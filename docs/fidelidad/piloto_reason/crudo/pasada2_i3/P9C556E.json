@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P9C556E",
+  "intento": 0,
+  "usd": 0.243904,
+  "turnos": 1,
+  "duracion_s": 18.0,
+  "pared_s": 19.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 53231,
+  "tokens_out": 1549,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P9C556E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4025, 4027, 4029, 4033, 4037, 4039, 3199], \"cita\": \"The second followed a fatal accident and identified weaknesses in shift handovers and the permit-to-work system. [...] A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala como fallo que el inspector no tuviera la checklist de permisos de trabajo. También recoge las debilidades en cambios de turno y los sistemas de emergencia que no se revisaron (bombas contra incendios, diluvio, simulacros). La objeción del Director a las listas fijas la rechaza Cullen, y Tripod usa checklists estandarizadas. El paso concreta esa lección en la misma dirección, sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P9C556E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4025,
+   4027,
+   4029,
+   4033,
+   4037,
+   4039,
+   3199
+  ],
+  "cita": "The second followed a fatal accident and identified weaknesses in shift handovers and the permit-to-work system. [...] A checklist existed to facilitate the evaluation of permit-to-work systems, but the inspector did not have it, nor was he experienced in the use of such procedures.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala como fallo que el inspector no tuviera la checklist de permisos de trabajo. También recoge las debilidades en cambios de turno y los sistemas de emergencia que no se revisaron (bombas contra incendios, diluvio, simulacros). La objeción del Director a las listas fijas la rechaza Cullen, y Tripod usa checklists estandarizadas. El paso concreta esa lección en la misma dirección, sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

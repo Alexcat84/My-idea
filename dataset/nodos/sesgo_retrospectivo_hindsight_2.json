@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "No te preguntes '¿por qué no hice...?' o '¿por qué no hizo...?', esa pregunta ya asume que la respuesta era obvia",
     "Reconstruye la situación tal como la viviste o la vivió la otra persona, sin usar lo que ya sabes ahora del resultado",
-    "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, sin olvidar el volumen de información disperso entre los participantes",
+    "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, según la pantalla o herramienta que usabas y las tareas, objetivos y conocimientos que tenías entre manos. Sugerencia de My Idea: ten en cuenta también el volumen de información disperso entre los participantes.",
     "No conviertas la secuencia de eventos en una causa y efecto simple, la realidad casi nunca fue tan lineal",
     "Entrenar a los investigadores de incidentes en el reconocimiento y mitigación del sesgo retrospectivo."
   ],
@@ -37,6 +37,25 @@
       "node_id": "sesgo_retrospectivo_hindsight",
       "titulo": "Sesgo Retrospectivo (Hindsight Bias) en el Análisis de Accidentes",
       "fuente": "Managing the Risks of Organizat - Reason, J. T_"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t10-04",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, sin olvidar el volumen de información disperso entre los participantes",
+      "texto_nuevo": "Distingue lo que tenías disponible de lo que realmente podías observar en ese momento, según la pantalla o herramienta que usabas y las tareas, objetivos y conocimientos que tenías entre manos. Sugerencia de My Idea: ten en cuenta también el volumen de información disperso entre los participantes.",
+      "cita": {
+        "libro": "The Field Guide to Understanding Human Error - Dekker, Sidney",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "L1732-L1732",
+        "frase": "data observability: what would have been observable given the features of the interface and the multiple interleaving tasks, goals, interests, knowledge and even culture of the people looking at it."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor, con el texto del arbitro. Decision del fundador del 27 sep, punto 3: las EXCEPCIONES con desacuerdo entre fases van a un arbitro con el libro. La primera parte del paso es fiel: el libro distingue lo que estaba fisicamente disponible de lo que era observable dados la interfaz y las tareas, objetivos, intereses, conocimiento y cultura de quien miraba (L1730-L1732). El matiz final, \"sin olvidar el volumen de informacion disperso entre los participantes\", no aparece en el libro. Los factores de observabilidad que da el autor son propios de la persona que mira y de su interfaz, no la dispersion de la informacion entre varios participantes. Las unicas menciones cercanas (data overload en L2335 y memoria distributed across the cockpit en L2367) tratan otros temas y no respaldan esta condicion. Es un anadido practico, no una cifra ni el nombre de una herramienta. Busqueda en todo el libro: Lei L1722-L1734 (data availability frente a data observability) y su repeticion en L2067. Busque con Grep en todo el libro distributed, scattered, dispersed, spread, data overload, amount of data/information, volume of, shared, among/between participants, observab, who knew. Hallazgos: L2335 habla de data overload, pero se refiere a grandes cantidades de datos que producen los ordenadores y que la persona no logra ordenar, no a informacion repartida entre participantes; L2367 dice que la memoria de las velocidades esta distributed across the entire cockpit, en artefactos fisicos, dentro del capitulo de automatizacion y no como criterio para separar lo disponible de lo observable; L1838-L1842 trata el entendimiento compartido del equipo en otro contexto (CRM). Ningun pasaje incluye el volumen de informacion disperso entre los participantes como factor de observabilidad.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/ARBITRAJE_EXCEPCIONES.json, entrada sesgo_retrospectivo_hindsight_2"
     }
   ]
 }

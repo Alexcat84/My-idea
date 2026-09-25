@@ -1,0 +1,72 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_080",
+  "intento": 0,
+  "usd": 0.164112,
+  "turnos": 1,
+  "duracion_s": 15.5,
+  "pared_s": 16.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33993,
+  "tokens_out": 1407,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P8C20FD\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4388, 4394, 4414, 4324, 4340], \"razon\": \"La FSA culmina en decidir opciones, y el Safety Case presenta esa evaluación demostrando controles adecuados. Documentar la decisión y los controles es coherente; el libro no pide nada distinto.\"},\n {\"id\": \"P2C928A\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [648, 666, 4765, 5067, 4761], \"razon\": \"El libro dice que la cultura generativa entrena y premia a los mensajeros y valora la imaginación requisita. También pide recompensar la información de seguridad en una cultura justa. Sin choque.\"},\n {\"id\": \"PD8F6B2\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [4276, 4280, 4284, 4288, 4292, 4388], \"razon\": \"El libro enumera los enfoques como lo que la tecnología o la sociedad considera suficientemente seguro. No dice que la organización elija y justifique su enfoque ante reguladores; hay que verificar ese supuesto.\"},\n {\"id\": \"PC9B24D\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4296, 3965, 83, 81], \"razon\": \"Según el libro, el estándar debe moverse hacia el riesgo cero. Pero el paso no fija la dirección de la revisión, y el libro advierte contra la erosión insidiosa de los estándares ('riesgo aceptable' en Challenger).\"}]\n```",
+ "parseado": [
+  {
+   "id": "P8C20FD",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4388,
+    4394,
+    4414,
+    4324,
+    4340
+   ],
+   "razon": "La FSA culmina en decidir opciones, y el Safety Case presenta esa evaluación demostrando controles adecuados. Documentar la decisión y los controles es coherente; el libro no pide nada distinto."
+  },
+  {
+   "id": "P2C928A",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    648,
+    666,
+    4765,
+    5067,
+    4761
+   ],
+   "razon": "El libro dice que la cultura generativa entrena y premia a los mensajeros y valora la imaginación requisita. También pide recompensar la información de seguridad en una cultura justa. Sin choque."
+  },
+  {
+   "id": "PD8F6B2",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    4276,
+    4280,
+    4284,
+    4288,
+    4292,
+    4388
+   ],
+   "razon": "El libro enumera los enfoques como lo que la tecnología o la sociedad considera suficientemente seguro. No dice que la organización elija y justifique su enfoque ante reguladores; hay que verificar ese supuesto."
+  },
+  {
+   "id": "PC9B24D",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4296,
+    3965,
+    83,
+    81
+   ],
+   "razon": "Según el libro, el estándar debe moverse hacia el riesgo cero. Pero el paso no fija la dirección de la revisión, y el libro advierte contra la erosión insidiosa de los estándares ('riesgo aceptable' en Challenger)."
+  }
+ ]
+}

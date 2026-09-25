@@ -1,0 +1,66 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_028",
+  "intento": 0,
+  "usd": 0.15035199999999999,
+  "turnos": 1,
+  "duracion_s": 11.8,
+  "pared_s": 13.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32623,
+  "tokens_out": 993,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P65B21D\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [866, 868, 918, 942], \"razon\": \"El libro atribuye la confusión de modos a no advertir transiciones y a automatización que oculta eventos; evaluar si la interfaz las hace detectables sigue esa dirección.\"},\n{\"id\": \"P34DC2D\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [5037, 5055, 5057], \"razon\": \"El libro propone preguntar a pares y usar un 'jurado' de pares comparables en cualificación y experiencia; seleccionarlos es extensión directa, sin choque.\"},\n{\"id\": \"P3E24E0\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4340, 4388], \"razon\": \"El libro exige actualizar el Safety Case tras cambios significativos; también a intervalos regulares, pero el paso no lo excluye.\"},\n{\"id\": \"P748CE7\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5641, 5688, 5690, 5701, 5907], \"razon\": \"El libro advierte que centrarse en lesiones personales y LTIF oculta riesgos organizacionales; identificar esa brecha coincide con su tesis.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P65B21D",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    866,
+    868,
+    918,
+    942
+   ],
+   "razon": "El libro atribuye la confusión de modos a no advertir transiciones y a automatización que oculta eventos; evaluar si la interfaz las hace detectables sigue esa dirección."
+  },
+  {
+   "id": "P34DC2D",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    5037,
+    5055,
+    5057
+   ],
+   "razon": "El libro propone preguntar a pares y usar un 'jurado' de pares comparables en cualificación y experiencia; seleccionarlos es extensión directa, sin choque."
+  },
+  {
+   "id": "P3E24E0",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4340,
+    4388
+   ],
+   "razon": "El libro exige actualizar el Safety Case tras cambios significativos; también a intervalos regulares, pero el paso no lo excluye."
+  },
+  {
+   "id": "P748CE7",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5641,
+    5688,
+    5690,
+    5701,
+    5907
+   ],
+   "razon": "El libro advierte que centrarse en lesiones personales y LTIF oculta riesgos organizacionales; identificar esa brecha coincide con su tesis."
+  }
+ ]
+}

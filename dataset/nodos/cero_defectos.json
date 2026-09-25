@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Establece el estándar de Cero Defectos como compromiso personal de desempeño, no como eslogan motivacional pasajero",
     "Comunícalo con absoluta claridad, trabajándolo caso por caso en vez de con mensajes masivos",
-    "Fija una fecha de lanzamiento (Día de Cero Defectos) tras un periodo breve de preparación para darle visibilidad",
+    "Fija una fecha de lanzamiento (Dia de Cero Defectos) tras una preparacion cuidadosa de los pasos previos, que puede llevar meses, para darle visibilidad",
     "Reconoce el desempeño alineado al estándar de forma genuina, evitando el efectivo como único mecanismo",
     "Extiende el estándar a todas tus áreas de trabajo, no solo a la producción o entrega del producto",
     "Repite y refuerza el mensaje de forma constante hasta que se vuelva parte habitual de tu forma de trabajar",
@@ -74,6 +74,25 @@
       "node_id": "filosofia_zero_defectos",
       "titulo": "Filosofía de Cero Defectos",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-008",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Fija una fecha de lanzamiento (Día de Cero Defectos) tras un periodo breve de preparación para darle visibilidad",
+      "texto_nuevo": "Fija una fecha de lanzamiento (Dia de Cero Defectos) tras una preparacion cuidadosa de los pasos previos, que puede llevar meses, para darle visibilidad",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L1629-L1631",
+        "frase": "By the time ZD day is reached, as much as a year may have gone by"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro no pone un periodo breve: el Dia ZD llega tras recorrer los pasos previos, puede pasar hasta un ano, los supervisores se preparan al menos cuatro semanas antes (L3095) y la preparacion debe ser cuidadosa. Ningun pasaje apoya una preparacion breve.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C097-022"
     }
   ]
 }

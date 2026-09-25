@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PCF97A3",
+  "intento": 0,
+  "usd": 0.202476,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 11.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47089,
+  "tokens_out": 706,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PCF97A3\", \"veredicto\": \"FIEL\", \"lineas\": [594, 4753, 4757, 5134, 5136], \"cita\": \"If eternal vigilance is the price of liberty, then chronic unease is the price of safety. Studies of high-reliability organizations... indicate that the people who operate and manage them tend to assume that each day will be a bad day and act accordingly.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta la chronic unease como el precio de la seguridad y como rasgo de las HRO, y pide sostener una cautela inteligente: 'fear being lulled', 'not forgetting to be afraid'. El paso fija ese objetivo sin prescribir un medio contrario. L848 trata otro asunto: la vigilancia prolongada de automatismos. El paso no contiene datos concretos añadidos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PCF97A3",
+  "veredicto": "FIEL",
+  "lineas": [
+   594,
+   4753,
+   4757,
+   5134,
+   5136
+  ],
+  "cita": "If eternal vigilance is the price of liberty, then chronic unease is the price of safety. Studies of high-reliability organizations... indicate that the people who operate and manage them tend to assume that each day will be a bad day and act accordingly.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta la chronic unease como el precio de la seguridad y como rasgo de las HRO, y pide sostener una cautela inteligente: 'fear being lulled', 'not forgetting to be afraid'. El paso fija ese objetivo sin prescribir un medio contrario. L848 trata otro asunto: la vigilancia prolongada de automatismos. El paso no contiene datos concretos añadidos.",
+  "paso_fiel": ""
+ }
+}

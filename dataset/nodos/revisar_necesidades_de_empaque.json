@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Antes de comprar cajas o bolsas, anota el peso y la fragilidad de lo que vas a enviar.",
     "Pregunta si el contenido es liquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
-    "Verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+    "Sugerencia de My Idea: verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
     "Revisa si tu producto entra en alguna categoria regulada, como baterias, perfumes o quimicos, antes de despacharlo.",
     "Con esa informacion decide si necesitas caja simple, de doble pared o bolsa plastica."
   ],
@@ -30,5 +30,24 @@
     "Has tenido devoluciones por daño y no sabes si el problema es el empaque o el contenido.",
     "Sospechas que tu producto podria clasificar como mercancia peligrosa, como perfumes o baterias."
   ],
-  "etiqueta_arbol": "Evalúa antes de empacar"
+  "etiqueta_arbol": "Evalúa antes de empacar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t13-03",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+      "texto_nuevo": "Sugerencia de My Idea: verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+      "cita": {
+        "libro": "DHL Express, An Essential Packing Guide for Express Shipments",
+        "fichero": "OCR/Extraccion delicada/dhl_express_packing_guide_en.md",
+        "lineas": "L81",
+        "frase": "Extra cushioning and protection may be required for high value goods."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 4: se comparo la extraccion nueva con la version oficial descargada de mydhl.express.dhl (PDF de 14 paginas fechado el 23/07/2026; la copia local es del 25/02/2026). El texto coincide salvo un parrafo nuevo sobre no usar 'black foil' en el exterior; la frase citada es identica en las dos y la palabra insurance no aparece en ninguna. La guia relaciona el valor del contenido con proteccion extra, pero no con un seguro.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/EXCEPCIONES.md seccion B y campania/c2/decision/B6 (lector de la campania, ANADIDO PRACTICO, texto_sugerencia)"
+    }
+  ]
 }

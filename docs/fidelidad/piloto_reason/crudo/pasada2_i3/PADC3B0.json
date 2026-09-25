@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PADC3B0",
+  "intento": 0,
+  "usd": 0.173968,
+  "turnos": 1,
+  "duracion_s": 15.2,
+  "pared_s": 16.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36897,
+  "tokens_out": 1319,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PADC3B0\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [563, 569, 580, 582, 584, 5775], \"cita\": \"established from the original plans that the roadbed had been located on the corner of an existing beaver pond. [...] Although the upper portions of the roadbed had been maintained and upgraded over the ensuing decades, the basic instability of their foundations had not been rectified.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"En Nakina la causa raíz fue de construcción (1916) y la revelaron los planos originales, pese al mantenimiento. El libro sitúa las condiciones latentes en diseñar y construir y pide hacerlas visibles antes del suceso (L580-582, L5775). Llamarlo 'caso muy especial' (L584) se refiere a detectarlo, no desaconseja revisar el diseño. El paso concreta sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PADC3B0",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   563,
+   569,
+   580,
+   582,
+   584,
+   5775
+  ],
+  "cita": "established from the original plans that the roadbed had been located on the corner of an existing beaver pond. [...] Although the upper portions of the roadbed had been maintained and upgraded over the ensuing decades, the basic instability of their foundations had not been rectified.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "En Nakina la causa raíz fue de construcción (1916) y la revelaron los planos originales, pese al mantenimiento. El libro sitúa las condiciones latentes en diseñar y construir y pide hacerlas visibles antes del suceso (L580-582, L5775). Llamarlo 'caso muy especial' (L584) se refiere a detectarlo, no desaconseja revisar el diseño. El paso concreta sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

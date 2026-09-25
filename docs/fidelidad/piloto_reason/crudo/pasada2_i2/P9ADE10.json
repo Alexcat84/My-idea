@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P9ADE10",
+  "intento": 0,
+  "usd": 0.107136,
+  "turnos": 1,
+  "duracion_s": 11.0,
+  "pared_s": 11.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 21859,
+  "tokens_out": 985,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P9ADE10\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [417, 419, 453], \"cita\": \"the line-generated work pack contained no mention of the restorative work --replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack.\", \"datos_sin_respaldo\": [\"al menos 48 horas antes\"], \"razon\": \"El libro respalda el fondo del paso: tarjetas paso a paso y firmas del reensamblaje (L419, L453). El plazo de 48 horas no aparece. La documentación de línea se genera justo antes del trabajo (L417) y el traspaso fue imprevisto. Aun así, el libro no desaconseja preparar el paquete con antelación, así que no es contrario.\", \"paso_fiel\": \"Antes de transferir una tarea de línea a base, completar el paquete de trabajo con las tarjetas paso a paso, las advertencias del manual y firmas paso a paso que confirmen el trabajo de reensamblaje (fijaciones y tapas).\"}\n```",
+ "parseado": {
+  "id": "P9ADE10",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   417,
+   419,
+   453
+  ],
+  "cita": "the line-generated work pack contained no mention of the restorative work --replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack.",
+  "datos_sin_respaldo": [
+   "al menos 48 horas antes"
+  ],
+  "razon": "El libro respalda el fondo del paso: tarjetas paso a paso y firmas del reensamblaje (L419, L453). El plazo de 48 horas no aparece. La documentación de línea se genera justo antes del trabajo (L417) y el traspaso fue imprevisto. Aun así, el libro no desaconseja preparar el paquete con antelación, así que no es contrario.",
+  "paso_fiel": "Antes de transferir una tarea de línea a base, completar el paquete de trabajo con las tarjetas paso a paso, las advertencias del manual y firmas paso a paso que confirmen el trabajo de reensamblaje (fijaciones y tapas)."
+ }
+}

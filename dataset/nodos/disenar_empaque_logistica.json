@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Revisa si tu empaque actual protege el producto en el manejo y no solo en el estante.",
     "Prueba una forma cubica en vez de cilindrica para aprovechar mejor el espacio de guardado y envio.",
-    "Verifica que el empaque sea facil de identificar y de cargar con una sola mano.",
+    "Sugerencia de My Idea: verifica que el empaque sea facil de identificar y de cargar, por ejemplo con una sola mano si el producto es pequeño.",
     "Ajusta el diseno cuando notes danos frecuentes, espacio desperdiciado o dificultad para apilar."
   ],
   "entregable_esperado": "Un empaque revisado que resiste el transporte y ocupa menos espacio de almacenamiento.",
@@ -26,5 +26,24 @@
     "Tu bodega o closet se llena de cajas con formas que no se apilan bien",
     "Estas redisenando el empaque y no sabes si priorizar la venta o el envio"
   ],
-  "etiqueta_arbol": "Disena el empaque para envio"
+  "etiqueta_arbol": "Disena el empaque para envio",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-060",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica que el empaque sea facil de identificar y de cargar con una sola mano.",
+      "texto_nuevo": "Sugerencia de My Idea: verifica que el empaque sea facil de identificar y de cargar, por ejemplo con una sola mano si el producto es pequeño.",
+      "cita": {
+        "libro": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
+        "fichero": "C:/Users/AlexDesk/Downloads/Supply chain/The Handbook of Logistics and D - Alan Rushton;Phil Croucher;Pete.txt",
+        "lineas": "L4726",
+        "frase": "packages should be easy to handle, convenient to store, readily identifiable"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide facil manejo e identificacion, pero no el criterio de cargar con una sola mano.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-116"
+    }
+  ]
 }

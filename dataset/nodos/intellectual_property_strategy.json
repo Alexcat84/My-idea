@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Identificar qué activos requieren trademark, copyright o patente",
     "Presentar patentes provisionales tempranamente para invenciones clave",
-    "Crear acuerdos de cesión de invención con empleados y contratistas, incluido el acuerdo de 'work for hire'",
+    "Crear acuerdos de cesión de invención con empleados y acuerdos escritos de cesión del trabajo creado con contratistas y subcontratistas",
     "Documentar cadena de título de la propiedad intelectual, desde que fundas tu empresa",
     "Evitar divulgaciones públicas antes de proteger la invención",
-    "Busca a alguien con buen criterio legal antes de avanzar más en construir tu negocio"
+    "Define qué ideas e invenciones clave necesitan patente o patente provisional y empieza a presentarlas pronto"
   ],
   "entregable_esperado": "Mapa de estrategia de IP con activos identificados, tipo de protección y cronograma de registro",
   "nodos_previos": [
@@ -41,6 +41,42 @@
       "node_id": "proteccion_propiedad_intelectual",
       "titulo": "Protege la propiedad de tu idea desde el principio (IP)",
       "fuente": "Venture Deals"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-032",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca a alguien con buen criterio legal antes de avanzar más en construir tu negocio",
+      "texto_nuevo": "Define qué ideas e invenciones clave necesitan patente o patente provisional y empieza a presentarlas pronto",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L7429-L7440",
+        "frase": "What are the most important ideas and inventions that need patents (or provisional patents)? Start filing these early!"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no pide buscar asesoría o criterio legal para la propiedad intelectual; búsqueda de legal, lawyer, attorney y counsel sin pasaje que lo respalde. Introduce un responsable legal que el libro no pone.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C071-050"
+    },
+    {
+      "id": "fidelidad-t7-033",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Crear acuerdos de cesión de invención con empleados y contratistas, incluido el acuerdo de 'work for hire'",
+      "texto_nuevo": "Crear acuerdos de cesión de invención con empleados y acuerdos escritos de cesión del trabajo creado con contratistas y subcontratistas",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L7449",
+        "frase": "If you're using independent contractors, make sure you have written agreements assigning work created. Make sure you have Employee Invention Assignment Agreements."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide acuerdos de cesión con empleados y contratistas, pero no menciona la figura legal work for hire (búsqueda de work for hire y variantes sin resultado).",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C071-108"
     }
   ]
 }

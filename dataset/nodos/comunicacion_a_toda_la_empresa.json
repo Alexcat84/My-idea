@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Prepara un discurso claro sobre por qué falló el negocio, no sobre las personas",
     "Dirige el mensaje principalmente a quienes se quedan trabajando contigo",
-    "No te disculpes de más: eso debilita la confianza que tienen en ti como líder",
+    "No te disculpes de más: la empresa tiene que seguir adelante",
     "Quédate presente y visible después del anuncio, y ayuda a las personas que se van"
   ],
   "entregable_esperado": "Tu discurso preparado y tu plan para estar presente y visible después del anuncio",
@@ -22,5 +22,24 @@
   "condiciones_activacion": [
     "Cuando vas a hacer un despido que afecta a varios equipos o a toda tu empresa"
   ],
-  "etiqueta_arbol": "Habla Claro a toda tu Empresa"
+  "etiqueta_arbol": "Habla Claro a toda tu Empresa",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-034",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No te disculpes de más: eso debilita la confianza que tienen en ti como líder",
+      "texto_nuevo": "No te disculpes de más: la empresa tiene que seguir adelante",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L889-L891",
+        "frase": "Still, the company must move forward, so be careful not to apologize too much."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razón B. El libro sí pide no disculparse de más, pero la razón que da es que la empresa tiene que seguir adelante. Busqué 'apolog' en todo el libro: solo sale en L891 y en L2106 (Arthur se disculpa, sin relación con esto). Ningún pasaje dice que disculparse de más debilite la confianza en el líder. El paso no se limita a concretar lo que dice el libro. Cambia la razón por una afirmación causal que el libro no respalda, así que no es OPERATIVO. Se corrige poniendo la razón del libro.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C093-001"
+    }
+  ]
 }

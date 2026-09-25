@@ -7,8 +7,8 @@
   "resumen_teorico": "Los sistemas de IA pueden ser manipulados mediante técnicas como 'prompt injection' (instrucciones ocultas en contenido web o documentos que la IA lee) y 'jailbreaking' (convencer a la IA de romper sus reglas mediante escenarios ficticios o roleplay). Esto representa un riesgo real para cualquier negocio que integre IA con acceso a datos externos, atención al cliente automatizada o generación de contenido, ya que actores malintencionados pueden explotar estas vulnerabilidades para phishing, desinformación o fraude.",
   "pasos_accionables": [
     "Evaluar qué fuentes de datos externas puede leer la IA integrada en el producto (webs, documentos, emails)",
-    "Realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
-    "Establecer capas de validación adicionales para instrucciones que provengan de contenido no confiable",
+    "Sugerencia de My Idea: realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
+    "Sugerencia de My Idea: Establecer capas de validación adicionales para instrucciones que provengan de contenido no confiable",
     "Monitorear el uso del sistema en producción para detectar patrones de abuso o manipulación"
   ],
   "entregable_esperado": "Plan de mitigación de riesgos de seguridad para el sistema de IA del negocio",
@@ -22,5 +22,41 @@
     "Cuando el producto integra IA con capacidad de leer contenido externo o ejecutar acciones automáticas",
     "Antes del lanzamiento público de una funcionalidad basada en IA generativa"
   ],
-  "etiqueta_arbol": "Protege tu IA de Ataques"
+  "etiqueta_arbol": "Protege tu IA de Ataques",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-033",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
+      "texto_nuevo": "Sugerencia de My Idea: realizar pruebas de penetración (red teaming) intentando jailbreaks comunes antes de lanzar el producto",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L327-L343",
+        "frase": "It may be impossible to avoid these sorts of deliberate attacks on AI systems, which will create considerable vulnerabilities in the future."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro describe el jailbreak pero no propone pruebas de penetración ni red teaming (buscado red team, penetration: sin resultados).",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-019"
+    },
+    {
+      "id": "fidelidad-t9-034",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer capas de validación adicionales para instrucciones que provengan de contenido no confiable",
+      "texto_nuevo": "Sugerencia de My Idea: Establecer capas de validación adicionales para instrucciones que provengan de contenido no confiable",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L325-L327",
+        "frase": "One technique for doing so is called prompt injection, where people use the AI’s capabilities to read files, look at the web, or run code to secretly feed the AI instructions."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro explica la inyeccion de prompt con el ejemplo de su biografia (L325) y luego el jailbreak (L327). No propone ninguna defensa tecnica contra eso. Busque validat, valid, sanitiz, untrusted, safeguard, guardrail y defense en todo el libro: solo salen los guardrails del RLHF (L321, L349) y la defensa de los abogados (L716), nada sobre validar lo que llega de contenido no confiable. Las capas de validacion adicionales son un mecanismo tecnico concreto que el paso mete por su cuenta. No concreta ninguna recomendacion del libro, porque el libro describe el riesgo pero no da remedio. Por eso no es OPERATIVO, como decia A. Es una practica, asi que el tipo es PRACTICO.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-020"
+    }
+  ]
 }

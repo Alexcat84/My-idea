@@ -1,0 +1,85 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_027",
+  "intento": 0,
+  "usd": 0.169672,
+  "turnos": 1,
+  "duracion_s": 17.8,
+  "pared_s": 20.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33713,
+  "tokens_out": 1741,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P70769B\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"reguladores\"],\n    \"clase\": \"SIN_COBERTURA\",\n    \"lineas\": [4276, 4280, 4296, 4318, 4388],\n    \"razon\": \"El libro no trata justificar la elección ante partes interesadas. Lo 'seguro' lo fija la tecnología o la sociedad, y el ALARP viene en la ley. Elegir libremente el marco podría chocar.\"\n  },\n  {\n    \"id\": \"PD2E19D\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"hot washups\"],\n    \"clase\": \"FIEL\",\n    \"lineas\": [5134],\n    \"razon\": \"El libro describe investigaciones inmediatas, llamadas 'hot washups' en la US Navy, cada vez que ocurren errores en las HRO.\"\n  },\n  {\n    \"id\": \"P6DEAAD\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"listas digitales de SafetyCulture\", \"el técnico\", \"antes de cerrar la tarea\"],\n    \"clase\": \"INFERIDO-ANADIDO\",\n    \"lineas\": [2250, 2267, 2279, 2289, 2293, 2311],\n    \"razon\": \"El libro no nombra SafetyCulture. Pide que el recordatorio esté junto al paso en tiempo y lugar; confirmarlo al cerrar la tarea podría chocar. Además, los recordatorios son solo 'primeros auxilios'.\"\n  },\n  {\n    \"id\": \"P514A96\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"2-3 GFTs\"],\n    \"clase\": \"FIEL\",\n    \"lineas\": [3199, 3209, 3382],\n    \"razon\": \"La dirección de línea revisa los perfiles y planifica e implementa acciones remediales para los dos o tres peores GFTs de cada medición.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P70769B",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "reguladores"
+   ],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    4276,
+    4280,
+    4296,
+    4318,
+    4388
+   ],
+   "razon": "El libro no trata justificar la elección ante partes interesadas. Lo 'seguro' lo fija la tecnología o la sociedad, y el ALARP viene en la ley. Elegir libremente el marco podría chocar."
+  },
+  {
+   "id": "PD2E19D",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "hot washups"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5134
+   ],
+   "razon": "El libro describe investigaciones inmediatas, llamadas 'hot washups' en la US Navy, cada vez que ocurren errores en las HRO."
+  },
+  {
+   "id": "P6DEAAD",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "listas digitales de SafetyCulture",
+    "el técnico",
+    "antes de cerrar la tarea"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    2250,
+    2267,
+    2279,
+    2289,
+    2293,
+    2311
+   ],
+   "razon": "El libro no nombra SafetyCulture. Pide que el recordatorio esté junto al paso en tiempo y lugar; confirmarlo al cerrar la tarea podría chocar. Además, los recordatorios son solo 'primeros auxilios'."
+  },
+  {
+   "id": "P514A96",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "2-3 GFTs"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3199,
+    3209,
+    3382
+   ],
+   "razon": "La dirección de línea revisa los perfiles y planifica e implementa acciones remediales para los dos o tres peores GFTs de cada medición."
+  }
+ ]
+}

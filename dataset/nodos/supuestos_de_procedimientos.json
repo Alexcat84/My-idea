@@ -9,7 +9,7 @@
     "Revisar los procedimientos existentes e identificar dónde asumen linealidad, predictibilidad o controlabilidad",
     "Realizar observaciones de campo para contrastar el trabajo real (interleaving de tareas) contra el trabajo prescrito",
     "Rediseñar guías escritas incorporando manejo explícito de interrupciones y tareas concurrentes",
-    "Capacitar a los equipos en el manejo de omisiones derivadas de la intercalación de tareas no practicadas"
+    "Sugerencia de My Idea: capacitar a los equipos en el manejo de las omisiones que surgen al intercalar tareas no practicadas"
   ],
   "entregable_esperado": "Documento de rediseño de procedimientos que contemple explícitamente la gestión de tareas concurrentes e interrupciones",
   "nodos_previos": [
@@ -22,5 +22,24 @@
     "Cuando se redactan o auditan procedimientos operativos estándar (SOP) para entornos complejos",
     "Cuando ocurren errores de omisión atribuidos a 'no seguir el procedimiento'"
   ],
-  "etiqueta_arbol": "Cuestiona tus Procedimientos Fijos"
+  "etiqueta_arbol": "Cuestiona tus Procedimientos Fijos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-55",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Capacitar a los equipos en el manejo de omisiones derivadas de la intercalación de tareas no practicadas",
+      "texto_nuevo": "Sugerencia de My Idea: capacitar a los equipos en el manejo de las omisiones que surgen al intercalar tareas no practicadas",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "L2447-L2449",
+        "frase": "Interleaving unpracticed tasks, particularly those that involve novel or unexpected aspects leads often to errors of omission."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Herramienta añadida (capacitación): el libro constata que intercalar tareas no practicadas lleva a menudo a errores de omisión y que las personas subestiman su vulnerabilidad al error en esas circunstancias (Dekker L2447-L2449). No propone capacitar a los equipos. Se reescribe como sugerencia de My Idea. El resumen_teorico y el entregable no mencionan la capacitación.",
+      "indice": 3,
+      "auditoria": "tramo1 DK4-051"
+    }
+  ]
 }

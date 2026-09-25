@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Evaluar la viabilidad estructural de instalar un techo verde en el edificio",
     "Seleccionar especies vegetales nativas o adaptadas al clima local",
-    "Diseñar el sistema de capas (impermeabilización, sustrato, drenaje, vegetación)",
+    "Sugerencia de My Idea: diseñar el sistema de capas del techo (impermeabilización, sustrato, drenaje y vegetación).",
     "Calcular ahorro en costos de climatización y gestión de aguas pluviales"
   ],
   "entregable_esperado": "Plan técnico de instalación de techo verde con estimación de beneficios ambientales y económicos.",
@@ -23,5 +23,24 @@
   "ids_alias": [
     "gestión_de_aguas_pluviales_con_techos_verdes"
   ],
-  "etiqueta_arbol": "Instala un Techo Verde"
+  "etiqueta_arbol": "Instala un Techo Verde",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-07",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar el sistema de capas (impermeabilización, sustrato, drenaje, vegetación)",
+      "texto_nuevo": "Sugerencia de My Idea: diseñar el sistema de capas del techo (impermeabilización, sustrato, drenaje y vegetación).",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "I have an idea/books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "L509",
+        "frase": "It is a light layer of soil, a growing matrix, covered with plants."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Añadido práctico de ejecución técnica: el libro describe el techo solo como \"a light layer of soil, a growing matrix, covered with plants\" (L509) y no nombra impermeabilización ni drenaje. No es cifra ni norma: es un detalle constructivo útil, así que se reescribe como sugerencia de My Idea sin atribuirlo al autor, en vez de borrar la impermeabilización y el drenaje, que en la práctica son necesarios. No se repite en resumen_teorico ni entregable.",
+      "indice": 2,
+      "auditoria": "muestreo A8"
+    }
+  ]
 }

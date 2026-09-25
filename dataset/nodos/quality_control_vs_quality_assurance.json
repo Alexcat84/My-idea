@@ -9,7 +9,7 @@
     "Revisar si la organización cuenta con una función de inspección independiente para tareas críticas de seguridad",
     "Evaluar los riesgos de permitir el autochequeo ('sign-off') sin verificación externa",
     "Establecer disponibilidad de personal de aseguramiento de calidad en todos los turnos, incluidos nocturnos",
-    "Implementar auditorías aleatorias sobre el trabajo firmado como conforme"
+    "Sugerencia de My Idea: implementar auditorías aleatorias sobre el trabajo firmado como conforme, como verificación separada de la firma."
   ],
   "entregable_esperado": "Política de aseguramiento de calidad con mecanismos de verificación independiente definidos",
   "nodos_previos": [
@@ -22,5 +22,24 @@
     "Cuando la organización ha migrado de inspección centralizada a autoevaluación del trabajador",
     "Si existen antecedentes de trabajo mal ejecutado firmado como conforme"
   ],
-  "etiqueta_arbol": "Distingue Controlar de Asegurar Calidad"
+  "etiqueta_arbol": "Distingue Controlar de Asegurar Calidad",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-20",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar auditorías aleatorias sobre el trabajo firmado como conforme",
+      "texto_nuevo": "Sugerencia de My Idea: implementar auditorías aleatorias sobre el trabajo firmado como conforme, como verificación separada de la firma.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L971",
+        "frase": "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es un método (auditorías aleatorias) que Reason no propone. El libro solo señala que faltaba una inspección separada (L971). Es un añadido práctico y se reescribe como sugerencia de My Idea. El dato no se repite en el resumen ni en el entregable.",
+      "indice": 3,
+      "auditoria": "muestreo A22"
+    }
+  ]
 }

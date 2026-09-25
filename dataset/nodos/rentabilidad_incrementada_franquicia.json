@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Proyectar el estado de resultados del franquiciante basado en ingresos por regalías, no ventas totales",
     "Comparar la estructura de costos de un franquiciante liviano vs. una operación corporativa completa",
-    "Validar supuestos de rentabilidad con benchmarks de la industria específica",
+    "Tratar con prudencia los supuestos de rentabilidad, porque no hay cifras de referencia fiables del sector para estimar el margen neto del franquiciante",
     "Establecer metas de margen neto para la organización franquiciante"
   ],
-  "entregable_esperado": "Proyección financiera de rentabilidad del franquiciante con benchmarks de industria",
+  "entregable_esperado": "Proyección financiera de rentabilidad del franquiciante con supuestos prudentes, ya que no hay cifras de referencia fiables del sector para estimar su margen neto",
   "nodos_previos": [
     "facilidad_supervision_franquicia"
   ],
@@ -22,5 +22,40 @@
   "condiciones_activacion": [
     "Si se está construyendo el modelo financiero del negocio franquiciante"
   ],
-  "etiqueta_arbol": "Aumenta tu Rentabilidad al Franquiciar"
+  "etiqueta_arbol": "Aumenta tu Rentabilidad al Franquiciar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-004",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Validar supuestos de rentabilidad con benchmarks de la industria específica",
+      "texto_nuevo": "Tratar con prudencia los supuestos de rentabilidad, porque no hay cifras de referencia fiables del sector para estimar el margen neto del franquiciante",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L1466-L1468",
+        "frase": "FYI, there are no reliable figures to use when estimating net margin."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. El paso pertenece al nodo sobre la rentabilidad del franquiciante y pide validarla con benchmarks del sector. El libro dice lo contrario: esa rentabilidad es dificil de cuantificar o probar y una comparacion directa es imposible (L347). Tambien dice que los estudios de 40 y 45,6 por ciento tienen poca validez estadistica y estan anticuados (L349), que no hay cifras fiables de margen neto y que la herramienta de la IFA no reune datos suficientes (L1468). Busque en todo el libro pasajes que apoyen el paso. El libro solo usa comparables para otras cosas: los multiplos de venta (L1458), las tarifas de la competencia (L1693, L1705), la formacion (L2775) y el presupuesto de marketing (L3443). Ninguno sirve para validar la rentabilidad. A dice que el paso no fija cifras, pero el problema no es la cifra: el paso presenta como fiable una validacion que el libro dice que no existe.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C011-063"
+    },
+    {
+      "id": "fidelidad-t4-005",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Proyección financiera de rentabilidad del franquiciante con benchmarks de industria",
+      "texto_nuevo": "Proyección financiera de rentabilidad del franquiciante con supuestos prudentes, ya que no hay cifras de referencia fiables del sector para estimar su margen neto",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L1466-L1468",
+        "frase": "FYI, there are no reliable figures to use when estimating net margin."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite el mismo dato que el paso 2, respaldar la rentabilidad del franquiciante con benchmarks de industria. Segun el libro no hay cifras fiables para estimar el margen neto (L1466-L1468). Es CONTRARIO y se corrige igual que el paso.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C011-063"
+    }
+  ]
 }

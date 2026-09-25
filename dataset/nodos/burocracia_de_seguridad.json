@@ -9,7 +9,7 @@
     "Auditar si los procedimientos de seguridad reflejan el trabajo real o son 'documentos de fantasía'",
     "Identificar la brecha entre cómo la organización cree que trabaja y cómo realmente trabaja",
     "Revisar si existen incentivos que fomenten el subreporte de incidentes",
-    "Evaluar la proporción de indicadores adelantados vs indicadores rezagados (lagging) en uso",
+    "Sugerencia de My Idea: evaluar la proporción de indicadores adelantados frente a indicadores rezagados (lagging) en uso",
     "Detectar innovaciones de los trabajadores que hayan pasado a la clandestinidad por no cumplir procedimientos"
   ],
   "entregable_esperado": "Reporte de auditoría de burocracia de seguridad identificando 'documentos de fantasía' y brechas operativas reales",
@@ -24,5 +24,24 @@
     "Cuando la organización tiene un departamento de seguridad numeroso pero desconectado de operaciones",
     "Cuando se sospecha subreporte de incidentes por presión de indicadores"
   ],
-  "etiqueta_arbol": "Evita el Exceso de Trámites"
+  "etiqueta_arbol": "Evita el Exceso de Trámites",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-49",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar la proporción de indicadores adelantados vs indicadores rezagados (lagging) en uso",
+      "texto_nuevo": "Sugerencia de My Idea: evaluar la proporción de indicadores adelantados frente a indicadores rezagados (lagging) en uso",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney;",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "L3111",
+        "frase": "; L2970: \"Safety bureaucracies are often organized around lagging indicators: measuring that which has already been. The predictive value of most lagging indicators is known to be poor."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Métrica o herramienta añadida: el libro no menciona indicadores adelantados ni ninguna proporción entre adelantados y rezagados. Solo dice que las burocracias de seguridad se organizan en torno a indicadores rezagados de poco valor predictivo (Dekker L3111). Se reescribe como sugerencia de My Idea. El resumen_teorico solo habla de los indicadores retrasados, que sí están en el libro, así que no repite el dato. El entregable tampoco.",
+      "indice": 3,
+      "auditoria": "tramo1 DK1-073"
+    }
+  ]
 }

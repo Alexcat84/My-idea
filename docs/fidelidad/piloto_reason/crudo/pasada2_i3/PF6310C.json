@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF6310C",
+  "intento": 0,
+  "usd": 0.195428,
+  "turnos": 1,
+  "duracion_s": 10.0,
+  "pared_s": 10.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44767,
+  "tokens_out": 818,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PF6310C\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2823, 2845, 2849, 3161, 808, 1129], \"cita\": \"Since this will never be wholly successful, we also need error containment--measures designed to limit the adverse consequences of those errors that still occur.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide medidas de contención, de detección (L2845) y de tolerancia del sistema (L2849). Las defensas incluyen detección y contención (L3161). 'Temprana' y 'barreras' concretan en la misma dirección, sin datos nuevos. El cap. 3 advierte que las defensas pueden ser peligrosas, pero es un matiz y no desaconseja diseñarlas: no es contrario.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "PF6310C",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2823,
+   2845,
+   2849,
+   3161,
+   808,
+   1129
+  ],
+  "cita": "Since this will never be wholly successful, we also need error containment--measures designed to limit the adverse consequences of those errors that still occur.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide medidas de contención, de detección (L2845) y de tolerancia del sistema (L2849). Las defensas incluyen detección y contención (L3161). 'Temprana' y 'barreras' concretan en la misma dirección, sin datos nuevos. El cap. 3 advierte que las defensas pueden ser peligrosas, pero es un matiz y no desaconseja diseñarlas: no es contrario.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_085",
+  "intento": 0,
+  "usd": 0.175424,
+  "turnos": 1,
+  "duracion_s": 17.3,
+  "pared_s": 18.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35761,
+  "tokens_out": 1619,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PADC3B0\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [563, 567, 569, 580, 584], \"razon\": \"El libro llama a Nakina 'caso muy especial', casi indetectable sin análisis geotécnico. No recomienda revisar historiales de diseño; el paso generaliza desde ese caso.\"},\n  {\"id\": \"P5622AE\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [596, 608, 628, 648, 4761, 4765, 4786], \"razon\": \"Westrum clasifica las culturas según cómo tratan a los mensajeros. El capítulo 9 liga la cultura de reporte a la confianza y a no castigar.\"},\n  {\"id\": \"P8D2363\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"listas de equipo mínimo\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [158, 4060, 4064, 4068, 4072, 4076, 4084], \"razon\": \"El caso Dryden enumera capas regulatorias fallidas, incluida la Minimum Equipment List. Mapearlas concreta el libro en su dirección, aunque allí se atribuyen al regulador.\"},\n  {\"id\": \"PC9F867\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2577, 2583, 5641], \"razon\": \"El libro define la paradoja posicional: la cúpula culpa al personal de primera línea. Detectarla es parte de la cognisance.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PADC3B0",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    563,
+    567,
+    569,
+    580,
+    584
+   ],
+   "razon": "El libro llama a Nakina 'caso muy especial', casi indetectable sin análisis geotécnico. No recomienda revisar historiales de diseño; el paso generaliza desde ese caso."
+  },
+  {
+   "id": "P5622AE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    596,
+    608,
+    628,
+    648,
+    4761,
+    4765,
+    4786
+   ],
+   "razon": "Westrum clasifica las culturas según cómo tratan a los mensajeros. El capítulo 9 liga la cultura de reporte a la confianza y a no castigar."
+  },
+  {
+   "id": "P8D2363",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "listas de equipo mínimo"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    158,
+    4060,
+    4064,
+    4068,
+    4072,
+    4076,
+    4084
+   ],
+   "razon": "El caso Dryden enumera capas regulatorias fallidas, incluida la Minimum Equipment List. Mapearlas concreta el libro en su dirección, aunque allí se atribuyen al regulador."
+  },
+  {
+   "id": "PC9F867",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2577,
+    2583,
+    5641
+   ],
+   "razon": "El libro define la paradoja posicional: la cúpula culpa al personal de primera línea. Detectarla es parte de la cognisance."
+  }
+ ]
+}

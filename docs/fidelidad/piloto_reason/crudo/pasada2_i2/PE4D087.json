@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PE4D087",
+  "intento": 0,
+  "usd": 0.18754,
+  "turnos": 1,
+  "duracion_s": 8.6,
+  "pared_s": 9.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44595,
+  "tokens_out": 458,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE4D087\", \"veredicto\": \"FIEL\", \"lineas\": [5057, 5037], \"cita\": \"It seems appropriate to apply Johnston's substitution test once the issues of possible substance abuse and deliberate non-compliance have been settled [...] If the answer given by a 'jury' of peers is 'yes', then the error is probably blameless.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro propone la prueba de sustitución de Johnston y que la responda un 'jurado' de pares (L5057; también L5037). El paso no invierte el orden del libro. Los pasos previos del nodo ya descartan sustancias y violaciones, así que omitir ese orden es solo un detalle.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE4D087",
+  "veredicto": "FIEL",
+  "lineas": [
+   5057,
+   5037
+  ],
+  "cita": "It seems appropriate to apply Johnston's substitution test once the issues of possible substance abuse and deliberate non-compliance have been settled [...] If the answer given by a 'jury' of peers is 'yes', then the error is probably blameless.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro propone la prueba de sustitución de Johnston y que la responda un 'jurado' de pares (L5057; también L5037). El paso no invierte el orden del libro. Los pasos previos del nodo ya descartan sustancias y violaciones, así que omitir ese orden es solo un detalle.",
+  "paso_fiel": ""
+ }
+}

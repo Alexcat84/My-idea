@@ -7,7 +7,7 @@
   "resumen_teorico": "El Quality Score es una calificación que Google (y otras plataformas) asigna a cada anuncio, grupo de anuncios y cuenta, basada en qué tan bien responden los usuarios (principalmente medido por CTR). Un Quality Score alto mejora la posición del anuncio y reduce su costo. El CTR es el factor de mayor peso, y depende directamente de qué tan relevante es el anuncio respecto a la keyword buscada. Ads con CTR menor a 1.5% suelen recibir baja calificación y deben reescribirse, testearse en otra audiencia o eliminarse.",
   "pasos_accionables": [
     "Revisar el CTR de cada keyword y anuncio regularmente",
-    "Reescribir anuncios con CTR por debajo del promedio (2%) o crítico (menor a 1.5%)",
+    "Reescribir, probar con otra audiencia o eliminar los anuncios con CTR menor a 1.5%, donde Google asigna Quality Score bajo (el promedio ronda el 2%)",
     "Usar Dynamic Keyword Insertion para aumentar relevancia automáticamente",
     "Adaptar el copy del anuncio específicamente a cada grupo de keywords",
     "Monitorear el Quality Score general de la cuenta como indicador de salud de la campaña"
@@ -23,5 +23,24 @@
     "Cuando el CPC es demasiado alto o la campaña no es rentable",
     "Cuando se busca escalar una campaña SEM ya validada"
   ],
-  "etiqueta_arbol": "Mejora el Puntaje de Calidad"
+  "etiqueta_arbol": "Mejora el Puntaje de Calidad",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-019",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Reescribir anuncios con CTR por debajo del promedio (2%) o crítico (menor a 1.5%)",
+      "texto_nuevo": "Reescribir, probar con otra audiencia o eliminar los anuncios con CTR menor a 1.5%, donde Google asigna Quality Score bajo (el promedio ronda el 2%)",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "I have an idea/books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "L1262",
+        "frase": "Google assigns a low quality score to ads with CTRs below 1.5 percent. If any of your keywords are getting such low CTRs, rewrite those ads, test them on a different audience, or ditch them altogether."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Para el libro, el 2% es solo el CTR promedio de referencia. El umbral para reescribir es el 1.5%. El paso adelanta la acción a todo anuncio por debajo del 2%, así que cambia el umbral.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C106-039"
+    }
+  ]
 }

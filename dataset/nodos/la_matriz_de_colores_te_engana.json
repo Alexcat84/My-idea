@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Si usas una matriz de colores, deja de multiplicar sus casillas como si fueran números.",
     "Cambia el rojo-amarillo-verde por una frase honesta: qué tan probable y cuánto en dinero o tiempo.",
-    "Cuando digas probabilidad media, aclara qué rango de probabilidad quieres decir.",
+    "No digas probabilidad media: di la probabilidad que estimas, como un porcentaje.",
     "Prefiere una estimación imperfecta pero honesta a un tablero de colores que aparenta rigor."
   ],
-  "entregable_esperado": "Tus riesgos clave reexpresados sin la matriz de colores: probabilidad y daño en palabras y cifras honestas.",
+  "entregable_esperado": "Tus riesgos clave reexpresados sin la matriz de colores: probabilidad en porcentaje y daño en cifras honestas.",
   "nodos_previos": [
     "cuan_probable_y_cuanto_doleria",
     "escepticismo_sano_ante_el_riesgo"
@@ -25,5 +25,42 @@
     "cuando calificas riesgos con puntajes que luego sumas o multiplicas",
     "cuando un tablero de riesgo te da calma pero no sabrías defender sus números"
   ],
-  "etiqueta_arbol": "La Matriz de Colores Te Engaña"
+  "etiqueta_arbol": "La Matriz de Colores Te Engaña",
+  "correcciones": [
+    {
+      "id": "fidelidad-t2-08",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando digas probabilidad media, aclara qué rango de probabilidad quieres decir.",
+      "texto_nuevo": "No digas probabilidad media: di la probabilidad que estimas, como un porcentaje.",
+      "cita": {
+        "libro": "The Failure of Risk Management_ - Douglas W. Hubbard",
+        "fichero": "I have an idea/books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "L2136",
+        "frase": "Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else.",
+        "apoyo": "L2533: \"he found they varied widely even when they were given specific guidelines for what these terms meant\"; L2535: \"detailed procedures for how those terms should be used is no guarantee that those rules will be followed in practice.\""
+      },
+      "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, texto corregido de la ficha C5 del muestreo, que reconcilia al lector y al clasificador ciego. quita la etiqueta \"probabilidad media\" con un rango aclarado (lo que el libro prueba que no basta); anade la probabilidad explicita en porcentaje",
+      "indice": 2,
+      "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C5"
+    },
+    {
+      "id": "fidelidad-t2-09",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Tus riesgos clave reexpresados sin la matriz de colores: probabilidad y daño en palabras y cifras honestas.",
+      "texto_nuevo": "Tus riesgos clave reexpresados sin la matriz de colores: probabilidad en porcentaje y daño en cifras honestas.",
+      "cita": {
+        "libro": "The Failure of Risk Management_ - Douglas W. Hubbard",
+        "fichero": "I have an idea/books/Risk Management/The Failure of Risk Management_ - Douglas W. Hubbard.txt",
+        "lineas": "L2136",
+        "frase": "Because experts can be trained to provide explicit probabilities, there is no reason to ever use anything else.",
+        "apoyo": "L2533: \"he found they varied widely even when they were given specific guidelines for what these terms meant\"; L2535: \"detailed procedures for how those terms should be used is no guarantee that those rules will be followed in practice.\""
+      },
+      "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el campo entregable_esperado repetia lo que corrige la ficha C5. Se cambia solo el segmento; el resto no cambia.",
+      "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C5"
+    }
+  ]
 }

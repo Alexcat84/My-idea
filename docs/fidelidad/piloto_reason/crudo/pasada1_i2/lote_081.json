@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_081",
+  "intento": 0,
+  "usd": 0.17312000000000002,
+  "turnos": 1,
+  "duracion_s": 21.8,
+  "pared_s": 22.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32835,
+  "tokens_out": 2089,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P611F38\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"modelo de Reason\"], \"clase\": \"FIEL\", \"lineas\": [219, 293, 308, 4105], \"razon\": \"El libro propone su modelo para identificar, en cada defensa vulnerada, fallas activas y condiciones latentes. BASI lo adoptó así. L5748 advierte rendimientos decrecientes, pero sin contradecir el paso.\"},\n  {\"id\": \"P62EAF7\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2581, 4757], \"razon\": \"El libro liga la competencia a la calidad del sistema de información de seguridad: si recoge la información correcta, si la difunde y si actúa sobre ella.\"},\n  {\"id\": \"P224D89\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"trabajadores experimentados\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1012, 1543, 1547, 1006, 5055], \"razon\": \"El libro distingue violaciones rutinarias (atajos de mínimo esfuerzo) de necesarias. El paso las fusiona y podría legitimar atajos. La consulta a veteranos no aparece explícita.\"},\n  {\"id\": \"P9A4604\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"hojas de traspaso (stage sheets)\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [423, 451, 459, 990, 1354], \"razon\": \"El libro señala la falta de stage sheets y de traspaso escrito. Pero duda de añadir procedimientos tras cada evento (L459, cap. 3) y dice que estos traspasos son raros y poco prioritarios.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P611F38",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "modelo de Reason"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    219,
+    293,
+    308,
+    4105
+   ],
+   "razon": "El libro propone su modelo para identificar, en cada defensa vulnerada, fallas activas y condiciones latentes. BASI lo adoptó así. L5748 advierte rendimientos decrecientes, pero sin contradecir el paso."
+  },
+  {
+   "id": "P62EAF7",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2581,
+    4757
+   ],
+   "razon": "El libro liga la competencia a la calidad del sistema de información de seguridad: si recoge la información correcta, si la difunde y si actúa sobre ella."
+  },
+  {
+   "id": "P224D89",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "trabajadores experimentados"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1012,
+    1543,
+    1547,
+    1006,
+    5055
+   ],
+   "razon": "El libro distingue violaciones rutinarias (atajos de mínimo esfuerzo) de necesarias. El paso las fusiona y podría legitimar atajos. La consulta a veteranos no aparece explícita."
+  },
+  {
+   "id": "P9A4604",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "hojas de traspaso (stage sheets)"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    423,
+    451,
+    459,
+    990,
+    1354
+   ],
+   "razon": "El libro señala la falta de stage sheets y de traspaso escrito. Pero duda de añadir procedimientos tras cada evento (L459, cap. 3) y dice que estos traspasos son raros y poco prioritarios."
+  }
+ ]
+}

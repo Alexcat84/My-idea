@@ -10,7 +10,7 @@
     "Lleva contigo una libreta o notas de voz para capturar cualquier señal sutil de que una idea se está formando, o el momento en que llega completa, como indicio de Intimación",
     "Iluminación: cuando llegue el destello de la idea, captúralo de inmediato sin filtrarlo con crítica",
     "Verificación: somete la idea capturada a un análisis lógico riguroso y a pruebas antes de implementarla",
-    "Anota en qué etapa se encuentra cada idea que estés trabajando, preparación, incubación, iluminación o verificación, para no perder el hilo"
+    "Sugerencia de My Idea: anota en qué etapa se encuentra cada idea que estés trabajando, preparación, incubación, iluminación o verificación, para no perder el hilo."
   ],
   "entregable_esperado": "Una bitácora del proceso creativo, con notas de preparación, incubación e iluminación, y una idea validada lógicamente lista para pasar a prototipado.",
   "condiciones_activacion": [
@@ -64,6 +64,25 @@
       "node_id": "wallas_etapa_iluminacion",
       "titulo": "Etapa de Iluminación",
       "fuente": "The Art of Thought - Wallas, Graham"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-069",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anota en qué etapa se encuentra cada idea que estés trabajando, preparación, incubación, iluminación o verificación, para no perder el hilo",
+      "texto_nuevo": "Sugerencia de My Idea: anota en qué etapa se encuentra cada idea que estés trabajando, preparación, incubación, iluminación o verificación, para no perder el hilo.",
+      "cita": {
+        "libro": "The Art of Thought - Graham Wallas",
+        "fichero": "I have an idea/txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "L313-L313",
+        "frase": "In the daily stream of thought these four different stages constantly overlap each other as we explore different problems."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. Wallas describe el solapamiento de etapas entre problemas (L313). Como metodo de registro, en L537-L539 propone carpetas etiquetadas por tema, una carpeta 'Redistribute' y la libreta de Hobbes para los pensamientos al vuelo, pero en ningun pasaje propone anotar en que etapa esta cada idea. Busque note-book, folder, label y record. Llevar un registro por etapas es un formato que pone el paso.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-133"
     }
   ]
 }

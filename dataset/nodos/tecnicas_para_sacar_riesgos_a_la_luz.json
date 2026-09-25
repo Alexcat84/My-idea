@@ -4,11 +4,11 @@
   "dominio": "risk_management",
   "titulo_concepto": "Técnicas de Identificación de Riesgos",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas suelta, sola o con alguien de confianza, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Para el emprendedor solo, combinar estas técnicas compensa la falta de un equipo que aporte muchas miradas distintas.",
+  "resumen_teorico": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Aunque emprendas solo, sacar riesgos a la luz no es tarea de una sola persona: suma a quienes conozcan el proyecto y combina estas técnicas.",
   "pasos_accionables": [
-    "Haz una lluvia de ideas de riesgos, solo o con alguien de confianza que te cuestione.",
+    "Haz una lluvia de ideas de riesgos guiada por las actividades de tu proyecto, con un grupo pequeño de personas que lo conozcan; no la hagas solo.",
     "Busca o arma una lista de chequeo de riesgos típicos de tu tipo de negocio.",
-    "Estudia dos o tres proyectos parecidos que fracasaron y anota por qué cayeron.",
+    "Estudia proyectos parecidos que fracasaron y anota por qué cayeron.",
     "Reescribe cada riesgo como una frase completa de causa y efecto, no como una palabra suelta."
   ],
   "entregable_esperado": "Una lista de riesgos sacada con varias técnicas, cada uno escrito como frase completa de causa y efecto.",
@@ -25,5 +25,76 @@
     "cuando anotas riesgos como palabras sueltas y luego no sabes qué querías decir",
     "cuando no tienes equipo que aporte miradas distintas sobre lo que puede fallar"
   ],
-  "etiqueta_arbol": "Saca los Riesgos a la Luz"
+  "etiqueta_arbol": "Saca los Riesgos a la Luz",
+  "correcciones": [
+    {
+      "id": "fidelidad-t2-02",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Haz una lluvia de ideas de riesgos, solo o con alguien de confianza que te cuestione.",
+      "texto_nuevo": "Haz una lluvia de ideas de riesgos guiada por las actividades de tu proyecto, con un grupo pequeño de personas que lo conozcan; no la hagas solo.",
+      "cita": {
+        "libro": "Managing Project Risks - Peter J. Edwards",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L3002",
+        "frase": "fewer participants are better than many for this type of workshop, but it is definitely not a task for one person alone!",
+        "apoyo": "L3002: \"'one-man band' approaches to project risk management expose any organisation to the serious threat risk of mismanagement\"; L3000: \"risk identification is best suited to a workshop approach and using brainstorming. However, the brainstorming should be structured in some way\""
+      },
+      "decision": "Mandato del fundador de la campania de fidelidad, regla B: CONTRARIO, texto corregido de la ficha C2 del muestreo, que reconcilia al lector y al clasificador ciego. quita \"solo o con alguien de confianza\"; anade el grupo pequeno de personas que conozcan el proyecto y la lluvia de ideas guiada",
+      "indice": 0,
+      "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C2"
+    },
+    {
+      "id": "fidelidad-t2-03",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas suelta, sola o con alguien de confianza, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Para el emprendedor solo, combinar estas técnicas compensa la falta de un equipo que aporte muchas miradas distintas.",
+      "texto_nuevo": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Para el emprendedor solo, combinar estas técnicas compensa la falta de un equipo que aporte muchas miradas distintas.",
+      "cita": {
+        "libro": "Managing Project Risks - Peter J. Edwards",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L3002",
+        "frase": "fewer participants are better than many for this type of workshop, but it is definitely not a task for one person alone!",
+        "apoyo": "L3002: \"'one-man band' approaches to project risk management expose any organisation to the serious threat risk of mismanagement\"; L3000: \"risk identification is best suited to a workshop approach and using brainstorming. However, the brainstorming should be structured in some way\""
+      },
+      "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el campo resumen_teorico repetia lo que corrige la ficha C2. Se cambia solo el segmento; el resto no cambia.",
+      "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C2"
+    },
+    {
+      "id": "fidelidad-t2-04",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Para el emprendedor solo, combinar estas técnicas compensa la falta de un equipo que aporte muchas miradas distintas.",
+      "texto_nuevo": "No basta con esperar a que los riesgos se te ocurran: hay maneras concretas de sacarlos a la luz. La lluvia de ideas, guiada y en un grupo pequeño que conozca el proyecto, saca lo obvio; una lista de chequeo de riesgos típicos de tu tipo de negocio te recuerda lo que olvidarías; y mirar proyectos parecidos que fracasaron te muestra las trampas reales del terreno. La clave es escribir cada riesgo como una frase clara y completa, no como una palabra suelta: no basta poner proveedor, hay que decir si mi único proveedor sube el precio un treinta por ciento, mi margen desaparece. Aunque emprendas solo, sacar riesgos a la luz no es tarea de una sola persona: suma a quienes conozcan el proyecto y combina estas técnicas.",
+      "cita": {
+        "libro": "Managing Project Risks - Peter J. Edwards",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L3002",
+        "frase": "fewer participants are better than many for this type of workshop, but it is definitely not a task for one person alone!",
+        "apoyo": "L3002: \"'one-man band' approaches to project risk management expose any organisation to the serious threat risk of mismanagement\"; L3000: \"risk identification is best suited to a workshop approach and using brainstorming. However, the brainstorming should be structured in some way\""
+      },
+      "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el campo resumen_teorico repetia lo que corrige la ficha C2. Se cambia solo el segmento; el resto no cambia.",
+      "auditoria": "rama muestreo-fidelidad, docs/audits/MUESTREO_FIDELIDAD_2026-09.md, ficha C2"
+    },
+    {
+      "id": "fidelidad-t3-09",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Estudia dos o tres proyectos parecidos que fracasaron y anota por qué cayeron.",
+      "texto_nuevo": "Estudia proyectos parecidos que fracasaron y anota por qué cayeron.",
+      "cita": {
+        "libro": "Managing Project Risks - Peter J. Edwards",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L5502",
+        "frase": "will have recourse to the knowledge captured from previous projects"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'dos o tres proyectos' no está en el libro; se quita sin añadir nada más. No se añaden 'informes y lecciones', que era la propuesta de la ficha, para no introducir un dato nuevo. Cita del libro: L2678: \"What unsuccessful aspects of past projects are likely to arise in this one?\"; L5502: \"will have recourse to the knowledge captured from previous projects\". El resumen_teorico no lleva la cifra; no hay segmentos.",
+      "indice": 2,
+      "auditoria": "muestreo A10"
+    }
+  ]
 }

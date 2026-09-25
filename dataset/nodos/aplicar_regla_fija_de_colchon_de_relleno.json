@@ -9,7 +9,7 @@
     "Mide con una regla la distancia entre el producto y cada pared de la caja antes de cerrarla.",
     "Ajusta el tamaño de caja si la distancia es menor a cinco centímetros en algún lado.",
     "Rellena cualquier espacio vacío hasta que el producto no se mueva al agitar la caja con cuidado.",
-    "Anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez."
+    "Sugerencia de My Idea: anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez."
   ],
   "entregable_esperado": "Una regla escrita de cinco a seis centímetros de colchón en todos los lados, aplicada en cada envío.",
   "nodos_previos": [
@@ -24,5 +24,24 @@
     "No sabes cuánto relleno es suficiente y por eso usas de más o de menos.",
     "Recibes quejas de clientes porque el producto se movió dentro de la caja."
   ],
-  "etiqueta_arbol": "Deja 5 cm de colchón siempre"
+  "etiqueta_arbol": "Deja 5 cm de colchón siempre",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-061",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez.",
+      "texto_nuevo": "Sugerencia de My Idea: anota esta regla en un lugar visible de tu zona de empaque para no improvisar cada vez.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "I have an idea/txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "L25-L30",
+        "frase": "Nodo: \"regla de los ~5 cm de colchón por todos lados\"."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. La extraccion da la regla (FedEx 5 a 7.5 cm, UPS 5 cm, DHL 6 cm; nodo: unos 5 cm por todos lados), pero en las 108 lineas del fichero no aparece nada sobre anotarla, ponerla a la vista ni tener una zona de empaque. Busque visible, anota, zona, checklist, lista y documento, sin resultado. El cartel visible es un formato que pone el paso, asi que no es una simple concrecion.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-007"
+    }
+  ]
 }

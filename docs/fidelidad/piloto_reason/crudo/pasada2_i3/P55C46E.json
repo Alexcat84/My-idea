@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P55C46E",
+  "intento": 0,
+  "usd": 0.171132,
+  "turnos": 1,
+  "duracion_s": 13.4,
+  "pared_s": 14.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37598,
+  "tokens_out": 1037,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P55C46E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2650, 2585, 2568, 105], \"cita\": \"Regular checks reveal where holes exist now and where they are most likely to appear next. ... a lengthy period without a bad accident does not signal the coming of peace. They see it, correctly, as a period of heightened danger and so reform and strengthen their defences accordingly.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda los chequeos regulares de defensas (L2650) y pide no fiarse de los resultados (L2568). Tambien trata el periodo sin accidentes como de mayor peligro (L2585). Revisar sin condicionar al historial va en esa direccion y no aconseja relajarse. 'Obligatorias' solo concreta la regularidad: no nombra una norma, una frecuencia ni un responsable.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P55C46E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2650,
+   2585,
+   2568,
+   105
+  ],
+  "cita": "Regular checks reveal where holes exist now and where they are most likely to appear next. ... a lengthy period without a bad accident does not signal the coming of peace. They see it, correctly, as a period of heightened danger and so reform and strengthen their defences accordingly.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda los chequeos regulares de defensas (L2650) y pide no fiarse de los resultados (L2568). Tambien trata el periodo sin accidentes como de mayor peligro (L2585). Revisar sin condicionar al historial va en esa direccion y no aconseja relajarse. 'Obligatorias' solo concreta la regularidad: no nombra una norma, una frecuencia ni un responsable.",
+  "paso_fiel": ""
+ }
+}

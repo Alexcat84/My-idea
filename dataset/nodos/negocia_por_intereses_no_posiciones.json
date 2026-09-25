@@ -9,10 +9,10 @@
     "Antes de reunirte, escribe la posición de la otra parte y pregúntate qué necesidad real puede esconder.",
     "Durante la conversación, pregunta por qué es importante eso para él en vez de discutir directamente el número.",
     "Cuando surja un desacuerdo, sepáralo de la persona: habla del problema, no de quién tiene razón.",
-    "Propón dos o tres opciones distintas que resuelvan el interés detectado, no solo la petición original.",
+    "Propón opciones distintas que resuelvan el interés detectado, no solo la petición original.",
     "Anota los criterios objetivos que ambos aceptan, como precios de mercado o plazos habituales, para apoyar la decisión final."
   ],
-  "entregable_esperado": "Una lista de los intereses reales detrás de la posición de la otra parte y dos opciones que los resuelven.",
+  "entregable_esperado": "Una lista de los intereses reales detrás de la posición de la otra parte y opciones que los resuelven.",
   "nodos_previos": [
     "aplica_modelo_ackerman",
     "depura_proveedores_sin_respuesta",
@@ -27,5 +27,40 @@
     "Sientes que estás discutiendo por orgullo más que por lo que realmente necesitas.",
     "Quieres encontrar una solución que ambos puedan aceptar sin sentir que perdieron."
   ],
-  "etiqueta_arbol": "Busca el interés, no la postura"
+  "etiqueta_arbol": "Busca el interés, no la postura",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-046",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Propón dos o tres opciones distintas que resuelvan el interés detectado, no solo la petición original.",
+      "texto_nuevo": "Propón opciones distintas que resuelvan el interés detectado, no solo la petición original.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "I have an idea/txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "L4949-L4957",
+        "frase": "Invent options for mutual gains."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro manda generar opciones para beneficio mutuo con una lluvia de ideas, pero no fija cuantas. Lo de dos o tres opciones no aparece en el libro.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-037"
+    },
+    {
+      "id": "fidelidad-t5-047",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una lista de los intereses reales detrás de la posición de la otra parte y dos opciones que los resuelven.",
+      "texto_nuevo": "Una lista de los intereses reales detrás de la posición de la otra parte y opciones que los resuelven.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "I have an idea/txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "L4949-L4957",
+        "frase": "Invent options for mutual gains."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): ANADIDO de cifra: el entregable fija un numero de opciones (dos), el mismo dato que el dos o tres opciones del paso 3; el libro pide inventar opciones de beneficio mutuo sin fijar cuantas, asi que se quita la cifra.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-037"
+    }
+  ]
 }

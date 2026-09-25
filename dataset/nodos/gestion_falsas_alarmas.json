@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Auditar la tasa de falsas alarmas de los sistemas de advertencia críticos",
     "Rediseñar los sistemas de alarma para reducir falsos positivos sin comprometer la sensibilidad",
-    "Establecer protocolos que impidan la desactivación unilateral de alarmas críticas sin verificación cruzada",
+    "Sugerencia de My Idea: establecer protocolos que impidan desactivar una alarma crítica de forma unilateral sin verificación cruzada, para que no se apague solo porque se desconfía de ella",
     "Capacitar al personal sobre los riesgos de desactivar alarmas por desconfianza histórica"
   ],
   "entregable_esperado": "Reporte de confiabilidad de sistemas de alarma con plan de reducción de falsos positivos",
@@ -21,5 +21,24 @@
     "Cuando existen antecedentes de alarmas falsas frecuentes en el sistema",
     "Si el personal ha mostrado desconfianza o desactivación de sistemas de advertencia"
   ],
-  "etiqueta_arbol": "No Ignores Falsas Alarmas"
+  "etiqueta_arbol": "No Ignores Falsas Alarmas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-19",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer protocolos que impidan la desactivación unilateral de alarmas críticas sin verificación cruzada",
+      "texto_nuevo": "Sugerencia de My Idea: establecer protocolos que impidan desactivar una alarma crítica de forma unilateral sin verificación cruzada, para que no se apague solo porque se desconfía de ella",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L1085",
+        "frase": "Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). La verificación cruzada contra la desactivación unilateral es un mecanismo añadido; el libro solo describe el riesgo de que las falsas alarmas hagan perder la confianza e ignorar avisos reales (L1085). Se reescribe como sugerencia de My Idea y se conserva el fin del libro. El dato no aparece en otros campos.",
+      "indice": 2,
+      "auditoria": "muestreo A21"
+    }
+  ]
 }

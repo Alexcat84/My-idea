@@ -6,7 +6,7 @@
   "fuente": "DeMarco y Lister, Waltzing with Bears",
   "resumen_teorico": "Cuando conoces tus riesgos, sabes cuánto margen guardar para protegerte: eso es la reserva de contingencia, tiempo y dinero apartados para cuando un riesgo pegue. La reserva es, por definición, algo que quizá no uses; por eso cuesta disciplina reservarla, y por eso quien no la tiene termina pagando mucho más caro cuando el riesgo se vuelve realidad. Lo importante es que su tamaño no sea un número al azar ni un diez por ciento de manual, sino que salga del riesgo real que mediste: mientras más grande e incierto el riesgo, mayor el colchón. La reserva incluye lo que gastarás en prepararte y lo que guardas para apagar incendios. Para el emprendedor, un colchón bien dimensionado es lo que le permite sobrevivir al golpe que a otros los saca del juego.",
   "pasos_accionables": [
-    "Suma el impacto probable de tus riesgos graves para estimar cuánto colchón necesitas.",
+    "Suma el impacto probable (probabilidad por costo) de todos tus riesgos para estimar cuánto colchón necesitas.",
     "Aparta tiempo y dinero de reserva proporcional a ese riesgo, no un porcentaje al azar.",
     "Separa la reserva del presupuesto normal: es para emergencias, no para gasto corriente.",
     "Revisa el tamaño del colchón cada vez que tus riesgos crezcan o se reduzcan."
@@ -26,5 +26,24 @@
     "cuando tu reserva es un porcentaje redondo sin relación con tus riesgos reales",
     "cuando gastas tu colchón de emergencia en el día a día"
   ],
-  "etiqueta_arbol": "Guarda un Colchón de Reserva"
+  "etiqueta_arbol": "Guarda un Colchón de Reserva",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-017",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Suma el impacto probable de tus riesgos graves para estimar cuánto colchón necesitas.",
+      "texto_nuevo": "Suma el impacto probable (probabilidad por costo) de todos tus riesgos para estimar cuánto colchón necesitas.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L582-L586",
+        "frase": "If you calculate exposure for all your risks and set aside a risk reserve equal to the total exposure, that risk reserve will, on average, be sufficient to pay for the risks that do materialize."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR B. El libro dimensiona la reserva con la exposicion total de todos los riesgos (L586, L606, L612). El paso cambia el alcance y mete un umbral: solo los riesgos graves. Asi sale una reserva menor que la que el libro considera suficiente en promedio. Busque apoyo: L608 admite asignar menos que la exposicion agregada, pero como estrategia 'less defensive' elegida a conciencia, no como forma de saber cuanto colchon necesitas. Ademas, los riesgos mas graves (showstoppers, L592-L596) quedan fuera de la reserva como supuestos del proyecto. El LECTOR A vio la discrepancia pero la dejo en OPERATIVO. Un umbral cambiado es CONTRARIO.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-058"
+    }
+  ]
 }

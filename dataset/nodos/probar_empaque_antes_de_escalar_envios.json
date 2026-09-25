@@ -10,7 +10,7 @@
     "Preguntale a tu courier si tiene un servicio de prueba de empaque gratuito.",
     "Envia la muestra marcada como paquete de prueba segun sus instrucciones.",
     "Espera el resultado y ajusta grosor de caja o relleno segun lo que senalen.",
-    "Repite la prueba si cambias de proveedor de cajas o de material de relleno."
+    "Sugerencia de My Idea: repite la prueba si cambias de proveedor de cajas o de material de relleno."
   ],
   "entregable_esperado": "Un reporte de prueba de tu courier que confirma si tu empaque actual resiste el transporte o que debes cambiar.",
   "nodos_previos": [
@@ -26,5 +26,24 @@
     "Ya tuviste productos danados en transito y no sabes si el problema es el empaque o el manejo.",
     "Vas a cambiar de proveedor de cajas o de material de relleno y no sabes si sigue funcionando igual."
   ],
-  "etiqueta_arbol": "Prueba tu empaque antes de escalar"
+  "etiqueta_arbol": "Prueba tu empaque antes de escalar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-27",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Repite la prueba si cambias de proveedor de cajas o de material de relleno.",
+      "texto_nuevo": "Sugerencia de My Idea: repite la prueba si cambias de proveedor de cajas o de material de relleno.",
+      "cita": {
+        "libro": "HowToPack_fxcom",
+        "fichero": "I have an idea/txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "L879-L879",
+        "frase": "We encourage you to submit a sample of your packaging for testing and evaluation."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Repetir la prueba al cambiar de proveedor es una frecuencia o disparador práctico que la guía no dice (L879 solo anima a enviar una muestra). Se reescribe como sugerencia de My Idea. El dato no se repite en el resumen ni en el entregable.",
+      "indice": 4,
+      "auditoria": "tramo1 FX1-015"
+    }
+  ]
 }

@@ -1,0 +1,141 @@
+{
+ "coste": {
+  "etapa": "traduccion",
+  "clave": "lote_030",
+  "intento": 0,
+  "usd": 0.059084000000000005,
+  "turnos": 1,
+  "duracion_s": 14.1,
+  "pared_s": 16.0,
+  "modelos": [
+   "claude-haiku-4-5-20251001",
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 3734,
+  "tokens_out": 1299,
+  "error": false
+ },
+ "resultado": "[{\"id\":\"P305F28\",\"consultas\":[\"task step analysis identifying omission-prone steps\",\"breaking maintenance task into discrete steps\",\"functionally isolated step not cued by preceding action\",\"omission likely after main goal of task achieved\"],\"nodo\":\"omission-prone task steps features in maintenance\"},{\"id\":\"PF725C4\",\"consultas\":[\"risk of maintenance neglect versus maintenance error\",\"preventive maintenance introduces errors while disturbing components\",\"trade-off between too little and too much maintenance\",\"maintenance-induced failures versus failures from lack of maintenance\"],\"nodo\":\"balance preventive versus corrective maintenance resource knee\"},{\"id\":\"P4FE10C\",\"consultas\":[\"ALARP as low as reasonably practicable regulatory approach\",\"comparative risk approach socially acceptable risk levels\",\"de minimis risk trivial one in a million\",\"zero risk approach acceptable risk regulation industry\"],\"nodo\":\"acceptable risk approaches ALARP comparative de minimis zero risk\"},{\"id\":\"PE341F4\",\"consultas\":[\"omissions largest category of maintenance errors\",\"INPO analysis of human performance problems maintenance omissions\",\"classification of maintenance errors incorrect installation wrong parts\",\"Rasmussen omission of functionally isolated acts maintenance\"],\"nodo\":\"omissions most common maintenance error type\"},{\"id\":\"PA3C55A\",\"consultas\":[\"culpability decision tree unsafe acts\",\"history of unsafe acts repeated errors blameworthy\",\"substitution test peers with similar training\",\"deliberate violation of procedures culpability substance abuse\"],\"nodo\":\"decision tree for determining culpability of unsafe acts\"},{\"id\":\"P51B55A\",\"consultas\":[\"shift handover procedures maintenance task transfer\",\"informal task handover borescope inspection covers not refitted\",\"shift changeover communication failure maintenance incident\",\"Boeing 737 engine cowling borescope inspection incident\"],\"nodo\":\"Boeing 737 borescope inspection shift handover maintenance case\"},{\"id\":\"P8A5749\",\"consultas\":[\"Tripod-Delta checklist indicators general failure types\",\"Tripod-Delta questionnaire administered quarterly profile\",\"general failure types hardware design maintenance management procedures\",\"measuring latent failure types Shell Tripod\"],\"nodo\":\"Tripod-Delta general failure types GFTs proactive measurement\"},{\"id\":\"P076CAA\",\"consultas\":[\"high-reliability organizations reconfigure under high tempo operations\",\"flexible culture shift from hierarchical to flatter structure\",\"control passes to task experts on the spot\",\"training front-line personnel trust decision-making authority\"],\"nodo\":\"flexible culture high-reliability organizations\"},{\"id\":\"PA8F90B\",\"consultas\":[\"person model versus system model error management\",\"changing the situation rather than the person\",\"human fallibility can be moderated but never eliminated\",\"retraining disciplinary measures warnings ineffective error management\"],\"nodo\":\"situational versus person approach to error management\"},{\"id\":\"PA67B45\",\"consultas\":[\"blame cycle illusion of free will\",\"human actions constrained by factors beyond individual control\",\"warnings sanctions exhortations little effect on error\",\"fundamental attribution error blaming individuals\"],\"nodo\":\"blame cycle free will naming blaming shaming\"},{\"id\":\"P66FA63\",\"consultas\":[\"latent conditions originate from top-level management decisions\",\"resident pathogens latent conditions design decisions\",\"tracing organizational factors back to management decisions\",\"active failures latent conditions breaching defences\"],\"nodo\":\"active failures and latent conditions\"},{\"id\":\"P6325AC\",\"consultas\":[\"violation-producing conditions procedure compliance\",\"likelihood of detection inconvenience of procedure violations\",\"regulatory compliance culture procedural violations organization\",\"attitudes beliefs group norms violations motivation\"],\"nodo\":\"violation-producing conditions VPCs\"}]",
+ "parseado": [
+  {
+   "id": "P305F28",
+   "consultas": [
+    "task step analysis identifying omission-prone steps",
+    "breaking maintenance task into discrete steps",
+    "functionally isolated step not cued by preceding action",
+    "omission likely after main goal of task achieved"
+   ],
+   "nodo": "omission-prone task steps features in maintenance"
+  },
+  {
+   "id": "PF725C4",
+   "consultas": [
+    "risk of maintenance neglect versus maintenance error",
+    "preventive maintenance introduces errors while disturbing components",
+    "trade-off between too little and too much maintenance",
+    "maintenance-induced failures versus failures from lack of maintenance"
+   ],
+   "nodo": "balance preventive versus corrective maintenance resource knee"
+  },
+  {
+   "id": "P4FE10C",
+   "consultas": [
+    "ALARP as low as reasonably practicable regulatory approach",
+    "comparative risk approach socially acceptable risk levels",
+    "de minimis risk trivial one in a million",
+    "zero risk approach acceptable risk regulation industry"
+   ],
+   "nodo": "acceptable risk approaches ALARP comparative de minimis zero risk"
+  },
+  {
+   "id": "PE341F4",
+   "consultas": [
+    "omissions largest category of maintenance errors",
+    "INPO analysis of human performance problems maintenance omissions",
+    "classification of maintenance errors incorrect installation wrong parts",
+    "Rasmussen omission of functionally isolated acts maintenance"
+   ],
+   "nodo": "omissions most common maintenance error type"
+  },
+  {
+   "id": "PA3C55A",
+   "consultas": [
+    "culpability decision tree unsafe acts",
+    "history of unsafe acts repeated errors blameworthy",
+    "substitution test peers with similar training",
+    "deliberate violation of procedures culpability substance abuse"
+   ],
+   "nodo": "decision tree for determining culpability of unsafe acts"
+  },
+  {
+   "id": "P51B55A",
+   "consultas": [
+    "shift handover procedures maintenance task transfer",
+    "informal task handover borescope inspection covers not refitted",
+    "shift changeover communication failure maintenance incident",
+    "Boeing 737 engine cowling borescope inspection incident"
+   ],
+   "nodo": "Boeing 737 borescope inspection shift handover maintenance case"
+  },
+  {
+   "id": "P8A5749",
+   "consultas": [
+    "Tripod-Delta checklist indicators general failure types",
+    "Tripod-Delta questionnaire administered quarterly profile",
+    "general failure types hardware design maintenance management procedures",
+    "measuring latent failure types Shell Tripod"
+   ],
+   "nodo": "Tripod-Delta general failure types GFTs proactive measurement"
+  },
+  {
+   "id": "P076CAA",
+   "consultas": [
+    "high-reliability organizations reconfigure under high tempo operations",
+    "flexible culture shift from hierarchical to flatter structure",
+    "control passes to task experts on the spot",
+    "training front-line personnel trust decision-making authority"
+   ],
+   "nodo": "flexible culture high-reliability organizations"
+  },
+  {
+   "id": "PA8F90B",
+   "consultas": [
+    "person model versus system model error management",
+    "changing the situation rather than the person",
+    "human fallibility can be moderated but never eliminated",
+    "retraining disciplinary measures warnings ineffective error management"
+   ],
+   "nodo": "situational versus person approach to error management"
+  },
+  {
+   "id": "PA67B45",
+   "consultas": [
+    "blame cycle illusion of free will",
+    "human actions constrained by factors beyond individual control",
+    "warnings sanctions exhortations little effect on error",
+    "fundamental attribution error blaming individuals"
+   ],
+   "nodo": "blame cycle free will naming blaming shaming"
+  },
+  {
+   "id": "P66FA63",
+   "consultas": [
+    "latent conditions originate from top-level management decisions",
+    "resident pathogens latent conditions design decisions",
+    "tracing organizational factors back to management decisions",
+    "active failures latent conditions breaching defences"
+   ],
+   "nodo": "active failures and latent conditions"
+  },
+  {
+   "id": "P6325AC",
+   "consultas": [
+    "violation-producing conditions procedure compliance",
+    "likelihood of detection inconvenience of procedure violations",
+    "regulatory compliance culture procedural violations organization",
+    "attitudes beliefs group norms violations motivation"
+   ],
+   "nodo": "violation-producing conditions VPCs"
+  }
+ ]
+}

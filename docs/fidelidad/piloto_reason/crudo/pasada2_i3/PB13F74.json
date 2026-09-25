@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PB13F74",
+  "intento": 0,
+  "usd": 0.172228,
+  "turnos": 1,
+  "duracion_s": 18.0,
+  "pared_s": 19.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36807,
+  "tokens_out": 1250,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB13F74\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [96, 973, 1076, 1133], \"cita\": \"In short, protective gains are frequently converted into productive advantages, leaving the organization with the same inadequate protection that prevailed before the event or with something even worse.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta como peligroso convertir las ganancias de protección en ventaja productiva y pide cautela con las defensas que sirven a otros fines (L973). Una política directiva que lo impida va en esa dirección. La crítica a acumular procedimientos (L990-1006) apunta a prohibiciones reactivas al operario, no a esta decisión de gestión. 'Políticas' es un medio genérico, no un dato concreto.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PB13F74",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   96,
+   973,
+   1076,
+   1133
+  ],
+  "cita": "In short, protective gains are frequently converted into productive advantages, leaving the organization with the same inadequate protection that prevailed before the event or with something even worse.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta como peligroso convertir las ganancias de protección en ventaja productiva y pide cautela con las defensas que sirven a otros fines (L973). Una política directiva que lo impida va en esa dirección. La crítica a acumular procedimientos (L990-1006) apunta a prohibiciones reactivas al operario, no a esta decisión de gestión. 'Políticas' es un medio genérico, no un dato concreto.",
+  "paso_fiel": ""
+ }
+}

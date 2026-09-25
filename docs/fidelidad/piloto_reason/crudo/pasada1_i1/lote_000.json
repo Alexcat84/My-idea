@@ -1,0 +1,70 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_000",
+  "intento": 0,
+  "usd": 0.155196,
+  "turnos": 1,
+  "duracion_s": 17.7,
+  "pared_s": 19.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31729,
+  "tokens_out": 1414,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PC5BFCE\",\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"marca\": true,\n    \"lineas\": [4276, 4280, 4284, 4288, 4292, 4296, 3965, 2769],\n    \"razon\": \"El libro enumera enfoques sin mandar fijar umbrales. Presenta el 'riesgo aceptable' como fuente de erosión (Challenger) y dice que la única meta alcanzable es la máxima resistencia intrínseca.\"\n  },\n  {\n    \"id\": \"PBEE943\",\n    \"clase\": \"FIEL\",\n    \"marca\": false,\n    \"lineas\": [5134],\n    \"razon\": \"El libro describe investigaciones inmediatas ('hot washups') cada vez que ocurren errores en las HRO, con acciones monitoreadas de cerca.\"\n  },\n  {\n    \"id\": \"PE722CD\",\n    \"clase\": \"FIEL\",\n    \"marca\": false,\n    \"lineas\": [3817, 2884, 2922, 2961, 4765, 4987],\n    \"razon\": \"El libro rechaza culpar como vía principal. El paso no propone 'no-blame' total, compatible con la cultura justa, que sanciona actos atroces.\"\n  },\n  {\n    \"id\": \"P71461D\",\n    \"clase\": \"INFERIDO\",\n    \"marca\": true,\n    \"lineas\": [2299, 2311, 2250],\n    \"razon\": \"Los fragmentos no tratan la revisión periódica de recordatorios. El libro los llama 'primeros auxilios' no permanentes y prefiere soluciones de diseño. Ajustarlos podría desviar de esa prioridad.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PC5BFCE",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4276,
+    4280,
+    4284,
+    4288,
+    4292,
+    4296,
+    3965,
+    2769
+   ],
+   "razon": "El libro enumera enfoques sin mandar fijar umbrales. Presenta el 'riesgo aceptable' como fuente de erosión (Challenger) y dice que la única meta alcanzable es la máxima resistencia intrínseca."
+  },
+  {
+   "id": "PBEE943",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5134
+   ],
+   "razon": "El libro describe investigaciones inmediatas ('hot washups') cada vez que ocurren errores en las HRO, con acciones monitoreadas de cerca."
+  },
+  {
+   "id": "PE722CD",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3817,
+    2884,
+    2922,
+    2961,
+    4765,
+    4987
+   ],
+   "razon": "El libro rechaza culpar como vía principal. El paso no propone 'no-blame' total, compatible con la cultura justa, que sanciona actos atroces."
+  },
+  {
+   "id": "P71461D",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    2299,
+    2311,
+    2250
+   ],
+   "razon": "Los fragmentos no tratan la revisión periódica de recordatorios. El libro los llama 'primeros auxilios' no permanentes y prefiere soluciones de diseño. Ajustarlos podría desviar de esa prioridad."
+  }
+ ]
+}

@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_104",
+  "intento": 0,
+  "usd": 0.1718,
+  "turnos": 1,
+  "duracion_s": 19.4,
+  "pared_s": 20.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33160,
+  "tokens_out": 1958,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PEF92B9\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4810, 4910, 4912, 4914], \"razon\": \"El libro lista como factor clave la retroalimentación rápida, útil, accesible e inteligible a la comunidad reportante, y la ilustra con ASRS y BASIS.\"},\n{\"id\": \"P678C0E\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [293, 310, 2652, 2654, 4105, 181], \"razon\": \"El libro respalda investigar defensas fallidas, pero advierte contra centrarse en eventos aislados. Recomienda analizar varios eventos con un marco común y remontarse a condiciones latentes.\"},\n{\"id\": \"PBDCEA9\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"operador\", \"fabricante\", \"regulador\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [248, 261, 263, 271, 273, 4523], \"razon\": \"El libro sí traza causas hasta el fabricante y el regulador. Pero pide reglas de parada y limitar el análisis a lo controlable por los gestores; «todos los actores» quita ese límite.\"},\n{\"id\": \"PC37AD0\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4257, 4261, 4263, 4265], \"razon\": \"Vaughan dice que interpretar las sanciones negociadas como fallos regulatorios es no entender el problema. El paso presenta el compromiso como algo opuesto al cumplimiento real, es decir, como una deficiencia.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PEF92B9",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4810,
+    4910,
+    4912,
+    4914
+   ],
+   "razon": "El libro lista como factor clave la retroalimentación rápida, útil, accesible e inteligible a la comunidad reportante, y la ilustra con ASRS y BASIS."
+  },
+  {
+   "id": "P678C0E",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    293,
+    310,
+    2652,
+    2654,
+    4105,
+    181
+   ],
+   "razon": "El libro respalda investigar defensas fallidas, pero advierte contra centrarse en eventos aislados. Recomienda analizar varios eventos con un marco común y remontarse a condiciones latentes."
+  },
+  {
+   "id": "PBDCEA9",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "operador",
+    "fabricante",
+    "regulador"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    248,
+    261,
+    263,
+    271,
+    273,
+    4523
+   ],
+   "razon": "El libro sí traza causas hasta el fabricante y el regulador. Pero pide reglas de parada y limitar el análisis a lo controlable por los gestores; «todos los actores» quita ese límite."
+  },
+  {
+   "id": "PC37AD0",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4257,
+    4261,
+    4263,
+    4265
+   ],
+   "razon": "Vaughan dice que interpretar las sanciones negociadas como fallos regulatorios es no entender el problema. El paso presenta el compromiso como algo opuesto al cumplimiento real, es decir, como una deficiencia."
+  }
+ ]
+}

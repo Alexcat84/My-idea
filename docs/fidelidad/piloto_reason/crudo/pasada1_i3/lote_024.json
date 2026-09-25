@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_024",
+  "intento": 0,
+  "usd": 0.162604,
+  "turnos": 1,
+  "duracion_s": 16.1,
+  "pared_s": 17.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33926,
+  "tokens_out": 1345,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P3110CA\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [81, 83, 3965, 3971, 3973], \"razon\": \"El libro describe atajos de seguridad por plazos que se vuelven hábito, la erosión gradual de márgenes y estándares, y decisiones incrementales no percibidas como tales.\"},\n  {\"id\": \"P08C9B3\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [520, 668, 674, 678, 686, 688, 692], \"razon\": \"El libro advierte del sesgo retrospectivo: una señal solo es advertencia si se sabe qué desastre vendrá. Además, ninguna señal aislada bastaba. El paso invierte ese criterio.\"},\n  {\"id\": \"PE0E2A5\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"especialistas de tarea (task specialists)\", \"por tipo de operación\"], \"clase\": \"FIEL\", \"lineas\": [3163, 3199, 3213], \"razon\": \"Los indicadores de Tripod-Delta los crean especialistas de tarea que trabajan en grupos, para cada tipo de operación.\"},\n  {\"id\": \"P96889B\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [202, 291, 425, 427, 3784], \"razon\": \"El libro usa una tabla que resume fallas activas y condiciones latentes (Tabla 2.1). Nota: puede haber condiciones latentes sin falla activa asociada.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P3110CA",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    81,
+    83,
+    3965,
+    3971,
+    3973
+   ],
+   "razon": "El libro describe atajos de seguridad por plazos que se vuelven hábito, la erosión gradual de márgenes y estándares, y decisiones incrementales no percibidas como tales."
+  },
+  {
+   "id": "P08C9B3",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    520,
+    668,
+    674,
+    678,
+    686,
+    688,
+    692
+   ],
+   "razon": "El libro advierte del sesgo retrospectivo: una señal solo es advertencia si se sabe qué desastre vendrá. Además, ninguna señal aislada bastaba. El paso invierte ese criterio."
+  },
+  {
+   "id": "PE0E2A5",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "especialistas de tarea (task specialists)",
+    "por tipo de operación"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3163,
+    3199,
+    3213
+   ],
+   "razon": "Los indicadores de Tripod-Delta los crean especialistas de tarea que trabajan en grupos, para cada tipo de operación."
+  },
+  {
+   "id": "P96889B",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    202,
+    291,
+    425,
+    427,
+    3784
+   ],
+   "razon": "El libro usa una tabla que resume fallas activas y condiciones latentes (Tabla 2.1). Nota: puede haber condiciones latentes sin falla activa asociada."
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_053",
+  "intento": 0,
+  "usd": 0.16677599999999998,
+  "turnos": 1,
+  "duracion_s": 17.7,
+  "pared_s": 18.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32824,
+  "tokens_out": 1774,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P813BCC\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5692, 5688, 5690], \"razon\": \"El libro dice que los carteles de horas sin LTI transmiten que el sitio es seguro, y no lo es. El paso va en la misma direccion.\"},\n  {\"id\": \"PA2687C\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"tres cosas\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1963, 1967, 1971, 1975, 1977, 1840, 2250], \"razon\": \"El libro aplica las tres preguntas a clases de actividad en tecnologias peligrosas. El paso las extiende a 'cada tarea de tu negocio': posible generalizacion.\"},\n  {\"id\": \"P9FD331\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2489, 2491, 2547, 2520, 5688], \"razon\": \"El libro afirma que los datos de resultado son poco fiables cuando las tasas son bajas (mas ruido que senal).\"},\n  {\"id\": \"PC774FF\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3395, 3397, 3659], \"razon\": \"HEART pide consultar las EPC y decidir cuales afectan a la actividad. El paso lo concreta sin datos nuevos, aunque omite asignar antes la tarea generica.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P813BCC",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5692,
+    5688,
+    5690
+   ],
+   "razon": "El libro dice que los carteles de horas sin LTI transmiten que el sitio es seguro, y no lo es. El paso va en la misma direccion."
+  },
+  {
+   "id": "PA2687C",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "tres cosas"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1963,
+    1967,
+    1971,
+    1975,
+    1977,
+    1840,
+    2250
+   ],
+   "razon": "El libro aplica las tres preguntas a clases de actividad en tecnologias peligrosas. El paso las extiende a 'cada tarea de tu negocio': posible generalizacion."
+  },
+  {
+   "id": "P9FD331",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2489,
+    2491,
+    2547,
+    2520,
+    5688
+   ],
+   "razon": "El libro afirma que los datos de resultado son poco fiables cuando las tasas son bajas (mas ruido que senal)."
+  },
+  {
+   "id": "PC774FF",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3395,
+    3397,
+    3659
+   ],
+   "razon": "HEART pide consultar las EPC y decidir cuales afectan a la actividad. El paso lo concreta sin datos nuevos, aunque omite asignar antes la tarea generica."
+  }
+ ]
+}

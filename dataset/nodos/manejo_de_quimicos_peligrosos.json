@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Manejo Seguro de Químicos Peligrosos en el Lugar de Trabajo",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en áreas ventiladas o aisladas para sustancias tóxicas.",
+  "resumen_teorico": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos.",
   "pasos_accionables": [
     "Instalar estaciones de lavado de ojos y duchas de seguridad donde se manejen químicos",
     "Proveer EPP adecuado (guantes, protección ocular, respiradores)",
     "Establecer procedimientos estándar para limpieza de derrames químicos",
     "Implementar monitoreo médico/biológico para trabajadores expuestos a sustancias específicas",
-    "Almacenar sustancias tóxicas en áreas aisladas o ventiladas"
+    "Almacenar en lugares remotos o aislados las sustancias que desprenden vapores tóxicos cuando no se usan"
   ],
   "entregable_esperado": "Procedimientos operativos estándar (SOP) para manejo y derrame de químicos, con EPP asignado",
   "nodos_previos": [
@@ -22,5 +22,40 @@
   "condiciones_activacion": [
     "Si los trabajadores manipulan directamente sustancias químicas peligrosas"
   ],
-  "etiqueta_arbol": "Maneja tus Químicos con Cuidado"
+  "etiqueta_arbol": "Maneja tus Químicos con Cuidado",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-39",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Almacenar sustancias tóxicas en áreas aisladas o ventiladas",
+      "texto_nuevo": "Almacenar en lugares remotos o aislados las sustancias que desprenden vapores tóxicos cuando no se usan",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L807",
+        "frase": "Materials that give off toxic, asphyxiant, suffocating, or anesthetic fumes are stored in remote or isolated locations when not in use."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). 'O ventiladas' abre una alternativa de almacenamiento que el libro no admite. El libro exige lugares remotos o aislados cuando no se usan (L807). Es una norma de seguridad, asi que se reemplaza por lo que dice el libro. El resumen_teorico repite el dato y se corrige igual.",
+      "indice": 4,
+      "auditoria": "tramo1 SB1-077"
+    },
+    {
+      "id": "fidelidad-t3-40",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en áreas ventiladas o aisladas para sustancias tóxicas.",
+      "texto_nuevo": "Incluye el uso de EPP adecuado, estaciones de lavado de ojos y duchas de emergencia, monitoreo médico/biológico para trabajadores expuestos, procedimientos de limpieza de derrames, y almacenamiento en lugares remotos o aislados, cuando no se usan, de las sustancias que desprenden vapores tóxicos.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L807",
+        "frase": "Materials that give off toxic, asphyxiant, suffocating, or anesthetic fumes are stored in remote or isolated locations when not in use."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+      "auditoria": "tramo1 SB1-077"
+    }
+  ]
 }

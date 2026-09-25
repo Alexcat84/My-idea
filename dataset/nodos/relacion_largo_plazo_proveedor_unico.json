@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar y reducir progresivamente el número de proveedores por artículo hacia uno solo",
     "Formar equipos conjuntos (proveedor-comprador) que incluyan ingeniería, diseño, manufactura y ventas",
-    "Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+    "Sugerencia de My Idea: establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
     "Evaluar proveedores no solo por precio sino por evidencia de mejora continua (Punto 5 de los 14 puntos)"
   ],
   "entregable_esperado": "Lista de proveedores únicos por artículo crítico y contratos de largo plazo firmados con criterios de calidad definidos",
@@ -26,5 +26,24 @@
     "Cuando la empresa maneja múltiples proveedores para un mismo insumo",
     "Si hay variación de calidad entre lotes de distintos proveedores del mismo ítem"
   ],
-  "etiqueta_arbol": "Elige un Solo Proveedor"
+  "etiqueta_arbol": "Elige un Solo Proveedor",
+  "correcciones": [
+    {
+      "id": "fidelidad-t12-03",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+      "texto_nuevo": "Sugerencia de My Idea: establecer contratos de largo plazo (varios años) con transparencia total de costos ('open books')",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L844-L850",
+        "frase": "In return for steelmakers' cooperation with GM in its cost-cutting objectives, the auto maker is expected to reward suppliers with multi-year contracts."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 5: la segunda pasada dio contrarios y se amplio al resto de los FIEL no releidos (lote Q028, lector y verificador de acuerdo). El libro respalda los contratos plurianuales (tambien L1063, hasta seis anos), pero no menciona en ningun sitio la transparencia total de costos ni los 'open books'. Lo busque con open book, transparen, disclos y cost data.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p3/VEREDICTOS_AMPLIACION.jsonl, id Q028-092"
+    }
+  ]
 }

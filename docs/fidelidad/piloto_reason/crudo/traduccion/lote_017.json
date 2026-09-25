@@ -1,0 +1,129 @@
+{
+ "coste": {
+  "etapa": "traduccion",
+  "clave": "lote_017",
+  "intento": 0,
+  "usd": 0.060245,
+  "turnos": 1,
+  "duracion_s": 14.4,
+  "pared_s": 16.3,
+  "modelos": [
+   "claude-haiku-4-5-20251001",
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 3863,
+  "tokens_out": 1304,
+  "error": false
+ },
+ "resultado": "[{\"id\": \"P41A4E4\", \"consultas\": [\"omission-prone task step features functionally isolated not cued by preceding action\", \"steps occurring after main goal of task achieved omitted\", \"items concealed hidden from view, recent change of practice, multiple similar items installed\"], \"nodo\": \"identifying omission-prone steps in maintenance tasks\"}, {\"id\": \"PCCD65C\", \"consultas\": [\"regulator conflict of goals safety versus commercial viability of operators\", \"Australian Civil Aviation Authority Seaview and Monarch Young accidents\", \"regulatory body funded by the industry it regulates independence\"], \"nodo\": \"regulators caught between safety goals and commercial pressures\"}, {\"id\": \"PBEF22B\", \"consultas\": [\"self-inspection sign-off without independent checking by quality inspectors\", \"quality assurance replacing quality control removing independent inspection\", \"risks of technicians signing off their own work\"], \"nodo\": \"quality control versus quality assurance and total quality management\"}, {\"id\": \"PDBA388\", \"consultas\": [\"process measures versus outcome measures of safety performance\", \"lost time injury rates unreliable indicators when accidents rare\", \"Poisson distribution Prussian cavalry horse kicks noise versus signal\"], \"nodo\": \"process measures versus negative outcome measures of safety\"}, {\"id\": \"P8BE1A0\", \"consultas\": [\"procedures overspecified space of permitted actions shrinks after each accident\", \"necessary violations to get job done when procedures unworkable\", \"rules added after accidents forcing workers to violate procedures\"], \"nodo\": \"procedural overspecification leading to necessary violations\"}, {\"id\": \"PCFD6D5\", \"consultas\": [\"false alarms cry wolf operators lose trust in warning systems\", \"Trident accident Staines 1972 stick-pusher disabled by crew\", \"operators disconnect or ignore alarms after spurious activations\"], \"nodo\": \"false alarms and the cry wolf effect on warning systems\"}, {\"id\": \"PA514F3\", \"consultas\": [\"dangerous defences barriers create new unforeseen hazards\", \"plate armour Agincourt knights helpless when fallen\", \"automation and defences change human role creating new vulnerabilities\"], \"nodo\": \"dangerous defences: safeguards introducing new risks\"}, {\"id\": \"PFFD0B9\", \"consultas\": [\"omissions largest category of maintenance errors INPO Rasmussen\", \"omission errors at planning, intention storage, execution, monitoring stages\", \"forgetting intentions lapses slips failing to perform necessary steps\"], \"nodo\": \"omissions as dominant error type in maintenance\"}, {\"id\": \"P4D13DF\", \"consultas\": [\"latent conditions organizational processes design construction maintenance training\", \"resident pathogens dormant weaknesses combine with local triggering factors\", \"latent conditions versus active failures at sharp end\"], \"nodo\": \"latent conditions in complex organizational systems\"}, {\"id\": \"PD018B7\", \"consultas\": [\"Boeing 737 borescope inspection high pressure rotor drive covers not refitted\", \"line maintenance and base maintenance different working practices\", \"shift handover undermanning supervisor performing task outside routine\"], \"nodo\": \"case study of maintenance omission on Boeing 737 engines\"}, {\"id\": \"PC564E1\", \"consultas\": [\"near miss reports estimate potential financial cost to attract management attention\", \"free lessons near misses inoculate system against accidents\", \"incident reporting schemes costing potential losses for managers\"], \"nodo\": \"near-miss and incident reporting systems\"}, {\"id\": \"P1020AF\", \"consultas\": [\"proactive process measurement organizational factors priority assessment\", \"Tripod-Delta general failure types management of change communication procurement\", \"organizational factors parent processes creating local workplace factors\"], \"nodo\": \"priorities for proactive measurement of safety processes\"}]",
+ "parseado": [
+  {
+   "id": "P41A4E4",
+   "consultas": [
+    "omission-prone task step features functionally isolated not cued by preceding action",
+    "steps occurring after main goal of task achieved omitted",
+    "items concealed hidden from view, recent change of practice, multiple similar items installed"
+   ],
+   "nodo": "identifying omission-prone steps in maintenance tasks"
+  },
+  {
+   "id": "PCCD65C",
+   "consultas": [
+    "regulator conflict of goals safety versus commercial viability of operators",
+    "Australian Civil Aviation Authority Seaview and Monarch Young accidents",
+    "regulatory body funded by the industry it regulates independence"
+   ],
+   "nodo": "regulators caught between safety goals and commercial pressures"
+  },
+  {
+   "id": "PBEF22B",
+   "consultas": [
+    "self-inspection sign-off without independent checking by quality inspectors",
+    "quality assurance replacing quality control removing independent inspection",
+    "risks of technicians signing off their own work"
+   ],
+   "nodo": "quality control versus quality assurance and total quality management"
+  },
+  {
+   "id": "PDBA388",
+   "consultas": [
+    "process measures versus outcome measures of safety performance",
+    "lost time injury rates unreliable indicators when accidents rare",
+    "Poisson distribution Prussian cavalry horse kicks noise versus signal"
+   ],
+   "nodo": "process measures versus negative outcome measures of safety"
+  },
+  {
+   "id": "P8BE1A0",
+   "consultas": [
+    "procedures overspecified space of permitted actions shrinks after each accident",
+    "necessary violations to get job done when procedures unworkable",
+    "rules added after accidents forcing workers to violate procedures"
+   ],
+   "nodo": "procedural overspecification leading to necessary violations"
+  },
+  {
+   "id": "PCFD6D5",
+   "consultas": [
+    "false alarms cry wolf operators lose trust in warning systems",
+    "Trident accident Staines 1972 stick-pusher disabled by crew",
+    "operators disconnect or ignore alarms after spurious activations"
+   ],
+   "nodo": "false alarms and the cry wolf effect on warning systems"
+  },
+  {
+   "id": "PA514F3",
+   "consultas": [
+    "dangerous defences barriers create new unforeseen hazards",
+    "plate armour Agincourt knights helpless when fallen",
+    "automation and defences change human role creating new vulnerabilities"
+   ],
+   "nodo": "dangerous defences: safeguards introducing new risks"
+  },
+  {
+   "id": "PFFD0B9",
+   "consultas": [
+    "omissions largest category of maintenance errors INPO Rasmussen",
+    "omission errors at planning, intention storage, execution, monitoring stages",
+    "forgetting intentions lapses slips failing to perform necessary steps"
+   ],
+   "nodo": "omissions as dominant error type in maintenance"
+  },
+  {
+   "id": "P4D13DF",
+   "consultas": [
+    "latent conditions organizational processes design construction maintenance training",
+    "resident pathogens dormant weaknesses combine with local triggering factors",
+    "latent conditions versus active failures at sharp end"
+   ],
+   "nodo": "latent conditions in complex organizational systems"
+  },
+  {
+   "id": "PD018B7",
+   "consultas": [
+    "Boeing 737 borescope inspection high pressure rotor drive covers not refitted",
+    "line maintenance and base maintenance different working practices",
+    "shift handover undermanning supervisor performing task outside routine"
+   ],
+   "nodo": "case study of maintenance omission on Boeing 737 engines"
+  },
+  {
+   "id": "PC564E1",
+   "consultas": [
+    "near miss reports estimate potential financial cost to attract management attention",
+    "free lessons near misses inoculate system against accidents",
+    "incident reporting schemes costing potential losses for managers"
+   ],
+   "nodo": "near-miss and incident reporting systems"
+  },
+  {
+   "id": "P1020AF",
+   "consultas": [
+    "proactive process measurement organizational factors priority assessment",
+    "Tripod-Delta general failure types management of change communication procurement",
+    "organizational factors parent processes creating local workplace factors"
+   ],
+   "nodo": "priorities for proactive measurement of safety processes"
+  }
+ ]
+}

@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_051",
+  "intento": 0,
+  "usd": 0.16321200000000002,
+  "turnos": 1,
+  "duracion_s": 14.7,
+  "pared_s": 15.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33813,
+  "tokens_out": 1398,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P1B0FE9\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [415, 417, 419, 451],\n    \"razon\": \"El libro señala la diferencia de prácticas entre mantenimiento de línea y de base como una grieta del sistema. Revisarla la concreta en la misma dirección.\"\n  },\n  {\n    \"id\": \"P7D12BF\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"tres cosas\"],\n    \"clase\": \"FIEL\",\n    \"lineas\": [1963, 1967, 1971, 1975, 1977],\n    \"razon\": \"El libro plantea exactamente tres preguntas: contacto directo, criticidad y frecuencia. Lo hace para actividades de tecnologías peligrosas; aplicarlo a 'tu negocio' es una extensión menor.\"\n  },\n  {\n    \"id\": \"P0C2AE9\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [5037, 5057, 668, 674, 678],\n    \"razon\": \"La prueba juzga según cómo se percibieron los hechos en tiempo real y según las circunstancias del momento. Presentarlas a los pares concreta ese paso.\"\n  },\n  {\n    \"id\": \"P67A52A\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [4502, 4500, 3075, 2872, 2876],\n    \"razon\": \"El libro afirma que eliminar las instancias una por una no mejora la salud de seguridad. Lo principal es reformar los factores organizacionales de origen; las reparaciones locales quedan subordinadas.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P1B0FE9",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    415,
+    417,
+    419,
+    451
+   ],
+   "razon": "El libro señala la diferencia de prácticas entre mantenimiento de línea y de base como una grieta del sistema. Revisarla la concreta en la misma dirección."
+  },
+  {
+   "id": "P7D12BF",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "tres cosas"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    1963,
+    1967,
+    1971,
+    1975,
+    1977
+   ],
+   "razon": "El libro plantea exactamente tres preguntas: contacto directo, criticidad y frecuencia. Lo hace para actividades de tecnologías peligrosas; aplicarlo a 'tu negocio' es una extensión menor."
+  },
+  {
+   "id": "P0C2AE9",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5037,
+    5057,
+    668,
+    674,
+    678
+   ],
+   "razon": "La prueba juzga según cómo se percibieron los hechos en tiempo real y según las circunstancias del momento. Presentarlas a los pares concreta ese paso."
+  },
+  {
+   "id": "P67A52A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4502,
+    4500,
+    3075,
+    2872,
+    2876
+   ],
+   "razon": "El libro afirma que eliminar las instancias una por una no mejora la salud de seguridad. Lo principal es reformar los factores organizacionales de origen; las reparaciones locales quedan subordinadas."
+  }
+ ]
+}

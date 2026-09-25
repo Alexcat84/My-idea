@@ -1,0 +1,73 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_100",
+  "intento": 0,
+  "usd": 0.16346,
+  "turnos": 1,
+  "duracion_s": 17.4,
+  "pared_s": 18.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32910,
+  "tokens_out": 1591,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P9227CD\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [3993, 4060, 4418, 4039, 4121, 5781], \"razon\": \"El libro documenta recortes de personal y presupuesto que degradaron la supervisión (NASA, Transport Canada, HSE, ACAA). Identificar esas funciones reducidas va en la misma dirección.\"},\n  {\"id\": \"PFA6E1A\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [2596, 2520, 2654, 2638], \"razon\": \"L2596 lista esos procesos. Pero L2654 advierte que no conviene medirlos todos: hay que elegirlos analizando múltiples eventos. Además, L2638 exige combinarlos con medidas reactivas. El paso omite ambas condiciones.\"},\n  {\"id\": \"PBF0132\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [293, 196, 2905, 4105, 5710, 5712, 5763], \"razon\": \"Coincide con el modelo de investigación del libro. Sin embargo, L5712 y L5763 advierten que el péndulo pudo ir demasiado lejos al rastrear factores remotos. Conviene revisar ese matiz.\"},\n  {\"id\": \"P5B08D2\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5603, 5639, 5701, 5907], \"razon\": \"Priorizar por el riesgo predominante del dominio puede descuidar las condiciones latentes, que el libro considera altas en todos los dominios. L5907 pide contramedidas simultáneas en todos los niveles, sin ignorar ningún tipo de riesgo.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P9227CD",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    3993,
+    4060,
+    4418,
+    4039,
+    4121,
+    5781
+   ],
+   "razon": "El libro documenta recortes de personal y presupuesto que degradaron la supervisión (NASA, Transport Canada, HSE, ACAA). Identificar esas funciones reducidas va en la misma dirección."
+  },
+  {
+   "id": "PFA6E1A",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    2596,
+    2520,
+    2654,
+    2638
+   ],
+   "razon": "L2596 lista esos procesos. Pero L2654 advierte que no conviene medirlos todos: hay que elegirlos analizando múltiples eventos. Además, L2638 exige combinarlos con medidas reactivas. El paso omite ambas condiciones."
+  },
+  {
+   "id": "PBF0132",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    293,
+    196,
+    2905,
+    4105,
+    5710,
+    5712,
+    5763
+   ],
+   "razon": "Coincide con el modelo de investigación del libro. Sin embargo, L5712 y L5763 advierten que el péndulo pudo ir demasiado lejos al rastrear factores remotos. Conviene revisar ese matiz."
+  },
+  {
+   "id": "P5B08D2",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5603,
+    5639,
+    5701,
+    5907
+   ],
+   "razon": "Priorizar por el riesgo predominante del dominio puede descuidar las condiciones latentes, que el libro considera altas en todos los dominios. L5907 pide contramedidas simultáneas en todos los niveles, sin ignorar ningún tipo de riesgo."
+  }
+ ]
+}

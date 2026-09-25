@@ -4,16 +4,16 @@
   "dominio": "core",
   "titulo_concepto": "Planificación de Escenarios Futuros (Scenario Planning)",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Técnica de estrategia que consiste en imaginar futuros concretos, no en predecirlos, a partir de dos o más impulsores de incertidumbre clave de la industria. Se cruzan esos impulsores en una matriz para construir entre 2 y 4 escenarios detallados, cuidando que entre ellos estén el mejor y el peor caso posible del entorno externo a 5 a 10 años, y no solo el futuro que la empresa ya da por esperado. Cada escenario se titula y se narra, y luego un taller desarrolla con lluvia de ideas y técnicas de creatividad un modelo de negocio apropiado para cada uno, con preguntas específicas por bloque del Canvas. Con los escenarios ya construidos se nombran las decisiones primarias que la empresa enfrenta, se asigna una probabilidad pequeña a los escenarios alternativos para reconsiderar con ella las decisiones de inversión, y se identifican las señales y marcadores tempranos que dicen hacia qué escenario se está moviendo el mundo. El caso clásico es AT&T rechazando el control gratuito de internet por no haber considerado escenarios alternativos a su tecnología dominante.",
+  "resumen_teorico": "Técnica de estrategia que consiste en imaginar futuros concretos, no en predecirlos, a partir de dos o más impulsores de incertidumbre clave de la industria. Se cruzan esos impulsores en una matriz para construir entre 2 y 4 escenarios detallados del entorno futuro de la empresa. Cada escenario se titula y se narra, y luego un taller desarrolla con lluvia de ideas y técnicas de creatividad un modelo de negocio apropiado para cada uno, con preguntas específicas por bloque del Canvas. El caso clásico es AT&T rechazando el control gratuito de internet por no haber considerado escenarios alternativos a su tecnología dominante.",
   "pasos_accionables": [
     "Identifica dos o más impulsores de incertidumbre clave que puedan transformar tu industria (por ejemplo la tecnología o la regulación): son las dimensiones que van a caracterizar a tus escenarios",
-    "Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios distintos, y asegúrate de que entre ellos estén descritos en detalle, a 5 a 10 años, el mejor y el peor escenario posible para el entorno externo de tu empresa",
+    "Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios distintos del entorno futuro de tu empresa",
     "Titula y narra cada escenario con una historia breve que describa sus elementos principales",
     "Organiza un taller donde los participantes desarrollen un modelo de negocio apropiado para cada escenario, usando lluvia de ideas y técnicas de creatividad, y formula preguntas específicas por bloque del Canvas (KP, KA, VP, CR, CS, C$, R$) para cada uno",
-    "Identifica las decisiones primarias que enfrenta tu empresa (nuevos negocios, tecnologías, productos), asigna una probabilidad pequeña a los escenarios alternativos y reconsidera con ella tus decisiones de inversión",
-    "Identifica las señales y marcadores tempranos que indiquen hacia qué escenario se está moviendo el mundo"
+    "Sugerencia de My Idea: identifica las decisiones primarias que enfrenta tu empresa (nuevos negocios, tecnologías, productos), asigna una probabilidad pequeña a los escenarios alternativos y reconsidera con ella tus decisiones de inversión",
+    "Sugerencia de My Idea: identifica las señales y marcadores tempranos que indiquen hacia qué escenario se está moviendo el mundo"
   ],
-  "entregable_esperado": "Documento con 2 a 4 escenarios futuros titulados y narrados, entre ellos el mejor y el peor caso descritos en detalle, con un modelo de negocio (Canvas) propuesto para cada uno, las decisiones primarias y de inversión asociadas con su probabilidad, y las señales de alerta temprana identificadas",
+  "entregable_esperado": "Documento con 2 a 4 escenarios futuros titulados y narrados, con un modelo de negocio (Canvas) propuesto para cada uno, las decisiones primarias y de inversión asociadas con su probabilidad, y las señales de alerta temprana identificadas",
   "nodos_previos": [
     "lienzo_modelo_negocio",
     "iota_analysis",
@@ -45,6 +45,107 @@
       "node_id": "escenarios_futuros",
       "titulo": "Desarrollo de Escenarios Futuros Alternativos",
       "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-015",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica las señales y marcadores tempranos que indiquen hacia qué escenario se está moviendo el mundo",
+      "texto_nuevo": "Sugerencia de My Idea: identifica las señales y marcadores tempranos que indiquen hacia qué escenario se está moviendo el mundo",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2977-L2997",
+        "frase": "1 DEVELOP A SET OF FUTURE SCENARIOS BASED ON TWO OR MORE MAIN CRITERIA. 2 DESCRIBE EACH SCENARIO WITH A STORY ... 3 WORKSHOP DEVELOP ONE OR MORE APPROPRIATE BUSINESS MODELS FOR EACH SCENARIO"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El metodo del libro tiene tres pasos: desarrollar escenarios, narrarlos y hacer el taller. En la seccion de escenarios no habla de vigilar senales o marcadores tempranos. Solo aparecen 'early warning signals' en un comentario de un lector sobre la implementacion (L4611), no en el metodo de escenarios.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C119-013"
+    },
+    {
+      "id": "fidelidad-t9-016",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Identifica las decisiones primarias que enfrenta tu empresa (nuevos negocios, tecnologías, productos), asigna una probabilidad pequeña a los escenarios alternativos y reconsidera con ella tus decisiones de inversión",
+      "texto_nuevo": "Sugerencia de My Idea: identifica las decisiones primarias que enfrenta tu empresa (nuevos negocios, tecnologías, productos), asigna una probabilidad pequeña a los escenarios alternativos y reconsidera con ella tus decisiones de inversión",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2977-L2997",
+        "frase": "The goal of combining scenarios with business model innovation efforts is to help your organization prepare for the future."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Para los escenarios el libro solo pide desarrollarlos, narrarlos y crear en un taller un modelo de negocio para cada uno. No pide identificar decisiones primarias, asignar probabilidades ni revisar inversiones. Busque 'probabilit' e 'investment decision' sin resultado en este contexto.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C119-034"
+    },
+    {
+      "id": "fidelidad-t9-017",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica de estrategia que consiste en imaginar futuros concretos, no en predecirlos, a partir de dos o más impulsores de incertidumbre clave de la industria. Se cruzan esos impulsores en una matriz para construir entre 2 y 4 escenarios detallados, cuidando que entre ellos estén el mejor y el peor caso posible del entorno externo a 5 a 10 años, y no solo el futuro que la empresa ya da por esperado. Cada escenario se titula y se narra, y luego un taller desarrolla con lluvia de ideas y técnicas de creatividad un modelo de negocio apropiado para cada uno, con preguntas específicas por bloque del Canvas. Con los escenarios ya construidos se nombran las decisiones primarias que la empresa enfrenta, se asigna una probabilidad pequeña a los escenarios alternativos para reconsiderar con ella las decisiones de inversión, y se identifican las señales y marcadores tempranos que dicen hacia qué escenario se está moviendo el mundo. El caso clásico es AT&T rechazando el control gratuito de internet por no haber considerado escenarios alternativos a su tecnología dominante.",
+      "texto_nuevo": "Técnica de estrategia que consiste en imaginar futuros concretos, no en predecirlos, a partir de dos o más impulsores de incertidumbre clave de la industria. Se cruzan esos impulsores en una matriz para construir entre 2 y 4 escenarios detallados, cuidando que entre ellos estén el mejor y el peor caso posible del entorno externo a 5 a 10 años, y no solo el futuro que la empresa ya da por esperado. Cada escenario se titula y se narra, y luego un taller desarrolla con lluvia de ideas y técnicas de creatividad un modelo de negocio apropiado para cada uno, con preguntas específicas por bloque del Canvas. El caso clásico es AT&T rechazando el control gratuito de internet por no haber considerado escenarios alternativos a su tecnología dominante.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2977-L2997",
+        "frase": "The goal of combining scenarios with business model innovation efforts is to help your organization prepare for the future."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): Añadidos prácticos (C119-034 y C119-013, pasos 4 y 5, ahora Sugerencia de My Idea): el resumen teórico los presenta como parte del método del libro, que solo pide desarrollar, narrar y trabajar en taller los escenarios. Se quitan del resumen en un único segmento porque los dos datos están en la misma frase; el entregable y los pasos quedan igual.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C119-034"
+    },
+    {
+      "id": "fidelidad-t9-018",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios distintos, y asegúrate de que entre ellos estén descritos en detalle, a 5 a 10 años, el mejor y el peor escenario posible para el entorno externo de tu empresa",
+      "texto_nuevo": "Cruza esos impulsores en una matriz para generar entre 2 y 4 escenarios distintos del entorno futuro de tu empresa",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2909-L2995",
+        "frase": "Ideally you should develop between two and four different scenarios based on two or more criteria in order to run a good business model scenario workshop."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. La cifra de 2 a 4 escenarios y el cruce de dos impulsores (que dan cuatro escenarios) estan en el libro. El libro no fija un plazo de 5 a 10 anos (el ejemplo farmaceutico habla de la proxima decada, a titulo ilustrativo) ni pide incluir el mejor y el peor caso. Busque 'worst', 'best case' y '10 years' sin resultado.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C119-046"
+    },
+    {
+      "id": "fidelidad-t9-019",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Técnica de estrategia que consiste en imaginar futuros concretos, no en predecirlos, a partir de dos o más impulsores de incertidumbre clave de la industria. Se cruzan esos impulsores en una matriz para construir entre 2 y 4 escenarios detallados, cuidando que entre ellos estén el mejor y el peor caso posible del entorno externo a 5 a 10 años, y no solo el futuro que la empresa ya da por esperado. Cada escenario se titula y se narra, y luego un taller desarrolla con lluvia de ideas y técnicas de creatividad un modelo de negocio apropiado para cada uno, con preguntas específicas por bloque del Canvas. El caso clásico es AT&T rechazando el control gratuito de internet por no haber considerado escenarios alternativos a su tecnología dominante.",
+      "texto_nuevo": "Técnica de estrategia que consiste en imaginar futuros concretos, no en predecirlos, a partir de dos o más impulsores de incertidumbre clave de la industria. Se cruzan esos impulsores en una matriz para construir entre 2 y 4 escenarios detallados del entorno futuro de la empresa. Cada escenario se titula y se narra, y luego un taller desarrolla con lluvia de ideas y técnicas de creatividad un modelo de negocio apropiado para cada uno, con preguntas específicas por bloque del Canvas. El caso clásico es AT&T rechazando el control gratuito de internet por no haber considerado escenarios alternativos a su tecnología dominante.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2909-L2995",
+        "frase": "Ideally you should develop between two and four different scenarios based on two or more criteria in order to run a good business model scenario workshop."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el plazo de 5 a 10 años y la obligación de incluir el mejor y el peor caso, añadidos que se quitan del paso 1 porque el libro no los fija.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C119-046"
+    },
+    {
+      "id": "fidelidad-t9-020",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documento con 2 a 4 escenarios futuros titulados y narrados, entre ellos el mejor y el peor caso descritos en detalle, con un modelo de negocio (Canvas) propuesto para cada uno, las decisiones primarias y de inversión asociadas con su probabilidad, y las señales de alerta temprana identificadas",
+      "texto_nuevo": "Documento con 2 a 4 escenarios futuros titulados y narrados, con un modelo de negocio (Canvas) propuesto para cada uno, las decisiones primarias y de inversión asociadas con su probabilidad, y las señales de alerta temprana identificadas",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2909-L2995",
+        "frase": "Ideally you should develop between two and four different scenarios based on two or more criteria in order to run a good business model scenario workshop."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la obligación de incluir el mejor y el peor caso, añadido de norma que se quita del paso 1 porque el libro no lo pide.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C119-046"
     }
   ]
 }

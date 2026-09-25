@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_049",
+  "intento": 0,
+  "usd": 0.159964,
+  "turnos": 1,
+  "duracion_s": 14.5,
+  "pared_s": 15.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32876,
+  "tokens_out": 1423,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P78D885\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"grupo de confianza\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5055, 5057, 5063], \"razon\": \"El libro habla de un 'jurado' de pares del implicado para la zona gris. Un 'grupo de confianza' sin exigir pares podría apartarse del test de sustitución.\"},\n {\"id\": \"PB3955F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2648, 2652, 2654], \"razon\": \"El libro pide revelar patrones recurrentes de causa-efecto en condiciones locales y organizacionales analizando muchos eventos con un marco común.\"},\n {\"id\": \"P3E6A38\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [263, 5748], \"razon\": \"El libro presenta la evidencia disponible como una limitación. Su criterio para fijar límites es lo que los gestores pueden controlar; el paso invierte esa prioridad.\"},\n {\"id\": \"PFEB781\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"EPC\", \"probabilidad nominal\"], \"clase\": \"FIEL\", \"lineas\": [3395, 3397], \"razon\": \"El libro dice literalmente que la probabilidad nominal se multiplica por una proporción juzgada del factor EPC correspondiente.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P78D885",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "grupo de confianza"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5055,
+    5057,
+    5063
+   ],
+   "razon": "El libro habla de un 'jurado' de pares del implicado para la zona gris. Un 'grupo de confianza' sin exigir pares podría apartarse del test de sustitución."
+  },
+  {
+   "id": "PB3955F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2648,
+    2652,
+    2654
+   ],
+   "razon": "El libro pide revelar patrones recurrentes de causa-efecto en condiciones locales y organizacionales analizando muchos eventos con un marco común."
+  },
+  {
+   "id": "P3E6A38",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    263,
+    5748
+   ],
+   "razon": "El libro presenta la evidencia disponible como una limitación. Su criterio para fijar límites es lo que los gestores pueden controlar; el paso invierte esa prioridad."
+  },
+  {
+   "id": "PFEB781",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "EPC",
+    "probabilidad nominal"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3395,
+    3397
+   ],
+   "razon": "El libro dice literalmente que la probabilidad nominal se multiplica por una proporción juzgada del factor EPC correspondiente."
+  }
+ ]
+}

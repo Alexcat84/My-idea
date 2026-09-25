@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Decisiones Reversibles vs Irreversibles",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "En una startup el saldo bancario decrece cada día, así que la velocidad de decisión es crítica. Las decisiones se dividen en dos tipos: reversibles, como agregar o quitar una característica o cambiar de segmento de clientes, e irreversibles, como despedir, firmar contratos largos o lanzar un producto. Las decisiones reversibles deben tomarse rápido, sin buscar la perfección ni imitar procesos de gran empresa, porque lo que importa es mantener el momentum y un ciclo de feedback basado en hechos para corregir sobre la marcha. El análisis profundo se reserva para las irreversibles. Medir tu propio tempo de decisión te ayuda a detectar cuándo te estás paralizando.",
+  "resumen_teorico": "En una startup el saldo bancario decrece cada día, así que la velocidad de decisión es crítica. Las decisiones se dividen en dos tipos: reversibles, como agregar o quitar una característica o cambiar de segmento de clientes, e irreversibles, como despedir, firmar contratos largos o lanzar un producto. Las decisiones reversibles deben tomarse rápido, sin buscar la perfección ni imitar procesos de gran empresa, porque lo que importa es mantener el momentum y un ciclo de feedback basado en hechos para corregir sobre la marcha. El análisis profundo se reserva para las irreversibles.",
   "pasos_accionables": [
     "Clasificar cada decisión pendiente como reversible o irreversible antes de analizarla",
     "Para las reversibles, fijarte un límite de tiempo corto y decidir antes de pasar a la siguiente tarea",
     "Reservar el análisis profundo solo para las decisiones irreversibles",
     "Crear un registro simple para revisar y corregir rápido las decisiones que resultaron erróneas",
-    "Anotar cuántas decisiones tomas y revisas por semana para medir tu tempo"
+    "Sugerencia de My Idea: anotar cuántas decisiones tomas y revisas por semana para medir tu tempo"
   ],
   "entregable_esperado": "Lista personal de clasificación de decisiones pendientes con reglas de tiempo límite para resolverlas.",
   "nodos_previos": [
@@ -36,6 +36,41 @@
       "node_id": "decisiones_rapidas_reversibles",
       "titulo": "Toma de Decisiones Rápida y Reversible",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-030",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anotar cuántas decisiones tomas y revisas por semana para medir tu tempo",
+      "texto_nuevo": "Sugerencia de My Idea: anotar cuántas decisiones tomas y revisas por semana para medir tu tempo",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L1270-L1272",
+        "frase": "tempo--the ability to make quick decisions consistently and at all levels in the company"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla de tempo y compara 20 decisiones tomadas y cinco revertidas, pero no pide contar decisiones por semana; busqué 'week', 'semana' junto a decisiones sin resultado. Frecuencia y métrica añadidas.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C069-102"
+    },
+    {
+      "id": "fidelidad-t7-031",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En una startup el saldo bancario decrece cada día, así que la velocidad de decisión es crítica. Las decisiones se dividen en dos tipos: reversibles, como agregar o quitar una característica o cambiar de segmento de clientes, e irreversibles, como despedir, firmar contratos largos o lanzar un producto. Las decisiones reversibles deben tomarse rápido, sin buscar la perfección ni imitar procesos de gran empresa, porque lo que importa es mantener el momentum y un ciclo de feedback basado en hechos para corregir sobre la marcha. El análisis profundo se reserva para las irreversibles. Medir tu propio tempo de decisión te ayuda a detectar cuándo te estás paralizando.",
+      "texto_nuevo": "En una startup el saldo bancario decrece cada día, así que la velocidad de decisión es crítica. Las decisiones se dividen en dos tipos: reversibles, como agregar o quitar una característica o cambiar de segmento de clientes, e irreversibles, como despedir, firmar contratos largos o lanzar un producto. Las decisiones reversibles deben tomarse rápido, sin buscar la perfección ni imitar procesos de gran empresa, porque lo que importa es mantener el momentum y un ciclo de feedback basado en hechos para corregir sobre la marcha. El análisis profundo se reserva para las irreversibles.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L1270-L1272",
+        "frase": "tempo--the ability to make quick decisions consistently and at all levels in the company"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO practico (Sugerencia de My Idea): el resumen presenta como teoría del libro la idea de medir tu propio tempo, que es el fin del paso 4 (anotar cuántas decisiones tomas y revisas por semana para medir tu tempo). El libro define el tempo pero no pide medirlo ni llevar esa cuenta; en el resumen_teorico se quita el dato.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C069-102"
     }
   ]
 }

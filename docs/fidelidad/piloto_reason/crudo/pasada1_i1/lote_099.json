@@ -1,0 +1,76 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_099",
+  "intento": 0,
+  "usd": 0.17006,
+  "turnos": 1,
+  "duracion_s": 18.6,
+  "pared_s": 21.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34165,
+  "tokens_out": 1670,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PF9C91D\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [81, 3965, 3967, 3971, 3973, 4761, 4765, 5134], \"razon\": \"El libro describe la erosión gradual que normaliza la desviación y pide una cultura de reporte y justa que detecte errores menores. El paso va en esa dirección.\"},\n{\"id\": \"P9A0FC8\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [1145, 4448, 4500, 2765, 459, 636, 656, 2638], \"razon\": \"El libro advierte que corregir la causa visible del accidente anterior puede contribuir al siguiente. Prioriza reformar factores de origen sobre reparaciones locales, y el paso se centra en las capas que fallaron.\"},\n{\"id\": \"P009CDB\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2577, 2579, 5692], \"razon\": \"El libro distingue explícitamente entre ser modelo del dominio en seguridad y limitarse a ir un paso por delante de los reguladores.\"},\n{\"id\": \"P8E864F\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4769, 5164, 5174, 5178, 5208], \"razon\": \"El libro pide inversión en formación, pero basa el cambio de autoridad en una cultura jerárquica previa y en premisas compartidas, no en reglas. El paso omite esa condición y la vuelta al modo jerárquico.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PF9C91D",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    81,
+    3965,
+    3967,
+    3971,
+    3973,
+    4761,
+    4765,
+    5134
+   ],
+   "razon": "El libro describe la erosión gradual que normaliza la desviación y pide una cultura de reporte y justa que detecte errores menores. El paso va en esa dirección."
+  },
+  {
+   "id": "P9A0FC8",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    1145,
+    4448,
+    4500,
+    2765,
+    459,
+    636,
+    656,
+    2638
+   ],
+   "razon": "El libro advierte que corregir la causa visible del accidente anterior puede contribuir al siguiente. Prioriza reformar factores de origen sobre reparaciones locales, y el paso se centra en las capas que fallaron."
+  },
+  {
+   "id": "P009CDB",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2577,
+    2579,
+    5692
+   ],
+   "razon": "El libro distingue explícitamente entre ser modelo del dominio en seguridad y limitarse a ir un paso por delante de los reguladores."
+  },
+  {
+   "id": "P8E864F",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4769,
+    5164,
+    5174,
+    5178,
+    5208
+   ],
+   "razon": "El libro pide inversión en formación, pero basa el cambio de autoridad en una cultura jerárquica previa y en premisas compartidas, no en reglas. El paso omite esa condición y la vuelta al modo jerárquico."
+  }
+ ]
+}

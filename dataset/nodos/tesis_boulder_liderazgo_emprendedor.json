@@ -7,7 +7,7 @@
   "resumen_teorico": "Para que una comunidad de startups sea sostenible, debe ser liderada por emprendedores (personas que han cofundado una empresa), no por gobiernos, universidades o inversionistas, aunque estos actores sean importantes. Se requiere una masa crítica de líderes emprendedores (a menudo menos de una docena) comprometidos con el ecosistema, diferenciando empresas de alto crecimiento de pequeños negocios locales.",
   "pasos_accionables": [
     "Identificar emprendedores locales con historial de cofundación de empresas de alto crecimiento",
-    "Formar un núcleo de liderazgo de máximo 10-12 emprendedores comprometidos",
+    "Formar un núcleo de liderazgo con una masa crítica de emprendedores comprometidos, a menudo menos de una docena, abierto a que se sumen más líderes",
     "Diferenciar el rol de apoyo (gobierno, universidades, inversionistas) del rol de liderazgo (emprendedores)",
     "Evitar que actores no emprendedores intenten dirigir la estrategia del ecosistema"
   ],
@@ -21,5 +21,24 @@
   "condiciones_activacion": [
     "Si el usuario busca construir o fortalecer un ecosistema emprendedor regional"
   ],
-  "etiqueta_arbol": "Deja Liderar a Emprendedores"
+  "etiqueta_arbol": "Deja Liderar a Emprendedores",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-018",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Formar un núcleo de liderazgo de máximo 10-12 emprendedores comprometidos",
+      "texto_nuevo": "Formar un núcleo de liderazgo con una masa crítica de emprendedores comprometidos, a menudo menos de una docena, abierto a que se sumen más líderes",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L5564-L5594",
+        "frase": "All that is needed is a critical mass of entrepreneurs, often fewer than a dozen, who will provide leadership... The leaders have to be open to having more leaders involved"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da menos de una docena como masa critica suficiente, no como tope, y pide que los lideres esten abiertos a sumar mas lideres; fijar un maximo invierte ese umbral.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C023-013"
+    }
+  ]
 }

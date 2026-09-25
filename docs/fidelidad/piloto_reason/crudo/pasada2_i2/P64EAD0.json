@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P64EAD0",
+  "intento": 0,
+  "usd": 0.206792,
+  "turnos": 1,
+  "duracion_s": 12.2,
+  "pared_s": 13.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46293,
+  "tokens_out": 1081,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P64EAD0\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4730, 4734], \"cita\": \"Organizations with a positive safety culture are characterized by communications founded on mutual trust, by shared perceptions of the importance of safety, and by confidence in the efficacy of preventive measure.\", \"datos_sin_respaldo\": [\"usar la comunicación basada en confianza y la percepción compartida como método para medir el compromiso\"], \"razon\": \"El libro cita la definición del HSC. Según ella, la confianza mutua y la percepción compartida son rasgos que caracterizan una cultura positiva, no un instrumento para medir el compromiso. El libro no propone esa medición y da prioridad al sistema de información de seguridad. No contradice el libro, pero añade un método que el libro no respalda.\", \"paso_fiel\": \"Fomentar comunicaciones basadas en la confianza mutua y una percepción compartida de la importancia de la seguridad, como rasgos de una cultura de seguridad positiva, apoyándose en un sistema de información de seguridad eficaz.\"}\n```",
+ "parseado": {
+  "id": "P64EAD0",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4730,
+   4734
+  ],
+  "cita": "Organizations with a positive safety culture are characterized by communications founded on mutual trust, by shared perceptions of the importance of safety, and by confidence in the efficacy of preventive measure.",
+  "datos_sin_respaldo": [
+   "usar la comunicación basada en confianza y la percepción compartida como método para medir el compromiso"
+  ],
+  "razon": "El libro cita la definición del HSC. Según ella, la confianza mutua y la percepción compartida son rasgos que caracterizan una cultura positiva, no un instrumento para medir el compromiso. El libro no propone esa medición y da prioridad al sistema de información de seguridad. No contradice el libro, pero añade un método que el libro no respalda.",
+  "paso_fiel": "Fomentar comunicaciones basadas en la confianza mutua y una percepción compartida de la importancia de la seguridad, como rasgos de una cultura de seguridad positiva, apoyándose en un sistema de información de seguridad eficaz."
+ }
+}

@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P087D20",
+  "intento": 0,
+  "usd": 0.198584,
+  "turnos": 1,
+  "duracion_s": 8.8,
+  "pared_s": 9.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46056,
+  "tokens_out": 718,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P087D20\", \"veredicto\": \"FIEL\", \"lineas\": [5204], \"cita\": \"it means selecting and training first-line supervisors so that they are able to direct safe and productive working without the need for SOPs. [...] A prerequisite is an extensive experience of the jobs carried out in the workplace [...] Supervisors need to be 'sitewise' [...] to the range of obvious and less obvious hazards.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide seleccionar supervisores de primera línea. Pone como requisito previo una experiencia amplia en los trabajos del lugar y el conocimiento ('sitewise') de los peligros evidentes y menos evidentes. El paso recoge ese criterio de selección. La formación que el libro exige a la vez está en otro paso del nodo, así que omitirla aquí no invierte ni condiciona nada.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P087D20",
+  "veredicto": "FIEL",
+  "lineas": [
+   5204
+  ],
+  "cita": "it means selecting and training first-line supervisors so that they are able to direct safe and productive working without the need for SOPs. [...] A prerequisite is an extensive experience of the jobs carried out in the workplace [...] Supervisors need to be 'sitewise' [...] to the range of obvious and less obvious hazards.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide seleccionar supervisores de primera línea. Pone como requisito previo una experiencia amplia en los trabajos del lugar y el conocimiento ('sitewise') de los peligros evidentes y menos evidentes. El paso recoge ese criterio de selección. La formación que el libro exige a la vez está en otro paso del nodo, así que omitirla aquí no invierte ni condiciona nada.",
+  "paso_fiel": ""
+ }
+}

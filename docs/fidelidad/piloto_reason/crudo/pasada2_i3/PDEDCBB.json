@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PDEDCBB",
+  "intento": 0,
+  "usd": 0.252384,
+  "turnos": 1,
+  "duracion_s": 12.6,
+  "pared_s": 14.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 58266,
+  "tokens_out": 966,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PDEDCBB\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5164, 5176, 5178, 5208], \"cita\": \"it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot … But respect must be earned, and this requires a major training investment on the part of the organization.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro describe el paso de la autoridad jerárquica a la pericia técnica en momentos de alta exigencia y pide una fuerte inversión en formación. El paso concreta esa idea en la misma dirección y sin datos nuevos. No contradice la centralización cultural previa que plantea Weick, que ya recogen otros pasos del nodo. Omitirla no lleva a hacer lo que el libro desaconseja.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PDEDCBB",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5164,
+   5176,
+   5178,
+   5208
+  ],
+  "cita": "it involves shifting from the conventional hierarchical mode to a flatter professional structure, where control passes to task experts on the spot … But respect must be earned, and this requires a major training investment on the part of the organization.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro describe el paso de la autoridad jerárquica a la pericia técnica en momentos de alta exigencia y pide una fuerte inversión en formación. El paso concreta esa idea en la misma dirección y sin datos nuevos. No contradice la centralización cultural previa que plantea Weick, que ya recogen otros pasos del nodo. Omitirla no lleva a hacer lo que el libro desaconseja.",
+  "paso_fiel": ""
+ }
+}

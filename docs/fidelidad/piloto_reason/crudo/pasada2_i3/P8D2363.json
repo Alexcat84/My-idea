@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P8D2363",
+  "intento": 0,
+  "usd": 0.142792,
+  "turnos": 1,
+  "duracion_s": 10.1,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31928,
+  "tokens_out": 754,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8D2363\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4060, 4064, 4068, 4072, 4076, 4084, 158], \"cita\": \"the air carrier inspection and monitoring safety net failed. ... no audit of F-28 operations, ... no approved Airplane Operating Manual or Flight Operations Manual, ... no Minimum Equipment List six months after the aircraft had entered service\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El caso Dryden enumera como capas de la red de seguridad las auditorías, los manuales aprobados, la Minimum Equipment List y la certificación del personal (L4060-L4084). L158 incluye licencias y certificación entre las defensas. Todos los ejemplos del paso están respaldados. Hacer un inventario de esas capas concreta el libro en su misma dirección; el libro no lo prescribe como tal.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P8D2363",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4060,
+   4064,
+   4068,
+   4072,
+   4076,
+   4084,
+   158
+  ],
+  "cita": "the air carrier inspection and monitoring safety net failed. ... no audit of F-28 operations, ... no approved Airplane Operating Manual or Flight Operations Manual, ... no Minimum Equipment List six months after the aircraft had entered service",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El caso Dryden enumera como capas de la red de seguridad las auditorías, los manuales aprobados, la Minimum Equipment List y la certificación del personal (L4060-L4084). L158 incluye licencias y certificación entre las defensas. Todos los ejemplos del paso están respaldados. Hacer un inventario de esas capas concreta el libro en su misma dirección; el libro no lo prescribe como tal.",
+  "paso_fiel": ""
+ }
+}

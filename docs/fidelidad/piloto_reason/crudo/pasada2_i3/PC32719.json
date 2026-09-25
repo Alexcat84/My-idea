@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PC32719",
+  "intento": 0,
+  "usd": 0.202232,
+  "turnos": 1,
+  "duracion_s": 13.7,
+  "pared_s": 14.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43923,
+  "tokens_out": 1327,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC32719\", \"veredicto\": \"FIEL\", \"lineas\": [5037, 5057], \"cita\": \"If the answer is ‘probably not’ then, as Johnston put it, ‘… apportioning blame has no material role to play, other than to obscure systemic deficiencies and to blame one of the victims’.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El paso anterior pregunta si los pares habrían actuado de otra manera. Una respuesta negativa equivale al 'probably not' de L5037: la culpa no procede y hay que mirar las deficiencias sistémicas. La secuencia de L5057 (formación, selección, negligencia) sigue a la respuesta contraria. El orden previo sobre sustancias y violaciones afecta al nodo entero, no a este paso.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC32719",
+  "veredicto": "FIEL",
+  "lineas": [
+   5037,
+   5057
+  ],
+  "cita": "If the answer is ‘probably not’ then, as Johnston put it, ‘… apportioning blame has no material role to play, other than to obscure systemic deficiencies and to blame one of the victims’.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El paso anterior pregunta si los pares habrían actuado de otra manera. Una respuesta negativa equivale al 'probably not' de L5037: la culpa no procede y hay que mirar las deficiencias sistémicas. La secuencia de L5057 (formación, selección, negligencia) sigue a la respuesta contraria. El orden previo sobre sustancias y violaciones afecta al nodo entero, no a este paso.",
+  "paso_fiel": ""
+ }
+}

@@ -7,7 +7,7 @@
   "resumen_teorico": "El Certificado de Origen (y específicamente el NAFTA Certificate of Origin) determina si los bienes importados califican para aranceles reducidos o eliminados bajo un tratado de libre comercio. El Regional Value Content (RVC) es la técnica usada para determinar si un producto cumple con la regla de origen, calculada mediante métodos Build-Up, Build-Down o Net Cost según el tratado aplicable (NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros). Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar si el mercado destino tiene un tratado de libre comercio vigente con Estados Unidos",
-    "Determinar la regla de origen aplicable al producto (tariff shift, RVC, wholly obtained), que son las cuatro reglas de origen del Artículo 401",
+    "Determinar por cual de las cuatro vias del Articulo 401 origina el producto: obtenido enteramente en la region, conforme a la regla especifica del Anexo 401 (cambio de clasificacion arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
     "Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost), con los umbrales de 60% método de transacción o 50% método de costo neto",
     "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque, en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen",
     "Conservar la documentación de respaldo por el periodo requerido por la aduana, y disponible para el importador"
@@ -35,6 +35,25 @@
       "node_id": "nafta_free_trade_agreements",
       "titulo": "Aprovechamiento de NAFTA y Tratados de Libre Comercio",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-006",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Determinar la regla de origen aplicable al producto (tariff shift, RVC, wholly obtained), que son las cuatro reglas de origen del Artículo 401",
+      "texto_nuevo": "Determinar por cual de las cuatro vias del Articulo 401 origina el producto: obtenido enteramente en la region, conforme a la regla especifica del Anexo 401 (cambio de clasificacion arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L2881-L2889",
+        "frase": "Tariffs will be eliminated only on goods that originate in one of the four ways defined in Article 401 of the agreement"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. El libro enumera las cuatro vias del Articulo 401: bienes obtenidos enteramente en la region, bienes que cumplen la regla especifica del Anexo 401, bienes producidos solo con materiales originarios, y bienes con valor regional de 60 o 50 por ciento (L2883-L2889; tambien criterios A a D en L6485). El paso afirma que las cuatro reglas son tariff shift, RVC y wholly obtained: tres elementos, uno de los cuales (el cambio de clasificacion) el libro situa dentro de la regla del Anexo 401 (L6485), y omite la via de materiales exclusivamente originarios. La accion de determinar la regla aplicable si tiene apoyo, pero la enumeracion de la norma queda cambiada respecto al libro, y eso es otro valor para el mismo dato. A reconoce el problema pero lo deja en OPERATIVO.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C013-045"
     }
   ]
 }

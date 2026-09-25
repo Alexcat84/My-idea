@@ -10,7 +10,7 @@
     "Pide referencias de tiempos de entrega y calidad de empaque antes de firmar nada.",
     "Haz un pedido de prueba a tu propio nombre y revisa como llega.",
     "Deja por escrito quien responde si el envio llega tarde, dañado o incompleto.",
-    "Revisa cada mes las quejas reales de clientes atribuibles a ese proveedor."
+    "Sugerencia de My Idea: revisa cada mes las quejas reales de clientes atribuibles a ese proveedor."
   ],
   "entregable_esperado": "Un acuerdo escrito con el proveedor de drop-shipping mas el resultado documentado de un pedido de prueba.",
   "nodos_previos": [
@@ -24,5 +24,24 @@
     "Te preocupa quedarte con mercancia pesada o de poca rotacion.",
     "Ya tienes contacto con proveedores que podrian despachar directo al comprador."
   ],
-  "etiqueta_arbol": "Vende sin guardar inventario"
+  "etiqueta_arbol": "Vende sin guardar inventario",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-053",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa cada mes las quejas reales de clientes atribuibles a ese proveedor.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa cada mes las quejas reales de clientes atribuibles a ese proveedor.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "I have an idea/txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "L198",
+        "frase": "it is difficult to ensure the desired level of customer service"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro advierte del riesgo pero no fija revision mensual.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-046"
+    }
+  ]
 }

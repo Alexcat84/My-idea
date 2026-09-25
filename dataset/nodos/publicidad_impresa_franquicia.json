@@ -9,7 +9,7 @@
     "Identifica directorios y publicaciones específicas de la industria o de franquicias relevantes para el perfil de franquiciado que buscas",
     "Evalúa el costo por lead y la tasa de cierre esperada, junto con el 'pass around value' de la publicación, antes de invertir",
     "Prioriza ediciones regionales o locales si buscas un despliegue localizado en vez de nacional",
-    "Implementa mecanismos de rastreo, como códigos o URLs únicas, para medir la atribución real del canal",
+    "Sugerencia de My Idea: implementa mecanismos de rastreo, como códigos o URLs únicas, para medir la atribución real del canal impreso",
     "Decide la prioridad presupuestaria del impreso según el presupuesto total disponible"
   ],
   "entregable_esperado": "Análisis costo-beneficio de medios impresos disponibles con métricas estimadas frente a otros canales y decisión documentada sobre su inclusión en el presupuesto de marketing.",
@@ -34,6 +34,25 @@
       "node_id": "publicidad_impresa_para_franquicias",
       "titulo": "Publicidad Impresa en la Venta de Franquicias",
       "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-023",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementa mecanismos de rastreo, como códigos o URLs únicas, para medir la atribución real del canal",
+      "texto_nuevo": "Sugerencia de My Idea: implementa mecanismos de rastreo, como códigos o URLs únicas, para medir la atribución real del canal impreso",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L3776-L3780",
+        "frase": "Unfortunately, when it comes to print, one of the big problems is measurement."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon A. Sobre el impreso, el libro senala el problema de medicion: el lead acaba contando como busqueda organica o trafico directo. Su respuesta es que el buen marketer haga mas analisis que medir CPM, coste por lead y coste por venta (L3780). No propone codigos ni URL unicas para el impreso. El link coding y las landing pages propias que cita B (L4060-L4064) se refieren a enlaces entrantes online y PPC, no a anuncios impresos. Busque promo code, coupon code, unique url, tracking number, phone number, source code, dedicated y landing page, y no aparece nada aplicado al impreso. Los codigos no salen en ningun sitio. La herramienta es practica y no esta en el libro.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C011-109"
     }
   ]
 }

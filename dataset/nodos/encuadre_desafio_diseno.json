@@ -11,7 +11,7 @@
     "Listar posibles soluciones pensando ampliamente, permitiendo resultados sorprendentes",
     "Documentar contexto y restricciones (geográficas, tecnológicas, de tiempo, poblacionales)",
     "Revisar y ajustar la pregunta original según lo aprendido, iterando la formulación con el equipo hasta encontrar el nivel de abstracción correcto",
-    "Validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar",
+    "Sugerencia de My Idea: validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar",
     "Identificar el objetivo macro o problema social/de negocio a resolver.",
     "Verifica que la pregunta no sea demasiado general (imposible de abordar) ni demasiado específica (limita soluciones)",
     "Usa la pregunta como brújula durante todo el proceso de diseño",
@@ -76,6 +76,25 @@
       "node_id": "how_might_we_hmw",
       "titulo": "El Reto '¿Cómo Podríamos...?' (How Might We)",
       "fuente": "Change by Design"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-048",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar",
+      "texto_nuevo": "Sugerencia de My Idea: validar el brief con conocimiento local ('local knowledge') de ONGs o actores en terreno antes de prototipar",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "I have an idea/txt/The field guide to human-center - Unknown.txt",
+        "lineas": "L1001-L1175",
+        "frase": "4) Finally, write down some of the context and constraints that you’re facing. [...] 5) Does your original question need a tweak? Try it again."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Frame Your Design Challenge no pide validar el brief con ONGs ni con actores en terreno antes de prototipar. Busqué 'local knowledge', NGO y brief, y las ONGs solo salen en otros métodos, como interlocutores de investigación.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C130-071"
     }
   ]
 }

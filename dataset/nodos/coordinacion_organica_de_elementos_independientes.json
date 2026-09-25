@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Coordinación de Elementos Parcialmente Independientes",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Wallas argumenta que tanto los sistemas de gobierno complejos como el cuerpo humano (o el pensamiento) no funcionan como una máquina controlada por una sola voluntad soberana, sino como una coordinación delicada de elementos parcialmente independientes (manos, ideas, instintos, emociones) que deben fusionarse de forma 'involuntaria' mediante la práctica. El pensador, como el golfista, debe aceptar que su mente no es una unidad perfecta sino una tendencia imperfecta hacia la unificación que se mejora con arte y práctica, no con control directo.",
+  "resumen_teorico": "Wallas argumenta que tanto los sistemas de gobierno complejos como el cuerpo humano (o el pensamiento) no funcionan como una máquina controlada por una sola voluntad soberana, sino como una coordinación delicada de elementos parcialmente independientes (manos, ideas, instintos, emociones) que deben fusionarse de forma 'involuntaria' mediante la práctica. El pensador, como el golfista, debe aceptar que su mente no es una unidad perfecta sino una tendencia imperfecta hacia la unificación que se mejora con arte y práctica: mientras se aprende, con más atención consciente, hasta que la fusión ya no requiere control directo al ejecutar.",
   "pasos_accionables": [
     "Identificar los distintos 'elementos' independientes que intervienen en tu proceso creativo (intuición, lógica, emoción, experiencia previa)",
-    "Practicar repetidamente una tarea creativa hasta lograr que estos elementos se fusionen de forma natural, sin forzar el control consciente",
+    "Practicar repetidamente una tarea creativa prestando atención consciente a cómo se relacionan estos elementos mientras se aprende, hasta lograr que se fusionen de forma natural y ya no requieran ese control al ejecutarla",
     "Aceptar que la maestría no viene de dominar cada parte por separado, sino de permitir que cooperen orgánicamente"
   ],
   "entregable_esperado": "Una rutina o ritual de trabajo creativo practicado repetidamente que permita la fusión natural de intuición y análisis",
@@ -23,5 +23,40 @@
     "Cuando el emprendedor siente que su pensamiento creativo es forzado o mecánico",
     "Cuando se busca desarrollar una práctica creativa sostenida en el tiempo"
   ],
-  "etiqueta_arbol": "Coordina Partes, No Controles"
+  "etiqueta_arbol": "Coordina Partes, No Controles",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-009",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Practicar repetidamente una tarea creativa hasta lograr que estos elementos se fusionen de forma natural, sin forzar el control consciente",
+      "texto_nuevo": "Practicar repetidamente una tarea creativa prestando atención consciente a cómo se relacionan estos elementos mientras se aprende, hasta lograr que se fusionen de forma natural y ya no requieran ese control al ejecutarla",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "I have an idea/txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "L349-L349",
+        "frase": "Mr. Harry Vardon, when he is acquiring a new grip, is wise to make himself more conscious of the relation between his will and his wrists than when he is addressing himself to his approach-shot"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon B. El paso trata de la fase de adquisicion ('practicar repetidamente... hasta lograr que se fusionen') y pide hacerlo sin control consciente. El libro dice lo contrario para esa fase: aprender un arte debe ser mas consciente que practicarlo (L349). Vardon logro la fusion 'after a year of constant experimentation' (L213), y Mill ganaba energia con esfuerzo voluntario repetido hasta volverlo automatico (L587). La fusion involuntaria es el resultado, no el metodo. Busque apoyos: L423 advierte contra interferir en el desarrollo automatico, pero se refiere a la etapa de Iluminacion y a la ejecucion de una obra, no al aprendizaje de una destreza. No encontre ningun pasaje que respalde aprender sin control consciente.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C129-016"
+    },
+    {
+      "id": "fidelidad-t9-010",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Wallas argumenta que tanto los sistemas de gobierno complejos como el cuerpo humano (o el pensamiento) no funcionan como una máquina controlada por una sola voluntad soberana, sino como una coordinación delicada de elementos parcialmente independientes (manos, ideas, instintos, emociones) que deben fusionarse de forma 'involuntaria' mediante la práctica. El pensador, como el golfista, debe aceptar que su mente no es una unidad perfecta sino una tendencia imperfecta hacia la unificación que se mejora con arte y práctica, no con control directo.",
+      "texto_nuevo": "Wallas argumenta que tanto los sistemas de gobierno complejos como el cuerpo humano (o el pensamiento) no funcionan como una máquina controlada por una sola voluntad soberana, sino como una coordinación delicada de elementos parcialmente independientes (manos, ideas, instintos, emociones) que deben fusionarse de forma 'involuntaria' mediante la práctica. El pensador, como el golfista, debe aceptar que su mente no es una unidad perfecta sino una tendencia imperfecta hacia la unificación que se mejora con arte y práctica: mientras se aprende, con más atención consciente, hasta que la fusión ya no requiere control directo al ejecutar.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "I have an idea/txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "L349-L349",
+        "frase": "Mr. Harry Vardon, when he is acquiring a new grip, is wise to make himself more conscious of the relation between his will and his wrists than when he is addressing himself to his approach-shot"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite la idea contraria del paso 1 (mejorar sin control consciente); el libro dice que aprender un arte debe ser más consciente que practicarlo, y la fusión involuntaria es el resultado, no el método.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C129-016"
+    }
+  ]
 }

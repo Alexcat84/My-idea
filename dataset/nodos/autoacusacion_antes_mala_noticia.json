@@ -9,7 +9,7 @@
     "Antes de la llamada o el mensaje, escribe todo lo malo que el proveedor podría pensar de tu propuesta.",
     "Empieza la conversación diciendo en voz alta esas quejas antes de que él las mencione.",
     "Nombra lo que crees que siente el otro con frases como parece que esto te preocupa y espera en silencio.",
-    "Ofrece de inmediato una salida o alternativa concreta después de nombrar la queja.",
+    "Después de nombrar la queja, haz una pausa y deja que se asiente antes de ofrecer una salida o alternativa concreta.",
     "Cierra confirmando que quieres seguir trabajando juntos en el futuro."
   ],
   "entregable_esperado": "Un guion corto de autoacusación y etiquetas para dar la mala noticia sin romper la relación.",
@@ -24,5 +24,24 @@
     "Necesitas renegociar un contrato a la baja y temes que el proveedor corte la relación.",
     "Vas a dar una noticia incómoda a alguien con quien seguirás trabajando el próximo mes."
   ],
-  "etiqueta_arbol": "Anticipa la queja antes de darla"
+  "etiqueta_arbol": "Anticipa la queja antes de darla",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-007",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Ofrece de inmediato una salida o alternativa concreta después de nombrar la queja.",
+      "texto_nuevo": "Después de nombrar la queja, haz una pausa y deja que se asiente antes de ofrecer una salida o alternativa concreta.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "I have an idea/txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "L1258-L1268",
+        "frase": "Disuelvo ese miedo y espero, dejando que surta su efecto"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razón B. El libro fija la secuencia: primero etiquetar el miedo, luego pausa, y solo después la solución. Ejemplos: 'Disuelvo ese miedo y espero' (L1268); 'Aquí puede hacerse una pequeña pausa ... y después darle la vuelta a la situación ofreciéndole una solución positiva' (L1160); 'Haz pausas. Después de haber etiquetado una barrera ... deja que se asiente' (L1430); 'La última regla del etiquetado es el silencio' (L1093). En el caso de Anna, tras la autoacusación incluso se pasa a la otra parte la responsabilidad de ofrecer la solución (L1328). En el ejemplo de los Emiratos (L2622-L2626) el libro no dice que la propuesta llegue 'de inmediato', así que no respalda el paso. Poner 'de inmediato' cambia la secuencia del libro.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-020"
+    }
+  ]
 }

@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_034",
+  "intento": 0,
+  "usd": 0.16721999999999998,
+  "turnos": 1,
+  "duracion_s": 16.3,
+  "pared_s": 17.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33655,
+  "tokens_out": 1630,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PF962A8\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [181, 213, 293, 310, 5779, 5781], \"razon\": \"Correcto al investigar. Como prevención, el libro dice que los agujeros se mueven, los disparadores locales son difíciles de anticipar y la mejor vía es eliminar condiciones latentes.\"},\n  {\"id\": \"P466B2C\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [840, 844, 852], \"razon\": \"Según Bainbridge, al humano le quedan las tareas no automatizables, sobre todo restaurar el sistema tras fallos imprevistos. El paso lo concreta en la misma dirección.\"},\n  {\"id\": \"P7E4AD9\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2909, 2948, 2961, 2977, 3825, 3829, 5041, 5499, 5641], \"razon\": \"Omite que el libro favorece el enfoque situacional y avisa del error de atribución. Dejar criterios propios puede llevar a centrarse en la persona, que el libro desaconseja.\"},\n  {\"id\": \"P4DCA53\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2556, 2568, 2579, 4749], \"razon\": \"El libro cita presiones públicas y regulatorias, además de accidentes, como impulso a la seguridad, y la cultura de seguridad como motor duradero.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PF962A8",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    181,
+    213,
+    293,
+    310,
+    5779,
+    5781
+   ],
+   "razon": "Correcto al investigar. Como prevención, el libro dice que los agujeros se mueven, los disparadores locales son difíciles de anticipar y la mejor vía es eliminar condiciones latentes."
+  },
+  {
+   "id": "P466B2C",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    840,
+    844,
+    852
+   ],
+   "razon": "Según Bainbridge, al humano le quedan las tareas no automatizables, sobre todo restaurar el sistema tras fallos imprevistos. El paso lo concreta en la misma dirección."
+  },
+  {
+   "id": "P7E4AD9",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2909,
+    2948,
+    2961,
+    2977,
+    3825,
+    3829,
+    5041,
+    5499,
+    5641
+   ],
+   "razon": "Omite que el libro favorece el enfoque situacional y avisa del error de atribución. Dejar criterios propios puede llevar a centrarse en la persona, que el libro desaconseja."
+  },
+  {
+   "id": "P4DCA53",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2556,
+    2568,
+    2579,
+    4749
+   ],
+   "razon": "El libro cita presiones públicas y regulatorias, además de accidentes, como impulso a la seguridad, y la cultura de seguridad como motor duradero."
+  }
+ ]
+}

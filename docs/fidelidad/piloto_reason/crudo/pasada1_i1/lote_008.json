@@ -1,0 +1,63 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_008",
+  "intento": 0,
+  "usd": 0.15176399999999998,
+  "turnos": 1,
+  "duracion_s": 10.5,
+  "pared_s": 11.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33481,
+  "tokens_out": 892,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PDBF837\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2581, 4757, 4773], \"razon\": \"El libro liga la competencia a la calidad del sistema de información de seguridad: si recolecta la información correcta, si la difunde y si actúa sobre ella.\"},\n  {\"id\": \"P827586\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2583, 5499, 5641], \"razon\": \"El libro define la paradoja posicional: la cúpula culpa al personal de línea en lugar de mirar el sistema. La presenta como síntoma de falta de cognición que conviene detectar.\"},\n  {\"id\": \"P7D4823\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4360, 4364], \"razon\": \"El primer paso del procedimiento COSHH es listar todas las sustancias peligrosas e identificar sus puntos de uso. La evaluación de riesgos que lo acompaña no se contradice.\"},\n  {\"id\": \"P4BD1CD\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2944, 293, 2905], \"razon\": \"El libro afirma que los errores tienen causas personales, de tarea, situacionales y organizacionales, y que identificar el error es el inicio de la búsqueda de sus causas.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PDBF837",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2581,
+    4757,
+    4773
+   ],
+   "razon": "El libro liga la competencia a la calidad del sistema de información de seguridad: si recolecta la información correcta, si la difunde y si actúa sobre ella."
+  },
+  {
+   "id": "P827586",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2583,
+    5499,
+    5641
+   ],
+   "razon": "El libro define la paradoja posicional: la cúpula culpa al personal de línea en lugar de mirar el sistema. La presenta como síntoma de falta de cognición que conviene detectar."
+  },
+  {
+   "id": "P7D4823",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4360,
+    4364
+   ],
+   "razon": "El primer paso del procedimiento COSHH es listar todas las sustancias peligrosas e identificar sus puntos de uso. La evaluación de riesgos que lo acompaña no se contradice."
+  },
+  {
+   "id": "P4BD1CD",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2944,
+    293,
+    2905
+   ],
+   "razon": "El libro afirma que los errores tienen causas personales, de tarea, situacionales y organizacionales, y que identificar el error es el inicio de la búsqueda de sus causas."
+  }
+ ]
+}

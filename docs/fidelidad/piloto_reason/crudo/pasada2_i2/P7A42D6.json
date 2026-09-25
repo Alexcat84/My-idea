@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P7A42D6",
+  "intento": 0,
+  "usd": 0.16604,
+  "turnos": 1,
+  "duracion_s": 12.4,
+  "pared_s": 13.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36515,
+  "tokens_out": 999,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P7A42D6\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [569, 225, 582, 567], \"cita\": \"The root cause was a latent construction failure--permitted by the standards existing in 1916--that had lain dormant for 76 years until a set of local triggering conditions caused its intrinsic weaknesses to be fatally revealed.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro muestra que hay debilidades presentes desde el origen del sistema (L225) y que la causa de Nakina fue una decisión de construcción de 1916 (L569). También pide hacer visibles las condiciones latentes para corregirlas (L582). 'Décadas' procede del propio caso (76 años) y no es un dato nuevo. El paso concreta esto en auditorías, en la misma dirección.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P7A42D6",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   569,
+   225,
+   582,
+   567
+  ],
+  "cita": "The root cause was a latent construction failure--permitted by the standards existing in 1916--that had lain dormant for 76 years until a set of local triggering conditions caused its intrinsic weaknesses to be fatally revealed.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro muestra que hay debilidades presentes desde el origen del sistema (L225) y que la causa de Nakina fue una decisión de construcción de 1916 (L569). También pide hacer visibles las condiciones latentes para corregirlas (L582). 'Décadas' procede del propio caso (76 años) y no es un dato nuevo. El paso concreta esto en auditorías, en la misma dirección.",
+  "paso_fiel": ""
+ }
+}

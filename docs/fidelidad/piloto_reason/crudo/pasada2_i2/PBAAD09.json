@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PBAAD09",
+  "intento": 0,
+  "usd": 0.145712,
+  "turnos": 1,
+  "duracion_s": 13.5,
+  "pared_s": 14.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31003,
+  "tokens_out": 1085,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PBAAD09\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4306, 4165, 4418, 4523], \"cita\": \"The first, and the most fundamental, of these was that there was too much law. ... This might have been a manageable situation had the ACAA the resources and the overriding aim of maintaining aviation safety\", \"datos_sin_respaldo\": [], \"razon\": \"El libro no rechaza reducir la carga normativa: Robens critica el exceso de ley. Lo que critica es desregular recortando la vigilancia: presupuestos, inspecciones, recursos. La desregulación habría sido manejable con recursos y prioridad a la seguridad. El paso exige mantener vigilancia efectiva, en la misma dirección que el libro, y no añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PBAAD09",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4306,
+   4165,
+   4418,
+   4523
+  ],
+  "cita": "The first, and the most fundamental, of these was that there was too much law. ... This might have been a manageable situation had the ACAA the resources and the overriding aim of maintaining aviation safety",
+  "datos_sin_respaldo": [],
+  "razon": "El libro no rechaza reducir la carga normativa: Robens critica el exceso de ley. Lo que critica es desregular recortando la vigilancia: presupuestos, inspecciones, recursos. La desregulación habría sido manejable con recursos y prioridad a la seguridad. El paso exige mantener vigilancia efectiva, en la misma dirección que el libro, y no añade datos.",
+  "paso_fiel": ""
+ }
+}

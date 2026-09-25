@@ -3,6 +3,39 @@
 Lista viva de lo que queda por hacer. Se actualiza al cerrar o abrir frentes.
 (Última actualización: agosto 2026.)
 
+## 0a. Campaña de FIDELIDAD: lo que queda para la integración del mundo 11 (24 sep 2026)
+
+Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice
+su fuente. Las correcciones de fidelidad entran a `main` por tandas
+(`fidelidad-tN`), cada una declarada en el propio nodo (campo `correcciones`,
+con el texto viejo y la cita literal del libro) y con Gate 0 y las dos suites
+en verde. El registro de cada tanda vive en `docs/fidelidad/tandas/`.
+
+Lo que esas tandas **no** pueden hacer solas, y queda para la integración del
+mundo 11:
+
+1. **HECHO el 24 sep 2026** (`docs/fidelidad/credencial/LISTAS.md`, sección 3). **Re-embeber los nodos corregidos** en la sesión con credencial (Voyage). El
+   índice semántico guarda el vector del texto viejo; Gate 0 no lo ve rojo
+   porque el vector existe, pero ya no describe el texto nuevo. **Lista exacta
+   (24 sep 2026): `docs/fidelidad/credencial/nodos_a_reembeber.txt`**, con su
+   razón en `docs/fidelidad/credencial/LISTAS.md`. Solo entran los nodos con
+   una corrección en título, resumen o condiciones, que es lo que se embebe;
+   una corrección de paso no cambia el vector.
+2. **Al sincronizar `puente-forja` con `main`, regenerar los ficheros derivados
+   del grafo** (`master_graph`, las etiquetas de cara reaplicadas, la copia web
+   de `sync_assets_web.py`), en vez de fusionarlos a mano: el ciclo es
+   `run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py --aplicar` y
+   `sync_assets_web.py`.
+3. **HECHO el 24 sep 2026** (las 23 de vuelta en la caché). **La caché de preguntas** (`preguntas_cache.json`) se construyó con el texto
+   viejo de esos nodos; su regeneración parcial (`build_question_cache.py
+   --patch`) también gasta credencial y va en la misma sesión que el punto 1.
+   Las preguntas nacidas de un resumen corregido por CONTRARIO o por cifra,
+   plazo o norma **ya se retiraron** de la caché (decisión del fundador del 27
+   sep, commit de `fidelidad-cache-1`; registro en
+   `docs/fidelidad/PREGUNTAS_RETIRADAS.json`). **Lista exacta a regenerar:
+   `docs/fidelidad/credencial/preguntas_a_regenerar.txt`**, para
+   `--patch-file`.
+
 ## 0b. La cirugía de costuras se ordena por PARES LIBERADOS (12 ago 2026)
 
 **El dato que cambia la prioridad**, contado del archivo del cribado intra: hay
@@ -482,6 +515,29 @@ son la capa 3 embrionaria). Matriz de fases:
 - **2FA/TOTP + dominio de correo propio**: dormido (anclas listas).
 
 ## 5. Backlog / afinar
+
+- **`contador-upstash-ruidoso`** (decisión del fundador 3, 27 sep 2026). **El
+  incidente (24 sep 2026):** la base Redis de Upstash que usa el contador de límites
+  (`web/lib/rateLimit.ts`) desapareció (`getaddrinfo ENOTFOUND
+  tough-fox-158997.upstash.io`, confirmado contra los DNS de Google) y **toda la IA
+  quedó caída**: ordenar, explorar y generar planes daban 500 y la pantalla decía el
+  genérico "algo se atoró de nuestro lado". El fundador creó una base nueva y cargó
+  `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` en Vercel.
+  **Lo que se encontró en el código:** el comentario de `contarEnUpstash` promete
+  "Upstash caído no debe tumbar el producto: se permite y se registra", pero solo lo
+  cumple cuando Upstash RESPONDE con error (`!resIncr.ok`); si no se le puede alcanzar
+  (DNS, red), `fetch` lanza, nadie lo atrapa y la ruta cae en 500. El texto promete lo
+  que el código no hace.
+  **Lo que manda el fundador:** el fallo del contador se dice con claridad **en los
+  registros y en pantalla, nunca un genérico**. Por decidir en la tanda: si con el
+  contador caído se **deja pasar** (con alerta ruidosa en los registros y un aviso
+  honesto) o se **frena** con un mensaje que diga la razón; el fusible global también
+  vive en Upstash, así que dejar pasar deja la IA sin tope de gasto mientras dure.
+  **Revisar (POR VERIFICAR con la política vigente de Upstash):** si una base gratuita
+  puede archivarse o borrarse por inactividad, y cómo evitarlo (un toque diario desde la
+  tarea programada que ya existe, `/api/cron/limpiar-invitados`; el plan de pago; o la
+  integración de Upstash del Marketplace de Vercel). Prueba en rojo primero: `fetch`
+  que lanza en `contarEnUpstash` → hoy 500 con genérico.
 
 - **`mundos-de-proteccion-sobre-lo-existente`** → **PROMOVIDA A CAMPAÑA.** La spec del
   fundador es **`docs/PLAN_MUNDOS_PROTECCION.md`** (5 ago 2026), que responde las

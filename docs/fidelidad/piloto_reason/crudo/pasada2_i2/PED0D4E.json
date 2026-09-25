@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PED0D4E",
+  "intento": 0,
+  "usd": 0.18767999999999999,
+  "turnos": 1,
+  "duracion_s": 8.1,
+  "pared_s": 9.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43715,
+  "tokens_out": 641,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PED0D4E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5208, 5178, 5182], \"cita\": \"Paradoxically perhaps, the success of this transformation depends on the prior establishment of a strong and disciplined hierarchical culture. It is the shared values and assumptions created by this culture that permit the coordination of decentralized work groups.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro afirma que los valores y supuestos compartidos permiten coordinar los grupos descentralizados (Weick, L5178). Identificarlos concreta esa idea en su misma dirección y sin datos nuevos. No es contrario: el libro desaconseja intentar cambiar valores por plan (L4724) y prioriza las prácticas, pero identificar no es cambiar. Tampoco es FIEL literal, porque el libro no manda identificarlos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PED0D4E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5208,
+   5178,
+   5182
+  ],
+  "cita": "Paradoxically perhaps, the success of this transformation depends on the prior establishment of a strong and disciplined hierarchical culture. It is the shared values and assumptions created by this culture that permit the coordination of decentralized work groups.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro afirma que los valores y supuestos compartidos permiten coordinar los grupos descentralizados (Weick, L5178). Identificarlos concreta esa idea en su misma dirección y sin datos nuevos. No es contrario: el libro desaconseja intentar cambiar valores por plan (L4724) y prioriza las prácticas, pero identificar no es cambiar. Tampoco es FIEL literal, porque el libro no manda identificarlos.",
+  "paso_fiel": ""
+ }
+}

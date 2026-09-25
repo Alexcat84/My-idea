@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Redacta los terminos y condiciones del contrato de servicio de forma clara y separada de la garantia base del producto.",
     "Revisa que ofrecer el contrato de servicio no te lleve, sin darte cuenta, a anular garantias implicitas de forma ilegal.",
-    "Define precio, duracion y alcance del contrato de servicio como algo adicional que te genera ingresos recurrentes."
+    "Sugerencia de My Idea: define precio, duracion y alcance del contrato de servicio como algo adicional que te puede generar ingresos recurrentes."
   ],
   "entregable_esperado": "Un contrato de servicio listo para ofrecer, con sus terminos claros, como producto adicional de posventa.",
   "nodos_previos": [
@@ -23,5 +23,24 @@
     "Si vendes, o piensas vender, productos a clientes en Estados Unidos.",
     "Cuando quieres cobrar por servicios de posventa adicionales, como garantia extendida o mantenimiento pagado."
   ],
-  "etiqueta_arbol": "Ofrece Contratos de Servicio Claros"
+  "etiqueta_arbol": "Ofrece Contratos de Servicio Claros",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-064",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define precio, duracion y alcance del contrato de servicio como algo adicional que te genera ingresos recurrentes.",
+      "texto_nuevo": "Sugerencia de My Idea: define precio, duracion y alcance del contrato de servicio como algo adicional que te puede generar ingresos recurrentes.",
+      "cita": {
+        "libro": "Businessperson's Guide to Federal Warranty Law",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Businessperson's Guide to Federal Warranty Law.txt",
+        "lineas": "L866-L876",
+        "frase": "They are separate either because they are made some time after the sale of the product, or because they cost the customer a fee beyond the purchase price of the product."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro trata el contrato de servicio como un acuerdo aparte, con cargo adicional y términos claros, pero no habla de ingresos recurrentes. Busqué 'recurring', 'revenue' y 'profit' sin resultado.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C036-108"
+    }
+  ]
 }

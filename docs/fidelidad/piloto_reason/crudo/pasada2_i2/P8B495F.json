@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P8B495F",
+  "intento": 0,
+  "usd": 0.18362,
+  "turnos": 1,
+  "duracion_s": 10.7,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41220,
+  "tokens_out": 937,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8B495F\", \"veredicto\": \"FIEL\", \"lineas\": [2837, 3395, 3625, 3659], \"cita\": \"Measures to discover, assess and then eliminate error-producing (and violation-producing) factors within the workplace. ... The fact that they can be ranked reliably--so that we can assess the relative effects of the different factors--represents a major advance and an extremely valuable addition to the safety-concerned manager's tool box.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro recomienda descubrir y evaluar en el lugar de trabajo los factores productores de violaciones. Presenta los ocho VPCs de Williams con sus pesos para valorar su efecto relativo, y el metodo HEART consiste en decidir que condiciones actuan y aplicar una proporcion juzgada de su factor. Que los pesos sean preliminares matiza el detalle, no invierte el consejo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P8B495F",
+  "veredicto": "FIEL",
+  "lineas": [
+   2837,
+   3395,
+   3625,
+   3659
+  ],
+  "cita": "Measures to discover, assess and then eliminate error-producing (and violation-producing) factors within the workplace. ... The fact that they can be ranked reliably--so that we can assess the relative effects of the different factors--represents a major advance and an extremely valuable addition to the safety-concerned manager's tool box.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro recomienda descubrir y evaluar en el lugar de trabajo los factores productores de violaciones. Presenta los ocho VPCs de Williams con sus pesos para valorar su efecto relativo, y el metodo HEART consiste en decidir que condiciones actuan y aplicar una proporcion juzgada de su factor. Que los pesos sean preliminares matiza el detalle, no invierte el consejo.",
+  "paso_fiel": ""
+ }
+}

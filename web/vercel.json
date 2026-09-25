@@ -5,5 +5,11 @@
     "deploymentEnabled": {
       "staging": false
     }
-  }
+  },
+  "crons": [
+    {
+      "path": "/api/cron/limpiar-invitados",
+      "schedule": "0 8 * * *"
+    }
+  ]
 }

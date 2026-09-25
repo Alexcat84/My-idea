@@ -1,0 +1,70 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_011",
+  "intento": 0,
+  "usd": 0.167116,
+  "turnos": 1,
+  "duracion_s": 15.4,
+  "pared_s": 16.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33964,
+  "tokens_out": 1563,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P8D6F24\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3784], \"razon\": \"El libro dice que, ante un fallo activo, probablemente hay precondiciones en el lugar de trabajo que se identifican y describen. El paso lo recoge literalmente.\"},\n  {\"id\": \"P7164BD\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [868, 918, 942], \"razon\": \"El libro atribuye la confusión de modos a no percibir las transiciones y a una automatización que oculta eventos. Evaluar el diseño concreta esto sin datos nuevos.\"},\n  {\"id\": \"P3186F1\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"SIN_COBERTURA\", \"lineas\": [4429, 4431, 4433, 4435], \"razon\": \"El libro no trata la 'madurez para autorregularse'. Presenta la autorregulación como un gran avance para las organizaciones y sitúa las dificultades en el regulador. El paso añade una condición no respaldada.\"},\n  {\"id\": \"P26886B\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5037, 5057], \"razon\": \"Coincide con la prueba de sustitución, pero omite condiciones esenciales: sustituto comparable, juzgar según lo percibido en tiempo real y aplicarla tras descartar sustancias o incumplimiento deliberado. Hay riesgo de sesgo retrospectivo.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P8D6F24",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3784
+   ],
+   "razon": "El libro dice que, ante un fallo activo, probablemente hay precondiciones en el lugar de trabajo que se identifican y describen. El paso lo recoge literalmente."
+  },
+  {
+   "id": "P7164BD",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    868,
+    918,
+    942
+   ],
+   "razon": "El libro atribuye la confusión de modos a no percibir las transiciones y a una automatización que oculta eventos. Evaluar el diseño concreta esto sin datos nuevos."
+  },
+  {
+   "id": "P3186F1",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    4429,
+    4431,
+    4433,
+    4435
+   ],
+   "razon": "El libro no trata la 'madurez para autorregularse'. Presenta la autorregulación como un gran avance para las organizaciones y sitúa las dificultades en el regulador. El paso añade una condición no respaldada."
+  },
+  {
+   "id": "P26886B",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5037,
+    5057
+   ],
+   "razon": "Coincide con la prueba de sustitución, pero omite condiciones esenciales: sustituto comparable, juzgar según lo percibido en tiempo real y aplicarla tras descartar sustancias o incumplimiento deliberado. Hay riesgo de sesgo retrospectivo."
+  }
+ ]
+}

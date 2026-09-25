@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_024",
+  "intento": 0,
+  "usd": 0.155268,
+  "turnos": 1,
+  "duracion_s": 14.2,
+  "pared_s": 15.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32447,
+  "tokens_out": 1274,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P911367\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [1058, 2638, 2650, 2767, 2853, 5775, 5781], \"razon\": \"El libro pide hacer visibles las condiciones latentes y detectarlas proactivamente antes de que se combinen y rompan las defensas; el paso coincide.\"},\n  {\"id\": \"P2BDEFA\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [5517, 5641, 5688, 5905, 5907], \"razon\": \"Cada modelo tiene sus métricas y el predominio del modelo de persona es una barrera. Diagnosticar qué modelo predomina es una extensión coherente y no avala LTIF.\"},\n  {\"id\": \"P5F2FCB\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [3965, 3967, 3971, 3973, 2767, 81, 105], \"razon\": \"Revisar periódicamente es coherente con la evaluación proactiva, pero el libro subraya que en una cultura cerrada es muy difícil detectar cuándo empezó la desviación. Conviene verificar la autorrevisión.\"},\n  {\"id\": \"P229853\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2170, 2250, 2259, 2866], \"razon\": \"El libro propone identificar de antemano los pasos vulnerables por sus rasgos de tarea y critica la gestión reactiva basada en eventos. Priorizar por tasa histórica invierte ese enfoque.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P911367",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    1058,
+    2638,
+    2650,
+    2767,
+    2853,
+    5775,
+    5781
+   ],
+   "razon": "El libro pide hacer visibles las condiciones latentes y detectarlas proactivamente antes de que se combinen y rompan las defensas; el paso coincide."
+  },
+  {
+   "id": "P2BDEFA",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    5517,
+    5641,
+    5688,
+    5905,
+    5907
+   ],
+   "razon": "Cada modelo tiene sus métricas y el predominio del modelo de persona es una barrera. Diagnosticar qué modelo predomina es una extensión coherente y no avala LTIF."
+  },
+  {
+   "id": "P5F2FCB",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    3965,
+    3967,
+    3971,
+    3973,
+    2767,
+    81,
+    105
+   ],
+   "razon": "Revisar periódicamente es coherente con la evaluación proactiva, pero el libro subraya que en una cultura cerrada es muy difícil detectar cuándo empezó la desviación. Conviene verificar la autorrevisión."
+  },
+  {
+   "id": "P229853",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2170,
+    2250,
+    2259,
+    2866
+   ],
+   "razon": "El libro propone identificar de antemano los pasos vulnerables por sus rasgos de tarea y critica la gestión reactiva basada en eventos. Priorizar por tasa histórica invierte ese enfoque."
+  }
+ ]
+}

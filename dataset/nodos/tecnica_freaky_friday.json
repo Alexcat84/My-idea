@@ -4,11 +4,11 @@
   "dominio": "core",
   "titulo_concepto": "Técnica de Gestión 'Freaky Friday' (Intercambio de Roles)",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Técnica de resolución de conflictos entre equipos donde los líderes de dos grupos en pugna intercambian temporalmente sus puestos de trabajo. Al experimentar directamente los desafíos y limitaciones del otro equipo, los líderes desarrollan empatía genuina y descubren rápidamente las causas raíz del conflicto, permitiendo implementar soluciones prácticas y sostenibles.",
+  "resumen_teorico": "Técnica de resolución de conflictos entre equipos donde los líderes de dos grupos en pugna intercambian sus puestos de trabajo de forma permanente. Al experimentar directamente los desafíos y limitaciones del otro equipo, los líderes desarrollan empatía genuina y descubren rápidamente las causas raíz del conflicto, permitiendo implementar soluciones prácticas y sostenibles.",
   "pasos_accionables": [
     "Identificar dos equipos con conflicto crónico y líderes competentes en ambos lados",
     "Proponer el intercambio de roles entre los líderes de los equipos en conflicto",
-    "Mantener el intercambio por un período suficiente para generar comprensión real (ej. una semana o más)",
+    "Hacer el intercambio de puestos de forma permanente, no como una prueba temporal; en el caso del libro, basto una semana en el puesto del otro para que ambos lideres diagnosticaran el conflicto",
     "Facilitar que ambos líderes diagnostiquen las causas del conflicto desde la nueva perspectiva",
     "Implementar los procesos que ambos líderes propongan tras el intercambio"
   ],
@@ -24,5 +24,40 @@
     "Cuando no es viable despedir o reemplazar a los líderes involucrados",
     "Cuando el conflicto se basa en falta de comprensión mutua de las limitaciones de cada área"
   ],
-  "etiqueta_arbol": "Intercambia Roles Entre Equipos"
+  "etiqueta_arbol": "Intercambia Roles Entre Equipos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-005",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Mantener el intercambio por un período suficiente para generar comprensión real (ej. una semana o más)",
+      "texto_nuevo": "Hacer el intercambio de puestos de forma permanente, no como una prueba temporal; en el caso del libro, basto una semana en el puesto del otro para que ambos lideres diagnosticaran el conflicto",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L3208-L3210",
+        "frase": "they would be switching jobs. I explained that, like Jodie Foster and Barbara Harris, they would keep their minds, but get new bodies. Permanently."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El paso plantea un intercambio temporal que se mantiene durante un periodo; el libro dice que el cambio de puestos fue permanente y que una semana basto para diagnosticar el conflicto.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-070"
+    },
+    {
+      "id": "fidelidad-t8-006",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Técnica de resolución de conflictos entre equipos donde los líderes de dos grupos en pugna intercambian temporalmente sus puestos de trabajo. Al experimentar directamente los desafíos y limitaciones del otro equipo, los líderes desarrollan empatía genuina y descubren rápidamente las causas raíz del conflicto, permitiendo implementar soluciones prácticas y sostenibles.",
+      "texto_nuevo": "Técnica de resolución de conflictos entre equipos donde los líderes de dos grupos en pugna intercambian sus puestos de trabajo de forma permanente. Al experimentar directamente los desafíos y limitaciones del otro equipo, los líderes desarrollan empatía genuina y descubren rápidamente las causas raíz del conflicto, permitiendo implementar soluciones prácticas y sostenibles.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L3208-L3210",
+        "frase": "they would be switching jobs. I explained that, like Jodie Foster and Barbara Harris, they would keep their minds, but get new bodies. Permanently."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el intercambio temporal que la correccion C096-070 cambia: en el libro el cambio de puestos fue permanente (L3208-L3210).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-070"
+    }
+  ]
 }

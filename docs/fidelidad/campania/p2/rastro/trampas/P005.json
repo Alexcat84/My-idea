@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Método de Debriefing de Participantes (Klein)",
+  "resumen": "Gary Klein propone un orden para entrevistar a quienes vivieron un incidente: primero dejar que cuenten la historia con sus propias palabras, luego repetírsela para confirmar que se entendió, identificar juntos los puntos críticos y, en cada uno, reconstruir cómo se veía el mundo desde adentro: señales, expectativas, metas y experiencia previa.",
+  "texto": "Antes de que el participante narre lo ocurrido, muéstrale la grabación o los registros del evento para refrescarle la memoria",
+  "tipo": "CONTRARIO",
+  "libro": "The Field Guide to Understandin - Dekker, Sidney",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\The Field Guide to Understandin - Dekker, Sidney;.txt",
+  "lineas": "L1016",
+  "cita": "1. Have participants tell the story from their point of view, without presenting them with any replays or reminders that supposedly “refresh their memory” but would actually distort it.",
+  "dato": "",
+  "explicacion": "El libro pide que el participante cuente la historia SIN repeticiones ni recordatorios que supuestamente le refrescan la memoria, porque en realidad la distorsionan; la grabación solo cabe más tarde, en el paso 4 (L1022), para llenar huecos. El paso invierte el orden y recomienda justo lo que el libro advierte que distorsiona el relato."
+ },
+ {
+  "titulo": "Riesgos de Perseguir Números Bajos de Incidentes",
+  "resumen": "Cuando la organización se obsesiona con mostrar pocas lesiones, aparecen mecanismos que bajan los números sin bajar el riesgo: premios por no reportar, sanciones al que reporta, pruebas automáticas de drogas tras una lesión o metas de incidentes por unidad. El resultado es subreporte y menos aprendizaje, no más seguridad.",
+  "texto": "Coloca en la entrada un letrero que cuente los días sin lesiones con baja para mantener al equipo enfocado en la seguridad",
+  "tipo": "CONTRARIO",
+  "libro": "The Field Guide to Understandin - Dekker, Sidney",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\The Field Guide to Understandin - Dekker, Sidney;.txt",
+  "lineas": "L3697",
+  "cita": "• workplace signs that track the number of hours or days without a losttime or recordable injury. This encourages numbers games;",
+  "dato": "",
+  "explicacion": "Dekker pone los letreros de horas o días sin lesión con baja en la lista de prácticas que consiguen números bajos a costa del reporte, y dice que fomentan el juego de números (lo ilustra en L3141 con el gerente que esperaba llegar a 300 días). El paso recomienda como motivador lo que el libro señala como incentivo al subreporte."
+ },
+ {
+  "titulo": "Cultura Justa (Just Culture) y segundas víctimas",
+  "resumen": "Las segundas víctimas son profesionales que participaron en un incidente que dañó o pudo dañar a otra persona y se sienten personalmente responsables. Contar con sistemas sólidos de apoyo social y organizacional (primeros auxilios psicológicos, debriefings, seguimiento) ayuda a contener el estrés postraumático y convierte su experiencia en aprendizaje para la organización.",
+  "texto": "Ofrece primeros auxilios psicológicos a las segundas víctimas dentro de las primeras 72 horas tras el incidente",
+  "tipo": "ANADIDO",
+  "libro": "The Field Guide to Understandin - Dekker, Sidney",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\The Field Guide to Understandin - Dekker, Sidney;.txt",
+  "lineas": "L656-L658",
+  "cita": "Strong social and organizational support systems for second victims (psychological first aid, debriefings, follow-up), have proven critical to contain the negative consequences (particularly post-traumatic stress in all its forms).",
+  "dato": "plazo de 72 horas para los primeros auxilios psicológicos",
+  "explicacion": "El libro sí respalda dar primeros auxilios psicológicos, debriefings y seguimiento a las segundas víctimas, pero no da ningún plazo. Un Grep de '72', '72 h', 'within' y 'hours after' en todo el texto no encuentra ningún plazo de respuesta: '72' solo aparece en '72 workers' (L542) y en '1972' (L2796)."
+ },
+ {
+  "titulo": "Sistemas contra incendios: alarmas y rociadores",
+  "resumen": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras, la alarma tiene que estar certificada y probarse cada año, el mantenimiento de los rociadores lo hace alguien calificado, las cabezas expuestas a golpes llevan protección metálica y debajo de ellas se deja un espacio libre mínimo de 18 pulgadas.",
+  "texto": "Revisa cada semana las válvulas de control y los manómetros del sistema de rociadores",
+  "tipo": "ANADIDO",
+  "libro": "SMALL_BUSINESS",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\SMALL_BUSINESS.md",
+  "lineas": "L585",
+  "cita": "Automatic sprinkler system water control valves and pressure gages are checked periodically.",
+  "dato": "frecuencia semanal de revisión de válvulas y manómetros",
+  "explicacion": "El libro solo dice que se revisen 'periodically', sin dar una frecuencia. Un Grep de 'weekly', 'every week' y 'each week' en todo SMALL_BUSINESS.md da 0 resultados; las únicas frecuencias concretas del apartado son la prueba anual de la alarma (L581) y la de mangueras (L591), y la inspección mensual de extintores (L543)."
+ }
+]

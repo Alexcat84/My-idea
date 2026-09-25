@@ -13,7 +13,7 @@
     "Evaluar si el modelo de negocio ya funciona en otro país y puede clonarse localmente",
     "Documentar el tipo de mercado como hipótesis temprana, aunque sea una decisión de atado tardío",
     "Calcular la cuota de mercado del líder para evaluar si es monopolio, duopolio o mercado inestable",
-    "Si se ataca mercado existente, calcular el costo de entrada (1.7x o 3x el presupuesto de marketing del líder)",
+    "Si se ataca mercado existente, calcular el costo de entrada (3x el presupuesto combinado de ventas y marketing del jugador dominante, o 1.7x el de la empresa que atacas si hay varios participantes)",
     "Definir la base de competencia donde el producto puede ganar (features, servicio, precio, marca)",
     "Si un competidor domina más del 74% del mercado, evita atacarlo de frente; si domina entre 26% y 74%, elige bien tus batallas",
     "Escribe un breve documento respondiendo las preguntas clave según el tipo de mercado que elegiste",
@@ -79,6 +79,25 @@
       "node_id": "tipo_de_mercado_estrategia_competitiva",
       "titulo": "Decidir en qué tipo de mercado compites y tu estrategia para hacerlo",
       "fuente": "The Startup Owner's Manual"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-005",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si se ataca mercado existente, calcular el costo de entrada (1.7x o 3x el presupuesto de marketing del líder)",
+      "texto_nuevo": "Si se ataca mercado existente, calcular el costo de entrada (3x el presupuesto combinado de ventas y marketing del jugador dominante, o 1.7x el de la empresa que atacas si hay varios participantes)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L6078-L6080",
+        "frase": "spend three times the combined sales and marketing budget of that dominant player ... 1.7 times the combined sales and marketing budget of the company you plan to attack"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenía razón el lector B. Las cifras 3x y 1.7x son del libro, pero el paso cambia la base del cálculo en dos puntos. Primero, reduce la base al presupuesto de marketing, cuando el libro dice presupuesto combinado de ventas y marketing, así que el costo de entrada sale más bajo. Segundo, aplica el 1.7x al líder, cuando el libro lo aplica a la empresa que atacas en un mercado con varios participantes (L6136: \"1.7 times that of a competitor in a crowded market\"). El libro solo usa \"del líder\" para el 3x (L6126, \"three times the resources of the market leader\"). En ningún pasaje el libro calcula la entrada sobre el presupuesto de marketing solo. Un umbral con otra base es otro valor para el mismo dato, y eso es CONTRARIO. El lector A lo consideró solo un resumen válido.",
+      "indice": 7,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C069-091"
     }
   ]
 }

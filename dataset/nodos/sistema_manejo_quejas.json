@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La forma en que gestionas las quejas de tus clientes impacta directamente en la venta futura y la lealtad hacia tu marca, más allá de la insatisfacción inicial. Estudios muestran que cerca del 70% de clientes insatisfechos no se queja, y de los que sí lo hacen, más del 40% queda inconforme con la respuesta recibida. Un sistema organizado, con un canal de contacto disponible las 24 horas, un registro de quejas y atención capacitada, genera alto retorno de inversión. Además, mantener informados a tus clientes durante fallas de servicio, explicando causas y tiempos de solución, y medir el impacto de tus resoluciones en la lealtad de marca, fortalece la confianza a largo plazo.",
   "pasos_accionables": [
-    "Define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
+    "Sugerencia de My Idea: define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
     "Crea una base de datos simple, aunque sea una hoja de cálculo, para registrar cada queja recibida",
     "Prepárate y capacítate tú mismo en cómo responder reclamos con empatía y rapidez",
     "Pide activamente retroalimentación a tus clientes después de una compra o servicio para detectar insatisfacción antes de perderlos",
@@ -41,6 +41,25 @@
       "node_id": "gestion_de_quejas_y_fidelizacion",
       "titulo": "Gestión de Quejas y su Impacto en la Fidelización",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-021",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
+      "texto_nuevo": "Sugerencia de My Idea: define un canal de contacto que puedas atender o revisar las 24 horas, como una línea telefónica gratuita o WhatsApp",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L914-L920",
+        "frase": "A response center staffed to provide 24/7 access by consumers"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El canal 24 horas y la linea gratuita estan en el libro, pero WhatsApp es una herramienta que el libro no menciona (buscado whatsapp).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C057-024"
     }
   ]
 }

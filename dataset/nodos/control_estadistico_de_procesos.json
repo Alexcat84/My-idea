@@ -12,7 +12,7 @@
     "Determinar el punto más temprano de prueba para detectar causas asignables",
     "Elegir el tipo de gráfico de control adecuado (variables o atributos)",
     "Decidir la línea central y los límites de control (usualmente ±3σ), calculados a partir del rango promedio",
-    "Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5",
+    "Elegir subgrupos racionales para las muestras, de forma que las unidades de un mismo subgrupo sean lo más parecidas posible y las de subgrupos distintos lo más diferentes",
     "Establecer un sistema simple y confiable de recolección de datos",
     "Calcular límites de control y definir instrucciones de interpretación y acción",
     "Graficar los datos e interpretar los resultados"
@@ -53,6 +53,25 @@
       "node_id": "control_estadistico_de_procesos_2",
       "titulo": "Control Estadístico de Procesos mediante Gráficos de Control",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-012",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elegir subgrupos racionales para las muestras, por ejemplo n=4 o n=5",
+      "texto_nuevo": "Elegir subgrupos racionales para las muestras, de forma que las unidades de un mismo subgrupo sean lo más parecidas posible y las de subgrupos distintos lo más diferentes",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L18669-L18669",
+        "frase": "rational subgroups should be chosen so that the units within a subgroup have the greatest chance of being alike and the units between subgroups have the greatest chance of being different."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro define el subgrupo racional pero no recomienda n=4 ni n=5. Busque subgroup size, four or five, 4 or 5, n = 4 y n = 5, sin resultado. Su unico ejemplo usa seis unidades por subgrupo, como ilustracion y no como recomendacion.",
+      "indice": 6,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C042-043"
     }
   ]
 }

@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PB9559F",
+  "intento": 0,
+  "usd": 0.191388,
+  "turnos": 1,
+  "duracion_s": 19.1,
+  "pared_s": 20.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38777,
+  "tokens_out": 1814,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PB9559F\", \"veredicto\": \"CONTRARIO\", \"lineas\": [848, 856, 942, 1033, 1129, 1141, 1149], \"cita\": \"In their efforts to compensate for the unreliability of human performance, the designers of automated control systems have unwittingly created opportunities for new error types that can be even more serious than those they were seeking to avoid.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta la mala vigilancia como ironía de la automatización (L848). Su respuesta es invertir más en entrenamiento del operador (L856). Compensar la falibilidad humana con más automatismos, alarmas o defensas lo describe como contraproducente: crea errores nuevos, más complejidad y falsas alarmas. El paso propone justo esa vía.\", \"paso_fiel\": \"Reconocer que los operadores no son aptos para vigilar durante largos periodos condiciones anormales muy raras e invertir más en su entrenamiento cuanto más fiable sea el sistema automatizado, sin añadir automatismos o alarmas que sumen complejidad y errores nuevos.\"}\n```",
+ "parseado": {
+  "id": "PB9559F",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   848,
+   856,
+   942,
+   1033,
+   1129,
+   1141,
+   1149
+  ],
+  "cita": "In their efforts to compensate for the unreliability of human performance, the designers of automated control systems have unwittingly created opportunities for new error types that can be even more serious than those they were seeking to avoid.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta la mala vigilancia como ironía de la automatización (L848). Su respuesta es invertir más en entrenamiento del operador (L856). Compensar la falibilidad humana con más automatismos, alarmas o defensas lo describe como contraproducente: crea errores nuevos, más complejidad y falsas alarmas. El paso propone justo esa vía.",
+  "paso_fiel": "Reconocer que los operadores no son aptos para vigilar durante largos periodos condiciones anormales muy raras e invertir más en su entrenamiento cuanto más fiable sea el sistema automatizado, sin añadir automatismos o alarmas que sumen complejidad y errores nuevos."
+ }
+}

@@ -10,7 +10,7 @@
     "Evalúa cada especificación o nivel de precisión contra su verdadero impacto en la satisfacción de tu cliente",
     "Elimina inversión en refinamientos, procesos o controles que no sean perceptibles ni valorados por el cliente",
     "Reserva el estándar de perfección únicamente para los atributos críticos de seguridad o salud",
-    "Define tus propios criterios de 'fit for purpose' para detectar sobreingeniería antes de invertir recursos"
+    "Define los criterios de 'fit for purpose' a partir de lo que el cliente valora para detectar sobreingeniería antes de invertir recursos"
   ],
   "entregable_esperado": "Matriz de criticidad de atributos de calidad (crítico de seguridad vs no crítico) con recomendaciones de inversión y especificaciones revisadas.",
   "nodos_previos": [
@@ -34,6 +34,25 @@
       "node_id": "perfeccionismo_vs_valor_2",
       "titulo": "Perfeccionismo como Desperdicio de Valor (Contextos Críticos vs Desperdicio)",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-003",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Define tus propios criterios de 'fit for purpose' para detectar sobreingeniería antes de invertir recursos",
+      "texto_nuevo": "Define los criterios de 'fit for purpose' a partir de lo que el cliente valora para detectar sobreingeniería antes de invertir recursos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L3201; L265; L972",
+        "frase": "Who gets to decide what \"fitness\" means? Who decides what \"purpose\" means? The user decides what \"use\" means, and the user decides what \"fitness\" means. Any other answer is bound to lead to argument and misunderstanding. Providers rarely win here."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector A, y hay una cita mas fuerte que la suya. El libro deja claro que la aptitud y el proposito los define el usuario y que cualquier otra respuesta lleva a malentendidos (L3201, L265). Tambien dice que los planificadores no deben sustituir las necesidades del cliente por su propio criterio tecnico (L3610). El paso manda definir criterios propios de fit for purpose, y eso invierte quien decide. Busque con Grep pasajes que dejen esa definicion al proveedor. L8138 (criterios de trabajo para quien no conoce la aptitud de uso) se refiere a especificaciones derivadas de la aptitud, no a definirla. L24412 insiste en que valen las medidas del usuario y no las del fabricante. Detectar el perfeccionismo si esta en el libro (L972), pero el criterio debe salir del cliente.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C052-111"
     }
   ]
 }

@@ -9,7 +9,7 @@
     "Evalúa con honestidad si tu negocio cumple lo mínimo para ser público: procesos ordenados, proyecciones confiables, operación estable",
     "Haz una lista clara de ventajas y desventajas de salir a bolsa según el momento actual del mercado",
     "Habla con personas que hayan sido directores generales de empresas públicas y pídeles su experiencia",
-    "Prepara a tu equipo para la realidad de la valuación y lo que implica, por ejemplo si hay que dividir las acciones",
+    "Prepara a tu equipo para la realidad de la valuación y lo que implica, por ejemplo si hay que hacer un contrasplit y agrupar las acciones",
     "Ajusta el precio de la oferta según lo que valen negocios comparables en el mercado, aunque sea menor a lo que valió en rondas privadas anteriores"
   ],
   "entregable_esperado": "Tu evaluacion honesta de si la operacion, los procesos y las proyecciones aguantan el escrutinio publico, la lista de ventajas y desventajas contra el momento actual del mercado, y el rango de precio de oferta calibrado con comparables",
@@ -21,5 +21,24 @@
     "Cuando la salida a bolsa dejo de ser una idea y hay que decidir si el negocio aguanta el escrutinio trimestral",
     "Cuando hay que fijar el precio de la oferta y la valuacion privada anterior esta por encima de lo que dicen los comparables"
   ],
-  "etiqueta_arbol": "Mide si Aguantas la Bolsa"
+  "etiqueta_arbol": "Mide si Aguantas la Bolsa",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-003",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Prepara a tu equipo para la realidad de la valuación y lo que implica, por ejemplo si hay que dividir las acciones",
+      "texto_nuevo": "Prepara a tu equipo para la realidad de la valuación y lo que implica, por ejemplo si hay que hacer un contrasplit y agrupar las acciones",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L336-L342",
+        "frase": "the company had fallen so far in value that we would have to reverse split the stock two for one."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. La leccion de preparar al equipo esta en el libro, pero el ejemplo esta invertido: lo que Horowitz tuvo que hacer fue un contrasplit (reducir a la mitad el numero de acciones), no dividirlas. No hay en el libro ningun pasaje sobre dividir las acciones que apoye el ejemplo.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C094-037"
+    }
+  ]
 }

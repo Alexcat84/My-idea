@@ -7,8 +7,8 @@
   "resumen_teorico": "Las medidas correctivas diseñadas tras un accidente (fixes de ingeniería o regulación) pueden, sin quererlo, sembrar las condiciones para un accidente futuro distinto. Ejemplos históricos incluyen el monitor de despegue que falló mecánicamente causando un accidente, y la regla post-TMI de no reducir la inyección de agua a alta presión, que en Ginna prolongó una emergencia porque esa acción sí era la correcta en ese contexto. Esto demuestra que los reguladores y diseñadores no pueden prever todos los escenarios de falla en sistemas complejos y fuertemente acoplados.",
   "pasos_accionables": [
     "Antes de implementar una nueva regla o dispositivo tras un incidente, evaluar escenarios alternativos donde la nueva regla podría ser contraproducente",
-    "Realizar análisis de sensibilidad sobre nuevas regulaciones en diferentes contextos operativos",
-    "Establecer revisiones periódicas de reglas post-accidente para verificar su aplicabilidad universal",
+    "Sugerencia de My Idea: realizar un análisis de sensibilidad de cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro",
+    "Sugerencia de My Idea: revisar periódicamente las reglas post-accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
     "Capacitar a operadores en el juicio situacional, no solo en el cumplimiento ciego de la nueva regla"
   ],
   "entregable_esperado": "Protocolo de revisión de nuevas medidas correctivas con análisis de escenarios contraproducentes",
@@ -22,5 +22,41 @@
     "Cuando se está por implementar una nueva regla o dispositivo tras investigar un accidente",
     "Si la organización opera sistemas complejos y fuertemente acoplados"
   ],
-  "etiqueta_arbol": "Cuidado con las Soluciones Riesgosas"
+  "etiqueta_arbol": "Cuidado con las Soluciones Riesgosas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-18",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar análisis de sensibilidad sobre nuevas regulaciones en diferentes contextos operativos",
+      "texto_nuevo": "Sugerencia de My Idea: realizar un análisis de sensibilidad de cada nueva regulación en diferentes contextos operativos, ya que una misma regla puede ser acertada en un caso y contraproducente en otro",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L1035",
+        "frase": "What proved to be an error in the TMI event turned out to be a vital step at Ginna."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). El \"análisis de sensibilidad\" es una herramienta añadida; el libro sostiene la idea de fondo con el caso TMI y Ginna (L1035). Se reescribe como sugerencia de My Idea y se conserva la razón del libro. El entregable habla de análisis de escenarios, no de este dato, y queda.",
+      "indice": 1,
+      "auditoria": "muestreo A20"
+    },
+    {
+      "id": "fidelidad-t3-21",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer revisiones periódicas de reglas post-accidente para verificar su aplicabilidad universal",
+      "texto_nuevo": "Sugerencia de My Idea: revisar periódicamente las reglas post-accidente para comprobar en qué contextos siguen sirviendo, sin esperar que alguna valga para todos los casos.",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L1575",
+        "frase": "this collection of safe operating procedures will never be wholly comprehensive nor universally applicable."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es una frecuencia (revisiones periódicas), que es práctica, y queda como sugerencia de My Idea. El fin original, 'verificar su aplicabilidad universal', se cambia porque el libro dice que ningún conjunto de procedimientos será nunca universalmente aplicable (L1575). El dato no se repite en el resumen ni en el entregable.",
+      "indice": 2,
+      "auditoria": "muestreo A25"
+    }
+  ]
 }

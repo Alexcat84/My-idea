@@ -11,7 +11,7 @@
     "Si es variación aleatoria, evitar otorgar premios de mérito individual; considerar mejoras al sistema en su conjunto.",
     "Si existe una causa especial genuina, investigarla y usarla como oportunidad de aprendizaje para todo el grupo.",
     "Calcular la probabilidad de obtener 'cero incidencias' dado el promedio histórico de cada trabajador (ej. usando distribución de Poisson)",
-    "Comunicar a la organización que el mérito debe basarse en mejoras sostenidas, no en resultados de un solo período"
+    "Comunicar a la organización que el mérito solo lo merece quien queda fuera del sistema por el lado bueno, no quien destaca dentro de un sistema estable, ni en un período ni en varios seguidos"
   ],
   "entregable_esperado": "Un análisis de control estadístico del desempeño grupal que determine si las diferencias individuales son causas comunes o especiales, antes de diseñar cualquier sistema de reconocimiento.",
   "nodos_previos": [
@@ -36,6 +36,25 @@
       "node_id": "sistemas_recompensa_aleatorios",
       "titulo": "Sistemas de Reconocimiento como Lotería Estadística",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-015",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Comunicar a la organización que el mérito debe basarse en mejoras sostenidas, no en resultados de un solo período",
+      "texto_nuevo": "Comunicar a la organización que el mérito solo lo merece quien queda fuera del sistema por el lado bueno, no quien destaca dentro de un sistema estable, ni en un período ni en varios seguidos",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L6541-L6547",
+        "frase": "If the work of the group forms a statistical system, then the prize would be merely a lottery. On the other hand, if the top man is a special cause on the side of low proportion defective, then he is indeed outstanding."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro basa el reconocimiento en un criterio estadistico: solo lo merece quien queda fuera de los limites del sistema por el lado bueno (L6545; L2506: 'If he is outside the limit of variation of the system on the good side ... he deserves recognition'; L2553). Tambien advierte que, dentro de un sistema estable, repetir buenos resultados puede ser azar: el mismo hombre del mes dos meses seguidos (L8945) y el general que gana cinco batallas seguidas ('Mathematical probability, not genius', L8958). Busque en todo el libro un apoyo al merito por 'mejoras sostenidas' o resultados repetidos y no lo hay: L2224 critica que la calificacion por merito premie a quien rinde bien dentro del sistema. El paso acierta al rechazar un solo periodo, pero cambia el criterio del libro por otro que el libro desmonta de forma expresa. El lector A lo vio (cita L8945), pero lo dejo en OPERATIVO.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-037"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "Presentación visual de 10-20 diapositivas que comunica la misma información que el executive summary pero con más ejemplos y formato visual. Debe adaptarse a la audiencia (una persona, toda la partnership, evento de inversionistas) y cubrir: problema, tamaño de oportunidad, fortaleza del equipo, ventaja competitiva, plan de acción, estado actual, financieros resumidos e hitos. Idealmente en 10 diapositivas o menos.",
   "pasos_accionables": [
-    "Estructurar el deck en máximo 10-15 slides cubriendo: problema, oportunidad, equipo, competencia, plan, estado actual y financieros",
+    "Estructurar el deck idealmente en 10 slides o menos cubriendo: problema, tamano de la oportunidad, equipo, ventaja competitiva, plan, estado actual y financieros resumidos",
     "Adaptar la duración y profundidad según la audiencia (3 min, 8 min, 30 min)",
     "Invertir en buen diseño visual, idealmente con ayuda de un diseñador",
     "Preparar una versión para enviar por email y otra para presentar en vivo si son distintas"
@@ -24,5 +24,24 @@
     "Cuando un VC pide una reunión o presentación formal",
     "Cuando se prepara para pitch events o reuniones de partnership"
   ],
-  "etiqueta_arbol": "Arma tu Presentación a Inversionistas"
+  "etiqueta_arbol": "Arma tu Presentación a Inversionistas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-015",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Estructurar el deck en máximo 10-15 slides cubriendo: problema, oportunidad, equipo, competencia, plan, estado actual y financieros",
+      "texto_nuevo": "Estructurar el deck idealmente en 10 slides o menos cubriendo: problema, tamano de la oportunidad, equipo, ventaja competitiva, plan, estado actual y financieros resumidos",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L456; L469",
+        "frase": "Most good investor presentations can be done in 10 slides or fewer."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da 10 a 20 paginas como habitual e ideal 10 o menos; el paso fija otro umbral (maximo 10-15).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C022-040"
+    }
+  ]
 }

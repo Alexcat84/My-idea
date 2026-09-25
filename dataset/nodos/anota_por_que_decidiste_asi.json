@@ -6,7 +6,7 @@
   "fuente": "Edwards et al., Managing Project Risks",
   "resumen_teorico": "Cada vez que decides qué hacer con un riesgo, anota por qué lo decidiste así. Parece un trámite, pero es una de las cosas más valiosas que puedes hacer, porque la memoria engaña: dentro de unos meses no recordarás si aceptaste un riesgo por análisis o por prisa, y repetirás el error o desharás una buena decisión sin saberlo. Registrar la razón (qué sabías, qué supusiste, qué alternativas descartaste) te permite revisar la decisión cuando cambien las circunstancias y aprender de ella al cerrar el proyecto. Para el emprendedor solo, que es a la vez quien decide y quien ejecuta, este registro es su única memoria institucional: convierte cada susto vivido en una lección que el siguiente proyecto puede aprovechar.",
   "pasos_accionables": [
-    "Cada vez que decidas qué hacer con un riesgo, escribe en una línea por qué lo decidiste así.",
+    "Sugerencia de My Idea: cada vez que decidas que hacer con un riesgo, escribe en una linea por que lo decidiste asi.",
     "Anota qué sabías, qué supusiste y qué otras opciones descartaste.",
     "Guarda esas notas junto a tu lista de riesgos, no sueltas.",
     "Al cerrar el proyecto, relee tus decisiones y saca lecciones para el siguiente."
@@ -25,5 +25,24 @@
     "cuando repites un error que ya habías analizado y olvidado",
     "cuando deshaces una buena decisión sin saber por qué la tomaste"
   ],
-  "etiqueta_arbol": "Anota Por Qué Decidiste Así"
+  "etiqueta_arbol": "Anota Por Qué Decidiste Así",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-036",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada vez que decidas qué hacer con un riesgo, escribe en una línea por qué lo decidiste así.",
+      "texto_nuevo": "Sugerencia de My Idea: cada vez que decidas que hacer con un riesgo, escribe en una linea por que lo decidiste asi.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L5827-L5829",
+        "frase": "the item record entry should be as comprehensive and complete as possible"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide registrar cada decision de respuesta; admite forma abreviada en el registro, pero no fija el formato de una linea, y para la ficha pide la mayor completitud.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C031-055"
+    }
+  ]
 }

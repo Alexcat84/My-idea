@@ -7,8 +7,8 @@
   "resumen_teorico": "Las aberturas en pisos deben estar protegidas mediante cubiertas, barandillas o equivalentes en todos los lados, excepto en escaleras. Las cubiertas, incluyendo pantallas de tragaluz, deben soportar el doble de la carga máxima prevista, y las rejillas deben permitir tráfico peatonal y de equipos rodantes sin obstrucción.",
   "pasos_accionables": [
     "Inspeccionar todas las aberturas de piso existentes en la instalación",
-    "Instalar cubiertas o barandillas que soporten el doble de la carga máxima esperada",
-    "Colocar rodapiés en bordes de aberturas permanentes donde transite personal",
+    "Proteger cada abertura con cubierta, barandilla o equivalente; las cubiertas deben soportar el doble de la carga máxima prevista",
+    "Colocar rodapiés alrededor de los bordes de las aberturas permanentes de piso donde pueda pasar gente por debajo de la abertura",
     "Verificar que las rejillas permitan el tránsito seguro de personas y equipos"
   ],
   "entregable_esperado": "Registro de inspección de aberturas de piso con medidas correctivas implementadas.",
@@ -21,5 +21,41 @@
   "condiciones_activacion": [
     "Si existen huecos en pisos, tragaluces o drenajes de piso en la instalación"
   ],
-  "etiqueta_arbol": "Protege Aberturas de Piso y Pared"
+  "etiqueta_arbol": "Protege Aberturas de Piso y Pared",
+  "correcciones": [
+    {
+      "id": "fidelidad-t1-02",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Colocar rodapiés en bordes de aberturas permanentes donde transite personal",
+      "texto_nuevo": "Colocar rodapiés alrededor de los bordes de las aberturas permanentes de piso donde pueda pasar gente por debajo de la abertura",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L1479",
+        "frase": "Toeboards are installed around the edges of permanent floor holes where persons may pass below the hole."
+      },
+      "decision": "Mandato del fundador, regla B: CONTRARIO, version fiel del verificador ciego (fila SB2-119). El paso ponia la condicion en quien transita por arriba; el libro la pone en quien puede pasar por debajo.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha SB2-119"
+    },
+    {
+      "id": "fidelidad-t3-41",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Instalar cubiertas o barandillas que soporten el doble de la carga máxima esperada",
+      "texto_nuevo": "Proteger cada abertura con cubierta, barandilla o equivalente; las cubiertas deben soportar el doble de la carga máxima prevista",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L1477-L1481",
+        "frase": "Covers including skylight screens, are able to withstand, without failure, twice the maximum intended load that may be imposed on the cover at any one time."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es una cifra normativa: el paso aplica tambien a las barandillas la exigencia del doble de la carga maxima, y el libro la pone solo para las cubiertas (L1481). La proteccion con cubierta, barandilla o equivalente viene de L1477. El resumen_teorico ya lo dice bien y no se toca.",
+      "indice": 1,
+      "auditoria": "tramo1 SB2-004"
+    }
+  ]
 }

@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P12BD11",
+  "intento": 0,
+  "usd": 0.14977200000000002,
+  "turnos": 1,
+  "duracion_s": 7.9,
+  "pared_s": 8.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34548,
+  "tokens_out": 579,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P12BD11\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [965, 971, 973], \"cita\": \"The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.\", \"datos_sin_respaldo\": [], \"razon\": \"Reason advierte que abolir la inspección independiente abrió un hueco donde la calidad afecta directamente a la seguridad (L965, L971, L973). Revisar si existe esa función concreta su advertencia en la misma dirección. No sustituye el aseguramiento de calidad ni contradice L963. Acotar a tareas críticas coincide con L965. No añade datos nuevos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P12BD11",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   965,
+   971,
+   973
+  ],
+  "cita": "The lack of a separate inspection plus the absence of QA staff allowed unfinished or wrongly executed jobs to be signed off as fit for service.",
+  "datos_sin_respaldo": [],
+  "razon": "Reason advierte que abolir la inspección independiente abrió un hueco donde la calidad afecta directamente a la seguridad (L965, L971, L973). Revisar si existe esa función concreta su advertencia en la misma dirección. No sustituye el aseguramiento de calidad ni contradice L963. Acotar a tareas críticas coincide con L965. No añade datos nuevos.",
+  "paso_fiel": ""
+ }
+}

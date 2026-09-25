@@ -9,7 +9,7 @@
     "Después de aplicar una respuesta, mide de nuevo el riesgo: bajó lo suficiente o no.",
     "Si no bajó a un nivel aceptable, decide qué respuesta adicional le das.",
     "Cuando un riesgo se materializó o el entorno cambió, actualiza su probabilidad e impacto.",
-    "Cierra el riesgo solo cuando de verdad esté dentro de lo que aceptas, no antes."
+    "Si el riesgo tratado aun no esta dentro de lo que aceptas, sigue tratandolo; y no lo cierres hasta que ya no pueda afectar tus objetivos."
   ],
   "entregable_esperado": "Cada riesgo tratado reevaluado contra tu criterio, con la decisión de darlo por controlado o darle otra vuelta.",
   "nodos_previos": [
@@ -27,5 +27,24 @@
     "cuando das por resuelto un riesgo sin volver a mirarlo",
     "cuando sigues temiendo un riesgo que en realidad ya bajó"
   ],
-  "etiqueta_arbol": "Vuelve a Medir Después del Susto"
+  "etiqueta_arbol": "Vuelve a Medir Después del Susto",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-003",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cierra el riesgo solo cuando de verdad esté dentro de lo que aceptas, no antes.",
+      "texto_nuevo": "Si el riesgo tratado aun no esta dentro de lo que aceptas, sigue tratandolo; y no lo cierres hasta que ya no pueda afectar tus objetivos.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L5886-L5886",
+        "frase": "monitoring will also signal situations where particular risk uncertainties can no longer affect the achievement of project objectives for the project stakeholder. Those risks can then be ‘closed off’"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Para el libro, un riesgo dentro de los limites aceptables se retiene y se sigue vigilando (L5818, L6030); solo se cierra cuando ya no puede ocurrir o su impacto ceso (L8598). El paso cambia el criterio de cierre.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C031-042"
+    }
+  ]
 }

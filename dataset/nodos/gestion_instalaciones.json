@@ -7,7 +7,7 @@
   "resumen_teorico": "Una vez decidida la ubicación de una instalación (decisión costosa y difícil de revertir), la gestión continua se enfoca en tres decisiones clave: el rol que jugará cada instalación (qué actividades realiza, lo que afecta la flexibilidad de la cadena de suministro), cómo se asigna la capacidad en cada instalación (equipo y mano de obra, afectando rentabilidad), y la asignación de proveedores y mercados a cada instalación (afectando costos de transporte y capacidad de cumplir la demanda).",
   "pasos_accionables": [
     "Definir el rol específico de cada instalación (única función vs. multipropósito)",
-    "Calcular la capacidad óptima a asignar evitando sobre-capacidad (bajos costos de utilización) o sub-capacidad (pérdida de ventas)",
+    "Calcular la capacidad óptima a asignar evitando sobre-capacidad (bajas tasas de utilización y mayores costos) o sub-capacidad (pérdida de ventas)",
     "Asignar proveedores y mercados a cada instalación considerando costos de transporte",
     "Evaluar el impacto de estas decisiones en la flexibilidad general de la cadena de suministro"
   ],
@@ -25,5 +25,24 @@
     "Cuando el emprendimiento escala y necesita más de una instalación física",
     "Si se está evaluando abrir una nueva planta o centro de distribución"
   ],
-  "etiqueta_arbol": "Gestiona bien tus Instalaciones"
+  "etiqueta_arbol": "Gestiona bien tus Instalaciones",
+  "correcciones": [
+    {
+      "id": "fidelidad-t12-02",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Calcular la capacidad óptima a asignar evitando sobre-capacidad (bajos costos de utilización) o sub-capacidad (pérdida de ventas)",
+      "texto_nuevo": "Calcular la capacidad óptima a asignar evitando sobre-capacidad (bajas tasas de utilización y mayores costos) o sub-capacidad (pérdida de ventas)",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L1310-L1310",
+        "frase": "Too much capacity in a facility results in low utilization rates and higher supply chain costs."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: la segunda pasada dio contrarios y se amplio al resto de los FIEL no releidos (lote Q009, arbitro). Tiene razon el LECTOR B. La accion general (evitar sobre y sub capacidad) coincide con el libro, pero el parentesis del paso atribuye a la sobrecapacidad 'bajos costos de utilizacion', y el libro dice que trae bajas tasas de utilizacion y MAYORES costos de la cadena. L136 lo confirma: 'capacity costs money, and excess capacity is idle capacity not in use and not generating revenue'. Busque en todo el libro (utilization, excess capacity, too much capacity) y ningun pasaje dice que el exceso de capacidad abarate costos; el paso invierte la consecuencia. El LECTOR A paso por alto esa inversion. La sesion solo restituye las tildes que el texto propuesto traia sin ellas.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p3/VEREDICTOS_AMPLIACION.jsonl, id Q009-001"
+    }
+  ]
 }

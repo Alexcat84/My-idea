@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PDFAF6D",
+  "intento": 0,
+  "usd": 0.159508,
+  "turnos": 1,
+  "duracion_s": 6.8,
+  "pared_s": 7.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37557,
+  "tokens_out": 464,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PDFAF6D\", \"veredicto\": \"FIEL\", \"lineas\": [2533, 2568], \"cita\": \"It is a notional space within which we can represent the current resistance or vulnerability of an individual or an organization. [...] managers must understand the nature of the forces acting upon the organization, as well as the kinds of information needed to fix their current position.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide fijar la posicion actual de la organizacion en el continuo resistencia-vulnerabilidad, y el paso dice exactamente eso. No indica con que medirla, pero tampoco manda usar tasas de accidentes, asi que no contradice la advertencia sobre medidas de resultado. No incluye datos concretos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PDFAF6D",
+  "veredicto": "FIEL",
+  "lineas": [
+   2533,
+   2568
+  ],
+  "cita": "It is a notional space within which we can represent the current resistance or vulnerability of an individual or an organization. [...] managers must understand the nature of the forces acting upon the organization, as well as the kinds of information needed to fix their current position.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide fijar la posicion actual de la organizacion en el continuo resistencia-vulnerabilidad, y el paso dice exactamente eso. No indica con que medirla, pero tampoco manda usar tasas de accidentes, asi que no contradice la advertencia sobre medidas de resultado. No incluye datos concretos.",
+  "paso_fiel": ""
+ }
+}

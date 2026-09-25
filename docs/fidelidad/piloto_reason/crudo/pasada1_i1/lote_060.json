@@ -1,0 +1,70 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_060",
+  "intento": 0,
+  "usd": 0.154308,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33667,
+  "tokens_out": 982,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PAFB19D\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5896, 4769], \"razon\": \"El libro dice que las organizaciones preparadas para crisis tienen poca negación y racionalización. Cita a Smith: la negación indica una cultura propensa a crisis que requiere tratamiento.\"},\n  {\"id\": \"P9A1D21\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [194, 196, 250, 252, 5641, 5907], \"razon\": \"El libro rechaza la investigación centrada solo en la persona en sistemas complejos. Advierte también no ignorar lo individual, y el 'únicamente' del paso lo respeta.\"},\n  {\"id\": \"P4FE180\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5641, 5907, 194, 196, 5688], \"razon\": \"El libro critica el predominio del modelo personal que ignora los factores sistémicos. Pide que los gestores reconozcan otros tipos de riesgo y otras herramientas.\"},\n  {\"id\": \"P3C22BE\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [271, 273, 5742, 5748, 5781], \"razon\": \"El libro dice que los factores sociales escapan al alcance de los gestores y aportan rendimientos decrecientes. El mayor valor está en lo organizacional y controlable, misma dirección que el paso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PAFB19D",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5896,
+    4769
+   ],
+   "razon": "El libro dice que las organizaciones preparadas para crisis tienen poca negación y racionalización. Cita a Smith: la negación indica una cultura propensa a crisis que requiere tratamiento."
+  },
+  {
+   "id": "P9A1D21",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    194,
+    196,
+    250,
+    252,
+    5641,
+    5907
+   ],
+   "razon": "El libro rechaza la investigación centrada solo en la persona en sistemas complejos. Advierte también no ignorar lo individual, y el 'únicamente' del paso lo respeta."
+  },
+  {
+   "id": "P4FE180",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5641,
+    5907,
+    194,
+    196,
+    5688
+   ],
+   "razon": "El libro critica el predominio del modelo personal que ignora los factores sistémicos. Pide que los gestores reconozcan otros tipos de riesgo y otras herramientas."
+  },
+  {
+   "id": "P3C22BE",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    271,
+    273,
+    5742,
+    5748,
+    5781
+   ],
+   "razon": "El libro dice que los factores sociales escapan al alcance de los gestores y aportan rendimientos decrecientes. El mayor valor está en lo organizacional y controlable, misma dirección que el paso."
+  }
+ ]
+}

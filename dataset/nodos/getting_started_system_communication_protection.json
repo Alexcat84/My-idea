@@ -4,14 +4,14 @@
   "dominio": "seguridad_digital",
   "titulo_concepto": "Protección de Comunicaciones y Límites del Sistema",
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-  "resumen_teorico": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado (TLS, IPsec) para proteger la confidencialidad de la CUI en tránsito y almacenamiento.",
+  "resumen_teorico": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
   "pasos_accionables": [
     "Monitorear y controlar comunicaciones en interfaces gestionadas (gateways, routers, firewalls).",
     "Separar redes internas de las públicas mediante subredes.",
     "Permitir conexiones externas solo a través de interfaces gestionadas.",
     "Denegar tráfico de red por defecto, permitiendo solo por excepción.",
     "Terminar conexiones de red al finalizar la sesión o tras inactividad.",
-    "Cifrar CUI en tránsito y almacenamiento usando TLS o IPsec.",
+    "Sugerencia de My Idea: cifrar CUI en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
     "Almacenar de forma segura las claves de cifrado."
   ],
   "entregable_esperado": "Arquitectura de red segmentada con controles de tráfico documentados y mecanismos de cifrado implementados.",
@@ -24,5 +24,40 @@
   "condiciones_activacion": [
     "Cuando se necesita proteger comunicaciones de red que transmiten CUI."
   ],
-  "etiqueta_arbol": "Protege tus Comunicaciones Digitales"
+  "etiqueta_arbol": "Protege tus Comunicaciones Digitales",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-044",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cifrar CUI en tránsito y almacenamiento usando TLS o IPsec.",
+      "texto_nuevo": "Sugerencia de My Idea: cifrar CUI en tránsito con TLS o IPsec y en almacenamiento con una herramienta de cifrado de almacenamiento.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "I have an idea/books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "L681-L685",
+        "frase": "Mechanisms that protect the confidentiality of CUI during transmission include TLS and IPsec."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector A. El libro pide cifrar en transito y en almacenamiento ('Encryption protects CUI from unauthorized disclosure during transmission and while in storage'), pero reserva TLS e IPsec para la transmision. Para el almacenamiento solo remite a 'NIST SP 800-111 Guide to Storage Encryption Technologies' (L679), a la guia de CISA sobre datos guardados (L685) y a 'many free and paid encryption tools' (L683). Al decir 'en transito y almacenamiento usando TLS o IPsec', el paso asigna una herramienta a un objeto (el almacenamiento) al que el libro no la aplica. Eso es un dato concreto sin respaldo, no una simple concrecion. Tampoco es CONTRARIO: el libro no fija otra herramienta concreta para el almacenamiento ni desaconseja TLS. Es una herramienta, asi que el tipo es PRACTICO. El lector B reconocio el desajuste pero lo dejo en OPERATIVO, y eso no cabe, porque el paso contiene un dato que el libro no pone.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C032-087"
+    },
+    {
+      "id": "fidelidad-t5-045",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado (TLS, IPsec) para proteger la confidencialidad de la CUI en tránsito y almacenamiento.",
+      "texto_nuevo": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
+      "cita": {
+        "libro": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
+        "fichero": "I have an idea/books/seguridad_digital/NIST.SP.1318.txt",
+        "lineas": "L681-L685",
+        "frase": "Mechanisms that protect the confidentiality of CUI during transmission include TLS and IPsec."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO practico: el resumen repite TLS o IPsec como medio para cifrar la CUI tambien en almacenamiento; el libro reserva TLS e IPsec para la transmision. En el resumen se quita el dato dejando TLS e IPsec solo para el transito.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C032-087"
+    }
+  ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Proceso de síntesis que convierte hallazgos de investigación en insights organizados por tema, y luego transforma cada insight en una pregunta 'How Might We' (Cómo podríamos) que abre el espacio para la ideación. Este puente entre investigación e ideación es clave en el proceso de diseño centrado en humanos.",
   "pasos_accionables": [
     "Agrupar hallazgos de investigación en temas",
-    "Redactar 2-3 insights concretos por cada tema",
+    "Redactar insights concretos por cada tema y quedarse con 3 a 5 en total",
     "Convertir cada insight en una pregunta 'How Might We' abierta y accionable",
     "Usar las preguntas HMW como punto de partida para sesiones de brainstorming"
   ],
@@ -26,5 +26,24 @@
     "Al finalizar la fase de investigación/Inspiración",
     "Antes de comenzar sesiones de ideación estructurada"
   ],
-  "etiqueta_arbol": "Convierte Hallazgos en Preguntas"
+  "etiqueta_arbol": "Convierte Hallazgos en Preguntas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-047",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Redactar 2-3 insights concretos por cada tema",
+      "texto_nuevo": "Redactar insights concretos por cada tema y quedarse con 3 a 5 en total",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "I have an idea/txt/The field guide to human-center - Unknown.txt",
+        "lineas": "L3419-L3451",
+        "frase": "Now, take one of the themes and rephrase it as a short statement. [...] You only want three to five insights statements."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tenia razon B. Busque con Grep 'two', 'three', '2' y '3' junto a 'insight' y 'theme' en todo el libro. Hay tres cifras. El texto del metodo pide pasar cada tema a una frase corta y quedarse con tres a cinco insights en total (L3419, L3435-L3451). La hoja de la p. 176 (L7838-L7870) deja tres huecos numerados por tema. El ejemplo de Eram (L3539-L3585) pone tres insights en cada tema. El rango '2-3 por tema' no aparece en el libro, y en concreto el minimo de dos no esta en ningun sitio. A lo marca CONTRARIO, pero la hoja y el ejemplo apoyan redactar varios insights por tema, hasta tres. El paso cae dentro de ese margen y no lo invierte. Como hay pasajes que lo apoyan, no puede ser CONTRARIO. La cifra concreta no esta respaldada, asi que es ANADIDO, y como el dato es una cifra, el tipo es LEGAL_CIFRA.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C130-048"
+    }
+  ]
 }

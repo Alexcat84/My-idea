@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_091",
+  "intento": 0,
+  "usd": 0.168376,
+  "turnos": 1,
+  "duracion_s": 20.3,
+  "pared_s": 21.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32649,
+  "tokens_out": 1889,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P7CBB6F\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [5603, 5639, 5641, 5701, 5907],\n    \"razon\": \"El libro dice que las condiciones latentes son altas en todos los dominios y pide contramedidas simultáneas en todos los niveles. Priorizar por riesgo predominante podría relegar lo latente.\"\n  },\n  {\n    \"id\": \"P8D4FBD\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"cuatro subcomponentes\"],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [4777, 5234, 5270],\n    \"razon\": \"Coincide con los cuatro subcomponentes, pero el libro advierte que repasarlos como lista de verificación no basta: la cultura es más que la suma de sus partes. Es un matiz a revisar.\"\n  },\n  {\n    \"id\": \"P9BF0A6\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [478, 494, 504, 526, 5701],\n    \"razon\": \"Generaliza el principio de separar trading y liquidación, que el libro llama básico. El libro aplica sus principios a todos los dominios. Va en la misma dirección.\"\n  },\n  {\n    \"id\": \"PED9CFE\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4314, 2748, 5692, 2577],\n    \"razon\": \"Robens: las buenas intenciones del consejo son inútiles si los mandos inferiores solo atienden la producción. El compromiso debe estar en toda la organización, sin excluir la cúpula.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P7CBB6F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5603,
+    5639,
+    5641,
+    5701,
+    5907
+   ],
+   "razon": "El libro dice que las condiciones latentes son altas en todos los dominios y pide contramedidas simultáneas en todos los niveles. Priorizar por riesgo predominante podría relegar lo latente."
+  },
+  {
+   "id": "P8D4FBD",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "cuatro subcomponentes"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4777,
+    5234,
+    5270
+   ],
+   "razon": "Coincide con los cuatro subcomponentes, pero el libro advierte que repasarlos como lista de verificación no basta: la cultura es más que la suma de sus partes. Es un matiz a revisar."
+  },
+  {
+   "id": "P9BF0A6",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    478,
+    494,
+    504,
+    526,
+    5701
+   ],
+   "razon": "Generaliza el principio de separar trading y liquidación, que el libro llama básico. El libro aplica sus principios a todos los dominios. Va en la misma dirección."
+  },
+  {
+   "id": "PED9CFE",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4314,
+    2748,
+    5692,
+    2577
+   ],
+   "razon": "Robens: las buenas intenciones del consejo son inútiles si los mandos inferiores solo atienden la producción. El compromiso debe estar en toda la organización, sin excluir la cúpula."
+  }
+ ]
+}

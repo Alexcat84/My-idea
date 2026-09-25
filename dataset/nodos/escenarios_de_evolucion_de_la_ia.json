@@ -4,9 +4,9 @@
   "dominio": "core",
   "titulo_concepto": "Escenarios de Evolución de la IA para tu Negocio",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-  "resumen_teorico": "Nadie sabe a qué velocidad va a avanzar la IA, y esperar a saberlo es una forma de decidir. En vez de apostar por un solo futuro, se trabaja con dos o tres escenarios plausibles de evolución, desde el avance lento y gradual hasta el salto de capacidad en pocos años, y se mira qué le pasa al negocio en cada uno. Lo que se busca no es acertar el futuro, sino tener escrito de antemano qué se hace en cada caso y qué señales avisan de hacia cuál se está moviendo la realidad.",
+  "resumen_teorico": "Nadie sabe a qué velocidad va a avanzar la IA, y esperar a saberlo es una forma de decidir. En vez de apostar por un solo futuro, se trabaja con dos o tres escenarios plausibles de evolución, desde el avance lento, de quizá un 10 o 20 por ciento al año, hasta el exponencial, en el que la IA se vuelve cientos de veces más capaz en la próxima década, y se mira qué le pasa al negocio en cada uno. Lo que se busca no es acertar el futuro, sino tener escrito de antemano qué se hace en cada caso y qué señales avisan de hacia cuál se está moviendo la realidad.",
   "pasos_accionables": [
-    "Definir 2-3 escenarios plausibles de evolución de la IA para el sector, desde el crecimiento lineal de mejoras incrementales anuales hasta el exponencial de capacidad multiplicada 10x-100x en pocos años.",
+    "Definir escenarios plausibles de evolución de la IA para el sector, sobre todo los dos que el libro ve más probables: el crecimiento lento, de quizá un 10 o 20 por ciento al año, y el exponencial, en el que la IA se vuelve cientos de veces más capaz en la próxima década.",
     "Identificar qué tareas críticas del negocio podrían automatizarse en cada escenario.",
     "Evaluar el impacto de cada escenario en el modelo de negocio, la fuerza laboral y la propuesta de valor.",
     "Diseñar un plan de contingencia o pivote que contemple al menos dos de los escenarios, para no quedar desprevenido.",
@@ -21,5 +21,40 @@
   "condiciones_activacion": [
     "Cuando el negocio depende de tareas que la IA podría absorber y hay que decidir con qué ritmo de avance contar"
   ],
-  "etiqueta_arbol": "Anticipa Hasta Dónde Llegará la IA"
+  "etiqueta_arbol": "Anticipa Hasta Dónde Llegará la IA",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-006",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Definir 2-3 escenarios plausibles de evolución de la IA para el sector, desde el crecimiento lineal de mejoras incrementales anuales hasta el exponencial de capacidad multiplicada 10x-100x en pocos años.",
+      "texto_nuevo": "Definir escenarios plausibles de evolución de la IA para el sector, sobre todo los dos que el libro ve más probables: el crecimiento lento, de quizá un 10 o 20 por ciento al año, y el exponencial, en el que la IA se vuelve cientos de veces más capaz en la próxima década.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L1399-L1439",
+        "frase": "And at this pace, AI becomes hundreds of times more capable in the next decade."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro describe el escenario exponencial como una IA cientos de veces más capaz en la próxima década, y el de crecimiento lento como un 10 o 20 por ciento al año. El paso cambia la cifra y el plazo a 10x-100x en pocos años.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-004"
+    },
+    {
+      "id": "fidelidad-t9-007",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Nadie sabe a qué velocidad va a avanzar la IA, y esperar a saberlo es una forma de decidir. En vez de apostar por un solo futuro, se trabaja con dos o tres escenarios plausibles de evolución, desde el avance lento y gradual hasta el salto de capacidad en pocos años, y se mira qué le pasa al negocio en cada uno. Lo que se busca no es acertar el futuro, sino tener escrito de antemano qué se hace en cada caso y qué señales avisan de hacia cuál se está moviendo la realidad.",
+      "texto_nuevo": "Nadie sabe a qué velocidad va a avanzar la IA, y esperar a saberlo es una forma de decidir. En vez de apostar por un solo futuro, se trabaja con dos o tres escenarios plausibles de evolución, desde el avance lento, de quizá un 10 o 20 por ciento al año, hasta el exponencial, en el que la IA se vuelve cientos de veces más capaz en la próxima década, y se mira qué le pasa al negocio en cada uno. Lo que se busca no es acertar el futuro, sino tener escrito de antemano qué se hace en cada caso y qué señales avisan de hacia cuál se está moviendo la realidad.",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L1399-L1439",
+        "frase": "And at this pace, AI becomes hundreds of times more capable in the next decade."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el plazo corregido en el paso 0 (salto de capacidad en pocos años); el libro habla de cientos de veces más capaz en la próxima década y de un crecimiento lento del 10 o 20 por ciento al año.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-004"
+    }
+  ]
 }

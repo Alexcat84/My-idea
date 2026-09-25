@@ -1,0 +1,67 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_027",
+  "intento": 0,
+  "usd": 0.15896,
+  "turnos": 1,
+  "duracion_s": 14.2,
+  "pared_s": 15.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33510,
+  "tokens_out": 1246,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P19AEDA\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2687, 4757], \"razon\": \"El libro pide difundir ampliamente los datos de casi accidentes, en particular entre los niveles altos de la organización.\"},\n  {\"id\": \"P1AFF1D\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4435, 4448, 4176], \"razon\": \"El libro señala esa carencia del regulador, pero añade que sumar expertos en factores 'blandos' no resolvería el problema. Hay que revisar las acciones que siguen a esa identificación.\"},\n  {\"id\": \"PDFD02B\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [1728, 2161, 963, 975, 977, 1840], \"razon\": \"Priorizar el mantenimiento es fiel. Pero 'controles de calidad' choca en matiz con el libro: la calidad no se inspecciona, y el QA fomenta firmar sin verificar.\"},\n  {\"id\": \"P8126D3\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4769, 5176, 5178, 5208], \"razon\": \"Presentar la jerarquía como obstáculo choca en matiz con el libro. Para él, el cambio flexible exige antes una cultura jerárquica fuerte y disciplinada.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P19AEDA",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2687,
+    4757
+   ],
+   "razon": "El libro pide difundir ampliamente los datos de casi accidentes, en particular entre los niveles altos de la organización."
+  },
+  {
+   "id": "P1AFF1D",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4435,
+    4448,
+    4176
+   ],
+   "razon": "El libro señala esa carencia del regulador, pero añade que sumar expertos en factores 'blandos' no resolvería el problema. Hay que revisar las acciones que siguen a esa identificación."
+  },
+  {
+   "id": "PDFD02B",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    1728,
+    2161,
+    963,
+    975,
+    977,
+    1840
+   ],
+   "razon": "Priorizar el mantenimiento es fiel. Pero 'controles de calidad' choca en matiz con el libro: la calidad no se inspecciona, y el QA fomenta firmar sin verificar."
+  },
+  {
+   "id": "P8126D3",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4769,
+    5176,
+    5178,
+    5208
+   ],
+   "razon": "Presentar la jerarquía como obstáculo choca en matiz con el libro. Para él, el cambio flexible exige antes una cultura jerárquica fuerte y disciplinada."
+  }
+ ]
+}

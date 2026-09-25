@@ -13,7 +13,7 @@
     "Vincular un sistema de bonos o participación en utilidades a los resultados financieros compartidos",
     "Cambiar el lenguaje organizacional para reforzar la cultura de pertenencia (ej. 'socios' en vez de 'empleados')",
     "Documentar y comunicar las 'reglas del juego' operativas de forma simple y clara",
-    "Permitir que las personas elijan roles y ofrecerles capacitación para crecer en ellos",
+    "Sugerencia de My Idea: permite que las personas elijan sus roles y ofreceles capacitacion para crecer en ellos",
     "Crear un tablero de indicadores visible en tiempo real (marcador del juego)",
     "Vincular recompensas tangibles e intangibles a los resultados alcanzados"
   ],
@@ -31,5 +31,24 @@
     "Cuando la empresa es privada y puede compartir libremente su información financiera",
     "Si se detecta desconfianza o desconexión entre empleados y resultados del negocio"
   ],
-  "etiqueta_arbol": "Enseña a Leer las Cifras"
+  "etiqueta_arbol": "Enseña a Leer las Cifras",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-027",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Permitir que las personas elijan roles y ofrecerles capacitación para crecer en ellos",
+      "texto_nuevo": "Sugerencia de My Idea: permite que las personas elijan sus roles y ofreceles capacitacion para crecer en ellos",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "I have an idea/txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "L3729-L3731",
+        "frase": "OBM involves sharing the financials with your employees and, of course, helping them learn what the numbers mean."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. La gestion de libro abierto del libro consiste en compartir las cifras, enseñar y asignar lineas. En todo el libro no aparece dejar que las personas elijan su rol (se busco role y choose).",
+      "indice": 7,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C029-028"
+    }
+  ]
 }

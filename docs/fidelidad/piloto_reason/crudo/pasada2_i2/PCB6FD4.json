@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PCB6FD4",
+  "intento": 0,
+  "usd": 0.212664,
+  "turnos": 1,
+  "duracion_s": 11.3,
+  "pared_s": 12.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 48636,
+  "tokens_out": 906,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PCB6FD4\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5894, 5896, 5184], \"cita\": \"This bank had in place a well conceived loss recovery programme that had been tested by the bombing in the nearby St Mary Axe. … 80 per cent of disaster recovery plans do not work the first time. … alternatives for trial and error. These could include imagination, vicarious experience, simulation\", \"datos_sin_respaldo\": [], \"razon\": \"El libro valora un plan de recuperación ya probado y avisa de que el 80% de los planes falla la primera vez. También propone la simulación como alternativa al aprendizaje por ensayo y error. Probar el plan con simulacros antes del evento real concreta esa idea en la misma dirección, sin cifras ni responsables nuevos. No hay contradicción.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PCB6FD4",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5894,
+   5896,
+   5184
+  ],
+  "cita": "This bank had in place a well conceived loss recovery programme that had been tested by the bombing in the nearby St Mary Axe. … 80 per cent of disaster recovery plans do not work the first time. … alternatives for trial and error. These could include imagination, vicarious experience, simulation",
+  "datos_sin_respaldo": [],
+  "razon": "El libro valora un plan de recuperación ya probado y avisa de que el 80% de los planes falla la primera vez. También propone la simulación como alternativa al aprendizaje por ensayo y error. Probar el plan con simulacros antes del evento real concreta esa idea en la misma dirección, sin cifras ni responsables nuevos. No hay contradicción.",
+  "paso_fiel": ""
+ }
+}

@@ -617,5 +617,26 @@ FROM (
       SELECT 1 FROM information_schema.columns
       WHERE table_schema='public' AND table_name='user_seguridad' AND column_name='totp_secret_pendiente'
     )
+  UNION ALL
+  -- 044 . borrado real de los datos del usuario (decisiones del fundador, 26 sep 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '044', 'credit_refund_log.user_id nullable + limpiar_ideas_de_invitado (service-role-only)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='credit_refund_log' AND column_name='user_id' AND is_nullable='YES'
+    )
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='limpiar_ideas_de_invitado' AND pronamespace='public'::regnamespace AND prosecdef)
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_routine_grants
+      WHERE routine_schema='public' AND routine_name='limpiar_ideas_de_invitado'
+        AND grantee IN ('anon','authenticated') AND privilege_type='EXECUTE'
+    )
+  UNION ALL
+  -- 045 . historial de creditos anonimo al borrar la cuenta (decision del fundador, 27 sep 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '045', 'credit_transactions.user_id y saldo_resultante nullable (historial anonimo)',
+    (SELECT count(*) FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='credit_transactions'
+        AND column_name IN ('user_id','saldo_resultante') AND is_nullable='YES') = 2
 ) checks
 ORDER BY num;

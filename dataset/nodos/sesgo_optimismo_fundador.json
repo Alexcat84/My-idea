@@ -7,7 +7,7 @@
   "pasos_accionables": [
     "Busca activamente una evaluación externa objetiva (un mentor, un asesor, un inversionista) que contraste con tu propio optimismo",
     "Aplica la regla de descontar tus proyecciones: divide tus proyecciones de ingresos entre 10 y súmale un año al tiempo que estimaste para entregar",
-    "Documenta explícitamente los supuestos optimistas de tu plan de negocio y busca evidencia que los contradiga (haz un 'premortem')",
+    "Sugerencia de My Idea: anota por escrito los supuestos optimistas de tu plan de negocio y busca evidencia que los contradiga, por ejemplo con un ejercicio de premortem.",
     "Compara tu proyecto contra negocios similares de tu mercado con criterios objetivos, no solo con tu intuición",
     "Identifica las decisiones clave donde tu pasión podría estar nublando tu juicio racional"
   ],
@@ -26,5 +26,24 @@
     "tres_preguntas_carrera",
     "prospecto_emprendedor_flaming"
   ],
-  "etiqueta_arbol": "Cuida tu Optimismo Excesivo"
+  "etiqueta_arbol": "Cuida tu Optimismo Excesivo",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-020",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documenta explícitamente los supuestos optimistas de tu plan de negocio y busca evidencia que los contradiga (haz un 'premortem')",
+      "texto_nuevo": "Sugerencia de My Idea: anota por escrito los supuestos optimistas de tu plan de negocio y busca evidencia que los contradiga, por ejemplo con un ejercicio de premortem.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L614-L618",
+        "frase": "leading them to discount negative information, to be more susceptible to confirmation biases"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro advierte de los planes con proyecciones optimistas y del sesgo de confirmación, pero no propone el premortem. Esta herramienta no aparece en el libro.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C027-048"
+    }
+  ]
 }

@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD2E19D",
+  "intento": 0,
+  "usd": 0.24404,
+  "turnos": 1,
+  "duracion_s": 8.9,
+  "pared_s": 10.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 57520,
+  "tokens_out": 698,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD2E19D\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5134, 5136], \"cita\": \"Actions in these HROs were closely monitored so that immediate investigations--termed 'hot washups' in the US Navy--were conducted whenever errors occurred.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro describe como rasgo de las HRO la investigación inmediata de cada error ('hot washups', término de la US Navy) y el análisis antes y después de los errores. No manda identificar esos mecanismos. El paso lo convierte en una acción de diagnóstico, en la misma dirección y sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD2E19D",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5134,
+   5136
+  ],
+  "cita": "Actions in these HROs were closely monitored so that immediate investigations--termed 'hot washups' in the US Navy--were conducted whenever errors occurred.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro describe como rasgo de las HRO la investigación inmediata de cada error ('hot washups', término de la US Navy) y el análisis antes y después de los errores. No manda identificar esos mecanismos. El paso lo convierte en una acción de diagnóstico, en la misma dirección y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

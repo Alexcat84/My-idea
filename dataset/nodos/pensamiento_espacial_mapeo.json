@@ -10,9 +10,9 @@
     "Dibuja un continuo (línea con dos extremos) y ordena los elementos según un criterio relevante",
     "Repite el ejercicio con el mismo dataset pero un criterio de ordenamiento distinto",
     "Crea un diagrama de Venn amorfo con dos elementos y articula qué comparten en la superposición",
-    "Genera múltiples mapas del mismo concepto (al menos 3-5) para construir un 'atlas' de perspectivas"
+    "Genera varios mapas del mismo concepto para construir un 'atlas' de perspectivas"
   ],
-  "entregable_esperado": "Un atlas de 3-5 mapas/diagramas distintos del mismo problema o idea, cada uno revelando una relación o patrón diferente",
+  "entregable_esperado": "Un atlas de varios mapas/diagramas distintos del mismo problema o idea, cada uno revelando una relación o patrón diferente",
   "nodos_previos": [
     "search_for_business_model",
     "metaforas_para_pensar",
@@ -27,5 +27,40 @@
     "Cuando se necesita entender un problema complejo desde múltiples ángulos antes de idear soluciones",
     "Si el usuario cree que ya conoce bien un tema pero necesita cuestionar sus supuestos"
   ],
-  "etiqueta_arbol": "Mapea para Ver Patrones"
+  "etiqueta_arbol": "Mapea para Ver Patrones",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-05",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Genera múltiples mapas del mismo concepto (al menos 3-5) para construir un 'atlas' de perspectivas",
+      "texto_nuevo": "Genera varios mapas del mismo concepto para construir un 'atlas' de perspectivas",
+      "cita": {
+        "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L3374",
+        "frase": "Each map is one lens. Together they make an atlas of whatever idea you’re representing."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Cifra añadida: 'al menos 3-5' no está en el libro, que habla de muchos mapas sin mínimo (L3374: \"Each map is one lens. Together they make an atlas of whatever idea you're representing.\"; L3372 menciona incluso \"twenty, thirty, forty maps\"). Se quita, y se quita igual en el entregable_esperado, donde se repite.",
+      "indice": 4,
+      "auditoria": "muestreo A7"
+    },
+    {
+      "id": "fidelidad-t3-06",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un atlas de 3-5 mapas/diagramas distintos del mismo problema o idea, cada uno revelando una relación o patrón diferente",
+      "texto_nuevo": "Un atlas de varios mapas/diagramas distintos del mismo problema o idea, cada uno revelando una relación o patrón diferente",
+      "cita": {
+        "libro": "Assembling Tomorrow_ A Guide to - Scott Doorley",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L3374",
+        "frase": "Each map is one lens. Together they make an atlas of whatever idea you’re representing."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo entregable_esperado del nodo; se cambia solo el segmento.",
+      "auditoria": "muestreo A7"
+    }
+  ]
 }

@@ -9,7 +9,7 @@
     "Estudiar los principios centrales de cada uno de los cinco gurús de la calidad",
     "Evaluar cuál enfoque (o combinación) se ajusta mejor a la cultura y necesidades de la organización",
     "Seleccionar y adaptar el marco conceptual elegido a las circunstancias específicas del negocio",
-    "Documentar la elección y su justificación como base filosófica para el sistema de gestión de calidad"
+    "Sugerencia de My Idea: documentar la elección y su justificación como base filosófica para el sistema de gestión de calidad"
   ],
   "entregable_esperado": "Documento de análisis comparativo de enfoques de calidad con la selección justificada del marco a adoptar",
   "nodos_previos": [
@@ -23,5 +23,24 @@
     "Al iniciar el diseño de un sistema de gestión de calidad desde cero",
     "Cuando la organización busca fundamentos teóricos para justificar su enfoque de calidad"
   ],
-  "etiqueta_arbol": "Compara a los Gurús de Calidad"
+  "etiqueta_arbol": "Compara a los Gurús de Calidad",
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-013",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar la elección y su justificación como base filosófica para el sistema de gestión de calidad",
+      "texto_nuevo": "Sugerencia de My Idea: documentar la elección y su justificación como base filosófica para el sistema de gestión de calidad",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L205-L219",
+        "frase": "The approaches of these gurus have similarities as well as differences--particularly in the relative emphasis on managerial, statistical, technological, and behavioral elements. This book draws upon the contributions of these and other experts."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razón el lector B. El libro compara a los cinco gurús y dice que se apoya en todos, con Juran como base (L209). No pide elegir un enfoque ni documentar esa elección con su justificación. La cita del lector A (L2038) habla de la declaración de la política de calidad en los manuales, no de registrar una base filosófica elegida entre gurús, así que no sostiene el paso. Busqué en todo el libro philosophy, document y la política de calidad, y no hay ningún pasaje que pida ese registro. Lo que se añade es un formato, un documento de elección y justificación, por eso el tipo es PRACTICO.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C046-112"
+    }
+  ]
 }

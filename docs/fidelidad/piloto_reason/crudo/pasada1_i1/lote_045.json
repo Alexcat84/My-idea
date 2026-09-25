@@ -1,0 +1,70 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_045",
+  "intento": 0,
+  "usd": 0.158192,
+  "turnos": 1,
+  "duracion_s": 17.7,
+  "pared_s": 18.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33133,
+  "tokens_out": 1283,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P386002\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2585, 306, 2566], \"razon\": \"El libro dice que un periodo largo sin accidentes graves es de mayor peligro y que las organizaciones conscientes reforman y refuerzan sus defensas entonces.\"},\n{\"id\": \"P78DB12\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [5132, 5148, 5162, 5178, 1724], \"razon\": \"Evaluar la dependencia de SOPs es neutral y coherente con el libro: HRO basadas en SOP, pero flexibles, con SOP revisables y límites en emergencias.\"},\n{\"id\": \"P7A1998\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3232, 3298, 3332, 3334], \"razon\": \"El libro describe 16 RPF de Review elegidos por estudios de campo, y en MESH 8 factores organizacionales comunes más factores locales que varían según el lugar de trabajo.\"},\n{\"id\": \"PFE9674\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2547, 2568, 2594, 2638, 2765, 2520], \"razon\": \"El libro pide medidas reactivas y proactivas, pero advierte que las de resultado revelan poco con tasas bajas. Complementarlas en pie de igualdad puede diluir la prioridad del proceso.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P386002",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2585,
+    306,
+    2566
+   ],
+   "razon": "El libro dice que un periodo largo sin accidentes graves es de mayor peligro y que las organizaciones conscientes reforman y refuerzan sus defensas entonces."
+  },
+  {
+   "id": "P78DB12",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    5132,
+    5148,
+    5162,
+    5178,
+    1724
+   ],
+   "razon": "Evaluar la dependencia de SOPs es neutral y coherente con el libro: HRO basadas en SOP, pero flexibles, con SOP revisables y límites en emergencias."
+  },
+  {
+   "id": "P7A1998",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3232,
+    3298,
+    3332,
+    3334
+   ],
+   "razon": "El libro describe 16 RPF de Review elegidos por estudios de campo, y en MESH 8 factores organizacionales comunes más factores locales que varían según el lugar de trabajo."
+  },
+  {
+   "id": "PFE9674",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2547,
+    2568,
+    2594,
+    2638,
+    2765,
+    2520
+   ],
+   "razon": "El libro pide medidas reactivas y proactivas, pero advierte que las de resultado revelan poco con tasas bajas. Complementarlas en pie de igualdad puede diluir la prioridad del proceso."
+  }
+ ]
+}

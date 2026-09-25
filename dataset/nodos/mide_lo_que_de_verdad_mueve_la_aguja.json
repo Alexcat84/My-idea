@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Lista los supuestos inciertos detrás de tu decisión o tu proyección.",
     "Pregunta de cada uno: si me equivoco en este, cuánto cambia el resultado final.",
-    "Marca los dos o tres que más mueven la aguja e ignora por ahora los demás.",
+    "Marca los pocos que más mueven la aguja y concentra en ellos tu atención.",
     "Concentra tu siguiente esfuerzo de medición en reducir la incertidumbre de esos pocos."
   ],
-  "entregable_esperado": "Tus supuestos ordenados por cuánto mueven el resultado, con los dos o tres decisivos marcados para medir primero.",
+  "entregable_esperado": "Tus supuestos ordenados por cuánto mueven el resultado, con los pocos decisivos marcados para medir primero.",
   "nodos_previos": [
     "nombra_tus_suposiciones_fragiles",
     "calibra_tu_propio_ojo",
@@ -26,5 +26,40 @@
     "cuando pasas tiempo afinando datos que quizá no cambian nada",
     "cuando una decisión depende de varios supuestos y quieres saber cuál pesa más"
   ],
-  "etiqueta_arbol": "Mide lo Que Mueve la Aguja"
+  "etiqueta_arbol": "Mide lo Que Mueve la Aguja",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-057",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marca los dos o tres que más mueven la aguja e ignora por ahora los demás.",
+      "texto_nuevo": "Marca los pocos que más mueven la aguja y concentra en ellos tu atención.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L1480-L1482",
+        "frase": "value is very unevenly distributed over a system. The system's real money proposition lies in certain core functions"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro sostiene que unas pocas partes concentran el peso, pero no fija la cifra 'dos o tres'; buscada en el libro, 'two or three' solo aparece referida a versiones de entrega.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-006"
+    },
+    {
+      "id": "fidelidad-t5-058",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tus supuestos ordenados por cuánto mueven el resultado, con los dos o tres decisivos marcados para medir primero.",
+      "texto_nuevo": "Tus supuestos ordenados por cuánto mueven el resultado, con los pocos decisivos marcados para medir primero.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L1480-L1482",
+        "frase": "value is very unevenly distributed over a system. The system's real money proposition lies in certain core functions"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la cifra 'dos o tres', ANADIDO de cifra que el libro no fija; se reemplaza por 'los pocos', como en el paso corregido.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C035-006"
+    }
+  ]
 }

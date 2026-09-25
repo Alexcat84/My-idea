@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Listar todos los elementos del sistema que constituyen valor entregado al franquiciado",
     "Seleccionar factores de diferenciación (inversión, territorio, soporte, tecnología, tarifas)",
-    "Articular por qué el sistema garantiza consistencia y replicabilidad del éxito",
+    "Articular cómo el sistema asegura una experiencia de consumo consistente y probada, sin garantizar el éxito al franquiciado",
     "Validar que la propuesta de valor justifique las regalías y fees exigidos"
   ],
   "entregable_esperado": "Documento de propuesta de valor del sistema de franquicia, listo para incorporar en materiales de venta y FDD",
@@ -40,5 +40,24 @@
   "ids_alias": [
     "propuesta_valor_franquicia_2"
   ],
-  "etiqueta_arbol": "Construye tu Propuesta de Valor"
+  "etiqueta_arbol": "Construye tu Propuesta de Valor",
+  "correcciones": [
+    {
+      "id": "fidelidad-t11-04",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Articular por qué el sistema garantiza consistencia y replicabilidad del éxito",
+      "texto_nuevo": "Articular cómo el sistema asegura una experiencia de consumo consistente y probada, sin garantizar el éxito al franquiciado",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L3277-L3277",
+        "frase": "Of course, as a franchisor, you will not be offering your franchisees any guarantees or assurances of success."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P018, arbitro). Tiene razon el LECTOR B. He buscado con Grep pasajes que apoyen el paso. L3277 dice que los sistemas aseguran la consistencia a nivel del consumidor ('ensure consistency at the consumer level'), y L1657 y L2558 dicen que un buen sistema replica su exito y que documentarlo es la clave para duplicarlo. Esa es la parte de la consistencia, y esta respaldada. Pero el paso forma parte de la propuesta de valor dirigida al prospecto y manda argumentar que el sistema garantiza que el exito se replique. L649 (lineas L645-L652) lo descarta de forma expresa: el franquiciador no ofrece garantias ni seguridades de exito. Ademas L166 y L611 limitan lo que se puede decir al prospecto sobre resultados si no esta en el Item 19. Ningun pasaje apoya prometer que el exito se replica; solo apoyan la replicacion como objetivo del sistema. Presentarla como garantia invierte lo que dice el libro. El LECTOR A se quedo en L3277 y no vio L649.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P018-098"
+    }
+  ]
 }

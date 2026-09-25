@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PDB837E",
+  "intento": 0,
+  "usd": 0.188352,
+  "turnos": 1,
+  "duracion_s": 16.0,
+  "pared_s": 17.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40468,
+  "tokens_out": 1324,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PDB837E\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1085, 1095, 1141, 126], \"cita\": \"Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies. ... Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro describe este riesgo con el caso Trident y lo cuenta entre las formas en que las defensas se vuelven peligrosas. Crear comprensión de los peligros es una función de las defensas (L126). El paso no presenta la formación como vía principal; el nodo ataca también la causa, auditando y rediseñando las alarmas. El libro no desaconseja esta formación, y el paso no añade cifras, plazos ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PDB837E",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1085,
+   1095,
+   1141,
+   126
+  ],
+  "cita": "Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies. ... Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro describe este riesgo con el caso Trident y lo cuenta entre las formas en que las defensas se vuelven peligrosas. Crear comprensión de los peligros es una función de las defensas (L126). El paso no presenta la formación como vía principal; el nodo ataca también la causa, auditando y rediseñando las alarmas. El libro no desaconseja esta formación, y el paso no añade cifras, plazos ni responsables.",
+  "paso_fiel": ""
+ }
+}

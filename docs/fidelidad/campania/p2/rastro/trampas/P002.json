@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Árbol de Culpabilidad y Prueba de Sustitución",
+  "resumen": "Para decidir si un acto inseguro merece sanción conviene recorrer un árbol de decisión en orden: primero descartar sabotaje, consumo de sustancias e incumplimiento deliberado, y solo después aplicar la prueba de sustitución de Johnston, preguntando si otra persona igual de competente habría actuado distinto. Si la respuesta es 'probablemente no', la culpa oculta las deficiencias del sistema.",
+  "texto": "Aplicar la prueba de sustitución de Johnston como primer filtro, antes de revisar si hubo consumo de sustancias o incumplimiento deliberado",
+  "tipo": "CONTRARIO",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "L5057",
+  "cita": "It seems appropriate to apply Johnston’s substitution test once the issues of possible substance abuse and deliberate non-compliance have been settled",
+  "dato": "",
+  "explicacion": "El libro sitúa la prueba de sustitución después de haber resuelto las cuestiones de consumo de sustancias y de incumplimiento deliberado; el paso invierte el orden y la pone como primer filtro."
+ },
+ {
+  "titulo": "Caracterización de Peligros y Controles Provisionales",
+  "resumen": "Una vez identificados los peligros, hay que caracterizarlos según la gravedad, la probabilidad y el número de trabajadores expuestos, priorizarlos para su control permanente y, mientras tanto, proteger a los trabajadores con medidas provisionales. Los peligros serios se eliminan o controlan de inmediato.",
+  "texto": "Esperar a tener definida la solución permanente antes de intervenir cada peligro, para no gastar dos veces en medidas provisionales",
+  "tipo": "CONTRARIO",
+  "libro": "OSHA3885",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\OSHA3885.md",
+  "lineas": "L627",
+  "cita": "- Use interim control measures to protect workers until more permanent solutions can be implemented.",
+  "dato": "",
+  "explicacion": "El libro pide usar controles provisionales para proteger a los trabajadores hasta que se implante la solución permanente (lo repite en L671); el paso aconseja lo contrario, que es no proteger mientras se diseña la solución definitiva."
+ },
+ {
+  "titulo": "Investigación Inmediata de Errores en Organizaciones de Alta Confiabilidad",
+  "resumen": "En las organizaciones de alta confiabilidad, como los portaaviones nucleares o los centros de control aéreo, las acciones se vigilan de cerca y cada error, aunque sea menor, se investiga de inmediato, porque ciertos errores pequeños pueden escalar rápido a fallos que amenazan todo el sistema. Esta vigilancia se apoya en una inquietud crónica que evita la complacencia.",
+  "texto": "Realizar un 'hot washup' inmediato, de no más de 15 minutos, cada vez que ocurra un error, por menor que sea",
+  "tipo": "ANADIDO",
+  "libro": "Managing the Risks of Organizat - Reason, J. T_",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+  "lineas": "L5134",
+  "cita": "Actions in these HROs were closely monitored so that immediate investigations—termed ‘hot washups’ in the US Navy—were conducted whenever errors occurred.",
+  "dato": "duración máxima de 15 minutos por hot washup",
+  "explicacion": "El libro solo dice que los hot washups son investigaciones inmediatas cada vez que ocurre un error; no les fija duración. Grep en todo el texto: no aparecen '15 min', 'fifteen min' ni otra duración asociada a 'hot washup' (única mención en L5134)."
+ },
+ {
+  "titulo": "Inspección de Vehículos y Equipos Móviles",
+  "resumen": "Los peligros aparecen con el tiempo, a medida que cambian los puestos y los procesos, se desgastan los equipos o se descuida el mantenimiento. Las inspecciones regulares deben cubrir todas las áreas y actividades, incluidos los vehículos de planta, como montacargas, y los vehículos de transporte que usa tu negocio.",
+  "texto": "Inspecciona una vez al mes tus montacargas y los vehículos de transporte que usa tu negocio",
+  "tipo": "ANADIDO",
+  "libro": "OSHA3885",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\OSHA3885.md",
+  "lineas": "L511",
+  "cita": "- Regularly inspect both plant vehicles (e.g., forklifts, powered industrial trucks) and transportation vehicles (e.g., cars, trucks).",
+  "dato": "frecuencia mensual de la inspección de vehículos",
+  "explicacion": "El libro pide inspeccionar los vehículos con regularidad (regularly) pero no fija frecuencia. Grep en todo OSHA3885.md: 'month' y 'monthly' dan 0 coincidencias; las únicas frecuencias explícitas son 'at least annually' para verificar controles y evaluar el programa (L685, L883, L943)."
+ }
+]

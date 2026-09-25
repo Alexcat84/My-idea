@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PE6C357",
+  "intento": 0,
+  "usd": 0.16941599999999998,
+  "turnos": 1,
+  "duracion_s": 17.0,
+  "pared_s": 18.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36139,
+  "tokens_out": 1243,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PE6C357\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [567, 559, 584, 582], \"cita\": \"There were no visual indications that the roadbed had been undermined, nor could this have been predicted without a detailed geotechnical analysis. Since the track appeared to be stable to those carrying out routine inspections of its exterior features, no such analysis was performed\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que solo un análisis geotécnico detallado habría revelado el defecto, invisible a las inspecciones externas rutinarias. Llama 'caso muy especial' a que el fallo fuera casi indescubrible, no desaconseja ese análisis. Limitarlo a infraestructuras críticas es compatible con priorizar recursos limitados (L582). Es una lección implícita del caso, en su misma dirección.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PE6C357",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   567,
+   559,
+   584,
+   582
+  ],
+  "cita": "There were no visual indications that the roadbed had been undermined, nor could this have been predicted without a detailed geotechnical analysis. Since the track appeared to be stable to those carrying out routine inspections of its exterior features, no such analysis was performed",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que solo un análisis geotécnico detallado habría revelado el defecto, invisible a las inspecciones externas rutinarias. Llama 'caso muy especial' a que el fallo fuera casi indescubrible, no desaconseja ese análisis. Limitarlo a infraestructuras críticas es compatible con priorizar recursos limitados (L582). Es una lección implícita del caso, en su misma dirección.",
+  "paso_fiel": ""
+ }
+}

@@ -10,7 +10,7 @@
     "Marca cuales representan mayor gasto anual, sin importar que tan facil sea reponerlos.",
     "Marca por separado cuales, si faltan, detienen tu operacion o tus ventas de inmediato.",
     "Para los insumos criticos y dificiles de reponer rapido, define un stock de seguridad o un segundo proveedor.",
-    "Revisa esta lista cada pocos meses porque lo que es critico puede cambiar."
+    "Sugerencia de My Idea: revisa esta lista cada pocos meses, porque lo que es critico puede cambiar."
   ],
   "entregable_esperado": "Una lista de insumos marcados por valor y por cuan critico es que no falten, con una decision de que hacer con cada grupo.",
   "nodos_previos": [
@@ -24,5 +24,24 @@
     "Tienes mucho capital invertido en stock pero no sabes cual de esos insumos realmente importa vigilar de cerca.",
     "Quieres decidir a que proveedores conviene tener respaldo y a cuales no."
   ],
-  "etiqueta_arbol": "Distingue lo crítico de lo caro"
+  "etiqueta_arbol": "Distingue lo crítico de lo caro",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-049",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa esta lista cada pocos meses porque lo que es critico puede cambiar.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa esta lista cada pocos meses, porque lo que es critico puede cambiar.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "OCR/Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "L4925",
+        "frase": "Criticality: Some items are critical for reasons other than dollar value, usage rate, or lead time."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro trata la criticidad pero no fija ninguna frecuencia de revision de la lista de insumos criticos.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-005"
+    }
+  ]
 }

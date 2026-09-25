@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P5CFF94",
+  "intento": 0,
+  "usd": 0.164576,
+  "turnos": 1,
+  "duracion_s": 10.4,
+  "pared_s": 11.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37054,
+  "tokens_out": 818,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P5CFF94\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [423, 451, 459], \"cita\": \"no preprepared stage sheets (indicating the prior work performed) were available and the handover briefing was carried out verbally rather than in writing. This was not so much a case of a flawed defence as one that was entirely absent.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta como condición latente la falta de hojas de etapa escritas y el traspaso solo verbal (L423, L451). El paso convierte esa carencia en remedio, en la misma dirección y sin datos nuevos. L423 solo matiza que era difícil priorizarlo antes del suceso. L459 cuestiona un cambio total de procedimientos, no las hojas de etapa, así que no hay contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P5CFF94",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   423,
+   451,
+   459
+  ],
+  "cita": "no preprepared stage sheets (indicating the prior work performed) were available and the handover briefing was carried out verbally rather than in writing. This was not so much a case of a flawed defence as one that was entirely absent.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta como condición latente la falta de hojas de etapa escritas y el traspaso solo verbal (L423, L451). El paso convierte esa carencia en remedio, en la misma dirección y sin datos nuevos. L423 solo matiza que era difícil priorizarlo antes del suceso. L459 cuestiona un cambio total de procedimientos, no las hojas de etapa, así que no hay contrario.",
+  "paso_fiel": ""
+ }
+}

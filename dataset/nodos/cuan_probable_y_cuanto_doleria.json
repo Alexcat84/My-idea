@@ -4,12 +4,12 @@
   "dominio": "risk_management",
   "titulo_concepto": "Probabilidad e Impacto",
   "fuente": "Edwards et al., Managing Project Risks",
-  "resumen_teorico": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Para que la comparacion sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el dano en dinero o en tiempo perdido, no en un color. Cuando digas probabilidad media, aclara que rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimacion imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de dano minimo puede esperar; uno improbable capaz de hundirte merece tu atención hoy, siempre que uses el mismo criterio para todos.",
+  "resumen_teorico": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Para que la comparacion sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el dano en dinero o en tiempo perdido, no en un color. Cuando digas probabilidad media, aclara que rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimacion imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de dano minimo puede esperar; uno improbable capaz de hundirte merece tu atención, siempre que uses el mismo criterio para todos.",
   "pasos_accionables": [
     "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderias, no a una etiqueta de color.",
     "Para cada probabilidad, escribe el rango concreto (un porcentaje o una frecuencia) que tienes en mente cuando dices alta, media o baja.",
     "Revisa si dos riesgos con la misma etiqueta en realidad significan cosas muy distintas en dinero o tiempo; si es así, corrige la etiqueta.",
-    "Marca que riesgos improbables pero capaces de hundirte necesitan tu atención esta semana, aunque su probabilidad sea baja.",
+    "Marca que riesgos improbables pero capaces de hundirte necesitan tu atencion, aunque su probabilidad sea baja.",
     "Aplica el mismo criterio de conversión, en dinero, en tiempo o en rango de porcentaje, a todos los riesgos de tu lista, sin excepciones."
   ],
   "entregable_esperado": "Tu lista de riesgos con cada probabilidad expresada como rango y cada impacto expresado en dinero o tiempo, en vez de etiquetas o colores vagos.",
@@ -28,5 +28,40 @@
     "cuando no puedes explicar que rango de probabilidad quisiste decir con media",
     "cuando tu lista de riesgos aparenta rigor pero nadie podria verificar los números detras"
   ],
-  "etiqueta_arbol": "Cuán Probable y Cuánto Dolería"
+  "etiqueta_arbol": "Cuán Probable y Cuánto Dolería",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-037",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marca que riesgos improbables pero capaces de hundirte necesitan tu atención esta semana, aunque su probabilidad sea baja.",
+      "texto_nuevo": "Marca que riesgos improbables pero capaces de hundirte necesitan tu atencion, aunque su probabilidad sea baja.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L394-L394",
+        "frase": "they tend to have characteristics of very low probability but very high impact and are among the most difficult project risks to manage"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro respalda atender riesgos raros pero catastroficos (tabla 8.7: Rare y Catastrophic dan Extreme), pero no fija el plazo de esta semana.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C031-060"
+    },
+    {
+      "id": "fidelidad-t5-038",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Para que la comparacion sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el dano en dinero o en tiempo perdido, no en un color. Cuando digas probabilidad media, aclara que rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimacion imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de dano minimo puede esperar; uno improbable capaz de hundirte merece tu atención hoy, siempre que uses el mismo criterio para todos.",
+      "texto_nuevo": "Ya ubicaste cada riesgo como alto, medio o bajo en probabilidad e impacto. El problema es que esas etiquetas pueden esconder cualquier cosa: impacto alto para uno puede significar perder un cliente, y para otro, cerrar el negocio. Para que la comparacion sirva de algo, cada etiqueta necesita decir algo verificable. Expresa el dano en dinero o en tiempo perdido, no en un color. Cuando digas probabilidad media, aclara que rango tienes en mente, porque dos personas entienden cosas distintas por esa misma palabra. Prefiere una estimacion imperfecta pero honesta a un tablero que aparenta rigor sin decir nada concreto. Un riesgo muy probable de dano minimo puede esperar; uno improbable capaz de hundirte merece tu atención, siempre que uses el mismo criterio para todos.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L394-L394",
+        "frase": "they tend to have characteristics of very low probability but very high impact and are among the most difficult project risks to manage"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO de plazo: el resumen fija un plazo para atender el riesgo improbable pero catastrofico (hoy), la misma idea que el esta semana del paso 3; el libro respalda atenderlo pero no da plazo, asi que se quita.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C031-060"
+    }
+  ]
 }

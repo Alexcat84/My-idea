@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD93B3F",
+  "intento": 0,
+  "usd": 0.181648,
+  "turnos": 1,
+  "duracion_s": 8.0,
+  "pared_s": 9.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42467,
+  "tokens_out": 589,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD93B3F\", \"veredicto\": \"FIEL\", \"lineas\": [3226, 3228, 3232], \"cita\": \"task specialists... are asked to estimate on a scale from 1 (hardly at all) to 5 (very often indeed) how frequently particular kinds of workplace or organizational problems have adversely affected their work over a short, clearly defined time period, or in relation to a few specific jobs.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro prescribe la escala de 1 (hardly at all) a 5 (very often indeed) aplicada sobre un periodo claramente definido. Omitir 'corto' y la alternativa de trabajos concretos solo simplifica el detalle. Review, además, usa 'the last accounting period', que es un periodo definido. El paso no se aparta de la dirección del libro ni añade datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD93B3F",
+  "veredicto": "FIEL",
+  "lineas": [
+   3226,
+   3228,
+   3232
+  ],
+  "cita": "task specialists... are asked to estimate on a scale from 1 (hardly at all) to 5 (very often indeed) how frequently particular kinds of workplace or organizational problems have adversely affected their work over a short, clearly defined time period, or in relation to a few specific jobs.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro prescribe la escala de 1 (hardly at all) a 5 (very often indeed) aplicada sobre un periodo claramente definido. Omitir 'corto' y la alternativa de trabajos concretos solo simplifica el detalle. Review, además, usa 'the last accounting period', que es un periodo definido. El paso no se aparta de la dirección del libro ni añade datos.",
+  "paso_fiel": ""
+ }
+}

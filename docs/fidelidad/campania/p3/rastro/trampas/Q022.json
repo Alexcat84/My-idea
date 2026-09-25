@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Acortar el Tiempo de Ciclo en Procesos de Servicio",
+  "resumen": "Los clientes piden entregas cada vez más rápidas, y el diagrama de flujo del proceso permite localizar dónde se pierde el tiempo. Con enfoque Lean se eliminan desperdicios: reprocesos, pasos de poco valor para el cliente, aprobaciones innecesarias en niveles altos y actividades que podrían hacerse en paralelo.",
+  "texto": "Eliminar primero las inspecciones y revisiones redundantes para ganar tiempo, y analizar después las causas de los errores",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L21391",
+  "cita": "• Eliminate redundant steps such as inspections or reviews (but not until the causes of errors have been determined and eliminated).",
+  "dato": "",
+  "explicacion": "El libro dice que solo se quitan las inspecciones o revisiones redundantes cuando ya se han determinado y eliminado las causas de los errores. El paso invierte ese orden: primero quita las inspecciones y deja el análisis de causas para después."
+ },
+ {
+  "titulo": "Priorizar Activos en el Mantenimiento Centrado en Confiabilidad",
+  "resumen": "RCM reparte los recursos de mantenimiento en tres categorías según lo críticos que sean los activos: reactivo (operar hasta la falla) para lo no crítico, preventivo por calendario o ciclos para activos con patrón de falla conocido, y predictivo basado en condición para los activos más críticos para la operación y el cliente.",
+  "texto": "Para activos con patrón de falla aleatorio, establecer un calendario de mantenimiento preventivo basado en ciclos o intervalos de tiempo",
+  "tipo": "CONTRARIO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L13621",
+  "cita": "This group also includes assets with random failure patterns, assets not normally subject to wear, and replacement components with long lead times for replenishment. The group is analyzed based on condition.",
+  "dato": "",
+  "explicacion": "El libro reserva el calendario por ciclos o tiempo para los activos con patrón de falla conocido. Los activos con patrón de falla aleatorio los pone en el grupo predictivo, que se analiza según su condición. El paso los manda al preventivo por calendario."
+ },
+ {
+  "titulo": "Cerrar la Auditoría con el Equipo Auditado",
+  "resumen": "La auditoría involucra personas y puede crear tensión. Para cuidar la relación hay que explicar por qué se audita, orientar los reportes al problema y no a la persona, incluir lo que se hace bien y basar las recomendaciones en hechos. La reunión posterior a la auditoría sirve para presentar lo observado, corregir errores en los hechos y planificar las acciones correctivas.",
+  "texto": "Realizar la reunión post-auditoría con el responsable y su equipo dentro de las 48 horas siguientes a terminar el trabajo de campo",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L10305",
+  "cita": "• Postaudit meeting. An important part of the implementation phase is the postaudit meeting that is held with the manager and his or her team of the audited activity. At this meeting, the audit observations are presented so that the manager and the team can plan for corrective action.",
+  "dato": "plazo de 48 horas para celebrar la reunión post-auditoría",
+  "explicacion": "El libro recomienda la reunión post-auditoría con el responsable y su equipo, y también revisar allí el borrador del reporte (L10195), pero no le pone ningún plazo. Con Grep, '48 hours' solo sale en L183, en un ejemplo sin relación sobre plazos de entrega de pedidos. No hay 'within ... hours/days' asociado a la auditoría."
+ },
+ {
+  "titulo": "Validación Manual de Datos en un Estudio de Benchmarking",
+  "resumen": "En benchmarking, datos malos dan conclusiones malas. Después de las revisiones automáticas, una persona con experiencia revisa a mano que los datos estén completos, que los datos relacionados entre sí cuadren y que sean consistentes con los históricos disponibles. Las anomalías se resuelven una a una con cada participante.",
+  "texto": "Si más del 10 % de los datos enviados presenta errores, convocar una sesión de resolución de dudas (data clinic) con los participantes",
+  "tipo": "ANADIDO",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+  "lineas": "L17423",
+  "cita": "Where either there are a large number of apparent errors or participants are experiencing difficulty in obtaining the data required, a data clinic may be held, attended by participants and designed to clarify any confusions relating to the data required.",
+  "dato": "umbral del 10 % de datos con errores para convocar la data clinic",
+  "explicacion": "El libro solo dice 'a large number of apparent errors', sin dar ninguna cifra. Con Grep, 'data clinic' sale únicamente en L17423, y no hay '10 percent of the data' ni '10% of the data' en todo el texto. El umbral del 10 % es inventado."
+ }
+]

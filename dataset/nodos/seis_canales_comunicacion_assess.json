@@ -6,13 +6,13 @@
   "fuente": "Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "Cuando alguien te está evaluando antes de comprar, tienes seis formas de comunicarte con esa persona para crear una experiencia memorable: en persona (demos, presentaciones), email (con contenido que enseñe, no solo que venda), correo físico (boletines, muestras gratis), teléfono (para validar ideas o hablar con expertos), video (para mostrar a tu equipo o resolver dudas) y regalos (algo personalizado que no se sienta hecho en serie). No necesitas usar los seis: cada uno te da una oportunidad distinta de generar conexión antes de que la persona decida comprar.",
   "pasos_accionables": [
-    "Elige dos o tres canales que tengan sentido según tu negocio y cuánto tarda alguien en decidir comprarte",
+    "Elige los canales que tengan sentido según tu negocio y cuánto tarda alguien en decidir comprarte; no necesitas usar los seis",
     "Prepara contenido que enseñe algo, no solo que promocione",
-    "Prueba la idea primero con un grupo pequeño de prospectos",
+    "Sugerencia de My Idea: prueba la idea primero con un grupo pequeño de prospectos",
     "Mide si mejora la conversión y cómo perciben tu marca",
     "Ajusta y quédate con el canal que mejor te funcione"
   ],
-  "entregable_esperado": "Un plan piloto de comunicación con dos o tres canales para la fase en que te están evaluando, con las métricas que usarás para saber si funcionó",
+  "entregable_esperado": "Un plan piloto de comunicación con los canales que elijas para la fase en que te están evaluando, con las métricas que usarás para saber si funcionó",
   "nodos_previos": [
     "fase_assess_ciclo_cliente",
     "estrategia_multicanal_bienvenida"
@@ -24,5 +24,57 @@
     "Cuando quieras diversificar cómo te contactas con quienes todavía no te compran",
     "Si pocos prospectos terminan comprándote y crees que falta conexión antes de la venta"
   ],
-  "etiqueta_arbol": "Usa Seis Canales para Conectar"
+  "etiqueta_arbol": "Usa Seis Canales para Conectar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-058",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prueba la idea primero con un grupo pequeño de prospectos",
+      "texto_nuevo": "Sugerencia de My Idea: prueba la idea primero con un grupo pequeño de prospectos",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L2068-L2087",
+        "frase": "What is one thing you can start doing tomorrow to make the experience your customers have in the Assess phase even better?"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon B. El libro pide elegir una mejora, empezar manana y medir si funciono, pero en ningun lugar propone probarla antes con un grupo pequeno de prospectos. Busque en todo el libro pilot, small group, test, try, experiment, start small y few customers/prospects: 'small group' solo aparece en CADRE (formaciones y comite de bienvenida), nada sobre pilotar una mejora. El metodo de prueba piloto es un formato nuevo.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C109-037"
+    },
+    {
+      "id": "fidelidad-t8-062",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elige dos o tres canales que tengan sentido según tu negocio y cuánto tarda alguien en decidir comprarte",
+      "texto_nuevo": "Elige los canales que tengan sentido según tu negocio y cuánto tarda alguien en decidir comprarte; no necesitas usar los seis",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L1927-L1930",
+        "frase": "Remember, you don't have to use every communication tool in each phase. Instead, just consider that it's possible to use each tool to create a memorable experience for a prospect during this phase."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no fija un número de canales. 'Two or three' solo aparece como el promedio actual, que el libro invita a ampliar (L1240). El criterio de cuánto tarda en decidir sí está en el libro (L1917, L2031).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C109-074"
+    },
+    {
+      "id": "fidelidad-t8-063",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un plan piloto de comunicación con dos o tres canales para la fase en que te están evaluando, con las métricas que usarás para saber si funcionó",
+      "texto_nuevo": "Un plan piloto de comunicación con los canales que elijas para la fase en que te están evaluando, con las métricas que usarás para saber si funcionó",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L1927-L1930",
+        "frase": "Remember, you don't have to use every communication tool in each phase. Instead, just consider that it's possible to use each tool to create a memorable experience for a prospect during this phase."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la cifra de dos o tres canales que el paso 0 quita porque el libro no fija un número (ANADIDO de cifra). Se corrige igual que el paso. La palabra piloto se mantiene: viene del ANADIDO práctico C109-037 y, según la regla, en el entregable ese dato se deja.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C109-074"
+    }
+  ]
 }

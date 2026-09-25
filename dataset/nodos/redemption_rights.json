@@ -9,7 +9,7 @@
     "Revisa si la hoja de términos (term sheet) incluye una cláusula de redención estándar o una redención por cambio adverso, que debes evitar.",
     "Negocia que la redención necesite la aprobación conjunta de todas las clases de inversionistas preferentes, no solo de una clase minoritaria.",
     "Evalúa si tu negocio realmente podría pagar esa recompra si llegara el momento.",
-    "Rechaza cualquier cláusula de redención basada en un cambio material adverso que no esté claramente definido."
+    "Rechaza siempre cualquier clausula de redencion por cambio material adverso (adverse change redemption): es un concepto vago, demasiado punitivo y le da demasiado control al inversionista"
   ],
   "entregable_esperado": "Una cláusula de redención revisada, sin lenguaje de redención por cambio adverso, y con protecciones aprobadas por tu consejo (board).",
   "nodos_previos": [
@@ -22,5 +22,24 @@
     "Si quien invierte te pide derechos de redención en la hoja de términos.",
     "Si existe el riesgo de que tu negocio se vuelva estable pero poco atractivo para una venta o salida a bolsa (IPO)."
   ],
-  "etiqueta_arbol": "Conoce tus Derechos de Redención"
+  "etiqueta_arbol": "Conoce tus Derechos de Redención",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-017",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Rechaza cualquier cláusula de redención basada en un cambio material adverso que no esté claramente definido.",
+      "texto_nuevo": "Rechaza siempre cualquier clausula de redencion por cambio material adverso (adverse change redemption): es un concepto vago, demasiado punitivo y le da demasiado control al inversionista",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L1698-L1706; L1717",
+        "frase": "We recommend you never agree to the following term that has recently crept into term sheets"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro rechaza siempre la redencion por cambio adverso; el paso la rechaza solo si no esta claramente definida, abriendo una excepcion que el libro no admite.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C022-070"
+    }
+  ]
 }

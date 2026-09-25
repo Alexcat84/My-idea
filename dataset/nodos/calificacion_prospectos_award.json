@@ -11,7 +11,7 @@
     "Rechaza a un candidato no apto aunque tenga el dinero, especialmente entre tus primeros 10 franquiciados",
     "Evalúa el impacto a largo plazo de aceptar un franquiciado débil: soporte, litigios y validación negativa",
     "Recuerda que cada franquiciado fallido debe divulgarse en el FDD y será consultado por futuros prospectos",
-    "Revisa tu propia tasa de aceptación y rechazo para no sesgarte hacia cerrar la venta"
+    "Sugerencia de My Idea: revisa tu propia tasa de aceptación y rechazo para no sesgarte hacia cerrar la venta"
   ],
   "entregable_esperado": "Documento de criterios de calificación de candidatos (perfil ideal) que usas como filtro en cada etapa del proceso de ventas",
   "nodos_previos": [
@@ -39,6 +39,25 @@
       "node_id": "calificacion_candidatos_franquicia",
       "titulo": "Calificación de Candidatos a Franquiciados (The Award)",
       "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-020",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa tu propia tasa de aceptación y rechazo para no sesgarte hacia cerrar la venta",
+      "texto_nuevo": "Sugerencia de My Idea: revisa tu propia tasa de aceptación y rechazo para no sesgarte hacia cerrar la venta",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L4204-L4214; L4264",
+        "frase": "a franchisor who is willing to walk away from the wrong sale will sell the most franchises"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razón A. El libro avisa de la tentación de vender a candidatos que no están calificados (L4206-L4208) y propone como remedios involucrar a varias personas en la evaluación, con poder de veto (L4355), escuchar la intuición y aprender de los errores (L4262). Nunca propone llevar ni revisar una tasa propia de aceptación y rechazo. Busqué en todo el libro acceptance, reject, rate, approval, bias y temptation: solo salen las closing rates del proceso de venta (L4208, L4432) y el tema de rechazar al candidato con tacto (L4482), nunca una métrica de aceptación del franquiciador. El paso añade un instrumento de seguimiento concreto, una métrica, que el libro no respalda. Por eso no es una simple concreción como decía B. Es práctico, no legal ni cifra.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C005-104"
     }
   ]
 }

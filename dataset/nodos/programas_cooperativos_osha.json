@@ -4,11 +4,11 @@
   "dominio": "health_safety",
   "titulo_concepto": "Programas Cooperativos de OSHA (Asociaciones Estratégicas, Alianzas, VPP)",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, a un Programa de Alianzas para recibir información de cumplimiento, o a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones por debajo del promedio nacional.",
+  "resumen_teorico": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones por debajo del promedio nacional.",
   "pasos_accionables": [
     "Revisa si tu negocio cumple los criterios para participar en VPP",
     "Contacta la Oficina de Área o Regional de OSHA que corresponda a tu zona para explorar una Asociación Estratégica",
-    "Busca establecer una Alianza con asociaciones comerciales o sindicatos relevantes para tu actividad",
+    "Aprovecha la información y los recursos de cumplimiento que OSHA, o la autoridad equivalente en tu mercado, comparte a través de su Programa de Alianzas con asociaciones comerciales y profesionales, sindicatos y otras organizaciones",
     "Si optas por VPP, prepara tu solicitud y ten en cuenta que habrá una evaluación en el lugar de trabajo"
   ],
   "entregable_esperado": "Solicitud o acuerdo de participación en un programa cooperativo de OSHA",
@@ -23,5 +23,40 @@
     "Cuando ya tienes un sistema de gestión de seguridad funcionando y maduro",
     "Cuando buscas un reconocimiento externo de tus buenas prácticas de seguridad"
   ],
-  "etiqueta_arbol": "Colabora con Programas de Seguridad"
+  "etiqueta_arbol": "Colabora con Programas de Seguridad",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-44",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca establecer una Alianza con asociaciones comerciales o sindicatos relevantes para tu actividad",
+      "texto_nuevo": "Aprovecha la información y los recursos de cumplimiento que OSHA, o la autoridad equivalente en tu mercado, comparte a través de su Programa de Alianzas con asociaciones comerciales y profesionales, sindicatos y otras organizaciones",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L1851",
+        "frase": "Through the Alliance Program, OSHA works with organizations such as trade and professional associations, labor unions, educational institutions, community and faith-based groups, and government agencies"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es materia normativa, sobre la estructura de un programa oficial: el paso presenta la Alianza como un acuerdo entre tu negocio y asociaciones o sindicatos. En el libro, la Alianza es entre OSHA y esas organizaciones, para compartir informacion y recursos de cumplimiento (L1851). Se reemplaza por lo que dice el libro y se anade 'o la autoridad equivalente en tu mercado' porque el texto nombra OSHA. El resumen_teorico repite el dato ('sumarte ... a un Programa de Alianzas') y se corrige igual.",
+      "indice": 2,
+      "auditoria": "tramo1 SB2-078"
+    },
+    {
+      "id": "fidelidad-t3-45",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, a un Programa de Alianzas para recibir información de cumplimiento, o a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones por debajo del promedio nacional.",
+      "texto_nuevo": "Esto solo aplica si tu negocio opera en Estados Unidos: es un conjunto de programas voluntarios de la agencia estadounidense OSHA para colaborar con negocios en temas de seguridad laboral. Puedes sumarte a una Asociación Estratégica (OSPP) con metas concretas de seguridad, aprovechar la información de cumplimiento que OSHA comparte mediante su Programa de Alianzas con asociaciones comerciales, sindicatos y otras organizaciones, o sumarte a los Programas Voluntarios de Protección (VPP), que reconocen a quienes tienen un sistema de gestión de seguridad efectivo y una tasa de lesiones por debajo del promedio nacional.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L1851",
+        "frase": "Through the Alliance Program, OSHA works with organizations such as trade and professional associations, labor unions, educational institutions, community and faith-based groups, and government agencies"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+      "auditoria": "tramo1 SB2-078"
+    }
+  ]
 }

@@ -9,7 +9,7 @@
     "Preguntale directamente a tu inversionista que expectativa tiene sobre el capital que tu empresa va a necesitar mas adelante",
     "Investiga cuantas otras empresas tiene en su cartera y cuanta capacidad real de reservas le queda",
     "Presta atención a señales de resistencia a nuevas rondas o presión para vender la empresa",
-    "Considera los terminos que te obligan a seguir poniendo dinero para mantener tus derechos (pay to play) y como afectan la disposicion de tu inversionista a reservar capital"
+    "Considera los terminos que obligan a tu inversionista a seguir invirtiendo en rondas futuras para mantener sus derechos (pay to play) y como, si le faltan reservas, pueden aumentar su resistencia a nuevas rondas"
   ],
   "entregable_esperado": "Una evaluación clara de si tu inversionista actual tiene la capacidad y la disposicion para acompanarte en futuras rondas",
   "nodos_previos": [
@@ -23,5 +23,24 @@
     "Cuando necesitas anticipar si tus inversionistas actuales te van a apoyar en rondas futuras",
     "Cuando tu inversionista actual muestra resistencia a que consigas nuevo financiamiento"
   ],
-  "etiqueta_arbol": "Entiende las Reservas de tu Inversor"
+  "etiqueta_arbol": "Entiende las Reservas de tu Inversor",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-016",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Considera los terminos que te obligan a seguir poniendo dinero para mantener tus derechos (pay to play) y como afectan la disposicion de tu inversionista a reservar capital",
+      "texto_nuevo": "Considera los terminos que obligan a tu inversionista a seguir invirtiendo en rondas futuras para mantener sus derechos (pay to play) y como, si le faltan reservas, pueden aumentar su resistencia a nuevas rondas",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L1101; L3197",
+        "frase": "In a pay-to-play provision, investors must keep investing pro-ratably in future financings (paying) in order to not have their preferred stock converted to common stock"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro define el pay-to-play como una obligacion del inversionista (L1101, L1133: 'It causes the investors to stand up...'), y en ninguna parte del libro obliga al fundador; el paso dice 'terminos que te obligan a seguir poniendo dinero para mantener tus derechos', invirtiendo a quien obliga. Busque 'pay-to-play' en todo el libro y ningun pasaje apoya esa lectura. La relacion con las reservas si esta en L3197 (mas resistencia a nuevas rondas cuando hay pay-to-play), por lo que el texto fiel conserva esa parte.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C022-045"
+    }
+  ]
 }

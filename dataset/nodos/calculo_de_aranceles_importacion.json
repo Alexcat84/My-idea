@@ -4,10 +4,10 @@
   "dominio": "exportacion",
   "titulo_concepto": "Cálculo de Aranceles y Tarifas de Importación",
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-  "resumen_teorico": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de trade.gov para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+  "resumen_teorico": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
   "pasos_accionables": [
     "Identificar el código HS (Sistema Armonizado) de 6 dígitos del producto.",
-    "Consultar la base de datos de aranceles en trade.gov para el país de destino específico.",
+    "Consultar la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para el país de destino específico.",
     "Calcular el impacto de aranceles, tarifas portuarias e impuestos sobre el precio final al consumidor.",
     "Incorporar estos costos en la estrategia de fijación de precios de exportación."
   ],
@@ -24,5 +24,40 @@
     "Cuando el usuario necesita determinar el costo final de su producto en un mercado extranjero específico.",
     "Si el usuario está definiendo su estrategia de precios de exportación."
   ],
-  "etiqueta_arbol": "Calcula Aranceles de Importación"
+  "etiqueta_arbol": "Calcula Aranceles de Importación",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-007",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Consultar la base de datos de aranceles en trade.gov para el país de destino específico.",
+      "texto_nuevo": "Consultar la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para el país de destino específico.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L3681-L3681",
+        "frase": "You can calculate tariffs and taxes for most commodities to most countries by signing up to use a special database on export.gov."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. El libro situa la base de datos de aranceles e impuestos en export.gov (L3681) y la base Customs Information en export.customsinfo.com (L4813). trade.gov solo aparece como correo tic@trade.gov (L4891) y en la unidad Industry and Analysis (L2795), nunca como base de aranceles. El libro da otro valor para el mismo dato (donde esta la herramienta), y la regla lo clasifica como CONTRARIO, no ANADIDO como decia A. CRITERIO A15, declarado por la sesion: el libro cita export.gov y el nodo trade.gov, que es su sucesor (export.gov redirige hoy a trade.gov). Poner el dominio del libro mandaria al cliente a una direccion vieja; dejar trade.gov seria atribuir al libro algo que no escribio. Se aplica lo que el fundador decidio en A15 (se quitan los nombres; si se confirma una edicion que los nombre, se restauran con cita): el paso dice lo que dice el libro, el portal oficial de exportacion del gobierno de EE. UU., sin nombrar el dominio.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C013-103"
+    },
+    {
+      "id": "fidelidad-t4-008",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de trade.gov para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "texto_nuevo": "Los aranceles, tarifas portuarias e impuestos afectan significativamente el costo final del producto en el mercado extranjero. Aunque típicamente el importador paga los aranceles, estos costos influyen en cuánto está dispuesto a pagar el comprador. Es esencial calcular estos costos usando herramientas como la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado, para determinar la viabilidad y competitividad del precio final. Puntero jurisdiccional-temporal: esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente; verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L3681-L3681",
+        "frase": "You can calculate tariffs and taxes for most commodities to most countries by signing up to use a special database on export.gov."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el mismo dato que el paso 1, la base de datos de aranceles en trade.gov. El libro la situa en export.gov (L3681), y por el criterio A15 se quita el dominio. Es CONTRARIO y se corrige igual que el paso.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C013-103"
+    }
+  ]
 }

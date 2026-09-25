@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_045",
+  "intento": 0,
+  "usd": 0.169668,
+  "turnos": 1,
+  "duracion_s": 19.6,
+  "pared_s": 20.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33167,
+  "tokens_out": 1850,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P6C0A42\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"puntos de control periódicos\", \"en tu calendario\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [81, 105, 3965, 3971, 3973], \"razon\": \"El libro describe la erosión gradual y lo difícil que es detectarla. No prescribe revisiones periódicas agendadas: la frecuencia y el calendario son añadidos, aunque van en su misma dirección.\"},\n  {\"id\": \"P7F384E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5037, 5055, 5057], \"razon\": \"El libro propone preguntar a los pares y usar un 'jurado' de pares con formación y experiencia comparables al implicado.\"},\n  {\"id\": \"P2F57E1\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1840, 2340, 2342, 2354, 1114], \"razon\": \"El libro dice que el riesgo de error crece con la actividad de mantenimiento y que el mantenimiento puede dañar el sistema. Afirmar que cada intervención reduce el riesgo invierte esa causalidad.\"},\n  {\"id\": \"P9430BD\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4109, 4133, 4165, 4184, 4265, 668], \"razon\": \"La dirección coincide con el caso ACAA. Pero el libro advierte del sesgo retrospectivo y dice que el compromiso regulatorio es estructural, no un 'fallo'. El matiz requiere revisión.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P6C0A42",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "puntos de control periódicos",
+    "en tu calendario"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    81,
+    105,
+    3965,
+    3971,
+    3973
+   ],
+   "razon": "El libro describe la erosión gradual y lo difícil que es detectarla. No prescribe revisiones periódicas agendadas: la frecuencia y el calendario son añadidos, aunque van en su misma dirección."
+  },
+  {
+   "id": "P7F384E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5037,
+    5055,
+    5057
+   ],
+   "razon": "El libro propone preguntar a los pares y usar un 'jurado' de pares con formación y experiencia comparables al implicado."
+  },
+  {
+   "id": "P2F57E1",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1840,
+    2340,
+    2342,
+    2354,
+    1114
+   ],
+   "razon": "El libro dice que el riesgo de error crece con la actividad de mantenimiento y que el mantenimiento puede dañar el sistema. Afirmar que cada intervención reduce el riesgo invierte esa causalidad."
+  },
+  {
+   "id": "P9430BD",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4109,
+    4133,
+    4165,
+    4184,
+    4265,
+    668
+   ],
+   "razon": "La dirección coincide con el caso ACAA. Pero el libro advierte del sesgo retrospectivo y dice que el compromiso regulatorio es estructural, no un 'fallo'. El matiz requiere revisión."
+  }
+ ]
+}

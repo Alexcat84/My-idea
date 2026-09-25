@@ -11,7 +11,7 @@
     "Clasifica y prioriza cada aviso y pásalo a quien pueda resolverlo",
     "Consigue lo necesario y actúa rápido para eliminar la causa",
     "Si decides no actuar, justifica la decisión y revísala con alguien de más experiencia o confianza antes de cerrarla",
-    "Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan, por ejemplo con un sorteo semanal o un reconocimiento visible"
+    "Confirma a cada persona la decisión tomada y, para estimular los avisos, considera un sorteo semanal al azar entre los avisos recibidos, tratando todos los avisos por igual"
   ],
   "entregable_esperado": "Sistema ECR funcionando: formulario, respuesta rápida, registro de causas reportadas y resueltas, y retroalimentación a quienes avisan.",
   "nodos_previos": [
@@ -66,6 +66,25 @@
       "node_id": "eliminacion_causas_error",
       "titulo": "Eliminación de Causas de Error (Paso 11)",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-009",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Confirma a cada persona la decisión tomada y considera reconocer periódicamente a quienes más avisan, por ejemplo con un sorteo semanal o un reconocimiento visible",
+      "texto_nuevo": "Confirma a cada persona la decisión tomada y, para estimular los avisos, considera un sorteo semanal al azar entre los avisos recibidos, tratando todos los avisos por igual",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L3277-L3285",
+        "frase": "It is wise not to attach relative values to the identification of problems. Problems identified during the error--removal stage should all be treated the same way"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR A. El libro confirma la decision a quien envio el ECR (L3277), pero el estimulo que propone es un sorteo al azar cada semana (L3285; en L3361 lo llama 'random recognition'). Ademas advierte en L1637 que no se debe dar valor relativo a los problemas senalados y que todos se tratan igual. Reconocer 'a quienes mas avisan' premia el volumen y da justo ese valor relativo que el libro desaconseja. Busque en todo el libro (random, drawing, number of ECR, relative value) algun pasaje que premie a quien mas avisa y no aparece ninguno. Que el paso mencione el sorteo como ejemplo no arregla la regla que fija, que es la contraria.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C098-015"
     }
   ]
 }

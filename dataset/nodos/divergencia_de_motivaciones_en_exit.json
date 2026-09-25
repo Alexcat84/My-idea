@@ -10,7 +10,7 @@
     "Evaluar cómo el equity split actual influye en el deseo de cada fundador de vender o esperar",
     "Identificar empleados clave cuyos contratos de compensación podrían complicar una venta",
     "Facilitar conversaciones explícitas sobre tolerancia al riesgo antes de que llegue una oferta real",
-    "Establecer mecanismos de decisión (votación, cláusulas de arrastre) para resolver desacuerdos"
+    "Establecer mecanismos de decisión para resolver desacuerdos sobre la venta"
   ],
   "entregable_esperado": "Un acuerdo o protocolo de gobernanza que anticipe cómo se resolverán desacuerdos entre cofundadores sobre el momento y términos del exit.",
   "nodos_previos": [
@@ -25,5 +25,24 @@
     "Cuando el equipo fundador enfrenta una oferta de adquisición y no hay consenso",
     "Si existen asimetrías significativas de equity entre cofundadores"
   ],
-  "etiqueta_arbol": "Alinea Motivaciones antes del Exit"
+  "etiqueta_arbol": "Alinea Motivaciones antes del Exit",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-037",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer mecanismos de decisión (votación, cláusulas de arrastre) para resolver desacuerdos",
+      "texto_nuevo": "Establecer mecanismos de decisión para resolver desacuerdos sobre la venta",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L3809-L3809",
+        "frase": "What are the most effective mechanisms for resolving such divergences (e.g., founder carve-outs or earn-outs)?"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro deja como pregunta abierta qué mecanismos sirven para resolver estas divergencias. Las cláusulas de arrastre solo aparecen como un término de los inversores que los fundadores que priorizan el control deberían resistir (L2988), nunca como un mecanismo entre cofundadores.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C025-032"
+    }
+  ]
 }

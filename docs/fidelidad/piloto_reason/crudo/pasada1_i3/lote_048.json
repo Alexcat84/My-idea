@@ -1,0 +1,87 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_048",
+  "intento": 0,
+  "usd": 0.179,
+  "turnos": 1,
+  "duracion_s": 21.5,
+  "pared_s": 22.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34565,
+  "tokens_out": 2037,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P6FA9F5\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1021, 1033, 1035, 3209, 4448], \"razon\": \"El libro dice que reguladores y diseñadores no pueden prever todos los escenarios. Propone mejorar procesos de forma proactiva, no confiar en anticipar escenarios de cada 'fix' reactivo.\"},\n  {\"id\": \"P20FD7E\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"tabla de características de Westrum\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [596, 600, 666, 5272, 5236], \"razon\": \"La tabla es descriptiva, no un instrumento de diagnóstico. El libro advierte que quien cree tener buena cultura casi seguro se equivoca: riesgo de autodiagnóstico sesgado.\"},\n  {\"id\": \"P3B8FB1\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"2-3\"], \"clase\": \"FIEL\", \"lineas\": [4478, 4494, 3209, 3382], \"razon\": \"El libro indica identificar los dos o tres factores más necesitados de reforma urgente mediante el Perfil de Factores Organizacionales.\"},\n  {\"id\": \"P23A118\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"la dirección\", \"caso de negocio\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2579, 3993, 4523, 5250, 5254, 5219], \"razon\": \"El libro respalda la falta de recursos, pero habla de calidad y calibre, no solo de cantidad. No trata el 'caso de negocio' y el nodo se refiere a reguladores, no a la propia organización.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P6FA9F5",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1021,
+    1033,
+    1035,
+    3209,
+    4448
+   ],
+   "razon": "El libro dice que reguladores y diseñadores no pueden prever todos los escenarios. Propone mejorar procesos de forma proactiva, no confiar en anticipar escenarios de cada 'fix' reactivo."
+  },
+  {
+   "id": "P20FD7E",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "tabla de características de Westrum"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    596,
+    600,
+    666,
+    5272,
+    5236
+   ],
+   "razon": "La tabla es descriptiva, no un instrumento de diagnóstico. El libro advierte que quien cree tener buena cultura casi seguro se equivoca: riesgo de autodiagnóstico sesgado."
+  },
+  {
+   "id": "P3B8FB1",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "2-3"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4478,
+    4494,
+    3209,
+    3382
+   ],
+   "razon": "El libro indica identificar los dos o tres factores más necesitados de reforma urgente mediante el Perfil de Factores Organizacionales."
+  },
+  {
+   "id": "P23A118",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "la dirección",
+    "caso de negocio"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2579,
+    3993,
+    4523,
+    5250,
+    5254,
+    5219
+   ],
+   "razon": "El libro respalda la falta de recursos, pero habla de calidad y calibre, no solo de cantidad. No trata el 'caso de negocio' y el nodo se refiere a reguladores, no a la propia organización."
+  }
+ ]
+}

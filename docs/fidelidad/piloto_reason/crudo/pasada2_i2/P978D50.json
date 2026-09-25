@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P978D50",
+  "intento": 0,
+  "usd": 0.161736,
+  "turnos": 1,
+  "duracion_s": 9.6,
+  "pared_s": 10.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36684,
+  "tokens_out": 750,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P978D50\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1820, 1991, 2250], \"cita\": \"these close encounters with the technical components of a system probably constitute the single largest human performance problem facing most hazardous technologies. By the same token, they also offer the greatest opportunity for human factors improvements.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro señala el mantenimiento (alto en contacto, criticidad y frecuencia) como la actividad con más problemas y mayor oportunidad de mejora, y propone localizar de antemano los pasos propensos a error para actuar sobre ellos. Priorizar esas tareas concreta esa idea sin datos nuevos. 'Controles de calidad' es genérico, y el libro no desaconseja controlar la calidad.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P978D50",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1820,
+   1991,
+   2250
+  ],
+  "cita": "these close encounters with the technical components of a system probably constitute the single largest human performance problem facing most hazardous technologies. By the same token, they also offer the greatest opportunity for human factors improvements.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro señala el mantenimiento (alto en contacto, criticidad y frecuencia) como la actividad con más problemas y mayor oportunidad de mejora, y propone localizar de antemano los pasos propensos a error para actuar sobre ellos. Priorizar esas tareas concreta esa idea sin datos nuevos. 'Controles de calidad' es genérico, y el libro no desaconseja controlar la calidad.",
+  "paso_fiel": ""
+ }
+}

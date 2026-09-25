@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC1FD96",
+  "intento": 0,
+  "usd": 0.136988,
+  "turnos": 1,
+  "duracion_s": 9.3,
+  "pared_s": 10.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 30362,
+  "tokens_out": 777,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC1FD96\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [443, 445, 3993, 4121], \"cita\": \"The airline lacked an effective way of monitoring and adjusting the available manpower to the workload ... Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent. ... BASI assessed his workload as being unachievable in full.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro señala como fallo no ajustar la dotación a la carga de trabajo (L443). También documenta la subdotación del personal de seguridad y calidad en NASA y la carga inasumible del inspector de la ACAA. Calcular la carga real frente a la dotación concreta ese control en la misma dirección. No añade cifras ni herramientas nuevas, y 'seguridad/calidad' coincide con L3993.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC1FD96",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   443,
+   445,
+   3993,
+   4121
+  ],
+  "cita": "The airline lacked an effective way of monitoring and adjusting the available manpower to the workload ... Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent. ... BASI assessed his workload as being unachievable in full.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro señala como fallo no ajustar la dotación a la carga de trabajo (L443). También documenta la subdotación del personal de seguridad y calidad en NASA y la carga inasumible del inspector de la ACAA. Calcular la carga real frente a la dotación concreta ese control en la misma dirección. No añade cifras ni herramientas nuevas, y 'seguridad/calidad' coincide con L3993.",
+  "paso_fiel": ""
+ }
+}

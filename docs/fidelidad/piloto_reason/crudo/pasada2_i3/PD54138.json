@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PD54138",
+  "intento": 0,
+  "usd": 0.211244,
+  "turnos": 1,
+  "duracion_s": 9.6,
+  "pared_s": 10.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 49156,
+  "tokens_out": 731,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD54138\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 546, 582, 608, 644, 668], \"cita\": \"The Bank of England report identified a number of warning signs that should have alerted Barings management to BFS's unauthorized activities. … A letter sent by SIMEX to BFS on 11 January 1995 that included specific references to the five-eights account. This was not passed on to London at the time.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro muestra avisos descartados o no transmitidos: Barings, SR&QA y las 'smoulderings' de King's Cross. Pide hacer visibles las condiciones latentes y buscar activamente la información de seguridad; la cultura patológica 'dispara al mensajero'. El sesgo retrospectivo (L668, L686) solo matiza cómo juzgar esas señales, no desaconseja revisarlas. El paso concreta esto sin añadir datos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD54138",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   546,
+   582,
+   608,
+   644,
+   668
+  ],
+  "cita": "The Bank of England report identified a number of warning signs that should have alerted Barings management to BFS's unauthorized activities. … A letter sent by SIMEX to BFS on 11 January 1995 that included specific references to the five-eights account. This was not passed on to London at the time.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro muestra avisos descartados o no transmitidos: Barings, SR&QA y las 'smoulderings' de King's Cross. Pide hacer visibles las condiciones latentes y buscar activamente la información de seguridad; la cultura patológica 'dispara al mensajero'. El sesgo retrospectivo (L668, L686) solo matiza cómo juzgar esas señales, no desaconseja revisarlas. El paso concreta esto sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

@@ -4,16 +4,16 @@
   "dominio": "core",
   "titulo_concepto": "Tácticas de Retención de Clientes (Keep)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave definir el Dia 1 de la relacion con el cliente y mapear el customer life cycle completo, prestando especial atencion a los primeros 100 dias, donde suele concentrarse la mayor desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+  "resumen_teorico": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave mapear el customer life cycle completo y organizar las metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
   "pasos_accionables": [
     "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y senales de abandono",
     "Disena e-mails de bienvenida y guias de uso para los primeros dias de cada cliente nuevo",
     "Crea un programa de lealtad con recompensas por compras o visitas repetidas",
     "Envia notificaciones push y newsletters periodicas con tips para mantener el engagement",
-    "Define el Dia 1 de la relacion con el cliente y mapea los primeros 100 dias para identificar el punto exacto de mayor desercion",
+    "Organiza tus metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion",
     "Establece llamadas de servicio antes de renovaciones y ofrece descuentos preventivos ante senales de posible abandono"
   ],
-  "entregable_esperado": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos en los primeros 100 dias, listo para probar en validacion de clientes.",
+  "entregable_esperado": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validacion de clientes.",
   "nodos_previos": [
     "segmentos_de_clientes_problema_necesidad",
     "channels_hypothesis_physical",
@@ -47,6 +47,57 @@
       "node_id": "customer_retention_strategy",
       "titulo": "Estrategia de Retención de Clientes (Keep Customers)",
       "fuente": "The Startup Owner's Manual - Steve Blank | Never Lose a Customer Again - Joey Coleman"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-027",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Define el Dia 1 de la relacion con el cliente y mapea los primeros 100 dias para identificar el punto exacto de mayor desercion",
+      "texto_nuevo": "Organiza tus metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L6792-L6808",
+        "frase": "Organize the metrics around “cohorts,” or common groups of customers (like “those who joined in January”)"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide vigilar metricas de retencion organizadas por cohortes; no habla de un Dia 1 de la relacion ni de mapear los primeros 100 dias (busque 100 days, hundred days, first days, Day One sin resultado en ese contexto).",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C068-083"
+    },
+    {
+      "id": "fidelidad-t7-028",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave definir el Dia 1 de la relacion con el cliente y mapear el customer life cycle completo, prestando especial atencion a los primeros 100 dias, donde suele concentrarse la mayor desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+      "texto_nuevo": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave mapear el customer life cycle completo y organizar las metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L6792-L6808",
+        "frase": "Organize the metrics around “cohorts,” or common groups of customers (like “those who joined in January”)"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): Repite el dato corregido en el paso 4: el Dia 1 y los primeros 100 dias como punto de mayor desercion no estan en el libro, que pide organizar las metricas de retencion por cohortes (L6792-L6808).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C068-083"
+    },
+    {
+      "id": "fidelidad-t7-029",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos en los primeros 100 dias, listo para probar en validacion de clientes.",
+      "texto_nuevo": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validacion de clientes.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L6792-L6808",
+        "frase": "Organize the metrics around “cohorts,” or common groups of customers (like “those who joined in January”)"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): Repite el plazo de los primeros 100 dias corregido en el paso 4, que el libro no respalda (ANADIDO de plazo: se quita).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C068-083"
     }
   ]
 }

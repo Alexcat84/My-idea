@@ -1,0 +1,63 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_107",
+  "intento": 0,
+  "usd": 0.12028,
+  "turnos": 1,
+  "duracion_s": 13.3,
+  "pared_s": 14.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 23680,
+  "tokens_out": 1278,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P7FF042\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2340, 2342, 2369, 1114, 2170, 2028],\n    \"razon\": \"El libro afirma que el mantenimiento preventivo y el correctivo pueden introducir errores dañinos. Evaluar ese riesgo va en su misma dirección; el libro propone análisis de tareas propensas a omisiones.\"\n  },\n  {\n    \"id\": \"PD79B19\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [3829, 2922, 3817, 5077],\n    \"razon\": \"L3829: las violaciones se abordan cambiando normas, creencias, actitudes y cultura. El paso omite mejorar los procedimientos. 'No solo sanción' encaja con L5077 (sancionar a pocos casos graves).\"\n  },\n  {\n    \"id\": \"P646D41\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [2648, 2652, 2654],\n    \"razon\": \"Tabla 6.2 y L2654: analizar muchos incidentes con un marco común revela patrones recurrentes de causa-efecto en condiciones locales y organizacionales. El paso no menciona el requisito de analizar múltiples eventos.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P7FF042",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2340,
+    2342,
+    2369,
+    1114,
+    2170,
+    2028
+   ],
+   "razon": "El libro afirma que el mantenimiento preventivo y el correctivo pueden introducir errores dañinos. Evaluar ese riesgo va en su misma dirección; el libro propone análisis de tareas propensas a omisiones."
+  },
+  {
+   "id": "PD79B19",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3829,
+    2922,
+    3817,
+    5077
+   ],
+   "razon": "L3829: las violaciones se abordan cambiando normas, creencias, actitudes y cultura. El paso omite mejorar los procedimientos. 'No solo sanción' encaja con L5077 (sancionar a pocos casos graves)."
+  },
+  {
+   "id": "P646D41",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2648,
+    2652,
+    2654
+   ],
+   "razon": "Tabla 6.2 y L2654: analizar muchos incidentes con un marco común revela patrones recurrentes de causa-efecto en condiciones locales y organizacionales. El paso no menciona el requisito de analizar múltiples eventos."
+  }
+ ]
+}

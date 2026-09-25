@@ -7,9 +7,9 @@
   "resumen_teorico": "En ventas grandes, comprar un producto implica también 'comprar' una relación continua con el vendedor, ya que suele requerirse soporte post-venta y interacción recurrente. Esto hace que, a diferencia de la venta pequeña donde producto y vendedor pueden separarse fácilmente, en la venta grande el cliente evalúa al vendedor como parte inseparable de la decisión, afectando directamente la probabilidad de cierre.",
   "pasos_accionables": [
     "Evaluar y mejorar conscientemente la relación de confianza con el cliente, no solo el pitch del producto",
-    "Anticipar y comunicar claramente el soporte post-venta disponible",
+    "Sugerencia de My Idea: anticipar y comunicar claramente el soporte post-venta disponible",
     "Evitar estilos de venta agresivos que dañen la relación de largo plazo",
-    "Planificar puntos de contacto recurrentes con el cliente durante y después de la venta"
+    "Sugerencia de My Idea: planificar puntos de contacto recurrentes con el cliente durante y después de la venta"
   ],
   "entregable_esperado": "Plan de relación con el cliente que incluya puntos de contacto durante el ciclo de venta y después de cerrada",
   "nodos_previos": [
@@ -21,5 +21,41 @@
   "condiciones_activacion": [
     "Cuando la venta implica soporte, implementación o relación continua post-compra"
   ],
-  "etiqueta_arbol": "Vende también una Relación Duradera"
+  "etiqueta_arbol": "Vende también una Relación Duradera",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-029",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Planificar puntos de contacto recurrentes con el cliente durante y después de la venta",
+      "texto_nuevo": "Sugerencia de My Idea: planificar puntos de contacto recurrentes con el cliente durante y después de la venta",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "I have an idea/books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "L127-L135",
+        "frase": "major purchases usually require some post-sale support--which means that the buyer and seller must meet one or more times after the sale"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro constata que existe una relacion continua y reuniones posventa (L127, L593, L693). La leccion que saca es que la venta grande exige otro estilo de venta (L133) y que hay que tener cuidado con las tecnicas de cierre (L603). Nunca aconseja planificar contactos recurrentes. Busque follow up, keep in touch, regular contact, existing customers y account development, y ninguno da ese consejo. L2530 solo dice que la venta grande supone varias llamadas y no pide programarlas. Planificar contactos recurrentes es una practica que el libro no pone.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C126-016"
+    },
+    {
+      "id": "fidelidad-t9-030",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anticipar y comunicar claramente el soporte post-venta disponible",
+      "texto_nuevo": "Sugerencia de My Idea: anticipar y comunicar claramente el soporte post-venta disponible",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "I have an idea/books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "L127-L133",
+        "frase": "Partly, this is because major purchases usually require some post-sale support"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro solo menciona el soporte posventa para explicar por que la venta grande crea una relacion continua (L127). En ninguna parte aconseja anticipar ni comunicar el soporte disponible. Busque post-sale, after-sale y support: aparece solo en L127, L590-L603, L693 y L3374, y siempre como rasgo de la venta grande o como razon para evitar el cierre presionado, nunca como algo que haya que comunicar. Es una accion nueva que el libro no pone.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C126-021"
+    }
+  ]
 }

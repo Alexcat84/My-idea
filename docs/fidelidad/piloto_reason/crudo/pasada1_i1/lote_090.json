@@ -1,0 +1,75 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_090",
+  "intento": 0,
+  "usd": 0.156976,
+  "turnos": 1,
+  "duracion_s": 14.4,
+  "pared_s": 16.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32519,
+  "tokens_out": 1345,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P305F28\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2250, 2224, 2226, 2248], \"razon\": \"El libro propone identificar pasos vulnerables contando los rasgos de omisión de cada paso discreto. Desglosar la tarea en pasos es el prerrequisito implícito.\"},\n{\"id\": \"PF725C4\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [1842, 2340, 2342, 2346, 2354], \"razon\": \"El libro compara explícitamente el riesgo por mantenimiento descuidado con el riesgo de errores durante el mantenimiento. Advierte que el segundo acaba dominando.\"},\n{\"id\": \"P4FE10C\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4276, 4278, 4280, 4284, 4288, 4292, 4296], \"razon\": \"El libro enumera los enfoques y dice que dependen de lo que la tecnología o la sociedad considera suficientemente seguro. Identificar cuál rige en el contexto va en esa dirección.\"},\n{\"id\": \"PE341F4\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2109, 2111, 2113, 2117, 2121, 2125, 1943], \"razon\": \"Reason clasificó 122 fallos de mantenimiento de una aerolínea en exactamente estas categorías. Además, avala clasificar por consecuencias por ser fácil de interpretar.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P305F28",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2250,
+    2224,
+    2226,
+    2248
+   ],
+   "razon": "El libro propone identificar pasos vulnerables contando los rasgos de omisión de cada paso discreto. Desglosar la tarea en pasos es el prerrequisito implícito."
+  },
+  {
+   "id": "PF725C4",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    1842,
+    2340,
+    2342,
+    2346,
+    2354
+   ],
+   "razon": "El libro compara explícitamente el riesgo por mantenimiento descuidado con el riesgo de errores durante el mantenimiento. Advierte que el segundo acaba dominando."
+  },
+  {
+   "id": "P4FE10C",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4276,
+    4278,
+    4280,
+    4284,
+    4288,
+    4292,
+    4296
+   ],
+   "razon": "El libro enumera los enfoques y dice que dependen de lo que la tecnología o la sociedad considera suficientemente seguro. Identificar cuál rige en el contexto va en esa dirección."
+  },
+  {
+   "id": "PE341F4",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2109,
+    2111,
+    2113,
+    2117,
+    2121,
+    2125,
+    1943
+   ],
+   "razon": "Reason clasificó 122 fallos de mantenimiento de una aerolínea en exactamente estas categorías. Además, avala clasificar por consecuencias por ser fácil de interpretar."
+  }
+ ]
+}

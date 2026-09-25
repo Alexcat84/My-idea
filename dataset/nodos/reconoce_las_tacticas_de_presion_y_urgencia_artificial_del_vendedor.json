@@ -7,7 +7,7 @@
   "resumen_teorico": "Muchos vendedores usan frases como que solo queda una unidad, que el precio sube pronto o que la oferta se acaba hoy para que decidas con prisa y sin comparar. Esa urgencia casi nunca es información real sobre el mercado, es una herramienta de venta pensada para que bajes la guardia. Reconocerla te permite responder con calma en vez de ceder por miedo a perder la oportunidad. La clave está en separar el hecho real de la presión emocional que lo acompaña, y en recordar que casi siempre existe otra opción, otro proveedor o más tiempo del que parece. Mantener tu propio ritmo de decisión, en lugar del que te impone el vendedor, es lo que te deja negociar desde una posición fuerte.",
   "pasos_accionables": [
     "Cuando el vendedor diga que hay poca disponibilidad o que el precio sube pronto, pregúntate si es real o una táctica de presión.",
-    "Pide que la oferta con fecha límite te la confirmen por escrito.",
+    "Sugerencia de My Idea: pide que la oferta con fecha límite te la confirmen por escrito.",
     "Antes de la reunión, fija tu propio límite de tiempo y de precio, y no lo cambies solo porque el vendedor apura.",
     "Si sientes presión, pide una pausa breve para pensar antes de responder.",
     "Compara la urgencia que te presentan con otras opciones que tengas disponibles en el mercado."
@@ -25,5 +25,24 @@
     "Sientes que te están apresurando a firmar sin darte tiempo para comparar precios.",
     "El proveedor sube la presión justo cuando nota que estás dudando."
   ],
-  "etiqueta_arbol": "Detecta la urgencia falsa del vendedor"
+  "etiqueta_arbol": "Detecta la urgencia falsa del vendedor",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-050",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pide que la oferta con fecha límite te la confirmen por escrito.",
+      "texto_nuevo": "Sugerencia de My Idea: pide que la oferta con fecha límite te la confirmen por escrito.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "I have an idea/txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "L5051",
+        "frase": "Even when the information is true, the fact that this particular car would not be available for long should have no impact on the decision to buy it."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide ignorar la urgencia del vendedor, pero en ninguna parte dice que se pida la oferta por escrito.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-060"
+    }
+  ]
 }

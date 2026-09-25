@@ -10,7 +10,7 @@
     "Diseñar la experiencia emocional deseada para cada una de las ocho fases.",
     "Detectar en qué fase se están 'atascando' la mayoría de los clientes actuales.",
     "Crear un plan de acción específico para avanzar a los clientes de una fase a la siguiente.",
-    "Priorizar el diseño de experiencia en las fases Affirm y Activate, que suelen ser las más descuidadas y donde ocurre la mayor deserción."
+    "Priorizar el diseño de experiencia en las fases en que la mayoría de las empresas se estancan, entre la 4 y la 6 (Activate, Acclimate y Accomplish), con especial atención a Acclimate, donde es más probable que el cliente se aleje."
   ],
   "entregable_esperado": "Un diagrama del recorrido del cliente con las ocho fases identificadas y el estado actual de los clientes en cada una.",
   "nodos_previos": [
@@ -43,6 +43,25 @@
       "node_id": "fases_de_retencion_de_clientes",
       "titulo": "Las 8 Fases del Viaje del Cliente (Assess-Advocate)",
       "fuente": "Never Lose a Customer Again - Joey Coleman"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-020",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Priorizar el diseño de experiencia en las fases Affirm y Activate, que suelen ser las más descuidadas y donde ocurre la mayor deserción.",
+      "texto_nuevo": "Priorizar el diseño de experiencia en las fases en que la mayoría de las empresas se estancan, entre la 4 y la 6 (Activate, Acclimate y Accomplish), con especial atención a Acclimate, donde es más probable que el cliente se aleje.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L1047",
+        "frase": "In fact, most stall out somewhere between phases 4 and 6, missing out entirely on the benefit of loyal customers and raving fans."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro situa el estancamiento entre las fases 4 y 6 y dice que la ruptura ocurre most likely during the Acclimate phase (L4612). Sobre Activate afirma que many organizations do pay attention to this phase (L3082). El paso cambia las fases: pone Affirm y Activate como las mas descuidadas y como el punto de mayor desercion. Busque en todo el libro un pasaje que las senale como el punto de mayor desercion y no lo hay.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C108-030"
     }
   ]
 }

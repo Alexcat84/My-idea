@@ -9,7 +9,7 @@
     "Identificar qué aspectos de tu proyecto son tendencias inevitables del mercado/tecnología y cuáles son decisiones de diseño abiertas.",
     "Listar las opciones de diseño disponibles dentro de esa tendencia inevitable (abierto/cerrado, público/privado, con o sin fines de lucro).",
     "Elegir deliberadamente la configuración que mejor sirva a valores humanos y sociales, no solo a la rentabilidad.",
-    "Documentar la justificación de esas decisiones de diseño para mantener coherencia en el futuro."
+    "Sugerencia de My Idea: documentar la justificación de esas decisiones de diseño para mantener coherencia en el futuro."
   ],
   "entregable_esperado": "Un documento de decisiones de diseño clave que distinga lo inevitable de lo elegible, y la justificación de las elecciones tomadas.",
   "nodos_previos": [
@@ -23,5 +23,24 @@
     "Cuando se está diseñando una tecnología o plataforma emergente con múltiples configuraciones posibles.",
     "Si el equipo asume que 'así tiene que ser' sin cuestionar las decisiones de diseño subyacentes."
   ],
-  "etiqueta_arbol": "Diseña los Detalles, no lo Inevitable"
+  "etiqueta_arbol": "Diseña los Detalles, no lo Inevitable",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-012",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar la justificación de esas decisiones de diseño para mantener coherencia en el futuro.",
+      "texto_nuevo": "Sugerencia de My Idea: documentar la justificación de esas decisiones de diseño para mantener coherencia en el futuro.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L1503-L1507",
+        "frase": "we can still decide how to design them ... It's time to decide."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el LECTOR B. El pasaje de Kelly pide decidir la forma concreta de lo inevitable, pero no dice nada de documentar la justificacion de esas decisiones ni de coherencia futura. Busque en todo el libro document, rationale, justif, write down, record: solo aparecen en otros sentidos (documentos de CERN, documental, parametro Documentation del indice de reparabilidad frances en L4326, que trata de documentos tecnicos para reparadores). Documentar la justificacion es una practica de formato nueva, no una concrecion de decidir; por eso no es OPERATIVO.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C113-073"
+    }
+  ]
 }

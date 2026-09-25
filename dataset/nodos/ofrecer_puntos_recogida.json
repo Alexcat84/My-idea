@@ -10,7 +10,7 @@
     "Agrega la opcion de recoger en tienda o en un punto aliado al finalizar la compra.",
     "Define un plazo realista para tener el pedido listo antes de anunciar la opcion.",
     "Notifica al cliente con claridad donde y cuando puede recoger su pedido.",
-    "Revisa cada tres meses cuantos clientes eligen recoger frente a domicilio y ajusta la oferta."
+    "Sugerencia de My Idea: revisa cada tres meses cuantos clientes eligen recoger frente a domicilio y ajusta la oferta."
   ],
   "entregable_esperado": "Una opcion de recogida activa en tu proceso de compra, con al menos un punto alterno al domicilio.",
   "nodos_previos": [
@@ -28,5 +28,24 @@
     "Quieres bajar el costo de la ultima milla sin perder ventas",
     "Tus clientes te piden recoger su pedido cuando les convenga a ellos"
   ],
-  "etiqueta_arbol": "Ofrece puntos de recogida"
+  "etiqueta_arbol": "Ofrece puntos de recogida",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-050",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa cada tres meses cuantos clientes eligen recoger frente a domicilio y ajusta la oferta.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa cada tres meses cuantos clientes eligen recoger frente a domicilio y ajusta la oferta.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "I have an idea/txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "L234-L236",
+        "frase": "In 2014 CnC grew faster than home deliveries, and companies such as John Lewis saw more customers collecting their online purchases in store than taking delivery at home"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El capitulo habla de la preferencia por recoger, pero no da ninguna frecuencia de revision.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-006"
+    }
+  ]
 }

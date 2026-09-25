@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3186F1",
+  "intento": 0,
+  "usd": 0.150864,
+  "turnos": 1,
+  "duracion_s": 14.6,
+  "pared_s": 15.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31181,
+  "tokens_out": 1307,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3186F1\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4429, 4163, 4182, 4314], \"cita\": \"Unlike the United States, where new operators must establish that they have sufficient resources to maintain their aircraft, it was the case in Australia that ‘those who could beg, borrow or steal a decent enough plane can become their very own airline magnate’.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro elogia la autorregulación (L4429), pero no la presenta como adecuada para cualquier operador. Advierte de sus riesgos cuando falta capacidad: operadores sin recursos (L4163), pérdida de confianza tras la desregulación (L4182) y buena gestión como requisito (L4314). El paso no desaconseja autorregularse; solo concreta esa cautela. No aporta cifra, herramienta, norma ni responsable.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P3186F1",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4429,
+   4163,
+   4182,
+   4314
+  ],
+  "cita": "Unlike the United States, where new operators must establish that they have sufficient resources to maintain their aircraft, it was the case in Australia that ‘those who could beg, borrow or steal a decent enough plane can become their very own airline magnate’.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro elogia la autorregulación (L4429), pero no la presenta como adecuada para cualquier operador. Advierte de sus riesgos cuando falta capacidad: operadores sin recursos (L4163), pérdida de confianza tras la desregulación (L4182) y buena gestión como requisito (L4314). El paso no desaconseja autorregularse; solo concreta esa cautela. No aporta cifra, herramienta, norma ni responsable.",
+  "paso_fiel": ""
+ }
+}

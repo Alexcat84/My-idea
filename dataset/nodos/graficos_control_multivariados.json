@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando un producto tiene dos o más características de calidad, monitorearlas de forma independiente con gráficos separados puede ser engañoso, ya que la probabilidad conjunta de que ambas excedan sus límites simultáneamente es mucho menor que la individual. Los gráficos multivariados (como el T² de Hotelling o EWMA multivariado) abordan correctamente esta interdependencia.",
   "pasos_accionables": [
     "Identificar las múltiples características de calidad correlacionadas del producto",
-    "Calcular la matriz de covarianza entre las características",
+    "Sugerencia de My Idea: calcular la matriz de covarianza entre las caracteristicas",
     "Construir el estadístico multivariado (por ejemplo, T² de Hotelling)",
     "Establecer límites de control multivariados apropiados",
     "Monitorear el estadístico combinado en lugar de gráficos independientes"
@@ -25,5 +25,24 @@
     "Cuando el producto tiene múltiples características de calidad correlacionadas",
     "Cuando el monitoreo independiente de características genera conclusiones distorsionadas"
   ],
-  "etiqueta_arbol": "Vigila Varias Variables a la Vez"
+  "etiqueta_arbol": "Vigila Varias Variables a la Vez",
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-015",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular la matriz de covarianza entre las características",
+      "texto_nuevo": "Sugerencia de My Idea: calcular la matriz de covarianza entre las caracteristicas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L20690-L20693",
+        "frase": "Multivariate control charts and statistics (e.g., Hotelling's T2 charts, multivariate EWMA) address this issue. See Montgomery (2000, Section 8.4) for a highly useful discussion."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro solo nombra el T2 de Hotelling y el EWMA multivariado y remite a Montgomery; no da ningun procedimiento de calculo. Busque en todo el libro 'covarian', 'covariance matrix', 'variance-covariance', 'Hotelling', 'matrix of': la unica aparicion de covarianza es MANOVA/MANCOVA (L20051), ajena a los graficos de control. Calcular la matriz de covarianza es una tecnica concreta que el libro no aporta; aunque sea correcta e intrinseca al T2, es un dato tecnico nuevo, no una concrecion del texto.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C049-092"
+    }
+  ]
 }

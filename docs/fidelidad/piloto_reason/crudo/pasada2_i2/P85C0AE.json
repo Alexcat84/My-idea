@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P85C0AE",
+  "intento": 0,
+  "usd": 0.20312000000000002,
+  "turnos": 1,
+  "duracion_s": 12.9,
+  "pared_s": 13.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45490,
+  "tokens_out": 1058,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P85C0AE\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1991, 1993, 1995, 1945], \"cita\": \"To what extent is this prediction borne out by the available evidence? [...] These data bear out the earlier analysis. In all three studies more than half of all the identified performance problems were associated with maintenance, testing and calibration activities.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro hace lo mismo: tras el análisis a priori, contrasta la predicción con informes de sucesos, y valora las clasificaciones de fallos por actividad (L1945). El paso lo traslada al historial propio sin datos nuevos. No manda descartar el mantenimiento. El riesgo de latentes ocultas (L1820) es un matiz, no una inversión.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P85C0AE",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1991,
+   1993,
+   1995,
+   1945
+  ],
+  "cita": "To what extent is this prediction borne out by the available evidence? [...] These data bear out the earlier analysis. In all three studies more than half of all the identified performance problems were associated with maintenance, testing and calibration activities.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro hace lo mismo: tras el análisis a priori, contrasta la predicción con informes de sucesos, y valora las clasificaciones de fallos por actividad (L1945). El paso lo traslada al historial propio sin datos nuevos. No manda descartar el mantenimiento. El riesgo de latentes ocultas (L1820) es un matiz, no una inversión.",
+  "paso_fiel": ""
+ }
+}

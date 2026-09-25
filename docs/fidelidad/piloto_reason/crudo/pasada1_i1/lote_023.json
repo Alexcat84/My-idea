@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_023",
+  "intento": 0,
+  "usd": 0.162692,
+  "turnos": 1,
+  "duracion_s": 14.7,
+  "pared_s": 16.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34398,
+  "tokens_out": 1255,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P55E7A9\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5190, 5200, 666], \"razon\": \"El libro recomienda equipos divergentes por especialidad, experiencia o género porque ven colectivamente más y aumentan la variedad requerida.\"},\n  {\"id\": \"P8EB21F\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3395, 3397, 3659], \"razon\": \"HEART indica consultar la lista rankeada de EPCs y decidir qué condiciones afectan la actividad; el paso coincide.\"},\n  {\"id\": \"P402C3A\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [1539, 1522, 5043, 3821, 2716, 3829], \"razon\": \"El libro admite violaciones erróneas, no deliberadas, y trata violaciones como acciones intencionadas con consecuencias no intencionadas; definirlas como intencionales generaliza lo que el libro matiza.\"},\n  {\"id\": \"PF93269\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4060, 4064, 4068, 4072, 4084, 4027, 4259], \"razon\": \"Dryden muestra capas ausentes: sin manual aprobado, sin auditoría ni guía. Verificar su estado real extiende la lección sin chocar con el libro.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P55E7A9",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5190,
+    5200,
+    666
+   ],
+   "razon": "El libro recomienda equipos divergentes por especialidad, experiencia o género porque ven colectivamente más y aumentan la variedad requerida."
+  },
+  {
+   "id": "P8EB21F",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3395,
+    3397,
+    3659
+   ],
+   "razon": "HEART indica consultar la lista rankeada de EPCs y decidir qué condiciones afectan la actividad; el paso coincide."
+  },
+  {
+   "id": "P402C3A",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    1539,
+    1522,
+    5043,
+    3821,
+    2716,
+    3829
+   ],
+   "razon": "El libro admite violaciones erróneas, no deliberadas, y trata violaciones como acciones intencionadas con consecuencias no intencionadas; definirlas como intencionales generaliza lo que el libro matiza."
+  },
+  {
+   "id": "PF93269",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4060,
+    4064,
+    4068,
+    4072,
+    4084,
+    4027,
+    4259
+   ],
+   "razon": "Dryden muestra capas ausentes: sin manual aprobado, sin auditoría ni guía. Verificar su estado real extiende la lección sin chocar con el libro."
+  }
+ ]
+}

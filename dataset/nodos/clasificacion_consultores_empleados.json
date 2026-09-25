@@ -7,7 +7,7 @@
   "resumen_teorico": "Las leyes laborales estatales y federales exigen pagar al menos salario mínimo a empleados de tiempo completo. Muchas startups clasifican incorrectamente a fundadores o ejecutivos tempranos como 'contratistas' para evitar estas obligaciones, lo cual genera riesgo legal si esas personas son en realidad empleados. Una clasificación adecuada de consultores requiere estructurar la relación con criterios específicos: proyectos definidos, pago por proyecto, ausencia de supervisión directa, no provisión de equipo/entrenamiento, permitir trabajar para otros clientes y evitar relaciones terminables a voluntad.",
   "pasos_accionables": [
     "Evaluar si la empresa tiene caja disponible para pagar salarios de mercado",
-    "Si hay caja: clasificar correctamente como empleados y pagar salario mínimo y prestaciones",
+    "Si hay caja y la persona es en realidad empleada: clasificarla como empleada y pagar el salario y los impuestos correspondientes",
     "Si no hay caja: estructurar contratos de consultoría con proyectos y pagos definidos por entregable",
     "Evitar supervisión directa, provisión de equipo o exclusividad con los consultores",
     "Consultar con un abogado laboral para minimizar riesgo de reclasificación"
@@ -23,5 +23,24 @@
     "Cuando la startup no tiene caja suficiente para pagar salarios completos",
     "Cuando se incorpora personal clave sin compensación monetaria inmediata"
   ],
-  "etiqueta_arbol": "Clasifica Bien a tus Colaboradores"
+  "etiqueta_arbol": "Clasifica Bien a tus Colaboradores",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-030",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si hay caja: clasificar correctamente como empleados y pagar salario mínimo y prestaciones",
+      "texto_nuevo": "Si hay caja y la persona es en realidad empleada: clasificarla como empleada y pagar el salario y los impuestos correspondientes",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L4728",
+        "frase": "if a company has the cash and the individuals providing services are truly employees, the company should classify them as employees and pay wages and taxes accordingly."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro dice pagar salarios e impuestos si de verdad son empleados; las prestaciones no aparecen en el libro.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C019-082"
+    }
+  ]
 }

@@ -4,10 +4,10 @@
   "dominio": "entrega",
   "titulo_concepto": "Empacar líquidos con doble o triple barrera",
   "fuente": "Requisitos de empaque de los couriers",
-  "resumen_teorico": "Los líquidos y polvos necesitan más de una barrera porque un solo envase que falle arruina todo el paquete y puede dañar otros envíos cercanos. El método probado tiene capas: primero un envase hermético con cierre firme, reforzado con cinta; luego material absorbente que atrape cualquier fuga; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
+  "resumen_teorico": "Los líquidos y polvos necesitan más de una barrera porque un solo envase que falle arruina todo el paquete y puede dañar otros envíos cercanos. El método probado tiene capas: primero un envase hermético con cierre firme; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
   "pasos_accionables": [
-    "Verifica que el envase primario cierre con rosca o tapa firme y refuerza el cierre con cinta.",
-    "Coloca material absorbente alrededor del envase primario, suficiente para absorber todo su contenido si se derrama.",
+    "Sugerencia de My Idea: verifica que el envase primario cierre con rosca o tapa firme y refuerza el cierre con cinta.",
+    "Sugerencia de My Idea: coloca material absorbente alrededor del envase primario, suficiente para absorber todo su contenido si se derrama.",
     "Mete ese conjunto en una bolsa plástica sellada o un contenedor secundario hermético.",
     "Empaca todo dentro de una caja de fibra rígida, nunca en bolsa o sobre como único contenedor.",
     "Pregunta a tu courier si tu producto líquido o en polvo requiere trato como mercancía regulada."
@@ -24,5 +24,73 @@
     "Ya tuviste un envío que llegó con fuga y dañó el resto del contenido.",
     "Vas a enviar por primera vez algo en polvo o semi líquido y no sabes qué exige el courier."
   ],
-  "etiqueta_arbol": "Empaca líquidos en varias capas"
+  "etiqueta_arbol": "Empaca líquidos en varias capas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-062",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Coloca material absorbente alrededor del envase primario, suficiente para absorber todo su contenido si se derrama.",
+      "texto_nuevo": "Sugerencia de My Idea: coloca material absorbente alrededor del envase primario, suficiente para absorber todo su contenido si se derrama.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "I have an idea/txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "L51-L56",
+        "frase": "Líquidos: envase a prueba de fugas, sellado DENTRO de bolsa plástica, y en caja resistente"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. La extraccion no menciona ningun material absorbente ni cuanto debe absorber. Busque absorb en todo el texto y no aparece.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-035"
+    },
+    {
+      "id": "fidelidad-t9-063",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los líquidos y polvos necesitan más de una barrera porque un solo envase que falle arruina todo el paquete y puede dañar otros envíos cercanos. El método probado tiene capas: primero un envase hermético con cierre firme, reforzado con cinta; luego material absorbente que atrape cualquier fuga; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
+      "texto_nuevo": "Los líquidos y polvos necesitan más de una barrera porque un solo envase que falle arruina todo el paquete y puede dañar otros envíos cercanos. El método probado tiene capas: primero un envase hermético con cierre firme, reforzado con cinta; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "I have an idea/txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "L51-L56",
+        "frase": "Líquidos: envase a prueba de fugas, sellado DENTRO de bolsa plástica, y en caja resistente"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO practico (C132-035): el resumen repite la capa de material absorbente, que la extraccion no menciona. En el resumen se quita el dato; el entregable se deja.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-035"
+    },
+    {
+      "id": "fidelidad-t9-067",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Verifica que el envase primario cierre con rosca o tapa firme y refuerza el cierre con cinta.",
+      "texto_nuevo": "Sugerencia de My Idea: verifica que el envase primario cierre con rosca o tapa firme y refuerza el cierre con cinta.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "I have an idea/txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "L51-L56",
+        "frase": "Líquidos: envase a prueba de fugas, sellado DENTRO de bolsa plástica"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. La extraccion pide un envase a prueba de fugas, pero no habla de rosca ni de reforzar el cierre con cinta.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-131"
+    },
+    {
+      "id": "fidelidad-t9-068",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los líquidos y polvos necesitan más de una barrera porque un solo envase que falle arruina todo el paquete y puede dañar otros envíos cercanos. El método probado tiene capas: primero un envase hermético con cierre firme, reforzado con cinta; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
+      "texto_nuevo": "Los líquidos y polvos necesitan más de una barrera porque un solo envase que falle arruina todo el paquete y puede dañar otros envíos cercanos. El método probado tiene capas: primero un envase hermético con cierre firme; después una bolsa o contenedor secundario también hermético; y finalmente una caja exterior rígida que resista el manejo normal del transporte. Cada capa cubre la posible falla de la anterior. Esta receta aplica tanto a un frasco de crema como a una muestra líquida, y conviene revisarla siempre que envíes algo que pueda derramarse, porque además algunos líquidos y polvos comunes se clasifican como mercancía regulada y piden papeleo adicional que vale la pena confirmar antes de despachar.",
+      "cita": {
+        "libro": "Requisitos de empaque de los couriers",
+        "fichero": "I have an idea/txt/Supply chain/EXTRACCION_EMPAQUE_COURIERS.md",
+        "lineas": "L51-L56",
+        "frase": "Líquidos: envase a prueba de fugas, sellado DENTRO de bolsa plástica"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO practico (C132-131): el resumen repite el refuerzo del cierre con cinta, que la extraccion de couriers no respalda (solo pide envase a prueba de fugas). En el resumen se quita el dato.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-131"
+    }
+  ]
 }

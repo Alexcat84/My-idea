@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD82F07",
+  "intento": 0,
+  "usd": 0.150532,
+  "turnos": 1,
+  "duracion_s": 12.0,
+  "pared_s": 13.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32778,
+  "tokens_out": 971,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD82F07\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2720, 2658, 2837], \"cita\": \"such things as poor workplace design, clumsy automation, inadequate tools and equipment, unworkable procedures, the absence of effective supervision, high workload, time pressure, inadequate training and experience ... Workplace factors change more rapidly than organizational ones, and so need to be monitored at more frequent intervals.\", \"datos_sin_respaldo\": [], \"razon\": \"Los cinco factores (diseño, carga de trabajo, supervisión, EPP, capacitación) figuran en la lista del libro (L2720). El libro no desaconseja registrarlos: pide vigilarlos con más frecuencia (L2658) y detectarlos (L2837). La prioridad de lo organizacional no convierte el paso en contrario, porque el paso no dice que sea la vía principal. Solo concreta en qué consiste esa vigilancia.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD82F07",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2720,
+   2658,
+   2837
+  ],
+  "cita": "such things as poor workplace design, clumsy automation, inadequate tools and equipment, unworkable procedures, the absence of effective supervision, high workload, time pressure, inadequate training and experience ... Workplace factors change more rapidly than organizational ones, and so need to be monitored at more frequent intervals.",
+  "datos_sin_respaldo": [],
+  "razon": "Los cinco factores (diseño, carga de trabajo, supervisión, EPP, capacitación) figuran en la lista del libro (L2720). El libro no desaconseja registrarlos: pide vigilarlos con más frecuencia (L2658) y detectarlos (L2837). La prioridad de lo organizacional no convierte el paso en contrario, porque el paso no dice que sea la vía principal. Solo concreta en qué consiste esa vigilancia.",
+  "paso_fiel": ""
+ }
+}

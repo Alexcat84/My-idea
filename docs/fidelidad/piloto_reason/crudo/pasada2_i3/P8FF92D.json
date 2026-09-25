@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P8FF92D",
+  "intento": 0,
+  "usd": 0.17321999999999999,
+  "turnos": 1,
+  "duracion_s": 14.4,
+  "pared_s": 15.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36765,
+  "tokens_out": 1308,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8FF92D\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [565, 569, 5779, 5781], \"cita\": \"Organizational accidents involve the interaction of latent conditions with local triggering factors. Two such local events precipitated the accident. First, the railway company implemented a policy of killing beavers in the vicinity of rail tracks... Second, it had been an unusually wet summer\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta Nakina como una política de la empresa (matar castores) que interactúa con un clima anómalo y con una condición latente. El paso generaliza ese patrón sin datos nuevos. No es contrario: no lo propone como vía principal, y el nodo prioriza la condición latente de diseño, como pide el libro (L5779-5781).\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P8FF92D",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   565,
+   569,
+   5779,
+   5781
+  ],
+  "cita": "Organizational accidents involve the interaction of latent conditions with local triggering factors. Two such local events precipitated the accident. First, the railway company implemented a policy of killing beavers in the vicinity of rail tracks... Second, it had been an unusually wet summer",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta Nakina como una política de la empresa (matar castores) que interactúa con un clima anómalo y con una condición latente. El paso generaliza ese patrón sin datos nuevos. No es contrario: no lo propone como vía principal, y el nodo prioriza la condición latente de diseño, como pide el libro (L5779-5781).",
+  "paso_fiel": ""
+ }
+}

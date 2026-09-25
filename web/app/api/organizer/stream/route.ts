@@ -10,7 +10,7 @@
  */
 import { NextResponse } from "next/server";
 import { createAnthropicClient } from "@/lib/anthropicClient";
-import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
+import { MAX_LARGO_IDEA, MENSAJE_IDEA_LARGA } from "@/lib/constants";
 import {
   costoAcumuladoUsd,
   MODEL_HAIKU,
@@ -56,9 +56,9 @@ export async function POST(request: Request) {
   if (typeof texto !== "string" || texto.trim().length === 0) {
     return NextResponse.json({ error: "falta 'texto'" }, { status: 400 });
   }
-  if (texto.length > MAX_LARGO_TEXTO_USUARIO) {
+  if (texto.length > MAX_LARGO_IDEA) {
     return NextResponse.json(
-      { error: MENSAJE_TEXTO_LARGO, limite: MAX_LARGO_TEXTO_USUARIO },
+      { error: MENSAJE_IDEA_LARGA, limite: MAX_LARGO_IDEA },
       { status: 400 }
     );
   }

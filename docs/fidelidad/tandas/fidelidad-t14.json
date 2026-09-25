@@ -1,0 +1,38 @@
+[
+ {
+  "node_id": "creacion_option_pool",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Negociar el tamaño del option pool con los inversores antes del cierre de la ronda (afecta la valuación pre-money).",
+  "texto_nuevo": "Definir el tamaño del option pool al crearlo o refrescarlo en la ronda, según las contrataciones clave previstas hasta la siguiente ronda.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "L2578",
+   "frase": "These are usually created or \"refreshed\" during each new round of financing / these pools should be sized to match the amount of hiring the startup expects to do before the pool is refreshed again; that is, until the next round of financing."
+  },
+  "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal (tipo LEGAL_CIFRA del lector): quitado y sustituido por lo que dice el libro, con el texto fiel del lector y el verificador, que coincidieron. El libro dice que el pool se crea o refresca en cada ronda y se dimensiona segun las contrataciones previstas hasta la siguiente (L2578); no dice que se negocie con los inversores ni que afecte a la valuacion pre-money. EXCEPCION PERDIDA, declarada: en la campania quedo apartada del bloque B1 porque el comprobador de entonces no reconocio la cita por las comillas tipograficas de \"refreshed\", y nunca paso a EXCEPCIONES.md. La encontro la comprobacion por script de que cada ANADIDO del censo tiene su correccion en main.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C024-113",
+  "id": "fidelidad-t14-01",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "creacion_option_pool",
+  "campo": "resumen_teorico",
+  "indice": null,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Los option pools son reservas de equity destinadas a futuras contrataciones clave, usualmente creadas o 'refrescadas' en cada ronda de financiamiento. Su tamaño suele ser mayor en etapas tempranas (hasta 20% del equity totalmente diluido) y decrece con rondas posteriores, reflejando la disminución de posiciones clave por llenar.",
+  "texto_nuevo": "Los option pools son reservas de equity destinadas a futuras contrataciones clave, usualmente creadas o 'refrescadas' en cada ronda de financiamiento. Su tamaño suele ser mayor en etapas tempranas (en promedio, 20% del equity totalmente diluido en las startups más jóvenes) y decrece con rondas posteriores, reflejando la disminución de posiciones clave por llenar.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "L2578",
+   "frase": "In the youngest startups in my dataset, the option pools averaged 20% of fully diluted equity"
+  },
+  "decision": "Mandato del fundador, regla B, cifra cambiada: el resumen daba \"hasta 20%\" (un tope) donde el libro da un promedio en las startups mas jovenes (\"averaged 20% of fully diluted equity\", L2578). Se sustituye por lo que dice el libro. La encontro la sesion al revisar el nodo para fidelidad-t14-01; los resumenes no entraban en las lecturas de la campania.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C024-113 (nodo revisado por la sesion)",
+  "id": "fidelidad-t14-02",
+  "fecha": "2026-09-24"
+ }
+]

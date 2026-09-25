@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Elaborar inventario completo de químicos peligrosos en el lugar de trabajo",
     "Mantener SDS actualizadas y accesibles para todos los trabajadores",
-    "Etiquetar correctamente los contenedores según el sistema GHS",
+    "Etiquetar los contenedores con identificador del producto, palabra de advertencia, indicaciones de peligro, pictogramas, consejos de prudencia y datos del proveedor",
     "Capacitar a los trabajadores antes de su asignación inicial y ante nuevos riesgos",
     "Revisar y actualizar periódicamente el programa de comunicación de riesgos"
   ],
@@ -23,5 +23,24 @@
   "condiciones_activacion": [
     "Si el negocio maneja, almacena o utiliza cualquier químico peligroso"
   ],
-  "etiqueta_arbol": "Comunica los Riesgos Químicos"
+  "etiqueta_arbol": "Comunica los Riesgos Químicos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-35",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Etiquetar correctamente los contenedores según el sistema GHS",
+      "texto_nuevo": "Etiquetar los contenedores con identificador del producto, palabra de advertencia, indicaciones de peligro, pictogramas, consejos de prudencia y datos del proveedor",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L743-L745",
+        "frase": "Labels are kept on shipped containers; including: product identifier, signal word, hazard statement(s), pictogram(s), precautionary statement(s), and supplier information."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). El paso cita una norma, 'sistema GHS', que el libro no nombra. Se reemplaza por los elementos de la etiqueta que el libro enumera (L743). El resumen solo dice 'etiquetado adecuado', asi que no repite el dato.",
+      "indice": 2,
+      "auditoria": "tramo1 SB1-098"
+    }
+  ]
 }

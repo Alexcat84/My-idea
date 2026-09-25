@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P3E6A38",
+  "intento": 0,
+  "usd": 0.177924,
+  "turnos": 1,
+  "duracion_s": 20.4,
+  "pared_s": 21.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34666,
+  "tokens_out": 1963,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P3E6A38\", \"veredicto\": \"CONTRARIO\", \"lineas\": [263, 271, 273, 5726], \"cita\": \"Accident analysts, just like historians, are limited by their resources and by the availability of reliable evidence. [...] Both of these ends are best satisfied by limiting the scope of the analysis to those things over which [...] the system managers--might reasonably be expected to exercise some control.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro fija los límites del análisis por lo que los gestores pueden controlar, por su valor remedial ('most importantly'). La disponibilidad de evidencia fiable figura solo como limitación y como razón complementaria. Priorizarla invierte ese orden: llevaría a extenderse a factores sociales bien documentados pero incontrolables, como los de Legasov.\", \"paso_fiel\": \"Fijar los límites del análisis priorizando los factores que los gestores del sistema pueden razonablemente controlar, teniendo en cuenta que la cantidad y fiabilidad de la evidencia disminuyen con la distancia al suceso.\"}\n```",
+ "parseado": {
+  "id": "P3E6A38",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   263,
+   271,
+   273,
+   5726
+  ],
+  "cita": "Accident analysts, just like historians, are limited by their resources and by the availability of reliable evidence. [...] Both of these ends are best satisfied by limiting the scope of the analysis to those things over which [...] the system managers--might reasonably be expected to exercise some control.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro fija los límites del análisis por lo que los gestores pueden controlar, por su valor remedial ('most importantly'). La disponibilidad de evidencia fiable figura solo como limitación y como razón complementaria. Priorizarla invierte ese orden: llevaría a extenderse a factores sociales bien documentados pero incontrolables, como los de Legasov.",
+  "paso_fiel": "Fijar los límites del análisis priorizando los factores que los gestores del sistema pueden razonablemente controlar, teniendo en cuenta que la cantidad y fiabilidad de la evidencia disminuyen con la distancia al suceso."
+ }
+}

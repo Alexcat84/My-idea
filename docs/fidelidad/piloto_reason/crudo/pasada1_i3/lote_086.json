@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_086",
+  "intento": 0,
+  "usd": 0.169524,
+  "turnos": 1,
+  "duracion_s": 22.8,
+  "pared_s": 24.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31066,
+  "tokens_out": 2263,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P355FAD\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"investigadores de accidentes\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2907, 2909, 2880, 5661, 196], \"razon\": \"El libro describe el error fundamental de atribución y critica centrarse en lo personal. No habla de entrenar investigadores: el paso concreta en la misma dirección.\"},\n  {\"id\": \"P813A63\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"sistemas de autodiagnóstico\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [2311, 2356, 2369, 1816, 1114, 1129], \"razon\": \"El libro propone eliminar el contacto manual por diseño, no con autodiagnóstico. Además advierte que automatizar y añadir dispositivos traslada errores y añade complejidad.\"},\n  {\"id\": \"P5F87B8\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1085, 1095, 1141], \"razon\": \"El libro advierte que las falsas alarmas frecuentes minan la confianza. Auditar su tasa concreta esa idea en la misma dirección, sin datos nuevos.\"},\n  {\"id\": \"P8302EF\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [213, 181, 1539, 219, 308, 196], \"razon\": \"El libro distingue deliberado de involuntario, pero no equipara deliberado con violación: hay retiradas legítimas y violaciones erróneas. Los huecos también vienen de condiciones latentes, no solo de fallos activos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P355FAD",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "investigadores de accidentes"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2907,
+    2909,
+    2880,
+    5661,
+    196
+   ],
+   "razon": "El libro describe el error fundamental de atribución y critica centrarse en lo personal. No habla de entrenar investigadores: el paso concreta en la misma dirección."
+  },
+  {
+   "id": "P813A63",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "sistemas de autodiagnóstico"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    2311,
+    2356,
+    2369,
+    1816,
+    1114,
+    1129
+   ],
+   "razon": "El libro propone eliminar el contacto manual por diseño, no con autodiagnóstico. Además advierte que automatizar y añadir dispositivos traslada errores y añade complejidad."
+  },
+  {
+   "id": "P5F87B8",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1085,
+    1095,
+    1141
+   ],
+   "razon": "El libro advierte que las falsas alarmas frecuentes minan la confianza. Auditar su tasa concreta esa idea en la misma dirección, sin datos nuevos."
+  },
+  {
+   "id": "P8302EF",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    213,
+    181,
+    1539,
+    219,
+    308,
+    196
+   ],
+   "razon": "El libro distingue deliberado de involuntario, pero no equipara deliberado con violación: hay retiradas legítimas y violaciones erróneas. Los huecos también vienen de condiciones latentes, no solo de fallos activos."
+  }
+ ]
+}

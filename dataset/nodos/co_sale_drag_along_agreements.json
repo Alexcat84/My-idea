@@ -3,14 +3,14 @@
   "dominio": "core",
   "titulo_concepto": "Acuerdos para vender junto con los inversionistas o arrastrar a los minoritarios en una venta (Co-Sale y Drag-Along)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los accionistas minoritarios a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario. Ambas cláusulas suelen ir juntas en el acuerdo de derechos de los inversionistas o en el acuerdo de votación.",
+  "resumen_teorico": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los accionistas minoritarios a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario.",
   "pasos_accionables": [
     "Acepta que la cláusula de co-venta va a estar ahí, porque es prácticamente estándar en todo financiamiento de capital de riesgo",
     "Negocia un piso mínimo de acciones que puedas vender sin necesidad de ofrecer co-venta a los inversionistas",
-    "Confirma que ambas cláusulas terminan automáticamente al llegar a una oferta pública inicial calificada",
+    "Confirma que la cláusula de co-venta termina automáticamente al llegar a una oferta pública inicial calificada",
     "Define el umbral de aprobación necesario para activar el arrastre (por ejemplo, mayoría de una serie de inversión determinada)",
     "Deja claras las excepciones razonables al acuerdo de co-venta",
-    "Incluye ambas cláusulas en el acuerdo de derechos de los inversionistas o en el acuerdo de votación, y entiende bien qué control estás cediendo de cara a una futura venta"
+    "Sugerencia de My Idea: deja ambas cláusulas por escrito en los acuerdos de la ronda, por ejemplo la co-venta en un acuerdo de co-venta y el arrastre en el acuerdo de votación, y entiende bien qué control estás cediendo de cara a una futura venta"
   ],
   "entregable_esperado": "Cláusulas de co-venta y de arrastre firmadas por ti y por los inversionistas, con un piso negociado para tus ventas menores y el umbral de aprobación del arrastre claramente definido",
   "condiciones_activacion": [
@@ -31,5 +31,57 @@
     "drag_along_agreement",
     "acuerdo_de_co_venta_y_votacion"
   ],
-  "etiqueta_arbol": "Negocia tus Cláusulas de Co-Venta"
+  "etiqueta_arbol": "Negocia tus Cláusulas de Co-Venta",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-027",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Incluye ambas cláusulas en el acuerdo de derechos de los inversionistas o en el acuerdo de votación, y entiende bien qué control estás cediendo de cara a una futura venta",
+      "texto_nuevo": "Sugerencia de My Idea: deja ambas cláusulas por escrito en los acuerdos de la ronda, por ejemplo la co-venta en un acuerdo de co-venta y el arrastre en el acuerdo de votación, y entiende bien qué control estás cediendo de cara a una futura venta",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L5113-L5133",
+        "frase": "The purchase agreement, investor rights agreement, co-sale agreement and voting agreement may be amended"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro recoge la co-venta en un acuerdo de co-venta propio y el arrastre en el acuerdo de votación; no dice que ambas cláusulas vayan en el acuerdo de derechos de los inversionistas. La ubicación documental propuesta es un formato que el libro no respalda.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C019-017"
+    },
+    {
+      "id": "fidelidad-t4-028",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los accionistas minoritarios a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario. Ambas cláusulas suelen ir juntas en el acuerdo de derechos de los inversionistas o en el acuerdo de votación.",
+      "texto_nuevo": "El acuerdo de venta conjunta (co-sale) es una cláusula casi imposible de evitar cuando levantas capital de riesgo: si tú vendes tus acciones, los inversionistas tienen derecho a vender una parte proporcional de las suyas en la misma operación. Te conviene negociar un piso que te permita vender pequeñas cantidades de acciones sin activar este derecho, y confirmar que la cláusula termina automáticamente cuando llegas a una oferta pública inicial calificada. El acuerdo de arrastre (drag-along), en cambio, obliga a los accionistas minoritarios a sumarse a una venta o liquidación de tu empresa si la mayoría de los accionistas preferentes lo aprueba, así una salida limpia no queda bloqueada por un accionista minoritario.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L5113-L5133",
+        "frase": "The purchase agreement, investor rights agreement, co-sale agreement and voting agreement may be amended"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el mismo dato que corrige C019-017: que ambas cláusulas van en el acuerdo de derechos de los inversionistas o en el acuerdo de votación. El libro pone la co-venta en un acuerdo de co-venta propio y el arrastre en el acuerdo de votación. Es un ANADIDO práctico y aparece en el resumen_teorico, así que ahí se quita el dato.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C019-017"
+    },
+    {
+      "id": "fidelidad-t4-029",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Confirma que ambas cláusulas terminan automáticamente al llegar a una oferta pública inicial calificada",
+      "texto_nuevo": "Confirma que la cláusula de co-venta termina automáticamente al llegar a una oferta pública inicial calificada",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L1967-L1971",
+        "frase": "This right of co-sale shall not apply to and shall terminate upon a Qualified IPO."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro solo dice que la co-venta termina con una IPO calificada; no dice nada sobre la terminación del drag-along en la IPO, así que extenderlo a ambas cláusulas añade una condición legal.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C019-046"
+    }
+  ]
 }

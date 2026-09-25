@@ -4,11 +4,11 @@
   "dominio": "entrega",
   "titulo_concepto": "Acolchado según la forma de la pieza",
   "fuente": "Guia de empaque para envios (FedEx)",
-  "resumen_teorico": "No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilindrica o tubular se protege mejor dentro de un tubo que dentro de una caja rectangular con relleno suelto; una forma irregular necesita que el material de proteccion quede pegado con cinta para que no se corra durante el trayecto. Las piezas pesadas, ademas, necesitan una base que resista el manejo con equipo mecanico o flejes que las asegure al empaque. Decidir el metodo de acolchado segun la forma real de cada producto, en vez de usar el mismo relleno para todo, reduce las roturas y raspones que mas quejas generan.",
+  "resumen_teorico": "No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilindrica o tubular va en caja o en tubo, con acolchado en los extremos y relleno suelto para que no perfore los cierres; una forma irregular necesita que el material de proteccion quede pegado con cinta para que no se corra durante el trayecto. Las piezas pesadas, ademas, necesitan una base que resista el manejo con equipo mecanico o flejes que las asegure al empaque. Decidir el metodo de acolchado segun la forma real de cada producto, en vez de usar el mismo relleno para todo, reduce las roturas y raspones que mas quejas generan.",
   "pasos_accionables": [
     "Identifica si tu pieza es plana, cilindrica o de forma irregular antes de elegir el material de relleno.",
     "En piezas planas o con bordes filosos, cubre esquinas y bordes con espuma o carton corrugado.",
-    "En piezas cilindricas o tubulares, usa tubos en vez de caja rectangular con relleno suelto.",
+    "En piezas cilindricas o tubulares, empacalas en caja o en tubo con relleno adecuado, como acolchado en los extremos y cacahuates sueltos, para que no perforen los cierres de los extremos.",
     "En piezas irregulares, pega el material de proteccion con cinta para que no se corra en el trayecto.",
     "En piezas pesadas, asegura con flejes o una base firme antes de cerrar el empaque."
   ],
@@ -23,5 +23,40 @@
     "Te han llegado quejas de piezas rayadas o rotas por el tipo de relleno usado",
     "Vendes productos de formas muy distintas y usas el mismo empaque para todos"
   ],
-  "etiqueta_arbol": "Acolcha según la forma"
+  "etiqueta_arbol": "Acolcha según la forma",
+  "correcciones": [
+    {
+      "id": "fidelidad-t1-07",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "En piezas cilindricas o tubulares, usa tubos en vez de caja rectangular con relleno suelto.",
+      "texto_nuevo": "En piezas cilindricas o tubulares, empacalas en caja o en tubo con relleno adecuado, como acolchado en los extremos y cacahuates sueltos, para que no perforen los cierres de los extremos.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "I have an idea/txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "L1277-L1279",
+        "frase": "Box cylindrical parts that can be packaged in tubes with adequate dunnage such as padding at the ends and loose- peanuts to prevent puncturing through the end closures."
+      },
+      "decision": "Mandato del fundador, regla B: CONTRARIO, version fiel del arbitro (fila FX1-034: el lector lo dio OPERATIVO, el verificador ciego CONTRARIO, y el arbitro decidio CONTRARIO releyendo la guia), en el estilo sin tildes del propio nodo. El paso descartaba la caja con relleno suelto, que la guia usa.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha FX1-034"
+    },
+    {
+      "id": "fidelidad-t1-08",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilindrica o tubular se protege mejor dentro de un tubo que dentro de una caja rectangular con relleno suelto; una forma irregular necesita que el material de proteccion quede pegado con cinta para que no se corra durante el trayecto. Las piezas pesadas, ademas, necesitan una base que resista el manejo con equipo mecanico o flejes que las asegure al empaque. Decidir el metodo de acolchado segun la forma real de cada producto, en vez de usar el mismo relleno para todo, reduce las roturas y raspones que mas quejas generan.",
+      "texto_nuevo": "No toda pieza se protege igual. Una superficie plana con bordes filosos necesita relleno concentrado en las esquinas y los bordes; una pieza cilindrica o tubular va en caja o en tubo, con acolchado en los extremos y relleno suelto para que no perfore los cierres; una forma irregular necesita que el material de proteccion quede pegado con cinta para que no se corra durante el trayecto. Las piezas pesadas, ademas, necesitan una base que resista el manejo con equipo mecanico o flejes que las asegure al empaque. Decidir el metodo de acolchado segun la forma real de cada producto, en vez de usar el mismo relleno para todo, reduce las roturas y raspones que mas quejas generan.",
+      "cita": {
+        "libro": "Guia de empaque para envios (FedEx)",
+        "fichero": "I have an idea/txt/Supply chain/HowToPack_fxcom.txt",
+        "lineas": "L1277-L1279",
+        "frase": "Box cylindrical parts that can be packaged in tubes with adequate dunnage such as padding at the ends and loose- peanuts to prevent puncturing through the end closures."
+      },
+      "decision": "Mandato del fundador, regla B, dato repetido en el nodo: el resumen repetia el CONTRARIO de fidelidad-t1-07 (tubo mejor que caja con relleno suelto). Se corrige con la misma cita; el resto del resumen no cambia.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha FX1-034"
+    }
+  ]
 }

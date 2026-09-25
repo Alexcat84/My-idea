@@ -1,0 +1,69 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_025",
+  "intento": 0,
+  "usd": 0.151784,
+  "turnos": 1,
+  "duracion_s": 9.7,
+  "pared_s": 11.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34021,
+  "tokens_out": 785,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PDA5AE2\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [393, 413, 443, 445, 447], \"razon\": \"El libro señala como condición latente la falta de un medio eficaz para vigilar y ajustar la dotación a la carga, sobre todo en turnos nocturnos. Auditarla va en la misma dirección.\"},\n {\"id\": \"P846E58\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4765, 4798, 4824, 4854, 5077, 5144], \"razon\": \"Leído como absoluto, 'sin represalias' choca con el libro: una cultura sin culpa no es factible ni deseable. Pide cultura justa, con indemnidad limitada y sanciones para actos atroces.\"},\n {\"id\": \"P39D6F5\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [275, 279, 293, 2720], \"razon\": \"El libro indica que, por cada acto inseguro identificado, hay que considerar qué condiciones locales pudieron moldearlo o provocarlo.\"},\n {\"id\": \"PD9D044\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4360, 4384], \"razon\": \"Entre los pasos del procedimiento continuo COSHH, el libro enumera literalmente capacitar a los empleados en la naturaleza de los riesgos y las precauciones.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PDA5AE2",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    393,
+    413,
+    443,
+    445,
+    447
+   ],
+   "razon": "El libro señala como condición latente la falta de un medio eficaz para vigilar y ajustar la dotación a la carga, sobre todo en turnos nocturnos. Auditarla va en la misma dirección."
+  },
+  {
+   "id": "P846E58",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4765,
+    4798,
+    4824,
+    4854,
+    5077,
+    5144
+   ],
+   "razon": "Leído como absoluto, 'sin represalias' choca con el libro: una cultura sin culpa no es factible ni deseable. Pide cultura justa, con indemnidad limitada y sanciones para actos atroces."
+  },
+  {
+   "id": "P39D6F5",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    275,
+    279,
+    293,
+    2720
+   ],
+   "razon": "El libro indica que, por cada acto inseguro identificado, hay que considerar qué condiciones locales pudieron moldearlo o provocarlo."
+  },
+  {
+   "id": "PD9D044",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4360,
+    4384
+   ],
+   "razon": "Entre los pasos del procedimiento continuo COSHH, el libro enumera literalmente capacitar a los empleados en la naturaleza de los riesgos y las precauciones."
+  }
+ ]
+}

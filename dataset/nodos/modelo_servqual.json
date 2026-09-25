@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Diseñar encuesta basada en las cinco dimensiones SERVQUAL",
     "Aplicar la encuesta a clientes reales del servicio",
-    "Comparar expectativas vs. percepciones por dimensión",
+    "Sugerencia de My Idea: Comparar expectativas vs. percepciones por dimensión",
     "Priorizar mejoras en las dimensiones con mayor brecha"
   ],
   "entregable_esperado": "Reporte de brechas de calidad percibida por dimensión SERVQUAL",
@@ -21,5 +21,24 @@
   "condiciones_activacion": [
     "Cuando se necesite medir la calidad percibida por el cliente en un servicio intangible"
   ],
-  "etiqueta_arbol": "Mide la Calidad de tu Servicio"
+  "etiqueta_arbol": "Mide la Calidad de tu Servicio",
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-017",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar expectativas vs. percepciones por dimensión",
+      "texto_nuevo": "Sugerencia de My Idea: Comparar expectativas vs. percepciones por dimensión",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L21983-L21995",
+        "frase": "One approach to measuring service quality is the SERVQUAL model (Zeithaml et al., 1990). This model identifies five dimensions of quality"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector B. SERVQUAL solo aparece una vez en el libro (L21983), que se limita a enumerar las cinco dimensiones. Busque con Grep en todo el libro expectations junto a perception, perceived, compare o gap, y ningun pasaje describe comparar expectativas con percepciones. Las menciones de percepcion del cliente (L3631, L21868, L22009) no tratan ese metodo. La comparacion expectativas frente a percepciones es un metodo de medicion concreto que el libro no respalda; no es una simple concrecion de medir por dimension. Es de tipo PRACTICO porque el dato es un metodo o formato de medicion, no una cifra ni una norma.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C052-088"
+    }
+  ]
 }

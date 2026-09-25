@@ -6,7 +6,7 @@
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Una vez que ya elegiste en qué arenas vas a competir, tienes que decidir cómo vas a hacerlo. Existen cuatro maneras de plantarte frente al mercado, según qué tan importante es para ti innovar en producto y qué tan proactivo eres frente a la competencia: ser Innovador (llegar primero al mercado), ser Fast Follower (mejorar lo que ya existe), ser Defensor (proteger tu nicho con calidad, servicio o precio) o ser Reactor (moverte solo cuando la presión te obliga, lo cual en realidad es no tener estrategia). Además tienes que definir tu enfoque competitivo (bajo costo, diferenciación o nicho) y hasta dónde llega tu alcance geográfico (local, global o una mezcla de ambas, 'glocal').",
   "pasos_accionables": [
-    "Para cada arena en la que compites, decide si vas a ser Innovador, Fast Follower, Defensor o Reactor",
+    "Para cada arena en la que compites, decide si vas a ser Innovador, Fast Follower o Defensor; no elijas ser Reactor, que solo responde cuando lo obligan y casi no es una estrategia",
     "Define tu enfoque: ¿vas a competir por precio bajo, por diferenciarte o por dominar un nicho?",
     "Decide tu alcance geográfico: local, global o glocal",
     "Revisa tus capacidades clave y lo que realmente hace ganar en tu industria, para confirmar que tu estrategia tiene sentido",
@@ -25,5 +25,24 @@
     "Cuando ya elegiste tus arenas estratégicas y necesitas definir cómo vas a competir en ellas",
     "Si todavía no tienes claro si vas a ser líder o seguidor frente a tu competencia"
   ],
-  "etiqueta_arbol": "Decide cómo Vas a Competir"
+  "etiqueta_arbol": "Decide cómo Vas a Competir",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-008",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Para cada arena en la que compites, decide si vas a ser Innovador, Fast Follower, Defensor o Reactor",
+      "texto_nuevo": "Para cada arena en la que compites, decide si vas a ser Innovador, Fast Follower o Defensor; no elijas ser Reactor, que solo responde cuando lo obligan y casi no es una estrategia",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L8399-L8407",
+        "frase": "It is difficult to imagine any business deliberately electing this strategy--some would argue that it's a \"non strategy\""
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El paso ofrece Reactor como opcion a elegir; el libro solo recomienda elegir entre innovador, fast follower o defensor (L8407) y descarta elegir Reactor de forma deliberada.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C076-062"
+    }
+  ]
 }

@@ -7,7 +7,7 @@
   "resumen_teorico": "Patrón recurrente en los casos analizados (NASA, Piper Alpha, Dryden, FAA) donde los organismos reguladores no pueden cumplir su función de vigilancia efectiva debido a recortes de personal, presupuesto insuficiente o sobrecarga de trabajo. Esto provoca inspecciones superficiales, ausencia de seguimiento a incidentes previos y pérdida de capacidad de detección temprana de riesgos sistémicos.",
   "pasos_accionables": [
     "Calcular la carga de trabajo real de los equipos de seguridad/calidad frente a su dotación actual",
-    "Comparar el ratio de personal de seguridad respecto al total de la organización con estándares del sector",
+    "Calcular el ratio de personal de seguridad respecto al total de la organización y ver cómo ha cambiado con los recortes",
     "Identificar funciones de supervisión que se han visto reducidas o eliminadas por recortes",
     "Presentar a la dirección un caso de negocio sobre el riesgo de subdotación en funciones de seguridad"
   ],
@@ -22,5 +22,24 @@
     "Cuando se han reducido plantillas de seguridad o calidad en los últimos años",
     "Cuando el personal de supervisión reporta sobrecarga de tareas no relacionadas con su función principal"
   ],
-  "etiqueta_arbol": "Vigila los Recursos del Regulador"
+  "etiqueta_arbol": "Vigila los Recursos del Regulador",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-17",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comparar el ratio de personal de seguridad respecto al total de la organización con estándares del sector",
+      "texto_nuevo": "Calcular el ratio de personal de seguridad respecto al total de la organización y ver cómo ha cambiado con los recortes",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L3993",
+        "frase": "Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent.\"; L3993: \"Overall, safety, reliability and quality staff comprised about 2 per cent of NASA’s 22 000 staff."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Remite a una norma o cifra de referencia (\"estándares del sector\") que el libro no da; el libro mide el ratio y su caída tras los recortes (L3993: \"NASA reduced its safety and quality control personnel by 71 per cent\"; \"about 2 per cent of NASA's 22 000 staff\"). Se reemplaza por lo que hace el libro. El dato no aparece en otros campos.",
+      "indice": 1,
+      "auditoria": "muestreo A19"
+    }
+  ]
 }

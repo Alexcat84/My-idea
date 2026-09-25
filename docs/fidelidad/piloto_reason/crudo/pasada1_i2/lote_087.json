@@ -1,0 +1,87 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_087",
+  "intento": 0,
+  "usd": 0.15915200000000002,
+  "turnos": 1,
+  "duracion_s": 14.2,
+  "pared_s": 15.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33043,
+  "tokens_out": 1349,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P0B823A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1085, 1095, 1141], \"razon\": \"El libro dice que las falsas alarmas frecuentes minan la confianza. No prescribe auditar su tasa, pero el paso lo concreta en la misma dirección.\"},\n  {\"id\": \"P51E19A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [413, 435, 967, 971, 973, 975], \"razon\": \"El libro señala como riesgo que se firme el propio trabajo sin inspección independiente ni personal de QA. El paso pide evaluar ese riesgo.\"},\n  {\"id\": \"P8B495F\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"VPCs\"], \"clase\": \"FIEL\", \"lineas\": [3623, 3625, 3629, 3633, 3637, 3641, 3645, 3649, 3653, 3657, 3659], \"razon\": \"El libro lista ocho VPCs con pesos relativos y los recomienda como herramienta para el gestor. Matiz a revisar: son pesos generales y preliminares.\"},\n  {\"id\": \"P2046B8\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Condiciones Productoras de Error (EPCs)\"], \"clase\": \"FIEL\", \"lineas\": [3395, 3397, 2837], \"razon\": \"HEART pide consultar las EPCs y decidir cuáles afectan a la actividad, después de encajarla en un tipo genérico de tarea.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P0B823A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1085,
+    1095,
+    1141
+   ],
+   "razon": "El libro dice que las falsas alarmas frecuentes minan la confianza. No prescribe auditar su tasa, pero el paso lo concreta en la misma dirección."
+  },
+  {
+   "id": "P51E19A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    413,
+    435,
+    967,
+    971,
+    973,
+    975
+   ],
+   "razon": "El libro señala como riesgo que se firme el propio trabajo sin inspección independiente ni personal de QA. El paso pide evaluar ese riesgo."
+  },
+  {
+   "id": "P8B495F",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "VPCs"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3623,
+    3625,
+    3629,
+    3633,
+    3637,
+    3641,
+    3645,
+    3649,
+    3653,
+    3657,
+    3659
+   ],
+   "razon": "El libro lista ocho VPCs con pesos relativos y los recomienda como herramienta para el gestor. Matiz a revisar: son pesos generales y preliminares."
+  },
+  {
+   "id": "P2046B8",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Condiciones Productoras de Error (EPCs)"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3395,
+    3397,
+    2837
+   ],
+   "razon": "HEART pide consultar las EPCs y decidir cuáles afectan a la actividad, después de encajarla en un tipo genérico de tarea."
+  }
+ ]
+}

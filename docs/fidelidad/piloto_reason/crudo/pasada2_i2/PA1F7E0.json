@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA1F7E0",
+  "intento": 0,
+  "usd": 0.19875600000000002,
+  "turnos": 1,
+  "duracion_s": 10.6,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45149,
+  "tokens_out": 908,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA1F7E0\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [3993, 4121, 4180], \"cita\": \"Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent. ... Overall, safety, reliability and quality staff comprised about 2 per cent of NASA's 22 000 staff.\", \"datos_sin_respaldo\": [\"comparación con estándares del sector como referencia\"], \"razon\": \"El libro calcula la proporción de personal de seguridad en NASA (2%) y su caída tras los recortes (71%), y mide la sobrecarga de los inspectores (L4121, L4180). En ningún caso usa estándares sectoriales de dotación como referencia. Tampoco desaconseja medir esa proporción, así que el paso no es contrario, pero añade una herramienta de comparación que el libro no respalda.\", \"paso_fiel\": \"Medir la proporción de personal de seguridad, fiabilidad y calidad sobre la plantilla total y cómo ha evolucionado tras los recortes, y contrastarla con la carga de trabajo y las responsabilidades que ese personal tiene asignadas.\"}\n```",
+ "parseado": {
+  "id": "PA1F7E0",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   3993,
+   4121,
+   4180
+  ],
+  "cita": "Between 1970 and the Challenger disaster, NASA reduced its safety and quality control personnel by 71 per cent. ... Overall, safety, reliability and quality staff comprised about 2 per cent of NASA's 22 000 staff.",
+  "datos_sin_respaldo": [
+   "comparación con estándares del sector como referencia"
+  ],
+  "razon": "El libro calcula la proporción de personal de seguridad en NASA (2%) y su caída tras los recortes (71%), y mide la sobrecarga de los inspectores (L4121, L4180). En ningún caso usa estándares sectoriales de dotación como referencia. Tampoco desaconseja medir esa proporción, así que el paso no es contrario, pero añade una herramienta de comparación que el libro no respalda.",
+  "paso_fiel": "Medir la proporción de personal de seguridad, fiabilidad y calidad sobre la plantilla total y cómo ha evolucionado tras los recortes, y contrastarla con la carga de trabajo y las responsabilidades que ese personal tiene asignadas."
+ }
+}

@@ -10,7 +10,7 @@
     "Expón a quien decide a interacciones reales y sin filtros con clientes (llamadas, quejas)",
     "Implementa mejoras pequeñas sin pedir permiso previo y documenta los resultados",
     "Comparte recursos externos (libros, guías) que respalden tu propuesta desde fuera de la cadena de mando",
-    "Calcular el Costo de Adquisición de Cliente (CAC) exacto por canal.",
+    "Sugerencia de My Idea: calcula el Costo de Adquisición de Cliente (CAC) exacto por canal.",
     "Calcular el tiempo promedio necesario para recuperar esa inversión (breakeven point).",
     "Medir el porcentaje real de clientes que abandonan antes de alcanzar ese punto de equilibrio.",
     "Presentar el impacto financiero de la pérdida temprana de clientes al equipo directivo."
@@ -26,5 +26,24 @@
     "Cuando detectas problemas de experiencia de cliente pero quien decide no los prioriza",
     "Cuando necesitas justificar presupuesto para iniciativas de retención de clientes"
   ],
-  "etiqueta_arbol": "Convence a Tu Dirección del Cliente"
+  "etiqueta_arbol": "Convence a Tu Dirección del Cliente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-061",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular el Costo de Adquisición de Cliente (CAC) exacto por canal.",
+      "texto_nuevo": "Sugerencia de My Idea: calcula el Costo de Adquisición de Cliente (CAC) exacto por canal.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L569-L598",
+        "frase": "many executives can detail their customer acquisition cost down to the dollar, if not the penny."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla del costo de adquisición (300 dólares por cuenta en bancos), pero nunca lo desglosa por canal ni lo pide como paso para convencer a quien decide.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C109-069"
+    }
+  ]
 }

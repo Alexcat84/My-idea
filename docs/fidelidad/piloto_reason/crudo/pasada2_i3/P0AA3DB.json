@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P0AA3DB",
+  "intento": 0,
+  "usd": 0.132928,
+  "turnos": 1,
+  "duracion_s": 8.1,
+  "pared_s": 9.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 29962,
+  "tokens_out": 654,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0AA3DB\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5497, 5517, 5905, 5907], \"cita\": \"Each has its own metrics and countermeasures. ... Such conflicts that exist arise mainly from the predominance of the person model in situations that demand a closer consideration of technical and systemic factors.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro distingue tres modelos, cada uno con sus propias métricas, y asocia LTIF y las estadísticas de lesiones personales al modelo de persona (L5497, L5517). También señala su predominio como fuente de conflicto (L5641, L5907). Diagnosticar qué modelo predomina es una concreción en la misma dirección. El libro no lo formula como paso explícito.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0AA3DB",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5497,
+   5517,
+   5905,
+   5907
+  ],
+  "cita": "Each has its own metrics and countermeasures. ... Such conflicts that exist arise mainly from the predominance of the person model in situations that demand a closer consideration of technical and systemic factors.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro distingue tres modelos, cada uno con sus propias métricas, y asocia LTIF y las estadísticas de lesiones personales al modelo de persona (L5497, L5517). También señala su predominio como fuente de conflicto (L5641, L5907). Diagnosticar qué modelo predomina es una concreción en la misma dirección. El libro no lo formula como paso explícito.",
+  "paso_fiel": ""
+ }
+}

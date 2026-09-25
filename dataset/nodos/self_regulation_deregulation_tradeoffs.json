@@ -6,12 +6,12 @@
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Analiza el movimiento hacia la autorregulación (donde las organizaciones asumen la responsabilidad de demostrar prácticas seguras) frente a la desregulación (reducción de la carga regulatoria). Si bien la autorregulación fuerza a las organizaciones a comprender profundamente sus riesgos sociotécnicos, plantea un dilema para los reguladores: ahora deben evaluar la adecuación de Safety Cases variables y generales, en lugar de verificar cumplimiento con reglas fijas, lo que exige competencias en factores humanos y organizacionales que muchos reguladores no poseen.",
   "pasos_accionables": [
-    "Evaluar si la organización tiene la madurez para autorregularse",
+    "Asumir como organización la responsabilidad de mantener prácticas seguras y ocuparse de forma continua y proactiva de todos los factores que afectan a su seguridad",
     "Identificar brechas de competencia del regulador en factores humanos/organizacionales",
     "Establecer criterios claros para juzgar la adecuación de un Safety Case",
     "Balancear la reducción de carga regulatoria con el mantenimiento de la vigilancia efectiva"
   ],
-  "entregable_esperado": "Análisis de riesgo-beneficio sobre el nivel de autorregulación adecuado para la organización",
+  "entregable_esperado": "Análisis de cómo asume la organización la responsabilidad de su seguridad y de los problemas que la autorregulación plantea al regulador",
   "nodos_previos": [
     "safety_case_evaluacion_formal"
   ],
@@ -22,5 +22,40 @@
     "Cuando se diseña un marco regulatorio o de cumplimiento interno",
     "Cuando existe presión política o económica para reducir regulaciones de seguridad"
   ],
-  "etiqueta_arbol": "Evalúa Autorregulación o Desregulación"
+  "etiqueta_arbol": "Evalúa Autorregulación o Desregulación",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-23",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evaluar si la organización tiene la madurez para autorregularse",
+      "texto_nuevo": "Asumir como organización la responsabilidad de mantener prácticas seguras y ocuparse de forma continua y proactiva de todos los factores que afectan a su seguridad",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L4429",
+        "frase": "So also is the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es materia legal y regulatoria: el libro trata la autorregulación como un impulso legislativo ('this legislative drive towards self-regulation', L4431) que traslada a las organizaciones la carga de la seguridad (L4429). No es algo a lo que se accede por madurez. Se reemplaza por lo que dice el libro, y el entregable se ajusta igual, con el segmento propuesto en la ficha. El resumen no contiene el dato.",
+      "indice": 0,
+      "auditoria": "muestreo A27"
+    },
+    {
+      "id": "fidelidad-t3-24",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Análisis de riesgo-beneficio sobre el nivel de autorregulación adecuado para la organización",
+      "texto_nuevo": "Análisis de cómo asume la organización la responsabilidad de su seguridad y de los problemas que la autorregulación plantea al regulador",
+      "cita": {
+        "libro": "Managing the Risks of Organizat - Reason, J. T_",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/Managing the Risks of Organizat - Reason, J. T_.txt",
+        "lineas": "L4429",
+        "frase": "So also is the related demand upon them to take a close, continuing and proactive interest in all the varied factors affecting the safety of their installations."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo entregable_esperado del nodo; se cambia solo el segmento.",
+      "auditoria": "muestreo A27"
+    }
+  ]
 }

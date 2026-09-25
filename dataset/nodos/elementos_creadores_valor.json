@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar cuál de los 7 elementos (diseño, marca, precio, reducción de costo, reducción de riesgo, accesibilidad, conveniencia) es más relevante para tu segmento",
     "Analizar casos de referencia (Rolex-marca, Tata Nano-precio, Salesforce-reducción de costos, NetJets-accesibilidad, iPod-conveniencia)",
-    "Seleccionar 2-3 elementos prioritarios y diseñar la propuesta de valor alrededor de ellos",
+    "Seleccionar la mezcla de elementos que responda a las necesidades del segmento y diseñar la propuesta de valor alrededor de ella",
     "Validar con clientes reales si perciben ese valor diferencial"
   ],
   "entregable_esperado": "Lista priorizada de elementos de valor aplicados a la propuesta específica del negocio",
@@ -29,5 +29,24 @@
     "Cuando el usuario ya definió el problema/necesidad pero no sabe cómo diferenciar su oferta",
     "Si el usuario compite solo en funcionalidad y necesita otros ángulos de valor"
   ],
-  "etiqueta_arbol": "Encuentra tus Fuentes de Valor"
+  "etiqueta_arbol": "Encuentra tus Fuentes de Valor",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-021",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Seleccionar 2-3 elementos prioritarios y diseñar la propuesta de valor alrededor de ellos",
+      "texto_nuevo": "Seleccionar la mezcla de elementos que responda a las necesidades del segmento y diseñar la propuesta de valor alrededor de ella",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L429-L431",
+        "frase": "A Value Proposition creates value for a Customer Segment through a distinct mix of elements catering to that segment's needs."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro habla de una mezcla de elementos segun las necesidades del segmento, pero no da un numero de elementos que priorizar. No encontre ninguna cifra equivalente.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C119-092"
+    }
+  ]
 }

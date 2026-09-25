@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P8F2224",
+  "intento": 0,
+  "usd": 0.170928,
+  "turnos": 1,
+  "duracion_s": 10.2,
+  "pared_s": 11.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39777,
+  "tokens_out": 591,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P8F2224\", \"veredicto\": \"FIEL\", \"lineas\": [3784, 293], \"cita\": \"The next step is to establish why a particular defence failed. This may be due to either active or latent failures\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"En Tripod-Beta, el libro fija como paso siguiente establecer por qué falló la defensa, por un fallo activo o latente. El paso reproduce esa misma disyuntiva que usa el libro. L293 pide considerar ambos tipos de fallo por cada defensa, y el paso no excluye hacerlo en cada nodo. Como mucho se aparta en el detalle, no lo contradice.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P8F2224",
+  "veredicto": "FIEL",
+  "lineas": [
+   3784,
+   293
+  ],
+  "cita": "The next step is to establish why a particular defence failed. This may be due to either active or latent failures",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "En Tripod-Beta, el libro fija como paso siguiente establecer por qué falló la defensa, por un fallo activo o latente. El paso reproduce esa misma disyuntiva que usa el libro. L293 pide considerar ambos tipos de fallo por cada defensa, y el paso no excluye hacerlo en cada nodo. Como mucho se aparta en el detalle, no lo contradice.",
+  "paso_fiel": ""
+ }
+}

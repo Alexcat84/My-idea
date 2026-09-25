@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_020",
+  "intento": 0,
+  "usd": 0.171848,
+  "turnos": 1,
+  "duracion_s": 19.1,
+  "pared_s": 20.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34692,
+  "tokens_out": 1654,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P896D3F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2585, 306, 83, 594], \"razon\": \"El libro dice que un largo periodo sin accidentes graves es de mayor peligro y que las organizaciones conscientes refuerzan sus defensas en consecuencia.\"},\n  {\"id\": \"P7CD64F\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"requisite variety\"], \"clase\": \"FIEL\", \"lineas\": [5184, 5200, 666], \"razon\": \"Weick, citado por Reason: equipos de personas diversas tienen más requisite variety y ven más al juntar observaciones. Término técnico nombrado, a verificar.\"},\n  {\"id\": \"PD3C33F\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [922, 908, 868, 942, 856], \"razon\": \"El libro señala los modos múltiples como fuente de confusión, pero no propone auditarlos contándolos. Enfatiza transiciones de modo y entrenamiento; solo contar modos podría desviar el foco.\"},\n  {\"id\": \"P50F9BF\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"escala de 1 (poca influencia) a 5 (influencia considerable)\", \"1\", \"5\"], \"clase\": \"FIEL\", \"lineas\": [4476, 4478, 4494], \"razon\": \"El regulador califica la contribución de cada factor O&M en escala de cinco puntos, 1 muy poca y 5 muy considerable influencia. El paso omite que califica el regulador.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P896D3F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2585,
+    306,
+    83,
+    594
+   ],
+   "razon": "El libro dice que un largo periodo sin accidentes graves es de mayor peligro y que las organizaciones conscientes refuerzan sus defensas en consecuencia."
+  },
+  {
+   "id": "P7CD64F",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "requisite variety"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5184,
+    5200,
+    666
+   ],
+   "razon": "Weick, citado por Reason: equipos de personas diversas tienen más requisite variety y ven más al juntar observaciones. Término técnico nombrado, a verificar."
+  },
+  {
+   "id": "PD3C33F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    922,
+    908,
+    868,
+    942,
+    856
+   ],
+   "razon": "El libro señala los modos múltiples como fuente de confusión, pero no propone auditarlos contándolos. Enfatiza transiciones de modo y entrenamiento; solo contar modos podría desviar el foco."
+  },
+  {
+   "id": "P50F9BF",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "escala de 1 (poca influencia) a 5 (influencia considerable)",
+    "1",
+    "5"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4476,
+    4478,
+    4494
+   ],
+   "razon": "El regulador califica la contribución de cada factor O&M en escala de cinco puntos, 1 muy poca y 5 muy considerable influencia. El paso omite que califica el regulador."
+  }
+ ]
+}

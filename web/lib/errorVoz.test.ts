@@ -4,7 +4,7 @@
 import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
-import { mensajeErrorVoz } from "./useSpeech";
+import { mensajeErrorVoz, SILENCIO_LARGO } from "./useSpeech";
 
 describe("el micrófono dice por qué se apagó (AUD-09 B14c)", () => {
   it("permiso negado", () => {
@@ -16,6 +16,9 @@ describe("el micrófono dice por qué se apagó (AUD-09 B14c)", () => {
   it("sin micrófono, y cualquier otro fallo", () => {
     expect(mensajeErrorVoz("audio-capture")).toBe("No encontré un micrófono. Puedes escribir tu respuesta.");
     expect(mensajeErrorVoz("network")).toBe("El dictado se cortó. Puedes volver a intentarlo o escribir.");
+  });
+  it("apagado por silencio largo", () => {
+    expect(mensajeErrorVoz(SILENCIO_LARGO)).toBe("Apagué el micrófono porque dejé de oírte. Tócalo para seguir dictando.");
   });
   it("no hablar no es un error que haya que anunciar", () => {
     expect(mensajeErrorVoz("no-speech")).toBeNull();

@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_075",
+  "intento": 0,
+  "usd": 0.18140399999999998,
+  "turnos": 1,
+  "duracion_s": 23.3,
+  "pared_s": 24.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35021,
+  "tokens_out": 2066,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P22F704\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Sección 4\", \"checklist de factores contribuyentes\"], \"clase\": \"FIEL\", \"lineas\": [3747, 3763], \"razon\": \"El libro describe la Sección 4 como checklist de factores contribuyentes. El paso omite 'para cada error de Sección 3', resume la lista y usa 'capacitación' por 'qualifications and skills'.\"},\n {\"id\": \"P462462\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4060, 4068, 4072, 4027, 4259], \"razon\": \"Dryden: faltaban auditoría y manual aprobado; Piper Alpha: se aceptó sin verificar. Verificar el estado real va en la misma dirección. 'Actualizado' es concreción propia.\"},\n {\"id\": \"PF019CD\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3395, 3397, 3401, 3405, 3659, 2837, 2841, 5742], \"razon\": \"El ranking de EPCs existe, pero HEART pondera por proporción juzgada. El libro prioriza los factores organizacionales que generan los EPCs. Priorizar solo por multiplicador podría invertir esa prioridad.\"},\n {\"id\": \"P668F81\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4360, 4384], \"razon\": \"El paso COSHH es literal: formar a los empleados en la naturaleza de los riesgos y las precauciones que deben tomar.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P22F704",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Sección 4",
+    "checklist de factores contribuyentes"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3747,
+    3763
+   ],
+   "razon": "El libro describe la Sección 4 como checklist de factores contribuyentes. El paso omite 'para cada error de Sección 3', resume la lista y usa 'capacitación' por 'qualifications and skills'."
+  },
+  {
+   "id": "P462462",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4060,
+    4068,
+    4072,
+    4027,
+    4259
+   ],
+   "razon": "Dryden: faltaban auditoría y manual aprobado; Piper Alpha: se aceptó sin verificar. Verificar el estado real va en la misma dirección. 'Actualizado' es concreción propia."
+  },
+  {
+   "id": "PF019CD",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3395,
+    3397,
+    3401,
+    3405,
+    3659,
+    2837,
+    2841,
+    5742
+   ],
+   "razon": "El ranking de EPCs existe, pero HEART pondera por proporción juzgada. El libro prioriza los factores organizacionales que generan los EPCs. Priorizar solo por multiplicador podría invertir esa prioridad."
+  },
+  {
+   "id": "P668F81",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4384
+   ],
+   "razon": "El paso COSHH es literal: formar a los empleados en la naturaleza de los riesgos y las precauciones que deben tomar."
+  }
+ ]
+}

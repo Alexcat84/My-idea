@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P2D03A8",
+  "intento": 0,
+  "usd": 0.169332,
+  "turnos": 1,
+  "duracion_s": 14.3,
+  "pared_s": 15.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36713,
+  "tokens_out": 1124,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P2D03A8\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5775, 5781, 2598, 2750, 3209], \"cita\": \"Resident ‘pathogens’ within the workplace and the organization can be identified and removed before the event. […] The purpose of each measurement exercise is twofold. First, to identify those processes giving the greatest cause for concern at that time. Second, to track the effectiveness of previous remedial measures.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide identificar y eliminar los patógenos residentes de forma continua, con chequeos regulares, y usar cada medición para seguir las correcciones. 'En cada auditoría' equivale a esos chequeos, no es una cifra ni un plazo nuevos. Tripod desaconseja arreglar indicadores sueltos, que son síntomas; seguir condiciones latentes va en la dirección del libro. Documentar y hacer seguimiento solo concreta ese proceso.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P2D03A8",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5775,
+   5781,
+   2598,
+   2750,
+   3209
+  ],
+  "cita": "Resident ‘pathogens’ within the workplace and the organization can be identified and removed before the event. […] The purpose of each measurement exercise is twofold. First, to identify those processes giving the greatest cause for concern at that time. Second, to track the effectiveness of previous remedial measures.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide identificar y eliminar los patógenos residentes de forma continua, con chequeos regulares, y usar cada medición para seguir las correcciones. 'En cada auditoría' equivale a esos chequeos, no es una cifra ni un plazo nuevos. Tripod desaconseja arreglar indicadores sueltos, que son síntomas; seguir condiciones latentes va en la dirección del libro. Documentar y hacer seguimiento solo concreta ese proceso.",
+  "paso_fiel": ""
+ }
+}

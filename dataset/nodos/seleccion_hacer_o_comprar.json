@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identifica qué partes de tu negocio son el corazón que no debes soltar",
     "Para cada actividad que consideres soltar, revisa qué tan bien la haces hoy, cuánta capacidad tienes, cuánto cuesta y si cumples los plazos",
-    "Antes de decidir, mira esa actividad como una oportunidad de mejorar su calidad y compara con dejarla como está",
+    "Antes de decidir, estudia esa actividad como un proyecto de mejora de calidad, haz los cambios internos necesarios y compara el resultado en calidad y costos con lo que ofrecen los proveedores de afuera",
     "Piensa cómo afecta esto el ánimo y la lealtad de las personas que trabajan contigo"
   ],
   "entregable_esperado": "Tu decisión de hacerlo tú mismo o subcontratarlo, con la lista de lo que es el corazón de tu negocio y lo que sí puedes soltar",
@@ -23,5 +23,24 @@
     "Cuando estés evaluando subcontratar algo que hoy haces internamente",
     "Cuando busques bajar costos o mejorar la calidad usando a alguien de afuera"
   ],
-  "etiqueta_arbol": "Decide Hacer o Comprar"
+  "etiqueta_arbol": "Decide Hacer o Comprar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-006",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Antes de decidir, mira esa actividad como una oportunidad de mejorar su calidad y compara con dejarla como está",
+      "texto_nuevo": "Antes de decidir, estudia esa actividad como un proyecto de mejora de calidad, haz los cambios internos necesarios y compara el resultado en calidad y costos con lo que ofrecen los proveedores de afuera",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L23645",
+        "frase": "Perhaps we should first study the entire activity to be outsourced as a quality improvement project ... and the necessary internal changes would be made. The result (quality and costs) could then be compared to those of outside suppliers."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro pide estudiar y mejorar la actividad internamente y comparar el resultado con los proveedores externos; el paso cambia el termino de comparacion a dejarla como esta.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C056-026"
+    }
+  ]
 }

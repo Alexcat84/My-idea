@@ -7,7 +7,7 @@
   "resumen_teorico": "Técnica práctica donde un supervisor intercambia temporalmente empleados con un área vecina de la línea de producción, para que cada trabajador comprenda mejor el proceso completo y el impacto de su trabajo en el ensamblaje total. Este ejercicio incrementa la identificación con el trabajo, reduce el ausentismo, disminuye rechazos de calidad y mejora el cumplimiento de programa, al generar mayor sentido de equipo y comprensión del flujo de valor.",
   "pasos_accionables": [
     "Identificar un área de producción vecina con la que sea viable un intercambio de personal.",
-    "Negociar con el supervisor par un intercambio de 2-3 empleados por un periodo corto (una semana).",
+    "Negociar con el supervisor par un intercambio de 3 empleados por 3 de los suyos durante un periodo corto (una semana).",
     "Obtener aprobación del superintendente o gerencia si es necesario.",
     "Ejecutar el intercambio y observar cambios en indicadores de ausentismo, rechazo y cumplimiento de programa.",
     "Repetir o expandir el programa si los resultados son positivos, fomentando la voluntariedad de los empleados.",
@@ -36,6 +36,25 @@
       "node_id": "rotacion_de_puestos_para_mejora_calidad",
       "titulo": "Rotación de Puestos como Herramienta de Mejora de Calidad",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-013",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Negociar con el supervisor par un intercambio de 2-3 empleados por un periodo corto (una semana).",
+      "texto_nuevo": "Negociar con el supervisor par un intercambio de 3 empleados por 3 de los suyos durante un periodo corto (una semana).",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L1319-L1321",
+        "frase": "Tl trade you three of my people for three of your people for a week. Then we'll bring them back."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El plazo corto de una semana coincide con el libro, que tambien habla de \"a few days\" (L1319). La cifra no coincide: el libro da tres personas por cada lado y el paso la amplia a 2-3, un valor que no aparece en ningun pasaje. Busque swap y exchange en todo el libro y no hay otra cifra. Por la vara, una cifra cambiada respecto al libro es CONTRARIO aunque la accion general sea correcta.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C099-094"
     }
   ]
 }

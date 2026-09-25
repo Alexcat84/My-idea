@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Acepta que siempre habrá riesgo: la meta no es cero riesgo, sino riesgo administrado.",
     "Convierte la gestión de riesgo en un hábito permanente, no en una tarea que se termina.",
-    "Cada tanto, celebra los golpes que evitaste o amortiguaste por haberte preparado.",
+    "Sugerencia de My Idea: cada tanto, celebra los golpes que evitaste o amortiguaste por haberte preparado.",
     "Sigue arriesgando con valentía, ahora con método debajo del brazo."
   ],
   "entregable_esperado": "Un compromiso personal de llevar la gestión de riesgo como hábito permanente, no como un pendiente que se cierra.",
@@ -25,5 +25,24 @@
     "cuando el riesgo te agota porque lo vives como un enemigo a vencer",
     "cuando quieres arriesgar con valentía sin perder la tranquilidad"
   ],
-  "etiqueta_arbol": "El Riesgo Nunca Se Acaba"
+  "etiqueta_arbol": "El Riesgo Nunca Se Acaba",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-071",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cada tanto, celebra los golpes que evitaste o amortiguaste por haberte preparado.",
+      "texto_nuevo": "Sugerencia de My Idea: cada tanto, celebra los golpes que evitaste o amortiguaste por haberte preparado.",
+      "cita": {
+        "libro": "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L560-L572",
+        "frase": "You mitigate a risk when you take steps before its materialization to reduce eventual containment costs."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro explica cómo mitigar y contener riesgos preparándose de antemano, pero nunca propone celebrar los golpes evitados, ni cada tanto ni de otra forma (busqué celebrat, credit, recogni y congratul sin resultados). Celebrar es una práctica nueva con una frecuencia que el libro no pone.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C133-006"
+    }
+  ]
 }

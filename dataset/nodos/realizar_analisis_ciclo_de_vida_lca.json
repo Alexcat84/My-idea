@@ -4,13 +4,13 @@
   "dominio": "environmental",
   "titulo_concepto": "Análisis de Ciclo de Vida (LCA) — Metodología por Etapas",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-  "resumen_teorico": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si ambas usan certificación de terceros idéntica.",
+  "resumen_teorico": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
   "pasos_accionables": [
     "Definir el alcance y límites del sistema a analizar (cradle-to-grave, cradle-to-gate, etc.)",
     "Identificar todos los inputs y outputs relevantes en cada etapa del ciclo de vida del producto",
     "Recolectar datos primarios propios o usar datos secundarios de sector cuando no sea posible obtener datos propios",
     "Documentar explícitamente los supuestos utilizados (uso del consumidor, ponderaciones de impacto, etc.)",
-    "Evitar comparar resultados con competidores salvo que ambos usen certificación de terceros equivalente"
+    "Evitar comparar resultados con competidores salvo que los productos de ambos esten verificados por la misma agencia certificadora de terceros"
   ],
   "entregable_esperado": "Un informe de LCA con límites del sistema definidos, supuestos documentados y resultados cuantificados de impacto ambiental por etapa del ciclo de vida.",
   "nodos_previos": [
@@ -27,5 +27,40 @@
     "Si se necesita comparar opciones de materiales o procesos con base en impacto ambiental",
     "Si un cliente o regulador exige evidencia de impacto ambiental del producto"
   ],
-  "etiqueta_arbol": "Evalúa el Impacto Ambiental Total"
+  "etiqueta_arbol": "Evalúa el Impacto Ambiental Total",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-001",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Evitar comparar resultados con competidores salvo que ambos usen certificación de terceros equivalente",
+      "texto_nuevo": "Evitar comparar resultados con competidores salvo que los productos de ambos esten verificados por la misma agencia certificadora de terceros",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L1906-L1906",
+        "frase": "Unless two companies’ products are verified by the same third-party certification agency, there is little meaning in comparing environmental impacts across competitors."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el LECTOR B. El libro pone una condicion concreta: la misma agencia certificadora, y lo justifica en la misma frase con Deloitte (pequenas diferencias de supuestos dan resultados radicalmente distintos). Cambiar esa condicion por una certificacion equivalente la relaja hasta el caso que el libro dice que tiene poco sentido (agencias distintas con supuestos distintos). Busque en todo el libro algun apoyo a comparar con certificaciones equivalentes: L1526 habla de comparar datos similares publicados por la competencia para hacer benchmarking, no de resultados de LCA, asi que no lo respalda. Una condicion cambiada respecto al libro cuenta como CONTRARIO.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C065-024"
+    },
+    {
+      "id": "fidelidad-t7-002",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si ambas usan certificación de terceros idéntica.",
+      "texto_nuevo": "El LCA es una metodología para evaluar los impactos ambientales de un producto o servicio a lo largo de todas sus etapas: extracción de materias primas, manufactura, transporte, uso y disposición final. Aunque es una herramienta poderosa, presenta desafíos significativos: los resultados pueden variar drásticamente según los supuestos, límites del sistema y fuentes de datos utilizadas por quien lo realiza. Es tanto un arte como una ciencia, y comparar resultados entre empresas solo tiene sentido si los productos de ambas están verificados por la misma agencia certificadora de terceros.",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L1906-L1906",
+        "frase": "Unless two companies’ products are verified by the same third-party certification agency, there is little meaning in comparing environmental impacts across competitors."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite la condición relajada del paso 4: una certificación de terceros idéntica en vez de la misma agencia certificadora. Es CONTRARIO y se corrige igual que el paso, según L1906 del libro de Esty.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C065-024"
+    }
+  ]
 }

@@ -1,0 +1,74 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_002",
+  "intento": 0,
+  "usd": 0.15012799999999998,
+  "turnos": 1,
+  "duracion_s": 13.9,
+  "pared_s": 15.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31797,
+  "tokens_out": 1147,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PDB29D6\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2905, 2907, 2909, 2918, 2896, 5661], \"razon\": \"El libro señala el error fundamental de atribución como la razón de aceptar el 'error humano' como explicación. Formar a los investigadores para reconocerlo sigue esa dirección sin chocar.\"},\n  {\"id\": \"P0E0353\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [293, 2650, 181, 202, 310], \"razon\": \"El libro indica que la investigación parte del resultado y examina cómo y cuándo falló cada defensa, cuyos agujeros cambian en el tiempo.\"},\n  {\"id\": \"P0C20D7\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4221, 4223, 4244, 29, 31, 5594], \"razon\": \"El libro distingue accidentes individuales, con peligros bien conocidos y legislación eficaz, de los organizacionales, poco comprendidos. Clasificar primero el tipo de riesgo es coherente.\"},\n  {\"id\": \"P285D71\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5544, 5546, 5559, 5905, 2994], \"razon\": \"El libro enumera HAZOPS, PRA y análisis de tareas cognitivas como herramientas del modelo de ingeniería centrado en desajustes humano-máquina, y las considera esenciales.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PDB29D6",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2905,
+    2907,
+    2909,
+    2918,
+    2896,
+    5661
+   ],
+   "razon": "El libro señala el error fundamental de atribución como la razón de aceptar el 'error humano' como explicación. Formar a los investigadores para reconocerlo sigue esa dirección sin chocar."
+  },
+  {
+   "id": "P0E0353",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    293,
+    2650,
+    181,
+    202,
+    310
+   ],
+   "razon": "El libro indica que la investigación parte del resultado y examina cómo y cuándo falló cada defensa, cuyos agujeros cambian en el tiempo."
+  },
+  {
+   "id": "P0C20D7",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4221,
+    4223,
+    4244,
+    29,
+    31,
+    5594
+   ],
+   "razon": "El libro distingue accidentes individuales, con peligros bien conocidos y legislación eficaz, de los organizacionales, poco comprendidos. Clasificar primero el tipo de riesgo es coherente."
+  },
+  {
+   "id": "P285D71",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5544,
+    5546,
+    5559,
+    5905,
+    2994
+   ],
+   "razon": "El libro enumera HAZOPS, PRA y análisis de tareas cognitivas como herramientas del modelo de ingeniería centrado en desajustes humano-máquina, y las considera esenciales."
+  }
+ ]
+}

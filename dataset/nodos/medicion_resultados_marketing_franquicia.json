@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Define qué vas a medir: costo por lead, costo por aplicación, tasa de cierre y velocidad de cierre",
     "Calcula tu costo por venta, pero interprétalo con cuidado si todavía tienes pocos casos",
-    "Usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+    "Sugerencia de My Idea: usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
     "Mide tu tasa de captura dividiendo los leads que generas entre los visitantes que llegan a la sección de franquicias de tu sitio",
     "Cada tres meses revisa el desempeño y reemplaza el 10-20% de los canales que peor te funcionan",
     "Haz pruebas A/B en tus páginas de aterrizaje y anuncios pagados, asegurándote de tener suficientes casos antes de sacar conclusiones"
@@ -25,5 +25,24 @@
     "Cuando necesitas ajustar el presupuesto de marketing de tus franquicias",
     "Cuando recién empiezas y todavía tienes pocos datos históricos de ventas"
   ],
-  "etiqueta_arbol": "Mide tus Resultados de Marketing"
+  "etiqueta_arbol": "Mide tus Resultados de Marketing",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-022",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+      "texto_nuevo": "Sugerencia de My Idea: usa herramientas como TrafficEstimate.com, AdRoll y Google Analytics para estimar la calidad del tráfico que llega a tu web",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L4056-L4060",
+        "frase": "you could go to TrafficEstimate.com ... you can measure site quality by going to Alexa ... The use of the free Google Analytics program can also help you measure key indicators across PPC campaigns"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro cita TrafficEstimate.com, Alexa y Google Analytics, pero AdRoll no aparece en el libro.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C009-102"
+    }
+  ]
 }

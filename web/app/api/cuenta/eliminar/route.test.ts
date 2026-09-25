@@ -20,8 +20,11 @@ vi.mock("@/lib/supabase/admin", () => ({
     from: () => ({
       select: () => ({ eq: () => ({ maybeSingle: async () => ({ data: null }) }) }),
       upsert: async () => ({ error: null }),
+      // el borrado real (B1 a B4) anonimiza y borra antes de la cuenta
+      update: () => ({ eq: async () => ({ error: null }) }),
+      delete: () => ({ eq: async () => ({ error: null }) }),
     }),
-    auth: { admin: { deleteUser } },
+    auth: { admin: { deleteUser, getUserById: async () => ({ data: { user: { app_metadata: {} } }, error: null }) } },
   }),
 }));
 

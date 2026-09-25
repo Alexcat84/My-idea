@@ -4,14 +4,14 @@
   "dominio": "risk_management",
   "titulo_concepto": "El Fundador Como Punto Único de Falla",
   "fuente": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
-  "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante dos semanas, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. Los libros llaman a esto riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+  "resumen_teorico": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. Los libros llaman a esto riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
   "pasos_accionables": [
     "Documenta en un solo lugar dónde vive todo: cuentas, contraseñas, proveedores, cómo funciona tu operación.",
     "Nombra un contacto de emergencia de confianza y dale un acceso seguro a lo esencial.",
-    "Escribe qué pasa con tus clientes si tú no puedes trabajar por dos semanas, y cómo se les avisaría.",
+    "Escribe qué pasa con tus clientes si tú no puedes trabajar durante un tiempo, y cómo se les avisaría.",
     "Cuida tu energía y tu salud como cuidas tu negocio: son parte del activo, no algo aparte."
   ],
-  "entregable_esperado": "Un documento con dónde vive todo, un contacto de emergencia con acceso, y un plan de qué pasa con tus clientes si faltas dos semanas.",
+  "entregable_esperado": "Un documento con dónde vive todo, un contacto de emergencia con acceso, y un plan de qué pasa con tus clientes si faltas un tiempo.",
   "nodos_previos": [
     "las_formas_en_que_los_proyectos_mueren",
     "sigue_operando_pese_al_golpe"
@@ -25,5 +25,56 @@
     "cuando los accesos y el conocimiento viven solo en tu cabeza",
     "cuando no sabes qué pasaría con tus clientes si te enfermas dos semanas"
   ],
-  "etiqueta_arbol": "El Riesgo Eres Tú"
+  "etiqueta_arbol": "El Riesgo Eres Tú",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-074",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Escribe qué pasa con tus clientes si tú no puedes trabajar por dos semanas, y cómo se les avisaría.",
+      "texto_nuevo": "Escribe qué pasa con tus clientes si tú no puedes trabajar durante un tiempo, y cómo se les avisaría.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L150-L156",
+        "frase": "contingency planning: what you expect to do if and when the risk materializes"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Escribir qué harías si te pasa algo es el plan de contingencia que pide el libro, y en L156 habla de dejar dispuesto quién se ocupa si ocurre algo malo. Pero el plazo de 'dos semanas' no aparece en el libro (busqué two weeks, fortnight y 2 weeks).",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C133-013"
+    },
+    {
+      "id": "fidelidad-t9-075",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante dos semanas, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. Los libros llaman a esto riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+      "texto_nuevo": "En un proyecto de una sola persona, la persona clave eres tú, y por eso eres también su mayor riesgo. Si te enfermas, te agotas o simplemente no puedes durante un tiempo, todo se detiene: no hay equipo que te cubra, y los accesos, las contraseñas y el conocimiento de cómo funciona todo viven solo en tu cabeza. Los libros llaman a esto riesgo de rotación, pensando en empresas donde alguien se va; en un negocio de uno, ese alguien eres tú y no puedes renunciarte, pero sí puedes faltar. Manejar este riesgo no es trabajar más, es dejar preparado el terreno para tu propia ausencia: documentar dónde vive todo, dejar un acceso de emergencia en manos de confianza, y tener claro qué pasa con tus clientes si desapareces un tiempo.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L150-L156",
+        "frase": "contingency planning: what you expect to do if and when the risk materializes"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO de plazo (C133-013): el plazo de dos semanas no aparece en el libro; se corrige igual que el paso.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C133-013"
+    },
+    {
+      "id": "fidelidad-t9-076",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un documento con dónde vive todo, un contacto de emergencia con acceso, y un plan de qué pasa con tus clientes si faltas dos semanas.",
+      "texto_nuevo": "Un documento con dónde vive todo, un contacto de emergencia con acceso, y un plan de qué pasa con tus clientes si faltas un tiempo.",
+      "cita": {
+        "libro": "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L150-L156",
+        "frase": "contingency planning: what you expect to do if and when the risk materializes"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): ANADIDO de plazo (C133-013): el entregable repite el plazo de dos semanas que el libro no respalda; se corrige igual que el paso.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C133-013"
+    }
+  ]
 }

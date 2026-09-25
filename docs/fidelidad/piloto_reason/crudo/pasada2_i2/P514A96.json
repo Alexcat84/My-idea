@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P514A96",
+  "intento": 0,
+  "usd": 0.167572,
+  "turnos": 1,
+  "duracion_s": 5.0,
+  "pared_s": 6.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40628,
+  "tokens_out": 253,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P514A96\", \"veredicto\": \"FIEL\", \"lineas\": [3199, 3209], \"cita\": \"Line management’s task is to review the Failure State Profiles for their respective areas and to plan and implement remedial actions for the two to three ‘worst’ GFTs obtained on any one testing occasion.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice literalmente que el perfil identifica los dos o tres GFTs que más necesitan atención inmediata (L3199) y que la dirección de línea planifica e implementa acciones remediales para los dos o tres 'peores' GFTs de cada medición (L3209). La cifra 2-3 está respaldada y la dirección coincide.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P514A96",
+  "veredicto": "FIEL",
+  "lineas": [
+   3199,
+   3209
+  ],
+  "cita": "Line management’s task is to review the Failure State Profiles for their respective areas and to plan and implement remedial actions for the two to three ‘worst’ GFTs obtained on any one testing occasion.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice literalmente que el perfil identifica los dos o tres GFTs que más necesitan atención inmediata (L3199) y que la dirección de línea planifica e implementa acciones remediales para los dos o tres 'peores' GFTs de cada medición (L3209). La cifra 2-3 está respaldada y la dirección coincide.",
+  "paso_fiel": ""
+ }
+}

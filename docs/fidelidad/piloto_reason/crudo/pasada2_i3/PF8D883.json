@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF8D883",
+  "intento": 0,
+  "usd": 0.1633,
+  "turnos": 1,
+  "duracion_s": 11.0,
+  "pared_s": 12.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35905,
+  "tokens_out": 984,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF8D883\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [310, 105, 204, 821, 1033, 1137, 1149], \"cita\": \"At no point will it be argued that defences are intrinsically bad. There is no doubt that, in absolute terms, the provision of redundant and diverse defences has greatly reduced the numbers of adverse events.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro sitúa el accidente en la alineación de agujeros (L310). También lamenta que se descuide preservar la integridad de las defensas existentes (L105) y que se dejen sin corregir las condiciones latentes (L204). Advierte que añadir defensas aumenta la complejidad y la opacidad (L1033, L1137, L1149), pero no desaconseja reforzar capas. El paso concreta esto sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF8D883",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   310,
+   105,
+   204,
+   821,
+   1033,
+   1137,
+   1149
+  ],
+  "cita": "At no point will it be argued that defences are intrinsically bad. There is no doubt that, in absolute terms, the provision of redundant and diverse defences has greatly reduced the numbers of adverse events.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro sitúa el accidente en la alineación de agujeros (L310). También lamenta que se descuide preservar la integridad de las defensas existentes (L105) y que se dejen sin corregir las condiciones latentes (L204). Advierte que añadir defensas aumenta la complejidad y la opacidad (L1033, L1137, L1149), pero no desaconseja reforzar capas. El paso concreta esto sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

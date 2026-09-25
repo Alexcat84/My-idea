@@ -4,13 +4,13 @@
   "dominio": "health_safety",
   "titulo_concepto": "Plan de Control de Infecciones",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposicion en tus tareas para luego poner en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies, manejo de residuos biopeligrosos, uso de equipo de proteccion personal, y capacitacion sobre exposicion a animales, vectores como mosquitos y garrapatas, y enfermedades respiratorias de temporada. También contempla definir una politica de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
+  "resumen_teorico": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposicion en tus tareas para luego poner en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies, manejo de residuos biopeligrosos, uso de equipo de proteccion personal (tambien frente a mosquitos, garrapatas y enfermedades respiratorias de temporada), y capacitacion sobre exposicion a animales. También contempla definir una politica de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
   "pasos_accionables": [
     "Evalua los riesgos de exposicion a agentes infecciosos en tu negocio.",
     "Pon en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies.",
     "Consigue contenedores cerrados y a prueba de fugas para residuos infecciosos y objetos punzocortantes, con las etiquetas correspondientes.",
     "Ten a mano el equipo de proteccion necesario según el riesgo: guantes, proteccion ocular, mascarillas o respiradores certificados.",
-    "Si tu trabajo o el de quien te ayuda implica contacto con animales, mosquitos o garrapatas, capacitate cada año sobre estos riesgos y consigue ropa protectora y repelente cuando aplique.",
+    "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacitate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
     "Define una politica de licencia por enfermedad flexible y lleva un registro de las enfermedades infecciosas relacionadas con el trabajo, reportando los casos graves según lo que exija la normativa laboral de tu mercado."
   ],
   "entregable_esperado": "Un plan de control de infecciones por escrito, con la evaluacion de riesgo, los procedimientos de higiene y manejo de residuos, el equipo de proteccion asignado, y los registros de capacitacion y reportes que correspondan según tu normativa local.",
@@ -35,6 +35,41 @@
       "node_id": "plan_de_control_de_infecciones",
       "titulo": "Plan de Control de Infecciones en el Lugar de Trabajo",
       "fuente": "SMALL_BUSINESS"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-37",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu trabajo o el de quien te ayuda implica contacto con animales, mosquitos o garrapatas, capacitate cada año sobre estos riesgos y consigue ropa protectora y repelente cuando aplique.",
+      "texto_nuevo": "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacitate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L921-L925",
+        "frase": "Train workers who may encounter animals as part of their job duties at least annually on how to protect themselves"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). El paso extiende a mosquitos y garrapatas la periodicidad anual que el libro solo exige para la capacitacion sobre animales (L921). Para mosquitos y garrapatas el libro pide ropa protectora y repelente (L923-L925). Se reemplaza por lo que dice el libro y la capacitacion anual queda solo para animales. El resumen_teorico repite el dato ('capacitacion sobre ... vectores como mosquitos y garrapatas, y enfermedades respiratorias'). Se corrige ahi tambien: vectores y enfermedades respiratorias pasan a proteccion, como en el libro (ropa, repelente, mascarillas, L923-L927).",
+      "indice": 4,
+      "auditoria": "tramo1 SB1-005"
+    },
+    {
+      "id": "fidelidad-t3-38",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposicion en tus tareas para luego poner en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies, manejo de residuos biopeligrosos, uso de equipo de proteccion personal, y capacitacion sobre exposicion a animales, vectores como mosquitos y garrapatas, y enfermedades respiratorias de temporada. También contempla definir una politica de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
+      "texto_nuevo": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposicion en tus tareas para luego poner en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies, manejo de residuos biopeligrosos, uso de equipo de proteccion personal (tambien frente a mosquitos, garrapatas y enfermedades respiratorias de temporada), y capacitacion sobre exposicion a animales. También contempla definir una politica de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L921-L925",
+        "frase": "Train workers who may encounter animals as part of their job duties at least annually on how to protect themselves"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+      "auditoria": "tramo1 SB1-005"
     }
   ]
 }

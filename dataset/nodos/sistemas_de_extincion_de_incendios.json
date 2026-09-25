@@ -4,12 +4,12 @@
   "dominio": "health_safety",
   "titulo_concepto": "Sistemas contra incendios: alarmas y rociadores",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que certificarlos y probarlos cada año, y contratar a alguien calificado para el mantenimiento. Deja el espacio bajo los rociadores libre de estorbos y protege los cabezales para que no se golpeen ni se dañen.",
+  "resumen_teorico": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que tener la alarma certificada y probarla cada año, inspeccionar con regularidad las mangueras y probarlas cada año, y contratar a alguien calificado para las pruebas y el mantenimiento de los rociadores. Deja el espacio bajo los rociadores libre de estorbos y protege los cabezales para que no se golpeen ni se dañen.",
   "pasos_accionables": [
-    "Certifica y prueba tu sistema de alarma contra incendios una vez al año",
+    "Asegura que tu sistema de alarma contra incendios esté certificado, funcione bien y se pruebe una vez al año",
     "Contrata a alguien calificado para el mantenimiento de los rociadores automáticos",
     "Revisa cada cierto tiempo las válvulas de control y los manómetros del sistema de rociadores",
-    "Inspecciona y prueba una vez al año las mangueras y válvulas contra incendio"
+    "Inspecciona con regularidad y prueba una vez al año las mangueras y válvulas contra incendio"
   ],
   "entregable_esperado": "Certificación vigente y registros de las pruebas de tus sistemas contra incendios y alarma",
   "nodos_previos": [
@@ -23,5 +23,57 @@
   "condiciones_activacion": [
     "Si tu local tiene instalados sistemas fijos de rociadores o alarmas contra incendios"
   ],
-  "etiqueta_arbol": "Mantén tus Sistemas Contra Incendios"
+  "etiqueta_arbol": "Mantén tus Sistemas Contra Incendios",
+  "correcciones": [
+    {
+      "id": "fidelidad-t3-46",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Certifica y prueba tu sistema de alarma contra incendios una vez al año",
+      "texto_nuevo": "Asegura que tu sistema de alarma contra incendios esté certificado, funcione bien y se pruebe una vez al año",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L581",
+        "frase": "Fire alarm system has been certified, is in proper working condition, and is tested annually."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Plazo añadido en materia de cumplimiento: el libro no pide certificar una vez al año. Pide que la alarma esté certificada, funcione bien y se pruebe cada año (SMALL_BUSINESS L581: \"Fire alarm system has been certified, is in proper working condition, and is tested annually.\"). Se reemplaza por lo que dice el libro. El mismo dato se repite en el resumen_teorico: 'certificarlos y probarlos cada año' se aplica a la alarma, los rociadores y las mangueras. Se corrige con los datos del libro: alarma certificada y probada cada año (L581), mangueras inspeccionadas con regularidad y probadas cada año (L591), pruebas y mantenimiento de los rociadores a cargo de alguien calificado (L583). Este segmento cubre también el dato de D42. El entregable ('Certificación vigente') no fija frecuencia y se deja como está.",
+      "indice": 0,
+      "auditoria": "tramo1 SB2-092"
+    },
+    {
+      "id": "fidelidad-t3-47",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que certificarlos y probarlos cada año, y contratar a alguien calificado para el mantenimiento. Deja el espacio bajo los rociadores libre de estorbos y protege los cabezales para que no se golpeen ni se dañen.",
+      "texto_nuevo": "Si tu local tiene alarma de incendio, rociadores automáticos o mangueras contra incendio, tienes que tener la alarma certificada y probarla cada año, inspeccionar con regularidad las mangueras y probarlas cada año, y contratar a alguien calificado para las pruebas y el mantenimiento de los rociadores. Deja el espacio bajo los rociadores libre de estorbos y protege los cabezales para que no se golpeen ni se dañen.",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L581",
+        "frase": "Fire alarm system has been certified, is in proper working condition, and is tested annually."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
+      "auditoria": "tramo1 SB2-092"
+    },
+    {
+      "id": "fidelidad-t3-48",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Inspecciona y prueba una vez al año las mangueras y válvulas contra incendio",
+      "texto_nuevo": "Inspecciona con regularidad y prueba una vez al año las mangueras y válvulas contra incendio",
+      "cita": {
+        "libro": "SMALL_BUSINESS",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/SMALL_BUSINESS.md",
+        "lineas": "L591",
+        "frase": "Standpipes, fire hoses, and fire hose valves, are inspected regularly and tested annually."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Frecuencia añadida en materia de cumplimiento: el libro pide inspeccionar con regularidad y probar una vez al año, no inspeccionar una vez al año (SMALL_BUSINESS L591: \"Standpipes, fire hoses, and fire hose valves, are inspected regularly and tested annually.\"). Se reemplaza por lo que dice el libro. El dato repetido en el resumen_teorico va en el segmento de D41, que corrige toda la frase ('certificarlos y probarlos cada año'). Así no hay dos segmentos sobre el mismo trozo de texto.",
+      "indice": 3,
+      "auditoria": "tramo1 SB2-020"
+    }
+  ]
 }

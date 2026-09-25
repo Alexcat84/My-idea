@@ -4,9 +4,9 @@
   "dominio": "risk_management",
   "titulo_concepto": "Entrega Incremental para Exponer el Riesgo",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
-  "resumen_teorico": "Entregar todo de una vez al final es apostar a ciegas: no sabes si funciona hasta que ya gastaste todo. Entregar por partes cambia el juego, porque cada pedazo terminado expone los riesgos temprano, cuando aún son baratos de corregir. Divides el proyecto en versiones pequeñas, muchas, una cada semana o par de semanas, y pones primero lo más valioso y lo más riesgoso. Así, si algo va a fallar, lo descubres en la versión tres y no al final; y si el proyecto se va a cancelar, pierdes poco en vez de todo. Para el emprendedor, entregar incrementos frecuentes al mercado o al cliente es la forma más honesta de que la realidad le confirme o le desmienta sus supuestos antes de apostarlo todo.",
+  "resumen_teorico": "Entregar todo de una vez al final es apostar a ciegas: no sabes si funciona hasta que ya gastaste todo. Entregar por partes cambia el juego, porque cada pedazo terminado expone los riesgos temprano, cuando aún son baratos de corregir. Divides el proyecto en versiones pequeñas, muchas, una cada semana, más o menos, y pones primero lo más valioso y lo más riesgoso. Así, si algo va a fallar, lo descubres en la versión tres y no al final; y si el proyecto se va a cancelar, pierdes poco en vez de todo. Para el emprendedor, entregar incrementos frecuentes al mercado o al cliente es la forma más honesta de que la realidad le confirme o le desmienta sus supuestos antes de apostarlo todo.",
   "pasos_accionables": [
-    "Divide tu proyecto en versiones pequeñas, suficientes para entregar algo cada semana o dos.",
+    "Divide tu proyecto en muchas versiones pequeñas, suficientes para entregar algo cada semana, más o menos.",
     "Ordena las versiones poniendo primero lo más valioso y lo más riesgoso.",
     "Entrega la primera versión pronto y observa qué riesgo confirma o desmiente.",
     "Ajusta el plan con lo aprendido antes de seguir con las siguientes versiones."
@@ -23,5 +23,40 @@
     "cuando no sabrás si tu idea funciona hasta haber gastado todo",
     "cuando quieres que la realidad ponga a prueba tus supuestos temprano"
   ],
-  "etiqueta_arbol": "Entrega por Partes, Expón el Riesgo"
+  "etiqueta_arbol": "Entrega por Partes, Expón el Riesgo",
+  "correcciones": [
+    {
+      "id": "fidelidad-t11-02",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Divide tu proyecto en versiones pequeñas, suficientes para entregar algo cada semana o dos.",
+      "texto_nuevo": "Divide tu proyecto en muchas versiones pequeñas, suficientes para entregar algo cada semana, más o menos.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L1576-L1576",
+        "frase": "lots of versions, at least enough to schedule a new version every week or so"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P012, arbitro). Tenia razon A. El libro pone un minimo de cadencia: al menos suficientes versiones para programar una nueva cada semana, mas o menos. El paso dice 'cada semana o dos', con lo que el intervalo puede doblarse a dos semanas y queda por debajo del minimo semanal ('at least'). 'Or so' da un margen aproximado, no permite duplicar el plazo. Busque en todo el libro every week, two weeks, fortnight, biweekly, weekly y each week: solo aparece esta frase. La cita de Gilb (L1274, 'lots of versions (so the time between versions is relatively small)') no respalda un intervalo de dos semanas. Segun la vara, un plazo cambiado respecto al libro es CONTRARIO aunque la accion general sea correcta.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P012-067"
+    },
+    {
+      "id": "fidelidad-t11-06",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Entregar todo de una vez al final es apostar a ciegas: no sabes si funciona hasta que ya gastaste todo. Entregar por partes cambia el juego, porque cada pedazo terminado expone los riesgos temprano, cuando aún son baratos de corregir. Divides el proyecto en versiones pequeñas, muchas, una cada semana o par de semanas, y pones primero lo más valioso y lo más riesgoso. Así, si algo va a fallar, lo descubres en la versión tres y no al final; y si el proyecto se va a cancelar, pierdes poco en vez de todo. Para el emprendedor, entregar incrementos frecuentes al mercado o al cliente es la forma más honesta de que la realidad le confirme o le desmienta sus supuestos antes de apostarlo todo.",
+      "texto_nuevo": "Entregar todo de una vez al final es apostar a ciegas: no sabes si funciona hasta que ya gastaste todo. Entregar por partes cambia el juego, porque cada pedazo terminado expone los riesgos temprano, cuando aún son baratos de corregir. Divides el proyecto en versiones pequeñas, muchas, una cada semana, más o menos, y pones primero lo más valioso y lo más riesgoso. Así, si algo va a fallar, lo descubres en la versión tres y no al final; y si el proyecto se va a cancelar, pierdes poco en vez de todo. Para el emprendedor, entregar incrementos frecuentes al mercado o al cliente es la forma más honesta de que la realidad le confirme o le desmienta sus supuestos antes de apostarlo todo.",
+      "cita": {
+        "libro": "DeMarco y Lister, Waltzing with Bears",
+        "fichero": "I have an idea/books/Risk Management/Waltzing with bears _ managing risk on software projects.txt",
+        "lineas": "L1576-L1576",
+        "frase": "lots of versions, at least enough to schedule a new version every week or so"
+      },
+      "decision": "Mandato del fundador, dato repetido en el resumen del mismo nodo: el resumen repetia el plazo \"cada semana o par de semanas\", que el libro fija en \"at least enough to schedule a new version every week or so\" (L1576). Se corrige con la misma cita que fidelidad-t11-02.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P012-067"
+    }
+  ]
 }
