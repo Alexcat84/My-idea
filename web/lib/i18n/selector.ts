@@ -10,3 +10,8 @@ export function urlConIdioma(href: string, idioma: ActiveLocale): string {
   url.searchParams.set("lang", idioma);
   return url.toString();
 }
+
+/** La opción activa al moverse con las flechas: da la vuelta en los extremos. */
+export function moverIndice(actual: number, delta: number, total: number): number {
+  return (((actual + delta) % total) + total) % total;
+}

@@ -8,19 +8,18 @@
  * Es OPCIONAL (decisión del fundador, 25 sep 2026): el idioma lo pone solo la
  * cookie o el navegador; esto es para cambiarlo a mano. `compacto` es la
  * versión de cabecera, a la derecha de toda pantalla: el globo y el código
- * ("ES"), sin recuadro (decisión del fundador, 25 sep 2026: algo más sutil),
- * con el menú nativo encima (al tocarlo se ven los nombres enteros).
+ * ("ES"), sin recuadro.
+ *
+ * La lista es PROPIA, no el <select> del sistema (pedido del fundador, 25 sep
+ * 2026): el menú nativo se abría como un rectángulo blanco que ignoraba el tema
+ * oscuro. Botón + listbox con teclado (flechas, Enter, Escape) y cierre al
+ * tocar fuera.
  */
+import { useEffect, useId, useRef, useState } from "react";
 import { ACTIVE_LOCALES, elegir, NOMBRE_IDIOMA, type ActiveLocale } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { SELECTOR_IDIOMA } from "@/lib/i18n/mensajes/selectorIdioma";
-import { urlConIdioma } from "@/lib/i18n/selector";
-
-/** El menú nativo del selector, en el tema oscuro de la casa: el sistema lo pinta
- * con sus propios colores (en algunos, fondo blanco); se le fijan los de la
- * paleta y `color-scheme: dark` en el propio <select>. */
-const ESTILO_OPCION: React.CSSProperties = { backgroundColor: "var(--surface-2)", color: "var(--text)" };
-const ESQUEMA_OSCURO: React.CSSProperties = { colorScheme: "dark" };
+import { moverIndice, urlConIdioma } from "@/lib/i18n/selector";
 
 function Globo() {
   return (
@@ -31,64 +30,149 @@ function Globo() {
   );
 }
 
+function Marca() {
+  return (
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
+      <path d="M5 12.5l4.5 4.5L19 7.5" />
+    </svg>
+  );
+}
+
 export function SelectorIdioma({
   className,
   style,
   compacto = false,
+  haciaArriba = false,
 }: {
   className?: string;
   style?: React.CSSProperties;
   compacto?: boolean;
+  /** La lista se abre hacia arriba (en el pie de página). */
+  haciaArriba?: boolean;
 }) {
   const idioma = useIdioma();
   const t = elegir(SELECTOR_IDIOMA, idioma);
-  const cambiar = (e: React.ChangeEvent<HTMLSelectElement>) =>
-    window.location.assign(urlConIdioma(window.location.href, e.target.value as ActiveLocale));
-  const opciones = ACTIVE_LOCALES.map((l) => (
-    <option key={l} value={l} lang={l} style={ESTILO_OPCION}>
-      {NOMBRE_IDIOMA[l]}
-    </option>
-  ));
+  const idLista = useId();
+  const raiz = useRef<HTMLDivElement>(null);
+  const boton = useRef<HTMLButtonElement>(null);
+  const lista = useRef<HTMLUListElement>(null);
+  const [abierto, setAbierto] = useState(false);
+  const [activo, setActivo] = useState(() => Math.max(0, ACTIVE_LOCALES.indexOf(idioma)));
 
-  if (compacto) {
-    return (
-      <label
+  useEffect(() => {
+    if (!abierto) return;
+    lista.current?.focus();
+    const fuera = (e: MouseEvent) => {
+      if (raiz.current && !raiz.current.contains(e.target as Node)) setAbierto(false);
+    };
+    document.addEventListener("mousedown", fuera);
+    return () => document.removeEventListener("mousedown", fuera);
+  }, [abierto]);
+
+  const abrir = () => {
+    setActivo(Math.max(0, ACTIVE_LOCALES.indexOf(idioma)));
+    setAbierto(true);
+  };
+  const cerrar = () => {
+    setAbierto(false);
+    boton.current?.focus();
+  };
+  const escoger = (l: ActiveLocale) => {
+    if (l === idioma) return cerrar();
+    window.location.assign(urlConIdioma(window.location.href, l));
+  };
+  const teclaLista = (e: React.KeyboardEvent) => {
+    if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+      e.preventDefault();
+      setActivo((a) => moverIndice(a, e.key === "ArrowDown" ? 1 : -1, ACTIVE_LOCALES.length));
+    } else if (e.key === "Home" || e.key === "End") {
+      e.preventDefault();
+      setActivo(e.key === "Home" ? 0 : ACTIVE_LOCALES.length - 1);
+    } else if (e.key === "Enter" || e.key === " ") {
+      e.preventDefault();
+      escoger(ACTIVE_LOCALES[activo]);
+    } else if (e.key === "Escape") {
+      e.preventDefault();
+      cerrar();
+    } else if (e.key === "Tab") {
+      setAbierto(false);
+    }
+  };
+
+  return (
+    <div ref={raiz} className={"relative inline-flex " + (compacto ? "shrink-0" : "")}>
+      <button
+        ref={boton}
+        type="button"
         title={t.etiqueta}
+        aria-label={`${t.etiqueta}: ${NOMBRE_IDIOMA[idioma]}`}
+        aria-haspopup="listbox"
+        aria-expanded={abierto}
+        aria-controls={idLista}
+        onClick={() => (abierto ? setAbierto(false) : abrir())}
+        onKeyDown={(e) => {
+          if (e.key === "ArrowDown" || e.key === "ArrowUp") {
+            e.preventDefault();
+            abrir();
+          }
+        }}
         className={
-          "relative flex h-8 shrink-0 items-center gap-1.5 rounded-full px-2 text-[12px] font-semibold uppercase tracking-[0.6px] text-dim transition-colors hover:bg-white/[0.06] hover:text-ink focus-within:bg-white/[0.06] focus-within:text-ink " +
-          (className ?? "")
+          compacto
+            ? "flex h-8 items-center gap-1.5 rounded-full px-2 text-[12px] font-semibold uppercase tracking-[0.6px] text-dim transition-colors hover:bg-white/[0.06] hover:text-ink focus-visible:bg-white/[0.06] focus-visible:text-ink " +
+              (abierto ? "bg-white/[0.06] text-ink " : "") +
+              (className ?? "")
+            : "inline-flex items-center gap-2 transition-colors hover:text-ink " + (className ?? "")
         }
         style={style}
       >
         <Globo />
-        {/* En pantallas angostas, solo el globo: el menú dice el resto. */}
-        <span aria-hidden className="hidden sm:inline">
-          {idioma}
-        </span>
-        <select
-          value={idioma}
+        {compacto ? (
+          // En pantallas angostas, solo el globo: la lista dice el resto.
+          <span aria-hidden className="hidden sm:inline">
+            {idioma}
+          </span>
+        ) : (
+          <span>{NOMBRE_IDIOMA[idioma]}</span>
+        )}
+      </button>
+      {abierto && (
+        <ul
+          ref={lista}
+          id={idLista}
+          role="listbox"
+          tabIndex={-1}
           aria-label={t.etiqueta}
-          onChange={cambiar}
-          className="absolute inset-0 cursor-pointer opacity-0"
-          style={ESQUEMA_OSCURO}
+          aria-activedescendant={`${idLista}-${ACTIVE_LOCALES[activo]}`}
+          onKeyDown={teclaLista}
+          className={
+            "absolute end-0 z-50 max-h-[70vh] min-w-[176px] overflow-y-auto rounded-[12px] border border-hairline bg-surface-2 p-1 text-left normal-case tracking-normal shadow-[0_16px_40px_rgba(0,0,0,0.55)] outline-none " +
+            (haciaArriba ? "bottom-full mb-2" : "top-full mt-2")
+          }
         >
-          {opciones}
-        </select>
-      </label>
-    );
-  }
-
-  return (
-    <label className={className} style={{ display: "inline-flex", alignItems: "center", gap: "8px", ...style }}>
-      <Globo />
-      <select
-        value={idioma}
-        aria-label={t.etiqueta}
-        onChange={cambiar}
-        style={{ ...ESQUEMA_OSCURO, background: "transparent", color: "inherit", font: "inherit", border: "none", cursor: "pointer" }}
-      >
-        {opciones}
-      </select>
-    </label>
+          {ACTIVE_LOCALES.map((l, i) => {
+            const elegido = l === idioma;
+            return (
+              <li
+                key={l}
+                id={`${idLista}-${l}`}
+                role="option"
+                lang={l}
+                aria-selected={elegido}
+                onMouseEnter={() => setActivo(i)}
+                onClick={() => escoger(l)}
+                className={
+                  "flex cursor-pointer items-center justify-between gap-3 rounded-[8px] px-3 py-2 text-[13.5px] font-medium " +
+                  (i === activo ? "bg-white/[0.07] " : "") +
+                  (elegido ? "text-accent" : "text-ink")
+                }
+              >
+                <span>{NOMBRE_IDIOMA[l]}</span>
+                {elegido && <Marca />}
+              </li>
+            );
+          })}
+        </ul>
+      )}
+    </div>
   );
 }

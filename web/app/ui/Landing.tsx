@@ -431,7 +431,7 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
             <a href="#" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.privacidad}</a>
             <a href="#" style={{ color: "#A6A7AD" }} className="lh5">{t.pie.terminos}</a>
           </div>
-          <SelectorIdioma style={{ fontSize: "14.5px", color: "#A6A7AD" }} />
+          <SelectorIdioma haciaArriba style={{ fontSize: "14.5px", color: "#A6A7AD" }} />
           <span style={{ fontSize: "14.5px", color: "#A6A7AD" }}>{interpolar(t.pie.derechos, { ano: new Date().getFullYear() })}</span>
         </div>
       </footer>

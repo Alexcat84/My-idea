@@ -41,3 +41,29 @@ describe("el selector de idioma está en toda pantalla", () => {
     });
   }
 });
+
+// Pedido del fundador (25 sep 2026): el menú nativo del sistema se abría como
+// un rectángulo blanco que ignoraba el tema oscuro. El selector pasa a una
+// lista propia (botón + listbox), pintada con la paleta de la casa.
+import { renderToStaticMarkup } from "react-dom/server";
+import { createElement } from "react";
+import { moverIndice } from "./selector";
+import { SelectorIdioma } from "../../app/ui/SelectorIdioma";
+
+describe("el selector usa una lista propia, no el menú del sistema", () => {
+  it("moverIndice recorre la lista en círculo (flechas del teclado)", () => {
+    // 11 idiomas: de 0 hacia arriba va al 10; del 10 hacia abajo vuelve al 0.
+    expect(moverIndice(0, 1, 11)).toBe(1);
+    expect(moverIndice(10, 1, 11)).toBe(0);
+    expect(moverIndice(0, -1, 11)).toBe(10);
+    expect(moverIndice(5, -1, 11)).toBe(4);
+  });
+  it("sin <select>: un botón que abre una lista (compacto y de pie)", () => {
+    for (const compacto of [true, false]) {
+      const html = renderToStaticMarkup(createElement(SelectorIdioma, { compacto }));
+      expect(html).not.toContain("<select");
+      expect(html).toContain('aria-haspopup="listbox"');
+      expect(html).toContain('aria-expanded="false"');
+    }
+  });
+});

@@ -8,7 +8,7 @@ import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
 export default function Layout({ children }: { children: React.ReactNode }) {
   return (
     <>
-      <div className="fixed right-4 top-4 z-40">
+      <div className="fixed end-4 top-4 z-40">
         <SelectorIdioma compacto />
       </div>
       {children}
