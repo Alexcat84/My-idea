@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Regla de Todo o Nada para la Inspección de Material Entrante",
+  "resumen": "Cuando el material entrante proviene de un proceso en control estadístico, el costo total mínimo se logra comparando la fracción defectuosa esperada p con el punto de equilibrio k1/k2 (costo de inspeccionar una pieza entre costo de una pieza defectuosa que entra a la línea), y decidiendo entre no inspeccionar o inspeccionar el 100%.",
+  "texto": "Si la fracción defectuosa esperada queda por debajo del punto de equilibrio k1/k2, aplicar de todos modos un muestreo parcial de aceptación como seguro intermedio",
+  "tipo": "CONTRARIO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L10175",
+  "cita": "That is, any inspection whatever in the region to the left of the breakeven point (p < k1/k2) will increase total cost. One can easily see that an acceptance plan in this region could double or treble the minimum total cost.",
+  "dato": "",
+  "explicacion": "El libro demuestra que a la izquierda del punto de equilibrio (p < k1/k2) cualquier inspección, incluido un plan de aceptación parcial, aumenta el costo total y puede duplicarlo o triplicarlo. La regla correcta es no inspeccionar. El paso recomienda justo lo que el libro señala como la trampa que sube el costo."
+ },
+ {
+  "titulo": "Independencia de los Inspectores en la Inspección Visual",
+  "resumen": "Para saber si de verdad existe un sistema de inspección, cada inspector tiene que registrar su resultado por separado. Comparar los registros individuales permite detectar las diferencias entre inspectores y aprender de ellas.",
+  "texto": "Cuando dos inspectores discrepen sobre una misma pieza, pedirles que acuerden un único resultado por consenso antes de registrarlo",
+  "tipo": "CONTRARIO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L7975",
+  "cita": "He notes that inspection by consensus annihilates the possibility to compare inspectors, and thus destroys the possibility to discover whether a system of inspection actually exists.",
+  "dato": "",
+  "explicacion": "El libro exige que los inspectores trabajen de forma independiente y registren por separado, porque el consenso impide compararlos y oculta si existe un sistema de inspección. En L9213 añade que el consenso 'is fatal for visual inspection'. El paso recomienda registrar por consenso, que es lo contrario."
+ },
+ {
+  "titulo": "Uso de la Distribución de Poisson para Planificar Capacidad ante Eventos Aleatorios",
+  "resumen": "Cuando los eventos (como averías de equipo) son independientes y no forman reacciones en cadena, su frecuencia diaria sigue una distribución de Poisson. Con el promedio histórico se calcula la desviación estándar (raíz del promedio) y se fija un límite superior para dimensionar recursos como el número de mecánicos.",
+  "texto": "Recalcular el límite superior cada 15 días con los registros acumulados de averías",
+  "tipo": "ANADIDO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L8667-L8675",
+  "cita": "It might thus be reasonable to prepare for a maximum of 54 emergencies. Plots to accumulate further experience will confirm or modify this expectation.",
+  "dato": "Frecuencia de recálculo cada 15 días",
+  "explicacion": "El libro dice que el límite es sensible al promedio y que hay que acumular datos y graficarlos para confirmarlo o ajustarlo ('compile figures day by day for a few weeks, and plot a run chart', L8675). En ningún momento fija una frecuencia de recálculo de 15 días. Un Grep en todo el texto no encuentra '15 days', 'fifteen days', 'every 15', '15-day', 'fortnight' ni 'biweekly'."
+ },
+ {
+  "titulo": "Control Estadístico del Método de Medición (Condición de Validez)",
+  "resumen": "Una medición solo vale como método si las mediciones repetidas del mismo ítem están en control estadístico y son reproducibles, dentro de límites fijados de antemano, entre distintos operadores e instrumentos.",
+  "texto": "Validar el sistema de medición con un estudio Gage R&R según la norma ISO 5725 antes de iniciar las pruebas",
+  "tipo": "ANADIDO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L6441",
+  "cita": "Repeated measurements of the same item over a period of time must show statistical control in order for the instrument and operator thereof to qualify as a method of measurement.",
+  "dato": "Estudio Gage R&R y norma ISO 5725",
+  "explicacion": "El libro pide comprobar el control estadístico con R-charts de mediciones repetidas y fijar de antemano criterios de reproducibilidad entre operadores e instrumentos (L6441, L6493). No menciona ningún estudio Gage R&R ni ninguna norma ISO. Un Grep en todo el texto da cero resultados para 'R&R', 'gage' como palabra, 'ISO' como palabra y '5725'."
+ }
+]

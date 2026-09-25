@@ -1,0 +1,596 @@
+{
+ "lote": "Q027",
+ "items": [
+  {
+   "id": "Q027-005",
+   "veredicto": "FIEL",
+   "lineas": "L3900-L3904",
+   "frase_clave": "This process of communication may be carried out reliably and economically today by sampling procedures and tests designed in conformity with appropriate statistical procedures.",
+   "razon": "El libro dice que la investigacion del consumidor se hace con muestreos y pruebas disenados segun procedimientos estadisticos apropiados para conocer las reacciones del consumidor."
+  },
+  {
+   "id": "Q027-006",
+   "veredicto": "FIEL",
+   "lineas": "L2858-L2860",
+   "frase_clave": "A repeated and repeatable pattern (Method 2 performs better than Method 1), without unexplained failure over a range of environmental conditions, leads to a degree of belief for purposes of planning.",
+   "razon": "Parafrasis directa: un patron repetido y sin fallas inexplicadas en un rango de condiciones ambientales es lo que da base para predecir y planificar."
+  },
+  {
+   "id": "Q027-007",
+   "veredicto": "FIEL",
+   "lineas": "L10853-L10853",
+   "frase_clave": "Hourly workers could thus learn to make, understand, and use control charts.",
+   "razon": "En el pasaje de JUSE el libro describe la educacion masiva en metodos estadisticos, con la que los trabajadores aprendian a construir, entender y usar cartas de control."
+  },
+  {
+   "id": "Q027-009",
+   "veredicto": "FIEL",
+   "lineas": "L8703-L8708",
+   "frase_clave": "After the training sessions were finished, the supervisors were asked by the management to try to make some applications of the principles learned and to prepare a report on the results achieved.",
+   "razon": "El libro dice que la gerencia pidio a los supervisores aplicar lo aprendido e informar los resultados en las reuniones semanales de supervisores."
+  },
+  {
+   "id": "Q027-010",
+   "veredicto": "FIEL",
+   "lineas": "L9765-L9770",
+   "frase_clave": "The several subassemblies, once they pass through inspection and receive attention with whatever replacements and adjustments are found necessary, form a new starting point. The cost k2 in the foregoing theory will then be the cost to inspect and adjust a subassembly.",
+   "razon": "El libro trata cada subensamble como un nuevo punto de partida al que se aplica la teoria k1/k2 con su propio k2."
+  },
+  {
+   "id": "Q027-012",
+   "veredicto": "FIEL",
+   "lineas": "L10556-L10560",
+   "frase_clave": "Under this plan, a man cannot be promoted for justifying bad statistical practice proposed by the division.",
+   "razon": "El libro dice literalmente que, con este plan, el estadistico de linea no puede ser promovido por justificar malas practicas estadisticas propuestas por la division."
+  },
+  {
+   "id": "Q027-013",
+   "veredicto": "OPERATIVO",
+   "lineas": "L2817-L2820",
+   "frase_clave": "A common disease that afflicts management and government administration the world over is the impression that \"Our problems are different.\" They are different, to be sure, but the principles that will help to improve quality of product and of service are universal in nature.",
+   "razon": "El libro califica de enfermedad creer que los propios problemas son distintos y dice que los principios son universales. El paso concreta esto en no rechazar una metodologia por ese motivo, en la misma direccion y sin datos nuevos."
+  },
+  {
+   "id": "Q027-014",
+   "veredicto": "FIEL",
+   "lineas": "L1352-L1352",
+   "frase_clave": "Management's first step should be to discover by calculation, not by judgment, whether this category is out of control with respect to the others.",
+   "razon": "Dentro del punto 8 (eliminar el miedo), el libro dice que ante un informe de quejas hay que calcular con los datos si esa categoria esta fuera de control antes de ir contra el responsable."
+  },
+  {
+   "id": "Q027-016",
+   "veredicto": "FIEL",
+   "lineas": "L2850-L2852",
+   "frase_clave": "No one should teach the theory and use of control charts without knowledge of statistical theory through at least the master's level, supplemented by experience under a master.",
+   "razon": "El libro insiste en aprender bajo un maestro y no con aficionados (\"teaching of beginners should be done by a master, not by a hack\", L8171). El paso lo parafrasea."
+  },
+  {
+   "id": "Q027-017",
+   "veredicto": "FIEL",
+   "lineas": "L10536-L10560",
+   "frase_clave": "It is true that the statistician in a division is responsible to two people--to the head of the division for day-by-day output of procedures and analysis, and to the statistical leader for his statistical work and continuing education.",
+   "razon": "El libro propone estadisticos en la linea, trabajando con las divisiones, que reportan al jefe de division y al lider estadistico."
+  },
+  {
+   "id": "Q027-018",
+   "veredicto": "CONTRARIO",
+   "lineas": "L9366-L9395",
+   "frase_clave": "One might accordingly be tempted in a state of chaos to try to test samples and decide by some rule whether to send a remainder into production as it is or to screen it. Samples and any rule for use of samples will place some lots on the wrong side of the break-even point, the unfortunate result of which is to maximize the total cost for a lot misplaced.",
+   "razon": "El paso describe casi literalmente la tentacion que el libro desaconseja en estado de caos. La unica regla de muestreo que el libro recomienda son las reglas de Joyce Orsini, y solo para 10k1 <= k2 < 1000k1, con muestra de 200. En los otros rangos el libro manda inspeccionar el 100% o no inspeccionar. El paso quita esos umbrales y el tamano de muestra y lo aplica a todo lote.",
+   "dato": "Muestrear cada lote entrante y decidir por una regla de aceptacion, sin los umbrales k2/k1 ni el tamano de muestra de las reglas de Orsini",
+   "texto_fiel": "Aplicar las reglas de Joyce Orsini a cada lote entrante: si k2 es al menos 1000 veces k1, inspeccionar el 100% del lote; si k2 esta entre 10 y 1000 veces k1, probar una muestra de 200 y aceptar el resto si no aparece ningun defectuoso o cribarlo si aparece alguno; si k2 es menor que 10 veces k1, no inspeccionar"
+  },
+  {
+   "id": "Q027-021",
+   "veredicto": "FIEL",
+   "lineas": "L8150-L8166",
+   "frase_clave": "Action line placed on chart by judgment, not calculated. As we have learned, the control limits on a control chart tell what to expect from the process as it is, not what we wish it to be.",
+   "razon": "El libro exige calcular los limites a partir del proceso tal como es (\"Where are your calculations for the control limit?\") y no ponerlos por juicio."
+  },
+  {
+   "id": "Q027-022",
+   "veredicto": "FIEL",
+   "lineas": "L1562-L1577",
+   "frase_clave": "Internal goals set in the management of a company, without a method, are a burlesque.",
+   "razon": "El punto 11b pide eliminar las metas numericas sin metodo, a las que el libro llama una farsa y una gestion por miedo."
+  },
+  {
+   "id": "Q027-023",
+   "veredicto": "FIEL",
+   "lineas": "L9768-L9770",
+   "frase_clave": "The theory, along with meaningful records of experience, may show that some subassemblies need not be inspected at all, while others should be subjected to rugged 100 percent inspection to avoid higher costs further along the line.",
+   "razon": "El libro dice que la teoria del punto de equilibrio determina que subensambles no se inspeccionan y cuales se inspeccionan al 100%."
+  },
+  {
+   "id": "Q027-025",
+   "veredicto": "FIEL",
+   "lineas": "L3900-L3900",
+   "frase_clave": "The main use of consumer research should be to feed consumer reactions back into the design of the product",
+   "razon": "Es literal: el uso principal de la investigacion del consumidor es llevar las reacciones de vuelta al diseno del producto."
+  },
+  {
+   "id": "Q027-026",
+   "veredicto": "FIEL",
+   "lineas": "L1422-L1422",
+   "frase_clave": "Calculations that indicate what proportion of defects and mistakes and high costs comes from the system (responsibility of management) and how much from the people on the job should be one of the chief tools of management",
+   "razon": "El libro pide calcular que parte de los defectos viene del sistema y que parte de las personas. Los ejemplos del paso (materiales, maquinas, instrumentos) aparecen en el mismo pasaje."
+  },
+  {
+   "id": "Q027-028",
+   "veredicto": "OPERATIVO",
+   "lineas": "L8737-L8757",
+   "frase_clave": "Operator 75. An excellent looper. The supervisor was able to incorporate much of her techniques into general departmental routine to the benefit of all.",
+   "razon": "En el caso de las medias el libro investiga los mejores y los peores graficos individuales (tecnica de la operaria 75, vista de la 22, falta de explicacion del trabajo). El paso lo generaliza en la misma direccion y sin datos nuevos."
+  },
+  {
+   "id": "Q027-029",
+   "veredicto": "FIEL",
+   "lineas": "L7991-L8003",
+   "frase_clave": "Everyone in the audience is asked to plot the chart for the number of red beads, lot by lot (Figure 38).",
+   "razon": "En el experimento se grafica la carta y se interpreta si el proceso esta en control estadistico, con limites calculados."
+  },
+  {
+   "id": "Q027-030",
+   "veredicto": "FIEL",
+   "lineas": "L7971-L7989",
+   "frase_clave": "The Recorder records the counts, work load by work load, in the table in Figure 38.",
+   "razon": "El experimento registra el resultado de cada trabajador en cada carga durante varios dias."
+  },
+  {
+   "id": "Q027-031",
+   "veredicto": "FIEL",
+   "lineas": "L4712-L4714",
+   "frase_clave": "The requirement of two signatures means that nobody is responsible: trouble guaranteed. Suggestions: 1. Require only the signature of the employee.",
+   "razon": "El libro recomienda eliminar las firmas redundantes y reducir a una sola (ver tambien L3494)."
+  },
+  {
+   "id": "Q027-032",
+   "veredicto": "FIEL",
+   "lineas": "L3106-L3106",
+   "frase_clave": "I saw this company carrying out 100 percent inspection on brake discs, when the control chart told them that no inspection was required, except, of course, samples for the control chart.",
+   "razon": "Parafrasis directa: si la carta muestra control, basta con las muestras para la carta y sobra la inspeccion al 100%."
+  },
+  {
+   "id": "Q027-034",
+   "veredicto": "FIEL",
+   "lineas": "L3028-L3028",
+   "frase_clave": "Gadgets and servomechanisms that by mechanical or electronic circuits guarantee zero defects will destroy the advantage of a beautiful narrow distribution of dimensions. ... Better off than on.",
+   "razon": "El libro desaconseja los dispositivos que fuerzan el cero defectos moviendo la distribucion dentro de las especificaciones."
+  },
+  {
+   "id": "Q027-035",
+   "veredicto": "OPERATIVO",
+   "lineas": "L8980-L8988",
+   "frase_clave": "If you cannot estimate satisfactorily the numerator or the denominator of a fraction, it is impossible to calculate the value of a fraction. This is where cost/benefit analysis often leaves us.",
+   "razon": "El libro advierte que costos y beneficios suelen ser dificiles de estimar. El paso lo convierte en una comprobacion previa, en la misma direccion y sin datos nuevos."
+  },
+  {
+   "id": "Q027-036",
+   "veredicto": "FIEL",
+   "lineas": "L4712-L4714",
+   "frase_clave": "Why have two people signed the card? Who is responsible for the accuracy of the card?",
+   "razon": "El libro plantea esa misma pregunta, quien es el responsable de la exactitud del documento, y propone hacer responsable a una sola persona."
+  },
+  {
+   "id": "Q027-037",
+   "veredicto": "OPERATIVO",
+   "lineas": "L2166-L2169",
+   "frase_clave": "Anyone can boost the dividend at the end of the quarter. ... Cut down on research, education, training.",
+   "razon": "El libro describe los recortes en investigacion, educacion y formacion, y tambien el aplazamiento del mantenimiento (L437), como sintomas del corto plazo. El paso los convierte en una revision, sin datos nuevos."
+  },
+  {
+   "id": "Q027-038",
+   "veredicto": "FIEL",
+   "lineas": "L10592-L10592",
+   "frase_clave": "Anyone who is getting a statistical education should have a chance to work under a statistician of competence, and to continue his education in statistics.",
+   "razon": "Parafrasis directa de lo que dice el libro (ver tambien L10550, \"under competent leadership\")."
+  },
+  {
+   "id": "Q027-041",
+   "veredicto": "OPERATIVO",
+   "lineas": "L2897-L2911",
+   "frase_clave": "The workers are handicapped by the system, and the system belongs to management.",
+   "razon": "El libro situa las causas en el sistema: diseno, materiales entrantes y, en otros pasajes, maquinas en mal estado y mantenimiento (L191, L1412). El paso lo concreta en una lista de revision antes de culpar, en la misma direccion."
+  },
+  {
+   "id": "Q027-042",
+   "veredicto": "OPERATIVO",
+   "lineas": "L1418-L1459",
+   "frase_clave": "Posters that explain to everyone on the job what the management is doing month by month ... would be a totally different story: they would boost morale.",
+   "razon": "El punto 10 pide eliminar las exhortaciones, y el libro distingue los carteles que explican lo que hace la gerencia. El paso concreta que se eliminan los mensajes que piden mejorar sin plan, en la misma direccion."
+  },
+  {
+   "id": "Q027-043",
+   "veredicto": "OPERATIVO",
+   "lineas": "L7776-L7782",
+   "frase_clave": "1. As a judgment. Was (past tense) the process in statistical control? ... 2. As an operation (ongoing).",
+   "razon": "El libro describe los dos usos. El paso los convierte en decidir de antemano cual de ellos se aplica, sin datos nuevos."
+  },
+  {
+   "id": "Q027-044",
+   "veredicto": "CONTRARIO",
+   "lineas": "L6052-L6058",
+   "frase_clave": "It is not economical to try to provide further training of the same kind. He may nevertheless, with good training, learn very well some other kind of job. ... When he reaches it, continuation of training by the same method will accomplish nothing.",
+   "razon": "El paso aconseja reforzar el entrenamiento en la misma tarea cuando el trabajador ya esta en control, y el libro dice lo contrario: ya no rinde y no es economico. Tambien lo dicen L3620 y L2004. No hay ningun pasaje que lo apoye.",
+   "dato": "Reforzar el entrenamiento en la misma tarea tras alcanzar el control estadistico",
+   "texto_fiel": "Si el trabajador ya alcanzo control estadistico en su tarea, no seguir entrenandolo de la misma forma en esa misma tarea, porque ya no rinde; en todo caso, puede aprender bien otro tipo de trabajo"
+  },
+  {
+   "id": "Q027-045",
+   "veredicto": "FIEL",
+   "lineas": "L7807-L7807",
+   "frase_clave": "Proliferation of charts without purpose is to be avoided. ... All charts are reviewed every two months; charts added, charts discontinued when they have achieved their purpose",
+   "razon": "El libro pide revisar periodicamente los graficos y evitar que proliferen sin proposito."
+  },
+  {
+   "id": "Q027-046",
+   "veredicto": "FIEL",
+   "lineas": "L3005-L3007",
+   "frase_clave": "They must be designed together, tested over and over in small subassemblies, modified as required, then in a multitude of bigger subassemblies, and so on.",
+   "razon": "El libro dice que los componentes de un sistema complejo deben disenarse y probarse juntos."
+  },
+  {
+   "id": "Q027-048",
+   "veredicto": "OPERATIVO",
+   "lineas": "L7238-L7252",
+   "frase_clave": "What if somebody would use this distribution to compute the capability of the process (p. 290)? He would walk into a bear trap. The process is not stable. No capability can be ascribed to it.",
+   "razon": "El libro dice que un proceso inestable no tiene capacidad y que las causas especiales se buscan y eliminan. El paso ordena esa secuencia sin datos nuevos."
+  },
+  {
+   "id": "Q027-049",
+   "veredicto": "FIEL",
+   "lineas": "L611-L611",
+   "frase_clave": "Your customers, your suppliers, your employees need your statement of constancy of purpose--your intention to stay in business by providing product and service that will help man to live better and which will have a market.",
+   "razon": "El libro pide explicitamente una declaracion de constancia de proposito a largo plazo."
+  },
+  {
+   "id": "Q027-050",
+   "veredicto": "FIEL",
+   "lineas": "L3259-L3259",
+   "frase_clave": "cease dependence on mass inspection and reduction of the number of vendors to those that deliver their product along with statistical evidence of quality.",
+   "razon": "El libro vincula pedir evidencia estadistica de calidad a los proveedores con dejar la inspeccion masiva de entrada (ver tambien L9285)."
+  },
+  {
+   "id": "Q027-051",
+   "veredicto": "FIEL",
+   "lineas": "L8880-L8882",
+   "frase_clave": "the economy and efficiency of making observations on natural variation, leaving experimentation for problems not solved by simple observation.",
+   "razon": "El libro dice literalmente que se experimenta solo en los problemas que la simple observacion no resuelve, y con buen diseno experimental (L8878)."
+  },
+  {
+   "id": "Q027-053",
+   "veredicto": "FIEL",
+   "lineas": "L2541-L2541",
+   "frase_clave": "Modern principles of leadership, explained and abundantly illustrated in this book, will replace the annual performance review.",
+   "razon": "El libro pide sustituir la evaluacion anual por liderazgo que ayude a las personas (ver tambien L546 y L531)."
+  },
+  {
+   "id": "Q027-055",
+   "veredicto": "FIEL",
+   "lineas": "L544-L546",
+   "frase_clave": "12a. Remove barriers that rob the hourly worker of his right to pride of workmanship.",
+   "razon": "Es el punto 12 casi literal, y aparece tambien en el pasaje de JUSE (L10853)."
+  },
+  {
+   "id": "Q027-056",
+   "veredicto": "OPERATIVO",
+   "lineas": "L2897-L2917",
+   "frase_clave": "The workers are handicapped by the system, and the system belongs to management. ... All this is management's responsibility.",
+   "razon": "El libro atribuye a la gerencia la responsabilidad de mejorar el sistema. El paso lo concreta en implicarse personalmente, en la misma direccion."
+  },
+  {
+   "id": "Q027-057",
+   "veredicto": "FIEL",
+   "lineas": "L8161-L8169",
+   "frase_clave": "Specification limits should never be shown on a control chart. A recent book on the statistical control of quality makes a similar mistake, stating that the customer's requirements form a basis for calculation of control limits.",
+   "razon": "El libro rechaza fijar los limites de control a partir de especificaciones, metas o requerimientos del cliente."
+  },
+  {
+   "id": "Q027-059",
+   "veredicto": "FIEL",
+   "lineas": "L767-L769",
+   "frase_clave": "It is thus necessary to follow a sample of materials through the whole production process into complex assemblies, and onward, finally, to the customer.",
+   "razon": "El libro pide literalmente seguir una muestra de materiales por todo el proceso porque pueden no funcionar bien juntos."
+  },
+  {
+   "id": "Q027-060",
+   "veredicto": "ANADIDO",
+   "lineas": "L934-L938",
+   "frase_clave": "Teams composed of experts from the supplier chosen for this material (part or component); plus your own design engineer, process engineer, manufacturing, sales, or any other knowledge that is needed",
+   "razon": "El libro define la composicion del equipo por conocimiento necesario y no fija ningun tope de integrantes; buscado six/6 members/people, maximum, no more than, sin resultado.",
+   "dato": "maximo de seis integrantes por equipo",
+   "tipo_anadido": "LEGAL_CIFRA",
+   "texto_fiel": "Incluir en cada equipo conjunto a quien aporte el conocimiento necesario para el diseño"
+  },
+  {
+   "id": "Q027-061",
+   "veredicto": "FIEL",
+   "lineas": "L936-L938",
+   "frase_clave": "Long lead time, enough to do the job right",
+   "razon": "Cita literal del modelo 'Today' de equipos con el proveedor."
+  },
+  {
+   "id": "Q027-063",
+   "veredicto": "FIEL",
+   "lineas": "L2996-L2999",
+   "frase_clave": "Specifications cannot tell the whole story. The supplier must know what the material is to be used for.",
+   "razon": "El libro dice que el proveedor debe conocer el uso del material, no solo la especificacion."
+  },
+  {
+   "id": "Q027-064",
+   "veredicto": "FIEL",
+   "lineas": "L1170",
+   "frase_clave": "Money and time spent for training will be ineffective unless inhibitors to good work are removed (Point 12).",
+   "razon": "El libro condiciona la eficacia de la capacitacion a quitar los inhibidores del buen trabajo; herramientas malas y material defectuoso son sus ejemplos (L1394, L1424)."
+  },
+  {
+   "id": "Q027-065",
+   "veredicto": "FIEL",
+   "lineas": "L6056; L6108-L6113",
+   "frase_clave": "Once the learning curve levels off, a control chart will indicate whether and when a person has reached the state of statistical control",
+   "razon": "El libro usa la carta de control para saber si la persona llego a control y da un ejemplo de cartas x-barra y R en entrenamiento."
+  },
+  {
+   "id": "Q027-066",
+   "veredicto": "FIEL",
+   "lineas": "L6058",
+   "frase_clave": "Curiously, if a man's work has not yet reached statistical control, further training will help him.",
+   "razon": "Parafrasis directa del libro."
+  },
+  {
+   "id": "Q027-067",
+   "veredicto": "FIEL",
+   "lineas": "L7781",
+   "frase_clave": "We extend into the future the control limits on (e.g.,) an -chart, and plot points one by one",
+   "razon": "El uso continuo del grafico extiende los limites hacia el futuro, como dice el paso."
+  },
+  {
+   "id": "Q027-069",
+   "veredicto": "FIEL",
+   "lineas": "L7225",
+   "frase_clave": "A trend of six consecutive points, or a run of seven or eight points below or above the average, will usually indicate a special cause",
+   "razon": "Las cifras del paso coinciden literalmente con el libro."
+  },
+  {
+   "id": "Q027-070",
+   "veredicto": "FIEL",
+   "lineas": "L8721-L8735",
+   "frase_clave": "The next step was to provide every looper with her own control chart so that she could perceive week by week how well she was doing.",
+   "razon": "En el caso de las medias se grafica el porcentaje de defectuosos por operaria a lo largo del tiempo; tambien L191 (chart for fraction defective for each operator)."
+  },
+  {
+   "id": "Q027-071",
+   "veredicto": "FIEL",
+   "lineas": "L6545",
+   "frase_clave": "if the top man is a special cause on the side of low proportion defective, then he is indeed outstanding. He would deserve recognition, and he could be a focal point for teaching men how to do the job.",
+   "razon": "El libro propone usar la causa especial genuina como foco de enseñanza para el grupo."
+  },
+  {
+   "id": "Q027-072",
+   "veredicto": "FIEL",
+   "lineas": "L6054; L6168",
+   "frase_clave": "It is not economical to try to provide further training of the same kind. He may nevertheless, with good training, learn very well some other kind of job.",
+   "razon": "El libro recomienda capacitar en otro trabajo a quien ya esta en control; el caso de L6168 lo aplica."
+  },
+  {
+   "id": "Q027-074",
+   "veredicto": "ANADIDO",
+   "lineas": "L10542-L10546",
+   "frase_clave": "It may be necessary, because of a shortage of statistical people, but subject to decision of the statistical leader, to place two or more activities under one statistician.",
+   "razon": "El libro no fija tope de divisiones por estadistico; deja la decision al lider estadistico y habla de dos o mas actividades. Buscado three divisions, maximum, more than one division, sin resultado.",
+   "dato": "maximo de tres divisiones por estadistico de linea",
+   "tipo_anadido": "LEGAL_CIFRA",
+   "texto_fiel": "Si faltan estadisticos, dejar que el lider de metodologia estadistica decida cuantas actividades asignar a cada estadistico de linea"
+  },
+  {
+   "id": "Q027-075",
+   "veredicto": "FIEL",
+   "lineas": "L7231",
+   "frase_clave": "distributions and calculations of mean, mode, standard deviation, chi-square, t-test, etc. serve no useful purpose for improvement of a process unless the data were produced in a state of statistical control. The first step in the examination of data is accordingly to question the state of statistical control",
+   "razon": "El libro pide comprobar el control estadistico antes de usar media o desviacion estandar."
+  },
+  {
+   "id": "Q027-077",
+   "veredicto": "FIEL",
+   "lineas": "L6545",
+   "frase_clave": "If the work of the group forms a statistical system, then the prize would be merely a lottery. On the other hand, if the top man is a special cause",
+   "razon": "El libro plantea exactamente esa distincion entre causa especial y variacion aleatoria."
+  },
+  {
+   "id": "Q027-078",
+   "veredicto": "FIEL",
+   "lineas": "L10501",
+   "frase_clave": "There will be a leader of statistical methodology, responsible to top management... He will assume leadership in statistical methodology throughout the company.",
+   "razon": "El libro pide nombrar un lider de metodologia estadistica con autoridad en toda la empresa."
+  },
+  {
+   "id": "Q027-079",
+   "veredicto": "FIEL",
+   "lineas": "L2108-L2119; L2760-L2763",
+   "frase_clave": "cure of the deadly diseases will require total reconstruction of Western management.",
+   "razon": "El libro exige un cambio de fondo de la direccion y rechaza la esperanza de un arreglo instantaneo (instant pudding)."
+  },
+  {
+   "id": "Q027-080",
+   "veredicto": "FIEL",
+   "lineas": "L2864",
+   "frase_clave": "This leap of faith would be taken by knowledge of chemistry, not by statistical theory. One must never forget the importance of subject matter.",
+   "razon": "El libro pide unir la estadistica con el conocimiento del tema (quimica, ingenieria, L7261)."
+  },
+  {
+   "id": "Q027-081",
+   "veredicto": "OPERATIVO",
+   "lineas": "L4511-L4609",
+   "frase_clave": "A run chart, or in some instances a distribution, on any of the following characteristics of performance will show management where retraining and special help are needed",
+   "razon": "El libro da listas de caracteristicas de desempeño a seguir en servicios (errores, demoras, tiempos); el paso resume esas listas en categorias genericas sin datos nuevos."
+  },
+  {
+   "id": "Q027-083",
+   "veredicto": "FIEL",
+   "lineas": "L2854-L2858",
+   "frase_clave": "A confidence interval has operational meaning and is very useful for summarization of results of an enumerative study... But a confidence interval has no operational meaning for prediction",
+   "razon": "El libro distingue estudios enumerativos de problemas analiticos orientados a predecir y planificar."
+  },
+  {
+   "id": "Q027-084",
+   "veredicto": "FIEL",
+   "lineas": "L10549; L10592",
+   "frase_clave": "examine your own resources. One may find right within the company people with master's degrees in statistical theory or mathematics or probability",
+   "razon": "El libro pide revisar los recursos internos y hacer inventario del conocimiento."
+  },
+  {
+   "id": "Q027-086",
+   "veredicto": "FIEL",
+   "lineas": "L7781; L7800",
+   "frase_clave": "The up and down movements of the points are to be disregarded by the production worker unless they show a run (as for wear of tool), or unless a point falls outside the control limits.",
+   "razon": "El libro dice lo mismo y asigna a la direccion enseñar el uso de la carta en el puesto."
+  },
+  {
+   "id": "Q027-087",
+   "veredicto": "OPERATIVO",
+   "lineas": "L1291-L1325",
+   "frase_clave": "Some actual expressions of fear follow. I am afraid that I may lose my job... I am afraid to admit a mistake.",
+   "razon": "El libro enumera expresiones de miedo (perder el empleo, admitir errores, preguntar); identificarlas concreta el punto 8 sin dato nuevo."
+  },
+  {
+   "id": "Q027-088",
+   "veredicto": "FIEL",
+   "lineas": "L8707",
+   "frase_clave": "The report was presented at one of the weekly supervisors' meetings which had been initiated during the training period. Management wished these meetings to be a forum for exchange of ideas",
+   "razon": "Las reuniones semanales de supervisores para intercambiar ideas estan en el caso de las medias."
+  },
+  {
+   "id": "Q027-090",
+   "veredicto": "FIEL",
+   "lineas": "L1396",
+   "frase_clave": "How can suppliers make such a sudden change? ... How may a supplier understand what the customer needs, except by the two working together as partners? Time is required.",
+   "razon": "El libro critica exigir a los proveedores un cambio subito y propone trabajar juntos."
+  },
+  {
+   "id": "Q027-091",
+   "veredicto": "FIEL",
+   "lineas": "L2540-L2552",
+   "frase_clave": "It is easier to rate them; focus on the outcome. What Western industry needs is methods that will improve the outcome.",
+   "razon": "El libro sustituye la calificacion de personas por liderazgo que mejora el sistema."
+  },
+  {
+   "id": "Q027-092",
+   "veredicto": "FIEL",
+   "lineas": "L1424; L3590",
+   "frase_clave": "Calculations that indicate what proportion of defects and mistakes and high costs comes from the system (responsibility of management) and how much from the people on the job should be one of the chief tools of management",
+   "razon": "Parafrasis directa."
+  },
+  {
+   "id": "Q027-094",
+   "veredicto": "FIEL",
+   "lineas": "L2850",
+   "frase_clave": "American management have resorted to mass assemblies for crash courses in statistical methods, employing hacks for teachers",
+   "razon": "El libro desaconseja los cursos masivos sin enseñantes competentes."
+  },
+  {
+   "id": "Q027-097",
+   "veredicto": "FIEL",
+   "lineas": "L934-L937",
+   "frase_clave": "Teams composed of experts from the supplier chosen for this material (part or component); plus your own design engineer, process engineer, manufacturing, sales",
+   "razon": "La composicion del equipo coincide con el libro."
+  },
+  {
+   "id": "Q027-099",
+   "veredicto": "FIEL",
+   "lineas": "L1556",
+   "frase_clave": "The job of management is to replace work standards by knowledgeable and intelligent leadership.",
+   "razon": "Parafrasis directa."
+  },
+  {
+   "id": "Q027-100",
+   "veredicto": "FIEL",
+   "lineas": "L6545",
+   "frase_clave": "Do the results of inspection of their work form a statistical system like the work of the 20 operators in Figure 41 (p. 311)?",
+   "razon": "El libro pide averiguar con la carta de control (Figura 41) si el grupo forma un sistema estable."
+  },
+  {
+   "id": "Q027-102",
+   "veredicto": "OPERATIVO",
+   "lineas": "L3560-L3566",
+   "frase_clave": "d. If you keep no records at some point, why don't you cut the inspection there?",
+   "razon": "El libro plantea como pregunta cortar la inspeccion donde no se llevan registros; el paso lo concreta en la misma direccion."
+  },
+  {
+   "id": "Q027-103",
+   "veredicto": "FIEL",
+   "lineas": "L7231-L7248",
+   "frase_clave": "Plot the points in order of production, or in some other rational order.",
+   "razon": "El libro pide graficar en orden de produccion y no fiarse solo de la distribucion."
+  },
+  {
+   "id": "Q027-104",
+   "veredicto": "FIEL",
+   "lineas": "L826",
+   "frase_clave": "The price will be settled later, all books open, everybody working toward a common aim",
+   "razon": "El libro dice que el precio se fija despues, con todos trabajando hacia un fin comun."
+  },
+  {
+   "id": "Q027-106",
+   "veredicto": "FIEL",
+   "lineas": "L728; L767",
+   "frase_clave": "The purchasing department must change its focus from lowest initial cost of material purchased to lowest total cost... What problems does the material encounter in production?",
+   "razon": "El libro pide mirar la calidad y el comportamiento en produccion, no solo el precio."
+  },
+  {
+   "id": "Q027-107",
+   "veredicto": "FIEL",
+   "lineas": "L9768",
+   "frase_clave": "It is sometimes possible to avoid extreme cost through construction of subassemblies that flow together to form the final assembly.",
+   "razon": "El libro propone construir subensambles intermedios."
+  },
+  {
+   "id": "Q027-108",
+   "veredicto": "FIEL",
+   "lineas": "L7014-L7016",
+   "frase_clave": "it can be prepared by the mutual agreement of all those who have contributed to it by their voluntary work... the interested parties are far more at ease in the technical committees of standards organizations",
+   "razon": "El libro describe comites tecnicos que preparan estandares por acuerdo mutuo."
+  },
+  {
+   "id": "Q027-109",
+   "veredicto": "OPERATIVO",
+   "lineas": "L6615",
+   "frase_clave": "Operational definitions are vital to lawyers, vital to government regulations, vital to (voluntary) industrial standards.",
+   "razon": "El libro dice que las definiciones operacionales son vitales para los estandares voluntarios; documentar el estandar con ellas lo concreta sin datos nuevos."
+  },
+  {
+   "id": "Q027-110",
+   "veredicto": "FIEL",
+   "lineas": "L1088; L3024",
+   "frase_clave": "the Japanese have worried about uniformity, working for less and less variation about the nominal value",
+   "razon": "El libro contrapone reducir la variacion alrededor del nominal a solo cumplir especificaciones."
+  },
+  {
+   "id": "Q027-113",
+   "veredicto": "OPERATIVO",
+   "lineas": "L1804",
+   "frase_clave": "Moreover, study that is directed toward immediate need may not be the wisest course.",
+   "razon": "El libro advierte contra estudiar solo para la necesidad inmediata; estudiar temas amplios es su concrecion en la misma direccion."
+  },
+  {
+   "id": "Q027-114",
+   "veredicto": "OPERATIVO",
+   "lineas": "L2166-L2169",
+   "frase_clave": "Anyone can boost the dividend at the end of the quarter. [...] Cut down on research, education, training.",
+   "razon": "El libro cuenta el recorte de investigación, educación y capacitación como síntoma de la búsqueda del dividendo trimestral y del beneficio a corto plazo, que derrota la constancia de propósito (también en L437: \"Anybody can pay dividends by deferring maintenance, cutting out research\"). Además pide destinar recursos a la investigación y la educación (L567-L600). Resistir ese recorte concreta esa crítica en la misma dirección y sin datos nuevos."
+  },
+  {
+   "id": "Q027-115",
+   "veredicto": "FIEL",
+   "lineas": "L8721-L8737",
+   "frase_clave": "Inspection of 16 stockings per day from each looper commenced the first working day of June.",
+   "razon": "En el caso de la fábrica de medias, el primer paso fue inspeccionar cada día el trabajo de cada remalladora, y después darle a cada una su propia carta de control. Montar una inspección diaria o periódica por trabajador parafrasea ese paso sin añadir nada."
+  },
+  {
+   "id": "Q027-116",
+   "veredicto": "FIEL",
+   "lineas": "L4505-L4609",
+   "frase_clave": "Records kept in some rational form, as by flight, or by location, by week, will yield run charts and distributions that will detect existence of special causes",
+   "razon": "Para hospitales y aerolíneas el libro propone gráficos de corrida y distribuciones que detectan causas especiales y miden el efecto de las mejoras. El paso lo dice casi literalmente."
+  }
+ ]
+}

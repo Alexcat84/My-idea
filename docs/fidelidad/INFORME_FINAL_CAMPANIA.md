@@ -2,103 +2,122 @@ NINGUN CONTRARIO CONOCIDO QUEDA EN PRODUCCION
 
 # CAMPANIA DE FIDELIDAD TOTAL: INFORME FINAL
 
-Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice su fuente. Busqueda en la rama fidelidad-total; correccion en la rama correcciones-fidelidad, llevada a main por avance rapido en las tandas fidelidad-t1 a fidelidad-t9. Todo con claude-opus-5-5; los agentes solo leyeron, clasificaron, verificaron y propusieron; la sesion escribio cada fichero e hizo cada commit.
+Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice su fuente. Busqueda en la rama fidelidad-total; correccion en la rama correcciones-fidelidad, llevada a main por avance rapido en las tandas fidelidad-t1 a fidelidad-t12. Todo con claude-opus-5-5; los agentes solo leyeron, clasificaron, verificaron y propusieron; la sesion escribio cada fichero e hizo cada commit. Este informe incluye lo hecho por las decisiones del fundador del 27 sep 2026 (seccion 8).
 
 ## 1. Cobertura, comprobada por script
 
-**15311 pasos vivos, 15311 con veredicto, 0 sin veredicto, 0 duplicados, 0 que no existan** (docs/fidelidad/campania/COBERTURA_FINAL.json). Fuentes del registro: el tramo 1 calibrado (VEREDICTOS_TRAMO1.jsonl, 827 pasos) y la campania (c2/VEREDICTOS_CAMPANIA.jsonl, 14484 pasos, 133 lotes, que incluyen Reason y Assembling Tomorrow releidos enteros).
+**15311 pasos vivos, 15311 con veredicto, 0 sin veredicto, 0 duplicados, 0 que no existan** (campania/COBERTURA_FINAL.json).
+
+**Cada paso vivo tiene al menos dos lecturas ciegas independientes contra su libro, salvo 3 pasos que el lector de la campania leyo OPERATIVO y que por un caso de borde del flujo no pasaron al verificador (OPERATIVO no se corrige): `amortizacion_y_periodo_de_gracia` p4, `eliminar_metas_numericas_gerencia` p1 y `eliminar_cuotas_numericas_trabajadores` p2.** Los no FIEL: lector y verificador ciego, y arbitro si no coincidian. Los FIEL: los muestreados en la campania por el verificador; todos los demas, por la segunda pasada ciega de la decision 5 (2763 de seguridad y salud y de legal y dinero, y su ampliacion a los 6186 del resto).
 
 ## 2. Censo por clase
 
-| clase | pasos | que se hizo |
-|---|---:|---|
-| FIEL | 10693 | nada |
-| OPERATIVO | 4301 | **no se toca**; su politica la decide el fundador con esta cifra delante (seccion 6) |
-| ANADIDO | 224 | por regla: cifra, plazo, norma o materia legal, quitado o sustituido por el libro; practico, "Sugerencia de My Idea: ..."; lo que la regla no resolvio limpio, a EXCEPCIONES |
-| CONTRARIO | 93 | **todos corregidos** con la version fiel del verificador (o del arbitro), con su cita |
+| clase | campania | ahora | que se hizo |
+|---|---:|---:|---|
+| FIEL | 10693 | 9849 | nada |
+| OPERATIVO | 4301 | 5134 | **no se toca** (decision del fundador 2: los OPERATIVOS se quedan) |
+| ANADIDO | 224 | 227 | por regla: cifra, plazo, norma o materia legal, quitado o sustituido por el libro; practico, "Sugerencia de My Idea: ..." |
+| CONTRARIO | 93 | 101 | **todos corregidos** con la version fiel, con su cita |
 
-**Los CONTRARIOS, comprobado por script contra main:** cada uno de los 93 CONTRARIOS conocidos (los del registro mas los 5 del muestreo) tiene en su nodo una correccion declarada de ese paso (scratchpad contrarios_en_produccion.py: 93 de 93, 0 sin corregir).
+Lo que cambio despues de la campania:
+
+| fuente | de | a | pasos |
+|---|---|---|---:|
+| ampliacion | FIEL | ANADIDO | 1 |
+| ampliacion | FIEL | CONTRARIO | 2 |
+| ampliacion | FIEL | OPERATIVO | 556 |
+| arbitraje excepciones | OPERATIVO | ANADIDO | 2 |
+| arbitraje excepciones | OPERATIVO | CONTRARIO | 1 |
+| segunda pasada | FIEL | CONTRARIO | 5 |
+| segunda pasada | FIEL | OPERATIVO | 280 |
+
+**Los CONTRARIOS, comprobado por script contra main:** 101 CONTRARIOS conocidos (los del registro, los del muestreo, el del arbitraje de las excepciones y los de la segunda pasada y su ampliacion); **0 sin corregir** (scratchpad censo_final2.py).
 
 ## 3. Lo medido del metodo
 
-- **Trampas:** 532 de 532 cazadas por los lectores y 532 de 532 por los verificadores ciegos en la campania; 32 de 32 en el tramo 1. Ningun lote tuvo que releerse.
-- **Desacuerdos lector frente a verificador:** 656, todos arbitrados releyendo el libro.
-- **FIEL releidos a ciegas:** 1731; 141 eran OPERATIVO y **1 era CONTRARIO** (cazado y corregido). Tasa de CONTRARIO escondido entre los FIEL: 0,06 por ciento, intervalo de Wilson al 95 por ciento de 0,01 a 0,33. **Lo que eso significa, dicho claro:** entre los unos 8960 pasos FIEL que no se muestrearon puede quedar del orden de 5 CONTRARIOS no detectados (cota superior al 95 por ciento: unos 30). "Ningun contrario conocido" es verdad; "ningun contrario" no esta demostrado.
-- **Limites:** las trampas las escribe el mismo modelo que las caza; un solo arbitro por desacuerdo; las guias de empaque escaneadas con columnas mezcladas no permiten cita literal contigua.
+- **Trampas en la campania:** 532 de 532 cazadas por los lectores y 532 de 532 por los verificadores ciegos; 32 de 32 en el tramo 1 calibrado.
+- **Trampas en la segunda pasada:** lectores 100 de 100, verificadores 100 de 100; en la ampliacion, lectores 223 de 224 y verificadores 224 de 224.
+  El lector del lote Q027 no cazo una trampa en dos lecturas (la leyo OPERATIVO; su verificador si la cazo). Por eso un verificador ciego extra releyo los 79 FIEL no muestreados de ese lote con sus 4 trampas dentro: 4 de 4, ningun ANADIDO ni CONTRARIO, 15 OPERATIVO (campania/p3/VERIFICADOR_EXTRA_Q027.json).
+- **Desacuerdos lector frente a verificador:** 656 en la campania, 124 en la segunda pasada y 191 en la ampliacion; todos arbitrados releyendo el libro.
+- **Lo que encontro la segunda lectura de los FIEL:** 7 CONTRARIOS y 1 ANADIDO en 8949 pasos (0,08 por ciento), todos corregidos. Los CONTRARIOS escondidos eran sutiles: un plazo alargado ("cada semana o dos" frente a "every week or so"), un criterio estrechado ("negocios fallidos" frente a "con o sin exito"), una consecuencia invertida ("bajos costos" de la sobrecapacidad frente a "higher costs").
+- **Limites, dichos:** las trampas las escribe el mismo modelo que las caza; un solo arbitro por desacuerdo; la frontera FIEL y OPERATIVO es blanda (la segunda lectura paso 836 FIEL a OPERATIVO), la que importa es la de ANADIDO y CONTRARIO; las guias de empaque escaneadas con columnas mezcladas no permiten cita literal contigua (seccion 7). "Ningun contrario conocido" es verdad; que no quede ninguno sin detectar no esta demostrado, pero cada paso, salvo esos 3 OPERATIVOS, ya lo leyeron dos lectores ciegos distintos.
 
 ## 4. Tandas en produccion (main, avance rapido, con Gate 0 entero y las dos suites en verde)
 
-| tanda | correcciones | de ellas CONTRARIO | sugerencias de My Idea | nodos |
-|---|---:|---:|---:|---:|
-| fidelidad-t1 | 11 | 9 | 0 | 7 |
-| fidelidad-t2 | 10 | 10 | 0 | 6 |
-| fidelidad-t3 | 55 | 0 | 23 | 39 |
-| fidelidad-t4 | 38 | 18 | 11 | 32 |
-| fidelidad-t5 | 64 | 17 | 25 | 43 |
-| fidelidad-t6 | 23 | 9 | 9 | 20 |
-| fidelidad-t7 | 51 | 22 | 15 | 33 |
-| fidelidad-t8 | 65 | 24 | 24 | 50 |
-| fidelidad-t9 | 76 | 11 | 41 | 48 |
-| **total** | **393** | **120** | **148** | |
+| tanda | commit | correcciones | de ellas CONTRARIO | sugerencias de My Idea | nodos |
+|---|---|---:|---:|---:|---:|
+| fidelidad-t1 | 8808bf61 | 11 | 9 | 0 | 7 |
+| fidelidad-t2 | c5182833 | 10 | 10 | 0 | 6 |
+| fidelidad-t3 | a6015754 | 55 | 0 | 23 | 39 |
+| fidelidad-t4 | fe8a88ee | 38 | 18 | 11 | 32 |
+| fidelidad-t5 | 8f12a32e | 64 | 17 | 25 | 43 |
+| fidelidad-t6 | 5ce22234 | 23 | 9 | 9 | 20 |
+| fidelidad-t7 | f868f1ca | 51 | 22 | 15 | 33 |
+| fidelidad-t8 | 8f4e7467 | 65 | 24 | 24 | 50 |
+| fidelidad-t9 | 7f911164 | 76 | 11 | 41 | 48 |
+| fidelidad-t10 | c855e9f4 | 4 | 1 | 3 | 4 |
+| fidelidad-t11 | 7263d971 | 6 | 6 | 0 | 5 |
+| fidelidad-t12 | f7705aee | 3 | 2 | 1 | 3 |
+| **total** | | **406** | **129** | **152** | |
 
-Cada correccion vive en el campo `correcciones` de su nodo con el texto viejo, el nuevo, la cita literal (libro, lineas, frase) y la decision (rama correcciones-fidelidad, docs/fidelidad/tandas/). Las cuentas de CONTRARIO de la tabla incluyen los datos repetidos en el resumen o el entregable del mismo nodo.
+Cada correccion vive en el campo `correcciones` de su nodo con el texto viejo, el nuevo, la cita literal (libro, lineas, frase) y la decision (docs/fidelidad/tandas/ en main). Las cuentas de CONTRARIO incluyen los datos repetidos en el resumen o el entregable del mismo nodo.
 
 ## 5. Censo por libro
 
 | libro | pasos | FIEL | OPERATIVO | ANADIDO | CONTRARIO |
 |---|---:|---:|---:|---:|---:|
-| Juran's Quality Handbook_ The C - Joseph A. Defeo | 2297 | 1791 | 486 | 13 | 7 |
-| The Green to Gold Business Play - Daniel C. Esty | 933 | 686 | 242 | 1 | 4 |
-| The Startup Owner's Manual - Blank, Steve | 864 | 749 | 101 | 10 | 4 |
-| Franchise Your Business - Mark Siebert | 828 | 618 | 201 | 5 | 4 |
-| Winning at New Products - Robert G. Cooper | 759 | 652 | 93 | 10 | 4 |
-| Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | 702 | 440 | 250 | 5 | 7 |
-| A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | 665 | 483 | 175 | 2 | 5 |
-| Venture Deals - Brad Feld | 585 | 386 | 185 | 8 | 6 |
-| Essentials of Supply Chain Management - Michael H. Hugos | 535 | 373 | 154 | 7 | 1 |
-| The Founder's Dilemmas - Wasserman, Noam | 486 | 283 | 194 | 9 | 0 |
-| The Hard Thing About Hard Things - Ben Horowitz | 452 | 291 | 145 | 11 | 5 |
-| The Field Guide to Understandin - Dekker, Sidney | 424 | 298 | 117 | 8 | 1 |
-| Quality is free _ the art of making quality certain -- Philip B_ Crosb | 406 | 294 | 104 | 3 | 5 |
-| Managing the Risks of Organizat - Reason, J. T_ | 403 | 184 | 214 | 4 | 1 |
-| The Lean Startup - Eric Ries | 352 | 276 | 70 | 5 | 1 |
-| Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe | 348 | 215 | 121 | 10 | 2 |
-| Traction - Gabriel Weinberg | 343 | 261 | 75 | 3 | 4 |
-| Never Lose a Customer Again - Joey Coleman | 341 | 215 | 118 | 6 | 2 |
-| Change by Design, Revised and U - Tim Brown | 335 | 203 | 127 | 2 | 3 |
-| Assembling Tomorrow: A Guide to Designing a Thriving Future | 295 | 124 | 163 | 8 | 0 |
-| A Project Manager's Book of Forms - Cynthia Stackpole Snyder | 283 | 259 | 24 | 0 | 0 |
-| Business Model Generation - Osterwalder, Alexander | 243 | 186 | 49 | 7 | 1 |
-| SMALL_BUSINESS | 238 | 197 | 29 | 10 | 2 |
-| Cradle to Cradle - Michael Braungart | 229 | 117 | 110 | 1 | 1 |
-| Value Proposition Design | 200 | 172 | 28 | 0 | 0 |
-| SPIN Selling - Neil Rackham | 175 | 113 | 57 | 3 | 2 |
-| Co-Intelligence_ Living and Wor - Ethan Mollick | 173 | 52 | 108 | 11 | 2 |
-| The Art of Thought - Wallas, Graham | 154 | 66 | 83 | 4 | 1 |
-| Edwards et al., Managing Project Risks | 123 | 35 | 78 | 8 | 2 |
-| NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer | 115 | 100 | 13 | 2 | 0 |
-| Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2 | 114 | 40 | 65 | 7 | 2 |
-| The field guide to human-centered design | 90 | 69 | 19 | 2 | 0 |
-| Chris Voss, Rompe la barrera del no | 86 | 35 | 43 | 2 | 6 |
-| OSHA3885 | 84 | 74 | 6 | 4 | 0 |
-| Rushton, Croucher y Baker, The Handbook of Logistics and Distribution  | 63 | 21 | 36 | 6 | 0 |
-| DeMarco y Lister, Waltzing with Bears | 55 | 15 | 33 | 5 | 2 |
+| Juran's Quality Handbook_ The C - Joseph A. Defeo | 2297 | 1652 | 625 | 13 | 7 |
+| The Green to Gold Business Play - Daniel C. Esty | 933 | 645 | 283 | 1 | 4 |
+| The Startup Owner's Manual - Blank, Steve | 864 | 731 | 119 | 10 | 4 |
+| Franchise Your Business - Mark Siebert | 828 | 567 | 249 | 5 | 7 |
+| Winning at New Products - Robert G. Cooper | 759 | 631 | 114 | 10 | 4 |
+| Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | 702 | 353 | 336 | 6 | 7 |
+| A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | 665 | 470 | 188 | 2 | 5 |
+| Venture Deals - Brad Feld | 585 | 357 | 213 | 8 | 7 |
+| Essentials of Supply Chain Management - Michael H. Hugos | 535 | 353 | 173 | 7 | 2 |
+| The Founder's Dilemmas - Wasserman, Noam | 486 | 248 | 229 | 9 | 0 |
+| The Hard Thing About Hard Things - Ben Horowitz | 452 | 265 | 171 | 11 | 5 |
+| The Field Guide to Understandin - Dekker, Sidney | 424 | 256 | 159 | 8 | 1 |
+| Quality is free _ the art of making quality certain -- Philip B_ Crosb | 406 | 270 | 128 | 3 | 5 |
+| Managing the Risks of Organizat - Reason, J. T_ | 403 | 159 | 237 | 6 | 1 |
+| The Lean Startup - Eric Ries | 352 | 252 | 93 | 5 | 2 |
+| Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe | 348 | 193 | 143 | 10 | 2 |
+| Traction - Gabriel Weinberg | 343 | 251 | 85 | 3 | 4 |
+| Never Lose a Customer Again - Joey Coleman | 341 | 203 | 130 | 6 | 2 |
+| Change by Design, Revised and U - Tim Brown | 335 | 185 | 145 | 2 | 3 |
+| Assembling Tomorrow: A Guide to Designing a Thriving Future | 295 | 83 | 203 | 8 | 1 |
+| A Project Manager's Book of Forms - Cynthia Stackpole Snyder | 283 | 254 | 29 | 0 | 0 |
+| Business Model Generation - Osterwalder, Alexander | 243 | 181 | 54 | 7 | 1 |
+| SMALL_BUSINESS | 238 | 166 | 60 | 10 | 2 |
+| Cradle to Cradle - Michael Braungart | 229 | 100 | 127 | 1 | 1 |
+| Value Proposition Design | 200 | 166 | 34 | 0 | 0 |
+| SPIN Selling - Neil Rackham | 175 | 110 | 60 | 3 | 2 |
+| Co-Intelligence_ Living and Wor - Ethan Mollick | 173 | 43 | 117 | 11 | 2 |
+| The Art of Thought - Wallas, Graham | 154 | 56 | 93 | 4 | 1 |
+| Edwards et al., Managing Project Risks | 123 | 29 | 84 | 8 | 2 |
+| NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer | 115 | 98 | 15 | 2 | 0 |
+| Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2 | 114 | 36 | 69 | 7 | 2 |
+| The field guide to human-centered design | 90 | 68 | 20 | 2 | 0 |
+| Chris Voss, Rompe la barrera del no | 86 | 34 | 44 | 2 | 6 |
+| OSHA3885 | 84 | 70 | 10 | 4 | 0 |
+| Rushton, Croucher y Baker, The Handbook of Logistics and Distribution  | 63 | 11 | 46 | 6 | 0 |
+| DeMarco y Lister, Waltzing with Bears | 55 | 13 | 34 | 5 | 3 |
 | NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start | 45 | 38 | 7 | 0 | 0 |
-| Guia de empaque para envios (FedEx) | 44 | 24 | 15 | 2 | 3 |
-| Businessperson's Guide to Federal Warranty Law | 40 | 23 | 16 | 1 | 0 |
-| Hubbard, The Failure of Risk Management | 40 | 12 | 26 | 0 | 2 |
+| Guia de empaque para envios (FedEx) | 44 | 17 | 22 | 2 | 3 |
+| Businessperson's Guide to Federal Warranty Law | 40 | 22 | 17 | 1 | 0 |
+| Hubbard, The Failure of Risk Management | 40 | 8 | 30 | 0 | 2 |
 | Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) | 38 | 0 | 35 | 3 | 0 |
-| OSHA3886 | 37 | 33 | 4 | 0 | 0 |
+| OSHA3886 | 37 | 31 | 6 | 0 | 0 |
 | NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start | 35 | 32 | 3 | 0 | 0 |
 | Cybersecurity for Small Business: Understanding the NIST Cybersecurity | 28 | 22 | 6 | 0 | 0 |
-| Getting Started with the NIST Privacy Framework: A Guide for Small and | 28 | 24 | 4 | 0 | 0 |
-| Max Muller, Essentials of Inventory Management | 25 | 13 | 10 | 2 | 0 |
-| ISTA 3P, Protocolo de ensayo de empaque para paqueteria | 24 | 9 | 11 | 3 | 1 |
-| The Startup Owner's Manual - Blank, Steve / Never Lose a Customer Agai | 23 | 15 | 8 | 0 | 0 |
-| Guia visual de empaque | 20 | 8 | 9 | 3 | 0 |
-| DHL Express, Guia de empaque | 15 | 8 | 6 | 1 | 0 |
-| The Founder's Dilemmas - Wasserman, Noam / The Hard Thing About Hard T | 15 | 11 | 4 | 0 | 0 |
-| Requisitos de empaque de los couriers | 14 | 6 | 5 | 3 | 0 |
+| Getting Started with the NIST Privacy Framework: A Guide for Small and | 28 | 21 | 7 | 0 | 0 |
+| Max Muller, Essentials of Inventory Management | 25 | 12 | 11 | 2 | 0 |
+| ISTA 3P, Protocolo de ensayo de empaque para paqueteria | 24 | 8 | 12 | 3 | 1 |
+| The Startup Owner's Manual - Blank, Steve / Never Lose a Customer Agai | 23 | 13 | 10 | 0 | 0 |
+| Guia visual de empaque | 20 | 6 | 11 | 3 | 0 |
+| DHL Express, Guia de empaque | 15 | 5 | 9 | 1 | 0 |
+| The Founder's Dilemmas - Wasserman, Noam / The Hard Thing About Hard T | 15 | 10 | 5 | 0 | 0 |
+| Requisitos de empaque de los couriers | 14 | 3 | 8 | 3 | 0 |
 | Venture Deals - Brad Feld / The Founder's Dilemmas - Wasserman, Noam | 14 | 10 | 4 | 0 | 0 |
 | The Startup Owner's Manual - Blank, Steve / The Lean Startup - Eric Ri | 8 | 7 | 1 | 0 | 0 |
 | The Startup Owner's Manual - Blank, Steve / Traction - Gabriel Weinber | 8 | 8 | 0 | 0 | 0 |
@@ -109,63 +128,63 @@ Cada correccion vive en el campo `correcciones` de su nodo con el texto viejo, e
 | Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla  | 4 | 3 | 0 | 1 | 0 |
 | Síntesis del método aplicado al emprendedor individual (riesgo de rota | 4 | 0 | 3 | 1 | 0 |
 
-## 6. CENSO DE OPERATIVOS, para la decision del fundador
+## 6. CENSO DE OPERATIVOS
 
-**4301 pasos OPERATIVOS** (28.1 por ciento del catalogo): concretan lo que su libro dice, en su misma direccion y sin datos nuevos. No se toco ninguno. Por libro, de mas a menos:
+**5134 pasos OPERATIVOS** (33.5 por ciento del catalogo): concretan lo que su libro dice, en su misma direccion y sin datos nuevos. Decision del fundador 2: se quedan. Por libro, de mas a menos:
 
 | libro | OPERATIVOS | de sus pasos |
 |---|---:|---:|
-| Juran's Quality Handbook_ The C - Joseph A. Defeo | 486 | 21% |
-| Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | 250 | 36% |
-| The Green to Gold Business Play - Daniel C. Esty | 242 | 26% |
-| Managing the Risks of Organizat - Reason, J. T_ | 214 | 53% |
-| Franchise Your Business - Mark Siebert | 201 | 24% |
-| The Founder's Dilemmas - Wasserman, Noam | 194 | 40% |
-| Venture Deals - Brad Feld | 185 | 32% |
-| A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | 175 | 26% |
-| Assembling Tomorrow: A Guide to Designing a Thriving Future | 163 | 55% |
-| Essentials of Supply Chain Management - Michael H. Hugos | 154 | 29% |
-| The Hard Thing About Hard Things - Ben Horowitz | 145 | 32% |
-| Change by Design, Revised and U - Tim Brown | 127 | 38% |
-| Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe | 121 | 35% |
-| Never Lose a Customer Again - Joey Coleman | 118 | 35% |
-| The Field Guide to Understandin - Dekker, Sidney | 117 | 28% |
-| Cradle to Cradle - Michael Braungart | 110 | 48% |
-| Co-Intelligence_ Living and Wor - Ethan Mollick | 108 | 62% |
-| Quality is free _ the art of making quality certain -- Philip B_ Crosb | 104 | 26% |
-| The Startup Owner's Manual - Blank, Steve | 101 | 12% |
-| Winning at New Products - Robert G. Cooper | 93 | 12% |
-| The Art of Thought - Wallas, Graham | 83 | 54% |
-| Edwards et al., Managing Project Risks | 78 | 63% |
-| Traction - Gabriel Weinberg | 75 | 22% |
-| The Lean Startup - Eric Ries | 70 | 20% |
-| Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2 | 65 | 57% |
-| SPIN Selling - Neil Rackham | 57 | 33% |
-| Business Model Generation - Osterwalder, Alexander | 49 | 20% |
-| Chris Voss, Rompe la barrera del no | 43 | 50% |
-| Rushton, Croucher y Baker, The Handbook of Logistics and Distribution  | 36 | 57% |
+| Juran's Quality Handbook_ The C - Joseph A. Defeo | 625 | 27% |
+| Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev | 336 | 48% |
+| The Green to Gold Business Play - Daniel C. Esty | 283 | 30% |
+| Franchise Your Business - Mark Siebert | 249 | 30% |
+| Managing the Risks of Organizat - Reason, J. T_ | 237 | 59% |
+| The Founder's Dilemmas - Wasserman, Noam | 229 | 47% |
+| Venture Deals - Brad Feld | 213 | 36% |
+| Assembling Tomorrow: A Guide to Designing a Thriving Future | 203 | 69% |
+| A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition) | 188 | 28% |
+| Essentials of Supply Chain Management - Michael H. Hugos | 173 | 32% |
+| The Hard Thing About Hard Things - Ben Horowitz | 171 | 38% |
+| The Field Guide to Understandin - Dekker, Sidney | 159 | 38% |
+| Change by Design, Revised and U - Tim Brown | 145 | 43% |
+| Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe | 143 | 41% |
+| Never Lose a Customer Again - Joey Coleman | 130 | 38% |
+| Quality is free _ the art of making quality certain -- Philip B_ Crosb | 128 | 32% |
+| Cradle to Cradle - Michael Braungart | 127 | 55% |
+| The Startup Owner's Manual - Blank, Steve | 119 | 14% |
+| Co-Intelligence_ Living and Wor - Ethan Mollick | 117 | 68% |
+| Winning at New Products - Robert G. Cooper | 114 | 15% |
+| The Art of Thought - Wallas, Graham | 93 | 60% |
+| The Lean Startup - Eric Ries | 93 | 26% |
+| Traction - Gabriel Weinberg | 85 | 25% |
+| Edwards et al., Managing Project Risks | 84 | 68% |
+| Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2 | 69 | 61% |
+| SMALL_BUSINESS | 60 | 25% |
+| SPIN Selling - Neil Rackham | 60 | 34% |
+| Business Model Generation - Osterwalder, Alexander | 54 | 22% |
+| Rushton, Croucher y Baker, The Handbook of Logistics and Distribution  | 46 | 73% |
+| Chris Voss, Rompe la barrera del no | 44 | 51% |
 | Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment) | 35 | 92% |
-| DeMarco y Lister, Waltzing with Bears | 33 | 60% |
-| SMALL_BUSINESS | 29 | 12% |
-| Value Proposition Design | 28 | 14% |
-| Hubbard, The Failure of Risk Management | 26 | 65% |
-| A Project Manager's Book of Forms - Cynthia Stackpole Snyder | 24 | 8% |
-| The field guide to human-centered design | 19 | 21% |
-| Businessperson's Guide to Federal Warranty Law | 16 | 40% |
-| Guia de empaque para envios (FedEx) | 15 | 34% |
-| NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer | 13 | 11% |
-| ISTA 3P, Protocolo de ensayo de empaque para paqueteria | 11 | 46% |
-| Max Muller, Essentials of Inventory Management | 10 | 40% |
-| Guia visual de empaque | 9 | 45% |
-| The Startup Owner's Manual - Blank, Steve / Never Lose a Customer Agai | 8 | 35% |
+| DeMarco y Lister, Waltzing with Bears | 34 | 62% |
+| Value Proposition Design | 34 | 17% |
+| Hubbard, The Failure of Risk Management | 30 | 75% |
+| A Project Manager's Book of Forms - Cynthia Stackpole Snyder | 29 | 10% |
+| Guia de empaque para envios (FedEx) | 22 | 50% |
+| The field guide to human-centered design | 20 | 22% |
+| Businessperson's Guide to Federal Warranty Law | 17 | 42% |
+| NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer | 15 | 13% |
+| ISTA 3P, Protocolo de ensayo de empaque para paqueteria | 12 | 50% |
+| Guia visual de empaque | 11 | 55% |
+| Max Muller, Essentials of Inventory Management | 11 | 44% |
+| OSHA3885 | 10 | 12% |
+| The Startup Owner's Manual - Blank, Steve / Never Lose a Customer Agai | 10 | 43% |
+| DHL Express, Guia de empaque | 9 | 60% |
+| Requisitos de empaque de los couriers | 8 | 57% |
+| Getting Started with the NIST Privacy Framework: A Guide for Small and | 7 | 25% |
 | NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start | 7 | 16% |
 | Cybersecurity for Small Business: Understanding the NIST Cybersecurity | 6 | 21% |
-| DHL Express, Guia de empaque | 6 | 40% |
-| OSHA3885 | 6 | 7% |
-| Requisitos de empaque de los couriers | 5 | 36% |
-| Getting Started with the NIST Privacy Framework: A Guide for Small and | 4 | 14% |
-| OSHA3886 | 4 | 11% |
-| The Founder's Dilemmas - Wasserman, Noam / The Hard Thing About Hard T | 4 | 27% |
+| OSHA3886 | 6 | 16% |
+| The Founder's Dilemmas - Wasserman, Noam / The Hard Thing About Hard T | 5 | 33% |
 | Venture Deals - Brad Feld / The Founder's Dilemmas - Wasserman, Noam | 4 | 29% |
 | NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start | 3 | 9% |
 | Síntesis del método aplicado al emprendedor individual (riesgo de rota | 3 | 75% |
@@ -175,10 +194,16 @@ Cada correccion vive en el campo `correcciones` de su nodo con el texto viejo, e
 | The Lean Startup - Eric Ries / The Hard Thing About Hard Things - Ben  | 1 | 14% |
 | The Startup Owner's Manual - Blank, Steve / The Lean Startup - Eric Ri | 1 | 12% |
 
-## 7. EXCEPCIONES para el fundador
+## 7. EXCEPCIONES
 
-Ver docs/fidelidad/EXCEPCIONES.md: lo que la regla no resolvio limpio, sin corregir. Ninguna es un CONTRARIO.
+Ver docs/fidelidad/EXCEPCIONES.md. Ninguna es un CONTRARIO sin corregir.
 
-## 8. Pendiente para la integracion del mundo 11
+## 8. Decisiones del fundador del 27 sep 2026, una por una
 
-Anotado en docs/PENDIENTES.md seccion 0a (en main): re-embeber los nodos corregidos y regenerar su cache de preguntas en la sesion con credencial; y, al sincronizar puente-forja con main, regenerar los derivados del grafo en vez de fusionarlos a mano.
+1. **Textos derivados.** Se buscaron los textos anteriores de las 120 correcciones de CONTRARIO y las 125 de cifra, plazo o norma en la cache de preguntas y en todo fichero derivado. Ninguna pregunta contiene un texto viejo; pero el generador lee los 400 primeros caracteres del resumen, asi que las preguntas cuyo resumen se corrigio dentro de ese tramo se **retiraron de la cache: 22** (docs/fidelidad/PREGUNTAS_RETIRADAS.json en main, con la pregunta, sus candidatos y la correccion que la invalida). Caen a la generica que la sesion adapta en vivo. El master_graph lleva el campo `correcciones` con los textos viejos, pero ningun codigo de web/ lo lee ni lo manda a un prompt. 7 textos viejos siguen identicos en nodos deprecados, que la app no ofrece y que resuelven al superviviente corregido.
+2. **OPERATIVOS: se quedan.** Lista de atribuciones a autor para la sesion de idiomas: docs/fidelidad/ATRIBUCIONES_A_AUTOR.md en main (el codigo de web/ no atribuye nada ni lee el campo fuente; los nombres de autor viven dentro del texto de 241 nodos, con fichero y linea).
+3. **EXCEPCIONES.** Las 4 con desacuerdo, a un arbitro con el libro (campania/ARBITRAJE_EXCEPCIONES.json): 1 CONTRARIO y 3 ANADIDOS practicos, corregidos en fidelidad-t10. Las 3 guias escaneadas: el fundador reconvierte los PDF y los pasara; pendientes (EXCEPCIONES.md, seccion B).
+4. **Criterios ratificados:** quitar el dominio en los 3 pasos; el prefijo "Sugerencia de My Idea:"; la voz de la casa solo si el significado no cambia, con registro y cita.
+5. **Segunda pasada ciega dirigida:** 2763 FIEL de seguridad y salud y de legal y dinero dieron 5 CONTRARIOS (fidelidad-t11); por la regla, se amplio al resto de los FIEL (6186), que dio 2 CONTRARIOS y 1 ANADIDO (fidelidad-t12). Registro: campania/p2/ y campania/p3/.
+6. **Documentacion:** docs/fidelidad/ de esta rama y el informe del muestreo se fusionan a main como archivo.
+7. **Sesion con credencial:** 43 nodos a re-embeber (el indice embebe titulo, resumen y condiciones, no los pasos) y 22 preguntas a regenerar; listas exactas en docs/fidelidad/credencial/ de main (LISTAS.md con la razon de cada una).
