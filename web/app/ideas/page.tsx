@@ -23,6 +23,7 @@ import { BotonSalir } from "../ui/BotonSalir";
 import { ChipSaldo } from "../ui/ChipSaldo";
 import { Saludo } from "../ui/Saludo";
 import { StepperMini } from "../ui/Stepper";
+import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
 
 export const dynamic = "force-dynamic";
 
@@ -86,6 +87,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
             </svg>
           </Link>
         )}
+        <SelectorIdioma compacto />
       </header>
 
       <main className="mx-auto w-full max-w-3xl flex-1 px-4 py-10 sm:px-6">

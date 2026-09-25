@@ -11,8 +11,17 @@ completo con su visto, luego el francés, luego los otros ocho. Convenciones: `F
   catálogo `mensajes/mundos.ts`. Su español es copia de `packs_catalog.json`, y una prueba falla si
   las dos copias dejan de coincidir. Se nombran así en las pantallas, las pestañas, las vitrinas de
   créditos y Potencia tu idea, la bitácora, el calendario, Mis ideas y los avisos de las rutas.
-- **Selector de idioma** en el pie de la portada y en /cuenta, con cada idioma escrito en su propio
-  alfabeto. Elegir uno recarga la página con `?lang=xx` y `proxy.ts` escribe la cookie (D9).
+- **Selector de idioma, manual y opcional** (el automático por cookie y navegador sigue mandando).
+  Decisión del fundador del 25 sep: a la derecha de **toda** pantalla. En cada cabecera (portada,
+  Mis ideas, la idea, créditos, cuenta, potenciadores) va un globo con "ES"/"EN", que en móvil queda
+  solo en globo. En las pantallas sin cabecera (acceso, idea nueva, contraseña) va fijo arriba a la
+  derecha. También está en el pie de la portada y en /cuenta. Al tocarlo aparecen los idiomas, cada
+  uno escrito en su propio alfabeto. Elegir uno recarga la página con `?lang=xx` y `proxy.ts` escribe
+  la cookie (D9).
+- **Ver la vista previa con sesión iniciada:** el inicio con Google (y el enlace de los correos)
+  vuelve a la dirección que Supabase tiene autorizada. Si la de la vista previa no está en
+  Authentication → URL Configuration → Redirect URLs, te devuelve a producción (`main`), que solo
+  habla español. Con correo y contraseña te quedas en la vista previa.
   Comprobado en el navegador: un navegador en inglés entra en inglés; al elegir Español se queda en
   español también en las páginas siguientes.
 - **Formatos en inglés:** "$1,200", fechas "March 20" / "Friday, March 20", fecha corta del mapa

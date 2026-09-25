@@ -22,6 +22,7 @@ import { POTENCIADORES } from "@/lib/i18n/mensajes/potenciadores";
 import { idiomaDeCookies } from "@/lib/i18n/servidor";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { createClient } from "@/lib/supabase/server";
+import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
 
 export const dynamic = "force-dynamic";
 
@@ -32,6 +33,8 @@ function Cabecera({ titulo, misIdeas }: { titulo: string; misIdeas: string }) {
         {misIdeas}
       </Link>
       <span className="text-[14.5px] font-semibold">{titulo}</span>
+      <span className="flex-1" />
+      <SelectorIdioma compacto />
     </header>
   );
 }

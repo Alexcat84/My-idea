@@ -141,12 +141,13 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
             <a href="#descargar" onClick={() => marcarActiva("descargar")} style={{ position: "relative", color: colorNav("descargar"), padding: "8px 12px", borderRadius: "8px", transition: "color 180ms ease-out,background 180ms ease-out" }} className="lh0">{t.nav.app}<span style={{ position: "absolute", left: "12px", right: "12px", bottom: "2px", height: "2px", borderRadius: "2px", background: "#4D7CFE", transform: subrayadoNav("descargar"), transformOrigin: "left center", transition: "transform 220ms ease-out" }}></span></a>
           </div>
           <span style={{ flex: "1" }}></span>
+          <SelectorIdioma compacto />
           {sesionActiva ? (
-            <button type="button" onClick={cerrarSesion} style={{ fontSize: "14.5px", fontWeight: "600", color: "#F5F6F8", background: "transparent", cursor: "pointer", fontFamily: "inherit", padding: "9px 20px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "10px", transition: "border-color 180ms ease-out,background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh1">{t.salir}</button>
+            <button type="button" onClick={cerrarSesion} style={{ fontSize: "14.5px", fontWeight: "600", color: "#F5F6F8", background: "transparent", cursor: "pointer", fontFamily: "inherit", whiteSpace: "nowrap", padding: "9px 20px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "10px", transition: "border-color 180ms ease-out,background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh1">{t.salir}</button>
           ) : (
-            <a href="/login" style={{ fontSize: "14.5px", fontWeight: "600", color: "#F5F6F8", padding: "9px 20px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "10px", transition: "border-color 180ms ease-out,background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh1">{t.iniciarSesion}</a>
+            <a href="/login" style={{ fontSize: "14.5px", fontWeight: "600", color: "#F5F6F8", whiteSpace: "nowrap", padding: "9px 20px", border: "1px solid rgba(255,255,255,0.18)", borderRadius: "10px", transition: "border-color 180ms ease-out,background 180ms ease-out,box-shadow 180ms ease-out" }} className="lh1">{t.iniciarSesion}</a>
           )}
-          <a href={sesionActiva ? "/ideas" : "/nueva"} style={{ background: "#4D7CFE", color: "#FFFFFF", border: "none", borderRadius: "10px", padding: "10px 20px", fontFamily: "inherit", fontSize: "14.5px", fontWeight: "600", cursor: "pointer", transition: "background 180ms ease-out" }} className="lh2">{sesionActiva ? t.misIdeas : t.comenzar}</a>
+          <a href={sesionActiva ? "/ideas" : "/nueva"} style={{ background: "#4D7CFE", color: "#FFFFFF", border: "none", borderRadius: "10px", whiteSpace: "nowrap", padding: "10px 20px", fontFamily: "inherit", fontSize: "14.5px", fontWeight: "600", cursor: "pointer", transition: "background 180ms ease-out" }} className="lh2">{sesionActiva ? t.misIdeas : t.comenzar}</a>
         </div>
       </nav>
 

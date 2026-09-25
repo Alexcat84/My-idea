@@ -14,6 +14,7 @@ import { esInvitadoInvisible } from "@/lib/identidad";
 import { createClient } from "@/lib/supabase/server";
 import { BotonSalir } from "../ui/BotonSalir";
 import { CuentaCliente } from "../ui/CuentaCliente";
+import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
 
 export const dynamic = "force-dynamic";
 
@@ -36,6 +37,7 @@ export default async function Cuenta() {
           {t.misIdeas}
         </Link>
         <BotonSalir />
+        <SelectorIdioma compacto />
       </header>
 
       <main className="mx-auto w-full max-w-2xl flex-1 px-4 py-10 sm:px-6">

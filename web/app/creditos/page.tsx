@@ -32,6 +32,7 @@ import { apartadoDe } from "@/lib/creditos";
 import { leerSaldo } from "@/lib/saldo";
 import { textoChipSaldo } from "@/lib/textoSaldo";
 import { createClient } from "@/lib/supabase/server";
+import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
 
 export const dynamic = "force-dynamic";
 
@@ -149,6 +150,7 @@ export default async function Creditos() {
             {textoSaldo ? interpolar(t.disponibles, { saldo: textoSaldo.principal }) : t.saldoNoDisponible}
           </span>
         </div>
+        <SelectorIdioma compacto />
       </header>
 
       <main className="mx-auto flex w-full max-w-[1180px] flex-1 flex-col gap-12 px-4 py-10 sm:px-8">

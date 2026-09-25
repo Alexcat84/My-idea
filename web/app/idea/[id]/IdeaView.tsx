@@ -55,6 +55,7 @@ import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { CLARIDAD } from "@/lib/i18n/mensajes/claridad";
 import { IDEA_VIEW } from "@/lib/i18n/mensajes/ideaView";
+import { SelectorIdioma } from "@/app/ui/SelectorIdioma";
 
 // i18n F2: la nota de los nodos silenciosos (t.notaSilencioso) y el mensaje de
 // respaldo del cierre (t.cierreRespaldo) viven en el catálogo de la vista.
@@ -1063,6 +1064,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
         >
           {etiquetaStepper}
         </span>
+        <SelectorIdioma compacto />
       </header>
 
       <main className="mx-auto w-full max-w-5xl flex-1 px-4 py-8 sm:px-6">
