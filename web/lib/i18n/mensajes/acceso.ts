@@ -119,7 +119,529 @@ const enLogin: typeof esLogin = {
   continuarGoogle: "Continue with Google",
 };
 
-export const LOGIN: PorIdioma<typeof esLogin> = { es: esLogin, en: enLogin };
+const frLogin: typeof esLogin = {
+  lema: "L'espace où tes idées prennent forme.",
+  errores: {
+    enviarCodigo: "nous n'avons pas pu envoyer le code; réessaie",
+    conectar: "nous n'avons pas pu nous connecter; réessaie",
+    conectarInternet: "nous n'avons pas pu nous connecter; vérifie ta connexion Internet et réessaie",
+    atoro: "quelque chose a coincé; réessaie",
+    yaTieneCuenta: "Cette adresse courriel a déjà un compte. Connecte-toi.",
+    escribeCorreo: "Écris ton adresse courriel ci-dessus, puis touche de nouveau le lien.",
+  },
+  avisos: {
+    codigoEnviado: "Nous t'avons envoyé un code par courriel.",
+    codigoNuevo: "Nouveau code envoyé par courriel.",
+    confirmacionReenviada: "Nous t'avons renvoyé le courriel de confirmation. Vérifie ta boîte de réception.",
+  },
+  revisaCorreo: {
+    titulo: "Vérifie tes courriels",
+    texto: "Nous avons envoyé un lien à <correo/> pour confirmer ton compte. Ouvre-le et c'est fait. (Si tu ne le vois pas, regarde dans tes courriels indésirables.)",
+  },
+  resetEnviado: {
+    titulo: "Lien envoyé",
+    texto: "Si <correo/> a un compte, un lien pour choisir un nouveau mot de passe vient d'y être envoyé. Vérifie ta boîte de réception (et tes courriels indésirables).",
+  },
+  volver: "Retour",
+  desafio: {
+    titulo: "Une dernière étape : ta vérification en deux étapes",
+    escribeRescate: "Écris un de tes codes de récupération.",
+    etiquetaRescate: "Code de récupération",
+    escribeCodigoApp: "Écris le code de ton application d'authentification.",
+    etiquetaCodigo: "Code à 6 chiffres",
+    verificando: "Vérification…",
+    verificar: "Vérifier",
+    reenviarCodigo: "Renvoie-moi le code",
+    volverNormal: "Revenir au code habituel",
+    usarRescate: "Je n'ai pas mon code : utiliser un code de récupération",
+  },
+  noInvitado: {
+    titulo: "My Idea est en bêta privée.",
+    texto: "Cette adresse courriel n'est pas encore sur la liste des invités (c'est la même liste pour se connecter avec un mot de passe ou avec Google). Si tu as reçu une invitation, demande à la personne qui te l'a envoyée de vérifier l'adresse qu'elle a inscrite.",
+    otroCorreo: "Essayer avec une autre adresse",
+  },
+  entrar: "Se connecter",
+  crearCuenta: "Créer un compte",
+  enlaceVencido: "Ce lien a expiré ou a déjà été utilisé. Demandes-en un nouveau juste en dessous.",
+  googleFallo: "Nous n'avons pas pu terminer la connexion avec Google. Réessaie, ou connecte-toi avec ton mot de passe.",
+  etiquetaCorreo: "Adresse courriel",
+  placeholderCorreo: "toi@courriel.com",
+  etiquetaContrasena: "Mot de passe",
+  placeholderContrasena: "Ton mot de passe",
+  reglasContrasena: "Au moins {{n}} caractères, une majuscule et un chiffre.",
+  reenviarConfirmacion: "Renvoie-moi le courriel de confirmation",
+  unMomento: "Un instant…",
+  crearMiCuenta: "Créer mon compte",
+  olvide: "J'ai oublié mon mot de passe",
+  separador: "ou",
+  continuarGoogle: "Continuer avec Google",
+};
+
+const ptLogin: typeof esLogin = {
+  lema: "O espaço onde suas ideias ganham forma.",
+  errores: {
+    enviarCodigo: "não conseguimos enviar o código; tente de novo",
+    conectar: "não conseguimos conectar; tente de novo",
+    conectarInternet: "não conseguimos conectar; confira sua internet e tente de novo",
+    atoro: "algo travou; tente de novo",
+    yaTieneCuenta: "Esse e-mail já tem conta. Faça login.",
+    escribeCorreo: "Digite seu e-mail acima e toque de novo.",
+  },
+  avisos: {
+    codigoEnviado: "Enviamos um código para seu e-mail.",
+    codigoNuevo: "Novo código enviado para seu e-mail.",
+    confirmacionReenviada: "Reenviamos o e-mail de confirmação. Confira sua caixa de entrada.",
+  },
+  revisaCorreo: {
+    titulo: "Confira seu e-mail",
+    texto: "Enviamos um link para <correo/> para confirmar sua conta. Abra o link e pronto, você já entra. (Se não encontrar, confira o spam.)",
+  },
+  resetEnviado: {
+    titulo: "Link enviado",
+    texto: "Se <correo/> tiver conta, chegou um link para escolher uma senha nova. Confira sua caixa de entrada (e o spam).",
+  },
+  volver: "Voltar",
+  desafio: {
+    titulo: "Mais um passo: sua verificação em duas etapas",
+    escribeRescate: "Digite um dos seus códigos de recuperação.",
+    etiquetaRescate: "Código de recuperação",
+    escribeCodigoApp: "Digite o código do seu app de autenticação.",
+    etiquetaCodigo: "Código de 6 dígitos",
+    verificando: "Verificando…",
+    verificar: "Verificar",
+    reenviarCodigo: "Enviar o código de novo",
+    volverNormal: "Voltar ao código normal",
+    usarRescate: "Não tenho meu código: usar um de recuperação",
+  },
+  noInvitado: {
+    titulo: "My Idea está em beta privado.",
+    texto: "Esse e-mail ainda não está na lista de convidados (é a mesma lista para entrar com senha ou com o Google). Se alguém convidou você, peça para essa pessoa confirmar o e-mail que cadastrou.",
+    otroCorreo: "Tentar com outro e-mail",
+  },
+  entrar: "Entrar",
+  crearCuenta: "Criar conta",
+  enlaceVencido: "Esse link já expirou ou já foi usado. Peça um novo aqui embaixo.",
+  googleFallo: "Não conseguimos concluir o acesso com o Google. Tente de novo ou entre com sua senha.",
+  etiquetaCorreo: "E-mail",
+  placeholderCorreo: "voce@email.com",
+  etiquetaContrasena: "Senha",
+  placeholderContrasena: "Sua senha",
+  reglasContrasena: "Pelo menos {{n}} caracteres, uma letra maiúscula e um número.",
+  reenviarConfirmacion: "Reenviar o e-mail de confirmação",
+  unMomento: "Um momento…",
+  crearMiCuenta: "Criar minha conta",
+  olvide: "Esqueci minha senha",
+  separador: "ou",
+  continuarGoogle: "Continuar com o Google",
+};
+
+const deLogin: typeof esLogin = {
+  lema: "Der Ort, an dem du deine Ideen ausarbeitest.",
+  errores: {
+    enviarCodigo: "wir konnten den Code nicht senden; versuch es noch einmal",
+    conectar: "wir konnten keine Verbindung herstellen; versuch es noch einmal",
+    conectarInternet: "wir konnten keine Verbindung herstellen; prüf deine Internetverbindung und versuch es noch einmal",
+    atoro: "etwas hat gehakt; versuch es noch einmal",
+    yaTieneCuenta: "Für diese E-Mail-Adresse gibt es schon ein Konto. Melde dich an.",
+    escribeCorreo: "Gib oben deine E-Mail-Adresse ein und tippe noch einmal.",
+  },
+  avisos: {
+    codigoEnviado: "Wir haben dir einen Code per E-Mail geschickt.",
+    codigoNuevo: "Neuer Code an deine E-Mail-Adresse gesendet.",
+    confirmacionReenviada: "Wir haben dir die Bestätigungs-E-Mail noch einmal geschickt. Schau in dein Postfach.",
+  },
+  revisaCorreo: {
+    titulo: "Schau in deine E-Mails",
+    texto: "Wir haben dir einen Link an <correo/> geschickt, um dein Konto zu bestätigen. Öffne ihn, und schon bist du drin. (Wenn du ihn nicht siehst, schau im Spam-Ordner nach.)",
+  },
+  resetEnviado: {
+    titulo: "Link gesendet",
+    texto: "Wenn es für <correo/> ein Konto gibt, ist dort ein Link angekommen, mit dem du ein neues Passwort wählen kannst. Schau in dein Postfach (und in den Spam-Ordner).",
+  },
+  volver: "Zurück",
+  desafio: {
+    titulo: "Noch ein Schritt: deine Bestätigung in zwei Schritten",
+    escribeRescate: "Gib einen deiner Wiederherstellungscodes ein.",
+    etiquetaRescate: "Wiederherstellungscode",
+    escribeCodigoApp: "Gib den Code aus deiner Authentifizierungs-App ein.",
+    etiquetaCodigo: "6-stelliger Code",
+    verificando: "Wird geprüft…",
+    verificar: "Bestätigen",
+    reenviarCodigo: "Code noch einmal senden",
+    volverNormal: "Zurück zum normalen Code",
+    usarRescate: "Ich habe meinen Code nicht: Wiederherstellungscode verwenden",
+  },
+  noInvitado: {
+    titulo: "My Idea ist in einer privaten Beta.",
+    texto: "Diese E-Mail-Adresse steht noch nicht auf der Einladungsliste (es ist dieselbe Liste für die Anmeldung mit Passwort oder mit Google). Wenn dich jemand eingeladen hat, bitte die Person, die eingetragene Adresse zu prüfen.",
+    otroCorreo: "Andere E-Mail-Adresse versuchen",
+  },
+  entrar: "Anmelden",
+  crearCuenta: "Konto erstellen",
+  enlaceVencido: "Dieser Link ist abgelaufen oder wurde schon benutzt. Fordere hier unten einen neuen an.",
+  googleFallo: "Die Anmeldung mit Google hat nicht geklappt. Versuch es noch einmal oder melde dich mit deinem Passwort an.",
+  etiquetaCorreo: "E-Mail-Adresse",
+  placeholderCorreo: "du@beispiel.de",
+  etiquetaContrasena: "Passwort",
+  placeholderContrasena: "Dein Passwort",
+  reglasContrasena: "Mindestens {{n}} Zeichen, ein Großbuchstabe und eine Zahl.",
+  reenviarConfirmacion: "Bestätigungs-E-Mail noch einmal senden",
+  unMomento: "Einen Moment…",
+  crearMiCuenta: "Mein Konto erstellen",
+  olvide: "Passwort vergessen",
+  separador: "oder",
+  continuarGoogle: "Weiter mit Google",
+};
+
+const itLogin: typeof esLogin = {
+  lema: "Lo spazio dove le tue idee prendono forma.",
+  errores: {
+    enviarCodigo: "non siamo riusciti a inviare il codice; riprova",
+    conectar: "non siamo riusciti a connetterci; riprova",
+    conectarInternet: "non siamo riusciti a connetterci; controlla la connessione e riprova",
+    atoro: "qualcosa si è inceppato; riprova",
+    yaTieneCuenta: "Questa email ha già un account. Accedi.",
+    escribeCorreo: "Scrivi la tua email qui sopra e tocca di nuovo.",
+  },
+  avisos: {
+    codigoEnviado: "Ti abbiamo inviato un codice via email.",
+    codigoNuevo: "Nuovo codice inviato alla tua email.",
+    confirmacionReenviada: "Ti abbiamo rimandato l'email di conferma. Controlla la posta in arrivo.",
+  },
+  revisaCorreo: {
+    titulo: "Controlla la tua email",
+    texto: "Ti abbiamo inviato un link a <correo/> per confermare il tuo account. Aprilo e sei dentro. (Se non lo vedi, controlla lo spam.)",
+  },
+  resetEnviado: {
+    titulo: "Link inviato",
+    texto: "Se <correo/> ha un account, riceverà un link per scegliere una nuova password. Controlla la posta in arrivo (e lo spam).",
+  },
+  volver: "Indietro",
+  desafio: {
+    titulo: "Ancora un passo: la tua verifica in due passaggi",
+    escribeRescate: "Scrivi uno dei tuoi codici di recupero.",
+    etiquetaRescate: "Codice di recupero",
+    escribeCodigoApp: "Scrivi il codice della tua app di autenticazione.",
+    etiquetaCodigo: "Codice a 6 cifre",
+    verificando: "Verifica in corso…",
+    verificar: "Verifica",
+    reenviarCodigo: "Rimandami il codice",
+    volverNormal: "Torna al codice normale",
+    usarRescate: "Non ho il mio codice: usa un codice di recupero",
+  },
+  noInvitado: {
+    titulo: "My Idea è in beta privata.",
+    texto: "Questa email non è ancora nella lista degli invitati (è la stessa lista per entrare con la password o con Google). Se hai ricevuto un invito, chiedi a chi te l'ha mandato di controllare l'email che ha registrato.",
+    otroCorreo: "Prova con un'altra email",
+  },
+  entrar: "Accedi",
+  crearCuenta: "Crea un account",
+  enlaceVencido: "Questo link è scaduto o è già stato usato. Chiedine uno nuovo qui sotto.",
+  googleFallo: "Non siamo riusciti a completare l'accesso con Google. Riprova, oppure accedi con la tua password.",
+  etiquetaCorreo: "Email",
+  placeholderCorreo: "tu@email.com",
+  etiquetaContrasena: "Password",
+  placeholderContrasena: "La tua password",
+  reglasContrasena: "Almeno {{n}} caratteri, una maiuscola e un numero.",
+  reenviarConfirmacion: "Rimandami l'email di conferma",
+  unMomento: "Un momento…",
+  crearMiCuenta: "Crea il mio account",
+  olvide: "Ho dimenticato la password",
+  separador: "o",
+  continuarGoogle: "Continua con Google",
+};
+
+const jaLogin: typeof esLogin = {
+  lema: "アイデアを形にしていく場所。",
+  errores: {
+    enviarCodigo: "コードを送信できませんでした。もう一度お試しください",
+    conectar: "接続できませんでした。もう一度お試しください",
+    conectarInternet: "接続できませんでした。インターネット接続を確認して、もう一度お試しください",
+    atoro: "うまく処理できませんでした。もう一度お試しください",
+    yaTieneCuenta: "このメールアドレスはすでに登録されています。ログインしてください。",
+    escribeCorreo: "上にメールアドレスを入力してから、もう一度タップしてください。",
+  },
+  avisos: {
+    codigoEnviado: "メールにコードを送りました。",
+    codigoNuevo: "新しいコードをメールに送りました。",
+    confirmacionReenviada: "確認メールを再送しました。受信トレイを確認してください。",
+  },
+  revisaCorreo: {
+    titulo: "メールを確認してください",
+    texto: "アカウントを確認するためのリンクを<correo/>に送りました。リンクを開けば、すぐに使い始められます。（見つからない場合は、迷惑メールフォルダを確認してください。）",
+  },
+  resetEnviado: {
+    titulo: "リンクを送信しました",
+    texto: "<correo/>のアカウントがある場合、新しいパスワードを設定するためのリンクが届いています。受信トレイ（と迷惑メールフォルダ）を確認してください。",
+  },
+  volver: "戻る",
+  desafio: {
+    titulo: "あと1ステップ：2段階認証",
+    escribeRescate: "リカバリーコードを1つ入力してください。",
+    etiquetaRescate: "リカバリーコード",
+    escribeCodigoApp: "認証アプリに表示されたコードを入力してください。",
+    etiquetaCodigo: "6桁のコード",
+    verificando: "確認しています…",
+    verificar: "確認する",
+    reenviarCodigo: "コードを再送信する",
+    volverNormal: "通常のコードに戻る",
+    usarRescate: "コードが手元にない：リカバリーコードを使う",
+  },
+  noInvitado: {
+    titulo: "My Ideaは現在、招待制のベータ版です。",
+    texto: "このメールアドレスは、まだ招待リストに入っていません（パスワードでのログインもGoogleでのログインも、同じリストです）。招待してくれた方がいる場合は、登録したメールアドレスを確認してもらってください。",
+    otroCorreo: "別のメールアドレスで試す",
+  },
+  entrar: "ログイン",
+  crearCuenta: "アカウント作成",
+  enlaceVencido: "このリンクは有効期限が切れているか、すでに使われています。下から新しいリンクをリクエストしてください。",
+  googleFallo: "Googleでのログインを完了できませんでした。もう一度お試しいただくか、パスワードでログインしてください。",
+  etiquetaCorreo: "メールアドレス",
+  placeholderCorreo: "you@example.com",
+  etiquetaContrasena: "パスワード",
+  placeholderContrasena: "パスワード",
+  reglasContrasena: "{{n}}文字以上で、英大文字と数字をそれぞれ1つ以上含めてください。",
+  reenviarConfirmacion: "確認メールを再送する",
+  unMomento: "少々お待ちください…",
+  crearMiCuenta: "アカウントを作成する",
+  olvide: "パスワードを忘れた場合",
+  separador: "または",
+  continuarGoogle: "Googleで続ける",
+};
+
+const zhLogin: typeof esLogin = {
+  lema: "打磨你每一个想法的地方。",
+  errores: {
+    enviarCodigo: "没能发送验证码，请再试一次",
+    conectar: "没能连接上，请再试一次",
+    conectarInternet: "没能连接上，请检查网络后再试一次",
+    atoro: "出了点状况，请再试一次",
+    yaTieneCuenta: "这个邮箱已经注册过了。请直接登录。",
+    escribeCorreo: "请先在上方填写你的邮箱，再点一次。",
+  },
+  avisos: {
+    codigoEnviado: "验证码已发送到你的邮箱。",
+    codigoNuevo: "新的验证码已发送到你的邮箱。",
+    confirmacionReenviada: "确认邮件已重新发送，请查看收件箱。",
+  },
+  revisaCorreo: {
+    titulo: "请查收邮件",
+    texto: "我们已向 <correo/> 发送了一个链接，用来确认你的账户。打开它就能进入。（如果没看到，请查看垃圾邮件。）",
+  },
+  resetEnviado: {
+    titulo: "链接已发送",
+    texto: "如果 <correo/> 已注册，它会收到一个设置新密码的链接。请查看收件箱（以及垃圾邮件）。",
+  },
+  volver: "返回",
+  desafio: {
+    titulo: "还差一步：两步验证",
+    escribeRescate: "请输入你的任意一个恢复码。",
+    etiquetaRescate: "恢复码",
+    escribeCodigoApp: "请输入身份验证器应用中的验证码。",
+    etiquetaCodigo: "6 位验证码",
+    verificando: "正在验证…",
+    verificar: "验证",
+    reenviarCodigo: "重新发送验证码",
+    volverNormal: "改回普通验证码",
+    usarRescate: "我拿不到验证码：使用恢复码",
+  },
+  noInvitado: {
+    titulo: "My Idea 目前处于内测阶段。",
+    texto: "这个邮箱还不在邀请名单上（用密码登录和用 Google 登录是同一份名单）。如果有人邀请了你，请让对方确认一下登记的邮箱。",
+    otroCorreo: "换个邮箱试试",
+  },
+  entrar: "登录",
+  crearCuenta: "注册",
+  enlaceVencido: "这个链接已过期或已被使用。请在下方重新申请一个。",
+  googleFallo: "没能通过 Google 完成登录。请再试一次，或用密码登录。",
+  etiquetaCorreo: "电子邮箱",
+  placeholderCorreo: "name@example.com",
+  etiquetaContrasena: "密码",
+  placeholderContrasena: "你的密码",
+  reglasContrasena: "至少 {{n}} 个字符，包含一个大写字母和一个数字。",
+  reenviarConfirmacion: "重新发送确认邮件",
+  unMomento: "请稍候…",
+  crearMiCuenta: "创建我的账户",
+  olvide: "忘记密码",
+  separador: "或",
+  continuarGoogle: "使用 Google 继续",
+};
+
+const koLogin: typeof esLogin = {
+  lema: "아이디어를 다듬어 가는 공간이에요.",
+  errores: {
+    enviarCodigo: "코드를 보내지 못했어요. 다시 시도해 주세요",
+    conectar: "연결하지 못했어요. 다시 시도해 주세요",
+    conectarInternet: "연결하지 못했어요. 인터넷 연결을 확인하고 다시 시도해 주세요",
+    atoro: "문제가 생겼어요. 다시 시도해 주세요",
+    yaTieneCuenta: "이미 가입된 이메일이에요. 로그인해 주세요.",
+    escribeCorreo: "위에 이메일을 입력하고 다시 눌러 주세요.",
+  },
+  avisos: {
+    codigoEnviado: "이메일로 코드를 보냈어요.",
+    codigoNuevo: "새 코드를 이메일로 보냈어요.",
+    confirmacionReenviada: "확인 메일을 다시 보냈어요. 받은편지함을 확인해 주세요.",
+  },
+  revisaCorreo: {
+    titulo: "이메일을 확인해 주세요",
+    texto: "<correo/> 주소로 계정 확인 링크를 보냈어요. 링크를 열면 바로 들어갈 수 있어요. (보이지 않으면 스팸함을 확인해 주세요.)",
+  },
+  resetEnviado: {
+    titulo: "링크를 보냈어요",
+    texto: "<correo/> 주소로 가입된 계정이 있다면, 새 비밀번호를 정할 수 있는 링크가 도착했을 거예요. 받은편지함과 스팸함을 확인해 주세요.",
+  },
+  volver: "돌아가기",
+  desafio: {
+    titulo: "한 단계만 더: 2단계 인증",
+    escribeRescate: "복구 코드 중 하나를 입력해 주세요.",
+    etiquetaRescate: "복구 코드",
+    escribeCodigoApp: "인증 앱에 표시된 코드를 입력해 주세요.",
+    etiquetaCodigo: "6자리 코드",
+    verificando: "확인 중…",
+    verificar: "확인",
+    reenviarCodigo: "코드 다시 받기",
+    volverNormal: "일반 코드로 돌아가기",
+    usarRescate: "코드가 없어요: 복구 코드 사용하기",
+  },
+  noInvitado: {
+    titulo: "My Idea는 지금 비공개 베타 중이에요.",
+    texto: "이 이메일은 아직 초대 명단에 없어요(비밀번호로 들어오든 Google로 들어오든 같은 명단이에요). 초대를 받았다면, 초대한 분께 등록한 이메일을 다시 확인해 달라고 부탁해 주세요.",
+    otroCorreo: "다른 이메일로 해 보기",
+  },
+  entrar: "로그인",
+  crearCuenta: "계정 만들기",
+  enlaceVencido: "이 링크는 만료되었거나 이미 사용되었어요. 아래에서 새 링크를 요청해 주세요.",
+  googleFallo: "Google 로그인을 마치지 못했어요. 다시 시도하거나 비밀번호로 로그인해 주세요.",
+  etiquetaCorreo: "이메일",
+  placeholderCorreo: "name@email.com",
+  etiquetaContrasena: "비밀번호",
+  placeholderContrasena: "비밀번호 입력",
+  reglasContrasena: "{{n}}자 이상, 대문자와 숫자를 하나 이상씩 넣어 주세요.",
+  reenviarConfirmacion: "확인 메일 다시 받기",
+  unMomento: "잠시만요…",
+  crearMiCuenta: "내 계정 만들기",
+  olvide: "비밀번호를 잊었어요",
+  separador: "또는",
+  continuarGoogle: "Google로 계속하기",
+};
+
+const arLogin: typeof esLogin = {
+  lema: "المساحة التي تعملون فيها على أفكاركم.",
+  errores: {
+    enviarCodigo: "تعذّر إرسال الرمز؛ حاولوا مرة أخرى",
+    conectar: "تعذّر الاتصال؛ حاولوا مرة أخرى",
+    conectarInternet: "تعذّر الاتصال؛ تحقّقوا من الإنترنت وحاولوا مرة أخرى",
+    atoro: "تعثّر شيء ما؛ حاولوا مرة أخرى",
+    yaTieneCuenta: "لهذا البريد حساب بالفعل. سجّلوا الدخول.",
+    escribeCorreo: "اكتبوا بريدكم الإلكتروني في الأعلى ثم اضغطوا مرة أخرى.",
+  },
+  avisos: {
+    codigoEnviado: "أرسلنا رمزًا إلى بريدكم الإلكتروني.",
+    codigoNuevo: "أُرسل رمز جديد إلى بريدكم الإلكتروني.",
+    confirmacionReenviada: "أعدنا إرسال رسالة التأكيد. تفقّدوا صندوق الوارد.",
+  },
+  revisaCorreo: {
+    titulo: "تفقّدوا بريدكم",
+    texto: "أرسلنا رابطًا إلى <correo/> لتأكيد حسابكم. افتحوه وستدخلون مباشرة. (إن لم تجدوه، فتفقّدوا مجلد الرسائل غير المرغوب فيها.)",
+  },
+  resetEnviado: {
+    titulo: "تم إرسال الرابط",
+    texto: "إن كان للعنوان <correo/> حساب، فقد وصله رابط لاختيار كلمة مرور جديدة. تفقّدوا صندوق الوارد (ومجلد الرسائل غير المرغوب فيها).",
+  },
+  volver: "رجوع",
+  desafio: {
+    titulo: "خطوة أخرى: التحقق بخطوتين",
+    escribeRescate: "اكتبوا أحد رموز الاسترداد الخاصة بكم.",
+    etiquetaRescate: "رمز الاسترداد",
+    escribeCodigoApp: "اكتبوا الرمز الظاهر في تطبيق المصادقة لديكم.",
+    etiquetaCodigo: "رمز من 6 أرقام",
+    verificando: "جارٍ التحقق…",
+    verificar: "التحقق",
+    reenviarCodigo: "إعادة إرسال الرمز إليّ",
+    volverNormal: "العودة إلى الرمز العادي",
+    usarRescate: "الرمز ليس معي: استخدام رمز استرداد",
+  },
+  noInvitado: {
+    titulo: "My Idea في مرحلة تجريبية خاصة.",
+    texto: "هذا البريد ليس على قائمة المدعوّين بعد (وهي القائمة نفسها للدخول بكلمة مرور أو عبر Google). إن كان أحدٌ قد دعاكم، فاطلبوا منه التأكد من البريد الذي سجّله.",
+    otroCorreo: "تجربة بريد آخر",
+  },
+  entrar: "دخول",
+  crearCuenta: "إنشاء حساب",
+  enlaceVencido: "انتهت صلاحية هذا الرابط أو سبق استخدامه. اطلبوا رابطًا جديدًا من هنا في الأسفل.",
+  googleFallo: "تعذّر إكمال الدخول عبر Google. حاولوا مرة أخرى، أو ادخلوا بكلمة المرور.",
+  etiquetaCorreo: "البريد الإلكتروني",
+  placeholderCorreo: "you@email.com",
+  etiquetaContrasena: "كلمة المرور",
+  placeholderContrasena: "كلمة المرور الخاصة بكم",
+  reglasContrasena: "الحد الأدنى لعدد الأحرف: {{n}}، مع حرف لاتيني كبير ورقم على الأقل.",
+  reenviarConfirmacion: "إعادة إرسال رسالة التأكيد إليّ",
+  unMomento: "لحظة من فضلكم…",
+  crearMiCuenta: "إنشاء حسابي",
+  olvide: "نسيت كلمة المرور",
+  separador: "أو",
+  continuarGoogle: "المتابعة باستخدام Google",
+};
+
+const hiLogin: typeof esLogin = {
+  lema: "वह जगह जहाँ आपके विचारों पर काम होता है।",
+  errores: {
+    enviarCodigo: "हम कोड नहीं भेज पाए; फिर से कोशिश करें",
+    conectar: "हम कनेक्ट नहीं कर पाए; फिर से कोशिश करें",
+    conectarInternet: "हम कनेक्ट नहीं कर पाए; अपना इंटरनेट जाँचें और फिर से कोशिश करें",
+    atoro: "कुछ अटक गया; फिर से कोशिश करें",
+    yaTieneCuenta: "इस ईमेल से खाता पहले से बना है। लॉग इन करें।",
+    escribeCorreo: "ऊपर अपना ईमेल लिखें और फिर से टैप करें।",
+  },
+  avisos: {
+    codigoEnviado: "हमने आपके ईमेल पर एक कोड भेजा है।",
+    codigoNuevo: "आपके ईमेल पर नया कोड भेज दिया गया है।",
+    confirmacionReenviada: "हमने पुष्टि वाला ईमेल फिर से भेज दिया है। अपना इनबॉक्स देखें।",
+  },
+  revisaCorreo: {
+    titulo: "अपना ईमेल देखें",
+    texto: "आपके खाते की पुष्टि के लिए हमने <correo/> पर एक लिंक भेजा है। उसे खोलें, और आपका लॉग इन हो जाएगा। (अगर न दिखे, तो स्पैम फ़ोल्डर देखें।)",
+  },
+  resetEnviado: {
+    titulo: "लिंक भेज दिया गया",
+    texto: "अगर <correo/> से कोई खाता बना है, तो उस पर नया पासवर्ड चुनने का लिंक पहुँच गया है। अपना इनबॉक्स (और स्पैम) देखें।",
+  },
+  volver: "वापस",
+  desafio: {
+    titulo: "बस एक कदम और: आपका दो-चरणीय सत्यापन",
+    escribeRescate: "अपना कोई एक रिकवरी कोड लिखें।",
+    etiquetaRescate: "रिकवरी कोड",
+    escribeCodigoApp: "अपने ऑथेंटिकेटर ऐप में दिख रहा कोड लिखें।",
+    etiquetaCodigo: "6 अंकों का कोड",
+    verificando: "जाँच हो रही है…",
+    verificar: "सत्यापित करें",
+    reenviarCodigo: "कोड फिर से भेजें",
+    volverNormal: "सामान्य कोड पर लौटें",
+    usarRescate: "मेरे पास कोड नहीं है: रिकवरी कोड इस्तेमाल करें",
+  },
+  noInvitado: {
+    titulo: "My Idea अभी प्राइवेट बीटा में है।",
+    texto: "यह ईमेल अभी आमंत्रित लोगों की सूची में नहीं है (पासवर्ड और Google, दोनों से लॉग इन के लिए यही सूची है)। अगर किसी ने आपको बुलाया है, तो उनसे पक्का कर लें कि उन्होंने कौन-सा ईमेल दर्ज किया था।",
+    otroCorreo: "दूसरे ईमेल से कोशिश करें",
+  },
+  entrar: "लॉग इन करें",
+  crearCuenta: "खाता बनाएँ",
+  enlaceVencido: "यह लिंक पुराना हो चुका है या पहले ही इस्तेमाल हो चुका है। नीचे से नया लिंक मँगवाएँ।",
+  googleFallo: "Google से लॉग इन पूरा नहीं हो पाया। फिर से कोशिश करें, या अपने पासवर्ड से लॉग इन करें।",
+  etiquetaCorreo: "ईमेल",
+  placeholderCorreo: "aapka@email.com",
+  etiquetaContrasena: "पासवर्ड",
+  placeholderContrasena: "आपका पासवर्ड",
+  reglasContrasena: "कम से कम {{n}} अक्षर, एक बड़ा (कैपिटल) अक्षर और एक अंक।",
+  reenviarConfirmacion: "पुष्टि वाला ईमेल फिर से भेजें",
+  unMomento: "एक पल…",
+  crearMiCuenta: "मेरा खाता बनाएँ",
+  olvide: "पासवर्ड याद नहीं?",
+  separador: "या",
+  continuarGoogle: "Google के साथ जारी रखें",
+};
+
+export const LOGIN: PorIdioma<typeof esLogin> = { es: esLogin, en: enLogin, fr: frLogin, pt: ptLogin, de: deLogin, it: itLogin, ja: jaLogin, zh: zhLogin, ko: koLogin, ar: arLogin, hi: hiLogin };
 
 const esClaveNueva = {
   noCoinciden: "Las dos contraseñas no coinciden.",
@@ -153,7 +675,151 @@ const enClaveNueva: typeof esClaveNueva = {
   guardar: "Save password",
 };
 
-export const CLAVE_NUEVA: PorIdioma<typeof esClaveNueva> = { es: esClaveNueva, en: enClaveNueva };
+const frClaveNueva: typeof esClaveNueva = {
+  noCoinciden: "Les deux mots de passe ne correspondent pas.",
+  enlaceVencido: "Ce lien a expiré ou a déjà été utilisé. Demandes-en un nouveau depuis « J'ai oublié mon mot de passe ».",
+  noActualizo: "Nous n'avons pas pu mettre à jour ton mot de passe; réessaie.",
+  conectarInternet: "nous n'avons pas pu nous connecter; vérifie ta connexion Internet et réessaie",
+  lema: "Choisis ton nouveau mot de passe.",
+  actualizada: "Mot de passe mis à jour. Connexion en cours…",
+  etiquetaNueva: "Nouveau mot de passe",
+  placeholderNueva: "Nouveau mot de passe",
+  etiquetaRepetir: "Confirmer le mot de passe",
+  placeholderRepetir: "Répète ton mot de passe",
+  reglas: "Au moins {{n}} caractères, une majuscule et un chiffre.",
+  guardando: "Enregistrement…",
+  guardar: "Enregistrer le mot de passe",
+};
+
+const ptClaveNueva: typeof esClaveNueva = {
+  noCoinciden: "As duas senhas não coincidem.",
+  enlaceVencido: "Esse link já expirou ou já foi usado. Peça um novo em 'Esqueci minha senha'.",
+  noActualizo: "Não conseguimos atualizar sua senha; tente de novo.",
+  conectarInternet: "não conseguimos conectar; confira sua internet e tente de novo",
+  lema: "Escolha sua nova senha.",
+  actualizada: "Senha atualizada. Entrando…",
+  etiquetaNueva: "Nova senha",
+  placeholderNueva: "Nova senha",
+  etiquetaRepetir: "Repetir senha",
+  placeholderRepetir: "Repita sua senha",
+  reglas: "Pelo menos {{n}} caracteres, uma letra maiúscula e um número.",
+  guardando: "Salvando…",
+  guardar: "Salvar senha",
+};
+
+const deClaveNueva: typeof esClaveNueva = {
+  noCoinciden: "Die beiden Passwörter stimmen nicht überein.",
+  enlaceVencido: "Dieser Link ist abgelaufen oder wurde schon benutzt. Fordere über „Passwort vergessen“ einen neuen an.",
+  noActualizo: "Wir konnten dein Passwort nicht ändern; versuch es noch einmal.",
+  conectarInternet: "wir konnten keine Verbindung herstellen; prüf deine Internetverbindung und versuch es noch einmal",
+  lema: "Wähle dein neues Passwort.",
+  actualizada: "Passwort geändert. Du wirst angemeldet…",
+  etiquetaNueva: "Neues Passwort",
+  placeholderNueva: "Neues Passwort",
+  etiquetaRepetir: "Passwort wiederholen",
+  placeholderRepetir: "Wiederhole dein Passwort",
+  reglas: "Mindestens {{n}} Zeichen, ein Großbuchstabe und eine Zahl.",
+  guardando: "Wird gespeichert…",
+  guardar: "Passwort speichern",
+};
+
+const itClaveNueva: typeof esClaveNueva = {
+  noCoinciden: "Le due password non coincidono.",
+  enlaceVencido: "Questo link è scaduto o è già stato usato. Chiedine uno nuovo da 'Ho dimenticato la password'.",
+  noActualizo: "Non siamo riusciti ad aggiornare la tua password; riprova.",
+  conectarInternet: "non siamo riusciti a connetterci; controlla la connessione e riprova",
+  lema: "Scegli la tua nuova password.",
+  actualizada: "Password aggiornata. Accesso in corso…",
+  etiquetaNueva: "Nuova password",
+  placeholderNueva: "Nuova password",
+  etiquetaRepetir: "Ripeti la password",
+  placeholderRepetir: "Ripeti la tua password",
+  reglas: "Almeno {{n}} caratteri, una maiuscola e un numero.",
+  guardando: "Salvataggio…",
+  guardar: "Salva la password",
+};
+
+const jaClaveNueva: typeof esClaveNueva = {
+  noCoinciden: "2つのパスワードが一致しません。",
+  enlaceVencido: "このリンクは有効期限が切れているか、すでに使われています。「パスワードを忘れた場合」から新しいリンクをリクエストしてください。",
+  noActualizo: "パスワードを更新できませんでした。もう一度お試しください。",
+  conectarInternet: "接続できませんでした。インターネット接続を確認して、もう一度お試しください",
+  lema: "新しいパスワードを決めてください。",
+  actualizada: "パスワードを更新しました。ログインしています…",
+  etiquetaNueva: "新しいパスワード",
+  placeholderNueva: "新しいパスワード",
+  etiquetaRepetir: "パスワード（確認）",
+  placeholderRepetir: "もう一度入力してください",
+  reglas: "{{n}}文字以上で、英大文字と数字をそれぞれ1つ以上含めてください。",
+  guardando: "保存しています…",
+  guardar: "パスワードを保存",
+};
+
+const zhClaveNueva: typeof esClaveNueva = {
+  noCoinciden: "两次输入的密码不一致。",
+  enlaceVencido: "这个链接已过期或已被使用。请通过“忘记密码”重新申请一个。",
+  noActualizo: "没能更新你的密码，请再试一次。",
+  conectarInternet: "没能连接上，请检查网络后再试一次",
+  lema: "设置你的新密码。",
+  actualizada: "密码已更新。正在登录…",
+  etiquetaNueva: "新密码",
+  placeholderNueva: "新密码",
+  etiquetaRepetir: "确认密码",
+  placeholderRepetir: "再输入一次密码",
+  reglas: "至少 {{n}} 个字符，包含一个大写字母和一个数字。",
+  guardando: "正在保存…",
+  guardar: "保存密码",
+};
+
+const koClaveNueva: typeof esClaveNueva = {
+  noCoinciden: "두 비밀번호가 서로 달라요.",
+  enlaceVencido: "이 링크는 만료되었거나 이미 사용되었어요. ‘비밀번호를 잊었어요’에서 새 링크를 요청해 주세요.",
+  noActualizo: "비밀번호를 바꾸지 못했어요. 다시 시도해 주세요.",
+  conectarInternet: "연결하지 못했어요. 인터넷 연결을 확인하고 다시 시도해 주세요",
+  lema: "새 비밀번호를 정해 주세요.",
+  actualizada: "비밀번호를 바꿨어요. 들어가는 중…",
+  etiquetaNueva: "새 비밀번호",
+  placeholderNueva: "새 비밀번호",
+  etiquetaRepetir: "비밀번호 확인",
+  placeholderRepetir: "비밀번호를 한 번 더 입력해 주세요",
+  reglas: "{{n}}자 이상, 대문자와 숫자를 하나 이상씩 넣어 주세요.",
+  guardando: "저장 중…",
+  guardar: "비밀번호 저장",
+};
+
+const arClaveNueva: typeof esClaveNueva = {
+  noCoinciden: "كلمتا المرور غير متطابقتين.",
+  enlaceVencido: "انتهت صلاحية هذا الرابط أو سبق استخدامه. اطلبوا رابطًا جديدًا من «نسيت كلمة المرور».",
+  noActualizo: "لم نتمكن من تحديث كلمة المرور؛ حاولوا مرة أخرى.",
+  conectarInternet: "تعذّر الاتصال؛ تحقّقوا من الإنترنت وحاولوا مرة أخرى",
+  lema: "اختاروا كلمة المرور الجديدة.",
+  actualizada: "تم تحديث كلمة المرور. جارٍ الدخول…",
+  etiquetaNueva: "كلمة المرور الجديدة",
+  placeholderNueva: "كلمة المرور الجديدة",
+  etiquetaRepetir: "تأكيد كلمة المرور",
+  placeholderRepetir: "أعيدوا كتابة كلمة المرور",
+  reglas: "الحد الأدنى لعدد الأحرف: {{n}}، مع حرف لاتيني كبير ورقم على الأقل.",
+  guardando: "جارٍ الحفظ…",
+  guardar: "حفظ كلمة المرور",
+};
+
+const hiClaveNueva: typeof esClaveNueva = {
+  noCoinciden: "दोनों पासवर्ड एक जैसे नहीं हैं।",
+  enlaceVencido: "यह लिंक पुराना हो चुका है या पहले ही इस्तेमाल हो चुका है। 'पासवर्ड याद नहीं?' से नया लिंक मँगवाएँ।",
+  noActualizo: "हम आपका पासवर्ड अपडेट नहीं कर पाए; फिर से कोशिश करें।",
+  conectarInternet: "हम कनेक्ट नहीं कर पाए; अपना इंटरनेट जाँचें और फिर से कोशिश करें",
+  lema: "अपना नया पासवर्ड चुनें।",
+  actualizada: "पासवर्ड अपडेट हो गया। लॉग इन हो रहा है…",
+  etiquetaNueva: "नया पासवर्ड",
+  placeholderNueva: "नया पासवर्ड",
+  etiquetaRepetir: "पासवर्ड दोबारा लिखें",
+  placeholderRepetir: "अपना पासवर्ड दोबारा लिखें",
+  reglas: "कम से कम {{n}} अक्षर, एक बड़ा (कैपिटल) अक्षर और एक अंक।",
+  guardando: "सेव हो रहा है…",
+  guardar: "पासवर्ड सेव करें",
+};
+
+export const CLAVE_NUEVA: PorIdioma<typeof esClaveNueva> = { es: esClaveNueva, en: enClaveNueva, fr: frClaveNueva, pt: ptClaveNueva, de: deClaveNueva, it: itClaveNueva, ja: jaClaveNueva, zh: zhClaveNueva, ko: koClaveNueva, ar: arClaveNueva, hi: hiClaveNueva };
 
 /** lib/password.ts: el problema de la contraseña en palabras de persona. */
 const esReglasClave = {
@@ -168,4 +834,58 @@ const enReglasClave: typeof esReglasClave = {
   sinNumero: "Your password needs at least one number.",
 };
 
-export const REGLAS_CLAVE: PorIdioma<typeof esReglasClave> = { es: esReglasClave, en: enReglasClave };
+const frReglasClave: typeof esReglasClave = {
+  corta: "Ton mot de passe doit contenir au moins {{n}} caractères.",
+  sinMayuscula: "Ton mot de passe doit contenir au moins une lettre majuscule.",
+  sinNumero: "Ton mot de passe doit contenir au moins un chiffre.",
+};
+
+const ptReglasClave: typeof esReglasClave = {
+  corta: "Sua senha precisa ter pelo menos {{n}} caracteres.",
+  sinMayuscula: "Sua senha precisa ter pelo menos uma letra maiúscula.",
+  sinNumero: "Sua senha precisa ter pelo menos um número.",
+};
+
+const deReglasClave: typeof esReglasClave = {
+  corta: "Dein Passwort braucht mindestens {{n}} Zeichen.",
+  sinMayuscula: "Dein Passwort braucht mindestens einen Großbuchstaben.",
+  sinNumero: "Dein Passwort braucht mindestens eine Zahl.",
+};
+
+const itReglasClave: typeof esReglasClave = {
+  corta: "La tua password deve avere almeno {{n}} caratteri.",
+  sinMayuscula: "La tua password deve avere almeno una lettera maiuscola.",
+  sinNumero: "La tua password deve avere almeno un numero.",
+};
+
+const jaReglasClave: typeof esReglasClave = {
+  corta: "パスワードは{{n}}文字以上にしてください。",
+  sinMayuscula: "パスワードには英大文字を1つ以上含めてください。",
+  sinNumero: "パスワードには数字を1つ以上含めてください。",
+};
+
+const zhReglasClave: typeof esReglasClave = {
+  corta: "你的密码至少需要 {{n}} 个字符。",
+  sinMayuscula: "你的密码至少需要一个大写字母。",
+  sinNumero: "你的密码至少需要一个数字。",
+};
+
+const koReglasClave: typeof esReglasClave = {
+  corta: "비밀번호는 {{n}}자 이상이어야 해요.",
+  sinMayuscula: "비밀번호에 대문자를 하나 이상 넣어 주세요.",
+  sinNumero: "비밀번호에 숫자를 하나 이상 넣어 주세요.",
+};
+
+const arReglasClave: typeof esReglasClave = {
+  corta: "يجب ألّا يقل عدد أحرف كلمة المرور عن {{n}}.",
+  sinMayuscula: "تحتاج كلمة المرور إلى حرف لاتيني كبير واحد على الأقل.",
+  sinNumero: "تحتاج كلمة المرور إلى رقم واحد على الأقل.",
+};
+
+const hiReglasClave: typeof esReglasClave = {
+  corta: "आपके पासवर्ड में कम से कम {{n}} अक्षर होने चाहिए।",
+  sinMayuscula: "आपके पासवर्ड में कम से कम एक बड़ा (कैपिटल) अक्षर होना चाहिए।",
+  sinNumero: "आपके पासवर्ड में कम से कम एक अंक होना चाहिए।",
+};
+
+export const REGLAS_CLAVE: PorIdioma<typeof esReglasClave> = { es: esReglasClave, en: enReglasClave, fr: frReglasClave, pt: ptReglasClave, de: deReglasClave, it: itReglasClave, ja: jaReglasClave, zh: zhReglasClave, ko: koReglasClave, ar: arReglasClave, hi: hiReglasClave };

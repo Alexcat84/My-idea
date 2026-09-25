@@ -37,4 +37,139 @@ const en: typeof es = {
   noCubre: "## What this plan doesn't cover yet",
 };
 
-export const MOTOR_PLAN: PorIdioma<typeof es> = { es, en };
+const fr: typeof es = {
+  avisoVersionBasica: "Voici une version de base de ton plan : je l'ai préparée sans la rédaction par IA, parce que cette conversation a atteint sa limite de travail. Rien ne t'a été facturé. Tu peux le régénérer au complet à partir de ce que tu m'as déjà raconté : tu ne paies que si l'IA le livre.",
+  offline: {
+    titulo: "# Ton plan d'action",
+    contexto: "## Contexte",
+    puntoDePartida: "Point de départ : {{texto}}",
+    loQueSabemos: "Ce que nous savons de ton idée : {{perfil}}",
+    etapa: "## Étape {{n}} : {{concepto}}",
+    puntoDeControl: "Point de contrôle : {{entregable}}",
+  },
+  etiquetaCompleto: "Plan complet",
+  etiquetaInicial: "Plan initial",
+  noCubre: "## Ce que ce plan ne couvre pas encore",
+};
+
+const pt: typeof es = {
+  avisoVersionBasica: "Esta é uma versão básica do seu plano: eu a montei sem a redação com IA porque esta conversa chegou ao limite de trabalho. Nada foi cobrado. Você pode gerá-lo de novo completo a partir do que já me contou: só há cobrança se a IA entregar.",
+  offline: {
+    titulo: "# Seu plano de ação",
+    contexto: "## Contexto",
+    puntoDePartida: "Ponto de partida: {{texto}}",
+    loQueSabemos: "O que sabemos da sua ideia: {{perfil}}",
+    etapa: "## Etapa {{n}}: {{concepto}}",
+    puntoDeControl: "Ponto de controle: {{entregable}}",
+  },
+  etiquetaCompleto: "Plano completo",
+  etiquetaInicial: "Plano inicial",
+  noCubre: "## O que este plano ainda não cobre",
+};
+
+const de: typeof es = {
+  avisoVersionBasica: "Das ist eine einfache Version deines Plans: Ich habe sie ohne die Ausarbeitung durch die KI erstellt, weil dieses Gespräch an seine Arbeitsgrenze gekommen ist. Dir wurde nichts berechnet. Du kannst den vollständigen Plan aus dem, was du mir schon erzählt hast, neu erstellen lassen: Berechnet wird nur, wenn die KI ihn liefert.",
+  offline: {
+    titulo: "# Dein Handlungsplan",
+    contexto: "## Kontext",
+    puntoDePartida: "Ausgangspunkt: {{texto}}",
+    loQueSabemos: "Was wir über deine Idee wissen: {{perfil}}",
+    etapa: "## Etappe {{n}}: {{concepto}}",
+    puntoDeControl: "Kontrollpunkt: {{entregable}}",
+  },
+  etiquetaCompleto: "Vollständiger Plan",
+  etiquetaInicial: "Erster Plan",
+  noCubre: "## Was dieser Plan noch nicht abdeckt",
+};
+
+const it: typeof es = {
+  avisoVersionBasica: "Questa è una versione base del tuo piano: l'ho preparata senza la stesura con l'IA perché questa conversazione ha raggiunto il suo limite di lavoro. Non ti è stato addebitato nulla. Puoi rigenerarlo completo a partire da quello che mi hai già raccontato: paghi solo se l'IA lo consegna.",
+  offline: {
+    titulo: "# Il tuo piano d'azione",
+    contexto: "## Contesto",
+    puntoDePartida: "Punto di partenza: {{texto}}",
+    loQueSabemos: "Quello che sappiamo della tua idea: {{perfil}}",
+    etapa: "## Tappa {{n}}: {{concepto}}",
+    puntoDeControl: "Punto di controllo: {{entregable}}",
+  },
+  etiquetaCompleto: "Piano completo",
+  etiquetaInicial: "Piano iniziale",
+  noCubre: "## Cosa questo piano non copre ancora",
+};
+
+const ja: typeof es = {
+  avisoVersionBasica: "これはプランの基本版です。この会話が作業量の上限に達したため、AIによる文章作成なしでまとめました。ポイントは差し引かれていません。すでに話してくれた内容から、完全版を作り直せます。ポイントが差し引かれるのは、AIが完全版をお届けした場合だけです。",
+  offline: {
+    titulo: "# アクションプラン",
+    contexto: "## 背景",
+    puntoDePartida: "出発点：{{texto}}",
+    loQueSabemos: "アイデアについてわかっていること：{{perfil}}",
+    etapa: "## ステージ{{n}}：{{concepto}}",
+    puntoDeControl: "チェックポイント：{{entregable}}",
+  },
+  etiquetaCompleto: "完全版プラン",
+  etiquetaInicial: "最初のプラン",
+  noCubre: "## このプランがまだカバーしていないこと",
+};
+
+const zh: typeof es = {
+  avisoVersionBasica: "这是你计划的基础版：这次对话已经达到工作上限，所以我没用AI撰写，先把它整理了出来。没有向你收费。你可以根据你已经告诉我的内容重新生成完整版：只有AI交付了才会收费。",
+  offline: {
+    titulo: "# 你的行动计划",
+    contexto: "## 背景",
+    puntoDePartida: "起点：{{texto}}",
+    loQueSabemos: "我们对你的想法的了解：{{perfil}}",
+    etapa: "## 第{{n}}阶段：{{concepto}}",
+    puntoDeControl: "检查点：{{entregable}}",
+  },
+  etiquetaCompleto: "完整计划",
+  etiquetaInicial: "初始计划",
+  noCubre: "## 这份计划还没涵盖的内容",
+};
+
+const ko: typeof es = {
+  avisoVersionBasica: "이건 계획의 기본 버전이에요. 이 대화가 작업 한도에 도달해서 AI 작성 없이 만들었어요. 크레딧은 차감되지 않았어요. 이미 들려준 내용으로 전체 계획을 다시 만들 수 있고, AI가 전달할 때만 차감돼요.",
+  offline: {
+    titulo: "# 나의 실행 계획",
+    contexto: "## 배경",
+    puntoDePartida: "출발점: {{texto}}",
+    loQueSabemos: "아이디어에 대해 알고 있는 것: {{perfil}}",
+    etapa: "## {{n}}단계: {{concepto}}",
+    puntoDeControl: "점검 지점: {{entregable}}",
+  },
+  etiquetaCompleto: "전체 계획",
+  etiquetaInicial: "초기 계획",
+  noCubre: "## 이 계획이 아직 다루지 않는 것",
+};
+
+const ar: typeof es = {
+  avisoVersionBasica: "هذه نسخة أساسية من خطتكم: أعددتها دون الصياغة بالذكاء الاصطناعي لأن هذه المحادثة بلغت حدّها من العمل. لم يُخصم منكم شيء. يمكنكم إعادة إنشائها كاملة مما رويتموه لي: ولا يُخصم شيء إلا إذا سلّمها الذكاء الاصطناعي.",
+  offline: {
+    titulo: "# خطة عملكم",
+    contexto: "## السياق",
+    puntoDePartida: "نقطة البداية: {{texto}}",
+    loQueSabemos: "ما نعرفه عن فكرتكم: {{perfil}}",
+    etapa: "## المرحلة {{n}}: {{concepto}}",
+    puntoDeControl: "نقطة التحقّق: {{entregable}}",
+  },
+  etiquetaCompleto: "الخطة الكاملة",
+  etiquetaInicial: "الخطة الأولى",
+  noCubre: "## ما لا تغطيه هذه الخطة بعد",
+};
+
+const hi: typeof es = {
+  avisoVersionBasica: "यह आपकी योजना का एक बुनियादी संस्करण है: इसे AI के लेखन के बिना बनाया गया, क्योंकि यह बातचीत अपने काम की सीमा तक पहुँच गई। आपसे कुछ नहीं काटा गया। आपने जो पहले ही बताया है, उसी से पूरी योजना फिर से बनवाई जा सकती है: क्रेडिट तभी कटते हैं जब AI उसे पूरा करके देता है।",
+  offline: {
+    titulo: "# आपकी कार्य योजना",
+    contexto: "## संदर्भ",
+    puntoDePartida: "शुरुआती बिंदु: {{texto}}",
+    loQueSabemos: "आपके विचार के बारे में हम जो जानते हैं: {{perfil}}",
+    etapa: "## चरण {{n}}: {{concepto}}",
+    puntoDeControl: "जाँच बिंदु: {{entregable}}",
+  },
+  etiquetaCompleto: "पूरी योजना",
+  etiquetaInicial: "शुरुआती योजना",
+  noCubre: "## यह योजना अभी क्या कवर नहीं करती",
+};
+
+export const MOTOR_PLAN: PorIdioma<typeof es> = { es, en, fr, pt, de, it, ja, zh, ko, ar, hi };

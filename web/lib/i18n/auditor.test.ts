@@ -6,6 +6,7 @@ import path from "node:path";
 import { pathToFileURL } from "node:url";
 import { describe, expect, it } from "vitest";
 import { auditarCatalogo, pareceCatalogo } from "./auditor";
+import { ACTIVE_LOCALES } from "./config";
 
 const DIR = path.join(__dirname, "mensajes");
 
@@ -41,14 +42,12 @@ describe("el auditor de idiomas", () => {
   });
 
   it("detecta las fallas (no aprueba en falso)", () => {
-    expect(
-      auditarCatalogo("ok", {
-        es: { a: "Hola {{n}}", b: ["x"], c: { d: "<b>sí</b>" } },
-        en: { a: "Hi {{n}}", b: ["x"], c: { d: "<b>yes</b>" } },
-      })
-    ).toEqual([]);
-    expect(auditarCatalogo("vacio", { es: { a: " " }, en: { a: "x" } })).toEqual(["vacio.a [es]: cadena vacía"]);
+    // Un catálogo de juguete con todos los idiomas activos; `es` se reemplaza en cada caso.
+    const con = (es: unknown, otro: unknown) => ({ ...Object.fromEntries(ACTIVE_LOCALES.map((l) => [l, otro])), es });
+    expect(auditarCatalogo("ok", con({ a: "Hola {{n}}", b: ["x"], c: { d: "<b>sí</b>" } }, { a: "Hi {{n}}", b: ["x"], c: { d: "<b>yes</b>" } }))).toEqual([]);
+    expect(auditarCatalogo("vacio", con({ a: " " }, { a: "x" }))).toEqual(["vacio.a [es]: cadena vacía"]);
     expect(auditarCatalogo("sinBase", { en: { a: "x" } })).toContain("sinBase: falta el idioma base (es)");
-    expect(auditarCatalogo("numero", { es: { a: 3 }, en: { a: "x" } })).toContain("numero.a [es]: tipo no admitido en un catálogo (number)");
+    expect(auditarCatalogo("numero", con({ a: 3 }, { a: "x" }))).toContain("numero.a [es]: tipo no admitido en un catálogo (number)");
+    expect(auditarCatalogo("marcador", con({ a: "Hola {{n}}" }, { a: "Hi" }))).toContain("marcador.a [en]: marcadores distintos ( vs n)");
   });
 });

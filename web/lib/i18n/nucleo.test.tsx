@@ -10,19 +10,21 @@ import { etiquetasDe, rico } from "./rico";
 import { idiomaDeRequest } from "./servidor";
 
 describe("config", () => {
-  it("once idiomas de la marca; en F2 solo el español está activo", () => {
+  it("once idiomas de la marca; en F3 los once activos", () => {
     expect(LOCALES).toEqual(["es", "en", "pt", "fr", "de", "it", "ja", "zh", "ko", "ar", "hi"]);
-    // F3: el inglés primero (decisión del fundador, 24 sep 2026).
-    expect(ACTIVE_LOCALES).toEqual(["es", "en"]);
+    // F3: el inglés primero y luego los otros nueve (decisiones del fundador,
+    // 24 y 25 sep 2026): hoy se sirven los once.
+    expect(ACTIVE_LOCALES).toEqual(LOCALES);
     expect(LOCALE_BASE).toBe("es");
   });
-  it("un idioma no activo cae al español", () => {
-    expect(normalizarIdioma("fr")).toBe("es");
+  it("un idioma que no existe cae al español", () => {
+    expect(normalizarIdioma("fr")).toBe("fr");
     expect(normalizarIdioma("en")).toBe("en");
     expect(normalizarIdioma("xx")).toBe("es");
     expect(normalizarIdioma(undefined)).toBe("es");
-    expect(elegir({ es: { hola: "Hola" }, en: { hola: "Hello" } }, "fr")).toEqual({ hola: "Hola" });
-    expect(elegir({ es: { hola: "Hola" }, en: { hola: "Hello" } }, "en")).toEqual({ hola: "Hello" });
+    const cat = Object.fromEntries(LOCALES.map((l) => [l, { hola: l === "es" ? "Hola" : `hola-${l}` }])) as Record<(typeof LOCALES)[number], { hola: string }>;
+    expect(elegir(cat, "xx")).toEqual({ hola: "Hola" });
+    expect(elegir(cat, "ja")).toEqual({ hola: "hola-ja" });
   });
   it("el dictado por voz sigue el idioma de la interfaz; en español, es-MX como siempre", () => {
     // Casos a mano: la variante de cada idioma, fijada por el diseño.
@@ -62,10 +64,11 @@ describe("negociación del idioma", () => {
   });
   it("primera visita: del navegador si está activo, si no el español; y se escribe la cookie", () => {
     expect(negociarIdioma({ acceptLanguage: "es-MX,es;q=0.9" })).toEqual({ idioma: "es", escribirCookie: true });
-    // F3: el inglés ya está activo; el francés todavía no, cae al español
+    // F3: los once activos; la subetiqueta regional cae a su idioma (fr-CA -> fr)
     expect(negociarIdioma({ acceptLanguage: "en-US" })).toEqual({ idioma: "en", escribirCookie: true });
-    expect(negociarIdioma({ acceptLanguage: "fr-CA,fr;q=0.9" })).toEqual({ idioma: "es", escribirCookie: true });
-    expect(negociarIdioma({ acceptLanguage: "fr-CA,en;q=0.8" })).toEqual({ idioma: "en", escribirCookie: true });
+    expect(negociarIdioma({ acceptLanguage: "fr-CA,fr;q=0.9" })).toEqual({ idioma: "fr", escribirCookie: true });
+    expect(negociarIdioma({ acceptLanguage: "ru-RU,ko;q=0.8" })).toEqual({ idioma: "ko", escribirCookie: true });
+    expect(negociarIdioma({ acceptLanguage: "ru-RU" })).toEqual({ idioma: "es", escribirCookie: true });
   });
   it("con cookie: manda la cookie y no se reescribe", () => {
     expect(negociarIdioma({ cookie: "es", acceptLanguage: "en" })).toEqual({ idioma: "es", escribirCookie: false });

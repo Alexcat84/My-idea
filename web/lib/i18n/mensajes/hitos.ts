@@ -66,4 +66,296 @@ const en: typeof es = {
   },
 };
 
-export const HITOS: PorIdioma<typeof es> = { es, en };
+const fr: typeof es = {
+  core: {
+    chispa: "L'Étincelle",
+    chispaSub: "L'idée voit le jour",
+    claridad: "Clarté",
+    claridadSub: "Ton idée, organisée",
+    plan: "Ton plan",
+    planSub: "Ton plan d'action, prêt",
+    realizada: "Réalisée",
+    realizadaSub: "C'est ici que naît ton projet",
+    cierre: "La clôture",
+    cierreSub: "Quand tu la sentiras réelle",
+  },
+  mundo: {
+    diagnostico: "Ton diagnostic",
+    diagnosticoSub: "Un premier regard sur ce volet",
+    plan: "Le plan de {{mundo}}",
+    planSub: "Prêt à passer à l'action",
+    cerrado: "Fermé",
+    cerradoSub: "Tu as déclaré ce volet terminé",
+    cierre: "La clôture",
+    cierreSub: "Quand tu le déclareras terminé",
+  },
+  mapa: {
+    titulo: "Tes jalons en un coup d'œil",
+    nota: "Un pas par jalon, dans l'ordre où ils se sont produits. Les vraies distances entre les dates se trouvent sur la ligne du bas.",
+    meses: ["janv.", "févr.", "mars", "avr.", "mai", "juin", "juil.", "août", "sept.", "oct.", "nov.", "déc."],
+    fechaCorta: "{{d}} {{mes}}",
+  },
+};
+
+const pt: typeof es = {
+  core: {
+    chispa: "A Faísca",
+    chispaSub: "A ideia nasce",
+    claridad: "Clareza",
+    claridadSub: "Sua ideia, organizada",
+    plan: "Seu Plano",
+    planSub: "Seu plano de ação, pronto",
+    realizada: "Realizada",
+    realizadaSub: "Aqui nasce seu projeto",
+    cierre: "O encerramento",
+    cierreSub: "Quando você sentir que é real",
+  },
+  mundo: {
+    diagnostico: "Seu diagnóstico",
+    diagnosticoSub: "O primeiro olhar sobre esta frente",
+    plan: "O plano de {{mundo}}",
+    planSub: "Pronto para executar",
+    cerrado: "Encerrado",
+    cerradoSub: "Você deu esta frente por concluída",
+    cierre: "O encerramento",
+    cierreSub: "Quando você der por concluído",
+  },
+  mapa: {
+    titulo: "Seus marcos num relance",
+    nota: "Um passo por marco, na ordem em que aconteceram. As distâncias reais entre as datas estão na linha abaixo.",
+    meses: ["jan", "fev", "mar", "abr", "mai", "jun", "jul", "ago", "set", "out", "nov", "dez"],
+    fechaCorta: "{{d}} {{mes}}",
+  },
+};
+
+const de: typeof es = {
+  core: {
+    chispa: "Der Funke",
+    chispaSub: "Die Idee entsteht",
+    claridad: "Klarheit",
+    claridadSub: "Deine Idee, geordnet",
+    plan: "Dein Plan",
+    planSub: "Dein Aktionsplan steht",
+    realizada: "Verwirklicht",
+    realizadaSub: "Hier entsteht dein Projekt",
+    cierre: "Der Abschluss",
+    cierreSub: "Wenn es sich echt anfühlt",
+  },
+  mundo: {
+    diagnostico: "Deine Diagnose",
+    diagnosticoSub: "Der erste Blick auf dieses Themenfeld",
+    plan: "Der Plan für {{mundo}}",
+    planSub: "Bereit zur Umsetzung",
+    cerrado: "Abgeschlossen",
+    cerradoSub: "Du hast dieses Themenfeld abgeschlossen",
+    cierre: "Der Abschluss",
+    cierreSub: "Wenn du es für erledigt hältst",
+  },
+  mapa: {
+    titulo: "Deine Meilensteine auf einen Blick",
+    nota: "Ein Schritt pro Meilenstein, in der Reihenfolge, in der sie passiert sind. Die echten Abstände zwischen den Daten zeigt die Linie darunter.",
+    meses: ["Jan", "Feb", "März", "Apr", "Mai", "Juni", "Juli", "Aug", "Sep", "Okt", "Nov", "Dez"],
+    fechaCorta: "{{d}}. {{mes}}",
+  },
+};
+
+const it: typeof es = {
+  core: {
+    chispa: "La Scintilla",
+    chispaSub: "L'idea nasce",
+    claridad: "Chiarezza",
+    claridadSub: "La tua idea, organizzata",
+    plan: "Il tuo piano",
+    planSub: "Il tuo piano d'azione, pronto",
+    realizada: "Realizzata",
+    realizadaSub: "Qui nasce il tuo progetto",
+    cierre: "La chiusura",
+    cierreSub: "Quando ti sembra reale",
+  },
+  mundo: {
+    diagnostico: "La tua diagnosi",
+    diagnosticoSub: "Un primo sguardo su questo ambito",
+    plan: "Il piano di {{mundo}}",
+    planSub: "Pronto da mettere in pratica",
+    cerrado: "Chiuso",
+    cerradoSub: "Hai dato per concluso questo ambito",
+    cierre: "La chiusura",
+    cierreSub: "Quando lo darai per concluso",
+  },
+  mapa: {
+    titulo: "I tuoi traguardi, a colpo d'occhio",
+    nota: "Un passo per traguardo, nell'ordine in cui sono arrivati. Le distanze reali tra le date sono nella linea qui sotto.",
+    meses: ["gen", "feb", "mar", "apr", "mag", "giu", "lug", "ago", "set", "ott", "nov", "dic"],
+    fechaCorta: "{{d}} {{mes}}",
+  },
+};
+
+const ja: typeof es = {
+  core: {
+    chispa: "ひらめき",
+    chispaSub: "アイデアの誕生",
+    claridad: "明確さ",
+    claridadSub: "整理されたアイデア",
+    plan: "あなたのプラン",
+    planSub: "行動プランの完成",
+    realizada: "実現",
+    realizadaSub: "ここでプロジェクトが生まれます",
+    cierre: "締めくくり",
+    cierreSub: "現実になったと感じたときに",
+  },
+  mundo: {
+    diagnostico: "診断",
+    diagnosticoSub: "この分野の最初の見立て",
+    plan: "{{mundo}}のプラン",
+    planSub: "実行の準備完了",
+    cerrado: "完了",
+    cerradoSub: "この分野を完了にしました",
+    cierre: "締めくくり",
+    cierreSub: "完了にするときに",
+  },
+  mapa: {
+    titulo: "マイルストーンをひと目で",
+    nota: "マイルストーンごとに1ステップ、起きた順に並んでいます。日付の間の実際の間隔は、下のラインで確認できます。",
+    meses: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+    fechaCorta: "{{mes}}{{d}}日",
+  },
+};
+
+const zh: typeof es = {
+  core: {
+    chispa: "灵光一闪",
+    chispaSub: "想法诞生",
+    claridad: "清晰",
+    claridadSub: "你的想法，已梳理清楚",
+    plan: "你的计划",
+    planSub: "你的行动计划，已就绪",
+    realizada: "已实现",
+    realizadaSub: "你的项目在这里诞生",
+    cierre: "收尾",
+    cierreSub: "当你觉得它已成真时",
+  },
+  mundo: {
+    diagnostico: "你的诊断",
+    diagnosticoSub: "初步看看这一块",
+    plan: "{{mundo}}计划",
+    planSub: "可以开始执行了",
+    cerrado: "已关闭",
+    cerradoSub: "你已将这一块标记为完成",
+    cierre: "收尾",
+    cierreSub: "当你认为它已完成时",
+  },
+  mapa: {
+    titulo: "你的里程碑一览",
+    nota: "每个里程碑一步，按发生的先后排列。日期之间的真实间隔，请看下方的时间线。",
+    meses: ["1月", "2月", "3月", "4月", "5月", "6月", "7月", "8月", "9月", "10月", "11月", "12月"],
+    fechaCorta: "{{mes}}{{d}}日",
+  },
+};
+
+const ko: typeof es = {
+  core: {
+    chispa: "불꽃",
+    chispaSub: "아이디어가 태어나요",
+    claridad: "명확함",
+    claridadSub: "정리된 아이디어",
+    plan: "나의 계획",
+    planSub: "실행 계획 준비 완료",
+    realizada: "실현",
+    realizadaSub: "여기서 프로젝트가 태어나요",
+    cierre: "마무리",
+    cierreSub: "진짜라고 느껴질 때",
+  },
+  mundo: {
+    diagnostico: "나의 진단",
+    diagnosticoSub: "이 영역을 처음 살펴본 결과",
+    plan: "{{mundo}} 계획",
+    planSub: "실행할 준비 완료",
+    cerrado: "마무리됨",
+    cerradoSub: "이 영역을 마무리했어요",
+    cierre: "마무리",
+    cierreSub: "마무리됐다고 느낄 때",
+  },
+  mapa: {
+    titulo: "한눈에 보는 나의 이정표",
+    nota: "이정표마다 한 칸씩, 일어난 순서대로 보여 줘요. 날짜 사이의 실제 간격은 아래 줄에서 볼 수 있어요.",
+    meses: ["1월", "2월", "3월", "4월", "5월", "6월", "7월", "8월", "9월", "10월", "11월", "12월"],
+    fechaCorta: "{{mes}} {{d}}일",
+  },
+};
+
+const ar: typeof es = {
+  core: {
+    chispa: "الشرارة",
+    chispaSub: "تولد الفكرة",
+    claridad: "الوضوح",
+    claridadSub: "فكرتكم، مرتّبة",
+    plan: "خطتكم",
+    planSub: "خطة عملكم جاهزة",
+    realizada: "تحقّق",
+    realizadaSub: "هنا يولد مشروعكم",
+    cierre: "الإغلاق",
+    cierreSub: "حين تشعرون بأنها صارت حقيقية",
+  },
+  mundo: {
+    diagnostico: "تشخيصكم",
+    diagnosticoSub: "النظرة الأولى إلى هذا الجانب",
+    plan: "خطة {{mundo}}",
+    planSub: "جاهزة للتنفيذ",
+    cerrado: "مُغلق",
+    cerradoSub: "أعلنتم انتهاء هذا الجانب",
+    cierre: "الإغلاق",
+    cierreSub: "حين تعلنون انتهاءه",
+  },
+  mapa: {
+    titulo: "محطاتكم في لمحة",
+    nota: "خطوة لكل محطة، بترتيب حدوثها. أما المسافات الفعلية بين التواريخ فتظهر في الخط أدناه.",
+    meses: [
+      "يناير",
+      "فبراير",
+      "مارس",
+      "أبريل",
+      "مايو",
+      "يونيو",
+      "يوليو",
+      "أغسطس",
+      "سبتمبر",
+      "أكتوبر",
+      "نوفمبر",
+      "ديسمبر",
+    ],
+    fechaCorta: "{{d}} {{mes}}",
+  },
+};
+
+const hi: typeof es = {
+  core: {
+    chispa: "चिंगारी",
+    chispaSub: "विचार का जन्म",
+    claridad: "स्पष्टता",
+    claridadSub: "आपका विचार, व्यवस्थित",
+    plan: "आपकी योजना",
+    planSub: "आपकी कार्य-योजना तैयार",
+    realizada: "साकार",
+    realizadaSub: "यहीं से आपकी परियोजना शुरू होती है",
+    cierre: "समापन",
+    cierreSub: "जब यह आपको असली लगे",
+  },
+  mundo: {
+    diagnostico: "आपका आकलन",
+    diagnosticoSub: "इस पहलू पर पहली नज़र",
+    plan: "{{mundo}} की योजना",
+    planSub: "अमल के लिए तैयार",
+    cerrado: "बंद",
+    cerradoSub: "आपने इस पहलू को पूरा मान लिया",
+    cierre: "समापन",
+    cierreSub: "जब आप इसे पूरा मान लें",
+  },
+  mapa: {
+    titulo: "आपके पड़ाव, एक नज़र में",
+    nota: "हर पड़ाव के लिए एक कदम, उसी क्रम में जिसमें वे आए। तारीखों के बीच की असली दूरी नीचे वाली लाइन में दिखती है।",
+    meses: ["जन॰", "फ़र॰", "मार्च", "अप्रैल", "मई", "जून", "जुल॰", "अग॰", "सित॰", "अक्टू॰", "नव॰", "दिस॰"],
+    fechaCorta: "{{d}} {{mes}}",
+  },
+};
+
+export const HITOS: PorIdioma<typeof es> = { es, en, fr, pt, de, it, ja, zh, ko, ar, hi };
