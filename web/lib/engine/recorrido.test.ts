@@ -387,3 +387,51 @@ describe("avanzarTurno: la entrevista de un mundo no cruza a otro mundo (AUD-09 
     expect(args?.dominiosDesbloqueados).toEqual(["core", "quality"]);
   });
 });
+
+// i18n F5: la entrevista de una idea en coreano la escribe la IA en coreano
+// (el idioma de la IDEA viaja en el estado), y la de una sesión de antes de F5
+// (sin idioma en el estado) sigue en español.
+describe("avanzarTurno: el idioma de la idea llega al intérprete (i18n F5)", () => {
+  beforeEach(() => interpretarMultiSaltoFalso.mockReset());
+
+  async function turnoCon(idioma: string | undefined) {
+    interpretarMultiSaltoFalso.mockResolvedValueOnce({ resultado: null, acumulado: usoVacio(), eventos: [] });
+    const base = estadoInicial({ actualId: "leap_of_faith_assumptions", perfilSesion: "p", textoOriginal: "t", idioma });
+    const estado = { ...base, preguntaPendiente: "¿?" };
+    if (idioma === undefined) delete (estado as { idioma?: string }).idioma;
+    await avanzarTurno({
+      client: {} as never,
+      graph,
+      families,
+      preguntasCache,
+      estado,
+      respuestaUsuario: "r",
+      acumulado: usoVacio(),
+      dbSessionId: "sess-i18n",
+      idioma: "en",
+    });
+    return interpretarMultiSaltoFalso.mock.calls[0]?.[0] as { idiomaSalida?: string | null; idioma?: string };
+  }
+
+  it("idea en coreano con la interfaz en inglés: la IA en coreano, las plantillas en coreano", async () => {
+    const args = await turnoCon("ko");
+    expect(args.idiomaSalida).toBe("ko");
+    expect(args.idioma).toBe("ko");
+  });
+
+  it("idea en ruso (fuera de los once): la IA en ruso, las plantillas en la interfaz", async () => {
+    const args = await turnoCon("ru");
+    expect(args.idiomaSalida).toBe("ru");
+    expect(args.idioma).toBe("en");
+  });
+
+  it("sesión de antes de F5 (sin idioma): español en todo", async () => {
+    const args = await turnoCon(undefined);
+    expect(args.idiomaSalida).toBeNull();
+    expect(args.idioma).toBe("es");
+  });
+
+  it("estadoInicial sin idioma lo fija en español", () => {
+    expect(estadoInicial({ actualId: "x", perfilSesion: "p", textoOriginal: "t" }).idioma).toBe("es");
+  });
+});

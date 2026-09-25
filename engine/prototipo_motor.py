@@ -300,6 +300,20 @@ PRESUPUESTO_EXCEDIDO = False
 # env var cuando ya no haga falta revisar cada sesion.
 JUEZ_SESION_MUESTREO = float(os.environ.get("JUEZ_SESION_MUESTREO", "1.0"))
 
+# i18n F5 (DISENO §5): la regla final de los prompts que escriben texto para
+# la persona. El idioma de la idea NO va dentro del prompt (el cache de
+# Anthropic depende de que su prefijo no cambie): la web lo manda en un bloque
+# de sistema POSTERIOR, titulado IDIOMA DE SALIDA (web/lib/i18n/idiomaSalida.ts).
+# Sin ese bloque, todo sigue en espanol como siempre.
+REGLA_IDIOMA_SALIDA = (
+    "\n\nIDIOMA DE SALIDA: espanol, salvo que un bloque posterior de este "
+    "sistema, titulado IDIOMA DE SALIDA, indique otro idioma. En ese caso, "
+    "toda mencion de 'espanol' en estas reglas significa ese idioma, las "
+    "reglas de acentos y signos se aplican con la ortografia de ese idioma, "
+    "y lo que ese bloque diga sobre el idioma manda sobre estas reglas."
+)
+
+
 SYSTEM_CLASIFICACION = (
     "Eres el clasificador de entrada de una app de guia de emprendimiento. El "
     "usuario describe su idea o su situacion en texto libre. Debes: 1) elegir "
@@ -793,6 +807,7 @@ SYSTEM_INTERPRETE_MULTI = (
     "\"digital\"|\"mixto\"|null, \"unidad_venta_detectada\": str|null, "
     "\"razonamiento\": str|null}."
 )
+SYSTEM_INTERPRETE_MULTI += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 SYSTEM_PROFUNDIZAR = (
     "Interpretas la respuesta de un usuario a la pregunta de si quiere su "
@@ -817,6 +832,7 @@ SYSTEM_PREGUNTA_DIRIGIDA = (
     "ultimas_preguntas_hechas. Responde SOLO el texto de la pregunta, sin "
     "comillas ni JSON."
 )
+SYSTEM_PREGUNTA_DIRIGIDA += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 SYSTEM_PLAN = (
     "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
@@ -1086,6 +1102,7 @@ SYSTEM_PLAN = (
     "inventes un id que no viniera en el material recibido)}. No agregues "
     "nada despues de esa linea."
 )
+SYSTEM_PLAN += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 SYSTEM_ESTADO_VIVO = (
     "Comprimes el estado de un proyecto de emprendimiento en una sintesis de "
@@ -1099,6 +1116,7 @@ SYSTEM_ESTADO_VIVO = (
     "dicha, sintetiza. Responde SOLO el texto del estado_vivo nuevo, sin "
     "JSON, sin comillas, sin titulo."
 )
+SYSTEM_ESTADO_VIVO += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 SYSTEM_JUEZ_SESION = (
     "Fase 3.1 (caja de vidrio): eres un auditor barato y rapido de UNA "
@@ -1147,6 +1165,7 @@ SYSTEM_ORGANIZADOR = (
     "'areas_que_cubriria_tu_plan_completo' son solo NOMBRES de temas (3 a "
     "6), nunca acciones, nunca el 'como' hacerlo."
 )
+SYSTEM_ORGANIZADOR += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 SYSTEM_REPORTE = (
     "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas: usa comas, dos puntos o parentesis. "
@@ -1209,6 +1228,7 @@ SYSTEM_REPORTE = (
     "'negocio' salvo que el propio usuario ya la haya usado; habla de "
     "'tu idea' o 'tu proyecto'."
 )
+SYSTEM_REPORTE += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 # Fase 4.5 (docs/PREVIEW_MUNDOS_PLAN.md): el redactor del DIAGNOSTICO del
 # preview de un mundo. El preview es el escaparate: dice lo que HAY y lo que
@@ -1249,6 +1269,7 @@ SYSTEM_DIAGNOSTICO_MUNDO = (
     "agregues secciones, notas, precios ni llamados a comprar: el sistema "
     "pone el boton despues de tu texto."
 )
+SYSTEM_DIAGNOSTICO_MUNDO += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 
 def cargar_grafo():
@@ -3201,6 +3222,7 @@ SYSTEM_CLASIFICAR_OFERTA = (
     "unidad de venta (pieza, cliente, pack, sesion, usuario, "
     "suscripcion...); si no queda clara, usa 'unidad'."
 )
+SYSTEM_CLASIFICAR_OFERTA += REGLA_IDIOMA_SALIDA  # i18n F5 (DISENO §5)
 
 
 def _extraer_numero(texto):

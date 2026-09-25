@@ -3,7 +3,7 @@
 // entrevista. Una entrevista de 0,10 o más dejaba el diagnóstico bloqueado para
 // siempre (el mismo 502 en cada reintento). La regla: el tope del diagnóstico se
 // mide contra SU PROPIO gasto, y ese gasto se suma después al de la sesión.
-import { describe, expect, it } from "vitest";
+import { describe, expect, it, vi } from "vitest";
 import type Anthropic from "@anthropic-ai/sdk";
 import { costoAcumuladoUsd, MODEL, type UsoAcumulado } from "../costmeter";
 import { redactarDiagnostico, type MaterialDiagnostico } from "./diagnosticoMundo";
@@ -35,5 +35,19 @@ describe("redactarDiagnostico: su tope se mide contra su propio gasto", () => {
     expect(r.acumulado.uso[MODEL].llamadas).toBe(7);
     expect(r.acumulado.uso_por_componente.diagnostico).toBeCloseTo(0.012, 6);
     expect(r.acumulado.uso_por_componente.interprete).toBeCloseTo(0.135, 6);
+  });
+});
+
+// i18n F5: el diagnóstico de un mundo lo escribe la IA en el idioma de la idea.
+import { redactarDiagnostico as redactarI18n } from "./diagnosticoMundo";
+import { usoVacio as usoVacioI18n } from "../costmeter";
+
+describe("redactarDiagnostico: el idioma de la idea (i18n F5)", () => {
+  it("con idiomaSalida ar, la llamada lleva la regla de idioma", async () => {
+    const create = vi.fn(async () => ({ content: [{ type: "text", text: "تشخيص" }], usage: { input_tokens: 1, output_tokens: 1 } }));
+    await redactarI18n({ messages: { create } } as never, {} as never, usoVacioI18n(), "ar");
+    const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
+    expect(sistema).toHaveLength(2);
+    expect(sistema[1].text).toMatch(/^IDIOMA DE SALIDA: árabe/);
   });
 });

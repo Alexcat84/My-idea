@@ -35,6 +35,7 @@ import {
   obtenerProyecto,
   registrarBitacora,
 } from "@/lib/db";
+import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { anclarResultadoTurno } from "@/lib/engine/reformuladorProteccion";
 import { esMundoProteccion, murallaSinPlan } from "@/lib/espacios";
@@ -259,6 +260,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // este mundo se quedaria mirando una pantalla muda.
     dominioSesion: pack,
     snapshotNucleo,
+    idioma: idiomaDelProyecto(proyecto),
   });
 
   // Fase v1.3.2 (cazado por el vuelo, dos veces): la PRIMERA pregunta del

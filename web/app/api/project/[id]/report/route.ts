@@ -31,6 +31,7 @@ import { createAnthropicClient } from "@/lib/anthropicClient";
 import { MAX_LARGO_TEXTO_USUARIO, mensajeTextoLargo } from "@/lib/constants";
 import { costoAcumuladoUsd, PRESUPUESTO_REPORTE_USD, usoVacio } from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearSesion, guardarPlan, obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
+import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
@@ -109,7 +110,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     if (!limite.permitido) {
       return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
     }
-    resultado = await iniciarReporte(client, numeros, proyecto.tipo_oferta ?? null, proyecto.unidad_venta ?? null, usoVacio(), idioma);
+    resultado = await iniciarReporte(client, numeros, proyecto.tipo_oferta ?? null, proyecto.unidad_venta ?? null, usoVacio(), idioma, idiomaDelProyecto(proyecto));
   } else {
     if (!proyecto.estado_reporte) {
       return NextResponse.json(
@@ -123,7 +124,8 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       numeros,
       respuesta,
       proyecto.estado_reporte.acumulado,
-      idioma
+      idioma,
+      idiomaDelProyecto(proyecto)
     );
   }
 

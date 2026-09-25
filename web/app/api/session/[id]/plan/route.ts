@@ -83,6 +83,9 @@ import {
   type PreparacionPlan,
 } from "@/lib/engine/planRedactor";
 import { SYSTEM_PLAN } from "@/lib/prompts";
+import { ROTULOS_PLAN } from "@/lib/engine/constants";
+import { idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
+import { bloquesDeSistema } from "@/lib/i18n/idiomaSalida";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
@@ -103,7 +106,9 @@ async function generarTextoPlan(
   /** Un intento previo pinto etapas en el arbol de espera y murio: el cliente
    * debe DESCARTARLAS antes de que el intento nuevo pinte las suyas (el texto
    * nuevo no es el mismo). Anunciar una sola vez, la leccion del organizador. */
-  onReinicio: () => void
+  onReinicio: () => void,
+  /** i18n F5: el idioma de la IDEA (el plan sigue al proyecto, D2). */
+  idiomaSalida: string | null = null
 ): Promise<{ rawTexto: string | null; acumulado: UsoAcumulado; avisoFallback: string | null }> {
   if (costoAcumuladoUsd(acumulado) >= PRESUPUESTO_SESION_USD_DEFAULT) {
     return { rawTexto: null, acumulado, avisoFallback: "presupuesto de sesion ya excedido, ensamblo sin narrar" };
@@ -118,7 +123,7 @@ async function generarTextoPlan(
       const stream = client.messages.stream({
         model: MODEL,
         max_tokens: 5000,
-        system: [{ type: "text", text: SYSTEM_PLAN, cache_control: { type: "ephemeral" } }],
+        system: bloquesDeSistema(SYSTEM_PLAN, idiomaSalida, ROTULOS_PLAN),
         messages: [{ role: "user", content: JSON.stringify(preparacion.payload) }],
       });
       // Nunca reenviar el marcador ===JSON=== ni lo que sigue -- es la
@@ -194,6 +199,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const client = createAnthropicClient();
   const { recorrido, acumulado } = estadoPersistido;
   const projectId = sesion.project_id;
+  // i18n F5 (D2): el plan sigue el idioma de la IDEA. La IA escribe en él;
+  // lo que arma el código sin IA, en él si es de los once y si no en el de la
+  // interfaz. Una sesión de antes de F5 no trae idioma: español.
+  const idiomaSalida = recorrido.idioma ?? null;
+  const idiomaPlan = idiomaDePlantilla(recorrido.idioma ?? "es", idioma);
 
   // Phase 3.7.2 (la oferta honesta): "¿Algo mas que quieras que tu plan
   // tome en cuenta?" — el texto opcional viaja al redactor por el mismo
@@ -297,7 +307,8 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           preparacion,
           acumulado,
           (texto) => enviar("delta", { texto }),
-          () => enviar("reinicio", { motivo: "reintentando la redaccion" })
+          () => enviar("reinicio", { motivo: "reintentando la redaccion" }),
+          idiomaSalida
         );
         // AUD-09 H02: sin texto del redactor, el plan sale del ensamblado
         // offline. No es lo prometido: no se cobra y se dice en pantalla.
@@ -327,7 +338,8 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           families,
           recorrido.textoOriginal,
           (e) => eventosPlan.push(e),
-          numerosParaPlan
+          numerosParaPlan,
+          idiomaPlan
         );
 
         const conceptosTitulos = conceptosDeRuta([...recorrido.ruta, ...resultado.cosechaIds], graph);
@@ -341,7 +353,8 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           conceptosTitulos,
           // El unico camino offline es el techo de la sesion: queda registrado
           // (antes presupuesto_excedido nunca se marcaba en ningun lugar).
-          versionBasica ? { ...acumuladoTrasRedactor, presupuesto_excedido: true } : acumuladoTrasRedactor
+          versionBasica ? { ...acumuladoTrasRedactor, presupuesto_excedido: true } : acumuladoTrasRedactor,
+          idiomaSalida
         );
 
         const nodosConTipo: NodoConTipo[] = [

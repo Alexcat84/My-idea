@@ -26,6 +26,7 @@ import { parsearJson } from "../parseJson";
 import { SYSTEM_PREGUNTA_DIRIGIDA, SYSTEM_PROFUNDIZAR } from "../prompts";
 import { evaluarRuta, type EvaluacionCobertura, type Familia } from "../readiness";
 import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
+import { idiomaDePlantilla } from "../i18n/detectarIdioma";
 import { MOTOR } from "../i18n/mensajes/motor";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
 import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
@@ -95,6 +96,9 @@ export interface EstadoRecorrido {
   unidadVentaSesion: string | null;
   fase: FaseRecorrido;
   sigamosDirigido: SigamosDirigidoState | null;
+  /** i18n F5: el idioma de la IDEA (projects.idioma), en que escribe la IA.
+   * Ausente en sesiones de antes de F5 = español. */
+  idioma?: string;
 }
 
 /** AUD-09 M16: los dominios que la entrevista puede recorrer. En una sesión de
@@ -118,6 +122,8 @@ export function estadoInicial(params: {
   dominioSesion?: string;
   /** Mundos de proteccion (P1): el snapshot del nucleo ya renderizado. */
   snapshotNucleo?: string | null;
+  /** i18n F5: el idioma de la idea (projects.idioma). */
+  idioma?: string;
 }): EstadoRecorrido {
   return {
     ruta: [params.actualId],
@@ -132,6 +138,7 @@ export function estadoInicial(params: {
     dominioSesion: params.dominioSesion ?? "core",
     puertasDescartadas: [],
     snapshotNucleo: params.snapshotNucleo ?? null,
+    idioma: params.idioma ?? "es",
     fallbackEvents: [],
     prioridadDeclarada: null,
     preguntaPendiente: null,
@@ -302,7 +309,8 @@ export async function preguntaDirigida(
   perfilSesion: string | null,
   ultimasPreguntas: string[],
   acumulado: UsoAcumulado,
-  idioma: Locale = LOCALE_BASE
+  idioma: Locale = LOCALE_BASE,
+  idiomaSalida: string | null = null
 ): Promise<{ pregunta: string; acumulado: UsoAcumulado }> {
   const plano = preguntaDeNodo(nid, graph, preguntasCache, idioma);
   try {
@@ -314,6 +322,7 @@ export async function preguntaDirigida(
     const r = await llamarClaude(client, SYSTEM_PREGUNTA_DIRIGIDA, JSON.stringify(ctx), MODEL_HAIKU, acumulado, {
       maxTokens: 150,
       componente: "turnos",
+      idiomaSalida,
     });
     const texto = r.texto.trim();
     return { pregunta: texto || plano, acumulado: r.acumulado };
@@ -343,7 +352,11 @@ export interface AvanzarTurnoParams {
 
 export async function avanzarTurno(params: AvanzarTurnoParams): Promise<ResultadoTurno> {
   const { client, graph, families, preguntasCache, dbSessionId } = params;
-  const idioma = params.idioma ?? LOCALE_BASE;
+  // i18n F5: lo que el motor arma sin la IA sale en el idioma de la IDEA si es
+  // de los once; si no, en el de la interfaz (D2). Sin idioma guardado, la
+  // sesión es de antes de F5: español.
+  const idioma = idiomaDePlantilla(params.estado.idioma ?? "es", params.idioma ?? LOCALE_BASE);
+  const idiomaSalida = params.estado.idioma ?? null;
   let estado = params.estado;
   let acumulado = params.acumulado;
   let respuestaUsuario = params.respuestaUsuario;
@@ -420,7 +433,8 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       estado.perfilSesion,
       estado.ultimasPreguntas,
       acumulado,
-      idioma
+      idioma,
+      idiomaSalida
     );
     acumulado = a2;
     estado = {
@@ -471,7 +485,8 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       perfilNuevo,
       estado.ultimasPreguntas,
       acumulado,
-      idioma
+      idioma,
+      idiomaSalida
     );
     acumulado = a2;
     estado = {
@@ -564,6 +579,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       registrarEvento: (e) => eventosNuevos.push(e),
       dominiosDesbloqueados: dominiosDelRecorrido(estado),
       idioma,
+      idiomaSalida,
     });
     acumulado = resultadoInterprete.acumulado;
     if (resultadoInterprete.historialMensajes) {

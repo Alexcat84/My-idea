@@ -22,6 +22,7 @@ import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { mensajeSaldoInsuficiente, reservarCreditos, resolverReserva, verificarSaldo } from "@/lib/creditos";
 import { crearSesion, dominiosDesbloqueados, obtenerProyecto } from "@/lib/db";
+import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { nacerIdea } from "@/lib/nacerIdea";
 import { clasificarEntrada } from "@/lib/engine/clasificar";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
@@ -129,6 +130,8 @@ export async function POST(request: Request) {
   const families = cargarFamilies();
 
   let projectId: string;
+  // i18n F5: el idioma de la IDEA (el de su texto al nacer), en que escribe la IA.
+  let idiomaIdea: string;
   if (projectIdSolicitado) {
     // RLS garantiza que solo se ve el proyecto propio; si no aparece, o
     // no existe o no es de este usuario -- misma respuesta en ambos casos.
@@ -138,8 +141,9 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
     }
     projectId = projectIdSolicitado;
+    idiomaIdea = idiomaDelProyecto(proyecto);
   } else {
-    ({ projectId } = await nacerIdea(supabase, user.id, texto, idioma));
+    ({ projectId, idioma: idiomaIdea } = await nacerIdea(supabase, user.id, texto, idioma));
   }
   const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", texto, null, "core", { id: sessionIdNueva });
 
@@ -166,6 +170,7 @@ export async function POST(request: Request) {
     perfilSesion: clasificacion.perfilSesion,
     textoOriginal: texto,
     dominiosDesbloqueados: dominios,
+    idioma: idiomaIdea,
   });
   // AUD-09 M17: si la clasificación cayó a su respaldo, queda como evento de la
   // sesión (caja de vidrio), no solo en el log.

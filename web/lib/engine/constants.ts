@@ -15,6 +15,21 @@ export const MAX_COSECHA_PRIORIDAD = 8;
 
 export const SECCION_ECONOMICA_TITULO = "¿Puede sostenerse tu idea?";
 
+/** i18n F5 (DISENO §5): los MARCADORES NEUTROS del plan. Son los rótulos que
+ * el código lee de lo que escribe la IA (checklist.ts, planParser.ts, la
+ * sección económica del redactor). En cualquier idioma la IA los escribe tal
+ * cual, en español; la pantalla y los documentos los pintan en el idioma de
+ * quien lee. */
+export const ROTULOS_PLAN: readonly string[] = [
+  "## Etapa N:",
+  "**Pasos:**",
+  "**Entregable:**",
+  "**Esta semana:**",
+  "**El lunes que viene:**",
+  `## ${SECCION_ECONOMICA_TITULO} Los numeros en simple`,
+  "===JSON===",
+];
+
 // AUD-09 M33: lo que el plan aún no cubre, en español llano y con tildes (sin
 // "MVP"). Fuente única: la usan readiness.ts y el redactor; paridad con
 // engine/plan_readiness.py y engine/prototipo_motor.py.

@@ -91,13 +91,16 @@ export interface ResultadoClasificarOferta {
 export async function clasificarOferta(
   client: Anthropic,
   texto: string,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  /** i18n F5: la unidad de venta se muestra: en el idioma de la idea. */
+  idiomaSalida: string | null = null
 ): Promise<ResultadoClasificarOferta> {
   try {
     const r = await llamarClaude(client, SYSTEM_CLASIFICAR_OFERTA, texto, MODEL_HAIKU, acumulado, {
       maxTokens: 150,
       componente: "turnos",
       presupuestoUsd: PRESUPUESTO_REPORTE_USD,
+      idiomaSalida,
     });
     const data = parsearJson<{ tipo_oferta?: string; unidad_venta?: string }>(r.texto);
     const tipo = data.tipo_oferta && TIPOS_OFERTA_VALIDOS.has(data.tipo_oferta) ? data.tipo_oferta : null;
@@ -189,7 +192,9 @@ export async function narrarReporte(
   numeros: NumerosProyecto,
   tipoOferta: TipoOferta,
   acumulado: UsoAcumulado,
-  idioma: Locale = LOCALE_BASE
+  idioma: Locale = LOCALE_BASE,
+  /** i18n F5: el idioma de la idea, en que narra la IA. */
+  idiomaSalida: string | null = null
 ): Promise<ResultadoNarracion> {
   const payload = {
     resultados,
@@ -201,6 +206,7 @@ export async function narrarReporte(
       maxTokens: 1800,
       componente: "reporte",
       presupuestoUsd: PRESUPUESTO_REPORTE_USD,
+      idiomaSalida,
     });
     return { contenido: r.texto.trim() + REPORTE_DISCLAIMER, acumulado: r.acumulado, sinIA: false };
   } catch (e) {

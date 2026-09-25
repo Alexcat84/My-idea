@@ -21,6 +21,7 @@ import { createAnthropicClient } from "@/lib/anthropicClient";
 import catalogo from "@/lib/assets/packs_catalog.json";
 import { costoAcumuladoUsd } from "@/lib/costmeter";
 import { guardarEstadoSesion, obtenerProyecto, obtenerSesion, registrarBitacora } from "@/lib/db";
+import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { PACK_CLICKS_PACK } from "@/lib/dbContract";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
@@ -114,7 +115,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   let resumen: string;
   let acumulado = estadoPersistido.acumulado;
   try {
-    const r = await redactarDiagnostico(createAnthropicClient(), material, acumulado);
+    const r = await redactarDiagnostico(createAnthropicClient(), material, acumulado, idiomaDelProyecto(proyecto));
     resumen = r.resumen;
     acumulado = r.acumulado;
   } catch (e) {

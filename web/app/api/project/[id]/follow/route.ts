@@ -44,6 +44,7 @@ import { MAX_LARGO_TEXTO_USUARIO, mensajeTextoLargo } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { mensajeSaldoInsuficiente, reservarCreditos, resolverReserva, verificarSaldo } from "@/lib/creditos";
 import { obtenerModosPorEspacio, crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
+import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
@@ -389,6 +390,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     dominiosDesbloqueados: dominios,
     // Fase 4.3: un follow de mundo es una sesion de mundo. Misma regla.
     dominioSesion: dominio,
+    idioma: idiomaDelProyecto(proyecto),
   });
 
   const resultado = await avanzarTurno({

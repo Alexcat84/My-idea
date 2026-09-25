@@ -21,6 +21,7 @@ import {
 } from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearSesion, FASES, guardarPlan } from "@/lib/db";
 import { nacerIdea } from "@/lib/nacerIdea";
+import { idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import { construirMarkdown, limpiarOrganizador, MAX_TOKENS_ORGANIZADOR, type OrganizadorData } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
@@ -80,7 +81,7 @@ export async function POST(request: Request) {
     resumen: graph[s].resumen_teorico.slice(0, 150),
   }));
 
-  const { projectId } = await nacerIdea(supabase, user.id, texto, idioma);
+  const { projectId, idioma: idiomaIdea } = await nacerIdea(supabase, user.id, texto, idioma);
   const sessionId = await crearSesion(supabase, user.id, projectId, "gratuito", texto);
 
   const client = createAnthropicClient();
@@ -93,7 +94,7 @@ export async function POST(request: Request) {
       JSON.stringify({ texto_usuario: texto, puertas }),
       MODEL_HAIKU,
       acumulado,
-      { maxTokens: MAX_TOKENS_ORGANIZADOR, componente: "organizador" }
+      { maxTokens: MAX_TOKENS_ORGANIZADOR, componente: "organizador", idiomaSalida: idiomaIdea }
     );
     acumulado = resultado.acumulado;
     data = parsearJson<OrganizadorData>(resultado.texto);
@@ -117,7 +118,8 @@ export async function POST(request: Request) {
   }
 
   const limpio = limpiarOrganizador(data);
-  const markdown = construirMarkdown(limpio);
+  // i18n F5 (D2): la Claridad es un documento de la idea: en su idioma.
+  const markdown = construirMarkdown(limpio, idiomaDePlantilla(idiomaIdea, idioma));
   await guardarPlan(supabase, user.id, sessionId, "organizador", markdown, 0, []);
   await cerrarSesion(
     supabase,

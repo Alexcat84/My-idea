@@ -77,12 +77,15 @@ export interface ResultadoDiagnostico {
 export async function redactarDiagnostico(
   client: Anthropic,
   material: MaterialDiagnostico,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  /** i18n F5: el idioma de la idea, en que escribe la IA. */
+  idiomaSalida: string | null = null
 ): Promise<ResultadoDiagnostico> {
   const r = await llamarClaude(client, SYSTEM_DIAGNOSTICO_MUNDO, JSON.stringify(material), MODEL, usoVacio(), {
     maxTokens: 700,
     componente: "diagnostico",
     presupuestoUsd: PRESUPUESTO_DIAGNOSTICO_USD,
+    idiomaSalida,
   });
   return { resumen: r.texto.trim(), acumulado: sumarUso(acumulado, r.acumulado) };
 }

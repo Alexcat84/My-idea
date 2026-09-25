@@ -285,3 +285,23 @@ describe("LA FRONTERA: los mundos de mejora y el núcleo no se tocan", () => {
     }
   });
 });
+
+// i18n F5: la pregunta anclada de un mundo de protección la escribe la IA en
+// el idioma de la idea (viaja en el estado de la sesión).
+import { anclarResultadoTurno as anclarI18n } from "./reformuladorProteccion";
+import { usoVacio as usoVacioI18n } from "../costmeter";
+
+describe("anclarResultadoTurno: el idioma de la idea (i18n F5)", () => {
+  it("una sesión en hindi manda la regla de idioma al reformulador", async () => {
+    const create = vi.fn(async () => ({ content: [{ type: "text", text: "आप क्या करते हैं?" }], usage: { input_tokens: 1, output_tokens: 1 } }));
+    const resultado = {
+      tipo: "pregunta",
+      pregunta: "¿Qué haces hoy?",
+      estado: { snapshotNucleo: "actividades", preguntaPendiente: "¿Qué haces hoy?", ultimasPreguntas: [], fallbackEvents: [], idioma: "hi" },
+    };
+    await anclarI18n({ messages: { create } } as never, resultado, usoVacioI18n());
+    const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
+    expect(sistema).toHaveLength(2);
+    expect(sistema[1].text).toMatch(/^IDIOMA DE SALIDA: hindi/);
+  });
+});

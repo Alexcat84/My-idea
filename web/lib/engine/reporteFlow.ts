@@ -12,6 +12,7 @@ import { detectarInconsistenciaGigo, calcularReporte, type NumerosProyecto, type
 import { type UsoAcumulado } from "../costmeter";
 import { cerraduraAritmetica, numerosDeCalculadora, numerosDeclarados, verificarNumerosHuerfanos } from "../verificadorHuerfanos";
 import { LOCALE_BASE, type Locale } from "../i18n/config";
+import { idiomaDePlantilla } from "../i18n/detectarIdioma";
 import { MAX_PREGUNTAS_REPORTE, preguntaTipoOferta, type CampoNumericoProyecto } from "./constants";
 import {
   camposEsencialesPorTipo,
@@ -59,11 +60,25 @@ export type ResultadoPasoReporte =
       eventos: Record<string, unknown>[];
     };
 
+/** i18n F5 (D2): el reporte es un documento de la idea. `salida` es el idioma
+ * en que narra la IA (el de la idea); `documento`, el de lo que arma el código
+ * sin IA (el de la idea si es de los once; si no, el de la interfaz). Sin
+ * idioma de idea (antes de F5), español en todo. */
+interface IdiomasReporte {
+  salida: string | null;
+  documento: Locale;
+}
+
+function idiomasDelReporte(idiomaIdea: string | null, interfaz: Locale): IdiomasReporte {
+  return { salida: idiomaIdea, documento: idiomaDePlantilla(idiomaIdea ?? "es", interfaz) };
+}
+
 async function generarContenidoReporte(
   client: Anthropic,
   numeros: NumerosProyecto,
   tipoOferta: string | null,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  idiomas: IdiomasReporte
 ): Promise<{ contenido: string; acumulado: UsoAcumulado; eventos: Record<string, unknown>[] }> {
   const eventos: Record<string, unknown>[] = [];
   const registrarEvento = (e: Record<string, unknown>) => eventos.push(e);
@@ -72,7 +87,7 @@ async function generarContenidoReporte(
   let acumuladoFinal: UsoAcumulado;
   let numerosPermitidos: Set<number>;
   if (gigo.inconsistente) {
-    contenido = reporteGigoInconsistente(gigo.motivo ?? "", numeros);
+    contenido = reporteGigoInconsistente(gigo.motivo ?? "", numeros, idiomas.documento);
     acumuladoFinal = acumulado;
     numerosPermitidos = cerraduraAritmetica(numerosDeclarados(numeros));
     // Fase 3.1 (caja de vidrio): antes de esto, un aborto del guardian
@@ -81,7 +96,7 @@ async function generarContenidoReporte(
     registrarEvento({ tipo: "gigo_abortado", motivo: gigo.motivo ?? "" });
   } else {
     const resultados = calcularReporte(numeros, tipoOferta as TipoOferta);
-    const r = await narrarReporte(client, resultados, numeros, tipoOferta as TipoOferta, acumulado);
+    const r = await narrarReporte(client, resultados, numeros, tipoOferta as TipoOferta, acumulado, idiomas.documento, idiomas.salida);
     contenido = r.contenido;
     acumuladoFinal = r.acumulado;
     // AUD-09 M20: el reporte sin IA deja su evento (caja de vidrio).
@@ -114,9 +129,12 @@ export async function iniciarReporte(
   unidadVenta: string | null,
   acumulado: UsoAcumulado,
   /** i18n: el idioma de las preguntas (se muestran, no se guardan). El
-   * reporte generado es un documento y sigue en el base (D2, F5). */
-  idioma: Locale = LOCALE_BASE
+   * reporte generado es un documento: sigue el idioma de la IDEA (D2, F5). */
+  idioma: Locale = LOCALE_BASE,
+  /** i18n F5: el idioma de la idea (projects.idioma). Sin él, español. */
+  idiomaIdea: string | null = null
 ): Promise<ResultadoPasoReporte> {
+  const idiomas = idiomasDelReporte(idiomaIdea, idioma);
   if (!tipoOferta) {
     const estado: EstadoReporte = {
       fase: "clasificando_oferta",
@@ -136,7 +154,7 @@ export async function iniciarReporte(
       tipoOfertaActualizado: null,
     };
   }
-  return continuarConTipoConocido(client, numeros, tipoOferta, unidadVenta, 0, false, acumulado, idioma);
+  return continuarConTipoConocido(client, numeros, tipoOferta, unidadVenta, 0, false, acumulado, idioma, idiomas);
 }
 
 async function continuarConTipoConocido(
@@ -147,11 +165,12 @@ async function continuarConTipoConocido(
   noAplicaCount: number,
   moldeCambiado: boolean,
   acumulado: UsoAcumulado,
-  idioma: Locale
+  idioma: Locale,
+  idiomas: IdiomasReporte
 ): Promise<ResultadoPasoReporte> {
   const faltantesEsenciales = calcularFaltantes(tipoOferta, numeros);
   if (faltantesEsenciales.length === 0) {
-    const { contenido, acumulado: acumuladoFinal, eventos } = await generarContenidoReporte(client, numeros, tipoOferta, acumulado);
+    const { contenido, acumulado: acumuladoFinal, eventos } = await generarContenidoReporte(client, numeros, tipoOferta, acumulado, idiomas);
     return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null, eventos };
   }
   const preguntas = preguntasPorTipo(tipoOferta, unidadVenta, idioma);
@@ -183,10 +202,13 @@ export async function avanzarReporte(
   respuesta: string,
   acumulado: UsoAcumulado,
   /** i18n: el idioma de las preguntas (ver iniciarReporte). */
-  idioma: Locale = LOCALE_BASE
+  idioma: Locale = LOCALE_BASE,
+  /** i18n F5: el idioma de la idea (ver iniciarReporte). */
+  idiomaIdea: string | null = null
 ): Promise<ResultadoPasoReporte> {
+  const idiomas = idiomasDelReporte(idiomaIdea, idioma);
   if (estado.fase === "clasificando_oferta") {
-    const r = await clasificarOferta(client, respuesta, acumulado);
+    const r = await clasificarOferta(client, respuesta, acumulado, idiomas.salida);
     // Igual que Python: si la clasificacion falla, tipo_oferta queda null
     // (nunca se fuerza a "producto_fisico") -- las tablas de consulta
     // (camposEsencialesPorTipo/preguntasPorTipo) ya tratan null como ese
@@ -197,15 +219,15 @@ export async function avanzarReporte(
     const tipoOfertaActualizado: TipoOfertaActualizado | null = r.tipo
       ? { tipoOferta: r.tipo, unidadVenta }
       : null;
-    const resultado = await continuarConTipoConocido(client, numeros, tipoOferta, unidadVenta, 0, false, r.acumulado, idioma);
+    const resultado = await continuarConTipoConocido(client, numeros, tipoOferta, unidadVenta, 0, false, r.acumulado, idioma, idiomas);
     return { ...resultado, tipoOfertaActualizado: resultado.tipoOfertaActualizado ?? tipoOfertaActualizado };
   }
 
   if (estado.fase === "reclasificando_molde") {
-    const r = await clasificarOferta(client, respuesta, acumulado);
+    const r = await clasificarOferta(client, respuesta, acumulado, idiomas.salida);
     if (r.tipo && r.tipo !== estado.tipoOferta) {
       const unidadVenta = r.unidad ?? estado.unidadVenta;
-      const resultado = await continuarConTipoConocido(client, numeros, r.tipo, unidadVenta, 0, true, r.acumulado, idioma);
+      const resultado = await continuarConTipoConocido(client, numeros, r.tipo, unidadVenta, 0, true, r.acumulado, idioma, idiomas);
       return { ...resultado, tipoOfertaActualizado: { tipoOferta: r.tipo, unidadVenta } };
     }
     // Sin cambio de tipo: seguimos con la MISMA lista, avanzando un campo.
@@ -216,7 +238,8 @@ export async function avanzarReporte(
         client,
         numeros,
         tipoOferta,
-        r.acumulado
+        r.acumulado,
+        idiomas
       );
       return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null, eventos };
     }
@@ -250,7 +273,7 @@ export async function avanzarReporte(
     const siguienteIdx = estado.idx + 1;
     if (siguienteIdx >= estado.faltantesEsenciales.length) {
       const tipoOferta = estado.tipoOferta;
-      const { contenido, acumulado: acumuladoFinal, eventos } = await generarContenidoReporte(client, numeros, tipoOferta, acumulado);
+      const { contenido, acumulado: acumuladoFinal, eventos } = await generarContenidoReporte(client, numeros, tipoOferta, acumulado, idiomas);
       return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null, eventos };
     }
     const preguntas = preguntasPorTipo(estado.tipoOferta, estado.unidadVenta, idioma);
@@ -283,7 +306,8 @@ export async function avanzarReporte(
       client,
       numerosActualizados,
       tipoOferta,
-      acumulado
+      acumulado,
+      idiomas
     );
     return {
       tipo: "reporte_listo",

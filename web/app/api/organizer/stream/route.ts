@@ -25,6 +25,8 @@ import {
 } from "@/lib/costmeter";
 import { actualizarProyecto, cerrarSesion, crearSesion, FASES, guardarPlan, obtenerProyecto } from "@/lib/db";
 import { nacerIdea } from "@/lib/nacerIdea";
+import { idiomaDelProyecto, idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
+import { bloquesDeSistema } from "@/lib/i18n/idiomaSalida";
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import {
   construirMarkdown,
@@ -84,10 +86,13 @@ export async function POST(request: Request) {
   // del usuario (RLS) y si de verdad no tiene su Claridad.
   const idPedido = (body as { project_id?: unknown } | null)?.project_id;
   let ideaExistente: string | null = null;
+  let idiomaExistente: string | null = null;
   if (typeof idPedido === "string" && idPedido) {
-    if (!(await obtenerProyecto(supabase, idPedido))) {
+    const existente = await obtenerProyecto(supabase, idPedido);
+    if (!existente) {
       return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
     }
+    idiomaExistente = idiomaDelProyecto(existente);
     const { data: sesionesIdea } = await supabase.from("sessions").select("id").eq("project_id", idPedido);
     const ids = ((sesionesIdea ?? []) as Array<{ id: string }>).map((s) => s.id);
     const { data: organizadores } = ids.length
@@ -122,7 +127,10 @@ export async function POST(request: Request) {
     resumen: graph[s].resumen_teorico.slice(0, 150),
   }));
 
-  const projectId = ideaExistente ?? (await nacerIdea(supabase, user.id, texto, idioma)).projectId;
+  // i18n F5: el idioma de la IDEA (el de su texto al nacer), en que escribe la IA.
+  const nacida = ideaExistente ? null : await nacerIdea(supabase, user.id, texto, idioma);
+  const projectId = ideaExistente ?? nacida!.projectId;
+  const idiomaIdea = idiomaExistente ?? nacida!.idioma;
   const sessionId = await crearSesion(supabase, user.id, projectId, "gratuito", texto);
 
   const client = createAnthropicClient();
@@ -168,7 +176,7 @@ export async function POST(request: Request) {
         const claudeStream = client.messages.stream({
           model: MODEL_HAIKU,
           max_tokens: MAX_TOKENS_ORGANIZADOR,
-          system: [{ type: "text", text: SYSTEM_ORGANIZADOR, cache_control: { type: "ephemeral" } }],
+          system: bloquesDeSistema(SYSTEM_ORGANIZADOR, idiomaIdea),
           messages: [{ role: "user", content: JSON.stringify({ texto_usuario: texto, puertas }) }],
         });
         let crudo = "";
@@ -234,7 +242,8 @@ export async function POST(request: Request) {
         // La puerta SSE no pasa por el punto único de limpieza de
         // llamarClaude: se limpia aquí, antes del markdown y del cliente.
         data = limpiarOrganizador(data);
-        const markdown = construirMarkdown(data);
+        // i18n F5 (D2): la Claridad es un documento de la idea: en su idioma.
+        const markdown = construirMarkdown(data, idiomaDePlantilla(idiomaIdea, idioma));
         await guardarPlan(supabase, user.id, sessionId, "organizador", markdown, 0, []);
         await cerrar();
         if (typeof data.etapa_detectada === "string" && (FASES as readonly string[]).includes(data.etapa_detectada)) {

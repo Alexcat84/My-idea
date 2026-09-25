@@ -69,7 +69,8 @@ export async function anclarPregunta(
   pregunta: string,
   snapshotTexto: string | null,
   acumulado: UsoAcumulado,
-  opts: { presupuestoUsd?: number } = {}
+  /** i18n F5: `idiomaSalida`, el idioma de la idea. */
+  opts: { presupuestoUsd?: number; idiomaSalida?: string | null } = {}
 ): Promise<ResultadoAnclaje> {
   const sinAnclar = (fallo: string | null): ResultadoAnclaje => ({
     pregunta,
@@ -91,7 +92,7 @@ export async function anclarPregunta(
       // a un modelo menor abarata justo lo que se ve.
       MODEL,
       acumulado,
-      { maxTokens: 300, componente: "anclaje_proteccion", presupuestoUsd: opts.presupuestoUsd ?? 5 }
+      { maxTokens: 300, componente: "anclaje_proteccion", presupuestoUsd: opts.presupuestoUsd ?? 5, idiomaSalida: opts.idiomaSalida }
     );
     const texto = r.texto.trim();
     if (!esPreguntaUsable(texto)) {
@@ -128,6 +129,8 @@ export async function anclarResultadoTurno<
       preguntaPendiente: string | null;
       ultimasPreguntas: string[];
       fallbackEvents: EventoInterprete[];
+      /** i18n F5: el idioma de la idea (EstadoRecorrido.idioma). */
+      idioma?: string;
     };
   }
 >(
@@ -140,7 +143,10 @@ export async function anclarResultadoTurno<
     return { resultado, acumulado, anclaje: null };
   }
   const original = resultado.pregunta;
-  const anclaje = await anclarPregunta(client, original, resultado.estado.snapshotNucleo, acumulado, opts);
+  const anclaje = await anclarPregunta(client, original, resultado.estado.snapshotNucleo, acumulado, {
+    ...opts,
+    idiomaSalida: resultado.estado.idioma ?? null,
+  });
 
   // El PAR va siempre a los eventos de la sesion, se haya anclado o no: es lo
   // que le permite al fundador muestrear si la intencion sobrevivio, y lo que

@@ -49,6 +49,17 @@ export const SYSTEM_REPORTE = prompts.SYSTEM_REPORTE;
 export const SYSTEM_CLASIFICAR_OFERTA = prompts.SYSTEM_CLASIFICAR_OFERTA;
 export const SYSTEM_DIAGNOSTICO_MUNDO = prompts.SYSTEM_DIAGNOSTICO_MUNDO;
 
+/** i18n F5 (DISENO §5): la regla final de los prompts NATIVOS que escriben para
+ * la persona. Misma letra que REGLA_IDIOMA_SALIDA de engine/prototipo_motor.py
+ * (los prompts sincronizados ya la traen). El idioma de la idea llega en un
+ * bloque posterior (lib/i18n/idiomaSalida.ts). */
+const REGLA_IDIOMA_SALIDA =
+  "\n\nIDIOMA DE SALIDA: espanol, salvo que un bloque posterior de este " +
+  "sistema, titulado IDIOMA DE SALIDA, indique otro idioma. En ese caso, " +
+  "toda mencion de 'espanol' en estas reglas significa ese idioma, las " +
+  "reglas de acentos y signos se aplican con la ortografia de ese idioma, " +
+  "y lo que ese bloque diga sobre el idioma manda sobre estas reglas.";
+
 /**
  * SYSTEM_ESTIMACION_BANDA — Scheduler Inteligente, estimador de esfuerzo.
  *
@@ -98,7 +109,7 @@ export const SYSTEM_REFORMULADOR_PROTECCION = [
   "Reglas: UNA sola pregunta, en segunda persona, sin explicar teoria antes, sin",
   "comillas y sin JSON. Menciona la actividad por su titulo (puedes citar su #N).",
   "Responde SOLO el texto de la pregunta.",
-].join("\n");
+].join("\n") + REGLA_IDIOMA_SALIDA;
 
 /**
  * SYSTEM_ENLACE_PROTECCION — Mundos de protección (P2): el ENLAZADOR.

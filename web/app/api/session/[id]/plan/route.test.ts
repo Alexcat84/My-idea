@@ -489,3 +489,55 @@ describe("reintento tras una falla entre guardar el plan y cerrar la sesión (AU
   });
 });
 
+
+// i18n F5: el plan de una idea en coreano lo redacta la IA en coreano, con los
+// rótulos de estructura en español (los marcadores neutros que leen el
+// checklist y la pantalla). Una sesión de antes de F5 va como siempre.
+describe("POST /api/session/[id]/plan: el idioma de la idea (i18n F5)", () => {
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    messagesStreamFalso.mockReset();
+  });
+
+  function sembrar(recorrido: Record<string, unknown>) {
+    estadoFalso.projects["p1"] = { id: "p1", session_count: 1, titulo: null, numeros_proyecto: {} };
+    estadoFalso.sessions["s1"] = {
+      id: "s1",
+      project_id: "p1",
+      closed_at: null,
+      estado_recorrido: { recorrido, acumulado: acumuladoVacio },
+    };
+  }
+
+  const raw = '# 화분 판매 계획\n\n## Etapa 1: 수요 확인\n\n**Esta semana:** 5명에게 물어보세요.\n\n===JSON===\n{"familias_tratadas": []}';
+
+  it("idea en coreano: el redactor recibe la regla de idioma con los rótulos fijos", async () => {
+    sembrar(estadoRecorridoBase({ idioma: "ko" }));
+    messagesStreamFalso.mockReturnValueOnce(streamFalsoExitoso(raw));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    const sistema = (messagesStreamFalso.mock.calls[0][0] as { system: Array<{ text: string }> }).system;
+    expect(sistema).toHaveLength(2);
+    expect(sistema[1].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
+    expect(sistema[1].text).toContain("«## Etapa N:»");
+    expect(sistema[1].text).toContain("«**Esta semana:**»");
+  });
+
+  it("sesión de antes de F5 (sin idioma): un solo bloque, como siempre", async () => {
+    sembrar(estadoRecorridoBase());
+    messagesStreamFalso.mockReturnValueOnce(streamFalsoExitoso(raw));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    const sistema = (messagesStreamFalso.mock.calls[0][0] as { system: unknown[] }).system;
+    expect(sistema).toHaveLength(1);
+  });
+
+  it("el checklist sale del plan en coreano gracias a los rótulos fijos", async () => {
+    sembrar(estadoRecorridoBase({ idioma: "ko" }));
+    messagesStreamFalso.mockReturnValueOnce(streamFalsoExitoso(raw));
+    const res = await POST(requestFalso(), ctxFalso("s1"));
+    await leerEventoDone(res);
+    expect(estadoFalso.checklistItems.map((i) => i.texto)).toContain("5명에게 물어보세요.");
+  });
+});

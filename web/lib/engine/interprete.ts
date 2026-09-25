@@ -289,6 +289,9 @@ export interface InterpretarMultiSaltoParams {
   /** i18n F2: el idioma de la pregunta genérica del respaldo tier-2 (la única
    * que el intérprete arma sin la IA). Sin él, el base. */
   idioma?: Locale;
+  /** i18n F5: el idioma de la IDEA, en que la IA escribe la pregunta adaptada
+   * y la repregunta (lib/i18n/idiomaSalida). Sin él, español. */
+  idiomaSalida?: string | null;
 }
 
 export interface ResultadoInterpretarMultiSalto {
@@ -318,6 +321,7 @@ export async function interpretarMultiSalto(
     registrarEvento,
     dominiosDesbloqueados,
     idioma = LOCALE_BASE,
+    idiomaSalida = null,
   } = params;
   let acumulado = params.acumulado;
 
@@ -476,7 +480,7 @@ export async function interpretarMultiSalto(
         JSON.stringify(ctxTurno),
         MODEL_HAIKU,
         acumulado,
-        { maxTokens: 700, componente: "turnos" }
+        { maxTokens: 700, componente: "turnos", idiomaSalida }
       );
       raw = r.texto;
       acumulado = r.acumulado;
@@ -485,6 +489,7 @@ export async function interpretarMultiSalto(
       const r = await llamarClaude(client, SYSTEM_INTERPRETE_MULTI, JSON.stringify(ctxTurno), MODEL_HAIKU, acumulado, {
         maxTokens: 700,
         componente: "turnos",
+        idiomaSalida,
       });
       raw = r.texto;
       acumulado = r.acumulado;
@@ -514,6 +519,7 @@ export async function interpretarMultiSalto(
     const r2 = await llamarClaude(client, SYSTEM_INTERPRETE_MULTI, JSON.stringify(ctxRetry), MODEL_HAIKU, acumulado, {
       maxTokens: 700,
       componente: "turnos",
+      idiomaSalida,
     });
     acumulado = r2.acumulado;
     const resultado = validarRespuesta(r2.texto);
