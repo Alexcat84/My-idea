@@ -117,6 +117,14 @@ export async function POST(request: Request) {
     .update({ app_user_id: null })
     .eq("app_user_id", userId);
   if (errPagos) return fallo("la anonimización de los eventos de pago", errPagos);
+  // B5 (decisión del fundador, 27 sep 2026): el historial de créditos queda
+  // anónimo, solo monto (con su tipo) y fecha. ANTES de borrar la cuenta: una
+  // fila que sigue con su user_id se la lleva el ON DELETE CASCADE.
+  const { error: errHistorial } = await admin
+    .from("credit_transactions")
+    .update({ user_id: null, saldo_resultante: null, concepto: null, origen: null, idempotency_key: null })
+    .eq("user_id", userId);
+  if (errHistorial) return fallo("la anonimización del historial de créditos (¿falta la migración 045?)", errHistorial);
 
   // B3: el correo sale de la lista de invitados (normalizado como la guarda).
   if (email) {

@@ -83,7 +83,7 @@ describe("borrar la cuenta borra o anonimiza todo lo del usuario", () => {
     expect(anonimizados).toContainEqual({ tabla: "revenuecat_webhook_events", cambios: { app_user_id: null }, col: "app_user_id", val: "u1" });
   });
 
-  it.fails("B5: su historial de créditos queda anónimo (solo monto, tipo y fecha)", async () => {
+  it("B5: su historial de créditos queda anónimo (solo monto, tipo y fecha)", async () => {
     await pedir();
     expect(anonimizados).toContainEqual({
       tabla: "credit_transactions",
@@ -93,7 +93,7 @@ describe("borrar la cuenta borra o anonimiza todo lo del usuario", () => {
     });
   });
 
-  it.fails("B5: el historial se anonimiza ANTES de borrar la cuenta (si no, el CASCADE se lo lleva)", async () => {
+  it("B5: el historial se anonimiza ANTES de borrar la cuenta (si no, el CASCADE se lo lleva)", async () => {
     const orden: string[] = [];
     const antes = anonimizados.push.bind(anonimizados);
     anonimizados.push = (...xs) => (xs.forEach((x) => orden.push(x.tabla)), antes(...xs));

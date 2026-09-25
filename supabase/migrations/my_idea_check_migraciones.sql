@@ -631,5 +631,12 @@ FROM (
       WHERE routine_schema='public' AND routine_name='limpiar_ideas_de_invitado'
         AND grantee IN ('anon','authenticated') AND privilege_type='EXECUTE'
     )
+  UNION ALL
+  -- 045 . historial de creditos anonimo al borrar la cuenta (decision del fundador, 27 sep 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '045', 'credit_transactions.user_id y saldo_resultante nullable (historial anonimo)',
+    (SELECT count(*) FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='credit_transactions'
+        AND column_name IN ('user_id','saldo_resultante') AND is_nullable='YES') = 2
 ) checks
 ORDER BY num;
