@@ -51,6 +51,14 @@ function compararNodo(base: unknown, otro: unknown, ruta: string, idioma: string
   fallas.push(`${ruta} [${idioma}]: tipo no admitido en un catálogo (${typeof base})`);
 }
 
+/** Compara una traducción suelta contra su español (la usa la herramienta de
+ * traducción de F3 antes de integrar un idioma que aún no está activo). */
+export function compararTraduccion(base: unknown, otro: unknown, ruta: string, idioma: string): string[] {
+  const fallas: string[] = [];
+  compararNodo(base, otro, ruta, idioma, fallas);
+  return fallas;
+}
+
 /** Audita un catálogo (`PorIdioma<T>`). Devuelve la lista de fallas (vacía = bien). */
 export function auditarCatalogo(nombre: string, catalogo: Record<string, unknown>): string[] {
   const fallas: string[] = [];
