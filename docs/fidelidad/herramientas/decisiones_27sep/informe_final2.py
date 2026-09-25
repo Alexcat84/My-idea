@@ -37,6 +37,15 @@ A('NINGUN CONTRARIO CONOCIDO QUEDA EN PRODUCCION' if not sin else 'QUEDAN CONTRA
 A('')
 A('# CAMPANIA DE FIDELIDAD TOTAL: INFORME FINAL')
 A('')
+A('## Estado del catalogo, solo con lo probado')
+A('')
+an_sin = COB['anadidos_sin_correccion_en_main']
+A('> **Los %d pasos accionables vivos del catalogo de My Idea se leyeron a ciegas contra su fuente, cada uno por al menos dos lectores '
+  'independientes salvo 3 que quedaron OPERATIVOS con una sola lectura; los %d que la contradecian y los %d que afirmaban algo que la '
+  'fuente no respalda tienen su correccion declarada en produccion, con cita literal, y un script lo comprueba contra main (%d y %d sin '
+  'corregir). No esta demostrado que no quede ningun error sin detectar, y los resumenes y entregables no se leyeron enteros: solo se '
+  'corrigieron donde repetian un dato corregido.**' % (N, COB['contrarios_conocidos'], COB['anadidos'], len(sin), len(an_sin)))
+A('')
 A('Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice su fuente. Busqueda en la rama fidelidad-total; '
   'correccion en la rama correcciones-fidelidad, llevada a main por avance rapido en las tandas fidelidad-t1 a fidelidad-t%d. '
   'Todo con claude-opus-5-5; los agentes solo leyeron, clasificaron, verificaron y propusieron; la sesion escribio cada fichero '
@@ -142,6 +151,21 @@ A('5. **Segunda pasada ciega dirigida:** 2763 FIEL de seguridad y salud y de leg
 A('6. **Documentacion:** docs/fidelidad/ de esta rama y el informe del muestreo se fusionan a main como archivo.')
 A('7. **Sesion con credencial:** %d nodos a re-embeber (el indice embebe titulo, resumen y condiciones, no los pasos) y %d preguntas a regenerar; '
   'listas exactas en docs/fidelidad/credencial/ de main (LISTAS.md con la razon de cada una).' % (len(reemb), len(retiradas)))
+A('')
+A('## 9. Segundas decisiones del fundador del 27 sep 2026')
+A('')
+A('1. **Ratificados** los textos que la sesion ajusto (EXCEPCIONES.md, seccion C).')
+A('2. **Atribuciones:** los nombres de autor dentro del texto de los nodos se quedan; no hay cambio de interfaz pendiente.')
+A('3. **Pagina del auditor externo** actualizada con estas cifras.')
+A('4. **Guias escaneadas:** el fundador reextrajo los PDF linea por linea con coordenadas. La infografia se identifico como la de UPS por el '
+  'encabezado de su extraccion; la de DHL se comparo con la version oficial descargada (23/07/2026 frente a la local del 25/02/2026: mismo texto '
+  'salvo un parrafo nuevo sobre "black foil"; la frase citada identica). Las dos ya tienen cita literal: 3 ANADIDOS practicos a "Sugerencia de '
+  'My Idea:" en fidelidad-t13. Al comprobar por script que cada ANADIDO del censo tuviera su correccion aparecio uno sin corregir: '
+  '`creacion_option_pool` p2, una excepcion del bloque B1 que se habia perdido (la cita no se reconocio por unas comillas tipograficas y nunca paso '
+  'a EXCEPCIONES.md). Corregido en fidelidad-t14, junto con una cifra cambiada en su resumen ("hasta 20%" frente a "averaged 20%").')
+A('5. **Sesion con credencial:** pendiente de que el fundador diga "clave cargada"; listas exactas en docs/fidelidad/credencial/ de main '
+  '(%d nodos a re-embeber y %d preguntas a regenerar tras fidelidad-t14).' % (len(reemb), len(retiradas)))
+A('6. **Frase de estado:** al principio de este informe.')
 txt = '\n'.join(L) + '\n'
 io.open(RF + '/docs/fidelidad/INFORME_FINAL_CAMPANIA.md', 'w', encoding='utf-8', newline='\n').write(txt.replace(chr(0x2014), '--').replace(chr(0x2013), '-'))
 
@@ -159,23 +183,22 @@ ARB = json.load(io.open(C + '/ARBITRAJE_EXCEPCIONES.json', encoding='utf-8'))
 for x in ARB:
     e('- `%s` paso %d: el arbitro con el libro lo leyo %s (%s, "%s"); corregido en fidelidad-t10.' % (x['node_id'], x['paso'], x['veredicto'], x['lineas'], x['frase_literal'][:160]))
 e('')
-e('## B. Pendientes: las 3 guias de empaque escaneadas')
+e('- `adaptar_empaque_segun_tipo_de_articulo` pasos 2 y 4 y `revisar_necesidades_de_empaque` paso 3 (guias escaneadas): con la extraccion nueva del fundador, cita literal; ANADIDOS practicos a "Sugerencia de My Idea:" en fidelidad-t13.')
+e('- `creacion_option_pool` paso 2: excepcion del bloque B1 que se habia perdido (su cita no se reconocio por unas comillas tipograficas y nunca llego a este fichero). La encontro la comprobacion por script de los ANADIDOS; corregida en fidelidad-t14.')
 e('')
-e('ANADIDOS practicos cuya frase de apoyo existe en la fuente, pero partida por el escaneo en trozos no contiguos. Decision del fundador 3: OCR '
-  'para sacar la cita; si no se puede, esos pasos pasan a "Sugerencia de My Idea:" sin atribucion. **El fundador reconvierte los PDF y los pasara.**')
+e('## B. Abiertas')
 e('')
-for nid, p, fuente, fich in (('adaptar_empaque_segun_tipo_de_articulo', 2, 'Guia visual de empaque (infografia de UPS)', 'I have an idea/txt/Supply chain/packaging_guide_infographic.txt, L47-L55'),
-                             ('adaptar_empaque_segun_tipo_de_articulo', 4, 'Guia visual de empaque (infografia de UPS)', 'I have an idea/txt/Supply chain/packaging_guide_infographic.txt, L61-L67'),
-                             ('revisar_necesidades_de_empaque', 3, 'DHL Express, Guia de empaque', 'I have an idea/txt/Supply chain/dhl_express_packing_guide_en.txt, L51-L53')):
-    d = json.load(io.open('%s/dataset/nodos/%s.json' % (RC, nid), encoding='utf-8'))
-    e('- `%s` paso %d (%s; %s). **Texto vigente:** %s' % (nid, p, fuente, fich, d['pasos_accionables'][p - 1]))
+e('Ninguna.')
 e('')
-e('## C. Para ratificar: textos que la sesion ajusto sobre la propuesta del verificador o del arbitro')
+e('## C. Textos que la sesion ajusto sobre la propuesta del verificador o del arbitro: RATIFICADOS por el fundador el 27 sep 2026')
 e('')
-e('- `decision_fpr` paso 2 (fidelidad-t11-01): el texto del arbitro decia que el FPR "facilita la venta"; el libro lo desmiente (L2052, "no significant '
-  'correlation between the use of an FPR and speed of growth"; L4695). Quedo con los beneficios que el libro si da (L4715 y L4717) y dos razones para no usarlo (L4719).')
-e('- `documentacion_mantenimiento_linea_base` paso 2 (fidelidad-t10-03): se quito del texto del arbitro una coletilla que remitia al texto viejo.')
-e('- Restitucion de tildes en textos de verificador sin ellas: fidelidad-t11-05 y fidelidad-t12-02.')
+e('- `decision_fpr` paso 2 (fidelidad-t11-01): el texto del arbitro decia que el FPR "facilita la venta"; el libro lo desmiente (L2052, L4695).')
+e('- `documentacion_mantenimiento_linea_base` paso 2 (fidelidad-t10-03): se quito una coletilla que remitia al texto viejo.')
+e('- Restitucion de tildes: fidelidad-t11-05 y fidelidad-t12-02.')
+e('')
+e('## D. Declarado sin corregir')
+e('')
+e('- El resumen de `adaptar_empaque_segun_tipo_de_articulo` repite como dato practico la bolsa plastica para liquidos y la caja dentro de caja. Por el precedente de las tandas, el dato repetido en resumen o entregable solo se corrigio en CONTRARIOS y en cifras, plazos o normas; los resumenes no los pinta ninguna pantalla.')
 t = '\n'.join(E) + '\n'
 io.open(RF + '/docs/fidelidad/EXCEPCIONES.md', 'w', encoding='utf-8', newline='\n').write(t.replace(chr(0x2014), '--').replace(chr(0x2013), '-'))
 print('informe y excepciones escritos;', len(tandas), 'tandas;', sum(t[2] for t in tandas), 'correcciones')

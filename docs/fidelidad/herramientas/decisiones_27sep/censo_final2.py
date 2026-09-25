@@ -59,11 +59,18 @@ for nid, paso in sorted(contrarios):
     d = json.load(io.open('%s/dataset/nodos/%s.json' % (RC, nid), encoding='utf-8'))
     if not any(c.get('campo') == 'pasos_accionables' and c.get('indice') == paso - 1 for c in d.get('correcciones', [])):
         sin.append((nid, paso))
+anadidos = sorted(k for k in vivos if k in reg and reg[k]['veredicto'] == 'ANADIDO')
+an_sin = []
+for nid, paso in anadidos:
+    d = json.load(io.open('%s/dataset/nodos/%s.json' % (RC, nid), encoding='utf-8'))
+    if not any(c.get('campo') == 'pasos_accionables' and c.get('indice') == paso - 1 for c in d.get('correcciones', [])):
+        an_sin.append((nid, paso))
 res = {'pasos_vivos': len(vivos), 'con_veredicto': len(vivos) - len(faltan), 'n_faltan': len(faltan), 'faltan': faltan[:50],
        'n_sobran': len(sobran), 'sobran': sobran[:50], 'n_duplicados': len(dup), 'duplicados': dup[:50],
        'censo_campania': dict(antes), 'censo': dict(ahora),
        'cambios_posteriores': [{'fuente': a, 'de': b, 'a': c, 'pasos': v} for (a, b, c), v in sorted(cambios.items())],
        'contrarios_conocidos': len(contrarios), 'contrarios_sin_corregir_en_main': sin,
+       'anadidos': len(anadidos), 'anadidos_sin_correccion_en_main': an_sin,
        'por_libro': {k: dict(v) for k, v in sorted(por_libro.items())}}
 json.dump(res, io.open(C + '/COBERTURA_FINAL.json', 'w', encoding='utf-8', newline='\n'), ensure_ascii=False, indent=1)
 print('pasos vivos %d | con veredicto %d | faltan %d | sobran %d | duplicados %d' % (len(vivos), res['con_veredicto'], len(faltan), len(sobran), len(dup)))
@@ -72,3 +79,4 @@ print('censo ahora', dict(ahora))
 for x in res['cambios_posteriores']:
     print('  ', x)
 print('CONTRARIOS conocidos %d | sin corregir en main %d %s' % (len(contrarios), len(sin), sin))
+print('ANADIDOS %d | sin correccion en main %d %s' % (len(anadidos), len(an_sin), an_sin))

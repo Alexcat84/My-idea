@@ -2,7 +2,11 @@ NINGUN CONTRARIO CONOCIDO QUEDA EN PRODUCCION
 
 # CAMPANIA DE FIDELIDAD TOTAL: INFORME FINAL
 
-Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice su fuente. Busqueda en la rama fidelidad-total; correccion en la rama correcciones-fidelidad, llevada a main por avance rapido en las tandas fidelidad-t1 a fidelidad-t12. Todo con claude-opus-5-5; los agentes solo leyeron, clasificaron, verificaron y propusieron; la sesion escribio cada fichero e hizo cada commit. Este informe incluye lo hecho por las decisiones del fundador del 27 sep 2026 (seccion 8).
+## Estado del catalogo, solo con lo probado
+
+> **Los 15311 pasos accionables vivos del catalogo de My Idea se leyeron a ciegas contra su fuente, cada uno por al menos dos lectores independientes salvo 3 que quedaron OPERATIVOS con una sola lectura; los 101 que la contradecian y los 227 que afirmaban algo que la fuente no respalda tienen su correccion declarada en produccion, con cita literal, y un script lo comprueba contra main (0 y 0 sin corregir). No esta demostrado que no quede ningun error sin detectar, y los resumenes y entregables no se leyeron enteros: solo se corrigieron donde repetian un dato corregido.**
+
+Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice su fuente. Busqueda en la rama fidelidad-total; correccion en la rama correcciones-fidelidad, llevada a main por avance rapido en las tandas fidelidad-t1 a fidelidad-t14. Todo con claude-opus-5-5; los agentes solo leyeron, clasificaron, verificaron y propusieron; la sesion escribio cada fichero e hizo cada commit. Este informe incluye lo hecho por las decisiones del fundador del 27 sep 2026 (seccion 8).
 
 ## 1. Cobertura, comprobada por script
 
@@ -58,7 +62,9 @@ Lo que cambio despues de la campania:
 | fidelidad-t10 | c855e9f4 | 4 | 1 | 3 | 4 |
 | fidelidad-t11 | 7263d971 | 6 | 6 | 0 | 5 |
 | fidelidad-t12 | f7705aee | 3 | 2 | 1 | 3 |
-| **total** | | **406** | **129** | **152** | |
+| fidelidad-t13 | ffccb770 | 3 | 0 | 3 | 2 |
+| fidelidad-t14 | c94ae62f | 2 | 0 | 0 | 1 |
+| **total** | | **411** | **129** | **155** | |
 
 Cada correccion vive en el campo `correcciones` de su nodo con el texto viejo, el nuevo, la cita literal (libro, lineas, frase) y la decision (docs/fidelidad/tandas/ en main). Las cuentas de CONTRARIO incluyen los datos repetidos en el resumen o el entregable del mismo nodo.
 
@@ -200,10 +206,19 @@ Ver docs/fidelidad/EXCEPCIONES.md. Ninguna es un CONTRARIO sin corregir.
 
 ## 8. Decisiones del fundador del 27 sep 2026, una por una
 
-1. **Textos derivados.** Se buscaron los textos anteriores de las 120 correcciones de CONTRARIO y las 125 de cifra, plazo o norma en la cache de preguntas y en todo fichero derivado. Ninguna pregunta contiene un texto viejo; pero el generador lee los 400 primeros caracteres del resumen, asi que las preguntas cuyo resumen se corrigio dentro de ese tramo se **retiraron de la cache: 22** (docs/fidelidad/PREGUNTAS_RETIRADAS.json en main, con la pregunta, sus candidatos y la correccion que la invalida). Caen a la generica que la sesion adapta en vivo. El master_graph lleva el campo `correcciones` con los textos viejos, pero ningun codigo de web/ lo lee ni lo manda a un prompt. 7 textos viejos siguen identicos en nodos deprecados, que la app no ofrece y que resuelven al superviviente corregido.
+1. **Textos derivados.** Se buscaron los textos anteriores de las 120 correcciones de CONTRARIO y las 125 de cifra, plazo o norma en la cache de preguntas y en todo fichero derivado. Ninguna pregunta contiene un texto viejo; pero el generador lee los 400 primeros caracteres del resumen, asi que las preguntas cuyo resumen se corrigio dentro de ese tramo se **retiraron de la cache: 23** (docs/fidelidad/PREGUNTAS_RETIRADAS.json en main, con la pregunta, sus candidatos y la correccion que la invalida). Caen a la generica que la sesion adapta en vivo. El master_graph lleva el campo `correcciones` con los textos viejos, pero ningun codigo de web/ lo lee ni lo manda a un prompt. 7 textos viejos siguen identicos en nodos deprecados, que la app no ofrece y que resuelven al superviviente corregido.
 2. **OPERATIVOS: se quedan.** Lista de atribuciones a autor para la sesion de idiomas: docs/fidelidad/ATRIBUCIONES_A_AUTOR.md en main (el codigo de web/ no atribuye nada ni lee el campo fuente; los nombres de autor viven dentro del texto de 241 nodos, con fichero y linea).
 3. **EXCEPCIONES.** Las 4 con desacuerdo, a un arbitro con el libro (campania/ARBITRAJE_EXCEPCIONES.json): 1 CONTRARIO y 3 ANADIDOS practicos, corregidos en fidelidad-t10. Las 3 guias escaneadas: el fundador reconvierte los PDF y los pasara; pendientes (EXCEPCIONES.md, seccion B).
 4. **Criterios ratificados:** quitar el dominio en los 3 pasos; el prefijo "Sugerencia de My Idea:"; la voz de la casa solo si el significado no cambia, con registro y cita.
 5. **Segunda pasada ciega dirigida:** 2763 FIEL de seguridad y salud y de legal y dinero dieron 5 CONTRARIOS (fidelidad-t11); por la regla, se amplio al resto de los FIEL (6186), que dio 2 CONTRARIOS y 1 ANADIDO (fidelidad-t12). Registro: campania/p2/ y campania/p3/.
 6. **Documentacion:** docs/fidelidad/ de esta rama y el informe del muestreo se fusionan a main como archivo.
-7. **Sesion con credencial:** 43 nodos a re-embeber (el indice embebe titulo, resumen y condiciones, no los pasos) y 22 preguntas a regenerar; listas exactas en docs/fidelidad/credencial/ de main (LISTAS.md con la razon de cada una).
+7. **Sesion con credencial:** 44 nodos a re-embeber (el indice embebe titulo, resumen y condiciones, no los pasos) y 23 preguntas a regenerar; listas exactas en docs/fidelidad/credencial/ de main (LISTAS.md con la razon de cada una).
+
+## 9. Segundas decisiones del fundador del 27 sep 2026
+
+1. **Ratificados** los textos que la sesion ajusto (EXCEPCIONES.md, seccion C).
+2. **Atribuciones:** los nombres de autor dentro del texto de los nodos se quedan; no hay cambio de interfaz pendiente.
+3. **Pagina del auditor externo** actualizada con estas cifras.
+4. **Guias escaneadas:** el fundador reextrajo los PDF linea por linea con coordenadas. La infografia se identifico como la de UPS por el encabezado de su extraccion; la de DHL se comparo con la version oficial descargada (23/07/2026 frente a la local del 25/02/2026: mismo texto salvo un parrafo nuevo sobre "black foil"; la frase citada identica). Las dos ya tienen cita literal: 3 ANADIDOS practicos a "Sugerencia de My Idea:" en fidelidad-t13. Al comprobar por script que cada ANADIDO del censo tuviera su correccion aparecio uno sin corregir: `creacion_option_pool` p2, una excepcion del bloque B1 que se habia perdido (la cita no se reconocio por unas comillas tipograficas y nunca paso a EXCEPCIONES.md). Corregido en fidelidad-t14, junto con una cifra cambiada en su resumen ("hasta 20%" frente a "averaged 20%").
+5. **Sesion con credencial:** pendiente de que el fundador diga "clave cargada"; listas exactas en docs/fidelidad/credencial/ de main (44 nodos a re-embeber y 23 preguntas a regenerar tras fidelidad-t14).
+6. **Frase de estado:** al principio de este informe.
