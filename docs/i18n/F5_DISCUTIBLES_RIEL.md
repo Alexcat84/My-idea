@@ -2,6 +2,37 @@
 
 Anexo de `F5_INFORME.md`. Cada idioma lo tradujo un modelo y lo revisó un segundo modelo; lo evidente ya está aplicado en `web/lib/i18n/etiquetas/<idioma>.json`. Esto es lo que el revisor dejó para tu decisión, tal cual lo escribió (las notas **[aplicado]** las agregó la sesión de la nube).
 
+## DECISIÓN DEL FUNDADOR (25 sep 2026)
+
+Aprobadas las cuatro decisiones de la nube (riel por la interfaz, lo interno en español, documentos
+en F6, "État" con mayúscula). Para lo discutible: **se aplica la versión del revisor salvo que choque
+con el glosario aprobado**. Aplicado el 25 sep 2026 con `scripts/i18n/etiquetasRiel.ts aplicar`
+(valida cada etiqueta), 19 etiquetas:
+
+- **en** (1): `descomponer_tiempo_ciclo_pedido` "Time Each Step of Your Order" → "Time Each Stage of
+  Your Order" (el glosario fija etapa = stage).
+- **fr** (0 nuevas): los casos 1 a 4 y 10 ya los había aplicado la nube; 5 y 6 (el "?" de las
+  preguntas) el revisor los deja como están, "se lee natural", y no propone otra versión; 7 a 9
+  ("État") quedan con mayúscula por la decisión del fundador.
+- **pt** (3): `plan_de_contingencia_b`, `autoresponders_drip_campaigns` (acompanhamento, como fija el
+  glosario para Seguimiento) y `framework_excelencia_operacional`.
+- **de** (5): `framework_good_bad_product_manager` y los cuatro ciclos en infinitivo pasan al
+  imperativo du (`build_measure_learn`, `ciclo_crear_medir_aprender`, `desarrollo_en_espiral`,
+  `design_test_repeat`). El par del crédito de exportación queda como está (el revisor lo ve
+  intencional).
+- **it** (2): `autoservicio_y_autosanacion_del_producto` ("senza che") y
+  `ten_un_checklist_de_clausulas_de_contrato` (la versión del revisor, con "lista di controllo").
+- **ja** (1): `diez_derechos_servicio_cliente` → 配送の10の権利.
+- **ko** (5): las tres de margen pasan a 마진, que es el término fijo del glosario; y las dos más
+  largas, acortadas.
+- **ar** (1): `evaluar_proceso_completo_no_cada_metrica` (حاصل ضرب, sin el doble sentido de اضربوا).
+- **hi** (1): `establecer_proyecto_y_metas_diseno` (la versión inequívoca, con coma).
+- **Sin cambio:** en `company_building` (el revisor no propone otra versión); it
+  `modelos_negocio_mas_alla_del_lucro` y las dudas del grafo (`valor_presente_franquicia_pvf`,
+  `warrants_financiamiento`, `modelos_negocio_mas_alla_del_lucro`): las corrige la sesión dueña del
+  dataset; cuando lleguen a `main` se traen a `i18n` y se vuelve a derivar esa etiqueta en los diez
+  idiomas.
+
 ---
 
 ## Discutibles — revisión de naturalidad (en)
