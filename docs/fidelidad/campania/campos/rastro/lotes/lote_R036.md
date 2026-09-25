@@ -1,0 +1,479 @@
+# Lote R036: 49 nodos a leer contra su libro (titulo, etiqueta, resumen, entregable, condiciones)
+
+### R036-001
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Despliegue del Plan con Catch Ball
+- etiqueta: Negocia tus Metas en Ambos Sentidos
+- resumen: Una vez fijadas las metas, la direccion pregunta a cada nivel que necesita para apoyarlas; cada nivel consulta al siguiente y las respuestas suben resumidas. El intercambio puede repetirse varias veces hasta que haya satisfaccion general con el plan final. Incluye comunicar las areas clave que propone la direccion, recoger otras areas nominadas desde niveles inferiores y decidir que hara cada departamento.
+- entregable: Plan anual con metas acordadas por nivel, las areas nominadas desde abajo y lo que hara cada departamento
+- condiciones:
+  - condiciones[0]: Cuando ya tienes metas estrategicas y necesitas bajarlas a cada area con su compromiso
+  - condiciones[1]: Si tu equipo aun no tiene experiencia en mejora de calidad, porque el catch ball no exige preparar a quienes responden
+
+### R036-002
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Concepto de Dominancia de Variables
+- etiqueta: Identifica la Variable Dominante
+- resumen: Dado que existen numerosos sujetos de control, este concepto ayuda a identificar los 'pocos vitales' priorizando la variable dominante del proceso: dominante por configuración inicial (setup), por tiempo (desgaste progresivo), por componentes (calidad de insumos), por personas (habilidad del trabajador) o por información (procesos tipo taller que cambian frecuentemente). Cada tipo dominante sugiere un diseño de control distinto.
+- entregable: Identificación documentada de la variable dominante del proceso y plan de control ajustado a ella
+- condiciones:
+  - condiciones[0]: Cuando los recursos de control son limitados y se debe priorizar
+  - condiciones[1]: Si el proceso presenta múltiples variables sin claridad sobre cuál controlar primero
+
+### R036-003
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Competencias del Ingeniero de Calidad (Qualitist)
+- etiqueta: Forma a Tu Ingeniero de Calidad
+- resumen: El Ingeniero de Calidad o 'qualitist' es el experto técnico responsable de ejecutar los tres procesos universales de gestión de calidad: planificación, control y mejora. Sus competencias se agrupan en siete categorías: conceptos básicos de calidad, sistemas de calidad, evaluación organizacional, planificación de calidad, control de calidad, mejora de calidad y gestión del cambio. Requiere como mínimo los tres primeros niveles de la Taxonomía de Bloom (recordar, comprender, aplicar).
+- entregable: Perfil de competencias del Ingeniero de Calidad documentado y plan de certificación
+- condiciones:
+  - condiciones[0]: Cuando se contrata o desarrolla personal técnico de calidad
+
+### R036-004
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Clasificación de Características y Defectos de Calidad
+- etiqueta: Clasifica Características y Defectos de Calidad
+- resumen: Consiste en elaborar dos listas: una de características de calidad derivadas de las especificaciones, y otra de defectos (síntomas de no conformidad durante manufactura o uso). Estas listas guían al planificador para determinar cuáles características requieren mayor atención en la inspección.
+- entregable: Documento con listas clasificadas de características de calidad y defectos asociados.
+- condiciones:
+  - condiciones[0]: Cuando se necesita priorizar qué aspectos del producto inspeccionar con mayor rigor.
+
+### R036-005
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Competencias del Director de Calidad basadas en Taxonomía de Bloom
+- etiqueta: Desarrolla al Director de Calidad
+- resumen: El Director de Calidad requiere competencias de liderazgo, planificación estratégica, gestión de relaciones con clientes, gestión de la cadena de suministro, sistemas de información de calidad y desarrollo de talento. Estas competencias se evalúan según los seis niveles de la Taxonomía de Bloom revisada (recordar, comprender, aplicar, analizar, evaluar, crear), siendo el Director quien debe dominar los seis niveles, a diferencia del Ingeniero de Calidad que requiere como mínimo los tres primeros.
+- entregable: Matriz de competencias del Director de Calidad con niveles de Bloom asignados y evaluación de brechas
+- condiciones:
+  - condiciones[0]: Cuando se necesita definir el perfil de liderazgo de calidad o evaluar a un candidato/titular del puesto
+
+### R036-006
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Certificación de Belts en Six Sigma
+- etiqueta: Certifica a tus Expertos
+- resumen: La certificación de expertos en Six Sigma (Green Belt, Black Belt, Master Black Belt) surgió como lección aprendida de TQM, donde faltaba entrenamiento en herramientas de análisis de datos. Organismos como ASQ ofrecen certificaciones estandarizadas (CQE, Certified Manager of Quality/Organizational Excellence), aunque la calidad de la certificación depende de la legitimidad y el rigor de quien la otorga.
+- entregable: Un plan de certificación y desarrollo de tus propias competencias, o las de la persona que te ayuda con la mejora continua en tu negocio
+- condiciones:
+  - condiciones[0]: Cuando quieres formarte o certificarte, tú o alguien que te ayuda, en metodologías de mejora de calidad
+
+### R036-007
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Comunicación Catch Ball para Despliegue de Metas
+- etiqueta: Dialoga tus Metas en Equipo
+- resumen: Catch ball es un proceso de comunicación en dos sentidos (término de origen japonés) donde tú propones las metas o áreas de enfoque, y la persona que te ayuda a ejecutar responde con sus necesidades y sugerencias. El diálogo se repite hasta llegar a un acuerdo. Supera la costumbre de fijar metas en un solo sentido, sin escuchar a quien las va a llevar a cabo.
+- entregable: Plan estratégico acordado entre tú y las personas que te ayudan, logrado a través de varias rondas de retroalimentación
+- condiciones:
+  - condiciones[0]: Cuando necesitas alinear tus metas con la capacidad y los recursos reales de quienes te ayudan a ejecutar
+
+### R036-008
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Código de Conducta y Ética Orientado al Cliente
+- etiqueta: Define tu Código Ético al Cliente
+- resumen: Un código de conducta orientado al cliente establece normas de comportamiento esperadas para todos los miembros de la organización, incluidos los directivos. Debe ser publicado, enseñado en la inducción de nuevos empleados, y considerado en evaluaciones de desempeño y distribución de recompensas. Su efectividad depende de su aplicación consistente; si se ignora, se convierte en una herramienta de engaño que los clientes y empleados eventualmente detectan, dañando la credibilidad organizacional.
+- entregable: Documento de código de conducta ético-cliente aprobado, difundido y con mecanismo de aplicación y seguimiento
+- condiciones:
+  - condiciones[0]: Cuando la organización busca establecer una cultura de calidad centrada en el cliente
+  - condiciones[1]: Si existen inconsistencias entre discurso y práctica de calidad en la empresa
+
+### R036-009
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Clasificación de Seriedad de Defectos (Guía para el Proveedor)
+- etiqueta: Prioriza Defectos con tu Proveedor
+- resumen: Sistema para categorizar defectos según su gravedad e impacto, ayudando al proveedor a entender dónde concentrar sus esfuerzos de mejora. Esta clasificación es fundamental para priorizar recursos y establecer niveles de calidad aceptables (AQL) o defectos por millón (DPM) según la criticidad del defecto.
+- entregable: Tabla de clasificación de defectos por nivel de seriedad, comunicada formalmente al proveedor
+- condiciones:
+  - condiciones[0]: Cuando se necesita priorizar recursos de inspección
+  - condiciones[1]: Cuando existen múltiples tipos de no conformidad en un producto
+
+### R036-010
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Certificación Profesional de Expertos en Calidad
+- etiqueta: Certifica a tus Expertos en Calidad
+- resumen: La certificación profesional (como ASQ CQE, Certified Manager of Quality/Organizational Excellence, o los Belts de Six Sigma) te sirve para demostrar que de verdad sabes de calidad. La lección de la era de la Gestión de Calidad Total y del auge de Six Sigma es que un solo proyecto o un examen sin supervisión no bastan para probar que dominas el tema; elige organismos certificadores con buena reputación y respalda tu certificación con evidencia práctica sostenida en el tiempo.
+- entregable: Tu plan de certificación con el organismo elegido y los criterios de evaluación definidos
+- condiciones:
+  - condiciones[0]: Cuando quieres formalizar y validar tu experiencia (o la de tu equipo) en calidad
+
+### R036-011
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Ciclo PDCA/PDSA (Shewhart-Deming)
+- etiqueta: Planea, Haz y Corrige
+- resumen: El ciclo PDCA (Plan-Do-Check-Act) o PDSA (Plan-Do-Study-Act), popularizado por Shewhart y difundido por Deming, es un método de retroalimentación para tomar acción correctiva ante problemas esporádicos. 'Plan' define metas y sujetos de control, 'Do' ejecuta y monitorea el proceso, 'Check/Study' analiza mediante sensado y comparación, y 'Act' implementa la acción correctiva. Se distingue de metodologías de mejora como Six Sigma, más adecuadas para problemas crónicos.
+- entregable: Registro documentado de un ciclo PDCA/PDSA aplicado a un problema esporádico específico
+- condiciones:
+  - condiciones[0]: Cuando surge un problema esporádico o cambio repentino en el desempeño del proceso
+  - condiciones[1]: Si se necesita una acción correctiva rápida sin análisis estadístico complejo
+
+### R036-012
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Lluvia de Ideas con Reglas de Turno
+- etiqueta: Ordena tu Lluvia de Ideas
+- resumen: Tecnica de grupo para sacar ideas nuevas y creativas de todos los participantes, o nuevos usos de ideas que ya existen. Antes de la sesion comunicas la pregunta y al empezar repasas las reglas: nada de criticas ni evaluaciones, se vale lo poco convencional, se busca cantidad de ideas en poco tiempo y se construye sobre las ideas de otros. En la practica, cada uno aporta por turnos, una sola idea por turno, sin dar explicaciones y pudiendo pasar.
+- entregable: Lista de ideas del grupo, recogida en una sesion de 15 minutos como maximo y depurada de duplicados, lista para agruparse en un diagrama de afinidad
+- condiciones:
+  - condiciones[0]: Cuando necesitas que todo tu equipo aporte ideas nuevas sobre un problema o un producto
+  - condiciones[1]: Si en tus reuniones hablan siempre los mismos y quieres aportes ordenados por turnos
+
+### R036-013
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Carta de Control de Shewhart
+- etiqueta: Usa Cartas de Control
+- resumen: Herramienta gráfica que grafica el desempeño de calidad en el tiempo junto con una línea central (promedio histórico) y límites estadísticos de control basados en probabilidad (ej. 1 en 100). Los puntos dentro de los límites sugieren causas comunes (proceso en control estadístico); los puntos fuera sugieren causas especiales que ameritan acción correctiva. Su uso debe justificarse por valor agregado (seguridad, riesgo económico, necesidades del cliente), evitando el uso excesivo e ignorado de cartas sin valor real.
+- entregable: Carta de control implementada y en uso activo para el proceso, con criterios claros de interpretación
+- condiciones:
+  - condiciones[0]: Cuando se necesita distinguir estadísticamente variación normal de anómala
+  - condiciones[1]: Si hay riesgo de tomar decisiones basadas en variación aleatoria (falsas alarmas)
+
+### R036-014
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Causas Especiales y Comunes de Variación
+- etiqueta: Diagnostica tu Variación de Proceso
+- resumen: Shewhart denominó causas 'asignables' y 'no asignables'; Deming las llamó 'especiales' y 'comunes'. Las causas especiales son esporádicas, originadas en una variable dominante y fáciles de diagnosticar; son objeto del control de calidad. Las causas comunes son crónicas, originadas en la interacción de múltiples variables menores, difíciles de diagnosticar; son objeto de la mejora de calidad. Distinguirlas es esencial para decidir la acción correcta.
+- entregable: Clasificación documentada de la variación observada como causa especial o común, con la acción correspondiente definida
+- condiciones:
+  - condiciones[0]: Cuando se detecta una diferencia entre el desempeño real y la meta de calidad
+  - condiciones[1]: Si existe confusión sobre si se debe corregir o mejorar el proceso
+
+### R036-015
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Clasificacion de Seriedad por Comite Interdepartamental
+- etiqueta: Gradua la Gravedad de tus Defectos
+- resumen: Las caracteristicas de calidad no pesan igual en la aptitud para el uso: unas pocas son criticas y muchas son menores. Por eso conviene que un comite con varias areas decida cuantas clases de seriedad crear (normalmente cinco o seis), defina cada clase y asigne cada caracteristica y cada defecto a su clase. La clasificacion se usa despues en inspeccion, planificacion, especificaciones, relacion con proveedores y auditorias de producto.
+- entregable: Tabla de clases de seriedad definidas, con cada caracteristica y cada defecto asignado a su clase
+- condiciones:
+  - condiciones[0]: Cuando todas tus inspecciones reciben la misma atencion aunque unos defectos importan mucho mas que otros
+  - condiciones[1]: Si vas a indicar a tus proveedores donde concentrar sus esfuerzos
+
+### R036-016
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Clasificación de Seriedad (Seriousness Classification)
+- etiqueta: Clasifica la Seriedad de tus Defectos
+- resumen: Es un sistema para clasificar las características y los defectos de tu producto según su gravedad, generalmente en tres o cuatro niveles: crítico, mayor, menor e incidental. Así decides cuánta atención darle a cada uno al planificar, muestrear o definir qué es aceptable. Te ayuda a enfocar tus recursos en lo que realmente importa.
+- entregable: Una tabla de clasificación de gravedad aprobada por ti y aplicada a las características y defectos de tu producto.
+- condiciones:
+  - condiciones[0]: Cuando tienes muchas características que revisar y necesitas priorizar tus esfuerzos.
+
+### R036-017
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: La Brecha de Calidad (Quality Gap) - Modelo de 4 Gaps
+- etiqueta: Cierra las Brechas de Calidad
+- resumen: Explica por qué las organizaciones fallan sistemáticamente en satisfacer a sus clientes mediante cuatro brechas componentes: (1) brecha de entendimiento (falta de comprensión de necesidades del cliente), (2) brecha de diseño (diseños no alineados con lo entendido), (3) brecha de proceso (el proceso no es capaz de cumplir el diseño consistentemente), y (4) brecha de operaciones (fallas en cómo se opera y controla el proceso). Quality by Design provee las herramientas para cerrar cada una de estas brechas.
+- entregable: Diagnóstico documentado de en cuál(es) de las cuatro brechas se concentran los problemas de calidad de la organización
+- condiciones:
+  - condiciones[0]: Cuando el usuario percibe insatisfacción constante de clientes pero no sabe identificar la causa raíz
+  - condiciones[1]: Antes de iniciar un rediseño de producto o servicio
+
+### R036-018
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Ingeniería Concurrente
+- etiqueta: Diseña y Produce Juntos
+- resumen: Proceso de desarrollo de productos donde todos los responsables de desarrollo y producción participan desde las etapas más tempranas del diseño. Dado que el 70-80% del costo de un producto se determina en estas etapas iniciales, es esencial considerar el costo desde el principio para lograr competitividad.
+- entregable: Configuración de producto validada por un equipo multifuncional con estimaciones de costo tempranas
+- condiciones:
+  - condiciones[0]: Cuando se busca reducir costos de producto desde etapas tempranas de diseño
+  - condiciones[1]: Cuando existe desconexión entre los equipos de diseño y manufactura
+
+### R036-019
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Carta del Proyecto (Problem and Goal Statement)
+- etiqueta: Define la Carta del Proyecto
+- resumen: Cada proyecto seleccionado debe acompañarse de una declaración escrita del problema y la meta que define el enfoque y resultado esperado. Esta carta define las acciones requeridas del equipo, establece responsabilidad clara (la meta se vuelve parte de la descripción de trabajo de cada miembro), otorga legitimidad oficial al proyecto, y confiere derechos al equipo como convocar reuniones y solicitar datos.
+- entregable: Documento formal de carta de proyecto (problem and goal statement) aprobado
+- condiciones:
+  - condiciones[0]: Cuando un proyecto ha sido aprobado y se necesita definir formalmente su alcance
+  - condiciones[1]: Cuando se requiere establecer responsabilidad y legitimidad para un equipo de mejora
+
+### R036-020
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Clases Generales de Medidas de Calidad
+- etiqueta: Elige tus Medidas de Calidad
+- resumen: Existen cinco clases generales de medidas de calidad: defectos (deficiencias, fallas), costos de mala calidad, características de producto/proceso, necesidades del cliente y comportamiento del cliente. Cada clase requiere unidades de medida específicas; por ejemplo, los defectos se expresan como fracciones (numerador de fallas sobre denominador de unidades producidas), mientras que las características de producto pueden requerir la invención de nuevas unidades de medida y sensores.
+- entregable: Definición formal de la unidad de medida de calidad aplicable al problema, con numerador/denominador claros
+- condiciones:
+  - condiciones[0]: Cuando se necesita cuantificar la calidad de un producto, proceso o servicio antes de iniciar mejora
+
+### R036-021
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Concepto de Variación Estadística
+- etiqueta: Acepta la Variación Natural
+- resumen: Ningún elemento es perfectamente idéntico a otro; la variación es un hecho de la naturaleza y de la vida industrial. Ignorar la existencia de variación o subestimarla puede llevar a decisiones incorrectas sobre problemas importantes. La variación debida a causas aleatorias suele ser mayor de lo que la mayoría de las personas piensan, y a menudo se toman decisiones basadas en el punto de dato más reciente, olvidando que forma parte de un historial de datos.
+- entregable: Documento o análisis que reconozca y cuantifique la variación del proceso antes de tomar decisiones
+- condiciones:
+  - condiciones[0]: Cuando se necesita tomar decisiones sobre un proceso basado en datos
+  - condiciones[1]: Al diseñar planes de mejora de calidad
+
+### R036-022
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Ciclo Adaptativo de Inteligencia Organizacional
+- etiqueta: Detecta y Adapta tu Entorno
+- resumen: Proceso continuo (conceptualizado como espiral) mediante el cual una organización detecta cambios o tendencias en su entorno interno y externo, interpreta y evalúa la información, y la refiere a funciones o personas empoderadas para actuar. Incluye recopilación de datos internos (capacidad de procesos, COPQ, cultura, lealtad de empleados) y externos (necesidades del cliente, tendencias tecnológicas, benchmarking).
+- entregable: Reporte periódico de inteligencia organizacional (interno y externo) con hallazgos accionables
+- condiciones:
+  - condiciones[0]: Cuando se requiere monitoreo continuo del entorno para sostener ventaja competitiva
+  - condiciones[1]: Si la organización carece de un sistema estructurado de detección de amenazas y oportunidades
+
+### R036-023
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Certificación de Proveedores
+- etiqueta: Clasifica a tus Proveedores
+- resumen: Sistema de clasificación de proveedores en niveles: 'certificado' (no requiere inspección rutinaria por su historial de calidad), 'preferido' (calidad superior al mínimo) y 'aprobado' (cumple requisitos mínimos). La certificación reduce drásticamente los costos de inspección del comprador, es esencial para manufactura justo a tiempo (JIT) y sirve para identificar proveedores para alianzas estratégicas.
+- entregable: Sistema de certificación documentado con criterios claros y lista de proveedores clasificados por nivel
+- condiciones:
+  - condiciones[0]: Cuando se busca reducir costos de inspección entrante
+  - condiciones[1]: Cuando se implementa manufactura justo a tiempo
+  - condiciones[2]: Cuando se busca establecer alianzas estratégicas con proveedores
+
+### R036-024
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Clasificación de Tipos de Benchmarking
+- etiqueta: Clasifica tus Comparaciones de Referencia
+- resumen: El benchmarking puede clasificarse según qué se está comparando (funcional, de proceso, de unidad de negocio/sitio, de proyecto, genérico, modelos de excelencia empresarial) y según quién participa (interno, externo, competitivo, no competitivo). Cada tipo tiene beneficios y limitaciones distintas relacionadas con la similitud de los participantes, el nivel de control sobre el proceso y el costo/tiempo requerido.
+- entregable: Definición documentada del tipo de benchmarking a realizar (qué, quién y cómo) que oriente el diseño del estudio
+- condiciones:
+  - condiciones[0]: Cuando se inicia la planificación de un estudio de benchmarking y se debe decidir su alcance y tipo de participantes
+
+### R036-025
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Clasificación de Seriedad de Defectos (Características y Defectos por Gravedad)
+- etiqueta: Separa Características y Defectos por Gravedad
+- resumen: Consiste en clasificar tanto las características de calidad derivadas de especificaciones como los defectos (síntomas de no conformidad) según su gravedad. Aunque ambas listas tienen relación, no son idénticas ni se comportan igual. Esta clasificación, aunque tediosa, revela confusiones entre las distintas partes de tu negocio y permite optimizar recursos de inspección.
+- entregable: Tabla de clasificación de seriedad de características y defectos aplicada a un producto o proceso específico
+- condiciones:
+  - condiciones[0]: Cuando tienes alto volumen de inspección sin prioridades claras
+  - condiciones[1]: Cuando hay desacuerdo sobre qué defectos son realmente críticos
+
+### R036-026
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Capacidad de Proceso
+- etiqueta: Mide la Capacidad de tu Proceso
+- resumen: La capacidad de proceso mide la uniformidad inherente de un proceso para producir dentro de especificaciones. Se cuantifica desde la etapa de planificación y sirve para decidir sobre la adecuación de procesos, elección de alternativas, necesidad de rediseño y, en control, para definir la frecuencia de medición y mantenimiento: a mayor estabilidad, menor necesidad de medición frecuente.
+- entregable: Análisis de capacidad de proceso con recomendación sobre frecuencia de control y necesidad de ajuste
+- condiciones:
+  - condiciones[0]: Cuando se planifica un nuevo proceso o se evalúa uno existente
+  - condiciones[1]: Si se necesita justificar la frecuencia de inspección o mantenimiento
+
+### R036-027
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: El Bucle de Retroalimentación (Feedback Loop) en Control de Calidad
+- etiqueta: Cierra tu Bucle de Control
+- resumen: El bucle de retroalimentación es el mecanismo universal del control de calidad: un sensor mide el desempeño real del proceso, un árbitro (umpire) compara esa medición contra un estándar definido, y si la diferencia es significativa, un actuador estimula al proceso para corregirlo. Este ciclo puede ser automatizado, de autocontrol del empleado, mediante inspección externa, o híbrido, y opera en distintos niveles del negocio. Documentar cada ciclo permite trazabilidad: saber qué se midió, contra qué estándar y qué corrección se aplicó, para repetir el control de forma consistente en el tiempo.
+- entregable: Diagrama de bucle de retroalimentación documentado con sensor, estándar de comparación y actuador definidos para el proceso crítico seleccionado
+- condiciones:
+  - condiciones[0]: Si necesitas diseñar un sistema de control para un proceso nuevo o existente
+  - condiciones[1]: Cuando requieres controlar la conformidad de un proceso en tiempo real
+  - condiciones[2]: Si existen desviaciones no gestionadas entre el desempeño real y la meta
+
+### R036-028
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Capacidad de Proceso (Process Capability)
+- etiqueta: Predice la Variación de tu Proceso
+- resumen: La capacidad de proceso es la variación inherente medida del producto generado por un proceso en estado de control estadístico. Proporciona una predicción cuantificada de la adecuación del proceso, siendo fundamental para predecir variabilidad, elegir procesos, planificar secuencias de procesos, y establecer bases para control periódico y certificación de proveedores.
+- entregable: Informe de capacidad de proceso con distribución de variación cuantificada y su relación con especificaciones
+- condiciones:
+  - condiciones[0]: Cuando se necesita predecir si un proceso podrá cumplir especificaciones antes de producir en volumen
+  - condiciones[1]: Cuando se debe certificar proveedores o elegir entre procesos competidores
+
+### R036-029
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Ruptura Cultural (Breakthrough in Culture)
+- etiqueta: Transforma la Cultura de tu Equipo
+- resumen: Transformación de los estandares de comportamiento, valores y normas de tu negocio para alinearlos con tus objetivos de desempeno y calidad. Es el tipo de cambio mas dificil y lento de lograr, porque exige modificar creencias arraigadas, y solo se sostiene si tu mantienes consistencia y persistencia al reforzar las nuevas normas.
+- entregable: Plan de transformación cultural con las formas de elegir, formar y reconocer a tu gente alineadas, y con mecanismos de refuerzo definidos
+- condiciones:
+  - condiciones[0]: Cuando las mejoras de proceso no se sostienen porque falta una cultura de calidad
+  - condiciones[1]: Cuando arrancas una iniciativa de largo plazo como Six Sigma
+
+### R036-030
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Analisis de Pareto para Priorizar
+- etiqueta: Separa lo Vital de lo Util
+- resumen: Herramienta para fijar prioridades separando los pocos vitales de los muchos utiles. Totalizas cada contribuyente y el total general, los ordenas de mayor a menor, calculas el porcentaje acumulado y dibujas barras con la curva acumulada; despues buscas el punto de quiebre en la curva para marcar los pocos vitales.
+- entregable: Diagrama de Pareto titulado, con barras ordenadas de mayor a menor, curva de porcentaje acumulado y los pocos vitales y muchos utiles senalados
+- condiciones:
+  - condiciones[0]: Cuando tienes que elegir que proyectos de mejora abordar primero
+  - condiciones[1]: Si has reunido al menos 50 registros de quejas o defectos clasificados por tipo
+
+### R036-031
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Modelos de Excelencia Empresarial (Baldridge y EFQM)
+- etiqueta: Apunta a la Excelencia Empresarial
+- resumen: Marcos de referencia diseñados para medir y mejorar holísticamente el desempeño organizacional, considerando todos los aspectos clave que impulsan la excelencia. El Premio Baldridge (EE.UU.) y el Modelo EFQM (Europa) identifican criterios críticos de éxito y sirven tanto para autoevaluación como para benchmarking comparativo generalizado.
+- entregable: Autoevaluación completa según modelo de excelencia con brechas identificadas frente a organizaciones líderes.
+- condiciones:
+  - condiciones[0]: Cuando la organización busca una evaluación integral de su desempeño global.
+  - condiciones[1]: Si se requiere demostrar actividad de benchmarking para certificación o premio de calidad.
+
+### R036-032
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Calificación de Calidad de Proveedores (Supplier Rating)
+- etiqueta: Califica la Calidad de Proveedores
+- resumen: Proporciona un resumen cuantitativo de la calidad del proveedor a lo largo de un periodo de tiempo, útil para decidir cómo asignar compras entre proveedores. Puede basarse en porcentaje de no conformidad, calidad general del producto (puntos por fase), análisis económico de costo total, o un plan compuesto que incluya calidad, entrega, precio y capacidad de respuesta con pesos ponderados.
+- entregable: Reporte periódico de calificación de proveedores con puntaje compuesto y su vínculo a decisiones de compra
+- condiciones:
+  - condiciones[0]: Cuando se debe decidir la asignación de futuras compras entre múltiples proveedores
+  - condiciones[1]: Cuando se requiere retroalimentación cuantitativa continua a proveedores
+
+### R036-033
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Caso de Estudio: Mejora de Desempeño mediante Benchmarking
+- etiqueta: Mejora Comparando tu Desempeño
+- resumen: Ejemplo real de una terminal petrolera que, tras descubrir mediante benchmarking que su desempeño estaba en el cuartil más bajo, implementó un plan de acción centrado en costos controlables, reestructuración organizacional, cambios en turnos de trabajo y mantenimiento basado en riesgo. En dos años logró pasar de cuarto a segundo/tercer cuartil, con reducciones significativas de costos y tiempos.
+- entregable: Plan de acción de mejora basado en hallazgos de benchmarking, con métricas de seguimiento anual
+- condiciones:
+  - condiciones[0]: Cuando los resultados de un benchmarking inicial revelan un desempeño significativamente inferior al de los pares
+
+### R036-034
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Certificación y Registro de Sistemas de Calidad (Auditorías de Tercera Parte)
+- etiqueta: Audita con Terceros Independientes
+- resumen: Los estándares ISO 9000, adoptados por más de 100 países, ofrecen un marco no prescriptivo para asegurar calidad en diseño, producción, entrega y soporte. Para evitar que cada cliente audite por separado a su proveedor, surgen organismos certificadores de tercera parte que auditan la conformidad de tu sistema de gestión de calidad frente a normas como ISO 9001 o ISO 9002. Al aprobar, emiten un certificado público y te registran, lo que reduce costos, elimina auditorías redundantes y da credibilidad internacional en la cadena de suministro. El estatus se mantiene con auditorías de vigilancia periódicas, usualmente semestrales, y auditorías completas cada cierto tiempo.
+- entregable: Certificado de conformidad ISO 9001 vigente, emitido por un organismo acreditado, con tu sistema de gestión de calidad documentado y registrado públicamente.
+- condiciones:
+  - condiciones[0]: Cuando necesitas reducir auditorías redundantes de múltiples clientes
+  - condiciones[1]: Cuando buscas credibilidad de mercado internacional o en tu cadena de suministro
+  - condiciones[2]: Cuando el mercado te exige evidencia pública de cumplimiento de estándares de calidad
+
+### R036-035
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Boxplot (Diagrama de Caja)
+- etiqueta: Resume tus Datos con Cajas
+- resumen: El boxplot es un resumen gráfico de cinco números: valor mínimo, primer cuartil, mediana, tercer cuartil y valor máximo, que muestra la dispersión, tendencia central y simetría de un conjunto de datos. Te permite comparar rápidamente la variabilidad y consistencia entre dos o más procesos, grupos o proveedores con solo mirar un gráfico. Antes de dibujarlo debes decidir qué tipo de boxplot construir según lo que quieras analizar, y luego etiquetar bien los ejes para que la comparación visual sea clara. Es una herramienta simple con tu teléfono para tomar decisiones basadas en datos cuando necesitas evaluar desempeño o consistencia entre alternativas.
+- entregable: Boxplot construido y etiquetado que muestra la distribución y variabilidad de los datos para comparar grupos o proveedores
+- condiciones:
+  - condiciones[0]: Si necesitas comparar la variabilidad y consistencia entre dos o más procesos o proveedores
+  - condiciones[1]: Cuando quieres evaluar la distribución de un proceso entre múltiples grupos antes de decidir
+
+### R036-036
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Brainstorming (Tormenta de Ideas)
+- etiqueta: Lanza tu Lluvia de Ideas
+- resumen: Técnica grupal para generar ideas creativas y constructivas de todos los participantes, sin juicio ni evaluación durante la generación. Es efectiva para desarrollar listas de teorías, ideas u opiniones, pero no debe usarse para probar teorías, que requieren datos.
+- entregable: Lista de ideas generadas por el grupo, procesada y lista para su categorización
+- condiciones:
+  - condiciones[0]: Cuando se necesita generar múltiples ideas o teorías sobre un problema o necesidad de mejora
+
+### R036-037
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: El Proyecto como Unidad de Breakthrough
+- etiqueta: Resuelve Problemas Proyecto a Proyecto
+- resumen: Un proyecto se define como un problema crónico programado para su solución. Es la unidad fundamental de acción para lograr breakthrough: toda mejora significativa ocurre proyecto por proyecto, y de ninguna otra manera. Algunos proyectos derivan directamente del plan de negocio (vitales pocos), mientras que la mayoría surgen del proceso de nominación-selección (útiles muchos).
+- entregable: Ficha de proyecto con definición del problema crónico, alcance y equipo asignado
+- condiciones:
+  - condiciones[0]: Cuando se ha identificado un problema crónico que requiere solución estructurada
+
+### R036-038
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Clasificación de Seriedad de Defectos y Deméritos por Unidad
+- etiqueta: Pondera la Gravedad de tus Defectos
+- resumen: Sistema de ponderación de defectos según su gravedad (crítico, mayor, menor A, menor B, incidental), asignando 'pesos' o deméritos a cada tipo. La suma total de deméritos dividida entre las unidades inspeccionadas produce un índice único (deméritos por unidad) que permite comparar calidad entre periodos, líneas de producción o competidores de forma objetiva y proporcional a la oportunidad de error.
+- entregable: Tabla de clasificación de defectos con pesos asignados y cálculo del índice de deméritos por unidad
+- condiciones:
+  - condiciones[0]: Cuando se necesita un indicador único y comparable de calidad de producto
+  - condiciones[1]: Cuando se quiere diferenciar la gravedad relativa de distintos tipos de fallas
+
+### R036-039
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Comunicar Políticas Organizacionales de Calidad
+- etiqueta: Comunica Tus Políticas de Calidad
+- resumen: Una política es una guía para la acción gerencial. Las políticas de calidad publicadas suelen declarar la intención de satisfacer las necesidades del cliente, igualar o superar a la competencia y comprometerse con la mejora continua. Deben ser aprobadas al más alto nivel y sujetas a auditoría (p.ej. bajo ISO 9000).
+- entregable: Documento de política de calidad aprobado, auditable y comunicado en toda la organización
+- condiciones:
+  - condiciones[0]: Cuando la organización requiere formalizar su compromiso de calidad ante clientes y auditorías
+  - condiciones[1]: Cuando se inicia un manual de calidad organizacional
+  - condiciones[2]: Si la organización necesita alinear decisiones gerenciales con objetivos de calidad
+
+### R036-040
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Concepto y Tipos de Auditoría de Calidad
+- etiqueta: Audita Tu Calidad
+- resumen: Una auditoría de calidad es una revisión independiente que compara el desempeño de calidad con un estándar definido, determinando si las actividades y resultados cumplen con lo planificado y si estos arreglos son efectivamente implementados. Existen auditorías internas (primera parte), de segunda parte (realizadas por clientes) y de tercera parte (organismos externos de certificación como ISO 9001).
+- entregable: Plan de auditoría de calidad con tipo, alcance, estándares y auditores designados
+- condiciones:
+  - condiciones[0]: Cuando se requiere verificar cumplimiento de sistemas de calidad
+  - condiciones[1]: Cuando se busca certificación bajo normas ISO
+
+### R036-041
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Buenas Prácticas de Manufactura Actuales (cGMP)
+- etiqueta: Cumple las Buenas Prácticas de Manufactura
+- resumen: Las cGMP son regulaciones que exige el organismo sanitario de tu país para asegurar el diseño, monitoreo y control adecuados de tus procesos e instalaciones de fabricación, garantizando identidad, potencia, calidad y pureza de tus productos farmacéuticos. Son requisitos mínimos pero flexibles: tú decides cómo implementar los controles usando un diseño científico sólido, métodos de procesamiento y procedimientos de prueba, siempre que uses tecnologías actualizadas ('current').
+- entregable: Un sistema documentado de cGMP con procedimientos, controles de calidad y registros de cumplimiento que puedas mostrar ante el organismo regulador de tu mercado si te lo pide
+- condiciones:
+  - condiciones[0]: Cuando fabricas productos farmacéuticos o dispositivos médicos sujetos a regulación sanitaria
+
+### R036-042
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Comprensión y Priorización de Brechas de Desempeño
+- etiqueta: Prioriza Tus Brechas de Desempeño
+- resumen: Los resultados de tu benchmarking deben convertirse en un plan de acción, pero antes necesitas entender a fondo tus brechas de desempeño, eliminando lo que distorsiona la comparación. Hay brechas controlables (accionables) y otras que no lo son (costos de arranque, regulaciones, factores geopolíticos). Una brecha accionable te permite comprometerte, priorizar los 'vital few' sobre los 'useful many', asignar recursos y establecer controles de seguimiento.
+- entregable: Un plan de acción con las brechas de desempeño accionables priorizadas, los recursos asignados y quién se encargará de cada una
+- condiciones:
+  - condiciones[0]: Cuando los resultados de tu benchmarking muestran brechas importantes frente a los líderes del mercado
+  - condiciones[1]: Si necesitas convertir esos hallazgos en un plan de acción concreto
+
+### R036-043
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Replicar una mejora en tus otras sucursales o unidades
+- etiqueta: Replica tus Mejoras en Todas Partes
+- resumen: Si tu negocio tiene varias sucursales, locales o áreas parecidas entre sí, cuando logras una mejora que funciona bien en una de ellas, vale la pena que consideres llevarla a las demás. Cuando cierres un proyecto, anota qué otros lugares podrían beneficiarse de esa misma mejora y comparte esa información con ellos. Pide una respuesta clara: que la adopten, que la adapten a su realidad, o que te digan por qué no la aplicarán, para que la sugerencia no se quede sin respuesta.
+- entregable: Un registro de la mejora replicada, con la respuesta de cada sucursal o unidad candidata
+- condiciones:
+  - condiciones[0]: Cuando tu negocio tiene varias sucursales o unidades con procesos parecidos
+  - condiciones[1]: Cuando una mejora que probaste funciona y podría aplicarse en otras áreas o sucursales
+
+### R036-044
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Cálculo del Retorno de Inversión (ROI) en Calidad
+- etiqueta: Calcula el Retorno de la Calidad
+- resumen: El ROI es un factor decisivo para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo es complejo porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que se tratan diferente en contabilidad. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Juran recomienda usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que la precisión extrema rara vez cambia tu decisión.
+- entregable: Estimación de ROI y costo de mala calidad (COPQ) documentado, con un rango de confianza aceptable para tomar tu decisión
+- condiciones:
+  - condiciones[0]: Cuando necesitas tener el número claro antes de decidir si vale la pena invertir en una mejora
+  - condiciones[1]: Cuando tienes varias ideas compitiendo por el mismo dinero disponible
+
+### R036-045
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Hablar del riesgo y tener claro quien hace que en una crisis
+- etiqueta: Comunica el Riesgo con Claridad
+- resumen: No puedes actuar ante un riesgo si tu y las personas que trabajan contigo no son conscientes de el. Por eso hablar del riesgo una y otra vez, por distintos canales, es el primer paso critico. Además necesitas tener claro quien hace que cuando llega una crisis, y aprovechar simulacros o problemas pequeños como entrenamiento para responder mejor cuando venga uno de verdad.
+- entregable: Plan de comunicación de crisis con roles asignados y calendario de simulacros
+- condiciones:
+  - condiciones[0]: Cuando tu negocio corre riesgo de una crisis operativa o de seguridad en tu producto
+  - condiciones[1]: Cuando tu o las personas que trabajan contigo no tienen claro quien debe actuar en una emergencia
+
+### R036-046
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Benchmarking y la Trilogía de Juran
+- etiqueta: Conecta Benchmarking con tu Calidad
+- resumen: El benchmarking se relaciona directamente con los tres procesos de la Trilogía de Juran: planificación de calidad (diseño de nuevos productos/procesos basado en mejores prácticas externas), control de calidad (comparación continua de estándares de desempeño) y mejora de calidad (identificación de brechas y priorización de proyectos usando el principio de Pareto). Esta interacción convierte al benchmarking en un insumo clave para el ciclo completo de gestión de la calidad.
+- entregable: Matriz de priorización de proyectos de mejora basada en gap analysis y principio de Pareto derivado del benchmarking.
+- condiciones:
+  - condiciones[0]: Cuando se han obtenido resultados de benchmarking y se necesita traducirlos en acciones concretas de calidad.
+  - condiciones[1]: Si la organización ya aplica la Trilogía de Juran como marco de gestión de calidad.
+
+### R036-047
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Evaluación de Conformidad en el Comercio Internacional (Marcado CE)
+- etiqueta: Certifica tu Producto para Exportar
+- resumen: Para vender productos regulados en la Unión Europea, es obligatorio el marcado CE, que exige evidencia de conformidad en cuatro áreas: documentación técnica de diseño, pruebas de tipo, vigilancia del producto y vigilancia del aseguramiento de calidad. Este enfoque modular impulsó masivamente la adopción global de certificaciones ISO 9001/9002, ya que las organizaciones no pueden mantener sistemas de calidad separados para productos regulados y no regulados.
+- entregable: Marcado CE u homólogo obtenido, con sistema de calidad único que cubra ambos tipos de producto
+- condiciones:
+  - condiciones[0]: Cuando la organización busca exportar productos regulados (salud, seguridad, medio ambiente) a la Unión Europea u otros mercados regulados
+
+### R036-048
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Eliminación del Carryover de Características Propensas a Fallas
+- etiqueta: Elimina Fallas Heredadas
+- resumen: Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: siempre es mas atractivo sumar algo nuevo que corregir algo viejo. Resolverlo exige que tu, como responsable del negocio, lo pongas como prioridad explicita.
+- entregable: Plan de eliminación de fallas recurrentes con responsables y metas por versión de producto
+- condiciones:
+  - condiciones[0]: Cuando tu producto o servicio arrastra las mismas fallas de una versión a otra
+
+### R036-049
+- fichero del libro: C:\Users\AlexDesk\Documents\I have an idea\books\Especificos\Quality\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt
+- titulo: Usa estándares de referencia y listas de verificación (checklists) al revisar tu negocio
+- etiqueta: Audita Contra un Estándar
+- resumen: Cuando revises cómo va algo en tu negocio, compara lo que realmente pasa contra un estándar claro: tus políticas escritas, una especificación o una norma de tu sector. Esto reduce que juzgues por sensación. Si no tienes ese estándar definido, primero defínelo antes de revisar nada, porque sin él nadie sabe qué se espera. Puedes usar una lista general de áreas a revisar o una lista detallada con puntos específicos a verificar.
+- entregable: Tu lista de verificación conectada con los estándares que ya validaste
+- condiciones:
+  - condiciones[0]: Cuando estás preparando cómo vas a revisar algo en tu negocio

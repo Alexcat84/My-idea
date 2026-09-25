@@ -1,0 +1,316 @@
+{
+ "R042-001": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Cuándo Inspeccionar por Muestra en Lugar de al 100%",
+   "etiqueta": "Decide Cuándo Muestrear",
+   "resumen": "El muestreo de aceptación evalúa una parte del producto de un lote para aceptar o rechazar el lote completo. Su ventaja principal es la economía, y además reduce el daño por manejo, acorta el tiempo de disposición del lote y minimiza la monotonía y los errores de la inspección al 100%. Sus desventajas son los riesgos de muestreo, mayores costos administrativos y menos información sobre el producto. Funciona mejor cuando va precedido de un programa de prevención que ya logra un nivel aceptable de conformidad.",
+   "entregable": "Criterio documentado de cuándo aplicar muestreo de aceptación y cuándo inspección al 100% para cada tipo de producto entrante",
+   "condiciones": [
+    "Cuando el costo de inspeccionar es bajo en relación con el daño que causa dejar pasar un producto defectuoso",
+    "Cuando la inspección es destructiva",
+    "Cuando la inspección al 100% es monótona y provoca errores de inspección"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "condiciones",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24881",
+   "cita": "Acceptance sampling is used when (1) the cost of inspection is high in relation to the damage cost resulting from passing a defective product, (2) 100 percent inspection is monotonous and causes inspection errors, or (3) the inspection is destructive.",
+   "dato": "Cuando el costo de inspeccionar es bajo en relación con el daño que causa dejar pasar un producto defectuoso",
+   "explicacion": "El libro indica usar muestreo cuando el costo de inspección es ALTO en relación con el daño de dejar pasar un defectuoso; la condición invierte la relación y activaría el muestreo justo cuando conviene inspeccionar todo."
+  }
+ },
+ "R042-002": {
+  "real": true,
+  "node_id": "normalizacion_datos_benchmarking",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-003": {
+  "real": true,
+  "node_id": "planificacion_inicial_calidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-004": {
+  "real": true,
+  "node_id": "planificacion_estrategica_despliegue_2",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-005": {
+  "real": true,
+  "node_id": "oficina_calidad_y_excelencia",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-006": {
+  "real": true,
+  "node_id": "practicas_gerenciales_no_delegables",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-007": {
+  "real": true,
+  "node_id": "niveles_calidad_muestreo_aql_lql_aoql",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-008": {
+  "real": true,
+  "node_id": "monitoreo_continuo_benchmarking",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-009": {
+  "real": true,
+  "node_id": "organizacion_equipos_calidad_servicio",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-010": {
+  "real": true,
+  "node_id": "planificacion_estudio_capacidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-011": {
+  "real": true,
+  "node_id": "planes_de_muestreo_de_aceptacion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-012": {
+  "real": true,
+  "node_id": "planificacion_cadena_suministro",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-013": {
+  "real": true,
+  "node_id": "precision_exactitud_sensores",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-014": {
+  "real": true,
+  "node_id": "modelo_servqual",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-015": {
+  "real": true,
+  "node_id": "muestreo_de_aceptacion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-016": {
+  "real": true,
+  "node_id": "modelo_shingo_evaluacion_excelencia",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-017": {
+  "real": true,
+  "node_id": "plan_de_control",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-018": {
+  "real": true,
+  "node_id": "premio_shingo",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-019": {
+  "real": true,
+  "node_id": "ocho_desperdicios_lean",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-020": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Sensores Humanos y Tecnológicos: Precisión, Exactitud y Mantenimiento",
+   "etiqueta": "Elige y Cuida tus Sensores",
+   "resumen": "La precisión de un sensor es su capacidad de repetir sus resultados en pruebas sucesivas, y en los sensores tecnológicos suele ser alta y fácil de cuantificar. Las personas que actúan como sensores (inspectores, auditores, supervisores, evaluadores) son notoriamente menos precisas, así que conviene entender sus límites antes de decidir con sus datos. La exactitud se ajusta con facilidad recalibrando conforme a la norma ISO 10012, pero la precisión tiene un límite propio del diseño y superarlo exige rediseñar el sensor. Como el mal uso o el mantenimiento inadecuado pueden bajar la precisión por debajo de su capacidad, al elegir cada sensor conviene prever calendarios de mantenimiento y listas de verificación.",
+   "entregable": "Inventario de sensores humanos y tecnológicos con sus límites de precisión, su calendario de mantenimiento y la lista de verificación de cada revisión",
+   "condiciones": [
+    "Cuando tomas decisiones con datos que vienen de inspectores, auditores o evaluadores",
+    "Cuando un instrumento da resultados que no se repiten en mediciones sucesivas"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "resumen",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "3996",
+   "cita": "For technological sensors, it is usually easy to adjust for accuracy by recalibrating.",
+   "dato": "recalibrando conforme a la norma ISO 10012",
+   "explicacion": "El libro solo dice que la exactitud se ajusta recalibrando (con el ejemplo del reloj y las señales horarias de radio); no cita ninguna norma de gestión de las mediciones. La referencia a ISO 10012 es inventada (Grep sin coincidencias para '10012' ni 'ISO 10012')."
+  }
+ },
+ "R042-021": {
+  "real": true,
+  "node_id": "planificacion_estrategica_despliegue",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-022": {
+  "real": true,
+  "node_id": "planificacion_inspeccion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-023": {
+  "real": true,
+  "node_id": "metodologia_medicion_copq",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-024": {
+  "real": true,
+  "node_id": "planificacion_de_la_inspeccion",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-025": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Exactitud de la Inspección Humana y Efecto de la Monotonía",
+   "etiqueta": "Cuida la Precisión de tus Inspectores",
+   "resumen": "La exactitud de la inspección depende de lo completa que sea la planificación de la inspección, del sesgo y la precisión de los instrumentos y del nivel de error humano. Los errores son especialmente altos en tareas muy monótonas, como revisar frascos de alimentos buscando partículas extrañas o revisar equipaje en un control de seguridad. La monotonía que hace que un inspector pase por alto defectos aparece solo tras jornadas largas de inspección, y con inspección monótona se detecta entre el 80 y el 90 por ciento de los defectos. Por eso una inspección al 100 por ciento que es monótona no es efectiva al 100 por ciento; la automatización elimina ese error humano.",
+   "entregable": "Diagnóstico de las tareas de inspección monótonas con su tasa estimada de detección y propuesta de automatización o rediseño de las más críticas",
+   "condiciones": [
+    "Cuando confías en una inspección al 100 por ciento hecha por personas para frenar todos los defectos",
+    "Cuando siguen llegando defectos al cliente a pesar de inspeccionar cada unidad"
+   ],
+   "tipo": "CONTRARIO",
+   "campo": "resumen",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "24710",
+   "cita": "Surprisingly, monotony that causes an inspector to miss defects can build up in a short time.",
+   "dato": "La monotonía que hace que un inspector pase por alto defectos aparece solo tras jornadas largas de inspección",
+   "explicacion": "El libro dice que, sorprendentemente, la monotonía que hace fallar al inspector puede acumularse en poco tiempo; el resumen afirma lo contrario, que solo aparece tras jornadas largas, lo que invita a no tomar medidas en inspecciones cortas."
+  }
+ },
+ "R042-026": {
+  "real": true,
+  "node_id": "prediccion_confiabilidad_diseno",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-027": {
+  "real": true,
+  "node_id": "modelo_costo_optimo_calidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-028": {
+  "real": true,
+  "node_id": "planificacion_recoleccion_datos",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-029": {
+  "real": true,
+  "node_id": "necesidad_mantener_informado",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-030": {
+  "real": true,
+  "node_id": "optimizacion_caracteristicas_diseno",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-031": {
+  "real": true,
+  "node_id": "modelo_madurez_capacidades_cmmi",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-032": {
+  "real": true,
+  "node_id": "poka_yoke_a_prueba_de_errores",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-033": {
+  "real": true,
+  "node_id": "politica_de_calidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-034": {
+  "real": true,
+  "node_id": "modelo_transformacion_juran",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-035": {
+  "real": true,
+  "node_id": "muestreo_dodge_romig",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-036": {
+  "real": true,
+  "node_id": "necesidades_user_friendly",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-037": {
+  "real": true,
+  "node_id": "pocos_vitales_muchos_utiles",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-038": {
+  "real": true,
+  "node_id": "necesidades_reales_vs_declaradas",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-039": {
+  "real": true,
+  "node_id": "piramide_de_control",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-040": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Inspección Rectificante con Tablas Dodge-Romig",
+   "etiqueta": "Protege tu Calidad Lote a Lote",
+   "resumen": "Las tablas de Dodge y Romig ofrecen cuatro conjuntos de planes por atributos, de muestreo simple o doble, que ponen el énfasis en la calidad lote a lote (LTPD) o en la calidad promedio a largo plazo (AOQL). A diferencia de ANSI/ASQC Z1.4, asumen que todo lote rechazado se inspecciona al 100% y que los defectuosos se reemplazan por unidades aceptables. Los planes LTPD dan una probabilidad de aceptación de 0.1 a un lote con calidad LTPD, y los planes AOQL aseguran que la calidad promedio de muchos lotes no supere el AOQL.",
+   "entregable": "Plan de muestreo rectificante Dodge-Romig con su LTPD y su AOQL definidos, aplicable a lotes de al menos 500 unidades",
+   "condiciones": [
+    "Cuando puedes inspeccionar al 100% los lotes rechazados y reemplazar las unidades defectuosas",
+    "Cuando necesitas proteger la calidad promedio que sale hacia tu cliente a lo largo de muchos lotes"
+   ],
+   "tipo": "ANADIDO",
+   "campo": "entregable",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "25104-25113",
+   "cita": "These plans differ from those in ANSI/ASQC Z1.4 in that the Dodge–Romig plans assume that all rejected lots are 100 percent inspected and the defectives are replaced with acceptable items.",
+   "dato": "aplicable a lotes de al menos 500 unidades",
+   "explicacion": "El libro no fija ningún tamaño mínimo de lote para los planes Dodge-Romig; la cifra de 500 unidades es inventada (Grep sin coincidencias para 'at least 500', 'lots of 500', '500 units', 'minimum lot'; el único '500 pieces' es parte de '1500 pieces' en otro ejemplo de Z1.4)."
+  }
+ },
+ "R042-041": {
+  "real": true,
+  "node_id": "optimizacion_de_procesos",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-042": {
+  "real": true,
+  "node_id": "perfeccionismo_vs_valor",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-043": {
+  "real": true,
+  "node_id": "planificacion_economica_conjunta",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-044": {
+  "real": true,
+  "node_id": "normas_culturales_calidad",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-045": {
+  "real": true,
+  "node_id": "planificacion_auditoria_individual",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-046": {
+  "real": true,
+  "node_id": "planificacion_gobierno_organizaciones_familiares",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-047": {
+  "real": true,
+  "node_id": "organizaciones_paralelas_cambio",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-048": {
+  "real": true,
+  "node_id": "pre_control_estadistico",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "R042-049": {
+  "real": true,
+  "node_id": "necesidades_psicologicas_cliente",
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ }
+}
