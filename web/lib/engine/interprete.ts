@@ -16,6 +16,7 @@
  */
 import type Anthropic from "@anthropic-ai/sdk";
 import { MAX_SALTOS_POSIBLES_OFRECIDOS, MIN_SCORE_SALTO, buscarAfines } from "../compass";
+import { consultaAlEspanol } from "./consultaAlEspanol";
 import {
   llamarClaude,
   llamarClaudeConversacion,
@@ -148,7 +149,16 @@ export interface EventoRegeneracionPlanBasico {
   desde_sesion: string;
 }
 
+/** i18n F5, remedio de F1: la traducción de la consulta al español falló y la
+ * brújula buscó con el original (recupera peor: F1_BUSCADOR.md). */
+export interface EventoConsultaSinTraducir {
+  tipo: "consulta_sin_traducir";
+  nodo_actual: string;
+  idioma: string | null;
+}
+
 export type EventoInterprete =
+  | EventoConsultaSinTraducir
   | EventoFallback
   | EventoDecisionTurno
   | EventoPuertaReelegida
@@ -334,7 +344,14 @@ export async function interpretarMultiSalto(
     return entradaNivel1;
   });
 
-  const textoParaBrujula = respuestaUsuario || textoOriginal;
+  // i18n F5, remedio de F1: el índice está en español; en una idea escrita en
+  // otro idioma, la brújula busca con la respuesta traducida al español.
+  const traducida = await consultaAlEspanol(client, respuestaUsuario || textoOriginal, idiomaSalida, acumulado);
+  acumulado = traducida.acumulado;
+  if (traducida.fallo && registrarEvento) {
+    registrarEvento({ tipo: "consulta_sin_traducir", nodo_actual: actualId, idioma: idiomaSalida });
+  }
+  const textoParaBrujula = traducida.consulta;
   const excluidosBrujula = new Set([...visitados, ...nivel1Ids]);
   const saltoCandidatos = await buscarAfines(textoParaBrujula, excluidosBrujula, {
     k: MAX_SALTOS_POSIBLES_OFRECIDOS,

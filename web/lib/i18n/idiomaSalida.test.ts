@@ -88,7 +88,7 @@ describe("los prompts que escriben para la persona terminan con la regla de idio
     "SYSTEM_REFORMULADOR_PROTECCION",
     "SYSTEM_TRADUCIR_PREGUNTA",
   ] as const;
-  const sinRegla = ["SYSTEM_CLASIFICACION", "SYSTEM_PUERTA_AVANZADA", "SYSTEM_PROFUNDIZAR", "SYSTEM_JUEZ_SESION", "SYSTEM_ENLACE_PROTECCION", "SYSTEM_ESTIMACION_BANDA"] as const;
+  const sinRegla = ["SYSTEM_CLASIFICACION", "SYSTEM_PUERTA_AVANZADA", "SYSTEM_PROFUNDIZAR", "SYSTEM_JUEZ_SESION", "SYSTEM_ENLACE_PROTECCION", "SYSTEM_ESTIMACION_BANDA", "SYSTEM_CONSULTA_AL_ESPANOL"] as const;
 
   it.each(conRegla)("%s", (nombre) => {
     const texto = (P as Record<string, unknown>)[nombre] as string;

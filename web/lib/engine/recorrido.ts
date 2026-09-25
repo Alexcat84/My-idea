@@ -31,6 +31,7 @@ import { MOTOR } from "../i18n/mensajes/motor";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
 import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, resolverId, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
 import { preguntaEnIdioma } from "./preguntaEnIdioma";
+import { consultaAlEspanol } from "./consultaAlEspanol";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
 import {
   interpretarMultiSalto,
@@ -466,7 +467,10 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
     // siendo una promesa real: los mejores afines al perfil, sin filtro
     // de familia (antes: elegidos vacios -> listo otra vez, boton muerto).
     if (candidatosFamilia.length === 0 && familiasFaltantesKeys.length === 0) {
-      const afinesPerfil = await buscarAfines(estado.perfilSesion || estado.textoOriginal, visitados, {
+      // i18n F5, remedio de F1: el índice está en español.
+      const traducida = await consultaAlEspanol(client, estado.perfilSesion || estado.textoOriginal, idiomaSalida, acumulado);
+      acumulado = traducida.acumulado;
+      const afinesPerfil = await buscarAfines(traducida.consulta, visitados, {
         k: 6,
         graph,
         dominiosDesbloqueados: dominiosDelRecorrido(estado),

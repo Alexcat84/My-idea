@@ -133,6 +133,16 @@ export const SYSTEM_TRADUCIR_PREGUNTA = [
 ].join("\n") + REGLA_IDIOMA_SALIDA;
 
 /**
+ * SYSTEM_CONSULTA_AL_ESPANOL — el remedio de F1 (i18n F5; docs/i18n/F1_BUSCADOR.md).
+ * El índice semántico está hecho con el español de los nodos: antes de buscar,
+ * la consulta de una idea escrita en otro idioma se traduce al español. La
+ * letra es la MISMA que se midió en F1 (medicion_buscador.ts --remedio). Su
+ * salida es interna (va al buscador): no lleva la regla de idioma de salida.
+ */
+export const SYSTEM_CONSULTA_AL_ESPANOL =
+  "Traduce al español el texto del usuario. Responde SOLO con la traducción, sin comillas ni comentarios.";
+
+/**
  * SYSTEM_ENLACE_PROTECCION — Mundos de protección (P2): el ENLAZADOR.
  *
  * PROCEDENCIA: nace en TS, como el estimador (por eso es una const nativa y no
