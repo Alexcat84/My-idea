@@ -2,7 +2,7 @@
 
 Sacadas del repositorio por script (campo `correcciones` de cada nodo vivo, cache de preguntas y registro de retiradas), no de memoria.
 
-## 1. Nodos a re-embeber (Voyage): 43
+## 1. Nodos a re-embeber (Voyage): 44
 
 El indice semantico embebe titulo, resumen_teorico y condiciones_activacion (`scripts/build_semantic_index_voyage.py`, `texto_nodo`). Los pasos y el entregable NO entran: una correccion de paso no cambia el vector. Van aqui los nodos con alguna correccion en esos campos. Fichero, uno por linea: `docs/fidelidad/credencial/nodos_a_reembeber.txt`.
 
@@ -18,6 +18,7 @@ El constructor no tiene modo parcial: vuelve a embeber todos los nodos vivos (un
 - `colocar_etiquetas_de_manejo_correctamente` (fidelidad-t3-26)
 - `consejo_de_calidad_2` (fidelidad-t8-011)
 - `coordinacion_organica_de_elementos_independientes` (fidelidad-t9-010)
+- `creacion_option_pool` (fidelidad-t14-02)
 - `critica_del_plan_con_ia` (fidelidad-t9-032)
 - `cuan_probable_y_cuanto_doleria` (fidelidad-t5-038)
 - `customer_retention_tactics` (fidelidad-t7-028)
@@ -52,11 +53,11 @@ El constructor no tiene modo parcial: vuelve a embeber todos los nodos vivos (un
 - `vehiculos_autonomos_drones_supply_chain` (fidelidad-t8-033)
 - `verifica_quien_tiene_el_poder_de_decidir_o_vetar` (fidelidad-t5-014)
 
-## 2. Preguntas a regenerar: 22
+## 2. Preguntas a regenerar: 23
 
 Con `python engine/build_question_cache.py --patch-file docs/fidelidad/credencial/preguntas_a_regenerar.txt`.
 
-### Obligatorias: las 22 retiradas de la cache
+### Obligatorias: las 23 retiradas de la cache
 
 Retiradas el 24 sep por la decision del fundador 1 (commit de fidelidad-cache-1): su pregunta nacio de un resumen corregido por CONTRARIO o por cifra, plazo o norma. Detalle y motivo de cada una en `docs/fidelidad/PREGUNTAS_RETIRADAS.json`.
 
@@ -66,6 +67,7 @@ Retiradas el 24 sep por la decision del fundador 1 (commit de fidelidad-cache-1)
 - `cierre_segun_complejidad_venta`
 - `colocar_etiquetas_de_manejo_correctamente`
 - `consejo_de_calidad_2`
+- `creacion_option_pool`
 - `el_riesgo_eres_tu`
 - `entrega_por_partes_para_exponer_el_riesgo`
 - `future_scenarios_planning`
