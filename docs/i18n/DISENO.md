@@ -244,7 +244,7 @@ en las tablas):
 |---|---|---|---|
 | F0 | este documento | solo `docs/` | glosario y decisiones: el fundador |
 | F1 | 20 ideas × 11 idiomas contra `buscarAfines`; acuerdo por idioma con la versión en español (solape de los primeros 10 nodos); si alguno recupera mal, se mide también traducir la consulta al español antes de buscar | un script de medición, sin cambios en la app | el fundador con la clave de Voyage |
-| F2 | `lib/i18n/`, auditor, cookie y negociación en `proxy.ts`, formatos con `Intl`, y **todos** los textos extraídos al catálogo en español; la app se ve idéntica (capturas antes y después) | `web/` | visto en la vista previa |
+| F2 | `lib/i18n/`, auditor, cookie y negociación en `proxy.ts`, formatos con `Intl`, y **todos** los textos extraídos al catálogo en español; la app se ve idéntica (capturas antes y después) | `web/` | visto en la vista previa. **HECHA, pendiente del visto** (27 sep 2026): ver `F2_INFORME.md` |
 | F3 | las otras 10 traducciones con el glosario; formatos por idioma | catálogos | visto |
 | F4 | árabe RTL; tipografías CJK y devanagari solo al elegirlas; capturas de cada una | `web/` | visto |
 | F5 | detección del idioma de la idea, `projects.idioma` (migración), prompts con idioma de salida, marcadores neutros en el plan, plantillas por idioma de los generadores sin IA, y D3; prueba: una idea en coreano y otra en árabe dan plan y respuestas en su idioma con los nodos correctos | `web/`, `engine/` (prompts), `supabase/` | visto; migración la aplica el fundador |

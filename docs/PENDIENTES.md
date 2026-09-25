@@ -516,6 +516,12 @@ son la capa 3 embrionaria). Matriz de fases:
 
 ## 5. Backlog / afinar
 
+- **`ritual-fechas-sin-fecha`** (hallado en i18n F2, 27 sep 2026; defecto PREVIO, no causado por
+  F2). El ritual de fechas de Manos a la Obra (`RitualFechas`) muestra en su primera corrida todas las
+  tareas (`soloPendientes=false`), pero `calcularFechasRitual` solo da fecha a las pendientes: con una
+  tarea hecha o retirada sin fecha, `fechaHumana(isoDesdeInputLocal(undefined))` lanza `RangeError:
+  Invalid time value` y la pantalla se rompe. Lo reprodujo el agente de Manos a la Obra renderizando la
+  versión de antes y la de después (las dos lanzan igual). Prueba en rojo primero.
 - **`contador-upstash-ruidoso`** (decisión del fundador 3, 27 sep 2026). **El
   incidente (24 sep 2026):** la base Redis de Upstash que usa el contador de límites
   (`web/lib/rateLimit.ts`) desapareció (`getaddrinfo ENOTFOUND
