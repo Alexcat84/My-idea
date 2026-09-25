@@ -17,7 +17,7 @@
     "Memorializar experiencias (cenas, eventos) con un objeto físico que las recuerde",
     "Empezar con 2-3 clientes clave antes de escalar la práctica"
   ],
-  "entregable_esperado": "Plan de regalos personalizados para al menos los 10-20 clientes más valiosos, con presupuesto y calendario de entrega",
+  "entregable_esperado": "Plan de regalos personalizados para tus clientes más valiosos, con presupuesto y calendario de entrega",
   "nodos_previos": [
     "enfoque_en_superfans",
     "herramientas_de_activacion_web",
@@ -43,6 +43,24 @@
       "node_id": "regalos_estrategicos_sorpresa",
       "titulo": "Sorpresas y Regalos Estratégicos al Cliente",
       "fuente": "Never Lose a Customer Again - Joey Coleman"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-72",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Plan de regalos personalizados para al menos los 10-20 clientes más valiosos, con presupuesto y calendario de entrega",
+      "texto_nuevo": "Plan de regalos personalizados para tus clientes más valiosos, con presupuesto y calendario de entrega",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L4779-L4812",
+        "frase": "The Cubs gifted the limited edition ... speakers to their top four hundred most important relationships"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R046-017 (ANADIDO, lector y verificador de acuerdo): Cifra de 10 a 20 clientes no presente en el libro; buscada en numero y letra sin resultado. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R046-017"
     }
   ]
 }

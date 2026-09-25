@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Detectar lo que el cliente realmente prioriza en la entrega",
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
-  "resumen_teorico": "Cuando vendes en linea, la velocidad y el precio no son lo unico que decide una compra: casi la mitad de los carritos se abandonan por dudas sobre la entrega. Lo que mas valora el comprador es una ventana de entrega angosta para no quedarse esperando todo el dia, un aviso por mensaje cuando el paquete esta en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros negocios en linea fracasaron porque disenaban la entrega desde su propia comodidad y no desde estas prioridades del cliente. Detectar cuales de estos puntos pesan mas para tu publico, antes de prometer plazos o metodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
+  "resumen_teorico": "Cuando vendes en linea, la velocidad y el precio no son lo unico que decide una compra: en una encuesta, casi la mitad de los compradores admitio haber abandonado un carrito antes de pagar por problemas con la entrega ofrecida. Lo que mas valora el comprador es una ventana de entrega angosta para no quedarse esperando todo el dia, un aviso por mensaje cuando el paquete esta en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros negocios en linea fracasaron porque disenaban la entrega desde su propia comodidad y no desde estas prioridades del cliente. Detectar cuales de estos puntos pesan mas para tu publico, antes de prometer plazos o metodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
   "pasos_accionables": [
     "Pregunta a tus ultimos diez compradores que les preocupo mas de la entrega.",
     "Activa notificaciones automaticas por mensaje de texto cuando despaches cada pedido.",
@@ -28,5 +28,23 @@
     "Vendes por primera vez en linea y no sabes que tan estricto ser con los tiempos de entrega.",
     "Recibes quejas de clientes que dicen no haber sabido cuando llegaria su pedido."
   ],
-  "etiqueta_arbol": "Descubre que espera tu cliente"
+  "etiqueta_arbol": "Descubre que espera tu cliente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-14",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando vendes en linea, la velocidad y el precio no son lo unico que decide una compra: casi la mitad de los carritos se abandonan por dudas sobre la entrega. Lo que mas valora el comprador es una ventana de entrega angosta para no quedarse esperando todo el dia, un aviso por mensaje cuando el paquete esta en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros negocios en linea fracasaron porque disenaban la entrega desde su propia comodidad y no desde estas prioridades del cliente. Detectar cuales de estos puntos pesan mas para tu publico, antes de prometer plazos o metodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
+      "texto_nuevo": "Cuando vendes en linea, la velocidad y el precio no son lo unico que decide una compra: en una encuesta, casi la mitad de los compradores admitio haber abandonado un carrito antes de pagar por problemas con la entrega ofrecida. Lo que mas valora el comprador es una ventana de entrega angosta para no quedarse esperando todo el dia, un aviso por mensaje cuando el paquete esta en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros negocios en linea fracasaron porque disenaban la entrega desde su propia comodidad y no desde estas prioridades del cliente. Detectar cuales de estos puntos pesan mas para tu publico, antes de prometer plazos o metodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "I have an idea/txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "L200",
+        "frase": "nearly half of the respondents admitted to abandoning an online 'shopping cart' prior to purchase, due to issues with the delivery solution offered"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R052-040 (CONTRARIO, lector y verificador de acuerdo): Cambia la base de la cifra: de casi la mitad de los encuestados a casi la mitad de los carritos, lo que es una tasa de abandono distinta. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R052-040"
+    }
+  ]
 }

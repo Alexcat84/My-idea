@@ -21,7 +21,26 @@
     "eficiencia_hidrica_edificios_2"
   ],
   "condiciones_activacion": [
-    "Si los sistemas HVAC tienen más de 10-15 años sin mantenimiento mayor"
+    "Si los sistemas HVAC están anticuados, mal dimensionados o sin el mantenimiento adecuado"
   ],
-  "etiqueta_arbol": "Moderniza tu Sistema de Climatización"
+  "etiqueta_arbol": "Moderniza tu Sistema de Climatización",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-56",
+      "fecha": "2026-09-25",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si los sistemas HVAC tienen más de 10-15 años sin mantenimiento mayor",
+      "texto_nuevo": "Si los sistemas HVAC están anticuados, mal dimensionados o sin el mantenimiento adecuado",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L2756-L2758",
+        "frase": "businesses often waste enormous amounts of energy because their systems are inefficient due to improper sizing, inadequate maintenance, or outdated technology."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R053-016 (ANADIDO, lector y verificador de acuerdo): Cifra de antiguedad que el libro no da. La sesion compone el texto a mano porque el recorte automatico al fragmento dejo la frase mal construida; el contenido es el del texto fiel del verificador o del arbitro.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R053-016"
+    }
+  ]
 }

@@ -12,7 +12,7 @@ Uso:
 
 <tanda.json> es una lista de correcciones:
   {"id", "node_id", "campo" (pasos_accionables | condiciones_activacion | resumen_teorico |
-   entregable_esperado), "indice" (solo en los campos lista, pasos y condiciones, desde 0), "veredicto" (CONTRARIO | ANADIDO), "texto_anterior",
+   entregable_esperado | etiqueta_arbol), "indice" (solo en los campos lista, pasos y condiciones, desde 0), "veredicto" (CONTRARIO | ANADIDO), "texto_anterior",
    "texto_nuevo", "cita": {"libro", "fichero", "lineas", "frase"}, "decision", "auditoria"}
 
 Se niega (exit 1, sin escribir nada) si el texto anterior no es EXACTAMENTE el
@@ -25,10 +25,11 @@ from pathlib import Path
 
 BASE = Path(__file__).resolve().parent.parent.parent
 NODOS = BASE / "dataset" / "nodos"
-CAMPOS = {"pasos_accionables", "condiciones_activacion", "resumen_teorico", "entregable_esperado"}
+CAMPOS = {"pasos_accionables", "condiciones_activacion", "resumen_teorico", "entregable_esperado", "etiqueta_arbol"}
 # Los campos lista se corrigen elemento a elemento, por indice. Las condiciones de
-# activacion entraron el 27 sep 2026: la pasada contra la fuente sobre los campos
-# que no son pasos (docs/fidelidad/CAMPOS_QUE_LLEGAN.md) llegan a la IA.
+# activacion entraron el 24 sep 2026: la pasada contra la fuente sobre los campos
+# que no son pasos (docs/fidelidad/CAMPOS_QUE_LLEGAN.md) llegan a la IA. La etiqueta
+# de cara (etiqueta_arbol, escalar) entro con fidelidad-t15: es lo que ve la pantalla.
 LISTAS = {"pasos_accionables", "condiciones_activacion"}
 PROHIBIDOS = (chr(0x2014), chr(0x2013))
 

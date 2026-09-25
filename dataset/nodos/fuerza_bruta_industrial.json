@@ -21,5 +21,23 @@
     "Cuando el sistema productivo depende intensivamente de combustibles fósiles o pesticidas/químicos",
     "Si se busca reducir la huella energética de un proceso"
   ],
-  "etiqueta_arbol": "Domina la Naturaleza con Energía"
+  "etiqueta_arbol": "Deja Atrás la Fuerza Bruta",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-22",
+      "fecha": "2026-09-25",
+      "campo": "etiqueta_arbol",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Domina la Naturaleza con Energía",
+      "texto_nuevo": "Deja Atrás la Fuerza Bruta",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "I have an idea/books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "L193-L201",
+        "frase": "is one manifestation of this principle and its underlying assumption, that nature should be overwhelmed; so is the application of the chemical brute force and fossil fuel energy necessary to make such solutions \"fit.\""
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R031-015 (CONTRARIO, arbitro): Tenia razon el lector A. El libro critica el supuesto de arrollar la naturaleza con energía fósil y química (L193), lamenta que se haga sin prestar atención a los flujos locales de energía natural (L195) y dice que la energía de fuerza bruta no tiene sentido como estrategia dominante a largo plazo (L201). Busqué en todo el libro (dominat, conquer, control nature, overwhelm, brute force) y ningún pasaje recomienda dominar la naturaleza; la línea L523 también lo presenta como una cultura del control que se critica. La etiqueta, en imperativo, recomienda lo que el libro desaconseja. El resumen y los demás campos lo describen bien como una crítica. La sesion ajusta la etiqueta propuesta por el arbitro (No Domines la Naturaleza con Energia) a una forma corta en la voz de las etiquetas de cara, con el mismo sentido: el libro pide abandonar la fuerza bruta (L201).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R031-015"
+    }
+  ]
 }

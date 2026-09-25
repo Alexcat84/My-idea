@@ -16,7 +16,7 @@
     "Capturar leads mediante lead magnets (ebooks, infografías) para construir lista de email",
     "Dedica al menos seis meses consistentes de publicación antes de evaluar resultados"
   ],
-  "entregable_esperado": "Blog activo con calendario editorial, al menos 10-15 publicaciones iniciales y sistema de captura de leads",
+  "entregable_esperado": "Blog activo con calendario editorial, publicaciones iniciales en profundidad sobre los problemas de tu cliente objetivo y sistema de captura de leads",
   "nodos_previos": [
     "arquetipos_de_cliente",
     "seo_estrategia_fat_head",
@@ -46,6 +46,24 @@
       "node_id": "blogging_como_canal_de_traccion",
       "titulo": "Blog Corporativo como Canal de Tracción",
       "fuente": "Traction - Gabriel Weinberg"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-59",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Blog activo con calendario editorial, al menos 10-15 publicaciones iniciales y sistema de captura de leads",
+      "texto_nuevo": "Blog activo con calendario editorial, publicaciones iniciales en profundidad sobre los problemas de tu cliente objetivo y sistema de captura de leads",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "I have an idea/books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "L1886-L1892",
+        "frase": "Produce in-depth posts you can’t find anywhere else."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R066-025 (ANADIDO, lector y verificador de acuerdo): Cifra de publicaciones que el libro no da (buscado ten, fifteen, 10, 15 posts). La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R066-025"
     }
   ]
 }

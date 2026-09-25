@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Medición de Calidad en Áreas de Servicio y Administrativas",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "A diferencia de manufactura, las áreas de servicio (finanzas, marketing, personal, etc.) rara vez miden su desempeño de calidad, aunque generan gran parte de los costos por errores administrativos ('paperworkmanship'). Estudios muestran que más del 85% de documentos contienen al menos un error, generando hasta 25% de gasto operativo en corregirlos. Se requiere reconocimiento gerencial, un método de medición basado en desviaciones no planificadas, y un programa de corrección y prevención.",
+  "resumen_teorico": "A diferencia de manufactura, las áreas de servicio (finanzas, marketing, personal, etc.) rara vez miden su desempeño de calidad, aunque generan gran parte de los costos por errores administrativos ('paperworkmanship'). Estudios muestran que más del 85% de documentos contienen al menos un error, y corregirlos cuesta al menos el 25% del gasto operativo de cada función. Se requiere reconocimiento gerencial, un método de medición basado en desviaciones no planificadas, y un programa de corrección y prevención.",
   "pasos_accionables": [
     "Reconocer que las áreas de servicio también generan costos de no calidad",
     "Definir una base de medición: cambios causados por desviación no planificada de procedimientos",
@@ -25,5 +25,23 @@
     "Cuando la organización tiene una alta proporción de personal administrativo o de servicio",
     "Cuando no existen métricas de calidad fuera de manufactura"
   ],
-  "etiqueta_arbol": "Mide la Calidad en Servicios"
+  "etiqueta_arbol": "Mide la Calidad en Servicios",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-28",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "A diferencia de manufactura, las áreas de servicio (finanzas, marketing, personal, etc.) rara vez miden su desempeño de calidad, aunque generan gran parte de los costos por errores administrativos ('paperworkmanship'). Estudios muestran que más del 85% de documentos contienen al menos un error, generando hasta 25% de gasto operativo en corregirlos. Se requiere reconocimiento gerencial, un método de medición basado en desviaciones no planificadas, y un programa de corrección y prevención.",
+      "texto_nuevo": "A diferencia de manufactura, las áreas de servicio (finanzas, marketing, personal, etc.) rara vez miden su desempeño de calidad, aunque generan gran parte de los costos por errores administrativos ('paperworkmanship'). Estudios muestran que más del 85% de documentos contienen al menos un error, y corregirlos cuesta al menos el 25% del gasto operativo de cada función. Se requiere reconocimiento gerencial, un método de medición basado en desviaciones no planificadas, y un programa de corrección y prevención.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L2527",
+        "frase": "The cost of this fixing runs at least 25 percent of the operating expenses of any function"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R051-037 (CONTRARIO, lector y verificador de acuerdo): Invierte el umbral: convierte un mínimo en un máximo. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R051-037"
+    }
+  ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "La Silla Vacia del Cliente en las Reuniones de Decision",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Amazon usa, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
+  "resumen_teorico": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Comcast coloco en cada reunion, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
   "pasos_accionables": [
     "Incorporar un símbolo o recordatorio del cliente en las reuniones internas de decisión",
     "Colocar una silla vacía representando al cliente en cada reunión interna como recordatorio simbólico"
@@ -19,5 +19,23 @@
     "Cuando las decisiones internas se toman por comodidad operativa y el cliente aparece solo al final, si aparece",
     "Cuando quieres instalar un recordatorio permanente en vez de una campana de una vez"
   ],
-  "etiqueta_arbol": "Sienta al Cliente en tu Mesa"
+  "etiqueta_arbol": "Sienta al Cliente en tu Mesa",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-48",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Amazon usa, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
+      "texto_nuevo": "En las reuniones internas donde se deciden las cosas que afectan al cliente, el cliente no esta. Todos hablan de el y nadie habla por el, y la conversacion se inclina sola hacia lo que le conviene a la operacion. El remedio es fisico y barato: instalar un simbolo permanente que represente al cliente en esa mesa, como la silla vacia que Comcast coloco en cada reunion, para que quede a la vista que hay una parte interesada que no puede replicar. No es decoracion: el simbolo funciona cuando alguien tiene el encargo de ocuparlo y la reunion tiene la costumbre de preguntarle antes de cerrar la decision.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L6302",
+        "frase": "Finally, to keep the customer \"front and center\" in every internal discussion, an empty chair was placed in each meeting to represent the customer."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R046-026 (CONTRARIO, lector y verificador de acuerdo): El libro da otro dato para el mismo ejemplo: la silla vacia es de Comcast, no de Amazon. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R046-026"
+    }
+  ]
 }

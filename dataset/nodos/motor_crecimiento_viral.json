@@ -25,7 +25,26 @@
   ],
   "condiciones_activacion": [
     "Si el producto depende de que el uso normal implique invitar a otros (redes sociales, herramientas colaborativas)",
-    "Si el crecimiento actual proviene de recomendaciones espontáneas de usuarios"
+    "Si el crecimiento actual proviene de que el uso normal del producto lo expone a otros, y no de recomendaciones intencionales de usuarios"
   ],
-  "etiqueta_arbol": "Crece por Contagio Natural"
+  "etiqueta_arbol": "Crece por Contagio Natural",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-31",
+      "fecha": "2026-09-25",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si el crecimiento actual proviene de recomendaciones espontáneas de usuarios",
+      "texto_nuevo": "Si el crecimiento actual proviene de que el uso normal del producto lo expone a otros, y no de recomendaciones intencionales de usuarios",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "I have an idea/txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "L2460",
+        "frase": "This is distinct from the simple word-of-mouth growth discussed above. Instead, products that exhibit viral growth depend on person-to-person transmission as a necessary consequence of normal product use."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R061-005 (CONTRARIO, lector y verificador de acuerdo): Atribuye al motor viral la fuente de crecimiento (boca a boca) que el libro separa expresamente de el. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R061-005"
+    }
+  ]
 }

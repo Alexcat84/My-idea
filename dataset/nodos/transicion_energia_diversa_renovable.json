@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Transición a Flujos de Energía Diversos y Renovables",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Al igual que la biodiversidad fortalece un ecosistema, la diversificación de fuentes de energía (solar, eólica, microturbinas locales) hace que un sistema energético sea más resiliente ante fallos o picos de demanda, en comparación con sistemas centralizados de monocultivo energético (una sola planta nuclear o de carbón). La generación de energía a pequeña escala y distribuida (por manzana, por granja) reduce pérdidas por transmisión y permite aprovechar el calor residual localmente.",
+  "resumen_teorico": "Al igual que la biodiversidad fortalece un ecosistema, la diversificación de fuentes de energía (solar, eólica, microturbinas locales) hace que un sistema energético sea más resiliente ante fallos o picos de demanda, en comparación con sistemas centralizados de monocultivo energético (una sola planta nuclear o de carbón). La generación de energía a pequeña escala y distribuida (una pequeña planta cada tres manzanas, un molino cada pocas granjas) reduce pérdidas por transmisión y permite aprovechar el calor residual localmente.",
   "pasos_accionables": [
     "Evaluar la viabilidad de plantas de energía a pequeña escala y distribuida en lugar de una única fuente centralizada masiva.",
     "Diseñar mecanismos para capturar y reutilizar el calor residual de generadores locales (microturbinas, celdas de combustible).",
@@ -20,5 +20,23 @@
     "Cuando se planifica la infraestructura energética de una ciudad, fábrica o comunidad.",
     "Si el usuario busca alternativas a la dependencia de combustibles fósiles centralizados."
   ],
-  "etiqueta_arbol": "Diversifica tus Fuentes de Energía"
+  "etiqueta_arbol": "Diversifica tus Fuentes de Energía",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-51",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Al igual que la biodiversidad fortalece un ecosistema, la diversificación de fuentes de energía (solar, eólica, microturbinas locales) hace que un sistema energético sea más resiliente ante fallos o picos de demanda, en comparación con sistemas centralizados de monocultivo energético (una sola planta nuclear o de carbón). La generación de energía a pequeña escala y distribuida (por manzana, por granja) reduce pérdidas por transmisión y permite aprovechar el calor residual localmente.",
+      "texto_nuevo": "Al igual que la biodiversidad fortalece un ecosistema, la diversificación de fuentes de energía (solar, eólica, microturbinas locales) hace que un sistema energético sea más resiliente ante fallos o picos de demanda, en comparación con sistemas centralizados de monocultivo energético (una sola planta nuclear o de carbón). La generación de energía a pequeña escala y distribuida (una pequeña planta cada tres manzanas, un molino cada pocas granjas) reduce pérdidas por transmisión y permite aprovechar el calor residual localmente.",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "I have an idea/books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "L773-L793",
+        "frase": "producing power at the scale of one small plant for every three city blocks is dramatically more effective than more centralized production"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R032-022 (CONTRARIO, lector y verificador de acuerdo): Cambia la proporción que da el libro: una planta cada tres manzanas (L773) y un molino en cada pocas granjas familiares (L793: \"distributed on every few family farms\"), no una por manzana ni una por granja. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R032-022"
+    }
+  ]
 }

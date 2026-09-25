@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Gestión Motivada por Propiedad (Franquiciado vs Gerente)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Un franquiciado, al invertir su propio capital y a menudo sus ahorros, tiene un compromiso a largo plazo, mejor desempeño operativo, mayor innovación y mejor gestión de gastos que un gerente contratado. Estudios de caso (Texaco UK, Sterling Optical) muestran incrementos de ventas de 20-30% al convertir gerentes en propietarios franquiciados, con las mismas condiciones de ubicación, personal e inventario.",
+  "resumen_teorico": "Un franquiciado, al invertir su propio capital y a menudo sus ahorros, tiene un compromiso a largo plazo, mejor desempeño operativo, mayor innovación y mejor gestión de gastos que un gerente contratado. Estudios de caso (Texaco UK, Sterling Optical) muestran incrementos de ventas al convertir gerentes en propietarios franquiciados; en Sterling Optical las ventas subieron un 32% con las mismas condiciones de ubicación, personal e inventario.",
   "pasos_accionables": [
     "Identificar ubicaciones actuales gestionadas por gerentes contratados que podrían convertirse en franquicias",
     "Comparar métricas de desempeño (ventas, limpieza, rotación de personal) entre unidades propias y franquiciadas si existen datos, incluidos ingresos, gestión de gastos",
@@ -55,6 +55,22 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon B. Segun el libro, la motivacion del franquiciado nace de su propia inversion y de ser dueno (L488-L492: \"pride in ownership that is difficult to instill in someone without a deep investment\"), y ni el mejor plan de reparto de utilidades la iguala (L2478). Disenar un esquema de incentivos para replicar esa motivacion invierte la tesis. Ademas, en las unidades franquiciadas la propiedad ya existe, y el libro dice que el manual no debe fijar la politica de bonos del franquiciado (L2602). Busque en todo el libro incentive, profit-sharing, bonus y replicate y no hay ningun pasaje que apoye el paso. No es ANADIDO porque el libro dice lo contrario, no solo calla.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C009-034"
+    },
+    {
+      "id": "fidelidad-t15-30",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un franquiciado, al invertir su propio capital y a menudo sus ahorros, tiene un compromiso a largo plazo, mejor desempeño operativo, mayor innovación y mejor gestión de gastos que un gerente contratado. Estudios de caso (Texaco UK, Sterling Optical) muestran incrementos de ventas de 20-30% al convertir gerentes en propietarios franquiciados, con las mismas condiciones de ubicación, personal e inventario.",
+      "texto_nuevo": "Un franquiciado, al invertir su propio capital y a menudo sus ahorros, tiene un compromiso a largo plazo, mejor desempeño operativo, mayor innovación y mejor gestión de gastos que un gerente contratado. Estudios de caso (Texaco UK, Sterling Optical) muestran incrementos de ventas al convertir gerentes en propietarios franquiciados; en Sterling Optical las ventas subieron un 32% con las mismas condiciones de ubicación, personal e inventario.",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L299-L309",
+        "frase": "While sales at the corporate stores remained relatively flat, sales at these stores increased 32 percent!"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R016-029 (CONTRARIO, lector y verificador de acuerdo): Cifra cambiada: el libro da 10 a 30% como rango general y 32% en Sterling Optical. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R016-029"
     }
   ]
 }

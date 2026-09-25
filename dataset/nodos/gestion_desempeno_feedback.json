@@ -21,7 +21,26 @@
     "hr_calidad_gestion"
   ],
   "condiciones_activacion": [
-    "Cuando tu equipo crece más allá de 20 o 25 personas y todavía no tienes un proceso formal de feedback"
+    "Cuando tu equipo crece a unas 25 personas y todavía no tienes un proceso formal de feedback"
   ],
-  "etiqueta_arbol": "Formaliza tu Feedback de Desempeño"
+  "etiqueta_arbol": "Formaliza tu Feedback de Desempeño",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-66",
+      "fecha": "2026-09-25",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando tu equipo crece más allá de 20 o 25 personas y todavía no tienes un proceso formal de feedback",
+      "texto_nuevo": "Cuando tu equipo crece a unas 25 personas y todavía no tienes un proceso formal de feedback",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L1730",
+        "frase": "Your company now employs twenty-five people and you know that you should formalize the performance management process"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R059-047 (ANADIDO, arbitro): Tiene razón el lector A. Busqué con Grep en todo el libro twenty, 20, twenty people y employs, y no hay ningún umbral de 20. La única cifra ligada a formalizar la gestión del desempeño es veinticinco (L1730), y la condición la mantiene. Por eso no hay un valor distinto que contradiga el libro: lo que sobra es el 20, una cifra añadida. Es ANADIDO y no CONTRARIO. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R059-047"
+    }
+  ]
 }

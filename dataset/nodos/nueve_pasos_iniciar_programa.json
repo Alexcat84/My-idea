@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Nueve Pasos Simples para Iniciar un Programa de Seguridad",
   "fuente": "OSHA3886",
-  "resumen_teorico": "Guía introductoria de acciones simples y de bajo costo para que tú, como responsable de una pequeña o mediana empresa de construcción sin experiencia previa en programas formales, empieces a construir seguridad y salud sin necesidad de una estructura compleja. Cubre desde declarar la seguridad como prioridad y modelarla con tu propio comportamiento, hasta crear canales de reporte, capacitar, inspeccionar junto a los trabajadores, recoger e implementar sus ideas, definir protocolos de emergencia y consultar antes de cambios significativos. Sirve como punto de partida accesible cuando un marco completo de elementos de seguridad resulta abrumador, dejando base sólida para estructurar más adelante un programa completo.",
+  "resumen_teorico": "Guía introductoria de acciones simples y de bajo costo para que tú, como responsable de una pequeña o mediana empresa de construcción sin experiencia previa en programas formales, empieces a construir seguridad y salud sin necesidad de una estructura compleja. Cubre desde declarar la seguridad como prioridad y modelarla con tu propio comportamiento, hasta crear canales de reporte, capacitar, inspeccionar junto a los trabajadores, recoger e implementar sus ideas, definir protocolos de emergencia y reservar un tiempo regular para hablar de seguridad y buscar mejoras al programa. Sirve como punto de partida accesible cuando un marco completo de elementos de seguridad resulta abrumador, dejando base sólida para estructurar más adelante un programa completo.",
   "pasos_accionables": [
     "Establece la seguridad y salud como prioridad máxima y comunícalo con claridad",
     "Predica con el ejemplo mostrando comportamientos seguros en tu trabajo diario",
@@ -37,6 +37,24 @@
       "node_id": "diez_pasos_iniciales_programa",
       "titulo": "10 Acciones Iniciales para Arrancar un Programa de Seguridad",
       "fuente": "OSHA3885"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-32",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Guía introductoria de acciones simples y de bajo costo para que tú, como responsable de una pequeña o mediana empresa de construcción sin experiencia previa en programas formales, empieces a construir seguridad y salud sin necesidad de una estructura compleja. Cubre desde declarar la seguridad como prioridad y modelarla con tu propio comportamiento, hasta crear canales de reporte, capacitar, inspeccionar junto a los trabajadores, recoger e implementar sus ideas, definir protocolos de emergencia y consultar antes de cambios significativos. Sirve como punto de partida accesible cuando un marco completo de elementos de seguridad resulta abrumador, dejando base sólida para estructurar más adelante un programa completo.",
+      "texto_nuevo": "Guía introductoria de acciones simples y de bajo costo para que tú, como responsable de una pequeña o mediana empresa de construcción sin experiencia previa en programas formales, empieces a construir seguridad y salud sin necesidad de una estructura compleja. Cubre desde declarar la seguridad como prioridad y modelarla con tu propio comportamiento, hasta crear canales de reporte, capacitar, inspeccionar junto a los trabajadores, recoger e implementar sus ideas, definir protocolos de emergencia y reservar un tiempo regular para hablar de seguridad y buscar mejoras al programa. Sirve como punto de partida accesible cuando un marco completo de elementos de seguridad resulta abrumador, dejando base sólida para estructurar más adelante un programa completo.",
+      "cita": {
+        "libro": "OSHA3886",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/OSHA3886.md",
+        "lineas": "L101-L147",
+        "frase": "9. MAKE IMPROVEMENTS Set aside a regular time to discuss safety and health issues, with the goal of identifying ways to improve the program."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R003-014 (CONTRARIO, arbitro): Tiene razón el lector B. Los ocho primeros elementos del resumen coinciden en orden con los pasos 1 a 8 del libro (L105-L143), pero el último sustituye el paso 9 por otro. Busqué en todo el libro pasajes que apoyaran el campo: la práctica de pedir la opinión de los trabajadores antes de un cambio aparece en L547, dentro de otro elemento (identificación de peligros), no en la lista de los nueve pasos iniciales. Por eso no respalda el campo, que presenta esa práctica como parte de los nueve pasos cuando el título y el entregable hablan de 'nueve'. Así se altera la secuencia que da el libro: se cuela un paso ajeno y se pierde el de mejorar el programa. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R003-014"
     }
   ]
 }

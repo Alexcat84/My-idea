@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Hábito Energizante vs. Hábito Mecánico en el Pensamiento",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Contrastando a Herbert Spencer (pensamiento pasivo que decae en energía con la repetición) y John Stuart Mill (hábito de nunca aceptar soluciones a medias, manteniendo alta energía mediante esfuerzo voluntario repetido), Wallas muestra que no todo hábito reduce la vitalidad del pensamiento. El hábito correcto es aquel que mantiene activo el compromiso voluntario y crítico, en vez de caer en la repetición 'ciega y mecánica' que Wordsworth reconoció como destructiva para su propia poesía.",
+  "resumen_teorico": "Contrastando a Herbert Spencer (pensamiento pasivo que decae en energía con la repetición) y John Stuart Mill (hábito de nunca aceptar soluciones a medias, manteniendo alta energía mediante esfuerzo voluntario repetido), Wallas muestra que no todo hábito reduce la vitalidad del pensamiento. El hábito correcto es aquel que mantiene activo el compromiso voluntario y crítico, en vez de caer en la repetición 'ciega y mecánica' que Wordsworth defendió sin ver el problema y que, según Wallas, ayudó a destruir su propia poesía.",
   "pasos_accionables": [
     "Adoptar la actitud de Mill: nunca aceptar una solución parcial como completa, volviendo repetidamente al problema",
     "Evitar caer en la producción 'automática' sin cuestionamiento crítico de las ideas generadas",
@@ -25,5 +25,23 @@
     "Cuando el pensador nota que su producción ha caído en la mera repetición sin avance real",
     "Cuando se busca sostener la calidad creativa a largo plazo en un proyecto extenso"
   ],
-  "etiqueta_arbol": "Elige un Hábito con Energía"
+  "etiqueta_arbol": "Elige un Hábito con Energía",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-23",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Contrastando a Herbert Spencer (pensamiento pasivo que decae en energía con la repetición) y John Stuart Mill (hábito de nunca aceptar soluciones a medias, manteniendo alta energía mediante esfuerzo voluntario repetido), Wallas muestra que no todo hábito reduce la vitalidad del pensamiento. El hábito correcto es aquel que mantiene activo el compromiso voluntario y crítico, en vez de caer en la repetición 'ciega y mecánica' que Wordsworth reconoció como destructiva para su propia poesía.",
+      "texto_nuevo": "Contrastando a Herbert Spencer (pensamiento pasivo que decae en energía con la repetición) y John Stuart Mill (hábito de nunca aceptar soluciones a medias, manteniendo alta energía mediante esfuerzo voluntario repetido), Wallas muestra que no todo hábito reduce la vitalidad del pensamiento. El hábito correcto es aquel que mantiene activo el compromiso voluntario y crítico, en vez de caer en la repetición 'ciega y mecánica' que Wordsworth defendió sin ver el problema y que, según Wallas, ayudó a destruir su propia poesía.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "I have an idea/txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "L575",
+        "frase": "Wordsworth, when, after Coleridge’s return from Germany, he began to think about his own mental processes, made the mistake of ignoring this difficulty; ... Wordsworth here, by using the words ‘blindly and mechanically,’ describes exactly the mental attitude which was most likely to lead to loss of energy, and which did, in fact, help to destroy in him the power of producing great poetry."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R053-013 (CONTRARIO, lector y verificador de acuerdo): Invierte la postura de Wordsworth: no la reconocio como destructiva, la defendio. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R053-013"
+    }
+  ]
 }

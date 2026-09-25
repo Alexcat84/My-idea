@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Distorsión por Muestreo Mecánico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede introducir sesgos sistemáticos ajenos a la teoría de probabilidad. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
+  "resumen_teorico": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede producir diferencias que la teoría de probabilidad no cubre; esa diferencia no es un sesgo, sino la diferencia entre dos métodos de selección. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
   "pasos_accionables": [
     "Evalúa si tu método actual de muestreo usa selección aleatoria o mecánica",
     "Si usas un instrumento físico para muestrear, documenta y calibra el sesgo propio de esa herramienta",
@@ -35,6 +35,24 @@
       "node_id": "muestreo_aleatorio_vs_mecanico",
       "titulo": "Muestreo Aleatorio vs Muestreo Mecánico",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-17",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede introducir sesgos sistemáticos ajenos a la teoría de probabilidad. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
+      "texto_nuevo": "El muestreo mecánico, sea por criterio del inspector al tomar muestras de arriba, abajo y medio de un lote, o mediante herramientas físicas como una paleta, puede producir diferencias que la teoría de probabilidad no cubre; esa diferencia no es un sesgo, sino la diferencia entre dos métodos de selección. Esto distorsiona el promedio real del proceso observado, a diferencia del muestreo por números aleatorios verdaderos, que sí permite aplicar sin distorsión la teoría estadística de distribuciones. Un cambio en el método de selección de muestras puede sacar un punto fuera de control sin que el proceso realmente haya cambiado, o hacer que los resultados parezcan sesgados respecto a la proporción teórica esperada cuando en realidad el problema está en cómo tomas la muestra, no en el proceso mismo.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L8070-L8092",
+        "frase": "The difference between the accumulated and 10 is often alluded to by people in the audience as bias. No, this difference is not bias. It is the difference between two methods of selection: (1) mechanical sampling, used here; (2) selection by random numbers."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R047-001 (CONTRARIO, arbitro): Tenía razón el lector A. Deming niega literalmente que la diferencia sea sesgo (L8070) y en L6659 insiste en tratar una diferencia de método no como sesgo. Busqué bias, biased y distort en todo el libro y ningún pasaje llama sesgo al efecto del muestreo mecánico; el libro habla de distorsión (L8089, L8092). La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R047-001"
     }
   ]
 }

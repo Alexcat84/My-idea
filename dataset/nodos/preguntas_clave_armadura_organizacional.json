@@ -14,7 +14,7 @@
     "Crear o fortalecer funciones con autoridad real para cuestionar interpretaciones comunes sobre seguridad",
     "Incorporar perspectivas frescas y diversas en la resolución de problemas de seguridad"
   ],
-  "entregable_esperado": "Checklist institucional de las siete preguntas clave aplicado y documentado con hallazgos y planes de acción para cada una",
+  "entregable_esperado": "Checklist institucional de las ocho preguntas clave aplicado y documentado con hallazgos y planes de acción para cada una",
   "nodos_previos": [
     "trabajo_como_imaginado_vs_trabajo_como_hecho",
     "insight_de_wald"
@@ -26,5 +26,23 @@
     "Cuando una organización ultra-segura busca prevenir el próximo accidente sorpresivo",
     "Cuando se diseña o revisa un sistema de gestión de seguridad maduro"
   ],
-  "etiqueta_arbol": "Busca Riesgos Que No Ves"
+  "etiqueta_arbol": "Busca Riesgos Que No Ves",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-36",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Checklist institucional de las siete preguntas clave aplicado y documentado con hallazgos y planes de acción para cada una",
+      "texto_nuevo": "Checklist institucional de las ocho preguntas clave aplicado y documentado con hallazgos y planes de acción para cada una",
+      "cita": {
+        "libro": "The Field Guide to Understandin - Dekker, Sidney",
+        "fichero": "I have an idea/books/Especificos/Health and Safety/The Field Guide to Understandin - Dekker, Sidney;.txt",
+        "lineas": "L3851-L3869",
+        "frase": "Here are some key questions you should ask of yourself, your teams and your organization. [...] The ability and extent of bringing in fresh perspectives."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R006-034 (CONTRARIO, lector y verificador de acuerdo): Cambia la cifra de preguntas que da el libro (ocho, no siete). La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R006-034"
+    }
+  ]
 }

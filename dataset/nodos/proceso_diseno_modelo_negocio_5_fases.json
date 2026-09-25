@@ -12,7 +12,7 @@
     "Fase 4 Implementar: ejecuta el modelo seleccionado en campo",
     "Fase 5 Gestionar: monitorea, evalúa y adapta continuamente el modelo"
   ],
-  "entregable_esperado": "Plan de proyecto de innovación de modelo de negocio estructurado en las cinco fases, con objetivos y actividades definidas por fase",
+  "entregable_esperado": "Plan de proyecto de innovación de modelo de negocio que detalla objetivos y actividades de Movilizar, Entender y Diseñar, dejando Implementar y Gestionar para planificarse cuando esté clara la dirección del modelo",
   "nodos_previos": [
     "business_model_environment_mapping"
   ],
@@ -25,5 +25,23 @@
   "condiciones_activacion": [
     "Al iniciar cualquier proyecto formal de diseño o rediseño de modelo de negocio, sea en startup o empresa establecida"
   ],
-  "etiqueta_arbol": "Diseña tu Modelo en Fases"
+  "etiqueta_arbol": "Diseña tu Modelo en Fases",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-37",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Plan de proyecto de innovación de modelo de negocio estructurado en las cinco fases, con objetivos y actividades definidas por fase",
+      "texto_nuevo": "Plan de proyecto de innovación de modelo de negocio que detalla objetivos y actividades de Movilizar, Entender y Diseñar, dejando Implementar y Gestionar para planificarse cuando esté clara la dirección del modelo",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L4363-L4365",
+        "frase": "Initial planning should cover the first phases of a business model design project: Mobilize, Understand, and Design. The Implementation and Management phases depend heavily on the outcome of these first three phases--namely the business model direction--and therefore can only be planned later."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R028-014 (CONTRARIO, arbitro): Tiene razon el lector B. El libro ofrece objetivo y foco por fase como marco generico (L4221), pero no apoya un plan de proyecto con actividades de las cinco fases fijadas al iniciar; dice expresamente que las dos ultimas solo pueden planificarse mas tarde. Cambia la secuencia de planificacion que da el libro. Busque en todo el libro otros pasajes sobre planificar las fases y ninguno apoya el campo. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R028-014"
+    }
+  ]
 }

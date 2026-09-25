@@ -20,8 +20,27 @@
     "ferias_comerciales_franquicia"
   ],
   "condiciones_activacion": [
-    "Cuando se busca generar leads de alta calidad con presupuesto limitado",
+    "Cuando se busca generar leads de alta calidad y hay presupuesto para asumir un costo por lead alto y poco previsible",
     "Cuando el franquiciador tiene una historia de marca distintiva y mediática"
   ],
-  "etiqueta_arbol": "Usa Relaciones Públicas para Prospectos"
+  "etiqueta_arbol": "Usa Relaciones Públicas para Prospectos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-44",
+      "fecha": "2026-09-25",
+      "campo": "condiciones_activacion",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando se busca generar leads de alta calidad con presupuesto limitado",
+      "texto_nuevo": "Cuando se busca generar leads de alta calidad y hay presupuesto para asumir un costo por lead alto y poco previsible",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L3459, L3547, L3674, L3704",
+        "frase": "if you have a very limited budget, you might want to focus on PPC advertising to the exclusion of other media, as it is easily controlled and a reliable lead generator. And while other lead generation expenditures (such as public relations) have higher close rates, they are less predictable."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R017-035 (CONTRARIO, arbitro): Tiene razon el LECTOR B. El libro aconseja priorizar PPC con presupuesto muy limitado (L3459), situa la PR como la fuente de mayor costo por lead (L3547, 'Despite the relatively high cost per lead', L3674) y recomienda contratar una firma de PR 'as soon as they can afford to do so' (L3704). Busque en todo el libro apoyo a la PR como opcion de bajo presupuesto (limited budget, low cost, inexpensive, free publicity) y no lo hay; incluso L3908 advierte que la publicidad gratuita en redes no es gratis ni facil. Las anecdotas de leads 'without spending a penny on franchise advertising' no convierten la PR en el canal recomendado para presupuestos limitados. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R017-035"
+    }
+  ]
 }

@@ -12,7 +12,7 @@
     "Registra los descubrimientos que van surgiendo mientras permaneces en la incomodidad, sin intentar resolverla.",
     "Usa la incomodidad como señal de que hay una oportunidad de aprendizaje o un hallazgo sin explorar."
   ],
-  "entregable_esperado": "Un diario de observación con notas de al menos una sesión prolongada (mínimo 30 a 60 minutos) donde documentes los hallazgos que solo aparecieron con el paso del tiempo.",
+  "entregable_esperado": "Un diario de observación con notas de al menos una sesión prolongada donde documentes los hallazgos que solo aparecieron con el paso del tiempo.",
   "nodos_previos": [
     "investigacion_analoga",
     "empatia_capas_de_comprension",
@@ -45,6 +45,22 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el arbitro, con su cita. Decision del fundador del 27 sep, punto 3: las EXCEPCIONES con desacuerdo entre fases van a un arbitro con el libro. Registrar los hallazgos que salen con el tiempo sí va en la línea del libro (Roberts, L4662). Pero el paso pone el descubrimiento \"después de superar la incomodidad inicial\", y eso invierte la secuencia que da el libro. Para el libro, lo nuevo aparece precisamente porque no resuelves la incomodidad y te quedas en ella: \"dwell\", \"linger\", \"discomfort without resolution\", \"Then keep standing there\". Dice incluso que el afán de resolver es \"the enemy of luck\". Superar la incomodidad es justo lo que el libro pide no hacer, y además choca con el paso 2 del propio nodo (\"Resiste el impulso de resolverlo\"). Invertir una secuencia o una recomendación cuenta como CONTRARIO, y hay citas que se oponen de forma directa (L2690, L2696, L4662). Busqueda en todo el libro: Busqué en todo el libro awkward, discomfort, uncomfortable, overcome, get past y push through. A favor de registrar lo que aparece con el tiempo: L2692-L2694 (Roberts, tres horas: los detalles se despliegan con paciencia, \"access is not synonymous with learning\") y L4662 (\"We can sit with our awkward moments until the quirky components reveal design opportunities\"). En los dos casos los hallazgos llegan mientras sigues dentro de la incomodidad, no después de dejarla atrás. En contra de \"superar\": L2688 (\"that's where you need to dwell\", \"linger in discomfort\", \"staying open when something is off\"), L2690 (\"discomfort without resolution is a cocktail that delivers a curiosity buzz\"), L2696 (\"The relentless desire to resolve things is the enemy of luck... Stew in it... Then keep standing there\"), L3011 (\"if we sit with it rather than react, we might find treasure\") y L4347 (\"get comfortable with your discomfort\"). No hay ningún pasaje que diga que hay que superar, dejar atrás o resolver la incomodidad para descubrir algo.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/ARBITRAJE_EXCEPCIONES.json, entrada abrazar_la_incomodidad"
+    },
+    {
+      "id": "fidelidad-t15-55",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un diario de observación con notas de al menos una sesión prolongada (mínimo 30 a 60 minutos) donde documentes los hallazgos que solo aparecieron con el paso del tiempo.",
+      "texto_nuevo": "Un diario de observación con notas de al menos una sesión prolongada donde documentes los hallazgos que solo aparecieron con el paso del tiempo.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L2692-L2694",
+        "frase": "They must sit in front of the artwork, at its place in a museum, for three straight hours. Her reasoning is that what you notice in the first ten minutes is different from the details that begin to unfold at minutes 62…153…178"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R026-011 (ANADIDO, lector y verificador de acuerdo): Se buscaron en todo el libro 30 o 60 minutos, media hora y una hora, y no aparecen como pauta de observación. La única cifra del libro son tres horas, así que el umbral de 30 a 60 minutos es inventado. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R026-011"
     }
   ]
 }

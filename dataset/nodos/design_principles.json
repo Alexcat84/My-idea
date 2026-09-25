@@ -13,7 +13,7 @@
     "Revisar y modificar los principios para asegurar que cubran los aspectos clave de la solución",
     "Estar dispuesto a revisar los principios conforme se prototipe y pruebe la solución"
   ],
-  "entregable_esperado": "Una lista corta (5-7) de Principios de Diseño memorables que guían el desarrollo de la solución",
+  "entregable_esperado": "Una lista corta de Principios de Diseño memorables que guían el desarrollo de la solución",
   "nodos_previos": [
     "identificar_brechas_gaps",
     "bundle_ideas"
@@ -25,5 +25,23 @@
     "Cuando el equipo empieza a construir ideas y necesita un marco unificador que mantenga la consistencia",
     "Si distintos miembros del equipo diseñan por separado y se necesita alinear criterios"
   ],
-  "etiqueta_arbol": "Fija tus Principios de Diseño"
+  "etiqueta_arbol": "Fija tus Principios de Diseño",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-62",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una lista corta (5-7) de Principios de Diseño memorables que guían el desarrollo de la solución",
+      "texto_nuevo": "Una lista corta de Principios de Diseño memorables que guían el desarrollo de la solución",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "I have an idea/txt/The field guide to human-center - Unknown.txt",
+        "lineas": "L4696, L4698",
+        "frase": "Remember, Design Principles operate as a group, and it’s likely that you’ll / need to identify several."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R065-020 (ANADIDO, lector y verificador de acuerdo): Rango numérico que el libro no establece. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta. La frase de la cita esta partida en el texto por las columnas mezcladas de la guia (L4696 y L4698); se cita en sus dos trozos literales.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R065-020"
+    }
+  ]
 }

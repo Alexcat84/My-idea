@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Educación Masiva en Métodos Estadísticos para la Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "La experiencia japonesa demostró que mejorar la calidad de forma sostenida requiere que el conocimiento estadístico llegue a todos los que participan en un negocio, no solo a quien decide. JUSE (Union of Japanese Scientists and Engineers) capacitó a más de 14,700 ingenieros y a miles de supervisores entre 1950 y 1970 en métodos estadísticos básicos y avanzados, incluido el uso de cartas de control (basadas en la filosofía de Shewhart). Al no existir barreras que impidieran sentir orgullo por el trabajo bien hecho, hasta quienes hacían el trabajo operativo aprendieron y aplicaron estas herramientas.",
+  "resumen_teorico": "La experiencia japonesa demostró que mejorar la calidad de forma sostenida requiere que el conocimiento estadístico llegue a todos los que participan en un negocio, no solo a quien decide. JUSE (Union of Japanese Scientists and Engineers) capacitó a 14,700 ingenieros y a miles de supervisores entre 1950 y 1970 en métodos estadísticos básicos y avanzados, incluido el uso de cartas de control (basadas en la filosofía de Shewhart). Al no existir barreras que impidieran sentir orgullo por el trabajo bien hecho, hasta quienes hacían el trabajo operativo aprendieron y aplicaron estas herramientas.",
   "pasos_accionables": [
     "Diseñar una capacitación en métodos estadísticos para ti y para cada persona que trabaja contigo, sin importar la tarea que haga",
     "Eliminar cualquier barrera que impida que quien hace el trabajo se sienta orgulloso de hacerlo bien",
@@ -28,5 +28,23 @@
     "Cuando tu negocio carece de conocimiento estadístico básico, tanto en quien decide como en quien ejecuta el trabajo",
     "Cuando buscas construir una forma de mejorar continuamente basada en datos"
   ],
-  "etiqueta_arbol": "Enseña Estadística a tu Equipo"
+  "etiqueta_arbol": "Enseña Estadística a tu Equipo",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-18",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "La experiencia japonesa demostró que mejorar la calidad de forma sostenida requiere que el conocimiento estadístico llegue a todos los que participan en un negocio, no solo a quien decide. JUSE (Union of Japanese Scientists and Engineers) capacitó a más de 14,700 ingenieros y a miles de supervisores entre 1950 y 1970 en métodos estadísticos básicos y avanzados, incluido el uso de cartas de control (basadas en la filosofía de Shewhart). Al no existir barreras que impidieran sentir orgullo por el trabajo bien hecho, hasta quienes hacían el trabajo operativo aprendieron y aplicaron estas herramientas.",
+      "texto_nuevo": "La experiencia japonesa demostró que mejorar la calidad de forma sostenida requiere que el conocimiento estadístico llegue a todos los que participan en un negocio, no solo a quien decide. JUSE (Union of Japanese Scientists and Engineers) capacitó a 14,700 ingenieros y a miles de supervisores entre 1950 y 1970 en métodos estadísticos básicos y avanzados, incluido el uso de cartas de control (basadas en la filosofía de Shewhart). Al no existir barreras que impidieran sentir orgullo por el trabajo bien hecho, hasta quienes hacían el trabajo operativo aprendieron y aplicaron estas herramientas.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L10861",
+        "frase": "Between 1950 and 1970 JUSE taught statistical methods to 14,700 engineers and thousands of foremen."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R047-035 (CONTRARIO, arbitro): Tenía razón el lector B. Cambiar la cifra exacta del libro por un mínimo (más de) altera el dato aunque el sentido general se mantenga, y el mandato cuenta como CONTRARIO cualquier cambio de cifra. La única mención de la cifra en todo el libro es L10861 y dice 14,700 a secas. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R047-035"
+    }
+  ]
 }

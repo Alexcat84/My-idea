@@ -11,7 +11,7 @@
     "Preparar toda la logística (documentos, paquetes de indemnización) antes de anunciar nada",
     "Ejecutar el despido en el menor tiempo posible tras la decisión final"
   ],
-  "entregable_esperado": "Plan de ejecución de despido con cronograma de máximo 48-72 horas entre decisión y comunicación",
+  "entregable_esperado": "Plan de ejecución de despido con un cronograma que reduzca al mínimo el tiempo entre decisión y ejecución",
   "nodos_previos": [
     "falta_de_constancia_de_proposito"
   ],
@@ -23,5 +23,23 @@
     "Cuando la empresa ha decidido reducir personal por incumplimiento de metas",
     "Si existe riesgo de filtración de información sensible"
   ],
-  "etiqueta_arbol": "Ejecuta los Despidos sin Demora"
+  "etiqueta_arbol": "Ejecuta los Despidos sin Demora",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-64",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Plan de ejecución de despido con cronograma de máximo 48-72 horas entre decisión y comunicación",
+      "texto_nuevo": "Plan de ejecución de despido con un cronograma que reduzca al mínimo el tiempo entre decisión y ejecución",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L867",
+        "frase": "the time elapsed between making that decision and executing that decision should be as short as possible"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R059-024 (ANADIDO, lector y verificador de acuerdo): Plazo numérico que el libro no da (búsqueda de 48, 72, forty-eight, seventy-two sin pasajes sobre despidos). La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R059-024"
+    }
+  ]
 }

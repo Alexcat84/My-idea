@@ -4,7 +4,7 @@
   "dominio": "entrega",
   "titulo_concepto": "Proteger frágiles con el método caja dentro de caja",
   "fuente": "DHL Express, Guia de empaque",
-  "resumen_teorico": "Para artículos frágiles, filosos o de alto valor, una sola caja no basta: el impacto se transmite directo del exterior al contenido. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa suele ser entre 14 y 15 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Este doble amortiguamiento absorbe golpes que una sola caja no aguanta, y es la técnica recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
+  "resumen_teorico": "Para artículos frágiles, filosos o de alto valor, una sola caja no basta: el impacto se transmite directo del exterior al contenido. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Este doble amortiguamiento absorbe golpes que una sola caja no aguanta, y es la técnica recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
   "pasos_accionables": [
     "Acolchona el producto y colócalo dentro de una caja interna resistente.",
     "Elige una caja externa varios centímetros más grande en cada dimensión que la interna.",
@@ -25,5 +25,23 @@
     "Estás reenviando un producto en su empaque original de fábrica.",
     "Ya tuviste reclamos por daños con una sola caja y necesitas más protección."
   ],
-  "etiqueta_arbol": "Usa el sandwich de dos cajas"
+  "etiqueta_arbol": "Usa el sandwich de dos cajas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-38",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Para artículos frágiles, filosos o de alto valor, una sola caja no basta: el impacto se transmite directo del exterior al contenido. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa suele ser entre 14 y 15 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Este doble amortiguamiento absorbe golpes que una sola caja no aguanta, y es la técnica recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
+      "texto_nuevo": "Para artículos frágiles, filosos o de alto valor, una sola caja no basta: el impacto se transmite directo del exterior al contenido. El método caja dentro de caja pone el producto, ya acolchado, dentro de una caja interna, y esa caja interna se centra dentro de una caja externa más grande, dejando un colchón de relleno entre ambas paredes. Como referencia general, la caja externa debe ser al menos 14 centímetros más grande que la interna en cada dimensión, con varios centímetros de relleno separándolas por los seis lados, pero conviene confirmar la medida exacta con el servicio de envíos que uses o probarla tú mismo. Este doble amortiguamiento absorbe golpes que una sola caja no aguanta, y es la técnica recomendada cuando el producto original ya viene en su empaque de fábrica, que no está pensado para reenviarse.",
+      "cita": {
+        "libro": "DHL Express, Guia de empaque",
+        "fichero": "I have an idea/txt/Supply chain/dhl_express_packing_guide_en.txt",
+        "lineas": "L329, L363",
+        "frase": "The outer box should be at least 14cm larger in all dimensions than the inner box to provide sufficient overpack protection."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R032-028 (CONTRARIO, lector y verificador de acuerdo): Cambia un umbral mínimo (al menos 14 cm) por un rango con techo de 15 cm que la guía no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R032-028"
+    }
+  ]
 }

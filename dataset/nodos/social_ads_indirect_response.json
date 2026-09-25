@@ -13,7 +13,7 @@
     "Mide la conversión en ventanas de tiempo más largas que las que usarías en publicidad de buscadores",
     "Migrar gradualmente a esa audiencia hacia un objetivo de conversión (compra, registro, uso)"
   ],
-  "entregable_esperado": "Una campaña de anuncios en redes sociales con contenido de marca y un plan de al menos 3 etapas para acompañar a tu audiencia antes de pedirle la conversión.",
+  "entregable_esperado": "Una campaña de anuncios en redes sociales con contenido de marca y un plan para acompañar a tu audiencia antes de pedirle la conversión.",
   "nodos_previos": [
     "retargeting_display",
     "herramientas_online_canal_fisico"
@@ -36,6 +36,24 @@
       "node_id": "estrategia_anuncios_sociales_respuesta_indirecta",
       "titulo": "Publicidad Social con Respuesta Indirecta",
       "fuente": "Traction - Gabriel Weinberg"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-74",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una campaña de anuncios en redes sociales con contenido de marca y un plan de al menos 3 etapas para acompañar a tu audiencia antes de pedirle la conversión.",
+      "texto_nuevo": "Una campaña de anuncios en redes sociales con contenido de marca y un plan para acompañar a tu audiencia antes de pedirle la conversión.",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "I have an idea/books/General/marketing_y_crecimiento/Traction - Gabriel Weinberg.txt",
+        "lineas": "L1322-L1362, L1430",
+        "frase": "The goal with social ads should be to build an audience, engage with that audience over time, and eventually move them to convert to customers."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R067-007 (ANADIDO, arbitro): Tiene razon el lector A. Busque en todo el libro (stage, steps, three, 3 y el apartado Social Ads, L1322 a L1380, mas los Targets en L1430) y no hay ninguna cifra de etapas para la estrategia de respuesta indirecta. Ese minimo de 3 es un umbral inventado, y ni siquiera coincide con los pasos del libro que van antes de la conversion. El lector B no lo detecto. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R067-007"
     }
   ]
 }

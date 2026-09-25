@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Momento Óptimo para Dividir el Equity (Split Temprano vs. Tardío)",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Puedes dividir el equity entre socios apenas fundas la empresa o esperar unos meses. Repartirlo temprano crea un punto de referencia que después es dificil de renegociar, aunque las contribuciones reales cambien. Esperar te deja ver mejor el aporte real de cada socio, pero puede debilitar el compromiso temprano y complicar sumar a un cofundador clave después. Negociar antes de recibir inversion externa es mas tranquilo, porque una vez que hay una valoracion de por medio, la tension sube.",
+  "resumen_teorico": "Puedes dividir el equity entre socios apenas fundas la empresa o esperar unos meses. Repartirlo temprano crea un punto de referencia que después es dificil de renegociar, aunque las contribuciones reales cambien. Esperar te deja ver mejor el aporte real de cada socio, pero puede complicar sumar a un cofundador clave después. Negociar antes de recibir inversion externa es mas tranquilo, porque una vez que hay una valoracion de por medio, la tension sube.",
   "pasos_accionables": [
     "Habla con tus socios sobre si conviene dividir el equity de inmediato o esperar a tener mas información sobre las contribuciones reales",
     "Si decides esperar, fija un momento claro para hacerlo, por ejemplo antes de levantar la primera ronda de inversion",
@@ -23,5 +23,23 @@
   "condiciones_activacion": [
     "Cuando tú y tus socios estan por decidir como y cuando repartir el equity inicial"
   ],
-  "etiqueta_arbol": "Elige cuándo Repartir el Equity"
+  "etiqueta_arbol": "Elige cuándo Repartir el Equity",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-50",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Puedes dividir el equity entre socios apenas fundas la empresa o esperar unos meses. Repartirlo temprano crea un punto de referencia que después es dificil de renegociar, aunque las contribuciones reales cambien. Esperar te deja ver mejor el aporte real de cada socio, pero puede debilitar el compromiso temprano y complicar sumar a un cofundador clave después. Negociar antes de recibir inversion externa es mas tranquilo, porque una vez que hay una valoracion de por medio, la tension sube.",
+      "texto_nuevo": "Puedes dividir el equity entre socios apenas fundas la empresa o esperar unos meses. Repartirlo temprano crea un punto de referencia que después es dificil de renegociar, aunque las contribuciones reales cambien. Esperar te deja ver mejor el aporte real de cada socio, pero puede complicar sumar a un cofundador clave después. Negociar antes de recibir inversion externa es mas tranquilo, porque una vez que hay una valoracion de por medio, la tension sube.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L1535-L1537",
+        "frase": "Holding off on the split may also provide a strong incentive for the founders of a young startup to contribute and to prove themselves, rather than free riding* once the split has been determined."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R021-013 (CONTRARIO, lector y verificador de acuerdo): El libro presenta mantener la motivación como una ventaja de esperar (L1537: to keep the cofounders motivated), no como un coste; ningún pasaje dice que esperar debilite el compromiso. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R021-013"
+    }
+  ]
 }

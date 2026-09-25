@@ -12,7 +12,7 @@
     "Descarta las ideas que no encajen bien con el resto",
     "Identifica los huecos logísticos que queden y llénalos con ideas adicionales"
   ],
-  "entregable_esperado": "Un conjunto de 2 a 3 combinaciones de ideas que formen un sistema coherente de solución",
+  "entregable_esperado": "Unas pocas combinaciones de ideas que formen un sistema coherente de solución",
   "nodos_previos": [
     "reglas_brainstorming",
     "identificar_brechas_gaps",
@@ -27,5 +27,23 @@
     "Cuando tienes varias ideas dispersas de tu lluvia de ideas y necesitas convertirlas en una solución integrada",
     "Si ninguna idea por sí sola resuelve por completo el reto que tienes delante"
   ],
-  "etiqueta_arbol": "Agrupa tus Ideas en Sistemas"
+  "etiqueta_arbol": "Agrupa tus Ideas en Sistemas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-58",
+      "fecha": "2026-09-25",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un conjunto de 2 a 3 combinaciones de ideas que formen un sistema coherente de solución",
+      "texto_nuevo": "Unas pocas combinaciones de ideas que formen un sistema coherente de solución",
+      "cita": {
+        "libro": "The field guide to human-centered design",
+        "fichero": "I have an idea/txt/The field guide to human-center - Unknown.txt",
+        "lineas": "L4327-L4357",
+        "frase": "consolidate your thinking into a few concepts you can start to share."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R065-035 (ANADIDO, lector y verificador de acuerdo): Cifra de combinaciones que el libro no da. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R065-035"
+    }
+  ]
 }

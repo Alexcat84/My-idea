@@ -23,8 +23,27 @@
     "portfolio_management_triangulation"
   ],
   "condiciones_activacion": [
-    "Si el 90% del portafolio son proyectos de bajo riesgo.",
+    "Si la mayor parte del portafolio son proyectos de bajo riesgo.",
     "Si las decisiones de inversión se basan solo en métricas financieras a corto plazo."
   ],
-  "etiqueta_arbol": "Atrévete a Invertir en Grande"
+  "etiqueta_arbol": "Atrévete a Invertir en Grande",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-65",
+      "fecha": "2026-09-25",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si el 90% del portafolio son proyectos de bajo riesgo.",
+      "texto_nuevo": "Si la mayor parte del portafolio son proyectos de bajo riesgo.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L471",
+        "frase": "firms naturally gravitate toward a conservative, low-risk portfolio"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R069-025 (ANADIDO, lector y verificador de acuerdo): Porcentaje concreto que el libro no da para este umbral. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R069-025"
+    }
+  ]
 }

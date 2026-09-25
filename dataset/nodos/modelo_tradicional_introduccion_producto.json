@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "El Modelo Tradicional de Introducción de Nuevos Productos (Anti-patrón)",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
-  "resumen_teorico": "Modelo heredado de la manufactura del siglo XX que sigue una secuencia lineal tipo 'cascada' (waterfall): concepto/semilla, desarrollo de producto, alpha/beta test, lanzamiento. Funciona bien en empresas establecidas con clientes conocidos y mercados definidos, pero es fatal para startups porque asume que las características del producto pueden especificarse por adelantado sin retroalimentación real del cliente. El caso Webvan (quiebra tras gastar más de 800 millones de dólares) ilustra cómo seguir este modelo perfectamente puede llevar al fracaso total si no se valida el mercado.",
+  "resumen_teorico": "Modelo heredado de la manufactura del siglo XX que sigue una secuencia lineal tipo 'cascada' (waterfall): concepto/semilla, desarrollo de producto, alpha/beta test, lanzamiento. Funciona bien en empresas establecidas con clientes conocidos y mercados definidos, pero es fatal para startups porque asume que las características del producto pueden especificarse por adelantado sin retroalimentación real del cliente. El caso Webvan (quiebra tras recaudar más de 800 millones de dólares) ilustra cómo seguir este modelo perfectamente puede llevar al fracaso total si no se valida el mercado.",
   "pasos_accionables": [
     "Identificar si tu equipo está usando un proceso waterfall rígido de especificación-desarrollo-lanzamiento, heredado de grandes empresas",
     "Evaluar si las especificaciones del producto se basan en suposiciones no validadas, y si el mercado y el cliente son realmente 'conocidos' o son solo hipótesis",
@@ -39,6 +39,24 @@
       "node_id": "modelo_cascada_desarrollo_producto",
       "titulo": "El Modelo Tradicional en Cascada (Waterfall)",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-29",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Modelo heredado de la manufactura del siglo XX que sigue una secuencia lineal tipo 'cascada' (waterfall): concepto/semilla, desarrollo de producto, alpha/beta test, lanzamiento. Funciona bien en empresas establecidas con clientes conocidos y mercados definidos, pero es fatal para startups porque asume que las características del producto pueden especificarse por adelantado sin retroalimentación real del cliente. El caso Webvan (quiebra tras gastar más de 800 millones de dólares) ilustra cómo seguir este modelo perfectamente puede llevar al fracaso total si no se valida el mercado.",
+      "texto_nuevo": "Modelo heredado de la manufactura del siglo XX que sigue una secuencia lineal tipo 'cascada' (waterfall): concepto/semilla, desarrollo de producto, alpha/beta test, lanzamiento. Funciona bien en empresas establecidas con clientes conocidos y mercados definidos, pero es fatal para startups porque asume que las características del producto pueden especificarse por adelantado sin retroalimentación real del cliente. El caso Webvan (quiebra tras recaudar más de 800 millones de dólares) ilustra cómo seguir este modelo perfectamente puede llevar al fracaso total si no se valida el mercado.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L371, L684",
+        "frase": "Raising one of the largest financial war chests ever seen (more than $800 million)"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R064-042 (CONTRARIO, lector y verificador de acuerdo): Los 800 millones son lo que Webvan recaudó, no lo que gastó; el libro da un déficit acumulado de 612 millones. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R064-042"
     }
   ]
 }

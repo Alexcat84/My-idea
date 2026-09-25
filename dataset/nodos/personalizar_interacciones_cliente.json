@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Personaliza: construye interacciones que le importen a tu cliente",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Tercer paso del proceso de investigar, observar, personalizar y dar seguimiento (IOPS). Usa lo que investigaste y lo que observaste para crear mensajes e interacciones personalizadas y auténticas con tus clientes. La honestidad es clave: conecta solo sobre intereses genuinamente compartidos, no fingidos. Puedes escalar la personalización agrupando clientes con intereses parecidos ('grupos de interés') o con eventos de agradecimiento.",
+  "resumen_teorico": "Tercer paso del proceso de investigar, observar, personalizar y sorprender (IOPS). Usa lo que investigaste y lo que observaste para crear mensajes e interacciones personalizadas y auténticas con tus clientes. La honestidad es clave: conecta solo sobre intereses genuinamente compartidos, no fingidos. Puedes escalar la personalización agrupando clientes con intereses parecidos ('grupos de interés') o con eventos de agradecimiento.",
   "pasos_accionables": [
     "Usa los datos personales o emocionales que guardas de cada cliente para crear mensajes personalizados ('sorpresas personales')",
     "Sé honesto sobre los intereses que compartes con tu cliente; no finjas conexiones que no existen",
@@ -24,5 +24,23 @@
     "Cuando ya tienes suficiente información del cliente para personalizar sin inventar conexiones",
     "Si tus comunicaciones actuales son genéricas o automáticas y sin contexto personal"
   ],
-  "etiqueta_arbol": "Personaliza cada Interacción con el Cliente"
+  "etiqueta_arbol": "Personaliza cada Interacción con el Cliente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-34",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Tercer paso del proceso de investigar, observar, personalizar y dar seguimiento (IOPS). Usa lo que investigaste y lo que observaste para crear mensajes e interacciones personalizadas y auténticas con tus clientes. La honestidad es clave: conecta solo sobre intereses genuinamente compartidos, no fingidos. Puedes escalar la personalización agrupando clientes con intereses parecidos ('grupos de interés') o con eventos de agradecimiento.",
+      "texto_nuevo": "Tercer paso del proceso de investigar, observar, personalizar y sorprender (IOPS). Usa lo que investigaste y lo que observaste para crear mensajes e interacciones personalizadas y auténticas con tus clientes. La honestidad es clave: conecta solo sobre intereses genuinamente compartidos, no fingidos. Puedes escalar la personalización agrupando clientes con intereses parecidos ('grupos de interés') o con eventos de agradecimiento.",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L5498-L5503, L6129",
+        "frase": "the four-step process of Investigate, Observe, Personalize, and Surprise"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R046-030 (CONTRARIO, lector y verificador de acuerdo): Cambia un elemento de la secuencia de cuatro pasos que da el libro. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R046-030"
+    }
+  ]
 }

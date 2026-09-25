@@ -30,6 +30,7 @@ NODO = {
     "nodos_previos": [],
     "nodos_siguientes": [],
     "condiciones_activacion": ["Siempre"],
+    "etiqueta_arbol": "Domina el Mundo",
 }
 
 
@@ -100,6 +101,14 @@ def main():
             fallos.append("no aplico una correccion valida de condiciones_activacion: " + r.stdout)
         elif nodo["condiciones_activacion"][0] != "Cuando el libro lo dice" or nodo["correcciones"][0].get("indice") != 0:
             fallos.append("la condicion no cambio o no quedo declarada con su indice")
+    # POSITIVO: la etiqueta de cara, campo escalar
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, ruta = montar(tmp)
+        r = correr(repo, [correccion(id="etq-01", campo="etiqueta_arbol", indice=None,
+                                     texto_anterior="Domina el Mundo", texto_nuevo="Deja la Fuerza Bruta")])
+        nodo = json.loads(ruta.read_text(encoding="utf-8"))
+        if r.returncode != 0 or nodo.get("etiqueta_arbol") != "Deja la Fuerza Bruta":
+            fallos.append("no corrigio la etiqueta de cara: " + r.stdout)
     # NEGATIVOS: cada uno rechazado y sin escribir nada
     for nombre, mala in (
         ("una condicion con indice fuera de rango",

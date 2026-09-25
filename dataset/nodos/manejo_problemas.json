@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Manejo de Problemas con Integridad y Objetividad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Las organizaciones que realmente quieren resolver problemas deben crear una sociedad abierta basada en integridad (hacer las cosas bien porque es la política correcta) y objetividad (apuntar las preguntas al trabajo, no al individuo). Más del 85% de los problemas se resuelven en el primer nivel de supervisión, 13% requiere dos niveles/departamentos, y solo 2% requiere tres o más niveles organizacionales.",
+  "resumen_teorico": "Las organizaciones que realmente quieren resolver problemas deben crear una sociedad abierta basada en integridad (hacer las cosas bien porque es la política correcta) y objetividad (apuntar las preguntas al trabajo, no al individuo). Más del 85% de los problemas se resuelven en el primer nivel de supervisión, 13% requiere dos niveles/departamentos, y el 2% restante puede requerir hasta tres operaciones o niveles organizacionales.",
   "pasos_accionables": [
     "Fomentar una cultura de integridad donde 'hacer las cosas bien' sea la norma explícita",
     "Enfocar la investigación de problemas en el proceso/trabajo, no en culpar individuos",
@@ -36,6 +36,24 @@
       "node_id": "cultura_integridad_objetividad_resolucion_problemas",
       "titulo": "Cultura de Integridad y Objetividad en la Resolución de Problemas",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t15-26",
+      "fecha": "2026-09-25",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Las organizaciones que realmente quieren resolver problemas deben crear una sociedad abierta basada en integridad (hacer las cosas bien porque es la política correcta) y objetividad (apuntar las preguntas al trabajo, no al individuo). Más del 85% de los problemas se resuelven en el primer nivel de supervisión, 13% requiere dos niveles/departamentos, y solo 2% requiere tres o más niveles organizacionales.",
+      "texto_nuevo": "Las organizaciones que realmente quieren resolver problemas deben crear una sociedad abierta basada en integridad (hacer las cosas bien porque es la política correcta) y objetividad (apuntar las preguntas al trabajo, no al individuo). Más del 85% de los problemas se resuelven en el primer nivel de supervisión, 13% requiere dos niveles/departamentos, y el 2% restante puede requerir hasta tres operaciones o niveles organizacionales.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L943",
+        "frase": "The remaining 2 percent might require as many as three operations or levels of organization. But they can be solved."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R051-040 (CONTRARIO, lector y verificador de acuerdo): Cambia el umbral: el libro pone tres como tope, el campo lo convierte en mínimo. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R051-040"
     }
   ]
 }
