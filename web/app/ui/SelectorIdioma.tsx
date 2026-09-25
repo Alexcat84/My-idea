@@ -15,6 +15,12 @@ import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { SELECTOR_IDIOMA } from "@/lib/i18n/mensajes/selectorIdioma";
 import { urlConIdioma } from "@/lib/i18n/selector";
 
+/** El menú nativo del selector, en el tema oscuro de la casa: el sistema lo pinta
+ * con sus propios colores (en algunos, fondo blanco); se le fijan los de la
+ * paleta y `color-scheme: dark` en el propio <select>. */
+const ESTILO_OPCION: React.CSSProperties = { backgroundColor: "var(--surface-2)", color: "var(--text)" };
+const ESQUEMA_OSCURO: React.CSSProperties = { colorScheme: "dark" };
+
 function Globo() {
   return (
     <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" aria-hidden>
@@ -38,7 +44,7 @@ export function SelectorIdioma({
   const cambiar = (e: React.ChangeEvent<HTMLSelectElement>) =>
     window.location.assign(urlConIdioma(window.location.href, e.target.value as ActiveLocale));
   const opciones = ACTIVE_LOCALES.map((l) => (
-    <option key={l} value={l} lang={l} style={{ color: "#16171A" }}>
+    <option key={l} value={l} lang={l} style={ESTILO_OPCION}>
       {NOMBRE_IDIOMA[l]}
     </option>
   ));
@@ -63,6 +69,7 @@ export function SelectorIdioma({
           aria-label={t.etiqueta}
           onChange={cambiar}
           className="absolute inset-0 cursor-pointer opacity-0"
+          style={ESQUEMA_OSCURO}
         >
           {opciones}
         </select>
@@ -77,7 +84,7 @@ export function SelectorIdioma({
         value={idioma}
         aria-label={t.etiqueta}
         onChange={cambiar}
-        style={{ background: "transparent", color: "inherit", font: "inherit", border: "none", cursor: "pointer" }}
+        style={{ ...ESQUEMA_OSCURO, background: "transparent", color: "inherit", font: "inherit", border: "none", cursor: "pointer" }}
       >
         {opciones}
       </select>
