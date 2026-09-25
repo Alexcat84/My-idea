@@ -109,6 +109,24 @@
   "regenerar": "build_question_cache.py --patch-file en la sesion con credencial"
  },
  {
+  "node_id": "creacion_option_pool",
+  "pregunta_retirada": "Ahora que sabes cómo reservar equity para atraer talento futuro, ¿tu idea necesita capital externo para crecer, o prefieres explorar primero cuánto puedes avanzar con recursos propios?",
+  "candidatos": [
+   "term_sheet_negociacion",
+   "decision_autofinanciamiento_vs_inversion"
+  ],
+  "motivo": "la pregunta se genero con los 400 primeros caracteres del resumen_teorico (build_question_cache.generar_pregunta) y la correccion de ese resumen empieza dentro de ellos: la pregunta nacio del texto viejo",
+  "correcciones": [
+   {
+    "id": "fidelidad-t14-02",
+    "veredicto": "ANADIDO (cifra cambiada)",
+    "primer_caracter_cambiado": 197,
+    "tanda": "fidelidad-t14"
+   }
+  ],
+  "regenerar": "build_question_cache.py --patch-file en la sesion con credencial"
+ },
+ {
   "node_id": "el_riesgo_eres_tu",
   "pregunta_retirada": "Si mañana no pudieras trabajar durante dos o tres semanas por cualquier razón, ¿qué pasaría con tu proyecto? ¿Hay algo que seguiría funcionando sin ti, o todo se quedaría parado?",
   "candidatos": [
