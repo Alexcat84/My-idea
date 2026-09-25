@@ -1,0 +1,842 @@
+{
+ "E01": [
+  {
+   "node_id": "ley_de_capacidad_de_sistemas",
+   "titulo": "Ley de Capacidad de los Sistemas (Systems Development Law)",
+   "resumen": "Toda nueva tecnología introducida para reducir la carga de trabajo o el riesgo tiende a ser 'estirada' hasta que el sistema vuelve a operar en el límite de su capacidad. Las mejoras tecnológicas no reducen las demandas sobre el operador, sino que elevan las expectativas de desempeño, empujándolo nuevamente al borde del envolvente operacional del cual la tecnología debía protegerlo.",
+   "etiqueta": "Anticipa el Límite de tus Sistemas",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Reduce tu Carga con Nueva Tecnología",
+   "explicacion": "CONTRARIA: el nodo dice que la tecnología nueva no reduce la carga, porque el sistema se estira hasta volver al límite; la etiqueta promete justo esa reducción."
+  },
+  {
+   "node_id": "zero_defects_concepto",
+   "titulo": "Cero Defectos como Estándar de Desempeño",
+   "resumen": "Cero Defectos (CD) no es un programa de motivación laboral, sino la declaración clara del estándar que tú exiges: hacerlo bien la primera vez. Crosby argumenta que no existe una 'economía de la calidad' que justifique niveles aceptables de defectos; el único estándar válido es cero defectos, porque las personas trabajan según el estándar que se les da.",
+   "etiqueta": "Exige Hacerlo Bien Siempre",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Fija un Nivel Aceptable de Defectos",
+   "explicacion": "CONTRARIA: Crosby niega que exista un nivel aceptable de defectos y exige cero; la etiqueta manda fijar un margen tolerado."
+  },
+  {
+   "node_id": "trilogia_juran_qa_qc",
+   "titulo": "La diferencia entre vigilar la calidad y asegurarla (control de calidad y aseguramiento de calidad)",
+   "resumen": "Cuando hablas de control de calidad, te refieres a vigilar en el momento que lo que haces cumple lo que prometiste. Cuando hablas de aseguramiento de calidad, te refieres a revisar y auditar tu propio sistema para comprobar que las mejoras que lograste se mantienen o se ajustan a lo que tu cliente necesita ahora. Ambos términos se unieron internacionalmente bajo el nombre de 'gestión de calidad' en la norma ISO 8402.",
+   "etiqueta": "Distingue Control y Aseguramiento de Calidad",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Distingue Calidad de Diseño y Conformidad",
+   "explicacion": "DISTINTA: cambia la pareja de conceptos. El nodo separa control y aseguramiento de calidad, no calidad de diseño y calidad de conformidad."
+  },
+  {
+   "node_id": "getting_started_system_communication_protection",
+   "titulo": "Protección de Comunicaciones y Límites del Sistema",
+   "resumen": "Monitorea, controla y protege las comunicaciones organizacionales en los límites externos e internos clave del sistema, empleando cifrado para proteger la confidencialidad de la CUI en tránsito (TLS, IPsec) y en almacenamiento.",
+   "etiqueta": "Protege tus Comunicaciones Digitales",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Controla Quién Accede a tus Sistemas",
+   "explicacion": "DISTINTA: nombra el control de acceso de usuarios, un control vecino. El nodo trata de vigilar y cifrar las comunicaciones en los límites del sistema."
+  }
+ ],
+ "E02": [
+  {
+   "node_id": "powered_industrial_trucks_safety",
+   "titulo": "Seguridad en Montacargas (Powered Industrial Trucks)",
+   "resumen": "Requisitos de capacitación, certificación, inspección y operación segura de montacargas industriales para prevenir accidentes relacionados con cargas, colisiones y mantenimiento inadecuado.",
+   "etiqueta": "Asegura tus Montacargas",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Reduce las Inspecciones de tus Montacargas",
+   "explicacion": "CONTRARIA: el nodo exige inspección, capacitación y mantenimiento para evitar accidentes; la etiqueta manda recortar las inspecciones."
+  },
+  {
+   "node_id": "desarrollo_expertos_capaces",
+   "titulo": "Desarrollo de Expertos Capaces (Capable Experts)",
+   "resumen": "Consiste en desarrollar en el personal las competencias y capacidades necesarias, basadas en las necesidades reales de los clientes internos, para lograr la excelencia en desempeño y calidad. Incluye la evaluación de habilidades, la reeducación y la certificación como mecanismos para cerrar brechas y transformar la Oficina actual en la Oficina que la organización necesita para sostenerse en el futuro (ej. Green Belts, Black Belts, expertos Lean).",
+   "etiqueta": "Desarrolla Expertos Realmente Capaces",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Contrata Expertos en Lugar de Formarlos",
+   "explicacion": "CONTRARIA: el nodo manda desarrollar al personal propio con evaluación, reeducación y certificación; la etiqueta propone traer expertos de fuera en vez de formarlos."
+  },
+  {
+   "node_id": "preservar_efectivo_buscar_modelo",
+   "titulo": "Preservar Efectivo Mientras se Busca el Modelo de Negocio",
+   "resumen": "El objetivo de Customer Development no es evitar gastar dinero, sino preservar el efectivo mientras buscas un modelo de negocio repetible y escalable. 'Repetible' significa que tus ventas no dependen de esfuerzos heroicos únicos ni de relaciones puntuales; 'escalable' significa que cada dólar o persona adicional que inviertes genera más ganancia bruta que su costo. Mientras buscas ese modelo, evita contratar personal de ventas o marketing basándote en hipótesis sin comprobar. Una vez que confirmas el product/market fit con hechos, no con suposiciones, el criterio cambia por completo: debes invertir agresivamente para capturar la demanda y llenar tu canal de ventas antes de que otro lo haga.",
+   "etiqueta": "Cuida tu Efectivo al Buscar",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Calcula Cuántos Meses de Caja Tienes",
+   "explicacion": "DISTINTA: pasa a calcular cuántos meses de caja quedan, algo que el nodo no enseña. El nodo trata de preservar efectivo mientras buscas un modelo repetible y escalable, y de invertir fuerte al confirmarlo."
+  },
+  {
+   "node_id": "equipos_multifuncionales_dfe",
+   "titulo": "Equipos Multifuncionales para el Diseño Sostenible",
+   "resumen": "Aunque trabajes solo, un rediseño sostenible exitoso exige que consigas, aunque sea por telefono, perspectivas de distintas areas: tecnica, creativa, marketing y cadena de suministro, para que tus decisiones no queden limitadas por tu propio punto de vista aislado. Establece un proceso de revision critica y honesta, contigo mismo o con colaboradores externos, que te permita detectar problemas de diseno antes de lanzarlo al mercado, evitando errores costosos y perdida de valor percibida por el cliente en calidad, servicio o precio. Ademas, busca sumar a tu proyecto personas con actitud pragmatica y resiliente ante la adversidad, y evita tomar decisiones de rediseno sin consultar otras miradas.",
+   "etiqueta": "Integra Equipos para Diseño Sostenible",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Mide la Huella Ambiental del Diseño",
+   "explicacion": "DISTINTA: remite a medir el impacto ambiental. El nodo trata de sumar perspectivas de distintas áreas y de hacer revisión crítica en el rediseño sostenible."
+  }
+ ],
+ "E03": [
+  {
+   "node_id": "valor_presente_franquicia_pvf",
+   "titulo": "Valor Presente de una Franquicia (PVF)",
+   "resumen": "El PVF es un concepto desarrollado por iFranchise Group que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo.",
+   "etiqueta": "Calcula el Valor Presente por Franquicia",
+   "tipo": "CONTRARIA",
+   "etiqueta_trampa": "Calcula el Valor Futuro",
+   "historica": true,
+   "explicacion": "etiqueta erronea REAL del catalogo, corregida en 6871a11e"
+  },
+  {
+   "node_id": "investigacion_mercado_primaria_secundaria_2",
+   "titulo": "Investigación de Mercado Primaria y Secundaria",
+   "resumen": "La investigación primaria consiste en recolectar datos directamente del mercado extranjero mediante entrevistas, encuestas y contacto directo con compradores potenciales; es costosa y lenta pero altamente personalizada. La investigación secundaria usa fuentes existentes como estadísticas comerciales y reportes de mercado; es más económica pero puede tener datos desactualizados o demasiado generales. El Market Survey Report combina ambos enfoques con estadísticas relevantes sobre compradores y competidores.",
+   "etiqueta": "Combina Datos Propios y Existentes",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Elige entre Datos Propios o Existentes",
+   "explicacion": "CONTRARIA: el nodo muestra que conviene combinar la investigación primaria con la secundaria; la etiqueta obliga a quedarse con una sola."
+  },
+  {
+   "node_id": "resolucion_problemas_niveles_supervision",
+   "titulo": "Resolución de Problemas por Alcance (Regla 85-13-2)",
+   "resumen": "Crosby observa que más del 85% de los problemas de calidad se pueden resolver justo donde los detectas, sin necesitar ayuda de nadie más. Un 13% adicional requiere coordinarte con otra persona, como un proveedor o un socio. Y solo un 2% necesita que intervengan varias personas o un experto externo. Esta proporción te ayuda a decidir cuándo resolver algo tú mismo y cuándo pedir ayuda, evitando convertir en un asunto complicado lo que podrías resolver de inmediato.",
+   "etiqueta": "Resuelve Problemas en su Nivel",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Ordena tus Problemas por su Costo",
+   "explicacion": "DISTINTA: cambia el criterio de clasificación, que en la etiqueta es el costo (tipo Pareto). La regla 85-13-2 reparte los problemas según cuántas personas hacen falta para resolverlos."
+  },
+  {
+   "node_id": "principios_gestion_error",
+   "titulo": "Principios de Gestión del Error (Error Management)",
+   "resumen": "Conjunto de ocho principios fundamentales que resumen cómo entender y gestionar el error humano en las organizaciones: los mejores empleados pueden cometer los peores errores, los estados mentales transitorios son difíciles de gestionar, no se puede cambiar la condición humana pero sí las condiciones de trabajo, culpar no reduce la falibilidad futura, los errores son informacionales y las violaciones son sociales/motivacionales, y las violaciones aumentan tanto la probabilidad de error subsecuente como la severidad de sus consecuencias.",
+   "etiqueta": "Entiende y Gestiona el Error",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Diseña Procesos a Prueba de Errores",
+   "explicacion": "DISTINTA: nombra el diseño a prueba de errores, técnica vecina que el nodo no trata. El nodo reúne principios para entender y gestionar el error humano: no culpar y distinguir error de violación."
+  }
+ ],
+ "E04": [
+  {
+   "node_id": "coeficiente_viral",
+   "titulo": "Coeficiente Viral (Viral Growth Factor)",
+   "resumen": "El coeficiente viral mide cuántos usuarios activados nuevos genera cada usuario existente mediante referencias. Un coeficiente de 1.0 significa crecimiento mínimo viral (duplicación); valores superiores a 1.2-1.3 indican crecimiento saludable; valores muy altos (12, 20+) indican viralidad explosiva como videos virales.",
+   "etiqueta": "Mide tu Crecimiento Viral",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Mantén tu Coeficiente Viral Bajo Uno",
+   "explicacion": "CONTRARIA: el nodo dice que el crecimiento viral empieza en 1.0 y es sano por encima de 1.2; la etiqueta pide mantenerlo por debajo de uno."
+  },
+  {
+   "node_id": "modelo_lubin_esty_4_etapas",
+   "titulo": "Modelo de 4 Etapas de Creación de Valor en Sostenibilidad (Lubin-Esty)",
+   "resumen": "Modelo iterativo de David Lubin y Dan Esty que describe cómo maduras tu enfoque de sostenibilidad en cuatro etapas. Etapa 1, 'Hacer cosas viejas de nuevas formas', enfocada en cumplimiento normativo y reducción de riesgo y costo (ejemplo, 3M Pollution Prevention Pays). Etapa 2, 'Hacer cosas nuevas de nuevas formas', enfocada en rediseñar productos y procesos para optimizar eficiencia de recursos (ejemplo, DuPont zero waste). Etapa 3, 'Transformar el núcleo del negocio', donde la sostenibilidad se vuelve fuente de nuevos ingresos y crecimiento (ejemplo, Dow 2015 Sustainability Goals). Etapa 4, 'Crear un nuevo modelo de negocio', donde logras diferenciación total mediante Eco-Advantage, redefiniendo modelo de negocio y marca en torno a la sostenibilidad.",
+   "etiqueta": "Evoluciona tu Enfoque Sostenible",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Limita tu Sostenibilidad al Cumplimiento Normativo",
+   "explicacion": "CONTRARIA: el modelo pide madurar más allá del cumplimiento normativo hasta un nuevo modelo de negocio; la etiqueta pide quedarse en la etapa uno."
+  },
+  {
+   "node_id": "programa_entrenamiento_franquiciados",
+   "titulo": "Diseño del Programa de Entrenamiento para Franquiciados",
+   "resumen": "El programa de entrenamiento debe transmitir el contenido del manual de operaciones de forma estructurada, asumiendo el nivel de conocimiento más bajo posible del franquiciado, para garantizar que todos representen la marca al estándar de calidad esperado. Debe incluir pre-entrenamiento, entrenamiento en oficina central, entrenamiento en sitio y entrenamiento continuo.",
+   "etiqueta": "Diseña el Entrenamiento de Franquiciados",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Redacta el Manual de Operaciones",
+   "explicacion": "DISTINTA: nombra la redacción del manual. El nodo da el manual por hecho y enseña a diseñar el programa de entrenamiento que lo transmite."
+  },
+  {
+   "node_id": "decision_comunicacion",
+   "titulo": "Decisión de Comunicación sobre No Conformidades",
+   "resumen": "Involucra decidir qué información comunicar a clientes (outsiders) y a empleados internos (insiders) cuando se envía un producto no conforme como apto para el uso. La falta de comunicación puede generar desconfianza en clientes o desmotivación en inspectores y operarios que perciben que sus reportes no tienen efecto.",
+   "etiqueta": "Decide qué Comunicar sobre Fallas",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Decide si Retiras el Producto Defectuoso",
+   "explicacion": "DISTINTA: plantea la decisión de retirar el producto. El nodo parte de que el producto no conforme ya se envió como apto para el uso y trata qué comunicar a clientes y empleados."
+  }
+ ],
+ "E05": [
+  {
+   "node_id": "recursos_educativos_osha",
+   "titulo": "Recursos Educativos y de Capacitación de OSHA",
+   "resumen": "OSHA pone a tu disposición un conjunto de materiales y programas para capacitar en seguridad a tu negocio y a las personas que trabajan contigo. Encuentras publicaciones, videos, páginas dedicadas a temas de seguridad, el boletín informativo QuickTakes, los Centros de Educación del Instituto de Capacitación de OSHA y el Programa de Capacitación Outreach, que ofrece formación de 10 o 30 horas según la necesidad.",
+   "etiqueta": "Aprovecha los Recursos de OSHA",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Crea tu Capacitación sin Ayuda Externa",
+   "explicacion": "CONTRARIA: el nodo manda aprovechar los materiales y programas de capacitación de la agencia; la etiqueta pide hacerlo por tu cuenta sin apoyo externo."
+  },
+  {
+   "node_id": "muestreo_estadistico_para_inspeccion",
+   "titulo": "Muestreo estadístico como alternativa a la inspección al 100%",
+   "resumen": "En lugar de revisar cada transacción, reclamo o pieza de inventario (costoso e ineficiente), Deming propone usar muestreo estadístico basado en teoría de probabilidad para estimar el estado general del sistema y detectar anomalías. Ejemplos incluyen el pago inmediato de viáticos con auditoría de una muestra (ej. 1 de 50) y la evaluación del valor de planta física de una empresa mediante inspección de una fracción representativa de los activos. Este enfoque libera recursos de revisión excesiva y los redirige a trabajo productivo.",
+   "etiqueta": "Muestrea en Lugar de Todo",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Inspecciona Cada Pieza y Transacción",
+   "explicacion": "CONTRARIA: el nodo propone el muestreo estadístico como alternativa a revisar todo; la etiqueta manda la inspección al cien por ciento."
+  },
+  {
+   "node_id": "adaptaciones_sectoriales_iso",
+   "titulo": "Adaptaciones Sectoriales de ISO 9000 (cGMP y ISO/TS 16949)",
+   "resumen": "Si tu negocio opera en una industria regulada, no te basta con ISO 9001 general: existen extensiones especificas que debes cumplir. En dispositivos medicos y farmaceuticos, las cGMP (Current Good Manufacturing Practices) que exige la FDA en Estados Unidos, o el organismo equivalente en tu mercado, exigen sistemas de calidad rigurosos y actualizados que garanticen identidad, potencia y pureza del producto. En la industria automotriz, ISO/TS 16949 combina ISO 9001 con requisitos especificos para diseno, producción e instalacion de productos automotrices, y reemplazo al antiguo estándar QS-9000.",
+   "etiqueta": "Cumple Normas de tu Sector",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Cumple Normas Ambientales de tu Sector",
+   "explicacion": "DISTINTA: habla de normas ambientales. El nodo trata extensiones sectoriales de calidad: buenas prácticas de manufactura para farmacia y dispositivos médicos, y la norma automotriz."
+  },
+  {
+   "node_id": "auditorias_proveedores",
+   "titulo": "Auditorías Formales de Proveedores",
+   "resumen": "Tener un código de conducta no garantiza cumplimiento; se requieren mecanismos de verificación como auditorías anunciadas y no anunciadas. GEMI recomienda: investigar el desempeño existente del proveedor, construir sobre marcos ya existentes (ej. Carbon Disclosure Project), solicitar información adicional solo cuando sea necesaria, ser selectivo sobre a quién auditar, y usar visitas in-situ para proveedores críticos.",
+   "etiqueta": "Verifica a tus Proveedores de Verdad",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Redacta un Código para tus Proveedores",
+   "explicacion": "DISTINTA: pide redactar el código de conducta. El nodo dice que el código no basta y enseña a verificarlo con auditorías anunciadas, no anunciadas y visitas en sitio."
+  }
+ ],
+ "E06": [
+  {
+   "node_id": "gestion_beneficios_alianza_sostenible",
+   "titulo": "Gestión Sostenible de Beneficios en Alianzas (Costo/Beneficio Compartido)",
+   "resumen": "Una alianza sostenible no busca solo reducir costos al socio, sino generar una relación de costo/beneficio favorable donde ambas partes crecen. Los costos operativos pueden subir siempre que el ratio beneficio/costo se mantenga favorable; ese crecimiento en costos del socio representa su ganancia. La clave es definir métricas claras, asignarles valor monetario y rastrear su cumplimiento continuamente para evitar 'matar a la gallina de los huevos de oro'.",
+   "etiqueta": "Comparte Beneficios con tus Socios",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Minimiza el Costo de tus Socios",
+   "explicacion": "CONTRARIA: el nodo dice que la alianza no busca solo reducir costos al socio y que esos costos pueden subir si la relación beneficio/costo sigue siendo favorable; la etiqueta manda reducirlos al mínimo."
+  },
+  {
+   "node_id": "design_scorecard",
+   "titulo": "Tarjeta de Puntuación de Diseño (Design Scorecard)",
+   "resumen": "Es una herramienta que usas para llevar el pulso de cómo se va a comportar tu producto y cuántas fallas puede tener, a medida que vas sumando elementos de diseño. La actualizas durante todo el proyecto para asegurarte de que estás cumpliendo los objetivos de calidad que te propusiste (bajo el método Six Sigma).",
+   "etiqueta": "Mide y Predice tu Diseño",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Mide tu Diseño Solo al Final",
+   "explicacion": "CONTRARIA: el nodo pide actualizar la tarjeta durante todo el proyecto, a medida que sumas elementos de diseño; la trampa la deja para el cierre."
+  },
+  {
+   "node_id": "enfoques_definicion_riesgo_aceptable",
+   "titulo": "Enfoques para Definir el Riesgo Aceptable (ALARP y Alternativas)",
+   "resumen": "Existen distintos marcos conceptuales para definir qué se considera 'seguro' en la gestión de riesgos: el enfoque ALARP (riesgo tan bajo como sea razonablemente practicable), el enfoque de riesgo comparativo (comparación con riesgos socialmente aceptados), el enfoque de minimis (riesgo trivial, típicamente 10^-6) y el enfoque de riesgo cero. Cada organización o sociedad debe elegir el marco que mejor se adapte a su contexto tecnológico, económico y cultural, entendiendo que la definición de 'seguridad suficiente' es un objetivo móvil que tiende hacia el riesgo cero conforme la sociedad progresa.",
+   "etiqueta": "Define tu Riesgo Aceptable",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Calcula la Probabilidad de tus Fallas",
+   "explicacion": "DISTINTA: el nodo compara marcos para decidir qué riesgo es aceptable (ALARP, comparativo, de minimis, cero); no enseña a cuantificar la probabilidad de las fallas."
+  },
+  {
+   "node_id": "preguntar_que_no_quien",
+   "titulo": "Preguntar 'qué pasó' en lugar de 'quién fue'",
+   "resumen": "Desde los años 40 se descubrió que las acciones de las personas tienen sentido cuando entiendes las características críticas del entorno en que trabajan. En lugar de buscar quién cometió el error, investiga qué de las herramientas, las tareas o el sistema llevó a esa acción. Ahí está el aprendizaje real y la posibilidad de mejorar.",
+   "etiqueta": "Pregunta Qué, No Quién",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Reconstruye la Cronología del Incidente",
+   "explicacion": "DISTINTA: el nodo trata de cambiar la pregunta de quién fue a qué del entorno llevó a la acción; no enseña a reconstruir la línea de tiempo de un incidente."
+  }
+ ],
+ "E07": [
+  {
+   "node_id": "optimizacion_tecnologia_cadena_suministro",
+   "titulo": "Optimización de la Cadena de Suministro con Tecnología",
+   "resumen": "Las nuevas tecnologías permiten a las empresas tener una visión integrada de los impactos de la cadena de suministro. El software de análisis de ciclo de vida y los dashboards permiten comparar el desempeño de proveedores a lo largo del tiempo sin necesidad de recolectar información directamente. Aberdeen Group identifica cuatro áreas clave: dashboards verdes basados en roles, activos sostenibles/eficientes, seguimiento de residuos y transporte/logística sostenible.",
+   "etiqueta": "Optimiza tu Cadena con Tecnología",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Recolecta Datos Directo de tus Proveedores",
+   "explicacion": "CONTRARIA: el nodo dice que el software y los tableros permiten comparar proveedores sin recolectar la información directamente."
+  },
+  {
+   "node_id": "sistema_gestion_calidad",
+   "titulo": "Sistema de Gestión de Calidad",
+   "resumen": "Es el sistema con el que diriges y controlas tu negocio en todo lo relacionado con la calidad. Como la calidad afecta a todo tu negocio y no solo a la parte de producción u operaciones, este sistema también es amplio: puede estar controlado desde distintas partes de tu negocio, no solo desde un area dedicada a calidad.",
+   "etiqueta": "Dirige la Calidad de tu Empresa",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Delega la Calidad a un Área",
+   "explicacion": "CONTRARIA: el nodo dice que el sistema abarca todo el negocio y puede controlarse desde varias partes, no solo desde un área dedicada a calidad."
+  },
+  {
+   "node_id": "preguntas_situacion",
+   "titulo": "Preguntas de situación",
+   "resumen": "Son las preguntas con las que abres una conversación para entender hechos y antecedentes del cliente (por ejemplo, 'cuánto tiempo lleva con su proveedor actual'). Las necesitas para tener contexto, pero si abusas de ellas aburres o irritas a la persona que tienes enfrente. Antes de la llamada investiga por tu cuenta para llegar con menos preguntas de este tipo y usarlas con moderación.",
+   "etiqueta": "Haz Preguntas de Situación",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Haz Preguntas de Problema",
+   "explicacion": "DISTINTA: el nodo trata las preguntas de situación (hechos y antecedentes del cliente); las de problema son otro tipo vecino del mismo método que el nodo no enseña."
+  },
+  {
+   "node_id": "seo_estrategia_fat_head",
+   "titulo": "Estrategia SEO Fat-Head",
+   "resumen": "El fat-head SEO consiste en intentar posicionarse para términos de búsqueda cortos y de alto volumen que describen directamente tu producto o empresa (ej. 'wooden toys'). Estos términos concentran el 30% de las búsquedas totales pero son altamente competitivos. La clave del ranking es la cantidad y calidad de enlaces entrantes hacia tu sitio.",
+   "etiqueta": "Apunta a Términos Muy Buscados",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Compra Anuncios en los Buscadores",
+   "explicacion": "DISTINTA: el nodo trata del posicionamiento orgánico en términos cortos y muy buscados, ganado con enlaces entrantes; no trata de publicidad pagada en buscadores."
+  }
+ ],
+ "E08": [
+  {
+   "node_id": "identify_mapeo_datos",
+   "titulo": "Mapea tus datos y evalúa el riesgo de privacidad (Identify)",
+   "resumen": "Antes de proteger algo tienes que saber qué tienes. Este paso consiste en mapear qué datos maneja tu negocio: qué recolectas, para qué los usas, con quién los compartes y dónde los guardas, a lo largo de todo su recorrido, desde que entran hasta que los eliminas. Con ese mapa en la mano, evalúas el riesgo: piensas en cómo el manejo de esos datos podría afectar a las personas (vergüenza, discriminación, pérdida de dinero) y cómo eso te afectaría a ti (pérdida de confianza, daño a tu reputación).",
+   "etiqueta": "Mapea Tus Datos Sensibles",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Protege tus Datos Antes de Mapearlos",
+   "explicacion": "CONTRARIA: invierte el orden; el nodo dice que antes de proteger algo tienes que mapear qué datos tienes."
+  },
+  {
+   "node_id": "retorno_sobre_capital",
+   "titulo": "Retorno sobre Capital (ROE)",
+   "resumen": "El ROE mide qué porcentaje de ganancia se genera por cada dólar de capital (equity) invertido en la empresa, a diferencia del ROA que mide sobre el total de activos. Es un ratio clave para inversionistas externos, ya que les indica si el retorno esperado justifica el riesgo de invertir en la empresa comparado con inversiones libres de riesgo como bonos del tesoro. Dos empresas pueden tener ROE distinto por diferencias en su nivel de deuda, lo que conecta directamente con los ratios de apalancamiento.",
+   "etiqueta": "Calcula el Retorno de tu Capital",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Calcula el Retorno de tus Activos",
+   "explicacion": "CONTRARIA: el nodo mide la ganancia sobre el capital invertido y la distingue expresamente del retorno sobre los activos totales; la trampa nombra justo la medida con la que el nodo lo contrasta."
+  },
+  {
+   "node_id": "prototipado_organizacional_estrategico",
+   "titulo": "Prototipado de Estrategias y Organizaciones",
+   "resumen": "El pensamiento de diseño y el prototipado no se limitan a objetos físicos: también pueden aplicarse a ideas abstractas como estrategias de negocio o el rediseño de una organización completa. Crear representaciones tangibles (mock-ups, recorridos físicos, mapas de ruta) de una estrategia ayuda a que toda la organización la entienda y se comprometa con ella, como hizo HBO al construir un recorrido físico de futuras experiencias de contenido.",
+   "etiqueta": "Prototipa tu Estrategia y Organización",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Planea tu Estrategia con Escenarios",
+   "explicacion": "DISTINTA: el nodo trata de volver tangible una estrategia con maquetas y recorridos para que la organización la entienda; no enseña planeación por escenarios."
+  },
+  {
+   "node_id": "pruebas_inadecuadas_prototipos",
+   "titulo": "Pruebas inadecuadas de prototipos",
+   "resumen": "Es práctica común construir prototipos con partes muy cercanas al valor nominal, lo que hace que las pruebas iniciales sean exitosas. Sin embargo, en producción real todas las características variarán, y sin control estadístico establecido, la variación puede no seguir ninguna distribución predecible. Esto puede resultar en que solo una fracción mínima de la producción real se comporte como el prototipo probado.",
+   "etiqueta": "Prueba tus Prototipos con Rigor",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Prueba tus Prototipos con Usuarios Reales",
+   "explicacion": "DISTINTA: el nodo advierte que los prototipos se arman con piezas cercanas al valor nominal y no reflejan la variación de producción; no trata de pruebas con usuarios."
+  }
+ ],
+ "E09": [
+  {
+   "node_id": "auditoria_responsabilidad",
+   "titulo": "Auditoría y Responsabilidad (Audit and Accountability)",
+   "resumen": "Consiste en crear, proteger y retener registros de auditoría del sistema en la medida necesaria para permitir el monitoreo, análisis, investigación y reporte de actividad ilegal, no autorizada o inapropiada del sistema, asegurando que las acciones de los usuarios individuales puedan rastrearse hasta ellos para hacerlos responsables. Incluye definir qué información capturan los registros de auditoría, cómo se protegen, y con qué frecuencia se revisan.",
+   "etiqueta": "Registra y Audita tu Actividad",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Anonimiza la Actividad de tus Usuarios",
+   "explicacion": "CONTRARIA: el nodo exige que cada acción pueda rastrearse hasta el usuario individual para hacerlo responsable; anonimizar rompe ese rastreo."
+  },
+  {
+   "node_id": "abandonar_arreglos_rapidos",
+   "titulo": "Abandonar la Falacia del Arreglo Rápido",
+   "resumen": "Tras un accidente o fallo, la presión por mostrar resultados empuja a aplicar arreglos rápidos de Vieja Vista: reprender a los involucrados, reentrenarlos, escribir un nuevo procedimiento o agregar más tecnología. Todos son falsos arreglos porque no atacan las causas sistémicas: la reprimenda detiene el aprendizaje organizacional (no se puede aprender y castigar al mismo tiempo), el reentrenamiento tiene alcance limitado, los procedimientos nuevos reducen la transparencia, y la tecnología añadida crea nuevas oportunidades de error. Lo que parece un problema de error humano o de Bad Apples es en realidad un problema organizacional tan complejo como la organización que lo generó, y merece un análisis a esa altura.",
+   "etiqueta": "Evita los Arreglos Rápidos",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Reentrena al Equipo Tras el Fallo",
+   "explicacion": "CONTRARIA: el nodo pone el reentrenamiento entre los falsos arreglos rápidos que hay que abandonar; la trampa lo manda como respuesta."
+  },
+  {
+   "node_id": "equipo_multifuncional_real",
+   "titulo": "Equipo Multifuncional Real (no un equipo de fachada)",
+   "resumen": "Para que tu equipo de innovación funcione, necesitas reunir personas comprometidas de distintas áreas (marketing, investigación y desarrollo, operaciones) con tiempo real liberado de sus tareas habituales, un líder al que le das autoridad de verdad y no solo responsabilidad, y recompensas basadas en los resultados del equipo. Esto es distinto de un equipo de fachada, donde cada persona solo asiste a reuniones como representante de su área, sin autoridad ni dedicación real.",
+   "etiqueta": "Forma un Equipo Multifuncional Real",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Crea una Unidad de Innovación Separada",
+   "explicacion": "DISTINTA: el nodo trata de armar un equipo multifuncional con dedicación, autoridad y recompensas reales; no trata de separar la innovación en una unidad aparte."
+  },
+  {
+   "node_id": "supuestos_de_procedimientos",
+   "titulo": "Tres Supuestos Erróneos en el Diseño de Procedimientos",
+   "resumen": "Los manuales operativos y checklists suelen basarse en tres supuestos irreales sobre el entorno de trabajo: (1) el entorno es lineal (tareas en secuencia fija, sin demandas paralelas), (2) el entorno es predecible (eventos y tiempos anticipables con exactitud), y (3) el entorno es controlable (el operador controla el ritmo y tiempo de ejecución de sus tareas). Estos supuestos generan procedimientos frágiles que se rompen bajo la presión de operaciones reales con tareas concurrentes e interrupciones.",
+   "etiqueta": "Cuestiona tus Procedimientos Fijos",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Acorta tus Listas de Verificación",
+   "explicacion": "DISTINTA: el nodo expone tres supuestos falsos sobre el entorno (lineal, predecible, controlable) que vuelven frágiles los procedimientos; no trata del largo de las listas."
+  }
+ ],
+ "E10": [
+  {
+   "node_id": "warrants_financiamiento",
+   "titulo": "Warrants en Financiamientos de Etapas Posteriores",
+   "resumen": "Un warrant es el derecho a comprar un número determinado de acciones a un precio predefinido durante un plazo de años, similar a una opción de compra. Los inversionistas los usan para reducir efectivamente la valoración de la empresa sin que ese descuento aparezca explícitamente en el precio negociado -son, en la práctica, un mecanismo de valoración encubierta-. Son comunes en préstamos puente (bridge loans) y en financiamientos de etapas posteriores, típicamente ofreciendo un descuento de hasta 20% sobre el precio de la siguiente ronda, y suelen generar complejidad contable innecesaria.",
+   "etiqueta": "Detecta Opciones que Bajan tu Valoración",
+   "tipo": "CONTRARIA",
+   "etiqueta_trampa": "Usa Opciones para Bajar la Valoración",
+   "historica": true,
+   "explicacion": "etiqueta erronea REAL del catalogo, corregida en 6871a11e"
+  },
+  {
+   "node_id": "financiamiento_amigos_y_familia",
+   "titulo": "Financiamiento de Amigos y Familia (Friends & Family)",
+   "resumen": "Es la fuente de capital más accesible para un fundador primerizo, basada en relaciones de confianza previas. Aunque permite iniciar el startup cuando no hay otras opciones, conlleva riesgos emocionales significativos ('Playing-with-Fire Gap') ya que mezcla dinero con relaciones personales. Estos inversores suelen aportar montos pequeños, poco capital humano/social, y su participación no otorga credibilidad externa ante otros inversores o clientes.",
+   "etiqueta": "Busca Apoyo de Amigos y Familia",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Gana Credibilidad con Amigos y Familia",
+   "explicacion": "CONTRARIA: el nodo dice que ese dinero no te da credibilidad externa ante otros inversionistas ni ante los clientes."
+  },
+  {
+   "node_id": "gestion_contrasenas_cui",
+   "titulo": "Gestión Segura de Contraseñas",
+   "resumen": "Define reglas organizacionales para la creación, transmisión y actualización de contraseñas, asegurando que no coincidan con listas de contraseñas comprometidas o comúnmente utilizadas, y que se transmitan mediante canales cifrados.",
+   "etiqueta": "Protege tus Contraseñas Correctamente",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Activa la Verificación en Dos Pasos",
+   "explicacion": "DISTINTA: el nodo trata de las reglas para crear, transmitir y actualizar contraseñas; la verificación en dos pasos es otro control vecino que no aborda."
+  },
+  {
+   "node_id": "cloud_computing_supply_chain",
+   "titulo": "Cloud Computing como Infraestructura Habilitadora",
+   "resumen": "El cloud computing combina tecnologías (Internet, virtualización, software open source) para entregar recursos computacionales a demanda, sin compromisos de largo plazo y con pago por uso. Es el componente central que hace accesibles y asequibles las demás tecnologías de información en la cadena de suministro.",
+   "etiqueta": "Apóyate en la Nube",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Rastrea tu Inventario con Sensores",
+   "explicacion": "DISTINTA: el nodo trata de la nube como infraestructura que abarata las demás tecnologías de la cadena; no enseña a rastrear el inventario con sensores."
+  }
+ ],
+ "E11": [
+  {
+   "node_id": "what_if_questions",
+   "titulo": "Preguntas '¿Qué pasaría si?' para romper el status quo",
+   "resumen": "Técnica de ideación que utiliza preguntas provocadoras para desafiar supuestos convencionales sobre cómo funciona una industria, liberando el pensamiento del status quo. Ejemplos históricos: IKEA (muebles autoensamblados), Rolls-Royce (pago por hora de motor), Skype (llamadas gratis).",
+   "etiqueta": "Desafía lo Establecido con Preguntas",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Sigue las Reglas de tu Industria",
+   "explicacion": "CONTRARIA: el nodo usa preguntas provocadoras para desafiar los supuestos de cómo funciona la industria; la trampa manda seguirlos."
+  },
+  {
+   "node_id": "unidades_medida_sensores",
+   "titulo": "Establecimiento de Unidades de Medida y Sensores",
+   "resumen": "Para comunicar la calidad con precisión, es necesario 'decirlo en números'. Esto requiere definir una unidad de medida (cantidad definida de una característica de calidad) y un sensor (método o instrumento que evalúa y expresa esa característica en términos de la unidad). Aplica tanto a bienes (unidades técnicas como tiempo, temperatura) como a servicios (prontitud, cortesía) y a abstracciones (belleza, sabor), las cuales deben descomponerse en componentes medibles.",
+   "etiqueta": "Define tus Unidades y Sensores",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Describe tu Calidad con Palabras",
+   "explicacion": "CONTRARIA: el nodo pide expresar la calidad en números, con unidades y sensores, y descomponer lo abstracto en partes medibles."
+  },
+  {
+   "node_id": "adaptabilidad_regional_concepto",
+   "titulo": "Adaptabilidad Regional y Geográfica del Concepto",
+   "resumen": "Algunos conceptos tienen variaciones regionales significativas en demanda debido a gusto, clima o regulación (ej. barbacoa, cuidado del césped, franquicias médicas sujetas a leyes estatales). Antes de expandir, el franquiciador debe evaluar qué factores hicieron exitoso el negocio en su mercado original y si estos son replicables en otras regiones, o si debe limitar su expansión geográfica.",
+   "etiqueta": "Evalúa las Diferencias Regionales",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Elige el Local de cada Franquicia",
+   "explicacion": "DISTINTA: nombra la seleccion de ubicacion del local, concepto vecino de franquicias que el nodo no trata; el nodo ensena a evaluar si los factores del exito se replican en otras regiones o limitar la expansion."
+  },
+  {
+   "node_id": "guia_y_mentoria_vc",
+   "titulo": "Cómo aprovechar el acompañamiento de tus inversores en las reuniones de junta",
+   "resumen": "Tus inversores te dan orientación estratégica, operativa y de personal de dos formas: informal, en conversaciones uno a uno, y formal, en las reuniones de junta. Vas a necesitar menos de esa guía a medida que tu negocio madura y tu equipo y tus métricas se consolidan. Si el inversor ya fue director en otras empresas, eso vale: reconoce patrones de problemas comunes que a ti todavía te cuesta ver.",
+   "etiqueta": "Aprovecha la Guía de tus Inversores",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Prepara el Informe para tu Junta",
+   "explicacion": "DISTINTA: promete ensenar a armar el material o informe de la reunion de junta; el nodo trata de aprovechar la orientacion que dan los inversores, informal y formal."
+  }
+ ],
+ "E12": [
+  {
+   "node_id": "mentor_dos_tipos_de_amigos",
+   "titulo": "Los Dos Tipos de Amigos/Mentores que Todo Fundador Necesita",
+   "resumen": "Todo emprendedor necesita dos tipos de relaciones de confianza: alguien que se alegre genuinamente por tus éxitos sin envidia, y alguien a quien puedas llamar en la peor crisis, sin importar cuán grave sea, y que esté ahí incondicionalmente. Bill Campbell, mentor de múltiples CEOs de Silicon Valley, ejemplifica ambos roles simultáneamente.",
+   "etiqueta": "Busca tus Dos Mentores Clave",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Enfrenta Solo tus Peores Crisis",
+   "explicacion": "CONTRARIA: el nodo dice que necesitas a alguien a quien llamar en la peor crisis y que este ahi incondicionalmente; la etiqueta manda enfrentarla solo."
+  },
+  {
+   "node_id": "sucesion_iniciada_por_fundador",
+   "titulo": "Sucesión Iniciada por el Fundador vs. por la Junta",
+   "resumen": "Distingue dos formas de gatillar el reemplazo del CEO fundador: cuando el fundador mismo reconoce la necesidad de cambio y lo inicia ('adelantarse a la junta'), versus cuando la junta directiva lo impone. Los datos muestran que cuando el fundador inicia el proceso, tiene mayor probabilidad de permanecer en un rol senior, participar en la elección del sucesor y seguir en el consejo directivo, en lugar de ser expulsado abruptamente.",
+   "etiqueta": "Decide Quién Impulsa tu Reemplazo",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Deja que la Junta te Reemplace",
+   "explicacion": "CONTRARIA: invierte quien inicia; el nodo muestra que conviene que el fundador se adelante a la junta e inicie el proceso, y la etiqueta pide cederlo a la junta."
+  },
+  {
+   "node_id": "integracion_agresiva_ejecutivo",
+   "titulo": "Integración Agresiva de un Nuevo Ejecutivo",
+   "resumen": "Contratar bien a un ejecutivo no basta: la forma en que lo integras es tan importante como la entrevista. Tienes que exigirle resultados desde el primer día, asegurarte de que entienda a fondo tu producto, tu mercado y tus clientes, y ponerlo en contacto directo con las personas clave de tu negocio desde el arranque.",
+   "etiqueta": "Integra Rápido a tus Ejecutivos",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Entrevista a Fondo a tus Ejecutivos",
+   "explicacion": "DISTINTA: nombra la entrevista de seleccion, que el nodo menciona solo para decir que no basta; lo que ensena es la integracion agresiva tras la contratacion."
+  },
+  {
+   "node_id": "formacion_seleccion_y_retencion_de_personal",
+   "titulo": "Selección, Capacitación y Retención de Personal para Calidad",
+   "resumen": "La calidad organizacional depende de seleccionar personal con las competencias adecuadas, capacitarlo de forma oportuna e interactiva, y retenerlo mediante compensación, empoderamiento, desarrollo de carrera y reconocimiento. Las fallas comunes en capacitación incluyen entrenar sin oportunidad de aplicación inmediata, falta de participación de gerentes de línea y exceso de dependencia en el método de lectura/clase.",
+   "etiqueta": "Selecciona y Retén tu Talento",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Evalúa el Desempeño de tu Personal",
+   "explicacion": "DISTINTA: nombra la evaluacion de desempeno, concepto vecino de gestion de personas que el nodo no trata; el nodo ensena a seleccionar, capacitar y retener para la calidad."
+  }
+ ],
+ "E13": [
+  {
+   "node_id": "customer_discovery",
+   "titulo": "Descubrimiento del cliente (Customer Discovery)",
+   "resumen": "Es el primer paso del desarrollo de clientes (Customer Development): conviertes tu visión en hipótesis sobre cada parte de tu negocio y diseñas pruebas para comprobarlas. Tiene dos fases: primero pruebas si el cliente realmente percibe el problema, y luego le muestras el producto, normalmente una versión minima (MVP), para validar que lo resuelve. Terminas esta etapa cuando los clientes confirman con entusiasmo que el problema les importa y que tu solución funciona.",
+   "etiqueta": "Descubre a tus Clientes",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Muestra tu Producto Antes del Problema",
+   "explicacion": "CONTRARIA: invierte el orden de las dos fases; el nodo manda probar primero si el cliente percibe el problema y despues mostrar el producto."
+  },
+  {
+   "node_id": "mapeo_flujos_invisibles_datos",
+   "titulo": "Mapeo de Flujos Invisibles (Data como Sistema)",
+   "resumen": "Los flujos de datos son invisibles pero omnipresentes, similares al aire: no los notamos hasta que algo cambia. Todo comportamiento medible se convierte en dato (compras, ritmo cardíaco, ubicación), y quien posee los datos concentra poder, ya que 'los patrones se convierten en conocimiento, y el conocimiento en poder' (Zuboff). Diseñar sistemas conscientes implica visibilizar estos flujos ocultos para entender su impacto en comportamiento, privacidad y medio ambiente (los centros de datos consumen energía masiva).",
+   "etiqueta": "Mapea tus Flujos de Datos",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Mantén Ocultos tus Flujos de Datos",
+   "explicacion": "CONTRARIA: el nodo pide visibilizar los flujos invisibles de datos para entender su impacto; la etiqueta pide mantenerlos ocultos."
+  },
+  {
+   "node_id": "desconexion_ventas_experiencia",
+   "titulo": "La desconexion entre vender y cumplir lo prometido después",
+   "resumen": "En muchos negocios, quien cierra la venta no es quien después entrega la experiencia al cliente. Si vendes pensando solo en cerrar cuentas nuevas, no tienes ningun incentivo para cuidar que el traspaso hacia quien atiende o entrega sea fluido. Así, la información que el cliente te compartio (sus necesidades, sus expectativas, el porque de su compra) se pierde en el camino, y el cliente se frustra cuando la persona que lo atiende después no sabe lo que le prometiste.",
+   "etiqueta": "Conecta Ventas y Postventa",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Capacita a tu Equipo de Ventas",
+   "explicacion": "DISTINTA: nombra la formacion del equipo comercial, otra accion del mismo campo; el nodo trata la desconexion y el traspaso de informacion entre quien vende y quien entrega despues."
+  },
+  {
+   "node_id": "prototipar_con_medios_no_convencionales",
+   "titulo": "Use Unconventional Mediums: Prototipar con Materiales Inesperados",
+   "resumen": "El medio con el que construyes un prototipo moldea directamente cómo piensas y qué soluciones descubres: un modelo en arcilla se vuelve más grueso, uno en madera se vuelve más angular. Si cambias el material habitual de tu proyecto (físico en vez de digital, blando en vez de duro, visible en vez de invisible), revelas sesgos ocultos en tu propio pensamiento y abres posibilidades que el medio convencional te tapaba. Casos como el auto GINA de BMW, con piel de tela en vez de metal, o algoritmos de machine learning traducidos a cartas de papel, muestran cómo un medio no convencional hace tangible lo invisible y puede acercar a nuevas personas a tu proceso creativo.",
+   "etiqueta": "Prototipa con Materiales Inesperados",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Prototipa con Materiales Baratos",
+   "explicacion": "DISTINTA: sugiere prototipado de bajo costo, concepto vecino; el nodo ensena a cambiar el medio habitual por uno inesperado para revelar sesgos, no a ahorrar."
+  }
+ ],
+ "E14": [
+  {
+   "node_id": "trilogia_de_juran",
+   "titulo": "Trilogía de Juran (Planificación, Control y Mejora)",
+   "resumen": "Modelo universal que integra tres procesos gerenciales interrelacionados para gestionar la calidad: planificación de la calidad, que diseña procesos para crear productos o servicios que satisfagan necesidades; control de calidad, que asegura que la producción cumpla los criterios de diseño eliminando picos esporádicos que se alejan del nivel planificado; y mejora de la calidad, que reduce el desperdicio crónico mediante cambios sistemáticos o disruptivos tipo breakthrough. Distinguir si un problema es un pico esporádico o un desperdicio crónico te permite elegir el método correcto: apagar incendios no es lo mismo que mejorar de forma estructural, y cada uno exige un tratamiento distinto aunque compartan herramientas. Estos tres procesos son la base científica de la gestión de calidad moderna, incluyendo metodologías como Six Sigma.",
+   "etiqueta": "Planifica, Controla y Mejora tu Calidad",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Trata Igual Picos y Desperdicio Crónico",
+   "explicacion": "CONTRARIA: el nodo insiste en distinguir picos esporadicos de desperdicio cronico porque cada uno exige un tratamiento distinto; la etiqueta manda tratarlos igual."
+  },
+  {
+   "node_id": "value_map",
+   "titulo": "Value Map (Mapa de Valor)",
+   "resumen": "Describe las características de una propuesta de valor específica de forma estructurada y detallada, desglosándola en Productos y Servicios, Pain Relievers (aliviadores de dolor) y Gain Creators (creadores de ganancia). Es el lado de 'crear valor' del Value Proposition Canvas, y debe diseñarse en función del Customer Profile.",
+   "etiqueta": "Mapea tu Propuesta de Valor",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Mapea tu Valor sin el Cliente",
+   "explicacion": "CONTRARIA: el nodo dice que el mapa de valor debe disenarse en funcion del perfil del cliente; la etiqueta pide hacerlo sin mirarlo."
+  },
+  {
+   "node_id": "guia_entrevista_hcd",
+   "titulo": "Guía de Entrevista Cualitativa (Open General, Then Go Deep)",
+   "resumen": "Estructura de entrevista en dos etapas: primero preguntas amplias y generales para abrir la conversación y generar confianza, luego preguntas profundas orientadas a descubrir esperanzas, miedos y ambiciones del entrevistado. Complementada con un análisis de flujo de recursos (de dónde entra y a dónde va el dinero) tanto a nivel individual como grupal.",
+   "etiqueta": "Escucha Primero, Profundiza Después",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Diseña tu Encuesta de Opción Múltiple",
+   "explicacion": "DISTINTA: nombra una encuesta cuantitativa cerrada, otro instrumento de investigacion; el nodo ensena una guia de entrevista cualitativa abierta que va de lo general a lo profundo."
+  },
+  {
+   "node_id": "ab_testing_optimizacion",
+   "titulo": "A/B Testing para Optimización Web/Mobile",
+   "resumen": "El A/B testing es el método más usado para optimizar actividades de 'get, keep and grow' en negocios web y móviles. Consiste en comparar dos versiones de una página web (o elemento) para determinar cuál produce mejores resultados, mostrando la versión 'A' a la mitad de los visitantes y la versión 'B' a la otra mitad, de forma alternada y secuencial.",
+   "etiqueta": "Compara Versiones, Mejora Resultados",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Analiza el Recorrido de tus Visitantes",
+   "explicacion": "DISTINTA: nombra el analisis del recorrido de navegacion, herramienta vecina de optimizacion web; el nodo ensena a comparar dos versiones repartiendo visitantes mitad y mitad."
+  }
+ ],
+ "E15": [
+  {
+   "node_id": "modelos_negocio_mas_alla_del_lucro",
+   "titulo": "Modelos de Negocio Más Allá del Lucro (Enterprise Models)",
+   "resumen": "Extensión del Business Model Canvas para organizaciones sin fines de lucro, entidades públicas y empresas sociales. Se distinguen dos tipos: modelos financiados por terceros (donde el pagador no es el receptor del valor, como ONGs o gobierno) y modelos de triple resultado (triple bottom line) que contabilizan costos/beneficios sociales y ambientales además de los financieros.",
+   "etiqueta": "Diseña Modelos Más Allá del Lucro",
+   "tipo": "DISTINTA",
+   "etiqueta_trampa": "Diseña tu Modelo sin Lucro",
+   "historica": true,
+   "explicacion": "etiqueta erronea REAL del catalogo, corregida en 6871a11e"
+  },
+  {
+   "node_id": "actualizar_modelo_de_negocio_pivot_o_proceed",
+   "titulo": "Actualiza tu modelo de negocio: ¿cambias de rumbo o sigues adelante?",
+   "resumen": "Cuando ya entiendes a fondo a tu cliente y tu mercado, detente un momento y revisa todas las suposiciones que hiciste en tu lienzo de modelo de negocio (Business Model Canvas). Dibuja el mapa de cómo tu cliente típico hace las cosas hoy, compáralo con lo que habías supuesto al inicio y decide si tu producto realmente resuelve el problema, es decir, si encaja con el mercado (product market fit). Si no encaja, prioriza cambiar de segmento de clientes antes que agregar funciones nuevas: tu meta es tener una lista de características que quepa en un párrafo y sirva a miles de clientes, no una lista de diez páginas pensada para venderle a diez personas.",
+   "etiqueta": "Decide si Cambias de Rumbo",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Agrega Funciones antes que Cambiar Segmento",
+   "explicacion": "CONTRARIA: el nodo manda, si no hay encaje, priorizar cambiar de segmento de clientes antes que agregar funciones; la etiqueta invierte esa prioridad."
+  },
+  {
+   "node_id": "arquitectura_tecnica_modular",
+   "titulo": "Arquitectura Técnica Modular Basada en la Nube",
+   "resumen": "Estrategia de construir sistemas de negocio combinando servicios de computación en la nube y aplicaciones de software ya existentes (APIs, SaaS), escribiendo código nuevo solo para las funciones únicas que generan valor diferencial. Ejemplo: Uber usa AWS, Google Maps, Braintree y Twilio, enfocando su desarrollo propio solo en ser la plataforma de conexión entre pasajeros y conductores.",
+   "etiqueta": "Construye tu Arquitectura Modular",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Programa Todo tu Sistema desde Cero",
+   "explicacion": "CONTRARIA: el nodo manda combinar servicios en la nube y software existente, escribiendo codigo propio solo para lo diferencial; la etiqueta pide construirlo todo desde cero."
+  },
+  {
+   "node_id": "elegir_material_de_relleno_segun_producto",
+   "titulo": "Elegir el material de relleno según el producto",
+   "resumen": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
+   "etiqueta": "Elige el relleno según tu producto",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Elige la Caja según tu Producto",
+   "explicacion": "DISTINTA: cambia el objeto de la eleccion por la caja o embalaje exterior; el nodo trata solo del material de relleno segun peso, forma y fragilidad."
+  }
+ ],
+ "E16": [
+  {
+   "node_id": "portfolio_management_triangulation",
+   "titulo": "Triangulación de Métodos en Gestión de Portafolio",
+   "resumen": "Ningún método de selección de proyectos funciona perfectamente por sí solo. Las empresas de mejor desempeño combinan múltiples enfoques: análisis financiero (NPV, Productivity Index, ECV para proyectos riesgosos) no en los gates tempranos, sino a más tardar en Gate 3, scorecards en gates tempranos (1-3) especialmente para proyectos audaces o tecnológicos, criterios de éxito claros para responsabilizar equipos, y herramientas visuales (gráficos de burbuja, pie charts) para revisiones de portafolio. La integridad de los datos sigue siendo la base de todos los métodos.",
+   "etiqueta": "Combina Métodos para tu Portafolio",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Analiza tus Finanzas desde el Inicio",
+   "explicacion": "CONTRARIA: el nodo dice que el analisis financiero no va en las etapas tempranas sino a mas tardar en la tercera, y que al inicio se usan tablas de puntuacion; la etiqueta lo pone desde el inicio."
+  },
+  {
+   "node_id": "sujetos_de_control",
+   "titulo": "Selección de Sujetos de Control (Control Subjects)",
+   "resumen": "Cada característica del producto o proceso a controlar se denomina 'sujeto de control'. Su selección es el primer paso crítico en la planificación del control, derivándose de necesidades del cliente, regulaciones, seguridad, análisis de modos de fallo (FMEA) y diseño de experimentos.",
+   "etiqueta": "Elige qué Vas a Controlar",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Deja para el Final qué Controlar",
+   "explicacion": "CONTRARIA: el nodo dice que elegir los sujetos de control es el primer paso critico de la planificacion del control; la etiqueta lo manda al final."
+  },
+  {
+   "node_id": "clasificacion_riesgos_por_dominio",
+   "titulo": "Clasificación de Riesgos por Dominio Operacional",
+   "resumen": "Todos los dominios peligrosos comparten cuatro tipos de riesgo: lesiones personales, errores de operadores clave, condiciones latentes y riesgos a terceros. El balance entre estos riesgos varía según el dominio (nuclear, aviación, construcción, minería, servicios financieros, etc.) y puede cambiar con la tecnología y la sociedad. Sin embargo, el riesgo de condiciones latentes es consistentemente alto en todos los dominios, ya que los procesos organizacionales genéricos (planificación, presupuesto, mantenimiento, gestión) son comunes a cualquier sistema técnico complejo.",
+   "etiqueta": "Clasifica tus Riesgos por Dominio",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Calcula el Costo de tus Riesgos",
+   "explicacion": "DISTINTA: nombra la cuantificacion economica del riesgo, concepto vecino que el nodo no trata; el nodo clasifica cuatro tipos de riesgo y como varia su balance segun el dominio."
+  },
+  {
+   "node_id": "reconstruccion_de_equipo_ejecutivo",
+   "titulo": "Reconstrucción del Equipo Ejecutivo tras un Pivote de Modelo de Negocio",
+   "resumen": "Cuando tu empresa pivota a un modelo de negocio radicalmente distinto (por ejemplo de servicios cloud a venta de software empresarial), las competencias que hicieron exitoso a tu equipo ejecutivo en la etapa anterior pueden no servir en la nueva. Un CFO experto en contabilidad de servicios puede no entender contabilidad de software; un líder de ventas exitoso en un modelo puede fracasar en ventas enterprise o marketing B2B. Debes evaluar objetivamente si cada ejecutivo tiene las competencias específicas que exige la nueva fase, no si es buena persona o buen profesional en general. El desempeño pasado no garantiza éxito futuro en un contexto distinto, y el reemplazo debe explicarse como una cuestión de fit de habilidades, no de valor personal.",
+   "etiqueta": "Renueva tu Equipo tras el Cambio",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Renueva tu Consejo tras el Cambio",
+   "explicacion": "DISTINTA: cambia el objeto. El nodo trata de evaluar y reemplazar al equipo ejecutivo (director financiero, líder de ventas) según las competencias de la nueva fase, no de renovar la junta o el consejo de directores."
+  }
+ ],
+ "E17": [
+  {
+   "node_id": "shapeshifting_diversidad",
+   "titulo": "Shapeshifting: Cultivar la Diversidad de Pensamiento",
+   "resumen": "El 'shapeshifting' es la capacidad de cambiar ágilmente entre formas de pensar y actuar, explorando los límites de disciplinas y experiencias para encontrar solapamientos que generen nuevas posibilidades. Se contrapone a la 'sameness' (homogeneización), ejemplificada por monocultivos como el banano Cavendish, que ganan eficiencia pero pierden resiliencia genética y quedan vulnerables a amenazas (como enfermedades). De igual forma, la homogeneización cultural y lingüística reduce la 'ideadiversidad' colectiva. Preservar la diversidad —biológica, cultural, de pensamiento— es clave para la resiliencia de cualquier sistema, incluyendo equipos y proyectos de innovación.",
+   "etiqueta": "Cultiva tu Pensamiento Diverso",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Unifica el Pensamiento de tu Equipo",
+   "explicacion": "CONTRARIA: pide homogeneizar el pensamiento, que es justo la 'sameness' tipo monocultivo que el nodo señala como pérdida de resiliencia, cuando el nodo manda cultivar la diversidad."
+  },
+  {
+   "node_id": "formalizar_alianza_estrategica",
+   "titulo": "Formalizar y Gestionar una Alianza Estratégica de Sostenibilidad",
+   "resumen": "Una vez seleccionado el socio, es necesario establecer acuerdos formales que definan metas, líneas de tiempo, líneas base y mecanismos de transparencia. Mantener la independencia institucional y conformar equipos multifuncionales son claves para que la alianza sea efectiva y sostenible en el tiempo.",
+   "etiqueta": "Formaliza tu Alianza Estratégica",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Mantén Informal tu Alianza Estratégica",
+   "explicacion": "CONTRARIA: el nodo manda establecer acuerdos formales con metas, plazos, líneas base y transparencia; la etiqueta pide dejar la alianza en lo informal."
+  },
+  {
+   "node_id": "manejo_de_incertidumbre_proyectos_innovadores",
+   "titulo": "Manejo de Incertidumbre en Proyectos Altamente Innovadores mediante Experimentación",
+   "resumen": "En proyectos con alta incertidumbre (nuevos mercados, nuevas tecnologías), ningún nivel de investigación previa puede validar todos los supuestos antes de Desarrollo. La comprensión del valor para el cliente y la viabilidad técnica solo emerge mediante experimentación: construir, probar con el cliente, revisar. El producto puede entrar a Desarrollo solo 40% definido y evolucionar mediante iteraciones.",
+   "etiqueta": "Experimenta ante la Incertidumbre",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Planifica Escenarios ante la Incertidumbre",
+   "explicacion": "DISTINTA: nombra otro método vecino (planificación de escenarios) que el nodo no enseña; el nodo trata de experimentar construyendo, probando con el cliente y revisando, y entrar a Desarrollo con el producto definido solo en parte."
+  },
+  {
+   "node_id": "desarrollar_caracteristicas_proceso",
+   "titulo": "Desarrollar las Características del Proceso",
+   "resumen": "Quinto paso del modelo: identificar y seleccionar los procesos (actuales o alternativos) capaces de producir las características definidas para el producto. Principio clave: la capacidad del proceso debe reconciliarse con los requisitos del producto; la variación proviene de los procesos, las metas provienen de las personas.",
+   "etiqueta": "Define las Características del Proceso",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Define las Características del Producto",
+   "explicacion": "DISTINTA: nombra el paso vecino del modelo (definir las características del producto), no el quinto paso que trata el nodo: seleccionar los procesos capaces de producirlas."
+  }
+ ],
+ "E18": [
+  {
+   "node_id": "diagnostico_motivacion_para_contrataciones_inversores",
+   "titulo": "Diagnóstico de Motivación del Fundador para Contrataciones e Inversionistas",
+   "resumen": "Tanto empleados potenciales como inversionistas deben evaluar si la motivación del fundador-CEO (riqueza o control) es compatible con la suya antes de unirse. Empleados motivados por riqueza deben buscar fundadores motivados por riqueza; si el fundador es motivado por control, los empleados deben ser atraídos por otras razones (visión, cultura, impacto), como ocurrió en Segway con Dean Kamen. Los inversionistas deben anticipar si el fundador aceptará un cambio de CEO cuando sea financieramente beneficioso o luchará por mantener el control incluso a costa del valor de la empresa.",
+   "etiqueta": "Alinea Motivaciones Antes de Sumar",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Diagnostica la Motivación de tus Inversionistas",
+   "explicacion": "CONTRARIA: invierte quién evalúa a quién. En el nodo, empleados e inversionistas diagnostican la motivación del fundador (riqueza o control); la etiqueta pone al fundador evaluando a los inversionistas."
+  },
+  {
+   "node_id": "marco_name_system_fee",
+   "titulo": "Marco de Decisión NAME-SYSTEM-FEE",
+   "resumen": "Marco de tres preguntas clave para determinar si un negocio realmente busca convertirse en franquicia: (1) NAME - ¿quiere construir una marca común?; (2) SYSTEM - ¿quiere controlar cómo se representa esa marca y proveer soporte a quienes la usan?; (3) FEE - ¿cómo desea ser compensado por ese soporte? Si las respuestas involucran usar una marca, controlarla/apoyarla, y cobrar una tarifa, legalmente se está creando una franquicia sin importar cómo se le llame.",
+   "etiqueta": "Define Marca, Sistema y Cuota",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Evita la Franquicia Cambiándole el Nombre",
+   "explicacion": "CONTRARIA: el nodo dice que si hay marca, control o soporte y cuota se crea legalmente una franquicia sin importar cómo se le llame; la etiqueta sugiere que basta con renombrarla para evitarla."
+  },
+  {
+   "node_id": "planificacion_itinerario_viaje_negocios",
+   "titulo": "Cómo planificar tu viaje de negocios al extranjero",
+   "resumen": "Un itinerario bien planificado te ayuda a aprovechar el tiempo y sacarle el máximo provecho a tu viaje de negocios al extranjero. Agenda pocas reuniones bien espaciadas en vez de llenar el día de citas, confirma cada cita antes de salir de tu país, prepara tarjetas de presentación en dos idiomas, y toma en cuenta el clima, la salud, la moneda, el transporte y la cultura del lugar. Deja además un día libre para recuperarte del cambio de horario.",
+   "etiqueta": "Planifica tu Viaje de Negocios",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Negocia con Socios en el Extranjero",
+   "explicacion": "DISTINTA: nombra otra acción del mismo campo (negociar en el exterior) que el nodo no enseña; el nodo trata del itinerario: pocas reuniones espaciadas, confirmar citas, tarjetas bilingües, clima, moneda, cultura y un día para el cambio de horario."
+  },
+  {
+   "node_id": "disponibilidad_producto",
+   "titulo": "Cálculo de Disponibilidad del Producto",
+   "resumen": "La disponibilidad es la probabilidad de que un producto funcione satisfactoriamente cuando se necesite, considerando el tiempo de operación y el tiempo de inactividad por reparaciones. Se puede calcular como disponibilidad operacional (incluyendo todo el tiempo de inactividad) o disponibilidad intrínseca (solo tiempo de reparación activo), usando la fórmula de estado estable basada en MTBF y MTTR.",
+   "etiqueta": "Calcula la Disponibilidad del Producto",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Calcula la Confiabilidad del Producto",
+   "explicacion": "DISTINTA: cambia al concepto vecino de confiabilidad (probabilidad de no fallar en un periodo), cuando el nodo calcula la disponibilidad (funcionar cuando se necesita, contando el tiempo de reparación con tiempo medio entre fallas y tiempo medio de reparación)."
+  }
+ ],
+ "E19": [
+  {
+   "node_id": "canales_de_traccion_19",
+   "titulo": "Los 19 Canales de Tracción",
+   "resumen": "Existen 19 canales distintos por los cuales un startup puede obtener tracción: blogs objetivo, publicidad tradicional (PR), PR no convencional, marketing en motores de búsqueda (SEM), anuncios sociales y display, anuncios offline, SEO, marketing de contenidos, email marketing, ingeniería como marketing, marketing viral, desarrollo de negocios (BD), ventas, programas de afiliados, plataformas existentes, ferias comerciales, eventos offline, conferencias/speaking, y construcción de comunidad. La mayoría de founders solo consideran los canales que ya conocen, ignorando los que podrían ser más efectivos para su negocio específico.",
+   "etiqueta": "Explora los Diecinueve Canales",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Apuesta por los Canales que Conoces",
+   "explicacion": "CONTRARIA: el nodo critica justo eso, que la mayoría de los fundadores solo consideran los canales que ya conocen, y manda explorar los diecinueve."
+  },
+  {
+   "node_id": "composicion_board_directors",
+   "titulo": "Composición del Board de Directores",
+   "resumen": "Tu junta de directores (board) es uno de los mecanismos de control más poderosos: puede aprobar presupuestos, fusiones, salidas a bolsa y reemplazar al director general. Su composición suele negociarse en una ronda de inversión: en etapa temprana tiene entre 3 y 5 asientos (tú, un inversionista, un miembro independiente); en etapa madura crece a 7-9 con más miembros externos. Los asientos se dividen en Directores Preferentes (elegidos por inversionistas), Directores Comunes (elegidos por fundadores) y Directores Mutuos (elegidos por consenso), lo que define el poder entre tú y tus inversionistas. Incluir a más de un cofundador puede confundir los roles entre tu equipo y la junta. Los miembros independientes aportan mediación y experiencia externa, y suelen cobrar entre 0.25% y 0.5% en opciones con 2 a 4 años de vesting. Si eres un director general primerizo, busca directores con más experiencia que equilibren tu optimismo y falta de foco.",
+   "etiqueta": "Define Tu Board de Directores",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Llena tu Junta con tus Cofundadores",
+   "explicacion": "CONTRARIA: el nodo advierte que incluir a más de un cofundador confunde los roles entre el equipo y la junta, y recomienda miembros independientes y directores con experiencia."
+  },
+  {
+   "node_id": "evaluacion_riesgo_calidad_organizacional",
+   "titulo": "Evaluación de Riesgo de Calidad (Quality Risk Assessment)",
+   "resumen": "Es una revisión integral del estado de la calidad en toda la organización, basada en el Juran Organization Health Check. A diferencia de auditorías como ISO 9000, se enfoca en tres criterios: enfoque (approach), despliegue (deployment) y resultados (results), evaluando siete categorías organizacionales que suman 1000 puntos, desde alineación estratégica hasta resultados de scorecard.",
+   "etiqueta": "Diagnostica el Riesgo de tu Calidad",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Certifica tu Sistema de Calidad",
+   "explicacion": "DISTINTA: nombra la certificación o auditoría tipo norma internacional, que es justo aquello de lo que el nodo se distingue; el nodo trata de una revisión integral con enfoque, despliegue y resultados en siete categorías que suman 1000 puntos."
+  },
+  {
+   "node_id": "principios_gestion_calidad_iso9000",
+   "titulo": "Ocho Principios de Gestión de Calidad (ISO 9000)",
+   "resumen": "ISO 9000 identifica ocho principios rectores que guían a las organizaciones hacia la excelencia: enfoque al cliente, liderazgo, involucramiento de las personas, enfoque a procesos, enfoque de sistema para la gestión, mejora continua, enfoque basado en hechos para la toma de decisiones, y relaciones mutuamente beneficiosas con proveedores. Sirven como marco fundacional para cualquier sistema de gestión de calidad.",
+   "etiqueta": "Aplica los Ocho Principios ISO",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Aplica los Catorce Puntos de Deming",
+   "explicacion": "DISTINTA: nombra otro marco vecino de la gestión de calidad (los catorce puntos de Deming), no los ocho principios de la norma ISO 9000 que trata el nodo."
+  }
+ ],
+ "E20": [
+  {
+   "node_id": "ergonomia_laboral",
+   "titulo": "Programa de Ergonomía Laboral",
+   "resumen": "La ergonomía busca adaptar el trabajo a la persona que lo hace, para prevenir trastornos musculoesqueléticos causados por levantar objetos pesados con frecuencia, alcanzar cosas por encima de la cabeza de forma repetitiva, empujar o jalar con fuerza de manera repetida, mantener posturas incómodas o hacer tareas manuales repetitivas. Un programa efectivo requiere tu compromiso, la participación de quienes hacen el trabajo, un análisis del lugar donde se trabaja, controles de ingeniería (los preferidos), ajustes en la forma de organizar las tareas, equipo de protección y una revisión periódica de qué tan bien están funcionando esas medidas.",
+   "etiqueta": "Cuida la Ergonomía Laboral",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Adapta la Persona al Trabajo",
+   "explicacion": "CONTRARIA: invierte la dirección de la ergonomía. El nodo busca adaptar el trabajo a la persona que lo hace, no la persona al trabajo."
+  },
+  {
+   "node_id": "modelo_accidente_organizacional",
+   "titulo": "Modelo de Etapas del Accidente Organizacional (Figura 1.6)",
+   "resumen": "Modelo que vincula la causalidad de un accidente organizacional en tres niveles: factores organizacionales (decisiones estratégicas, presupuestos, cultura corporativa), condiciones del lugar de trabajo (presión de tiempo, herramientas inadecuadas, mala capacitación) y actos inseguros de individuos en la 'punta afilada'. La causalidad fluye de abajo hacia arriba, mientras la investigación debe fluir de arriba hacia abajo, partiendo del resultado y retrocediendo hasta los factores organizacionales.",
+   "etiqueta": "Rastrea las Raíces de un Accidente",
+   "tipo": "CONTRARIA",
+   "historica": false,
+   "etiqueta_trampa": "Rastrea el Accidente hasta el Operario",
+   "explicacion": "CONTRARIA: el nodo manda investigar desde el resultado y retroceder hasta los factores organizacionales; la etiqueta detiene la investigación en el acto inseguro del individuo en la punta afilada."
+  },
+  {
+   "node_id": "aceptacion_de_fallas_como_inevitables",
+   "titulo": "Aceptar la falla como parte necesaria del sistema",
+   "resumen": "La perfección no es posible ni te la puedes costear; incluso los mejores sistemas de calidad (Six Sigma) permiten una tasa de defectos que nunca llega a cero. Todo sistema hecho por personas falla eventualmente, y si tu negocio no muestra fallas, puede ser señal de que las estás ocultando o no las estás detectando bien. Acepta que la falla es inevitable y enfoca tu esfuerzo en construir formas de detectarla y gestionarla rápido para minimizar la pérdida.",
+   "etiqueta": "Acepta que las Fallas Ocurren",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Celebra los Fracasos de tu Equipo",
+   "explicacion": "DISTINTA: nombra otro concepto vecino (una cultura que celebra el fracaso) que el nodo no enseña; el nodo trata de aceptar que la falla es inevitable y montar formas de detectarla y gestionarla rápido para minimizar la pérdida."
+  },
+  {
+   "node_id": "enfoque_proyecto_por_proyecto",
+   "titulo": "Breakthrough Proyecto por Proyecto",
+   "resumen": "Principio central de Juran: toda mejora significativa (breakthrough) ocurre a través de proyectos específicos y programados, no de manera general o difusa. Requiere crear un glosario común, seleccionar proyectos concretos, asignar responsabilidades y aplicar el concepto de 'Big Q' extendiendo la mejora a todos los procesos del negocio, no solo manufactura.",
+   "etiqueta": "Avanza Proyecto por Proyecto",
+   "tipo": "DISTINTA",
+   "historica": false,
+   "etiqueta_trampa": "Controla tu Calidad Proceso por Proceso",
+   "explicacion": "DISTINTA: nombra el control de calidad, otra pieza vecina del enfoque de Juran, en vez de la mejora de avance (breakthrough) que se logra con proyectos específicos y programados."
+  }
+ ]
+}
