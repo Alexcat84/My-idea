@@ -7,7 +7,7 @@
  * entra en vivo al campo y es editable antes de enviar.
  */
 import { useEffect, useRef } from "react";
-import { fusionarDictado } from "@/lib/fusionarDictado";
+import { alEditarAMano, componerDictado, estadoDictadoInicial } from "@/lib/dictado";
 import { useSpeech } from "@/lib/useSpeech";
 
 interface Props {
@@ -21,41 +21,40 @@ interface Props {
 }
 
 export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus, deshabilitado, id }: Props) {
-  // AUD-09 B14b: lo provisional vive DENTRO del valor (así enviar o detener a
-  // mitad de frase no lo pierde); esto recuerda qué parte del final lo es, para
-  // que el siguiente trozo del dictado lo reemplace en vez de duplicarlo.
-  const sufijoProvisional = useRef("");
-  // El valor VIVO: el dictado agrega sobre lo que hay AHORA, aunque el
-  // usuario haya corregido a mano mientras hablaba. (Antes se guardaba una
-  // "base" al arrancar el micrófono y se recomponía desde ella; si el
-  // usuario editaba, esa base ya contenía lo dictado y todo se duplicaba.)
+  // Lo dictado vive DENTRO del valor (AUD-09 B14b: enviar o detener a mitad
+  // de frase no lo pierde). Cada sesión del micrófono reemplaza su propio
+  // aporte con el texto entero de la sesión, así que por más que el navegador
+  // reenvíe la frase, ocupa su lugar una vez (lib/dictado.ts).
+  const estadoDictado = useRef(estadoDictadoInicial());
+  const ultimoTextoSesion = useRef("");
+  // El valor VIVO: el dictado trabaja sobre lo que hay AHORA, aunque el
+  // usuario haya corregido a mano mientras hablaba.
   const valorRef = useRef(valor);
   useEffect(() => {
     valorRef.current = valor;
   });
 
   const { soportado, escuchando, errorVoz, iniciar, detener } = useSpeech(
-    (nuevoFinal, prov) => {
-      const r = fusionarDictado(valorRef.current, sufijoProvisional.current, nuevoFinal, prov);
-      sufijoProvisional.current = r.sufijo;
+    (textoSesion) => {
+      ultimoTextoSesion.current = textoSesion;
+      const r = componerDictado(valorRef.current, estadoDictado.current, textoSesion);
+      estadoDictado.current = r.estado;
+      if (r.valor === valorRef.current) return;
       valorRef.current = r.valor;
       onCambio(r.valor);
     },
-    // El navegador cortó la sesión y el dictado se reanuda: lo provisional de
-    // la sesión vieja queda fijo en el campo (la nueva empieza de cero).
+    // Sesión nueva (al iniciar o al reanudarse sola): lo de la anterior queda
+    // fijo en el campo.
     () => {
-      sufijoProvisional.current = "";
+      estadoDictado.current = estadoDictadoInicial();
+      ultimoTextoSesion.current = "";
     }
   );
 
-  // Detener NO descarta lo oído: queda en el campo (y si el navegador manda el
-  // final tardío, reemplaza a su provisional).
+  // Detener NO descarta lo oído: ya está en el campo.
   function alternarMicrofono() {
     if (escuchando) detener();
-    else {
-      sufijoProvisional.current = "";
-      iniciar();
-    }
+    else iniciar();
   }
 
   return (
@@ -68,9 +67,12 @@ export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus
         placeholder={placeholder}
         value={valor}
         onChange={(e) => {
-          // lo que el usuario escribe es suyo: nada de ahí es provisional
-          sufijoProvisional.current = "";
-          onCambio(e.target.value);
+          const v = e.target.value;
+          if (v === valorRef.current) return; // eco del teclado: nada cambió
+          // lo que el usuario escribe es suyo: el dictado no lo pisa ni repite
+          estadoDictado.current = alEditarAMano(v, estadoDictado.current, ultimoTextoSesion.current);
+          valorRef.current = v;
+          onCambio(v);
         }}
         className="w-full resize-y rounded-panel border border-hairline bg-surface px-4 py-3 text-base leading-relaxed text-ink placeholder:text-dim disabled:opacity-60"
       />
