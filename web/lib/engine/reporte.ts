@@ -15,10 +15,10 @@ import { SYSTEM_CLASIFICAR_OFERTA, SYSTEM_REPORTE } from "../prompts";
 import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
 import { interpolar } from "../i18n/interpolar";
 import { REPORTE } from "../i18n/mensajes/reporte";
+import { MOTOR } from "../i18n/mensajes/motor";
 import {
   CAMPOS_ESENCIALES_POR_TIPO,
   FRASES_NO_APLICA_MOLDE,
-  REPORTE_DISCLAIMER,
   TIPOS_OFERTA_VALIDOS,
   type CampoNumericoProyecto,
 } from "./constants";
@@ -55,13 +55,16 @@ export function preguntasPorTipo(
 export function unidadDeclaradaCampo(
   campo: CampoNumericoProyecto,
   tipoOferta: string | null | undefined,
-  unidadVenta: string | null | undefined
+  unidadVenta: string | null | undefined,
+  /** i18n F5: el idioma de la idea (el de las plantillas). */
+  idioma: Locale = LOCALE_BASE
 ): string {
-  const u = unidadVenta || "unidad";
-  if (campo === "costos_fijos_mensuales") return "por mes";
-  if (campo === "valor_hora") return "por hora";
-  if (campo === "unidades_vendidas") return tipoOferta === "digital" ? `${u}/mes` : u;
-  return `por ${u}`;
+  const t = elegir(MOTOR, idioma).unidadCampo;
+  const u = unidadVenta || t.unidad;
+  if (campo === "costos_fijos_mensuales") return t.porMes;
+  if (campo === "valor_hora") return t.porHora;
+  if (campo === "unidades_vendidas") return tipoOferta === "digital" ? interpolar(t.alMes, { u }) : u;
+  return interpolar(t.porUnidad, { u });
 }
 
 /** Extractor deterministico (SIN LLM) de un numero en lenguaje natural:
@@ -208,10 +211,10 @@ export async function narrarReporte(
       presupuestoUsd: PRESUPUESTO_REPORTE_USD,
       idiomaSalida,
     });
-    return { contenido: r.texto.trim() + REPORTE_DISCLAIMER, acumulado: r.acumulado, sinIA: false };
+    return { contenido: r.texto.trim() + elegir(MOTOR, idioma).reporteDisclaimer, acumulado: r.acumulado, sinIA: false };
   } catch (e) {
     // AUD-09 M20: antes este catch era mudo. Deja rastro y se marca.
     console.error("[reporte] la narracion con IA fallo; queda el ensamblado sin narrar:", e);
-    return { contenido: reporteOffline(resultados, idioma) + REPORTE_DISCLAIMER, acumulado, sinIA: true };
+    return { contenido: reporteOffline(resultados, idioma) + elegir(MOTOR, idioma).reporteDisclaimer, acumulado, sinIA: true };
   }
 }

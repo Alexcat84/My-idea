@@ -282,20 +282,53 @@ export async function detectarDecisionPlan(
  * _decision_por_palabras de engine/prototipo_motor.py.
  */
 export function decisionPorPalabras(respuesta: string): "generar_ya" | "continuar" {
-  const plano = respuesta
-    .toLowerCase()
-    .normalize("NFD")
-    .replace(/[̀-ͯ]/g, "")
-    .replace(/[^a-z0-9\s]/g, " ")
-    .replace(/\s+/g, " ")
-    .trim();
-  const frases = ["dame mi plan", "dame el plan", "genera mi plan", "genera el plan", "asi esta bien", "con esto alcanza"];
-  if (frases.some((f) => ` ${plano} `.includes(` ${f} `))) return "generar_ya";
+  const plano = normalizarDecision(respuesta);
+  if (FRASES_DECISION.some((f) => (SIN_ESPACIOS.test(f) ? plano.includes(f) : ` ${plano} `.includes(` ${f} `)))) return "generar_ya";
   const palabras = plano ? plano.split(" ") : [];
-  const sueltas = ["ya", "listo", "ahora", "dale"];
-  if (palabras.length > 0 && palabras.length <= 3 && palabras.some((w) => sueltas.includes(w))) return "generar_ya";
+  if (palabras.length > 0 && palabras.length <= 3 && palabras.some((w) => SUELTAS_DECISION.has(w))) return "generar_ya";
   return "continuar";
 }
+
+/** Minúsculas, sin los acentos del alfabeto latino, sin puntuación. Conserva
+ * las marcas de las otras escrituras (las vocales del devanagari, la hamza). */
+function normalizarDecision(texto: string): string {
+  return texto
+    .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
+    .replace(/[^\p{L}\p{M}\p{N}\s]/gu, " ")
+    .replace(/\s+/g, " ")
+    .trim();
+}
+
+/** i18n F5: el "dame mi plan" en los once idiomas (la persona responde en el de
+ * su idea). El español, en paridad con engine/prototipo_motor.py; los demás
+ * solo en la web (el motor de Python habla español). */
+const FRASES_DECISION = [
+  "dame mi plan", "dame el plan", "genera mi plan", "genera el plan", "asi esta bien", "con esto alcanza",
+  "give me my plan", "give me the plan", "generate my plan", "generate the plan", "thats enough", "that is enough", "good enough",
+  "me de meu plano", "me de o plano", "me da meu plano", "gera meu plano", "gere meu plano", "assim esta bom", "ja basta",
+  "donne moi mon plan", "donne moi le plan", "genere mon plan", "genere le plan", "ca suffit", "c est bon",
+  "gib mir meinen plan", "gib mir den plan", "erstelle meinen plan", "das reicht", "passt so",
+  "dammi il mio piano", "dammi il piano", "genera il mio piano", "va bene cosi", "basta cosi",
+  "プランをください", "計画をください", "プランを作って", "計画を作って", "これで十分",
+  "给我计划", "给我我的计划", "生成计划", "生成我的计划", "就这样吧", "够了",
+  "계획 주세요", "계획을 주세요", "플랜 주세요", "계획 만들어 주세요", "이제 됐어요", "충분해요",
+  "أعطني خطتي", "أعطني الخطة", "أنشئ خطتي", "هذا يكفي",
+  "मुझे मेरी योजना दो", "योजना दो", "योजना बनाओ", "बस इतना काफी है",
+].map(normalizarDecision);
+
+/** Palabras sueltas (solo en una respuesta de hasta 3 palabras). Fuera las
+ * ambiguas entre idiomas: "pronto" (listo en portugués e italiano, "luego" en
+ * español) y "ja" (sí en alemán). */
+const SUELTAS_DECISION = new Set(
+  ["ya", "listo", "ahora", "dale", "now", "ready", "done", "agora", "maintenant", "jetzt", "fertig", "ora", "adesso", "지금", "الآن", "अभी"].map(
+    normalizarDecision
+  )
+);
+
+/** Chino y japonés no separan palabras: la frase se busca dentro del texto. */
+const SIN_ESPACIOS = /[\p{Script=Han}\p{Script=Hiragana}\p{Script=Katakana}]/u;
 
 /** Port de pregunta_dirigida: pregunta adaptada para un nodo elegido por
  * la brujula en la extension dirigida, sin pasar por el contrato completo

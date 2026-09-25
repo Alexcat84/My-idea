@@ -293,7 +293,7 @@ export async function avanzarReporte(
   if (valor !== null) {
     numerosActualizados[campo] = {
       valor,
-      unidad: unidadDeclaradaCampo(campo, estado.tipoOferta, estado.unidadVenta),
+      unidad: unidadDeclaradaCampo(campo, estado.tipoOferta, estado.unidadVenta, idiomas.documento),
       texto_original: respuesta,
       session_id: null,
       updated_at: new Date().toISOString(),

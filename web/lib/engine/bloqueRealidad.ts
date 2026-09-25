@@ -25,6 +25,10 @@ const PLURAL = (n: number, sing: string, plur: string) => `${n} ${n === 1 ? sing
  * El bloque de realidad, o null si no hay nada medido que contar (proyecto
  * recién nacido sin plan vigente ni avances).
  */
+// i18n F5: este bloque NO se muestra a nadie: es entrada de la IA (va dentro
+// del mensaje de seguimiento), y la regla 8-bis de SYSTEM_PLAN lo nombra por su
+// rótulo en español ("Mi realidad medida"). Se queda en español en cualquier
+// idioma; la IA escribe el plan en el de la idea (lib/i18n/idiomaSalida).
 export function construirBloqueRealidad(a: Analytics): string | null {
   const u = a.universal;
   if (!u.planVigenteAt && u.accionesHechas === 0) return null;

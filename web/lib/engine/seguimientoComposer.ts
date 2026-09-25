@@ -95,6 +95,9 @@ function lista(items: ItemParaComponer[], estado: ChecklistEstado): string[] {
  * Gestor de estados: las RETIRADAS (no_aplica) NO se componen como pendientes.
  * Van en su propia sección, marcadas para que el intérprete no las vuelva a
  * proponer: retirar una tarea es una decisión del usuario, no un olvido. */
+// i18n F5: el mensaje compuesto es ENTRADA de la IA (y queda como
+// mensaje_entrada de la sesión, que ninguna pantalla lee): se queda en español;
+// la IA responde en el idioma de la idea (lib/i18n/idiomaSalida).
 export function componerMensajeSeguimiento(e: EntradaSeguimiento): string {
   const partes: string[] = ["Desde el último plan, este es mi avance real:"];
   const orden: ChecklistEstado[] = ["hecho", "en_proceso", "empezado", "pendiente"];
