@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PCE0109",
+  "intento": 0,
+  "usd": 0.229004,
+  "turnos": 1,
+  "duracion_s": 14.7,
+  "pared_s": 15.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 50381,
+  "tokens_out": 1374,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PCE0109\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [1031, 1033, 1035], \"cita\": \"regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response.\", \"datos_sin_respaldo\": [\"análisis de sensibilidad (técnica o herramienta concreta que el libro no menciona)\"], \"razon\": \"El libro muestra con Ginna que una regla válida tras TMI fue dañina en otro contexto. Por eso va en la misma dirección examinar las reglas nuevas en distintos contextos, y no es contrario. Pero el 'análisis de sensibilidad' es una herramienta que el libro no propone. Además, el libro advierte que no se pueden prever todos los escenarios.\", \"paso_fiel\": \"Antes de adoptar una nueva regla tras un accidente, examinar en qué otros contextos operativos podría resultar contraproducente, asumiendo que no se pueden prever todos los escenarios ni prohibir universalmente una respuesta humana.\"}\n```",
+ "parseado": {
+  "id": "PCE0109",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   1031,
+   1033,
+   1035
+  ],
+  "cita": "regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems such as nuclear power plants, and so cannot universally proscribe particular types of human response.",
+  "datos_sin_respaldo": [
+   "análisis de sensibilidad (técnica o herramienta concreta que el libro no menciona)"
+  ],
+  "razon": "El libro muestra con Ginna que una regla válida tras TMI fue dañina en otro contexto. Por eso va en la misma dirección examinar las reglas nuevas en distintos contextos, y no es contrario. Pero el 'análisis de sensibilidad' es una herramienta que el libro no propone. Además, el libro advierte que no se pueden prever todos los escenarios.",
+  "paso_fiel": "Antes de adoptar una nueva regla tras un accidente, examinar en qué otros contextos operativos podría resultar contraproducente, asumiendo que no se pueden prever todos los escenarios ni prohibir universalmente una respuesta humana."
+ }
+}

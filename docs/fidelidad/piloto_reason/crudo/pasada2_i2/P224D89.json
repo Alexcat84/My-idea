@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P224D89",
+  "intento": 0,
+  "usd": 0.171156,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37909,
+  "tokens_out": 976,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P224D89\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1006, 1012, 1547], \"cita\": \"The scope of permitted action shrinks to such an extent that procedures are either violated routinely, or on those occasions when operational necessity demands it. [...] Most experienced workers know approximately where the ‘edge’ between safety and disaster lies\", \"datos_sin_respaldo\": [], \"razon\": \"El libro afirma que las violaciones necesarias acaban volviéndose rutinarias (L1547) y que los trabajadores experimentados conocen el límite real (L1012). Consultarlos para detectar dónde el procedimiento impide trabajar concreta el diagnóstico del nodo. No aconseja legitimar atajos ni contradice el libro. La consulta es un medio operativo sin dato nuevo.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P224D89",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1006,
+   1012,
+   1547
+  ],
+  "cita": "The scope of permitted action shrinks to such an extent that procedures are either violated routinely, or on those occasions when operational necessity demands it. [...] Most experienced workers know approximately where the ‘edge’ between safety and disaster lies",
+  "datos_sin_respaldo": [],
+  "razon": "El libro afirma que las violaciones necesarias acaban volviéndose rutinarias (L1547) y que los trabajadores experimentados conocen el límite real (L1012). Consultarlos para detectar dónde el procedimiento impide trabajar concreta el diagnóstico del nodo. No aconseja legitimar atajos ni contradice el libro. La consulta es un medio operativo sin dato nuevo.",
+  "paso_fiel": ""
+ }
+}

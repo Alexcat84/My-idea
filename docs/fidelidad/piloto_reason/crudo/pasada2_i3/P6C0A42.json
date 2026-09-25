@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P6C0A42",
+  "intento": 0,
+  "usd": 0.208264,
+  "turnos": 1,
+  "duracion_s": 14.6,
+  "pared_s": 15.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45876,
+  "tokens_out": 1238,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P6C0A42\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [3965, 3971, 4429, 4478], \"cita\": \"it is very difficult to identify exactly when things started to go wrong since each step and each decision proceeded naturally from the last. ... take a close, continuing and proactive interest in all the varied factors affecting the safety\", \"datos_sin_respaldo\": [\"en tu calendario\"], \"tambien_anadido\": false, \"razon\": \"El libro describe la erosión insidiosa de los estándares y pide un interés continuado y proactivo. También respalda revisiones sucesivas o a intervalos regulares (perfiles sucesivos, Safety Case actualizado). No es contrario. El calendario es una herramienta concreta que el libro no menciona. La periodicidad tiene respaldo indirecto.\", \"paso_fiel\": \"Revisa de forma continuada y proactiva las desviaciones que has ido aceptando, comparándolas con tus estándares originales, porque su erosión es gradual y cada decisión parece seguir naturalmente a la anterior.\"}\n```",
+ "parseado": {
+  "id": "P6C0A42",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   3965,
+   3971,
+   4429,
+   4478
+  ],
+  "cita": "it is very difficult to identify exactly when things started to go wrong since each step and each decision proceeded naturally from the last. ... take a close, continuing and proactive interest in all the varied factors affecting the safety",
+  "datos_sin_respaldo": [
+   "en tu calendario"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro describe la erosión insidiosa de los estándares y pide un interés continuado y proactivo. También respalda revisiones sucesivas o a intervalos regulares (perfiles sucesivos, Safety Case actualizado). No es contrario. El calendario es una herramienta concreta que el libro no menciona. La periodicidad tiene respaldo indirecto.",
+  "paso_fiel": "Revisa de forma continuada y proactiva las desviaciones que has ido aceptando, comparándolas con tus estándares originales, porque su erosión es gradual y cada decisión parece seguir naturalmente a la anterior."
+ }
+}

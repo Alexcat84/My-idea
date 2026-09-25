@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P200A86",
+  "intento": 0,
+  "usd": 0.17176000000000002,
+  "turnos": 1,
+  "duracion_s": 9.9,
+  "pared_s": 11.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39225,
+  "tokens_out": 743,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P200A86\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2596, 2598, 5639, 5701], \"cita\": \"managers should regularly measure and improve those processes--design, hardware, training, procedures, maintenance, planning, budgeting, communication, goal conflicts, and the like--that are known to be implicated in the occurrence of organizational accidents.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro pide medir con regularidad los procesos organizativos genéricos (mantenimiento, planificación, comunicación), con 'health checks' periódicos. Recalca que estos procesos son comunes a todos los dominios (L5639, L5701). 'Periódicas' equivale a 'regularly' sin fijar frecuencia. 'Auditorías' concreta los 'health checks' en la misma dirección, sin aportar datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P200A86",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2596,
+   2598,
+   5639,
+   5701
+  ],
+  "cita": "managers should regularly measure and improve those processes--design, hardware, training, procedures, maintenance, planning, budgeting, communication, goal conflicts, and the like--that are known to be implicated in the occurrence of organizational accidents.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro pide medir con regularidad los procesos organizativos genéricos (mantenimiento, planificación, comunicación), con 'health checks' periódicos. Recalca que estos procesos son comunes a todos los dominios (L5639, L5701). 'Periódicas' equivale a 'regularly' sin fijar frecuencia. 'Auditorías' concreta los 'health checks' en la misma dirección, sin aportar datos nuevos.",
+  "paso_fiel": ""
+ }
+}

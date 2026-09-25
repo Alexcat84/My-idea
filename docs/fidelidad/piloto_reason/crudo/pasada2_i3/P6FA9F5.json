@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P6FA9F5",
+  "intento": 0,
+  "usd": 0.17453200000000002,
+  "turnos": 1,
+  "duracion_s": 12.0,
+  "pared_s": 13.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38448,
+  "tokens_out": 1037,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P6FA9F5\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1021, 1033, 1035, 973, 821, 1145], \"cita\": \"regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems ... and so cannot universally proscribe particular types of human response. / we need to be cautious about defensive developments\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro advierte que los 'fixes' posteriores a un accidente pueden causar el siguiente (Ginna), y pide cautela y conocer los peligros de las defensas. Evaluar antes dónde una nueva regla sería contraproducente sigue esa dirección. El paso no pretende prever todos los escenarios ni sustituye la mejora proactiva de procesos. No añade cifras, herramientas ni responsables.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P6FA9F5",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1021,
+   1033,
+   1035,
+   973,
+   821,
+   1145
+  ],
+  "cita": "regulators--just as much as system designers--cannot foresee all the possible scenarios of failure in complex, tightly-coupled and highly interactive systems ... and so cannot universally proscribe particular types of human response. / we need to be cautious about defensive developments",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro advierte que los 'fixes' posteriores a un accidente pueden causar el siguiente (Ginna), y pide cautela y conocer los peligros de las defensas. Evaluar antes dónde una nueva regla sería contraproducente sigue esa dirección. El paso no pretende prever todos los escenarios ni sustituye la mejora proactiva de procesos. No añade cifras, herramientas ni responsables.",
+  "paso_fiel": ""
+ }
+}

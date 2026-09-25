@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_074",
+  "intento": 0,
+  "usd": 0.16209199999999999,
+  "turnos": 1,
+  "duracion_s": 15.9,
+  "pared_s": 17.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32448,
+  "tokens_out": 1615,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PDE8988\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"periódicamente\"],\n    \"clase\": \"SIN_COBERTURA\",\n    \"lineas\": [2259, 2297, 2299, 2311],\n    \"razon\": \"El libro no habla de revisar ni ajustar recordatorios. Los llama 'primeros auxilios', no solución permanente, y propone rediseñar. El paso añade una frecuencia sin respaldo.\"\n  },\n  {\n    \"id\": \"PEB1118\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [5190, 5196],\n    \"razon\": \"El libro favorece la comunicación cara a cara, pero la cita admite sustitutos como el correo electrónico. Conviene revisar el matiz de 'sobre canales impersonales'.\"\n  },\n  {\n    \"id\": \"P3A8CEC\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2520, 2533, 2535, 2547, 2568, 2598],\n    \"razon\": \"Va en la dirección del libro, pero omite que la posición debe medirse con indicadores de proceso. Los datos de resultados (accidentes) revelan poco sobre la posición.\"\n  },\n  {\n    \"id\": \"P508499\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [263, 5742, 5748],\n    \"razon\": \"El libro menciona la disponibilidad de evidencia solo como una limitación. Su criterio para fijar límites es lo que los gestores pueden controlar. El paso invierte esa prioridad.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PDE8988",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "periódicamente"
+   ],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    2259,
+    2297,
+    2299,
+    2311
+   ],
+   "razon": "El libro no habla de revisar ni ajustar recordatorios. Los llama 'primeros auxilios', no solución permanente, y propone rediseñar. El paso añade una frecuencia sin respaldo."
+  },
+  {
+   "id": "PEB1118",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5190,
+    5196
+   ],
+   "razon": "El libro favorece la comunicación cara a cara, pero la cita admite sustitutos como el correo electrónico. Conviene revisar el matiz de 'sobre canales impersonales'."
+  },
+  {
+   "id": "P3A8CEC",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2520,
+    2533,
+    2535,
+    2547,
+    2568,
+    2598
+   ],
+   "razon": "Va en la dirección del libro, pero omite que la posición debe medirse con indicadores de proceso. Los datos de resultados (accidentes) revelan poco sobre la posición."
+  },
+  {
+   "id": "P508499",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    263,
+    5742,
+    5748
+   ],
+   "razon": "El libro menciona la disponibilidad de evidencia solo como una limitación. Su criterio para fijar límites es lo que los gestores pueden controlar. El paso invierte esa prioridad."
+  }
+ ]
+}

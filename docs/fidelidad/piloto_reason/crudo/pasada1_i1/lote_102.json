@@ -1,0 +1,71 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_102",
+  "intento": 0,
+  "usd": 0.16255999999999998,
+  "turnos": 1,
+  "duracion_s": 17.5,
+  "pared_s": 18.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32415,
+  "tokens_out": 1645,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P76619A\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [1085, 1095, 1141], \"razon\": \"El libro muestra que las falsas alarmas destruyen la confianza en los avisos. Reducirlas sin perder sensibilidad va en su misma dirección y no choca con nada.\"},\n  {\"id\": \"P49D204\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [3829, 2716, 4724], \"razon\": \"L3829 lo dice literalmente. Pero L4724 afirma que cambiar valores colectivos es casi imposible y que se actúa sobre prácticas; hay matiz de vía a revisar.\"},\n  {\"id\": \"PCFEAB3\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5572, 5578, 5582, 5586, 5590, 5603, 5611, 5639], \"razon\": \"El libro define los cuatro tipos de riesgo primarios y su peso distinto según el dominio. Mapearlos para el propio dominio es su uso directo.\"},\n  {\"id\": \"PCE507F\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4765, 5027, 5063, 5065, 5077], \"razon\": \"El 'solo' deja fuera sabotaje, malevolencia, abuso de sustancias e imprudencia temeraria, que el libro sanciona severamente. Además sitúa la negligencia en zona gris, no como sancionable automática.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P76619A",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    1085,
+    1095,
+    1141
+   ],
+   "razon": "El libro muestra que las falsas alarmas destruyen la confianza en los avisos. Reducirlas sin perder sensibilidad va en su misma dirección y no choca con nada."
+  },
+  {
+   "id": "P49D204",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    3829,
+    2716,
+    4724
+   ],
+   "razon": "L3829 lo dice literalmente. Pero L4724 afirma que cambiar valores colectivos es casi imposible y que se actúa sobre prácticas; hay matiz de vía a revisar."
+  },
+  {
+   "id": "PCFEAB3",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5572,
+    5578,
+    5582,
+    5586,
+    5590,
+    5603,
+    5611,
+    5639
+   ],
+   "razon": "El libro define los cuatro tipos de riesgo primarios y su peso distinto según el dominio. Mapearlos para el propio dominio es su uso directo."
+  },
+  {
+   "id": "PCE507F",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4765,
+    5027,
+    5063,
+    5065,
+    5077
+   ],
+   "razon": "El 'solo' deja fuera sabotaje, malevolencia, abuso de sustancias e imprudencia temeraria, que el libro sanciona severamente. Además sitúa la negligencia en zona gris, no como sancionable automática."
+  }
+ ]
+}

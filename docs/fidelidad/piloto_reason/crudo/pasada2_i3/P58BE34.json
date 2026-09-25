@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P58BE34",
+  "intento": 0,
+  "usd": 0.148528,
+  "turnos": 1,
+  "duracion_s": 9.9,
+  "pared_s": 12.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33492,
+  "tokens_out": 728,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P58BE34\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1934, 1914, 1887, 293, 158], \"cita\": \"maintenance errors--like human failures in any other sphere--are not just isolated causes; they are themselves the consequences of upstream organizational factors or latent conditions.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro presenta los errores de mantenimiento de estos casos como consecuencia de condiciones latentes (L1934). Los tres ejemplos del paso están en el texto: comunicación en el relevo y permiso de trabajo en Piper Alpha (L1914), procedimientos no estándar en el vuelo 191 (L1887). Mapearlos caso a caso concreta el método de L293 sin añadir datos.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P58BE34",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1934,
+   1914,
+   1887,
+   293,
+   158
+  ],
+  "cita": "maintenance errors--like human failures in any other sphere--are not just isolated causes; they are themselves the consequences of upstream organizational factors or latent conditions.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro presenta los errores de mantenimiento de estos casos como consecuencia de condiciones latentes (L1934). Los tres ejemplos del paso están en el texto: comunicación en el relevo y permiso de trabajo en Piper Alpha (L1914), procedimientos no estándar en el vuelo 191 (L1887). Mapearlos caso a caso concreta el método de L293 sin añadir datos.",
+  "paso_fiel": ""
+ }
+}

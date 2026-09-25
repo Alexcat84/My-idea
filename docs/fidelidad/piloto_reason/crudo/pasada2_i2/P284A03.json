@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P284A03",
+  "intento": 0,
+  "usd": 0.19302,
+  "turnos": 1,
+  "duracion_s": 12.6,
+  "pared_s": 13.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43275,
+  "tokens_out": 996,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P284A03\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [918, 942, 3101, 3825, 896], \"cita\": \"either the user makes a wrong assessment of the active mode at a particular time or the user fails to notice transitions in mode status / the failure of designed items to provide feedback to the user (the evaluation gulf)\", \"datos_sin_respaldo\": [], \"razon\": \"El libro atribuye la confusión de modos a que el operador no percibe las transiciones y a que la automatización oculta cambios y aumenta la carga en picos de demanda. También señala la falta de retroalimentación como fallo de diseño. Hacer visibles los cambios de modo concreta esto en la misma dirección. No es una defensa añadida que el libro desaconseje.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P284A03",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   918,
+   942,
+   3101,
+   3825,
+   896
+  ],
+  "cita": "either the user makes a wrong assessment of the active mode at a particular time or the user fails to notice transitions in mode status / the failure of designed items to provide feedback to the user (the evaluation gulf)",
+  "datos_sin_respaldo": [],
+  "razon": "El libro atribuye la confusión de modos a que el operador no percibe las transiciones y a que la automatización oculta cambios y aumenta la carga en picos de demanda. También señala la falta de retroalimentación como fallo de diseño. Hacer visibles los cambios de modo concreta esto en la misma dirección. No es una defensa añadida que el libro desaconseje.",
+  "paso_fiel": ""
+ }
+}

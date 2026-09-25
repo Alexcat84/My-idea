@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_062",
+  "intento": 0,
+  "usd": 0.171428,
+  "turnos": 1,
+  "duracion_s": 17.6,
+  "pared_s": 18.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34062,
+  "tokens_out": 1759,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P19EA5A\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [856, 868, 908, 942, 872],\n    \"razon\": \"El libro pide conocer los modos y la logica de seleccion (L868), pero lo llama 'tall order' y atribuye la causa al diseño torpe. Formarse en todos los modos como via principal podria chocar.\"\n  },\n  {\n    \"id\": \"P64B6DF\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"Sistema de Comando de Incidentes\"],\n    \"clase\": \"INFERIDO-ANADIDO\",\n    \"lineas\": [4769, 5164, 5174, 5178, 5208],\n    \"razon\": \"El libro no menciona ese sistema. Atribuye la flexibilidad a una cultura previa, a la formacion y al respeto. Weick dice que las reglas o la estandarizacion sirven poco ante emergencias sin precedente.\"\n  },\n  {\n    \"id\": \"P3B331C\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"inspectores\", \"procedimientos de permiso de trabajo\"],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [4025, 4027, 4033, 4039, 4043],\n    \"razon\": \"El inspector carecia de experiencia en permisos de trabajo (L4027). Pero Cullen cuestiona de raiz ese tipo de inspeccion y propone otro modo de regulacion: formar inspectores podria no bastar.\"\n  },\n  {\n    \"id\": \"PDCDF93\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": true,\n    \"datos\": [\"hot washups\"],\n    \"clase\": \"FIEL\",\n    \"lineas\": [5134],\n    \"razon\": \"El libro describe las investigaciones inmediatas ('hot washups' de la US Navy) que se hacen cuando ocurren errores en las organizaciones de alta confiabilidad.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P19EA5A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    856,
+    868,
+    908,
+    942,
+    872
+   ],
+   "razon": "El libro pide conocer los modos y la logica de seleccion (L868), pero lo llama 'tall order' y atribuye la causa al diseño torpe. Formarse en todos los modos como via principal podria chocar."
+  },
+  {
+   "id": "P64B6DF",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "Sistema de Comando de Incidentes"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    4769,
+    5164,
+    5174,
+    5178,
+    5208
+   ],
+   "razon": "El libro no menciona ese sistema. Atribuye la flexibilidad a una cultura previa, a la formacion y al respeto. Weick dice que las reglas o la estandarizacion sirven poco ante emergencias sin precedente."
+  },
+  {
+   "id": "P3B331C",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "inspectores",
+    "procedimientos de permiso de trabajo"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4025,
+    4027,
+    4033,
+    4039,
+    4043
+   ],
+   "razon": "El inspector carecia de experiencia en permisos de trabajo (L4027). Pero Cullen cuestiona de raiz ese tipo de inspeccion y propone otro modo de regulacion: formar inspectores podria no bastar."
+  },
+  {
+   "id": "PDCDF93",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "hot washups"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5134
+   ],
+   "razon": "El libro describe las investigaciones inmediatas ('hot washups' de la US Navy) que se hacen cuando ocurren errores en las organizaciones de alta confiabilidad."
+  }
+ ]
+}

@@ -1,0 +1,65 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_022",
+  "intento": 0,
+  "usd": 0.15656399999999998,
+  "turnos": 1,
+  "duracion_s": 13.9,
+  "pared_s": 15.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33011,
+  "tokens_out": 1226,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P473E2E\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4757, 2581, 2687], \"razon\": \"El libro pide explicitamente crear un sistema de informacion que recolecte, analice y difunda informacion de incidentes y cuasi-incidentes, base de la cultura informada.\"},\n  {\"id\": \"P43A862\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5184, 5186, 5196], \"razon\": \"Weick, citado en la seccion de cultura flexible, recomienda culturas que valoran las historias de guerra y la comunicacion cara a cara para reducir la brecha de variedad requerida.\"},\n  {\"id\": \"P4661D7\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [5178, 5208, 4693], \"razon\": \"El libro dice que los valores y supuestos compartidos permiten la coordinacion descentralizada. Matiz: L4693 afirma que la cultura organizacional se forma sobre todo por practicas, no por valores.\"},\n  {\"id\": \"PDC5139\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [4027, 4039, 4033, 4454], \"razon\": \"El inspector no hizo la auditoria completa por falta de tiempo. Pero Cullen cuestiona el tipo de inspeccion en si, y el libro subraya los recursos limitados; mas tiempo podria no bastar.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P473E2E",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4757,
+    2581,
+    2687
+   ],
+   "razon": "El libro pide explicitamente crear un sistema de informacion que recolecte, analice y difunda informacion de incidentes y cuasi-incidentes, base de la cultura informada."
+  },
+  {
+   "id": "P43A862",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5184,
+    5186,
+    5196
+   ],
+   "razon": "Weick, citado en la seccion de cultura flexible, recomienda culturas que valoran las historias de guerra y la comunicacion cara a cara para reducir la brecha de variedad requerida."
+  },
+  {
+   "id": "P4661D7",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    5178,
+    5208,
+    4693
+   ],
+   "razon": "El libro dice que los valores y supuestos compartidos permiten la coordinacion descentralizada. Matiz: L4693 afirma que la cultura organizacional se forma sobre todo por practicas, no por valores."
+  },
+  {
+   "id": "PDC5139",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    4027,
+    4039,
+    4033,
+    4454
+   ],
+   "razon": "El inspector no hizo la auditoria completa por falta de tiempo. Pero Cullen cuestiona el tipo de inspeccion en si, y el libro subraya los recursos limitados; mas tiempo podria no bastar."
+  }
+ ]
+}

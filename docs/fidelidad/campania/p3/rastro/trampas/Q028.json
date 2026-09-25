@@ -1,0 +1,48 @@
+[
+ {
+  "titulo": "Ajuste Automatico para Garantizar Cero Defectos",
+  "resumen": "Una distribucion estrecha de dimensiones es una ventaja economica que hay que proteger. Los dispositivos que corrigen cada pieza para mantenerla dentro de especificacion desplazan la distribucion de un lado a otro, aumentan la variacion y elevan las perdidas aunque el conteo de defectos baje a cero.",
+  "texto": "Instalar un servomecanismo que corrija automaticamente la maquina tras cada pieza para mantenerla siempre dentro de especificacion",
+  "tipo": "CONTRARIO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L3028",
+  "cita": "Gadgets and servomechanisms that by mechanical or electronic circuits guarantee zero defects will destroy the advantage of a beautiful narrow distribution of dimensions. They slide the distribution back and forth inside the specification limits, achieving zero defects and at the same time driving losses and costs to the maximum.",
+  "explicacion": "El paso recomienda justo lo que el libro advierte que falla: los servomecanismos que corrigen pieza a pieza para lograr cero defectos aplican las reglas 2, 3 o 4 del embudo, desplazan la distribucion dentro de los limites y llevan perdidas y costos al maximo ('Better off than on')."
+ },
+ {
+  "titulo": "Circulos de Calidad como Punto de Partida",
+  "resumen": "Los circulos de calidad solo prosperan cuando la direccion actua sobre sus recomendaciones y elimina los obstaculos que reportan. Copiarlos sin cambiar antes la forma de dirigir los condena a desintegrarse en pocos meses por frustracion.",
+  "texto": "Empezar la transformacion formando circulos de calidad entre los operarios, antes de involucrar a la direccion",
+  "tipo": "CONTRARIO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L3116",
+  "cita": "Most Japanese managers know that the establishment of them is not the first but the last step in building a corporate culture that will support a company’s total commitment to product quality and high productivity.",
+  "explicacion": "El paso invierte el orden que da el libro: los circulos de calidad son el ultimo paso, no el primero. El libro insiste ademas en que un buen lugar para empezar es la propia direccion (L2962) y relata que los circulos creados entre los operarios sin educar antes a la direccion se desintegraron (L3100)."
+ },
+ {
+  "titulo": "Muestreo estratificado con seguimiento a no respondientes en encuestas de clientes",
+  "resumen": "Enviar un cuestionario a todos los compradores y analizar solo las respuestas que regresan produce conclusiones poco fiables, aunque respondan muchos. Es mejor encuestar una muestra reducida y bien seleccionada y buscar en persona a quienes no respondieron, con menor costo y un grado de confianza conocido.",
+  "texto": "Entrevistar en persona a los no respondientes dentro de los 30 dias posteriores al envio del cuestionario",
+  "tipo": "ANADIDO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L5009",
+  "cita": "A simple modification, well known,11 would be to send out questionnaires to only a sample of a thousand purchasers, appropriately selected; then to follow up by personal interview with the nonrespondents.",
+  "dato": "plazo de 30 dias para la entrevista de seguimiento",
+  "explicacion": "El libro respalda el seguimiento por entrevista personal a los no respondientes, pero no fija ningun plazo. Busque con Grep '30 days', '30-day' y 'thirty days' en todo el texto y no aparecen; 'thirty' solo sale en contextos ajenos (L8845 y L8958)."
+ },
+ {
+  "titulo": "Definicion Operacional de Seleccion Aleatoria",
+  "resumen": "Una muestra no es aleatoria por si misma: lo que se juzga es el procedimiento de seleccion. Un procedimiento aleatorio queda definido operacionalmente al numerar el marco muestral y leer numeros aleatorios sin duplicar, siguiendo un metodo escrito de antemano.",
+  "texto": "Generar los numeros aleatorios con la funcion ALEATORIO.ENTRE de Excel u otra hoja de calculo equivalente",
+  "tipo": "ANADIDO",
+  "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+  "lineas": "L6842",
+  "cita": "It is presumed that one uses a standard table of random numbers, or generates random numbers under the guidance of a mathematician who knows the possible fallacies of generation of random numbers.",
+  "dato": "funcion ALEATORIO.ENTRE de Excel u hoja de calculo",
+  "explicacion": "El libro pide un procedimiento escrito de antemano con una tabla estandar de numeros aleatorios, o bien generarlos bajo la guia de un matematico que conozca sus trampas. No nombra ninguna herramienta de software. Busque con Grep 'Excel', 'spreadsheet' y 'aleatorio' y no aparecen en el texto."
+ }
+]

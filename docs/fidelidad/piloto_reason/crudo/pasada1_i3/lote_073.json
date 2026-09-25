@@ -1,0 +1,96 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_073",
+  "intento": 0,
+  "usd": 0.175336,
+  "turnos": 1,
+  "duracion_s": 20.4,
+  "pared_s": 21.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33749,
+  "tokens_out": 2017,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PDEDCBB\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5164, 5170, 5174, 5178, 5208], \"razon\": \"El libro pide invertir en formación, pero la delegación depende de una cultura jerárquica previa y valores compartidos. El paso omite esa condición y la reduce a reconocer el momento.\"},\n {\"id\": \"P3DA05A\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"cada inspector\", \"lista fija de equipos y procedimientos\", \"en todas las visitas\", \"igual para todas las instalaciones\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4027, 4033, 4039, 4464, 4494], \"razon\": \"Según el libro, una lista fija igual para todas crea dificultades por la variedad y permite anticipar la inspección. Cullen cuestiona el tipo de inspección, no pide listas uniformes.\"},\n {\"id\": \"PF312D4\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"SafetyCulture\", \"listas digitales\", \"el técnico\", \"antes de cerrar la tarea\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [2218, 2250, 2263, 2267, 2279, 2289, 2293, 2311], \"razon\": \"SafetyCulture no aparece en el libro. Confirmar al cierre choca con el recordatorio contiguo al paso, y el libro llama primeros auxilios a los recordatorios.\"},\n {\"id\": \"PFECFB3\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [261, 263, 275, 277, 293, 2981, 3955], \"razon\": \"El libro apoya remontar a los factores organizacionales, pero limita el alcance a lo que los gestores pueden controlar. 'Cadena completa' puede contradecir esa regla de parada.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PDEDCBB",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4769,
+    5164,
+    5170,
+    5174,
+    5178,
+    5208
+   ],
+   "razon": "El libro pide invertir en formación, pero la delegación depende de una cultura jerárquica previa y valores compartidos. El paso omite esa condición y la reduce a reconocer el momento."
+  },
+  {
+   "id": "P3DA05A",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "cada inspector",
+    "lista fija de equipos y procedimientos",
+    "en todas las visitas",
+    "igual para todas las instalaciones"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4027,
+    4033,
+    4039,
+    4464,
+    4494
+   ],
+   "razon": "Según el libro, una lista fija igual para todas crea dificultades por la variedad y permite anticipar la inspección. Cullen cuestiona el tipo de inspección, no pide listas uniformes."
+  },
+  {
+   "id": "PF312D4",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "SafetyCulture",
+    "listas digitales",
+    "el técnico",
+    "antes de cerrar la tarea"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    2218,
+    2250,
+    2263,
+    2267,
+    2279,
+    2289,
+    2293,
+    2311
+   ],
+   "razon": "SafetyCulture no aparece en el libro. Confirmar al cierre choca con el recordatorio contiguo al paso, y el libro llama primeros auxilios a los recordatorios."
+  },
+  {
+   "id": "PFECFB3",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    261,
+    263,
+    275,
+    277,
+    293,
+    2981,
+    3955
+   ],
+   "razon": "El libro apoya remontar a los factores organizacionales, pero limita el alcance a lo que los gestores pueden controlar. 'Cadena completa' puede contradecir esa regla de parada."
+  }
+ ]
+}

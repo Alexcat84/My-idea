@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_019",
+  "intento": 0,
+  "usd": 0.158356,
+  "turnos": 1,
+  "duracion_s": 12.8,
+  "pared_s": 13.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33864,
+  "tokens_out": 1145,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC813F2\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [196, 198, 580, 1820, 1914, 4027], \"razon\": \"El libro trata los fallos de mantenimiento como condiciones latentes organizacionales (comunicación, permisos de trabajo, procedimientos). Mapearlas caso por caso sigue esa misma dirección.\"},\n  {\"id\": \"PE2A97C\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4433, 4435, 4462], \"razon\": \"El libro dice que definir un Safety Case adecuado no es tarea fácil y que los criterios quizá sean incognoscibles. Advierte contra juzgarlo como lista de verificación; el paso lo presenta como sencillo.\"},\n  {\"id\": \"P692939\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [5067, 5077, 4820, 4765], \"razon\": \"El libro vincula las sanciones con la moral, la confianza, el resentimiento y la percepción de justicia. Evaluar ese impacto es coherente y no choca.\"},\n  {\"id\": \"P29B0A0\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [967, 971, 443], \"razon\": \"El libro señala como precursor la falta de personal de QA en horario nocturno, y que la ausencia de QA permitió aprobar trabajos defectuosos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC813F2",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    196,
+    198,
+    580,
+    1820,
+    1914,
+    4027
+   ],
+   "razon": "El libro trata los fallos de mantenimiento como condiciones latentes organizacionales (comunicación, permisos de trabajo, procedimientos). Mapearlas caso por caso sigue esa misma dirección."
+  },
+  {
+   "id": "PE2A97C",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4433,
+    4435,
+    4462
+   ],
+   "razon": "El libro dice que definir un Safety Case adecuado no es tarea fácil y que los criterios quizá sean incognoscibles. Advierte contra juzgarlo como lista de verificación; el paso lo presenta como sencillo."
+  },
+  {
+   "id": "P692939",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    5067,
+    5077,
+    4820,
+    4765
+   ],
+   "razon": "El libro vincula las sanciones con la moral, la confianza, el resentimiento y la percepción de justicia. Evaluar ese impacto es coherente y no choca."
+  },
+  {
+   "id": "P29B0A0",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    967,
+    971,
+    443
+   ],
+   "razon": "El libro señala como precursor la falta de personal de QA en horario nocturno, y que la ausencia de QA permitió aprobar trabajos defectuosos."
+  }
+ ]
+}

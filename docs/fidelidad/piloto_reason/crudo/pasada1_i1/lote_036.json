@@ -1,0 +1,70 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_036",
+  "intento": 0,
+  "usd": 0.16328399999999998,
+  "turnos": 1,
+  "duracion_s": 14.2,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34801,
+  "tokens_out": 1204,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P89FC31\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4027, 4033, 4037, 4039, 3213, 1571, 1575, 2994], \"razon\": \"Cullen critica la falta de checklist. Pero el Director de Seguridad (con cierta simpatía del autor) advierte que listas fijas generan dificultades y anticipación. Tripod es deliberadamente no exhaustivo.\"},\n {\"id\": \"P78F944\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [3395, 3397, 3659], \"razon\": \"HEART exige primero asignar un tipo de tarea genérica y multiplicar por una proporción juzgada del factor EPC. Aplicar el peso multiplicador completo omite esa condición.\"},\n {\"id\": \"P65BBC9\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5190, 5200, 666, 5184], \"razon\": \"Weick, citado por Reason: equipos de personas divergentes tienen más variedad requerida y juntos ven más; importa poco el tipo de diversidad.\"},\n {\"id\": \"PAEB937\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5178, 5182, 5208], \"razon\": \"Primero centralizar socializando premisas compartidas para que la descentralización posterior quede coordinada. El éxito depende del establecimiento previo de una cultura fuerte.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P89FC31",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4027,
+    4033,
+    4037,
+    4039,
+    3213,
+    1571,
+    1575,
+    2994
+   ],
+   "razon": "Cullen critica la falta de checklist. Pero el Director de Seguridad (con cierta simpatía del autor) advierte que listas fijas generan dificultades y anticipación. Tripod es deliberadamente no exhaustivo."
+  },
+  {
+   "id": "P78F944",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    3395,
+    3397,
+    3659
+   ],
+   "razon": "HEART exige primero asignar un tipo de tarea genérica y multiplicar por una proporción juzgada del factor EPC. Aplicar el peso multiplicador completo omite esa condición."
+  },
+  {
+   "id": "P65BBC9",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5190,
+    5200,
+    666,
+    5184
+   ],
+   "razon": "Weick, citado por Reason: equipos de personas divergentes tienen más variedad requerida y juntos ven más; importa poco el tipo de diversidad."
+  },
+  {
+   "id": "PAEB937",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5178,
+    5182,
+    5208
+   ],
+   "razon": "Primero centralizar socializando premisas compartidas para que la descentralización posterior quede coordinada. El éxito depende del establecimiento previo de una cultura fuerte."
+  }
+ ]
+}

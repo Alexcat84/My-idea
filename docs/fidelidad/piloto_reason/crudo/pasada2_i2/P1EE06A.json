@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P1EE06A",
+  "intento": 0,
+  "usd": 0.16904400000000003,
+  "turnos": 1,
+  "duracion_s": 14.9,
+  "pared_s": 16.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36221,
+  "tokens_out": 1208,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1EE06A\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2654, 2658], \"cita\": \"The number of such diagnostic checks ranges typically from around eight to 16 and will vary from one type of system to another and their purpose is to identify those two or three processes that are in most urgent need of attention.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro respalda el rango de 8 a 16 chequeos y que los patrones del análisis de múltiples eventos guíen qué procesos muestrear (L2654). El paso presenta como pauta fija una cifra que el libro da como típica y omite su finalidad (aislar 2-3 procesos). Eso lo aparta en el detalle, no en la dirección, y no lleva a nada que el libro desaconseje.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P1EE06A",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2654,
+   2658
+  ],
+  "cita": "The number of such diagnostic checks ranges typically from around eight to 16 and will vary from one type of system to another and their purpose is to identify those two or three processes that are in most urgent need of attention.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro respalda el rango de 8 a 16 chequeos y que los patrones del análisis de múltiples eventos guíen qué procesos muestrear (L2654). El paso presenta como pauta fija una cifra que el libro da como típica y omite su finalidad (aislar 2-3 procesos). Eso lo aparta en el detalle, no en la dirección, y no lleva a nada que el libro desaconseje.",
+  "paso_fiel": ""
+ }
+}

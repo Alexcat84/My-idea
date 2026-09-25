@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P6DD1F4",
+  "intento": 0,
+  "usd": 0.139768,
+  "turnos": 1,
+  "duracion_s": 7.8,
+  "pared_s": 8.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31837,
+  "tokens_out": 621,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P6DD1F4\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4060, 4068, 4072, 4076, 4084, 158], \"cita\": \"no audit of F-28 operations, / no approved Airplane Operating Manual or Flight Operations Manual, / no Minimum Equipment List six months after the aircraft had entered service, / Dispatcher training and certification entirely in the hands of the air carriers\", \"datos_sin_respaldo\": [], \"razon\": \"Cada capa que cita el paso (manuales, auditorías, certificaciones, lista de equipo mínimo) aparece en el libro como defensa que falló en Dryden, y L158 las incluye entre las defensas 'soft'. Mapearlas concreta el concepto de red de seguridad en la misma dirección, sin datos nuevos. El libro no prescribe el inventario como tal, pero no lo contradice.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P6DD1F4",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4060,
+   4068,
+   4072,
+   4076,
+   4084,
+   158
+  ],
+  "cita": "no audit of F-28 operations, / no approved Airplane Operating Manual or Flight Operations Manual, / no Minimum Equipment List six months after the aircraft had entered service, / Dispatcher training and certification entirely in the hands of the air carriers",
+  "datos_sin_respaldo": [],
+  "razon": "Cada capa que cita el paso (manuales, auditorías, certificaciones, lista de equipo mínimo) aparece en el libro como defensa que falló en Dryden, y L158 las incluye entre las defensas 'soft'. Mapearlas concreta el concepto de red de seguridad en la misma dirección, sin datos nuevos. El libro no prescribe el inventario como tal, pero no lo contradice.",
+  "paso_fiel": ""
+ }
+}

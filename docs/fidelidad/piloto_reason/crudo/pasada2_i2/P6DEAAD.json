@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P6DEAAD",
+  "intento": 0,
+  "usd": 0.107076,
+  "turnos": 1,
+  "duracion_s": 14.2,
+  "pared_s": 15.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 20614,
+  "tokens_out": 1231,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P6DEAAD\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [2250, 2259, 2267, 2279, 2293], \"cita\": \"It should be located as closely as possible in both time and distance to the to-be-remembered (TBR) task step (contiguous). ... It should allow the actor to check off the number of discrete actions or items that should be included in the correct performance of the task (check).\", \"datos_sin_respaldo\": [\"listas digitales de SafetyCulture\", \"confirmación como ítem obligatorio antes de cerrar la tarea\"], \"razon\": \"El libro respalda reforzar los pasos propensos a omisión con recordatorios que permitan marcar y confirmar lo hecho (check, confirm), pero no nombra SafetyCulture ni listas digitales. Una lista de cierre se aparta en detalle del criterio de contigüidad, sin contradecirlo. La advertencia de 'primeros auxilios' no se contradice, porque el paso no la presenta como solución definitiva.\", \"paso_fiel\": \"Dotar a cada paso propenso a omisión de un recordatorio situado lo más cerca posible, en tiempo y lugar, de ese paso, que permita al técnico marcar los ítems o acciones que debe completar y confirmar que quedaron hechos.\"}\n```",
+ "parseado": {
+  "id": "P6DEAAD",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   2250,
+   2259,
+   2267,
+   2279,
+   2293
+  ],
+  "cita": "It should be located as closely as possible in both time and distance to the to-be-remembered (TBR) task step (contiguous). ... It should allow the actor to check off the number of discrete actions or items that should be included in the correct performance of the task (check).",
+  "datos_sin_respaldo": [
+   "listas digitales de SafetyCulture",
+   "confirmación como ítem obligatorio antes de cerrar la tarea"
+  ],
+  "razon": "El libro respalda reforzar los pasos propensos a omisión con recordatorios que permitan marcar y confirmar lo hecho (check, confirm), pero no nombra SafetyCulture ni listas digitales. Una lista de cierre se aparta en detalle del criterio de contigüidad, sin contradecirlo. La advertencia de 'primeros auxilios' no se contradice, porque el paso no la presenta como solución definitiva.",
+  "paso_fiel": "Dotar a cada paso propenso a omisión de un recordatorio situado lo más cerca posible, en tiempo y lugar, de ese paso, que permita al técnico marcar los ítems o acciones que debe completar y confirmar que quedaron hechos."
+ }
+}

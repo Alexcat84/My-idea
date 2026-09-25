@@ -1,0 +1,84 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_039",
+  "intento": 0,
+  "usd": 0.165732,
+  "turnos": 1,
+  "duracion_s": 15.2,
+  "pared_s": 16.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33693,
+  "tokens_out": 1548,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P42F66E\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4394, 4406, 4410, 4414], \"razon\": \"El tercer paso de la FSA segun la MSA es literalmente 'Consideration of alternative ways of managing those risks'. No hay choque.\"},\n {\"id\": \"PD7C017\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5892, 5834, 5894], \"razon\": \"El libro suma a los costes del accidente intangibles: reputacion, perdida de negocio, dificultades de reclutamiento. El paso los lleva al analisis de riesgo, en la misma direccion.\"},\n {\"id\": \"PCE5070\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 546, 550, 668, 686, 688, 3153, 5254], \"razon\": \"El libro dice que las senales, juntas, debian alarmar, y pregunta quien recopila la informacion. Pero advierte del sesgo retrospectivo: una senal solo avisa si sabes que desastre llega. El 'registro centralizado' no aparece.\"},\n {\"id\": \"PF2FC27\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1056, 1068, 1072, 1114, 1133, 1149, 821, 2650, 204], \"razon\": \"El libro advierte que anadir o reforzar defensas aumenta la complejidad y la opacidad, y puede favorecer la alineacion de agujeros. Prioriza corregir condiciones latentes. 'Reforzar capas' como via principal puede chocar.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P42F66E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4394,
+    4406,
+    4410,
+    4414
+   ],
+   "razon": "El tercer paso de la FSA segun la MSA es literalmente 'Consideration of alternative ways of managing those risks'. No hay choque."
+  },
+  {
+   "id": "PD7C017",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5892,
+    5834,
+    5894
+   ],
+   "razon": "El libro suma a los costes del accidente intangibles: reputacion, perdida de negocio, dificultades de reclutamiento. El paso los lleva al analisis de riesgo, en la misma direccion."
+  },
+  {
+   "id": "PCE5070",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    520,
+    546,
+    550,
+    668,
+    686,
+    688,
+    3153,
+    5254
+   ],
+   "razon": "El libro dice que las senales, juntas, debian alarmar, y pregunta quien recopila la informacion. Pero advierte del sesgo retrospectivo: una senal solo avisa si sabes que desastre llega. El 'registro centralizado' no aparece."
+  },
+  {
+   "id": "PF2FC27",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1056,
+    1068,
+    1072,
+    1114,
+    1133,
+    1149,
+    821,
+    2650,
+    204
+   ],
+   "razon": "El libro advierte que anadir o reforzar defensas aumenta la complejidad y la opacidad, y puede favorecer la alineacion de agujeros. Prioriza corregir condiciones latentes. 'Reforzar capas' como via principal puede chocar."
+  }
+ ]
+}

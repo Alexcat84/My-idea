@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_061",
+  "intento": 0,
+  "usd": 0.165196,
+  "turnos": 1,
+  "duracion_s": 17.5,
+  "pared_s": 18.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32974,
+  "tokens_out": 1665,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PE7F8DF\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"monitoreo continuo\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2520, 2568, 2598, 2638, 2658, 2765], \"razon\": \"'En vez de' reacción puede leerse como abandonar medidas reactivas; el libro exige ambas (L2638). Además habla de chequeos regulares cuya frecuencia depende del proceso, no de monitoreo continuo.\"},\n  {\"id\": \"P0E7328\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2170, 2250, 2872], \"razon\": \"El libro identifica de antemano los pasos vulnerables contando sus rasgos que provocan omisión, no por tasa histórica. Priorizar el historial reactivo puede invertir el enfoque proactivo.\"},\n  {\"id\": \"PAD2648\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2905, 1934, 196], \"razon\": \"El libro dice literalmente que identificar un error es el inicio de la búsqueda de causas, no el final.\"},\n  {\"id\": \"P9D6E40\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"protocolos\", \"expertos técnicos\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5164, 5174, 5208], \"razon\": \"Va en la dirección del libro, pero omite condiciones esenciales: volver al modo jerárquico, invertir en formación y tener antes una cultura jerárquica fuerte. Además usa 'protocolos formales' donde el libro describe un cambio cultural.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PE7F8DF",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "monitoreo continuo"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2520,
+    2568,
+    2598,
+    2638,
+    2658,
+    2765
+   ],
+   "razon": "'En vez de' reacción puede leerse como abandonar medidas reactivas; el libro exige ambas (L2638). Además habla de chequeos regulares cuya frecuencia depende del proceso, no de monitoreo continuo."
+  },
+  {
+   "id": "P0E7328",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2170,
+    2250,
+    2872
+   ],
+   "razon": "El libro identifica de antemano los pasos vulnerables contando sus rasgos que provocan omisión, no por tasa histórica. Priorizar el historial reactivo puede invertir el enfoque proactivo."
+  },
+  {
+   "id": "PAD2648",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2905,
+    1934,
+    196
+   ],
+   "razon": "El libro dice literalmente que identificar un error es el inicio de la búsqueda de causas, no el final."
+  },
+  {
+   "id": "P9D6E40",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "protocolos",
+    "expertos técnicos"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4769,
+    5164,
+    5174,
+    5208
+   ],
+   "razon": "Va en la dirección del libro, pero omite condiciones esenciales: volver al modo jerárquico, invertir en formación y tener antes una cultura jerárquica fuerte. Además usa 'protocolos formales' donde el libro describe un cambio cultural."
+  }
+ ]
+}

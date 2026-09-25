@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_067",
+  "intento": 0,
+  "usd": 0.16446,
+  "turnos": 1,
+  "duracion_s": 17.1,
+  "pared_s": 18.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32925,
+  "tokens_out": 1638,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P3A812A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5557, 5781, 5905, 5907, 293], \"razon\": \"El libro recomienda identificar y eliminar condiciones latentes de forma proactiva y revisar la integridad de las defensas como núcleo del modelo organizacional.\"},\n {\"id\": \"P0CBF22\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2905, 1934, 2876, 2880, 5641, 5712, 5742], \"razon\": \"El error es consecuencia, no causa; identificarlo es el inicio de la búsqueda. Matiz: no remontarse en exceso a factores remotos (L5712, L5742), sin choque con el paso.\"},\n {\"id\": \"P1DCAD2\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5603, 4296], \"razon\": \"El libro dice que el peso relativo de los riesgos varía con desarrollos tecnológicos y sociales; el paso lo operacionaliza en la misma dirección.\"},\n {\"id\": \"P76BA17\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"por escrito\", \"antes de decidir\"], \"clase\": \"SIN_COBERTURA\", \"lineas\": [4695, 4749, 4757, 5217, 5219, 2579], \"razon\": \"El libro no pide una justificación escrita previa; presenta la cultura de seguridad como meta esencial y advierte que lo difícil es actuar. Condicionar la decisión puede invertir el énfasis.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P3A812A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5557,
+    5781,
+    5905,
+    5907,
+    293
+   ],
+   "razon": "El libro recomienda identificar y eliminar condiciones latentes de forma proactiva y revisar la integridad de las defensas como núcleo del modelo organizacional."
+  },
+  {
+   "id": "P0CBF22",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2905,
+    1934,
+    2876,
+    2880,
+    5641,
+    5712,
+    5742
+   ],
+   "razon": "El error es consecuencia, no causa; identificarlo es el inicio de la búsqueda. Matiz: no remontarse en exceso a factores remotos (L5712, L5742), sin choque con el paso."
+  },
+  {
+   "id": "P1DCAD2",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5603,
+    4296
+   ],
+   "razon": "El libro dice que el peso relativo de los riesgos varía con desarrollos tecnológicos y sociales; el paso lo operacionaliza en la misma dirección."
+  },
+  {
+   "id": "P76BA17",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "por escrito",
+    "antes de decidir"
+   ],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    4695,
+    4749,
+    4757,
+    5217,
+    5219,
+    2579
+   ],
+   "razon": "El libro no pide una justificación escrita previa; presenta la cultura de seguridad como meta esencial y advierte que lo difícil es actuar. Condicionar la decisión puede invertir el énfasis."
+  }
+ ]
+}

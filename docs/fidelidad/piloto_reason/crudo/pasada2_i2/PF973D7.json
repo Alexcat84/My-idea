@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF973D7",
+  "intento": 0,
+  "usd": 0.204432,
+  "turnos": 1,
+  "duracion_s": 13.5,
+  "pared_s": 14.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 45143,
+  "tokens_out": 1193,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF973D7\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2583], \"cita\": \"The second symptom is the tick-off phenomenon. ... They treat safety measures like pieces of equipment. They put them in place, then tick them off as another job done. ... Simply implementing them is not enough. They have to be watched, worried about, tuned and adjusted.\", \"datos_sin_respaldo\": [], \"razon\": \"El verbo rector es 'Identificar' y lo que sigue define el fenomeno; no ordena tratar la seguridad como checklist. Coincide con el libro: poner la medida y tacharla frente a vigilarla y ajustarla. El libro lo presenta como sintoma de falta de cognisance; el paso lo convierte en accion de diagnostico. Tampoco condena los checklists en general.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF973D7",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2583
+  ],
+  "cita": "The second symptom is the tick-off phenomenon. ... They treat safety measures like pieces of equipment. They put them in place, then tick them off as another job done. ... Simply implementing them is not enough. They have to be watched, worried about, tuned and adjusted.",
+  "datos_sin_respaldo": [],
+  "razon": "El verbo rector es 'Identificar' y lo que sigue define el fenomeno; no ordena tratar la seguridad como checklist. Coincide con el libro: poner la medida y tacharla frente a vigilarla y ajustarla. El libro lo presenta como sintoma de falta de cognisance; el paso lo convierte en accion de diagnostico. Tampoco condena los checklists en general.",
+  "paso_fiel": ""
+ }
+}

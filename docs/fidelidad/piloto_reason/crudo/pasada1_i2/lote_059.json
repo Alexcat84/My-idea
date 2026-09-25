@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_059",
+  "intento": 0,
+  "usd": 0.170504,
+  "turnos": 1,
+  "duracion_s": 18.0,
+  "pared_s": 19.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33796,
+  "tokens_out": 1766,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P542BC4\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5178, 5182, 5208, 4693], \"razon\": \"Weick/Reason: centralizar y socializar antes de descentralizar. Matiz: el libro dice que la cultura organizacional nace sobre todo de prácticas compartidas, no de valores; el paso omite la centralización.\"},\n {\"id\": \"P95104F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [990, 992, 1006, 1012, 1547, 2720, 5055], \"razon\": \"El libro describe cómo la sobreespecificación reduce las acciones permitidas por debajo de lo necesario y habla de violaciones necesarias. Identificar esas tareas va en su dirección.\"},\n {\"id\": \"PB49A09\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5067, 5077, 4765, 4820, 4987], \"razon\": \"El libro trata los efectos de las sanciones en la moral, el resentimiento y la confianza. Evaluar ese impacto concreta su planteamiento sin invertirlo.\"},\n {\"id\": \"PD81839\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2905, 2907, 2909, 2888, 2924, 5661], \"razon\": \"El libro critica atribuir el error a rasgos como descuido o incompetencia (error fundamental de atribución). La palabra 'únicamente' respeta que existan casos imprudentes reales.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P542BC4",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5178,
+    5182,
+    5208,
+    4693
+   ],
+   "razon": "Weick/Reason: centralizar y socializar antes de descentralizar. Matiz: el libro dice que la cultura organizacional nace sobre todo de prácticas compartidas, no de valores; el paso omite la centralización."
+  },
+  {
+   "id": "P95104F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    990,
+    992,
+    1006,
+    1012,
+    1547,
+    2720,
+    5055
+   ],
+   "razon": "El libro describe cómo la sobreespecificación reduce las acciones permitidas por debajo de lo necesario y habla de violaciones necesarias. Identificar esas tareas va en su dirección."
+  },
+  {
+   "id": "PB49A09",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5067,
+    5077,
+    4765,
+    4820,
+    4987
+   ],
+   "razon": "El libro trata los efectos de las sanciones en la moral, el resentimiento y la confianza. Evaluar ese impacto concreta su planteamiento sin invertirlo."
+  },
+  {
+   "id": "PD81839",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2905,
+    2907,
+    2909,
+    2888,
+    2924,
+    5661
+   ],
+   "razon": "El libro critica atribuir el error a rasgos como descuido o incompetencia (error fundamental de atribución). La palabra 'únicamente' respeta que existan casos imprudentes reales."
+  }
+ ]
+}

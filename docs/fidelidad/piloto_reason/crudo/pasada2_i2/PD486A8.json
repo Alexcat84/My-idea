@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD486A8",
+  "intento": 0,
+  "usd": 0.167908,
+  "turnos": 1,
+  "duracion_s": 16.2,
+  "pared_s": 17.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34642,
+  "tokens_out": 1467,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD486A8\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [1934, 2369, 1840], \"cita\": \"We urgently need a greater awareness on the part of system designers and manufacturers of the varieties of human fallibility and the error-provoking nature of large parts of the maintenance task--especially during installation or reassembly.\", \"datos_sin_respaldo\": [\"uso de los casos como material de capacitación\", \"destinatarios: personal técnico y gerencial\"], \"razon\": \"El libro usa los casos para mostrar el alcance del problema (L1934). Pide concienciación a diseñadores y fabricantes (L2369), no formación del personal técnico y gerencial. No es contrario: el libro no desaconseja formar. Pero el formato de capacitación y ese público son añadidos. Si se enfoca en la competencia individual, chocaría con L1840 y L1934.\", \"paso_fiel\": \"Usar los casos para sensibilizar, sobre todo a diseñadores y fabricantes, sobre la falibilidad humana y el carácter propenso al error del mantenimiento (especialmente en el montaje), presentando esos errores como consecuencia de condiciones latentes organizacionales y no como falta de competencia individual.\"}\n```",
+ "parseado": {
+  "id": "PD486A8",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   1934,
+   2369,
+   1840
+  ],
+  "cita": "We urgently need a greater awareness on the part of system designers and manufacturers of the varieties of human fallibility and the error-provoking nature of large parts of the maintenance task--especially during installation or reassembly.",
+  "datos_sin_respaldo": [
+   "uso de los casos como material de capacitación",
+   "destinatarios: personal técnico y gerencial"
+  ],
+  "razon": "El libro usa los casos para mostrar el alcance del problema (L1934). Pide concienciación a diseñadores y fabricantes (L2369), no formación del personal técnico y gerencial. No es contrario: el libro no desaconseja formar. Pero el formato de capacitación y ese público son añadidos. Si se enfoca en la competencia individual, chocaría con L1840 y L1934.",
+  "paso_fiel": "Usar los casos para sensibilizar, sobre todo a diseñadores y fabricantes, sobre la falibilidad humana y el carácter propenso al error del mantenimiento (especialmente en el montaje), presentando esos errores como consecuencia de condiciones latentes organizacionales y no como falta de competencia individual."
+ }
+}

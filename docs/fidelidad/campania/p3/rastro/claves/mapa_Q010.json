@@ -1,0 +1,724 @@
+{
+ "Q010-001": {
+  "real": true,
+  "node_id": "sistema_visibilidad_cadena_suministro_low_cost",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-002": {
+  "real": true,
+  "node_id": "sop_colaborativo",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-003": {
+  "real": true,
+  "node_id": "acceptance_control",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-004": {
+  "real": true,
+  "node_id": "requisitos_sistema_retroalimentacion",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-005": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Acción Correctiva: Diagnóstico y Remedio de No Conformidades",
+   "resumen": "La acción correctiva (troubleshooting) cierra el bucle de retroalimentación: diagnostica qué cambió y restaura la conformidad. Se apoya en autopsias forenses, comparación de productos y datos de proceso antes y después, y reconstrucción de la cronología.",
+   "texto": "Para no conformidades crónicas, aplicar el mismo bucle de retroalimentación de troubleshooting que en los casos esporádicos hasta restaurar la conformidad",
+   "tipo": "CONTRARIO",
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "L8257",
+   "cita": "the feedback loop is not well designed to deal with the area of chronic waste shown in the figure. Instead, the need is to employ the quality improvement process.",
+   "explicacion": "Juran limita el bucle de retroalimentación (acción correctiva) a los problemas esporádicos y advierte que no sirve para el desperdicio crónico, que exige el proceso de mejora de calidad. El paso recomienda justo lo que el libro dice que falla."
+  }
+ },
+ "Q010-006": {
+  "real": true,
+  "node_id": "programacion_entregas_delivery_scheduling",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-007": {
+  "real": true,
+  "node_id": "simulacion_de_operaciones_supply_chain",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-008": {
+  "real": true,
+  "node_id": "sop_colaborativo",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-009": {
+  "real": true,
+  "node_id": "teoria_de_restricciones",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-010": {
+  "real": true,
+  "node_id": "accion_correctiva",
+  "paso": 5,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-011": {
+  "real": true,
+  "node_id": "simular_riesgos_transito_antes_de_enviar",
+  "paso": 4,
+  "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+ },
+ "Q010-012": {
+  "real": true,
+  "node_id": "sistema_visibilidad_cadena_suministro_low_cost",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-013": {
+  "real": true,
+  "node_id": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+  "paso": 2,
+  "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+ },
+ "Q010-014": {
+  "real": true,
+  "node_id": "produccion_scheduling_balance_objetivos",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-015": {
+  "real": true,
+  "node_id": "medir_paquete_redondeando_hacia_arriba",
+  "paso": 5,
+  "libro": "Guia visual de empaque"
+ },
+ "Q010-016": {
+  "real": true,
+  "node_id": "aceptacion_de_fallas_como_inevitables",
+  "paso": 4,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-017": {
+  "real": true,
+  "node_id": "sales_operations_planning",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-018": {
+  "real": true,
+  "node_id": "scor_model_operaciones",
+  "paso": 7,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-019": {
+  "real": true,
+  "node_id": "simulacion_de_operaciones_supply_chain",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-020": {
+  "real": true,
+  "node_id": "elegir_material_de_relleno_segun_producto",
+  "paso": 2,
+  "libro": "Guia de empaque para transporte"
+ },
+ "Q010-021": {
+  "real": true,
+  "node_id": "aceptacion_de_fallas_como_inevitables",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-022": {
+  "real": true,
+  "node_id": "detectar_empaque_poco_rigido",
+  "paso": 2,
+  "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+ },
+ "Q010-023": {
+  "real": false,
+  "tipo": "CONTRARIO",
+  "trampa": {
+   "titulo": "Secuenciación de Producción por Tiempo de Agotamiento (Run-out Time)",
+   "resumen": "Después de fijar el lote económico de cada producto, la secuencia de corridas se decide con el run-out time (inventario disponible / demanda esperada). Se recalculan los valores R tras cada corrida supuesta y se ajusta el programa contra la demanda real.",
+   "texto": "Programar primero la corrida del producto con el run-out time más alto, para aprovechar su inventario disponible mientras se producen los demás",
+   "tipo": "CONTRARIO",
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "L1271",
+   "cita": "The first production run is then scheduled for the product with the lowest R-value.",
+   "explicacion": "El libro ordena programar primero el producto con el valor R más bajo (el que se agota antes, ver también L1257: si su inventario es bajo respecto a la demanda se programa por delante). El paso invierte la condición y recomienda empezar por el de R más alto."
+  }
+ },
+ "Q010-024": {
+  "real": true,
+  "node_id": "simulacion_de_operaciones_supply_chain",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-025": {
+  "real": true,
+  "node_id": "trade_off_responsividad_eficiencia",
+  "paso": 6,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-026": {
+  "real": true,
+  "node_id": "proceso_sop_mop",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-027": {
+  "real": true,
+  "node_id": "scor_model_operaciones",
+  "paso": 6,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-028": {
+  "real": true,
+  "node_id": "aceptacion_de_fallas_como_inevitables",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-029": {
+  "real": true,
+  "node_id": "accion_correctiva",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-030": {
+  "real": true,
+  "node_id": "programacion_entregas_delivery_scheduling",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-031": {
+  "real": true,
+  "node_id": "simulacion_de_operaciones_supply_chain",
+  "paso": 7,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-032": {
+  "real": true,
+  "node_id": "etiqueta_duplicada_dentro_del_paquete",
+  "paso": 1,
+  "libro": "Guia visual de empaque"
+ },
+ "Q010-033": {
+  "real": true,
+  "node_id": "tecnologia_como_medio_no_fin",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-034": {
+  "real": true,
+  "node_id": "sales_operations_planning",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-035": {
+  "real": true,
+  "node_id": "aceptacion_de_fallas_como_inevitables",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-036": {
+  "real": true,
+  "node_id": "seleccion_de_proveedores_por_costo_total",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-037": {
+  "real": true,
+  "node_id": "tecnologia_como_medio_no_fin",
+  "paso": 6,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-038": {
+  "real": true,
+  "node_id": "pronostico_de_demanda_variables",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-039": {
+  "real": true,
+  "node_id": "scor_model_operaciones",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-040": {
+  "real": true,
+  "node_id": "elegir_material_de_relleno_segun_producto",
+  "paso": 3,
+  "libro": "Guia de empaque para transporte"
+ },
+ "Q010-041": {
+  "real": true,
+  "node_id": "programacion_entregas_delivery_scheduling",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-042": {
+  "real": true,
+  "node_id": "producto_como_servicio_de_acceso",
+  "paso": 7,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-043": {
+  "real": true,
+  "node_id": "requisitos_sistema_retroalimentacion",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-044": {
+  "real": true,
+  "node_id": "roadmap_proyectos_operacionales_12_meses",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-045": {
+  "real": true,
+  "node_id": "seleccion_de_proveedores_por_costo_total",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-046": {
+  "real": true,
+  "node_id": "sales_operations_planning",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-047": {
+  "real": true,
+  "node_id": "sistema_visibilidad_cadena_suministro_low_cost",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-048": {
+  "real": true,
+  "node_id": "sop_colaborativo",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-049": {
+  "real": true,
+  "node_id": "sop_colaborativo",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-050": {
+  "real": true,
+  "node_id": "medir_paquete_redondeando_hacia_arriba",
+  "paso": 1,
+  "libro": "Guia visual de empaque"
+ },
+ "Q010-051": {
+  "real": true,
+  "node_id": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "paso": 4,
+  "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+ },
+ "Q010-052": {
+  "real": true,
+  "node_id": "conocer_limites_peso_tamano_courier",
+  "paso": 3,
+  "libro": "Guia visual de empaque"
+ },
+ "Q010-053": {
+  "real": true,
+  "node_id": "seleccion_de_proveedores_por_costo_total",
+  "paso": 6,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-054": {
+  "real": true,
+  "node_id": "seleccion_de_proveedores_por_costo_total",
+  "paso": 8,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-055": {
+  "real": true,
+  "node_id": "seleccion_de_proveedores_por_costo_total",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-056": {
+  "real": true,
+  "node_id": "vertical_vs_virtual_integracion",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-057": {
+  "real": true,
+  "node_id": "accion_correctiva",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-058": {
+  "real": true,
+  "node_id": "scorecard_desempeno_cadena_suministro",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-059": {
+  "real": true,
+  "node_id": "produccion_scheduling_balance_objetivos",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-060": {
+  "real": true,
+  "node_id": "simulacion_de_operaciones_supply_chain",
+  "paso": 9,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-061": {
+  "real": true,
+  "node_id": "seleccion_de_proveedores_por_costo_total",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-062": {
+  "real": true,
+  "node_id": "definir_que_cuenta_como_dano_antes_de_probar_empaque",
+  "paso": 1,
+  "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+ },
+ "Q010-063": {
+  "real": true,
+  "node_id": "detectar_empaque_poco_rigido",
+  "paso": 1,
+  "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+ },
+ "Q010-064": {
+  "real": true,
+  "node_id": "trade_off_responsividad_eficiencia",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-065": {
+  "real": true,
+  "node_id": "simulacion_de_operaciones_supply_chain",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-066": {
+  "real": true,
+  "node_id": "etiqueta_duplicada_dentro_del_paquete",
+  "paso": 3,
+  "libro": "Guia visual de empaque"
+ },
+ "Q010-067": {
+  "real": true,
+  "node_id": "proceso_sop_mop",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-068": {
+  "real": true,
+  "node_id": "sistema_visibilidad_cadena_suministro_low_cost",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-069": {
+  "real": true,
+  "node_id": "programacion_entregas_delivery_scheduling",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-070": {
+  "real": true,
+  "node_id": "proceso_sop_mop",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-071": {
+  "real": true,
+  "node_id": "trade_off_responsividad_eficiencia",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-072": {
+  "real": true,
+  "node_id": "acceptance_control",
+  "paso": 1,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-073": {
+  "real": true,
+  "node_id": "programacion_entregas_delivery_scheduling",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-074": {
+  "real": true,
+  "node_id": "sistema_visibilidad_cadena_suministro_low_cost",
+  "paso": 6,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-075": {
+  "real": true,
+  "node_id": "trade_off_responsividad_eficiencia",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-076": {
+  "real": true,
+  "node_id": "adaptar_empaque_segun_tipo_de_articulo",
+  "paso": 1,
+  "libro": "Guia visual de empaque"
+ },
+ "Q010-077": {
+  "real": true,
+  "node_id": "requisitos_sistema_retroalimentacion",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-078": {
+  "real": true,
+  "node_id": "producto_como_servicio_de_acceso",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-079": {
+  "real": true,
+  "node_id": "trade_off_responsividad_eficiencia",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-080": {
+  "real": true,
+  "node_id": "trade_off_responsividad_eficiencia",
+  "paso": 7,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-081": {
+  "real": true,
+  "node_id": "accion_correctiva",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-082": {
+  "real": true,
+  "node_id": "roadmap_proyectos_operacionales_12_meses",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-083": {
+  "real": true,
+  "node_id": "rediseno_tras_fracaso_proyecto",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-084": {
+  "real": true,
+  "node_id": "scor_model_operaciones",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-085": {
+  "real": true,
+  "node_id": "produccion_scheduling_balance_objetivos",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-086": {
+  "real": true,
+  "node_id": "sistema_visibilidad_cadena_suministro_low_cost",
+  "paso": 7,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-087": {
+  "real": true,
+  "node_id": "requisitos_sistema_retroalimentacion",
+  "paso": 6,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-088": {
+  "real": true,
+  "node_id": "warehouse_management_system",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-089": {
+  "real": true,
+  "node_id": "medir_paquete_redondeando_hacia_arriba",
+  "paso": 2,
+  "libro": "Guia visual de empaque"
+ },
+ "Q010-090": {
+  "real": true,
+  "node_id": "adaptaciones_sectoriales_iso",
+  "paso": 3,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-091": {
+  "real": true,
+  "node_id": "sales_operations_planning",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-092": {
+  "real": true,
+  "node_id": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "paso": 1,
+  "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+ },
+ "Q010-093": {
+  "real": true,
+  "node_id": "tecnologia_como_medio_no_fin",
+  "paso": 8,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-094": {
+  "real": true,
+  "node_id": "simulacion_de_operaciones_supply_chain",
+  "paso": 6,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-095": {
+  "real": true,
+  "node_id": "medir_paquete_redondeando_hacia_arriba",
+  "paso": 3,
+  "libro": "Guia visual de empaque"
+ },
+ "Q010-096": {
+  "real": true,
+  "node_id": "requisitos_sistema_retroalimentacion",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-097": {
+  "real": true,
+  "node_id": "precios_todos_los_dias_bajos",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-098": {
+  "real": true,
+  "node_id": "simulacion_de_operaciones_supply_chain",
+  "paso": 1,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-099": {
+  "real": true,
+  "node_id": "vertical_vs_virtual_integracion",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-100": {
+  "real": true,
+  "node_id": "tecnologias_emergentes_cadena_suministro",
+  "paso": 2,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-101": {
+  "real": true,
+  "node_id": "acceptance_control",
+  "paso": 2,
+  "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+ },
+ "Q010-102": {
+  "real": true,
+  "node_id": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "paso": 3,
+  "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+ },
+ "Q010-103": {
+  "real": true,
+  "node_id": "seleccion_de_proveedores_por_costo_total",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-104": {
+  "real": true,
+  "node_id": "tecnologia_como_medio_no_fin",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-105": {
+  "real": true,
+  "node_id": "supply_chain_management_systems",
+  "paso": 3,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-106": {
+  "real": true,
+  "node_id": "tecnologia_como_medio_no_fin",
+  "paso": 10,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-107": {
+  "real": true,
+  "node_id": "sop_colaborativo",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-108": {
+  "real": true,
+  "node_id": "producto_como_servicio_de_acceso",
+  "paso": 8,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-109": {
+  "real": true,
+  "node_id": "proceso_sop_mop",
+  "paso": 5,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-110": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Ajuste del Lote Económico de Pedido (EOQ) a Tamaños Estándar",
+   "resumen": "El EOQ equilibra el costo fijo de pedido y el costo de mantener inventario. Como pequeños cambios en el EOQ apenas alteran el costo total, conviene ajustarlo a un tamaño de pedido práctico, por ejemplo la caja estándar del proveedor.",
+   "texto": "Redondear el EOQ calculado al tamaño de caja estándar más cercano, siempre que el ajuste no supere el 15% de la cantidad calculada",
+   "tipo": "ANADIDO",
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "L861",
+   "cita": "Small changes in the EOQ do not have a big impact on total ordering and holding costs, so it is best to round off the EOQ quantity to the nearest standard ordering size.",
+   "dato": "Umbral máximo de ajuste del 15% sobre el EOQ calculado",
+   "explicacion": "El libro aconseja redondear el EOQ al tamaño de pedido estándar más cercano (ejemplo: de 34 a 30 unidades), pero no pone ningún límite porcentual al ajuste. Con Grep no aparece \"15 percent\", \"15%\" ni \"fifteen\" en todo el texto."
+  }
+ },
+ "Q010-111": {
+  "real": true,
+  "node_id": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "paso": 2,
+  "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria"
+ },
+ "Q010-112": {
+  "real": false,
+  "tipo": "ANADIDO",
+  "trampa": {
+   "titulo": "Consolidación de Pedidos LTL en Rutas Milk Run",
+   "resumen": "Cuando los EOQ de cada punto receptor quedan por debajo de una carga completa (LTL), las entregas milk run combinan pedidos de varios productos o destinos hasta llenar un camión. Así se usa mejor el transporte y baja el costo de recepción, porque llegan menos entregas y más grandes.",
+   "texto": "Combinar pedidos LTL en una misma ruta milk run hasta completar la carga del camión, con un máximo de ocho paradas por ruta",
+   "tipo": "ANADIDO",
+   "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\operaciones_y_logistica\\Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+   "lineas": "L1562",
+   "cita": "If the EOQs of different products needed by a receiving location are less than truck load (LTL) amounts, milk run deliveries allow orders for different products to be combined until the resulting quantity equals a TL amount.",
+   "dato": "Límite de ocho paradas por ruta milk run",
+   "explicacion": "El libro respalda combinar pedidos LTL hasta completar una carga TL, pero no fija ningún número máximo de paradas por ruta. Con Grep no aparecen \"eight\", \"stops\" (en ese sentido), \"per route\" ni una cifra de paradas en todo el texto."
+  }
+ },
+ "Q010-113": {
+  "real": true,
+  "node_id": "pronostico_de_demanda_variables",
+  "paso": 4,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ },
+ "Q010-114": {
+  "real": true,
+  "node_id": "producto_como_servicio_de_acceso",
+  "paso": 6,
+  "libro": "Essentials of Supply Chain Management - Michael H. Hugos"
+ }
+}

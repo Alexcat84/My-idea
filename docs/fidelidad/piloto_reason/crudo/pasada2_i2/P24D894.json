@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P24D894",
+  "intento": 0,
+  "usd": 0.147612,
+  "turnos": 1,
+  "duracion_s": 5.6,
+  "pared_s": 6.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35398,
+  "tokens_out": 301,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P24D894\", \"veredicto\": \"CONTRARIO\", \"lineas\": [96, 1133], \"cita\": \"In short, protective gains are frequently converted into productive advantages, leaving the organization with the same inadequate protection that prevailed before the event or with something even worse.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta la conversión de las mejoras de protección en ventaja productiva (más velocidad, más volumen) como la compensación de riesgo que deja el sistema igual o menos seguro que antes (explosiones tras la lámpara Davy, colisiones asistidas por radar). El paso manda justamente hacer eso, invirtiendo la recomendación.\", \"paso_fiel\": \"Preservar cada mejora de protección instalada tras un accidente como margen de seguridad, sin convertirla en aumentos de velocidad o volumen de la operación.\"}",
+ "parseado": {
+  "id": "P24D894",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   96,
+   1133
+  ],
+  "cita": "In short, protective gains are frequently converted into productive advantages, leaving the organization with the same inadequate protection that prevailed before the event or with something even worse.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta la conversión de las mejoras de protección en ventaja productiva (más velocidad, más volumen) como la compensación de riesgo que deja el sistema igual o menos seguro que antes (explosiones tras la lámpara Davy, colisiones asistidas por radar). El paso manda justamente hacer eso, invirtiendo la recomendación.",
+  "paso_fiel": "Preservar cada mejora de protección instalada tras un accidente como margen de seguridad, sin convertirla en aumentos de velocidad o volumen de la operación."
+ }
+}

@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA27233",
+  "intento": 0,
+  "usd": 0.159356,
+  "turnos": 1,
+  "duracion_s": 8.5,
+  "pared_s": 9.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36639,
+  "tokens_out": 640,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA27233\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1085, 1141], \"cita\": \"Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies. ... Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro señala las falsas alarmas frecuentes como causa de desconfianza y de reacciones ineficaces ante emergencias reales. Reducirlas sin perder sensibilidad concreta ese diagnóstico en su misma dirección y no aporta cifras, herramientas ni plazos. La advertencia sobre la complejidad (L1149) se refiere a añadir defensas, no a mejorar la fiabilidad de una alarma existente, así que no la contradice.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA27233",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1085,
+   1141
+  ],
+  "cita": "Frequent false alarms cause people to lose trust, and to ignore or disbelieve warnings when they signal genuine emergencies. ... Warnings and alarms that acquire a reputation for indicating dangers where none exist are less likely to be acted upon in the event of a true emergency.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro señala las falsas alarmas frecuentes como causa de desconfianza y de reacciones ineficaces ante emergencias reales. Reducirlas sin perder sensibilidad concreta ese diagnóstico en su misma dirección y no aporta cifras, herramientas ni plazos. La advertencia sobre la complejidad (L1149) se refiere a añadir defensas, no a mejorar la fiabilidad de una alarma existente, así que no la contradice.",
+  "paso_fiel": ""
+ }
+}

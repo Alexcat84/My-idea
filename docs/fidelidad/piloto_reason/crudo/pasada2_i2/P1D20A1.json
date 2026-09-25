@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P1D20A1",
+  "intento": 0,
+  "usd": 0.17038,
+  "turnos": 1,
+  "duracion_s": 9.9,
+  "pared_s": 10.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 38455,
+  "tokens_out": 828,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1D20A1\", \"veredicto\": \"CONTRARIO\", \"lineas\": [668, 674, 686, 520], \"cita\": \"some prior indication of disaster is only truly a warning if you know what kind of disaster you will suffer. But this is rarely the case ... no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm\", \"datos_sin_respaldo\": [], \"razon\": \"El libro advierte que juzgar a posteriori qué debió preverse está sesgado por el conocimiento del resultado. Una señal solo es advertencia si se conoce el tipo de desastre, y ninguna señal aislada bastaba. El paso manda hacer justo ese juicio retrospectivo, señal por señal, y centrado en el personal y no en el sistema.\", \"paso_fiel\": \"Al revisar un accidente, evitar juzgar con visión retrospectiva lo que el personal debió prever y analizar por qué la organización no integró las señales dispersas que, solo en conjunto, debieron activar la alarma.\"}\n```",
+ "parseado": {
+  "id": "P1D20A1",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   668,
+   674,
+   686,
+   520
+  ],
+  "cita": "some prior indication of disaster is only truly a warning if you know what kind of disaster you will suffer. But this is rarely the case ... no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm",
+  "datos_sin_respaldo": [],
+  "razon": "El libro advierte que juzgar a posteriori qué debió preverse está sesgado por el conocimiento del resultado. Una señal solo es advertencia si se conoce el tipo de desastre, y ninguna señal aislada bastaba. El paso manda hacer justo ese juicio retrospectivo, señal por señal, y centrado en el personal y no en el sistema.",
+  "paso_fiel": "Al revisar un accidente, evitar juzgar con visión retrospectiva lo que el personal debió prever y analizar por qué la organización no integró las señales dispersas que, solo en conjunto, debieron activar la alarma."
+ }
+}

@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_003",
+  "intento": 0,
+  "usd": 0.160988,
+  "turnos": 1,
+  "duracion_s": 20.1,
+  "pared_s": 21.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31417,
+  "tokens_out": 1766,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PD9F1C3\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [5690, 5641, 5907, 5603],\n    \"razon\": \"El libro pide contramedidas distintas por nivel, precursores y chequeos regulares de procesos más allá de lesiones; el paso concreta vigilar cada tipo de riesgo en esa misma dirección.\"\n  },\n  {\n    \"id\": \"PD2B557\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [2340, 2342, 2354, 1840, 1114],\n    \"razon\": \"El libro dice que el error aumenta linealmente con la actividad de mantenimiento y que el mantenimiento puede dañar el sistema; afirmar que cada intervención adicional reduce el riesgo lo invierte.\"\n  },\n  {\n    \"id\": \"PA8B645\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [3690, 3692, 3704, 3706, 3714, 3718, 3722],\n    \"razon\": \"Las razones con escala graduada se asignan a nodos hoja; los factores con influencias previas se calculan mediante evaluaciones condicionales ponderadas. 'A cada factor' podría desviarse del procedimiento.\"\n  },\n  {\n    \"id\": \"PA1716E\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [181, 213, 293, 374, 2650, 1072],\n    \"razon\": \"El libro apoya chequear dónde están los huecos, pero insiste en que son dinámicos y en que existen grietas pequeñas o desconocidas; un mapa estático de huecos conocidos podría contradecir ese matiz.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PD9F1C3",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5690,
+    5641,
+    5907,
+    5603
+   ],
+   "razon": "El libro pide contramedidas distintas por nivel, precursores y chequeos regulares de procesos más allá de lesiones; el paso concreta vigilar cada tipo de riesgo en esa misma dirección."
+  },
+  {
+   "id": "PD2B557",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2340,
+    2342,
+    2354,
+    1840,
+    1114
+   ],
+   "razon": "El libro dice que el error aumenta linealmente con la actividad de mantenimiento y que el mantenimiento puede dañar el sistema; afirmar que cada intervención adicional reduce el riesgo lo invierte."
+  },
+  {
+   "id": "PA8B645",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3690,
+    3692,
+    3704,
+    3706,
+    3714,
+    3718,
+    3722
+   ],
+   "razon": "Las razones con escala graduada se asignan a nodos hoja; los factores con influencias previas se calculan mediante evaluaciones condicionales ponderadas. 'A cada factor' podría desviarse del procedimiento."
+  },
+  {
+   "id": "PA1716E",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    181,
+    213,
+    293,
+    374,
+    2650,
+    1072
+   ],
+   "razon": "El libro apoya chequear dónde están los huecos, pero insiste en que son dinámicos y en que existen grietas pequeñas o desconocidas; un mapa estático de huecos conocidos podría contradecir ese matiz."
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P0B8BBB",
+  "intento": 0,
+  "usd": 0.111068,
+  "turnos": 1,
+  "duracion_s": 5.0,
+  "pared_s": 6.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26382,
+  "tokens_out": 277,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P0B8BBB\", \"veredicto\": \"FIEL\", \"lineas\": [3395], \"cita\": \"HEART provides a set of generic task types with their associated nominal error probabilities. They are listed in Table 7.2. The starting point for the HEART analysis is to match the activity to be evaluated to one of the generic tasks listed in Table 7.2.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro establece literalmente que el punto de partida de HEART es asignar la actividad a evaluar a una de las tareas genéricas de la Tabla 7.2. El paso reproduce esa instrucción sin datos nuevos. HEART y la Tabla 7.2 están respaldados por las líneas 3393-3395 y 3547.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P0B8BBB",
+  "veredicto": "FIEL",
+  "lineas": [
+   3395
+  ],
+  "cita": "HEART provides a set of generic task types with their associated nominal error probabilities. They are listed in Table 7.2. The starting point for the HEART analysis is to match the activity to be evaluated to one of the generic tasks listed in Table 7.2.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro establece literalmente que el punto de partida de HEART es asignar la actividad a evaluar a una de las tareas genéricas de la Tabla 7.2. El paso reproduce esa instrucción sin datos nuevos. HEART y la Tabla 7.2 están respaldados por las líneas 3393-3395 y 3547.",
+  "paso_fiel": ""
+ }
+}

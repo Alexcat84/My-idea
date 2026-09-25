@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P4F7AF5",
+  "intento": 0,
+  "usd": 0.25254,
+  "turnos": 1,
+  "duracion_s": 14.0,
+  "pared_s": 15.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 57120,
+  "tokens_out": 1203,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P4F7AF5\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4478, 4928, 2596], \"cita\": \"A succession of these profiles will allow both the regulator and the regulated to track the progress of remedial efforts. / Action monitored--preventive measures have been implemented and their effects are being monitored.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro respalda vigilar los efectos de las medidas ya implantadas y seguir el progreso de las reformas con perfiles sucesivos. El paso no fija metodo ni indicador. No propone medir con accidentes, que el libro considera indicadores poco fiables, asi que no hay contrario. Concreta lo que dice el libro, en su misma direccion y sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P4F7AF5",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4478,
+   4928,
+   2596
+  ],
+  "cita": "A succession of these profiles will allow both the regulator and the regulated to track the progress of remedial efforts. / Action monitored--preventive measures have been implemented and their effects are being monitored.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro respalda vigilar los efectos de las medidas ya implantadas y seguir el progreso de las reformas con perfiles sucesivos. El paso no fija metodo ni indicador. No propone medir con accidentes, que el libro considera indicadores poco fiables, asi que no hay contrario. Concreta lo que dice el libro, en su misma direccion y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

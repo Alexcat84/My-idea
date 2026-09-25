@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P1A7FF4",
+  "intento": 0,
+  "usd": 0.130932,
+  "turnos": 1,
+  "duracion_s": 6.3,
+  "pared_s": 7.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 30678,
+  "tokens_out": 411,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P1A7FF4\", \"veredicto\": \"CONTRARIO\", \"lineas\": [2594, 2596, 2598], \"cita\": \"Rather than struggling vainly to exercise direct control over incidents and accidents, managers should regularly measure and improve those processes... the only attainable goal for safety management is not zero accidents, but to reach that region of the safety space associated with maximum resistance--and then staying there.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro rechaza expresamente el cero accidentes como meta alcanzable. También califica de vano el intento de controlar directamente los incidentes: los accidentes no son directamente controlables y las cifras de un periodo a otro son más ruido que señal (L2489). El paso invierte ambas recomendaciones y propone como vía principal la que el libro desaconseja.\", \"paso_fiel\": \"Fijar como meta central de seguridad alcanzar la zona de máxima resistencia intrínseca y mantenerse en ella, midiendo y mejorando con regularidad los procesos manejables (diseño, formación, procedimientos, mantenimiento, planificación, comunicación) en lugar de intentar controlar directamente el conteo de incidentes.\"}",
+ "parseado": {
+  "id": "P1A7FF4",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   2594,
+   2596,
+   2598
+  ],
+  "cita": "Rather than struggling vainly to exercise direct control over incidents and accidents, managers should regularly measure and improve those processes... the only attainable goal for safety management is not zero accidents, but to reach that region of the safety space associated with maximum resistance--and then staying there.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro rechaza expresamente el cero accidentes como meta alcanzable. También califica de vano el intento de controlar directamente los incidentes: los accidentes no son directamente controlables y las cifras de un periodo a otro son más ruido que señal (L2489). El paso invierte ambas recomendaciones y propone como vía principal la que el libro desaconseja.",
+  "paso_fiel": "Fijar como meta central de seguridad alcanzar la zona de máxima resistencia intrínseca y mantenerse en ella, midiendo y mejorando con regularidad los procesos manejables (diseño, formación, procedimientos, mantenimiento, planificación, comunicación) en lugar de intentar controlar directamente el conteo de incidentes."
+ }
+}

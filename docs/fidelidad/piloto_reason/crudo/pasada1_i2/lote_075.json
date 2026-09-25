@@ -1,0 +1,76 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_075",
+  "intento": 0,
+  "usd": 0.169844,
+  "turnos": 1,
+  "duracion_s": 20.2,
+  "pared_s": 21.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32826,
+  "tokens_out": 1927,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P5FCD2C\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3829, 2716, 4722, 4724], \"razon\": \"L3829 respalda cambiar normas, creencias y actitudes además de procedimientos. Pero L4724 dice que cambiar valores colectivos adultos es extremadamente difícil; conviene revisar ese matiz.\"},\n  {\"id\": \"P673EDC\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5037, 5057, 5059], \"razon\": \"El libro plantea un test mental con alguien comparable y añade consultar a pares ('jurado'). 'Formación similar' podría chocar con el caso Clapham, donde falló precisamente la formación.\"},\n  {\"id\": \"P944E0A\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"SIN_COBERTURA\", \"lineas\": [4274, 4429, 4431, 4433, 4435], \"razon\": \"El libro no habla de evaluar la madurez para autorregularse. Presenta la autorregulación como impuesta por ley y como gran ventaja. Las dificultades las ubica en los reguladores, no en la madurez organizacional.\"},\n  {\"id\": \"P8AC86A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2985, 2892, 2948, 5061], \"razon\": \"Concreta L2985: los accidentes provienen más de situaciones y actividades propensas al error que de personas propensas. Coincide con distinguir factores sistemáticos de aleatorios (L2892).\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P5FCD2C",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3829,
+    2716,
+    4722,
+    4724
+   ],
+   "razon": "L3829 respalda cambiar normas, creencias y actitudes además de procedimientos. Pero L4724 dice que cambiar valores colectivos adultos es extremadamente difícil; conviene revisar ese matiz."
+  },
+  {
+   "id": "P673EDC",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5037,
+    5057,
+    5059
+   ],
+   "razon": "El libro plantea un test mental con alguien comparable y añade consultar a pares ('jurado'). 'Formación similar' podría chocar con el caso Clapham, donde falló precisamente la formación."
+  },
+  {
+   "id": "P944E0A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    4274,
+    4429,
+    4431,
+    4433,
+    4435
+   ],
+   "razon": "El libro no habla de evaluar la madurez para autorregularse. Presenta la autorregulación como impuesta por ley y como gran ventaja. Las dificultades las ubica en los reguladores, no en la madurez organizacional."
+  },
+  {
+   "id": "P8AC86A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2985,
+    2892,
+    2948,
+    5061
+   ],
+   "razon": "Concreta L2985: los accidentes provienen más de situaciones y actividades propensas al error que de personas propensas. Coincide con distinguir factores sistemáticos de aleatorios (L2892)."
+  }
+ ]
+}

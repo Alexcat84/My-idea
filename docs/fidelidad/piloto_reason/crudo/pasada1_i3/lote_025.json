@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_025",
+  "intento": 0,
+  "usd": 0.169104,
+  "turnos": 1,
+  "duracion_s": 18.2,
+  "pared_s": 19.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33581,
+  "tokens_out": 1739,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P664440\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 3153, 686, 4215], \"razon\": \"El libro pide integrar las señales en conjunto y advierte que en previsión rara vez se reconocen como avisos. El seguimiento señal por señal puede chocar con ese matiz.\"},\n {\"id\": \"P4C52F6\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [580, 5639, 2596], \"razon\": \"L580 enumera literalmente esos procesos organizacionales genéricos como fuentes de condiciones latentes.\"},\n {\"id\": \"P2E3BAA\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"Formarla (la persona que supervisa en el terreno)\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5204, 5208, 1450, 4769], \"razon\": \"El libro respalda formar supervisores para actuar sin SOPs, pero condiciona la descentralización a ciertas circunstancias, a una cultura jerárquica disciplinada y a su autoridad y experiencia.\"},\n {\"id\": \"P4C2D56\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2716, 3825, 3829, 3623], \"razon\": \"El libro dice que la información en el puesto sirve para errores. Las violaciones son motivacionales y se abordan con normas, actitudes, cultura y procedimientos creíbles, 'al corazón, no a la cabeza'.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P664440",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    520,
+    3153,
+    686,
+    4215
+   ],
+   "razon": "El libro pide integrar las señales en conjunto y advierte que en previsión rara vez se reconocen como avisos. El seguimiento señal por señal puede chocar con ese matiz."
+  },
+  {
+   "id": "P4C52F6",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    580,
+    5639,
+    2596
+   ],
+   "razon": "L580 enumera literalmente esos procesos organizacionales genéricos como fuentes de condiciones latentes."
+  },
+  {
+   "id": "P2E3BAA",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "Formarla (la persona que supervisa en el terreno)"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5204,
+    5208,
+    1450,
+    4769
+   ],
+   "razon": "El libro respalda formar supervisores para actuar sin SOPs, pero condiciona la descentralización a ciertas circunstancias, a una cultura jerárquica disciplinada y a su autoridad y experiencia."
+  },
+  {
+   "id": "P4C2D56",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2716,
+    3825,
+    3829,
+    3623
+   ],
+   "razon": "El libro dice que la información en el puesto sirve para errores. Las violaciones son motivacionales y se abordan con normas, actitudes, cultura y procedimientos creíbles, 'al corazón, no a la cabeza'."
+  }
+ ]
+}

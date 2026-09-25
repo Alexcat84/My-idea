@@ -1,0 +1,70 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_077",
+  "intento": 0,
+  "usd": 0.15644000000000002,
+  "turnos": 1,
+  "duracion_s": 13.6,
+  "pared_s": 14.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33410,
+  "tokens_out": 1140,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P8A8EEB\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4765, 4798, 4824, 4832, 4836, 4854], \"razon\": \"El libro limita la indemnidad ('as far as practicable') y rechaza la amnistía general. El paso omite esos límites (actos temerarios, delitos, falta de competencia). 'Honestos' no equivale a esa condición.\"},\n {\"id\": \"P15D790\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2583, 2585], \"razon\": \"El libro atribuye el fenómeno tick-off a mandos técnicos y afirma que las medidas de seguridad son producto y proceso. Capacitarlos en eso es una extensión directa sin choque.\"},\n {\"id\": \"P17850A\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [2596, 2598, 2658, 2750, 3213], \"razon\": \"El libro apoya los chequeos regulares, pero muestrea un subconjunto de 8-16 índices, no es exhaustivo y ajusta la frecuencia al ritmo de cambio. 'Cada proceso' podría chocar en matiz.\"},\n {\"id\": \"P8FE6E3\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [1558, 1630, 1724, 1006, 5055], \"razon\": \"El libro afirma que el cumplimiento no es automáticamente correcto (mispliance con reglas malas) y que hay violaciones correctas. El paso considera correcto todo cumplimiento.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P8A8EEB",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4765,
+    4798,
+    4824,
+    4832,
+    4836,
+    4854
+   ],
+   "razon": "El libro limita la indemnidad ('as far as practicable') y rechaza la amnistía general. El paso omite esos límites (actos temerarios, delitos, falta de competencia). 'Honestos' no equivale a esa condición."
+  },
+  {
+   "id": "P15D790",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2583,
+    2585
+   ],
+   "razon": "El libro atribuye el fenómeno tick-off a mandos técnicos y afirma que las medidas de seguridad son producto y proceso. Capacitarlos en eso es una extensión directa sin choque."
+  },
+  {
+   "id": "P17850A",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    2596,
+    2598,
+    2658,
+    2750,
+    3213
+   ],
+   "razon": "El libro apoya los chequeos regulares, pero muestrea un subconjunto de 8-16 índices, no es exhaustivo y ajusta la frecuencia al ritmo de cambio. 'Cada proceso' podría chocar en matiz."
+  },
+  {
+   "id": "P8FE6E3",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    1558,
+    1630,
+    1724,
+    1006,
+    5055
+   ],
+   "razon": "El libro afirma que el cumplimiento no es automáticamente correcto (mispliance con reglas malas) y que hay violaciones correctas. El paso considera correcto todo cumplimiento."
+  }
+ ]
+}

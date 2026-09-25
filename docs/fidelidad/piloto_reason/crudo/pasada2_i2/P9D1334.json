@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P9D1334",
+  "intento": 0,
+  "usd": 0.14874800000000002,
+  "turnos": 1,
+  "duracion_s": 11.9,
+  "pared_s": 13.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32647,
+  "tokens_out": 908,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P9D1334\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2596, 2654, 2652], \"cita\": \"To learn the right lessons from the past, it is best to analyse several domain-related events using a common classificatory framework. This reveals patterns of cause and effect that are rarely evident in single-case investigations. Moreover, these patterns also indicate which of the local or organizational factors is playing a regular part\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide mejorar los procesos 'known to be implicated' en accidentes (L2596). También pide elegirlos analizando varios eventos pasados del dominio (L2654). El paso concreta eso en la misma dirección y habla de accidentes en plural, no de uno aislado. Que se limite al propio negocio y no a todo el dominio es una diferencia de detalle, no una contradicción. No añade cifras ni herramientas.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P9D1334",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2596,
+   2654,
+   2652
+  ],
+  "cita": "To learn the right lessons from the past, it is best to analyse several domain-related events using a common classificatory framework. This reveals patterns of cause and effect that are rarely evident in single-case investigations. Moreover, these patterns also indicate which of the local or organizational factors is playing a regular part",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide mejorar los procesos 'known to be implicated' en accidentes (L2596). También pide elegirlos analizando varios eventos pasados del dominio (L2654). El paso concreta eso en la misma dirección y habla de accidentes en plural, no de uno aislado. Que se limite al propio negocio y no a todo el dominio es una diferencia de detalle, no una contradicción. No añade cifras ni herramientas.",
+  "paso_fiel": ""
+ }
+}

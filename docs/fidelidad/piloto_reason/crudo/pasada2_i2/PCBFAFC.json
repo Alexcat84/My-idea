@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PCBFAFC",
+  "intento": 0,
+  "usd": 0.21099600000000002,
+  "turnos": 1,
+  "duracion_s": 11.1,
+  "pared_s": 12.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 48564,
+  "tokens_out": 837,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PCBFAFC\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5742, 273, 5748], \"cita\": \"Individual factors alone have only a small to moderate value for all three goals and that, overall, workplace and organizational factors contribute the most added value. There are diminishing returns on more remote influences, particularly with regard to countermeasures and risk management.\", \"datos_sin_respaldo\": [], \"razon\": \"Reason afirma que los factores de lugar de trabajo y organizacionales aportan el mayor valor agregado. También pide limitar el análisis a los límites manejables de la organización (L273). Pasar de ahí a concentrar los recursos de investigación es una concreción operativa en la misma dirección. No añade datos. 'Enfocar' no excluye los factores individuales, así que no contradice el término medio de L5748.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PCBFAFC",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5742,
+   273,
+   5748
+  ],
+  "cita": "Individual factors alone have only a small to moderate value for all three goals and that, overall, workplace and organizational factors contribute the most added value. There are diminishing returns on more remote influences, particularly with regard to countermeasures and risk management.",
+  "datos_sin_respaldo": [],
+  "razon": "Reason afirma que los factores de lugar de trabajo y organizacionales aportan el mayor valor agregado. También pide limitar el análisis a los límites manejables de la organización (L273). Pasar de ahí a concentrar los recursos de investigación es una concreción operativa en la misma dirección. No añade datos. 'Enfocar' no excluye los factores individuales, así que no contradice el término medio de L5748.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,162 @@
+[
+ {
+  "titulo": "Reporte Confidencial frente a Reporte Anónimo",
+  "resumen": "Según el nivel de seguridad de la actividad, un sistema de reporte confidencial es una fuente clave de información. Confidencial no es lo mismo que anónimo: en el anónimo nadie conoce al reportante; en el confidencial se le conoce, pero de forma restringida. Los reportes confidenciales revelan exposiciones al riesgo, cargas de trabajo y distracciones que nunca llegan al reporte formal, y permiten contramedidas más amplias que arreglar el fallo puntual.",
+  "texto": "Configurar el reporte confidencial para que el supervisor directo conozca la identidad del reportante y pueda dar seguimiento al caso",
+  "tipo": "CONTRARIO",
+  "lineas": "L591 a L597",
+  "cita": "Confidential means that the reporter is known, but only, for example, for safety people [...] not to people who could create career jeopardy (for example, supervisors, line managers).",
+  "dato": "",
+  "explicacion": "El libro define lo confidencial precisamente como que la identidad NO llegue a supervisores ni mandos de línea, que pueden poner en riesgo la carrera del reportante. El paso invierte esa condición y entrega la identidad justo a quien el libro excluye."
+ },
+ {
+  "titulo": "Rendición de Cuentas como Relato (Giving an Account)",
+  "resumen": "Rendir cuentas no tiene por qué significar exponer a la persona a castigo o responsabilidad legal. Se puede pedir a quien estuvo involucrado que cuente su versión de lo ocurrido y por qué, y difundir ese relato en la organización. Contar historias es un mecanismo poderoso para que otros aprendan de manera vicaria de los problemas, y si la persona acepta, la dirección debe renunciar a otras demandas de castigo.",
+  "texto": "Pedir a la persona involucrada que redacte su relato de lo ocurrido en un plazo máximo de 48 horas tras el incidente y publicarlo en toda la empresa",
+  "tipo": "ANADIDO",
+  "lineas": "L570 a L580",
+  "cita": "it could be more profitable to talk to the person in question and ask him to write up his account of what happened and why. And then to publish this account widely throughout the company.",
+  "dato": "plazo máximo de 48 horas para redactar el relato",
+  "explicacion": "El libro recomienda pedir el relato escrito y publicarlo, pero no fija ningún plazo. Las 48 horas son inventadas; el texto no contiene esa cifra ni ningún límite temporal para el relato."
+ },
+ {
+  "titulo": "Contrafácticos: Hablar de lo que No Ocurrió",
+  "resumen": "Frases como 'debieron haber', 'podrían haber' o 'si tan solo hubieran' son contrafácticos: describen una realidad que no sucedió. Los informes de accidentes están llenos de ellos, detallando caminos que las personas no tomaron. Son producto de la retrospectiva y no oportunidades que los involucrados desaprovecharon; lo que importa es entender por qué las cosas ocurrieron como ocurrieron.",
+  "texto": "Usar el razonamiento contrafáctico (qué habría pasado si hubieran actuado distinto) para explicar por qué los operadores actuaron como actuaron",
+  "tipo": "CONTRARIO",
+  "lineas": "L829 a L837",
+  "cita": "Counterfactual reasoning may thus be a fruitful exercise when recommending interventions against that exact failure in the future. But when it comes to explaining behavior, counterfactuals do not contribute.",
+  "dato": "",
+  "explicacion": "El libro admite el contrafáctico solo para recomendar intervenciones futuras y lo descarta expresamente para explicar el comportamiento. El paso le asigna justo el uso que el libro niega."
+ },
+ {
+  "titulo": "Salir de la Posición del Observador Retrospectivo",
+  "resumen": "Desde la posición del observador externo y retrospectivo solo se puede juzgar a las personas por no ver lo que ahora parece importante. El lenguaje del 'no logró' o 'falló en' delata que uno sigue fuera del túnel. La comprensión real llega al ponerse en el lugar de quienes estaban dentro de la secuencia de eventos, sin conocer el desenlace.",
+  "texto": "Aplicar la prueba de sustitución de Johnston, preguntando si tres colegas con la misma formación y en la misma situación habrían actuado igual",
+  "tipo": "ANADIDO",
+  "lineas": "L862 a L868",
+  "cita": "Real understanding comes from putting yourself in the shoes of the people on the inside of the sequence of events; on the inside of the tunnel.",
+  "dato": "prueba de sustitución de Johnston con tres colegas",
+  "explicacion": "El libro pide adoptar la perspectiva desde dentro del túnel, pero no menciona ninguna 'prueba de sustitución', ni a Johnston, ni un número de colegas de referencia. La herramienta con nombre y la cifra son añadidos."
+ },
+ {
+  "titulo": "Orden del Debriefing según Klein",
+  "resumen": "La memoria humana no funciona como una cinta que se rebobina: mezcla lo observado con informaciones posteriores y ordena los hechos de forma más lineal de lo que fueron. Por eso Gary Klein propone un orden de debriefing: primero el relato del participante, luego devolverle la historia, identificar los puntos críticos y reconstruir en cada uno cómo se veía el mundo desde dentro.",
+  "texto": "Mostrar al participante la grabación o reproducción del evento antes de que narre su versión, para refrescar su memoria de los hechos",
+  "tipo": "CONTRARIO",
+  "lineas": "L1014 a L1022",
+  "cita": "Have participants tell the story from their point of view, without presenting them with any replays or reminders that supposedly “refresh their memory” but would actually distort it.",
+  "dato": "",
+  "explicacion": "Klein, según el libro, prohíbe mostrar reproducciones antes del relato porque distorsionan la memoria; la reproducción solo se admite en el cuarto paso para llenar huecos. El paso invierte el orden y usa el mismo argumento de 'refrescar la memoria' que el libro rechaza."
+ },
+ {
+  "titulo": "Recomendaciones SMART tras una Investigación",
+  "resumen": "Las recomendaciones de bajo nivel, como reentrenar o reescribir una política, son fáciles de aprobar pero rara vez útiles. Para que una recomendación tenga tracción organizacional conviene que sea específica, medible, acordada, realista y acotada en el tiempo, de modo que los responsables puedan pactar plazos y seguir sus efectos.",
+  "texto": "Asignar a cada recomendación una fecha límite de implementación no superior a 90 días desde la publicación del informe",
+  "tipo": "ANADIDO",
+  "lineas": "L2034 a L2044",
+  "cita": "Time-bound. You may want the implementation of your recommendation to have some kind of suggested expiration date, so decision makers can agree on deadlines for achievement.",
+  "dato": "plazo máximo de 90 días para implementar cada recomendación",
+  "explicacion": "El libro solo sugiere 'algún tipo' de fecha de expiración pactada con quienes deciden; no da ningún umbral. Los 90 días son inventados y chocan además con la idea de plazos acordados."
+ },
+ {
+  "titulo": "Continuación del Plan y Aproximaciones Frustradas",
+  "resumen": "La continuación del plan consiste en mantener el plan original cuando la situación ya pide otro. Las señales tempranas a favor del plan suelen ser fuertes y claras, y las posteriores en contra son débiles y ambiguas. Casi todas las tripulaciones saben recitar los criterios de aproximación estabilizada, pero eso no garantiza que reconozcan a tiempo que deben abortar cuando están dentro de la situación.",
+  "texto": "Recordar periódicamente a las tripulaciones los criterios de aproximación estabilizada como contramedida principal contra la continuación del plan",
+  "tipo": "CONTRARIO",
+  "lineas": "L2244 a L2252",
+  "cita": "One promising countermeasure seems to be not to remind crews of the criteria for a stabilized approach, but to offer generic rewards for all the cases in which crews execute a missed approach.",
+  "dato": "",
+  "explicacion": "El libro afirma que hay poco que ganar recordando los criterios ('there seems little mileage in just reminding crews', L2250) y propone en su lugar recompensar sin preguntas cada aproximación frustrada. El paso recomienda justamente lo que el libro descarta."
+ },
+ {
+  "titulo": "Fatiga: Efectos y Soluciones desde la Nueva Visión",
+  "resumen": "La fatiga afecta la vigilancia, ralentiza la cognición, compromete la memoria y provoca microsueños. Sus efectos son difíciles de medir y la autoevaluación del trabajador es poco fiable, porque la propia fatiga deteriora ese juicio. El descanso es la única forma realmente eficaz de combatirla, y la Nueva Visión busca soluciones en la programación de turnos y en las condiciones del trabajo.",
+  "texto": "Rediseñar la programación de turnos para garantizar un descanso mínimo de 10 horas entre el fin de una jornada y el inicio de la siguiente",
+  "tipo": "ANADIDO",
+  "lineas": "L2257 a L2287",
+  "cita": "A “New View” on fatigue would suggest that promising solutions lie in scheduling and rostering, and in other conditions surrounding people’s work.",
+  "dato": "descanso mínimo de 10 horas entre jornadas",
+  "explicacion": "El libro apunta a la programación de turnos y dice que el descanso es la única solución eficaz, pero no fija ningún mínimo de horas entre jornadas. Las cifras que cita son de vigilia (13, y 14 a 16 horas), no de descanso; las 10 horas son inventadas."
+ },
+ {
+  "titulo": "El Triángulo de Heinrich y la Ilusión de la Causa Común",
+  "resumen": "Heinrich popularizó la idea de una relación proporcional entre incidentes menores, lesiones y fatalidades, que supone causas comunes entre unos y otros. Investigaciones más recientes muestran que cuanto más segura es una industria, menos se sostiene esa hipótesis: en sistemas muy seguros los incidentes y los accidentes graves tienen causas radicalmente distintas.",
+  "texto": "Reducir sistemáticamente los incidentes menores y eventos leves como vía principal para prevenir accidentes graves y fatalidades",
+  "tipo": "CONTRARIO",
+  "lineas": "L2755 a L2772",
+  "cita": "A continued belief in the triangle can probably make your industry less safe. It rocks you to sleep with the lullaby that the risk of major accidents or fatalities is under control as long as you don’t show minor injuries, events or incidents.",
+  "dato": "",
+  "explicacion": "El paso aplica tal cual la segunda premisa del triángulo (L2759), que el libro presenta como empíricamente problemática y peligrosa. El caso Macondo, con seis años sin lesiones antes del desastre, ilustra por qué el libro la rechaza."
+ },
+ {
+  "titulo": "Seguridad I frente a Seguridad II",
+  "resumen": "Seguridad I define la seguridad como ausencia de eventos negativos y busca que salga mal lo menos posible. Seguridad II la define como presencia de capacidades que hacen que las cosas salgan bien, y ve a las personas como fuente de flexibilidad y resiliencia. Una organización comprometida con Seguridad II sigue aprendiendo de lo que falla, pero también estudia cómo se logra normalmente el trabajo.",
+  "texto": "Destinar al menos el 30 por ciento del tiempo del equipo de seguridad a estudiar operaciones exitosas y el trabajo normal del día a día",
+  "tipo": "ANADIDO",
+  "lineas": "L2970 a L2978",
+  "cita": "In Safety II, the focus of safety management is to ensure that as many things as possible go right. This requires safety people as well as operational managers to understand how the system succeeds under varying conditions.",
+  "dato": "30 por ciento del tiempo del equipo de seguridad",
+  "explicacion": "El libro pide estudiar cómo el sistema tiene éxito y enfocarse en eventos frecuentes, pero no propone ningún porcentaje de dedicación. El 30 por ciento es inventado."
+ },
+ {
+  "titulo": "Participación Activa del Área de Seguridad en las Decisiones",
+  "resumen": "Un departamento de seguridad relegado a proveedor pasivo de datos pierde la base de su trabajo. Para salir de ese papel necesita recursos independientes, participación en las decisiones que afectan el equilibrio entre seguridad y eficiencia, fin de las metas numéricas periódicas y un vínculo continuo con la realidad operativa.",
+  "texto": "Mantener al área de seguridad al margen de las decisiones de compromiso entre producción y seguridad, para preservar su imparcialidad",
+  "tipo": "CONTRARIO",
+  "lineas": "L3068 a L3072",
+  "cita": "If you remain on the sideline as a supposed “impartial” department, you will see the basis for your work be whittled away.",
+  "dato": "",
+  "explicacion": "El libro exige una participación constructiva del área de seguridad en esas decisiones y advierte que quedarse al margen como departamento supuestamente imparcial erosiona su trabajo. El paso recomienda exactamente esa postura, con la misma justificación que el libro rebate."
+ },
+ {
+  "titulo": "Presencia Auténtica de Supervisores en la Línea",
+  "resumen": "La responsabilidad por la seguridad es ante todo de la línea, donde se trabaja cada día con los procesos peligrosos. Ninguna asesoría sustituye la presencia auténtica de supervisores y gerentes: una mentalidad inquisitiva, interés real por lo que hace el trabajo frustrante o dudoso, sin ego ni juicios preparados y sin anteponer su propia responsabilidad legal.",
+  "texto": "Reservar al menos el 20 por ciento de la jornada de cada supervisor a presencia directa en el área operativa, observando y conversando sobre el trabajo real",
+  "tipo": "ANADIDO",
+  "lineas": "L3241 a L3257",
+  "cita": "Even with support or coaching in place, there is no substitute for the authentic presence of line supervisors and managers.",
+  "dato": "20 por ciento de la jornada del supervisor en campo",
+  "explicacion": "El libro describe en qué consiste la presencia auténtica (actitud, curiosidad, ausencia de ego) pero no cuantifica cuánto tiempo debe dedicarse. El 20 por ciento de la jornada es una cifra inventada."
+ },
+ {
+  "titulo": "El Consejo de Wald: Blindar Donde No Hay Agujeros",
+  "resumen": "En el borde fino de la cuña, las organizaciones ultra seguras ya controlan sus riesgos conocidos, y sus accidentes sorprendentes no vienen precedidos por agujeros en las defensas ni por incidentes reportados. Como Abraham Wald con los bombarderos que regresaban, conviene preguntarse qué dicen los datos que no se ven.",
+  "texto": "En una organización ultra segura, concentrar las defensas en las áreas donde el sistema de reporte registra más incidentes y fallos",
+  "tipo": "CONTRARIO",
+  "lineas": "L3835 a L3848",
+  "cita": "don’t (just) look for the holes you know about, or the problems that show up in your incident reports or safety management system. Look in the places where there are no holes",
+  "dato": "",
+  "explicacion": "Es el error que Wald corrigió en los bombarderos aliados: blindar donde se ven los agujeros. El libro pide lo contrario para organizaciones ultra seguras: mirar el trabajo normal, donde no hay agujeros visibles ni reportes."
+ },
+ {
+  "titulo": "Una Voz con Autoridad para Contradecir el Consenso",
+  "resumen": "Entre la armadura que se puede poner donde no se ven agujeros está contar con una persona o función con autoridad, credibilidad y recursos para ir contra las interpretaciones comunes sobre seguridad y riesgo. Los denunciantes suelen venir de rangos bajos, con conocimiento pero sin poder para cambiar el rumbo; una organización madura integra esa función en niveles significativos.",
+  "texto": "Designar un Ombudsman de seguridad que reporte directamente al consejo de administración y tenga poder de veto sobre decisiones de riesgo",
+  "tipo": "ANADIDO",
+  "lineas": "L3853 a L3869",
+  "cita": "Having a person or function within the system with the authority, credibility and resources to go against common interpretations and decisions about safety and risk.",
+  "dato": "figura de Ombudsman con reporte al consejo de administración y poder de veto",
+  "explicacion": "El libro habla de una persona o función con autoridad en niveles organizacionales significativos, sin darle nombre, línea de reporte ni facultades concretas. El Ombudsman, el consejo de administración y el poder de veto son inventados."
+ },
+ {
+  "titulo": "Explicar un Error con Otro Error",
+  "resumen": "Al investigar el error humano conviene recordar que el desenlace no estaba en el horizonte de los involucrados, que nadie va a trabajar a hacerlo mal y que el error es efecto y no causa. Por eso ninguna etiqueta de error, se ponga donde se ponga, puede ser la conclusión de la investigación: es el punto de partida.",
+  "texto": "Si el error del operador no basta para explicar el evento, remontarse a la supervisión inadecuada o a la gestión deficiente como explicación de fondo",
+  "tipo": "CONTRARIO",
+  "lineas": "L4033 a L4045",
+  "cita": "Explaining one error (for example, operator error) by pointing to another (inadequate supervision, deficient management, bad design) does not explain anything. It only judges other people for not doing what you, in hindsight, think they should have done.",
+  "dato": "",
+  "explicacion": "El paso suena a enfoque sistémico, pero el libro advierte que trasladar el error del operador a la supervisión o a la gestión solo cambia de culpable y sigue juzgando en retrospectiva, sin explicar nada."
+ },
+ {
+  "titulo": "La Ventana de Aprendizaje tras el Fallo",
+  "resumen": "Los arreglos de fondo cambian algo fundamental en la organización, y por eso son difíciles. El impacto de un fallo puede abrir una ventana de mayor apertura: la organización acepta examinarse, se difuminan las fronteras entre dirección y operadores, hay disposición al cambio y aparecen recursos normalmente reservados a la producción. Esa apertura se pierde con facilidad ante reacciones de búsqueda de culpables.",
+  "texto": "Aprovechar la ventana de apertura posterior al incidente, que suele durar unas seis semanas, para impulsar las recomendaciones de cambio más difíciles",
+  "tipo": "ANADIDO",
+  "lineas": "L3981 a L3991",
+  "cita": "there could be a window in which there is more openness to learning. The shock of a failure may indeed help open such a window",
+  "dato": "duración de unas seis semanas de la ventana de apertura",
+  "explicacion": "El libro solo dice que la apertura al cambio puede durar poco tiempo ('even if only for a short while', L3987), sin cuantificarla. Las seis semanas son inventadas."
+ }
+]

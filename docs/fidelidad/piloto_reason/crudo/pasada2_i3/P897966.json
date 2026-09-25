@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P897966",
+  "intento": 0,
+  "usd": 0.18198,
+  "turnos": 1,
+  "duracion_s": 15.3,
+  "pared_s": 16.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 40065,
+  "tokens_out": 1086,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P897966\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2948, 2961, 3813, 5499, 3829, 5907], \"cita\": \"Within a skilled, experienced and largely well intentioned workforce, situations are more amenable to improvement than people. [...] The balance of scientific opinion clearly favours the situational rather than the personal approach to error management.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro prioriza cambiar las condiciones de trabajo sobre la persona. Tarea, herramientas (hardware, design) y procedimientos figuran entre sus factores. 'Primera línea' concreta esa prioridad sin invertirla. La condición de plantilla bienintencionada y el trato de las violaciones se cubren en otro paso del nodo. Actuar a varios niveles a la vez (L5907) no contradice priorizar.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P897966",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2948,
+   2961,
+   3813,
+   5499,
+   3829,
+   5907
+  ],
+  "cita": "Within a skilled, experienced and largely well intentioned workforce, situations are more amenable to improvement than people. [...] The balance of scientific opinion clearly favours the situational rather than the personal approach to error management.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro prioriza cambiar las condiciones de trabajo sobre la persona. Tarea, herramientas (hardware, design) y procedimientos figuran entre sus factores. 'Primera línea' concreta esa prioridad sin invertirla. La condición de plantilla bienintencionada y el trato de las violaciones se cubren en otro paso del nodo. Actuar a varios niveles a la vez (L5907) no contradice priorizar.",
+  "paso_fiel": ""
+ }
+}

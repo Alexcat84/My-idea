@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_063",
+  "intento": 0,
+  "usd": 0.16602,
+  "turnos": 1,
+  "duracion_s": 15.6,
+  "pared_s": 17.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34160,
+  "tokens_out": 1469,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PF05E9D\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"monitoreo continuo\", \"en cada capa defensiva\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [181, 2650, 2658, 2767, 5781], \"razon\": \"El libro pide chequeos regulares, con frecuencia según ritmo de cambio, sobre un subconjunto de 8-16 índices para priorizar 2-3. 'Continuo' y 'cada capa' pueden chocar con esto.\"},\n  {\"id\": \"P6E0947\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [293, 3784], \"razon\": \"L293 lo dice literalmente: para cada defensa vulnerada o eludida hay que establecer qué fallos activos y condiciones latentes intervinieron.\"},\n  {\"id\": \"P0231F8\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"process safety indicators\", \"LTIF\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [5688, 5690, 5907, 2596, 3053], \"razon\": \"Término con nombre propio ajeno al libro. 'Complementarias' puede dejar el LTIF como métrica principal, cuando el libro dice que con LTIF bajo los precursores son mucho más diagnósticos.\"},\n  {\"id\": \"PFBA87A\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [580, 5639, 2596], \"razon\": \"L580 enumera exactamente esos procesos organizacionales básicos como fuentes de condiciones latentes. Aclara que la lista es incompleta y el paso no dice lo contrario.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PF05E9D",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "monitoreo continuo",
+    "en cada capa defensiva"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    181,
+    2650,
+    2658,
+    2767,
+    5781
+   ],
+   "razon": "El libro pide chequeos regulares, con frecuencia según ritmo de cambio, sobre un subconjunto de 8-16 índices para priorizar 2-3. 'Continuo' y 'cada capa' pueden chocar con esto."
+  },
+  {
+   "id": "P6E0947",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    293,
+    3784
+   ],
+   "razon": "L293 lo dice literalmente: para cada defensa vulnerada o eludida hay que establecer qué fallos activos y condiciones latentes intervinieron."
+  },
+  {
+   "id": "P0231F8",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "process safety indicators",
+    "LTIF"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    5688,
+    5690,
+    5907,
+    2596,
+    3053
+   ],
+   "razon": "Término con nombre propio ajeno al libro. 'Complementarias' puede dejar el LTIF como métrica principal, cuando el libro dice que con LTIF bajo los precursores son mucho más diagnósticos."
+  },
+  {
+   "id": "PFBA87A",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    580,
+    5639,
+    2596
+   ],
+   "razon": "L580 enumera exactamente esos procesos organizacionales básicos como fuentes de condiciones latentes. Aclara que la lista es incompleta y el paso no dice lo contrario."
+  }
+ ]
+}

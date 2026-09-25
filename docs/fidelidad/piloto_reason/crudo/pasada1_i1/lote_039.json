@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_039",
+  "intento": 0,
+  "usd": 0.15123999999999999,
+  "turnos": 1,
+  "duracion_s": 11.9,
+  "pared_s": 13.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32795,
+  "tokens_out": 1003,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P8B72DD\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5067, 1543, 4765], \"razon\": \"El libro afirma que las recompensas son el medio más poderoso si se entregan cerca en tiempo y lugar de la conducta deseada; el reconocimiento inmediato coincide.\"},\n{\"id\": \"P2C30D3\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2489, 2491, 2547, 5688, 5690], \"razon\": \"El libro dice que los indicadores de resultado son poco fiables cuando las tasas son bajas, porque son más ruido que señal y revelan poco.\"},\n{\"id\": \"P2E9AAB\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2577, 2579, 2581, 2583, 5692], \"razon\": \"El libro exige combinar compromiso, competencia y conocimiento, que corresponden a la alta dirección; planificar cómo reforzarlos sigue esa misma dirección sin chocar.\"},\n{\"id\": \"PE20636\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4693, 4695, 4724], \"razon\": \"Las culturas organizacionales se forman por prácticas compartidas, que son manejables y el foco del capítulo; identificarlas es un primer paso razonable.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P8B72DD",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5067,
+    1543,
+    4765
+   ],
+   "razon": "El libro afirma que las recompensas son el medio más poderoso si se entregan cerca en tiempo y lugar de la conducta deseada; el reconocimiento inmediato coincide."
+  },
+  {
+   "id": "P2C30D3",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2489,
+    2491,
+    2547,
+    5688,
+    5690
+   ],
+   "razon": "El libro dice que los indicadores de resultado son poco fiables cuando las tasas son bajas, porque son más ruido que señal y revelan poco."
+  },
+  {
+   "id": "P2E9AAB",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2577,
+    2579,
+    2581,
+    2583,
+    5692
+   ],
+   "razon": "El libro exige combinar compromiso, competencia y conocimiento, que corresponden a la alta dirección; planificar cómo reforzarlos sigue esa misma dirección sin chocar."
+  },
+  {
+   "id": "PE20636",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4693,
+    4695,
+    4724
+   ],
+   "razon": "Las culturas organizacionales se forman por prácticas compartidas, que son manejables y el foco del capítulo; identificarlas es un primer paso razonable."
+  }
+ ]
+}

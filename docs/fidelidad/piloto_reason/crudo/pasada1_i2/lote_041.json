@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_041",
+  "intento": 0,
+  "usd": 0.17781999999999998,
+  "turnos": 1,
+  "duracion_s": 22.3,
+  "pared_s": 23.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33615,
+  "tokens_out": 2168,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P3A8A87\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3395, 3397, 2837, 3659], \"razon\": \"HEART pide consultar la lista de EPCs y decidir cuales afectan a la actividad evaluada; listar condiciones presentes concreta ese paso sin anadir datos.\"},\n{\"id\": \"P9F2E5B\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5067, 5077, 5063, 4765, 4987], \"razon\": \"Coincide con que el castigo diferido suele ser ineficaz, pero el libro defiende sancionar a los pocos culpables, incluso con despido. 'Evitar' como regla general podria llevar a no sancionarlos.\"},\n{\"id\": \"P89DD0F\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4219, 4221, 4223, 4244], \"razon\": \"El libro limita esos exitos a accidentes individuales con peligros bien conocidos. Extraer principios 'aplicables al contexto actual' puede llevar a trasladarlos a accidentes organizacionales, donde el libro dice que no funcionan.\"},\n{\"id\": \"P6C9895\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"análisis costo-beneficio\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5894, 5834, 5892, 4410, 81, 83, 688, 692], \"razon\": \"El libro invierte la pregunta: no lo que cuesta la seguridad, sino lo que ahorra. Advierte que los accidentes parecen imposibles y que la proteccion se sacrifica por produccion; condicionar la decision puede chocar.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P3A8A87",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3395,
+    3397,
+    2837,
+    3659
+   ],
+   "razon": "HEART pide consultar la lista de EPCs y decidir cuales afectan a la actividad evaluada; listar condiciones presentes concreta ese paso sin anadir datos."
+  },
+  {
+   "id": "P9F2E5B",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5067,
+    5077,
+    5063,
+    4765,
+    4987
+   ],
+   "razon": "Coincide con que el castigo diferido suele ser ineficaz, pero el libro defiende sancionar a los pocos culpables, incluso con despido. 'Evitar' como regla general podria llevar a no sancionarlos."
+  },
+  {
+   "id": "P89DD0F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4219,
+    4221,
+    4223,
+    4244
+   ],
+   "razon": "El libro limita esos exitos a accidentes individuales con peligros bien conocidos. Extraer principios 'aplicables al contexto actual' puede llevar a trasladarlos a accidentes organizacionales, donde el libro dice que no funcionan."
+  },
+  {
+   "id": "P6C9895",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "análisis costo-beneficio"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5894,
+    5834,
+    5892,
+    4410,
+    81,
+    83,
+    688,
+    692
+   ],
+   "razon": "El libro invierte la pregunta: no lo que cuesta la seguridad, sino lo que ahorra. Advierte que los accidentes parecen imposibles y que la proteccion se sacrifica por produccion; condicionar la decision puede chocar."
+  }
+ ]
+}

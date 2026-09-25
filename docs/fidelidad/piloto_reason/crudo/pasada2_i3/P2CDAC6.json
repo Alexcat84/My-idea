@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P2CDAC6",
+  "intento": 0,
+  "usd": 0.163616,
+  "turnos": 1,
+  "duracion_s": 24.9,
+  "pared_s": 25.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 37164,
+  "tokens_out": 748,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P2CDAC6\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5896], \"cita\": \"Recent studies have shown that crisis-prepared organizations plan for at least five different types of crisis, and the crisis plans are closely linked to business recovery plans.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro respalda la cifra de al menos cinco tipos distintos de crisis, aunque la presenta como rasgo descriptivo de las organizaciones preparadas, no como mandato. El paso la convierte en acción y añade 'relevantes al negocio'. Es una concreción en la misma dirección, sin datos nuevos ni contradicción.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P2CDAC6",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5896
+  ],
+  "cita": "Recent studies have shown that crisis-prepared organizations plan for at least five different types of crisis, and the crisis plans are closely linked to business recovery plans.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro respalda la cifra de al menos cinco tipos distintos de crisis, aunque la presenta como rasgo descriptivo de las organizaciones preparadas, no como mandato. El paso la convierte en acción y añade 'relevantes al negocio'. Es una concreción en la misma dirección, sin datos nuevos ni contradicción.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PA99C47",
+  "intento": 0,
+  "usd": 0.236952,
+  "turnos": 1,
+  "duracion_s": 14.8,
+  "pared_s": 15.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 52513,
+  "tokens_out": 1345,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA99C47\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4109, 4133, 3923, 4523], \"cita\": \"appeared to be biased towards promoting the viability of the operator ... deficiencies in Monarch’s flight operations had been identified a few months before the accident, the ACAA appeared to be reluctant to take decisive action\", \"datos_sin_respaldo\": [], \"razon\": \"El libro detecta el sesgo de la ACAA en su tolerancia pasada a deficiencias conocidas. También analiza casos pasados para entender cómo contribuye el regulador (L3923). No manda auditar decisiones históricas, pero el paso lo concreta en su dirección y sin datos nuevos. Solo advierte contra culpar con retrospectiva a inspectores concretos (L4523), y el paso no lo propone.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA99C47",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4109,
+   4133,
+   3923,
+   4523
+  ],
+  "cita": "appeared to be biased towards promoting the viability of the operator ... deficiencies in Monarch’s flight operations had been identified a few months before the accident, the ACAA appeared to be reluctant to take decisive action",
+  "datos_sin_respaldo": [],
+  "razon": "El libro detecta el sesgo de la ACAA en su tolerancia pasada a deficiencias conocidas. También analiza casos pasados para entender cómo contribuye el regulador (L3923). No manda auditar decisiones históricas, pero el paso lo concreta en su dirección y sin datos nuevos. Solo advierte contra culpar con retrospectiva a inspectores concretos (L4523), y el paso no lo propone.",
+  "paso_fiel": ""
+ }
+}

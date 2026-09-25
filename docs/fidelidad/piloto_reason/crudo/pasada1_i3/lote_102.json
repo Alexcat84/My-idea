@@ -1,0 +1,88 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_102",
+  "intento": 0,
+  "usd": 0.1785,
+  "turnos": 1,
+  "duracion_s": 23.8,
+  "pared_s": 24.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33605,
+  "tokens_out": 2204,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PA89584\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [990, 992, 1006, 1354], \"razon\": \"El libro describe la acumulación aditiva de reglas tras cada accidente. Revisar ese historial concreta el diagnóstico en la misma dirección, aunque el libro no lo prescribe explícitamente.\"},\n  {\"id\": \"P46A49E\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"función de inspección independiente\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [967, 969, 971, 973, 975], \"razon\": \"El libro advierte que suprimir la inspección independiente dejó pasar trabajos mal firmados. Verificar su existencia va en la misma dirección. Revisar el alcance de 'tareas críticas'.\"},\n  {\"id\": \"PB90A4B\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"modelo de Reason\"], \"clase\": \"FIEL\", \"lineas\": [183, 293, 308, 343, 4105, 5748, 5757], \"razon\": \"El libro apoya distinguir fallos activos y condiciones latentes. Matiz: prefiere 'condiciones' a 'fallas' latentes y advierte rendimientos decrecientes y límites a lo controlable.\"},\n  {\"id\": \"P505914\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1031, 1035, 1618, 1638, 1652, 1724, 1726, 5132], \"razon\": \"Ginna respalda que las reglas son insensibles al contexto. Pero el libro advierte que las violaciones exitosas generan misvenciones (Chernobyl) y no prescribe esa capacitación.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PA89584",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    990,
+    992,
+    1006,
+    1354
+   ],
+   "razon": "El libro describe la acumulación aditiva de reglas tras cada accidente. Revisar ese historial concreta el diagnóstico en la misma dirección, aunque el libro no lo prescribe explícitamente."
+  },
+  {
+   "id": "P46A49E",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "función de inspección independiente"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    967,
+    969,
+    971,
+    973,
+    975
+   ],
+   "razon": "El libro advierte que suprimir la inspección independiente dejó pasar trabajos mal firmados. Verificar su existencia va en la misma dirección. Revisar el alcance de 'tareas críticas'."
+  },
+  {
+   "id": "PB90A4B",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "modelo de Reason"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    183,
+    293,
+    308,
+    343,
+    4105,
+    5748,
+    5757
+   ],
+   "razon": "El libro apoya distinguir fallos activos y condiciones latentes. Matiz: prefiere 'condiciones' a 'fallas' latentes y advierte rendimientos decrecientes y límites a lo controlable."
+  },
+  {
+   "id": "P505914",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1031,
+    1035,
+    1618,
+    1638,
+    1652,
+    1724,
+    1726,
+    5132
+   ],
+   "razon": "Ginna respalda que las reglas son insensibles al contexto. Pero el libro advierte que las violaciones exitosas generan misvenciones (Chernobyl) y no prescribe esa capacitación."
+  }
+ ]
+}

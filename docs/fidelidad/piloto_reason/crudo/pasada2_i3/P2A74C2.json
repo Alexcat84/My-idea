@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P2A74C2",
+  "intento": 0,
+  "usd": 0.219332,
+  "turnos": 1,
+  "duracion_s": 8.0,
+  "pared_s": 8.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 52133,
+  "tokens_out": 540,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P2A74C2\", \"veredicto\": \"FIEL\", \"lineas\": [3817, 2884, 2977, 4765], \"cita\": \"Blaming people for their errors--though emotionally satisfying--will have little or no effect on their future fallibility.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala como defecto de la gestión del error apoyarse en sanciones y en la culpa (L2884, L2977, L3817). El paso no pide una cultura sin culpa: pide no hacer de la culpa la estrategia principal. Así deja sitio a sancionar los actos atroces, como exige la cultura justa (L4765). No contiene datos concretos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P2A74C2",
+  "veredicto": "FIEL",
+  "lineas": [
+   3817,
+   2884,
+   2977,
+   4765
+  ],
+  "cita": "Blaming people for their errors--though emotionally satisfying--will have little or no effect on their future fallibility.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala como defecto de la gestión del error apoyarse en sanciones y en la culpa (L2884, L2977, L3817). El paso no pide una cultura sin culpa: pide no hacer de la culpa la estrategia principal. Así deja sitio a sancionar los actos atroces, como exige la cultura justa (L4765). No contiene datos concretos.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PCEFBDB",
+  "intento": 0,
+  "usd": 0.181456,
+  "turnos": 1,
+  "duracion_s": 10.4,
+  "pared_s": 11.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42329,
+  "tokens_out": 607,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PCEFBDB\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [3825, 2716, 3449, 3461, 3109], \"cita\": \"Errors arise from informational problems. They are best tackled by improving the available information--either in the person's head or in the workplace.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que los errores se combaten mejorando la información. El paso concreta ejemplos en esa misma dirección: la calidad de los procedimientos, la retroalimentación del sistema y la información del puesto (EPC de HEART, GFT Procedures). Mejorar la calidad de un procedimiento no equivale a endurecerlo o multiplicarlo, que es lo que el libro critica (L1006). Omitir la vía de la formación es solo detalle.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PCEFBDB",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   3825,
+   2716,
+   3449,
+   3461,
+   3109
+  ],
+  "cita": "Errors arise from informational problems. They are best tackled by improving the available information--either in the person's head or in the workplace.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que los errores se combaten mejorando la información. El paso concreta ejemplos en esa misma dirección: la calidad de los procedimientos, la retroalimentación del sistema y la información del puesto (EPC de HEART, GFT Procedures). Mejorar la calidad de un procedimiento no equivale a endurecerlo o multiplicarlo, que es lo que el libro critica (L1006). Omitir la vía de la formación es solo detalle.",
+  "paso_fiel": ""
+ }
+}

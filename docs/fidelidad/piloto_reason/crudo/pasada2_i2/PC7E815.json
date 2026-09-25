@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC7E815",
+  "intento": 0,
+  "usd": 0.21997999999999998,
+  "turnos": 1,
+  "duracion_s": 11.3,
+  "pared_s": 12.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 50390,
+  "tokens_out": 921,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC7E815\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [520, 3985, 582, 594, 668, 686], \"cita\": \"The Bank of England report identified a number of warning signs that should have alerted Barings management to BFS's unauthorized activities. The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm\", \"datos_sin_respaldo\": [], \"razon\": \"El libro muestra señales ignoradas (Barings; datos de erosión de juntas no difundidos) y pide hacer visibles las condiciones latentes y mantener una inquietud crónica. El paso lo lleva a una autoevaluación personal en esa misma dirección y sin datos nuevos. La advertencia sobre la retrospectiva matiza la dificultad, pero no desaconseja buscar señales. No es contrario.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC7E815",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   520,
+   3985,
+   582,
+   594,
+   668,
+   686
+  ],
+  "cita": "The Bank of England report identified a number of warning signs that should have alerted Barings management to BFS's unauthorized activities. The report concedes that no single one of these indicators would have served as a sufficient warning, but collectively they should have raised the alarm",
+  "datos_sin_respaldo": [],
+  "razon": "El libro muestra señales ignoradas (Barings; datos de erosión de juntas no difundidos) y pide hacer visibles las condiciones latentes y mantener una inquietud crónica. El paso lo lleva a una autoevaluación personal en esa misma dirección y sin datos nuevos. La advertencia sobre la retrospectiva matiza la dificultad, pero no desaconseja buscar señales. No es contrario.",
+  "paso_fiel": ""
+ }
+}

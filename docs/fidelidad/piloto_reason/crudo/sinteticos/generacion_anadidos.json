@@ -1,0 +1,169 @@
+{
+ "coste": {
+  "etapa": "sinteticos",
+  "clave": "generacion_anadidos",
+  "intento": 0,
+  "usd": 0.24385600000000002,
+  "turnos": 1,
+  "duracion_s": 70.6,
+  "pared_s": 71.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 19999,
+  "tokens_out": 8193,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"fragmento\": \"F0006\",\n    \"lineas\": [63, 65],\n    \"tipo_dato\": \"CIFRA\",\n    \"dato_anadido\": \"al menos el 8% del presupuesto operativo\",\n    \"nodo_huesped\": \"produccion_y_proteccion\",\n    \"paso\": \"Asignar al menos el 8% del presupuesto operativo a funciones de protección en las líneas de producción clasificadas como de alto peligro.\",\n    \"que_dice_el_libro\": \"El nivel de protección debe corresponder a los peligros de la producción (zona de paridad), y las actividades de alto peligro requieren más protección por unidad productiva, sin fijar ningún porcentaje.\"\n  },\n  {\n    \"fragmento\": \"F0073\",\n    \"lineas\": [520],\n    \"tipo_dato\": \"ROL\",\n    \"dato_anadido\": \"Comité de Auditoría del directorio\",\n    \"nodo_huesped\": \"senales_alerta_no_atendidas\",\n    \"paso\": \"Encargar al Comité de Auditoría del directorio revisar en conjunto las señales de alerta dispersas, aunque ninguna por sí sola parezca suficiente.\",\n    \"que_dice_el_libro\": \"Ninguna señal aislada bastaba como advertencia, pero en conjunto debieron alertar a la dirección en Londres y Singapur, sin asignar esa revisión a un órgano concreto.\"\n  },\n  {\n    \"fragmento\": \"F0052\",\n    \"lineas\": [417, 419],\n    \"tipo_dato\": \"PLAZO\",\n    \"dato_anadido\": \"al menos 48 horas antes\",\n    \"nodo_huesped\": \"documentacion_mantenimiento_linea_base\",\n    \"paso\": \"Completar el paquete de trabajo de línea con tarjetas paso a paso y firmas de reensamblaje al menos 48 horas antes de transferirlo a base.\",\n    \"que_dice_el_libro\": \"El paquete generado en línea carecía de tarjetas paso a paso, de firmas de restauración y de advertencias, a diferencia de los paquetes de base, pero no se fija un plazo de preparación.\"\n  },\n  {\n    \"fragmento\": \"F0097\",\n    \"lineas\": [868],\n    \"tipo_dato\": \"PLAZO\",\n    \"dato_anadido\": \"cada seis meses\",\n    \"nodo_huesped\": \"confusion_de_modos_automatizacion\",\n    \"paso\": \"Programar cada seis meses una sesión de simulador dedicada a transiciones de modo del FMS durante fases de alta carga de trabajo.\",\n    \"que_dice_el_libro\": \"Las tripulaciones deben saber en qué modo están y cómo el FMS selecciona nuevos modos, sobre todo con alta carga mental, sin prescribir una frecuencia de entrenamiento.\"\n  },\n  {\n    \"fragmento\": \"F0105\",\n    \"lineas\": [969, 971, 973],\n    \"tipo_dato\": \"NORMA\",\n    \"dato_anadido\": \"la norma ISO 55001\",\n    \"nodo_huesped\": \"quality_control_vs_quality_assurance\",\n    \"paso\": \"Exigir inspección independiente en las tareas críticas de mantenimiento, sin aceptar solo la firma del ejecutor, conforme a la norma ISO 55001.\",\n    \"que_dice_el_libro\": \"La ausencia de inspección separada y de personal de aseguramiento permitió firmar trabajos inconclusos como aptos, sin mencionar ninguna norma de gestión de activos.\"\n  },\n  {\n    \"fragmento\": \"F0191\",\n    \"lineas\": [1963, 1967, 1971, 1975, 1977],\n    \"tipo_dato\": \"HERRAMIENTA\",\n    \"dato_anadido\": \"IBM Maximo\",\n    \"nodo_huesped\": \"riesgo_actividades_mantenimiento\",\n    \"paso\": \"Cargar en IBM Maximo las actividades que puntúan alto en contacto directo, criticidad y frecuencia para priorizar su control.\",\n    \"que_dice_el_libro\": \"Propone tres preguntas (contacto directo, criticidad y frecuencia) para estimar qué actividades generan más problemas de desempeño humano, sin mencionar software alguno.\"\n  },\n  {\n    \"fragmento\": \"F0199\",\n    \"lineas\": [2190, 2192, 2194, 2196],\n    \"tipo_dato\": \"HERRAMIENTA\",\n    \"dato_anadido\": \"listas digitales de SafetyCulture\",\n    \"nodo_huesped\": \"caracteristicas_tareas_propensas_omision\",\n    \"paso\": \"Registrar los pasos propensos a omisión como ítems obligatorios en listas digitales de SafetyCulture que el técnico confirme antes de cerrar la tarea.\",\n    \"que_dice_el_libro\": \"Describe los procesos cognitivos que llevan a omitir pasos y ejemplifica con la fotocopiadora, sin proponer aplicaciones digitales con nombre.\"\n  },\n  {\n    \"fragmento\": \"F0245\",\n    \"lineas\": [2734, 2738, 2742, 2746, 2748],\n    \"tipo_dato\": \"NORMA\",\n    \"dato_anadido\": \"ISO 45001\",\n    \"nodo_huesped\": \"medicion_proactiva_procesos\",\n    \"paso\": \"Organizar la medición proactiva en factores de gestión, técnicos, procedimentales y de formación, alineándola con los requisitos de ISO 45001.\",\n    \"que_dice_el_libro\": \"Agrupa las medidas de proceso en factores de gestión, técnicos, procedimentales y de formación con la cultura en el centro, sin referirse a ninguna norma ISO.\"\n  },\n  {\n    \"fragmento\": \"F0268\",\n    \"lineas\": [3093, 3097],\n    \"tipo_dato\": \"CIFRA\",\n    \"dato_anadido\": \"más de 10 años de antigüedad\",\n    \"nodo_huesped\": \"tripod_delta_general_failure_types\",\n    \"paso\": \"Revisar y reemplazar las herramientas y equipos con más de 10 años de antigüedad como parte del control del tipo de falla Hardware.\",\n    \"que_dice_el_libro\": \"El GFT Hardware incluye la antigüedad de los equipos entre sus componentes, pero no establece un umbral de años.\"\n  },\n  {\n    \"fragmento\": \"F0325\",\n    \"lineas\": [4092, 4094],\n    \"tipo_dato\": \"ROL\",\n    \"dato_anadido\": \"viceministro de transporte\",\n    \"nodo_huesped\": \"fallo_regulatorio_por_recursos_insuficientes\",\n    \"paso\": \"Hacer rendir cuentas al viceministro de transporte por la inacción y falta de recursos en la supervisión, no solo a los inspectores de primera línea.\",\n    \"que_dice_el_libro\": \"Las fallas regulatorias venían de la alta dirección de Transport Canada y del clima financiero del gobierno, no de los inspectores, sin señalar un cargo concreto.\"\n  },\n  {\n    \"fragmento\": \"F0391\",\n    \"lineas\": [4769],\n    \"tipo_dato\": \"OTRO\",\n    \"dato_anadido\": \"Sistema de Comando de Incidentes\",\n    \"nodo_huesped\": \"cultura_flexible\",\n    \"paso\": \"Adoptar el Sistema de Comando de Incidentes para traspasar el control a los expertos en terreno durante emergencias y volver después a la jerarquía habitual.\",\n    \"que_dice_el_libro\": \"Las organizaciones de alta confiabilidad pasan de una estructura jerárquica a una más plana ante emergencias y luego vuelven al modo burocrático, sin nombrar un modelo organizativo específico.\"\n  },\n  {\n    \"fragmento\": \"F0484\",\n    \"lineas\": [5892],\n    \"tipo_dato\": \"OTRO\",\n    \"dato_anadido\": \"Net Promoter Score\",\n    \"nodo_huesped\": \"costos_ocultos_accidentes_iceberg\",\n    \"paso\": \"Incluir el daño reputacional en el costo de cada accidente, midiendo la variación del Net Promoter Score de los clientes tras el evento.\",\n    \"que_dice_el_libro\": \"Hay que sumar intangibles como el daño a la reputación, reflejado probablemente en el precio de la acción, sin proponer un indicador de satisfacción de clientes.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "fragmento": "F0006",
+   "lineas": [
+    63,
+    65
+   ],
+   "tipo_dato": "CIFRA",
+   "dato_anadido": "al menos el 8% del presupuesto operativo",
+   "nodo_huesped": "produccion_y_proteccion",
+   "paso": "Asignar al menos el 8% del presupuesto operativo a funciones de protección en las líneas de producción clasificadas como de alto peligro.",
+   "que_dice_el_libro": "El nivel de protección debe corresponder a los peligros de la producción (zona de paridad), y las actividades de alto peligro requieren más protección por unidad productiva, sin fijar ningún porcentaje."
+  },
+  {
+   "fragmento": "F0073",
+   "lineas": [
+    520
+   ],
+   "tipo_dato": "ROL",
+   "dato_anadido": "Comité de Auditoría del directorio",
+   "nodo_huesped": "senales_alerta_no_atendidas",
+   "paso": "Encargar al Comité de Auditoría del directorio revisar en conjunto las señales de alerta dispersas, aunque ninguna por sí sola parezca suficiente.",
+   "que_dice_el_libro": "Ninguna señal aislada bastaba como advertencia, pero en conjunto debieron alertar a la dirección en Londres y Singapur, sin asignar esa revisión a un órgano concreto."
+  },
+  {
+   "fragmento": "F0052",
+   "lineas": [
+    417,
+    419
+   ],
+   "tipo_dato": "PLAZO",
+   "dato_anadido": "al menos 48 horas antes",
+   "nodo_huesped": "documentacion_mantenimiento_linea_base",
+   "paso": "Completar el paquete de trabajo de línea con tarjetas paso a paso y firmas de reensamblaje al menos 48 horas antes de transferirlo a base.",
+   "que_dice_el_libro": "El paquete generado en línea carecía de tarjetas paso a paso, de firmas de restauración y de advertencias, a diferencia de los paquetes de base, pero no se fija un plazo de preparación."
+  },
+  {
+   "fragmento": "F0097",
+   "lineas": [
+    868
+   ],
+   "tipo_dato": "PLAZO",
+   "dato_anadido": "cada seis meses",
+   "nodo_huesped": "confusion_de_modos_automatizacion",
+   "paso": "Programar cada seis meses una sesión de simulador dedicada a transiciones de modo del FMS durante fases de alta carga de trabajo.",
+   "que_dice_el_libro": "Las tripulaciones deben saber en qué modo están y cómo el FMS selecciona nuevos modos, sobre todo con alta carga mental, sin prescribir una frecuencia de entrenamiento."
+  },
+  {
+   "fragmento": "F0105",
+   "lineas": [
+    969,
+    971,
+    973
+   ],
+   "tipo_dato": "NORMA",
+   "dato_anadido": "la norma ISO 55001",
+   "nodo_huesped": "quality_control_vs_quality_assurance",
+   "paso": "Exigir inspección independiente en las tareas críticas de mantenimiento, sin aceptar solo la firma del ejecutor, conforme a la norma ISO 55001.",
+   "que_dice_el_libro": "La ausencia de inspección separada y de personal de aseguramiento permitió firmar trabajos inconclusos como aptos, sin mencionar ninguna norma de gestión de activos."
+  },
+  {
+   "fragmento": "F0191",
+   "lineas": [
+    1963,
+    1967,
+    1971,
+    1975,
+    1977
+   ],
+   "tipo_dato": "HERRAMIENTA",
+   "dato_anadido": "IBM Maximo",
+   "nodo_huesped": "riesgo_actividades_mantenimiento",
+   "paso": "Cargar en IBM Maximo las actividades que puntúan alto en contacto directo, criticidad y frecuencia para priorizar su control.",
+   "que_dice_el_libro": "Propone tres preguntas (contacto directo, criticidad y frecuencia) para estimar qué actividades generan más problemas de desempeño humano, sin mencionar software alguno."
+  },
+  {
+   "fragmento": "F0199",
+   "lineas": [
+    2190,
+    2192,
+    2194,
+    2196
+   ],
+   "tipo_dato": "HERRAMIENTA",
+   "dato_anadido": "listas digitales de SafetyCulture",
+   "nodo_huesped": "caracteristicas_tareas_propensas_omision",
+   "paso": "Registrar los pasos propensos a omisión como ítems obligatorios en listas digitales de SafetyCulture que el técnico confirme antes de cerrar la tarea.",
+   "que_dice_el_libro": "Describe los procesos cognitivos que llevan a omitir pasos y ejemplifica con la fotocopiadora, sin proponer aplicaciones digitales con nombre."
+  },
+  {
+   "fragmento": "F0245",
+   "lineas": [
+    2734,
+    2738,
+    2742,
+    2746,
+    2748
+   ],
+   "tipo_dato": "NORMA",
+   "dato_anadido": "ISO 45001",
+   "nodo_huesped": "medicion_proactiva_procesos",
+   "paso": "Organizar la medición proactiva en factores de gestión, técnicos, procedimentales y de formación, alineándola con los requisitos de ISO 45001.",
+   "que_dice_el_libro": "Agrupa las medidas de proceso en factores de gestión, técnicos, procedimentales y de formación con la cultura en el centro, sin referirse a ninguna norma ISO."
+  },
+  {
+   "fragmento": "F0268",
+   "lineas": [
+    3093,
+    3097
+   ],
+   "tipo_dato": "CIFRA",
+   "dato_anadido": "más de 10 años de antigüedad",
+   "nodo_huesped": "tripod_delta_general_failure_types",
+   "paso": "Revisar y reemplazar las herramientas y equipos con más de 10 años de antigüedad como parte del control del tipo de falla Hardware.",
+   "que_dice_el_libro": "El GFT Hardware incluye la antigüedad de los equipos entre sus componentes, pero no establece un umbral de años."
+  },
+  {
+   "fragmento": "F0325",
+   "lineas": [
+    4092,
+    4094
+   ],
+   "tipo_dato": "ROL",
+   "dato_anadido": "viceministro de transporte",
+   "nodo_huesped": "fallo_regulatorio_por_recursos_insuficientes",
+   "paso": "Hacer rendir cuentas al viceministro de transporte por la inacción y falta de recursos en la supervisión, no solo a los inspectores de primera línea.",
+   "que_dice_el_libro": "Las fallas regulatorias venían de la alta dirección de Transport Canada y del clima financiero del gobierno, no de los inspectores, sin señalar un cargo concreto."
+  },
+  {
+   "fragmento": "F0391",
+   "lineas": [
+    4769
+   ],
+   "tipo_dato": "OTRO",
+   "dato_anadido": "Sistema de Comando de Incidentes",
+   "nodo_huesped": "cultura_flexible",
+   "paso": "Adoptar el Sistema de Comando de Incidentes para traspasar el control a los expertos en terreno durante emergencias y volver después a la jerarquía habitual.",
+   "que_dice_el_libro": "Las organizaciones de alta confiabilidad pasan de una estructura jerárquica a una más plana ante emergencias y luego vuelven al modo burocrático, sin nombrar un modelo organizativo específico."
+  },
+  {
+   "fragmento": "F0484",
+   "lineas": [
+    5892
+   ],
+   "tipo_dato": "OTRO",
+   "dato_anadido": "Net Promoter Score",
+   "nodo_huesped": "costos_ocultos_accidentes_iceberg",
+   "paso": "Incluir el daño reputacional en el costo de cada accidente, midiendo la variación del Net Promoter Score de los clientes tras el evento.",
+   "que_dice_el_libro": "Hay que sumar intangibles como el daño a la reputación, reflejado probablemente en el precio de la acción, sin proponer un indicador de satisfacción de clientes."
+  }
+ ]
+}

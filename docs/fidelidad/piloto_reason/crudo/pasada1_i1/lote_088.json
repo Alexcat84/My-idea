@@ -1,0 +1,70 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_088",
+  "intento": 0,
+  "usd": 0.157968,
+  "turnos": 1,
+  "duracion_s": 16.4,
+  "pared_s": 18.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32372,
+  "tokens_out": 1424,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P11D119\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2652, 2654, 2656, 2648], \"razon\": \"El libro recomienda analizar varios eventos del mismo dominio con un marco clasificatorio común, en vez de casos aislados. El paso lo reproduce.\"},\n{\"id\": \"P194F8A\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [2658, 2767, 3075, 3079, 5763, 5781, 2654], \"razon\": \"Coincide con la vigilancia continua y proactiva. Pero el libro propone muestrear procesos organizacionales (GFTs, 8-16 indicadores) y priorizar, no catalogar condiciones una a una. Matiz a revisar.\"},\n{\"id\": \"P568A7E\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [5037, 5057], \"razon\": \"El paso omite condiciones esenciales: sustituir por un par comparable y juzgar según cómo se percibían los hechos en tiempo real. Así puede leerse como preguntar al implicado con retrospectiva, justo lo que la prueba evita.\"},\n{\"id\": \"PE1A0FA\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2823, 2833, 3825, 2994, 2948], \"razon\": \"El libro define la reducción de errores e incluye medidas sobre tareas, información y entrenamiento. Mejorar la información es su vía preferida contra los errores.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P11D119",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2652,
+    2654,
+    2656,
+    2648
+   ],
+   "razon": "El libro recomienda analizar varios eventos del mismo dominio con un marco clasificatorio común, en vez de casos aislados. El paso lo reproduce."
+  },
+  {
+   "id": "P194F8A",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    2658,
+    2767,
+    3075,
+    3079,
+    5763,
+    5781,
+    2654
+   ],
+   "razon": "Coincide con la vigilancia continua y proactiva. Pero el libro propone muestrear procesos organizacionales (GFTs, 8-16 indicadores) y priorizar, no catalogar condiciones una a una. Matiz a revisar."
+  },
+  {
+   "id": "P568A7E",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    5037,
+    5057
+   ],
+   "razon": "El paso omite condiciones esenciales: sustituir por un par comparable y juzgar según cómo se percibían los hechos en tiempo real. Así puede leerse como preguntar al implicado con retrospectiva, justo lo que la prueba evita."
+  },
+  {
+   "id": "PE1A0FA",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2823,
+    2833,
+    3825,
+    2994,
+    2948
+   ],
+   "razon": "El libro define la reducción de errores e incluye medidas sobre tareas, información y entrenamiento. Mejorar la información es su vía preferida contra los errores."
+  }
+ ]
+}

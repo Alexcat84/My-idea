@@ -1,0 +1,74 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_057",
+  "intento": 0,
+  "usd": 0.17126,
+  "turnos": 1,
+  "duracion_s": 21.8,
+  "pared_s": 22.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32670,
+  "tokens_out": 2029,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P60A559\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4987, 4989, 5027, 5057, 5063], \"razon\": \"Mayormente fiel (L4989), pero el libro deja el error negligente en zona gris con juicio cuidadoso y prueba de sustitución. Una línea binaria escrita puede omitir ese matiz.\"},\n  {\"id\": \"P702BB0\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [417, 419, 421, 423, 451, 459], \"razon\": \"El libro dice que línea y base requieren documentación distinta y que los manuales son difíciles de usar. La brecha era el traspaso; generalizar documentación completa a toda tarea choca.\"},\n  {\"id\": \"PDB50D2\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [293, 310, 2652, 2654, 3784], \"razon\": \"El libro rastrea hacia atrás qué defensas fallaron y por qué fallas activas y latentes. Recomienda analizar varios eventos buscando combinaciones de factores.\"},\n  {\"id\": \"P9FC640\", \"clase\": \"FIEL\", \"marca\": true, \"lineas\": [194, 196, 291, 293, 5765, 5781], \"razon\": \"Identificar actos inseguros es parte del procedimiento (L293). Pero el libro advierte no detenerse ahí y que no siempre existen; aislado, el paso podría inducir el modelo persona.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P60A559",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4987,
+    4989,
+    5027,
+    5057,
+    5063
+   ],
+   "razon": "Mayormente fiel (L4989), pero el libro deja el error negligente en zona gris con juicio cuidadoso y prueba de sustitución. Una línea binaria escrita puede omitir ese matiz."
+  },
+  {
+   "id": "P702BB0",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    417,
+    419,
+    421,
+    423,
+    451,
+    459
+   ],
+   "razon": "El libro dice que línea y base requieren documentación distinta y que los manuales son difíciles de usar. La brecha era el traspaso; generalizar documentación completa a toda tarea choca."
+  },
+  {
+   "id": "PDB50D2",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    293,
+    310,
+    2652,
+    2654,
+    3784
+   ],
+   "razon": "El libro rastrea hacia atrás qué defensas fallaron y por qué fallas activas y latentes. Recomienda analizar varios eventos buscando combinaciones de factores."
+  },
+  {
+   "id": "P9FC640",
+   "clase": "FIEL",
+   "marca": true,
+   "lineas": [
+    194,
+    196,
+    291,
+    293,
+    5765,
+    5781
+   ],
+   "razon": "Identificar actos inseguros es parte del procedimiento (L293). Pero el libro advierte no detenerse ahí y que no siempre existen; aislado, el paso podría inducir el modelo persona."
+  }
+ ]
+}

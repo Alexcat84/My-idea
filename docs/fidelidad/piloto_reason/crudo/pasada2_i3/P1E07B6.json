@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1E07B6",
+  "intento": 0,
+  "usd": 0.158588,
+  "turnos": 1,
+  "duracion_s": 9.1,
+  "pared_s": 10.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35977,
+  "tokens_out": 734,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1E07B6\", \"veredicto\": \"CONTRARIO\", \"lineas\": [1558, 1630, 1724, 1006], \"cita\": \"Similarly, compliance is not automatically ‘correct’, nor a violation incorrect. It all depends on the local conditions and the adequacy of the procedures.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro afirma que cumplir no es automáticamente correcto: depende de las condiciones locales y de la calidad del procedimiento. Además define la 'mispliance' como cumplir reglas inadecuadas con resultado inseguro. El paso convierte el cumplimiento verificado en correcto por regla general, contra lo que dice el libro y contra el propio nodo sobre sobreespecificación.\", \"paso_fiel\": \"Evaluar el desempeño de cada tarea contrastando el apego al procedimiento con las condiciones locales y con la adecuación de la regla, sin dar por correcto el cumplimiento de una regla inadecuada (mispliance) ni por incorrecta toda desviación de ella.\"}\n```",
+ "parseado": {
+  "id": "P1E07B6",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   1558,
+   1630,
+   1724,
+   1006
+  ],
+  "cita": "Similarly, compliance is not automatically ‘correct’, nor a violation incorrect. It all depends on the local conditions and the adequacy of the procedures.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro afirma que cumplir no es automáticamente correcto: depende de las condiciones locales y de la calidad del procedimiento. Además define la 'mispliance' como cumplir reglas inadecuadas con resultado inseguro. El paso convierte el cumplimiento verificado en correcto por regla general, contra lo que dice el libro y contra el propio nodo sobre sobreespecificación.",
+  "paso_fiel": "Evaluar el desempeño de cada tarea contrastando el apego al procedimiento con las condiciones locales y con la adecuación de la regla, sin dar por correcto el cumplimiento de una regla inadecuada (mispliance) ni por incorrecta toda desviación de ella."
+ }
+}

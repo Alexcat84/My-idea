@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P7CBB6F",
+  "intento": 0,
+  "usd": 0.202824,
+  "turnos": 1,
+  "duracion_s": 14.1,
+  "pared_s": 15.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44491,
+  "tokens_out": 1243,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P7CBB6F\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5603, 5605, 5641, 5907], \"cita\": \"But some risks are more salient than others, and the balance between the risks varies from domain to domain ... The difficulty lies in the failure on the part of some managers to recognize that there are other types of risk and other tools to deal with them.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que el peso de cada riesgo varía por dominio y critica a los gestores que solo miran lesiones personales. El paso lo concreta en asignación de recursos sin excluir otros riesgos. Las condiciones latentes son al menos 'high' en todos los dominios, así que no quedan relegadas. No aporta datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P7CBB6F",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5603,
+   5605,
+   5641,
+   5907
+  ],
+  "cita": "But some risks are more salient than others, and the balance between the risks varies from domain to domain ... The difficulty lies in the failure on the part of some managers to recognize that there are other types of risk and other tools to deal with them.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que el peso de cada riesgo varía por dominio y critica a los gestores que solo miran lesiones personales. El paso lo concreta en asignación de recursos sin excluir otros riesgos. Las condiciones latentes son al menos 'high' en todos los dominios, así que no quedan relegadas. No aporta datos nuevos.",
+  "paso_fiel": ""
+ }
+}

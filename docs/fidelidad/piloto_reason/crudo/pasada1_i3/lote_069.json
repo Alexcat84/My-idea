@@ -1,0 +1,80 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_069",
+  "intento": 0,
+  "usd": 0.182336,
+  "turnos": 1,
+  "duracion_s": 22.0,
+  "pared_s": 22.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34869,
+  "tokens_out": 2143,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P8CD568\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"revisiones periódicas\"],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [1021, 1031, 1033, 1035],\n    \"razon\": \"El libro dice que no se pueden prever todos los escenarios ni prescribir respuestas universales. Verificar 'aplicabilidad universal' sugiere que es alcanzable. La periodicidad no figura en el libro.\"\n  },\n  {\n    \"id\": \"PF45FAD\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [5250, 5790, 5832, 5834, 5892],\n    \"razon\": \"El libro promueve el 'loss costing' y pregunta qué sistema existe para costear pérdidas. Detalla costos indirectos no asegurados de 5 a 50 veces lo recuperado.\"\n  },\n  {\n    \"id\": \"P930BD6\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [4693, 4695, 4722, 4724, 5270],\n    \"razon\": \"El libro respalda cambiar la cultura introduciendo nuevas medidas y prácticas. Matiz: advierte que poseer los componentes 'externos' no basta por sí solo.\"\n  },\n  {\n    \"id\": \"PC0A424\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"SIN_COBERTURA\",\n    \"lineas\": [4769, 5174, 5178, 5208],\n    \"razon\": \"El libro describe una reversión 'seamless', basada en cultura y premisas compartidas, no en reglas. Weick advierte que las reglas no sirven en emergencias. No habla de criterios explícitos.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P8CD568",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "revisiones periódicas"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1021,
+    1031,
+    1033,
+    1035
+   ],
+   "razon": "El libro dice que no se pueden prever todos los escenarios ni prescribir respuestas universales. Verificar 'aplicabilidad universal' sugiere que es alcanzable. La periodicidad no figura en el libro."
+  },
+  {
+   "id": "PF45FAD",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5250,
+    5790,
+    5832,
+    5834,
+    5892
+   ],
+   "razon": "El libro promueve el 'loss costing' y pregunta qué sistema existe para costear pérdidas. Detalla costos indirectos no asegurados de 5 a 50 veces lo recuperado."
+  },
+  {
+   "id": "P930BD6",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4693,
+    4695,
+    4722,
+    4724,
+    5270
+   ],
+   "razon": "El libro respalda cambiar la cultura introduciendo nuevas medidas y prácticas. Matiz: advierte que poseer los componentes 'externos' no basta por sí solo."
+  },
+  {
+   "id": "PC0A424",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    4769,
+    5174,
+    5178,
+    5208
+   ],
+   "razon": "El libro describe una reversión 'seamless', basada en cultura y premisas compartidas, no en reglas. Weick advierte que las reglas no sirven en emergencias. No habla de criterios explícitos."
+  }
+ ]
+}

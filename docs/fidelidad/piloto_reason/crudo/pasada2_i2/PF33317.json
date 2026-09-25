@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF33317",
+  "intento": 0,
+  "usd": 0.201592,
+  "turnos": 1,
+  "duracion_s": 12.5,
+  "pared_s": 13.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 44723,
+  "tokens_out": 1135,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF33317\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4433, 4435, 4462], \"cita\": \"they also need a very clear idea of what constitutes an adequate Safety Case, and this is by no means an easy task in our present limited state of knowledge.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro afirma que el regulador necesita una idea muy clara de qué es un Safety Case adecuado. Lo presenta como algo difícil y advierte contra juzgarlo como checklist superficial, pero no lo desaconseja. El paso concreta esa necesidad en su misma dirección. 'Safety Case' está en el libro y el paso no añade datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF33317",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4433,
+   4435,
+   4462
+  ],
+  "cita": "they also need a very clear idea of what constitutes an adequate Safety Case, and this is by no means an easy task in our present limited state of knowledge.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro afirma que el regulador necesita una idea muy clara de qué es un Safety Case adecuado. Lo presenta como algo difícil y advierte contra juzgarlo como checklist superficial, pero no lo desaconseja. El paso concreta esa necesidad en su misma dirección. 'Safety Case' está en el libro y el paso no añade datos nuevos.",
+  "paso_fiel": ""
+ }
+}

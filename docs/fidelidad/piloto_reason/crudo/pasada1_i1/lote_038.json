@@ -1,0 +1,70 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_038",
+  "intento": 0,
+  "usd": 0.16188399999999997,
+  "turnos": 1,
+  "duracion_s": 15.2,
+  "pared_s": 16.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33856,
+  "tokens_out": 1323,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PBC1ECC\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [4261, 4211, 4125, 4265], \"razon\": \"L4261 respalda el riesgo de relaciones personales, pero L4125 critica la falta de relación cercana y L4265 dice que el compromiso no es un fallo. Un cliente podría buscar distancia excesiva.\"},\n {\"id\": \"P10469D\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [2585, 2650, 2568, 105], \"razon\": \"El libro ve los periodos sin accidentes como peligrosos, pide reforzar defensas y recomienda chequeos regulares de defensas. Es una extensión coherente.\"},\n {\"id\": \"P1F082C\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [5834, 5892, 5250, 5832], \"razon\": \"El libro describe los costos indirectos no asegurados y el loss costing, y pregunta qué sistema existe para costear las pérdidas por incidentes.\"},\n {\"id\": \"P18A2E8\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [2716, 5043, 5055, 5057, 1539, 4765], \"razon\": \"El libro distingue errores de violaciones, pero matiza que la mayoría de violaciones no son malévolas y que su culpa depende de los procedimientos. Una dicotomía simple podría llevar a sancionar violaciones necesarias.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PBC1ECC",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    4261,
+    4211,
+    4125,
+    4265
+   ],
+   "razon": "L4261 respalda el riesgo de relaciones personales, pero L4125 critica la falta de relación cercana y L4265 dice que el compromiso no es un fallo. Un cliente podría buscar distancia excesiva."
+  },
+  {
+   "id": "P10469D",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    2585,
+    2650,
+    2568,
+    105
+   ],
+   "razon": "El libro ve los periodos sin accidentes como peligrosos, pide reforzar defensas y recomienda chequeos regulares de defensas. Es una extensión coherente."
+  },
+  {
+   "id": "P1F082C",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    5834,
+    5892,
+    5250,
+    5832
+   ],
+   "razon": "El libro describe los costos indirectos no asegurados y el loss costing, y pregunta qué sistema existe para costear las pérdidas por incidentes."
+  },
+  {
+   "id": "P18A2E8",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    2716,
+    5043,
+    5055,
+    5057,
+    1539,
+    4765
+   ],
+   "razon": "El libro distingue errores de violaciones, pero matiza que la mayoría de violaciones no son malévolas y que su culpa depende de los procedimientos. Una dicotomía simple podría llevar a sancionar violaciones necesarias."
+  }
+ ]
+}

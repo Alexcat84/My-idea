@@ -1,0 +1,66 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_095",
+  "intento": 0,
+  "usd": 0.157392,
+  "turnos": 1,
+  "duracion_s": 14.2,
+  "pared_s": 15.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34088,
+  "tokens_out": 1052,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PB30D73\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [1044, 1050, 1068, 1072], \"razon\": \"El libro dice que la seguridad depende de la independencia causal entre capas. Los accidentes mayores ocurren cuando esa independencia se viola por fallos de modo común (Bhopal, Chernobyl).\"},\n  {\"id\": \"PECBEB3\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [5055, 5057, 5063], \"razon\": \"El libro propone un 'jurado' de pares del implicado y juicio cuidadoso en la zona gris. El paso no dice que sean pares; si el grupo fuera de gerencia, se alejaría del libro.\"},\n  {\"id\": \"P1654FD\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4388, 4398, 4429], \"razon\": \"Cullen exige una evaluación formal que demuestre que se identificaron los peligros mayores potenciales de la instalación. Es el primer paso de la FSA.\"},\n  {\"id\": \"P9CECB3\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4060, 4092, 1068, 1072], \"razon\": \"En Dryden, los recortes y la mayor carga fallaron varias capas regulatorias a la vez. El libro advierte sobre fallos de modo común entre defensas supuestamente independientes.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PB30D73",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    1044,
+    1050,
+    1068,
+    1072
+   ],
+   "razon": "El libro dice que la seguridad depende de la independencia causal entre capas. Los accidentes mayores ocurren cuando esa independencia se viola por fallos de modo común (Bhopal, Chernobyl)."
+  },
+  {
+   "id": "PECBEB3",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    5055,
+    5057,
+    5063
+   ],
+   "razon": "El libro propone un 'jurado' de pares del implicado y juicio cuidadoso en la zona gris. El paso no dice que sean pares; si el grupo fuera de gerencia, se alejaría del libro."
+  },
+  {
+   "id": "P1654FD",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4388,
+    4398,
+    4429
+   ],
+   "razon": "Cullen exige una evaluación formal que demuestre que se identificaron los peligros mayores potenciales de la instalación. Es el primer paso de la FSA."
+  },
+  {
+   "id": "P9CECB3",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4060,
+    4092,
+    1068,
+    1072
+   ],
+   "razon": "En Dryden, los recortes y la mayor carga fallaron varias capas regulatorias a la vez. El libro advierte sobre fallos de modo común entre defensas supuestamente independientes."
+  }
+ ]
+}

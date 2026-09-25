@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_044",
+  "intento": 0,
+  "usd": 0.176216,
+  "turnos": 1,
+  "duracion_s": 19.1,
+  "pared_s": 20.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34319,
+  "tokens_out": 1947,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P2D5D9B\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [196, 5641, 5907, 2876, 2880], \"razon\": \"El libro critica el predominio del modelo persona y centrarse en fallos activos sin ver causas latentes; el paso lo convierte en diagnóstico, misma dirección.\"},\n {\"id\": \"PF6310C\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2823, 2845, 2849, 808, 1129, 1149], \"razon\": \"El libro respalda la contención, la detección y la tolerancia. El cap. 3 advierte que las barreras añaden complejidad y pueden fallar o desplazar errores; revisar ese matiz.\"},\n {\"id\": \"PE96D62\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"revisiones periódicas\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2520, 2547, 2598, 2658, 2765], \"razon\": \"El libro pide chequeos regulares de procesos, con frecuencia según el ritmo de cambio de cada uno. Si la revisión usa tasas de accidentes, que revelan poco, contradice el libro.\"},\n {\"id\": \"P8F6304\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5892, 5834, 5894], \"razon\": \"El libro enumera como costes intangibles el daño reputacional, la pérdida de negocio y las dificultades de reclutamiento. El paso pide estimarlos en el análisis, en la misma dirección.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P2D5D9B",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    196,
+    5641,
+    5907,
+    2876,
+    2880
+   ],
+   "razon": "El libro critica el predominio del modelo persona y centrarse en fallos activos sin ver causas latentes; el paso lo convierte en diagnóstico, misma dirección."
+  },
+  {
+   "id": "PF6310C",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2823,
+    2845,
+    2849,
+    808,
+    1129,
+    1149
+   ],
+   "razon": "El libro respalda la contención, la detección y la tolerancia. El cap. 3 advierte que las barreras añaden complejidad y pueden fallar o desplazar errores; revisar ese matiz."
+  },
+  {
+   "id": "PE96D62",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "revisiones periódicas"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2520,
+    2547,
+    2598,
+    2658,
+    2765
+   ],
+   "razon": "El libro pide chequeos regulares de procesos, con frecuencia según el ritmo de cambio de cada uno. Si la revisión usa tasas de accidentes, que revelan poco, contradice el libro."
+  },
+  {
+   "id": "P8F6304",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5892,
+    5834,
+    5894
+   ],
+   "razon": "El libro enumera como costes intangibles el daño reputacional, la pérdida de negocio y las dificultades de reclutamiento. El paso pide estimarlos en el análisis, en la misma dirección."
+  }
+ ]
+}

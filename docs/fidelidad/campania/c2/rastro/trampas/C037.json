@@ -1,0 +1,50 @@
+[
+ {
+  "titulo": "Identify: Mapa de Datos Completo antes de Evaluar Riesgos",
+  "resumen": "Antes de evaluar el riesgo de privacidad, la organización debe conocer qué datos procesa y cómo fluyen por sus sistemas a lo largo de todo su ciclo de vida, desde la recolección hasta la eliminación. Ese mapa es la base para la evaluación de riesgo posterior.",
+  "texto": "No empieces la evaluación de riesgo hasta tener un mapa de datos exhaustivo de todos tus sistemas; un mapa parcial da una base falsa",
+  "tipo": "CONTRARIO",
+  "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\Getting-Started-NIST-Privacy-Framework-Guide.txt",
+  "lineas": "L17",
+  "cita": "This doesn't have to be comprehensive, especially at first, but it's a foundation for understanding your privacy risks.",
+  "dato": "",
+  "explicacion": "La guía dice expresamente que el mapa de datos no tiene que ser exhaustivo, sobre todo al principio, y aun así sirve de base para entender los riesgos. El paso exige lo contrario: un mapa exhaustivo antes de avanzar y trata el mapa parcial como base falsa."
+ },
+ {
+  "titulo": "Función Proteger: Capacitación en Ciberseguridad",
+  "resumen": "La capacitación es parte de la función Proteger del NIST Cybersecurity Framework. Busca que quienes usan equipos y red entiendan su papel en la seguridad de la empresa y los riesgos que corren también a nivel personal.",
+  "texto": "Concentrar la capacitación en ciberseguridad en el personal técnico que administra la red y los equipos",
+  "tipo": "CONTRARIO",
+  "libro": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\cybersecurity_sb_nist-cyber-framework.txt",
+  "lineas": "L39",
+  "cita": "Train everyone who uses your computers, devices, and network about cybersecurity.",
+  "dato": "",
+  "explicacion": "La guía de la FTC pide capacitar a todas las personas que usan los computadores, dispositivos y la red. El paso reduce la capacitación al personal técnico, justo lo contrario de su alcance universal."
+ },
+ {
+  "titulo": "Función Responder: Simulacros del Plan de Incidentes",
+  "resumen": "El plan de respuesta ante incidentes cubre la notificación a los afectados, la continuidad de las operaciones y el reporte a las autoridades. Para que funcione cuando haga falta, el plan tiene que probarse de forma periódica.",
+  "texto": "Probar el plan de respuesta con un simulacro completo cada seis meses",
+  "tipo": "ANADIDO",
+  "libro": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\cybersecurity_sb_nist-cyber-framework.txt",
+  "lineas": "L59",
+  "cita": "Test your plan regularly.",
+  "dato": "frecuencia de cada seis meses para el simulacro",
+  "explicacion": "La guía solo pide probar el plan de forma regular, sin fijar frecuencia. La periodicidad semestral no aparece en el texto (grep de six, month, semi, twice, annual, year sin coincidencias)."
+ },
+ {
+  "titulo": "Communicate: Plan de Respuesta ante Brechas de Datos",
+  "resumen": "La función Communicate incluye decidir de antemano qué hará la organización si ocurre una brecha de datos: cómo notificará a las personas afectadas y qué remedios les ofrecerá, como el monitoreo de crédito o el congelamiento del crédito.",
+  "texto": "Notificar a los afectados por una brecha en un máximo de 72 horas y ofrecerles 12 meses de monitoreo de crédito",
+  "tipo": "ANADIDO",
+  "libro": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
+  "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\seguridad_digital\\Getting-Started-NIST-Privacy-Framework-Guide.txt",
+  "lineas": "L95",
+  "cita": "Consider what you will do in case of a data breach. How will you provide notifications or any remedies such as credit monitoring or freezes?",
+  "dato": "plazo de notificación de 72 horas y 12 meses de monitoreo de crédito",
+  "explicacion": "La guía solo plantea que se piense cómo notificar y qué remedios ofrecer (monitoreo o congelamiento del crédito), sin plazos ni duraciones. Ni 72 horas ni 12 meses figuran en el texto (grep de 72, hour, month sin coincidencias). Es un plazo con apariencia de norma legal que el libro no respalda."
+ }
+]

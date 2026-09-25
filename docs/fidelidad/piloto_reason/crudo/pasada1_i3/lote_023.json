@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_023",
+  "intento": 0,
+  "usd": 0.178292,
+  "turnos": 1,
+  "duracion_s": 22.5,
+  "pared_s": 23.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33848,
+  "tokens_out": 2145,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P8060E3\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2320, 2322, 2340, 2342, 2354, 2367], \"razon\": \"El libro define ambas cargas, pero la no esperada son fallos imprevistos, no clasificables de antemano. Además el libro cuestiona la visión ortodoxa: el mantenimiento mismo introduce errores.\"},\n  {\"id\": \"P567904\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"cuatro subcomponentes\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4777, 5234, 5270, 4695], \"razon\": \"El libro lista cuatro subcomponentes, pero advierte que repasarlos uno a uno no basta: la cultura es más que la suma de sus partes.\"},\n  {\"id\": \"PE4A0A0\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3737, 3745], \"razon\": \"El libro dice que MEDA aporta análisis computarizado de tendencias para la organización de mantenimiento.\"},\n  {\"id\": \"PF63738\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1991, 1995, 2161, 963, 975, 1840, 2311, 2340, 2367], \"razon\": \"El libro prioriza el mantenimiento, pero critica el control de calidad por inspección. Además, más contacto manual e inspecciones aumentan el error. Su remedio es eliminar ese contacto desde el diseño.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P8060E3",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2320,
+    2322,
+    2340,
+    2342,
+    2354,
+    2367
+   ],
+   "razon": "El libro define ambas cargas, pero la no esperada son fallos imprevistos, no clasificables de antemano. Además el libro cuestiona la visión ortodoxa: el mantenimiento mismo introduce errores."
+  },
+  {
+   "id": "P567904",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "cuatro subcomponentes"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4777,
+    5234,
+    5270,
+    4695
+   ],
+   "razon": "El libro lista cuatro subcomponentes, pero advierte que repasarlos uno a uno no basta: la cultura es más que la suma de sus partes."
+  },
+  {
+   "id": "PE4A0A0",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3737,
+    3745
+   ],
+   "razon": "El libro dice que MEDA aporta análisis computarizado de tendencias para la organización de mantenimiento."
+  },
+  {
+   "id": "PF63738",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1991,
+    1995,
+    2161,
+    963,
+    975,
+    1840,
+    2311,
+    2340,
+    2367
+   ],
+   "razon": "El libro prioriza el mantenimiento, pero critica el control de calidad por inspección. Además, más contacto manual e inspecciones aumentan el error. Su remedio es eliminar ese contacto desde el diseño."
+  }
+ ]
+}

@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P478FB8",
+  "intento": 0,
+  "usd": 0.19911600000000002,
+  "turnos": 1,
+  "duracion_s": 7.4,
+  "pared_s": 8.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 47044,
+  "tokens_out": 547,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P478FB8\", \"veredicto\": \"FIEL\", \"lineas\": [4340, 4388], \"cita\": \"Updating of the report following any significant changes. / The presentation of the formal safety assessment should take the form of a Safety Case, which would be updated at regular intervals and on the occurrence of a major change of circumstances.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro exige actualizar el Safety Case tras cualquier cambio significativo (CIMAH, L4340) y ante un cambio mayor de circunstancias (Cullen, L4388). El paso no dice 'solo' ante cambios ni desaconseja la revisión periódica. Omitir esa revisión es una diferencia de detalle, no una contradicción. 'Safety Case' está respaldado.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P478FB8",
+  "veredicto": "FIEL",
+  "lineas": [
+   4340,
+   4388
+  ],
+  "cita": "Updating of the report following any significant changes. / The presentation of the formal safety assessment should take the form of a Safety Case, which would be updated at regular intervals and on the occurrence of a major change of circumstances.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro exige actualizar el Safety Case tras cualquier cambio significativo (CIMAH, L4340) y ante un cambio mayor de circunstancias (Cullen, L4388). El paso no dice 'solo' ante cambios ni desaconseja la revisión periódica. Omitir esa revisión es una diferencia de detalle, no una contradicción. 'Safety Case' está respaldado.",
+  "paso_fiel": ""
+ }
+}

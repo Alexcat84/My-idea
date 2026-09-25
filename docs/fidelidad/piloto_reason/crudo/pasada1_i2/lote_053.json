@@ -1,0 +1,88 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_053",
+  "intento": 0,
+  "usd": 0.175404,
+  "turnos": 1,
+  "duracion_s": 22.5,
+  "pared_s": 24.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33381,
+  "tokens_out": 2094,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PBED60A\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"EPCs\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3395, 3397, 3401, 3405, 3659], \"razon\": \"El libro jerarquiza las EPC por efecto, pero pondera el factor según su aplicabilidad a la tarea concreta. Priorizar solo por el multiplicador podría omitir esa condición.\"},\n  {\"id\": \"PED0D4E\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5178, 5182, 5208, 4693, 4706], \"razon\": \"Weick y el libro apoyan valores y supuestos compartidos para coordinar. Matiz: la cultura organizacional se forma sobre todo por prácticas compartidas, que el libro pone en el foco.\"},\n  {\"id\": \"P815D74\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"permisos de trabajo\", \"cambios de turno\", \"sistemas de emergencia\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4027, 4033, 4037, 4039, 3199, 423, 451], \"razon\": \"El libro critica la falta de checklist en Piper Alpha. Pero recoge el riesgo de que las listas fijas se anticipen, y Tripod rota los ítems. Estandarizar podría chocar.\"},\n  {\"id\": \"P5CB67B\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [194, 196, 5641, 5907, 5515], \"razon\": \"El libro advierte que predomina el modelo de persona y pide atender las causas sistémicas. El paso diagnostica exactamente eso.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PBED60A",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "EPCs"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3395,
+    3397,
+    3401,
+    3405,
+    3659
+   ],
+   "razon": "El libro jerarquiza las EPC por efecto, pero pondera el factor según su aplicabilidad a la tarea concreta. Priorizar solo por el multiplicador podría omitir esa condición."
+  },
+  {
+   "id": "PED0D4E",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5178,
+    5182,
+    5208,
+    4693,
+    4706
+   ],
+   "razon": "Weick y el libro apoyan valores y supuestos compartidos para coordinar. Matiz: la cultura organizacional se forma sobre todo por prácticas compartidas, que el libro pone en el foco."
+  },
+  {
+   "id": "P815D74",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "permisos de trabajo",
+    "cambios de turno",
+    "sistemas de emergencia"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4027,
+    4033,
+    4037,
+    4039,
+    3199,
+    423,
+    451
+   ],
+   "razon": "El libro critica la falta de checklist en Piper Alpha. Pero recoge el riesgo de que las listas fijas se anticipen, y Tripod rota los ítems. Estandarizar podría chocar."
+  },
+  {
+   "id": "P5CB67B",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    194,
+    196,
+    5641,
+    5907,
+    5515
+   ],
+   "razon": "El libro advierte que predomina el modelo de persona y pide atender las causas sistémicas. El paso diagnostica exactamente eso."
+  }
+ ]
+}

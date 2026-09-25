@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PBC8A48",
+  "intento": 0,
+  "usd": 0.117892,
+  "turnos": 1,
+  "duracion_s": 11.6,
+  "pared_s": 12.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 24673,
+  "tokens_out": 960,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PBC8A48\", \"veredicto\": \"FIEL\", \"lineas\": [3163, 3199, 3213, 3224], \"cita\": \"These indicators are obtained directly from task specialists; that is, from those involved in the day-to-day management and operation of each particular activity. [...] The indicators are created by task specialists working in syndicates.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que los especialistas de tarea (task specialists) crean los indicadores trabajando en grupos ('syndicates'). Tambien dice que hay una base de datos por GFT y por tipo de operacion. El paso lo recoge sin anadir datos. Que el proceso sea largo y costoso (L3224) es una advertencia, no algo que el libro desaconseje.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PBC8A48",
+  "veredicto": "FIEL",
+  "lineas": [
+   3163,
+   3199,
+   3213,
+   3224
+  ],
+  "cita": "These indicators are obtained directly from task specialists; that is, from those involved in the day-to-day management and operation of each particular activity. [...] The indicators are created by task specialists working in syndicates.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que los especialistas de tarea (task specialists) crean los indicadores trabajando en grupos ('syndicates'). Tambien dice que hay una base de datos por GFT y por tipo de operacion. El paso lo recoge sin anadir datos. Que el proceso sea largo y costoso (L3224) es una advertencia, no algo que el libro desaconseje.",
+  "paso_fiel": ""
+ }
+}

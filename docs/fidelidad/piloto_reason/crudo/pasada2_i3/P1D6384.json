@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1D6384",
+  "intento": 0,
+  "usd": 0.163112,
+  "turnos": 1,
+  "duracion_s": 10.9,
+  "pared_s": 12.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36663,
+  "tokens_out": 823,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1D6384\", \"veredicto\": \"FIEL\", \"lineas\": [2724, 2734], \"cita\": \"Clearly, then, organizational factors represent the priority area for process measurement. [...] management factors (for example, management of change, leadership and administration, communication, hiring and placement, purchasing controls, incompatibilities between production and protection and so on)\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro declara los factores organizacionales área prioritaria de medición (L2724). Los cuatro ejemplos figuran literalmente en el clúster de factores de gestión (L2734), incluido gestión del cambio; el filtro se equivocó. Los ejemplos ilustran y no excluyen las otras dimensiones, que cubre otro paso del nodo, así que no contradicen el equilibrio de L2750.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P1D6384",
+  "veredicto": "FIEL",
+  "lineas": [
+   2724,
+   2734
+  ],
+  "cita": "Clearly, then, organizational factors represent the priority area for process measurement. [...] management factors (for example, management of change, leadership and administration, communication, hiring and placement, purchasing controls, incompatibilities between production and protection and so on)",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro declara los factores organizacionales área prioritaria de medición (L2724). Los cuatro ejemplos figuran literalmente en el clúster de factores de gestión (L2734), incluido gestión del cambio; el filtro se equivocó. Los ejemplos ilustran y no excluyen las otras dimensiones, que cubre otro paso del nodo, así que no contradicen el equilibrio de L2750.",
+  "paso_fiel": ""
+ }
+}

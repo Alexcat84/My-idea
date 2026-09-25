@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P78E883",
+  "intento": 0,
+  "usd": 0.17452,
+  "turnos": 1,
+  "duracion_s": 22.6,
+  "pared_s": 23.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33790,
+  "tokens_out": 1968,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P78E883\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [2170, 2250, 2259], \"cita\": \"It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses. Having identified error-prone steps, remedial actions can then be taken\", \"datos_sin_respaldo\": [\"criterio de priorizacion por tasa de omision historica de cada paso\"], \"razon\": \"El libro respalda concentrar las medidas correctoras en los pasos propensos a omision, asi que no es contrario. Pero los identifica de antemano, por analisis de tarea, contando sus rasgos que provocan omision. Priorizar por la tasa historica de cada paso es un criterio que el libro no propone.\", \"paso_fiel\": \"Enfocar las intervenciones de mejora, como los recordatorios, en los pasos identificados de antemano como mas vulnerables por el numero de rasgos que provocan omision que reune cada paso.\"}\n```",
+ "parseado": {
+  "id": "P78E883",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   2170,
+   2250,
+   2259
+  ],
+  "cita": "It is therefore possible, in principle, to identify in advance those steps most vulnerable to omissions by establishing the number of omission-provoking features that each discrete step possesses. Having identified error-prone steps, remedial actions can then be taken",
+  "datos_sin_respaldo": [
+   "criterio de priorizacion por tasa de omision historica de cada paso"
+  ],
+  "razon": "El libro respalda concentrar las medidas correctoras en los pasos propensos a omision, asi que no es contrario. Pero los identifica de antemano, por analisis de tarea, contando sus rasgos que provocan omision. Priorizar por la tasa historica de cada paso es un criterio que el libro no propone.",
+  "paso_fiel": "Enfocar las intervenciones de mejora, como los recordatorios, en los pasos identificados de antemano como mas vulnerables por el numero de rasgos que provocan omision que reune cada paso."
+ }
+}

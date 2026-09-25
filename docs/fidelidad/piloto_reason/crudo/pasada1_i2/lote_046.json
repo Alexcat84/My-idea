@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_046",
+  "intento": 0,
+  "usd": 0.164444,
+  "turnos": 1,
+  "duracion_s": 16.9,
+  "pared_s": 17.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33131,
+  "tokens_out": 1596,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PDC0FF7\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [1044, 1066, 1068, 1070, 1072, 156], \"razon\": \"El libro advierte que añadir redundancia aumenta la complejidad, las fallas de modo común y la opacidad. El paso presenta la redundancia como vía para evitar fallas simultáneas.\"},\n  {\"id\": \"P47CA21\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2250, 2259, 2279, 2289, 2293], \"razon\": \"El libro propone identificar los pasos propensos a omisión y aplicar remedios, sobre todo recordatorios con función de chequeo y confirmación.\"},\n  {\"id\": \"P10A9CC\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5067, 4765], \"razon\": \"Las recompensas son el medio más poderoso si se dan cerca en tiempo y lugar. El reconocimiento inmediato concreta esa idea.\"},\n  {\"id\": \"P7A42D6\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"décadas atrás\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [198, 559, 563, 567, 569, 582, 5775], \"razon\": \"Nakina muestra una condición latente de diseño de 1916. El libro pide hacer visibles las condiciones latentes. El paso generaliza a auditorías de decisiones antiguas.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PDC0FF7",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    1044,
+    1066,
+    1068,
+    1070,
+    1072,
+    156
+   ],
+   "razon": "El libro advierte que añadir redundancia aumenta la complejidad, las fallas de modo común y la opacidad. El paso presenta la redundancia como vía para evitar fallas simultáneas."
+  },
+  {
+   "id": "P47CA21",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2250,
+    2259,
+    2279,
+    2289,
+    2293
+   ],
+   "razon": "El libro propone identificar los pasos propensos a omisión y aplicar remedios, sobre todo recordatorios con función de chequeo y confirmación."
+  },
+  {
+   "id": "P10A9CC",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5067,
+    4765
+   ],
+   "razon": "Las recompensas son el medio más poderoso si se dan cerca en tiempo y lugar. El reconocimiento inmediato concreta esa idea."
+  },
+  {
+   "id": "P7A42D6",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "décadas atrás"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    198,
+    559,
+    563,
+    567,
+    569,
+    582,
+    5775
+   ],
+   "razon": "Nakina muestra una condición latente de diseño de 1916. El libro pide hacer visibles las condiciones latentes. El paso generaliza a auditorías de decisiones antiguas."
+  }
+ ]
+}

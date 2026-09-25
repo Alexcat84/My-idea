@@ -1,0 +1,34 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P23A118",
+  "intento": 0,
+  "usd": 0.195492,
+  "turnos": 1,
+  "duracion_s": 14.5,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 43138,
+  "tokens_out": 1147,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P23A118\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2577, 2579, 2687, 2720, 2765], \"cita\": \"Three ingredients are vital for driving the safety engine, all of them the province of top management ... Must we conclude that it takes catastrophes of the magnitude of Piper Alpha, Chernobyl, or Bhopal before politicians and top managers understand that investment in safety is good business?\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro sitúa los recursos de seguridad en la alta dirección y lista la subdotación entre los factores de riesgo. Pide que los directivos vean la inversión en seguridad como buen negocio y valora estimar costes financieros. El caso de negocio concreta eso sin datos nuevos. No es contrario: el libro añade la calidad, pero no niega la cantidad.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P23A118",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2577,
+   2579,
+   2687,
+   2720,
+   2765
+  ],
+  "cita": "Three ingredients are vital for driving the safety engine, all of them the province of top management ... Must we conclude that it takes catastrophes of the magnitude of Piper Alpha, Chernobyl, or Bhopal before politicians and top managers understand that investment in safety is good business?",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro sitúa los recursos de seguridad en la alta dirección y lista la subdotación entre los factores de riesgo. Pide que los directivos vean la inversión en seguridad como buen negocio y valora estimar costes financieros. El caso de negocio concreta eso sin datos nuevos. No es contrario: el libro añade la calidad, pero no niega la cantidad.",
+  "paso_fiel": ""
+ }
+}

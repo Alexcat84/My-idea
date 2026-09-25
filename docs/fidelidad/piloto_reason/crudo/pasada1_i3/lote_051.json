@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_051",
+  "intento": 0,
+  "usd": 0.167412,
+  "turnos": 1,
+  "duracion_s": 18.8,
+  "pared_s": 19.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32233,
+  "tokens_out": 1924,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P0729D7\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [5503, 5594, 5603, 5639, 5641, 5905, 5907],\n    \"razon\": \"Coexistencia respaldada, pero ponderar según riesgo predominante puede relegar el modelo organizacional; el libro dice que las condiciones latentes son altas en todo dominio y pide contramedidas simultáneas siempre.\"\n  },\n  {\n    \"id\": \"P0C5D88\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"SIN_COBERTURA\",\n    \"lineas\": [79, 4284, 5603, 5639],\n    \"razon\": \"El libro compara dominios con estimaciones (Tabla 10.1), no con referencias históricas. Avisa que el perfil cambia y que la protección exitosa se mide mal por ausencia de sucesos.\"\n  },\n  {\n    \"id\": \"P6E6ED3\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [975, 2250, 2259, 2279, 2289, 2293],\n    \"razon\": \"El libro recomienda recordatorios con criterio 'check' para pasos propensos a omisión. Matiz: si 'verificaciones' se lee como firmas de conformidad, el libro advierte que se firma sin comprobar.\"\n  },\n  {\n    \"id\": \"PADB492\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [293, 2724, 2905, 5748, 5781],\n    \"razon\": \"El libro respalda buscar los factores locales y organizacionales. Matiz: advierte rendimientos decrecientes en la búsqueda creciente de factores y pide centrarse en lo modificable y controlable.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P0729D7",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5503,
+    5594,
+    5603,
+    5639,
+    5641,
+    5905,
+    5907
+   ],
+   "razon": "Coexistencia respaldada, pero ponderar según riesgo predominante puede relegar el modelo organizacional; el libro dice que las condiciones latentes son altas en todo dominio y pide contramedidas simultáneas siempre."
+  },
+  {
+   "id": "P0C5D88",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "SIN_COBERTURA",
+   "lineas": [
+    79,
+    4284,
+    5603,
+    5639
+   ],
+   "razon": "El libro compara dominios con estimaciones (Tabla 10.1), no con referencias históricas. Avisa que el perfil cambia y que la protección exitosa se mide mal por ausencia de sucesos."
+  },
+  {
+   "id": "P6E6ED3",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    975,
+    2250,
+    2259,
+    2279,
+    2289,
+    2293
+   ],
+   "razon": "El libro recomienda recordatorios con criterio 'check' para pasos propensos a omisión. Matiz: si 'verificaciones' se lee como firmas de conformidad, el libro advierte que se firma sin comprobar."
+  },
+  {
+   "id": "PADB492",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    293,
+    2724,
+    2905,
+    5748,
+    5781
+   ],
+   "razon": "El libro respalda buscar los factores locales y organizacionales. Matiz: advierte rendimientos decrecientes en la búsqueda creciente de factores y pide centrarse en lo modificable y controlable."
+  }
+ ]
+}

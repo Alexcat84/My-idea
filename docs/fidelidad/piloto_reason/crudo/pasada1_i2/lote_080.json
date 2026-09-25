@@ -1,0 +1,92 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_080",
+  "intento": 0,
+  "usd": 0.170636,
+  "turnos": 1,
+  "duracion_s": 20.8,
+  "pared_s": 21.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33104,
+  "tokens_out": 1911,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P453593\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2948, 2961, 2977, 2985, 3829, 5041, 5043, 5085, 5499], \"razon\": \"Criterios propios sin prioridad situacional pueden reequilibrar hacia la persona. El libro fija que la situación es más remediable y propone un enfoque común y consistente (árbol, AMMS).\"},\n  {\"id\": \"PC787B1\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"operadores\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1035, 1031, 1618, 1630, 1726, 1456, 1547], \"razon\": \"Va en la línea de Ginna y de la violación correcta, pero el libro no pide capacitar en juicio. Además advierte que las violaciones se rutinizan; puede alentar desviaciones.\"},\n  {\"id\": \"P2506F0\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2884, 2922, 2977, 3817], \"razon\": \"El libro critica expresamente la dependencia de exhortaciones y sanciones y señala su efectividad muy limitada; el 'solo' respeta ese matiz.\"},\n  {\"id\": \"PC03308\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"listas de verificación específicas\", \"obligatorias\", \"firma paso a paso\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [409, 413, 2250, 2279, 2289, 2293], \"razon\": \"El libro habla de recordatorios y de identificar pasos propensos a omisión. Muestra además que las firmas de cierre se hacen sin inspección real; la firma paso a paso es añadida y quizá ineficaz.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P453593",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2948,
+    2961,
+    2977,
+    2985,
+    3829,
+    5041,
+    5043,
+    5085,
+    5499
+   ],
+   "razon": "Criterios propios sin prioridad situacional pueden reequilibrar hacia la persona. El libro fija que la situación es más remediable y propone un enfoque común y consistente (árbol, AMMS)."
+  },
+  {
+   "id": "PC787B1",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "operadores"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1035,
+    1031,
+    1618,
+    1630,
+    1726,
+    1456,
+    1547
+   ],
+   "razon": "Va en la línea de Ginna y de la violación correcta, pero el libro no pide capacitar en juicio. Además advierte que las violaciones se rutinizan; puede alentar desviaciones."
+  },
+  {
+   "id": "P2506F0",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2884,
+    2922,
+    2977,
+    3817
+   ],
+   "razon": "El libro critica expresamente la dependencia de exhortaciones y sanciones y señala su efectividad muy limitada; el 'solo' respeta ese matiz."
+  },
+  {
+   "id": "PC03308",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "listas de verificación específicas",
+    "obligatorias",
+    "firma paso a paso"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    409,
+    413,
+    2250,
+    2279,
+    2289,
+    2293
+   ],
+   "razon": "El libro habla de recordatorios y de identificar pasos propensos a omisión. Muestra además que las firmas de cierre se hacen sin inspección real; la firma paso a paso es añadida y quizá ineficaz."
+  }
+ ]
+}

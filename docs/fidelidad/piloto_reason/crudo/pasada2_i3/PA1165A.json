@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PA1165A",
+  "intento": 0,
+  "usd": 0.146284,
+  "turnos": 1,
+  "duracion_s": 13.8,
+  "pared_s": 15.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 30861,
+  "tokens_out": 1142,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PA1165A\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [65, 77, 83], \"cita\": \"low-hazard ventures will require less protection per productive unit than will high-hazard ventures. In other words, the former can operate in the region below the parity zone, whereas the latter must operate above it.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El paso solo pide situar a la organizacion respecto a la zona de paridad, un marco que el libro propone (L65, L83). No dice que estar por debajo sea malo. La posicion por debajo solo es aceptable en actividades de bajo peligro; las de alto peligro deben estar por encima. Es un diagnostico que concreta el libro, no lo invierte.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PA1165A",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   65,
+   77,
+   83
+  ],
+  "cita": "low-hazard ventures will require less protection per productive unit than will high-hazard ventures. In other words, the former can operate in the region below the parity zone, whereas the latter must operate above it.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El paso solo pide situar a la organizacion respecto a la zona de paridad, un marco que el libro propone (L65, L83). No dice que estar por debajo sea malo. La posicion por debajo solo es aceptable en actividades de bajo peligro; las de alto peligro deben estar por encima. Es un diagnostico que concreta el libro, no lo invierte.",
+  "paso_fiel": ""
+ }
+}

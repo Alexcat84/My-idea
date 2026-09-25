@@ -1,0 +1,62 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_072",
+  "intento": 0,
+  "usd": 0.152996,
+  "turnos": 1,
+  "duracion_s": 10.9,
+  "pared_s": 12.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33169,
+  "tokens_out": 1016,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"PA240C5\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [3332, 3232, 3230], \"razon\": \"El 20-30% vale solo para factores locales en MESH y los evaluadores se eligen al azar; los organizacionales los califican gerentes técnicos. 'Representativa' podría llevar a elegirlos a mano.\"},\n {\"id\": \"P97A666\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [275, 285, 293], \"razon\": \"El libro dice que la investigación empieza por el mal resultado y luego examina cómo y cuándo fallaron las defensas.\"},\n {\"id\": \"P65C0B2\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3747, 3769, 3771], \"razon\": \"Según el libro, la Sección 5b pregunta qué medidas correctivas se tomaron o debieron tomarse a nivel local para prevenir la recurrencia.\"},\n {\"id\": \"PCA61B9\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3382], \"razon\": \"En MESH cada evaluador ve el diagrama de barras de sus calificaciones y luego el promedio del lugar de trabajo de las últimas cuatro semanas.\"}]\n```",
+ "parseado": [
+  {
+   "id": "PA240C5",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    3332,
+    3232,
+    3230
+   ],
+   "razon": "El 20-30% vale solo para factores locales en MESH y los evaluadores se eligen al azar; los organizacionales los califican gerentes técnicos. 'Representativa' podría llevar a elegirlos a mano."
+  },
+  {
+   "id": "P97A666",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    275,
+    285,
+    293
+   ],
+   "razon": "El libro dice que la investigación empieza por el mal resultado y luego examina cómo y cuándo fallaron las defensas."
+  },
+  {
+   "id": "P65C0B2",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3747,
+    3769,
+    3771
+   ],
+   "razon": "Según el libro, la Sección 5b pregunta qué medidas correctivas se tomaron o debieron tomarse a nivel local para prevenir la recurrencia."
+  },
+  {
+   "id": "PCA61B9",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3382
+   ],
+   "razon": "En MESH cada evaluador ve el diagrama de barras de sus calificaciones y luego el promedio del lugar de trabajo de las últimas cuatro semanas."
+  }
+ ]
+}

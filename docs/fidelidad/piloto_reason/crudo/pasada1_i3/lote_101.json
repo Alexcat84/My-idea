@@ -1,0 +1,77 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_101",
+  "intento": 0,
+  "usd": 0.168192,
+  "turnos": 1,
+  "duracion_s": 21.5,
+  "pared_s": 22.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32488,
+  "tokens_out": 1912,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P7F6EE6\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4716, 4720, 2884, 2922], \"razon\": \"El libro describe rituales y reacciones repetidas ('write another procedure', 'blame and train') que no hacen el sistema más resistente. El paso solo pide detectarlas, en la misma dirección.\"},\n  {\"id\": \"P13280F\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"inmediato\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5067, 4765], \"razon\": \"Las recompensas funcionan si son cercanas en tiempo y lugar a la conducta. 'Inmediato' concreta lo temporal pero omite el lugar; conviene verificar la condición.\"},\n  {\"id\": \"PFDD033\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [118, 120, 2656, 5771, 3161], \"razon\": \"El libro enumera funciones defensivas y pide revelar defensas débiles o ausentes. Advierte que añadir defensas aumenta la complejidad, pero el paso solo identifica.\"},\n  {\"id\": \"P123778\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"regulador\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4435, 4448], \"razon\": \"El libro confirma la brecha, pero matiza: la escasez de expertos en factores humanos es 'probably rightly so' y el ratio 80:20 no lo resolvería. Riesgo de sugerir la solución opuesta.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P7F6EE6",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4716,
+    4720,
+    2884,
+    2922
+   ],
+   "razon": "El libro describe rituales y reacciones repetidas ('write another procedure', 'blame and train') que no hacen el sistema más resistente. El paso solo pide detectarlas, en la misma dirección."
+  },
+  {
+   "id": "P13280F",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "inmediato"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5067,
+    4765
+   ],
+   "razon": "Las recompensas funcionan si son cercanas en tiempo y lugar a la conducta. 'Inmediato' concreta lo temporal pero omite el lugar; conviene verificar la condición."
+  },
+  {
+   "id": "PFDD033",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    118,
+    120,
+    2656,
+    5771,
+    3161
+   ],
+   "razon": "El libro enumera funciones defensivas y pide revelar defensas débiles o ausentes. Advierte que añadir defensas aumenta la complejidad, pero el paso solo identifica."
+  },
+  {
+   "id": "P123778",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "regulador"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4435,
+    4448
+   ],
+   "razon": "El libro confirma la brecha, pero matiza: la escasez de expertos en factores humanos es 'probably rightly so' y el ratio 80:20 no lo resolvería. Riesgo de sugerir la solución opuesta."
+  }
+ ]
+}

@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PD7C0F1",
+  "intento": 0,
+  "usd": 0.180508,
+  "turnos": 1,
+  "duracion_s": 14.0,
+  "pared_s": 14.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 39777,
+  "tokens_out": 1070,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PD7C0F1\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [2905, 2944, 3763, 5742, 5748], \"cita\": \"Identifying an error is merely the beginning of the search for causes, not the end. The error, just as much as the disaster that may follow it, is something that requires an explanation. Only by understanding the context that provoked the error can we hope to limit its recurrence.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide explicar el contexto causal de cada error antes de remediar (L2905) y aplicar MEDA a cada error (L3763). No es contrario: critica apagar fuegos, pero no investigar errores. 'Completa' se aparta solo en el detalle, pues el libro ve rendimientos decrecientes en causas remotas (L5742, L5748). No añade datos concretos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PD7C0F1",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   2905,
+   2944,
+   3763,
+   5742,
+   5748
+  ],
+  "cita": "Identifying an error is merely the beginning of the search for causes, not the end. The error, just as much as the disaster that may follow it, is something that requires an explanation. Only by understanding the context that provoked the error can we hope to limit its recurrence.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide explicar el contexto causal de cada error antes de remediar (L2905) y aplicar MEDA a cada error (L3763). No es contrario: critica apagar fuegos, pero no investigar errores. 'Completa' se aparta solo en el detalle, pues el libro ve rendimientos decrecientes en causas remotas (L5742, L5748). No añade datos concretos.",
+  "paso_fiel": ""
+ }
+}

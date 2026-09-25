@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P5A8B13",
+  "intento": 0,
+  "usd": 0.23125600000000002,
+  "turnos": 1,
+  "duracion_s": 10.0,
+  "pared_s": 11.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 53724,
+  "tokens_out": 818,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P5A8B13\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [5190, 5196], \"cita\": \"A culture that favours face-to-face communication. ... if high reliability systems need rich, dense talk to maintain complexity, then they may find it hard to generate this richness if talk is devalued or if people are unable to find substitutes for talk (e.g., electronic mail may be a substitute).\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro recomienda una cultura que favorezca la comunicación cara a cara, porque la complejidad exige conversación rica y densa. El paso lo concreta en la misma dirección. Mencionar el correo como sustituto no invierte la preferencia: 'promover sobre' no prohíbe los canales impersonales. Tampoco añade cifras, roles ni herramientas.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P5A8B13",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   5190,
+   5196
+  ],
+  "cita": "A culture that favours face-to-face communication. ... if high reliability systems need rich, dense talk to maintain complexity, then they may find it hard to generate this richness if talk is devalued or if people are unable to find substitutes for talk (e.g., electronic mail may be a substitute).",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro recomienda una cultura que favorezca la comunicación cara a cara, porque la complejidad exige conversación rica y densa. El paso lo concreta en la misma dirección. Mencionar el correo como sustituto no invierte la preferencia: 'promover sobre' no prohíbe los canales impersonales. Tampoco añade cifras, roles ni herramientas.",
+  "paso_fiel": ""
+ }
+}

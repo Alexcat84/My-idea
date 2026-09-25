@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P98A3F6",
+  "intento": 0,
+  "usd": 0.127552,
+  "turnos": 1,
+  "duracion_s": 5.9,
+  "pared_s": 7.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 29813,
+  "tokens_out": 415,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P98A3F6\", \"veredicto\": \"FIEL\", \"lineas\": [5266, 5270], \"cita\": \"Who decides what disciplinary action should be meted out? Are the 'defendant's' peers and union representatives involved in the judgement process? Is there any internal appeals procedure?\", \"datos_sin_respaldo\": [], \"razon\": \"El libro plantea como pregunta de autodiagnóstico si participan los pares en el juicio disciplinario y si existe apelación interna. El paso omite a los representantes sindicales, pero eso es solo un detalle y no invierte ni condiciona nada. El dato 'pares' está respaldado literalmente.\", \"paso_fiel\": \"\"}",
+ "parseado": {
+  "id": "P98A3F6",
+  "veredicto": "FIEL",
+  "lineas": [
+   5266,
+   5270
+  ],
+  "cita": "Who decides what disciplinary action should be meted out? Are the 'defendant's' peers and union representatives involved in the judgement process? Is there any internal appeals procedure?",
+  "datos_sin_respaldo": [],
+  "razon": "El libro plantea como pregunta de autodiagnóstico si participan los pares en el juicio disciplinario y si existe apelación interna. El paso omite a los representantes sindicales, pero eso es solo un detalle y no invierte ni condiciona nada. El dato 'pares' está respaldado literalmente.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,73 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_094",
+  "intento": 0,
+  "usd": 0.168268,
+  "turnos": 1,
+  "duracion_s": 18.8,
+  "pared_s": 19.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32887,
+  "tokens_out": 1836,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P828370\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [3395, 3397], \"razon\": \"El libro indica multiplicar la probabilidad nominal por una proporción juzgada de cada EPC. El paso pide calcular la probabilidad ajustada, en esa misma dirección.\"},\n  {\"id\": \"P19AD77\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5204, 4769, 5208], \"razon\": \"El libro exige autoridad personal basada en el respeto del equipo y en el apoyo de la dirección. Dar respaldo explícito concreta ese apoyo sin contradecirlo.\"},\n  {\"id\": \"PBDE5EA\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [293, 2650, 310], \"razon\": \"La investigación parte del resultado y examina cómo y cuándo fallaron las defensas. Para cada defensa se establecen los fallos activos y las condiciones latentes.\"},\n  {\"id\": \"PD4F27D\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [5043, 5053, 5055, 5057, 5063], \"razon\": \"El libro aplica la mitigación al abuso de sustancias, no a violaciones. El paso omite el abuso de sustancias y el error sin culpa (unos 90%), lo que empuja hacia categorías culpables.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P828370",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    3395,
+    3397
+   ],
+   "razon": "El libro indica multiplicar la probabilidad nominal por una proporción juzgada de cada EPC. El paso pide calcular la probabilidad ajustada, en esa misma dirección."
+  },
+  {
+   "id": "P19AD77",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5204,
+    4769,
+    5208
+   ],
+   "razon": "El libro exige autoridad personal basada en el respeto del equipo y en el apoyo de la dirección. Dar respaldo explícito concreta ese apoyo sin contradecirlo."
+  },
+  {
+   "id": "PBDE5EA",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    293,
+    2650,
+    310
+   ],
+   "razon": "La investigación parte del resultado y examina cómo y cuándo fallaron las defensas. Para cada defensa se establecen los fallos activos y las condiciones latentes."
+  },
+  {
+   "id": "PD4F27D",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    5043,
+    5053,
+    5055,
+    5057,
+    5063
+   ],
+   "razon": "El libro aplica la mitigación al abuso de sustancias, no a violaciones. El paso omite el abuso de sustancias y el error sin culpa (unos 90%), lo que empuja hacia categorías culpables."
+  }
+ ]
+}

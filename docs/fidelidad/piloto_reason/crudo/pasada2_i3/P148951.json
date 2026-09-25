@@ -1,0 +1,37 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P148951",
+  "intento": 0,
+  "usd": 0.199384,
+  "turnos": 1,
+  "duracion_s": 20.7,
+  "pared_s": 21.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41216,
+  "tokens_out": 1726,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P148951\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [4749, 4689, 2579, 4777, 4695], \"cita\": \"an ideal safety culture is the engine that continues to propel the system towards the goal of maximum safety health, regardless of the leadership’s personality or current commercial concerns. Such an ideal is hard to achieve in the real world, but it is nonetheless a goal worth striving for.\", \"datos_sin_respaldo\": [\"justificacion 'por escrito' (documento previo de justificacion de la inversion)\", \"'antes de decidir' como requisito previo a la decision de invertir\"], \"tambien_anadido\": false, \"razon\": \"El libro da razones para invertir en la cultura de seguridad: es el motor que sostiene la seguridad aunque cambie la direccion y es una meta que merece el esfuerzo. Tambien atribuye a la cultura gran parte de la variacion de riesgo. No lo contradice, pero no pide dejar la justificacion por escrito ni convertirla en paso previo a decidir.\", \"paso_fiel\": \"Tener claro por que vale la pena trabajar en los cuatro pilares: juntos forman la cultura informada que impulsa la seguridad del sistema aunque cambien los directivos o las presiones comerciales, y es una meta que merece el esfuerzo aunque sea dificil de alcanzar.\"}\n```",
+ "parseado": {
+  "id": "P148951",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   4749,
+   4689,
+   2579,
+   4777,
+   4695
+  ],
+  "cita": "an ideal safety culture is the engine that continues to propel the system towards the goal of maximum safety health, regardless of the leadership’s personality or current commercial concerns. Such an ideal is hard to achieve in the real world, but it is nonetheless a goal worth striving for.",
+  "datos_sin_respaldo": [
+   "justificacion 'por escrito' (documento previo de justificacion de la inversion)",
+   "'antes de decidir' como requisito previo a la decision de invertir"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro da razones para invertir en la cultura de seguridad: es el motor que sostiene la seguridad aunque cambie la direccion y es una meta que merece el esfuerzo. Tambien atribuye a la cultura gran parte de la variacion de riesgo. No lo contradice, pero no pide dejar la justificacion por escrito ni convertirla en paso previo a decidir.",
+  "paso_fiel": "Tener claro por que vale la pena trabajar en los cuatro pilares: juntos forman la cultura informada que impulsa la seguridad del sistema aunque cambien los directivos o las presiones comerciales, y es una meta que merece el esfuerzo aunque sea dificil de alcanzar."
+ }
+}

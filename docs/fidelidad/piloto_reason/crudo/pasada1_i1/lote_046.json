@@ -1,0 +1,65 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_046",
+  "intento": 0,
+  "usd": 0.165376,
+  "turnos": 1,
+  "duracion_s": 15.7,
+  "pared_s": 16.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34029,
+  "tokens_out": 1463,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P10D64D\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [4714, 4720], \"razon\": \"El libro describe la indefensión aprendida como cultura disfuncional que impulsa el ciclo de la culpa. Diagnosticarla es una extensión coherente sin choque.\"},\n{\"id\": \"P82FFC2\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4693, 4695, 4722, 4724, 5270], \"razon\": \"El libro defiende que la gerencia cambia la cultura introduciendo nuevas prácticas y medidas. Advierte que no basta, pero el paso no afirma suficiencia.\"},\n{\"id\": \"PC22DE9\", \"clase\": \"SIN_COBERTURA\", \"marca\": true, \"lineas\": [1851, 1934], \"razon\": \"El libro presenta los casos para mostrar su alcance y su origen organizacional, pero no trata su uso formativo. Una capacitación centrada en individuos podría chocar con L1934.\"},\n{\"id\": \"P734D81\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2568, 2598, 2638, 2658], \"razon\": \"El libro exige combinar medidas reactivas y proactivas, con controles periódicos según el ritmo de cambio. 'En vez de reacción' puede leerse como abandonar el aprendizaje reactivo.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P10D64D",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    4714,
+    4720
+   ],
+   "razon": "El libro describe la indefensión aprendida como cultura disfuncional que impulsa el ciclo de la culpa. Diagnosticarla es una extensión coherente sin choque."
+  },
+  {
+   "id": "P82FFC2",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4693,
+    4695,
+    4722,
+    4724,
+    5270
+   ],
+   "razon": "El libro defiende que la gerencia cambia la cultura introduciendo nuevas prácticas y medidas. Advierte que no basta, pero el paso no afirma suficiencia."
+  },
+  {
+   "id": "PC22DE9",
+   "clase": "SIN_COBERTURA",
+   "marca": true,
+   "lineas": [
+    1851,
+    1934
+   ],
+   "razon": "El libro presenta los casos para mostrar su alcance y su origen organizacional, pero no trata su uso formativo. Una capacitación centrada en individuos podría chocar con L1934."
+  },
+  {
+   "id": "P734D81",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2568,
+    2598,
+    2638,
+    2658
+   ],
+   "razon": "El libro exige combinar medidas reactivas y proactivas, con controles periódicos según el ritmo de cambio. 'En vez de reacción' puede leerse como abandonar el aprendizaje reactivo."
+  }
+ ]
+}

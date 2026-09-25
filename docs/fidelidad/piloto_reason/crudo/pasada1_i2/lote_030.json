@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_030",
+  "intento": 0,
+  "usd": 0.165592,
+  "turnos": 1,
+  "duracion_s": 16.1,
+  "pared_s": 17.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33113,
+  "tokens_out": 1657,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P90E084\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [908, 922, 934, 942], \"razon\": \"El libro señala los modos múltiples como propiedad que favorece la confusión. No propone auditar ni contar modos, pero el paso concreta esa idea en la misma dirección.\"},\n{\"id\": \"PE8374C\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"junta directiva\", \"reuniones regulares de alto nivel\"], \"clase\": \"FIEL\", \"lineas\": [5242, 5246, 5270], \"razon\": \"Reproduce las preguntas del libro. Omite la distinción entre seguridad organizacional y salud laboral convencional, sin invertir el sentido.\"},\n{\"id\": \"P83ED59\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"ISO 45001\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [2724, 2726, 2748, 2750], \"razon\": \"El libro exige muestrear las seis dimensiones, incluidas cultura y factores específicos de seguridad, que el paso omite. ISO 45001 no está en el libro.\"},\n{\"id\": \"P39B0D3\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"Safety Case\", \"cada vez que haya un cambio significativo\"], \"clase\": \"FIEL\", \"lineas\": [4340, 4388], \"razon\": \"El libro respalda actualizar ante cambios mayores, pero Cullen también pide actualizarlo a intervalos regulares, algo que el paso omite.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P90E084",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    908,
+    922,
+    934,
+    942
+   ],
+   "razon": "El libro señala los modos múltiples como propiedad que favorece la confusión. No propone auditar ni contar modos, pero el paso concreta esa idea en la misma dirección."
+  },
+  {
+   "id": "PE8374C",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "junta directiva",
+    "reuniones regulares de alto nivel"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    5242,
+    5246,
+    5270
+   ],
+   "razon": "Reproduce las preguntas del libro. Omite la distinción entre seguridad organizacional y salud laboral convencional, sin invertir el sentido."
+  },
+  {
+   "id": "P83ED59",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "ISO 45001"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    2724,
+    2726,
+    2748,
+    2750
+   ],
+   "razon": "El libro exige muestrear las seis dimensiones, incluidas cultura y factores específicos de seguridad, que el paso omite. ISO 45001 no está en el libro."
+  },
+  {
+   "id": "P39B0D3",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "Safety Case",
+    "cada vez que haya un cambio significativo"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    4340,
+    4388
+   ],
+   "razon": "El libro respalda actualizar ante cambios mayores, pero Cullen también pide actualizarlo a intervalos regulares, algo que el paso omite."
+  }
+ ]
+}

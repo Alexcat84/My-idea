@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_080",
+  "intento": 0,
+  "usd": 0.16855199999999998,
+  "turnos": 1,
+  "duracion_s": 19.2,
+  "pared_s": 20.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33178,
+  "tokens_out": 1792,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P143447\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4360, 4376], \"razon\": \"El libro lista literalmente, entre los pasos del procedimiento continuo COSHH: monitorear la exposicion mediante tecnicas validas de higiene ocupacional.\"},\n  {\"id\": \"P0ED8F8\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"EPC\", \"peso multiplicador\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3395, 3397, 3401], \"razon\": \"El libro multiplica por una proporcion juzgada del factor EPC, no por el factor completo. Omite ademas el paso previo de asignar tarea generica HEART.\"},\n  {\"id\": \"P2E8DCC\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [261, 263, 5712, 5742, 5748], \"razon\": \"El libro pide limitar el analisis a lo que los gestores pueden controlar y senala rendimientos decrecientes remediales de los factores remotos.\"},\n  {\"id\": \"P44D1D5\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [4989, 5027, 5041, 5057, 5063, 4987], \"razon\": \"El libro deja el error negligente en zona gris de juicio caso a caso, no al otro lado de la linea. Pide principios acordados; 'por escrito' no consta.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P143447",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4376
+   ],
+   "razon": "El libro lista literalmente, entre los pasos del procedimiento continuo COSHH: monitorear la exposicion mediante tecnicas validas de higiene ocupacional."
+  },
+  {
+   "id": "P0ED8F8",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "EPC",
+    "peso multiplicador"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3395,
+    3397,
+    3401
+   ],
+   "razon": "El libro multiplica por una proporcion juzgada del factor EPC, no por el factor completo. Omite ademas el paso previo de asignar tarea generica HEART."
+  },
+  {
+   "id": "P2E8DCC",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    261,
+    263,
+    5712,
+    5742,
+    5748
+   ],
+   "razon": "El libro pide limitar el analisis a lo que los gestores pueden controlar y senala rendimientos decrecientes remediales de los factores remotos."
+  },
+  {
+   "id": "P44D1D5",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    4989,
+    5027,
+    5041,
+    5057,
+    5063,
+    4987
+   ],
+   "razon": "El libro deja el error negligente en zona gris de juicio caso a caso, no al otro lado de la linea. Pide principios acordados; 'por escrito' no consta."
+  }
+ ]
+}

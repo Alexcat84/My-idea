@@ -1,0 +1,83 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_004",
+  "intento": 0,
+  "usd": 0.16198400000000002,
+  "turnos": 1,
+  "duracion_s": 17.4,
+  "pared_s": 18.8,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32541,
+  "tokens_out": 1591,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PC78276\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"al menos el 8% del presupuesto operativo\", \"líneas de producción clasificadas como de alto peligro\"], \"clase\": \"INFERIDO-ANADIDO\", \"lineas\": [65, 67, 77, 79], \"razon\": \"El libro no da ningún porcentaje; pide ajustar la protección al peligro (paridad). Un mínimo fijo podría quedarse corto frente a lo que exige un peligro alto.\"},\n  {\"id\": \"PF2DCC7\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"EPC\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [3395, 3397, 3401, 3659], \"razon\": \"HEART multiplica por una proporción juzgada del factor EPC, no por el peso completo. Además, primero asigna una tarea genérica con su probabilidad nominal. El paso omite ambos matices.\"},\n  {\"id\": \"P284A03\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [868, 872, 918, 942, 1114, 1129], \"razon\": \"El libro diagnostica las transiciones de modo inadvertidas pero no prescribe este remedio. También advierte que añadir defensas aumenta la complejidad y traslada errores.\"},\n  {\"id\": \"P881BE1\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [2716, 1945, 3825, 3829], \"razon\": \"El libro valora la naturaleza y variedad de los actos inseguros ligadas al tipo de actividad, y distingue errores de violaciones porque requieren gestión distinta.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PC78276",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "al menos el 8% del presupuesto operativo",
+    "líneas de producción clasificadas como de alto peligro"
+   ],
+   "clase": "INFERIDO-ANADIDO",
+   "lineas": [
+    65,
+    67,
+    77,
+    79
+   ],
+   "razon": "El libro no da ningún porcentaje; pide ajustar la protección al peligro (paridad). Un mínimo fijo podría quedarse corto frente a lo que exige un peligro alto."
+  },
+  {
+   "id": "PF2DCC7",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "EPC"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    3395,
+    3397,
+    3401,
+    3659
+   ],
+   "razon": "HEART multiplica por una proporción juzgada del factor EPC, no por el peso completo. Además, primero asigna una tarea genérica con su probabilidad nominal. El paso omite ambos matices."
+  },
+  {
+   "id": "P284A03",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    868,
+    872,
+    918,
+    942,
+    1114,
+    1129
+   ],
+   "razon": "El libro diagnostica las transiciones de modo inadvertidas pero no prescribe este remedio. También advierte que añadir defensas aumenta la complejidad y traslada errores."
+  },
+  {
+   "id": "P881BE1",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2716,
+    1945,
+    3825,
+    3829
+   ],
+   "razon": "El libro valora la naturaleza y variedad de los actos inseguros ligadas al tipo de actividad, y distingue errores de violaciones porque requieren gestión distinta."
+  }
+ ]
+}

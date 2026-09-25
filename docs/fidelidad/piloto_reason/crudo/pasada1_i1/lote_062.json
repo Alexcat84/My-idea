@@ -1,0 +1,65 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_062",
+  "intento": 0,
+  "usd": 0.157364,
+  "turnos": 1,
+  "duracion_s": 16.1,
+  "pared_s": 17.1,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33001,
+  "tokens_out": 1268,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P59D9F5\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [5688, 5690, 3055, 5692], \"razon\": \"El libro dice que un LTIF bajo revela poco y que los precursores y las revisiones de procesos son más diagnósticos. Relegar el LTIF va en esa dirección.\"},\n  {\"id\": \"P39054B\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [2322, 2340, 2342], \"razon\": \"El libro presenta el cálculo del óptimo de costos como visión ortodoxa y la critica porque supone un mantenimiento benigno. El paso la adopta sin incluir el riesgo de error humano.\"},\n  {\"id\": \"P4D51A2\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2250, 2224, 2259], \"razon\": \"El libro propone identificar de antemano los pasos más vulnerables contando sus rasgos provocadores de omisión y actuar sobre ellos.\"},\n  {\"id\": \"P5C9E98\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2866, 2896, 2961], \"razon\": \"El libro critica que la gestión de errores tradicional ignore los avances en ciencias del comportamiento y no se base en el conocimiento actual de factores humanos.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P59D9F5",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    5688,
+    5690,
+    3055,
+    5692
+   ],
+   "razon": "El libro dice que un LTIF bajo revela poco y que los precursores y las revisiones de procesos son más diagnósticos. Relegar el LTIF va en esa dirección."
+  },
+  {
+   "id": "P39054B",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    2322,
+    2340,
+    2342
+   ],
+   "razon": "El libro presenta el cálculo del óptimo de costos como visión ortodoxa y la critica porque supone un mantenimiento benigno. El paso la adopta sin incluir el riesgo de error humano."
+  },
+  {
+   "id": "P4D51A2",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2250,
+    2224,
+    2259
+   ],
+   "razon": "El libro propone identificar de antemano los pasos más vulnerables contando sus rasgos provocadores de omisión y actuar sobre ellos."
+  },
+  {
+   "id": "P5C9E98",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2866,
+    2896,
+    2961
+   ],
+   "razon": "El libro critica que la gestión de errores tradicional ignore los avances en ciencias del comportamiento y no se base en el conocimiento actual de factores humanos."
+  }
+ ]
+}

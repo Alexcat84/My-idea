@@ -1,0 +1,95 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_006",
+  "intento": 0,
+  "usd": 0.19146000000000002,
+  "turnos": 1,
+  "duracion_s": 28.3,
+  "pared_s": 29.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33195,
+  "tokens_out": 2934,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"P34A143\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [81, 3965, 3967, 3971, 3973, 2691, 4761, 4765, 5134],\n    \"razon\": \"El libro describe la erosión gradual y la normalización de la desviación. Apoya una cultura de reporte justa y la vigilancia de errores menores, como en las HRO. El paso lo concreta sin añadir datos.\"\n  },\n  {\n    \"id\": \"P264C5E\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [202, 291, 423, 427, 3784, 5763],\n    \"razon\": \"El libro resume los casos con una tabla de fallas activas y condiciones latentes (Tabla 2.1) y usa Tripod-Beta. Matiz: puede haber accidentes solo con condiciones latentes, sin fallas activas.\"\n  },\n  {\n    \"id\": \"PFD8814\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [2669, 2693, 2769, 4974, 5690],\n    \"razon\": \"El libro considera el reporte de casi-accidentes una ayuda invaluable y las fugas más diagnósticas que el LTIF. Matiz: requiere cultura de reporte, formación para reconocer incidentes y chequeos de procesos.\"\n  },\n  {\n    \"id\": \"P745537\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": true,\n    \"datos\": [\"doble verificación\", \"inspecciones independientes posteriores al reensamblaje antes de la puesta en servicio\", \"aumentar la supervisión\"],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [409, 413, 969, 971, 973, 1068, 1072, 2028, 2250, 2259, 2961],\n    \"razon\": \"El libro respalda la inspección independiente. Pero advierte que la redundancia oculta errores y que los supervisores sobrecargados fallan, y prioriza enfoques situacionales y recordatorios. Choque de matiz posible.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "P34A143",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    81,
+    3965,
+    3967,
+    3971,
+    3973,
+    2691,
+    4761,
+    4765,
+    5134
+   ],
+   "razon": "El libro describe la erosión gradual y la normalización de la desviación. Apoya una cultura de reporte justa y la vigilancia de errores menores, como en las HRO. El paso lo concreta sin añadir datos."
+  },
+  {
+   "id": "P264C5E",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    202,
+    291,
+    423,
+    427,
+    3784,
+    5763
+   ],
+   "razon": "El libro resume los casos con una tabla de fallas activas y condiciones latentes (Tabla 2.1) y usa Tripod-Beta. Matiz: puede haber accidentes solo con condiciones latentes, sin fallas activas."
+  },
+  {
+   "id": "PFD8814",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2669,
+    2693,
+    2769,
+    4974,
+    5690
+   ],
+   "razon": "El libro considera el reporte de casi-accidentes una ayuda invaluable y las fugas más diagnósticas que el LTIF. Matiz: requiere cultura de reporte, formación para reconocer incidentes y chequeos de procesos."
+  },
+  {
+   "id": "P745537",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "doble verificación",
+    "inspecciones independientes posteriores al reensamblaje antes de la puesta en servicio",
+    "aumentar la supervisión"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    409,
+    413,
+    969,
+    971,
+    973,
+    1068,
+    1072,
+    2028,
+    2250,
+    2259,
+    2961
+   ],
+   "razon": "El libro respalda la inspección independiente. Pero advierte que la redundancia oculta errores y que los supervisores sobrecargados fallan, y prioriza enfoques situacionales y recordatorios. Choque de matiz posible."
+  }
+ ]
+}

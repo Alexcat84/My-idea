@@ -1,0 +1,81 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_002",
+  "intento": 0,
+  "usd": 0.168572,
+  "turnos": 1,
+  "duracion_s": 20.6,
+  "pared_s": 22.2,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32298,
+  "tokens_out": 1969,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PCBFAFC\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [5740, 5742, 5748, 263, 271, 2652], \"razon\": \"Coincide con L5742. Matiz: Reason llama a la estimacion muy especulativa, pide un termino medio que reconozca influencias psicologicas y dice que ningun factor es necesariamente mas importante.\"},\n  {\"id\": \"PB59D37\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [565, 567, 569, 5779, 5781], \"razon\": \"Concreta los disparadores de Nakina. Matiz: el libro dice que los disparadores locales son dificiles de anticipar y que la mejor via es eliminar condiciones latentes, no rastrear disparadores.\"},\n  {\"id\": \"P2A92C6\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [5184, 5186, 2687, 4757, 5196], \"razon\": \"Weick valora las war stories y saber que otros ya manejaron errores similares, y el libro pide difundir los cuasi-accidentes. El paso lo concreta en su misma direccion.\"},\n  {\"id\": \"PE6EDD1\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"Sección 5b\", \"MEDA\"], \"clase\": \"FIEL\", \"lineas\": [3747, 3771], \"razon\": \"L3771: la Seccion 5b pregunta que medidas correctivas se tomaron o debieron tomarse a nivel local para prevenir la recurrencia.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PCBFAFC",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    5740,
+    5742,
+    5748,
+    263,
+    271,
+    2652
+   ],
+   "razon": "Coincide con L5742. Matiz: Reason llama a la estimacion muy especulativa, pide un termino medio que reconozca influencias psicologicas y dice que ningun factor es necesariamente mas importante."
+  },
+  {
+   "id": "PB59D37",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    565,
+    567,
+    569,
+    5779,
+    5781
+   ],
+   "razon": "Concreta los disparadores de Nakina. Matiz: el libro dice que los disparadores locales son dificiles de anticipar y que la mejor via es eliminar condiciones latentes, no rastrear disparadores."
+  },
+  {
+   "id": "P2A92C6",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    5184,
+    5186,
+    2687,
+    4757,
+    5196
+   ],
+   "razon": "Weick valora las war stories y saber que otros ya manejaron errores similares, y el libro pide difundir los cuasi-accidentes. El paso lo concreta en su misma direccion."
+  },
+  {
+   "id": "PE6EDD1",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "Sección 5b",
+    "MEDA"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    3747,
+    3771
+   ],
+   "razon": "L3771: la Seccion 5b pregunta que medidas correctivas se tomaron o debieron tomarse a nivel local para prevenir la recurrencia."
+  }
+ ]
+}

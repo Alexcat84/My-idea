@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PB11C35",
+  "intento": 0,
+  "usd": 0.146412,
+  "turnos": 1,
+  "duracion_s": 6.0,
+  "pared_s": 6.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34758,
+  "tokens_out": 369,
+  "error": false
+ },
+ "resultado": "{\"id\": \"PB11C35\", \"veredicto\": \"CONTRARIO\", \"lineas\": [81, 1638], \"cita\": \"For the most part, such short-cuts bring no bad effects and so can become an habitual part of routine work practices. Unfortunately, this gradual reduction in the system's safety margins renders it increasingly vulnerable to particular combinations of accident-causing factors.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro dice que los atajos habituales que no han causado incidentes son precisamente los que erosionan los margenes de seguridad y aumentan la vulnerabilidad. Tambien dice que las violaciones exitosas generan las misventions (L1638). Tratar la ausencia de incidentes como prueba de que un atajo es aceptable invierte el mensaje del libro (L81, L105, L2493).\", \"paso_fiel\": \"Revisar los atajos de seguridad que el equipo usa habitualmente sin haber producido incidentes y tratarlos como una erosion de los margenes de seguridad, no como una practica validada por la ausencia de eventos.\"}",
+ "parseado": {
+  "id": "PB11C35",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   81,
+   1638
+  ],
+  "cita": "For the most part, such short-cuts bring no bad effects and so can become an habitual part of routine work practices. Unfortunately, this gradual reduction in the system's safety margins renders it increasingly vulnerable to particular combinations of accident-causing factors.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro dice que los atajos habituales que no han causado incidentes son precisamente los que erosionan los margenes de seguridad y aumentan la vulnerabilidad. Tambien dice que las violaciones exitosas generan las misventions (L1638). Tratar la ausencia de incidentes como prueba de que un atajo es aceptable invierte el mensaje del libro (L81, L105, L2493).",
+  "paso_fiel": "Revisar los atajos de seguridad que el equipo usa habitualmente sin haber producido incidentes y tratarlos como una erosion de los margenes de seguridad, no como una practica validada por la ausencia de eventos."
+ }
+}

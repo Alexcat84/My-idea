@@ -1,0 +1,36 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P1DBB41",
+  "intento": 0,
+  "usd": 0.141732,
+  "turnos": 1,
+  "duracion_s": 20.6,
+  "pared_s": 36.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 26428,
+  "tokens_out": 1801,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P1DBB41\", \"veredicto\": \"CONTRARIO\", \"lineas\": [3692, 3704, 3706, 3714, 3718, 3722, 3724], \"cita\": \"The process begins with one of the ‘bottom influences’ (leaf nodes)--that is, a factor that has no external influences shown as impinging upon it. ... they are given a graded indicator scale that specifies the nature of the evidence to be taken into account.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro aplica la escala graduada de evidencia solo a los nodos hoja, que no reciben influencias. Los factores con influencias previas no reciben una razón directa: su probabilidad se deriva de evaluaciones condicionales por combinación, ponderadas y sumadas. Pedir una razón directa para cada factor generaliza lo que el libro limita y se salta la propagación.\", \"paso_fiel\": \"Con la guía de un facilitador experto, asignar a cada factor hoja (sin influencias previas) una razón de influencia (buena/mala) mediante una escala graduada de evidencia; los factores con varias influencias se derivan después combinando evaluaciones condicionales.\"}\n```",
+ "parseado": {
+  "id": "P1DBB41",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   3692,
+   3704,
+   3706,
+   3714,
+   3718,
+   3722,
+   3724
+  ],
+  "cita": "The process begins with one of the ‘bottom influences’ (leaf nodes)--that is, a factor that has no external influences shown as impinging upon it. ... they are given a graded indicator scale that specifies the nature of the evidence to be taken into account.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro aplica la escala graduada de evidencia solo a los nodos hoja, que no reciben influencias. Los factores con influencias previas no reciben una razón directa: su probabilidad se deriva de evaluaciones condicionales por combinación, ponderadas y sumadas. Pedir una razón directa para cada factor generaliza lo que el libro limita y se salta la propagación.",
+  "paso_fiel": "Con la guía de un facilitador experto, asignar a cada factor hoja (sin influencias previas) una razón de influencia (buena/mala) mediante una escala graduada de evidencia; los factores con varias influencias se derivan después combinando evaluaciones condicionales."
+ }
+}

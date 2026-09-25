@@ -1,0 +1,33 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P63A7A8",
+  "intento": 0,
+  "usd": 0.251116,
+  "turnos": 1,
+  "duracion_s": 23.2,
+  "pared_s": 24.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 57714,
+  "tokens_out": 1013,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P63A7A8\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4276, 4296, 4388, 4500], \"cita\": \"Irrespective of the concept invoked to define what safety is at a particular point in time, as a society progresses, it demands a higher degree of safety Thus, safety is a target moving continuously towards zero risk\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro dice que lo 'seguro' depende de la tecnología y la sociedad (L4276) y que el listón sube con el progreso social (L4296). También prevé actualizar el Safety Case 'at regular intervals' (L4388) y convertir las mejoras en nuevos estándares (L4500). Revisar el estándar concreta esto sin datos nuevos. 'Periódicamente' no fija ninguna frecuencia. El paso no invita a rebajar el estándar.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P63A7A8",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4276,
+   4296,
+   4388,
+   4500
+  ],
+  "cita": "Irrespective of the concept invoked to define what safety is at a particular point in time, as a society progresses, it demands a higher degree of safety Thus, safety is a target moving continuously towards zero risk",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro dice que lo 'seguro' depende de la tecnología y la sociedad (L4276) y que el listón sube con el progreso social (L4296). También prevé actualizar el Safety Case 'at regular intervals' (L4388) y convertir las mejoras en nuevos estándares (L4500). Revisar el estándar concreta esto sin datos nuevos. 'Periódicamente' no fija ninguna frecuencia. El paso no invita a rebajar el estándar.",
+  "paso_fiel": ""
+ }
+}

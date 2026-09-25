@@ -1,0 +1,29 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P2DFCE0",
+  "intento": 0,
+  "usd": 0.192632,
+  "turnos": 1,
+  "duracion_s": 7.2,
+  "pared_s": 8.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46408,
+  "tokens_out": 350,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P2DFCE0\", \"veredicto\": \"CONTRARIO\", \"lineas\": [5200], \"cita\": \"Work groups made up of divergent people. 'A team of divergent individuals has more requisite variety than a team of homogeneous individuals.' [...] By the same token, groups made up of very similar people tend to see very similar things, and so lack requisite variety.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro recomienda equipos de personas divergentes (otra especialidad, otra experiencia) porque, al buscar cosas distintas, juntos ven más. Advierte que los grupos de personas muy similares ven lo mismo y carecen de variedad requerida. El paso invierte la recomendación al pedir homogeneidad para que coincidan en qué vigilar.\", \"paso_fiel\": \"Formar los equipos de trabajo con personas diversas (distinta especialidad, experiencia, género) para que, al buscar cosas diferentes, colectivamente detecten más riesgos que cualquiera por separado.\"}",
+ "parseado": {
+  "id": "P2DFCE0",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   5200
+  ],
+  "cita": "Work groups made up of divergent people. 'A team of divergent individuals has more requisite variety than a team of homogeneous individuals.' [...] By the same token, groups made up of very similar people tend to see very similar things, and so lack requisite variety.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro recomienda equipos de personas divergentes (otra especialidad, otra experiencia) porque, al buscar cosas distintas, juntos ven más. Advierte que los grupos de personas muy similares ven lo mismo y carecen de variedad requerida. El paso invierte la recomendación al pedir homogeneidad para que coincidan en qué vigilar.",
+  "paso_fiel": "Formar los equipos de trabajo con personas diversas (distinta especialidad, experiencia, género) para que, al buscar cosas diferentes, colectivamente detecten más riesgos que cualquiera por separado."
+ }
+}

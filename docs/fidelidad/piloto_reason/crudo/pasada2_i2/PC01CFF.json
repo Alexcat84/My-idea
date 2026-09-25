@@ -1,0 +1,31 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PC01CFF",
+  "intento": 0,
+  "usd": 0.145052,
+  "turnos": 1,
+  "duracion_s": 11.4,
+  "pared_s": 12.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 31483,
+  "tokens_out": 956,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PC01CFF\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [4769, 5204, 5208], \"cita\": \"depends crucially on respect--in this case, respect for the skills, experience and abilities of the workforce and, most particularly, the first-line supervisors. But respect must be earned, and this requires a major training investment on the part of the organization.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide invertir mucho en formar al personal y sobre todo a los supervisores de primera línea, para ganar el respeto que permite la flexibilidad. El paso va en esa dirección. Solo cambia 'respeto' por 'confianza' y no nombra a los supervisores. Callar el requisito de una jerarquía previa fuerte no hace que el paso aconseje lo que el libro desaconseja.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PC01CFF",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   4769,
+   5204,
+   5208
+  ],
+  "cita": "depends crucially on respect--in this case, respect for the skills, experience and abilities of the workforce and, most particularly, the first-line supervisors. But respect must be earned, and this requires a major training investment on the part of the organization.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide invertir mucho en formar al personal y sobre todo a los supervisores de primera línea, para ganar el respeto que permite la flexibilidad. El paso va en esa dirección. Solo cambia 'respeto' por 'confianza' y no nombra a los supervisores. Callar el requisito de una jerarquía previa fuerte no hace que el paso aconseje lo que el libro desaconseja.",
+  "paso_fiel": ""
+ }
+}

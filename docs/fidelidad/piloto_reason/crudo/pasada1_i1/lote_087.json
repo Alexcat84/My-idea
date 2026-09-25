@@ -1,0 +1,74 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_087",
+  "intento": 0,
+  "usd": 0.15761599999999998,
+  "turnos": 1,
+  "duracion_s": 14.8,
+  "pared_s": 16.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33134,
+  "tokens_out": 1254,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"PEB75D3\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [5178, 5182, 5208], \"razon\": \"El libro dice que la cultura crea supuestos y premisas de decisión compartidos que coordinan la acción descentralizada. Identificarlos es una extensión razonable. Solo es diagnóstico, no choca con L3959.\"},\n  {\"id\": \"PAF1E96\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [1056, 1068, 1072, 1114, 1129, 1133, 1137, 1149, 2724], \"razon\": \"Reforzar capas puede entenderse como añadir defensas o redundancia. El libro advierte que eso aumenta la complejidad y la opacidad y favorece la alineación de agujeros. Además prioriza los factores organizacionales.\"},\n  {\"id\": \"P6B2479\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [3670, 3674, 3678, 3682, 3686, 3688, 3690], \"razon\": \"El libro describe los cuatro niveles del IDA y pide identificar los factores de cada nivel mediante una discusión estructurada con expertos. Se permite combinar el nivel PIF con el de factor influyente.\"},\n  {\"id\": \"PC65A79\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [2823, 2845, 2849], \"razon\": \"El libro define la contención de errores como medidas que limitan sus consecuencias. Incluye mejorar la detección y aumentar la tolerancia del sistema, así que el paso coincide.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "PEB75D3",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    5178,
+    5182,
+    5208
+   ],
+   "razon": "El libro dice que la cultura crea supuestos y premisas de decisión compartidos que coordinan la acción descentralizada. Identificarlos es una extensión razonable. Solo es diagnóstico, no choca con L3959."
+  },
+  {
+   "id": "PAF1E96",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    1056,
+    1068,
+    1072,
+    1114,
+    1129,
+    1133,
+    1137,
+    1149,
+    2724
+   ],
+   "razon": "Reforzar capas puede entenderse como añadir defensas o redundancia. El libro advierte que eso aumenta la complejidad y la opacidad y favorece la alineación de agujeros. Además prioriza los factores organizacionales."
+  },
+  {
+   "id": "P6B2479",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    3670,
+    3674,
+    3678,
+    3682,
+    3686,
+    3688,
+    3690
+   ],
+   "razon": "El libro describe los cuatro niveles del IDA y pide identificar los factores de cada nivel mediante una discusión estructurada con expertos. Se permite combinar el nivel PIF con el de factor influyente."
+  },
+  {
+   "id": "PC65A79",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    2823,
+    2845,
+    2849
+   ],
+   "razon": "El libro define la contención de errores como medidas que limitan sus consecuencias. Incluye mejorar la detección y aumentar la tolerancia del sistema, así que el paso coincide."
+  }
+ ]
+}

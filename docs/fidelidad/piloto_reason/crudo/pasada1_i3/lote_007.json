@@ -1,0 +1,88 @@
+{
+ "coste": {
+  "etapa": "pasada1_i3",
+  "clave": "lote_007",
+  "intento": 0,
+  "usd": 0.178956,
+  "turnos": 1,
+  "duracion_s": 21.4,
+  "pared_s": 22.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 34614,
+  "tokens_out": 2025,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P29E58D\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"5 criterios universales\", \"conspicuo, contiguo, contextual, contenido y check\"], \"clase\": \"FIEL\", \"lineas\": [2259, 2263, 2267, 2271, 2275, 2279, 2281], \"razon\": \"El libro enumera exactamente esos cinco criterios universales del buen recordatorio. Advierte además que los recordatorios son 'primeros auxilios', no una solución permanente, pero el paso no lo contradice.\"},\n  {\"id\": \"PB3B30D\", \"podria_contradecir\": true, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [4276, 4280, 4284, 4288, 4292, 4296, 4318], \"razon\": \"El libro solo describe los enfoques según lo que la tecnología o la sociedad considera seguro. No prescribe que la organización elija uno, y el ALARP viene impuesto por ley (HSW). Conviene revisar ese matiz.\"},\n  {\"id\": \"PFB439E\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"viceministro de transporte\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [200, 4060, 4092, 4448, 4521, 4523], \"razon\": \"El libro sitúa el origen arriba y en el gobierno, pero no pide pedir cuentas a un cargo concreto. Rechaza buscar chivos expiatorios y propone dar recursos y legislación. El rol concreto es añadido.\"},\n  {\"id\": \"P380B99\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4388, 4398, 4328], \"razon\": \"Cullen exige demostrar que se identificaron los peligros mayores potenciales, y la FSA empieza por identificar los peligros. El paso coincide con el libro.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P29E58D",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "5 criterios universales",
+    "conspicuo, contiguo, contextual, contenido y check"
+   ],
+   "clase": "FIEL",
+   "lineas": [
+    2259,
+    2263,
+    2267,
+    2271,
+    2275,
+    2279,
+    2281
+   ],
+   "razon": "El libro enumera exactamente esos cinco criterios universales del buen recordatorio. Advierte además que los recordatorios son 'primeros auxilios', no una solución permanente, pero el paso no lo contradice."
+  },
+  {
+   "id": "PB3B30D",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    4276,
+    4280,
+    4284,
+    4288,
+    4292,
+    4296,
+    4318
+   ],
+   "razon": "El libro solo describe los enfoques según lo que la tecnología o la sociedad considera seguro. No prescribe que la organización elija uno, y el ALARP viene impuesto por ley (HSW). Conviene revisar ese matiz."
+  },
+  {
+   "id": "PFB439E",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "viceministro de transporte"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    200,
+    4060,
+    4092,
+    4448,
+    4521,
+    4523
+   ],
+   "razon": "El libro sitúa el origen arriba y en el gobierno, pero no pide pedir cuentas a un cargo concreto. Rechaza buscar chivos expiatorios y propone dar recursos y legislación. El rol concreto es añadido."
+  },
+  {
+   "id": "P380B99",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4388,
+    4398,
+    4328
+   ],
+   "razon": "Cullen exige demostrar que se identificaron los peligros mayores potenciales, y la FSA empieza por identificar los peligros. El paso coincide con el libro."
+  }
+ ]
+}

@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P9A4604",
+  "intento": 0,
+  "usd": 0.16536,
+  "turnos": 1,
+  "duracion_s": 10.5,
+  "pared_s": 11.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36935,
+  "tokens_out": 881,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P9A4604\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [423, 451], \"cita\": \"Another small crack in the system was the absence of any formal procedure for handing over jobs from line to base maintenance. As a result, no preprepared stage sheets (indicating the prior work performed) were available and the handover briefing was carried out verbally rather than in writing.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro presenta como grieta o condicion latente la falta de stage sheets y el traspaso verbal en lugar de escrito. Admite que, en retrospectiva, se ve la necesidad de procedimientos de traspaso. Su comentario sobre la rareza de estos traspasos es un sesgo retrospectivo, no un consejo en contra. El paso convierte el defecto en accion, en la misma direccion y sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P9A4604",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   423,
+   451
+  ],
+  "cita": "Another small crack in the system was the absence of any formal procedure for handing over jobs from line to base maintenance. As a result, no preprepared stage sheets (indicating the prior work performed) were available and the handover briefing was carried out verbally rather than in writing.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro presenta como grieta o condicion latente la falta de stage sheets y el traspaso verbal en lugar de escrito. Admite que, en retrospectiva, se ve la necesidad de procedimientos de traspaso. Su comentario sobre la rareza de estos traspasos es un sesgo retrospectivo, no un consejo en contra. El paso convierte el defecto en accion, en la misma direccion y sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

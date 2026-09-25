@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "PF63738",
+  "intento": 0,
+  "usd": 0.16526400000000002,
+  "turnos": 1,
+  "duracion_s": 11.5,
+  "pared_s": 12.5,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 36776,
+  "tokens_out": 908,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF63738\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1820, 971, 2250], \"cita\": \"these close encounters with the technical components of a system probably constitute the single largest human performance problem facing most hazardous technologies. By the same token, they also offer the greatest opportunity for human factors improvements.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro señala el mantenimiento como el mayor problema y la mayor oportunidad de mejora (L1820), y pide identificar los pasos propensos al error para actuar sobre ellos (L2250). No critica controlar la calidad. Critica que falte una inspección separada (L971). Lo que desaconseja es el contacto manual innecesario, no la verificación. El paso concreta esa prioridad sin datos nuevos.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "PF63738",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1820,
+   971,
+   2250
+  ],
+  "cita": "these close encounters with the technical components of a system probably constitute the single largest human performance problem facing most hazardous technologies. By the same token, they also offer the greatest opportunity for human factors improvements.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro señala el mantenimiento como el mayor problema y la mayor oportunidad de mejora (L1820), y pide identificar los pasos propensos al error para actuar sobre ellos (L2250). No critica controlar la calidad. Critica que falte una inspección separada (L971). Lo que desaconseja es el contacto manual innecesario, no la verificación. El paso concreta esa prioridad sin datos nuevos.",
+  "paso_fiel": ""
+ }
+}

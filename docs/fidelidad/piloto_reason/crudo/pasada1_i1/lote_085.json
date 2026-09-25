@@ -1,0 +1,68 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_085",
+  "intento": 0,
+  "usd": 0.156852,
+  "turnos": 1,
+  "duracion_s": 14.7,
+  "pared_s": 17.0,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 32763,
+  "tokens_out": 1290,
+  "error": false
+ },
+ "resultado": "```json\n[{\"id\": \"P35D80E\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [563, 567, 569, 580, 584], \"razon\": \"Los planos originales revelaron la causa, pero el libro llama a Nakina 'caso muy especial', casi indetectable sin análisis geotécnico. Generalizarlo a regla de auditoría es dudoso; conviene revisarlo.\"},\n {\"id\": \"P4B4917\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [967, 969, 971, 973, 975], \"razon\": \"El libro señala que la falta de inspección separada y de personal de QA permitió firmar trabajos defectuosos. Revisar si existe esa función va en su misma dirección.\"},\n {\"id\": \"PBBE708\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4695, 5272, 5781], \"razon\": \"El libro dice que la cultura de seguridad surge de aplicar medidas prácticas de forma persistente, que es un proceso de aprendizaje colectivo y que el proceso importa más que el producto.\"},\n {\"id\": \"PA0198E\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [582, 2767, 4478], \"razon\": \"El libro lo dice casi literalmente: los recursos son limitados, no se puede resolver todo de una vez y hay que atender las condiciones latentes más urgentes en cada período.\"}]\n```",
+ "parseado": [
+  {
+   "id": "P35D80E",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    563,
+    567,
+    569,
+    580,
+    584
+   ],
+   "razon": "Los planos originales revelaron la causa, pero el libro llama a Nakina 'caso muy especial', casi indetectable sin análisis geotécnico. Generalizarlo a regla de auditoría es dudoso; conviene revisarlo."
+  },
+  {
+   "id": "P4B4917",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    967,
+    969,
+    971,
+    973,
+    975
+   ],
+   "razon": "El libro señala que la falta de inspección separada y de personal de QA permitió firmar trabajos defectuosos. Revisar si existe esa función va en su misma dirección."
+  },
+  {
+   "id": "PBBE708",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4695,
+    5272,
+    5781
+   ],
+   "razon": "El libro dice que la cultura de seguridad surge de aplicar medidas prácticas de forma persistente, que es un proceso de aprendizaje colectivo y que el proceso importa más que el producto."
+  },
+  {
+   "id": "PA0198E",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    582,
+    2767,
+    4478
+   ],
+   "razon": "El libro lo dice casi literalmente: los recursos son limitados, no se puede resolver todo de una vez y hay que atender las condiciones latentes más urgentes en cada período."
+  }
+ ]
+}

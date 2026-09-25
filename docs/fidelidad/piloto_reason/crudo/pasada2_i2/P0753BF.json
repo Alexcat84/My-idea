@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P0753BF",
+  "intento": 0,
+  "usd": 0.15196800000000002,
+  "turnos": 1,
+  "duracion_s": 7.5,
+  "pared_s": 8.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 35152,
+  "tokens_out": 568,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P0753BF\", \"veredicto\": \"INFERIDO-OPERATIVO\", \"lineas\": [1842, 2369], \"cita\": \"We urgently need a greater awareness on the part of system designers and manufacturers of the varieties of human fallibility and the error-provoking nature of large parts of the maintenance task--especially during installation or reassembly.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide que diseñadores y fabricantes tomen conciencia de la falibilidad humana y del riesgo del mantenimiento (L1842, L2369). Los destinatarios salen del propio libro. 'Reportar' solo concreta cómo transmitir esa necesidad, en la misma dirección. No añade cifra, plazo, herramienta ni norma. 'Ciclo de vida' equivale a la larga vida útil del sistema que menciona L2367.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P0753BF",
+  "veredicto": "INFERIDO-OPERATIVO",
+  "lineas": [
+   1842,
+   2369
+  ],
+  "cita": "We urgently need a greater awareness on the part of system designers and manufacturers of the varieties of human fallibility and the error-provoking nature of large parts of the maintenance task--especially during installation or reassembly.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide que diseñadores y fabricantes tomen conciencia de la falibilidad humana y del riesgo del mantenimiento (L1842, L2369). Los destinatarios salen del propio libro. 'Reportar' solo concreta cómo transmitir esa necesidad, en la misma dirección. No añade cifra, plazo, herramienta ni norma. 'Ciclo de vida' equivale a la larga vida útil del sistema que menciona L2367.",
+  "paso_fiel": ""
+ }
+}

@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P661559",
+  "intento": 0,
+  "usd": 0.206548,
+  "turnos": 1,
+  "duracion_s": 11.3,
+  "pared_s": 12.3,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 46502,
+  "tokens_out": 1027,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P661559\", \"veredicto\": \"CONTRARIO\", \"lineas\": [5200, 5184, 5190], \"cita\": \"'If people look for different things, when their observations are pooled they collectively see more than any one of them alone would see.' By the same token, groups made up of very similar people tend to see very similar things, and so lack requisite variety.\", \"datos_sin_respaldo\": [], \"tambien_anadido\": false, \"razon\": \"El libro recomienda formar grupos de trabajo con personas divergentes (distinta especialidad y experiencia), porque eso aumenta la variedad requerida. Advierte que los grupos homogéneos ven cosas muy similares y carecen de ella. El paso invierte esa recomendación. La homogeneidad de premisas de decisión de Weick (L5178) se refiere a la cultura compartida, no a la composición de los equipos.\", \"paso_fiel\": \"Formar los equipos de trabajo con personas de especialidades y experiencias distintas, para que cada una vigile riesgos diferentes y, al poner en común sus observaciones, el grupo vea más de lo que vería cualquiera por separado.\"}\n```",
+ "parseado": {
+  "id": "P661559",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   5200,
+   5184,
+   5190
+  ],
+  "cita": "'If people look for different things, when their observations are pooled they collectively see more than any one of them alone would see.' By the same token, groups made up of very similar people tend to see very similar things, and so lack requisite variety.",
+  "datos_sin_respaldo": [],
+  "tambien_anadido": false,
+  "razon": "El libro recomienda formar grupos de trabajo con personas divergentes (distinta especialidad y experiencia), porque eso aumenta la variedad requerida. Advierte que los grupos homogéneos ven cosas muy similares y carecen de ella. El paso invierte esa recomendación. La homogeneidad de premisas de decisión de Weick (L5178) se refiere a la cultura compartida, no a la composición de los equipos.",
+  "paso_fiel": "Formar los equipos de trabajo con personas de especialidades y experiencias distintas, para que cada una vigile riesgos diferentes y, al poner en común sus observaciones, el grupo vea más de lo que vería cualquiera por separado."
+ }
+}

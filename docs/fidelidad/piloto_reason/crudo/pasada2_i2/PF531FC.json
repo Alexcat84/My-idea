@@ -1,0 +1,32 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "PF531FC",
+  "intento": 0,
+  "usd": 0.21898,
+  "turnos": 1,
+  "duracion_s": 26.4,
+  "pared_s": 27.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 41390,
+  "tokens_out": 2671,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"PF531FC\", \"veredicto\": \"CONTRARIO\", \"lineas\": [4765, 4798, 4824, 4987], \"cita\": \"A ‘no-blame’ culture is neither feasible nor desirable. A small proportion of human unsafe acts are egregious (for example, substance abuse, reckless non-compliance, sabotage and so on) and warrant sanctions, severe ones in some cases.\", \"datos_sin_respaldo\": [], \"razon\": \"El libro pide proteger a los informantes de sanciones solo 'as far as it is practicable' y con límites explícitos. Rechaza la amnistía general y exige una cultura justa con una línea clara entre conductas aceptables e inaceptables. 'Sin represalias' sin condición convierte en regla general una protección que el libro limita.\", \"paso_fiel\": \"Desarrollar una cultura justa de reporte que proteja a quienes informan de sanciones por lo que reportan, en la medida de lo practicable, y que deje claro dónde está la línea entre conductas aceptables e inaceptables (abuso de sustancias, incumplimiento temerario, sabotaje), que sí se sancionan.\"}\n```",
+ "parseado": {
+  "id": "PF531FC",
+  "veredicto": "CONTRARIO",
+  "lineas": [
+   4765,
+   4798,
+   4824,
+   4987
+  ],
+  "cita": "A ‘no-blame’ culture is neither feasible nor desirable. A small proportion of human unsafe acts are egregious (for example, substance abuse, reckless non-compliance, sabotage and so on) and warrant sanctions, severe ones in some cases.",
+  "datos_sin_respaldo": [],
+  "razon": "El libro pide proteger a los informantes de sanciones solo 'as far as it is practicable' y con límites explícitos. Rechaza la amnistía general y exige una cultura justa con una línea clara entre conductas aceptables e inaceptables. 'Sin represalias' sin condición convierte en regla general una protección que el libro limita.",
+  "paso_fiel": "Desarrollar una cultura justa de reporte que proteja a quienes informan de sanciones por lo que reportan, en la medida de lo practicable, y que deje claro dónde está la línea entre conductas aceptables e inaceptables (abuso de sustancias, incumplimiento temerario, sabotaje), que sí se sancionan."
+ }
+}

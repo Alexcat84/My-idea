@@ -1,0 +1,35 @@
+{
+ "coste": {
+  "etapa": "pasada2_i3",
+  "clave": "P5A7ED6",
+  "intento": 0,
+  "usd": 0.111,
+  "turnos": 1,
+  "duracion_s": 13.9,
+  "pared_s": 15.4,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 21975,
+  "tokens_out": 1155,
+  "error": false
+ },
+ "resultado": "{\"id\": \"P5A7ED6\", \"veredicto\": \"INFERIDO-ANADIDO\", \"lineas\": [419, 453, 417, 423], \"cita\": \"the line-generated work pack contained no mention of the restorative work --replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack.\", \"datos_sin_respaldo\": [\"al menos 48 horas antes\"], \"tambien_anadido\": false, \"razon\": \"El libro señala como grieta que el paquete de línea careciera de tarjetas paso a paso y de firmas del trabajo de reensamblaje (L419, L453). Completarlo antes del traspaso va en esa dirección. El plazo de 48 h no aparece en el libro. Es poco práctico (L417, L401), pero el libro no desaconseja completar la documentación, así que no es contrario.\", \"paso_fiel\": \"Completar el paquete de trabajo de línea con las tarjetas de tarea paso a paso, las advertencias del manual y las firmas de reensamblaje antes de transferirlo a base.\"}",
+ "parseado": {
+  "id": "P5A7ED6",
+  "veredicto": "INFERIDO-ANADIDO",
+  "lineas": [
+   419,
+   453,
+   417,
+   423
+  ],
+  "cita": "the line-generated work pack contained no mention of the restorative work --replacing fasteners and covers--nor did it require step-by-step signatures confirming the completion of these tasks, as would be expected in a base-generated work pack.",
+  "datos_sin_respaldo": [
+   "al menos 48 horas antes"
+  ],
+  "tambien_anadido": false,
+  "razon": "El libro señala como grieta que el paquete de línea careciera de tarjetas paso a paso y de firmas del trabajo de reensamblaje (L419, L453). Completarlo antes del traspaso va en esa dirección. El plazo de 48 h no aparece en el libro. Es poco práctico (L417, L401), pero el libro no desaconseja completar la documentación, así que no es contrario.",
+  "paso_fiel": "Completar el paquete de trabajo de línea con las tarjetas de tarea paso a paso, las advertencias del manual y las firmas de reensamblaje antes de transferirlo a base."
+ }
+}

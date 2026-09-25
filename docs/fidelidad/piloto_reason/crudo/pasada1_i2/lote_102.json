@@ -1,0 +1,82 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_102",
+  "intento": 0,
+  "usd": 0.168852,
+  "turnos": 1,
+  "duracion_s": 19.5,
+  "pared_s": 20.7,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33078,
+  "tokens_out": 1827,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\n    \"id\": \"PC9E624\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [2922, 3817, 4720, 2884, 4987, 5063],\n    \"razon\": \"Coincide en dirección, pero 'como única respuesta' deja las sanciones como válidas ante errores. El libro dice que culpar tiene poco o ningún efecto y reserva la sanción para actos culpables.\"\n  },\n  {\n    \"id\": \"P0B904F\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"INFERIDO-OPERATIVO\",\n    \"lineas\": [419, 2028, 2250, 421, 459, 4720],\n    \"razon\": \"El libro respalda identificar pasos propensos a omisión y firmar paso a paso. No habla de secuencias numeradas y critica 'escribir otro procedimiento' como reacción; el cap. 3 no aparece.\"\n  },\n  {\n    \"id\": \"PD47D3A\",\n    \"podria_contradecir\": true,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"POSIBLE_CONTRARIO\",\n    \"lineas\": [417, 419, 421, 423, 451, 459],\n    \"razon\": \"Convierte en regla universal algo que el libro sitúa en el traspaso de línea a base. El libro acepta paperwork breve en línea, dice que los manuales son difíciles de usar y cuestiona el cambio total de procedimientos.\"\n  },\n  {\n    \"id\": \"P2F91D0\",\n    \"podria_contradecir\": false,\n    \"dato_concreto\": false,\n    \"datos\": [],\n    \"clase\": \"FIEL\",\n    \"lineas\": [2750, 2658, 3382, 4478],\n    \"razon\": \"El libro dice literalmente que cada medición sirve para identificar los procesos más preocupantes y seguir la efectividad de las medidas correctivas previas.\"\n  }\n]\n```",
+ "parseado": [
+  {
+   "id": "PC9E624",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2922,
+    3817,
+    4720,
+    2884,
+    4987,
+    5063
+   ],
+   "razon": "Coincide en dirección, pero 'como única respuesta' deja las sanciones como válidas ante errores. El libro dice que culpar tiene poco o ningún efecto y reserva la sanción para actos culpables."
+  },
+  {
+   "id": "P0B904F",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    419,
+    2028,
+    2250,
+    421,
+    459,
+    4720
+   ],
+   "razon": "El libro respalda identificar pasos propensos a omisión y firmar paso a paso. No habla de secuencias numeradas y critica 'escribir otro procedimiento' como reacción; el cap. 3 no aparece."
+  },
+  {
+   "id": "PD47D3A",
+   "podria_contradecir": true,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    417,
+    419,
+    421,
+    423,
+    451,
+    459
+   ],
+   "razon": "Convierte en regla universal algo que el libro sitúa en el traspaso de línea a base. El libro acepta paperwork breve en línea, dice que los manuales son difíciles de usar y cuestiona el cambio total de procedimientos."
+  },
+  {
+   "id": "P2F91D0",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    2750,
+    2658,
+    3382,
+    4478
+   ],
+   "razon": "El libro dice literalmente que cada medición sirve para identificar los procesos más preocupantes y seguir la efectividad de las medidas correctivas previas."
+  }
+ ]
+}

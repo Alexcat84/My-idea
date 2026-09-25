@@ -1,0 +1,388 @@
+{
+ "pasos_vivos": 15311,
+ "con_veredicto": 15311,
+ "n_faltan": 0,
+ "faltan": [],
+ "n_sobran": 0,
+ "sobran": [],
+ "n_duplicados": 0,
+ "duplicados": [],
+ "censo_campania": {
+  "OPERATIVO": 4301,
+  "FIEL": 10693,
+  "ANADIDO": 224,
+  "CONTRARIO": 93
+ },
+ "censo": {
+  "OPERATIVO": 5134,
+  "FIEL": 9849,
+  "ANADIDO": 227,
+  "CONTRARIO": 101
+ },
+ "cambios_posteriores": [
+  {
+   "fuente": "ampliacion",
+   "de": "FIEL",
+   "a": "ANADIDO",
+   "pasos": 1
+  },
+  {
+   "fuente": "ampliacion",
+   "de": "FIEL",
+   "a": "CONTRARIO",
+   "pasos": 2
+  },
+  {
+   "fuente": "ampliacion",
+   "de": "FIEL",
+   "a": "OPERATIVO",
+   "pasos": 556
+  },
+  {
+   "fuente": "arbitraje excepciones",
+   "de": "OPERATIVO",
+   "a": "ANADIDO",
+   "pasos": 2
+  },
+  {
+   "fuente": "arbitraje excepciones",
+   "de": "OPERATIVO",
+   "a": "CONTRARIO",
+   "pasos": 1
+  },
+  {
+   "fuente": "segunda pasada",
+   "de": "FIEL",
+   "a": "CONTRARIO",
+   "pasos": 5
+  },
+  {
+   "fuente": "segunda pasada",
+   "de": "FIEL",
+   "a": "OPERATIVO",
+   "pasos": 280
+  }
+ ],
+ "contrarios_conocidos": 101,
+ "contrarios_sin_corregir_en_main": [],
+ "por_libro": {
+  "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)": {
+   "OPERATIVO": 188,
+   "FIEL": 470,
+   "CONTRARIO": 5,
+   "ANADIDO": 2
+  },
+  "A Project Manager's Book of Forms - Cynthia Stackpole Snyder": {
+   "FIEL": 254,
+   "OPERATIVO": 29
+  },
+  "Assembling Tomorrow: A Guide to Designing a Thriving Future": {
+   "OPERATIVO": 203,
+   "FIEL": 83,
+   "CONTRARIO": 1,
+   "ANADIDO": 8
+  },
+  "Business Model Generation - Osterwalder, Alexander": {
+   "FIEL": 181,
+   "OPERATIVO": 54,
+   "ANADIDO": 7,
+   "CONTRARIO": 1
+  },
+  "Businessperson's Guide to Federal Warranty Law": {
+   "FIEL": 22,
+   "OPERATIVO": 17,
+   "ANADIDO": 1
+  },
+  "Change by Design, Revised and U - Tim Brown": {
+   "OPERATIVO": 145,
+   "FIEL": 185,
+   "CONTRARIO": 3,
+   "ANADIDO": 2
+  },
+  "Chris Voss, Rompe la barrera del no": {
+   "CONTRARIO": 6,
+   "FIEL": 34,
+   "ANADIDO": 2,
+   "OPERATIVO": 44
+  },
+  "Co-Intelligence_ Living and Wor - Ethan Mollick": {
+   "FIEL": 43,
+   "ANADIDO": 11,
+   "OPERATIVO": 117,
+   "CONTRARIO": 2
+  },
+  "Cradle to Cradle - Michael Braungart": {
+   "OPERATIVO": 127,
+   "FIEL": 100,
+   "CONTRARIO": 1,
+   "ANADIDO": 1
+  },
+  "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)": {
+   "FIEL": 22,
+   "OPERATIVO": 6
+  },
+  "DHL Express, Guia de empaque": {
+   "OPERATIVO": 9,
+   "FIEL": 5,
+   "ANADIDO": 1
+  },
+  "DeMarco y Lister, Waltzing with Bears": {
+   "OPERATIVO": 34,
+   "FIEL": 13,
+   "ANADIDO": 5,
+   "CONTRARIO": 3
+  },
+  "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)": {
+   "FIEL": 36,
+   "OPERATIVO": 69,
+   "CONTRARIO": 2,
+   "ANADIDO": 7
+  },
+  "Edwards et al., Managing Project Risks": {
+   "OPERATIVO": 84,
+   "FIEL": 29,
+   "ANADIDO": 8,
+   "CONTRARIO": 2
+  },
+  "Essentials of Supply Chain Management - Michael H. Hugos": {
+   "FIEL": 353,
+   "OPERATIVO": 173,
+   "CONTRARIO": 2,
+   "ANADIDO": 7
+  },
+  "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe": {
+   "OPERATIVO": 143,
+   "FIEL": 193,
+   "ANADIDO": 10,
+   "CONTRARIO": 2
+  },
+  "Franchise Your Business - Mark Siebert": {
+   "FIEL": 567,
+   "OPERATIVO": 249,
+   "ANADIDO": 5,
+   "CONTRARIO": 7
+  },
+  "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses": {
+   "OPERATIVO": 7,
+   "FIEL": 21
+  },
+  "Guia de empaque para envios (FedEx)": {
+   "OPERATIVO": 22,
+   "FIEL": 17,
+   "CONTRARIO": 3,
+   "ANADIDO": 2
+  },
+  "Guia de empaque para transporte": {
+   "OPERATIVO": 2,
+   "FIEL": 2,
+   "ANADIDO": 1
+  },
+  "Guia visual de empaque": {
+   "OPERATIVO": 11,
+   "FIEL": 6,
+   "ANADIDO": 3
+  },
+  "Hubbard, The Failure of Risk Management": {
+   "OPERATIVO": 30,
+   "FIEL": 8,
+   "CONTRARIO": 2
+  },
+  "ISTA 3P, Protocolo de ensayo de empaque para paqueteria": {
+   "OPERATIVO": 12,
+   "FIEL": 8,
+   "ANADIDO": 3,
+   "CONTRARIO": 1
+  },
+  "Juran's Quality Handbook_ The C - Joseph A. Defeo": {
+   "FIEL": 1652,
+   "OPERATIVO": 625,
+   "ANADIDO": 13,
+   "CONTRARIO": 7
+  },
+  "Managing the Risks of Organizat - Reason, J. T_": {
+   "ANADIDO": 6,
+   "FIEL": 159,
+   "OPERATIVO": 237,
+   "CONTRARIO": 1
+  },
+  "Max Muller, Essentials of Inventory Management": {
+   "OPERATIVO": 11,
+   "FIEL": 12,
+   "ANADIDO": 2
+  },
+  "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide": {
+   "FIEL": 32,
+   "OPERATIVO": 3
+  },
+  "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide": {
+   "FIEL": 38,
+   "OPERATIVO": 7
+  },
+  "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer": {
+   "OPERATIVO": 15,
+   "FIEL": 98,
+   "ANADIDO": 2
+  },
+  "Never Lose a Customer Again - Joey Coleman": {
+   "FIEL": 203,
+   "OPERATIVO": 130,
+   "ANADIDO": 6,
+   "CONTRARIO": 2
+  },
+  "OSHA3885": {
+   "FIEL": 70,
+   "OPERATIVO": 10,
+   "ANADIDO": 4
+  },
+  "OSHA3886": {
+   "FIEL": 31,
+   "OPERATIVO": 6
+  },
+  "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev": {
+   "FIEL": 353,
+   "OPERATIVO": 336,
+   "ANADIDO": 6,
+   "CONTRARIO": 7
+  },
+  "Quality is free _ the art of making quality certain -- Philip B_ Crosby": {
+   "OPERATIVO": 128,
+   "FIEL": 270,
+   "ANADIDO": 3,
+   "CONTRARIO": 5
+  },
+  "Requisitos de empaque de los couriers": {
+   "FIEL": 3,
+   "OPERATIVO": 8,
+   "ANADIDO": 3
+  },
+  "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management": {
+   "OPERATIVO": 46,
+   "ANADIDO": 6,
+   "FIEL": 11
+  },
+  "SMALL_BUSINESS": {
+   "FIEL": 166,
+   "ANADIDO": 10,
+   "OPERATIVO": 60,
+   "CONTRARIO": 2
+  },
+  "SPIN Selling - Neil Rackham": {
+   "OPERATIVO": 60,
+   "FIEL": 110,
+   "ANADIDO": 3,
+   "CONTRARIO": 2
+  },
+  "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)": {
+   "OPERATIVO": 35,
+   "ANADIDO": 3
+  },
+  "Síntesis de tono de DeMarco y Lister, Waltzing with Bears (nodo ancla del pack)": {
+   "FIEL": 3,
+   "ANADIDO": 1
+  },
+  "Síntesis del método aplicado al emprendedor individual (riesgo de rotación, Waltzing with Bears, Cap. 13, llevado a un proyecto de una sola persona)": {
+   "OPERATIVO": 3,
+   "ANADIDO": 1
+  },
+  "The Art of Thought - Graham Wallas": {
+   "OPERATIVO": 2,
+   "FIEL": 3,
+   "ANADIDO": 1
+  },
+  "The Art of Thought - Wallas, Graham": {
+   "OPERATIVO": 93,
+   "CONTRARIO": 1,
+   "FIEL": 56,
+   "ANADIDO": 4
+  },
+  "The Field Guide to Understandin - Dekker, Sidney": {
+   "FIEL": 256,
+   "OPERATIVO": 159,
+   "ANADIDO": 8,
+   "CONTRARIO": 1
+  },
+  "The Founder's Dilemmas - Wasserman, Noam": {
+   "FIEL": 248,
+   "OPERATIVO": 229,
+   "ANADIDO": 9
+  },
+  "The Founder's Dilemmas - Wasserman, Noam | The Hard Thing About Hard Things - Ben Horowitz": {
+   "FIEL": 10,
+   "OPERATIVO": 5
+  },
+  "The Green to Gold Business Play - Daniel C. Esty": {
+   "OPERATIVO": 283,
+   "FIEL": 645,
+   "CONTRARIO": 4,
+   "ANADIDO": 1
+  },
+  "The Hard Thing About Hard Things - Ben Horowitz": {
+   "FIEL": 265,
+   "OPERATIVO": 171,
+   "CONTRARIO": 5,
+   "ANADIDO": 11
+  },
+  "The Lean Startup - Eric Ries": {
+   "FIEL": 252,
+   "OPERATIVO": 93,
+   "ANADIDO": 5,
+   "CONTRARIO": 2
+  },
+  "The Lean Startup - Eric Ries | The Hard Thing About Hard Things - Ben Horowitz": {
+   "FIEL": 6,
+   "OPERATIVO": 1
+  },
+  "The Startup Owner's Manual - Blank, Steve": {
+   "OPERATIVO": 119,
+   "FIEL": 731,
+   "ANADIDO": 10,
+   "CONTRARIO": 4
+  },
+  "The Startup Owner's Manual - Blank, Steve | Never Lose a Customer Again - Joey Coleman": {
+   "OPERATIVO": 3,
+   "FIEL": 3
+  },
+  "The Startup Owner's Manual - Blank, Steve | Never Lose a Customer Again - Joey Coleman | Traction - Gabriel Weinberg": {
+   "FIEL": 13,
+   "OPERATIVO": 10
+  },
+  "The Startup Owner's Manual - Blank, Steve | The Lean Startup - Eric Ries": {
+   "FIEL": 7,
+   "OPERATIVO": 1
+  },
+  "The Startup Owner's Manual - Blank, Steve | Traction - Gabriel Weinberg": {
+   "FIEL": 8
+  },
+  "The field guide to human-centered design": {
+   "FIEL": 68,
+   "ANADIDO": 2,
+   "OPERATIVO": 20
+  },
+  "Traction - Gabriel Weinberg": {
+   "FIEL": 251,
+   "OPERATIVO": 85,
+   "CONTRARIO": 4,
+   "ANADIDO": 3
+  },
+  "Value Proposition Design": {
+   "FIEL": 166,
+   "OPERATIVO": 34
+  },
+  "Venture Deals - Brad Feld": {
+   "FIEL": 357,
+   "OPERATIVO": 213,
+   "CONTRARIO": 7,
+   "ANADIDO": 8
+  },
+  "Venture Deals - Brad Feld | The Founder's Dilemmas - Wasserman, Noam": {
+   "FIEL": 10,
+   "OPERATIVO": 4
+  },
+  "Winning at New Products - Robert G. Cooper": {
+   "FIEL": 631,
+   "OPERATIVO": 114,
+   "ANADIDO": 10,
+   "CONTRARIO": 4
+  }
+ }
+}

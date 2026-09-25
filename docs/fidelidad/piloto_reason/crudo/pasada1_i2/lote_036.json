@@ -1,0 +1,79 @@
+{
+ "coste": {
+  "etapa": "pasada1_i2",
+  "clave": "lote_036",
+  "intento": 0,
+  "usd": 0.16284800000000002,
+  "turnos": 1,
+  "duracion_s": 15.9,
+  "pared_s": 16.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33272,
+  "tokens_out": 1488,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P0E599F\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"FIEL\", \"lineas\": [4360, 4380], \"razon\": \"El libro enumera literalmente entre los pasos del procedimiento COSHH 'Carrying out health surveillance of employees exposed to risk'.\"},\n  {\"id\": \"P0753BF\", \"podria_contradecir\": false, \"dato_concreto\": true, \"datos\": [\"diseñadores y fabricantes\"], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [2369, 2311, 2342], \"razon\": \"El libro pide mayor conciencia de diseñadores y fabricantes sobre la falibilidad humana. 'Reportar' concreta esa idea en la misma dirección, aunque el libro no menciona reportes.\"},\n  {\"id\": \"PC0AC71\", \"podria_contradecir\": false, \"dato_concreto\": false, \"datos\": [], \"clase\": \"INFERIDO-OPERATIVO\", \"lineas\": [1044, 1068, 1072, 4060, 4418], \"razon\": \"Concreta dos ideas del libro: los fallos de modo común entre capas supuestamente independientes y el caso Dryden, con más carga y menos recursos. Misma dirección.\"},\n  {\"id\": \"P59C1CC\", \"podria_contradecir\": true, \"dato_concreto\": true, \"datos\": [\"EPCs\", \"mayor multiplicador de riesgo\"], \"clase\": \"POSIBLE_CONTRARIO\", \"lineas\": [3395, 3397, 3659, 2652], \"razon\": \"HEART aplica solo a EPCs presentes y pondera una proporción juzgada de cada factor. Priorizar por el multiplicador bruto quita esa condición. Además, L2652 dice que ningún factor es necesariamente más importante.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P0E599F",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "FIEL",
+   "lineas": [
+    4360,
+    4380
+   ],
+   "razon": "El libro enumera literalmente entre los pasos del procedimiento COSHH 'Carrying out health surveillance of employees exposed to risk'."
+  },
+  {
+   "id": "P0753BF",
+   "podria_contradecir": false,
+   "dato_concreto": true,
+   "datos": [
+    "diseñadores y fabricantes"
+   ],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    2369,
+    2311,
+    2342
+   ],
+   "razon": "El libro pide mayor conciencia de diseñadores y fabricantes sobre la falibilidad humana. 'Reportar' concreta esa idea en la misma dirección, aunque el libro no menciona reportes."
+  },
+  {
+   "id": "PC0AC71",
+   "podria_contradecir": false,
+   "dato_concreto": false,
+   "datos": [],
+   "clase": "INFERIDO-OPERATIVO",
+   "lineas": [
+    1044,
+    1068,
+    1072,
+    4060,
+    4418
+   ],
+   "razon": "Concreta dos ideas del libro: los fallos de modo común entre capas supuestamente independientes y el caso Dryden, con más carga y menos recursos. Misma dirección."
+  },
+  {
+   "id": "P59C1CC",
+   "podria_contradecir": true,
+   "dato_concreto": true,
+   "datos": [
+    "EPCs",
+    "mayor multiplicador de riesgo"
+   ],
+   "clase": "POSIBLE_CONTRARIO",
+   "lineas": [
+    3395,
+    3397,
+    3659,
+    2652
+   ],
+   "razon": "HEART aplica solo a EPCs presentes y pondera una proporción juzgada de cada factor. Priorizar por el multiplicador bruto quita esa condición. Además, L2652 dice que ningún factor es necesariamente más importante."
+  }
+ ]
+}

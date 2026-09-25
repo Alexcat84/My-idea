@@ -1,0 +1,69 @@
+{
+ "coste": {
+  "etapa": "pasada1_i1",
+  "clave": "lote_094",
+  "intento": 0,
+  "usd": 0.15832400000000002,
+  "turnos": 1,
+  "duracion_s": 16.4,
+  "pared_s": 17.6,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 33126,
+  "tokens_out": 1291,
+  "error": false
+ },
+ "resultado": "```json\n[\n  {\"id\": \"P7A0EBE\", \"clase\": \"INFERIDO\", \"marca\": false, \"lineas\": [520, 5254, 2769, 3153, 686], \"razon\": \"El libro dice que las señales, sueltas, no bastaban, pero juntas debían alarmar. Pide un sistema que recoja, analice y difunda información de seguridad. Un registro centralizado va en esa dirección.\"},\n  {\"id\": \"P90A97E\", \"clase\": \"POSIBLE_CONTRARIO\", \"marca\": true, \"lineas\": [3395, 3397, 2652], \"razon\": \"HEART multiplica por una proporción juzgada del EPC presente en la tarea, no por el multiplicador bruto. Priorizar solo por multiplicador omite esa condición. Además, el libro dice que ningún factor es necesariamente más importante.\"},\n  {\"id\": \"P079845\", \"clase\": \"INFERIDO\", \"marca\": true, \"lineas\": [5184, 5186, 5196, 2687, 4757], \"razon\": \"El libro valora las historias y difundir cuasi-accidentes. Matiz: prefiere la comunicación cara a cara a sus sustitutos, y las historias de guerra incluyen errores, no solo éxitos.\"},\n  {\"id\": \"PD1B50C\", \"clase\": \"FIEL\", \"marca\": false, \"lineas\": [4257, 4259, 4261, 4215], \"razon\": \"El libro describe literalmente estos límites estructurales: filtrado de información, visitas que dan vistazos aislados, tamaño, complejidad, jerga y dependencia del regulado.\"}\n]\n```",
+ "parseado": [
+  {
+   "id": "P7A0EBE",
+   "clase": "INFERIDO",
+   "marca": false,
+   "lineas": [
+    520,
+    5254,
+    2769,
+    3153,
+    686
+   ],
+   "razon": "El libro dice que las señales, sueltas, no bastaban, pero juntas debían alarmar. Pide un sistema que recoja, analice y difunda información de seguridad. Un registro centralizado va en esa dirección."
+  },
+  {
+   "id": "P90A97E",
+   "clase": "POSIBLE_CONTRARIO",
+   "marca": true,
+   "lineas": [
+    3395,
+    3397,
+    2652
+   ],
+   "razon": "HEART multiplica por una proporción juzgada del EPC presente en la tarea, no por el multiplicador bruto. Priorizar solo por multiplicador omite esa condición. Además, el libro dice que ningún factor es necesariamente más importante."
+  },
+  {
+   "id": "P079845",
+   "clase": "INFERIDO",
+   "marca": true,
+   "lineas": [
+    5184,
+    5186,
+    5196,
+    2687,
+    4757
+   ],
+   "razon": "El libro valora las historias y difundir cuasi-accidentes. Matiz: prefiere la comunicación cara a cara a sus sustitutos, y las historias de guerra incluyen errores, no solo éxitos."
+  },
+  {
+   "id": "PD1B50C",
+   "clase": "FIEL",
+   "marca": false,
+   "lineas": [
+    4257,
+    4259,
+    4261,
+    4215
+   ],
+   "razon": "El libro describe literalmente estos límites estructurales: filtrado de información, visitas que dan vistazos aislados, tamaño, complejidad, jerga y dependencia del regulado."
+  }
+ ]
+}

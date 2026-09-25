@@ -1,0 +1,30 @@
+{
+ "coste": {
+  "etapa": "pasada2_i2",
+  "clave": "P62577B",
+  "intento": 0,
+  "usd": 0.18654,
+  "turnos": 1,
+  "duracion_s": 9.6,
+  "pared_s": 10.9,
+  "modelos": [
+   "claude-opus-5-5"
+  ],
+  "tokens_in": 42575,
+  "tokens_out": 812,
+  "error": false
+ },
+ "resultado": "```json\n{\"id\": \"P62577B\", \"veredicto\": \"FIEL\", \"lineas\": [3395, 3397], \"cita\": \"to consult the list of error-producing conditions (EPCs) and to decide which condition(s) are likely to impact upon the performance of the activity in question … The principal error-producing conditions (EPCs) are listed below in rank order of effect.\", \"datos_sin_respaldo\": [], \"razon\": \"HEART manda consultar la lista de EPCs y decidir cuáles afectan a la actividad evaluada. El paso pide cotejar con esa lista las condiciones presentes. El único dato concreto es la 'lista rankeada', y el libro lo respalda: las EPCs aparecen en orden de efecto. No añade cifras, plazos ni responsables, y no invierte nada.\", \"paso_fiel\": \"\"}\n```",
+ "parseado": {
+  "id": "P62577B",
+  "veredicto": "FIEL",
+  "lineas": [
+   3395,
+   3397
+  ],
+  "cita": "to consult the list of error-producing conditions (EPCs) and to decide which condition(s) are likely to impact upon the performance of the activity in question … The principal error-producing conditions (EPCs) are listed below in rank order of effect.",
+  "datos_sin_respaldo": [],
+  "razon": "HEART manda consultar la lista de EPCs y decidir cuáles afectan a la actividad evaluada. El paso pide cotejar con esa lista las condiciones presentes. El único dato concreto es la 'lista rankeada', y el libro lo respalda: las EPCs aparecen en orden de efecto. No añade cifras, plazos ni responsables, y no invierte nada.",
+  "paso_fiel": ""
+ }
+}
