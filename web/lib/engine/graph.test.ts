@@ -127,3 +127,41 @@ describe("obtenerPregunta / resumenNodo", () => {
     expect(resumenNodo(nid, graph, cache).pregunta_cache).toBeDefined();
   });
 });
+
+// i18n F5, D3: las etiquetas del riel en cada idioma viven en archivos DERIVADOS
+// (lib/i18n/etiquetas/<idioma>.json); el grafo no se toca. En español, la del
+// grafo; en otro idioma, la derivada; si faltara, la del grafo (el auditor
+// exige que no falte ninguna de un nodo vivo).
+import { etiquetaArbol as etiquetaI18n, cargarGrafo as cargarGrafoI18n } from "./graph";
+import { ETIQUETAS_RIEL } from "../i18n/etiquetasRiel";
+
+describe("etiquetaArbol por idioma (i18n F5, D3)", () => {
+  const g = cargarGrafoI18n();
+  const nid = Object.keys(g).find((k) => !g[k].deprecado && g[k].etiqueta_arbol)!;
+
+  it("en español, la del grafo (como siempre)", () => {
+    expect(etiquetaI18n(nid, g)).toBe(g[nid].etiqueta_arbol);
+    expect(etiquetaI18n(nid, g, "es")).toBe(g[nid].etiqueta_arbol);
+  });
+
+  it("en otro idioma, la derivada si existe", () => {
+    const original = ETIQUETAS_RIEL.en[nid];
+    ETIQUETAS_RIEL.en[nid] = "Compare Versions, Improve Results";
+    try {
+      expect(etiquetaI18n(nid, g, "en")).toBe("Compare Versions, Improve Results");
+    } finally {
+      if (original === undefined) delete ETIQUETAS_RIEL.en[nid];
+      else ETIQUETAS_RIEL.en[nid] = original;
+    }
+  });
+
+  it("si faltara la derivada, cae a la del grafo", () => {
+    const original = ETIQUETAS_RIEL.ko[nid];
+    delete ETIQUETAS_RIEL.ko[nid];
+    try {
+      expect(etiquetaI18n(nid, g, "ko")).toBe(g[nid].etiqueta_arbol);
+    } finally {
+      if (original !== undefined) ETIQUETAS_RIEL.ko[nid] = original;
+    }
+  });
+});

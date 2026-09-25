@@ -86,6 +86,7 @@ describe("los prompts que escriben para la persona terminan con la regla de idio
     "SYSTEM_DIAGNOSTICO_MUNDO",
     "SYSTEM_CLASIFICAR_OFERTA",
     "SYSTEM_REFORMULADOR_PROTECCION",
+    "SYSTEM_TRADUCIR_PREGUNTA",
   ] as const;
   const sinRegla = ["SYSTEM_CLASIFICACION", "SYSTEM_PUERTA_AVANZADA", "SYSTEM_PROFUNDIZAR", "SYSTEM_JUEZ_SESION", "SYSTEM_ENLACE_PROTECCION", "SYSTEM_ESTIMACION_BANDA"] as const;
 

@@ -409,7 +409,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // y el diff de nodos nuevos no la incluye — se antepone para el árbol.
   const nodoPuerta = {
     id: puerta.puertaId,
-    etiqueta: etiquetaArbol(puerta.puertaId, graph),
+    etiqueta: etiquetaArbol(puerta.puertaId, graph, idioma),
     modo: "conversado" as const,
   };
 

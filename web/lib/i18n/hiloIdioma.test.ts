@@ -104,6 +104,8 @@ describe("el hilo del idioma", () => {
       expect(llamada, r).toMatch(/\bidioma,/);
     }
     const start = readFileSync(path.join(RAIZ_APP, "api/project/[id]/world/[pack]/start/route.ts"), "utf8");
-    expect(start).toMatch(/obtenerPregunta\(semillaId, graph\[semillaId\], preguntasCache, idioma\)/);
+    // i18n F5: la pregunta sale en el idioma de las plantillas de la IDEA
+    // (el suyo si es de los once; si no, el de la interfaz).
+    expect(start).toMatch(/obtenerPregunta\(semillaId, graph\[semillaId\], preguntasCache, idiomaDePlantilla\(idiomaIdea, idioma\)\)/);
   });
 });

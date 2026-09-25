@@ -35,7 +35,8 @@ import {
   obtenerProyecto,
   registrarBitacora,
 } from "@/lib/db";
-import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
+import { idiomaDelProyecto, idiomaDePlantilla } from "@/lib/i18n/detectarIdioma";
+import { preguntaEnIdioma } from "@/lib/engine/preguntaEnIdioma";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { anclarResultadoTurno } from "@/lib/engine/reformuladorProteccion";
 import { esMundoProteccion, murallaSinPlan } from "@/lib/espacios";
@@ -271,7 +272,16 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // explorar ESTE mundo) ni preguntaDirigida (el mismo estado_vivo hacía
   // que la reescritura se comiera al nodo). Desde el turno 2, el
   // intérprete manda como siempre.
-  const pregunta = obtenerPregunta(semillaId, graph[semillaId], preguntasCache, idioma);
+  // i18n F5 (D3): la cacheada está en español; en una idea escrita en otro
+  // idioma, la IA la expresa en ese idioma (misma intención; si falla, queda la
+  // cacheada). La genérica sale en el idioma de las plantillas.
+  const idiomaIdea = idiomaDelProyecto(proyecto);
+  const cruda = obtenerPregunta(semillaId, graph[semillaId], preguntasCache, idiomaDePlantilla(idiomaIdea, idioma));
+  const adaptada =
+    preguntasCache[semillaId]?.pregunta === cruda
+      ? await preguntaEnIdioma(createAnthropicClient(), cruda, idiomaIdea, usoVacio())
+      : { pregunta: cruda, acumulado: usoVacio() };
+  const pregunta = adaptada.pregunta;
   const estadoConPregunta = {
     ...estado,
     preguntaPendiente: pregunta,
@@ -281,13 +291,13 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     tipo: "pregunta" as const,
     estado: estadoConPregunta,
     pregunta,
-    acumulado: usoVacio(),
+    acumulado: adaptada.acumulado,
     nodosNuevos: [],
   };
 
   const puerta = {
     id: semillaId,
-    etiqueta: etiquetaArbol(semillaId, graph),
+    etiqueta: etiquetaArbol(semillaId, graph, idioma),
     modo: "conversado" as const,
   };
   // P2b: en un mundo de protección la primera pregunta ya se ancla a una

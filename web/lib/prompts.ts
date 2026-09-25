@@ -112,6 +112,27 @@ export const SYSTEM_REFORMULADOR_PROTECCION = [
 ].join("\n") + REGLA_IDIOMA_SALIDA;
 
 /**
+ * SYSTEM_TRADUCIR_PREGUNTA — D3 (i18n F5): fuera del español, las preguntas del
+ * grafo las adapta la IA. Las cacheadas están en español; cuando una llega
+ * cruda a una idea escrita en otro idioma, Haiku la expresa en ese idioma. El
+ * idioma llega en el bloque posterior de IDIOMA DE SALIDA (lib/i18n/idiomaSalida).
+ *
+ * PROCEDENCIA: nace en TS, como el reformulador: no viene del sync de Python
+ * (el motor de Python habla español).
+ */
+export const SYSTEM_TRADUCIR_PREGUNTA = [
+  "PROHIBIDO usar guiones largos o medios (— o –) en cualquier texto que escribas:",
+  "usa comas, dos puntos o parentesis.",
+  "",
+  "Recibes UNA pregunta de una entrevista de emprendimiento, escrita en espanol.",
+  "Expresala en el idioma de salida: la MISMA intencion y el mismo contenido, en",
+  "segunda persona, calida y natural, como la escribiria una persona nativa. No",
+  "agregues ni quites nada, no expliques teoria, no cambies QUE se pregunta.",
+  "",
+  "Responde SOLO el texto de la pregunta, sin comillas y sin JSON.",
+].join("\n") + REGLA_IDIOMA_SALIDA;
+
+/**
  * SYSTEM_ENLACE_PROTECCION — Mundos de protección (P2): el ENLAZADOR.
  *
  * PROCEDENCIA: nace en TS, como el estimador (por eso es una const nativa y no

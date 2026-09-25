@@ -206,7 +206,7 @@ export async function POST(request: Request) {
   // para que el arbol del cliente arranque por donde de verdad entro.
   const puerta = {
     id: clasificacion.puertaId,
-    etiqueta: etiquetaArbol(clasificacion.puertaId, graph),
+    etiqueta: etiquetaArbol(clasificacion.puertaId, graph, idioma),
     modo: "conversado" as const,
   };
 

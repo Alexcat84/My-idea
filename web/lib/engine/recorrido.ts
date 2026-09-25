@@ -29,7 +29,8 @@ import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
 import { idiomaDePlantilla } from "../i18n/detectarIdioma";
 import { MOTOR } from "../i18n/mensajes/motor";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
-import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
+import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, resolverId, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
+import { preguntaEnIdioma } from "./preguntaEnIdioma";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
 import {
   interpretarMultiSalto,
@@ -237,8 +238,7 @@ async function temasPendientesDeLaMesa(
         .filter((nid) => (families[nid] ?? "general") === familia)
         .slice(0, 2);
       for (const nid of deLaFamilia) {
-        const n = graph[nid];
-        const etiqueta = n?.etiqueta_arbol ?? n?.titulo_concepto;
+        const etiqueta = graph[nid] ? etiquetaArbol(nid, graph, idioma) : null;
         if (etiqueta && !etiquetas.includes(etiqueta)) etiquetas.push(etiqueta);
       }
     } catch {
@@ -384,12 +384,44 @@ export interface AvanzarTurnoParams {
 }
 
 export async function avanzarTurno(params: AvanzarTurnoParams): Promise<ResultadoTurno> {
+  return adaptarPreguntaDelCache(params, await avanzarTurnoBase(params));
+}
+
+/**
+ * D3 (i18n F5): si el turno termina en la pregunta CACHEADA del nodo (en
+ * español) y la idea está en otro idioma, la IA la expresa en ese idioma, y
+ * esa versión queda como pendiente y en el historial anti-repetición (lo que
+ * la persona leyó).
+ */
+async function adaptarPreguntaDelCache(params: AvanzarTurnoParams, r: ResultadoTurno): Promise<ResultadoTurno> {
+  const idiomaSalida = r.estado.idioma;
+  if (r.tipo !== "pregunta" || !idiomaSalida || idiomaSalida === "es") return r;
+  const actual = r.estado.ruta[r.estado.ruta.length - 1];
+  const cruda = actual ? params.preguntasCache[resolverId(actual, params.graph) ?? actual]?.pregunta : undefined;
+  if (!cruda || r.pregunta !== cruda) return r;
+  const t = await preguntaEnIdioma(params.client, cruda, idiomaSalida, r.acumulado);
+  if (!t.traducida) return { ...r, acumulado: t.acumulado };
+  return {
+    ...r,
+    pregunta: t.pregunta,
+    acumulado: t.acumulado,
+    estado: {
+      ...r.estado,
+      preguntaPendiente: t.pregunta,
+      ultimasPreguntas: r.estado.ultimasPreguntas.map((q) => (q === cruda ? t.pregunta : q)),
+    },
+  };
+}
+
+async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTurno> {
   const { client, graph, families, preguntasCache, dbSessionId } = params;
   // i18n F5: lo que el motor arma sin la IA sale en el idioma de la IDEA si es
   // de los once; si no, en el de la interfaz (D2). Sin idioma guardado, la
   // sesión es de antes de F5: español.
   const idioma = idiomaDePlantilla(params.estado.idioma ?? "es", params.idioma ?? LOCALE_BASE);
   const idiomaSalida = params.estado.idioma ?? null;
+  // D3: el riel y la tarjeta de lo que queda son NAVEGACIÓN: idioma de la interfaz.
+  const idiomaInterfaz = params.idioma ?? LOCALE_BASE;
   let estado = params.estado;
   let acumulado = params.acumulado;
   let respuestaUsuario = params.respuestaUsuario;
@@ -398,7 +430,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
   function nodosNuevosDesdeInicio(): NodoTranscrito[] {
     return estado.ruta.slice(rutaLongitudInicial).map((nid, i) => ({
       id: nid,
-      etiqueta: etiquetaArbol(nid, graph),
+      etiqueta: etiquetaArbol(nid, graph, idiomaInterfaz),
       modo: estado.modos[rutaLongitudInicial + i],
     }));
   }
@@ -748,7 +780,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
       // pendientes por su etiqueta de arbol) y dos CTAs de peso igual.
       // Si no falta nada, lo dice con honestidad inversa (temas = []).
       if (!estado.profundizarOfrecido) {
-        const temasPendientes = await temasPendientesDeLaMesa(estado, families, graph, idioma);
+        const temasPendientes = await temasPendientesDeLaMesa(estado, families, graph, idiomaInterfaz);
         estado = { ...estado, profundizarOfrecido: true, fase: "esperando_profundizar", preguntaPendiente: null };
         return {
           tipo: "listo_para_plan",

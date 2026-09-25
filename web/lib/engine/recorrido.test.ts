@@ -435,3 +435,38 @@ describe("avanzarTurno: el idioma de la idea llega al intérprete (i18n F5)", ()
     expect(estadoInicial({ actualId: "x", perfilSesion: "p", textoOriginal: "t" }).idioma).toBe("es");
   });
 });
+
+// D3 (i18n F5): el riel es navegación, así que sus etiquetas van en el idioma
+// de la INTERFAZ (la etiqueta derivada), aunque la idea esté en otro idioma.
+import { ETIQUETAS_RIEL } from "../i18n/etiquetasRiel";
+
+describe("avanzarTurno: el riel en el idioma de la interfaz (D3)", () => {
+  beforeEach(() => interpretarMultiSaltoFalso.mockReset());
+
+  it("nodosNuevos llevan la etiqueta derivada del idioma de la interfaz", async () => {
+    const nid = "mapeo_capas_diseno";
+    const antes = ETIQUETAS_RIEL.en[nid];
+    ETIQUETAS_RIEL.en[nid] = "Map Your Design Layers";
+    try {
+      interpretarMultiSaltoFalso.mockResolvedValueOnce({
+        resultado: {
+          accion: "avanzar", camino: [nid], esSalto: false, preguntaNecesaria: true, preguntaAdaptada: "디자인?",
+          repregunta: null, perfilUpdate: null, prioridadDeclarada: null, numerosDetectados: null,
+          tipoOfertaDetectado: null, unidadVentaDetectada: null,
+        },
+        acumulado: usoVacio(),
+        historialMensajes: [],
+      });
+      const estado = estadoInicial({ actualId: "design_thinking_fundamentos", perfilSesion: "p", textoOriginal: "t", idioma: "ko" });
+      const r = await avanzarTurno({
+        client: {} as never, graph, families, preguntasCache, estado,
+        respuestaUsuario: null, acumulado: usoVacio(), dbSessionId: "sess-d3", idioma: "en",
+      });
+      if (r.tipo !== "pregunta") throw new Error("esperaba tipo=pregunta");
+      expect(r.nodosNuevos[0].etiqueta).toBe("Map Your Design Layers");
+    } finally {
+      if (antes === undefined) delete ETIQUETAS_RIEL.en[nid];
+      else ETIQUETAS_RIEL.en[nid] = antes;
+    }
+  });
+});

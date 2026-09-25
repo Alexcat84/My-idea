@@ -200,7 +200,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
         id: nid,
         // Solo la etiqueta de cara: el nombre técnico del concepto no sale
         // de casa (decisión del fundador, jul 2026).
-        etiqueta: etiquetaArbol(nid, graph),
+        etiqueta: etiquetaArbol(nid, graph, idioma),
         modo: rec.modos[i],
       })),
       turnos: (s.estado_recorrido.turnos ?? []).map((t) => ({ pregunta: t.pregunta, respuesta: t.respuesta })),
@@ -220,7 +220,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     if (rec) {
       recorrido = rec.ruta.map((nid, i) => ({
         id: nid,
-        etiqueta: etiquetaArbol(nid, graph),
+        etiqueta: etiquetaArbol(nid, graph, idioma),
         modo: rec.modos[i],
       }));
     }
