@@ -12,6 +12,9 @@
  * (mismo patrón que SelectorEstado, para que se sienta de la casa).
  */
 import { useState } from "react";
+import { elegir } from "@/lib/i18n/config";
+import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { NOTA_RAPIDA } from "@/lib/i18n/mensajes/notaRapida";
 import { CampoConVoz } from "./CampoConVoz";
 
 function IconoNota({ tiene, tamano }: { tiene: boolean; tamano: number }) {
@@ -45,6 +48,7 @@ export function NotaRapida({
   onGuardar: (nota: string | null) => void;
   tamano?: number;
 }) {
+  const t = elegir(NOTA_RAPIDA, useIdioma());
   const [abierto, setAbierto] = useState(false);
   const [texto, setTexto] = useState(nota ?? "");
   const tiene = Boolean(nota && nota.trim());
@@ -66,8 +70,8 @@ export function NotaRapida({
         disabled={ocupado}
         aria-haspopup="dialog"
         aria-expanded={abierto}
-        title={tiene ? "Ver o editar tu nota" : "Añadir una nota"}
-        aria-label={tiene ? "Ver o editar tu nota" : "Añadir una nota"}
+        title={tiene ? t.verOEditar : t.anadir}
+        aria-label={tiene ? t.verOEditar : t.anadir}
         className={
           "-my-[9px] -mr-[7px] flex shrink-0 items-center justify-center p-[9px] transition-opacity hover:opacity-75 disabled:opacity-50 sm:m-0 sm:p-0 " +
           (tiene ? "text-accent" : "text-dim hover:text-ink")
@@ -80,13 +84,13 @@ export function NotaRapida({
         <>
           <button
             type="button"
-            aria-label="Cerrar la nota"
+            aria-label={t.cerrarNota}
             onClick={() => setAbierto(false)}
             className="fixed inset-0 z-40 cursor-default bg-black/40 sm:bg-transparent"
           />
           <div
             role="dialog"
-            aria-label="Tu nota"
+            aria-label={t.tuNota}
             className={
               "z-50 border border-white/[0.14] bg-surface-2 shadow-[0_18px_40px_rgba(0,0,0,0.6)] " +
               "fixed inset-x-0 bottom-0 rounded-t-[18px] p-4 pb-5 " +
@@ -94,13 +98,13 @@ export function NotaRapida({
             }
           >
             <span className="mx-auto mb-3 block h-1 w-9 rounded-full bg-white/20 sm:hidden" />
-            <p className="mb-2 px-0.5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">Tu nota</p>
+            <p className="mb-2 px-0.5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.tuNota}</p>
             <CampoConVoz
               id={`nota-rapida-${id}`}
               valor={texto}
               onCambio={setTexto}
               filas={3}
-              placeholder="Lo que necesites recordar…"
+              placeholder={t.placeholder}
             />
             <div className="mt-3 flex items-center gap-2">
               <button
@@ -109,10 +113,10 @@ export function NotaRapida({
                 disabled={ocupado}
                 className="rounded-[9px] border border-accent/40 bg-accent/10 px-4 py-1.5 text-[13px] font-semibold text-accent hover:bg-accent/20 disabled:opacity-50"
               >
-                Guardar
+                {t.guardar}
               </button>
               <button type="button" onClick={() => setAbierto(false)} className="text-[12.5px] text-dim hover:text-ink">
-                cerrar
+                {t.cerrar}
               </button>
               {tiene && (
                 <button
@@ -125,7 +129,7 @@ export function NotaRapida({
                   disabled={ocupado}
                   className="ml-auto text-[12.5px] text-dim hover:text-warn disabled:opacity-50"
                 >
-                  quitar
+                  {t.quitar}
                 </button>
               )}
             </div>

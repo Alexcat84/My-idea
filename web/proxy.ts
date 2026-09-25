@@ -23,6 +23,8 @@
  */
 import { createServerClient } from "@supabase/ssr";
 import { NextResponse, type NextRequest } from "next/server";
+import { COOKIE_IDIOMA, COOKIE_IDIOMA_MAX_AGE } from "@/lib/i18n/config";
+import { negociarIdioma } from "@/lib/i18n/negociar";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 // "/" exacta = landing pública (Fase 3.4): se sirve sin crear sesión —
@@ -33,6 +35,17 @@ const esRutaPublica = (pathname: string) =>
   pathname === "/" || RUTAS_PUBLICAS.some((r) => pathname === r || pathname.startsWith(r + "/"));
 
 export async function proxy(request: NextRequest) {
+  // i18n F2 (DISENO §3.2): el idioma de la interfaz. `?lang=xx` manda en esa
+  // visita (D9); si no, la cookie; en la primera visita, el Accept-Language; y
+  // si nada coincide, el español. Se pone en la petición ANTES de armar la
+  // respuesta, así el layout ya lo lee en esta misma visita.
+  const { idioma, escribirCookie } = negociarIdioma({
+    parametroUrl: request.nextUrl.searchParams.get("lang"),
+    cookie: request.cookies.get(COOKIE_IDIOMA)?.value,
+    acceptLanguage: request.headers.get("accept-language"),
+  });
+  if (escribirCookie) request.cookies.set(COOKIE_IDIOMA, idioma);
+
   let response = NextResponse.next({ request });
 
   const supabase = createServerClient(
@@ -82,6 +95,9 @@ export async function proxy(request: NextRequest) {
     }
   }
 
+  if (escribirCookie) {
+    response.cookies.set(COOKIE_IDIOMA, idioma, { path: "/", maxAge: COOKIE_IDIOMA_MAX_AGE, sameSite: "lax" });
+  }
   return response;
 }
 

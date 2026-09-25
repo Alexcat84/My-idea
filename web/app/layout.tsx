@@ -1,6 +1,9 @@
 import type { Metadata, Viewport } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
+import { htmlDir, htmlLang } from "@/lib/i18n/config";
+import { IdiomaProvider } from "@/lib/i18n/IdiomaProvider";
+import { idiomaDeCookies } from "@/lib/i18n/servidor";
 
 const inter = Inter({
   variable: "--font-inter",
@@ -24,15 +27,17 @@ export const viewport: Viewport = {
 // para siempre el "¿qué build estoy viendo?" de las sesiones del fundador.
 const SELLO_VERSION = (process.env.VERCEL_GIT_COMMIT_SHA ?? "dev").slice(0, 7);
 
-export default function RootLayout({
+export default async function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  // i18n F2: el idioma de la interfaz sale de la cookie que escribe proxy.ts.
+  const idioma = await idiomaDeCookies();
   return (
-    <html lang="es" className={`${inter.variable} h-full antialiased`}>
+    <html lang={htmlLang(idioma)} dir={htmlDir(idioma)} className={`${inter.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col bg-bg text-ink">
-        {children}
+        <IdiomaProvider idioma={idioma}>{children}</IdiomaProvider>
         <footer className="px-4 py-2 text-right text-[10px] text-white/25 select-all" aria-label="versión">
           v·{SELLO_VERSION}
         </footer>
