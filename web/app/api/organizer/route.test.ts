@@ -142,8 +142,8 @@ describe("POST /api/organizer", () => {
     expect(res.status).toBe(400);
   });
 
-  it("rechaza texto que supera el maximo de 4000 caracteres", async () => {
-    const res = await POST(requestFalso({ texto: "a".repeat(4001) }));
+  it("rechaza una idea que supera el maximo de 12.000 caracteres (decision del fundador, 27 sep 2026)", async () => {
+    const res = await POST(requestFalso({ texto: "a".repeat(12001) }));
     expect(res.status).toBe(400);
   });
 
