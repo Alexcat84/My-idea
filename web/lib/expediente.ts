@@ -510,7 +510,7 @@ export function nombreArchivo(nombreIdea: string, titulo: string, idioma: Locale
   const t = elegir(EXPEDIENTE, idioma).archivo;
   const limpio = (s: string) =>
     s
-      .replace(/[^\p{L}\p{N} _-]/gu, "")
+      .replace(/[^\p{L}\p{M}\p{N} _-]/gu, "")
       .trim()
       .replace(/\s+/g, "-")
       .slice(0, 40);

@@ -379,6 +379,13 @@ describe("cicloMarkdown", () => {
 });
 
 describe("nombreArchivo", () => {
+  // i18n F3: en devanagari (y en árabe con signos) las vocales son MARCAS
+  // (\p{M}), no letras: la limpieza las borraba y "विचार" quedaba "वचर".
+  // A mano: "मेरा विचार" -> "मेरा-विचार"; con título "योजना" -> "मेरा-विचार-योजना".
+  it("conserva los signos vocálicos de otras escrituras (i18n F3)", () => {
+    expect(nombreArchivo("मेरा विचार", "योजना")).toBe("मेरा-विचार-योजना");
+  });
+
   it("junta idea y documento en un nombre seguro", () => {
     expect(nombreArchivo("Kits de huerto urbano", "Seguimiento 1")).toBe("kits-de-huerto-urbano-seguimiento-1");
   });
