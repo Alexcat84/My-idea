@@ -23,7 +23,8 @@ import {
   usoVacio,
   type UsoAcumulado,
 } from "@/lib/costmeter";
-import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, guardarPlan, obtenerProyecto } from "@/lib/db";
+import { actualizarProyecto, cerrarSesion, crearSesion, FASES, guardarPlan, obtenerProyecto } from "@/lib/db";
+import { nacerIdea } from "@/lib/nacerIdea";
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import {
   construirMarkdown,
@@ -121,7 +122,7 @@ export async function POST(request: Request) {
     resumen: graph[s].resumen_teorico.slice(0, 150),
   }));
 
-  const projectId = ideaExistente ?? (await crearProyecto(supabase, user.id, texto));
+  const projectId = ideaExistente ?? (await nacerIdea(supabase, user.id, texto, idioma)).projectId;
   const sessionId = await crearSesion(supabase, user.id, projectId, "gratuito", texto);
 
   const client = createAnthropicClient();

@@ -19,7 +19,8 @@ import {
   usoVacio,
   type UsoAcumulado,
 } from "@/lib/costmeter";
-import { actualizarProyecto, cerrarSesion, crearProyecto, crearSesion, FASES, guardarPlan } from "@/lib/db";
+import { actualizarProyecto, cerrarSesion, crearSesion, FASES, guardarPlan } from "@/lib/db";
+import { nacerIdea } from "@/lib/nacerIdea";
 import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import { construirMarkdown, limpiarOrganizador, MAX_TOKENS_ORGANIZADOR, type OrganizadorData } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
@@ -79,7 +80,7 @@ export async function POST(request: Request) {
     resumen: graph[s].resumen_teorico.slice(0, 150),
   }));
 
-  const projectId = await crearProyecto(supabase, user.id, texto);
+  const { projectId } = await nacerIdea(supabase, user.id, texto, idioma);
   const sessionId = await crearSesion(supabase, user.id, projectId, "gratuito", texto);
 
   const client = createAnthropicClient();

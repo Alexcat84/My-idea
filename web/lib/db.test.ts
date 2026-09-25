@@ -4,7 +4,7 @@
 // igual, con banda null, en vez de romper el nacimiento del plan.
 import { describe, expect, it } from "vitest";
 import { crearSupabaseFalso, estadoFalsoVacio } from "./testUtils/fakeSupabase";
-import { insertarChecklist } from "./db";
+import { crearProyecto, insertarChecklist } from "./db";
 import type { SupabaseClient } from "@supabase/supabase-js";
 
 function falso() {
@@ -99,5 +99,45 @@ describe("insertarChecklist: tolera la 041 ausente (AUD-09 M15)", () => {
     await expect(
       insertarChecklist(client, "p1", "plan-r", [{ etapa: 1, orden: 1, texto: "x", destacado: false, protege_item: "n1", protege_nodos: ["a"] }])
     ).rejects.toMatchObject({ code: "23505" });
+  });
+});
+
+// i18n F5: el idioma de la idea nace con el proyecto (projects.idioma, 046).
+// Si el código llega antes que la migración, la idea se crea igual sin él (el
+// proyecto se leerá como español, lo mismo que antes de F5) y queda el síntoma
+// en el log.
+describe("crearProyecto: guarda el idioma de la idea (i18n F5, 046)", () => {
+  it("con idioma, la fila nace con él", async () => {
+    const { estado, client } = falso();
+    const id = await crearProyecto(client, "u1", "우리 동네에서 빵을 팔고 싶어요", "ko");
+    expect(estado.projects[id]).toMatchObject({ entrada_original: "우리 동네에서 빵을 팔고 싶어요", idioma: "ko" });
+  });
+
+  it("si la columna idioma no existe (046 sin aplicar), se crea sin ella", async () => {
+    const intentos: Array<Record<string, unknown>> = [];
+    const client = {
+      from: () => ({
+        insert: (fila: Record<string, unknown>) => {
+          intentos.push(fila);
+          const respuesta =
+            "idioma" in fila
+              ? { data: null, error: { code: "PGRST204", message: "Could not find the 'idioma' column of 'projects' in the schema cache" } }
+              : { data: { id: "p-nuevo" }, error: null };
+          return { select: () => ({ single: async () => respuesta }) };
+        },
+      }),
+    } as unknown as SupabaseClient;
+    expect(await crearProyecto(client, "u1", "Quiero vender pan", "es")).toBe("p-nuevo");
+    expect(intentos).toHaveLength(2);
+    expect(intentos[1]).not.toHaveProperty("idioma");
+  });
+
+  it("cualquier otro error sigue lanzando", async () => {
+    const client = {
+      from: () => ({
+        insert: () => ({ select: () => ({ single: async () => ({ data: null, error: { code: "23505", message: "duplicate key" } }) }) }),
+      }),
+    } as unknown as SupabaseClient;
+    await expect(crearProyecto(client, "u1", "x", "es")).rejects.toMatchObject({ code: "23505" });
   });
 });

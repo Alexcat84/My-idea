@@ -38,6 +38,9 @@ export interface Proyecto {
   /** Fase 4.0 §8 (acta de cierre): por qué el usuario cerró la idea aquí, en
    * sus palabras. null si cerró sin escribir nada (el campo es opcional). */
   cierre_motivo?: string | null;
+  /** i18n F5 (migration 046): el idioma de la idea (ISO 639-1). NULL o ausente
+   * = anterior a F5, español. Se lee con idiomaDelProyecto(). */
+  idioma?: string | null;
   /** FASE B (canon 14, migration 027): cuándo se activó Tus Números para esta
    * idea. Ancla del cobro UNA vez por idea (ETAPA 2). null = no activado. */
   tus_numeros_activado_at?: string | null;
@@ -110,12 +113,25 @@ function ahora(): string {
   return new Date().toISOString();
 }
 
-export async function crearProyecto(supabase: SupabaseClient, userId: string, entradaOriginal: string): Promise<string> {
-  const { data, error } = await supabase
-    .from("projects")
-    .insert({ user_id: userId, entrada_original: entradaOriginal, fase_actual: "ideacion" })
-    .select("id")
-    .single();
+/** Crea la idea. `idioma` es el de su texto (i18n F5, lib/i18n/detectarIdioma):
+ * manda en lo que escribe la IA y en los documentos (D2). */
+export async function crearProyecto(
+  supabase: SupabaseClient,
+  userId: string,
+  entradaOriginal: string,
+  idioma?: string
+): Promise<string> {
+  const fila: Record<string, unknown> = { user_id: userId, entrada_original: entradaOriginal, fase_actual: "ideacion" };
+  if (idioma) fila.idioma = idioma;
+  let { data, error } = await supabase.from("projects").insert(fila).select("id").single();
+  // i18n F5: projects.idioma llega con la 046. Si el código corre antes de
+  // aplicarla, la idea se crea igual sin él (se leerá como español, como antes
+  // de F5) y queda el síntoma en el log.
+  if (error && "idioma" in fila && /idioma/.test(error.message ?? "")) {
+    console.error("[crearProyecto] falta la migracion 046 (projects.idioma); se crea la idea sin su idioma:", error.message);
+    delete fila.idioma;
+    ({ data, error } = await supabase.from("projects").insert(fila).select("id").single());
+  }
   if (error) throw error;
   return (data as { id: string }).id;
 }

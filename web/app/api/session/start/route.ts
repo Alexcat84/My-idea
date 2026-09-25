@@ -21,7 +21,8 @@ import { responderResultadoTurno } from "@/lib/apiSesion";
 import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { mensajeSaldoInsuficiente, reservarCreditos, resolverReserva, verificarSaldo } from "@/lib/creditos";
-import { crearProyecto, crearSesion, dominiosDesbloqueados, obtenerProyecto } from "@/lib/db";
+import { crearSesion, dominiosDesbloqueados, obtenerProyecto } from "@/lib/db";
+import { nacerIdea } from "@/lib/nacerIdea";
 import { clasificarEntrada } from "@/lib/engine/clasificar";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
@@ -138,7 +139,7 @@ export async function POST(request: Request) {
     }
     projectId = projectIdSolicitado;
   } else {
-    projectId = await crearProyecto(supabase, user.id, texto);
+    ({ projectId } = await nacerIdea(supabase, user.id, texto, idioma));
   }
   const sessionId = await crearSesion(supabase, user.id, projectId, "inicial", texto, null, "core", { id: sessionIdNueva });
 
