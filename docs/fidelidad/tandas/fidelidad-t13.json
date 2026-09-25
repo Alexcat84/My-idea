@@ -1,0 +1,56 @@
+[
+ {
+  "node_id": "adaptar_empaque_segun_tipo_de_articulo",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
+  "texto_nuevo": "Sugerencia de My Idea: para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
+  "cita": {
+   "libro": "Guia visual de empaque (infografia de UPS, What to consider when packing your items)",
+   "fichero": "OCR/Extraccion delicada/packaging_guide_infographic.md",
+   "lineas": "L60",
+   "frase": "Sufficient and careful packaging is key when shipping any type of liquids, such as liquids, such as beverages."
+  },
+  "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 4: la infografia, identificada por el encabezado de su nueva extraccion (UPS, pagina unica, extraida linea por linea con coordenadas), ya tiene cita literal contigua. Para liquidos solo pide un empaque suficiente y cuidadoso que cumpla los requisitos de UPS y este probado por el fabricante (L60); no menciona sellar el envase ni la bolsa plastica. La duplicacion 'such as liquids, such as' es del original, segun la nota de la extraccion. El resumen del nodo repite la bolsa plastica como dato practico; por el precedente de las tandas t3 a t12, las correcciones de dato repetido solo cubren CONTRARIOS y cifras, plazos o normas, asi que el resumen no se toca y queda declarado.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/EXCEPCIONES.md seccion B y campania/c2/decision/B6 (lector de la campania, ANADIDO PRACTICO, texto_sugerencia)",
+  "id": "fidelidad-t13-01",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "adaptar_empaque_segun_tipo_de_articulo",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
+  "texto_nuevo": "Sugerencia de My Idea: para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
+  "cita": {
+   "libro": "Guia visual de empaque (infografia de UPS, What to consider when packing your items)",
+   "fichero": "OCR/Extraccion delicada/packaging_guide_infographic.md",
+   "lineas": "L34, L72",
+   "frase": "Fragile items should be wrapped separately. / Be sure to use a new double-wall corrugated double-wall corrugated cardboard box"
+  },
+  "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 4: con la nueva extraccion de la infografia de UPS, para lo fragil solo pide envolver cada articulo por separado (L34) y usar una caja nueva de carton corrugado de doble pared (L72); ni el metodo de caja dentro de caja ni los articulos de alto valor aparecen. La duplicacion 'double-wall corrugated double-wall corrugated' es del original. El resumen repite la caja dentro de caja como dato practico; por el mismo precedente que fidelidad-t13-01, no se toca y queda declarado.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/EXCEPCIONES.md seccion B y campania/c2/decision/B6 (lector de la campania, ANADIDO PRACTICO, texto_sugerencia)",
+  "id": "fidelidad-t13-02",
+  "fecha": "2026-09-24"
+ },
+ {
+  "node_id": "revisar_necesidades_de_empaque",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+  "texto_nuevo": "Sugerencia de My Idea: verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+  "cita": {
+   "libro": "DHL Express, An Essential Packing Guide for Express Shipments",
+   "fichero": "OCR/Extraccion delicada/dhl_express_packing_guide_en.md",
+   "lineas": "L81",
+   "frase": "Extra cushioning and protection may be required for high value goods."
+  },
+  "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 4: se comparo la extraccion nueva con la version oficial descargada de mydhl.express.dhl (PDF de 14 paginas fechado el 23/07/2026; la copia local es del 25/02/2026). El texto coincide salvo un parrafo nuevo sobre no usar 'black foil' en el exterior; la frase citada es identica en las dos y la palabra insurance no aparece en ninguna. La guia relaciona el valor del contenido con proteccion extra, pero no con un seguro.",
+  "auditoria": "rama fidelidad-total, docs/fidelidad/EXCEPCIONES.md seccion B y campania/c2/decision/B6 (lector de la campania, ANADIDO PRACTICO, texto_sugerencia)",
+  "id": "fidelidad-t13-03",
+  "fecha": "2026-09-24"
+ }
+]
