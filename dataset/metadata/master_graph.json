@@ -1977,9 +1977,9 @@
       "resumen_teorico": "Cada categoría de producto tiene un punto débil distinto durante el transporte, y el empaque genérico no lo resuelve. Los líquidos necesitan un envase sellado dentro de una bolsa plástica adicional para contener fugas. Los artículos pesados requieren cajas de doble pared y cinta reforzada, revisando que no superen el límite de peso de la caja. Los objetos irregulares, como tubos o piezas con bordes filosos, se protegen con tubos rígidos o cubriendo cada borde con cartón. Los artículos frágiles se benefician del método de caja dentro de caja, con una caja exterior más grande y colchón entre ambas. Reconocer a qué categoría pertenece cada producto antes de empacar, en lugar de aplicar siempre el mismo procedimiento, reduce las devoluciones por daño.",
       "pasos_accionables": [
         "Clasifica cada producto que vendes en una de estas categorías: líquido, pesado, frágil o de forma irregular.",
-        "Para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
+        "Sugerencia de My Idea: para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
         "Para piezas pesadas, usa caja de doble pared y confirma que no exceda el límite de peso impreso en la caja.",
-        "Para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
+        "Sugerencia de My Idea: para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
         "Sugerencia de My Idea: documenta el procedimiento elegido para cada categoría para no decidir de nuevo cada vez que empacas."
       ],
       "entregable_esperado": "Una guía breve por categoría de producto con el método de empaque que le corresponde.",
@@ -2016,6 +2016,40 @@
           "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. La guia describe como empacar cada articulo especial: liquidos, pesados de mas de 25 kg, irregulares y fragiles (L45-L67). En todo el fichero (129 lineas) no hay nada sobre documentar un procedimiento por categoria ni sobre estandarizarlo. Busque document, record, checklist, procedure y each time, sin resultado. Documentar el procedimiento es un formato que pone el paso.",
           "indice": 4,
           "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-046"
+        },
+        {
+          "id": "fidelidad-t13-01",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
+          "texto_nuevo": "Sugerencia de My Idea: para líquidos, sella el envase y colócalo dentro de una bolsa plástica antes de meterlo en la caja.",
+          "cita": {
+            "libro": "Guia visual de empaque (infografia de UPS, What to consider when packing your items)",
+            "fichero": "OCR/Extraccion delicada/packaging_guide_infographic.md",
+            "lineas": "L60",
+            "frase": "Sufficient and careful packaging is key when shipping any type of liquids, such as liquids, such as beverages."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 4: la infografia, identificada por el encabezado de su nueva extraccion (UPS, pagina unica, extraida linea por linea con coordenadas), ya tiene cita literal contigua. Para liquidos solo pide un empaque suficiente y cuidadoso que cumpla los requisitos de UPS y este probado por el fabricante (L60); no menciona sellar el envase ni la bolsa plastica. La duplicacion 'such as liquids, such as' es del original, segun la nota de la extraccion. El resumen del nodo repite la bolsa plastica como dato practico; por el precedente de las tandas t3 a t12, las correcciones de dato repetido solo cubren CONTRARIOS y cifras, plazos o normas, asi que el resumen no se toca y queda declarado.",
+          "indice": 1,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/EXCEPCIONES.md seccion B y campania/c2/decision/B6 (lector de la campania, ANADIDO PRACTICO, texto_sugerencia)"
+        },
+        {
+          "id": "fidelidad-t13-02",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
+          "texto_nuevo": "Sugerencia de My Idea: para artículos frágiles o de alto valor, aplica el método de caja dentro de caja con colchón entre ambas.",
+          "cita": {
+            "libro": "Guia visual de empaque (infografia de UPS, What to consider when packing your items)",
+            "fichero": "OCR/Extraccion delicada/packaging_guide_infographic.md",
+            "lineas": "L34, L72",
+            "frase": "Fragile items should be wrapped separately. / Be sure to use a new double-wall corrugated double-wall corrugated cardboard box"
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 4: con la nueva extraccion de la infografia de UPS, para lo fragil solo pide envolver cada articulo por separado (L34) y usar una caja nueva de carton corrugado de doble pared (L72); ni el metodo de caja dentro de caja ni los articulos de alto valor aparecen. La duplicacion 'double-wall corrugated double-wall corrugated' es del original. El resumen repite la caja dentro de caja como dato practico; por el mismo precedente que fidelidad-t13-01, no se toca y queda declarado.",
+          "indice": 3,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/EXCEPCIONES.md seccion B y campania/c2/decision/B6 (lector de la campania, ANADIDO PRACTICO, texto_sugerencia)"
         }
       ]
     },
@@ -108134,7 +108168,7 @@
       "pasos_accionables": [
         "Antes de comprar cajas o bolsas, anota el peso y la fragilidad de lo que vas a enviar.",
         "Pregunta si el contenido es liquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
-        "Verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+        "Sugerencia de My Idea: verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
         "Revisa si tu producto entra en alguna categoria regulada, como baterias, perfumes o quimicos, antes de despacharlo.",
         "Con esa informacion decide si necesitas caja simple, de doble pared o bolsa plastica."
       ],
@@ -108156,7 +108190,26 @@
         "Has tenido devoluciones por daño y no sabes si el problema es el empaque o el contenido.",
         "Sospechas que tu producto podria clasificar como mercancia peligrosa, como perfumes o baterias."
       ],
-      "etiqueta_arbol": "Evalúa antes de empacar"
+      "etiqueta_arbol": "Evalúa antes de empacar",
+      "correcciones": [
+        {
+          "id": "fidelidad-t13-03",
+          "fecha": "2026-09-24",
+          "campo": "pasos_accionables",
+          "veredicto": "ANADIDO",
+          "texto_anterior": "Verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+          "texto_nuevo": "Sugerencia de My Idea: verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+          "cita": {
+            "libro": "DHL Express, An Essential Packing Guide for Express Shipments",
+            "fichero": "OCR/Extraccion delicada/dhl_express_packing_guide_en.md",
+            "lineas": "L81",
+            "frase": "Extra cushioning and protection may be required for high value goods."
+          },
+          "decision": "Mandato del fundador, regla B, ANADIDO practico: reescrito como sugerencia de My Idea sin atribuirlo al autor. Decision del fundador del 27 sep, punto 4: se comparo la extraccion nueva con la version oficial descargada de mydhl.express.dhl (PDF de 14 paginas fechado el 23/07/2026; la copia local es del 25/02/2026). El texto coincide salvo un parrafo nuevo sobre no usar 'black foil' en el exterior; la frase citada es identica en las dos y la palabra insurance no aparece en ninguna. La guia relaciona el valor del contenido con proteccion extra, pero no con un seguro.",
+          "indice": 2,
+          "auditoria": "rama fidelidad-total, docs/fidelidad/EXCEPCIONES.md seccion B y campania/c2/decision/B6 (lector de la campania, ANADIDO PRACTICO, texto_sugerencia)"
+        }
+      ]
     },
     "revision_aplicabilidad_estandares_osha": {
       "node_id": "revision_aplicabilidad_estandares_osha",
