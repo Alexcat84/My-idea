@@ -93,13 +93,15 @@ function jergaEn(etiqueta: string): string[] {
   ).map((j) => j.termino);
 }
 
-/** Las tres fuentes EN ORDEN: la última manda, igual que en el script que las
+/** Las cuatro fuentes EN ORDEN: la última manda, igual que en el script que las
  * aplica (scripts/etiquetas_de_cara.py). Los campos "_*" son notas de
- * procedencia, no etiquetas. */
+ * procedencia, no etiquetas. La cuarta son las correcciones de fidelidad del
+ * fundador (25 sep 2026). */
 const FUENTES = [
   "dataset/metadata/etiquetas_de_cara_v1.json",
   "dataset/metadata/etiquetas_de_cara_v1_casa.json",
   "dataset/metadata/etiquetas_de_cara_v1_curaduria_final.json",
+  "dataset/metadata/etiquetas_de_cara_v1_fidelidad.json",
 ];
 const entradas = (rel: string): Array<[string, string]> =>
   Object.entries(leerJson(rel) as Record<string, unknown>)
@@ -111,7 +113,7 @@ describe("etiquetas de cara: la curaduría está aplicada", () => {
     expect(entradas(FUENTES[0])).toHaveLength(68);
   });
 
-  it("lo que resulta de mezclar las tres fuentes está en el grafo", () => {
+  it("lo que resulta de mezclar las cuatro fuentes está en el grafo", () => {
     const efectiva = new Map<string, string>();
     for (const fuente of FUENTES) for (const [id, etq] of entradas(fuente)) efectiva.set(id, etq);
     const sinAplicar = [...efectiva].filter(([id, etq]) => graph[id]?.etiqueta_arbol !== etq);
