@@ -224,7 +224,7 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
             <div style={{ fontSize: "15px", fontWeight: "600", color: "#A6A7AD" }}>02</div>
             <div style={{ background: "#17171B", border: "1px solid rgba(255,255,255,0.08)", borderRadius: "12px", padding: "16px 18px" }}>
               <div style={{ position: "relative", display: "flex", flexDirection: "column", gap: "14px" }}>
-                <div style={{ position: "absolute", left: "5px", top: "7px", bottom: "7px", borderLeft: "1px dashed rgba(255,255,255,0.18)" }}></div>
+                <div style={{ position: "absolute", insetInlineStart: "5px", top: "7px", bottom: "7px", borderInlineStart: "1px dashed rgba(255,255,255,0.18)" }}></div>
                 <div style={{ display: "flex", gap: "10px", alignItems: "center", position: "relative" }}><span style={{ width: "11px", height: "11px", borderRadius: "50%", background: "#17171B", display: "flex", alignItems: "center", justifyContent: "center", flex: "none" }}><span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#4D7CFE" }}></span></span><span style={{ width: "64%", height: "6px", borderRadius: "3px", background: "rgba(255,255,255,0.10)" }}></span></div>
                 <div style={{ display: "flex", gap: "10px", alignItems: "center", position: "relative", opacity: "0.45" }}><span style={{ width: "11px", height: "11px", borderRadius: "50%", background: "#17171B", display: "flex", alignItems: "center", justifyContent: "center", flex: "none" }}><span style={{ width: "7px", height: "7px", borderRadius: "50%", border: "1.5px solid #A6A7AD", boxSizing: "border-box" }}></span></span><span style={{ width: "44%", height: "6px", borderRadius: "3px", background: "rgba(255,255,255,0.10)" }}></span></div>
                 <div style={{ display: "flex", gap: "10px", alignItems: "center", position: "relative" }}><span style={{ width: "11px", height: "11px", borderRadius: "50%", background: "#17171B", display: "flex", alignItems: "center", justifyContent: "center", flex: "none" }}><span style={{ width: "7px", height: "7px", borderRadius: "50%", background: "#4D7CFE", animation: "ideaPulse 1.6s ease-out infinite" }}></span></span><span style={{ fontSize: "11px", color: "#4D7CFE", fontWeight: "500" }}>{t.como.paso2.demo}</span></div>
@@ -277,10 +277,10 @@ export function Landing({ sesionActiva = false }: { sesionActiva?: boolean } = {
               <span style={{ flex: "1" }}></span>
             </div>
             <div style={{ display: "flex", background: "#000000" }} data-stack="true">
-              <div data-hide-mobile="true" style={{ width: "264px", flex: "none", borderRight: "1px solid rgba(255,255,255,0.08)", padding: "26px 22px" }}>
+              <div data-hide-mobile="true" style={{ width: "264px", flex: "none", borderInlineEnd: "1px solid rgba(255,255,255,0.08)", padding: "26px 22px" }}>
                 <div style={{ fontSize: "10.5px", letterSpacing: "1.2px", textTransform: "uppercase", color: "#A6A7AD", fontWeight: "600", marginBottom: "22px" }}>{t.recorridoDeLaIdea}</div>
                 <div style={{ position: "relative", display: "flex", flexDirection: "column", gap: "24px" }}>
-                  <div style={{ position: "absolute", left: "6px", top: "10px", bottom: "10px", borderLeft: "1px dashed rgba(255,255,255,0.16)" }}></div>
+                  <div style={{ position: "absolute", insetInlineStart: "6px", top: "10px", bottom: "10px", borderInlineStart: "1px dashed rgba(255,255,255,0.16)" }}></div>
                   <div style={{ display: "flex", gap: "11px", alignItems: "flex-start", position: "relative", animation: "nodeIn 0.5s ease-out 0.7s both" }}>
                     <span style={{ width: "13px", height: "13px", borderRadius: "50%", background: "#000000", display: "flex", alignItems: "center", justifyContent: "center", flex: "none" }}><span style={{ width: "8px", height: "8px", borderRadius: "50%", background: "#4D7CFE" }}></span></span>
                     <span style={{ fontSize: "12.5px", fontWeight: "500", lineHeight: "1.4", color: "#F5F6F8" }}>{t.etapas.chispa}</span>

@@ -117,12 +117,12 @@ function Riel({
       {/* riel de fondo, del centro del primer punto al del último */}
       <div
         className="absolute top-1/2 h-[2px] -translate-y-1/2 rounded-full bg-white/15"
-        style={{ left: `${tam / 2}px`, right: `${tam / 2}px` }}
+        style={{ insetInlineStart: `${tam / 2}px`, insetInlineEnd: `${tam / 2}px` }}
       />
       {/* tramo recorrido: azul mientras piensa/ejecuta, verde al realizar */}
       <div
         className="absolute top-1/2 h-[2px] -translate-y-1/2 rounded-full transition-[width]"
-        style={{ left: `${tam / 2}px`, width: `calc((100% - ${tam}px) * ${frac})`, background: realizada ? "var(--done)" : "var(--accent)" }}
+        style={{ insetInlineStart: `${tam / 2}px`, width: `calc((100% - ${tam}px) * ${frac})`, background: realizada ? "var(--done)" : "var(--accent)" }}
       />
       {/* puntos, al ras sobre la línea */}
       <div className="relative flex w-full items-center justify-between">

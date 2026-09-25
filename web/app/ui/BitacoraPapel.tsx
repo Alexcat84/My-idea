@@ -107,9 +107,9 @@ export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] })
                         aria-hidden
                         style={{
                           position: "absolute",
-                          left: 7,
+                          insetInlineStart: 7,
                           width: 1,
-                          transform: "translateX(-50%)",
+                          transform: "translateX(calc(-50% * var(--sentido)))",
                           background: verde ? VERDE : AZUL,
                           top: esPrimera ? centro : 0,
                           ...(esUltima ? { height: centro } : { bottom: 0 }),
@@ -118,9 +118,9 @@ export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] })
                     );
                     if (f.tipo === "dia") {
                       return (
-                        <div key={`d-${i}`} style={{ position: "relative", paddingLeft: 30, paddingBottom: 7, breakInside: "avoid" }}>
+                        <div key={`d-${i}`} style={{ position: "relative", paddingInlineStart: 30, paddingBottom: 7, breakInside: "avoid" }}>
                           {tramo}
-                          <span style={{ position: "absolute", left: 7, top: 5, transform: "translateX(-50%)", width: 7, height: 7, borderRadius: "50%", background: f.cierre ? VERDE : AZUL }} />
+                          <span style={{ position: "absolute", insetInlineStart: 7, top: 5, transform: "translateX(calc(-50% * var(--sentido)))", width: 7, height: 7, borderRadius: "50%", background: f.cierre ? VERDE : AZUL }} />
                           <div style={{ fontSize: 15, fontWeight: 700, color: f.cierre ? VERDE : TINTA }}>{fechaHumanaConAno(f.fecha)}</div>
                         </div>
                       );
@@ -130,12 +130,12 @@ export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] })
                     const color = e.peso === "retirada" ? RETIRADO : e.peso === "cierre" ? VERDE : TINTA;
                     const puntoColor = e.peso === "retirada" ? RETIRADO : e.peso === "cierre" ? VERDE : AZUL_CLARO;
                     return (
-                      <div key={`e-${i}`} style={{ position: "relative", paddingLeft: 30, paddingBottom: finDeDia || esUltima ? 16 : 6 }}>
+                      <div key={`e-${i}`} style={{ position: "relative", paddingInlineStart: 30, paddingBottom: finDeDia || esUltima ? 16 : 6 }}>
                         {tramo}
-                        <span style={{ position: "absolute", left: 7, top: 7, transform: "translateX(-50%)", width: 6, height: 6, borderRadius: "50%", background: puntoColor }} />
+                        <span style={{ position: "absolute", insetInlineStart: 7, top: 7, transform: "translateX(calc(-50% * var(--sentido)))", width: 6, height: 6, borderRadius: "50%", background: puntoColor }} />
                         <div style={{ fontSize: 13.5, lineHeight: 1.6, fontWeight: esHito ? 700 : 400, color }}>
                           {f.conHora && (
-                            <span style={{ color: TERCIARIA, fontVariantNumeric: "tabular-nums", marginRight: 8 }}>{hora(e.fecha)}</span>
+                            <span style={{ color: TERCIARIA, fontVariantNumeric: "tabular-nums", marginInlineEnd: 8 }}>{hora(e.fecha)}</span>
                           )}
                           {conMotivo(e.texto, e.peso === "cierre" ? VERDE : e.peso === "retirada" ? "#6B6E75" : color)}
                         </div>

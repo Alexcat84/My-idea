@@ -35,7 +35,7 @@ function PasosLista({ pasos }: { pasos: string[] }) {
             {i < pasos.length - 1 && (
               // del borde inferior de este punto al borde superior del siguiente
               <span
-                className="absolute left-[2.5px] top-4 w-px"
+                className="absolute start-[2.5px] top-4 w-px"
                 style={{ bottom: "-8px", background: "rgba(77,124,254,0.28)" }}
               />
             )}
@@ -256,7 +256,7 @@ export function PlanDocumento({
     return (
       <section className="flex flex-col gap-8 lg:flex-row lg:items-start">
         {documento}
-        <aside className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-l lg:border-hairline lg:pl-7" style={{ animationDelay: "0.5s" }}>
+        <aside className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-s lg:border-hairline lg:ps-7" style={{ animationDelay: "0.5s" }}>
           {tarjetaBitacora}
         </aside>
       </section>
@@ -268,7 +268,7 @@ export function PlanDocumento({
     <section className="flex flex-col gap-8 lg:flex-row lg:items-start">
       {documento}
       <aside
-        className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-l lg:border-hairline lg:pl-7"
+        className="anima-plan-in lg:w-[300px] lg:shrink-0 lg:border-s lg:border-hairline lg:ps-7"
         style={{ animationDelay: "0.5s" }}
       >
         {tarjetaBitacora}

@@ -123,7 +123,7 @@ function FilaCarril({
   const t = elegir(ANALISIS, useIdioma()).comun;
   const colorReal = color;
   return (
-    <div
+    <div dir="ltr"
       style={{
         display: "grid",
         gridTemplateColumns: "20px 1fr 136px",
@@ -423,8 +423,8 @@ export function GanttCumplimiento({
             </div>
           )}
 
-          {/* eje de tiempo */}
-          <div style={{ display: "grid", gridTemplateColumns: vista === "cintas" ? "1fr" : "20px 1fr 136px", gap: 14, paddingTop: 12 }}>
+          {/* eje de tiempo (i18n F4: como las filas, de izquierda a derecha en todo idioma) */}
+          <div dir="ltr" style={{ display: "grid", gridTemplateColumns: vista === "cintas" ? "1fr" : "20px 1fr 136px", gap: 14, paddingTop: 12 }}>
             {vista !== "cintas" && <span />}
             <div style={{ display: "flex", justifyContent: "space-between", fontSize: 11, color: "#A6A7AD", fontVariantNumeric: "tabular-nums", marginLeft: vista === "cintas" ? 0 : 0 }}>
               {ticks.map((tick, i) => (
@@ -454,7 +454,7 @@ function SubfilaProteccion({
   const t = elegir(ANALISIS, useIdioma()).gantt;
   if (marcas.length === 0) return null;
   return (
-    <div style={{ display: "grid", gridTemplateColumns: "20px 1fr 136px", gap: 14, alignItems: "center" }}>
+    <div dir="ltr" style={{ display: "grid", gridTemplateColumns: "20px 1fr 136px", gap: 14, alignItems: "center" }}>
       <span />
       <div style={{ position: "relative", height: 16 }}>
         {marcas.map((m, i) => (
@@ -512,7 +512,7 @@ function DosCintas({ filas }: { filas: Array<{ n: number; base: { l: number; w: 
     </div>
   );
   return (
-    <div style={{ position: "relative" }}>
+    <div dir="ltr" style={{ position: "relative" }}>
       {/* cinta plan */}
       <div style={{ position: "relative", height: 36, marginBottom: 22 }}>
         {filas.map((f) => f.base && bloque(f.base.l, f.base.w, f.n, { border: `1px solid ${BASE_BORDE}`, background: BASE_FONDO, color: "#C6C8CE" }))}

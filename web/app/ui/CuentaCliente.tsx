@@ -367,7 +367,7 @@ export function CuentaCliente({ email }: { email: string }) {
             onChange={(e) => setPalabraCuenta(e.target.value.toUpperCase())}
             placeholder={PALABRA_CONFIRMAR}
             autoComplete="off"
-            className="w-full max-w-[260px] rounded-cinta border border-hairline bg-surface-2 px-4 py-2.5 text-left font-mono text-sm tracking-widest text-ink placeholder:text-dim/40"
+            className="w-full max-w-[260px] rounded-cinta border border-hairline bg-surface-2 px-4 py-2.5 text-start font-mono text-sm tracking-widest text-ink placeholder:text-dim/40"
           />
           <button
             type="submit"

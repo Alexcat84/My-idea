@@ -153,7 +153,7 @@ function BarraVerdad({ t }: { t: Tablero }) {
 function Fila({ clave, pct, texto, clase }: { clave: string; pct: number | null; texto: string; clase: string }) {
   return (
     <div className="mb-4 grid grid-cols-[76px_1fr] items-center gap-4 last:mb-0">
-      <span className="text-right text-[13.5px] text-dim">{clave}</span>
+      <span className="text-end text-[13.5px] text-dim">{clave}</span>
       <div className="relative h-[34px]">
         <div className={`flex h-full items-center rounded-lg px-3.5 text-sm font-bold ${clase}`} style={{ width: `${pct ?? 0}%` }}>
           {texto}
@@ -283,7 +283,7 @@ function Escenarios({ t }: { t: Tablero }) {
     <div className="overflow-hidden rounded-panel border border-hairline">
       <div className="grid grid-cols-[1fr_120px] gap-4 bg-surface px-6 py-3 text-[11.5px] font-semibold uppercase tracking-wider text-dim">
         <span>{tx.escenario}</span>
-        <span className="text-right">{tx.ganancia}</span>
+        <span className="text-end">{tx.ganancia}</span>
       </div>
       {filas.map((f) => (
         <div key={f.nombre} className="grid grid-cols-[1fr_120px] items-center gap-4 border-t border-hairline px-6 py-4">
@@ -291,7 +291,7 @@ function Escenarios({ t }: { t: Tablero }) {
             {f.nombre}
             <span className="block text-[12px] font-normal text-dim">{f.sub}</span>
           </div>
-          <div className={`text-right text-[15px] font-bold ${f.ganancia != null && f.ganancia < 0 ? "text-warn" : f.ganancia != null && f.ganancia > 0 ? "text-done" : ""}`}>
+          <div className={`text-end text-[15px] font-bold ${f.ganancia != null && f.ganancia < 0 ? "text-warn" : f.ganancia != null && f.ganancia > 0 ? "text-done" : ""}`}>
             {f.ganancia != null ? (
               dinero(idioma, f.ganancia)
             ) : f.sinCifra ? (
@@ -333,14 +333,14 @@ function Faltantes({ t, onCorregir }: { t: Tablero; onCorregir?: (campo: string)
               {e.porque && <div className="mt-0.5 text-[12.5px] leading-snug text-dim">{e.porque}</div>}
             </div>
             {onCorregir && (
-              <span className="ml-auto self-center whitespace-nowrap text-[12px] text-accent opacity-0 transition group-hover:opacity-100">
+              <span className="ms-auto self-center whitespace-nowrap text-[12px] text-accent opacity-0 transition group-hover:opacity-100">
                 {tx.anadir}
               </span>
             )}
           </>
         );
         return onCorregir ? (
-          <button key={campo} onClick={() => onCorregir(campo)} className="group flex w-full items-start gap-3.5 border-b border-hairline py-3 text-left last:border-b-0">
+          <button key={campo} onClick={() => onCorregir(campo)} className="group flex w-full items-start gap-3.5 border-b border-hairline py-3 text-start last:border-b-0">
             {cuerpo}
           </button>
         ) : (
@@ -447,12 +447,12 @@ function VersionesAnteriores({ versiones, onVer }: { versiones: VersionResumen[]
             <button
               key={v.id}
               onClick={() => onVer(v.id)}
-              className="group flex w-full items-center gap-4 border-b border-hairline px-6 py-4 text-left last:border-b-0 hover:bg-surface-2"
+              className="group flex w-full items-center gap-4 border-b border-hairline px-6 py-4 text-start last:border-b-0 hover:bg-surface-2"
             >
               <span className="text-[14px] font-semibold group-hover:text-accent">{selloVersion(v.fecha, ahora, conHora, idioma)}</span>
               <span className={`h-2 w-2 flex-none rounded-full ${punto}`} aria-hidden />
               <span className="text-[13px] text-dim">{v.tono ? tx.tonos[v.tono] : "—"}</span>
-              <span className={`ml-auto text-[14px] font-semibold ${mg.clase}`}>{mg.texto}</span>
+              <span className={`ms-auto text-[14px] font-semibold ${mg.clase}`}>{mg.texto}</span>
               <span className="whitespace-nowrap text-[12px] text-accent opacity-0 transition group-hover:opacity-100">{tx.ver}</span>
             </button>
           );
@@ -647,7 +647,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
           <span className="font-semibold text-ink">{tx.tusNumerosDeHoy}</span>
           {selloHoy && <span>{interpolar(tx.calculadoConCifrasDel, { sello: selloHoy })}</span>}
           {!editando && (
-            <button onClick={() => abrirRecolector(null)} className="ml-1 font-medium text-accent hover:underline">
+            <button onClick={() => abrirRecolector(null)} className="ms-1 font-medium text-accent hover:underline">
               {tx.corregirGratis}
             </button>
           )}

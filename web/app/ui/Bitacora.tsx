@@ -71,7 +71,7 @@ function aFilas(entradas: EntradaBitacora[], t: TextosPagina): Fila[] {
 
 /** El punto de una fila de entrada, según su peso. */
 function PuntoEntrada({ peso }: { peso: EntradaBitacora["peso"] }) {
-  const base = { position: "absolute" as const, left: 13, transform: "translateX(-50%)", borderRadius: "50%" };
+  const base = { position: "absolute" as const, insetInlineStart: 13, transform: "translateX(calc(-50% * var(--sentido)))", borderRadius: "50%" };
   if (peso === "cierre")
     return <span aria-hidden style={{ ...base, top: 8, width: 11, height: 11, background: VERDE, boxShadow: `0 0 0 3px rgba(63,185,80,0.2)` }} />;
   if (peso === "retirada")
@@ -143,9 +143,9 @@ export function LineaBitacora({
             aria-hidden
             style={{
               position: "absolute",
-              left: 13,
+              insetInlineStart: 13,
               width: 2,
-              transform: "translateX(-50%)",
+              transform: "translateX(calc(-50% * var(--sentido)))",
               background: verde ? "rgba(63,185,80,0.9)" : "rgba(77,124,254,0.85)",
               top: esPrimera ? centro : 0,
               ...(esUltima ? { height: centro } : { bottom: 0 }),
@@ -153,15 +153,15 @@ export function LineaBitacora({
           />
         );
         return f.tipo === "dia" ? (
-          <div key={`d-${i}`} className="relative" style={{ paddingLeft: 44, paddingBottom: 10, paddingTop: esPrimera ? 2 : 8 }}>
+          <div key={`d-${i}`} className="relative" style={{ paddingInlineStart: 44, paddingBottom: 10, paddingTop: esPrimera ? 2 : 8 }}>
             {tramo}
             <span
               aria-hidden
               style={{
                 position: "absolute",
-                left: 13,
+                insetInlineStart: 13,
                 top: 6,
-                transform: "translateX(-50%)",
+                transform: "translateX(calc(-50% * var(--sentido)))",
                 width: 13,
                 height: 13,
                 borderRadius: "50%",
@@ -178,7 +178,7 @@ export function LineaBitacora({
           <div
             key={`e-${i}`}
             className="relative"
-            style={{ paddingLeft: 44, paddingBottom: esUltima ? 0 : f.entrada.peso === "hito" ? 14 : 20 }}
+            style={{ paddingInlineStart: 44, paddingBottom: esUltima ? 0 : f.entrada.peso === "hito" ? 14 : 20 }}
           >
             {tramo}
             <PuntoEntrada peso={f.entrada.peso} />

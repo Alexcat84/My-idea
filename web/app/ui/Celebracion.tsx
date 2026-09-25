@@ -80,7 +80,7 @@ function Timeline({ hitos, onFin }: { hitos: Hito[]; onFin: () => void }) {
 
   // Eje SIEMPRE centrado en desktop y a la izquierda en móvil; el punto y la
   // barra azul viajan sobre él. left-[7px] (móvil) / left-1/2 (desktop).
-  const ejePos = "left-[7px] -translate-x-1/2 sm:left-1/2";
+  const ejePos = "start-[7px] -translate-x-1/2 rtl:translate-x-1/2 sm:start-1/2";
 
   return (
     <div className="relative py-2" onClick={() => setRevelados(total)}>
@@ -119,12 +119,12 @@ function Timeline({ hitos, onFin }: { hitos: Hito[]; onFin: () => void }) {
               {/* contenido: móvil a la derecha del eje; desktop alterna lados */}
               <div
                 className={
-                  "pl-7 sm:pl-0 " +
+                  "ps-7 sm:ps-0 " +
                   (realizada
                     ? "sm:col-span-2 sm:pt-9 sm:text-center"
                     : izq
-                      ? "sm:pr-10 sm:text-right"
-                      : "sm:col-start-2 sm:pl-10 sm:text-left")
+                      ? "sm:pe-10 sm:text-end"
+                      : "sm:col-start-2 sm:ps-10 sm:text-start")
                 }
               >
                 <p className="text-[12px] text-dim">{fechaHumanaCorta(h.fecha, idioma)}</p>
@@ -228,7 +228,7 @@ export function Celebracion({
         <div className="relative mt-4 inline-flex items-center justify-center">
           {terminado && (
             <span
-              className="anima-green-wave pointer-events-none absolute left-1/2 top-1/2 h-3 w-3 rounded-full"
+              className="anima-green-wave pointer-events-none absolute inset-0 m-auto h-3 w-3 rounded-full"
               style={{ background: "rgba(63,185,80,0.5)" }}
             />
           )}

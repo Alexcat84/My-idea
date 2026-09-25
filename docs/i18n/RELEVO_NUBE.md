@@ -22,8 +22,8 @@ grafo de conocimiento **se queda en español** (no se traduce). Diseño completo
 | **F0** diseño, inventario, glosario, decisiones | **HECHA** | `cf55b1b2` (diseño), `06c1a06e` (decisiones D1-D9), `d2ce48df` (inventario de datos y borradores legales), `80d0a38f` (glosario y legales con las decisiones) |
 | **F1** medición del buscador multilingüe | **HECHA** | `0debace9`; informe `docs/i18n/F1_BUSCADOR.md` |
 | **F2** base de idiomas + todos los textos al catálogo en español, la app idéntica | **HECHA, CON VISTO DEL FUNDADOR, EN PRODUCCIÓN** | `6a887b99` (base), `124113cb` (extracción), `1b495e32` (hilo del idioma), `20c0250e` (informe `docs/i18n/F2_INFORME.md`); en `main` con `9361c569`, etiqueta `web-v2.7.0` |
-| **F3** las otras 10 traducciones con el glosario; formatos por idioma | **HECHA, PENDIENTE DEL VISTO**: los once idiomas activos. Inglés aprobado con condición hasta el merge (25 sep); los otros nueve con revisión de naturalidad, lo discutible en `F3_INFORME_OTROS.md` | `73811801`, `bcff9f8e`, `eb03af8c`, `d1f36b11`, `0a03c26e`, `9ecf7a57` y el commit de los nueve idiomas (ver `git log`) |
-| **F4** árabe RTL; tipografías CJK y devanagari solo al elegirlas; capturas de cada una | por hacer | — |
+| **F3** las otras 10 traducciones con el glosario; formatos por idioma | **HECHA, APROBADA por el fundador (25 sep 2026)**; pendiente el merge a `main` | `73811801` … `ed8dd15a` (ver `git log`); informes `F3_INFORME_EN.md` y `F3_INFORME_OTROS.md` |
+| **F4** árabe RTL; tipografías CJK y devanagari solo al elegirlas; capturas de cada una | **HECHA, PENDIENTE DEL VISTO** (`F4_INFORME.md`) | ver `git log` |
 | **F5** idioma del proyecto (`projects.idioma`, migración), prompts con idioma de salida, remedio del buscador, plantillas de los generadores sin IA, D3 | por hacer | — |
 | **F6** correos (D4), documentos, legales (D5, francés obligatorio), SEO y `hreflang` (D9); auditor y guardias de frases por idioma | por hacer | — |
 

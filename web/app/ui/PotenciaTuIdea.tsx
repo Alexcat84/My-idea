@@ -172,7 +172,7 @@ export function PotenciaTuIdea({
   }
 
   const claseCard =
-    "group flex flex-col rounded-[14px] border bg-surface p-[22px] text-left transition-[transform,background,border-color] duration-200 hover:-translate-y-[3px] hover:bg-surface-2";
+    "group flex flex-col rounded-[14px] border bg-surface p-[22px] text-start transition-[transform,background,border-color] duration-200 hover:-translate-y-[3px] hover:bg-surface-2";
 
   return (
     <section className="mt-2">
@@ -263,7 +263,7 @@ export function PotenciaTuIdea({
                   /* Solo se ve con la puerta del mini-gate abierta. Sin esta
                      marca, un paseo de prueba se confunde con un mundo en
                      venta, que es exactamente el error que hay que evitar. */
-                  <span className="ml-2 rounded-full border border-warn/40 px-2 py-0.5 align-middle text-[10.5px] font-bold uppercase tracking-wide text-warn">
+                  <span className="ms-2 rounded-full border border-warn/40 px-2 py-0.5 align-middle text-[10.5px] font-bold uppercase tracking-wide text-warn">
                     {t.sinPublicar}
                   </span>
                 )}

@@ -418,7 +418,7 @@ function FilaItem({
           <button
             onClick={onAbrirDetalle}
             className={
-              "block w-full text-left text-[14.5px] hover:underline " +
+              "block w-full text-start text-[14.5px] hover:underline " +
               (hecho ? "text-dim line-through" : retirada ? "text-[#8A8B92]" : "text-ink")
             }
             title={t.fila.verDetalle}
@@ -749,13 +749,13 @@ function TarjetaModo({
       <h3 className="mx-auto max-w-md text-2xl font-bold leading-tight tracking-tight [text-wrap:balance]">
         {t.pregunta}
       </h3>
-      <div className="mt-7 flex flex-col gap-4 text-left sm:flex-row">
+      <div className="mt-7 flex flex-col gap-4 text-start sm:flex-row">
         {opciones.map((o) => (
           <button
             key={o.modo}
             onClick={() => onElegir(o.modo)}
             disabled={ocupado}
-            className="flex flex-1 flex-col rounded-panel border border-white/10 bg-surface p-6 text-left transition-transform hover:-translate-y-0.5 disabled:opacity-50"
+            className="flex flex-1 flex-col rounded-panel border border-white/10 bg-surface p-6 text-start transition-transform hover:-translate-y-0.5 disabled:opacity-50"
           >
             <span className="mb-4 flex h-10 w-10 items-center justify-center rounded-[11px] bg-surface-2">
               {o.icono}
@@ -1155,7 +1155,7 @@ function RitualFechas({
           {guardando ? t.guardando : t.aceptar}
         </button>
         <div className="flex flex-col">
-          <button onClick={onPosponer} disabled={guardando} className="text-left text-[13.5px] text-dim hover:text-ink disabled:opacity-50">
+          <button onClick={onPosponer} disabled={guardando} className="text-start text-[13.5px] text-dim hover:text-ink disabled:opacity-50">
             {t.ponerlasDespues}
           </button>
           <span className="text-xs text-dim opacity-75">{t.sinFechas}</span>
@@ -1488,7 +1488,7 @@ function TarjetaAcceso({
   return (
     <button
       onClick={onClick}
-      className={`cristal cristal-boton relative w-full rounded-panel p-5 text-left ${tono === "done" ? "cristal-done" : ""}`}
+      className={`cristal cristal-boton relative w-full rounded-panel p-5 text-start ${tono === "done" ? "cristal-done" : ""}`}
     >
       <div className="flex items-start gap-3.5">
         <span aria-hidden className={`ranura grid h-[42px] w-[42px] shrink-0 place-items-center rounded-[11px] ${tinta}`}>

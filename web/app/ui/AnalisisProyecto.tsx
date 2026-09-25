@@ -161,7 +161,7 @@ export function AnalisisProyecto({
             )}
           </p>
           {acta.cierre_motivo && (
-            <blockquote className="mt-3 border-l-2 border-done/50 pl-3 text-[13.5px] leading-[1.65] text-dim [text-wrap:pretty]">
+            <blockquote className="mt-3 border-s-2 border-done/50 ps-3 text-[13.5px] leading-[1.65] text-dim [text-wrap:pretty]">
               {interpolar(t.cita, { motivo: acta.cierre_motivo })}
             </blockquote>
           )}
@@ -187,7 +187,7 @@ export function AnalisisProyecto({
             )}
           </p>
           {cierreMotivo && (
-            <blockquote className="mt-3 border-l-2 border-done/50 pl-3 text-[13.5px] leading-[1.65] text-dim [text-wrap:pretty]">
+            <blockquote className="mt-3 border-s-2 border-done/50 ps-3 text-[13.5px] leading-[1.65] text-dim [text-wrap:pretty]">
               {interpolar(t.cita, { motivo: cierreMotivo })}
             </blockquote>
           )}

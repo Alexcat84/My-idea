@@ -172,7 +172,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
                   <p className="min-w-0 flex-1 text-[15px] font-semibold leading-snug sm:text-[17px]">
                     {idea.nombre}
                   </p>
-                  <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="shrink-0">
+                  <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="shrink-0 rtl:-scale-x-100">
                     <path d="M4 2l4 4-4 4" stroke="var(--text-dim)" strokeWidth="1.5" fill="none" />
                   </svg>
                 </div>
@@ -234,7 +234,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
                   {t.potenciarTexto}
                 </span>
               </span>
-              <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="shrink-0">
+              <svg width="13" height="13" viewBox="0 0 12 12" aria-hidden className="shrink-0 rtl:-scale-x-100">
                 <path d="M4 2l4 4-4 4" stroke="var(--text-dim)" strokeWidth="1.5" fill="none" />
               </svg>
             </Link>

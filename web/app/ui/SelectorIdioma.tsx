@@ -145,7 +145,7 @@ export function SelectorIdioma({
           aria-activedescendant={`${idLista}-${ACTIVE_LOCALES[activo]}`}
           onKeyDown={teclaLista}
           className={
-            "absolute end-0 z-50 max-h-[70vh] min-w-[176px] overflow-y-auto rounded-[12px] border border-hairline bg-surface-2 p-1 text-left normal-case tracking-normal shadow-[0_16px_40px_rgba(0,0,0,0.55)] outline-none " +
+            "absolute end-0 z-50 max-h-[70vh] min-w-[176px] overflow-y-auto rounded-[12px] border border-hairline bg-surface-2 p-1 text-start normal-case tracking-normal shadow-[0_16px_40px_rgba(0,0,0,0.55)] outline-none " +
             (haciaArriba ? "bottom-full mb-2" : "top-full mt-2")
           }
         >

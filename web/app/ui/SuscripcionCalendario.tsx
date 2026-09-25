@@ -63,7 +63,7 @@ export function SuscripcionCalendario({
           {info && (
             <>
               <button type="button" aria-label={t.cerrar} onClick={() => setInfo(false)} className="fixed inset-0 z-40 cursor-default" />
-              <div className="absolute left-0 top-full z-50 mt-2 w-[256px] rounded-[12px] border border-white/[0.14] bg-surface-2 p-3 text-[12px] leading-relaxed text-dim shadow-[0_18px_40px_rgba(0,0,0,0.6)]">
+              <div className="absolute start-0 top-full z-50 mt-2 w-[256px] rounded-[12px] border border-white/[0.14] bg-surface-2 p-3 text-[12px] leading-relaxed text-dim shadow-[0_18px_40px_rgba(0,0,0,0.6)]">
                 {t.info}
                 <span className="mt-2 block text-dim/80">{t.infoRefresco}</span>
               </div>

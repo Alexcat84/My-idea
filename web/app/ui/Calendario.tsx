@@ -368,7 +368,7 @@ function VistaAgenda({
               type="button"
               onClick={() => toggle(g)}
               aria-expanded={abierto}
-              className={"flex w-full items-center gap-3 text-left " + (abierto ? "mb-3" : "")}
+              className={"flex w-full items-center gap-3 text-start " + (abierto ? "mb-3" : "")}
             >
               <span className="text-[12px] font-semibold uppercase tracking-[1.2px]" style={{ color: colorGrupo(g) }}>{t.grupos[g]}</span>
               <span className="h-px flex-1" style={{ background: g === "vencidas" ? "rgba(224,166,74,0.30)" : g === "hoy" ? "rgba(63,185,80,0.28)" : "rgba(255,255,255,0.08)" }} />
@@ -485,7 +485,7 @@ function chipMes(d: Datado, onDetalle: (i: ItemChecklistUI) => void, sel: boolea
         onDetalle(d.item);
       }}
       title={(d.etiqueta ? `[${d.etiqueta}] ` : "") + d.item.texto + (con ? ` ${t.conNota}` : "")}
-      className="flex w-full items-center gap-1.5 truncate rounded-[6px] px-[7px] py-1 text-left text-[11px]"
+      className="flex w-full items-center gap-1.5 truncate rounded-[6px] px-[7px] py-1 text-start text-[11px]"
       style={{ background: c.bg, color: c.texto, boxShadow: sel ? "inset 0 0 0 1px rgba(77,124,254,0.40)" : undefined }}
     >
       {d.estatus === "hecha" ? (
@@ -613,7 +613,7 @@ function VistaMes({
                   }
                 }}
                 aria-label={interpolar(t.verDia, { n: cd.getDate() })}
-                className="min-h-[92px] cursor-pointer border border-white/[0.06] p-[7px] text-left align-top"
+                className="min-h-[92px] cursor-pointer border border-white/[0.06] p-[7px] text-start align-top"
                 style={{
                   background: esHoy ? "rgba(63,185,80,0.05)" : enMes ? "transparent" : "#08080B",
                   boxShadow: esSel
@@ -720,7 +720,7 @@ function VistaSemana({
                     }}
                     onClick={() => manejo.onDetalle(d.item)}
                     title={(d.etiqueta ? `[${d.etiqueta}] ` : "") + d.item.texto + (tieneNota(d.item) ? ` ${t.conNota}` : "") + (movible ? ` ${t.puntoArrastraParaMover}` : "")}
-                    className={"rounded-[8px] px-2 py-1.5 text-left text-[11.5px] leading-snug " + (movible ? "lg:cursor-grab" : "")}
+                    className={"rounded-[8px] px-2 py-1.5 text-start text-[11.5px] leading-snug " + (movible ? "lg:cursor-grab" : "")}
                     style={{ background: c.bg, color: c.tx }}
                   >
                     <span className="flex items-start gap-1.5">

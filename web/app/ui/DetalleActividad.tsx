@@ -173,8 +173,8 @@ export function DetalleActividad({
           superficie #0C0C10 (un paso más oscura, como capa flotante). */}
       <section
         className={
-          "relative z-10 ml-auto flex max-h-[88vh] w-full flex-col overflow-hidden rounded-t-[20px] " +
-          "border border-white/[0.12] bg-surface-3 sm:h-full sm:max-h-none sm:w-[520px] sm:rounded-none sm:rounded-l-[20px] " +
+          "relative z-10 ms-auto flex max-h-[88vh] w-full flex-col overflow-hidden rounded-t-[20px] " +
+          "border border-white/[0.12] bg-surface-3 sm:h-full sm:max-h-none sm:w-[520px] sm:rounded-none sm:rounded-s-[20px] " +
           "anima-hoja-in mt-auto sm:mt-0"
         }
         data-detalle-actividad
@@ -215,7 +215,7 @@ export function DetalleActividad({
             <div className="mt-3 flex flex-col gap-1.5" data-chip-proteccion>
               {protegidaPor.map((pr, i) => (
                 <p key={i} className="text-[12.5px] leading-relaxed text-dim [text-wrap:pretty]">
-                  <span className="mr-1.5 inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.6px] text-accent">
+                  <span className="me-1.5 inline-flex items-center rounded-full border border-accent/40 bg-accent/10 px-2 py-0.5 text-[10.5px] font-bold uppercase tracking-[0.6px] text-accent">
                     {t.protegida}
                   </span>
                   {pr.respuesta} <span className="text-dim/70">· {pr.mundo}</span>
@@ -254,7 +254,7 @@ export function DetalleActividad({
                 disabled={ocupado}
                 aria-haspopup="listbox"
                 aria-expanded={menuAbierto}
-                className="flex w-full items-center gap-3 rounded-[12px] border border-hairline bg-surface-2 px-4 py-3 text-left transition-colors hover:border-white/25 disabled:opacity-50"
+                className="flex w-full items-center gap-3 rounded-[12px] border border-hairline bg-surface-2 px-4 py-3 text-start transition-colors hover:border-white/25 disabled:opacity-50"
               >
                 <IconoEstado estado={bEstado} tamano={20} />
                 <span className="flex-1 text-[14.5px] font-semibold capitalize">{etiquetaEstado[bEstado]}</span>
@@ -275,7 +275,7 @@ export function DetalleActividad({
                         onClick={() => elegirEstado(e)}
                         disabled={ocupado}
                         className={
-                          "flex min-h-[44px] w-full items-center gap-3 px-4 py-2.5 text-left text-[14px] hover:bg-white/[0.05] disabled:opacity-50 " +
+                          "flex min-h-[44px] w-full items-center gap-3 px-4 py-2.5 text-start text-[14px] hover:bg-white/[0.05] disabled:opacity-50 " +
                           (activo ? "bg-white/[0.06] font-semibold" : "")
                         }
                       >

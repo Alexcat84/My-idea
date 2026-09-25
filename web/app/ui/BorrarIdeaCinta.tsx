@@ -32,7 +32,7 @@ export function BorrarIdeaCinta({ id, nombre }: { id: string; nombre: string }) 
 
   if (confirmando) {
     return (
-      <span className="absolute right-3 top-3 z-10 flex items-center gap-2 rounded-cinta border border-warn/40 bg-surface px-2.5 py-1.5 shadow-lg">
+      <span className="absolute end-3 top-3 z-10 flex items-center gap-2 rounded-cinta border border-warn/40 bg-surface px-2.5 py-1.5 shadow-lg">
         <span className="text-[11px] text-warn">{t.borrarla}</span>
         <button onClick={borrar} disabled={ocupado} className="text-[11px] font-semibold text-warn hover:underline disabled:opacity-50">
           {t.si}
@@ -49,7 +49,7 @@ export function BorrarIdeaCinta({ id, nombre }: { id: string; nombre: string }) 
       onClick={() => setConfirmando(true)}
       aria-label={interpolar(t.ariaBorrar, { nombre })}
       title={t.tituloBorrar}
-      className="absolute right-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full text-dim/70 hover:bg-warn/10 hover:text-warn"
+      className="absolute end-3 top-3 z-10 flex h-7 w-7 items-center justify-center rounded-full text-dim/70 hover:bg-warn/10 hover:text-warn"
     >
       <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" aria-hidden>
         <path d="M3 6h18" />

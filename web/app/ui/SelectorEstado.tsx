@@ -169,7 +169,7 @@ export function SelectorEstado({
             className={
               "z-50 border border-white/[0.14] bg-surface-2 shadow-[0_18px_40px_rgba(0,0,0,0.6)] " +
               "fixed inset-x-0 bottom-0 rounded-t-[18px] p-2 pb-4 " +
-              "sm:absolute sm:inset-x-auto sm:bottom-auto sm:left-0 sm:top-full sm:mt-2 sm:w-[268px] sm:rounded-[14px] sm:p-1.5 sm:pb-1.5"
+              "sm:absolute sm:inset-x-auto sm:bottom-auto sm:start-0 sm:top-full sm:mt-2 sm:w-[268px] sm:rounded-[14px] sm:p-1.5 sm:pb-1.5"
             }
           >
             <span className="mx-auto mt-1 mb-2 block h-1 w-9 rounded-full bg-white/20 sm:hidden" />
@@ -192,7 +192,7 @@ export function SelectorEstado({
                       onClick={() => elegirEstado(e)}
                       disabled={ocupado}
                       className={
-                        "flex min-h-[40px] w-full items-center gap-3 rounded-[10px] px-3 py-2.5 text-left text-[14px] disabled:opacity-50 " +
+                        "flex min-h-[40px] w-full items-center gap-3 rounded-[10px] px-3 py-2.5 text-start text-[14px] disabled:opacity-50 " +
                         (rapida
                           ? "bg-done/[0.12] font-semibold text-done hover:bg-done/[0.12]"
                           : actual

@@ -438,7 +438,7 @@ function LoginForm() {
       )}
       {estado.error && <p className="text-sm text-warn">{estado.error}</p>}
       {estado.sinConfirmar && (
-        <button type="button" onClick={reenviarConfirmacion} disabled={enviando} className="text-left text-sm text-accent hover:opacity-80">
+        <button type="button" onClick={reenviarConfirmacion} disabled={enviando} className="text-start text-sm text-accent hover:opacity-80">
           {t.reenviarConfirmacion}
         </button>
       )}

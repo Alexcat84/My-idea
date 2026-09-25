@@ -73,7 +73,7 @@ export function NotaRapida({
         title={tiene ? t.verOEditar : t.anadir}
         aria-label={tiene ? t.verOEditar : t.anadir}
         className={
-          "-my-[9px] -mr-[7px] flex shrink-0 items-center justify-center p-[9px] transition-opacity hover:opacity-75 disabled:opacity-50 sm:m-0 sm:p-0 " +
+          "-my-[9px] -me-[7px] flex shrink-0 items-center justify-center p-[9px] transition-opacity hover:opacity-75 disabled:opacity-50 sm:m-0 sm:p-0 " +
           (tiene ? "text-accent" : "text-dim hover:text-ink")
         }
       >
@@ -94,7 +94,7 @@ export function NotaRapida({
             className={
               "z-50 border border-white/[0.14] bg-surface-2 shadow-[0_18px_40px_rgba(0,0,0,0.6)] " +
               "fixed inset-x-0 bottom-0 rounded-t-[18px] p-4 pb-5 " +
-              "sm:absolute sm:inset-x-auto sm:bottom-auto sm:right-0 sm:top-full sm:mt-2 sm:w-[300px] sm:rounded-[14px] sm:p-3"
+              "sm:absolute sm:inset-x-auto sm:bottom-auto sm:end-0 sm:top-full sm:mt-2 sm:w-[300px] sm:rounded-[14px] sm:p-3"
             }
           >
             <span className="mx-auto mb-3 block h-1 w-9 rounded-full bg-white/20 sm:hidden" />
@@ -127,7 +127,7 @@ export function NotaRapida({
                     setAbierto(false);
                   }}
                   disabled={ocupado}
-                  className="ml-auto text-[12.5px] text-dim hover:text-warn disabled:opacity-50"
+                  className="ms-auto text-[12.5px] text-dim hover:text-warn disabled:opacity-50"
                 >
                   {t.quitar}
                 </button>

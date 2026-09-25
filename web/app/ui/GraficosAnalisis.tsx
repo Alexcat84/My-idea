@@ -224,7 +224,7 @@ export function EsfuerzoPorEtapa({
           <div key={s.etapa}>
             <div className="mb-1.5 flex items-baseline justify-between gap-3">
               <span className="min-w-0 truncate text-[13.5px]">
-                <span className="mr-1.5 font-semibold text-accent tabular-nums">{s.etapa}</span>
+                <span className="me-1.5 font-semibold text-accent tabular-nums">{s.etapa}</span>
                 {nombreEtapa(s.etapa)}
               </span>
               <span className="shrink-0 text-[12.5px] tabular-nums text-dim">

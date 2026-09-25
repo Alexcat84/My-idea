@@ -90,7 +90,7 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
         {linea && linea.height > 0 && (
           <span
             aria-hidden
-            className="absolute left-5 w-[4px] -translate-x-1/2 rounded sm:left-1/2"
+            className="absolute start-5 w-[4px] -translate-x-1/2 rtl:translate-x-1/2 rounded sm:start-1/2"
             style={{
               top: linea.top,
               height: linea.height,
@@ -113,7 +113,7 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
                     if (esUltima) ultimaRef.current = el;
                   }}
                   className={
-                    "absolute left-5 top-[7px] z-[1] h-[13px] w-[13px] -translate-x-1/2 rounded-full sm:left-1/2 " +
+                    "absolute start-5 top-[7px] z-[1] h-[13px] w-[13px] -translate-x-1/2 rtl:translate-x-1/2 rounded-full sm:start-1/2 " +
                     (viva ? "anima-halo-viva" : "")
                   }
                   style={viva ? { background: color } : { background: color, boxShadow: "0 0 0 4px var(--bg)" }}
@@ -122,7 +122,7 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
               <div
                 className={
                   "col-start-2 flex min-w-0 flex-col gap-[3px] " +
-                  (izq ? "sm:col-start-1 sm:items-end sm:text-right" : "sm:col-start-3 sm:items-start sm:text-left")
+                  (izq ? "sm:col-start-1 sm:items-end sm:text-end" : "sm:col-start-3 sm:items-start sm:text-start")
                 }
               >
                 {h.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(h.fecha, idioma)}</span>}
@@ -140,12 +140,12 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
               ref={(el) => {
                 ultimaRef.current = el;
               }}
-              className="absolute left-5 top-1 z-[1] flex h-9 w-9 -translate-x-1/2 items-center justify-center rounded-full text-[17px] leading-none sm:left-1/2"
+              className="absolute start-5 top-1 z-[1] flex h-9 w-9 -translate-x-1/2 rtl:translate-x-1/2 items-center justify-center rounded-full text-[17px] leading-none sm:start-1/2"
               style={{ background: "var(--bg)", border: `2.5px solid ${VERDE}`, boxShadow: "0 0 0 5px var(--bg), 0 0 0 12px rgba(63,185,80,0.22)" }}
             >
               🎉
             </span>
-            <div className="flex flex-col gap-1 pl-[52px] pt-1 sm:items-center sm:pl-0 sm:pt-[52px] sm:text-center">
+            <div className="flex flex-col gap-1 ps-[52px] pt-1 sm:items-center sm:ps-0 sm:pt-[52px] sm:text-center">
               {cierre.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(cierre.fecha, idioma)}</span>}
               <span className="text-[15px] font-extrabold uppercase tracking-[1.6px] text-done">{cierre.etiqueta}</span>
               {cierre.subtitulo && <span className="text-[14px] text-dim">{cierre.subtitulo}</span>}

@@ -76,7 +76,7 @@ export function SelectorCara({
       {/* La luz que viaja a la cara activa. */}
       <span
         aria-hidden
-        className="cristal cambiador-luz pointer-events-none absolute bottom-[5px] left-0 top-[5px] z-[1] rounded-[12px]"
+        className="cristal cambiador-luz pointer-events-none absolute bottom-[5px] start-0 top-[5px] z-[1] rounded-[12px]"
         style={{
           transform: `translateX(${ind.left}px)`,
           width: ind.width,

@@ -322,6 +322,8 @@ function GanttPapel({
         <Chip color={AZUL} texto={t.aTiempo} />
         <Chip color={AMBAR} texto={t.tardia} />
       </div>
+      {/* i18n F4: el eje del tiempo se lee de izquierda a derecha en todo idioma (también en árabe). */}
+      <div dir="ltr">
       {esCintas ? (
         <div>
           <div style={{ position: "relative", height: 30, marginBottom: 16 }}>
@@ -363,6 +365,7 @@ function GanttPapel({
         {ticks.map((tick, i) => (
           <span key={i}>{i === 0 ? interpolar(t.diaN, { n: tick }) : tick}</span>
         ))}
+      </div>
       </div>
     </Tarjeta>
   );

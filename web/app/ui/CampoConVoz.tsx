@@ -90,7 +90,7 @@ export function CampoConVoz({ valor, onCambio, placeholder, filas = 6, autoFocus
           aria-label={escuchando ? t.detenerDictado : t.dictarPorVoz}
           aria-pressed={escuchando}
           className={
-            "absolute bottom-3 right-3 flex h-10 w-10 items-center justify-center rounded-full " +
+            "absolute bottom-3 end-3 flex h-10 w-10 items-center justify-center rounded-full " +
             (escuchando ? "bg-accent text-white animate-pulse" : "border border-hairline bg-surface-2 text-dim hover:text-ink")
           }
         >
