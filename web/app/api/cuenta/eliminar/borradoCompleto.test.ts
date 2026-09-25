@@ -13,6 +13,11 @@
 //   B4. las identidades invisibles de app_metadata.adopcion_pendiente y las
 //       ideas escritas antes de entrar. SE BORRAN (solo si de verdad son
 //       invisibles: nunca una cuenta real).
+//   B5 (decisión del fundador, 27 sep 2026). credit_transactions: el ON DELETE
+//       CASCADE se llevaba el historial entero. SE ANONIMIZA como B1 y B2:
+//       queda el monto (con su tipo: compra, consumo o devolución) y la fecha;
+//       sin persona, concepto, origen, clave ni saldo acumulado. Los registros
+//       fiscales de las ventas los conserva el procesador de pagos.
 import { beforeEach, describe, expect, it, vi } from "vitest";
 
 vi.mock("@/lib/seguridad", async (importOriginal) => ({
@@ -76,6 +81,29 @@ describe("borrar la cuenta borra o anonimiza todo lo del usuario", () => {
   it("B2: sus eventos de pago quedan anónimos", async () => {
     await pedir();
     expect(anonimizados).toContainEqual({ tabla: "revenuecat_webhook_events", cambios: { app_user_id: null }, col: "app_user_id", val: "u1" });
+  });
+
+  it.fails("B5: su historial de créditos queda anónimo (solo monto, tipo y fecha)", async () => {
+    await pedir();
+    expect(anonimizados).toContainEqual({
+      tabla: "credit_transactions",
+      cambios: { user_id: null, saldo_resultante: null, concepto: null, origen: null, idempotency_key: null },
+      col: "user_id",
+      val: "u1",
+    });
+  });
+
+  it.fails("B5: el historial se anonimiza ANTES de borrar la cuenta (si no, el CASCADE se lo lleva)", async () => {
+    const orden: string[] = [];
+    const antes = anonimizados.push.bind(anonimizados);
+    anonimizados.push = (...xs) => (xs.forEach((x) => orden.push(x.tabla)), antes(...xs));
+    const antesU = usuariosBorrados.push.bind(usuariosBorrados);
+    usuariosBorrados.push = (...xs) => (xs.forEach((x) => orden.push(`borrar:${x}`)), antesU(...xs));
+    await pedir();
+    anonimizados.push = antes;
+    usuariosBorrados.push = antesU;
+    expect(orden.indexOf("credit_transactions")).toBeGreaterThan(-1);
+    expect(orden.indexOf("credit_transactions")).toBeLessThan(orden.indexOf("borrar:u1"));
   });
 
   it("B3: su correo sale de la lista de invitados (normalizado como la lista lo guarda)", async () => {
