@@ -3,6 +3,20 @@
 Lista viva de lo que queda por hacer. Se actualiza al cerrar o abrir frentes.
 (Última actualización: agosto 2026.)
 
+## 0. Fechas de las decisiones del fundador: vale la del commit (corrección declarada, 24 sep 2026)
+
+Las decisiones del fundador que en este repo (y en la forja) aparecen fechadas
+**"25 sep", "26 sep" y "27 sep" de 2026** fueron mal fechadas por el auditor de
+hilo: el reloj de la máquina, que es el correcto, marcaba el 24 de septiembre
+cuando se recogieron (las de la campaña de fidelidad entraron en commits del 24).
+**Su fecha real es la del commit que las recoge.** Los documentos no se reescriben: esta nota es la corrección, única y
+declarada, y cubre también los ficheros de la campaña de fidelidad que citan esas
+decisiones (`docs/fidelidad/`, las tandas y el campo `correcciones` de los nodos).
+
+**La regla, desde ahora:** la fecha que vale de una decisión es la del commit que la
+recoge (`git log --format=%ci`). Una fecha escrita en el texto es orientativa; si
+no coincide con la del commit, manda el commit.
+
 ## 0a. Campaña de FIDELIDAD: lo que queda para la integración del mundo 11 (24 sep 2026)
 
 Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice
