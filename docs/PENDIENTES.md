@@ -516,6 +516,29 @@ son la capa 3 embrionaria). Matriz de fases:
 
 ## 5. Backlog / afinar
 
+- **`contador-upstash-ruidoso`** (decisión del fundador 3, 27 sep 2026). **El
+  incidente (24 sep 2026):** la base Redis de Upstash que usa el contador de límites
+  (`web/lib/rateLimit.ts`) desapareció (`getaddrinfo ENOTFOUND
+  tough-fox-158997.upstash.io`, confirmado contra los DNS de Google) y **toda la IA
+  quedó caída**: ordenar, explorar y generar planes daban 500 y la pantalla decía el
+  genérico "algo se atoró de nuestro lado". El fundador creó una base nueva y cargó
+  `UPSTASH_REDIS_REST_URL` / `UPSTASH_REDIS_REST_TOKEN` en Vercel.
+  **Lo que se encontró en el código:** el comentario de `contarEnUpstash` promete
+  "Upstash caído no debe tumbar el producto: se permite y se registra", pero solo lo
+  cumple cuando Upstash RESPONDE con error (`!resIncr.ok`); si no se le puede alcanzar
+  (DNS, red), `fetch` lanza, nadie lo atrapa y la ruta cae en 500. El texto promete lo
+  que el código no hace.
+  **Lo que manda el fundador:** el fallo del contador se dice con claridad **en los
+  registros y en pantalla, nunca un genérico**. Por decidir en la tanda: si con el
+  contador caído se **deja pasar** (con alerta ruidosa en los registros y un aviso
+  honesto) o se **frena** con un mensaje que diga la razón; el fusible global también
+  vive en Upstash, así que dejar pasar deja la IA sin tope de gasto mientras dure.
+  **Revisar (POR VERIFICAR con la política vigente de Upstash):** si una base gratuita
+  puede archivarse o borrarse por inactividad, y cómo evitarlo (un toque diario desde la
+  tarea programada que ya existe, `/api/cron/limpiar-invitados`; el plan de pago; o la
+  integración de Upstash del Marketplace de Vercel). Prueba en rojo primero: `fetch`
+  que lanza en `contarEnUpstash` → hoy 500 con genérico.
+
 - **`mundos-de-proteccion-sobre-lo-existente`** → **PROMOVIDA A CAMPAÑA.** La spec del
   fundador es **`docs/PLAN_MUNDOS_PROTECCION.md`** (5 ago 2026), que responde las
   cuatro preguntas que esta ficha dejó abiertas y añade las herramientas canónicas
