@@ -24,7 +24,7 @@ grafo de conocimiento **se queda en español** (no se traduce). Diseño completo
 | **F2** base de idiomas + todos los textos al catálogo en español, la app idéntica | **HECHA, CON VISTO DEL FUNDADOR, EN PRODUCCIÓN** | `6a887b99` (base), `124113cb` (extracción), `1b495e32` (hilo del idioma), `20c0250e` (informe `docs/i18n/F2_INFORME.md`); en `main` con `9361c569`, etiqueta `web-v2.7.0` |
 | **F3** las otras 10 traducciones con el glosario; formatos por idioma | **HECHA, CON VISTO DEL FUNDADOR, EN `main`** (sin interruptor, decisión del 25 sep 2026) | `73811801` … `ed8dd15a`; informes `F3_INFORME_EN.md` y `F3_INFORME_OTROS.md`; en `main` con `434a9c1b`, etiqueta `web-v2.8.0` |
 | **F4** árabe RTL; tipografías CJK y devanagari solo al elegirlas; capturas de cada una | **HECHA, CON VISTO DEL FUNDADOR (25 sep 2026), EN `main`** | `434a9c1b` (`F4_INFORME.md`); `main` avanzó por avance rápido `9361c569..434a9c1b` |
-| **F5** idioma del proyecto (`projects.idioma`, migración), prompts con idioma de salida, remedio del buscador, plantillas de los generadores sin IA, D3; **más** los idiomas fuera de los once y el conteo anónimo (decisión del 25 sep 2026) | **EN CURSO** en `i18n` (ver §10) | — |
+| **F5** idioma del proyecto (`projects.idioma`, migración 046), prompts con idioma de salida, remedio del buscador, plantillas de los generadores sin IA, D3; **más** los idiomas fuera de los once y el conteo anónimo (decisión del 25 sep 2026) | **HECHA, PENDIENTE DEL VISTO** y de aplicar la 046 (`F5_INFORME.md`) | `ccd91a19` … `c00f3570` |
 | **F6** correos (D4), documentos, la elisión del italiano ("l'8 marzo", decisión del 25 sep 2026), legales (D5, francés obligatorio), SEO y `hreflang` (D9); auditor y guardias de frases por idioma | por hacer | — |
 
 ### Lo que F2 dejó construido (y cómo se usa)
@@ -205,3 +205,9 @@ Las suites no necesitan claves: ningún test cambia de veredicto según haya o n
 - **F5** sigue en la rama `i18n`, con dos añadidos del fundador: los **idiomas fuera de los once**
   (una idea escrita en otro idioma) y el **conteo anónimo** de los idiomas en que se escribe. La
   migración queda escrita con su nombre y la aplica el fundador en Supabase.
+- **F5 hecha, pendiente del visto** (`F5_INFORME.md`, discutibles del riel en
+  `F5_DISCUTIBLES_RIEL.md`). La migración 046 (`my_idea_046_idioma_del_proyecto.sql`) la aplica el
+  fundador; el código funciona con y sin ella.
+- **Para mantener las etiquetas del riel** (D3): si el grafo gana nodos, `etiquetasRiel.test.ts`
+  falla. `cd web && npx tsx scripts/i18n/etiquetasRiel.ts exportar <idioma> <salida.json> --lote 800`
+  exporta solo las que faltan; se traducen con las reglas de F3 y se aplican con `aplicar`.
