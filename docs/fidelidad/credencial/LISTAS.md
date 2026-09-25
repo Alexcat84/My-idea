@@ -89,3 +89,8 @@ Retiradas el 24 sep por la decision del fundador 1 (commit de fidelidad-cache-1)
 
 Su resumen cambio dentro de los 400 caracteres que lee el generador, pero por una correccion de "Sugerencia de My Idea" (un anadido practico, no un dato): la pregunta no afirma nada falso y sigue en la cache. Regenerarla la alinea con el texto nuevo.
 
+
+## 3. HECHO el 24 sep 2026 (sesion con credencial)
+
+- **Indice semantico** reconstruido con voyage-4-lite (dim 512): 3169 nodos vivos, unos 532.600 tokens. Los 44 nodos de la lista cambiaron de vector (coseno con el viejo entre 0,970 y 0,9997); de los otros 3125, 61 se movieron por debajo del ruido (coseno >= 0,99995). Los dos puntos de control del salto semantico siguen separados por el umbral vigente (`MIN_SCORE_SALTO = 0.3` en `web/lib/compass.ts`): 0,351 pasa y 0,263 queda fuera; no se toca.
+- **Preguntas**: las 23 regeneradas con `build_question_cache.py --patch-file` (el modelo del producto, claude-haiku-4-5; 16.636 tokens de entrada y 2.093 de salida, 0,03 USD). Las 23 vuelven a la cache (3546 a 3569), ninguna otra cambio y ninguna trae guiones largos. El registro de lo retirado se queda en `docs/fidelidad/PREGUNTAS_RETIRADAS.json` como historia.

@@ -14,7 +14,7 @@ en verde. El registro de cada tanda vive en `docs/fidelidad/tandas/`.
 Lo que esas tandas **no** pueden hacer solas, y queda para la integración del
 mundo 11:
 
-1. **Re-embeber los nodos corregidos** en la sesión con credencial (Voyage). El
+1. **HECHO el 24 sep 2026** (`docs/fidelidad/credencial/LISTAS.md`, sección 3). **Re-embeber los nodos corregidos** en la sesión con credencial (Voyage). El
    índice semántico guarda el vector del texto viejo; Gate 0 no lo ve rojo
    porque el vector existe, pero ya no describe el texto nuevo. **Lista exacta
    (24 sep 2026): `docs/fidelidad/credencial/nodos_a_reembeber.txt`**, con su
@@ -26,7 +26,7 @@ mundo 11:
    de `sync_assets_web.py`), en vez de fusionarlos a mano: el ciclo es
    `run_phase1.py --reaplico-curaduria`, `etiquetas_de_cara.py --aplicar` y
    `sync_assets_web.py`.
-3. **La caché de preguntas** (`preguntas_cache.json`) se construyó con el texto
+3. **HECHO el 24 sep 2026** (las 23 de vuelta en la caché). **La caché de preguntas** (`preguntas_cache.json`) se construyó con el texto
    viejo de esos nodos; su regeneración parcial (`build_question_cache.py
    --patch`) también gasta credencial y va en la misma sesión que el punto 1.
    Las preguntas nacidas de un resumen corregido por CONTRARIO o por cifra,
