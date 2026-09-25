@@ -54,6 +54,9 @@ export interface DocumentoIndice {
   /** identificador estable que la UI manda de vuelta para pedir el contenido */
   clave: string;
   tipo: "ciclo" | "expediente" | "bitacora" | "analisis" | "reporte" | "registro";
+  /** i18n F3: un ciclo posterior al primero (un Seguimiento). La UI elige su
+   * ícono por aquí: el título está en el idioma de quien lo lee. */
+  seguimiento?: boolean;
   titulo: string;
   subtitulo: string;
   /** ISO; null solo si el documento no cuelga de una fecha concreta */
@@ -183,9 +186,10 @@ export function indiceDeDocumentos(
   idioma: Locale = LOCALE_BASE,
 ): DocumentoIndice[] {
   const t = elegir(EXPEDIENTE, idioma).indice;
-  const docs: DocumentoIndice[] = titulosDeCiclos(ciclos, idioma).map(({ ciclo, titulo, subtitulo }) => ({
+  const docs: DocumentoIndice[] = titulosDeCiclos(ciclos, idioma).map(({ ciclo, titulo, subtitulo }, i) => ({
     clave: claveDeCiclo(ciclo.planId),
     tipo: "ciclo" as const,
+    seguimiento: i > 0,
     titulo,
     subtitulo,
     fecha: ciclo.createdAt,

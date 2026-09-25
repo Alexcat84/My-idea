@@ -14,11 +14,9 @@ import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { CUENTA } from "@/lib/i18n/mensajes/cuenta";
 import { rico } from "@/lib/i18n/rico";
+import { palabraEliminar } from "@/lib/i18n/palabraEliminar";
 import { createClient } from "@/lib/supabase/client";
 
-/** La palabra que confirma el borrado: un DATO que /api/cuenta/eliminar
- * compara tal cual, no un texto del catálogo. */
-const PALABRA_CONFIRMAR = "ELIMINAR";
 
 type Flujo2FA =
   | { paso: "reposo" }
@@ -61,7 +59,11 @@ function ZonaDePeligro({ children }: { children: React.ReactNode }) {
 }
 
 export function CuentaCliente({ email }: { email: string }) {
-  const t = elegir(CUENTA, useIdioma());
+  const idioma = useIdioma();
+  const t = elegir(CUENTA, idioma);
+  // La palabra que confirma el borrado: un DATO que /api/cuenta/eliminar
+  // compara, en el idioma de la interfaz (lib/i18n/palabraEliminar).
+  const PALABRA_CONFIRMAR = palabraEliminar(idioma);
   const router = useRouter();
   const [seguridad, setSeguridad] = useState<Seguridad | null>(null);
   const [flujo, setFlujo] = useState<Flujo2FA>({ paso: "reposo" });

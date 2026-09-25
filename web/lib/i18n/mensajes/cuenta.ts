@@ -1,8 +1,8 @@
 /**
  * /cuenta, el centro de cuenta: app/cuenta/page.tsx y ui/CuentaCliente.tsx.
  * La palabra de confirmación del borrado (ELIMINAR) NO está aquí: es un dato
- * que el servidor compara (/api/cuenta/eliminar), y entra a las frases por la
- * etiqueta <palabra/>.
+ * que el servidor compara (/api/cuenta/eliminar), vive en lib/i18n/palabraEliminar
+ * (una por idioma), y entra a las frases por la etiqueta <palabra/>.
  */
 import type { PorIdioma } from "../config";
 

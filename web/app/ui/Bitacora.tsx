@@ -13,6 +13,7 @@
  * El .md y el PDF salen del MISMO texto (bitacoraMarkdown), la misma verdad que
  * el documento del panel.
  */
+import { partirMotivo } from "@/lib/i18n/comillas";
 import { useEffect, useState } from "react";
 import { etiquetaEspacio, proyectoTieneMundos, type EntradaBitacora } from "@/lib/bitacoraCliente";
 import catalogo from "@/lib/assets/packs_catalog.json";
@@ -103,13 +104,15 @@ function TextoEntrada({ e }: { e: EntradaBitacora }) {
   return <span style={{ fontSize: 14.5, lineHeight: 1.55, color: "#DDDEE3" }}>{e.texto}</span>;
 }
 
-/** Si el texto trae un motivo citado tras dos puntos (": «…»"), colorea la cita. */
+/** Si el texto trae un motivo citado tras dos puntos (": «…»" en español; cada idioma con sus comillas), colorea la cita. */
 function coloreaMotivo(texto: string, color: string) {
-  const m = texto.match(/^([\s\S]*?): («[\s\S]*»)$/);
+  const m = partirMotivo(texto);
   if (!m) return texto;
   return (
     <>
-      {m[1]}: <span style={{ color }}>{m[2]}</span>
+      {m[0]}
+      {m[1]}
+      <span style={{ color }}>{m[2]}</span>
     </>
   );
 }

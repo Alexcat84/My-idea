@@ -21,7 +21,7 @@ const es = {
     noPudimosCrear: "no pudimos crear tu cuenta; intenta de nuevo en un momento",
   },
   eliminar: {
-    escribeEliminar: 'Para borrar tu cuenta escribe la palabra "ELIMINAR" tal cual.',
+    escribeEliminar: 'Para borrar tu cuenta escribe la palabra "{{palabra}}" tal cual.',
     seguridadSinConfirmar:
       "No pude confirmar la seguridad de tu cuenta, así que no borré nada. Intenta de nuevo en un momento.",
     noPudeBorrarTodo: "No pude borrar todos tus datos, así que tu cuenta sigue igual. Intenta de nuevo en un momento.",

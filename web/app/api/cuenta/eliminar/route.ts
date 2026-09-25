@@ -1,6 +1,7 @@
 /**
  * POST /api/cuenta/eliminar — borra la cuenta COMPLETA (réplica del I Ching
- * api/account/delete): exige la palabra escrita "ELIMINAR", y con 2FA activo
+ * api/account/delete): exige la palabra escrita ("ELIMINAR" en español; i18n
+ * F3: la del idioma o la del español, lib/i18n/palabraEliminar), y con 2FA activo
  * exige además el desafío superado en esta sesión. Antes de borrar, si la
  * cuenta recibió cortesía, se escribe la huella del correo
  * (cortesia_email_log): borrar-y-volver no re-otorga los 20.
@@ -22,6 +23,8 @@ import { NextResponse } from "next/server";
 import { elegir } from "@/lib/i18n/config";
 import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
+import { interpolar } from "@/lib/i18n/interpolar";
+import { esPalabraEliminar, palabraEliminar } from "@/lib/i18n/palabraEliminar";
 import { huellaDeEmail } from "@/lib/cuentas";
 import {
   aviso2FA,
@@ -44,9 +47,9 @@ export async function POST(request: Request) {
   } catch {
     return NextResponse.json({ error: t.comun.cuerpoInvalido }, { status: 400 });
   }
-  if (String(body.confirmacion ?? "").trim().toUpperCase() !== "ELIMINAR") {
+  if (!esPalabraEliminar(body.confirmacion, idioma)) {
     return NextResponse.json(
-      { error: t.eliminar.escribeEliminar },
+      { error: interpolar(t.eliminar.escribeEliminar, { palabra: palabraEliminar(idioma) }) },
       { status: 400 }
     );
   }

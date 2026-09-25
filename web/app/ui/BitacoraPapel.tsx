@@ -11,6 +11,7 @@
  * Misma verdad que el .md: sale de las mismas `entradas`. El .md descargable
  * sigue siendo texto (bitacoraMarkdown); esto es solo su vestido en papel.
  */
+import { partirMotivo } from "@/lib/i18n/comillas";
 import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
 import type { EntradaBitacora } from "@/lib/bitacoraCliente";
 import { elegir } from "@/lib/i18n/config";
@@ -56,13 +57,15 @@ function aFilas(entradas: EntradaBitacora[]): Fila[] {
   return filas;
 }
 
-/** Colorea la cita del motivo (": «…»") en el color dado. */
+/** Colorea la cita del motivo (": «…»" en español; cada idioma con sus comillas) en el color dado. */
 function conMotivo(texto: string, color: string) {
-  const m = texto.match(/^([\s\S]*?): («[\s\S]*»)$/);
+  const m = partirMotivo(texto);
   if (!m) return texto;
   return (
     <>
-      {m[1]}: <span style={{ color }}>{m[2]}</span>
+      {m[0]}
+      {m[1]}
+      <span style={{ color }}>{m[2]}</span>
     </>
   );
 }

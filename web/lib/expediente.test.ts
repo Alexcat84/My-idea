@@ -85,6 +85,22 @@ describe("indiceDeDocumentos", () => {
     expect(docs.at(-1)!.subtitulo).toContain("hasta hoy");
   });
 
+  // i18n F3: el ícono de Descargas no puede salir de leer el título ("Seguimiento…"
+  // solo existe en español); el índice marca el seguimiento con un campo propio.
+  // Ciclo 0 = Tu Plan (no es seguimiento); ciclos 1 y 2 = Seguimiento 1 y 2.
+  it("marca los seguimientos con un campo, no por el título (i18n F3)", () => {
+    const docs = indiceDeDocumentos(
+      [
+        ciclo("p1", "completo", "2026-03-01T12:00:00Z"),
+        ciclo("p2", "seguimiento", "2026-03-20T12:00:00Z"),
+        ciclo("p3", "seguimiento", "2026-04-02T12:00:00Z"),
+      ],
+      null
+    );
+    expect(docs.filter((d) => d.tipo === "ciclo").map((d) => d.seguimiento)).toEqual([false, true, true]);
+    expect(docs.filter((d) => d.tipo !== "ciclo").every((d) => !d.seguimiento)).toBe(true);
+  });
+
   it("sin ningún plan no ofrece expediente (no hay desarrollo que contar)", () => {
     expect(indiceDeDocumentos([], null)).toEqual([]);
   });

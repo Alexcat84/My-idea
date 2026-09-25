@@ -238,7 +238,7 @@ export function Descargas({
 
   const renderDoc = (doc: DocumentoIndice, etiqueta?: string) => {
     const esExpediente = doc.tipo === "expediente";
-    const esSeguimiento = /^seguimiento/i.test(doc.titulo);
+    const esSeguimiento = doc.seguimiento === true;
     return (
       <div
         key={doc.clave}
