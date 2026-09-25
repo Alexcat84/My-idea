@@ -638,5 +638,24 @@ FROM (
     (SELECT count(*) FROM information_schema.columns
       WHERE table_schema='public' AND table_name='credit_transactions'
         AND column_name IN ('user_id','saldo_resultante') AND is_nullable='YES') = 2
+  UNION ALL
+  -- 046 . idioma del proyecto + conteo anonimo de idiomas (i18n F5, decision del fundador, 25 sep 2026).
+  -- ANTES de aplicar debe decir MISSING; DESPUES, OK.
+  SELECT '046', 'projects.idioma + conteo_idiomas + contar_idioma_de_idea (service-role-only)',
+    EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='projects' AND column_name='idioma'
+    )
+    AND EXISTS (SELECT 1 FROM information_schema.tables WHERE table_schema='public' AND table_name='conteo_idiomas')
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.columns
+      WHERE table_schema='public' AND table_name='conteo_idiomas' AND column_name IN ('user_id','project_id')
+    )
+    AND EXISTS (SELECT 1 FROM pg_proc WHERE proname='contar_idioma_de_idea' AND pronamespace='public'::regnamespace AND prosecdef)
+    AND NOT EXISTS (
+      SELECT 1 FROM information_schema.role_routine_grants
+      WHERE routine_schema='public' AND routine_name='contar_idioma_de_idea'
+        AND grantee IN ('anon','authenticated') AND privilege_type='EXECUTE'
+    )
 ) checks
 ORDER BY num;
