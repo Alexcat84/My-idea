@@ -157,7 +157,7 @@ export function AnalisisProyecto({
           <p className="mt-2 text-[14px]">
             {rico(
               interpolar(t.actaCerrado, {
-                fecha: fechaHumanaCorta(acta.cerrada_at),
+                fecha: fechaHumanaCorta(acta.cerrada_at, idioma),
                 hechas: acta.instantanea.acciones.hechas,
                 total: acta.instantanea.acciones.total,
               }),
@@ -183,7 +183,7 @@ export function AnalisisProyecto({
           <p className="mt-2 text-[14px]">
             {rico(
               interpolar(t.estadoCerrado, {
-                fecha: fechaHumanaCorta(realizadaAt),
+                fecha: fechaHumanaCorta(realizadaAt, idioma),
                 hechas: u.accionesVigente.hechas,
                 total: u.accionesVigente.total,
               }),

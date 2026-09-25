@@ -456,7 +456,7 @@ function VersionesAnteriores({ versiones, onVer }: { versiones: VersionResumen[]
               onClick={() => onVer(v.id)}
               className="group flex w-full items-center gap-4 border-b border-hairline px-6 py-4 text-left last:border-b-0 hover:bg-surface-2"
             >
-              <span className="text-[14px] font-semibold group-hover:text-accent">{selloVersion(v.fecha, ahora, conHora)}</span>
+              <span className="text-[14px] font-semibold group-hover:text-accent">{selloVersion(v.fecha, ahora, conHora, idioma)}</span>
               <span className={`h-2 w-2 flex-none rounded-full ${punto}`} aria-hidden />
               <span className="text-[13px] text-dim">{v.tono ? tx.tonos[v.tono] : "—"}</span>
               <span className={`ml-auto text-[14px] font-semibold ${mg.clase}`}>{mg.texto}</span>
@@ -471,7 +471,8 @@ function VersionesAnteriores({ versiones, onVer }: { versiones: VersionResumen[]
 
 // ── pantalla ───────────────────────────────────────────────────────────────
 export function TusNumeros({ projectId }: { projectId: string }) {
-  const tx = elegir(TUS_NUMEROS, useIdioma());
+  const idioma = useIdioma();
+  const tx = elegir(TUS_NUMEROS, idioma);
   const [data, setData] = useState<RespuestaNumeros | null>(null);
   const [error, setError] = useState<string | null>(null);
   const [editando, setEditando] = useState(false);
@@ -606,7 +607,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
         <div className="mx-auto w-full max-w-[1060px] px-10 pb-16 pt-8">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-panel border border-accent/40 bg-accent/[0.06] px-6 py-4">
             <p className="text-[14px] font-semibold text-accent">
-              {interpolar(tx.historico.viendo, { momento: momentoAbsoluto(historico.cifras_fecha) })}
+              {interpolar(tx.historico.viendo, { momento: momentoAbsoluto(historico.cifras_fecha, undefined, idioma) })}
             </p>
             <button
               onClick={volverAHoy}
@@ -629,7 +630,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
   const t = data.tablero;
   const v = data.veredicto;
   const reciente = data.cifras_fecha ? new Date().getTime() - new Date(data.cifras_fecha).getTime() < 120_000 : false;
-  const selloHoy = data.cifras_fecha ? (reciente ? tx.recienActualizado : fechaSello(data.cifras_fecha)) : null;
+  const selloHoy = data.cifras_fecha ? (reciente ? tx.recienActualizado : fechaSello(data.cifras_fecha, undefined, idioma)) : null;
 
   return (
     <div className="min-h-full">

@@ -20,7 +20,10 @@ export const TOPE_RENARRACION_DIA = 5;
 /** En palabras de persona cuando se alcanza el tope (amarre del fundador):
  * espejo, sin regano, y deja claro que nada se pierde. El texto vive en el
  * catálogo; la constante es su valor base (quien la muestra elige por idioma). */
-export const MENSAJE_TOPE_RENARRACION = elegir(MOTOR_NUMEROS, LOCALE_BASE).vivo.topeRenarracion;
+export function mensajeTopeRenarracion(idioma: Locale = LOCALE_BASE): string {
+  return elegir(MOTOR_NUMEROS, idioma).vivo.topeRenarracion;
+}
+export const MENSAJE_TOPE_RENARRACION = mensajeTopeRenarracion(LOCALE_BASE);
 
 /** Un entero de dinero al estilo del canon, SIN signo: "$1.200", "$170" (el
  * valor absoluto: la frase ya dice si es pérdida). dinero() de formato.ts. */

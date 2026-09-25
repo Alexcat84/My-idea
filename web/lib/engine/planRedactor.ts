@@ -46,7 +46,10 @@ import { detectarFaltaDeAcentos } from "../detectorAcentos";
 /** AUD-09 H02: lo que la pantalla le dice a quien recibe un plan armado sin la
  * redacción con IA (el ensamblado offline). Ese plan no se cobra. */
 // i18n F2: el texto vive en el catálogo MOTOR_PLAN; la constante es el valor base.
-export const AVISO_VERSION_BASICA = elegir(MOTOR_PLAN, LOCALE_BASE).avisoVersionBasica;
+export function avisoVersionBasica(idioma: Locale = LOCALE_BASE): string {
+  return elegir(MOTOR_PLAN, idioma).avisoVersionBasica;
+}
+export const AVISO_VERSION_BASICA = avisoVersionBasica(LOCALE_BASE);
 
 /** El aviso de un plan ya guardado, derivado del evento que la ruta del plan
  * deja en las decisiones de su sesión: tras recargar, el aviso sigue ahí. */

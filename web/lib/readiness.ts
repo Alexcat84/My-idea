@@ -9,7 +9,8 @@
  * para paridad y para poder reclasificar si el dataset cambia.
  */
 import nodeFamiliesJson from "./assets/node_families.json";
-import { TEXTO_FAMILIA_FALTANTE } from "./engine/constants";
+import { textosFamiliaFaltante } from "./engine/constants";
+import { LOCALE_BASE, type Locale } from "./i18n/config";
 
 export const MIN_NODOS_COMPLETA = 5;
 
@@ -91,16 +92,23 @@ export interface EvaluacionCobertura {
  * Evalua si una ruta esta lista para un plan completo (toca >=1 nodo de
  * accion_clientes y >=1 de viabilidad_economica, con al menos 5 nodos).
  */
-export function evaluarRuta(ruta: string[], families: Record<string, Familia>): EvaluacionCobertura {
+export function evaluarRuta(
+  ruta: string[],
+  families: Record<string, Familia>,
+  /** i18n: el idioma de los textos de lo que falta (el recorrido pasa el de la
+   * interfaz; el plan, que es documento, queda en el base hasta F5). */
+  idioma: Locale = LOCALE_BASE
+): EvaluacionCobertura {
   const familiasEnRuta = new Set(ruta.map((nid) => families[nid] ?? "general"));
   const tieneAccion = familiasEnRuta.has("accion_clientes");
   const tieneViabilidad = familiasEnRuta.has("viabilidad_economica");
   const esCompleta = tieneAccion && tieneViabilidad && ruta.length >= MIN_NODOS_COMPLETA;
   const faltantes: string[] = [];
   // AUD-09 M33: los textos de la fuente única (constants.ts).
-  if (!tieneAccion) faltantes.push(TEXTO_FAMILIA_FALTANTE.accion_clientes);
-  if (!tieneViabilidad) faltantes.push(TEXTO_FAMILIA_FALTANTE.viabilidad_economica);
-  if (ruta.length < MIN_NODOS_COMPLETA) faltantes.push(TEXTO_FAMILIA_FALTANTE.profundidad);
+  const texto = textosFamiliaFaltante(idioma);
+  if (!tieneAccion) faltantes.push(texto.accion_clientes);
+  if (!tieneViabilidad) faltantes.push(texto.viabilidad_economica);
+  if (ruta.length < MIN_NODOS_COMPLETA) faltantes.push(texto.profundidad);
   return {
     es_completa: esCompleta,
     tiene_accion_clientes: tieneAccion,

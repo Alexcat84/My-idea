@@ -7,6 +7,7 @@
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
 import catalogo from "./assets/packs_catalog.json";
+import { LOCALE_BASE, type Locale } from "./i18n/config";
 import {
   construirBitacora,
   type EntradaBitacora,
@@ -24,7 +25,10 @@ export async function cargarEntradasBitacora(
   supabase: SupabaseClient,
   projectId: string,
   proyecto: ProyectoMin,
-  nombre: string
+  nombre: string,
+  /** i18n: el idioma de los textos de cada entrada (la pantalla pasa el de la
+   * interfaz; los documentos quedan en el base hasta F5, D2). */
+  idioma: Locale = LOCALE_BASE
 ): Promise<EntradaBitacora[]> {
   const packs = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
   const nombreMundo = (dominio: string) => packs.find((p) => p.clave === dominio)?.nombre ?? dominio;
@@ -75,5 +79,5 @@ export async function cargarEntradasBitacora(
     eventos,
     nombreMundo,
     generadoAt: new Date().toISOString(),
-  });
+  }, idioma);
 }

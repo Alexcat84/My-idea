@@ -11,7 +11,7 @@
  * es tuyo no se cobra.
  */
 import { NextResponse } from "next/server";
-import { elegir } from "@/lib/i18n/config";
+import { elegir, LOCALE_BASE } from "@/lib/i18n/config";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { DOCUMENTOS_RUTA } from "@/lib/i18n/mensajes/documentosRuta";
 import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
@@ -21,7 +21,7 @@ import type { AnalisisPapelData } from "@/app/ui/AnalisisPapel";
 import { analyticsDeMundo, calcularAnalytics, informeMarkdown, resumenEspacioMd } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
 import catalogo from "@/lib/assets/packs_catalog.json";
-import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
+import { cargarEntradaAnalytics, LecturaFallidaError, mensajeLecturaFallida } from "@/lib/analyticsEntrada";
 import { bitacoraCuerpo, bitacoraDeEspacio, bitacoraMarkdown, etiquetaEspacio, proyectoTieneMundos } from "@/lib/bitacoraCliente";
 import { cargarEntradasBitacora } from "@/lib/bitacoraDatos";
 import { obtenerItemsDePlan, obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
@@ -114,6 +114,9 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
   const idioma = idiomaDeRequest(request);
   const r = elegir(RUTAS, idioma);
   const t = elegir(DOCUMENTOS_RUTA, idioma);
+  // Lo que forma el documento (títulos, archivo, encabezados) sigue el idioma
+  // del proyecto (D2, llega en F5): hoy el base. Los rechazos, el de la interfaz.
+  const tDoc = elegir(DOCUMENTOS_RUTA, LOCALE_BASE);
 
   const supabase = await createClient();
   const {
@@ -201,9 +204,9 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
 
     const nombreDom = nombreMundo(dominio);
     return NextResponse.json({
-      titulo: interpolar(t.tituloReporte, { mundo: nombreDom }),
+      titulo: interpolar(tDoc.tituloReporte, { mundo: nombreDom }),
       nombre,
-      archivo: nombreArchivo(nombre, interpolar(t.tituloReporte, { mundo: nombreDom })),
+      archivo: nombreArchivo(nombre, interpolar(tDoc.tituloReporte, { mundo: nombreDom })),
       markdown: reporteMundoMarkdown({
         nombreIdea: nombre,
         nombreMundo: nombreDom,
@@ -258,11 +261,11 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     const nombreDom = nombreMundo(dominio);
     const generado = new Date().toISOString();
     return NextResponse.json({
-      titulo: interpolar(t.tituloRegistro, { mundo: nombreDom }),
+      titulo: interpolar(tDoc.tituloRegistro, { mundo: nombreDom }),
       nombre,
-      archivo: nombreArchivo(nombre, interpolar(t.tituloRegistro, { mundo: nombreDom })),
+      archivo: nombreArchivo(nombre, interpolar(tDoc.tituloRegistro, { mundo: nombreDom })),
       markdown: [
-        interpolar(t.encabezadoRegistro, { nombre, mundo: nombreDom, fecha: fechaHumanaCorta(generado) }),
+        interpolar(tDoc.encabezadoRegistro, { nombre, mundo: nombreDom, fecha: fechaHumanaCorta(generado) }),
         "",
         registroMarkdown(nombreDom, entradas),
       ].join("\n"),
@@ -276,9 +279,9 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     // (nombre de cara), con RUIDO CERO — un proyecto solo-core no etiqueta nada.
     const hayMundos = proyectoTieneMundos(entradas);
     return NextResponse.json({
-      titulo: t.tituloBitacora,
+      titulo: tDoc.tituloBitacora,
       nombre,
-      archivo: nombreArchivo(nombre, t.archivoBitacora),
+      archivo: nombreArchivo(nombre, tDoc.archivoBitacora),
       markdown: bitacoraMarkdown(nombre, entradas, generado, undefined, (e) =>
         etiquetaEspacio(e.dominio, hayMundos, nombreMundo),
       ),
@@ -332,9 +335,9 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
         : null,
     };
     return NextResponse.json({
-      titulo: t.tituloAnalisis,
+      titulo: tDoc.tituloAnalisis,
       nombre,
-      archivo: nombreArchivo(nombre, t.archivoAnalisis),
+      archivo: nombreArchivo(nombre, tDoc.archivoAnalisis),
       markdown: informeMarkdown(nombre, analytics, realizadaAt, nombreMundo, (await actasVigentes(supabase, projectId)).core ?? null),
       papel: { analisis },
     });
@@ -447,21 +450,21 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
         accionesCumplidas: u.accionesVigente.hechas,
         hitos: analytics.hitos
           .filter((h) => h.tipo !== "accion")
-          .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? t.hitoRealizado : h.etiqueta })),
+          .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? tDoc.hitoRealizado : h.etiqueta })),
         loQueMovio: camino.loQueMovio,
         loQuePendiente: u.retiradas.length
-          ? interpolar(t.loQuePendienteConRetiradas, {
+          ? interpolar(tDoc.loQuePendienteConRetiradas, {
               n: Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas),
               retiradas: u.retiradas.length,
             })
-          : interpolar(t.loQuePendiente, { n: Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas) }),
+          : interpolar(tDoc.loQuePendiente, { n: Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas) }),
       }
     : null;
 
   return NextResponse.json({
-    titulo: t.tituloExpediente,
+    titulo: tDoc.tituloExpediente,
     nombre,
-    archivo: nombreArchivo(nombre, t.tituloExpediente),
+    archivo: nombreArchivo(nombre, tDoc.tituloExpediente),
     markdown,
     papel: { bodyMarkdown, resumen, entradas: entradasBita },
   });
@@ -473,7 +476,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   try {
     return await generarDocumentos(request, { params });
   } catch (e) {
-    if (e instanceof LecturaFallidaError) return NextResponse.json({ error: MENSAJE_LECTURA_FALLIDA }, { status: 503 });
+    if (e instanceof LecturaFallidaError) return NextResponse.json({ error: mensajeLecturaFallida(idiomaDeRequest(request)) }, { status: 503 });
     throw e;
   }
 }

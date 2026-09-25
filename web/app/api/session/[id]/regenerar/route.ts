@@ -33,7 +33,7 @@ import {
 import { crearSesion, guardarEstadoSesion, obtenerSesion, type EstadoSesionPersistido } from "@/lib/db";
 import { avisoDelPlan } from "@/lib/engine/planRedactor";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
-import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
@@ -95,7 +95,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
     await resolverReserva(claveReserva, "liberada");
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {

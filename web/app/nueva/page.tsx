@@ -12,7 +12,7 @@ import { useEffect, useState } from "react";
 import { ArbolPensante, type NodoArbol } from "../ui/ArbolPensante";
 import { CampoConVoz } from "../ui/CampoConVoz";
 import { BotonHeroe } from "../ui/BotonHeroe";
-import { MAX_LARGO_IDEA, MENSAJE_IDEA_LARGA } from "@/lib/constants";
+import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
 import { leerRechazo } from "@/lib/mensajeServidor";
 import { consumirSSE, EsperaAgotadaError } from "@/lib/sseCliente";
 import type { OrganizadorData } from "@/lib/engine/organizador";
@@ -60,7 +60,7 @@ export default function NuevaIdea() {
     // AUD-09 H03: el límite se dice antes de enviar, con su número, y el texto
     // se queda en el campo para recortarlo.
     if (texto.length > MAX_LARGO_IDEA) {
-      setEstado({ fase: "captura", error: MENSAJE_IDEA_LARGA });
+      setEstado({ fase: "captura", error: mensajeIdeaLarga(idioma) });
       return;
     }
     setEstado({ fase: "generando" });
@@ -78,7 +78,7 @@ export default function NuevaIdea() {
       }
       if (!res.ok || !res.body) {
         // AUD-09 H03: el rechazo con razón (fusible, texto largo) se dice tal cual.
-        setEstado({ fase: "captura", error: (await leerRechazo(res)).mensaje });
+        setEstado({ fase: "captura", error: (await leerRechazo(res, idioma)).mensaje });
         return;
       }
       // AUD-09 H08: la espera termina SIEMPRE con salida. Lo que decide es si

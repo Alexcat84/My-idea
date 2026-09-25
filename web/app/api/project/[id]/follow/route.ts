@@ -39,7 +39,7 @@ import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
 import catalogo from "@/lib/assets/packs_catalog.json";
-import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
+import { MAX_LARGO_TEXTO_USUARIO, mensajeTextoLargo } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { mensajeSaldoInsuficiente, reservarCreditos, resolverReserva, verificarSaldo } from "@/lib/creditos";
 import { obtenerModosPorEspacio, crearSesion, dominiosDesbloqueados, nodosCubiertos, obtenerProyecto } from "@/lib/db";
@@ -48,7 +48,7 @@ import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
 import { analyticsDeMundo, calcularAnalytics } from "@/lib/analytics";
-import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
+import { cargarEntradaAnalytics, LecturaFallidaError, mensajeLecturaFallida } from "@/lib/analyticsEntrada";
 import { construirBloqueRealidad, construirBloqueRealidadMundo } from "@/lib/engine/bloqueRealidad";
 import { candidatosSeguimiento, seleccionarPuertaAvanzada } from "@/lib/engine/puertaAvanzada";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
@@ -57,7 +57,7 @@ import {
   itemsDelUltimoPlanDe,
   type FilaChecklist,
 } from "@/lib/engine/seguimientoComposer";
-import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
@@ -118,7 +118,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   for (const valor of [detalles, enfoque]) {
     if (valor && valor.length > MAX_LARGO_TEXTO_USUARIO) {
       return NextResponse.json(
-        { error: MENSAJE_TEXTO_LARGO, limite: MAX_LARGO_TEXTO_USUARIO },
+        { error: mensajeTextoLargo(idioma), limite: MAX_LARGO_TEXTO_USUARIO },
         { status: 400 }
       );
     }
@@ -234,7 +234,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
     await soltarReserva();
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
@@ -294,7 +294,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     entradaAnalytics = await cargarEntradaAnalytics(supabase, projectId, proyecto);
   } catch (e) {
     await soltarReserva();
-    if (e instanceof LecturaFallidaError) return NextResponse.json({ error: MENSAJE_LECTURA_FALLIDA }, { status: 503 });
+    if (e instanceof LecturaFallidaError) return NextResponse.json({ error: mensajeLecturaFallida(idioma) }, { status: 503 });
     throw e;
   }
   const analytics = calcularAnalytics(entradaAnalytics);
@@ -399,6 +399,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     respuestaUsuario: null,
     acumulado: puerta.acumulado,
     dbSessionId: sessionId,
+    idioma,
   });
 
   // Igual que session/start: la puerta vive en la ruta desde estadoInicial

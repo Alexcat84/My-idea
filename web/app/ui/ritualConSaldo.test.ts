@@ -17,6 +17,6 @@ describe("el ritual consulta el saldo antes de abrirse (AUD-09 M22)", () => {
   it("abrirRitual pregunta a GET follow por el espacio y muestra el rechazo tal cual", () => {
     const fn = manos.match(/async function abrirRitual\([\s\S]*?\r?\n  \}\r?\n/)?.[0] ?? "";
     expect(fn).toMatch(/fetch\(`\/api\/project\/\$\{projectId\}\/follow\?dominio=\$\{encodeURIComponent\(dominio\)\}`\)/);
-    expect(fn).toMatch(/leerRechazo\(res\)/);
+    expect(fn).toMatch(/leerRechazo\(res, idioma\)/);
   });
 });

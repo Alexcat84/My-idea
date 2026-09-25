@@ -57,6 +57,22 @@ export function htmlDir(idioma: Locale): "ltr" | "rtl" {
   return idioma === "ar" ? "rtl" : "ltr";
 }
 
+/** La variante regional con que se dicta por voz (SpeechRecognition.lang) en
+ * cada idioma de la interfaz. El español dicta como siempre, es-MX. */
+export const LANG_DICTADO: Record<Locale, string> = {
+  es: "es-MX",
+  en: "en-US",
+  pt: "pt-BR",
+  fr: "fr-CA",
+  de: "de-DE",
+  it: "it-IT",
+  ja: "ja-JP",
+  zh: "zh-CN",
+  ko: "ko-KR",
+  ar: "ar-SA",
+  hi: "hi-IN",
+};
+
 /** Cada idioma en su propia escritura (para el selector). */
 export const NOMBRE_IDIOMA: Record<Locale, string> = {
   es: "Español",

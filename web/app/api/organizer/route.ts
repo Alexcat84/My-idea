@@ -10,7 +10,7 @@ import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
 import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
-import { MAX_LARGO_IDEA, MENSAJE_IDEA_LARGA } from "@/lib/constants";
+import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
 import {
   costoAcumuladoUsd,
   llamarClaude,
@@ -24,7 +24,7 @@ import { cargarEntrySeeds, cargarGrafo } from "@/lib/engine/graph";
 import { construirMarkdown, limpiarOrganizador, MAX_TOKENS_ORGANIZADOR, type OrganizadorData } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
-import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
@@ -43,7 +43,7 @@ export async function POST(request: Request) {
   }
   if (texto.length > MAX_LARGO_IDEA) {
     return NextResponse.json(
-      { error: MENSAJE_IDEA_LARGA, limite: MAX_LARGO_IDEA },
+      { error: mensajeIdeaLarga(idioma), limite: MAX_LARGO_IDEA },
       { status: 400 }
     );
   }
@@ -59,7 +59,7 @@ export async function POST(request: Request) {
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {

@@ -210,7 +210,7 @@ async function temasPendientesDeLaMesa(
   graph: Grafo,
   idioma: Locale = LOCALE_BASE
 ): Promise<string[]> {
-  const evaluacion = evaluarRuta(estado.ruta, families);
+  const evaluacion = evaluarRuta(estado.ruta, families, idioma);
   const faltantesKeys: string[] = [];
   if (!evaluacion.tiene_accion_clientes) faltantesKeys.push("accion_clientes");
   if (!evaluacion.tiene_viabilidad_economica) faltantesKeys.push("viabilidad_economica");
@@ -369,9 +369,9 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     }
     if (decision === "generar_ya") {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null };
-      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families), nodosNuevos: [] };
+      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families, idioma), nodosNuevos: [] };
     }
-    const evaluacion = evaluarRuta(estado.ruta, families);
+    const evaluacion = evaluarRuta(estado.ruta, families, idioma);
     const familiasFaltantesKeys: string[] = [];
     if (!evaluacion.tiene_accion_clientes) familiasFaltantesKeys.push("accion_clientes");
     if (!evaluacion.tiene_viabilidad_economica) familiasFaltantesKeys.push("viabilidad_economica");
@@ -408,7 +408,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     const elegidos = candidatosFamilia.slice(0, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO);
     if (elegidos.length === 0) {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null };
-      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families), nodosNuevos: [] };
+      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families, idioma), nodosNuevos: [] };
     }
 
     const primerNid = elegidos[0];
@@ -441,7 +441,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     acumulado = a1;
     if (decision === "generar_ya") {
       estado = { ...estado, fase: "listo_para_plan", preguntaPendiente: null, sigamosDirigido: null };
-      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families), nodosNuevos: [] };
+      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families, idioma), nodosNuevos: [] };
     }
     const { elegidos, indice } = estado.sigamosDirigido;
     const nidActual = elegidos[indice];
@@ -459,7 +459,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         preguntaPendiente: null,
         sigamosDirigido: null,
       };
-      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families), nodosNuevos: [] };
+      return { tipo: "listo_para_plan", estado, acumulado, evaluacion: evaluarRuta(estado.ruta, families, idioma), nodosNuevos: [] };
     }
 
     const siguienteNid = elegidos[siguienteIndice];
@@ -541,7 +541,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
         tipo: "listo_para_plan",
         estado,
         acumulado,
-        evaluacion: evaluarRuta(estado.ruta, families),
+        evaluacion: evaluarRuta(estado.ruta, families, idioma),
         nodosNuevos: nodosNuevosDesdeInicio(),
       };
     }
@@ -692,7 +692,7 @@ export async function avanzarTurno(params: AvanzarTurnoParams): Promise<Resultad
     }
 
     if (resultado.accion === "generar_plan") {
-      const evaluacion = evaluarRuta(estado.ruta, families);
+      const evaluacion = evaluarRuta(estado.ruta, families, idioma);
       // Phase 3.7.2 (la oferta honesta, canon 04): la oferta de
       // suficiencia ya no es una pregunta de texto que invita a salir a
       // ciegas; es una tarjeta con lo que queda sobre la mesa (2-3 temas

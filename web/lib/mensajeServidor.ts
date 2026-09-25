@@ -11,7 +11,11 @@
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { SERVIDOR_COMUN } from "./i18n/mensajes/servidorComun";
 
-export const ERROR_GENERICO = elegir(SERVIDOR_COMUN, LOCALE_BASE).errorGenerico;
+/** El genérico en el idioma pedido (las pantallas pasan el suyo). */
+export function errorGenerico(idioma: Locale = LOCALE_BASE): string {
+  return elegir(SERVIDOR_COMUN, idioma).errorGenerico;
+}
+export const ERROR_GENERICO = errorGenerico(LOCALE_BASE);
 
 export type Rechazo =
   | { tipo: "mensaje"; mensaje: string }

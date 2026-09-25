@@ -23,9 +23,9 @@ import { SERVIDOR_MUNDOS } from "@/lib/i18n/mensajes/servidorMundos";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { guardarActa, instantaneaDeActa } from "@/lib/acta";
 import { calcularAnalytics } from "@/lib/analytics";
-import { cargarEntradaAnalytics, LecturaFallidaError, MENSAJE_LECTURA_FALLIDA } from "@/lib/analyticsEntrada";
+import { cargarEntradaAnalytics, LecturaFallidaError, mensajeLecturaFallida } from "@/lib/analyticsEntrada";
 import catalogo from "@/lib/assets/packs_catalog.json";
-import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
+import { MAX_LARGO_TEXTO_USUARIO, mensajeTextoLargo } from "@/lib/constants";
 import { obtenerProyecto, registrarBitacora } from "@/lib/db";
 import { createClient } from "@/lib/supabase/server";
 
@@ -54,7 +54,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const motivoCrudo = typeof body.motivo === "string" ? body.motivo.trim() : null;
   if (motivoCrudo && motivoCrudo.length > MAX_LARGO_TEXTO_USUARIO) {
     return NextResponse.json(
-      { error: MENSAJE_TEXTO_LARGO, limite: MAX_LARGO_TEXTO_USUARIO },
+      { error: mensajeTextoLargo(idioma), limite: MAX_LARGO_TEXTO_USUARIO },
       { status: 400 }
     );
   }
@@ -100,7 +100,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     try {
       analytics = calcularAnalytics(await cargarEntradaAnalytics(supabase, projectId, proyecto));
     } catch (e) {
-      if (e instanceof LecturaFallidaError) return NextResponse.json({ error: MENSAJE_LECTURA_FALLIDA }, { status: 503 });
+      if (e instanceof LecturaFallidaError) return NextResponse.json({ error: mensajeLecturaFallida(idioma) }, { status: 503 });
       throw e;
     }
     const guardada = await guardarActa(supabase, projectId, {

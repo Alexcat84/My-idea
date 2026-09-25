@@ -18,7 +18,7 @@ import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
-import { MAX_LARGO_IDEA, MENSAJE_IDEA_LARGA } from "@/lib/constants";
+import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
 import { usoVacio } from "@/lib/costmeter";
 import { mensajeSaldoInsuficiente, reservarCreditos, resolverReserva, verificarSaldo } from "@/lib/creditos";
 import { crearProyecto, crearSesion, dominiosDesbloqueados, obtenerProyecto } from "@/lib/db";
@@ -28,7 +28,7 @@ import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
-import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
@@ -48,7 +48,7 @@ export async function POST(request: Request) {
   }
   if (texto.length > MAX_LARGO_IDEA) {
     return NextResponse.json(
-      { error: MENSAJE_IDEA_LARGA, limite: MAX_LARGO_IDEA },
+      { error: mensajeIdeaLarga(idioma), limite: MAX_LARGO_IDEA },
       { status: 400 }
     );
   }
@@ -111,7 +111,7 @@ export async function POST(request: Request) {
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
     await resolverReserva(claveReserva, "liberada");
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
@@ -192,6 +192,7 @@ export async function POST(request: Request) {
     respuestaUsuario: null,
     acumulado,
     dbSessionId: sessionId,
+    idioma,
   });
 
   // La puerta de entrada vive en la ruta DESDE estadoInicial, asi que el

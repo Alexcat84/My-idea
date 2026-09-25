@@ -82,7 +82,10 @@ export const MAX_PREGUNTAS_REPORTE = 6;
 export const REPORTE_DISCLAIMER = elegir(MOTOR, LOCALE_BASE).reporteDisclaimer;
 
 // i18n F2: texto en el catálogo MOTOR; la constante es el valor base.
-export const PREGUNTA_TIPO_OFERTA = elegir(MOTOR, LOCALE_BASE).preguntaTipoOferta;
+export function preguntaTipoOferta(idioma: Locale = LOCALE_BASE): string {
+  return elegir(MOTOR, idioma).preguntaTipoOferta;
+}
+export const PREGUNTA_TIPO_OFERTA = preguntaTipoOferta(LOCALE_BASE);
 
 // Guardian GIGO (Motor v2.2): frases deterministicas que indican que la
 // mini-entrevista actual (el "molde" de preguntas del tipo_oferta activo)

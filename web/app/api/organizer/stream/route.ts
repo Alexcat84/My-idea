@@ -14,7 +14,7 @@ import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
 import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
-import { MAX_LARGO_IDEA, MENSAJE_IDEA_LARGA } from "@/lib/constants";
+import { MAX_LARGO_IDEA, mensajeIdeaLarga } from "@/lib/constants";
 import {
   costoAcumuladoUsd,
   MODEL_HAIKU,
@@ -29,13 +29,13 @@ import {
   construirMarkdown,
   limpiarOrganizador,
   MAX_TOKENS_ORGANIZADOR,
-  SECCIONES_ORGANIZADOR,
+  seccionesOrganizador,
   type OrganizadorData,
 } from "@/lib/engine/organizador";
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
 import { garantizarTerminal } from "@/lib/streamTerminal";
-import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 import type Anthropic from "@anthropic-ai/sdk";
 
@@ -65,7 +65,7 @@ export async function POST(request: Request) {
   }
   if (texto.length > MAX_LARGO_IDEA) {
     return NextResponse.json(
-      { error: MENSAJE_IDEA_LARGA, limite: MAX_LARGO_IDEA },
+      { error: mensajeIdeaLarga(idioma), limite: MAX_LARGO_IDEA },
       { status: 400 }
     );
   }
@@ -101,7 +101,7 @@ export async function POST(request: Request) {
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
@@ -145,6 +145,8 @@ export async function POST(request: Request) {
       // Las secciones se anuncian una sola vez aunque haya reintentos: el
       // árbol conserva lo que ya encendió.
       const anunciadas = new Set<string>();
+      // Los nombres de las secciones se pintan en el árbol: idioma de la interfaz.
+      const secciones = seccionesOrganizador(idioma);
 
       const cerrar = () =>
         cerrarSesion(
@@ -171,7 +173,7 @@ export async function POST(request: Request) {
         let crudo = "";
         claudeStream.on("text", (delta) => {
           crudo += delta;
-          for (const { clave, label } of SECCIONES_ORGANIZADOR) {
+          for (const { clave, label } of secciones) {
             if (!anunciadas.has(clave) && crudo.includes(`"${clave}"`)) {
               anunciadas.add(clave);
               enviar("seccion", { clave, label });

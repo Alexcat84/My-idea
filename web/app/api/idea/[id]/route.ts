@@ -9,7 +9,7 @@ import { NextResponse } from "next/server";
 import { elegir } from "@/lib/i18n/config";
 import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
-import { PREGUNTA_TIPO_OFERTA } from "@/lib/engine/constants";
+import { preguntaTipoOferta } from "@/lib/engine/constants";
 import { obtenerCapacidadesPorEspacio, obtenerModosPorEspacio, obtenerProyecto, type EstadoSesionPersistido } from "@/lib/db";
 import { ESPACIO_CORE } from "@/lib/espacios";
 import { cargarGrafo, etiquetaArbol } from "@/lib/engine/graph";
@@ -21,7 +21,8 @@ import { estadoEntrevista } from "@/lib/entrevistaAbierta";
 
 export async function GET(request: Request, { params }: { params: Promise<{ id: string }> }) {
   const { id: projectId } = await params;
-  const r = elegir(RUTAS, idiomaDeRequest(request));
+  const idioma = idiomaDeRequest(request);
+  const r = elegir(RUTAS, idioma);
 
   const supabase = await createClient();
   const {
@@ -232,11 +233,11 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   if (proyecto.estado_reporte) {
     const e = proyecto.estado_reporte.estado;
     if (e.fase === "clasificando_oferta" || e.fase === "reclasificando_molde") {
-      reporteEnCurso = { pregunta: PREGUNTA_TIPO_OFERTA };
+      reporteEnCurso = { pregunta: preguntaTipoOferta(idioma) };
     } else {
       const campo = e.faltantesEsenciales[e.idx];
       if (campo) {
-        reporteEnCurso = { pregunta: preguntasPorTipo(e.tipoOferta, e.unidadVenta)[campo] };
+        reporteEnCurso = { pregunta: preguntasPorTipo(e.tipoOferta, e.unidadVenta, idioma)[campo] };
       }
     }
   }
@@ -276,7 +277,8 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       // AUD-09 H02: un plan armado sin IA conserva su aviso tras recargar.
       aviso: avisoDelPlan(
         ((sesiones ?? []) as Array<{ id: string; decisiones?: unknown }>).find((x) => x.id === plan.session_id)
-          ?.decisiones
+          ?.decisiones,
+        idioma
       ),
     },
     reporte: reporte && { contenido_md: reporte.contenido_md, created_at: reporte.created_at },

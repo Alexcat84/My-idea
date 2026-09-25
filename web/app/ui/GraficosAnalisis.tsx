@@ -274,7 +274,7 @@ export function ProyeccionCierre({
   // dominio). Cualquier forma de "capturar ahora" cae en otra regla (setState en
   // efecto); se exime la de pureza SOLO en esta línea.
   // eslint-disable-next-line react-hooks/purity
-  const fechaCierre = puede ? fechaHumanaCorta(new Date(Date.now() + semanasRest * 7 * 86_400_000).toISOString()) : null;
+  const fechaCierre = puede ? fechaHumanaCorta(new Date(Date.now() + semanasRest * 7 * 86_400_000).toISOString(), idioma) : null;
   return (
     <div className="rounded-panel border border-hairline bg-surface-3 p-5 sm:p-6">
       <Titulo nota={tx.graficos.proyeccionNota}>{tx.comun.proyeccionTitulo}</Titulo>

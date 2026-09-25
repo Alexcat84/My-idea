@@ -7,6 +7,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { REGISTRO_VACIO, registroMarkdown } from "./registroProteccion";
+import { REGISTRO_PROTECCION } from "./i18n/mensajes/registroProteccion";
 
 describe("el registro vacío dice lo que pasó (AUD-09 M48)", () => {
   it("la frase no promete que se llenará", () => {
@@ -19,7 +20,11 @@ describe("el registro vacío dice lo que pasó (AUD-09 M48)", () => {
   });
   it("la pantalla la usa", () => {
     const manos = readFileSync(path.join(__dirname, "..", "app", "ui", "ManosALaObra.tsx"), "utf8");
-    expect(manos).toMatch(/\{REGISTRO_VACIO\}/);
+    // i18n: la pantalla elige la frase del catálogo por su idioma; el catálogo
+    // base es la misma frase que REGISTRO_VACIO.
+    expect(manos).toMatch(/\{tr\.registroVacio\}/);
+    expect(manos).toMatch(/const tr = elegir\(REGISTRO_PROTECCION, idioma\);/);
+    expect(REGISTRO_PROTECCION.es.registroVacio).toBe(REGISTRO_VACIO);
     expect(manos).not.toMatch(/se llenará con el plan de este mundo/);
   });
 });

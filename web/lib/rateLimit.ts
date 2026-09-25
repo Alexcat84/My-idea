@@ -132,4 +132,7 @@ export function mensajeLimite(limite: number, idioma: Locale = LOCALE_BASE): str
   return interpolar(t.limiteDiario, { arranques: plural(idioma, limite, t.arranques) });
 }
 
-export const MENSAJE_FUSIBLE = elegir(SERVIDOR_COMUN, LOCALE_BASE).fusible;
+export function mensajeFusible(idioma: Locale = LOCALE_BASE): string {
+  return elegir(SERVIDOR_COMUN, idioma).fusible;
+}
+export const MENSAJE_FUSIBLE = mensajeFusible(LOCALE_BASE);

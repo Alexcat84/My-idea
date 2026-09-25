@@ -213,7 +213,7 @@ describe("el enganche: el snapshot llega donde tiene que llegar", () => {
     // no queda ningún camino que se trague el fallo dejando el snapshot en null
     expect(ruta).not.toMatch(/catch\s*\{\s*snapshotNucleo = null;?\s*\}/);
     // el fallo responde al usuario y deja rastro persistido
-    expect(ruta).toContain("ERROR_SNAPSHOT_ILEGIBLE");
+    expect(ruta).toContain("errorSnapshotIlegible(idioma)");
     expect(ruta).toContain('"snapshot_ilegible"');
     expect(ruta).toContain("status: 502");
   });

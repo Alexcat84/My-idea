@@ -139,7 +139,8 @@ export function PotenciaTuIdea({
   onActivarMundo,
   mostrarOcultos = false,
 }: Props) {
-  const t = elegir(POTENCIA_TU_IDEA, useIdioma());
+  const idioma = useIdioma();
+  const t = elegir(POTENCIA_TU_IDEA, idioma);
   const [activando, setActivando] = useState<string | null>(null);
   const [errorEn, setErrorEn] = useState<string | null>(null);
   const [avisoBloqueado, setAvisoBloqueado] = useState<string | null>(null);
@@ -278,7 +279,7 @@ export function PotenciaTuIdea({
                     /* La muralla del sin plan: la MISMA frase que responde la
                        ruta, interpolada con el nombre del mundo (fuente única
                        en espacios.ts). */
-                    murallaSinPlan(p.nombre)
+                    murallaSinPlan(p.nombre, idioma)
                   ) : basico ? (
                     interpolar(t.basicoEspera, { n: PRECIOS.mundo_activar })
                   ) : estado === "diagnostico_listo" ? (

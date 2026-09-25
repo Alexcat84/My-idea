@@ -800,7 +800,7 @@ export function informeMarkdown(
   if (realizadaAt) {
     // AUD-09 M04: el acta sale de la instantánea guardada al cerrar; lo que se
     // calcula hoy es el ESTADO ACTUAL y ya no se presenta como acta.
-    if (acta) l.push(...actaMarkdown(acta, nombreMundo));
+    if (acta) l.push(...actaMarkdown(acta, nombreMundo, idioma));
     l.push(t.estadoActual);
     l.push(interpolar(t.ideaRealizada, { fecha: realizadaAt.slice(0, 10) }));
     l.push(

@@ -135,7 +135,7 @@ export function Calendario({
         body: JSON.stringify({ item_id: itemId, fecha, cascada }),
       });
       // AUD-09 M41: el rechazo con razón (hecha, retirada) se muestra tal cual.
-      if (!res.ok) return setError((await leerRechazo(res)).mensaje);
+      if (!res.ok) return setError((await leerRechazo(res, idioma)).mensaje);
       onRecargarChecklist();
     } catch {
       setError(t.errorMoverFecha);

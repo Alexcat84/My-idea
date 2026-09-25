@@ -8,7 +8,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { EntradaAnalytics, ItemAnalytics, MundoAnalytics, PlanCoreAnalytics } from "./analytics";
 import { obtenerModosPorEspacio, type Proyecto } from "./db";
-import { elegir, LOCALE_BASE } from "./i18n/config";
+import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { ANALYTICS_INFORME } from "./i18n/mensajes/analyticsInforme";
 
 const ETIQUETAS_CICLO = ["inicial", "completo", "seguimiento"];
@@ -28,7 +28,10 @@ export class LecturaFallidaError extends Error {
 /** El mensaje honesto de una lectura fallida, el mismo en toda ruta que la usa.
  * El texto vive en el catálogo; la constante es su valor base (una ruta que
  * lo devuelve elige por idioma con ANALYTICS_INFORME.lecturaFallida). */
-export const MENSAJE_LECTURA_FALLIDA = elegir(ANALYTICS_INFORME, LOCALE_BASE).lecturaFallida;
+export function mensajeLecturaFallida(idioma: Locale = LOCALE_BASE): string {
+  return elegir(ANALYTICS_INFORME, idioma).lecturaFallida;
+}
+export const MENSAJE_LECTURA_FALLIDA = mensajeLecturaFallida(LOCALE_BASE);
 const esCore = (dominio: string | null | undefined) => !dominio || dominio === "core";
 
 export async function cargarEntradaAnalytics(

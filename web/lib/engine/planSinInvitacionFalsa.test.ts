@@ -9,6 +9,7 @@ import path from "node:path";
 import { describe, expect, it } from "vitest";
 import { TEXTO_FAMILIA_FALTANTE } from "./constants";
 import { MOTOR_PLAN } from "../i18n/mensajes/motorPlan";
+import { evaluarRuta } from "../readiness";
 
 const leer = (rel: string) => readFileSync(path.join(__dirname, "..", "..", rel), "utf8");
 const redactor = leer("lib/engine/planRedactor.ts");
@@ -37,7 +38,14 @@ describe("el cierre del plan no invita a una sesión cerrada (AUD-09 M33)", () =
   });
 
   it("readiness usa esos mismos textos (una sola fuente)", () => {
-    expect(readiness).toMatch(/TEXTO_FAMILIA_FALTANTE\.accion_clientes/);
+    // i18n: readiness elige los textos por idioma de la misma fuente.
+    expect(readiness).toMatch(/textosFamiliaFaltante\(idioma\)/);
+    expect(readiness).toMatch(/texto\.accion_clientes/);
+    expect(evaluarRuta([], {}).familias_faltantes).toEqual([
+      TEXTO_FAMILIA_FALTANTE.accion_clientes,
+      TEXTO_FAMILIA_FALTANTE.viabilidad_economica,
+      TEXTO_FAMILIA_FALTANTE.profundidad,
+    ]);
     expect(readiness).not.toMatch(/MVP/);
   });
 

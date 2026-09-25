@@ -17,7 +17,8 @@ import { validarPassword } from "@/lib/password";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
-  const t = elegir(SERVIDOR_CUENTA, idiomaDeRequest(request));
+  const idioma = idiomaDeRequest(request);
+  const t = elegir(SERVIDOR_CUENTA, idioma);
   let body: { email?: unknown; password?: unknown; next?: unknown };
   try {
     body = await request.json();
@@ -34,7 +35,7 @@ export async function POST(request: Request) {
   if (!email || !email.includes("@") || email.length > 254) {
     return NextResponse.json({ error: t.comun.correoInvalido }, { status: 400 });
   }
-  const problema = validarPassword(password);
+  const problema = validarPassword(password, idioma);
   if (problema) return NextResponse.json({ error: problema }, { status: 400 });
 
   // La allowlist de beta gatea el registro (quién puede tener cuenta).

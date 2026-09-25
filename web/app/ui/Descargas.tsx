@@ -173,7 +173,8 @@ export function Descargas({
   dominio?: string;
   nombreEspacio?: string;
 }) {
-  const t = elegir(DESCARGAS, useIdioma());
+  const idioma = useIdioma();
+  const t = elegir(DESCARGAS, idioma);
   const [documentos, setDocumentos] = useState<DocumentoIndice[] | null>(null);
   // La clave del error (no el texto): se pinta en el idioma de la pantalla.
   const [error, setError] = useState<"errorCargar" | "errorPreparar" | null>(null);
@@ -277,7 +278,7 @@ export function Descargas({
           <p className="mt-0.5 text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty]">{doc.subtitulo}</p>
           {doc.fecha && (
             <p className="mt-1.5 text-[12px] tabular-nums text-[#6F7076]">
-              {esExpediente ? interpolar(t.cerradoEl, { fecha: fechaHumanaConAno(doc.fecha) }) : fechaHumanaConAno(doc.fecha)}
+              {esExpediente ? interpolar(t.cerradoEl, { fecha: fechaHumanaConAno(doc.fecha, idioma) }) : fechaHumanaConAno(doc.fecha, idioma)}
             </p>
           )}
         </div>

@@ -343,7 +343,7 @@ export function DetalleActividad({
               {!corrigiendoBanda ? (
                 <div className="rounded-cinta border border-hairline bg-surface-2 px-4 py-3">
                   <p className="text-[14px]">
-                    <span className="font-semibold">{rangoDeBanda(bBanda)}</span>
+                    <span className="font-semibold">{rangoDeBanda(bBanda, idioma)}</span>
                     {item.espera_externa ? <span className="text-dim"> {t.dependeDeTerceros}</span> : null}
                   </p>
                   <p className="mt-1 text-[12px] leading-relaxed text-dim">
@@ -375,7 +375,7 @@ export function DetalleActividad({
                               : "border-hairline text-ink hover:border-accent/60")
                           }
                         >
-                          {rangoDeBanda(b)}
+                          {rangoDeBanda(b, idioma)}
                         </button>
                       );
                     })}

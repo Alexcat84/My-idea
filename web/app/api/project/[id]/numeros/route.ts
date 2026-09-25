@@ -11,7 +11,7 @@
  *      JAMAS bloquea el recalculo determinista, gratis e ilimitado por ley.
  */
 import { NextResponse } from "next/server";
-import { elegir } from "@/lib/i18n/config";
+import { elegir, LOCALE_BASE, type Locale } from "@/lib/i18n/config";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
 import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
@@ -38,7 +38,7 @@ import { nombreDeIdea } from "@/lib/ideas";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { PRECIOS } from "@/lib/precios";
 import { narrarReporte } from "@/lib/engine/reporte";
-import { cifrasCambiaron, MENSAJE_TOPE_RENARRACION, TOPE_RENARRACION_DIA, veredictoNumeros } from "@/lib/numerosVivo";
+import { cifrasCambiaron, mensajeTopeRenarracion, TOPE_RENARRACION_DIA, veredictoNumeros } from "@/lib/numerosVivo";
 import { armarTablero } from "@/lib/tableroNumeros";
 import { createClient } from "@/lib/supabase/server";
 
@@ -116,9 +116,14 @@ async function cargarContexto(projectId: string, r: (typeof RUTAS)["es"]) {
 }
 
 /** Arma el payload de lectura del tablero (deterministico) sobre unas cifras. */
-function payloadTablero(numeros: NumerosProyecto, tipoOferta: TipoOferta, unidad: string | null) {
-  const tablero = armarTablero(numeros, tipoOferta);
-  return { tablero, veredicto: veredictoNumeros(tablero, unidad) };
+function payloadTablero(
+  numeros: NumerosProyecto,
+  tipoOferta: TipoOferta,
+  unidad: string | null,
+  idioma: Locale = LOCALE_BASE
+) {
+  const tablero = armarTablero(numeros, tipoOferta, undefined, idioma);
+  return { tablero, veredicto: veredictoNumeros(tablero, unidad, idioma) };
 }
 
 /** Los valores declarados de los campos editables, para PRE-LLENAR el
@@ -190,7 +195,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
 
   const numeros: NumerosProyecto = proyecto.numeros_proyecto ?? {};
   const tipoOferta = (proyecto.tipo_oferta ?? null) as TipoOferta;
-  const { tablero, veredicto } = payloadTablero(numeros, tipoOferta, proyecto.unidad_venta ?? null);
+  const { tablero, veredicto } = payloadTablero(numeros, tipoOferta, proyecto.unidad_venta ?? null, idioma);
   const ultima = await ultimaVersionNumeros(supabase, projectId);
   const historialRaw = await historialVersionesNumeros(supabase, projectId);
   // La primera (mas reciente) es la VIGENTE: la que se ve arriba. La UI lista
@@ -310,7 +315,11 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
 
   // 3) Recalculo determinista: SIEMPRE, gratis, sin tope ni bloqueo.
-  const { tablero, veredicto } = payloadTablero(numeros, tipoOferta, unidad);
+  // La respuesta se pinta en el idioma de la interfaz. Lo que se GUARDA (el
+  // snapshot de la version) y lo que va a la narracion siguen en el base: el
+  // idioma del proyecto llega en F5 (D2).
+  const { tablero, veredicto } = payloadTablero(numeros, tipoOferta, unidad, idioma);
+  const guardado = idioma === LOCALE_BASE ? { tablero, veredicto } : payloadTablero(numeros, tipoOferta, unidad);
 
   // Persistencia de cifras: si cambiaron respecto de la ultima version,
   // guarda las nuevas como vigentes en projects.
@@ -334,10 +343,10 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       const hoy = await contarNarracionesHoy(supabase, projectId);
       if (hoy >= TOPE_RENARRACION_DIA) {
         limiteAlcanzado = true;
-        mensaje = MENSAJE_TOPE_RENARRACION;
+        mensaje = mensajeTopeRenarracion(idioma);
       } else {
         const client = createAnthropicClient();
-        const r = await narrarReporte(client, tablero.reporte, numeros, tipoOferta, usoVacio());
+        const r = await narrarReporte(client, guardado.tablero.reporte, numeros, tipoOferta, usoVacio());
         if (r.sinIA) {
           // AUD-09 M20: un texto sin IA no es una narración. No se guarda como
           // tal (así tampoco cuenta contra el tope diario) y se dice.
@@ -355,7 +364,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   //    hubo una narracion nueva. La fila es un snapshot inmutable.
   let cifrasFecha = ultima?.created_at ?? null;
   if (hayCambio || narracion !== null) {
-    const calculoSnapshot = { ...tablero, veredicto };
+    const calculoSnapshot = { ...guardado.tablero, veredicto: guardado.veredicto };
     await insertarVersionNumeros(supabase, projectId, {
       numeros,
       tipoOferta,

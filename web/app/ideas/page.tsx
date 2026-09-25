@@ -10,7 +10,7 @@
  * Al visitante nuevo (cero ideas) se le lleva directo a la captura.
  * "Salir" solo aparece para cuentas con email.
  */
-import { MENSAJE_ADOPCION_PENDIENTE } from "@/lib/constants";
+import { mensajeAdopcionPendiente } from "@/lib/constants";
 import Link from "next/link";
 import { listarIdeasConEstado, type ChipCinta } from "@/lib/ideas";
 import { elegir } from "@/lib/i18n/config";
@@ -94,7 +94,7 @@ export default async function MisIdeas({ searchParams }: { searchParams: Promise
         </h1>
         {adopcion === "pendiente" && (
           <p role="status" className="mt-4 rounded-panel border border-hairline bg-surface p-4 text-sm text-warn">
-            {MENSAJE_ADOPCION_PENDIENTE}
+            {mensajeAdopcionPendiente(idioma)}
           </p>
         )}
 

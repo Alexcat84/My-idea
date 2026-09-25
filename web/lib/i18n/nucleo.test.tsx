@@ -3,7 +3,7 @@ import { readFileSync } from "node:fs";
 import path from "node:path";
 import { renderToStaticMarkup } from "react-dom/server";
 import { describe, expect, it } from "vitest";
-import { ACTIVE_LOCALES, elegir, htmlDir, htmlLang, LOCALE_BASE, LOCALES, normalizarIdioma } from "./config";
+import { ACTIVE_LOCALES, elegir, htmlDir, htmlLang, LANG_DICTADO, LOCALE_BASE, LOCALES, normalizarIdioma } from "./config";
 import { interpolar, plural } from "./interpolar";
 import { idiomasDeAcceptLanguage, negociarIdioma } from "./negociar";
 import { etiquetasDe, rico } from "./rico";
@@ -20,6 +20,28 @@ describe("config", () => {
     expect(normalizarIdioma("xx")).toBe("es");
     expect(normalizarIdioma(undefined)).toBe("es");
     expect(elegir({ es: { hola: "Hola" } }, "fr")).toEqual({ hola: "Hola" });
+  });
+  it("el dictado por voz sigue el idioma de la interfaz; en español, es-MX como siempre", () => {
+    // Casos a mano: la variante de cada idioma, fijada por el diseño.
+    expect(LANG_DICTADO).toEqual({
+      es: "es-MX",
+      en: "en-US",
+      pt: "pt-BR",
+      fr: "fr-CA",
+      de: "de-DE",
+      it: "it-IT",
+      ja: "ja-JP",
+      zh: "zh-CN",
+      ko: "ko-KR",
+      ar: "ar-SA",
+      hi: "hi-IN",
+    });
+    // Cada variante empieza por su idioma (no se cruzan).
+    for (const l of LOCALES) expect(LANG_DICTADO[l].split("-")[0]).toBe(l);
+    // useSpeech ya no fija el español: toma la variante del idioma que recibe.
+    const hook = readFileSync(path.join(__dirname, "..", "useSpeech.ts"), "utf8");
+    expect(hook).toMatch(/rec\.lang = LANG_DICTADO\[idiomaRef\.current\];/);
+    expect(hook).not.toMatch(/"es-MX"/);
   });
   it("lang y dir de <html>: zh-Hans y el árabe de derecha a izquierda", () => {
     expect(htmlLang("es")).toBe("es");

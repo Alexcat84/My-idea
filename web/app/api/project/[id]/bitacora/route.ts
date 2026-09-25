@@ -10,7 +10,7 @@
  * null) viven solo en la global: aquí nunca aparecen.
  */
 import { NextResponse } from "next/server";
-import { elegir } from "@/lib/i18n/config";
+import { elegir, LOCALE_BASE } from "@/lib/i18n/config";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
 import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
@@ -30,7 +30,6 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   const dominio = new URL(request.url).searchParams.get("dominio");
   const idioma = idiomaDeRequest(request);
   const r = elegir(RUTAS, idioma);
-  const t = elegir(SERVIDOR_PROYECTO, idioma).bitacora;
 
   const supabase = await createClient();
   const {
@@ -41,7 +40,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   if (!proyecto) return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
 
   const nombre = nombreDeIdea(proyecto.titulo, proyecto.entrada_original);
-  const todas = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
+  const todas = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre, idioma);
 
   // Global (sin dominio): la historia entera, como siempre.
   if (!dominio) return NextResponse.json({ nombre, entradas: todas });
@@ -53,6 +52,13 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
     ? nombre
     : (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs.find((p) => p.clave === dominio)?.nombre ??
       dominio;
-  const markdown = bitacoraMarkdown(nombreEspacio, entradas, new Date().toISOString(), interpolar(t.tituloEspacio, { espacio: nombreEspacio }));
+  // El markdown es un documento: sigue el idioma del proyecto (D2, llega en
+  // F5), hoy el base. Las entradas de la pantalla van en el de la interfaz.
+  const entradasDoc =
+    idioma === LOCALE_BASE
+      ? entradas
+      : bitacoraDeEspacio(await cargarEntradasBitacora(supabase, projectId, proyecto, nombre), dominio);
+  const tDoc = elegir(SERVIDOR_PROYECTO, LOCALE_BASE).bitacora;
+  const markdown = bitacoraMarkdown(nombreEspacio, entradasDoc, new Date().toISOString(), interpolar(tDoc.tituloEspacio, { espacio: nombreEspacio }));
   return NextResponse.json({ nombre: nombreEspacio, entradas, markdown });
 }

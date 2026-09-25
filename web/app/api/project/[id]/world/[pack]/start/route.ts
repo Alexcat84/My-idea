@@ -39,7 +39,7 @@ import { anclarResultadoTurno } from "@/lib/engine/reformuladorProteccion";
 import { esMundoProteccion, murallaSinPlan } from "@/lib/espacios";
 import {
   armarSnapshot,
-  ERROR_SNAPSHOT_ILEGIBLE,
+  errorSnapshotIlegible,
   snapshotComoTexto,
   type FilaChecklistSnapshot,
 } from "@/lib/engine/snapshotProyecto";
@@ -50,7 +50,7 @@ import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
 import { puedeRePreview } from "@/lib/engine/previewMundos";
 import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta, resolverId } from "@/lib/engine/graph";
 import { estadoInicial } from "@/lib/engine/recorrido";
-import { identidadLimite, MENSAJE_FUSIBLE, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
@@ -169,7 +169,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
-    return NextResponse.json({ error: MENSAJE_FUSIBLE }, { status: 503 });
+    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
@@ -224,7 +224,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
         plan: planCoreMasNuevo.id,
         motivo: e instanceof Error ? e.message : String(e),
       });
-      return NextResponse.json({ error: ERROR_SNAPSHOT_ILEGIBLE }, { status: 502 });
+      return NextResponse.json({ error: errorSnapshotIlegible(idioma) }, { status: 502 });
     }
   }
 
@@ -268,7 +268,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // explorar ESTE mundo) ni preguntaDirigida (el mismo estado_vivo hacía
   // que la reescritura se comiera al nodo). Desde el turno 2, el
   // intérprete manda como siempre.
-  const pregunta = obtenerPregunta(semillaId, graph[semillaId], preguntasCache);
+  const pregunta = obtenerPregunta(semillaId, graph[semillaId], preguntasCache, idioma);
   const estadoConPregunta = {
     ...estado,
     preguntaPendiente: pregunta,

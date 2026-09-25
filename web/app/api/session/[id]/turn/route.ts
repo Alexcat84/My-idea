@@ -15,7 +15,7 @@ import { SERVIDOR_SESION } from "@/lib/i18n/mensajes/servidorSesion";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { createAnthropicClient } from "@/lib/anthropicClient";
 import { responderResultadoTurno } from "@/lib/apiSesion";
-import { MAX_LARGO_TEXTO_USUARIO, MENSAJE_TEXTO_LARGO } from "@/lib/constants";
+import { MAX_LARGO_TEXTO_USUARIO, mensajeTextoLargo } from "@/lib/constants";
 import { obtenerSesion, type EstadoSesionPersistido } from "@/lib/db";
 import { cargarGrafo, cargarPreguntasCache } from "@/lib/engine/graph";
 import { avanzarTurno } from "@/lib/engine/recorrido";
@@ -41,7 +41,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   }
   if (respuesta.length > MAX_LARGO_TEXTO_USUARIO) {
     return NextResponse.json(
-      { error: MENSAJE_TEXTO_LARGO, limite: MAX_LARGO_TEXTO_USUARIO },
+      { error: mensajeTextoLargo(idioma), limite: MAX_LARGO_TEXTO_USUARIO },
       { status: 400 }
     );
   }
@@ -89,6 +89,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     respuestaUsuario: respuesta,
     acumulado: estadoPersistido.acumulado,
     dbSessionId: sessionId,
+    idioma,
   });
 
   // El recorrido conversado: se cierra la pareja (la pregunta que estaba en

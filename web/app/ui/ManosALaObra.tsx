@@ -21,7 +21,7 @@ import { BotonHeroe } from "./BotonHeroe";
 import { DetalleActividad } from "./DetalleActividad";
 import { NotaRapida } from "./NotaRapida";
 import { PlanDocumento } from "./PlanDocumento";
-import { ETIQUETA_ESTADO, SelectorEstado } from "./SelectorEstado";
+import { SelectorEstado } from "./SelectorEstado";
 import {
   CAPACIDAD_SEMANAL,
   cuentaHonesta,
@@ -45,8 +45,6 @@ import {
 import { armarSnapshot } from "@/lib/engine/snapshotProyecto";
 import {
   armarRegistro,
-  PALABRA_CAMINO,
-  REGISTRO_VACIO,
   resolverProtegido,
   severidadEnPalabras,
   textoProtege,
@@ -63,12 +61,14 @@ import { LineaAvance } from "./LineaAvance";
 import { loginConNext } from "@/lib/nextSeguro";
 import { cadenciasPorEspacio, chapaEstaSemana, diaDominante, ordenarEnFechas, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
-import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
+import { errorGenerico, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
 import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { rico } from "@/lib/i18n/rico";
 import { MANOS_A_LA_OBRA } from "@/lib/i18n/mensajes/manosALaObra";
+import { ESTADOS_TAREA } from "@/lib/i18n/mensajes/estadosTarea";
+import { REGISTRO_PROTECCION } from "@/lib/i18n/mensajes/registroProteccion";
 
 export interface ItemChecklistUI {
   id: string;
@@ -365,7 +365,9 @@ function FilaItem({
   /** Fase 4.3.2: tocar el texto abre "Explorar actividad" (el detalle). */
   onAbrirDetalle: () => void;
 }) {
-  const t = elegir(MANOS_A_LA_OBRA, useIdioma());
+  const idioma = useIdioma();
+  const t = elegir(MANOS_A_LA_OBRA, idioma);
+  const etiquetaEstado = elegir(ESTADOS_TAREA, idioma).etiquetas;
   const hecho = item.estado === "hecho";
   const retirada = item.estado === "no_aplica";
   // Marcar hecho COMPROMETE el estado en el acto, con la fecha de hoy por
@@ -429,7 +431,7 @@ function FilaItem({
             </span>
           )}
           {!hecho && !retirada && item.estado !== "pendiente" && (
-            <span className="mt-0.5 block text-[12.5px] text-done">{ETIQUETA_ESTADO[item.estado]}</span>
+            <span className="mt-0.5 block text-[12.5px] text-done">{etiquetaEstado[item.estado]}</span>
           )}
           {!hecho && !retirada && chapaEstaSemana(modo, item) && (
             // "esta semana": chapa HONESTA (adjudicación ago 2026). En modo fechas
@@ -441,11 +443,11 @@ function FilaItem({
           )}
           {/* AUD-09 M38: a mi ritmo no hay plazos: sin "para el …". */}
           {!hecho && !retirada && item.fecha_base && modo !== "ritmo" && (
-            <span className="mt-0.5 block text-[12.5px] text-accent">{interpolar(t.fila.paraEl, { fecha: fechaHumanaCorta(item.fecha_base) })}</span>
+            <span className="mt-0.5 block text-[12.5px] text-accent">{interpolar(t.fila.paraEl, { fecha: fechaHumanaCorta(item.fecha_base, idioma) })}</span>
           )}
           {hecho && item.completed_at && !editandoFecha && (
             // La fecha es un DATO (verde, informativo).
-            <span className="mt-1 block text-[12.5px] text-done">{interpolar(t.fila.hechoEl, { fecha: fechaHumanaCorta(item.completed_at) })}</span>
+            <span className="mt-1 block text-[12.5px] text-done">{interpolar(t.fila.hechoEl, { fecha: fechaHumanaCorta(item.completed_at, idioma) })}</span>
           )}
           {/* "cambiar fecha" ABAJO A LA DERECHA, debajo del texto: no le roba
               espacio a la actividad (el texto es el protagonista). El botón
@@ -896,7 +898,8 @@ function RitualFechas({
   /** Persiste la capacidad elegida. Sin este manejador la pregunta no aparece. */
   onCapacidad?: (c: CapacidadSemanal) => void;
 }) {
-  const tt = elegir(MANOS_A_LA_OBRA, useIdioma());
+  const idioma = useIdioma();
+  const tt = elegir(MANOS_A_LA_OBRA, idioma);
   const t = tt.fechas;
   // Con "recalcular", solo lo que sigue vivo. Un mundo recien activado trae
   // todos sus items pendientes: por eso aparece aqui aunque la baseline core
@@ -1120,7 +1123,7 @@ function RitualFechas({
                       )}
                     </span>
                     <span className="flex items-center gap-2">
-                      <span className="hidden text-[12.5px] text-dim sm:inline">{fechaHumana(isoDesdeInputLocal(fecha))}</span>
+                      <span className="hidden text-[12.5px] text-dim sm:inline">{fechaHumana(isoDesdeInputLocal(fecha), idioma)}</span>
                       <input
                         type="date"
                         value={fecha}
@@ -1198,30 +1201,32 @@ function IconoCara({ cara }: { cara: Cara }) {
  * vez de pintar una tabla vacía que parezca rota.
  */
 function RegistroProteccion({ nombreMundo, entradas }: { nombreMundo: string; entradas: EntradaRegistro[] }) {
-  const t = elegir(MANOS_A_LA_OBRA, useIdioma()).registro;
+  const idioma = useIdioma();
+  const t = elegir(MANOS_A_LA_OBRA, idioma).registro;
+  const tr = elegir(REGISTRO_PROTECCION, idioma);
   return (
     <section className="rounded-panel border border-hairline bg-surface p-5 sm:p-6">
       <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{interpolar(t.titulo, { mundo: nombreMundo })}</p>
       {entradas.length === 0 ? (
         <p className="mt-2.5 text-[13.5px] leading-relaxed text-dim [text-wrap:pretty]">
           {/* AUD-09 M48: el plan ya llegó; vacío = el enlace falló. */}
-          {REGISTRO_VACIO}
+          {tr.registroVacio}
         </p>
       ) : (
         <ul className="mt-3 flex flex-col gap-2.5">
           {entradas.map((e) => {
-            const sev = severidadEnPalabras(e);
+            const sev = severidadEnPalabras(e, idioma);
             return (
               <li key={e.id} className="rounded-cinta border border-hairline bg-surface-2 px-4 py-3">
                 <p className="text-[14px] font-semibold [text-wrap:pretty]">{e.deteccion ?? e.respuesta}</p>
                 {sev && <p className="mt-1 text-[12.5px] text-warn">{sev}</p>}
                 {e.camino && (
                   <p className="mt-1 text-[12.5px] text-dim">
-                    {rico(t.camino, { v: () => <span className="text-ink">{PALABRA_CAMINO[e.camino!]}</span> })}
+                    {rico(t.camino, { v: () => <span className="text-ink">{tr.camino[e.camino!]}</span> })}
                   </p>
                 )}
                 <p className="mt-1.5 text-[12.5px] text-dim [text-wrap:pretty]">
-                  {rico(t.protege, { v: () => <span className="text-ink">{textoProtege(e)}</span> })}
+                  {rico(t.protege, { v: () => <span className="text-ink">{textoProtege(e, idioma)}</span> })}
                 </p>
                 {e.deteccion && (
                   <p className="mt-1 text-[12.5px] text-dim [text-wrap:pretty]">
@@ -1777,7 +1782,7 @@ export function ManosALaObra({
     nombre: string,
     espacio?: string
   ) {
-    const ics = generarIcs({ nombreIdea: nombre, tareas: tareas.map((t) => ({ ...t, espacio })) });
+    const ics = generarIcs({ nombreIdea: nombre, tareas: tareas.map((t) => ({ ...t, espacio })) }, idioma);
     const blob = new Blob([ics], { type: "text/calendar;charset=utf-8" });
     const url = URL.createObjectURL(blob);
     const a = document.createElement("a");
@@ -1806,7 +1811,7 @@ export function ManosALaObra({
         body: JSON.stringify({ modo_camino: modo, dominio }),
       });
       if (!res.ok) {
-        setError(ERROR_GENERICO);
+        setError(errorGenerico(idioma));
         return;
       }
       // Reactivar fechas reabre el ritual (si aún no hay ninguna puesta).
@@ -1834,7 +1839,7 @@ export function ManosALaObra({
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ capacidad_semanal: capacidad, dominio }),
       });
-      if (!res.ok) setError(ERROR_GENERICO);
+      if (!res.ok) setError(errorGenerico(idioma));
     } catch {
       setError(t.errores.guardarHoras);
     }
@@ -1852,7 +1857,7 @@ export function ManosALaObra({
         body: JSON.stringify({ plan_id: planId, fechas }),
       });
       if (!res.ok) {
-        setErrorBaseline(ERROR_GENERICO);
+        setErrorBaseline(errorGenerico(idioma));
         return;
       }
       setRecalcularPendientes(false);
@@ -1877,7 +1882,7 @@ export function ManosALaObra({
       });
       if (!res.ok) {
         // AUD-09 M41: el rechazo con razón (hecha, retirada) se muestra tal cual.
-        setError((await leerRechazo(res)).mensaje);
+        setError((await leerRechazo(res, idioma)).mensaje);
         return;
       }
       onRecargarChecklist();
@@ -1896,7 +1901,7 @@ export function ManosALaObra({
         body: JSON.stringify({ accion: "realizar", motivo: cierreMotivo.trim() || null }),
       });
       if (!res.ok) {
-        setError(ERROR_GENERICO);
+        setError(errorGenerico(idioma));
         return;
       }
       setConfirmandoRealizar(false);
@@ -1920,7 +1925,7 @@ export function ManosALaObra({
         body: JSON.stringify({ item_id: item.id, ...cambio }),
       });
       if (!res.ok) {
-        setError(ERROR_GENERICO);
+        setError(errorGenerico(idioma));
         return;
       }
       // La ruta devuelve el ítem persistido COMPLETO (completed_at ya resuelto;
@@ -1962,7 +1967,7 @@ export function ManosALaObra({
         return;
       }
       if (!res.ok) {
-        setError((await leerRechazo(res)).mensaje);
+        setError((await leerRechazo(res, idioma)).mensaje);
         return;
       }
     } catch {
@@ -1993,7 +1998,7 @@ export function ManosALaObra({
       if (!res.ok) {
         // AUD-09 H03: todo rechazo con razón (saldo, límite, fusible, los muros
         // del mundo, doble factor, texto largo) se muestra tal cual.
-        const r = await leerRechazo(res);
+        const r = await leerRechazo(res, idioma);
         setErrorRitual(r.mensaje);
         if (r.tipo === "segundo_factor") void irAlDesafio(`/idea/${projectId}?vista=manos`);
         return;
@@ -2020,7 +2025,7 @@ export function ManosALaObra({
         body: JSON.stringify({ accion, motivo: accion === "completar" ? motivoMundo.trim() || null : null }),
       });
       if (!res.ok) {
-        setError((await leerRechazo(res)).mensaje);
+        setError((await leerRechazo(res, idioma)).mensaje);
         return;
       }
       const data = (await res.json()) as { completado_at?: string | null };
@@ -2048,7 +2053,7 @@ export function ManosALaObra({
         return;
       }
       if (!res.ok) {
-        setError(typeof data.error === "string" ? data.error : ERROR_GENERICO);
+        setError(typeof data.error === "string" ? data.error : errorGenerico(idioma));
         return;
       }
       onMundoIniciado(data, dominio);
@@ -2276,7 +2281,7 @@ export function ManosALaObra({
               {completado && (
                 <p className="mt-2 text-[12.5px] text-dim">
                   {interpolar(c.total > c.hechos ? t.mundo.terminadoConPendientes : t.mundo.terminado, {
-                    cuando: haceCuanto(mundo.completadoAt!),
+                    cuando: haceCuanto(mundo.completadoAt!, idioma),
                   })}
                 </p>
               )}
@@ -2477,7 +2482,7 @@ export function ManosALaObra({
                   <div className="rounded-panel border border-accent/30 bg-accent/[0.04] p-5">
                     <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-accent">
                       {t.mundo.tuDiagnostico}
-                      {mundo.resumenAt ? ` · ${fechaSello(mundo.resumenAt)}` : ""}
+                      {mundo.resumenAt ? ` · ${fechaSello(mundo.resumenAt, undefined, idioma)}` : ""}
                     </p>
                     <Markdown>{mundo.resumenMd}</Markdown>
                   </div>
@@ -2632,7 +2637,7 @@ export function ManosALaObra({
               {historial.map((h, i) => (
                 <Acordeon
                   key={i}
-                  titulo={interpolar(t.nucleo.planHistoria, { etiqueta: h.etiqueta, cuando: haceCuanto(h.created_at) })}
+                  titulo={interpolar(t.nucleo.planHistoria, { etiqueta: h.etiqueta, cuando: haceCuanto(h.created_at, idioma) })}
                 >
                   <PlanDocumento md={h.contenido_md} nombreIdea={interpolar(t.nucleo.planEtiqueta, { etiqueta: h.etiqueta })} />
                 </Acordeon>
@@ -2769,8 +2774,8 @@ export function ManosALaObra({
           <div className="border-t border-hairline pt-5">
             <p className="mb-3 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.ritmo.titulo}</p>
             <div className="flex flex-col gap-2">
-              <RitmoFila icono={<IconoReloj />} etiqueta={t.ritmo.ultimaAccion} valor={ultimaAccion ? haceCuanto(ultimaAccion) : t.ritmo.aunNinguna} color="accent" />
-              {desde && <RitmoFila icono={<IconoBandera />} etiqueta={t.ritmo.desde} valor={haceCuanto(desde)} color="done" />}
+              <RitmoFila icono={<IconoReloj />} etiqueta={t.ritmo.ultimaAccion} valor={ultimaAccion ? haceCuanto(ultimaAccion, idioma) : t.ritmo.aunNinguna} color="accent" />
+              {desde && <RitmoFila icono={<IconoBandera />} etiqueta={t.ritmo.desde} valor={haceCuanto(desde, idioma)} color="done" />}
               <RitmoFila icono={<IconoCiclos />} etiqueta={t.ritmo.ciclosAjuste} valor={String(ciclosAjuste)} color="warn" />
             </div>
             <p className="mt-5 text-[13px] leading-relaxed text-dim">

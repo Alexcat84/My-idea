@@ -11,7 +11,7 @@ describe("el rechazo de mover-fecha se muestra tal cual (AUD-09 M41)", () => {
       const src = readFileSync(path.join(__dirname, archivo), "utf8");
       const tras = src.slice(src.indexOf("/mover-fecha`"));
       const bloque = tras.slice(0, 400);
-      expect(bloque).toMatch(/if \(!res\.ok\)[\s\S]*leerRechazo\(res\)/);
+      expect(bloque).toMatch(/if \(!res\.ok\)[\s\S]*leerRechazo\(res, idioma\)/);
     });
   }
 });

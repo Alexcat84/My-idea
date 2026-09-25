@@ -54,6 +54,7 @@ function colorHito(h: Hito): string {
 /** El timeline animado. Se monta con los hitos ya cargados: así useState
  * arranca con el total real (reduce → todo revelado). */
 function Timeline({ hitos, onFin }: { hitos: Hito[]; onFin: () => void }) {
+  const idioma = useIdioma();
   const total = hitos.length;
   const reduce =
     typeof window !== "undefined" && window.matchMedia?.("(prefers-reduced-motion: reduce)").matches === true;
@@ -129,7 +130,7 @@ function Timeline({ hitos, onFin }: { hitos: Hito[]; onFin: () => void }) {
                       : "sm:col-start-2 sm:pl-10 sm:text-left")
                 }
               >
-                <p className="text-[12px] text-dim">{fechaHumanaCorta(h.fecha)}</p>
+                <p className="text-[12px] text-dim">{fechaHumanaCorta(h.fecha, idioma)}</p>
                 <p
                   className={
                     "mt-0.5 " +

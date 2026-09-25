@@ -11,7 +11,7 @@
  */
 import { useCallback, useEffect, useRef, useState, useSyncExternalStore } from "react";
 import { textoDeSesion, type ResultadoVoz as ResultadoDictado } from "./dictado";
-import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { elegir, LANG_DICTADO, LOCALE_BASE, type Locale } from "./i18n/config";
 import { VOZ } from "./i18n/mensajes/voz";
 
 interface ResultadoVoz {
@@ -146,7 +146,8 @@ export function useSpeech(
     let oyoAlgo = false;
     alNuevaSesionRef.current?.();
     const rec = new Ctor();
-    rec.lang = "es-MX";
+    // El dictado escucha en el idioma de la interfaz (en español, es-MX).
+    rec.lang = LANG_DICTADO[idiomaRef.current];
     rec.continuous = false;
     rec.interimResults = true;
     rec.onresult = (e) => {

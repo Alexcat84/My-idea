@@ -74,7 +74,7 @@ import { cargarGrafo, conceptosDeRuta, faseDeNodo } from "@/lib/engine/graph";
 import { dominiosDelRecorrido } from "@/lib/engine/recorrido";
 import { evaluarCalidadSesion } from "@/lib/engine/juezSesion";
 import {
-  AVISO_VERSION_BASICA,
+  avisoVersionBasica,
   comprimirEstadoVivo,
   extraerTitulo,
   filtrarDeltaAntesDeAutodeclaracion,
@@ -563,7 +563,7 @@ Estado actual del proyecto, más reciente que la exploración: ${estadoVivoActua
           // El chip refresca su saldo con la entrega (patron del I Ching).
           creditos_restantes: creditosRestantes,
           version_basica: versionBasica,
-          aviso: versionBasica ? AVISO_VERSION_BASICA : null,
+          aviso: versionBasica ? avisoVersionBasica(idioma) : null,
         });
         cobroAplicado = null; // el done salio: la entrega llego a su dueño
       } catch (e) {

@@ -35,7 +35,8 @@ function colorNodo(tipo: TipoHito): string {
 }
 
 export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
-  const t = elegir(ANALISIS, useIdioma()).lineaAvance;
+  const idioma = useIdioma();
+  const t = elegir(ANALISIS, idioma).lineaAvance;
   const cierre = hitos.at(-1);
   const arranques = hitos.slice(0, -1);
   const cerrado = cierre?.alcanzado ?? false;
@@ -124,7 +125,7 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
                   (izq ? "sm:col-start-1 sm:items-end sm:text-right" : "sm:col-start-3 sm:items-start sm:text-left")
                 }
               >
-                {h.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(h.fecha)}</span>}
+                {h.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(h.fecha, idioma)}</span>}
                 <span className="text-[17px] font-bold tracking-[-0.01em] [text-wrap:pretty]">{h.etiqueta}</span>
                 {h.subtitulo && <span className="text-[13.5px] leading-snug text-dim [text-wrap:pretty]">{h.subtitulo}</span>}
               </div>
@@ -145,7 +146,7 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
               🎉
             </span>
             <div className="flex flex-col gap-1 pl-[52px] pt-1 sm:items-center sm:pl-0 sm:pt-[52px] sm:text-center">
-              {cierre.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(cierre.fecha)}</span>}
+              {cierre.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(cierre.fecha, idioma)}</span>}
               <span className="text-[15px] font-extrabold uppercase tracking-[1.6px] text-done">{cierre.etiqueta}</span>
               {cierre.subtitulo && <span className="text-[14px] text-dim">{cierre.subtitulo}</span>}
             </div>

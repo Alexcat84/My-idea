@@ -32,11 +32,11 @@ import { CierreHonesto } from "../../ui/CierreHonesto";
 import { PotenciaTuIdea } from "../../ui/PotenciaTuIdea";
 import { CambiadorEspacios } from "../../ui/CambiadorEspacios";
 import type { Cara } from "../../ui/SelectorCara";
-import { MENSAJE_ADOPCION_PENDIENTE } from "@/lib/constants";
+import { mensajeAdopcionPendiente } from "@/lib/constants";
 import { cuentaHonesta } from "@/lib/dbContract";
 import { estadoEspacio } from "@/lib/esperaEspacio";
 import { finDeEntrevista } from "@/lib/finDeEntrevista";
-import { ERROR_GENERICO, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
+import { errorGenerico, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
 import { montoDelPlan, PRECIOS } from "@/lib/precios";
 import { urlDelEspacio } from "@/lib/espacios";
 import { loginConNext } from "@/lib/nextSeguro";
@@ -295,13 +295,13 @@ export function IdeaView({ projectId }: { projectId: string }) {
     try {
       const res = await fetch(`/api/project/${projectId}/checklist`, { signal: control.signal });
       if (res.ok) setChecklist((await res.json()) as ChecklistData);
-      else setErrorChecklist((await leerRechazo(res)).mensaje);
+      else setErrorChecklist((await leerRechazo(res, idioma)).mensaje);
     } catch {
       setErrorChecklist(t.errores.cargarEspacio);
     } finally {
       clearTimeout(limite);
     }
-  }, [projectId, t]);
+  }, [projectId, t, idioma]);
 
   function agregarNodos(nuevos: NodoNuevo[] | undefined) {
     if (!nuevos?.length) return;
@@ -357,7 +357,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
    * texto largo, fusible, límites). El genérico solo si no dio razón. Con el
    * doble factor pendiente, se abre el desafío y se vuelve a `volverA`. */
   async function mostrarRechazo(res: Response, volverA: string) {
-    const r = await leerRechazo(res);
+    const r = await leerRechazo(res, idioma);
     setError(r.mensaje);
     if (r.tipo === "segundo_factor") void irAlDesafio(volverA);
   }
@@ -432,7 +432,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
       });
       const data = (await res.json()) as { error?: string };
       if (!res.ok) {
-        setError(data.error ?? ERROR_GENERICO);
+        setError(data.error ?? errorGenerico(idioma));
         return;
       }
       // El escaparate queda persistido: salir de la entrevista, refrescar los
@@ -642,9 +642,9 @@ export function IdeaView({ projectId }: { projectId: string }) {
           setError(
             res.status === 404
               ? searchParams.get("adopcion") === "pendiente"
-                ? MENSAJE_ADOPCION_PENDIENTE
+                ? mensajeAdopcionPendiente(idioma)
                 : t.errores.ideaNoExiste
-              : ERROR_GENERICO
+              : errorGenerico(idioma)
           );
           setCargando(false);
           return;
@@ -915,7 +915,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   if (!detalle) {
     return (
       <div className="px-6 py-12">
-        <p className="text-warn">{error ?? ERROR_GENERICO}</p>
+        <p className="text-warn">{error ?? errorGenerico(idioma)}</p>
         <Link href="/ideas" className="mt-4 inline-block text-accent">
           {t.volverAMisIdeas}
         </Link>

@@ -11,7 +11,8 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { detectarInconsistenciaGigo, calcularReporte, type NumerosProyecto, type TipoOferta } from "../calculadora";
 import { type UsoAcumulado } from "../costmeter";
 import { cerraduraAritmetica, numerosDeCalculadora, numerosDeclarados, verificarNumerosHuerfanos } from "../verificadorHuerfanos";
-import { MAX_PREGUNTAS_REPORTE, PREGUNTA_TIPO_OFERTA, type CampoNumericoProyecto } from "./constants";
+import { LOCALE_BASE, type Locale } from "../i18n/config";
+import { MAX_PREGUNTAS_REPORTE, preguntaTipoOferta, type CampoNumericoProyecto } from "./constants";
 import {
   camposEsencialesPorTipo,
   clasificarOferta,
@@ -111,7 +112,10 @@ export async function iniciarReporte(
   numeros: NumerosProyecto,
   tipoOferta: string | null,
   unidadVenta: string | null,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  /** i18n: el idioma de las preguntas (se muestran, no se guardan). El
+   * reporte generado es un documento y sigue en el base (D2, F5). */
+  idioma: Locale = LOCALE_BASE
 ): Promise<ResultadoPasoReporte> {
   if (!tipoOferta) {
     const estado: EstadoReporte = {
@@ -126,13 +130,13 @@ export async function iniciarReporte(
     return {
       tipo: "pregunta",
       estado,
-      pregunta: PREGUNTA_TIPO_OFERTA,
+      pregunta: preguntaTipoOferta(idioma),
       acumulado,
       numeros,
       tipoOfertaActualizado: null,
     };
   }
-  return continuarConTipoConocido(client, numeros, tipoOferta, unidadVenta, 0, false, acumulado);
+  return continuarConTipoConocido(client, numeros, tipoOferta, unidadVenta, 0, false, acumulado, idioma);
 }
 
 async function continuarConTipoConocido(
@@ -142,14 +146,15 @@ async function continuarConTipoConocido(
   unidadVenta: string | null,
   noAplicaCount: number,
   moldeCambiado: boolean,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  idioma: Locale
 ): Promise<ResultadoPasoReporte> {
   const faltantesEsenciales = calcularFaltantes(tipoOferta, numeros);
   if (faltantesEsenciales.length === 0) {
     const { contenido, acumulado: acumuladoFinal, eventos } = await generarContenidoReporte(client, numeros, tipoOferta, acumulado);
     return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null, eventos };
   }
-  const preguntas = preguntasPorTipo(tipoOferta, unidadVenta);
+  const preguntas = preguntasPorTipo(tipoOferta, unidadVenta, idioma);
   const estado: EstadoReporte = {
     fase: "preguntando",
     tipoOferta,
@@ -176,7 +181,9 @@ export async function avanzarReporte(
   estado: EstadoReporte,
   numeros: NumerosProyecto,
   respuesta: string,
-  acumulado: UsoAcumulado
+  acumulado: UsoAcumulado,
+  /** i18n: el idioma de las preguntas (ver iniciarReporte). */
+  idioma: Locale = LOCALE_BASE
 ): Promise<ResultadoPasoReporte> {
   if (estado.fase === "clasificando_oferta") {
     const r = await clasificarOferta(client, respuesta, acumulado);
@@ -190,7 +197,7 @@ export async function avanzarReporte(
     const tipoOfertaActualizado: TipoOfertaActualizado | null = r.tipo
       ? { tipoOferta: r.tipo, unidadVenta }
       : null;
-    const resultado = await continuarConTipoConocido(client, numeros, tipoOferta, unidadVenta, 0, false, r.acumulado);
+    const resultado = await continuarConTipoConocido(client, numeros, tipoOferta, unidadVenta, 0, false, r.acumulado, idioma);
     return { ...resultado, tipoOfertaActualizado: resultado.tipoOfertaActualizado ?? tipoOfertaActualizado };
   }
 
@@ -198,7 +205,7 @@ export async function avanzarReporte(
     const r = await clasificarOferta(client, respuesta, acumulado);
     if (r.tipo && r.tipo !== estado.tipoOferta) {
       const unidadVenta = r.unidad ?? estado.unidadVenta;
-      const resultado = await continuarConTipoConocido(client, numeros, r.tipo, unidadVenta, 0, true, r.acumulado);
+      const resultado = await continuarConTipoConocido(client, numeros, r.tipo, unidadVenta, 0, true, r.acumulado, idioma);
       return { ...resultado, tipoOfertaActualizado: { tipoOferta: r.tipo, unidadVenta } };
     }
     // Sin cambio de tipo: seguimos con la MISMA lista, avanzando un campo.
@@ -213,7 +220,7 @@ export async function avanzarReporte(
       );
       return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null, eventos };
     }
-    const preguntas = preguntasPorTipo(estado.tipoOferta, estado.unidadVenta);
+    const preguntas = preguntasPorTipo(estado.tipoOferta, estado.unidadVenta, idioma);
     const nuevoEstado: EstadoReporte = { ...estado, fase: "preguntando", idx: siguienteIdx, moldeCambiado: true };
     return {
       tipo: "pregunta",
@@ -234,7 +241,7 @@ export async function avanzarReporte(
       return {
         tipo: "pregunta",
         estado: nuevoEstado,
-        pregunta: PREGUNTA_TIPO_OFERTA,
+        pregunta: preguntaTipoOferta(idioma),
         acumulado,
         numeros,
         tipoOfertaActualizado: null,
@@ -246,7 +253,7 @@ export async function avanzarReporte(
       const { contenido, acumulado: acumuladoFinal, eventos } = await generarContenidoReporte(client, numeros, tipoOferta, acumulado);
       return { tipo: "reporte_listo", contenido, acumulado: acumuladoFinal, numeros, tipoOfertaActualizado: null, eventos };
     }
-    const preguntas = preguntasPorTipo(estado.tipoOferta, estado.unidadVenta);
+    const preguntas = preguntasPorTipo(estado.tipoOferta, estado.unidadVenta, idioma);
     const nuevoEstado: EstadoReporte = { ...estado, noAplicaCount, idx: siguienteIdx };
     return {
       tipo: "pregunta",
@@ -287,7 +294,7 @@ export async function avanzarReporte(
       eventos,
     };
   }
-  const preguntas = preguntasPorTipo(estado.tipoOferta, estado.unidadVenta);
+  const preguntas = preguntasPorTipo(estado.tipoOferta, estado.unidadVenta, idioma);
   const nuevoEstado: EstadoReporte = { ...estado, idx: siguienteIdx };
   return {
     tipo: "pregunta",
