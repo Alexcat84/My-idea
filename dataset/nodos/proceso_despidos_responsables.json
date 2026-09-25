@@ -10,7 +10,7 @@
     "Minimizar el tiempo entre la decisión y la ejecución para evitar filtraciones",
     "Definir el mensaje central: es un fracaso de la empresa, no de las personas despedidas",
     "Entrenar a cada gerente para que despida personalmente a su propio equipo, explicando la situación, dejando claro que la decisión es innegociable, y detallando los beneficios y apoyo disponibles",
-    "Comunicar a toda la empresa lo sucedido de forma clara y honesta después de ejecutado el despido"
+    "Antes de ejecutar el despido, dirigirse a toda la empresa para explicar lo sucedido de forma clara y honesta y dar contexto y respaldo a los gerentes"
   ],
   "entregable_esperado": "Protocolo escrito de despidos con guion para gerentes, cronograma de ejecución y plan de comunicación interna",
   "nodos_previos": [
@@ -23,5 +23,24 @@
     "Cuando la empresa no cumple su plan financiero y debe reducir personal",
     "Cuando existe riesgo de filtración de rumores sobre recortes"
   ],
-  "etiqueta_arbol": "Despide con Responsabilidad y Respeto"
+  "etiqueta_arbol": "Despide con Responsabilidad y Respeto",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-007",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Comunicar a toda la empresa lo sucedido de forma clara y honesta después de ejecutado el despido",
+      "texto_nuevo": "Antes de ejecutar el despido, dirigirse a toda la empresa para explicar lo sucedido de forma clara y honesta y dar contexto y respaldo a los gerentes",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L889-L891",
+        "frase": "Prior to executing the layoff, the CEO must address the company. The CEO must deliver the overall message that provides the proper context and air cover for the managers."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro pone el mensaje a toda la empresa antes de ejecutar el despido; el paso lo pone despues, invirtiendo la secuencia.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-098"
+    }
+  ]
 }

@@ -4,13 +4,13 @@
   "dominio": "core",
   "titulo_concepto": "Desarrollo en Espiral o Iterativo (Build-Test-Feedback-Revise)",
   "fuente": "Winning at New Products - Robert G. Cooper",
-  "resumen_teorico": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. El ciclo se repite en promedio de tres a cuatro veces en negocios entre empresas, hasta quince en procesos de diseño muy iterativos, y se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final, y documenta cada iteración para reducir el riesgo de rehacer el trabajo completo.",
+  "resumen_teorico": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. El ciclo se repite en promedio entre 3 y 4,5 veces en fabricantes que venden a otras empresas (firmas de diseño como IDEO iteran en promedio 15 veces), y se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final, y documenta cada iteración para reducir el riesgo de rehacer el trabajo completo.",
   "pasos_accionables": [
     "Construir una versión mínima, rápida y económica del producto (prototipo, MVP, protocept), no la versión final",
     "Probar la versión con clientes reales para medir interés, preferencia e intención de compra",
     "Recoger feedback directo sobre qué debe cambiarse o corregirse",
     "Revisar el diseño, propuesta de valor y beneficios en base al feedback",
-    "Repetir el ciclo varias veces (de tres a cuatro en promedio, hasta quince en procesos muy iterativos), manteniendo contacto continuo con el cliente hasta llegar a pruebas de campo formales",
+    "Repetir el ciclo varias veces (entre 3 y 4,5 versiones en promedio en fabricantes B2B; firmas de diseño como IDEO iteran en promedio 15 veces), manteniendo contacto continuo con el cliente hasta llegar a las pruebas formales del producto o de campo",
     "Documentar cada iteración, desde la investigación inicial de la voz del cliente hasta el testeo completo del producto"
   ],
   "entregable_esperado": "Una serie documentada de prototipos iterativos, con registros de feedback de cliente en cada ciclo, que culmina en una definición de producto validada y probada en campo.",
@@ -52,6 +52,41 @@
       "node_id": "spiral_development",
       "titulo": "Desarrollo en Espiral (Spiral Development)",
       "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-009",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Repetir el ciclo varias veces (de tres a cuatro en promedio, hasta quince en procesos muy iterativos), manteniendo contacto continuo con el cliente hasta llegar a pruebas de campo formales",
+      "texto_nuevo": "Repetir el ciclo varias veces (entre 3 y 4,5 versiones en promedio en fabricantes B2B; firmas de diseño como IDEO iteran en promedio 15 veces), manteniendo contacto continuo con el cliente hasta llegar a las pruebas formales del producto o de campo",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L1694-L1700",
+        "frase": "between 3 and 4.5 versions of the product ... were presented to validate the design with customers ... (while product ideation-and-design contractors, such as IDEO, iterated on average 15 times with the customer per project!)"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El paso cambia las cifras: el libro da de 3 a 4,5 versiones en promedio y 15 iteraciones como promedio de IDEO, no como maximo.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C076-105"
+    },
+    {
+      "id": "fidelidad-t7-010",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. El ciclo se repite en promedio de tres a cuatro veces en negocios entre empresas, hasta quince en procesos de diseño muy iterativos, y se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final, y documenta cada iteración para reducir el riesgo de rehacer el trabajo completo.",
+      "texto_nuevo": "Los clientes muchas veces no saben lo que quieren hasta que lo ven o lo prueban, por eso el desarrollo no debe estar completamente definido desde el inicio ni seguir un camino lineal, sino evolucionar por ciclos: construir una versión rápida y económica, probarla con clientes reales, recoger feedback y revisar el diseño antes de repetir. Cada espiral acerca el producto al diseño final, permitiendo fallar rápido, barato y temprano. El ciclo se repite en promedio entre 3 y 4,5 veces en fabricantes que venden a otras empresas (firmas de diseño como IDEO iteran en promedio 15 veces), y se mide en meses en vez de semanas como en los ciclos ágiles. Mantén el contacto con el cliente durante todo el desarrollo, no solo al inicio y al final, y documenta cada iteración para reducir el riesgo de rehacer el trabajo completo.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L1694-L1700",
+        "frase": "between 3 and 4.5 versions of the product ... were presented to validate the design with customers ... (while product ideation-and-design contractors, such as IDEO, iterated on average 15 times with the customer per project!)"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite las cifras cambiadas del paso 4 (de tres a cuatro en promedio, hasta quince). El libro da entre 3 y 4,5 versiones en promedio en fabricantes B2B y 15 como promedio de IDEO, no como máximo (Cooper, L1694-L1700).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C076-105"
     }
   ]
 }

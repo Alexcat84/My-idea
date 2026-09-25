@@ -6,7 +6,7 @@
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
   "resumen_teorico": "La varianza es la diferencia entre dos cifras financieras (presupuesto vs. real, mes actual vs. mes anterior). Es clave determinar si una varianza es favorable o desfavorable: más ingresos de lo esperado es favorable, más gastos de lo esperado es desfavorable. Los paréntesis o signos negativos no siempre indican lo mismo dependiendo si es línea de ingreso o gasto.",
   "pasos_accionables": [
-    "Calcular varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes",
+    "Sugerencia de My Idea: calcular la varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes.",
     "Determinar manualmente si cada varianza es favorable o desfavorable",
     "Verificar cómo el sistema contable presenta paréntesis/signos negativos",
     "Priorizar la revisión de varianzas grandes en términos porcentuales",
@@ -37,6 +37,25 @@
       "node_id": "analisis_de_variancia",
       "titulo": "Análisis de variación entre lo presupuestado y lo real (budget vs. actual)",
       "fuente": "Financial Intelligence for Entrepreneurs"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-023",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes",
+      "texto_nuevo": "Sugerencia de My Idea: calcular la varianza en dólares y en porcentaje para cada línea relevante, y hacerlo cada mes.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "I have an idea/txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "L966",
+        "frase": "It might be the difference between budget and actual for the month or year, between actual this month and actual last month, and so on. It can be presented in dollars or percentages, or both."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro respalda la varianza en dolares y porcentaje, pero no fija una frecuencia mensual obligatoria; habla de mes o ano (buscado every month, monthly).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C028-040"
     }
   ]
 }

@@ -4,15 +4,15 @@
   "dominio": "compras",
   "titulo_concepto": "Usa el silencio y no aceptes partir el precio a la mitad",
   "fuente": "Chris Voss, Rompe la barrera del no",
-  "resumen_teorico": "Cuando negocias un precio con un proveedor al que vas a seguir comprando, ceder hasta el punto medio solo por incomodidad suele salir caro para los dos. El silencio, después de plantear tu límite con claridad, le da a la otra parte espacio para pensar sin que tú cedas primero ni te disculpes de más. Chris Voss ilustra esto con la imagen de unos zapatos desparejados: partir la diferencia entre dos opciones claras casi siempre deja un resultado peor que elegir una de ellas. La idea no es endurecerte con quien te va a volver a vender o comprar, sino distinguir entre ser flexible y ceder solo porque el silencio incomoda.",
+  "resumen_teorico": "Cuando negocias un precio con un proveedor al que vas a seguir comprando, ceder hasta el punto medio sale caro para los dos. El silencio, después de plantear tu límite con claridad, le da a la otra parte espacio para pensar sin que tú cedas primero ni te disculpes de más. Chris Voss ilustra esto con la imagen de unos zapatos desparejados: partir la diferencia entre dos opciones claras deja un resultado peor que elegir una de ellas. La idea no es endurecerte con quien te va a volver a vender o comprar, sino distinguir entre ser flexible y ceder solo porque el silencio incomoda.",
   "pasos_accionables": [
-    "Antes de la llamada o reunión, escribe el precio mínimo que puedes aceptar y no lo digas hasta que haga falta.",
+    "Antes de la llamada o reunión, ten claro lo que no puedes aceptar, pero anota solo tu objetivo por lo alto.",
     "Cuando plantees tu oferta, cállate y espera la respuesta sin rellenar el silencio con justificaciones.",
-    "Si te ofrecen partir la diferencia, pregunta qué problema resuelve esa cifra antes de aceptarla.",
+    "Si te ofrecen partir la diferencia, no la aceptes: responde con una pregunta de cómo o qué para buscar otra solución.",
     "Practica quedarte en silencio unos segundos después de tu oferta, aunque te incomode.",
-    "Anota después de cada negociación si cediste por presión del silencio o por una razón real."
+    "Sugerencia de My Idea: después de cada negociación, anota si cediste por la presión del silencio o por una razón real."
   ],
-  "entregable_esperado": "Un precio límite escrito antes de negociar, usado para no ceder por incomodidad.",
+  "entregable_esperado": "Un objetivo por lo alto escrito antes de negociar, usado para no ceder por incomodidad.",
   "nodos_previos": [
     "preparate_para_marcharte_del_trato"
   ],
@@ -25,5 +25,106 @@
     "Sientes la tentación de aceptar partir la diferencia solo para terminar la conversación incómoda.",
     "Un proveedor te presiona con silencios largos después de que planteas tu oferta."
   ],
-  "etiqueta_arbol": "Usa el silencio al negociar"
+  "etiqueta_arbol": "Usa el silencio al negociar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-008",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Antes de la llamada o reunión, escribe el precio mínimo que puedes aceptar y no lo digas hasta que haga falta.",
+      "texto_nuevo": "Antes de la llamada o reunión, ten claro lo que no puedes aceptar, pero anota solo tu objetivo por lo alto.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "I have an idea/txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "L5241-L5243",
+        "frase": "mi consejo es que te limites a anotar en él el objetivo por lo alto"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro desaconseja anotar el mínimo: en el pliego solo se escribe el objetivo por lo alto (L5215, L5243). Si te centras en el mínimo, eso es lo que conseguirás (L5241). Sí pide tener claro lo que no puedes aceptar (L5237), pero no escribirlo.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-048"
+    },
+    {
+      "id": "fidelidad-t5-009",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un precio límite escrito antes de negociar, usado para no ceder por incomodidad.",
+      "texto_nuevo": "Un objetivo por lo alto escrito antes de negociar, usado para no ceder por incomodidad.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "I have an idea/txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "L5241-L5243",
+        "frase": "mi consejo es que te limites a anotar en él el objetivo por lo alto"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite el dato corregido en el paso 0 (dejar escrito el precio mínimo o límite). El libro pide anotar solo el objetivo por lo alto y tener claro lo que no puedes aceptar sin escribirlo (L5215, L5241-L5243).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-048"
+    },
+    {
+      "id": "fidelidad-t5-010",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si te ofrecen partir la diferencia, pregunta qué problema resuelve esa cifra antes de aceptarla.",
+      "texto_nuevo": "Si te ofrecen partir la diferencia, no la aceptes: responde con una pregunta de cómo o qué para buscar otra solución.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "I have an idea/txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "L2381-L2393",
+        "frase": "nunca te comprometas a llegar a un punto medio"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razón B. El libro prohíbe sin excepción aceptar el punto medio (L2393, zapatos desparejados en L2381, lección L2873: 'así que no cedas'). El paso presenta la aceptación de la cifra partida como el final natural ('antes de aceptarla'). Busqué punto medio, partir la diferencia, intermedio y mitad en todo el libro: ningún pasaje respalda aceptar el punto medio. En L2296 se evita el punto medio y se acepta la solución que propone la otra parte, no la cifra partida. Preguntar va en la línea del libro, pero dejar abierta la aceptación va contra él.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-057"
+    },
+    {
+      "id": "fidelidad-t5-011",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando negocias un precio con un proveedor al que vas a seguir comprando, ceder hasta el punto medio solo por incomodidad suele salir caro para los dos. El silencio, después de plantear tu límite con claridad, le da a la otra parte espacio para pensar sin que tú cedas primero ni te disculpes de más. Chris Voss ilustra esto con la imagen de unos zapatos desparejados: partir la diferencia entre dos opciones claras casi siempre deja un resultado peor que elegir una de ellas. La idea no es endurecerte con quien te va a volver a vender o comprar, sino distinguir entre ser flexible y ceder solo porque el silencio incomoda.",
+      "texto_nuevo": "Cuando negocias un precio con un proveedor al que vas a seguir comprando, ceder hasta el punto medio sale caro para los dos. El silencio, después de plantear tu límite con claridad, le da a la otra parte espacio para pensar sin que tú cedas primero ni te disculpes de más. Chris Voss ilustra esto con la imagen de unos zapatos desparejados: partir la diferencia entre dos opciones claras casi siempre deja un resultado peor que elegir una de ellas. La idea no es endurecerte con quien te va a volver a vender o comprar, sino distinguir entre ser flexible y ceder solo porque el silencio incomoda.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "I have an idea/txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "L2381-L2393",
+        "frase": "nunca te comprometas a llegar a un punto medio"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): Repite la idea corregida en el paso 2: deja abierto aceptar el punto medio cuando no es por incomodidad. El libro prohíbe aceptarlo sin excepción ('nunca te comprometas a llegar a un punto medio', L2393).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-057"
+    },
+    {
+      "id": "fidelidad-t5-012",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Cuando negocias un precio con un proveedor al que vas a seguir comprando, ceder hasta el punto medio sale caro para los dos. El silencio, después de plantear tu límite con claridad, le da a la otra parte espacio para pensar sin que tú cedas primero ni te disculpes de más. Chris Voss ilustra esto con la imagen de unos zapatos desparejados: partir la diferencia entre dos opciones claras casi siempre deja un resultado peor que elegir una de ellas. La idea no es endurecerte con quien te va a volver a vender o comprar, sino distinguir entre ser flexible y ceder solo porque el silencio incomoda.",
+      "texto_nuevo": "Cuando negocias un precio con un proveedor al que vas a seguir comprando, ceder hasta el punto medio sale caro para los dos. El silencio, después de plantear tu límite con claridad, le da a la otra parte espacio para pensar sin que tú cedas primero ni te disculpes de más. Chris Voss ilustra esto con la imagen de unos zapatos desparejados: partir la diferencia entre dos opciones claras deja un resultado peor que elegir una de ellas. La idea no es endurecerte con quien te va a volver a vender o comprar, sino distinguir entre ser flexible y ceder solo porque el silencio incomoda.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "I have an idea/txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "L2381-L2393",
+        "frase": "nunca te comprometas a llegar a un punto medio"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El 'casi siempre' deja abierta la aceptación del punto medio, que es la idea corregida en el paso 2. En el libro, la imagen de los zapatos desparejados (L2381) y la lección 'así que no cedas' (L2873) no admiten excepción.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-057"
+    },
+    {
+      "id": "fidelidad-t5-055",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anota después de cada negociación si cediste por presión del silencio o por una razón real.",
+      "texto_nuevo": "Sugerencia de My Idea: después de cada negociación, anota si cediste por la presión del silencio o por una razón real.",
+      "cita": {
+        "libro": "Chris Voss, Rompe la barrera del no",
+        "fichero": "I have an idea/txt/Procurenment/Rompe la barrera del no_ 9 prin - Chris Voss.txt",
+        "lineas": "L4764-L4770",
+        "frase": "Repasa todo lo que escuches."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide repasar lo que dice la otra parte, pero nunca propone un registro tras cada negociación sobre si cediste por la presión del silencio. Busqué anotar, registro y diario sin encontrar respaldo.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C034-037"
+    }
+  ]
 }

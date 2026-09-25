@@ -9,7 +9,7 @@
     "Identifica un momento de incomodidad o desconcierto en tu proceso de investigación o diseño.",
     "Resiste el impulso de resolverlo o evitarlo de inmediato.",
     "Quédate observando la situación de manera prolongada y anota lo que va apareciendo con el tiempo.",
-    "Registra los descubrimientos que surgen después de superar la incomodidad inicial.",
+    "Registra los descubrimientos que van surgiendo mientras permaneces en la incomodidad, sin intentar resolverla.",
     "Usa la incomodidad como señal de que hay una oportunidad de aprendizaje o un hallazgo sin explorar."
   ],
   "entregable_esperado": "Un diario de observación con notas de al menos una sesión prolongada (mínimo 30 a 60 minutos) donde documentes los hallazgos que solo aparecieron con el paso del tiempo.",
@@ -27,5 +27,24 @@
     "Si tus primeras observaciones de un usuario o contexto te parecen superficiales.",
     "Cuando busques generar hallazgos no obvios en una investigación de campo."
   ],
-  "etiqueta_arbol": "Abraza la Incomodidad al Observar"
+  "etiqueta_arbol": "Abraza la Incomodidad al Observar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t10-01",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Registra los descubrimientos que surgen después de superar la incomodidad inicial.",
+      "texto_nuevo": "Registra los descubrimientos que van surgiendo mientras permaneces en la incomodidad, sin intentar resolverla.",
+      "cita": {
+        "libro": "Assembling Tomorrow: A Guide to Designing a Thriving Future - Doorley, Scott; Carter, Carissa",
+        "fichero": "I have an idea/txt/Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
+        "lineas": "L2696-L2696",
+        "frase": "If you resist the desire to resolve your awkwardness, you give your psyche room to let something novel hop in, rather than cutting off all possibility with a quick, ready-made resolution."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el arbitro, con su cita. Decision del fundador del 27 sep, punto 3: las EXCEPCIONES con desacuerdo entre fases van a un arbitro con el libro. Registrar los hallazgos que salen con el tiempo sí va en la línea del libro (Roberts, L4662). Pero el paso pone el descubrimiento \"después de superar la incomodidad inicial\", y eso invierte la secuencia que da el libro. Para el libro, lo nuevo aparece precisamente porque no resuelves la incomodidad y te quedas en ella: \"dwell\", \"linger\", \"discomfort without resolution\", \"Then keep standing there\". Dice incluso que el afán de resolver es \"the enemy of luck\". Superar la incomodidad es justo lo que el libro pide no hacer, y además choca con el paso 2 del propio nodo (\"Resiste el impulso de resolverlo\"). Invertir una secuencia o una recomendación cuenta como CONTRARIO, y hay citas que se oponen de forma directa (L2690, L2696, L4662). Busqueda en todo el libro: Busqué en todo el libro awkward, discomfort, uncomfortable, overcome, get past y push through. A favor de registrar lo que aparece con el tiempo: L2692-L2694 (Roberts, tres horas: los detalles se despliegan con paciencia, \"access is not synonymous with learning\") y L4662 (\"We can sit with our awkward moments until the quirky components reveal design opportunities\"). En los dos casos los hallazgos llegan mientras sigues dentro de la incomodidad, no después de dejarla atrás. En contra de \"superar\": L2688 (\"that's where you need to dwell\", \"linger in discomfort\", \"staying open when something is off\"), L2690 (\"discomfort without resolution is a cocktail that delivers a curiosity buzz\"), L2696 (\"The relentless desire to resolve things is the enemy of luck... Stew in it... Then keep standing there\"), L3011 (\"if we sit with it rather than react, we might find treasure\") y L4347 (\"get comfortable with your discomfort\"). No hay ningún pasaje que diga que hay que superar, dejar atrás o resolver la incomodidad para descubrir algo.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/ARBITRAJE_EXCEPCIONES.json, entrada abrazar_la_incomodidad"
+    }
+  ]
 }

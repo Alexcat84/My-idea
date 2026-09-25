@@ -7,10 +7,10 @@
   "resumen_teorico": "El A/B testing es el método más usado para optimizar actividades de 'get, keep and grow' en negocios web y móviles. Consiste en comparar dos versiones de una página web (o elemento) para determinar cuál produce mejores resultados, mostrando la versión 'A' a la mitad de los visitantes y la versión 'B' a la otra mitad, de forma alternada y secuencial.",
   "pasos_accionables": [
     "Identificar los elementos clave de la landing page que impulsan la activación (botones, titulares, imágenes, ofertas), eligiendo antes la métrica clave a mejorar (ej. tasa de registro) y contando también la ubicación de CTA, el copy, la prueba social y el número de campos de formulario.",
-    "Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipótesis de cambios grandes antes que las de pequeños ajustes.",
-    "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba durante semanas enfocándose en una sola métrica a la vez.",
+    "Sugerencia de My Idea: Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipotesis de cambios grandes antes que las de pequeños ajustes.",
+    "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba el tiempo suficiente para alcanzar su máximo, enfocándose en una sola métrica a la vez.",
     "Medir resultados de conversión/activación para cada versión",
-    "Implementar la versión ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente métrica cuando se agoten las ideas."
+    "Sugerencia de My Idea: Implementar la version ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente metrica cuando se agoten las ideas."
   ],
   "entregable_esperado": "Plan de pruebas A/B con elementos priorizados, resultados documentados y decisión sobre la versión ganadora",
   "nodos_previos": [
@@ -29,5 +29,58 @@
     "Cuando el startup ya tiene tráfico web/mobile pero necesita mejorar tasas de conversión",
     "Cuando se busca optimizar continuamente cualquier paso del funnel de adquisición"
   ],
-  "etiqueta_arbol": "Compara Versiones, Mejora Resultados"
+  "etiqueta_arbol": "Compara Versiones, Mejora Resultados",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-023",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Implementar la versión ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente métrica cuando se agoten las ideas.",
+      "texto_nuevo": "Sugerencia de My Idea: Implementar la version ganadora y repetir el proceso con nuevos elementos, documentando los resultados y pasando a la siguiente metrica cuando se agoten las ideas.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L11485-L11613",
+        "frase": "In summary: The optimization plan will change often, perhaps as often as every day. Start by defining the specific acquisition metrics to optimize. Don't tackle too many at once"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro pide probar, medir y ajustar sin fin (L11528, L11613), ordena las metricas una tras otra por tipo de negocio (L11485: start by optimizing traffic... and then move on) y documenta los experimentos en el canvas (L2220). Pero no pone ninguna condicion para pasar a la siguiente metrica, y menos 'cuando se agoten las ideas'. Busque run out of, out of ideas, next metric, winner, winning version: nada en el contexto de las pruebas A/B. Ese disparador es una pauta de metodo añadida, no una concrecion sin datos nuevos.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C067-047"
+    },
+    {
+      "id": "fidelidad-t7-025",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba durante semanas enfocándose en una sola métrica a la vez.",
+      "texto_nuevo": "Dividir el tráfico de manera aleatoria y equitativa entre ambas versiones (o 80/20 en páginas de alto tráfico), y dejar correr la prueba el tiempo suficiente para alcanzar su máximo, enfocándose en una sola métrica a la vez.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L11613-L11613",
+        "frase": "Many testers drive 80% of the traffic to one alternative, and 20% to the other, which can test on high-traffic pages well."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El reparto equitativo y el 80/20 en páginas de mucho tráfico son del libro, y 'no abordar muchas métricas a la vez' también (L11520). El plazo 'durante semanas' no está: el libro dice que solo la experiencia indica cuánto dura una prueba, que más corto es mejor, y que hay que llegar al máximo global (L8022). Busqué weeks, several weeks y run the test: sin plazo para A/B.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C067-092"
+    },
+    {
+      "id": "fidelidad-t7-026",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipótesis de cambios grandes antes que las de pequeños ajustes.",
+      "texto_nuevo": "Sugerencia de My Idea: Diseñar dos versiones (A y B) cambiando un solo elemento a la vez, generando las hipotesis de cambios grandes antes que las de pequeños ajustes.",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L11504-L11510",
+        "frase": "Don't test everything, test the important things. Don't test more than two changes to a page at a time, to avoid confusing your visitors so you can tell which change drove which improvement."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. Cambiar un solo elemento cabe dentro del limite del libro (no mas de dos cambios, L11510) y L11826 dice Test each one, one at a time, asi que esa parte es fiel. Pero el orden 'cambios grandes antes que pequeños ajustes' no esta en el libro: 'test the important things' prioriza por importancia, no por tamaño del cambio. Busque big changes, bigger changes, small changes, minor changes, tweaks, biggest impact: nada sobre ese orden. No es CONTRARIO porque el libro no da otro orden.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C067-106"
+    }
+  ]
 }

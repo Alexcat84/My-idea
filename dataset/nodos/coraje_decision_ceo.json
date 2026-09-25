@@ -8,11 +8,11 @@
   "pasos_accionables": [
     "Identificar cuando una decisión difícil está siendo influenciada por presión social más que por el análisis objetivo",
     "Evaluar la decisión aislando la opinión de la 'multitud' (equipo, inversionistas, prensa) del análisis propio",
-    "Documentar el razonamiento detrás de la decisión antes de conocer la opinión de otros, para evitar sesgo retrospectivo",
+    "Documentar por escrito el razonamiento detrás de la decisión, para separarte de tu propia psicología y poder decidir con rapidez",
     "Tomar la decisión que se cree correcta aunque no sea popular, aceptando el riesgo social",
-    "Revisar decisiones pasadas difíciles para reforzar la confianza en el propio juicio (entrenamiento del coraje)"
+    "Sugerencia de My Idea: revisar decisiones pasadas difíciles para reforzar la confianza en el propio juicio."
   ],
-  "entregable_esperado": "Un registro de decisiones críticas con el razonamiento independiente documentado antes de recibir input externo, usado como entrenamiento de coraje ejecutivo",
+  "entregable_esperado": "Un registro de decisiones críticas con el razonamiento independiente documentado por escrito, usado como entrenamiento de coraje ejecutivo",
   "nodos_previos": [
     "customer_validation"
   ],
@@ -26,5 +26,57 @@
     "Cuando el equipo o inversionistas presionan en dirección contraria a la convicción del fundador",
     "Cuando existe indecisión prolongada por miedo a la reacción social"
   ],
-  "etiqueta_arbol": "Decide con Coraje Real"
+  "etiqueta_arbol": "Decide con Coraje Real",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-036",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisar decisiones pasadas difíciles para reforzar la confianza en el propio juicio (entrenamiento del coraje)",
+      "texto_nuevo": "Sugerencia de My Idea: revisar decisiones pasadas difíciles para reforzar la confianza en el propio juicio.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2650-L2680",
+        "frase": "Every time you make the hard, correct decision you become a bit more courageous"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Según el libro, el coraje se desarrolla tomando decisiones difíciles y con práctica. En todo el libro no aparece como técnica revisar decisiones pasadas para reforzar la confianza en el propio juicio.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C093-031"
+    },
+    {
+      "id": "fidelidad-t8-037",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Documentar el razonamiento detrás de la decisión antes de conocer la opinión de otros, para evitar sesgo retrospectivo",
+      "texto_nuevo": "Documentar por escrito el razonamiento detrás de la decisión, para separarte de tu propia psicología y poder decidir con rapidez",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2549",
+        "frase": "I wrote down a detailed explanation of my logic. The process of writing that document separated me from my own psychology and enabled me to make the decision swiftly."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Ninguno acierta del todo. B se equivoca al decir que el libro no recoge la técnica de dejar escrito el razonamiento: está en L2549 ('Get it out of your head and onto paper'). A acierta con la cita, pero el paso no se queda en concretarla. Pone un orden que el libro no da (escribir antes de conocer la opinión de otros) y un fin que el libro no menciona (evitar el sesgo retrospectivo). Busqué 'hindsight': solo sale en L3435, sin relación. En el libro, escribir sirve para separarte de tu propia psicología y decidir rápido. El aviso sobre la multitud (L2626) no habla de escribir nada. Como el paso añade un orden y un fin que el libro no respalda, el veredicto es ANADIDO. Se corrige dejando el fin que da el libro.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C093-086"
+    },
+    {
+      "id": "fidelidad-t8-038",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un registro de decisiones críticas con el razonamiento independiente documentado antes de recibir input externo, usado como entrenamiento de coraje ejecutivo",
+      "texto_nuevo": "Un registro de decisiones críticas con el razonamiento independiente documentado por escrito, usado como entrenamiento de coraje ejecutivo",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2549",
+        "frase": "I wrote down a detailed explanation of my logic. The process of writing that document separated me from my own psychology and enabled me to make the decision swiftly."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): Repite el mismo dato ANADIDO del paso 2: documentar el razonamiento antes de conocer la opinion de otros. El libro (L2549) solo pide dejar por escrito el razonamiento para separarte de tu propia psicologia y decidir rapido, sin fijar ese orden. Se quita el orden anadido, igual que en el paso.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C093-086"
+    }
+  ]
 }

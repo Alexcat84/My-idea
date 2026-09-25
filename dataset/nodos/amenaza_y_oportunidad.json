@@ -9,7 +9,7 @@
     "De cada incertidumbre importante, escribe su cara de amenaza: cómo podría frenarte.",
     "Escribe también su cara de oportunidad: cómo podría, bien aprovechada, adelantarte.",
     "Si no tiene ni una cara ni la otra respecto a tu meta, déjala fuera de tu lista.",
-    "Marca una oportunidad concreta que valga la pena perseguir esta semana."
+    "Marca una oportunidad concreta que valga la pena perseguir."
   ],
   "entregable_esperado": "Una tabla de tus incertidumbres con su cara de amenaza y su cara de oportunidad, y una oportunidad marcada para perseguir.",
   "nodos_previos": [
@@ -25,5 +25,24 @@
     "cuando aparece un cambio en tu entorno y no sabes si te conviene o te perjudica",
     "cuando quieres decidir si algo incierto merece o no tu atención"
   ],
-  "etiqueta_arbol": "Amenaza y Oportunidad"
+  "etiqueta_arbol": "Amenaza y Oportunidad",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-041",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Marca una oportunidad concreta que valga la pena perseguir esta semana.",
+      "texto_nuevo": "Marca una oportunidad concreta que valga la pena perseguir.",
+      "cita": {
+        "libro": "Edwards et al., Managing Project Risks",
+        "fichero": "I have an idea/books/Risk Management/Managing Project Risks - Peter J. Edwards.txt",
+        "lineas": "L9563-L9563",
+        "frase": "The greater the focus on threats in risk management, the greater the number of opportunities that may be missed."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro apoya buscar y explotar oportunidades, pero no fija el plazo de esta semana.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C031-072"
+    }
+  ]
 }

@@ -6,7 +6,7 @@
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
   "resumen_teorico": "Para reducir el riesgo de sorpresas desagradables y facilitar futuras transiciones, el consejo debe realizar evaluaciones periódicas, honestas y documentadas del desempeño del fundador-CEO. Esto construye confianza, provee retroalimentación de desarrollo continua, y sienta las bases para una sucesión más fluida cuando sea necesaria.",
   "pasos_accionables": [
-    "Establecer un calendario formal de revisiones de desempeño del CEO (trimestral o semestral).",
+    "Sugerencia de My Idea: establece un calendario formal de revisiones de desempeño del CEO, por ejemplo trimestral o semestral.",
     "Documentar por escrito fortalezas, debilidades y áreas de mejora del fundador-CEO.",
     "Usar estas revisiones para preparar gradualmente al fundador ante la posibilidad de una futura sucesión.",
     "Vincular las revisiones con métricas objetivas de crecimiento y desempeño organizacional."
@@ -24,5 +24,24 @@
     "Una vez que los inversores han entrado al consejo de administración.",
     "Cuando se busca prevenir conflictos abruptos en una futura sucesión de CEO."
   ],
-  "etiqueta_arbol": "Evalúa Regularmente al Fundador-CEO"
+  "etiqueta_arbol": "Evalúa Regularmente al Fundador-CEO",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-021",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer un calendario formal de revisiones de desempeño del CEO (trimestral o semestral).",
+      "texto_nuevo": "Sugerencia de My Idea: establece un calendario formal de revisiones de desempeño del CEO, por ejemplo trimestral o semestral.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L3301",
+        "frase": "should make sure that the board conducts regular, candid, written reviews of the founder-CEO’s performance"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide revisiones regulares, pero no fija su frecuencia. 'Trimestral o semestral' no aparece.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C027-068"
+    }
+  ]
 }

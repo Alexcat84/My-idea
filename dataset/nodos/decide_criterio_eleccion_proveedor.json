@@ -8,8 +8,8 @@
   "pasos_accionables": [
     "Escribe en una hoja qué necesitas comprar con el mayor detalle posible antes de contactar a nadie.",
     "Decide si esta compra es de bajo riesgo, donde manda el precio, o de alto riesgo, donde manda el valor.",
-    "Si manda el valor, anota entre tres y cinco criterios que te importan además del precio.",
-    "Si vas a comprarle a un solo proveedor sin comparar, escribe en una línea la razón concreta.",
+    "Si manda el valor, anota los criterios que te importan además del precio.",
+    "Sugerencia de My Idea: si vas a comprarle a un solo proveedor sin comparar, escribe en una línea la razón concreta.",
     "Guarda esa lista para usarla cuando compares cotizaciones, no la improvises después."
   ],
   "entregable_esperado": "Una lista escrita de criterios de compra y, si aplica, la justificación de proveedor único.",
@@ -28,5 +28,41 @@
     "Ya tienes un proveedor de siempre y alguien te pregunta por qué no buscas otro.",
     "Vas a comprar algo importante para tu negocio y te preocupa quedarte solo con la oferta más barata."
   ],
-  "etiqueta_arbol": "Define tus criterios antes de comprar"
+  "etiqueta_arbol": "Define tus criterios antes de comprar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-051",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si manda el valor, anota entre tres y cinco criterios que te importan además del precio.",
+      "texto_nuevo": "Si manda el valor, anota los criterios que te importan además del precio.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "I have an idea/txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "L941",
+        "frase": "This is a short list of requirements that are often needed--not all of the possible requirements your company could have."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro lista diez elementos del mejor valor y no fija cuantos criterios usar. El rango de tres a cinco no aparece en el libro.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-065"
+    },
+    {
+      "id": "fidelidad-t5-054",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Si vas a comprarle a un solo proveedor sin comparar, escribe en una línea la razón concreta.",
+      "texto_nuevo": "Sugerencia de My Idea: si vas a comprarle a un solo proveedor sin comparar, escribe en una línea la razón concreta.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "I have an idea/txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "L1011, L991, L913-L917",
+        "frase": "If the justification is that there is only one supplier, the market data used to make this determination must be included with the RFPS."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. B tiene razón. El libro sí pide justificar por escrito la compra a proveedor único, en el formulario RFPS, y exige adjuntar datos de mercado si la razón es que solo hay un proveedor (L991, L1011). También advierte que las justificaciones escuetas como \"The IBP likes this supplier\" no aportan información suficiente (L913-L917). Busqué en todo el libro \"one line\", \"one-line\", \"single line\", \"one sentence\" y \"brief\", y no aparece ningún formato de una línea. Ese formato es un dato práctico que pone el paso, así que no es una simple concreción, como decía A.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-114"
+    }
+  ]
 }

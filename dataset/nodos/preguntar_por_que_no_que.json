@@ -6,7 +6,7 @@
   "fuente": "Change by Design, Revised and U - Tim Brown",
   "resumen_teorico": "Preguntar por qué en lugar de aceptar restricciones dadas permite reencuadrar el problema y redefinir sus límites, abriendo el camino a soluciones más innovadoras. En vez de aceptar el problema tal como se presenta (ej. 'autos más rápidos'), se cuestiona el objetivo real detrás (ej. 'mejor transporte').",
   "pasos_accionables": [
-    "Ante cada brief o problema, preguntar '¿por qué se necesita esto?' al menos tres veces.",
+    "Ante cada brief o problema, preguntar '¿por qué se necesita esto?' y si es de verdad el problema correcto.",
     "Cuestionar si el problema planteado es el correcto antes de buscar soluciones.",
     "Reformular el problema en términos del objetivo final del usuario, no del producto solicitado."
   ],
@@ -22,5 +22,24 @@
     "Si el equipo recibe un brief o restricción que parece limitar la innovación",
     "Al iniciar cualquier proceso de design thinking"
   ],
-  "etiqueta_arbol": "Pregunta Por Qué, No Qué"
+  "etiqueta_arbol": "Pregunta Por Qué, No Qué",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-065",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ante cada brief o problema, preguntar '¿por qué se necesita esto?' al menos tres veces.",
+      "texto_nuevo": "Ante cada brief o problema, preguntar '¿por qué se necesita esto?' y si es de verdad el problema correcto.",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "I have an idea/txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "L1421",
+        "frase": "Instead of accepting a given constraint, ask whether this is even the right problem to be solving."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide preguntar por que, sin fijar un numero de repeticiones; buscado three times, five whys y variantes sin resultado.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C112-083"
+    }
+  ]
 }

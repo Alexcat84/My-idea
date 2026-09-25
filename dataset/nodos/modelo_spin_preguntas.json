@@ -13,7 +13,7 @@
     "Ajusta la secuencia según el flujo natural de la conversación sin forzar el orden rígido",
     "Presenta tu solución recién cuando el cliente haya articulado la Necesidad Explícita",
     "Deja de entrenarte en distinguir preguntas abiertas de cerradas; ese no es el factor que marca la diferencia",
-    "Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales",
+    "Practica pasar de un tipo de pregunta a otro primero en situaciones seguras y luego en llamadas reales, sin preocuparte de que suene fluido: usa mucho la conducta nueva",
     "Revisa tus llamadas o tus notas para detectar en qué parte de la secuencia te trabas"
   ],
   "entregable_esperado": "Guion o banco de preguntas SPIN personalizado por cliente o producto, listo para tu próxima llamada de venta clave",
@@ -78,6 +78,25 @@
       "node_id": "modelo_spin",
       "titulo": "Las preguntas que abren una venta grande (método SPIN)",
       "fuente": "SPIN Selling - Neil Rackham"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-005",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Practica pasar de un tipo de pregunta a otro sin que se note, en llamadas reales",
+      "texto_nuevo": "Practica pasar de un tipo de pregunta a otro primero en situaciones seguras y luego en llamadas reales, sin preocuparte de que suene fluido: usa mucho la conducta nueva",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "I have an idea/books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "L2663-L2689",
+        "frase": "Don't worry about quality issues, such as whether you're using it smoothly or whether there might be a better way to phrase it."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El paso pone el foco de la practica en que la transicion sea imperceptible (calidad, fluidez) y en llamadas reales; el libro manda practicar por cantidad sin preocuparse de la fluidez (Regla 3) y probar primero en situaciones seguras antes de llamadas reales (L1822, L2689). Ningun pasaje apoya practicar la suavidad de las transiciones; el libro dice que el SPIN se usa con flexibilidad, no que se disimule.",
+      "indice": 7,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C126-001"
     }
   ]
 }

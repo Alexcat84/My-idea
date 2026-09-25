@@ -9,7 +9,7 @@
     "Determinar cuánto tiempo requiere la fase de exploración antes de necesitar dirección",
     "Establecer un deadline claro y comunicado a todo el equipo",
     "Usar el deadline como punto de evaluación final, no como presión diaria",
-    "Ajustar la duración según la complejidad del proyecto (ni muy corto ni de meses)"
+    "Ajustar la duración con criterio, según cuándo aportará más la revisión de la dirección (ni una fecha límite cada día ni estirarla seis meses)"
   ],
   "entregable_esperado": "Un calendario de hitos con deadlines definidos que marquen transiciones entre divergencia y convergencia",
   "nodos_previos": [
@@ -24,5 +24,24 @@
     "Cuando un equipo de diseño tiende a divergir indefinidamente sin tomar decisiones",
     "Cuando se necesita estructura temporal para avanzar el proyecto"
   ],
-  "etiqueta_arbol": "Usa Plazos para Decidir Rápido"
+  "etiqueta_arbol": "Usa Plazos para Decidir Rápido",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-022",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Ajustar la duración según la complejidad del proyecto (ni muy corto ni de meses)",
+      "texto_nuevo": "Ajustar la duración con criterio, según cuándo aportará más la revisión de la dirección (ni una fecha límite cada día ni estirarla seis meses)",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "I have an idea/txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "L575-L575",
+        "frase": "It's unwise to have a deadline every day, at least in the earlier phases of a project. Nor does it work to stretch it out for six months. It takes judgment to determine when a team will reach a point where management input, reflection, redirection, and selection are most likely to be valuable."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. El libro fija el limite superior en seis meses (no estirarlo seis meses) y el criterio en el juicio sobre cuando la revision de la direccion aportara mas. El paso cambia ese umbral a 'de meses', que excluye cualquier plazo de varios meses que el libro no descarta, y sustituye el criterio por la complejidad del proyecto. Busque en todo el libro (six months, complexity, deadline) y ningun pasaje liga la duracion del plazo a la complejidad ni apoya excluir todo plazo de meses; la unica otra mencion de six months (L785) es de Four Seasons. Umbral cambiado respecto al libro: CONTRARIO por la vara.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C110-026"
+    }
+  ]
 }

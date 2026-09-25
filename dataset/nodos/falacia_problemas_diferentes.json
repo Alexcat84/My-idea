@@ -7,7 +7,7 @@
   "resumen_teorico": "Es comun pensar que tus problemas particulares de calidad son unicos y que por eso no puedes aprovechar principios generales de mejora. Aunque los detalles cambien de un caso a otro, los principios de fondo para mejorar la calidad son universales y aplican a cualquier tipo de negocio.",
   "pasos_accionables": [
     "Antes de descartar un principio por creer que tu caso es distinto, identifica cuales son los principios universales de calidad",
-    "Compara casos de exito de otros rubros para encontrar patrones que también te sirvan a ti",
+    "En lugar de buscar casos de éxito de otros rubros, estudia los principios universales de calidad y entiende la teoría de lo que quieres hacer, porque copiar ejemplos es un peligro",
     "Evita rechazar de entrada una metodologia solo porque crees que tu contexto es diferente"
   ],
   "entregable_esperado": "Un análisis escrito que identifique que principios universales de calidad puedes aplicar a tu propio negocio",
@@ -21,5 +21,24 @@
   "condiciones_activacion": [
     "Cuando rechazas un método de mejora argumentando que tu negocio es único o diferente"
   ],
-  "etiqueta_arbol": "Tus Problemas No Son Únicos"
+  "etiqueta_arbol": "Tus Problemas No Son Únicos",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-017",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Compara casos de exito de otros rubros para encontrar patrones que también te sirvan a ti",
+      "texto_nuevo": "En lugar de buscar casos de éxito de otros rubros, estudia los principios universales de calidad y entiende la teoría de lo que quieres hacer, porque copiar ejemplos es un peligro",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L2797-L2807",
+        "frase": "no number of examples of success or of failure in the improvement of quality and productivity would indicate to the enquirer what success his company would have."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro desaconseja buscar ejemplos de éxito en otras empresas o rubros: dice que copiar es un peligro y que lo que decide es entender los principios. Busqué pasajes que apoyen comparar casos de éxito y no hay ninguno.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-107"
+    }
+  ]
 }

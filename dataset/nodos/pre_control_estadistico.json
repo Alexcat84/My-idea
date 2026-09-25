@@ -7,9 +7,9 @@
   "resumen_teorico": "PRE-Control es una técnica estadística simplificada que detecta condiciones y cambios de proceso que pueden causar defectos, enfocándose en la conformidad con especificaciones en lugar del control estadístico puro. Requiere solo tres mediciones, sin graficar ni calcular, usando la curva normal para detectar cambios significativos en la media o dispersión del proceso.",
   "pasos_accionables": [
     "Centrar el proceso entre los límites de especificación al iniciar",
-    "Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites",
-    "Tomar muestras periódicas de tres piezas consecutivas",
-    "Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado",
+    "Sugerencia de My Idea: definir zonas de PRE-Control (verde, amarilla, roja) segun la distancia a los limites de especificacion",
+    "Sugerencia de My Idea: tomar muestras periodicas de tres piezas consecutivas",
+    "Corregir el proceso cuando las mediciones indiquen un cambio en el centrado o la dispersion que pueda producir piezas fuera de especificacion",
     "Ajustar el proceso y reiniciar el monitoreo"
   ],
   "entregable_esperado": "Sistema de control simplificado en piso de planta operando sin necesidad de gráficos de control tradicionales",
@@ -23,5 +23,58 @@
     "Cuando se requiere un método de control simple y rápido en planta",
     "Cuando el enfoque debe ser en conformidad con especificación más que en control estadístico puro"
   ],
-  "etiqueta_arbol": "Usa el Pre-Control Estadístico"
+  "etiqueta_arbol": "Usa el Pre-Control Estadístico",
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-018",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tomar muestras periódicas de tres piezas consecutivas",
+      "texto_nuevo": "Sugerencia de My Idea: tomar muestras periodicas de tres piezas consecutivas",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L20605-L20610",
+        "frase": "It requires no plotting and no computations, and it needs only three measurements to give control information."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector A. El unico pasaje de PRE-Control en el libro (L20605-L20610) dice que bastan tres mediciones, sin decir como se toman. Busque en todo el libro consecutive, three pieces, three units, periodic sampling y pre-control: consecutive solo aparece en estudios de capacidad (L20891), independencia de mediciones (L20968) y lotes de muestreo (L25083), nunca en PRE-Control. Que las piezas sean consecutivas y el muestreo periodico es una regla de muestreo concreta que el libro no da; no es una simple concrecion de tres mediciones, por eso no es OPERATIVO. No es CONTRARIO porque el libro no fija otro valor para ese dato.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C053-002"
+    },
+    {
+      "id": "fidelidad-t6-019",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Detener el proceso si dos de tres mediciones caen en zona amarilla del mismo lado",
+      "texto_nuevo": "Corregir el proceso cuando las mediciones indiquen un cambio en el centrado o la dispersion que pueda producir piezas fuera de especificacion",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L20605-L20610",
+        "frase": "It requires no plotting and no computations, and it needs only three measurements to give control information."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no menciona zonas amarillas ni ninguna regla de dos de tres; solo dice que PRE-Control detecta cambios en el centrado o en la dispersion.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C053-092"
+    },
+    {
+      "id": "fidelidad-t6-020",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Definir zonas de PRE-Control (verde, amarilla, roja) según distancia a los límites",
+      "texto_nuevo": "Sugerencia de My Idea: definir zonas de PRE-Control (verde, amarilla, roja) segun la distancia a los limites de especificacion",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L20605-L20610",
+        "frase": "It requires no plotting and no computations, and it needs only three measurements"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro no describe zonas de colores verde, amarilla y roja; es un formato de la tecnica que no aparece en el texto.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C053-105"
+    }
+  ]
 }

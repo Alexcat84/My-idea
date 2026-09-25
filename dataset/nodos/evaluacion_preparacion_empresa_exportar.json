@@ -11,7 +11,7 @@
     "Revisa tu experiencia previa: países con los que ya hiciste negocios, consultas recibidas y productos más solicitados",
     "Analiza las demandas que exportar pondrá sobre tus recursos clave: personal, capacidad de producción, financiamiento, y su impacto en tus ventas domésticas",
     "Determina el capital disponible para producción y marketing de exportación y el plazo de retorno que esperas",
-    "Realiza la evaluación formal de preparación exportadora en trade.gov/begin/assessment.asp"
+    "Realiza la evaluación formal de preparación exportadora que ofrece el portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado."
   ],
   "entregable_esperado": "Informe de autoevaluación que identifique tus objetivos, experiencia previa, compromiso gerencial, capacidades y brechas de recursos, sirviendo de base para decidir si procedes con la exportación.",
   "nodos_previos": [
@@ -36,6 +36,25 @@
       "node_id": "autoevaluacion_gerencial_exportacion",
       "titulo": "Autoevaluación Gerencial para la Decisión de Exportar",
       "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-009",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Realiza la evaluación formal de preparación exportadora en trade.gov/begin/assessment.asp",
+      "texto_nuevo": "Realiza la evaluación formal de preparación exportadora que ofrece el portal oficial de exportación del gobierno de EE. UU., o el organismo equivalente en tu mercado.",
+      "cita": {
+        "libro": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
+        "fichero": "I have an idea/books/exportacion/basic-guide-to-exporting_Latest_eg_main_086196.txt",
+        "lineas": "L539",
+        "frase": "take the export readiness assessment, available at export.gov/begin/assessment.asp."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da otra direccion para la misma evaluacion (export.gov, no trade.gov); trade.gov no aparece en el libro. CRITERIO A15, declarado por la sesion: el libro cita export.gov y el nodo trade.gov, que es su sucesor (export.gov redirige hoy a trade.gov). Poner el dominio del libro mandaria al cliente a una direccion vieja; dejar trade.gov seria atribuir al libro algo que no escribio. Se aplica lo que el fundador decidio en A15 (se quitan los nombres; si se confirma una edicion que los nombre, se restauran con cita): el paso dice lo que dice el libro, el portal oficial de exportacion del gobierno de EE. UU., sin nombrar el dominio.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C015-038"
     }
   ]
 }

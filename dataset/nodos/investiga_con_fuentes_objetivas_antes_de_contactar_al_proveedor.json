@@ -6,7 +6,7 @@
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
   "resumen_teorico": "Antes de hablar con un proveedor, investiga por tu cuenta en fuentes que no dependan de el: reportes independientes, opiniones de otros compradores, comparativos de precio y calidad. Esta tarea te da una base propia de comparacion que el vendedor no puede manipular. Cuando ya sabes que existe en el mercado, que rango de precio es razonable y que otras opciones hay, entras a la conversacion sabiendo que preguntar y que exigir. Sin esta tarea previa, dependes solo de lo que el vendedor te cuenta, y eso deja toda la ventaja de informacion del lado de quien te quiere vender. Investigar primero tambien te ayuda a notar contradicciones entre lo que dice un proveedor y lo que dicen fuentes independientes.",
   "pasos_accionables": [
-    "Busca al menos dos fuentes independientes, como resenas o comparadores, sobre lo que necesitas.",
+    "Busca fuentes independientes y de confianza, como reseñas o comparadores, sobre lo que necesitas.",
     "Anota el rango de precios que encuentras para tener un punto de referencia propio.",
     "Identifica que caracteristicas son estandar en el mercado y cuales son extras que se cobran aparte.",
     "Guarda por escrito las preguntas que te genero la investigacion para llevarlas a la conversacion con el proveedor."
@@ -26,5 +26,24 @@
     "Un vendedor te esta presionando para decidir sin darte tiempo de comparar.",
     "No sabes si el precio que te ofrecen es razonable para lo que necesitas."
   ],
-  "etiqueta_arbol": "Investiga antes de negociar"
+  "etiqueta_arbol": "Investiga antes de negociar",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-049",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca al menos dos fuentes independientes, como resenas o comparadores, sobre lo que necesitas.",
+      "texto_nuevo": "Busca fuentes independientes y de confianza, como reseñas o comparadores, sobre lo que necesitas.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "I have an idea/txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "L5007-L5011",
+        "frase": "Doing their research online, Bill and Sheila started with a trusted site."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro recomienda investigar en fuentes de confianza, pero no fija un numero minimo. Lo de al menos dos fuentes no aparece en el libro.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-052"
+    }
+  ]
 }

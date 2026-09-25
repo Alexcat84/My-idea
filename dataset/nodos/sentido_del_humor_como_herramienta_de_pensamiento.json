@@ -7,9 +7,9 @@
   "resumen_teorico": "El sentido del humor, descrito por Hobbes como una 'súbita gloria', es un mecanismo psicológico que rompe censuras internas de costumbre, moral o autoestima, generando una irrupción hacia una nueva cadena de asociación de pensamiento. Wallas documenta casos históricos, como Galileo, donde el humor ayudó a superar obstáculos mentales heredados de la tradición y permitió avances de pensamiento. No es solo entretenimiento: es una herramienta que escritores, organizadores, educadores e innovadores pueden cultivar deliberadamente para liberarse de lealtades y solemnidades obsoletas, y para desafiar supuestos arraigados en un problema o industria que bloquean nuevas ideas.",
   "pasos_accionables": [
     "Identifica los supuestos 'sagrados' o intocables del problema que estás resolviendo.",
-    "Imagina la situación desde un ángulo absurdo o ridículo y anota lo que surge.",
+    "Sugerencia de My Idea: imagina la situación desde un ángulo absurdo o ridículo y anota lo que surge.",
     "Presta atención consciente a los momentos en que algo te suena gracioso: puede señalar una barrera mental oculta.",
-    "Usa caricaturas, analogías absurdas o juegos de palabras como técnica deliberada para generar ideas disruptivas.",
+    "Sugerencia de My Idea: usa caricaturas, analogías absurdas o juegos de palabras como técnica deliberada para generar ideas disruptivas.",
     "Permítete proponer ideas atrevidas sin censurarte de inmediato mientras generas alternativas."
   ],
   "entregable_esperado": "Una lista de supuestos desafiados mediante el humor junto con las nuevas ideas o perspectivas generadas a partir de ellos.",
@@ -36,6 +36,42 @@
       "node_id": "humor_como_herramienta_creativa",
       "titulo": "El Sentido del Humor como Ruptura de Barreras Mentales",
       "fuente": "The Art of Thought - Wallas, Graham"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-045",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa caricaturas, analogías absurdas o juegos de palabras como técnica deliberada para generar ideas disruptivas.",
+      "texto_nuevo": "Sugerencia de My Idea: usa caricaturas, analogías absurdas o juegos de palabras como técnica deliberada para generar ideas disruptivas.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "I have an idea/txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "L455-L459",
+        "frase": "the sense of Humour, like every other element in thought, requires for its effective use not the following of a mechanically uniform rule but the delicate manipulation of a varied art"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon A. El libro pide 'a watchful awareness' de la Intimacion teñida de humor y el valor de seguirla (L455-L457). Cita las caricaturas de Simplicissimus como forma de observar y comunicar hechos, no como tecnica para generar ideas, y advierte que el humor no es 'the habit of repeating funny stories'. Busque 'caricatur', 'pun', 'absurd' y 'play on words' y no hay ninguna tecnica deliberada de generacion. No es CONTRARIO: una tecnica no es necesariamente la 'regla mecanica' que el libro rechaza. Es una herramienta anadida.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C129-108"
+    },
+    {
+      "id": "fidelidad-t9-046",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Imagina la situación desde un ángulo absurdo o ridículo y anota lo que surge.",
+      "texto_nuevo": "Sugerencia de My Idea: imagina la situación desde un ángulo absurdo o ridículo y anota lo que surge.",
+      "cita": {
+        "libro": "The Art of Thought - Wallas, Graham",
+        "fichero": "I have an idea/txt/The Art of Thought - Wallas, Graham.txt",
+        "lineas": "L455-L457",
+        "frase": "He has to acquire the habit of treating every Intimation which comes to him with the colour of Humour as a challenge to his courage."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon A. El libro trata el humor como una Intimacion que llega sola, que hay que reconocer y atreverse a traer a la conciencia plena (Pearsall Smith, 'The Goat'). No propone provocarla imaginando a proposito angulos absurdos; 'absurd' solo aparece en L273-L275, referido a fantasias de ensonacion. Es una tecnica practica anadida, del mismo tipo que C129-108.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C129-130"
     }
   ]
 }

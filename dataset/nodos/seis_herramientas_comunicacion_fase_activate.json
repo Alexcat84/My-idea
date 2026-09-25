@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando alguien recibe tu producto o servicio por primera vez, tienes seis formas de estar presente: en persona, email, correo postal, teléfono, video o un regalo. No necesitas usarlas todas, pero cada una te da una oportunidad distinta para crear una experiencia memorable y bajar la ansiedad inicial de tu cliente.",
   "pasos_accionables": [
     "Identifica cuál es el primer contacto real que tienes con tu cliente después de que compra",
-    "Elige dos o tres de las seis formas de comunicación para intervenir a propósito",
+    "Elige a propósito las formas de comunicación que vas a usar; no necesitas usar las seis",
     "Prepara un contenido específico para cada forma que elijas, por ejemplo un email cálido o una llamada de seguimiento",
     "Ponle una nota del uno al diez a la experiencia que hoy le das a tu cliente en este momento",
     "Elige una mejora concreta para aplicar de inmediato y decide cómo vas a medir si funcionó"
@@ -22,5 +22,24 @@
   "condiciones_activacion": [
     "Cuando ya tienes clientes pero todavía no has ordenado cómo los acompañas la primera vez que usan lo que vendes"
   ],
-  "etiqueta_arbol": "Recibe Bien al Nuevo Cliente"
+  "etiqueta_arbol": "Recibe Bien al Nuevo Cliente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-060",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Elige dos o tres de las seis formas de comunicación para intervenir a propósito",
+      "texto_nuevo": "Elige a propósito las formas de comunicación que vas a usar; no necesitas usar las seis",
+      "cita": {
+        "libro": "Never Lose a Customer Again - Joey Coleman",
+        "fichero": "I have an idea/books/General/clientes_y_postventa/Never Lose a Customer Again_ Tu - Joey Coleman.txt",
+        "lineas": "L3229-L3232",
+        "frase": "Remember, you don't have to use every communication tool in each phase. Just remember that it's possible to use each tool to create a memorable experience for your customers during this phase."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro dice que no hace falta usar las seis formas, pero no recomienda un número. Solo menciona 'two or three' como el promedio que la gente usa hoy, y lo presenta como algo que conviene ampliar (L1240).",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C109-058"
+    }
+  ]
 }

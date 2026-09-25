@@ -7,7 +7,7 @@
   "resumen_teorico": "Antes de vender, tienes que entender a fondo quien es tu cliente y que problema, necesidad o pasion tiene. Usa una escala de reconocimiento del problema (latente, pasivo, activo o urgente, o con una solución casera ya armada) para calibrar cuanto le duele. También identifica los distintos tipos de cliente que intervienen en la decisión: quien usa el producto, quien influye y quien lo recomienda, porque casi nunca es una sola persona la que decide.",
   "pasos_accionables": [
     "Sal del edificio (get out of the building) a observar como tus clientes viven el problema",
-    "Clasifica el problema en la escala: latente, pasivo, activo o con una solución casera, y también cuando aún no existe y tú le muestras una visión",
+    "Clasifica el problema en la escala: latente (no sabe que lo tiene), pasivo, activo (o urgente) o visión (ya tiene una idea para resolverlo, incluso una solución casera, y pagaría por una mejor)",
     "Identifica si tu producto es indispensable (must-have) o solo agradable de tener (nice-to-have), determinando la intensidad del dolor que causa el problema",
     "Mapea los tipos de cliente: quien usa el producto, quien influye en la compra y quien lo recomienda",
     "Documenta un día en la vida de tu cliente y un mapa de quien influye en la decisión",
@@ -57,6 +57,25 @@
       "node_id": "problem_recognition_scale",
       "titulo": "Escala de Reconocimiento del Problema",
       "fuente": "The Startup Owner's Manual - Steve Blank"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-007",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Clasifica el problema en la escala: latente, pasivo, activo o con una solución casera, y también cuando aún no existe y tú le muestras una visión",
+      "texto_nuevo": "Clasifica el problema en la escala: latente (no sabe que lo tiene), pasivo, activo (o urgente) o visión (ya tiene una idea para resolverlo, incluso una solución casera, y pagaría por una mejor)",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "I have an idea/txt/The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L5635-L5643",
+        "frase": "a vision: they have an idea for solving the problem and even have cobbled together a home-grown solution, but are prepared to pay for a better one"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. La escala del libro tiene cuatro niveles: latente, pasivo, activo (o urgente) y vision, y la vision es del cliente, que ya tiene una idea e incluso una solucion casera. El paso anade un nivel en el que el problema aun no existe y eres tu quien muestra la vision, lo que invierte el sentido de esa categoria.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C073-015"
     }
   ]
 }

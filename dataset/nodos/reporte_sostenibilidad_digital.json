@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Diseña tu sitio con una navegación clara para que cada persona llegue directo al tema de sostenibilidad que le interesa",
     "Actualiza la información en línea cada vez que tengas datos nuevos, sin esperar a un reporte anual",
-    "Imprime solo unas pocas copias para quien prefiera tenerlo en papel",
+    "En algunos casos, imprime unos pocos cientos de copias para visitantes o para quien prefiera tenerlo en papel",
     "Cuida que las imágenes y el tono de tu sitio estén alineados con la historia de sostenibilidad que quieres contar"
   ],
   "entregable_esperado": "Un sitio web funcionando con una sección de sostenibilidad actualizada, fácil de navegar y alineada con tu negocio",
@@ -25,5 +25,24 @@
     "Si todavía no tienes un lugar digital central donde comunicar tu sostenibilidad",
     "Si quieres reducir el impacto ambiental de tus propias comunicaciones"
   ],
-  "etiqueta_arbol": "Publica tu Sostenibilidad en Digital"
+  "etiqueta_arbol": "Publica tu Sostenibilidad en Digital",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-003",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Imprime solo unas pocas copias para quien prefiera tenerlo en papel",
+      "texto_nuevo": "En algunos casos, imprime unos pocos cientos de copias para visitantes o para quien prefiera tenerlo en papel",
+      "cita": {
+        "libro": "The Green to Gold Business Play - Daniel C. Esty",
+        "fichero": "I have an idea/books/Especificos/Environmental/The Green to Gold Business Play - Daniel C. Esty.txt",
+        "lineas": "L7237-L7237",
+        "frase": "In some cases, printing a few hundred hard copies to hand out to office visitors or others who want the old-fashioned document may make sense."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el LECTOR B. El libro fija la cantidad en unos pocos cientos de copias impresas y solo para algunos casos. El paso la cambia a solo unas pocas copias. Una cantidad cambiada respecto al libro cuenta como CONTRARIO aunque la idea general de imprimir poco sea correcta. Busque en todo el libro un apoyo a imprimir solo unas pocas copias y no hay ninguno: la unica cifra de tiraje es la de L7237.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C065-100"
+    }
+  ]
 }

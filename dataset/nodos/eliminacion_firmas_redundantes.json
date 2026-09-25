@@ -11,7 +11,7 @@
     "Elimina firmas o revisiones redundantes que no agregan valor de control real",
     "Reasigna tareas de cálculo o verificación al área técnica correspondiente, no al usuario final",
     "Implementa el retorno inmediato de documentos incorrectos a quien los originó, con explicación del error",
-    "Mide tu tasa de errores durante 2 a 4 semanas antes y después del cambio para verificar la mejora"
+    "Mide tu tasa de errores antes y después del cambio para verificar la mejora"
   ],
   "entregable_esperado": "Un proceso administrativo rediseñado con un único responsable claro por documento y una tasa de error reducida y documentada.",
   "nodos_previos": [
@@ -36,6 +36,25 @@
       "node_id": "eliminacion_de_firmas_duplicadas_responsabilidad_unica",
       "titulo": "Eliminación de firmas duplicadas y asignación de responsabilidad única",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-046",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mide tu tasa de errores durante 2 a 4 semanas antes y después del cambio para verificar la mejora",
+      "texto_nuevo": "Mide tu tasa de errores antes y después del cambio para verificar la mejora",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L4729",
+        "frase": "My prediction was that the problem would evaporate in three weeks. Actually, irregularities dropped to 3 in 100 in two weeks."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no fija un periodo de medicion. Solo cuenta en cuanto tiempo cayeron los errores en un caso. El plazo de medicion es un dato anadido.",
+      "indice": 5,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C084-087"
     }
   ]
 }

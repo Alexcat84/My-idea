@@ -9,7 +9,7 @@
     "Pregúntate si tu motivación principal es la riqueza financiera o el control, porque eso anticipa cómo vas a responder ante futuras decisiones de financiamiento o crecimiento",
     "Evalúa, en cada decisión de financiamiento o contratación, cuánto control pierdes a cambio de cuánto valor ganas",
     "Define con claridad qué decisiones no estás dispuesto a ceder en cuanto a control, por ejemplo la dirección estratégica o la cultura, y cuáles sí puedes soltar a cambio de recursos",
-    "Considera estructuras híbridas, como acciones con derechos de voto diferenciados, si quieres conservar el control mientras consigues capital",
+    "Considera un camino híbrido, como mantener todo el control al inicio y buscar capital más adelante, sabiendo que también aumenta el riesgo de fracasar",
     "Ten presente que crecer rápido o levantar capital de riesgo suele significar sacrificar control"
   ],
   "entregable_esperado": "Una declaración clara de tus prioridades, riqueza o control, que guíe tus futuras decisiones de financiamiento, contratación y gobierno de tu empresa",
@@ -48,5 +48,24 @@
     "recursos_de_segundo_nivel",
     "sucesion_iniciada_por_fundador"
   ],
-  "etiqueta_arbol": "Elige Entre Riqueza o Control"
+  "etiqueta_arbol": "Elige Entre Riqueza o Control",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-036",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Considera estructuras híbridas, como acciones con derechos de voto diferenciados, si quieres conservar el control mientras consigues capital",
+      "texto_nuevo": "Considera un camino híbrido, como mantener todo el control al inicio y buscar capital más adelante, sabiendo que también aumenta el riesgo de fracasar",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L3489-L3495",
+        "frase": "Some founders, however, pursue a hybrid path--a mix of control and wealth decisions"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. En el libro, el camino híbrido es una secuencia de decisiones (control primero, riqueza después) que además aumenta el riesgo de fracasar. Las acciones con derechos de voto diferenciados no aparecen en todo el libro: la búsqueda de dual-class y de voting rights solo encuentra derechos de voto extra de los inversores.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C025-018"
+    }
+  ]
 }

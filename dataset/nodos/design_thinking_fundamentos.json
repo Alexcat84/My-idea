@@ -9,7 +9,7 @@
     "Identificar un problema u oportunidad que vaya más allá de mejorar un producto existente",
     "Reunir un equipo interdisciplinario (diseñadores, científicos del comportamiento, ingenieros, marketing)",
     "Enfocar la exploración inicial en las necesidades humanas antes que en las especificaciones técnicas",
-    "Balancear deseabilidad humana, viabilidad técnica y factibilidad económica en cada decisión"
+    "Balancear deseabilidad humana, factibilidad tecnica y viabilidad economica en cada decision"
   ],
   "entregable_esperado": "Un marco de trabajo interdisciplinario documentado que defina el problema desde la perspectiva humana, técnica y económica antes de iniciar el desarrollo de soluciones.",
   "nodos_previos": [
@@ -29,5 +29,24 @@
     "Cuando el usuario enfrenta un problema complejo que la innovación tecnológica o incremental no ha resuelto",
     "Cuando se busca ir más allá del diseño estético hacia la estrategia de negocio"
   ],
-  "etiqueta_arbol": "Piensa Centrado en las Personas"
+  "etiqueta_arbol": "Piensa Centrado en las Personas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-023",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Balancear deseabilidad humana, viabilidad técnica y factibilidad económica en cada decisión",
+      "texto_nuevo": "Balancear deseabilidad humana, factibilidad tecnica y viabilidad economica en cada decision",
+      "cita": {
+        "libro": "Change by Design, Revised and U - Tim Brown",
+        "fichero": "I have an idea/txt/Change by Design, Revised and U - Tim Brown.txt",
+        "lineas": "L209-L213",
+        "frase": "feasibility, what is functionally possible within the foreseeable future; viability, what is likely to become part of a sustainable business model; and desirability, what makes sense to people and for people."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro define la factibilidad como lo tecnico y la viabilidad como lo economico; el paso invierte ambas definiciones.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C110-063"
+    }
+  ]
 }

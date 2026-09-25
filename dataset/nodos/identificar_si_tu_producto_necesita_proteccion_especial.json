@@ -10,7 +10,7 @@
     "Revisa si tu producto es liquido o puede volverse liquido con el calor y derramarse.",
     "Si es fragil o liquido, prueba con al menos dos unidades distintas, no solo una.",
     "Clasifica la forma de tu empaque (estandar, plano o alargado) para saber que prueba de caida aplica.",
-    "Refuerza el empaque de lo fragil o liquido antes de escalar el volumen de envios."
+    "Sugerencia de My Idea: refuerza el empaque de lo fragil o liquido antes de escalar el volumen de envios."
   ],
   "entregable_esperado": "Una ficha por producto que indique si es fragil, liquido o normal, y cuantas muestras probaste.",
   "nodos_previos": [
@@ -28,5 +28,24 @@
     "Has tenido quejas de producto roto o derramado en el camino.",
     "Quieres decidir cuantas pruebas de caida hacerle a tu empaque antes de vender mas."
   ],
-  "etiqueta_arbol": "Detecta si tu producto es frágil"
+  "etiqueta_arbol": "Detecta si tu producto es frágil",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-066",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Refuerza el empaque de lo fragil o liquido antes de escalar el volumen de envios.",
+      "texto_nuevo": "Sugerencia de My Idea: refuerza el empaque de lo fragil o liquido antes de escalar el volumen de envios.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "I have an idea/txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "L151-L151",
+        "frase": "it is recommended that Fragile & Liquid product types have two (2) or more packaged-product samples tested."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. Para lo fragil y lo liquido, la unica consecuencia que saca ISTA de su mayor variabilidad es ensayar dos muestras o mas (L151); para liquidos anade la prueba de fuga (L265). No pide reforzar el empaque ni pone condiciones ligadas al volumen de envios: busque reinforc, scale, increase e improv, sin resultado. Tampoco hay en el libro una cita que diga lo contrario, asi que no es CONTRARIO. La accion (reforzar) y la condicion (antes de escalar) las pone el paso.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-068"
+    }
+  ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Escribe tu propia lista de reglas para estas reuniones de decisión.",
     "Elige a alguien que modere la reunión con autoridad para hacer cumplir esas reglas.",
-    "Envía los entregables con al menos 3 días de anticipación y en un formato que todos entiendan igual.",
+    "Envía los entregables unos 3 días hábiles antes de la reunión y en un formato estándar para que se puedan comparar los proyectos.",
     "Ordena la reunión así: quien presenta habla 15 minutos sin interrupciones, luego preguntas y respuestas, revisión de los criterios, cada uno da su valoración, se discuten las diferencias y se cierra con una decisión final.",
     "Comunica la decisión a las personas del proyecto de inmediato y en persona."
   ],
@@ -26,5 +26,24 @@
     "Si tus reuniones de decisión (gate) son ineficientes, se llenan de política o generan retrasos.",
     "Si las personas del proyecto sienten que las decisiones no son justas ni transparentes."
   ],
-  "etiqueta_arbol": "Fija Reglas para tus Reuniones"
+  "etiqueta_arbol": "Fija Reglas para tus Reuniones",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-013",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Envía los entregables con al menos 3 días de anticipación y en un formato que todos entiendan igual.",
+      "texto_nuevo": "Envía los entregables unos 3 días hábiles antes de la reunión y en un formato estándar para que se puedan comparar los proyectos.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L7289-L7289",
+        "frase": "The deliverables are sent to the gatekeepers about three working days prior to the meeting. Project teams are asked to use a standard format for their deliverables (for example, templates--but keep these short!) so that gatekeepers can compare projects more easily"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. Es el unico pasaje del libro con este plazo (busque three/3 days prior, in advance, days before). El libro da unos tres dias habiles como plazo aproximado; el paso lo convierte en un minimo de al menos 3 dias sin decir habiles, que pueden ser menos de tres dias laborables (por ejemplo, enviar el viernes para una reunion el lunes). Por la vara, un plazo cambiado es CONTRARIO aunque la accion general sea correcta. Lo del formato es fiel en sustancia (formato estandar para comparar proyectos).",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C080-076"
+    }
+  ]
 }

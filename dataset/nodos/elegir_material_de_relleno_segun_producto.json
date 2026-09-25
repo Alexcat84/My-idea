@@ -4,12 +4,12 @@
   "dominio": "entrega",
   "titulo_concepto": "Elegir el material de relleno según el producto",
   "fuente": "Guia de empaque para transporte",
-  "resumen_teorico": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos no frágiles y económicos. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
+  "resumen_teorico": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
   "pasos_accionables": [
     "Identifica si tu producto es frágil, pesado, plano o electrónico antes de elegir el relleno.",
     "Usa burbujas en capas sobre esquinas y bordes para artículos livianos y delicados.",
     "Evita maníes de poliestireno comunes con productos planos o electrónicos; usa la versión antiestática si es necesario.",
-    "Reserva el papel kraft arrugado para artículos resistentes y de bajo valor.",
+    "Sugerencia de My Idea: reserva el papel kraft bien arrugado para artículos livianos, resistentes y de bajo valor.",
     "Prueba la combinación elegida agitando la caja con cuidado para confirmar que el producto no se mueve."
   ],
   "entregable_esperado": "Una lista corta de qué material de relleno usar para cada tipo de producto que vendes.",
@@ -25,5 +25,40 @@
     "Has tenido productos electrónicos dañados por estática después de usar maníes de poliestireno.",
     "No sabes cuál material comprar porque hay demasiadas opciones en la tienda de empaques."
   ],
-  "etiqueta_arbol": "Elige el relleno según tu producto"
+  "etiqueta_arbol": "Elige el relleno según tu producto",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-072",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reserva el papel kraft arrugado para artículos resistentes y de bajo valor.",
+      "texto_nuevo": "Sugerencia de My Idea: reserva el papel kraft bien arrugado para artículos livianos, resistentes y de bajo valor.",
+      "cita": {
+        "libro": "Guia de empaque para transporte",
+        "fichero": "I have an idea/txt/Supply chain/Packaging_Guidelines.txt",
+        "lineas": "L79-L81",
+        "frase": "Used primarily as void-fill material for lightweight, non-fragile items. Must be tightly crumpled."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro reserva el papel kraft arrugado para artículos livianos y no frágiles. 'Resistentes' equivale a no frágiles, pero el libro no pone la condición de 'bajo valor', y el paso deja fuera que el artículo sea liviano.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C133-009"
+    },
+    {
+      "id": "fidelidad-t9-073",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos no frágiles y económicos. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
+      "texto_nuevo": "No todos los materiales de relleno cumplen la misma función, y usar el que no corresponde deja al producto sin protección real aunque la caja parezca llena. El plástico de burbujas cuida objetos livianos y funciona mejor en varias capas sobre esquinas y bordes. Los maníes de poliestireno rellenan espacios grandes pero se hunden con productos planos y generan electricidad estática, por lo que no sirven para electrónica a menos que sean antiestáticos. El papel kraft arrugado y apretado protege artículos no frágiles. La espuma se ajusta a piezas específicas cuando el producto lo justifica. Elegir el material según el peso, la forma y la fragilidad del producto, en vez de usar siempre el mismo, evita tanto el desperdicio como el daño.",
+      "cita": {
+        "libro": "Guia de empaque para transporte",
+        "fichero": "I have an idea/txt/Supply chain/Packaging_Guidelines.txt",
+        "lineas": "L79-L81",
+        "frase": "Used primarily as void-fill material for lightweight, non-fragile items. Must be tightly crumpled."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO practico (C133-009): 'económicos' repite la condicion 'de bajo valor' que el libro no pone (solo livianos y no fragiles). En el resumen se quita el dato.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C133-009"
+    }
+  ]
 }

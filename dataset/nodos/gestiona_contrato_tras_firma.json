@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Anota en tu calendario la fecha de vencimiento del contrato y una alerta unos meses antes.",
     "Revisa cada factura del proveedor contra lo que realmente se pactó antes de pagarla.",
-    "Habla cada uno o dos meses con tu contacto en el proveedor para saber cómo va el servicio.",
+    "Sugerencia de My Idea: habla cada uno o dos meses con tu contacto en el proveedor para saber cómo va el servicio.",
     "Decide con anticipación si vas a renovar, renegociar o cambiar de proveedor cuando se acerque el vencimiento.",
     "Guarda una copia del contrato firmado en un lugar donde puedas encontrarla en minutos."
   ],
@@ -26,5 +26,24 @@
     "Te has dado cuenta de que un contrato se venció sin que lo notaras.",
     "Pagas facturas de un proveedor sin comparar si coinciden con lo pactado."
   ],
-  "etiqueta_arbol": "Administra el contrato ya firmado"
+  "etiqueta_arbol": "Administra el contrato ya firmado",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-048",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Habla cada uno o dos meses con tu contacto en el proveedor para saber cómo va el servicio.",
+      "texto_nuevo": "Sugerencia de My Idea: habla cada uno o dos meses con tu contacto en el proveedor para saber cómo va el servicio.",
+      "cita": {
+        "libro": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
+        "fichero": "I have an idea/txt/Procurenment/Diana L. Lindstrom - Procurement Project Management Success_ Achieving a Higher Level of Effectiveness-J. Ross Publishing (2014).txt",
+        "lineas": "L5517, L5529",
+        "frase": "By checking in with the supplier's people occasionally, you show that you are still interested in the working relationship."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla de hablar con el proveedor de vez en cuando. El plazo de uno a tres meses lo da para revisar facturas y hablar con tu propia gente, no con el proveedor. La frecuencia de uno o dos meses no la da el libro.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C033-042"
+    }
+  ]
 }

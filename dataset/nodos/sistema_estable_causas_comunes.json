@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Sistema Estable y tu Responsabilidad sobre la Variación",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Un sistema estable es aquel cuya variación proviene solo de causas comunes: se mantiene dentro de límites predecibles a lo largo del tiempo, a diferencia de las causas especiales, que señalan algo puntual. Cuando confirmas que tu proceso es estable, la responsabilidad de mejorarlo es tuya, no de la persona que te ayuda a ejecutarlo, porque nadie puede superar por esfuerzo personal las limitaciones que trae el propio sistema. Pedirle a alguien que 'trabaje mejor' o fijar metas numéricas sin cambiar materiales, herramientas, definiciones o capacitación es inútil y desmoralizante. La mejora real exige identificar qué cambio estructural puede mover la capacidad del sistema antes de exigir resultados distintos.",
+  "resumen_teorico": "Un sistema estable es aquel cuya variación proviene solo de causas comunes: se mantiene dentro de límites predecibles a lo largo del tiempo, a diferencia de las causas especiales, que señalan algo puntual. Cuando confirmas que tu proceso es estable, la responsabilidad de mejorarlo es tuya, no de la persona que te ayuda a ejecutarlo, porque nadie puede superar por esfuerzo personal las limitaciones que trae el propio sistema. Pedirle a alguien que 'trabaje mejor' o fijar metas numéricas es inútil y desmoralizante: si el sistema es estable, obtendrás lo que el sistema dé. La mejora real exige identificar qué cambio estructural, como materiales, herramientas, definiciones o capacitación, puede mover la capacidad del sistema.",
   "pasos_accionables": [
     "Recolectar datos diarios de defectos o errores durante varias semanas.",
     "Graficar los datos en una carta de corrida o carta de control para verificar si la variación es estable o inestable.",
     "Clasificar la variación como causa común (del sistema) o causa especial (puntual).",
     "Si el sistema es estable, identificar qué cambios estructurales, como materiales, herramientas o capacitación, pueden mover su capacidad.",
-    "Evitar fijar metas numéricas o culpar a la persona que te ayuda hasta haber intervenido sobre el sistema mismo."
+    "Evitar fijar metas numericas y culpar a la persona que te ayuda: si el sistema es estable, la mejora solo llega interviniendo sobre el sistema mismo."
   ],
   "entregable_esperado": "Una carta de control o run chart con el diagnóstico de estabilidad del proceso, la clasificación de causas y un plan de acción dirigido a cambiar el sistema si corresponde.",
   "nodos_previos": [
@@ -51,6 +51,41 @@
       "node_id": "sistema_estable_variacion",
       "titulo": "Sistema Estable y Responsabilidad de la Variación",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-021",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Evitar fijar metas numéricas o culpar a la persona que te ayuda hasta haber intervenido sobre el sistema mismo.",
+      "texto_nuevo": "Evitar fijar metas numericas y culpar a la persona que te ayuda: si el sistema es estable, la mejora solo llega interviniendo sobre el sistema mismo.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L1571-L1573",
+        "frase": "If you have a stable system, then there is no use to specify a goal. You will get whatever the system will deliver."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro elimina las metas numericas en sistema estable o inestable y dice que el trabajador responde solo por causas especiales (L7460); el paso las aplaza hasta intervenir el sistema, lo que cambia la condicion del libro. L1465 critica metas sin hoja de ruta, no las autoriza tras intervenir.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C087-077"
+    },
+    {
+      "id": "fidelidad-t7-022",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un sistema estable es aquel cuya variación proviene solo de causas comunes: se mantiene dentro de límites predecibles a lo largo del tiempo, a diferencia de las causas especiales, que señalan algo puntual. Cuando confirmas que tu proceso es estable, la responsabilidad de mejorarlo es tuya, no de la persona que te ayuda a ejecutarlo, porque nadie puede superar por esfuerzo personal las limitaciones que trae el propio sistema. Pedirle a alguien que 'trabaje mejor' o fijar metas numéricas sin cambiar materiales, herramientas, definiciones o capacitación es inútil y desmoralizante. La mejora real exige identificar qué cambio estructural puede mover la capacidad del sistema antes de exigir resultados distintos.",
+      "texto_nuevo": "Un sistema estable es aquel cuya variación proviene solo de causas comunes: se mantiene dentro de límites predecibles a lo largo del tiempo, a diferencia de las causas especiales, que señalan algo puntual. Cuando confirmas que tu proceso es estable, la responsabilidad de mejorarlo es tuya, no de la persona que te ayuda a ejecutarlo, porque nadie puede superar por esfuerzo personal las limitaciones que trae el propio sistema. Pedirle a alguien que 'trabaje mejor' o fijar metas numéricas es inútil y desmoralizante: si el sistema es estable, obtendrás lo que el sistema dé. La mejora real exige identificar qué cambio estructural, como materiales, herramientas, definiciones o capacitación, puede mover la capacidad del sistema.",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L1571-L1573",
+        "frase": "If you have a stable system, then there is no use to specify a goal. You will get whatever the system will deliver."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): Repite la misma condición corregida en el paso 4: presenta las metas numéricas y la exigencia de resultados como aceptables una vez cambiado el sistema, cuando el libro las elimina sin más en un sistema estable (L1571-L1573, L7460).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C087-077"
     }
   ]
 }

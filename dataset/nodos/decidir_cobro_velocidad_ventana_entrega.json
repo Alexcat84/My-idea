@@ -9,7 +9,7 @@
     "Pide a tu courier las tarifas de cada nivel de servicio: estandar, rapido y mismo dia.",
     "Calcula cuanto te cuesta cada nivel frente a lo que cobras hoy por el envio.",
     "Ofrece la ventana angosta o el mismo dia como opcion de pago extra, no como estandar gratuito.",
-    "Revisa cada mes cuantos clientes eligen cada nivel para ajustar precios.",
+    "Sugerencia de My Idea: revisa cada mes cuantos clientes eligen cada nivel para ajustar precios.",
     "Elimina el nivel mas rapido si notas que nadie paga la diferencia y solo te cuesta margen."
   ],
   "entregable_esperado": "Una tabla simple con los niveles de entrega que ofreces y cuanto cobras por cada uno, basada en el costo real de tu courier.",
@@ -26,5 +26,24 @@
     "Un cliente te pide una ventana de entrega muy angosta y no sabes cuanto cobrarle.",
     "Notas que estas perdiendo margen en los envios rapidos sin haberlo decidido a proposito."
   ],
-  "etiqueta_arbol": "Cobra bien la entrega rápida"
+  "etiqueta_arbol": "Cobra bien la entrega rápida",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-051",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Revisa cada mes cuantos clientes eligen cada nivel para ajustar precios.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa cada mes cuantos clientes eligen cada nivel para ajustar precios.",
+      "cita": {
+        "libro": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
+        "fichero": "I have an idea/txt/Supply chain/E-logistics_Cap8_B2C_ecommerce_y_fulfilment.md",
+        "lineas": "L236-L238",
+        "frase": "Part of the problem is that customers are loathe to pay for this service, but attitudes may be changing."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El capitulo no fija ninguna frecuencia mensual de revision.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-008"
+    }
+  ]
 }

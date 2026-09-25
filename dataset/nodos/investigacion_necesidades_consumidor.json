@@ -7,11 +7,11 @@
   "resumen_teorico": "El propósito de la investigación de consumidor no es solo medir preferencias actuales sino entender necesidades futuras para diseñar productos y servicios que mejoren la vida del cliente. El costo de un cliente insatisfecho que no se queja (simplemente cambia de proveedor) es una de las 'cifras desconocidas' más peligrosas para el negocio.",
   "pasos_accionables": [
     "Diseñar estudios de consumidor enfocados en necesidades futuras, no solo satisfacción actual",
-    "Establecer métricas para estimar la pérdida de negocio por clientes insatisfechos que no se quejan",
+    "Reconocer que la pérdida de negocio por clientes insatisfechos que no se quejan no se puede estimar, y no ignorarla por no poder medirla",
     "Comparar percepción del cliente con la intención original de diseño del producto",
     "Monitorear tasas de retención de clientes como indicador indirecto de calidad percibida"
   ],
-  "entregable_esperado": "Estudio de necesidades futuras del consumidor y estimación de pérdida por insatisfacción silenciosa",
+  "entregable_esperado": "Estudio de necesidades futuras del consumidor que reconozca la pérdida por insatisfacción silenciosa como una cifra que no se puede estimar, sin ignorarla por no poder medirla",
   "nodos_previos": [
     "consumidor_como_eje_de_produccion",
     "definicion_calidad_segun_agente"
@@ -20,5 +20,40 @@
   "condiciones_activacion": [
     "Cuando la empresa depende solo de quejas formales para medir insatisfacción del cliente"
   ],
-  "etiqueta_arbol": "Anticipa Necesidades Futuras del Cliente"
+  "etiqueta_arbol": "Anticipa Necesidades Futuras del Cliente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-018",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Establecer métricas para estimar la pérdida de negocio por clientes insatisfechos que no se quejan",
+      "texto_nuevo": "Reconocer que la pérdida de negocio por clientes insatisfechos que no se quejan no se puede estimar, y no ignorarla por no poder medirla",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L3843-L3845",
+        "frase": "A second principle is that no one can guess the future loss of business from a dissatisfied customer."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro dice que esa pérdida no se puede adivinar ni estimar. La llama cifra desconocida e imposible de conocer (L244) e imposible de estimar (L9409). El paso pide fijar métricas para estimar justo eso.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-112"
+    },
+    {
+      "id": "fidelidad-t7-019",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Estudio de necesidades futuras del consumidor y estimación de pérdida por insatisfacción silenciosa",
+      "texto_nuevo": "Estudio de necesidades futuras del consumidor que reconozca la pérdida por insatisfacción silenciosa como una cifra que no se puede estimar, sin ignorarla por no poder medirla",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L3843-L3845",
+        "frase": "A second principle is that no one can guess the future loss of business from a dissatisfied customer."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): Repite el dato corregido en el paso 1: el entregable pide estimar la pérdida por clientes insatisfechos que no se quejan, y el libro dice que esa pérdida no se puede estimar (L3843, L244, L9409).",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C085-112"
+    }
+  ]
 }

@@ -9,9 +9,9 @@
     "Establece expectativas realistas de tiempo (al menos 5 a 10 anos) para cambios estructurales como comprar basandote en calidad",
     "Protege tu compromiso de largo plazo de la presión por resultados de corto plazo",
     "Si alguien te acompana en el negocio, construye junto a esa persona una convicción compartida sobre esta forma de trabajar",
-    "Da seguimiento al avance de cada uno de los 14 puntos con plazos definidos"
+    "Da seguimiento al avance de cada uno de los 14 puntos, sabiendo que cada uno requiere tiempo"
   ],
-  "entregable_esperado": "Plan de transformación de tu negocio con horizonte de 5 a 10 anos o mas, con hitos definidos",
+  "entregable_esperado": "Plan de transformación de tu negocio con horizonte de 5 a 10 anos o mas",
   "nodos_previos": [
     "cuestionario_autoevaluacion_gerencial_calidad"
   ],
@@ -23,5 +23,40 @@
     "Cuando tu esperas resultados de calidad en el corto plazo (meses)",
     "Cuando existe presión por resultados inmediatos que amenaza la constancia de proposito"
   ],
-  "etiqueta_arbol": "Transforma tu Gerencia con Paciencia"
+  "etiqueta_arbol": "Transforma tu Gerencia con Paciencia",
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-050",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Da seguimiento al avance de cada uno de los 14 puntos con plazos definidos",
+      "texto_nuevo": "Da seguimiento al avance de cada uno de los 14 puntos, sabiendo que cada uno requiere tiempo",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L2723-L2740",
+        "frase": "A better way would be to enquire into advancement during the past year on:"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro pide indagar el avance en removal de barreras, proveedores, formacion, etc., y advierte que los puntos requieren tiempo (L3263), pero no fija plazos definidos por punto; se busco deadline, timetable, target date sin hallarlo.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C087-030"
+    },
+    {
+      "id": "fidelidad-t7-051",
+      "fecha": "2026-09-24",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Plan de transformación de tu negocio con horizonte de 5 a 10 anos o mas, con hitos definidos",
+      "texto_nuevo": "Plan de transformación de tu negocio con horizonte de 5 a 10 anos o mas",
+      "cita": {
+        "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+        "fichero": "I have an idea/books/Especificos/Quality/Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+        "lineas": "L2723-L2740",
+        "frase": "A better way would be to enquire into advancement during the past year on:"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite la idea de plazos definidos que la ficha C087-030 quita del paso 3 (ANADIDO de plazo): los hitos definidos funcionan como fechas objetivo que el libro no fija (se busco deadline, timetable y target date sin hallarlo). Solo se quita ese trozo; el horizonte temporal no es objeto de esta ficha.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C087-030"
+    }
+  ]
 }

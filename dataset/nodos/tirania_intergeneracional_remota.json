@@ -6,7 +6,7 @@
   "fuente": "Cradle to Cradle - Michael Braungart",
   "resumen_teorico": "Concepto que describe cómo decisiones de diseño actuales, aunque bien intencionadas, imponen consecuencias negativas (contaminación, enfermedades, agotamiento de recursos) sobre generaciones futuras que no tuvieron voz en esas decisiones. Sirve para ampliar el horizonte temporal de evaluación de impacto de cualquier producto o proceso.",
   "pasos_accionables": [
-    "Proyectar los efectos del producto/proceso actual a 25, 50 y 100 años",
+    "Proyectar los efectos del producto/proceso actual a diez y hasta cien años",
     "Identificar qué recursos o poblaciones futuras heredarán los costos del diseño actual",
     "Incorporar el criterio de 'impacto intergeneracional' en la evaluación de decisiones de diseño",
     "Documentar explícitamente los trade-offs temporales del proyecto"
@@ -22,5 +22,24 @@
     "Si el proyecto involucra materiales persistentes o no biodegradables",
     "Si se requiere justificar decisiones de diseño ante criterios éticos de largo plazo"
   ],
-  "etiqueta_arbol": "Piensa en Generaciones Futuras"
+  "etiqueta_arbol": "Piensa en Generaciones Futuras",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-002",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Proyectar los efectos del producto/proceso actual a 25, 50 y 100 años",
+      "texto_nuevo": "Proyectar los efectos del producto/proceso actual a diez y hasta cien años",
+      "cita": {
+        "libro": "Cradle to Cradle - Michael Braungart",
+        "fichero": "I have an idea/books/Especificos/Environmental/Cradle to Cradle - Michael Braungart.txt",
+        "lineas": "L829-L829",
+        "frase": "What will a sustaining global commerce look like ten--or even a hundred--years from now? How can our products and systems help to create and sustain it, so that future generations are enriched by what we make, not tyrannized by hazards and waste?"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR B. El libro da un horizonte concreto para el 'feedforward' que evita tiranizar a las generaciones futuras: diez e incluso cien anos (L829). El paso cambia ese mismo dato por 25, 50 y 100 anos, quita el de diez anos y mete dos intermedios. Busque en todo el libro 'twenty-five', 'fifty', '25', '50', 'years from now' y 'hundred years': 'twenty-five' (L467) son los miembros de un consejo, 'hundred years' (L302, L596, L881) son otros contextos, y ningun pasaje apoya proyectar a 25 o 50 anos. Segun la vara, un plazo cambiado respecto al libro es CONTRARIO aunque la accion de proyectar a largo plazo sea correcta; por eso no basta con ANADIDO.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C122-074"
+    }
+  ]
 }

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identifica la hipótesis de negocio más crítica que necesitas validar, de valor o de crecimiento, y bájala al problema central más pequeño que un cliente pagaría por resolver.",
     "Diseña la versión más simple del producto que te permita probar esa hipótesis, definiendo el conjunto mínimo de características a partir de tu propia visión y no de una lista larga de pedidos.",
-    "Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.",
+    "Evita agregar funciones extra que no sean estrictamente necesarias para empezar a aprender, por importantes que parezcan; ante la duda, simplifica.",
     "Lanza tu primera versión a tus primeros usuarios (early adopters o earlyvangelists), no al mercado masivo.",
     "Mide la reacción real de los usuarios, no solo su opinión, para validar o descartar tu hipótesis, no para expandir funciones.",
     "Itera o cambia de rumbo si nadie encuentra interesante o suficiente tu solución, en ciclos cortos y de forma incremental."
@@ -77,5 +77,24 @@
     "Cuando todavía no validaste si el producto resuelve el problema real del cliente.",
     "Si no tienes claro qué características priorizar."
   ],
-  "etiqueta_arbol": "Lanza tu Producto Mínimo Viable"
+  "etiqueta_arbol": "Lanza tu Producto Mínimo Viable",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-052",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evita agregar funciones extra que no sean estrictamente necesarias para aprender; agrega una solo por excepción, cuando sin ella no sea posible vender.",
+      "texto_nuevo": "Evita agregar funciones extra que no sean estrictamente necesarias para empezar a aprender, por importantes que parezcan; ante la duda, simplifica.",
+      "cita": {
+        "libro": "The Lean Startup - Eric Ries",
+        "fichero": "I have an idea/txt/The Lean Startup_ How Today's E - Eric Ries.txt",
+        "lineas": "L1056-L1068",
+        "frase": "The lesson of the MVP is that any additional work beyond what was required to start learning is waste, no matter how important it might have seemed at the time."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. Tiene razon el lector B. La primera parte es fiel (L1066, L1068). La excepcion de anadir una funcion cuando sin ella no se pueda vender no esta en el libro. Busque en todo el libro 'sell', 'buy' y 'pay' junto a 'feature', ademas de 'extra feature' y 'additional feature', y no aparece. No la marco CONTRARIO porque el libro si admite lo que piden los primeros usuarios ('beyond what early adopters demand', L1056; 'beyond what is required by early adopters', L2578), y eso deja espacio a una funcion imprescindible. Lo que el libro no pone es el criterio de poder vender, porque su criterio es aprender. Es una condicion nueva que funciona como norma de decision, no como herramienta ni formato.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C103-059"
+    }
+  ]
 }

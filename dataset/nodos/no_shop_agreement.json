@@ -3,10 +3,10 @@
   "dominio": "core",
   "titulo_concepto": "Acuerdo de Exclusividad (No-Shop Agreement)",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (comúnmente 30, 60 o 90 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
+  "resumen_teorico": "Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (normalmente de 45 a 60 días; a veces puedes lograr que el inversionista acepte 30 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
   "pasos_accionables": [
-    "Define el período de exclusividad (comúnmente 30, 60 o 90 días)",
-    "Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), a diferencia del resto de sus condiciones",
+    "Define el periodo de exclusividad (normalmente de 45 a 60 dias; a veces puedes lograr que el inversor acepte 30 dias)",
+    "Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), junto con otras pocas como la de gastos legales y la de ley aplicable, a diferencia de la mayoría de sus condiciones",
     "Establece la obligación de avisar si alguien más se te acerca durante este periodo",
     "Negocia qué pasa si no cierras la transacción en el plazo acordado, para que la obligación termine ahí"
   ],
@@ -27,5 +27,57 @@
     "term_sheet_negociacion",
     "clausula_no_shop_adquisicion"
   ],
-  "etiqueta_arbol": "Pacta tu Exclusividad con Inversionistas"
+  "etiqueta_arbol": "Pacta tu Exclusividad con Inversionistas",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-012",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Define el período de exclusividad (comúnmente 30, 60 o 90 días)",
+      "texto_nuevo": "Define el periodo de exclusividad (normalmente de 45 a 60 dias; a veces puedes lograr que el inversor acepte 30 dias)",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L2054",
+        "frase": "In all cases, the entrepreneur should bound the no-shop agreement by a time period, which is usually 45 to 60 days, although you can occasionally get a VC to agree to a 30-day no-shop agreement."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro da como plazo habitual 45 a 60 dias y ocasionalmente 30; el paso cambia el rango e introduce 90 dias, que el libro no da (en ventas pide rechazar mas de 60).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C021-022"
+    },
+    {
+      "id": "fidelidad-t4-013",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (comúnmente 30, 60 o 90 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
+      "texto_nuevo": "Es una cláusula que sí es vinculante, a diferencia de la mayoría de las condiciones de la hoja de términos (term sheet), que no lo son. Al firmarla te comprometes a no buscar, solicitar ni negociar con otros inversionistas durante un plazo definido (normalmente de 45 a 60 días; a veces puedes lograr que el inversionista acepte 30 días) mientras se completa la revisión a fondo (due diligence) y se cierra la ronda actual. Su objetivo es darle certeza al inversionista de que su tiempo y sus recursos no se van a usar para generar una subasta paralela.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L2054",
+        "frase": "In all cases, the entrepreneur should bound the no-shop agreement by a time period, which is usually 45 to 60 days, although you can occasionally get a VC to agree to a 30-day no-shop agreement."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen_teorico repite el mismo plazo CONTRARIO del paso 0 (30, 60 o 90 días). El libro da como habitual de 45 a 60 días y a veces 30 (Venture Deals, L2054). Se corrige igual que el paso.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C021-022"
+    },
+    {
+      "id": "fidelidad-t11-03",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), a diferencia del resto de sus condiciones",
+      "texto_nuevo": "Ten claro que esta cláusula es vinculante desde que firmas la hoja de términos (term sheet), junto con otras pocas como la de gastos legales y la de ley aplicable, a diferencia de la mayoría de sus condiciones",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L1730-L1736",
+        "frase": "Except for the provisions contained herein entitled \"Legal Fees and Expenses,\" \"No-Shop Agreement,\" and \"Governing Law,\" which are explicitly agreed by the Investors and the Company to be binding upon execution of this term sheet"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P024, arbitro). Tiene razon B. Es cierto que el no-shop es vinculante desde la firma. Pero el paso dice que eso es 'a diferencia del resto de sus condiciones', y el libro dice lo contrario: gastos legales y ley aplicable tambien son vinculantes al firmar (L1730, L1736). L2052 lo pone 'part of the few terms that are binding'. Busque con Grep 'binding' en todo el libro y ningun pasaje presenta al no-shop como la unica clausula vinculante. En L4947 y L5043 tambien aparece acompanado de otras. El paso invierte un hecho que el texto sostiene. Ademas, el lector podria creer que la clausula de gastos legales no lo obliga.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P024-064"
+    }
+  ]
 }

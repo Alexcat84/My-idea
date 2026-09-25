@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando el capital es abundante y barato (como en burbujas de financiamiento), los inversionistas pueden preguntar '¿qué harías si el capital fuera gratis?'. Esta pregunta, aunque bien intencionada, puede llevar a decisiones de gasto y contratación desproporcionadas que no consideran la sostenibilidad del negocio ni el riesgo de un cambio brusco de ciclo económico.",
   "pasos_accionables": [
     "Cuestiona cualquier estrategia de crecimiento que dependa de suponer acceso ilimitado a capital futuro.",
-    "Modela escenarios de contracción de capital antes de comprometerte a gastos masivos (oficinas, contrataciones, adquisiciones).",
+    "Sugerencia de My Idea: modela escenarios de contracción de capital antes de comprometerte a gastos masivos (oficinas, contrataciones, adquisiciones).",
     "Establece un plan de contingencia si las rondas futuras de financiamiento no se concretan como esperado.",
     "Distingue entre crecer rápido de forma sostenible y crecer rápido apalancado en supuestos financieros frágiles."
   ],
@@ -24,5 +24,24 @@
     "Cuando la empresa recauda una ronda inusualmente grande o a una valuación muy alta.",
     "Cuando inversionistas presionan por crecimiento agresivo sin considerar riesgos macroeconómicos."
   ],
-  "etiqueta_arbol": "Cuidado con el Capital Fácil"
+  "etiqueta_arbol": "Cuidado con el Capital Fácil",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-041",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Modela escenarios de contracción de capital antes de comprometerte a gastos masivos (oficinas, contrataciones, adquisiciones).",
+      "texto_nuevo": "Sugerencia de My Idea: modela escenarios de contracción de capital antes de comprometerte a gastos masivos (oficinas, contrataciones, adquisiciones).",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L240-L256",
+        "frase": "\"What would you do if capital were free?\" is a dangerous question to ask an entrepreneur. ... The thinking this question leads to can be extremely dangerous."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector B. El libro cuenta el gasto masivo de Loudcloud (contrataciones, la Taj de 5 millones, oficinas) y advierte del peligro de pensar como si el capital fuera gratis, pero no propone modelar escenarios de contraccion de capital. Busque en todo el libro model*, scenario, contingenc*: 'modeling' solo aparece en L420 para evaluar la compra de Data Return, y los 'scenarios' de L436 son de separar Opsware, nada de simular una contraccion antes de gastar. Es una herramienta de planificacion que el libro no da, asi que no es OPERATIVO. Tampoco es CONTRARIO: ningun pasaje desaconseja preparar ese tipo de escenarios.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-023"
+    }
+  ]
 }

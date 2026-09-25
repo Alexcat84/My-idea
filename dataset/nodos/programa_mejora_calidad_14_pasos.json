@@ -7,7 +7,7 @@
   "resumen_teorico": "Es el procedimiento estructurado de 14 pasos que constituye el núcleo metodológico de Crosby, e incluye: tu compromiso con la calidad, armar un pequeño equipo de mejora, medir la calidad, calcular el costo de la no calidad, generar conciencia de calidad, aplicar acción correctiva, planificar un Día de Cero Defectos, entrenar a quienes supervisan tareas, celebrar ese día, fijar metas, eliminar las causas de los errores, reconocer los logros, crear espacios de conversación sobre calidad y repetir el ciclo. Se vuelve parte de la cultura permanente de tu negocio cuando lo aplicas con constancia.",
   "pasos_accionables": [
     "Comprometerte tú mismo con la calidad, de forma explícita y visible",
-    "Reunir a un pequeño equipo que impulse la mejora, aunque sea de dos o tres personas",
+    "Reunir a un equipo que impulse la mejora, con alguien que represente a cada area de tu negocio",
     "Definir cómo vas a medir la calidad y el costo de la no calidad",
     "Generar conciencia de calidad en todos los que trabajan contigo",
     "Aplicar acción correctiva de forma sistemática cuando detectes fallas",
@@ -55,6 +55,25 @@
       "node_id": "programa_de_mejora_de_calidad",
       "titulo": "Programa de Mejora de Calidad (Los Catorce Pasos)",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-048",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reunir a un pequeño equipo que impulse la mejora, aunque sea de dos o tres personas",
+      "texto_nuevo": "Reunir a un equipo que impulse la mejora, con alguien que represente a cada area de tu negocio",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L2101-L2113",
+        "frase": "The chairperson should assemble a team representing each department, and together they should examine the purpose of the program and the concepts involved."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro forma el equipo con representantes de cada departamento y no fija ningun tamano. La cifra de dos o tres personas no aparece; lo que el libro llama 'three or four members' es el comite ad hoc de Cero Defectos, otro grupo distinto.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C100-060"
     }
   ]
 }

@@ -6,7 +6,7 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Una política es una guía para la acción gerencial. Las políticas de calidad publicadas suelen declarar la intención de satisfacer las necesidades del cliente, igualar o superar a la competencia y comprometerse con la mejora continua. Deben ser aprobadas al más alto nivel y sujetas a auditoría (p.ej. bajo ISO 9000).",
   "pasos_accionables": [
-    "Redactar políticas de calidad que cubran necesidades del cliente, competitividad y mejora continua, mas la reducción de costos de mala calidad",
+    "Redactar politicas de calidad que cubran necesidades del cliente, competitividad y mejora continua",
     "Obtener aprobación al más alto nivel ejecutivo",
     "Establecer mecanismos de auditoría para verificar el cumplimiento de las políticas",
     "Comunicar las políticas a toda la organización como guía de decisiones diarias",
@@ -38,6 +38,25 @@
       "node_id": "politica_calidad_organizacional",
       "titulo": "Política de Calidad Organizacional",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-011",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Redactar políticas de calidad que cubran necesidades del cliente, competitividad y mejora continua, mas la reducción de costos de mala calidad",
+      "texto_nuevo": "Redactar politicas de calidad que cubran necesidades del cliente, competitividad y mejora continua",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L8948-L8954",
+        "frase": "most published quality policies declare the intention to meet the needs of customers. ... Most published policies include language relative to competitiveness in quality ... A third frequent area of published quality policy relates to quality improvement"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro nombra tres areas habituales de la politica (necesidades del cliente, competitividad, mejora) y referencias a clientes internos; no incluye la reduccion de costos de mala calidad como contenido de la politica. Se busco policy junto a cost of poor quality sin hallarlo.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C041-113"
     }
   ]
 }

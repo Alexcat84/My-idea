@@ -6,7 +6,7 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "Distinción crítica entre espíritu emprendedor deseable (tenacidad, confianza, disposición al riesgo) y el 'flaming entrepreneur' que rompe reglas sistemáticamente y quiere cambiar el sistema. Estos últimos ponen en riesgo el control de calidad porque no siguen los estándares de marca, contagiando esta actitud a otros franquiciados.",
   "pasos_accionables": [
-    "Buscar señales de alerta: cambios frecuentes de empleo, múltiples negocios fallidos, historial de manejo problemático",
+    "Buscar señales de alerta: cambios frecuentes de empleo, muchos negocios iniciados (con o sin éxito), a menudo desde joven, historial de manejo problemático",
     "Hacer preguntas reveladoras como '¿cómo te sentirías si tuvieras una gran idea y no te dejáramos implementarla?'",
     "Observar si el candidato cuestiona el modelo de negocio antes de firmar",
     "Distinguir entre espíritu emprendedor valioso y tendencia a romper reglas",
@@ -25,5 +25,24 @@
   "condiciones_activacion": [
     "Cuando el candidato muestra rasgos fuertemente emprendedores o cuestiona el sistema"
   ],
-  "etiqueta_arbol": "Evita al Emprendedor Rebelde"
+  "etiqueta_arbol": "Evita al Emprendedor Rebelde",
+  "correcciones": [
+    {
+      "id": "fidelidad-t11-05",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Buscar señales de alerta: cambios frecuentes de empleo, múltiples negocios fallidos, historial de manejo problemático",
+      "texto_nuevo": "Buscar señales de alerta: cambios frecuentes de empleo, muchos negocios iniciados (con o sin éxito), a menudo desde joven, historial de manejo problemático",
+      "cita": {
+        "libro": "Franchise Your Business - Mark Siebert",
+        "fichero": "I have an idea/books/franquicias/Franchise Your Business - Mark Siebert.txt",
+        "lineas": "L4405-L4407",
+        "frase": "They are likely to have changed jobs frequently; started numerous new businesses (whether successfully or not), often at an early age; displayed a spotty driving record"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P018, lector y verificador de acuerdo). El libro pone como senal haber iniciado muchos negocios, con exito o sin el. El paso la reduce a negocios fallidos y cambia el criterio que el libro fija de forma expresa. En el libro nada apoya que la senal sea el fracaso. La sesion solo restituye las tildes y la enie que el texto del verificador traia sin ellas.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P018-010"
+    }
+  ]
 }

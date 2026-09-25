@@ -7,14 +7,14 @@
   "resumen_teorico": "La etnografía consiste en observar a los clientes en su entorno natural durante períodos extendidos, detectando necesidades no articuladas. Aunque es poco popular (baja adopción por costo y tiempo), es calificada como el método MÁS EFECTIVO para generar ideas innovadoras, ya que revela problemas que el cliente ni siquiera sabe expresar (ejemplo: Purell FST Military Bottle desarrollado tras observar soldados en entrenamiento).",
   "pasos_accionables": [
     "Seleccionar un contexto de uso real del producto (ej. campo, fábrica, hospital)",
-    "Observar directamente a los usuarios utilizando o mal utilizando el producto durante un período extendido, involucrando a líderes o clientes (deputizar) en la observación de campo para generar empatía directa",
+    "Sugerencia de My Idea: observa directamente a los usuarios usando o usando mal el producto durante un período extendido, e involucra a líderes o clientes en la observación de campo para generar empatía directa",
     "Documentar problemas, quejas y comportamientos no verbalizados",
     "Capacitar al equipo observador en habilidades de escucha e inferencia",
     "Reducir el tiempo por visita si es necesario (ej. 'día en la vida' de un día por sitio)",
     "Traducir los hallazgos observacionales en conceptos de producto concretos",
-    "Formar equipos que combinen antropólogos/etnógrafos con diseñadores, arquitectos e ingenieros.",
-    "Buscar situaciones análogas (ej. un pit stop de carreras para entender una sala de emergencias)",
-    "Construir confianza genuina con los sujetos observados antes de extraer insights"
+    "Sugerencia de My Idea: forma equipos que combinen antropólogos o etnógrafos con diseñadores, arquitectos e ingenieros.",
+    "Sugerencia de My Idea: busca situaciones análogas (por ejemplo, un pit stop de carreras para entender una sala de emergencias)",
+    "Sugerencia de My Idea: construye confianza genuina con las personas que observas antes de sacar conclusiones"
   ],
   "entregable_esperado": "Informe etnográfico con insights de necesidades no articuladas traducidos en conceptos de producto",
   "nodos_previos": [
@@ -70,6 +70,76 @@
       "node_id": "etnografia_investigacion_usuario",
       "titulo": "Etnografía para Identificar Necesidades No Articuladas",
       "fuente": "Winning at New Products - Robert G. Cooper"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t7-037",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Buscar situaciones análogas (ej. un pit stop de carreras para entender una sala de emergencias)",
+      "texto_nuevo": "Sugerencia de My Idea: busca situaciones análogas (por ejemplo, un pit stop de carreras para entender una sala de emergencias)",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L4981-L5006",
+        "frase": "Ethnography, the term used in marketing for cultural anthropology, involves camping out with customers or observation of customers for extended periods"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. La seccion de etnografia no menciona buscar situaciones analogas ni el ejemplo del pit stop y la sala de emergencias; busque pit stop, emergency room, racing, analog sin hallarlo.",
+      "indice": 7,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C078-014"
+    },
+    {
+      "id": "fidelidad-t7-038",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Construir confianza genuina con los sujetos observados antes de extraer insights",
+      "texto_nuevo": "Sugerencia de My Idea: construye confianza genuina con las personas que observas antes de sacar conclusiones",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L4981-L5006",
+        "frase": "this observational method relies very much on the skill of the observer"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. La seccion de etnografia no habla de construir confianza con los observados antes de extraer insights; busque trust, rapport sin hallarlo.",
+      "indice": 8,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C078-100"
+    },
+    {
+      "id": "fidelidad-t7-039",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Formar equipos que combinen antropólogos/etnógrafos con diseñadores, arquitectos e ingenieros.",
+      "texto_nuevo": "Sugerencia de My Idea: forma equipos que combinen antropólogos o etnógrafos con diseñadores, arquitectos e ingenieros.",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L4981-L5006",
+        "frase": "members of the project team undertook an ethnographic study"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla de equipos de proyecto o de VoC que hacen etnografia, no de combinar antropologos con disenadores, arquitectos e ingenieros; busque anthropolog, architect, designers en ese contexto sin hallarlo.",
+      "indice": 6,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C078-113"
+    },
+    {
+      "id": "fidelidad-t7-040",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Observar directamente a los usuarios utilizando o mal utilizando el producto durante un período extendido, involucrando a líderes o clientes (deputizar) en la observación de campo para generar empatía directa",
+      "texto_nuevo": "Sugerencia de My Idea: observa directamente a los usuarios usando o usando mal el producto durante un período extendido, e involucra a líderes o clientes en la observación de campo para generar empatía directa",
+      "cita": {
+        "libro": "Winning at New Products - Robert G. Cooper",
+        "fichero": "I have an idea/txt/Winning at New Products_ Creati - Robert G. Cooper.txt",
+        "lineas": "L4986-L4986",
+        "frase": "observation of customers for extended periods, watching and probing as they use or misuse products"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. La primera parte es fiel, pero el libro no pide involucrar o delegar en lideres o clientes la observacion de campo; busque deputiz y la presencia de ejecutivos en visitas sin hallarlo.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C078-117"
     }
   ]
 }

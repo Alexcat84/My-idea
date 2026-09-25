@@ -4,10 +4,10 @@
   "dominio": "core",
   "titulo_concepto": "Efectividad del Cierre según la Complejidad de la Venta",
   "fuente": "SPIN Selling - Neil Rackham",
-  "resumen_teorico": "Concepto central de la investigación de Rackham: la efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso frecuente de técnicas de cierre puede mejorar resultados. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+  "resumen_teorico": "Concepto central de la investigación de Rackham: la efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
   "pasos_accionables": [
     "Clasificar el tipo de venta propia según valor, sofisticación del cliente y relación posventa, y tambien por su ciclo (una llamada vs múltiples), monto y visibilidad de la decisión",
-    "Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción",
+    "Si es venta pequena y transaccional: las tecnicas de cierre pueden funcionar, pero sin abusar, porque incluso en ventas pequenas las llamadas con mas de dos cierres fueron las menos exitosas",
     "Si es venta grande y relacional: minimizar el uso de técnicas de cierre y enfocar el esfuerzo en las etapas de indagación (SPIN)",
     "Revisar el proceso de venta completo, no solo el cierre, para identificar el verdadero factor decisivo del éxito",
     "Capacitar al equipo de ventas diferenciando el enfoque según el tipo de venta que manejan",
@@ -84,6 +84,41 @@
       "node_id": "riesgo_tecnicas_cierre_venta_compleja",
       "titulo": "Riesgo de las Técnicas de Cierre en Ventas Complejas",
       "fuente": "SPIN Selling - Neil Rackham"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-003",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Si es venta pequeña y transaccional: aplicar técnicas de cierre tradicionales sin restricción",
+      "texto_nuevo": "Si es venta pequena y transaccional: las tecnicas de cierre pueden funcionar, pero sin abusar, porque incluso en ventas pequenas las llamadas con mas de dos cierres fueron las menos exitosas",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "I have an idea/books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "L635-L672",
+        "frase": "Notice, however, that the least successful calls were those with more than two closing behaviors, where the success rate was below 20 percent."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro acepta el cierre en ventas pequenas (L635), pero en el estudio de American Airlines, con ventas relativamente pequenas, las llamadas con mas de dos cierres fueron las menos exitosas. 'Sin restriccion' contradice ese dato.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C125-027"
+    },
+    {
+      "id": "fidelidad-t9-004",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Concepto central de la investigación de Rackham: la efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso frecuente de técnicas de cierre puede mejorar resultados. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+      "texto_nuevo": "Concepto central de la investigación de Rackham: la efectividad de las técnicas de cierre depende directamente del tipo de venta. En ventas pequeñas, de bajo valor, con clientes poco sofisticados y sin relación posventa, una actitud favorable hacia el cierre y el uso de técnicas de cierre puede mejorar resultados, pero sin abusar: incluso en ventas pequeñas, las llamadas con más de dos cierres fueron las menos exitosas. Sin embargo, en ventas grandes, con clientes sofisticados y relación continua post-venta, el cierre agresivo se convierte en un pasivo (liability) más que en un activo, ya que puede antagonizar al cliente y dañar la relación a largo plazo. Esto refuerza la necesidad de metodologías como SPIN, centradas en el descubrimiento de necesidades en lugar del cierre forzado.",
+      "cita": {
+        "libro": "SPIN Selling - Neil Rackham",
+        "fichero": "I have an idea/books/General/ventas/SPIN Selling - Neil Rackham.txt",
+        "lineas": "L635-L672",
+        "frase": "Notice, however, that the least successful calls were those with more than two closing behaviors, where the success rate was below 20 percent."
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite la idea contraria del paso 1 (cerrar sin restricción, aquí como uso frecuente); el libro dice que incluso en ventas pequeñas las llamadas con más de dos cierres fueron las menos exitosas.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C125-027"
     }
   ]
 }

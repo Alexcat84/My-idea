@@ -12,7 +12,7 @@
     "Documenta el derecho de la empresa a recomprar las acciones no adquiridas si alguien se va antes de tiempo",
     "Negocia si aplican clausulas de aceleracion ante un cambio de control, prefiriendo la de doble gatillo (cambio de control mas despido sin causa) sobre la de un solo gatillo, ya que esta ultima puede desincentivar a compradores potenciales",
     "Documenta claramente que constituye 'causa' y 'razon justificada' de terminacion para efectos de la aceleracion",
-    "Decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
+    "Sugerencia de My Idea: decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
     "Deja por escrito las condiciones de cada persona de forma consistente, para evitar conflictos futuros si vendes el negocio o sales a bolsa"
   ],
   "entregable_esperado": "Acuerdo de vesting firmado por ti y tus socios o empleados clave (incluido en el acuerdo de compra de acciones), con cronograma, clausula de recompra, eleccion 83(b) presentada y condiciones de aceleracion claramente definidas",
@@ -59,6 +59,25 @@
       "node_id": "eleccion_estructura_vesting_founder",
       "titulo": "Cómo repartir las acciones en el tiempo entre fundadores y contrataciones (vesting)",
       "fuente": "The Founder's Dilemmas"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-034",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
+      "texto_nuevo": "Sugerencia de My Idea: decide si cada rol consolida sus acciones solo por tiempo o también por desempeño, según cuánto valor esperas que aporte",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L1210-L1212",
+        "frase": "vesting is the mechanism to ensure the equity is earned over time"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro solo trata el vesting por tiempo; no plantea vesting por desempeno para empleados ni fundadores (solo warrants de desempeno para socios estrategicos).",
+      "indice": 7,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C023-060"
     }
   ]
 }

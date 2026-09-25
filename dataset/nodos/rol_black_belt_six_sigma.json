@@ -7,7 +7,7 @@
   "resumen_teorico": "El Black Belt es la persona que dedicas de tiempo completo a llevar Six Sigma al día a día de tu negocio. Le das una capacitación profunda en la filosofía, la teoría, la estrategia, las tácticas y las herramientas de Six Sigma, y la pones a liderar equipos de distintas áreas para mejorar procesos. Te asesora directamente en las decisiones clave, y cada proyecto que dirige debe generar un retorno mínimo de $250,000. Maneja entre 3 y 6 proyectos al año, dedicándose por completo a esto tras una capacitación rigurosa, normalmente 4 semanas repartidas en intervalos de 4 a 5 semanas.",
   "pasos_accionables": [
     "Elige a alguien con potencial de liderazgo y conocimiento técnico para que asuma el rol de Black Belt",
-    "Dale una capacitación intensiva en 4 sesiones semanales, con intervalos para que aplique lo aprendido en la práctica",
+    "Dale una capacitación intensiva en 4 sesiones de una semana completa cada una, con intervalos de 4 a 5 semanas entre ellas para que aplique lo aprendido en la práctica",
     "Asígnale proyectos con un objetivo de retorno mínimo de $250,000",
     "Acuerda con esa persona cómo te va a asesorar en la priorización y el lanzamiento de proyectos",
     "Definir responsabilidades de coordinación entre equipos y análisis complejos",
@@ -40,6 +40,25 @@
       "node_id": "rol_black_belt",
       "titulo": "Rol del Black Belt en Six Sigma (Especialista en Breakthrough)",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t6-005",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Dale una capacitación intensiva en 4 sesiones semanales, con intervalos para que aplique lo aprendido en la práctica",
+      "texto_nuevo": "Dale una capacitación intensiva en 4 sesiones de una semana completa cada una, con intervalos de 4 a 5 semanas entre ellas para que aplique lo aprendido en la práctica",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "I have an idea/books/Especificos/Quality/Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L14078",
+        "frase": "usually delivered in four weeklong sessions with 4- to 5-week intervening intervals"
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tenia razon el LECTOR A. El libro dice cuatro sesiones de una semana entera, separadas por intervalos de 4 a 5 semanas. En espanol, 'sesiones semanales' se lee como una sesion por semana: cambia la duracion de cada sesion y el ritmo de la formacion. Busque en todo el libro algo que apoye sesiones con frecuencia semanal y no hay nada. L7264 habla de hasta seis semanas de formacion, y L14213 de un periodo de practica entre las semanas de formacion, lo que respalda 'para que aplique lo aprendido' pero no la frecuencia semanal. Segun la vara, un plazo cambiado respecto al libro es CONTRARIO.",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C055-070"
     }
   ]
 }

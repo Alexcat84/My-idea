@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar el costo total de la inversión propuesta (incluyendo costos ocultos de instalación, mantenimiento, etc.)",
     "Estimar los beneficios financieros esperados de la inversión (ahorro de costos, incremento de ingresos)",
-    "Calcular el ROI dividiendo el beneficio neto entre el costo de la inversión",
+    "Sugerencia de My Idea: calcular el ROI dividiendo el beneficio neto entre el costo de la inversión.",
     "Comparar el ROI de esta inversión con otras alternativas de uso del capital",
     "Tomar la decisión de inversión basada en el análisis, no solo en la intuición"
   ],
@@ -24,5 +24,24 @@
     "Si el emprendedor está considerando comprar equipo, maquinaria o tecnología nueva",
     "Antes de comprometer capital significativo en cualquier activo de largo plazo"
   ],
-  "etiqueta_arbol": "Calcula el Retorno de tu Inversión"
+  "etiqueta_arbol": "Calcula el Retorno de tu Inversión",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-026",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Calcular el ROI dividiendo el beneficio neto entre el costo de la inversión",
+      "texto_nuevo": "Sugerencia de My Idea: calcular el ROI dividiendo el beneficio neto entre el costo de la inversión.",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "I have an idea/txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "L2557; L3025",
+        "frase": "These calculations will be different depending on how people are measuring costs and returns."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro no da la formula beneficio neto entre costo (buscado divided by y ROI); calcula el retorno con payback, NPV e IRR. El paso introduce una herramienta de calculo que el libro no respalda.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C028-108"
+    }
+  ]
 }

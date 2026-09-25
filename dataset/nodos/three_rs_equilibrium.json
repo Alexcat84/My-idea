@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Mapear explícitamente las relaciones, roles y recompensas de cada cofundador",
     "Verificar que estos tres elementos estén alineados entre sí (ej. quien más aporta recibe más equity)",
-    "Establecer un mecanismo regular (ej. trimestral) para revisar y renegociar este equilibrio",
+    "Sugerencia de My Idea: establece un mecanismo regular, por ejemplo trimestral, para revisar y renegociar este equilibrio.",
     "Documentar por escrito los acuerdos, no solo verbalmente",
     "Identificar y discutir abiertamente las tensiones no habladas ('elefantes en la habitación')",
     "Mapear el tipo de relación previa entre cofundadores (familia, amigos, excompañeros de trabajo, extraños)",
@@ -42,6 +42,25 @@
       "node_id": "sistema_tres_rs_alineacion",
       "titulo": "El Sistema de las Tres Rs: Alineación entre Relaciones, Roles y Recompensas",
       "fuente": "The Founder's Dilemmas"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-018",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer un mecanismo regular (ej. trimestral) para revisar y renegociar este equilibrio",
+      "texto_nuevo": "Sugerencia de My Idea: establece un mecanismo regular, por ejemplo trimestral, para revisar y renegociar este equilibrio.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "I have an idea/txt/The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L1994-L2126",
+        "frase": "plan for those changes (e.g., by setting expectations about when each founder might relinquish his or her C-level position), and regularly reassess the alignment of those arrangements."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide reevaluar el equilibrio con regularidad, a medida que la startup evoluciona y cuando hay imprevistos, pero no fija ninguna frecuencia. Busqué quarterly, semiannual, annually y periodic: el libro no da frecuencia para esta revisión.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C027-003"
     }
   ]
 }

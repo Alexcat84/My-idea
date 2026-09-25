@@ -10,7 +10,7 @@
     "Pedir a la IA que cite fuentes verificables y luego contrastar manualmente esas fuentes.",
     "Usar la IA para generar borradores o hipótesis, nunca como fuente final de verdad.",
     "Entrenar al equipo en detectar el patrón de 'sonar creíble' como señal de alerta, no de confianza.",
-    "Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas"
+    "Sugerencia de My Idea: Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas"
   ],
   "entregable_esperado": "Un protocolo de verificación de contenido generado por IA antes de su uso en decisiones de negocio o comunicaciones externas.",
   "nodos_previos": [
@@ -39,6 +39,25 @@
       "node_id": "deteccion_alucinaciones_ia",
       "titulo": "Detección y Manejo de Alucinaciones de IA",
       "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-039",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas",
+      "texto_nuevo": "Sugerencia de My Idea: Realizar la misma pregunta de distintas formas para detectar inconsistencias en las respuestas",
+      "cita": {
+        "libro": "Co-Intelligence_ Living and Wor - Ethan Mollick",
+        "fichero": "I have an idea/books/General/ia_para_negocios/Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
+        "lineas": "L712-L722",
+        "frase": "I was able to notice the issues only after an extremely close reading and research on every fact and sentence in the output."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro reconoce que las respuestas varian porque se anade algo de aleatoriedad (L94) y que la IA es poco fiable, porque a veces se niega a hacer lo mismo cuando se le vuelve a pedir (L514). Pero nunca presenta esa variacion como herramienta para detectar alucinaciones. Contra las alucinaciones, su metodo es leer con mucho cuidado y comprobar cada dato (L720, L722), y avisa de que no sirve preguntarle a la IA por que alucino (L712). Busque rephras, same question, ask again, different answers, regenerat, inconsisten, multiple times y several times: no aparece la tecnica de hacer la misma pregunta de varias formas para comparar. No es una concrecion del cotejo de datos que propone el libro, sino otra tecnica que el libro no da. El libro tampoco la desaconseja, asi que no es CONTRARIO. Es una practica, asi que el tipo es PRACTICO.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-083"
     }
   ]
 }

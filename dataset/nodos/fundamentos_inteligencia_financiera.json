@@ -7,7 +7,7 @@
   "resumen_teorico": "La inteligencia financiera es un conjunto de habilidades aprendibles (no innatas) que todo emprendedor debe adquirir para dirigir un negocio con éxito. Se compone de tres pilares: (1) entender los fundamentos de los estados financieros (income statement, balance sheet, cash flow statement), (2) comprender el 'arte de las finanzas' -es decir, que los números contables son estimaciones y suposiciones, no verdades absolutas- y (3) saber realizar análisis financiero (ratios y ROI) para tomar mejores decisiones. Sin estas habilidades, un emprendedor opera en desventaja aunque su producto o servicio sea excelente.",
   "pasos_accionables": [
     "Evaluar tu nivel actual de comprensión de los tres estados financieros básicos",
-    "Comprometerte a leer y entender el income statement, balance sheet y cash flow statement de tu empresa mensualmente",
+    "Sugerencia de My Idea: comprometete a leer y entender cada mes el income statement, el balance sheet y el cash flow statement de tu empresa",
     "Identificar en tus reportes financieros qué cifras son 'duras' (objetivas) y cuáles son 'blandas' (basadas en estimaciones)",
     "Aprender a calcular e interpretar ratios de liquidez, rentabilidad y eficiencia",
     "Practicar cálculos de ROI antes de tomar decisiones de inversión importantes"
@@ -36,5 +36,24 @@
     "Si el fundador no conoce su burn rate",
     "Si el usuario está a punto de buscar un préstamo o inversionistas y necesita presentar estados financieros"
   ],
-  "etiqueta_arbol": "Domina tus Tres Pilares Financieros"
+  "etiqueta_arbol": "Domina tus Tres Pilares Financieros",
+  "correcciones": [
+    {
+      "id": "fidelidad-t5-029",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comprometerte a leer y entender el income statement, balance sheet y cash flow statement de tu empresa mensualmente",
+      "texto_nuevo": "Sugerencia de My Idea: comprometete a leer y entender cada mes el income statement, el balance sheet y el cash flow statement de tu empresa",
+      "cita": {
+        "libro": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
+        "fichero": "I have an idea/txt/Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
+        "lineas": "L64-L66",
+        "frase": "You need to see--and to understand--the information contained in the income statement, the balance sheet, and the cash flow statement."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro pide leer y entender los tres estados, pero no fija una frecuencia mensual para hacerlo (se busco monthly y every month: solo aparece para el presupuesto que pide el banco).",
+      "indice": 1,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C029-058"
+    }
+  ]
 }

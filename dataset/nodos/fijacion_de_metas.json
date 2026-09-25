@@ -10,7 +10,7 @@
     "Asegúrate de que las metas sean retadoras, no fáciles de alcanzar.",
     "Publica las metas en un lugar visible para todo el equipo.",
     "Reconoce públicamente a los grupos que logran mejoras (por ejemplo, bordes dorados en las pizarras o un lugar de estacionamiento preferencial).",
-    "Usa medidas de corto plazo (por ejemplo, horas sin defectos) en lugar de métricas mensuales, para mantener el enfoque diario."
+    "Ademas de la meta mensual en el grafico, usa medidas de corto plazo (por ejemplo, horas sin defectos) para mantener el enfoque diario."
   ],
   "entregable_esperado": "Lista de metas de mejora específicas, medibles y publicadas por cada equipo o área de trabajo.",
   "nodos_previos": [
@@ -35,6 +35,25 @@
       "node_id": "establecimiento_metas",
       "titulo": "Establecimiento de Metas (Paso 10)",
       "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-012",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Usa medidas de corto plazo (por ejemplo, horas sin defectos) en lugar de métricas mensuales, para mantener el enfoque diario.",
+      "texto_nuevo": "Ademas de la meta mensual en el grafico, usa medidas de corto plazo (por ejemplo, horas sin defectos) para mantener el enfoque diario.",
+      "cita": {
+        "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+        "fichero": "I have an idea/books/Especificos/Quality/Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+        "lineas": "L3244-L3265",
+        "frase": "O.K Let's set a monthly goal of two defects per harness on the measurement chart. But let's get the inspection people to report every hour."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector B. Ev dice que un mes o una semana es mucho tiempo para concentrarse (L3247) y el libro elogia la medida de ZD por hora (L3649), lo que apoya usar horas sin defectos. Pero el libro no las pone en lugar de la meta mensual: Carl dice \"We'd have to set a goal on the big chart too\" y el grupo fija la meta mensual en el grafico y anade el conteo por horas; los graficos de tendencia semanales o mensuales siguen sirviendo para fijar metas (L2503). El paso cambia complementar por sustituir, e invierte asi la decision del caso.",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C099-056"
     }
   ]
 }

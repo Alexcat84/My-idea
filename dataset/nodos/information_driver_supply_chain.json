@@ -10,7 +10,7 @@
     "Identifica las brechas de información que te llevan a tomar decisiones subóptimas",
     "Implementa un sistema (EDI, ERP o dashboard) para capturar y compartir datos de demanda, inventario y producción en tiempo real",
     "Usa esos datos para ajustar tus programaciones semanales de producción, inventario y transporte",
-    "Genera pronósticos tácticos mensuales y estratégicos anuales a partir de la información recopilada"
+    "Sugerencia de My Idea: genera pronósticos tácticos mensuales y trimestrales, y pronósticos estratégicos una vez al año, a partir de la información recopilada"
   ],
   "entregable_esperado": "Mapa de flujo de información en tu cadena de suministro, con los puntos de mejora identificados, que alimente tus decisiones de producción, inventario, ubicación y transporte",
   "nodos_previos": [
@@ -36,6 +36,25 @@
       "node_id": "driver_informacion",
       "titulo": "Driver de Información: Coordinación y Pronóstico en la Cadena de Suministro",
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-028",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Genera pronósticos tácticos mensuales y estratégicos anuales a partir de la información recopilada",
+      "texto_nuevo": "Sugerencia de My Idea: genera pronósticos tácticos mensuales y trimestrales, y pronósticos estratégicos una vez al año, a partir de la información recopilada",
+      "cita": {
+        "libro": "Essentials of Supply Chain Management - Michael H. Hugos",
+        "fichero": "I have an idea/books/General/operaciones_y_logistica/Essentials of Supply Chain Mana - Michael H. Hugos.txt",
+        "lineas": "L226",
+        "frase": "Available information is used to make tactical forecasts to guide the setting of monthly and quarterly production schedules and timetables. Information is also used for strategic forecasts to guide decisions about whether to build new facilities, enter a new market, or exit an existing market."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla de pronosticos tacticos para programas mensuales y trimestrales y de pronosticos estrategicos para decisiones de instalaciones y mercados, pero no les asigna frecuencia anual; la periodicidad anual es un dato anadido (frecuencia).",
+      "indice": 4,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C090-004"
     }
   ]
 }

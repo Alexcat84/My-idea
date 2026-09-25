@@ -9,14 +9,14 @@
     "Mapear el perfil (One o Two) de los candidatos internos a sucesión",
     "Evaluar el riesgo de rotación de talento ejecutivo bajo cada escenario de sucesión",
     "Considerar el momento de la empresa (paz o guerra) al elegir el tipo de sucesor necesario",
-    "Preparar un plan de retención para los ejecutivos clave que podrían no ser elegidos",
+    "Sugerencia de My Idea: preparar un plan de retención para los ejecutivos clave que podrían no ser elegidos en la sucesión.",
     "Comunicar de forma transparente los criterios usados para la decisión de sucesión",
     "Evalúa si tienes la visión de producto e innovación necesaria para seguir liderando",
     "Identifica tus brechas específicas de habilidades de CEO, como gestión organizacional, ventas o relación con ejecutivos, frente a brechas de red de contactos",
     "Busca mentores con experiencia real fundando y dirigiendo empresas, no solo asesores teóricos",
     "Si no quieres ser CEO, enfócate en encontrar al CEO profesional adecuado e integrarlo preservando tus fortalezas",
     "Evalúa si tu equipo directivo actual tiene conocimiento profundo del producto y la tecnología",
-    "Antes de aceptar inversión, negocia cláusulas que preserven tu control operativo",
+    "Antes de aceptar inversion, comprueba si el inversor esta dispuesto a ayudarte a crecer como CEO en lugar de buscar reemplazarte",
     "Si contratas a un CEO externo, asegura una transición gradual en la que sigas involucrado en las decisiones de producto",
     "Detecta señales tempranas de desalineación entre la dirección profesional y la visión de producto"
   ],
@@ -33,5 +33,41 @@
     "Cuando el fundador considera dejar el rol operativo de la empresa",
     "Cuando el consejo directivo debate entre candidatos internos y externos"
   ],
-  "etiqueta_arbol": "Elige a tu Próximo CEO"
+  "etiqueta_arbol": "Elige a tu Próximo CEO",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-042",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Preparar un plan de retención para los ejecutivos clave que podrían no ser elegidos",
+      "texto_nuevo": "Sugerencia de My Idea: preparar un plan de retención para los ejecutivos clave que podrían no ser elegidos en la sucesión.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2729-L2737",
+        "frase": "the natural Ones ... will eventually leave. ... you will likely cause massive turnover of the executive staff. ... The answer is there is no easy answer. CEO transition is hard."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector B. El libro describe el riesgo de que los ejecutivos se vayan en cualquiera de las dos vias de sucesion y concluye que no hay respuesta facil, pero no propone ningun plan de retencion. Busque en todo el libro retain, retention y keep: solo salen la retencion de empleados tras los despidos (L859), un punto de una lista (L1387) y la retencion de clientes (L1671-L1673), nada sobre sucesion. El plan de retencion es un instrumento nuevo, no una concrecion. Tampoco es CONTRARIO, porque el libro no desaconseja retener a nadie.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-045"
+    },
+    {
+      "id": "fidelidad-t8-045",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Antes de aceptar inversión, negocia cláusulas que preserven tu control operativo",
+      "texto_nuevo": "Antes de aceptar inversion, comprueba si el inversor esta dispuesto a ayudarte a crecer como CEO en lugar de buscar reemplazarte",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L3357-L3365",
+        "frase": "We wondered aloud why as founders we had to prove to our investors beyond a shadow of a doubt that we could run the company ... most venture capital firms were better designed to replace the founder than to help the founder grow and succeed."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no habla de negociar clausulas contractuales de control operativo antes de invertir (buscado clause, control, board seat sin resultado en ese sentido); es materia legal anadida.",
+      "indice": 10,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-100"
+    }
+  ]
 }

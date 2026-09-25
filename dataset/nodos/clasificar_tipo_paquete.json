@@ -9,7 +9,7 @@
     "Mide las tres dimensiones y calcula el volumen de tu paquete ya armado.",
     "Compara esas medidas contra las categorías: volumen grande con dimensión corta es plano, una dimensión mucho mayor que las otras dos es alargado.",
     "Marca si el contenido es frágil o si puede derramarse.",
-    "Anota la categoría en tu checklist de empaque antes de elegir caja y relleno."
+    "Sugerencia de My Idea: anota la categoría en tu checklist de empaque antes de elegir caja y relleno."
   ],
   "entregable_esperado": "Una ficha por producto que indica su categoría de paquete y sus riesgos asociados en tránsito.",
   "nodos_previos": [
@@ -30,5 +30,24 @@
     "Te ha pasado que un paquete alargado o plano llega dañado más seguido que los demás.",
     "Vas a empezar a despachar un producto nuevo y no sabes qué protección necesita."
   ],
-  "etiqueta_arbol": "Clasifica tu tipo de paquete"
+  "etiqueta_arbol": "Clasifica tu tipo de paquete",
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-064",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Anota la categoría en tu checklist de empaque antes de elegir caja y relleno.",
+      "texto_nuevo": "Sugerencia de My Idea: anota la categoría en tu checklist de empaque antes de elegir caja y relleno.",
+      "cita": {
+        "libro": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
+        "fichero": "I have an idea/txt/Supply chain/ISTA_3P_26-26_Overview.txt",
+        "lineas": "L81-L121",
+        "frase": "STANDARD packaged-products are those samples that do not meet the requirements for Flat, Elongated, or Small."
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. ISTA define las categorias (L81-L121) para decidir que ensayos aplicar. Lo mas cercano que dice sobre registrar es 5.2 (L165): documentar la configuracion, los materiales y la construccion del producto y del paquete ensayados, y eso se refiere al ensayo. No habla de una checklist de empaque ni de anotar la categoria antes de elegir caja y relleno. La checklist es una herramienta y un formato que pone el paso.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-036"
+    }
+  ]
 }

@@ -6,9 +6,9 @@
   "fuente": "Venture Deals - Brad Feld",
   "resumen_teorico": "En Estados Unidos, la norma fiscal conocida como 409A exige que las opciones sobre acciones que le das a tus empleados se valoren a precio justo de mercado. Si contratas una firma de valuación profesional, obtienes un respaldo (safe harbor) que te protege de sanciones de la autoridad fiscal (IRS). Si no lo haces, eres tú quien tiene que demostrar que la valuación es correcta. Esta práctica hizo que las acciones comunes se valoren ahora entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%, lo que reduce las ganancias que tus empleados pueden obtener en un evento de liquidez. Estos detalles legales y fiscales varían según el país, así que antes de actuar verifícalos con un profesional en tu mercado.",
   "pasos_accionables": [
-    "Contrata una firma de valuación profesional (o un servicio como Carta) después de cada ronda de financiamiento",
+    "Sugerencia de My Idea: contrata una firma de valuación profesional (o un servicio como Carta) después de cada ronda de financiamiento",
     "Consigue la valoración antes de otorgar nuevas opciones sobre acciones a tus empleados",
-    "Actualiza la valoración al menos una vez al año o cuando pase algo importante en tu negocio",
+    "Mantén vigente la valoración hecha por una firma profesional para conservar el respaldo (safe harbor) ante el IRS o la autoridad equivalente en tu mercado",
     "Guarda la documentación de la valoración por si te auditan"
   ],
   "entregable_esperado": "Una valoración vigente y documentada que respalde el precio al que tus empleados pueden ejercer sus opciones sobre acciones",
@@ -24,5 +24,41 @@
     "Cuando vayas a otorgar opciones sobre acciones a tus empleados",
     "Después de cerrar una ronda de financiamiento con inversionistas"
   ],
-  "etiqueta_arbol": "Valora tus Opciones Justamente"
+  "etiqueta_arbol": "Valora tus Opciones Justamente",
+  "correcciones": [
+    {
+      "id": "fidelidad-t4-033",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Contrata una firma de valuación profesional (o un servicio como Carta) después de cada ronda de financiamiento",
+      "texto_nuevo": "Sugerencia de My Idea: contrata una firma de valuación profesional (o un servicio como Carta) después de cada ronda de financiamiento",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L4685-L4687",
+        "frase": "If a company used a professional valuation firm, the valuation would be assumed to be correct... Recently, Carta announced that they'll do 409A valuations"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro respalda usar una firma profesional o Carta, pero no fija que se haga despues de cada ronda de financiamiento; esa frecuencia no aparece.",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C023-017"
+    },
+    {
+      "id": "fidelidad-t4-035",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Actualiza la valoración al menos una vez al año o cuando pase algo importante en tu negocio",
+      "texto_nuevo": "Mantén vigente la valoración hecha por una firma profesional para conservar el respaldo (safe harbor) ante el IRS o la autoridad equivalente en tu mercado",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "I have an idea/txt/Venture Deals - Brad Feld.txt",
+        "lineas": "L4685-L4687",
+        "frase": "Originally, these costs were about $5,000 to $15,000 per year"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no fija ninguna periodicidad minima ni causa de actualizacion de la valoracion 409A; el plazo es materia fiscal no respaldada.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C023-097"
+    }
+  ]
 }

@@ -9,7 +9,7 @@
     "No midas el éxito de tu ronda por el porcentaje de inversionistas que dicen sí, sino por encontrar al menos uno que encaje.",
     "Identifica inversionistas con una visión propia, relaciones o contexto particular que les permita ver valor donde otros no lo ven.",
     "No pierdas tiempo emocional en los rechazos masivos; redirige tu esfuerzo hacia los prospectos más prometedores.",
-    "Prepara varias formas de contar la misma historia según el perfil de cada inversionista."
+    "Sugerencia de My Idea: prepara varias formas de contar la misma historia según el perfil de cada inversionista."
   ],
   "entregable_esperado": "Tu lista priorizada de inversionistas potenciales, con una forma distinta de acercarte a cada uno, enfocada en encontrar al que diga que sí.",
   "nodos_previos": [
@@ -23,5 +23,24 @@
     "Cuando el mercado de capital está contraído o en crisis (por ejemplo, tras un crash del mercado).",
     "Cuando te desanimas después de varios rechazos de inversionistas."
   ],
-  "etiqueta_arbol": "Busca a tu Único Inversionista"
+  "etiqueta_arbol": "Busca a tu Único Inversionista",
+  "correcciones": [
+    {
+      "id": "fidelidad-t8-040",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prepara varias formas de contar la misma historia según el perfil de cada inversionista.",
+      "texto_nuevo": "Sugerencia de My Idea: prepara varias formas de contar la misma historia según el perfil de cada inversionista.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "I have an idea/books/General/liderazgo_y_crisis/The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L262-L262",
+        "frase": "Look for a market of one. You only need one investor to say yes, so it's best to ignore the other thirty who say \"no.\""
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro solo dice que busques al unico inversor que diga que si e ignores los no. En ningun sitio aconseja preparar varias versiones de la historia segun el perfil de cada inversor. Busque con Grep tailor, each investor, different investors, customize, pitch y story: tailored solo sale para un traje (L1169) y para cursos de formacion (L1399). En la visita a Herb Allen (L2444-L2450) cuentan la misma historia de Loudcloud, y L2981 habla de una sola historia que da contexto a todos, inversores incluidos. Adaptar la historia a cada perfil es una tactica de formato nueva, no una concrecion de lo que dice el libro. Por eso es ANADIDO de tipo PRACTICO.",
+      "indice": 3,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C095-052"
+    }
+  ]
 }

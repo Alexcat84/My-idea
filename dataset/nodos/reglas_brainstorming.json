@@ -4,16 +4,16 @@
   "dominio": "core",
   "titulo_concepto": "Reglas de Brainstorming Efectivo",
   "fuente": "Business Model Generation - Osterwalder, Alexander",
-  "resumen_teorico": "Conjunto de reglas para maximizar la generación de ideas útiles en sesiones de lluvia de ideas: mantener el foco en un problema bien definido (idealmente centrado en la necesidad del cliente), diferir el juicio crítico, mantener una sola conversación a la vez, priorizar cantidad, pensar visualmente (Post-it) y fomentar ideas alocadas. Incluye un ejercicio de calentamiento ('Silly Cow') para desbloquear la creatividad. Las reglas no son decorado: sin ellas la sesión degenera en reunión ordenada o en caos improductivo, y la más importante de todas es construir sobre las ideas de los demás, que genera un efecto acumulativo de creatividad superior al trabajo individual. La sesión pertenece a la fase divergente: abre el espectro de opciones y su cosecha se filtra después, en la fase de convergencia.",
+  "resumen_teorico": "Conjunto de reglas para maximizar la generación de ideas útiles en sesiones de lluvia de ideas: mantener el foco en un problema bien definido (idealmente centrado en la necesidad del cliente), diferir el juicio crítico, mantener una sola conversación a la vez, priorizar cantidad, pensar visualmente (Post-it) y fomentar ideas alocadas. Incluye un ejercicio de calentamiento ('Silly Cow') para desbloquear la creatividad. Las reglas no son decorado: sin ellas la sesión degenera en reunión ordenada o en caos improductivo. La sesión pertenece a la fase divergente: abre el espectro de opciones y su cosecha se filtra después, en la fase de convergencia.",
   "pasos_accionables": [
-    "Reunir al equipo en un espacio dedicado sin distracciones, formando grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.",
+    "Reunir un equipo diverso, con personas de distintas áreas, edades, experiencia y antigüedad e incluso de fuera, enseñarles a escuchar activamente y considerar un facilitador neutral para que el juicio prematuro no frene la generación de ideas.",
     "Definir un enunciado claro del problema centrado en necesidad del cliente",
-    "Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada, en sesiones de construcción colectiva ('yes, and...')",
+    "Sugerencia de My Idea: establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual y fomentar ideas locas o descabelladas, y además construir sobre las ideas de otros en sesiones de construcción colectiva ('yes, and...').",
     "Preparar al equipo con una experiencia de inmersión previa (visita de campo, entrevistas a clientes)",
     "Usar Post-it notes o pizarra para capturar y mover las ideas visualmente",
     "Opcional: realizar el ejercicio 'Silly Cow' como calentamiento creativo",
     "Generar el mayor número de ideas posible sin filtrar prematuramente, en sesiones dedicadas solo a generar opciones (divergencia) y separadas de las sesiones de selección (convergencia).",
-    "Evitar atribuir ideas exclusivamente a una sola persona para promover su evolución."
+    "Sugerencia de My Idea: evitar atribuir ideas exclusivamente a una sola persona para que el grupo las haga evolucionar."
   ],
   "entregable_esperado": "Sesión de brainstorming documentada con una colección amplia de ideas generadas colaborativamente, capturadas en Post-its y agrupadas por tema, lista para ser filtrada en la fase de convergencia",
   "nodos_previos": [
@@ -75,6 +75,75 @@
       "node_id": "construir_sobre_ideas_ajenas",
       "titulo": "Construir Sobre las Ideas de Otros",
       "fuente": "Change by Design"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "fidelidad-t9-001",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Reunir al equipo en un espacio dedicado sin distracciones, formando grupos donde los participantes se conozcan y tengan confianza mutua para evitar el escepticismo que reduce la generación de ideas.",
+      "texto_nuevo": "Reunir un equipo diverso, con personas de distintas áreas, edades, experiencia y antigüedad e incluso de fuera, enseñarles a escuchar activamente y considerar un facilitador neutral para que el juicio prematuro no frene la generación de ideas.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2161-L2169",
+        "frase": "Business model innovation teams should have a diverse membership. The diversity will help you generate, discuss, and select new ideas. Consider adding outsiders, or even children. Diversity works. But make sure to teach people how to listen actively, and consider engaging a neutral facilitator for key meetings."
+      },
+      "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon el lector A. El paso usa como criterio para formar los grupos que los participantes se conozcan y confien entre si. El libro pide lo opuesto: equipos deliberadamente heterogeneos (L2029), diversos en unidad, edad, experiencia y antiguedad (L2131, L2169-L2181), e incluso con gente de fuera (L2167), que por definicion no conoce al grupo. Ademas, el libro da por hecho que en estos grupos la gente puede saber poco de las areas de los demas (L2305). Para el problema que el paso quiere evitar, el libro no propone la familiaridad: propone enseñar a escuchar activamente, recurrir a un facilitador neutral (L2167) y aplicar la regla de diferir el juicio (L2193). Busque con Grep trust, skeptic, know each other, familiar, comfortable, distraction y safe en todo el libro y ningun pasaje apoya formar grupos por confianza mutua. El espacio sin distracciones solo aparece como ejemplo de una reunion offsite (L2027), sin que el libro lo pida. Como el criterio de composicion va contra lo que pide el libro, no basta con ANADIDO (lector B).",
+      "indice": 0,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C120-005"
+    },
+    {
+      "id": "fidelidad-t9-023",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Evitar atribuir ideas exclusivamente a una sola persona para promover su evolución.",
+      "texto_nuevo": "Sugerencia de My Idea: evitar atribuir ideas exclusivamente a una sola persona para que el grupo las haga evolucionar.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2183-L2201",
+        "frase": "The most important rules are “defer judgment,“ “one conversation at a time,“ “go for quantity,“ “be visual,“ and “encourage wild ideas.“"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Las reglas de brainstorming del libro no incluyen evitar atribuir ideas a una sola persona; busque ownership, attribut, whose idea, credit sin encontrarlo. Es una practica que el libro no respalda.",
+      "indice": 7,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C120-018"
+    },
+    {
+      "id": "fidelidad-t9-024",
+      "fecha": "2026-09-24",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual, fomentar ideas locas o descabelladas, y construir sobre las ideas de otros por encima de generar ideas propias de forma aislada, en sesiones de construcción colectiva ('yes, and...')",
+      "texto_nuevo": "Sugerencia de My Idea: establecer, visibilizar y hacer cumplir las reglas: diferir el juicio, una conversación a la vez, mantenerse enfocado en el tema, ir por cantidad antes que por calidad, ser visual y fomentar ideas locas o descabelladas, y además construir sobre las ideas de otros en sesiones de construcción colectiva ('yes, and...').",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2187-L2193",
+        "frase": "Clarify the brainstorming rules upfront and enforce them. The most important rules are “defer judgment,“ “one conversation at a time,“ “go for quantity,“ “be visual,“ and “encourage wild ideas.“"
+      },
+      "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Las reglas del paso coinciden con el libro salvo la de construir sobre las ideas de otros en sesiones de 'yes, and...', que el libro no incluye; busque build on, yes, and en el contexto de brainstorming sin encontrarlo.",
+      "indice": 2,
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C120-109"
+    },
+    {
+      "id": "fidelidad-t9-025",
+      "fecha": "2026-09-24",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Conjunto de reglas para maximizar la generación de ideas útiles en sesiones de lluvia de ideas: mantener el foco en un problema bien definido (idealmente centrado en la necesidad del cliente), diferir el juicio crítico, mantener una sola conversación a la vez, priorizar cantidad, pensar visualmente (Post-it) y fomentar ideas alocadas. Incluye un ejercicio de calentamiento ('Silly Cow') para desbloquear la creatividad. Las reglas no son decorado: sin ellas la sesión degenera en reunión ordenada o en caos improductivo, y la más importante de todas es construir sobre las ideas de los demás, que genera un efecto acumulativo de creatividad superior al trabajo individual. La sesión pertenece a la fase divergente: abre el espectro de opciones y su cosecha se filtra después, en la fase de convergencia.",
+      "texto_nuevo": "Conjunto de reglas para maximizar la generación de ideas útiles en sesiones de lluvia de ideas: mantener el foco en un problema bien definido (idealmente centrado en la necesidad del cliente), diferir el juicio crítico, mantener una sola conversación a la vez, priorizar cantidad, pensar visualmente (Post-it) y fomentar ideas alocadas. Incluye un ejercicio de calentamiento ('Silly Cow') para desbloquear la creatividad. Las reglas no son decorado: sin ellas la sesión degenera en reunión ordenada o en caos improductivo. La sesión pertenece a la fase divergente: abre el espectro de opciones y su cosecha se filtra después, en la fase de convergencia.",
+      "cita": {
+        "libro": "Business Model Generation - Osterwalder, Alexander",
+        "fichero": "I have an idea/txt/Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
+        "lineas": "L2187-L2193",
+        "frase": "Clarify the brainstorming rules upfront and enforce them. The most important rules are “defer judgment,“ “one conversation at a time,“ “go for quantity,“ “be visual,“ and “encourage wild ideas.“"
+      },
+      "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el dato del paso 2 (construir sobre las ideas de los demás) y además lo presenta como la regla más importante, cuando el libro no lo incluye entre sus reglas. Es un ANADIDO práctico, así que se quita del resumen.",
+      "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C120-109"
     }
   ]
 }
