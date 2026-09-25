@@ -17,9 +17,9 @@ const es = {
     realizada: "REALIZADA",
     /** El subtítulo de un hito de acción por su cumplimiento (el cumplimiento es el DATO). */
     cumplimiento: {
-      a_tiempo: "planificado · a tiempo",
-      adelantada: "planificado · adelantada",
-      tardia: "planificado · tardía",
+      a_tiempo: "planificada · a tiempo",
+      adelantada: "planificada · adelantada",
+      tardia: "planificada · tardía",
     },
   },
   /** Líneas del markdown (el informe y el resumen de un espacio). */

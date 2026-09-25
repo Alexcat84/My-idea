@@ -8,7 +8,7 @@ const es = {
   tituloRegistro: "Registro de {{mundo}}",
   encabezadoRegistro: "> {{nombre}} · Registro de {{mundo}} · {{fecha}}",
   tituloBitacora: "Tu bitácora",
-  archivoBitacora: "Tu bitacora",
+  archivoBitacora: "Tu bitácora",
   tituloAnalisis: "Análisis del proyecto",
   archivoAnalisis: "Análisis del proyecto",
   tituloExpediente: "Expediente completo",

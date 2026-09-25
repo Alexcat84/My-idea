@@ -166,6 +166,12 @@ function Fila({ clave, pct, texto, clase }: { clave: string; pct: number | null;
 // ── palancas ───────────────────────────────────────────────────────────────
 export { pluralDe };
 
+/** El título de la idea dentro de la frase ("Los números de tu tienda de
+ * velas"): en minúscula, salvo en alemán, donde los sustantivos la conservan. */
+function tituloEnFrase(titulo: string, idioma: Locale): string {
+  return idioma === "de" ? titulo : titulo.toLowerCase();
+}
+
 export function textoPalanca(p: Palanca, u: string, idioma: Locale = LOCALE_BASE): string {
   const tx = elegir(TUS_NUMEROS, idioma).palanca;
   const margen = p.margenResultante ? fmt(p.margenResultante.valor, idioma) : "—";
@@ -604,7 +610,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
             </button>
           </div>
           <h1 className="text-[32px] font-bold leading-tight tracking-tight">
-            {interpolar(tx.losNumerosDe, { titulo: titulo ? titulo.toLowerCase() : tx.tuIdeaMinuscula })}
+            {interpolar(tx.losNumerosDe, { titulo: titulo ? tituloEnFrase(titulo, idioma) : tx.tuIdeaMinuscula })}
           </h1>
           <VeredictoBloque v={historico.veredicto} />
           <RestoTablero t={historico.tablero} u={u} />
@@ -632,7 +638,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
           {tx.calculadoPorCodigo}
         </div>
         <h1 className="text-[32px] font-bold leading-tight tracking-tight">
-          {interpolar(tx.losNumerosDe, { titulo: titulo ? titulo.toLowerCase() : tx.tuIdeaMinuscula })}
+          {interpolar(tx.losNumerosDe, { titulo: titulo ? tituloEnFrase(titulo, idioma) : tx.tuIdeaMinuscula })}
         </h1>
 
         <VeredictoBloque v={v} />

@@ -21,7 +21,7 @@ const es = {
       "Tu idea, tu plan y sus ciclos, tu avance, cada mundo y tu bitácora, de la idea al cierre",
     expedienteSubtituloEnMarcha: "Tu idea, tu plan y sus ciclos, tu avance, cada mundo y tu bitácora, hasta hoy",
     reporteTitulo: "Reporte de {{mundo}}",
-    reporteSubtitulo: "El plan, el avance y el cómo te fue de este mundo",
+    reporteSubtitulo: "El plan, el avance y cómo te fue en este mundo",
     registroTitulo: "Registro de {{mundo}}",
     registroSubtitulo: "Lo que este mundo detectó y la respuesta que lo atiende, sobre tu plan real",
   },

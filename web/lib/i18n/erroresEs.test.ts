@@ -68,3 +68,67 @@ describe("inconsistencias del español (tanda de F2)", () => {
     expect(PORTADA.es.pie.derechos).toBe("© {{ano}} My Idea");
   });
 });
+
+// Hallados al traducir a los otros idiomas (F3): el español concordaba mal con
+// lo que entra por el marcador. A mano:
+//   saldo = "1 crédito" -> "1 crédito disponibles" (mal); se nombra antes: "Disponible: 1 crédito".
+//   sello = "hace 21 min" -> "tus cifras del hace 21 min" (mal); entre paréntesis.
+describe("concordancia con lo que entra por el marcador (F3)", () => {
+  it("el saldo con reserva no fuerza un plural", async () => {
+    const { SALDO } = await import("./mensajes/saldo");
+    expect(interpolar(SALDO.es.tituloConReserva, { saldo: "1 crédito", reservados: "2 apartados" })).toBe(
+      "Disponible: 1 crédito · 2 apartados"
+    );
+  });
+  it("el sello de las cifras no va tras 'del'", async () => {
+    const { TUS_NUMEROS } = await import("./mensajes/tusNumeros");
+    expect(interpolar(TUS_NUMEROS.es.calculadoConCifrasDel, { sello: "hace 21 min" })).toBe(
+      "· calculado con tus cifras (hace 21 min)"
+    );
+  });
+});
+
+// Segunda tanda de errores del español, hallados al traducir a los otros
+// nueve idiomas (F3). Ninguno cambia los marcadores (las traducciones ya los
+// sortearon). Escritos a mano:
+//   - "¿Cuántas veces de {{u}}…?" / "¿Cuántas de {{u}}…?": agramatical y supone
+//     unidad femenina; se cuenta "por {{u}}".
+//   - "Mi bitácora de mi viaje": "mi" repetido.
+//   - "Tu bitacora" (nombre del archivo): sin tilde.
+//   - "Tu viaje core": anglicismo en pantalla (BANCO §3); ya existe "Tu viaje principal".
+//   - "planificado · adelantada": concuerda con la acción, femenino.
+//   - "el cómo te fue de este mundo": "cómo te fue en este mundo".
+//   - "si te pagaras…, el costo real sube": condicional, "subiría".
+describe("segunda tanda de errores del español (F3)", () => {
+  it("las preguntas por la unidad de venta", async () => {
+    const { REPORTE } = await import("./mensajes/reporte");
+    const p = REPORTE.es.preguntas as unknown as Record<string, Record<string, string>>;
+    expect(interpolar(p.servicio.capacidad_semanal, { u: "sesión" })).toBe(
+      "En una semana normal, ¿cuántas veces puedes atender? Cuenta cada sesión como una vez."
+    );
+    expect(interpolar(p.productoFisico.capacidad_semanal, { u: "pieza" })).toBe(
+      "En una semana normal, ¿cuánto puedes producir, contando por pieza?"
+    );
+    expect(interpolar(p.digital.unidades_vendidas, { u: "licencia" })).toBe(
+      "Contando por licencia, ¿cuánto tienes hoy, o cuál sería una meta mensual realista?"
+    );
+  });
+  it("los demás", async () => {
+    const { BITACORA } = await import("./mensajes/bitacora");
+    const { DOCUMENTOS_RUTA } = await import("./mensajes/documentosRuta");
+    const { MANOS_A_LA_OBRA } = await import("./mensajes/manosALaObra");
+    const { ANALYTICS_INFORME } = await import("./mensajes/analyticsInforme");
+    const { EXPEDIENTE } = await import("./mensajes/expediente");
+    const { TUS_NUMEROS } = await import("./mensajes/tusNumeros");
+    expect(BITACORA.es.pagina.miBitacora).toBe("La bitácora de mi viaje");
+    expect(DOCUMENTOS_RUTA.es.archivoBitacora).toBe("Tu bitácora");
+    expect(MANOS_A_LA_OBRA.es.nucleo.tuViajeCore).toBe("Tu viaje principal · <b>{{hechos}}/{{total}}</b>");
+    expect(ANALYTICS_INFORME.es.hitos.cumplimiento).toEqual({
+      a_tiempo: "planificada · a tiempo",
+      adelantada: "planificada · adelantada",
+      tardia: "planificada · tardía",
+    });
+    expect(EXPEDIENTE.es.indice.reporteSubtitulo).toBe("El plan, el avance y cómo te fue en este mundo");
+    expect(TUS_NUMEROS.es.faltantes.horas_por_unidad.porque).toBe("si te pagaras el rato que tardas, el costo real subiría");
+  });
+});

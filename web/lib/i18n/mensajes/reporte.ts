@@ -14,7 +14,7 @@ const es = {
       horas_por_unidad: "¿Cuántas horas de trabajo te toma cada {{u}}?",
       valor_hora: "¿En cuánto valoras tu hora de trabajo (lo que sientes que deberías ganar por hora)?",
       precio_tentativo: "¿A qué precio cobras (o cobrarías) cada {{u}}?",
-      capacidad_semanal: "¿Cuántas veces de {{u}} puedes atender en una semana normal?",
+      capacidad_semanal: "En una semana normal, ¿cuántas veces puedes atender? Cuenta cada {{u}} como una vez.",
       costos_fijos_mensuales: "¿Tienes costos fijos mensuales (renta, herramientas, etc.)? Si sí, ¿cuánto suman al mes?",
     },
     digital: {
@@ -23,14 +23,14 @@ const es = {
       costo_materiales_unidad:
         "¿Tienes algún costo variable por cada {{u}} (por ejemplo, costo de API por uso)? Si es prácticamente cero, responde 0.",
       precio_tentativo: "¿A qué precio o ingreso promedio vendes (o venderías) cada {{u}}?",
-      unidades_vendidas: "¿Cuántas de {{u}} tienes hoy, o cuál sería una meta mensual realista?",
+      unidades_vendidas: "Contando por {{u}}, ¿cuánto tienes hoy, o cuál sería una meta mensual realista?",
     },
     productoFisico: {
       costo_materiales_unidad: "¿Cuánto gastas en materiales por {{u}}, más o menos? Un número aproximado sirve.",
       horas_por_unidad: "¿Cuántas horas de trabajo te toma cada {{u}}, de principio a fin?",
       valor_hora: "¿En cuánto valoras tu hora de trabajo (lo que sientes que deberías ganar por hora)?",
       precio_tentativo: "¿A qué precio venderías (o vendes) cada {{u}}?",
-      capacidad_semanal: "¿Cuántas de {{u}} puedes producir en una semana normal?",
+      capacidad_semanal: "En una semana normal, ¿cuánto puedes producir, contando por {{u}}?",
       costos_fijos_mensuales: "¿Tienes costos fijos mensuales (renta, herramientas, etc.)? Si sí, ¿cuánto suman al mes?",
     },
   },

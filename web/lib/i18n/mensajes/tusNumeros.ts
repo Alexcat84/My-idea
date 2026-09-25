@@ -57,7 +57,7 @@ const es = {
   /** Cada faltante por su clave de campo (la clave es el DATO; esto es su etiqueta). */
   faltantes: {
     costo_materiales_unidad: { texto: "Costo de materiales por unidad", porque: "es la base para saber cuánto te cuesta cada una" },
-    horas_por_unidad: { texto: "Tu tiempo por unidad, valorado en dinero", porque: "si te pagaras el rato que tardas, el costo real sube" },
+    horas_por_unidad: { texto: "Tu tiempo por unidad, valorado en dinero", porque: "si te pagaras el rato que tardas, el costo real subiría" },
     valor_hora: { texto: "Cuánto vale tu hora de trabajo", porque: "sin ella no se puede poner precio a tu tiempo" },
     precio_tentativo: { texto: "El precio al que vendes", porque: "sin precio no hay margen que calcular" },
     capacidad_semanal: { texto: "Cuántas puedes hacer en una semana", porque: "marca el techo real de lo que alcanzas a producir" },
@@ -117,7 +117,7 @@ const es = {
   recienActualizado: "recién actualizado",
   calculadoPorCodigo: "Calculado por código, sobre tus cifras",
   tusNumerosDeHoy: "Tus números de HOY",
-  calculadoConCifrasDel: "· calculado con tus cifras del {{sello}}",
+  calculadoConCifrasDel: "· calculado con tus cifras ({{sello}})",
   corregirGratis: "Corregir mis cifras · gratis",
 };
 
@@ -234,7 +234,7 @@ const en: typeof es = {
   recienActualizado: "just updated",
   calculadoPorCodigo: "Calculated by code, from your figures",
   tusNumerosDeHoy: "Your numbers TODAY",
-  calculadoConCifrasDel: "· calculated with your figures from {{sello}}",
+  calculadoConCifrasDel: "· calculated with your figures ({{sello}})",
   corregirGratis: "Correct my figures · free",
 };
 

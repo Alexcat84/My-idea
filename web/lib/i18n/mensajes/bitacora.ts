@@ -17,7 +17,7 @@ const es = {
     tuHistoria: "Tu historia",
     bitacoraDe: "Bitácora de {{nombre}}",
     esteMundo: "este mundo",
-    miBitacora: "Mi bitácora de mi viaje",
+    miBitacora: "La bitácora de mi viaje",
     vacia: "Tu historia apenas empieza. Cada paso que des irá quedando aquí: cada estado que cambies, cada fecha que muevas, cada nota.",
     pie: "Esta es tu historia tal como quedó registrada, día por día. Nada se reescribe: si moviste una fecha, la original sigue aquí.",
   },

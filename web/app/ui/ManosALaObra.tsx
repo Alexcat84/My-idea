@@ -62,7 +62,7 @@ import { loginConNext } from "@/lib/nextSeguro";
 import { cadenciasPorEspacio, chapaEstaSemana, diaDominante, ordenarEnFechas, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 import { errorGenerico, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
-import { elegir } from "@/lib/i18n/config";
+import { elegir, type Locale } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { rico } from "@/lib/i18n/rico";
@@ -1254,13 +1254,17 @@ function CapacidadDelEspacio({
   capacidad: CapacidadSemanal;
   onCapacidad: (dominio: string, c: CapacidadSemanal) => void;
 }) {
-  const tt = elegir(MANOS_A_LA_OBRA, useIdioma());
+  const idioma = useIdioma();
+  const tt = elegir(MANOS_A_LA_OBRA, idioma);
   const t = tt.capacidadEspacio;
   const [editando, setEditando] = useState(false);
+  // En medio de la frase la etiqueta va en minúscula ("de 5 a 10 horas"), salvo
+  // en alemán, donde el sustantivo conserva su mayúscula ("5 bis 10 Stunden").
+  const horas = (idioma as Locale) === "de" ? tt.capacidad[capacidad] : tt.capacidad[capacidad].toLowerCase();
   if (!editando) {
     return (
       <p className="mt-2.5 border-t border-hairline pt-2.5 text-[12.5px] text-dim">
-        {rico(interpolar(t.leDas, { horas: tt.capacidad[capacidad].toLowerCase() }), {
+        {rico(interpolar(t.leDas, { horas }), {
           b: (c) => <span className="font-semibold text-ink">{c}</span>,
         })}{" "}
         <button onClick={() => setEditando(true)} className="text-accent hover:underline">
