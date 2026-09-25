@@ -7,7 +7,7 @@ import type { PorIdioma } from "../config";
 const es = {
   misIdeas: "Mis ideas /",
   titulo: "Créditos",
-  disponibles: "{{saldo}} disponibles",
+  disponibles: "Disponible: {{saldo}}",
   saldoNoDisponible: "saldo no disponible",
   /** La píldora del costo, a la derecha de la cifra. */
   creditos: "créditos",

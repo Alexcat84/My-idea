@@ -74,6 +74,10 @@ describe("inconsistencias del español (tanda de F2)", () => {
 //   saldo = "1 crédito" -> "1 crédito disponibles" (mal); se nombra antes: "Disponible: 1 crédito".
 //   sello = "hace 21 min" -> "tus cifras del hace 21 min" (mal); entre paréntesis.
 describe("concordancia con lo que entra por el marcador (F3)", () => {
+  it("el saldo disponible de /creditos tampoco", async () => {
+    const { CREDITOS } = await import("./mensajes/creditos");
+    expect(interpolar(CREDITOS.es.disponibles, { saldo: "1 crédito" })).toBe("Disponible: 1 crédito");
+  });
   it("el saldo con reserva no fuerza un plural", async () => {
     const { SALDO } = await import("./mensajes/saldo");
     expect(interpolar(SALDO.es.tituloConReserva, { saldo: "1 crédito", reservados: "2 apartados" })).toBe(
