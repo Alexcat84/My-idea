@@ -30,7 +30,7 @@ import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
-import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
@@ -113,12 +113,15 @@ export async function POST(request: Request) {
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
     await resolverReserva(claveReserva, "liberada");
-    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
+    return NextResponse.json({ error: fusible.caido ? mensajeServicioNoDisponible(idioma) : mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     await resolverReserva(claveReserva, "liberada");
-    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
+    return NextResponse.json(
+      { error: limite.caido ? mensajeServicioNoDisponible(idioma) : mensajeLimite(limite.limite, idioma) },
+      { status: limite.caido ? 503 : 429 }
+    );
   }
 
   const graph = cargarGrafo();

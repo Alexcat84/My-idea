@@ -38,7 +38,7 @@ import {
 import { parsearJson } from "@/lib/parseJson";
 import { SYSTEM_ORGANIZADOR } from "@/lib/prompts";
 import { garantizarTerminal } from "@/lib/streamTerminal";
-import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 import type Anthropic from "@anthropic-ai/sdk";
 
@@ -107,11 +107,14 @@ export async function POST(request: Request) {
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
-    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
+    return NextResponse.json({ error: fusible.caido ? mensajeServicioNoDisponible(idioma) : mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
-    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
+    return NextResponse.json(
+      { error: limite.caido ? mensajeServicioNoDisponible(idioma) : mensajeLimite(limite.limite, idioma) },
+      { status: limite.caido ? 503 : 429 }
+    );
   }
 
   const graph = cargarGrafo();

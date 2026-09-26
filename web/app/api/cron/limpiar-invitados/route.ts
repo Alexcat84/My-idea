@@ -8,6 +8,7 @@
  * que borra todo lo que cuelga de cada idea.
  */
 import { NextResponse } from "next/server";
+import { latidoUpstash } from "@/lib/rateLimit";
 import { createAdminClient } from "@/lib/supabase/admin";
 
 export const DIAS_IDEAS_INVITADO = 30;
@@ -29,5 +30,15 @@ export async function GET(request: Request) {
   }
   const borradas = typeof data === "number" ? data : 0;
   console.log(`[cron/limpiar-invitados] ${borradas} idea(s) de invitado sin dueño borradas`);
-  return NextResponse.json({ borradas });
+
+  // El latido diario a Upstash (decisión del fundador, 25 sep 2026): mantiene
+  // activa la base del contador y, si no responde, la tarea FALLA (Vercel la
+  // marca en rojo) con una alerta en los registros. Sin esa base la IA está
+  // detenida (falla cerrada, lib/rateLimit.ts).
+  const upstash = await latidoUpstash();
+  if (upstash === "caido" || (upstash === "sin_credenciales" && process.env.NODE_ENV === "production")) {
+    console.error("[cron/limpiar-invitados] ALERTA: la base del contador (Upstash) no responde; la IA está detenida", { upstash });
+    return NextResponse.json({ borradas, upstash }, { status: 500 });
+  }
+  return NextResponse.json({ borradas, upstash });
 }

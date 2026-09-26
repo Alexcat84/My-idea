@@ -16,6 +16,7 @@ const es = {
     "Por hoy alcanzaste el límite de la beta ({{arranques}} al día). Tus ideas quedan guardadas. Vuelve mañana y seguimos donde quedamos.",
   arranques: { one: "{{n}} arranque", other: "{{n}} arranques" },
   fusible: "Estamos a capacidad por hoy; tus ideas te esperan mañana.",
+  servicioNoDisponible: "Servicio temporalmente no disponible. No se te cobró nada; intenta de nuevo en unos minutos.",
   /** lib/creditos.ts: el 402 en palabras de persona. */
   saldoInsuficiente: "Te quedan {{creditos}}; esto cuesta {{costo}}. Tu trabajo queda guardado tal como está.",
   saldoInsuficienteConApartados:
@@ -38,6 +39,7 @@ const en: typeof es = {
     "You've reached today's beta limit ({{arranques}} a day). Your ideas are saved. Come back tomorrow and we'll pick up where we left off.",
   arranques: { one: "{{n}} start", other: "{{n}} starts" },
   fusible: "We're at capacity for today; your ideas will be waiting for you tomorrow.",
+  servicioNoDisponible: "Service temporarily unavailable. You weren't charged anything; please try again in a few minutes.",
   saldoInsuficiente: "You have {{creditos}} left; this costs {{costo}}. Your work is saved just as it is.",
   saldoInsuficienteConApartados:
     "You have {{creditos}}, and {{apartados}} for a plan you have in progress; this costs {{costo}}. Your work is saved just as it is.",
@@ -58,6 +60,7 @@ const fr: typeof es = {
     other: "{{n}} démarrages",
   },
   fusible: "Nous sommes à pleine capacité pour aujourd'hui; tes idées t'attendent demain.",
+  servicioNoDisponible: "Service temporairement indisponible. Rien ne t'a été facturé; réessaie dans quelques minutes.",
   saldoInsuficiente: "Il te reste {{creditos}}; ceci coûte {{costo}}. Ton travail est enregistré tel quel.",
   saldoInsuficienteConApartados: "Tu as {{creditos}}, et {{apartados}} pour un plan en cours; ceci coûte {{costo}}. Ton travail est enregistré tel quel.",
   creditos: {
@@ -83,6 +86,7 @@ const pt: typeof es = {
     other: "{{n}} inícios",
   },
   fusible: "Estamos no limite da capacidade por hoje; suas ideias esperam você amanhã.",
+  servicioNoDisponible: "Serviço temporariamente indisponível. Nada foi cobrado de você; tente de novo em alguns minutos.",
   saldoInsuficiente: "Você ainda tem {{creditos}}; isto custa {{costo}}. Seu trabalho fica salvo do jeito que está.",
   saldoInsuficienteConApartados: "Você tem {{creditos}}, e {{apartados}} para um plano que está em andamento; isto custa {{costo}}. Seu trabalho fica salvo do jeito que está.",
   creditos: {
@@ -108,6 +112,7 @@ const de: typeof es = {
     other: "{{n}} Starts",
   },
   fusible: "Für heute sind wir ausgelastet; deine Ideen warten morgen auf dich.",
+  servicioNoDisponible: "Dienst vorübergehend nicht verfügbar. Dir wurde nichts berechnet; versuch es in ein paar Minuten noch einmal.",
   saldoInsuficiente: "Du hast noch {{creditos}}; das hier kostet {{costo}}. Deine Arbeit bleibt genau so gespeichert, wie sie ist.",
   saldoInsuficienteConApartados: "Du hast {{creditos}}, und {{apartados}} für einen Plan, der gerade läuft; das hier kostet {{costo}}. Deine Arbeit bleibt genau so gespeichert, wie sie ist.",
   creditos: {
@@ -133,6 +138,7 @@ const it: typeof es = {
     other: "{{n}} avvii",
   },
   fusible: "Per oggi siamo al completo; le tue idee ti aspettano domani.",
+  servicioNoDisponible: "Servizio temporaneamente non disponibile. Non ti è stato addebitato nulla; riprova tra qualche minuto.",
   saldoInsuficiente: "Ti restano {{creditos}}; questo costa {{costo}}. Il tuo lavoro resta salvato così com'è.",
   saldoInsuficienteConApartados: "Hai {{creditos}}, e {{apartados}} per un piano che hai in corso; questo costa {{costo}}. Il tuo lavoro resta salvato così com'è.",
   creditos: {
@@ -158,6 +164,7 @@ const ja: typeof es = {
     other: "{{n}}回",
   },
   fusible: "今日は利用が上限に達しています。アイデアは保存されているので、また明日お越しください。",
+  servicioNoDisponible: "サービスは一時的に利用できません。料金は一切かかっていません。数分後にもう一度お試しください。",
   saldoInsuficiente: "残りは{{creditos}}で、これには{{costo}}必要です。作業内容はそのまま保存されています。",
   saldoInsuficienteConApartados: "残りは{{creditos}}です（進行中のプラン用に{{apartados}}）。これには{{costo}}必要です。作業内容はそのまま保存されています。",
   creditos: {
@@ -183,6 +190,7 @@ const zh: typeof es = {
     other: "{{n}}次启动",
   },
   fusible: "今天我们的容量已满；你的想法明天在这里等你。",
+  servicioNoDisponible: "服务暂时不可用。没有向你收取任何费用；请几分钟后再试。",
   saldoInsuficiente: "你还剩{{creditos}}；这次需要{{costo}}。你的工作已原样保存。",
   saldoInsuficienteConApartados: "你有{{creditos}}，另有{{apartados}}给你进行中的一个计划；这次需要{{costo}}。你的工作已原样保存。",
   creditos: {
@@ -208,6 +216,7 @@ const ko: typeof es = {
     other: "{{n}}회 시작",
   },
   fusible: "오늘은 이용량이 가득 찼어요. 아이디어는 내일도 그대로 기다리고 있어요.",
+  servicioNoDisponible: "서비스를 잠시 이용할 수 없어요. 요금은 전혀 청구되지 않았어요. 몇 분 뒤에 다시 시도해 주세요.",
   saldoInsuficiente: "지금 남은 건 {{creditos}}이고, 이 작업에는 {{costo}}크레딧이 필요해요. 작업은 지금 상태 그대로 저장돼 있어요.",
   saldoInsuficienteConApartados: "지금 쓸 수 있는 건 {{creditos}}이고, 진행 중인 계획을 위해 {{apartados}}. 이 작업에는 {{costo}}크레딧이 필요해요. 작업은 지금 상태 그대로 저장돼 있어요.",
   creditos: {
@@ -233,6 +242,7 @@ const ar: typeof es = {
     other: "مرات البدء: {{n}}",
   },
   fusible: "بلغنا طاقتنا القصوى لهذا اليوم؛ أفكاركم بانتظاركم غدًا.",
+  servicioNoDisponible: "الخدمة غير متاحة مؤقتًا. لم يُخصم منكم أي شيء؛ حاولوا مرة أخرى بعد بضع دقائق.",
   saldoInsuficiente: "رصيدكم المتبقي {{creditos}}، وتكلفة هذا {{costo}}. عملكم محفوظ كما هو.",
   saldoInsuficienteConApartados: "لديكم {{creditos}} ({{apartados}} لخطة قيد الإنجاز)، وتكلفة هذا {{costo}}. عملكم محفوظ كما هو.",
   creditos: {
@@ -258,6 +268,7 @@ const hi: typeof es = {
     other: "{{n}} शुरुआतें",
   },
   fusible: "आज के लिए हमारी क्षमता पूरी हो गई है; आपके विचार कल आपका इंतज़ार करेंगे।",
+  servicioNoDisponible: "सेवा अस्थायी रूप से उपलब्ध नहीं है। आपसे कुछ भी नहीं लिया गया; कुछ मिनट बाद फिर से कोशिश करें।",
   saldoInsuficiente: "आपका बैलेंस {{creditos}} है; इसके लिए {{costo}} क्रेडिट चाहिए। आपका काम जैसा है, वैसा ही सहेजा हुआ है।",
   saldoInsuficienteConApartados: "आपका बैलेंस {{creditos}} है, और आपकी चालू योजना के लिए {{apartados}}; इसके लिए {{costo}} क्रेडिट चाहिए। आपका काम जैसा है, वैसा ही सहेजा हुआ है।",
   creditos: {

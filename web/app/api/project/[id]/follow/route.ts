@@ -59,7 +59,7 @@ import {
   itemsDelUltimoPlanDe,
   type FilaChecklist,
 } from "@/lib/engine/seguimientoComposer";
-import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { cargarFamilies } from "@/lib/readiness";
 import { createClient } from "@/lib/supabase/server";
 
@@ -236,12 +236,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
     await soltarReserva();
-    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
+    return NextResponse.json({ error: fusible.caido ? mensajeServicioNoDisponible(idioma) : mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     await soltarReserva();
-    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
+    return NextResponse.json(
+      { error: limite.caido ? mensajeServicioNoDisponible(idioma) : mensajeLimite(limite.limite, idioma) },
+      { status: limite.caido ? 503 : 429 }
+    );
   }
 
   // (a) El checklist del último plan DEL DOMINIO (por fecha de inserción) con

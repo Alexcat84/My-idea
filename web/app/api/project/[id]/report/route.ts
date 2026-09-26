@@ -33,7 +33,7 @@ import { costoAcumuladoUsd, PRESUPUESTO_REPORTE_USD, usoVacio } from "@/lib/cost
 import { actualizarProyecto, cerrarSesion, crearSesion, guardarPlan, obtenerPlanCoreVigente, obtenerProyecto } from "@/lib/db";
 import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
-import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { avanzarReporte, iniciarReporte } from "@/lib/engine/reporteFlow";
 import { createClient } from "@/lib/supabase/server";
@@ -104,11 +104,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
     // tocar la API, igual que session/start y follow.
     const fusible = await verificarFusibleGlobal(user.email);
     if (!fusible.permitido) {
-      return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
+      return NextResponse.json({ error: fusible.caido ? mensajeServicioNoDisponible(idioma) : mensajeFusible(idioma) }, { status: 503 });
     }
     const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
     if (!limite.permitido) {
-      return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
+      return NextResponse.json(
+      { error: limite.caido ? mensajeServicioNoDisponible(idioma) : mensajeLimite(limite.limite, idioma) },
+      { status: limite.caido ? 503 : 429 }
+    );
     }
     resultado = await iniciarReporte(client, numeros, proyecto.tipo_oferta ?? null, proyecto.unidad_venta ?? null, usoVacio(), idioma, idiomaDelProyecto(proyecto));
   } else {
