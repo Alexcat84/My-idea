@@ -125,6 +125,10 @@ depende del navegador.
    conserva el procesador de pagos (§4, B5).
 7. Dónde procesa el audio el navegador al dictar.
 8. Que `next/font` no llame a Google en el despliegue real.
-9. Que el nombre legal (Alexis Adalberto Antonio García Hurtado, empresa individual) coincida exactamente con el registro en
-   Revenu Québec (lo confirma el fundador). El correo de privacidad ya está decidido:
-   privacidad@myideaproject.com.
+9. ~~El nombre legal~~ CONFIRMADO por el fundador contra sus certificados de Revenu Québec:
+   **Alexis Garcia Hurtado** (empresa individual, sin segundos nombres); TPS/TVH (GST/HST)
+   72180 8434 RT0001 y TVQ (QST) 4056093040 TQ0001, vigentes desde el 7 de abril de 2026. Contactos:
+   privacy@myideaproject.com (privacidad y derechos de los usuarios) y support@myideaproject.com
+   (soporte general). **Sigue POR VERIFICAR la dirección del comerciante**: la Ley de protección del
+   consumidor de Quebec suele exigirla en los contratos a distancia; el fundador decidirá con el
+   profesional si publica una dirección comercial o un apartado postal.

@@ -12,8 +12,8 @@
 # Conditions d'utilisation de My Idea
 
 **Dernière mise à jour :** [date de publication]
-**Qui fournit le service :** Alexis Adalberto Antonio García Hurtado, entreprise individuelle enregistrée au Québec, Canada (nom à confirmer selon l'inscription auprès de Revenu Québec : À VÉRIFIER par le fondateur)
-(« nous »).
+**Qui fournit le service :** Alexis Garcia Hurtado, entreprise individuelle enregistrée au Québec, Canada
+(« nous »). Adresse du commerçant : À VÉRIFIER avec le professionnel (la Loi sur la protection du consommateur du Québec exige généralement le nom et l'adresse du commerçant dans les contrats conclus à distance; le fondateur décidera avec le professionnel de publier une adresse d'affaires ou une case postale plutôt que celle de son domicile).
 
 ## 1. Ce qu'est My Idea
 
@@ -58,7 +58,7 @@ l'application, vous acceptez les présentes conditions et la Politique de confid
 - Le contenu généré par l'IA peut contenir des erreurs. Examinez votre plan avec discernement avant
   d'agir.
 
-## 5. Crédits
+## 5. Prix, crédits et taxes
 
 - Certaines actions utilisent des crédits prépayés. **Il n'y a ni abonnement ni frais
   automatiques.** Le prix de chaque action est celui que l'application affiche avant qu'elle ne
@@ -78,6 +78,11 @@ l'application, vous acceptez les présentes conditions et la Politique de confid
   juridique (remboursement, résiliation, expiration) au regard de la Loi sur la protection du
   consommateur du Québec est À VÉRIFIER.
 - Les crédits sont personnels et ne peuvent pas être transférés à un autre compte (À VÉRIFIER).
+
+- **Taxes :** Alexis Garcia Hurtado est inscrit aux fichiers des taxes à la consommation :
+  **TPS/TVH 72180 8434 RT0001** et **TVQ 4056093040 TQ0001**, en vigueur depuis le 7 avril 2026. La
+  façon d'afficher et de percevoir les taxes sur le prix des crédits, lorsque l'achat avec de l'argent
+  sera activé, est À VÉRIFIER avec le professionnel.
 
 ## 6. Utilisation acceptable
 
@@ -120,4 +125,6 @@ langue française).
 
 ## 12. Contact
 
-privacidad@myideaproject.com
+- Protection des renseignements personnels et droits des utilisateurs : privacy@myideaproject.com
+- Soutien général : support@myideaproject.com
+- Adresse du commerçant : À VÉRIFIER avec le professionnel (la Loi sur la protection du consommateur du Québec exige généralement le nom et l'adresse du commerçant dans les contrats conclus à distance; le fondateur décidera avec le professionnel de publier une adresse d'affaires ou une case postale plutôt que celle de son domicile).

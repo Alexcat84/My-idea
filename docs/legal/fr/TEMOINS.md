@@ -38,4 +38,4 @@ professionnel).
 ## 3. Pour en savoir plus
 
 La façon dont nous traitons vos données est décrite dans la Politique de confidentialité. Pour
-toute question, écrivez à privacidad@myideaproject.com.
+toute question, écrivez à privacy@myideaproject.com.

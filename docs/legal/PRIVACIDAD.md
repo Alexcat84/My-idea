@@ -8,7 +8,7 @@
 # Política de privacidad de My Idea
 
 **Última actualización:** [fecha de publicación]
-**Responsable:** Alexis Adalberto Antonio García Hurtado, empresa individual registrada en Quebec, Canadá (el nombre debe coincidir exactamente con el registro en Revenu Québec: POR VERIFICAR por el fundador) ("nosotros"), que opera la
+**Responsable:** Alexis Garcia Hurtado, empresa individual registrada en Quebec, Canadá ("nosotros"), que opera la
 aplicación My Idea.
 
 ## 1. En pocas palabras
@@ -159,7 +159,9 @@ hoy no existen por escrito**).
 
 ## 12. Responsable de la protección de los datos personales
 
-El responsable es Alexis Adalberto Antonio García Hurtado, fundador de My Idea, en privacidad@myideaproject.com. Su título y sus datos de contacto se publican en la app.
+El responsable es Alexis Garcia Hurtado, fundador de My Idea, en privacy@myideaproject.com (privacidad y
+derechos sobre tus datos personales). Para soporte general: support@myideaproject.com. Su título y sus
+datos de contacto se publican en la app. Dirección del comerciante: POR VERIFICAR con el profesional (la Ley de protección del consumidor de Quebec suele exigir el nombre y la dirección del comerciante en los contratos a distancia; el fundador decidirá con el profesional si publica una dirección comercial o un apartado postal en lugar de la de su domicilio).
 
 ## 13. Menores
 

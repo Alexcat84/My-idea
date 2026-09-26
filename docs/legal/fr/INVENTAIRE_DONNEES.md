@@ -136,6 +136,11 @@ dans le champ et est transmis comme du texte écrit. L'endroit où le navigateur
    ventes sont conservés par le processeur de paiement (§4, B5).
 7. L'endroit où le navigateur traite le son lors de la dictée.
 8. Que `next/font` n'interroge pas Google dans le déploiement réel.
-9. Que le nom légal (Alexis Adalberto Antonio García Hurtado, entreprise individuelle) corresponde exactement à l'inscription auprès de
-   Revenu Québec (le fondateur le confirme). L'adresse courriel pour la protection des
-   renseignements personnels est déjà décidée : privacidad@myideaproject.com.
+9. ~~Le nom légal~~ CONFIRMÉ par le fondateur selon ses certificats de Revenu Québec :
+   **Alexis Garcia Hurtado** (entreprise individuelle, sans second prénom); TPS/TVH
+   72180 8434 RT0001 et TVQ 4056093040 TQ0001, en vigueur depuis le 7 avril 2026. Coordonnées :
+   privacy@myideaproject.com (protection des renseignements personnels et droits des utilisateurs) et
+   support@myideaproject.com (soutien général). **L'adresse du commerçant reste À VÉRIFIER** : la Loi
+   sur la protection du consommateur du Québec l'exige généralement dans les contrats conclus à
+   distance; le fondateur décidera avec le professionnel de publier une adresse d'affaires ou une case
+   postale.

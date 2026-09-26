@@ -63,9 +63,9 @@ grafo de conocimiento **se queda en español** (no se traduce). Diseño completo
   para todo nodo vivo.
 - **D4.** Sí al Send Email Hook de Supabase con Resend y el catálogo; los pasos de configuración se
   entregan al fundador en F6.
-- **D5.** Textos legales: borradores en `docs/legal/` (Quebec, Canadá; responsable: Alexis Adalberto
-  Antonio García Hurtado, empresa individual, nombre a confirmar contra Revenu Québec; contacto
-  privacidad@myideaproject.com), marcados BORRADOR, **no enlazados desde la app** hasta que el
+- **D5.** Textos legales: borradores en `docs/legal/` (Quebec, Canadá; responsable: Alexis Garcia
+  Hurtado, empresa individual, nombre confirmado contra Revenu Québec; contactos
+  privacy@myideaproject.com y support@myideaproject.com; dirección POR VERIFICAR), marcados BORRADOR, **no enlazados desde la app** hasta que el
   fundador los apruebe. La versión francesa será obligatoria.
 - **D6.** Formato por idioma con `Intl`, símbolo "$" por ahora; la moneda por proyecto es función
   futura (ficha `moneda-por-proyecto` en `docs/PENDIENTES.md`).

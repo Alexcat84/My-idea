@@ -9,8 +9,8 @@
 # Términos de uso de My Idea
 
 **Última actualización:** [fecha de publicación]
-**Quién presta el servicio:** Alexis Adalberto Antonio García Hurtado, empresa individual registrada en Quebec, Canadá (nombre a confirmar contra el registro en Revenu Québec: POR VERIFICAR por el fundador)
-("nosotros").
+**Quién presta el servicio:** Alexis Garcia Hurtado, empresa individual registrada en Quebec, Canadá
+("nosotros"). Dirección del comerciante: POR VERIFICAR con el profesional (la Ley de protección del consumidor de Quebec suele exigir el nombre y la dirección del comerciante en los contratos a distancia; el fundador decidirá con el profesional si publica una dirección comercial o un apartado postal en lugar de la de su domicilio).
 
 ## 1. Qué es My Idea
 
@@ -47,7 +47,7 @@ Al usar la app aceptas estos términos y la Política de privacidad.
   tu caso.
 - El contenido generado por IA puede contener errores. Revisa tu plan con criterio antes de actuar.
 
-## 5. Créditos
+## 5. Precios, créditos e impuestos
 
 - Algunas acciones usan créditos prepagos. **No hay suscripción ni cargos automáticos.** El precio
   de cada acción es el que la app muestra antes de empezarla.
@@ -61,6 +61,10 @@ Al usar la app aceptas estos términos y la Política de privacidad.
 - Hoy los créditos no tienen fecha de vencimiento en el sistema. Su tratamiento legal (reembolso,
   desistimiento, vencimiento) según la Ley de protección del consumidor de Quebec es POR VERIFICAR.
 - Los créditos son personales y no se transfieren a otra cuenta (POR VERIFICAR).
+- **Impuestos:** Alexis Garcia Hurtado está inscrito en los registros de impuestos al consumo:
+  **TPS/TVH (GST/HST) 72180 8434 RT0001** y **TVQ (QST) 4056093040 TQ0001**, ambos vigentes desde el
+  7 de abril de 2026. Cómo se muestran y se cobran los impuestos sobre el precio de los créditos cuando
+  se active la compra con dinero es POR VERIFICAR con el profesional.
 
 ## 6. Uso aceptable
 
@@ -99,4 +103,6 @@ VERIFICAR con el profesional, según la Carta de la lengua francesa).
 
 ## 12. Contacto
 
-privacidad@myideaproject.com
+- Privacidad y derechos sobre tus datos personales: privacy@myideaproject.com
+- Soporte general: support@myideaproject.com
+- Dirección del comerciante: POR VERIFICAR con el profesional (la Ley de protección del consumidor de Quebec suele exigir el nombre y la dirección del comerciante en los contratos a distancia; el fundador decidirá con el profesional si publica una dirección comercial o un apartado postal en lugar de la de su domicilio).
