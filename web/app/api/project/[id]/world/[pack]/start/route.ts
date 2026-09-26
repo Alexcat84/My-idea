@@ -53,7 +53,7 @@ import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
 import { puedeRePreview } from "@/lib/engine/previewMundos";
 import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta, resolverId } from "@/lib/engine/graph";
 import { estadoInicial } from "@/lib/engine/recorrido";
-import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
 
 export const runtime = "nodejs";
@@ -172,11 +172,14 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // Pre-beta: fusible global ANTES de cobrar creditos y de tocar la API.
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
-    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
+    return NextResponse.json({ error: fusible.caido ? mensajeServicioNoDisponible(idioma) : mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
-    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
+    return NextResponse.json(
+      { error: limite.caido ? mensajeServicioNoDisponible(idioma) : mensajeLimite(limite.limite, idioma) },
+      { status: limite.caido ? 503 : 429 }
+    );
   }
 
   // Fase 4.5: la fila nace (o refresca su preview) GRATIS. Es la presencia del

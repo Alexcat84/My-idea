@@ -536,7 +536,7 @@ son la capa 3 embrionaria). Matriz de fases:
   tarea hecha o retirada sin fecha, `fechaHumana(isoDesdeInputLocal(undefined))` lanza `RangeError:
   Invalid time value` y la pantalla se rompe. Lo reprodujo el agente de Manos a la Obra renderizando la
   versión de antes y la de después (las dos lanzan igual). Prueba en rojo primero.
-- **`contador-upstash-ruidoso`** (decisión del fundador 3, 27 sep 2026). **El
+- **`contador-upstash-ruidoso`** — **RESUELTA en la rama `upstash-contador` (decisión del fundador, 25 sep 2026):** con la base caída, fusible y límite diario FALLAN CERRADOS (`caido: true`), las siete rutas de la IA responden 503 con "Servicio temporalmente no disponible. No se te cobró nada; intenta de nuevo en unos minutos." (once idiomas) y sueltan la reserva, el registro dice `[rateLimit] UPSTASH NO RESPONDE`; el límite de envíos del doble factor (no es IA) deja pasar y lo registra; la tarea diaria `/api/cron/limpiar-invitados` da un latido a la base y falla con ALERTA si no responde. Lo que sigue es la ficha original. (decisión del fundador 3, 27 sep 2026). **El
   incidente (24 sep 2026):** la base Redis de Upstash que usa el contador de límites
   (`web/lib/rateLimit.ts`) desapareció (`getaddrinfo ENOTFOUND
   tough-fox-158997.upstash.io`, confirmado contra los DNS de Google) y **toda la IA

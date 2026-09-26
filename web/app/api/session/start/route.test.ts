@@ -131,6 +131,24 @@ describe("POST /api/session/start", () => {
     expect(rl.verificarFusibleGlobal).not.toHaveBeenCalled();
   });
 
+  // UPSTASH CAÍDO (decisión del fundador, 25 sep 2026): la IA se detiene con el
+  // mensaje claro, la reserva se suelta y no se cobra nada.
+  it.each(["fusible", "límite"])("base del contador caída (%s): 503 con el mensaje claro, reserva suelta, cero cobros, IA sin tocar", async (cual) => {
+    const rl = await import("@/lib/rateLimit");
+    const { cobrar, resolverReserva } = await import("@/lib/creditos");
+    vi.mocked(cobrar).mockClear();
+    vi.mocked(resolverReserva).mockClear();
+    const caida = { permitido: false, usados: 0, limite: 0, caido: true };
+    if (cual === "fusible") vi.mocked(rl.verificarFusibleGlobal).mockResolvedValueOnce(caida);
+    else vi.mocked(rl.verificarLimiteDiario).mockResolvedValueOnce(caida);
+    const res = await POST(requestFalso({ texto: "mi idea" }));
+    expect(res.status).toBe(503);
+    expect((await res.json()).error).toBe(rl.MENSAJE_SERVICIO_NO_DISPONIBLE);
+    expect(resolverReserva).toHaveBeenCalledWith(expect.any(String), "liberada");
+    expect(cobrar).not.toHaveBeenCalled();
+    expect(clasificarEntradaFalso).not.toHaveBeenCalled();
+  });
+
   it("401 si no hay usuario autenticado", async () => {
     supabaseFalso.auth.getUser.mockResolvedValueOnce({ data: { user: null } });
     const res = await POST(requestFalso({ texto: "mi idea" }));

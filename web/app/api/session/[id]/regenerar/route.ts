@@ -33,7 +33,7 @@ import {
 import { crearSesion, guardarEstadoSesion, obtenerSesion, type EstadoSesionPersistido } from "@/lib/db";
 import { avisoDelPlan } from "@/lib/engine/planRedactor";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
-import { identidadLimite, mensajeFusible, mensajeLimite, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
+import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
@@ -95,12 +95,15 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const fusible = await verificarFusibleGlobal(user.email);
   if (!fusible.permitido) {
     await resolverReserva(claveReserva, "liberada");
-    return NextResponse.json({ error: mensajeFusible(idioma) }, { status: 503 });
+    return NextResponse.json({ error: fusible.caido ? mensajeServicioNoDisponible(idioma) : mensajeFusible(idioma) }, { status: 503 });
   }
   const limite = await verificarLimiteDiario(identidadLimite(user.id, request), user.email);
   if (!limite.permitido) {
     await resolverReserva(claveReserva, "liberada");
-    return NextResponse.json({ error: mensajeLimite(limite.limite, idioma) }, { status: 429 });
+    return NextResponse.json(
+      { error: limite.caido ? mensajeServicioNoDisponible(idioma) : mensajeLimite(limite.limite, idioma) },
+      { status: limite.caido ? 503 : 429 }
+    );
   }
 
   const tipo = ((sesion as { tipo?: string }).tipo ?? (esSeguimiento ? "seguimiento" : "inicial")) as Parameters<
