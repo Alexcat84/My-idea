@@ -137,11 +137,12 @@ integrar todavia.
 
 ## MEDICIONES (solo lectura, antes de corregir nada)
 
-*Se rellena al cerrar cada medicion. Metodo calibrado: lector por lote con trampas sembradas, verificador ciego de
+*Instrumentos en `docs/saneamiento/instrumentos/` y resultados por nodo, con las claves de las trampas, en
+`docs/saneamiento/resultados/` (J vigencia y jurisdiccion, K coherencia, M muestra, R aristas). Metodo calibrado: lector por lote con trampas sembradas, verificador ciego de
 lo marcado mas una muestra de lo limpio, arbitro en los desacuerdos; todos los agentes en claude-opus-5-5.*
 
 ### Vigencia y jurisdiccion (pasada J, 26 sep 2026)
-- **Instrumento:** criba lexica de solo lectura (`criba_lexica.py`) que marca candidatos, y lectura con agentes de
+- **Instrumento:** criba lexica de solo lectura (`docs/saneamiento/instrumentos/criba_lexica.py`) que marca candidatos, y lectura con agentes de
   **1.466 nodos**: los 1.224 marcados (catalogo y mundo 11) mas una **muestra ciega de 242 no marcados** (1 de cada
   10, semilla 20260926) para medir lo que la criba deja. 33 lotes, **99 trampas** (pais sin clase, norma o plazo
   datado, enlace o institucion): el lector cazo **97 de 99**, el verificador ciego **98 de 99**; 113 desacuerdos al

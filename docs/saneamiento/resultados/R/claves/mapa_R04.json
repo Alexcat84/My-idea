@@ -1,0 +1,800 @@
+{
+ "R04-01-01": {
+  "nodo": "fuerza_bruta_industrial",
+  "vecino": "monocultura_como_paradigma",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-01-02": {
+  "nodo": "fuerza_bruta_industrial",
+  "vecino": "quality_score_optimizacion",
+  "sentido": "siguiente",
+  "trampa": true
+ },
+ "R04-01-03": {
+  "nodo": "fuerza_bruta_industrial",
+  "vecino": "diseno_universal_talla_unica",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-02-01": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "programa_cero_defectos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-02-02": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "equipo_conjunto_de_mejora_con_proveedores",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-02-03": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "regla_todo_o_nada_inspeccion_2",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-02-04": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "cribado_prueba_barata",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-02-05": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "economia_subensambles_inspeccion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-02-06": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "eliminacion_planes_muestreo_estandar",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-02-07": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "muestreo_de_aceptacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-02-08": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "probabilidad_falla_ensamblaje_multiple",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-02-09": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "pruebas_destructivas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-02-10": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "verificacion_paralela_trabajo_critico",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-02-11": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "control_estadistico_proceso",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-02-12": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "costo_de_mala_calidad_copq",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-02-13": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "correlacion_cero_muestra_remanente",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-02-14": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "comparacion_metodos_inspeccion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-02-15": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "redundancia_en_diseno",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-02-16": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "clasificacion_seriedad_defectos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-02-17": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "control_estadistico_de_procesos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-02-18": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "analisis_de_sistemas_de_medicion_msa",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-02-19": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "inspeccion_automatizada",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-02-20": {
+  "nodo": "punto_equilibrio_calidad_inspeccion",
+  "vecino": "relacion_largo_plazo_proveedor_unico",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-03-01": {
+  "nodo": "usa_silencio_no_partas_diferencia",
+  "vecino": "aplica_modelo_ackerman",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-03-02": {
+  "nodo": "usa_silencio_no_partas_diferencia",
+  "vecino": "ofrece_valor_no_economico",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-03-03": {
+  "nodo": "usa_silencio_no_partas_diferencia",
+  "vecino": "preparate_para_marcharte_del_trato",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-04-01": {
+  "nodo": "diseno_recordatorios_efectivos_2",
+  "vecino": "racional_mantenimiento_preventivo_correctivo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-04-02": {
+  "nodo": "diseno_recordatorios_efectivos_2",
+  "vecino": "caracteristicas_tareas_propensas_omision",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-04-03": {
+  "nodo": "diseno_recordatorios_efectivos_2",
+  "vecino": "prevalencia_omisiones",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-05-01": {
+  "nodo": "falacia_recompensa_loteria",
+  "vecino": "responsabilidad_gerencial_causas_comunes",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-05-02": {
+  "nodo": "falacia_recompensa_loteria",
+  "vecino": "gestion_miedo_reportes",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-05-03": {
+  "nodo": "falacia_recompensa_loteria",
+  "vecino": "sistema_estable_causas_comunes",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-06-01": {
+  "nodo": "gestion_falsas_alarmas",
+  "vecino": "defensas_en_profundidad_3",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-06-02": {
+  "nodo": "gestion_falsas_alarmas",
+  "vecino": "confusion_de_modos_automatizacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-07-01": {
+  "nodo": "revisar_necesidades_de_empaque",
+  "vecino": "conocer_limites_peso_tamano_courier",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-07-02": {
+  "nodo": "revisar_necesidades_de_empaque",
+  "vecino": "clasificar_tipo_paquete",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-07-03": {
+  "nodo": "revisar_necesidades_de_empaque",
+  "vecino": "adaptar_empaque_segun_tipo_de_articulo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-07-04": {
+  "nodo": "revisar_necesidades_de_empaque",
+  "vecino": "reconocer_mercancia_peligrosa_disfrazada",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-07-05": {
+  "nodo": "revisar_necesidades_de_empaque",
+  "vecino": "elegir_resistencia_caja_peso",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-07-06": {
+  "nodo": "revisar_necesidades_de_empaque",
+  "vecino": "empacar_liquidos_doble_barrera",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-07-07": {
+  "nodo": "revisar_necesidades_de_empaque",
+  "vecino": "disenar_empaque_logistica",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-07-08": {
+  "nodo": "revisar_necesidades_de_empaque",
+  "vecino": "decision_aptitud_uso",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-08-01": {
+  "nodo": "strat_map_arenas_estrategicas",
+  "vecino": "desarrollo_attack_plans",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-08-02": {
+  "nodo": "strat_map_arenas_estrategicas",
+  "vecino": "product_roadmap_estrategico",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-08-03": {
+  "nodo": "strat_map_arenas_estrategicas",
+  "vecino": "definicion_tipos_nuevo_producto",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-08-04": {
+  "nodo": "strat_map_arenas_estrategicas",
+  "vecino": "evaluacion_competencias_centrales",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-08-05": {
+  "nodo": "strat_map_arenas_estrategicas",
+  "vecino": "metas_objetivos_smart_innovacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-08-06": {
+  "nodo": "strat_map_arenas_estrategicas",
+  "vecino": "estrategia_de_innovacion_arenas",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-08-07": {
+  "nodo": "strat_map_arenas_estrategicas",
+  "vecino": "seleccion_arenas_estrategicas",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-08-08": {
+  "nodo": "strat_map_arenas_estrategicas",
+  "vecino": "perseguir_multiples_nortes",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-09-01": {
+  "nodo": "practicas_gerenciales_no_delegables",
+  "vecino": "estructura_organizacional_funcional_proceso",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-09-02": {
+  "nodo": "practicas_gerenciales_no_delegables",
+  "vecino": "planificacion_estrategica_despliegue",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-09-03": {
+  "nodo": "practicas_gerenciales_no_delegables",
+  "vecino": "reconocimiento_publico_recompensas",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-10-01": {
+  "nodo": "diseno_por_sustraccion",
+  "vecino": "build_measure_learn",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-10-02": {
+  "nodo": "diseno_por_sustraccion",
+  "vecino": "pasivos_vs_operadores",
+  "sentido": "siguiente",
+  "trampa": true
+ },
+ "R04-10-03": {
+  "nodo": "diseno_por_sustraccion",
+  "vecino": "prototipado_rapido",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-10-04": {
+  "nodo": "diseno_por_sustraccion",
+  "vecino": "analisis_y_sintesis",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-11-01": {
+  "nodo": "breakup_fee_evaluation",
+  "vecino": "mejorar_deal_despues_del_hecho",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-11-02": {
+  "nodo": "breakup_fee_evaluation",
+  "vecino": "no_shop_extension_negotiation",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-11-03": {
+  "nodo": "breakup_fee_evaluation",
+  "vecino": "fees_y_breakup_fee_adquisicion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-12-01": {
+  "nodo": "colocar_etiquetas_de_manejo_correctamente",
+  "vecino": "etiqueta_duplicada_dentro_del_paquete",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-12-02": {
+  "nodo": "colocar_etiquetas_de_manejo_correctamente",
+  "vecino": "medir_paquete_redondeando_hacia_arriba",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-12-03": {
+  "nodo": "colocar_etiquetas_de_manejo_correctamente",
+  "vecino": "elegir_caja_correcta",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-12-04": {
+  "nodo": "colocar_etiquetas_de_manejo_correctamente",
+  "vecino": "empacar_flores_plantas_sin_agua",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-13-01": {
+  "nodo": "accidentes_individuales_vs_organizacionales",
+  "vecino": "produccion_y_proteccion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-13-02": {
+  "nodo": "accidentes_individuales_vs_organizacionales",
+  "vecino": "modelo_queso_suizo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-13-03": {
+  "nodo": "accidentes_individuales_vs_organizacionales",
+  "vecino": "modelo_accidente_organizacional",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-13-04": {
+  "nodo": "accidentes_individuales_vs_organizacionales",
+  "vecino": "defensas_en_profundidad_3",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-13-05": {
+  "nodo": "accidentes_individuales_vs_organizacionales",
+  "vecino": "trayectoria_del_accidente",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-14-01": {
+  "nodo": "inspeccion_lugar_trabajo_peligros",
+  "vecino": "identificacion_peligros_salud",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-14-02": {
+  "nodo": "inspeccion_lugar_trabajo_peligros",
+  "vecino": "prevencion_control_peligros",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-14-03": {
+  "nodo": "inspeccion_lugar_trabajo_peligros",
+  "vecino": "caracterizacion_priorizacion_peligros",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-14-04": {
+  "nodo": "inspeccion_lugar_trabajo_peligros",
+  "vecino": "identificacion_recopilacion_informacion_peligros",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-15-01": {
+  "nodo": "deja_de_ignorar_el_riesgo",
+  "vecino": "cual_es_tu_mayor_riesgo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-15-02": {
+  "nodo": "deja_de_ignorar_el_riesgo",
+  "vecino": "gestionar_el_riesgo_es_de_adultos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-15-03": {
+  "nodo": "deja_de_ignorar_el_riesgo",
+  "vecino": "nombra_tus_suposiciones_fragiles",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-15-04": {
+  "nodo": "deja_de_ignorar_el_riesgo",
+  "vecino": "correr_hacia_el_riesgo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-15-05": {
+  "nodo": "deja_de_ignorar_el_riesgo",
+  "vecino": "eliminar_miedo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-16-01": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "cero_defectos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-02": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "consejo_de_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-03": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "eliminacion_causas_error_4",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-04": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "accion_correctiva_sistematica",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-05": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "consejo_de_calidad_3",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-06": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "accion_correctiva",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-07": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "compromiso_gerencial_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-08": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "conciencia_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-09": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "consejos_de_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-10": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "equipo_mejora_calidad_2",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-11": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "make_certain_programa",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-12": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "medicion_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-16-13": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "rejilla_madurez_gestion_calidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-16-14": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "costo_de_calidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-16-15": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "costo_de_mala_calidad_copq",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-16-16": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "costo_de_calidad_diagnostico",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-16-17": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "definicion_calidad_conformidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-16-18": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "estilo_gerencial_ballet_vs_hockey",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-16-19": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "consejo_de_calidad_3",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-16-20": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "zero_defects_concepto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-16-21": {
+  "nodo": "programa_mejora_calidad_14_pasos",
+  "vecino": "mejora_calidad_crosby",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-17-01": {
+  "nodo": "atributos_liderazgo_ceo",
+  "vecino": "ceo_de_guerra_vs_paz",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-17-02": {
+  "nodo": "atributos_liderazgo_ceo",
+  "vecino": "framework_ones_and_twos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-17-03": {
+  "nodo": "atributos_liderazgo_ceo",
+  "vecino": "coraje_decision_ceo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-18-01": {
+  "nodo": "mercado_de_uno_fundraising",
+  "vecino": "negociacion_carta_compromiso_banquero",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-18-02": {
+  "nodo": "mercado_de_uno_fundraising",
+  "vecino": "cierre_term_sheet",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-18-03": {
+  "nodo": "mercado_de_uno_fundraising",
+  "vecino": "construccion_de_leverage",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-19-01": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "programa_referidos_exclusividad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-19-02": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "vincular_compensacion_sostenibilidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-19-03": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "compartir_lecciones_aprendidas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-19-04": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "contabilidad_ambiental",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-19-05": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "green_team_oficina",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-19-06": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "inversion_capacitacion_sostenibilidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-19-07": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "lente_sostenibilidad_finanzas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-19-08": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "vision_alineacion_sostenibilidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-19-09": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "alineacion_engagement_estrategia_general",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-19-10": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "pilotos_estrategia_sostenibilidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-19-11": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "evaluacion_actitudes_empleados",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-19-12": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "valor_intangible_sostenibilidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-19-13": {
+  "nodo": "incentivos_reconocimiento_sostenibilidad",
+  "vecino": "sistema_gestion_ambiental",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-20-01": {
+  "nodo": "conoce_insumos_vitales",
+  "vecino": "traduce_stock_muerto_numeros",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-20-02": {
+  "nodo": "conoce_insumos_vitales",
+  "vecino": "clasifica_tu_inventario",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-21-01": {
+  "nodo": "customer_development_team",
+  "vecino": "customer_discovery",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-21-02": {
+  "nodo": "customer_development_team",
+  "vecino": "fase_mobilizar_modelo_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-21-03": {
+  "nodo": "customer_development_team",
+  "vecino": "board_management_buyin",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-22-01": {
+  "nodo": "information_driver_supply_chain",
+  "vecino": "definicion_alineacion_cadena_suministro",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-22-02": {
+  "nodo": "information_driver_supply_chain",
+  "vecino": "trade_off_responsividad_eficiencia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-22-03": {
+  "nodo": "information_driver_supply_chain",
+  "vecino": "planificacion_cadena_suministro",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-22-04": {
+  "nodo": "information_driver_supply_chain",
+  "vecino": "business_model_environment_mapping",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-22-05": {
+  "nodo": "information_driver_supply_chain",
+  "vecino": "driver_transporte",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-23-01": {
+  "nodo": "diagrama_eames_interseccion_posibilidad",
+  "vecino": "ejercicio_retrospectivo_proyecto",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-23-02": {
+  "nodo": "diagrama_eames_interseccion_posibilidad",
+  "vecino": "suenos_completos_diseno_responsable",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-23-03": {
+  "nodo": "diagrama_eames_interseccion_posibilidad",
+  "vecino": "reconocer_sesgo_de_apofenia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R04-24-01": {
+  "nodo": "programacion_cultura_empresarial",
+  "vecino": "cultura_flexible_organizacional",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R04-24-02": {
+  "nodo": "programacion_cultura_empresarial",
+  "vecino": "evaluacion_balanceada_de_ejecutivos",
+  "sentido": "previo",
+  "trampa": false
+ }
+}

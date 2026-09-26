@@ -1,0 +1,716 @@
+{
+ "R12-01-01": {
+  "nodo": "fijar_causa_ultimo_accidente_riesgo_siguiente",
+  "vecino": "defensas_en_profundidad_3",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-01-02": {
+  "nodo": "fijar_causa_ultimo_accidente_riesgo_siguiente",
+  "vecino": "violaciones_procedimentales_por_sobreespecificacion",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-01-03": {
+  "nodo": "fijar_causa_ultimo_accidente_riesgo_siguiente",
+  "vecino": "mapa_organizacional_influencia",
+  "sentido": "previo",
+  "trampa": true
+ },
+ "R12-02-01": {
+  "nodo": "cuan_probable_y_cuanto_doleria",
+  "vecino": "evalua_la_gravedad_sin_autoengano",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-02-02": {
+  "nodo": "cuan_probable_y_cuanto_doleria",
+  "vecino": "la_matriz_de_colores_te_engana",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-02-03": {
+  "nodo": "cuan_probable_y_cuanto_doleria",
+  "vecino": "haz_tu_lista_de_lo_que_puede_fallar",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-02-04": {
+  "nodo": "cuan_probable_y_cuanto_doleria",
+  "vecino": "el_pre_mortem_imagina_el_fracaso",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-02-05": {
+  "nodo": "cuan_probable_y_cuanto_doleria",
+  "vecino": "riesgo_no_es_mala_suerte",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-02-06": {
+  "nodo": "cuan_probable_y_cuanto_doleria",
+  "vecino": "tecnicas_para_sacar_riesgos_a_la_luz",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-03-01": {
+  "nodo": "entrega_por_partes_para_exponer_el_riesgo",
+  "vecino": "tus_alertas_tempranas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-03-02": {
+  "nodo": "entrega_por_partes_para_exponer_el_riesgo",
+  "vecino": "guarda_un_colchon_de_tiempo_y_dinero",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-04-01": {
+  "nodo": "gestion_contrasenas_cui",
+  "vecino": "respuesta_incidentes_cui",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-04-02": {
+  "nodo": "gestion_contrasenas_cui",
+  "vecino": "mantenimiento_sistema_cui",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-04-03": {
+  "nodo": "gestion_contrasenas_cui",
+  "vecino": "identificacion_autenticacion_mfa",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-05-01": {
+  "nodo": "orgullo_por_el_trabajo",
+  "vecino": "fomento_educacion_autoeducacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-05-02": {
+  "nodo": "orgullo_por_el_trabajo",
+  "vecino": "enfermedades_mortales_gestion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-05-03": {
+  "nodo": "orgullo_por_el_trabajo",
+  "vecino": "analisis_causa_raiz_despido_ejecutivo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-05-04": {
+  "nodo": "orgullo_por_el_trabajo",
+  "vecino": "inventario_conocimiento_estadistico_personal",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-05-05": {
+  "nodo": "orgullo_por_el_trabajo",
+  "vecino": "circulos_calidad_qc",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-05-06": {
+  "nodo": "orgullo_por_el_trabajo",
+  "vecino": "eliminacion_gestion_por_objetivos_y_numeros",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-06-01": {
+  "nodo": "comunicacion_de_riesgos_quimicos",
+  "vecino": "manejo_de_quimicos_peligrosos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-06-02": {
+  "nodo": "comunicacion_de_riesgos_quimicos",
+  "vecino": "evaluar_proceso_completo_no_cada_metrica",
+  "sentido": "siguiente",
+  "trampa": true
+ },
+ "R12-06-03": {
+  "nodo": "comunicacion_de_riesgos_quimicos",
+  "vecino": "almacenamiento_liquidos_inflamables",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-06-04": {
+  "nodo": "comunicacion_de_riesgos_quimicos",
+  "vecino": "herramientas_manuales_y_portatiles",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-07-01": {
+  "nodo": "probar_empaque_antes_de_escalar_envios",
+  "vecino": "calcular_peso_dimensional_antes_cotizar",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-07-02": {
+  "nodo": "probar_empaque_antes_de_escalar_envios",
+  "vecino": "detectar_empaque_poco_rigido",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-07-03": {
+  "nodo": "probar_empaque_antes_de_escalar_envios",
+  "vecino": "simular_riesgos_transito_antes_de_enviar",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-07-04": {
+  "nodo": "probar_empaque_antes_de_escalar_envios",
+  "vecino": "identificar_si_tu_producto_necesita_proteccion_especial",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-08-01": {
+  "nodo": "what_if_questions",
+  "vecino": "proceso_ideacion_modelo_negocio",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-08-02": {
+  "nodo": "what_if_questions",
+  "vecino": "retroalimentacion_shock_pensamiento_original",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-08-03": {
+  "nodo": "what_if_questions",
+  "vecino": "epicentros_innovacion_modelo_negocio",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-09-01": {
+  "nodo": "coraje_decision_ceo",
+  "vecino": "ceo_de_guerra_vs_paz",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-09-02": {
+  "nodo": "coraje_decision_ceo",
+  "vecino": "atributos_liderazgo_ceo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-09-03": {
+  "nodo": "coraje_decision_ceo",
+  "vecino": "framework_ones_and_twos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-09-04": {
+  "nodo": "coraje_decision_ceo",
+  "vecino": "customer_validation",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-10-01": {
+  "nodo": "extintores_portatiles_de_incendio",
+  "vecino": "sistemas_de_extincion_de_incendios",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-10-02": {
+  "nodo": "extintores_portatiles_de_incendio",
+  "vecino": "plan_de_accion_de_emergencia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-11-01": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "fase_assess",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-02": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "fase_admit_celebracion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-03": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "fase_affirm_buyers_remorse",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-04": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "fase_activate_primera_impresion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-05": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "fase_acclimate",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-06": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "fase_accomplish_experiencia_cliente",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-07": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "fase_adopt",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-08": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "advocacy_customer_journey",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-09": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "estrategia_multicanal_bienvenida",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-10": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "estrategia_de_ventas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-11": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "fase_acclimate_experiencia_cliente",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-11-12": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "categorias_entusiasmo_cliente",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-11-13": {
+  "nodo": "ocho_fases_experiencia_cliente",
+  "vecino": "pensamiento_h2h",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-12-01": {
+  "nodo": "seleccion_consultor_franquicias",
+  "vecino": "eleccion_abogado_franquicias",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-12-02": {
+  "nodo": "seleccion_consultor_franquicias",
+  "vecino": "estimacion_inversion_inicial_franquiciador",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-12-03": {
+  "nodo": "seleccion_consultor_franquicias",
+  "vecino": "criterio_bazooka_peashooter",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-12-04": {
+  "nodo": "seleccion_consultor_franquicias",
+  "vecino": "programas_compra_franquicia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-12-05": {
+  "nodo": "seleccion_consultor_franquicias",
+  "vecino": "decision_diy_vs_consultor_franquicia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-13-01": {
+  "nodo": "falacia_problemas_diferentes",
+  "vecino": "falsos_comienzos_mejora_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-13-02": {
+  "nodo": "falacia_problemas_diferentes",
+  "vecino": "ensenanza_deficiente_metodos_estadisticos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-13-03": {
+  "nodo": "falacia_problemas_diferentes",
+  "vecino": "definiciones_operacionales",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-14-01": {
+  "nodo": "shadow_ia_organizacional",
+  "vecino": "desafios_implementacion_ia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-14-02": {
+  "nodo": "shadow_ia_organizacional",
+  "vecino": "sistemas_organizacionales_ia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-14-03": {
+  "nodo": "shadow_ia_organizacional",
+  "vecino": "mitigar_falling_asleep_wheel",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-14-04": {
+  "nodo": "shadow_ia_organizacional",
+  "vecino": "centaur_cyborg_ia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-15-01": {
+  "nodo": "exenciones_legales_franquicia",
+  "vecino": "prevenir_franquicias_inadvertidas",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-15-02": {
+  "nodo": "exenciones_legales_franquicia",
+  "vecino": "alternativa_joint_venture",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-16-01": {
+  "nodo": "silla_vacia_del_cliente_en_decisiones",
+  "vecino": "cultura_de_experiencia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-16-02": {
+  "nodo": "silla_vacia_del_cliente_en_decisiones",
+  "vecino": "customer_journey_mapping",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-17-01": {
+  "nodo": "cinco_suposiciones_erroneas_calidad",
+  "vecino": "rejilla_madurez_gestion_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-17-02": {
+  "nodo": "cinco_suposiciones_erroneas_calidad",
+  "vecino": "concepto_haciendo_la_calidad_cierta",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-17-03": {
+  "nodo": "cinco_suposiciones_erroneas_calidad",
+  "vecino": "definicion_calidad_conformidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-17-04": {
+  "nodo": "cinco_suposiciones_erroneas_calidad",
+  "vecino": "definiciones_operacionales",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-18-01": {
+  "nodo": "encontrar_lead_vc",
+  "vecino": "proceso_decision_vc",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-18-02": {
+  "nodo": "encontrar_lead_vc",
+  "vecino": "term_sheet_negociacion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-18-03": {
+  "nodo": "encontrar_lead_vc",
+  "vecino": "encontrar_vc_adecuado",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-18-04": {
+  "nodo": "encontrar_lead_vc",
+  "vecino": "presentacion_inversionistas",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-18-05": {
+  "nodo": "encontrar_lead_vc",
+  "vecino": "gestion_multiples_term_sheets",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-18-06": {
+  "nodo": "encontrar_lead_vc",
+  "vecino": "hiring_blueprints",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-18-07": {
+  "nodo": "encontrar_lead_vc",
+  "vecino": "fuentes_contratacion_ejecutivos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-18-08": {
+  "nodo": "encontrar_lead_vc",
+  "vecino": "vesting_dinamico",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-19-01": {
+  "nodo": "division_trabajo_humano_ia",
+  "vecino": "bucle_retroalimentacion_autoajustable",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-19-02": {
+  "nodo": "division_trabajo_humano_ia",
+  "vecino": "centaur_cyborg_ia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-19-03": {
+  "nodo": "division_trabajo_humano_ia",
+  "vecino": "riesgo_sobredependencia_ia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-19-04": {
+  "nodo": "division_trabajo_humano_ia",
+  "vecino": "search_for_business_model",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-19-05": {
+  "nodo": "division_trabajo_humano_ia",
+  "vecino": "sistemas_organizacionales_ia",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-19-06": {
+  "nodo": "division_trabajo_humano_ia",
+  "vecino": "gestion_visual_del_pipeline_de_desarrollo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-19-07": {
+  "nodo": "division_trabajo_humano_ia",
+  "vecino": "riesgo_control_algoritmico",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-19-08": {
+  "nodo": "division_trabajo_humano_ia",
+  "vecino": "comprension_capacidades_limitaciones_ia",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-20-01": {
+  "nodo": "relacion_largo_plazo_proveedor_unico",
+  "vecino": "mejora_continua_del_sistema",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-20-02": {
+  "nodo": "relacion_largo_plazo_proveedor_unico",
+  "vecino": "calificacion_de_proveedores_por_capacidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-20-03": {
+  "nodo": "relacion_largo_plazo_proveedor_unico",
+  "vecino": "practicas_manufactura_justo_a_tiempo",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-20-04": {
+  "nodo": "relacion_largo_plazo_proveedor_unico",
+  "vecino": "punto_equilibrio_calidad_inspeccion",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-20-05": {
+  "nodo": "relacion_largo_plazo_proveedor_unico",
+  "vecino": "compra_por_precio_mas_bajo_como_error",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-20-06": {
+  "nodo": "relacion_largo_plazo_proveedor_unico",
+  "vecino": "eliminacion_planes_muestreo_estandar",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-21-01": {
+  "nodo": "la_matriz_de_colores_te_engana",
+  "vecino": "piensa_en_rangos_no_en_numeros_unicos",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-21-02": {
+  "nodo": "la_matriz_de_colores_te_engana",
+  "vecino": "como_sabes_que_tu_metodo_sirve",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-21-03": {
+  "nodo": "la_matriz_de_colores_te_engana",
+  "vecino": "cuan_probable_y_cuanto_doleria",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-21-04": {
+  "nodo": "la_matriz_de_colores_te_engana",
+  "vecino": "escepticismo_sano_ante_el_riesgo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-22-01": {
+  "nodo": "pruning_portafolio",
+  "vecino": "decision_factory_mentality",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-22-02": {
+  "nodo": "pruning_portafolio",
+  "vecino": "gestion_portafolio_formal",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-22-03": {
+  "nodo": "pruning_portafolio",
+  "vecino": "roi_proyectos_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-22-04": {
+  "nodo": "pruning_portafolio",
+  "vecino": "gates_sin_dientes_problema",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-22-05": {
+  "nodo": "pruning_portafolio",
+  "vecino": "gestion_visual_del_pipeline_de_desarrollo",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-22-06": {
+  "nodo": "pruning_portafolio",
+  "vecino": "gestion_portafolio_foco",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-22-07": {
+  "nodo": "pruning_portafolio",
+  "vecino": "portfolio_management",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-01": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "consejo_de_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-23-02": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "reconocimiento_al_desempeno",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-23-03": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "consejos_de_calidad",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-23-04": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "consejo_de_calidad_3",
+  "sentido": "siguiente",
+  "trampa": false
+ },
+ "R12-23-05": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "cero_defectos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-06": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "accion_correctiva",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-07": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "zero_defects_concepto",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-08": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "accion_correctiva_crosby",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-09": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "analisis_datos_atributos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-10": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "dia_cero_defectos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-11": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "fijacion_de_metas",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-12": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "accion_correctiva_sistematica",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-13": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "entrenamiento_supervisores_calidad",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-14": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "make_certain_programa",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-15": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "programa_mejora_calidad_14_pasos",
+  "sentido": "previo",
+  "trampa": false
+ },
+ "R12-23-16": {
+  "nodo": "eliminacion_causas_error_4",
+  "vecino": "dia_cero_defectos_2",
+  "sentido": "previo",
+  "trampa": false
+ }
+}
