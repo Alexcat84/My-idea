@@ -248,4 +248,4 @@ en las tablas):
 | F3 | las otras 10 traducciones con el glosario; formatos por idioma | catálogos | visto |
 | F4 | árabe RTL; tipografías CJK y devanagari solo al elegirlas; capturas de cada una | `web/` | visto |
 | F5 | detección del idioma de la idea, `projects.idioma` (migración), prompts con idioma de salida, marcadores neutros en el plan, plantillas por idioma de los generadores sin IA, y D3; prueba: una idea en coreano y otra en árabe dan plan y respuestas en su idioma con los nodos correctos | `web/`, `engine/` (prompts), `supabase/` | visto; migración la aplica el fundador. **HECHA, con visto, en `main` (`web-v2.9.0`, 046 aplicada)**: ver `F5_INFORME.md` |
-| F6 | correos (D4), documentos, legales (D5), SEO y `hreflang` (D9); auditor y guardias de frases por idioma | `web/` | visto. **HECHA, pendiente del visto**: ver `F6_INFORME.md` |
+| F6 | correos (D4), documentos, legales (D5), SEO y `hreflang` (D9); auditor y guardias de frases por idioma | `web/` | visto. **HECHA, con visto, en `main` (`web-v2.10.0`). PROYECTO DE IDIOMAS CERRADO**: ver `F6_INFORME.md` |

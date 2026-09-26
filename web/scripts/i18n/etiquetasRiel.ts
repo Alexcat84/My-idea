@@ -21,6 +21,7 @@ import { readFileSync, writeFileSync } from "node:fs";
 import path from "node:path";
 import { cargarGrafo } from "../../lib/engine/graph";
 import { validarEtiquetaRiel } from "../../lib/i18n/etiquetasRielValidar";
+import { etiquetasVencidas, huellaDe } from "../../lib/i18n/vigenciaEtiquetas";
 
 const DIR = path.join(__dirname, "..", "..", "lib", "i18n", "etiquetas");
 const IDIOMAS = ["en", "pt", "fr", "de", "it", "ja", "zh", "ko", "ar", "hi"];
@@ -28,6 +29,11 @@ const IDIOMAS = ["en", "pt", "fr", "de", "it", "ja", "zh", "ko", "ar", "hi"];
 function archivoDe(idioma: string): string {
   if (!IDIOMAS.includes(idioma)) throw new Error(`idioma desconocido: ${idioma}`);
   return path.join(DIR, `${idioma}.json`);
+}
+
+/** Las huellas del español del que salió cada traducción (guardia de vigencia). */
+function archivoHuellas(idioma: string): string {
+  return path.join(DIR, "huellas", `${idioma}.json`);
 }
 
 function leerJson<T>(ruta: string): T {
@@ -46,7 +52,12 @@ function vivos(): Record<string, { etiqueta: string; titulo: string }> {
 
 function exportar(idioma: string, salida: string, lote: number | null) {
   const ya = leerJson<Record<string, string>>(archivoDe(idioma));
-  const faltan = Object.entries(vivos()).filter(([id]) => !ya[id]);
+  // Las que faltan y las VENCIDAS: su español cambió desde que se tradujeron
+  // (guardia de vigencia, 25 sep 2026).
+  const v = vivos();
+  const espanol = Object.fromEntries(Object.entries(v).map(([id, n]) => [id, n.etiqueta]));
+  const vencidas = new Set(etiquetasVencidas(espanol, leerJson<Record<string, string>>(archivoHuellas(idioma))));
+  const faltan = Object.entries(v).filter(([id]) => !ya[id] || vencidas.has(id));
   const trozos = lote ? Array.from({ length: Math.ceil(faltan.length / lote) }, (_, i) => faltan.slice(i * lote, (i + 1) * lote)) : [faltan];
   trozos.forEach((trozo, i) => {
     const ruta = trozos.length > 1 ? salida.replace(/\.json$/, `_${String(i + 1).padStart(2, "0")}.json`) : salida;
@@ -85,6 +96,12 @@ function aplicar(idioma: string, rutas: string[]) {
   const junta = { ...ya, ...t };
   const ordenado = Object.fromEntries(Object.keys(junta).sort().map((k) => [k, junta[k].trim()]));
   writeFileSync(archivoDe(idioma), JSON.stringify(ordenado, null, 1) + "\n");
+  // Cada etiqueta aplicada salió del español vigente: se guarda su huella.
+  const v = vivos();
+  const huellas = leerJson<Record<string, string>>(archivoHuellas(idioma));
+  for (const id of Object.keys(t)) huellas[id] = huellaDe(v[id].etiqueta);
+  const huellasOrdenadas = Object.fromEntries(Object.keys(huellas).sort().map((k) => [k, huellas[k]]));
+  writeFileSync(archivoHuellas(idioma), JSON.stringify(huellasOrdenadas, null, 1) + "\n");
   console.log(`${idioma}: ${Object.keys(ordenado).length} en total`);
 }
 
