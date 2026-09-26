@@ -530,7 +530,7 @@ son la capa 3 embrionaria). Matriz de fases:
 
 ## 5. Backlog / afinar
 
-- **`ritual-fechas-sin-fecha`** (hallado en i18n F2, 27 sep 2026; defecto PREVIO, no causado por
+- **`ritual-fechas-sin-fecha`** — **RESUELTA en la rama `ritual-fechas` (decisión del fundador, 25 sep 2026):** el ritual lista exactamente lo que el repartidor fecha (lo pendiente) en las dos corridas, con `tramosDelRitual`. Era más amplio que lo anotado: el recálculo tampoco quitaba las retiradas ("no aplica"), que igual llegaban sin fecha. Prueba en rojo en `app/ui/ritualFechasSinFecha.test.ts`. Lo que sigue es la ficha original. (hallado en i18n F2, 27 sep 2026; defecto PREVIO, no causado por
   F2). El ritual de fechas de Manos a la Obra (`RitualFechas`) muestra en su primera corrida todas las
   tareas (`soloPendientes=false`), pero `calcularFechasRitual` solo da fecha a las pendientes: con una
   tarea hecha o retirada sin fecha, `fechaHumana(isoDesdeInputLocal(undefined))` lanza `RangeError:

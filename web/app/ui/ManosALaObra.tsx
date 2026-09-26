@@ -865,6 +865,20 @@ export function calcularFechasRitual(
   return { fechas, noLlegan };
 }
 
+/** Lo que entra al ritual de fechas: exactamente lo que el repartidor fecha, lo
+ * PENDIENTE (ni lo hecho ni lo retirado, AUD-09 M07), en la primera corrida y en
+ * el recálculo. Antes la primera corrida listaba todo y el recálculo solo
+ * quitaba lo hecho: una tarea hecha o retirada llegaba sin fecha y la pantalla
+ * se rompía (ficha ritual-fechas-sin-fecha). Los tramos que quedan vacíos no
+ * aparecen. `soloPendientes` ya no cambia la lista; se conserva por claridad
+ * del llamador (distingue la línea base del recálculo). */
+export function tramosDelRitual(grupos: GrupoRitual[], soloPendientes: boolean): GrupoRitual[] {
+  void soloPendientes;
+  return grupos
+    .map((g) => ({ ...g, items: g.items.filter((i) => i.estado !== "hecho" && i.estado !== "no_aplica") }))
+    .filter((g) => g.items.length > 0);
+}
+
 /** El ritual de la línea base (canon 10, vista B). Las fechas se reparten
  * determinísticamente (empaquetado.ts contra la capacidad, o fechasBase.ts de
  * fallback; cero LLM en los dos) y el usuario ajusta la que quiera. Tema azul:
@@ -908,13 +922,7 @@ function RitualFechas({
   // Con "recalcular", solo lo que sigue vivo. Un mundo recien activado trae
   // todos sus items pendientes: por eso aparece aqui aunque la baseline core
   // ya estuviera confirmada (V3a).
-  const tramos = useMemo(
-    () =>
-      grupos
-        .map((g) => ({ ...g, items: soloPendientes ? g.items.filter((i) => i.estado !== "hecho") : g.items }))
-        .filter((g) => g.items.length > 0),
-    [grupos, soloPendientes]
-  );
+  const tramos = useMemo(() => tramosDelRitual(grupos, soloPendientes), [grupos, soloPendientes]);
   const items = useMemo(() => tramos.flatMap((g) => g.items), [tramos]);
   const diaPreferido = useMemo(() => diaDominante(items.map((i) => i.completed_at)), [items]);
   // Scheduler F2: la capacidad SOLO manda si todas las tareas traen banda. Con
