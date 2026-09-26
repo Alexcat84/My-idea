@@ -14,7 +14,8 @@ import { useEffect, useState } from "react";
 import type { EntradaBitacora } from "@/lib/bitacoraCliente";
 import { BitacoraPapel } from "./BitacoraPapel";
 import { LineaBitacora } from "./Bitacora";
-import { elegir } from "@/lib/i18n/config";
+import { PapelEnIdioma } from "./PapelEnIdioma";
+import { elegir, normalizarIdioma } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { BITACORA } from "@/lib/i18n/mensajes/bitacora";
@@ -31,10 +32,21 @@ function descargarMd(markdown: string, archivo: string) {
   URL.revokeObjectURL(url);
 }
 
-type Datos = { nombre: string; entradas: EntradaBitacora[]; markdown: string };
+/** i18n F6 (D2): `entradas` es la línea de la pantalla (idioma de la interfaz);
+ * `markdown`, `papel` y `archivo` son el documento, en el idioma del proyecto
+ * (`idioma`). Sin ellos (una respuesta vieja), el documento cae a lo de la pantalla. */
+type Datos = {
+  nombre: string;
+  entradas: EntradaBitacora[];
+  markdown: string;
+  idioma?: string;
+  papel?: { entradas: EntradaBitacora[]; nombre?: string };
+  archivo?: string;
+};
 
 export function BitacoraEspacio({ projectId, dominio }: { projectId: string; dominio: string }) {
-  const t = elegir(BITACORA, useIdioma()).espacio;
+  const idioma = useIdioma();
+  const t = elegir(BITACORA, idioma).espacio;
   const [datos, setDatos] = useState<Datos | null>(null);
   const [error, setError] = useState(false);
   const [imprimir, setImprimir] = useState(false);
@@ -63,6 +75,7 @@ export function BitacoraEspacio({ projectId, dominio }: { projectId: string; dom
   if (!datos) return <p className="mt-8 text-[13px] text-dim">{t.cargando}</p>;
 
   const { nombre, entradas, markdown } = datos;
+  const archivo = datos.archivo ?? interpolar(t.archivo, { nombre });
 
   return (
     <div className="mt-8">
@@ -72,7 +85,7 @@ export function BitacoraEspacio({ projectId, dominio }: { projectId: string; dom
           <div className="flex items-center gap-2">
             <button
               type="button"
-              onClick={() => descargarMd(markdown, interpolar(t.archivo, { nombre }))}
+              onClick={() => descargarMd(markdown, archivo)}
               className="rounded-[9px] border border-hairline px-3 py-1.5 text-[12px] font-semibold text-dim hover:text-ink"
             >
               .md
@@ -96,7 +109,11 @@ export function BitacoraEspacio({ projectId, dominio }: { projectId: string; dom
         <LineaBitacora entradas={entradas} />
       )}
 
-      {imprimir && <BitacoraPapel oculto nombreIdea={nombre} entradas={entradas} />}
+      {imprimir && (
+        <PapelEnIdioma idioma={normalizarIdioma(datos.idioma ?? idioma)}>
+          <BitacoraPapel oculto nombreIdea={datos.papel?.nombre ?? nombre} entradas={datos.papel?.entradas ?? entradas} />
+        </PapelEnIdioma>
+      )}
     </div>
   );
 }

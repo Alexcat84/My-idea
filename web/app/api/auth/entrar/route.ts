@@ -17,7 +17,8 @@ import { estadoSeguridad } from "@/lib/seguridad";
 import { createClient } from "@/lib/supabase/server";
 
 export async function POST(request: Request) {
-  const t = elegir(SERVIDOR_CUENTA, idiomaDeRequest(request));
+  const idioma = idiomaDeRequest(request);
+  const t = elegir(SERVIDOR_CUENTA, idioma);
   let body: { email?: unknown; password?: unknown };
   try {
     body = await request.json();
@@ -71,6 +72,14 @@ export async function POST(request: Request) {
   const {
     data: { user: real },
   } = await supabase.auth.getUser();
+
+  // i18n F6 (D4): el idioma de la interfaz queda en user_metadata.idioma para
+  // los correos que manda Supabase (recuperar la contraseña, cambio de correo)
+  // por el Send Email Hook. Solo si cambió; si falla, la entrada sigue y se dice.
+  if (real && real.user_metadata?.idioma !== idioma) {
+    const { error: errIdioma } = await supabase.auth.updateUser({ data: { idioma } });
+    if (errIdioma) console.error("[entrar] no se pudo guardar el idioma en user_metadata:", errIdioma.message);
+  }
   // AUD-09 H07: si la adopción queda pendiente, la respuesta lo dice para que la
   // pantalla lo muestre (y el próximo ingreso lo reintenta).
   const { pendientes } = real ? await bienvenidaTrasLogin(real, anonId) : { pendientes: 0 };

@@ -11,7 +11,10 @@
  * es tuyo no se cobra.
  */
 import { NextResponse } from "next/server";
-import { elegir, LOCALE_BASE } from "@/lib/i18n/config";
+import { elegir } from "@/lib/i18n/config";
+import { interpolarEn } from "@/lib/i18n/elision";
+import { idiomaDeDocumentos } from "@/lib/i18n/idiomaDocumento";
+import { pintarRotulos } from "@/lib/i18n/rotulosPlan";
 import { formaPlural, interpolar } from "@/lib/i18n/interpolar";
 import { DOCUMENTOS_RUTA } from "@/lib/i18n/mensajes/documentosRuta";
 import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
@@ -20,7 +23,7 @@ import { actasVigentes } from "@/lib/acta";
 import type { AnalisisPapelData } from "@/app/ui/AnalisisPapel";
 import { analyticsDeMundo, calcularAnalytics, informeMarkdown, resumenEspacioMd } from "@/lib/analytics";
 import { fechaHumanaCorta } from "@/lib/fechas";
-import catalogo from "@/lib/assets/packs_catalog.json";
+import { nombreDeMundo } from "@/lib/catalogoMundos";
 import { cargarEntradaAnalytics, LecturaFallidaError, mensajeLecturaFallida } from "@/lib/analyticsEntrada";
 import { bitacoraCuerpo, bitacoraDeEspacio, bitacoraMarkdown, etiquetaEspacio, proyectoTieneMundos } from "@/lib/bitacoraCliente";
 import { cargarEntradasBitacora } from "@/lib/bitacoraDatos";
@@ -114,9 +117,6 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
   const idioma = idiomaDeRequest(request);
   const r = elegir(RUTAS, idioma);
   const t = elegir(DOCUMENTOS_RUTA, idioma);
-  // Lo que forma el documento (títulos, archivo, encabezados) sigue el idioma
-  // del proyecto (D2, llega en F5): hoy el base. Los rechazos, el de la interfaz.
-  const tDoc = elegir(DOCUMENTOS_RUTA, LOCALE_BASE);
 
   const supabase = await createClient();
   const {
@@ -129,6 +129,13 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
   if (!proyecto) {
     return NextResponse.json({ error: r.ideaNoEncontrada }, { status: 404 });
   }
+  // i18n F6 (D2): lo que FORMA el documento (títulos, archivo, encabezados,
+  // fechas, los rótulos del plan) sigue el idioma del proyecto; el índice que
+  // lista los documentos y los rechazos, el de la interfaz (lib/i18n/idiomaDocumento.ts).
+  const idiomaDoc = idiomaDeDocumentos(proyecto, idioma);
+  const tDoc = elegir(DOCUMENTOS_RUTA, idiomaDoc);
+  // El plan se guarda con sus rótulos neutros (F5); el documento los pinta en su idioma.
+  const planEnDoc = (md: string) => pintarRotulos(sinProcedencia(md), idiomaDoc);
 
   const { data: sesionesRaw, error: errSesiones } = await supabase
     .from("sessions")
@@ -155,14 +162,16 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
       planId: p.id,
       etiqueta: p.etiqueta,
       createdAt: p.created_at,
-      contenidoMd: sinProcedencia(p.contenido_md),
+      contenidoMd: planEnDoc(p.contenido_md),
     }));
 
   const nombre = nombreDeIdea(proyecto.titulo, proyecto.entrada_original);
   const realizadaAt = proyecto.realizada_at ?? null;
 
-  const packs = (catalogo as { packs: Array<{ clave: string; nombre: string }> }).packs;
-  const nombreMundo = (dominio: string) => packs.find((p) => p.clave === dominio)?.nombre ?? dominio;
+  // El nombre de cara de un mundo: en el documento, en su idioma; en el índice,
+  // en el de la interfaz (el panel parte sus recuadros con el nombre que pinta).
+  const nombreMundo = (dominio: string) => nombreDeMundo(dominio, idiomaDoc);
+  const nombreMundoIndice = (dominio: string) => nombreDeMundo(dominio, idioma);
 
   // Fase 3 (tanda 5): los mundos con plan (dominios distintos entre los planes de
   // mundo), para el Reporte por espacio del índice. Los ciclos de un dominio se
@@ -170,15 +179,15 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
   const ciclosDeDominio = (dominio: string): CicloExpediente[] =>
     planes
       .filter((p) => p.dominio === dominio && ETIQUETAS_CICLO.includes(p.etiqueta))
-      .map((p) => ({ planId: p.id, etiqueta: p.etiqueta, createdAt: p.created_at, contenidoMd: sinProcedencia(p.contenido_md) }));
+      .map((p) => ({ planId: p.id, etiqueta: p.etiqueta, createdAt: p.created_at, contenidoMd: planEnDoc(p.contenido_md) }));
   const dominiosMundo = [
     ...new Set(planes.filter((p) => !esCore(p.dominio) && ETIQUETAS_CICLO.includes(p.etiqueta)).map((p) => p.dominio!)),
   ];
-  const mundosIndice = dominiosMundo.map((dom) => ({ dominio: dom, nombre: nombreMundo(dom) }));
+  const mundosIndice = dominiosMundo.map((dom) => ({ dominio: dom, nombre: nombreMundoIndice(dom) }));
 
   const doc = new URL(request.url).searchParams.get("doc");
   if (!doc) {
-    return NextResponse.json({ nombre, documentos: indiceDeDocumentos(ciclos, realizadaAt, mundosIndice) });
+    return NextResponse.json({ nombre, documentos: indiceDeDocumentos(ciclos, realizadaAt, mundosIndice, idioma) });
   }
 
   // ── Reporte de un mundo (documento por espacio) ────────────────────────────
@@ -191,11 +200,11 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     const ahora = new Date().toISOString();
     const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
     const am = analyticsDeMundo(entrada, dominio);
-    const comoTeFueMd = am ? resumenEspacioMd(am.universal, am.cumplimiento).join("\n") : null;
+    const comoTeFueMd = am ? resumenEspacioMd(am.universal, am.cumplimiento, idiomaDoc).join("\n") : null;
 
-    const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
+    const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre, idiomaDoc);
     // Scopeado: la secuencia del mundo NO se auto-etiqueta (ya estás en su espacio).
-    const bitacoraMd = bitacoraCuerpo(bitacoraDeEspacio(entradasBita, dominio), 3).join("\n");
+    const bitacoraMd = bitacoraCuerpo(bitacoraDeEspacio(entradasBita, dominio), 3, undefined, idiomaDoc).join("\n");
 
     // AUD-09 M02: solo el ciclo vigente del mundo (los anteriores son sus ciclos).
     const accionesMundo = accionesDelCicloVigente(await cargarAcciones(supabase, projectId), planes)
@@ -206,7 +215,8 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     return NextResponse.json({
       titulo: interpolar(tDoc.tituloReporte, { mundo: nombreDom }),
       nombre,
-      archivo: nombreArchivo(nombre, interpolar(tDoc.tituloReporte, { mundo: nombreDom })),
+      idioma: idiomaDoc,
+      archivo: nombreArchivo(nombre, interpolar(tDoc.tituloReporte, { mundo: nombreDom }), idiomaDoc),
       markdown: reporteMundoMarkdown({
         nombreIdea: nombre,
         nombreMundo: nombreDom,
@@ -216,7 +226,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
         bitacoraMd,
         completadoAt: am?.completadoAt ?? null,
         generadoAt: ahora,
-      }),
+      }, idiomaDoc),
     });
   }
 
@@ -263,27 +273,34 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     return NextResponse.json({
       titulo: interpolar(tDoc.tituloRegistro, { mundo: nombreDom }),
       nombre,
-      archivo: nombreArchivo(nombre, interpolar(tDoc.tituloRegistro, { mundo: nombreDom })),
+      idioma: idiomaDoc,
+      archivo: nombreArchivo(nombre, interpolar(tDoc.tituloRegistro, { mundo: nombreDom }), idiomaDoc),
       markdown: [
-        interpolar(tDoc.encabezadoRegistro, { nombre, mundo: nombreDom, fecha: fechaHumanaCorta(generado) }),
+        interpolarEn(idiomaDoc, tDoc.encabezadoRegistro, { nombre, mundo: nombreDom, fecha: fechaHumanaCorta(generado, idiomaDoc) }),
         "",
-        registroMarkdown(nombreDom, entradas),
+        registroMarkdown(nombreDom, entradas, idiomaDoc),
       ].join("\n"),
     });
   }
 
   if (doc === CLAVE_BITACORA) {
     const generado = new Date().toISOString();
-    const entradas = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
+    const entradas = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre, idiomaDoc);
     // Fase 3 (tanda 4): la bitácora GLOBAL etiqueta cada entrada con su espacio
     // (nombre de cara), con RUIDO CERO — un proyecto solo-core no etiqueta nada.
     const hayMundos = proyectoTieneMundos(entradas);
     return NextResponse.json({
       titulo: tDoc.tituloBitacora,
       nombre,
-      archivo: nombreArchivo(nombre, tDoc.archivoBitacora),
-      markdown: bitacoraMarkdown(nombre, entradas, generado, undefined, (e) =>
-        etiquetaEspacio(e.dominio, hayMundos, nombreMundo),
+      idioma: idiomaDoc,
+      archivo: nombreArchivo(nombre, tDoc.archivoBitacora, idiomaDoc),
+      markdown: bitacoraMarkdown(
+        nombre,
+        entradas,
+        generado,
+        undefined,
+        (e) => etiquetaEspacio(e.dominio, hayMundos, nombreMundo, idiomaDoc),
+        idiomaDoc,
       ),
       // El PDF de la bitácora se dibuja estructurado (espina continua), no como
       // markdown; el .md sigue saliendo del mismo texto de arriba.
@@ -298,7 +315,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     // su propio botón de descarga.
     const ahora = new Date().toISOString();
     const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
-    const analytics = calcularAnalytics(entrada);
+    const analytics = calcularAnalytics(entrada, idiomaDoc);
     const u = analytics.universal;
     const c = analytics.cumplimiento;
     const restantes = Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas);
@@ -309,7 +326,7 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
             restantes,
             semanas,
             ritmo: u.ritmoAccionesPorSemana,
-            fechaHumana: fechaHumanaCorta(new Date(Date.parse(ahora) + semanas * 7 * 86_400_000).toISOString()),
+            fechaHumana: fechaHumanaCorta(new Date(Date.parse(ahora) + semanas * 7 * 86_400_000).toISOString(), idiomaDoc),
           }
         : null;
     const analisis: AnalisisPapelData = {
@@ -337,22 +354,24 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     return NextResponse.json({
       titulo: tDoc.tituloAnalisis,
       nombre,
-      archivo: nombreArchivo(nombre, tDoc.archivoAnalisis),
-      markdown: informeMarkdown(nombre, analytics, realizadaAt, nombreMundo, (await actasVigentes(supabase, projectId)).core ?? null),
+      idioma: idiomaDoc,
+      archivo: nombreArchivo(nombre, tDoc.archivoAnalisis, idiomaDoc),
+      markdown: informeMarkdown(nombre, analytics, realizadaAt, nombreMundo, (await actasVigentes(supabase, projectId)).core ?? null, idiomaDoc),
       papel: { analisis },
     });
   }
 
   if (doc !== CLAVE_EXPEDIENTE) {
-    const titulado = titulosDeCiclos(ciclos).find(({ ciclo }) => `ciclo:${ciclo.planId}` === doc);
+    const titulado = titulosDeCiclos(ciclos, idiomaDoc).find(({ ciclo }) => `ciclo:${ciclo.planId}` === doc);
     if (!titulado) {
       return NextResponse.json({ error: t.noEncontrado }, { status: 404 });
     }
     return NextResponse.json({
       titulo: titulado.titulo,
       nombre,
-      archivo: nombreArchivo(nombre, titulado.titulo),
-      markdown: cicloMarkdown(nombre, titulado.titulo, titulado.ciclo),
+      idioma: idiomaDoc,
+      archivo: nombreArchivo(nombre, titulado.titulo, idiomaDoc),
+      markdown: cicloMarkdown(nombre, titulado.titulo, titulado.ciclo, idiomaDoc),
     });
   }
 
@@ -376,8 +395,8 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
 
   const ahora = new Date().toISOString();
   const entrada = await cargarEntradaAnalytics(supabase, projectId, proyecto, ahora);
-  const analytics = calcularAnalytics(entrada);
-  const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre);
+  const analytics = calcularAnalytics(entrada, idiomaDoc);
+  const entradasBita = await cargarEntradasBitacora(supabase, projectId, proyecto, nombre, idiomaDoc);
 
   // Fase 3 (tanda 5): cada mundo se COMPLETA con su plan, SUS acciones y su cómo
   // te fue (su capa universal ya calculada en analytics.mundos, sin recalcular).
@@ -386,10 +405,10 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     const am = analytics.mundos.find((m) => m.dominio === u.dominio);
     return {
       nombre: nombreMundo(u.dominio),
-      contenidoMd: planMundo ? sinProcedencia(planMundo.contenido_md) : null,
+      contenidoMd: planMundo ? planEnDoc(planMundo.contenido_md) : null,
       completadoAt: u.completado_at ?? null,
       acciones: todasAcciones.filter((i) => i.dominio === u.dominio).map(aAccion),
-      comoTeFueMd: am ? resumenEspacioMd(am.universal, am.cumplimiento).join("\n") : null,
+      comoTeFueMd: am ? resumenEspacioMd(am.universal, am.cumplimiento, idiomaDoc).join("\n") : null,
     };
   });
 
@@ -401,7 +420,9 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     const num = planes.filter((p) => p.etiqueta === "reporte_numeros").at(-1);
     return num ? sinProcedencia(num.contenido_md) : null;
   })();
-  const informeMd = acciones.length ? informeMarkdown(nombre, analytics, realizadaAt, nombreMundo, (await actasVigentes(supabase, projectId)).core ?? null) : null;
+  const informeMd = acciones.length
+    ? informeMarkdown(nombre, analytics, realizadaAt, nombreMundo, (await actasVigentes(supabase, projectId)).core ?? null, idiomaDoc)
+    : null;
 
   const baseDoc = {
     nombre,
@@ -424,23 +445,29 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
     informeMd,
     // Fase 3 (tanda 4): la secuencia del expediente etiqueta cada entrada con su
     // espacio (nombre de cara), con RUIDO CERO (solo-core no etiqueta nada).
-    bitacoraMd: bitacoraCuerpo(entradasBita, 3, (e) =>
-      etiquetaEspacio(e.dominio, proyectoTieneMundos(entradasBita), nombreMundo),
+    bitacoraMd: bitacoraCuerpo(
+      entradasBita,
+      3,
+      (e) => etiquetaEspacio(e.dominio, proyectoTieneMundos(entradasBita), nombreMundo, idiomaDoc),
+      idiomaDoc,
     ).join("\n"),
-  });
+  }, idiomaDoc);
 
   // PDF: el CUERPO va como markdown (sin informe ni secuencia), y el resumen
   // "Cómo te fue" + la secuencia se dibujan ESTRUCTURADOS (páginas de papel de
   // Design), en su propia página. Los datos del resumen salen de analytics.
-  const bodyMarkdown = expedienteMarkdown({ ...baseDoc, informeMd: null, bitacoraMd: null });
+  const bodyMarkdown = expedienteMarkdown({ ...baseDoc, informeMd: null, bitacoraMd: null }, idiomaDoc);
   const u = analytics.universal;
   // AUD-09 M39: el "Cómo te fue" habla con los datos (modo y cumplimiento), no
   // con un veredicto fijo.
-  const camino = resumenCaminoExpediente({
-    cerrada: Boolean(realizadaAt),
-    modo: analytics.modoCamino,
-    cumplimiento: analytics.cumplimiento,
-  });
+  const camino = resumenCaminoExpediente(
+    {
+      cerrada: Boolean(realizadaAt),
+      modo: analytics.modoCamino,
+      cumplimiento: analytics.cumplimiento,
+    },
+    idiomaDoc
+  );
   const pendientes = Math.max(0, u.accionesVigente.total - u.accionesVigente.hechas);
   const resumen = acciones.length
     ? {
@@ -454,18 +481,19 @@ async function generarDocumentos(request: Request, { params }: { params: Promise
           .map((h) => ({ fecha: h.fecha, nombre: h.tipo === "realizada" ? tDoc.hitoRealizado : h.etiqueta })),
         loQueMovio: camino.loQueMovio,
         loQuePendiente: u.retiradas.length
-          ? interpolar(formaPlural(idioma, pendientes, tDoc.loQuePendienteConRetiradas), {
+          ? interpolar(formaPlural(idiomaDoc, pendientes, tDoc.loQuePendienteConRetiradas), {
               n: pendientes,
               retiradas: u.retiradas.length,
             })
-          : interpolar(formaPlural(idioma, pendientes, tDoc.loQuePendiente), { n: pendientes }),
+          : interpolar(formaPlural(idiomaDoc, pendientes, tDoc.loQuePendiente), { n: pendientes }),
       }
     : null;
 
   return NextResponse.json({
     titulo: tDoc.tituloExpediente,
     nombre,
-    archivo: nombreArchivo(nombre, tDoc.tituloExpediente),
+    idioma: idiomaDoc,
+    archivo: nombreArchivo(nombre, tDoc.tituloExpediente, idiomaDoc),
     markdown,
     papel: { bodyMarkdown, resumen, entradas: entradasBita },
   });

@@ -18,6 +18,7 @@ import { esMundoProteccion } from "./espacios";
 import { actaMarkdown, type ActaCierre } from "./acta";
 import { resolverProtegido } from "./registroProteccion";
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolarEn } from "./i18n/elision";
 import { interpolar } from "./i18n/interpolar";
 import { ANALYTICS_INFORME } from "./i18n/mensajes/analyticsInforme";
 
@@ -802,7 +803,7 @@ export function informeMarkdown(
     // calcula hoy es el ESTADO ACTUAL y ya no se presenta como acta.
     if (acta) l.push(...actaMarkdown(acta, nombreMundo, idioma));
     l.push(t.estadoActual);
-    l.push(interpolar(t.ideaRealizada, { fecha: realizadaAt.slice(0, 10) }));
+    l.push(interpolarEn(idioma, t.ideaRealizada, { fecha: realizadaAt.slice(0, 10) }));
     l.push(
       interpolar(t.accionesHoy, { hechas: u.accionesVigente.hechas, total: u.accionesVigente.total }) +
         (u.accionesVigente.total > 0
@@ -813,7 +814,7 @@ export function informeMarkdown(
     for (const m of a.mundos.filter((x) => x.universal.ciclosDePlan > 0)) {
       const v = m.universal.accionesVigente;
       const pctM = v.total > 0 ? interpolar(t.pct, { pct: Math.round((v.hechas / v.total) * 100) }) : "";
-      const estado = m.completadoAt ? interpolar(t.mundoCompletadoEl, { fecha: m.completadoAt.slice(0, 10) }) : t.mundoAbierto;
+      const estado = m.completadoAt ? interpolarEn(idioma, t.mundoCompletadoEl, { fecha: m.completadoAt.slice(0, 10) }) : t.mundoAbierto;
       l.push(interpolar(t.mundoLinea, { mundo: nombreMundo(m.dominio), hechas: v.hechas, total: v.total, pct: pctM, estado }));
     }
     if (!acta && a.cierreMotivo) {

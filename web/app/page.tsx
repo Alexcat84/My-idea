@@ -8,16 +8,39 @@
 import type { Metadata } from "next";
 import { redirect } from "next/navigation";
 import { Landing } from "./ui/Landing";
-import { elegir } from "@/lib/i18n/config";
+import { ACTIVE_LOCALES, elegir } from "@/lib/i18n/config";
 import { PORTADA } from "@/lib/i18n/mensajes/portada";
+import { alternatesDe, localeOg } from "@/lib/i18n/seo";
 import { idiomaDeCookies } from "@/lib/i18n/servidor";
 import { esInvitadoInvisible } from "@/lib/identidad";
 import { createClient } from "@/lib/supabase/server";
 
-// i18n F2: los metadatos salen del catálogo en el idioma de la cookie.
-export async function generateMetadata(): Promise<Metadata> {
-  const t = elegir(PORTADA, await idiomaDeCookies());
-  return { title: t.meta.titulo, description: t.meta.descripcion };
+// i18n F2: los metadatos salen del catálogo en el idioma de la cookie (con
+// ?lang=xx, proxy.ts ya la puso en ese idioma para esta visita). F6 (DISENO
+// §3.6, D9): hreflang de los once idiomas más x-default, y la canónica de la
+// variante pedida (lib/i18n/seo.ts).
+export async function generateMetadata({
+  searchParams,
+}: {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+}): Promise<Metadata> {
+  const idioma = await idiomaDeCookies();
+  const t = elegir(PORTADA, idioma);
+  const alternates = alternatesDe("/", (await searchParams).lang);
+  return {
+    title: t.meta.titulo,
+    description: t.meta.descripcion,
+    alternates,
+    openGraph: {
+      siteName: "My Idea",
+      title: t.meta.titulo,
+      description: t.meta.descripcion,
+      url: alternates.canonical,
+      locale: localeOg(idioma),
+      alternateLocale: ACTIVE_LOCALES.filter((l) => l !== idioma).map(localeOg),
+      type: "website",
+    },
+  };
 }
 
 export default async function PaginaPublica({

@@ -18,16 +18,15 @@ import { llamarClaude, MODEL_HAIKU, type UsoAcumulado } from "../costmeter";
 import { parsearJson } from "../parseJson";
 import { SYSTEM_ESTADO_VIVO } from "../prompts";
 import {
-  coincideKeyword,
   evaluarRuta,
-  KEYWORDS_ACCION_CLIENTES,
-  KEYWORDS_VIABILIDAD_ECONOMICA,
-  normalizarTexto,
+  normalizarParaPalabras,
+  PALABRAS_FAMILIAS_PLAN,
   type EvaluacionCobertura,
   type Familia,
 } from "../readiness";
-import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
-import { neutralizarRotulos } from "../i18n/rotulosPlan";
+import { elegir, esActivo, LOCALE_BASE, type Locale } from "../i18n/config";
+import { detectarIdioma } from "../i18n/detectarIdioma";
+import { neutralizarRotulos, rotulosPlan } from "../i18n/rotulosPlan";
 import { interpolar } from "../i18n/interpolar";
 import { MOTOR_PLAN } from "../i18n/mensajes/motorPlan";
 import { MAX_COSECHA, MAX_COSECHA_PRIORIDAD, SECCION_ECONOMICA_TITULO, textosFamiliaFaltante } from "./constants";
@@ -387,16 +386,39 @@ export function evaluacionDesdeAutodeclaracion(
  * viabilidad_economica ademas se confirma por la presencia exacta de la
  * seccion fija de sostenibilidad (regla 4), la misma senal que ya usa
  * corregirCoherenciaCobertura.
+ *
+ * i18n F6: el plan esta escrito en el idioma de la idea (con sus rotulos de
+ * estructura neutros, en espanol). Las palabras se buscan en el espanol, en
+ * el idioma de la plantilla (`idioma`) y en el idioma en que el TEXTO esta
+ * escrito (detectarIdioma sobre el plan sin sus rotulos neutros), con las
+ * listas por idioma de readiness.ts (PALABRAS_FAMILIAS_PLAN). Si el texto
+ * esta en un idioma fuera de los once (una idea en ruso), no hay palabras
+ * con que leerlo: el resultado se degrada, y eso se DICE (evento
+ * 'respaldo_familias_sin_palabras' con el idioma, y un aviso en el log), no
+ * se calla (BANCO 9, "fallar ruidoso").
  */
-export function familiasDesdeEncabezados(cuerpo: string, idioma: Locale = LOCALE_BASE): CoberturaPlan {
+export function familiasDesdeEncabezados(
+  cuerpo: string,
+  idioma: Locale = LOCALE_BASE,
+  registrarEvento?: (evento: Record<string, unknown>) => void
+): CoberturaPlan {
   const encabezados = cuerpo
     .split("\n")
     .filter((linea) => linea.trim().startsWith("#"))
     .join(" ");
-  const textoEncabezados = normalizarTexto(encabezados);
-  const tieneAccion = coincideKeyword(textoEncabezados, KEYWORDS_ACCION_CLIENTES);
-  const tieneViabilidad =
-    cuerpo.includes(SECCION_ECONOMICA_TITULO) || coincideKeyword(textoEncabezados, KEYWORDS_VIABILIDAD_ECONOMICA);
+  const textoEncabezados = normalizarParaPalabras(encabezados);
+  const idiomas = new Set<Locale>([LOCALE_BASE, idioma]);
+  const delTexto = detectarIdioma(textoSinRotulosNeutros(cuerpo), idioma).codigo;
+  if (esActivo(delTexto)) {
+    idiomas.add(delTexto);
+  } else {
+    registrarEvento?.({ tipo: "respaldo_familias_sin_palabras", idioma: delTexto });
+    console.warn(`[familiasDesdeEncabezados] plan en «${delTexto}», sin palabras clave para ese idioma: la cobertura se lee solo con ${[...idiomas].join(", ")}`);
+  }
+  const hay = (familia: "accion_clientes" | "viabilidad_economica") =>
+    [...idiomas].some((l) => PALABRAS_FAMILIAS_PLAN[l][familia].some((p) => textoEncabezados.includes(normalizarParaPalabras(p))));
+  const tieneAccion = hay("accion_clientes");
+  const tieneViabilidad = cuerpo.includes(SECCION_ECONOMICA_TITULO) || hay("viabilidad_economica");
   const textoFaltante = textosFamiliaFaltante(idioma);
   const faltantes = (["accion_clientes", "viabilidad_economica"] as const)
     .filter((f) => (f === "accion_clientes" ? !tieneAccion : !tieneViabilidad))
@@ -407,6 +429,24 @@ export function familiasDesdeEncabezados(cuerpo: string, idioma: Locale = LOCALE
     tiene_viabilidad_economica: tieneViabilidad,
     familias_faltantes: faltantes,
   };
+}
+
+/** El plan sin sus rotulos de estructura neutros (en espanol en todo idioma,
+ * F5): lo que queda es el texto en el idioma de la idea. */
+const NEUTROS = rotulosPlan(LOCALE_BASE);
+function textoSinRotulosNeutros(cuerpo: string): string {
+  return cuerpo
+    .split("\n")
+    .map((l) => l.trim())
+    .filter(
+      (l) =>
+        !l.startsWith(`## ${SECCION_ECONOMICA_TITULO}`) &&
+        l !== `## ${NEUTROS.noCubre}` &&
+        l !== `_${NEUTROS.etiquetaCompleto}_` &&
+        l !== `_${NEUTROS.etiquetaInicial}_`
+    )
+    .map((l) => l.replace(/^##\s+Etapa\s+\d+\s*:\s*/, "").replace(/^\*\*[^*]*\*\*\s*/, ""))
+    .join("\n");
 }
 
 /** Post-validador MECANICO (Motor v2.2) de la incoherencia etiqueta/
@@ -591,7 +631,7 @@ export function finalizarPlan(
   } else {
     // Hotfix v2.2.1: ver familiasDesdeEncabezados -- jamas se degrada la
     // etiqueta solo porque el JSON de cola se corto.
-    evaluacionCobertura = familiasDesdeEncabezados(cuerpo, idioma);
+    evaluacionCobertura = familiasDesdeEncabezados(cuerpo, idioma, registrarEvento);
     registrarEvento?.({ tipo: "autodeclaracion_fallida" });
   }
   evaluacionCobertura = corregirCoherenciaCobertura(evaluacionCobertura, cuerpo, tieneMaterialEconomico, registrarEvento, idioma);

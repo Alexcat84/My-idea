@@ -62,9 +62,10 @@ import { loginConNext } from "@/lib/nextSeguro";
 import { cadenciasPorEspacio, chapaEstaSemana, diaDominante, ordenarEnFechas, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 import { errorGenerico, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
-import { elegir, type Locale } from "@/lib/i18n/config";
+import { elegir, type ActiveLocale, type Locale } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
+import { interpolarEn } from "@/lib/i18n/elision";
 import { rico } from "@/lib/i18n/rico";
 import { MANOS_A_LA_OBRA } from "@/lib/i18n/mensajes/manosALaObra";
 import { ESTADOS_TAREA } from "@/lib/i18n/mensajes/estadosTarea";
@@ -168,6 +169,9 @@ interface MundoInfo {
 interface Props {
   projectId: string;
   planMd: string;
+  /** i18n F6 (D2): el idioma de los planes que se pintan aquí (el del
+   * proyecto; idiomaDeDocumentos). Sin él, el de la interfaz. */
+  idiomaDocumento?: ActiveLocale;
   /** created_at del plan core vigente: ancla del sugeridor de fechas (§4) */
   planCreatedAt: string;
   checklist: ChecklistData;
@@ -443,11 +447,11 @@ function FilaItem({
           )}
           {/* AUD-09 M38: a mi ritmo no hay plazos: sin "para el …". */}
           {!hecho && !retirada && item.fecha_base && modo !== "ritmo" && (
-            <span className="mt-0.5 block text-[12.5px] text-accent">{interpolar(t.fila.paraEl, { fecha: fechaHumanaCorta(item.fecha_base, idioma) })}</span>
+            <span className="mt-0.5 block text-[12.5px] text-accent">{interpolarEn(idioma, t.fila.paraEl, { fecha: fechaHumanaCorta(item.fecha_base, idioma) })}</span>
           )}
           {hecho && item.completed_at && !editandoFecha && (
             // La fecha es un DATO (verde, informativo).
-            <span className="mt-1 block text-[12.5px] text-done">{interpolar(t.fila.hechoEl, { fecha: fechaHumanaCorta(item.completed_at, idioma) })}</span>
+            <span className="mt-1 block text-[12.5px] text-done">{interpolarEn(idioma, t.fila.hechoEl, { fecha: fechaHumanaCorta(item.completed_at, idioma) })}</span>
           )}
           {/* "cambiar fecha" ABAJO A LA DERECHA, debajo del texto: no le roba
               espacio a la actividad (el texto es el protagonista). El botón
@@ -1506,6 +1510,7 @@ function TarjetaAcceso({
 export function ManosALaObra({
   projectId,
   planMd,
+  idiomaDocumento,
   planCreatedAt,
   checklist,
   historial,
@@ -2118,7 +2123,7 @@ export function ManosALaObra({
             La cara "manos" (default) es el comportamiento actual (aditivo). */}
         {coreEnEspacio && <SelectorCara valor={cara} onCambio={cambiarCara} opciones={opcionesCara} />}
         {coreEnEspacio && cara === "plan" && planMd && (
-          <PlanDocumento md={planMd} nombreIdea={tituloPlan ?? t.nucleo.tuPlan} />
+          <PlanDocumento md={planMd} idiomaDocumento={idiomaDocumento} nombreIdea={tituloPlan ?? t.nucleo.tuPlan} />
         )}
         {/* "Todo separado" (T2): "Tu avance" = SOLO la línea de hitos del espacio.
             Las estadísticas y la bitácora salieron de aquí; viven en sus propios
@@ -2340,7 +2345,7 @@ export function ManosALaObra({
                             <Markdown>{mundo.resumenMd}</Markdown>
                           </div>
                         )}
-                        {mundo.plan && <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />}
+                        {mundo.plan && <PlanDocumento md={mundo.plan.contenido_md} idiomaDocumento={idiomaDocumento} nombreIdea={mundo.nombre} />}
                       </div>
                     )}
                     {cara === "avance" && (
@@ -2472,7 +2477,7 @@ export function ManosALaObra({
                     )}
                     {mundo.plan && (
                       <Acordeon titulo={interpolar(t.mundo.elPlanDe, { mundo: mundo.nombre })}>
-                        <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />
+                        <PlanDocumento md={mundo.plan.contenido_md} idiomaDocumento={idiomaDocumento} nombreIdea={mundo.nombre} />
                       </Acordeon>
                     )}
                     <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} modo={modoMundo} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
@@ -2625,7 +2630,7 @@ export function ManosALaObra({
               {mundo.plan && (
                 <div className="mt-4">
                   <Acordeon titulo={interpolar(t.mundo.elPlanDe, { mundo: mundo.nombre })}>
-                    <PlanDocumento md={mundo.plan.contenido_md} nombreIdea={mundo.nombre} />
+                    <PlanDocumento md={mundo.plan.contenido_md} idiomaDocumento={idiomaDocumento} nombreIdea={mundo.nombre} />
                   </Acordeon>
                 </div>
               )}
@@ -2643,7 +2648,7 @@ export function ManosALaObra({
                   key={i}
                   titulo={interpolar(t.nucleo.planHistoria, { etiqueta: h.etiqueta, cuando: haceCuanto(h.created_at, idioma) })}
                 >
-                  <PlanDocumento md={h.contenido_md} nombreIdea={interpolar(t.nucleo.planEtiqueta, { etiqueta: h.etiqueta })} />
+                  <PlanDocumento md={h.contenido_md} idiomaDocumento={idiomaDocumento} nombreIdea={interpolar(t.nucleo.planEtiqueta, { etiqueta: h.etiqueta })} />
                 </Acordeon>
               ))}
             </div>

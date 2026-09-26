@@ -47,6 +47,14 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* i18n F6: el papel de un documento en otro idioma que la interfaz trae la
+   clase de la Noto de SU escritura (PapelEnIdioma). La familia de <body> ya
+   viene resuelta con la variable de <html>: aquí se vuelve a declarar para
+   que tome la del documento. */
+.papel-escritura {
+  font-family: var(--font-inter), var(--font-escritura, system-ui), system-ui, sans-serif;
+}
+
 /* Movimiento mantecoso y breve en todo lo interactivo (regla 5). */
 button,
 a,
@@ -263,7 +271,7 @@ summary::-webkit-details-marker {
   [data-plan-print] h2,
   [data-plan-print] h3,
   [data-plan-print] h4 {
-    font-family: Georgia, "Source Serif 4", "Times New Roman", serif !important;
+    font-family: Georgia, "Source Serif 4", "Times New Roman", var(--font-escritura, serif), serif !important;
   }
 
   /* Caja de lectura: la columna del cuerpo no pasa de 600px aunque la hoja

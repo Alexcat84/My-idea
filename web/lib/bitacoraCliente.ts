@@ -21,6 +21,7 @@
  */
 import { fechaHumanaConAno, fechaInputLocal } from "./fechas";
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolarEn } from "./i18n/elision";
 import { interpolar, plural } from "./i18n/interpolar";
 import { BITACORA } from "./i18n/mensajes/bitacora";
 
@@ -384,13 +385,13 @@ export function bitacoraMarkdown(
   l.push(titulo ?? interpolar(t.titulo, { nombre: nombreIdea }));
   l.push("");
   if (entradas.length === 0) {
-    l.push(interpolar(t.generada, { fecha: fechaHumanaConAno(generadoAt, idioma) }));
+    l.push(interpolarEn(idioma, t.generada, { fecha: fechaHumanaConAno(generadoAt, idioma) }));
     l.push("");
     l.push(t.vacia);
     l.push("");
     return l.join("\n");
   }
-  l.push(interpolar(t.rango, { desde: fechaHumanaConAno(entradas[0].fecha, idioma), hasta: fechaHumanaConAno(entradas[entradas.length - 1].fecha, idioma) }));
+  l.push(interpolarEn(idioma, t.rango, { desde: fechaHumanaConAno(entradas[0].fecha, idioma), hasta: fechaHumanaConAno(entradas[entradas.length - 1].fecha, idioma) }));
   l.push(...bitacoraCuerpo(entradas, 3, etiquetar, idioma));
   l.push("");
   return l.join("\n");

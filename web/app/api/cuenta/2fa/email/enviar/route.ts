@@ -7,7 +7,7 @@
  * Sirve tanto para ENROLAR el método email como para el desafío del login.
  */
 import { NextResponse } from "next/server";
-import { elegir, type ActiveLocale } from "@/lib/i18n/config";
+import { elegir, htmlDir, htmlLang, type ActiveLocale } from "@/lib/i18n/config";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { SERVIDOR_CUENTA } from "@/lib/i18n/mensajes/servidorCuenta";
 import { SERVIDOR_DOS_FACTORES } from "@/lib/i18n/mensajes/servidorDosFactores";
@@ -34,10 +34,14 @@ async function enviarPorResend(params: {
   const valores = { codigo: params.codigo, minutos: EMAIL_CODE_TTL_MINUTES };
   const asunto = interpolar(t.asunto, valores);
   const texto = interpolar(t.texto, valores);
+  // i18n F6: lang y dir del idioma (el árabe se lee de derecha a izquierda);
+  // el texto es el mismo del catálogo.
   const html =
+    `<div lang="${htmlLang(params.idioma)}" dir="${htmlDir(params.idioma)}">` +
     `<p>${t.htmlTuCodigo}</p>` +
     `<p style="font-size:28px;font-weight:700;letter-spacing:6px">${params.codigo}</p>` +
-    `<p>${interpolar(t.htmlVence, valores)}</p>`;
+    `<p>${interpolar(t.htmlVence, valores)}</p>` +
+    `</div>`;
   const response = await fetch("https://api.resend.com/emails", {
     method: "POST",
     headers: { Authorization: `Bearer ${params.apiKey}`, "Content-Type": "application/json" },

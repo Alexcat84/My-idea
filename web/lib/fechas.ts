@@ -8,11 +8,23 @@ import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
 import { interpolar } from "./i18n/interpolar";
 import { FECHAS } from "./i18n/mensajes/fechas";
 
+/** El número del día como se escribe en el idioma. El primero del mes es
+ * ordinal en italiano, "1º" (se lee "primo": "il 1º marzo"), y en francés,
+ * "1er" (se lee "premier": "1er mars"); los demás días, cardinales, también el
+ * 21 ("21 mars", "vingt et un"). i18n F6; la elisión "l'8 marzo" vive en
+ * lib/i18n/elision.ts. */
+const PRIMERO: Record<string, string> = { it: "1º", fr: "1er" };
+
+export function numeroDeDia(dia: number, idioma: Locale): string {
+  return (dia === 1 && PRIMERO[idioma]) || String(dia);
+}
+
 /** "20 de marzo" (con el año solo si `conAno`), en el idioma pedido. */
 function diaDeMes(d: Date, idioma: Locale, conAno = false): string {
   const t = elegir(FECHAS, idioma);
   const mes = t.meses[d.getMonth()];
-  return conAno ? interpolar(t.diaDeMesAno, { d: d.getDate(), mes, ano: d.getFullYear() }) : interpolar(t.diaDeMes, { d: d.getDate(), mes });
+  const dia = numeroDeDia(d.getDate(), idioma);
+  return conAno ? interpolar(t.diaDeMesAno, { d: dia, mes, ano: d.getFullYear() }) : interpolar(t.diaDeMes, { d: dia, mes });
 }
 
 /**
@@ -94,7 +106,7 @@ export function momentoAbsoluto(iso: string, ahora: Date = new Date(), idioma: L
 export function fechaHumana(iso: string, idioma: Locale = LOCALE_BASE): string {
   const t = elegir(FECHAS, idioma);
   const d = new Date(iso);
-  return interpolar(t.diaSemanaDeMes, { dia: t.dias[d.getDay()], d: d.getDate(), mes: t.meses[d.getMonth()] });
+  return interpolar(t.diaSemanaDeMes, { dia: t.dias[d.getDay()], d: numeroDeDia(d.getDate(), idioma), mes: t.meses[d.getMonth()] });
 }
 
 /** "20 de marzo" — versión corta, sin día de la semana. */

@@ -7,7 +7,8 @@
  * formato que el fundador prefiere para el resumen del Análisis (antes vivía en
  * la bitácora; se movió aquí porque es un análisis real, no un registro).
  */
-import { elegir } from "@/lib/i18n/config";
+import { numeroDeDia } from "@/lib/fechas";
+import { elegir, type Locale } from "@/lib/i18n/config";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { HITOS } from "@/lib/i18n/mensajes/hitos";
@@ -15,9 +16,12 @@ import { HITOS } from "@/lib/i18n/mensajes/hitos";
 const AZUL = "#4D7CFE";
 const VERDE = "#3FB950";
 
-function fechaMapa(iso: string, t: { meses: readonly string[]; fechaCorta: string }): string {
+/** "8 mar": la fecha corta del mapa. El primero del mes, como se escribe en
+ * el idioma ("1º" en italiano, "1er" en francés: numeroDeDia). */
+export function fechaMapa(iso: string, idioma: Locale): string {
+  const t = elegir(HITOS, idioma).mapa;
   const d = new Date(iso);
-  return interpolar(t.fechaCorta, { d: d.getDate(), mes: t.meses[d.getMonth()] });
+  return interpolar(t.fechaCorta, { d: numeroDeDia(d.getDate(), idioma), mes: t.meses[d.getMonth()] });
 }
 
 export interface HitoMapa {
@@ -28,7 +32,8 @@ export interface HitoMapa {
 }
 
 export function MapaHitos({ hitos, cerrada }: { hitos: HitoMapa[]; cerrada: boolean }) {
-  const t = elegir(HITOS, useIdioma()).mapa;
+  const idioma = useIdioma();
+  const t = elegir(HITOS, idioma).mapa;
   const N = hitos.length;
   if (N === 0) return null;
   const inset = N > 1 ? 100 / (2 * N) : 50;
@@ -68,7 +73,7 @@ export function MapaHitos({ hitos, cerrada }: { hitos: HitoMapa[]; cerrada: bool
                       }}
                     />
                   </div>
-                  <div className="mt-2.5 text-[11.5px] tabular-nums text-dim">{fechaMapa(h.fecha, t)}</div>
+                  <div className="mt-2.5 text-[11.5px] tabular-nums text-dim">{fechaMapa(h.fecha, idioma)}</div>
                   <div className="mt-1 text-[12.5px] font-semibold leading-[1.35]" style={{ color: esCierre ? VERDE : "#F5F6F8" }}>
                     {h.nombre}
                   </div>

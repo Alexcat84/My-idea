@@ -18,6 +18,7 @@
  *    visitante vuelve al login con su mundo intacto.
  */
 import { NextResponse } from "next/server";
+import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { cookies } from "next/headers";
 import { bienvenidaTrasLogin, adoptarProyectosDeUsuario, estaEnAllowlist } from "@/lib/cuentas";
 import { esInvitadoInvisible } from "@/lib/identidad";
@@ -107,6 +108,15 @@ export async function GET(request: Request) {
   // recuperación. Si queda pendiente (se reintentó y siguió fallando), el
   // destino lo dice para que la pantalla lo muestre: nada se pierde en silencio.
   const { pendientes } = await bienvenidaTrasLogin(real, anonId);
+
+  // i18n F6 (D4): como en /api/auth/entrar, el idioma de la interfaz queda en
+  // user_metadata.idioma: el hook de correos (api/auth/hook-correo) lo lee para
+  // escribir en su idioma. Si falla, el acceso sigue y queda en el registro.
+  const idioma = idiomaDeRequest(request);
+  if (real.user_metadata?.idioma !== idioma) {
+    const { error: errIdioma } = await supabase.auth.updateUser({ data: { idioma } });
+    if (errIdioma) console.error("[auth/callback] no se pudo guardar el idioma en user_metadata:", errIdioma.message);
+  }
   const conAviso = (ruta: string) =>
     pendientes > 0 ? `${ruta}${ruta.includes("?") ? "&" : "?"}adopcion=pendiente` : ruta;
   const destinoFinal = conAviso(destino);

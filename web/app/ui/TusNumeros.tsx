@@ -20,6 +20,7 @@ import { CorregirCifras } from "@/app/ui/CorregirCifras";
 import { elegir, LOCALE_BASE, type Locale } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
+import { interpolarEn } from "@/lib/i18n/elision";
 import { rico } from "@/lib/i18n/rico";
 import { dinero } from "@/lib/i18n/formato";
 import { TUS_NUMEROS } from "@/lib/i18n/mensajes/tusNumeros";
@@ -600,7 +601,7 @@ export function TusNumeros({ projectId }: { projectId: string }) {
         <div className="mx-auto w-full max-w-[1060px] px-10 pb-16 pt-8">
           <div className="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-panel border border-accent/40 bg-accent/[0.06] px-6 py-4">
             <p className="text-[14px] font-semibold text-accent">
-              {interpolar(tx.historico.viendo, { momento: momentoAbsoluto(historico.cifras_fecha, undefined, idioma) })}
+              {interpolarEn(idioma, tx.historico.viendo, { momento: momentoAbsoluto(historico.cifras_fecha, undefined, idioma) })}
             </p>
             <button
               onClick={volverAHoy}

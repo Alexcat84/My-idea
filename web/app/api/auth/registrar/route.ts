@@ -64,7 +64,10 @@ export async function POST(request: Request) {
   const { data, error } = await supabase.auth.signUp({
     email,
     password,
-    options: { emailRedirectTo: `${origen}/auth/callback` },
+    // i18n F6 (D4): el idioma de la interfaz queda en user_metadata.idioma; el
+    // Send Email Hook (api/auth/hook-correo) lo lee para mandar el correo de
+    // confirmación en ese idioma.
+    options: { emailRedirectTo: `${origen}/auth/callback`, data: { idioma } },
   });
   if (error) {
     const msg = error.message.toLowerCase();

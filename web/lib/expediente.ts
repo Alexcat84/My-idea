@@ -16,6 +16,7 @@
 import { esMundoProteccion } from "./espacios";
 import { fechaHumanaConAno } from "./fechas";
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolarEn } from "./i18n/elision";
 import { interpolar } from "./i18n/interpolar";
 import { EXPEDIENTE } from "./i18n/mensajes/expediente";
 
@@ -250,9 +251,9 @@ export function indiceDeDocumentos(
 }
 
 /** El markdown de un ciclo suelto, con su portadilla. */
-export function cicloMarkdown(nombre: string, titulo: string, ciclo: CicloExpediente): string {
+export function cicloMarkdown(nombre: string, titulo: string, ciclo: CicloExpediente, idioma: Locale = LOCALE_BASE): string {
   const l: string[] = [];
-  l.push(`> ${nombre} · ${titulo} · ${fechaHumanaConAno(ciclo.createdAt)}`);
+  l.push(`> ${nombre} · ${titulo} · ${fechaHumanaConAno(ciclo.createdAt, idioma)}`);
   l.push("");
   l.push(ciclo.contenidoMd.trim());
   l.push("");
@@ -285,9 +286,9 @@ export function seccionAcciones(acciones: AccionExpediente[], nivelEtapa = 3, id
       const check = a.estado === "hecho" ? "✓ " : "";
       const texto = a.texto.replace(/\s+/g, " ").trim().replace(/\|/g, "\\|");
       const cuando = a.completedAt
-        ? interpolar(t.hechoEl, { fecha: fechaHumanaConAno(a.completedAt, idioma) })
+        ? interpolarEn(idioma, t.hechoEl, { fecha: fechaHumanaConAno(a.completedAt, idioma) })
         : a.fechaBase
-          ? interpolar(t.previstoPara, { fecha: fechaHumanaConAno(a.fechaBase, idioma) })
+          ? interpolarEn(idioma, t.previstoPara, { fecha: fechaHumanaConAno(a.fechaBase, idioma) })
           : t.sinFecha;
       l.push(`| ${check}${texto} | ${cuando} |`);
     }
@@ -324,13 +325,13 @@ export function expedienteMarkdown(d: DatosExpediente, idioma: Locale = LOCALE_B
 
   l.push(`# ${d.nombre}`);
   l.push("");
-  l.push(interpolar(t.generado, { fecha: fechaHumanaConAno(d.generadoAt, idioma) }));
+  l.push(interpolarEn(idioma, t.generado, { fecha: fechaHumanaConAno(d.generadoAt, idioma) }));
   l.push("");
-  l.push(interpolar(t.empezaste, { fecha: fechaHumanaConAno(d.creadaAt, idioma) }));
+  l.push(interpolarEn(idioma, t.empezaste, { fecha: fechaHumanaConAno(d.creadaAt, idioma) }));
   l.push("");
   l.push(
     d.realizadaAt
-      ? interpolar(t.estadoRealizado, { fecha: fechaHumanaConAno(d.realizadaAt, idioma) })
+      ? interpolarEn(idioma, t.estadoRealizado, { fecha: fechaHumanaConAno(d.realizadaAt, idioma) })
       : t.estadoEnMarcha
   );
   l.push("");
@@ -393,7 +394,7 @@ export function expedienteMarkdown(d: DatosExpediente, idioma: Locale = LOCALE_B
     l.push(`## ${m.nombre}`);
     l.push("");
     if (m.completadoAt) {
-      l.push(interpolar(t.mundoTerminado, { fecha: fechaHumanaConAno(m.completadoAt, idioma) }));
+      l.push(interpolarEn(idioma, t.mundoTerminado, { fecha: fechaHumanaConAno(m.completadoAt, idioma) }));
       l.push("");
     }
     l.push(rebajarTitulos(m.contenidoMd.trim(), 2));
@@ -466,9 +467,9 @@ export function reporteMundoMarkdown(d: DatosReporteMundo, idioma: Locale = LOCA
   const l: string[] = [];
   l.push(interpolar(t.titulo, { mundo: d.nombreMundo }));
   l.push("");
-  l.push(interpolar(t.generado, { idea: d.nombreIdea, fecha: fechaHumanaConAno(d.generadoAt, idioma) }));
+  l.push(interpolarEn(idioma, t.generado, { idea: d.nombreIdea, fecha: fechaHumanaConAno(d.generadoAt, idioma) }));
   l.push("");
-  l.push(d.completadoAt ? interpolar(t.estadoTerminado, { fecha: fechaHumanaConAno(d.completadoAt, idioma) }) : tx.estadoEnMarcha);
+  l.push(d.completadoAt ? interpolarEn(idioma, t.estadoTerminado, { fecha: fechaHumanaConAno(d.completadoAt, idioma) }) : tx.estadoEnMarcha);
   l.push("");
 
   // El plan del mundo + sus seguimientos, con el mismo naming ("Tu Plan",

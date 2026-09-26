@@ -21,6 +21,7 @@ import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
 import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
+import { interpolarEn } from "@/lib/i18n/elision";
 import { BITACORA } from "@/lib/i18n/mensajes/bitacora";
 
 
@@ -252,7 +253,7 @@ export function Bitacora({
   const { entradas } = datos;
   const rango =
     entradas.length > 0
-      ? interpolar(t.rango, { desde: fechaHumanaConAno(entradas[0].fecha, idioma), hasta: fechaHumanaConAno(entradas[entradas.length - 1].fecha, idioma) })
+      ? interpolarEn(idioma, t.rango, { desde: fechaHumanaConAno(entradas[0].fecha, idioma), hasta: fechaHumanaConAno(entradas[entradas.length - 1].fecha, idioma) })
       : null;
 
   return (

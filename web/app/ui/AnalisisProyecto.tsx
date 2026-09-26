@@ -15,6 +15,7 @@ import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { decimal } from "@/lib/i18n/formato";
 import { interpolar, plural } from "@/lib/i18n/interpolar";
+import { interpolarEn } from "@/lib/i18n/elision";
 import { rico } from "@/lib/i18n/rico";
 import { ANALISIS } from "@/lib/i18n/mensajes/analisis";
 import { GanttCumplimiento } from "./GanttCumplimiento";
@@ -152,7 +153,7 @@ export function AnalisisProyecto({
           <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-done">{t.actaDeCierre}</p>
           <p className="mt-2 text-[14px]">
             {rico(
-              interpolar(t.actaCerrado, {
+              interpolarEn(idioma, t.actaCerrado, {
                 fecha: fechaHumanaCorta(acta.cerrada_at, idioma),
                 hechas: acta.instantanea.acciones.hechas,
                 total: acta.instantanea.acciones.total,
@@ -178,7 +179,7 @@ export function AnalisisProyecto({
           <p className="text-[11px] font-semibold uppercase tracking-[1.2px] text-done">{t.estadoActual}</p>
           <p className="mt-2 text-[14px]">
             {rico(
-              interpolar(t.estadoCerrado, {
+              interpolarEn(idioma, t.estadoCerrado, {
                 fecha: fechaHumanaCorta(realizadaAt, idioma),
                 hechas: u.accionesVigente.hechas,
                 total: u.accionesVigente.total,

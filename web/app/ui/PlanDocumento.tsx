@@ -11,10 +11,16 @@
  *     inicio; y el cierre es un CTA concreto (Empezar / Manos a la Obra).
  * El parser respeta el markdown REAL del motor: no inventa estructura, solo
  * pliega la que viene. Colores: azul piensa, verde ejecuta (REGLAS_Y_TOKENS).
+ *
+ * i18n F6 (D2): el plan es un documento y sigue el idioma del PROYECTO
+ * (`idiomaDocumento`): sus rótulos (Pasos, Entregable, Esta semana, "N
+ * etapas") van en ese idioma; la barra lateral y los botones, en el de la
+ * interfaz. Sin `idiomaDocumento`, todo en el de la interfaz, como antes.
  */
 import { Markdown } from "./Markdown";
+import { PapelEnIdioma, useIdiomaInterfaz } from "./PapelEnIdioma";
 
-import { elegir } from "@/lib/i18n/config";
+import { elegir, type ActiveLocale } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar, plural } from "@/lib/i18n/interpolar";
 import { PLAN_DOCUMENTO } from "@/lib/i18n/mensajes/planDocumento";
@@ -65,6 +71,8 @@ function CajaEstaSemana({
   etiqueta?: string;
 }) {
   const t = elegir(PLAN_DOCUMENTO, useIdioma());
+  // El botón es de la app, no del documento: va en el idioma de la interfaz.
+  const tUi = elegir(PLAN_DOCUMENTO, useIdiomaInterfaz());
   return (
     <div
       className={"rounded-[12px] bg-surface " + (grande ? "px-7 py-[26px]" : "px-4 py-4")}
@@ -83,7 +91,7 @@ function CajaEstaSemana({
           data-no-print
           className="mt-[18px] rounded-[10px] bg-done px-[22px] py-2.5 text-[13.5px] font-bold text-[#04120A] hover:opacity-90"
         >
-          {t.empezarConEsto}
+          {tUi.empezarConEsto}
         </button>
       )}
     </div>
@@ -155,6 +163,7 @@ export function PlanDocumento({
   onEmpezar,
   onVerBitacora,
   nodosFuente,
+  idiomaDocumento,
 }: {
   md: string;
   nombreIdea: string;
@@ -164,9 +173,14 @@ export function PlanDocumento({
   onVerBitacora?: () => void;
   /** canon 05: nodos del recorrido → sidebar "Construido con tu recorrido". */
   nodosFuente?: string[];
+  /** i18n F6 (D2): el idioma del proyecto, en que va el cuerpo del plan. */
+  idiomaDocumento?: ActiveLocale;
 }) {
-  const idioma = useIdioma();
+  const idiomaUi = useIdioma();
+  const idioma = idiomaDocumento ?? idiomaUi;
+  // `t` rotula el documento; `tUi`, la barra lateral (navegación de la app).
   const t = elegir(PLAN_DOCUMENTO, idioma);
+  const tUi = elegir(PLAN_DOCUMENTO, idiomaUi);
   const plan = parsearPlan(md, idioma);
   const etapas = plan.secciones.filter((s) => s.tipo === "etapa");
   // La acción de la etapa 1 (el corazón del producto): SIEMPRE visible arriba,
@@ -175,62 +189,64 @@ export function PlanDocumento({
     etapas.find((s) => s.estaSemana)?.estaSemana ?? plan.secciones.find((s) => s.estaSemana)?.estaSemana ?? null;
 
   const documento = (
-    <div className="min-w-0 flex-1" data-plan-print>
-      {/* encabezado del documento (canon 05) */}
-      <div className="anima-plan-in flex items-start justify-between gap-3" style={{ animationDelay: "0.1s" }}>
-        <div className="mb-3 flex items-center gap-2">
-          <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
-          {/* CONFIDENCIAL: jamás exponer la maquinaria (conteo de nodos,
-              grafo, conceptos). El usuario solo ve que su plan salió de SU
-              recorrido. */}
-          <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
-            {t.generadoDeTuRecorrido}{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
-          </span>
-        </div>
-        {/* La descarga (.md / PDF) del plan y de todo el desarrollo vive
-            centralizada en "Tus documentos"; aquí ya no se duplica. */}
-      </div>
-      {plan.titulo && (
-        <h2 className="anima-plan-in text-[26px] font-bold leading-[1.25] tracking-[-0.02em] [text-wrap:balance] sm:text-[32px]" style={{ animationDelay: "0.1s" }}>
-          {plan.titulo}
-        </h2>
-      )}
-      {plan.intro && (
-        <div data-prosa-plan className="anima-plan-in mt-3.5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#C7C8CD] [text-align:justify] [hyphens:auto] [text-wrap:pretty]" style={{ animationDelay: "0.2s" }}>
-          <Markdown>{plan.intro}</Markdown>
-        </div>
-      )}
-      {etapas.length > 0 && (
-        <p className="anima-plan-in mt-3 text-[13px] text-dim" style={{ animationDelay: "0.25s" }}>
-          {interpolar(t.metaEtapas, { etapas: plural(idioma, etapas.length, t.etapas) })}
-        </p>
-      )}
-
-      {/* TU PRIMERA ACCIÓN: el corazón del producto, siempre visible arriba */}
-      {primeraAccion && (
-        <div className="anima-plan-in mt-8" style={{ animationDelay: "0.3s" }}>
-          <CajaEstaSemana contenido={primeraAccion} grande onEmpezar={onEmpezar} etiqueta={t.tuPrimeraAccion} />
-        </div>
-      )}
-
-      {/* barras-topic (acordeones): TODAS colapsadas en la primera vista
-          (decisión del fundador: nunca desplegado; el lector abre la que quiere). */}
-      <div className="mt-6 flex flex-col gap-3">
-        {plan.secciones.map((s, i) => (
-          <div key={i} className="anima-plan-in" style={{ animationDelay: `${0.4 + i * 0.08}s` }}>
-            <BarraTopic s={s} />
+    <PapelEnIdioma idioma={idiomaDocumento}>
+      <div className="min-w-0 flex-1" data-plan-print>
+        {/* encabezado del documento (canon 05) */}
+        <div className="anima-plan-in flex items-start justify-between gap-3" style={{ animationDelay: "0.1s" }}>
+          <div className="mb-3 flex items-center gap-2">
+            <span aria-hidden className="h-1.5 w-1.5 rounded-full bg-accent" />
+            {/* CONFIDENCIAL: jamás exponer la maquinaria (conteo de nodos,
+                grafo, conceptos). El usuario solo ve que su plan salió de SU
+                recorrido. */}
+            <span className="text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">
+              {t.generadoDeTuRecorrido}{plan.etiqueta ? ` · ${plan.etiqueta}` : ""}
+            </span>
           </div>
-        ))}
-      </div>
+          {/* La descarga (.md / PDF) del plan y de todo el desarrollo vive
+              centralizada en "Tus documentos"; aquí ya no se duplica. */}
+        </div>
+        {plan.titulo && (
+          <h2 className="anima-plan-in text-[26px] font-bold leading-[1.25] tracking-[-0.02em] [text-wrap:balance] sm:text-[32px]" style={{ animationDelay: "0.1s" }}>
+            {plan.titulo}
+          </h2>
+        )}
+        {plan.intro && (
+          <div data-prosa-plan className="anima-plan-in mt-3.5 max-w-[640px] text-[15.5px] leading-[1.7] text-[#C7C8CD] [text-align:justify] [hyphens:auto] [text-wrap:pretty]" style={{ animationDelay: "0.2s" }}>
+            <Markdown>{plan.intro}</Markdown>
+          </div>
+        )}
+        {etapas.length > 0 && (
+          <p className="anima-plan-in mt-3 text-[13px] text-dim" style={{ animationDelay: "0.25s" }}>
+            {interpolar(t.metaEtapas, { etapas: plural(idioma, etapas.length, t.etapas) })}
+          </p>
+        )}
 
-      {/* Pie del PDF: se repite en cada página e identifica la idea. Oculto
-          en pantalla (la hoja de impresión lo enciende); reemplaza el pie
-          codificado del navegador (URL y fecha). */}
-      <div data-print-pie className="hidden">
-        <span>{plan.titulo || nombreIdea}</span>
-        <span>My Idea</span>
+        {/* TU PRIMERA ACCIÓN: el corazón del producto, siempre visible arriba */}
+        {primeraAccion && (
+          <div className="anima-plan-in mt-8" style={{ animationDelay: "0.3s" }}>
+            <CajaEstaSemana contenido={primeraAccion} grande onEmpezar={onEmpezar} etiqueta={t.tuPrimeraAccion} />
+          </div>
+        )}
+
+        {/* barras-topic (acordeones): TODAS colapsadas en la primera vista
+            (decisión del fundador: nunca desplegado; el lector abre la que quiere). */}
+        <div className="mt-6 flex flex-col gap-3">
+          {plan.secciones.map((s, i) => (
+            <div key={i} className="anima-plan-in" style={{ animationDelay: `${0.4 + i * 0.08}s` }}>
+              <BarraTopic s={s} />
+            </div>
+          ))}
+        </div>
+
+        {/* Pie del PDF: se repite en cada página e identifica la idea. Oculto
+            en pantalla (la hoja de impresión lo enciende); reemplaza el pie
+            codificado del navegador (URL y fecha). */}
+        <div data-print-pie className="hidden">
+          <span>{plan.titulo || nombreIdea}</span>
+          <span>My Idea</span>
+        </div>
       </div>
-    </div>
+    </PapelEnIdioma>
   );
 
   // Fase 4.8 — MI BITÁCORA como primer punto del sidebar (arriba a la derecha):
@@ -238,13 +254,13 @@ export function PlanDocumento({
   // recorrido (en ambos layouts).
   const tarjetaBitacora = onVerBitacora ? (
     <div className="mb-6 rounded-panel border border-accent/40 bg-accent/5 p-4" data-no-print>
-      <p className="text-[13.5px] font-semibold text-accent">{t.miBitacora}</p>
-      <p className="mt-1 text-[12px] leading-relaxed text-dim">{t.historiaDeTuViaje}</p>
+      <p className="text-[13.5px] font-semibold text-accent">{tUi.miBitacora}</p>
+      <p className="mt-1 text-[12px] leading-relaxed text-dim">{tUi.historiaDeTuViaje}</p>
       <button
         onClick={onVerBitacora}
         className="mt-2.5 w-full rounded-[10px] border border-accent/40 bg-accent/10 py-2 text-[12.5px] font-semibold text-accent hover:bg-accent/20"
       >
-        {t.verMiBitacora}
+        {tUi.verMiBitacora}
       </button>
     </div>
   ) : null;
@@ -272,7 +288,7 @@ export function PlanDocumento({
         style={{ animationDelay: "0.5s" }}
       >
         {tarjetaBitacora}
-        <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{t.construidoConTuRecorrido}</p>
+        <p className="mb-5 text-[11px] font-semibold uppercase tracking-[1.2px] text-dim">{tUi.construidoConTuRecorrido}</p>
         <ul className="flex flex-col gap-4">
           {nodosFuente.map((n, i) => (
             <li key={i} className="flex items-start gap-3">
@@ -289,7 +305,7 @@ export function PlanDocumento({
         {/* Canon 05: la nota de recálculo bajo una hairline — el plan no es
             una lápida, se vuelve a la entrevista cuando el mundo cambia. */}
         <p className="mt-6 border-t border-hairline pt-5 text-[12.5px] leading-[1.6] text-dim [text-wrap:pretty]">
-          {t.notaRecalculo}
+          {tUi.notaRecalculo}
         </p>
       </aside>
     </section>

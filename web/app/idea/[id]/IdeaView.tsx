@@ -52,6 +52,7 @@ import { estadoMundo } from "@/lib/engine/previewMundos";
 import { consumirSSE } from "@/lib/sseCliente";
 import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
+import { idiomaDeDocumentos } from "@/lib/i18n/idiomaDocumento";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { CLARIDAD } from "@/lib/i18n/mensajes/claridad";
 import { IDEA_VIEW } from "@/lib/i18n/mensajes/ideaView";
@@ -70,6 +71,9 @@ interface DetalleIdea {
     id: string;
     nombre: string;
     entrada_original: string;
+    /** i18n F6 (D2): el idioma del proyecto (projects.idioma, 046). null en
+     * una idea de antes de F5: se lee como español (idiomaDelProyecto). */
+    idioma?: string | null;
     modo_camino?: "ritmo" | "fechas" | null;
     /** "Todo separado" (T3c): el modo POR ESPACIO (mapa dominio→modo). El core
      * también viene en modo_camino (dual-read); aquí el core y cada mundo. */
@@ -918,6 +922,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
     );
   }
 
+  // i18n F6 (D2): el plan en pantalla sigue el idioma del proyecto, como los
+  // documentos que se descargan; el cromo de la app, el de la interfaz.
+  const idiomaDoc = idiomaDeDocumentos({ idioma: detalle.idea.idioma }, idioma);
+
   const entrevistaActiva = Boolean(pregunta) || enviando || listoParaPlan;
   const mostrarArbol = nodos.length > 0 && (entrevistaActiva || generandoPlan);
   const puedeGenerarPlan = Boolean(sessionId) && !generandoPlan && !planMd;
@@ -1161,6 +1169,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               key={espacioActivo}
               projectId={projectId}
               planMd={planMd}
+              idiomaDocumento={idiomaDoc}
               planCreatedAt={detalle.plan?.created_at ?? itemsCore[0]?.created_at ?? new Date().toISOString()}
               checklist={checklist}
               historial={detalle.historial ?? []}
@@ -1497,6 +1506,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
                   onEmpezar={() => irAManos()}
                   onVerBitacora={irABitacora}
                   nodosFuente={nodosFuente}
+                  idiomaDocumento={idiomaDoc}
                 />
               )}
 

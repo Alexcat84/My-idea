@@ -30,7 +30,9 @@ import { createAdminClient } from "@/lib/supabase/admin";
 // "/" exacta = landing pública (Fase 3.4): se sirve sin crear sesión —
 // así los crawlers no acuñan usuarios invitados; la identidad invisible
 // nace al entrar a /nueva (CTA "Comenzar").
-const RUTAS_PUBLICAS = ["/login", "/auth"];
+// robots.txt y sitemap.xml (i18n F6): los pide todo rastreador; sin esto cada
+// visita de un buscador acuñaba una identidad invisible.
+const RUTAS_PUBLICAS = ["/login", "/auth", "/robots.txt", "/sitemap.xml"];
 const esRutaPublica = (pathname: string) =>
   pathname === "/" || RUTAS_PUBLICAS.some((r) => pathname === r || pathname.startsWith(r + "/"));
 

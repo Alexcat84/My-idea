@@ -10,10 +10,12 @@
  * null) viven solo en la global: aquí nunca aparecen.
  */
 import { NextResponse } from "next/server";
-import { elegir, LOCALE_BASE } from "@/lib/i18n/config";
+import { elegir } from "@/lib/i18n/config";
+import { idiomaDeDocumentos } from "@/lib/i18n/idiomaDocumento";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { RUTAS } from "@/lib/i18n/mensajes/servidorRutas";
 import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
+import { BITACORA } from "@/lib/i18n/mensajes/bitacora";
 import { idiomaDeRequest } from "@/lib/i18n/servidor";
 import { bitacoraDeEspacio, bitacoraMarkdown } from "@/lib/bitacoraCliente";
 import { nombreDeMundo } from "@/lib/catalogoMundos";
@@ -48,17 +50,26 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   // Por espacio: un filtro de la fuente única. Core = el nombre de la idea; un
   // mundo = su nombre de cara (jamás la clave técnica).
   const entradas = bitacoraDeEspacio(todas, dominio);
-  // El del documento va en el idioma del proyecto (hoy el base, F5); el de la
-  // pantalla, en el de la interfaz.
-  const nombreEspacio = esEspacioCore(dominio) ? nombre : nombreDeMundo(dominio);
+  // i18n F6 (D2): el documento (el .md, el papel del PDF y su archivo) va en el
+  // idioma del proyecto (lib/i18n/idiomaDocumento.ts); la pantalla, en el de la
+  // interfaz.
+  const idiomaDoc = idiomaDeDocumentos(proyecto, idioma);
+  const nombreEspacio = esEspacioCore(dominio) ? nombre : nombreDeMundo(dominio, idiomaDoc);
   const nombrePantalla = esEspacioCore(dominio) ? nombre : nombreDeMundo(dominio, idioma);
-  // El markdown es un documento: sigue el idioma del proyecto (D2, llega en
-  // F5), hoy el base. Las entradas de la pantalla van en el de la interfaz.
   const entradasDoc =
-    idioma === LOCALE_BASE
+    idiomaDoc === idioma
       ? entradas
-      : bitacoraDeEspacio(await cargarEntradasBitacora(supabase, projectId, proyecto, nombre), dominio);
-  const tDoc = elegir(SERVIDOR_PROYECTO, LOCALE_BASE).bitacora;
-  const markdown = bitacoraMarkdown(nombreEspacio, entradasDoc, new Date().toISOString(), interpolar(tDoc.tituloEspacio, { espacio: nombreEspacio }));
-  return NextResponse.json({ nombre: nombrePantalla, entradas, markdown });
+      : bitacoraDeEspacio(await cargarEntradasBitacora(supabase, projectId, proyecto, nombre, idiomaDoc), dominio);
+  const tDoc = elegir(SERVIDOR_PROYECTO, idiomaDoc).bitacora;
+  const tituloDoc = interpolar(tDoc.tituloEspacio, { espacio: nombreEspacio });
+  const markdown = bitacoraMarkdown(nombreEspacio, entradasDoc, new Date().toISOString(), tituloDoc, undefined, idiomaDoc);
+  return NextResponse.json({
+    nombre: nombrePantalla,
+    entradas,
+    markdown,
+    // El papel y el nombre del archivo, en el idioma del documento.
+    idioma: idiomaDoc,
+    papel: { entradas: entradasDoc, nombre: nombreEspacio },
+    archivo: interpolar(elegir(BITACORA, idiomaDoc).espacio.archivo, { nombre: nombreEspacio }),
+  });
 }

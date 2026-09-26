@@ -16,7 +16,7 @@ import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
 import type { EntradaBitacora } from "@/lib/bitacoraCliente";
 import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
-import { interpolar } from "@/lib/i18n/interpolar";
+import { interpolarEn } from "@/lib/i18n/elision";
 import { DOCUMENTOS_PAPEL } from "@/lib/i18n/mensajes/documentosPapel";
 import { HojaImpresion, FilaPapel } from "./HojaImpresion";
 
@@ -73,14 +73,15 @@ function conMotivo(texto: string, color: string) {
 /** El CONTENIDO de la bitácora (sin andamio), para componerlo en el Expediente
  * o como documento suelto. */
 export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] }) {
-  const t = elegir(DOCUMENTOS_PAPEL, useIdioma()).bitacora;
+  const idioma = useIdioma();
+  const t = elegir(DOCUMENTOS_PAPEL, idioma).bitacora;
   const filas = aFilas(entradas);
   const cerrada = entradas.some((e) => e.peso === "cierre");
   const rango =
     entradas.length > 0
-      ? interpolar(t.rango, {
-          desde: fechaHumanaConAno(entradas[0].fecha),
-          hasta: fechaHumanaConAno(entradas[entradas.length - 1].fecha),
+      ? interpolarEn(idioma, t.rango, {
+          desde: fechaHumanaConAno(entradas[0].fecha, idioma),
+          hasta: fechaHumanaConAno(entradas[entradas.length - 1].fecha, idioma),
         })
       : "";
 
@@ -121,7 +122,7 @@ export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] })
                         <div key={`d-${i}`} style={{ position: "relative", paddingInlineStart: 30, paddingBottom: 7, breakInside: "avoid" }}>
                           {tramo}
                           <span style={{ position: "absolute", insetInlineStart: 7, top: 5, transform: "translateX(calc(-50% * var(--sentido)))", width: 7, height: 7, borderRadius: "50%", background: f.cierre ? VERDE : AZUL }} />
-                          <div style={{ fontSize: 15, fontWeight: 700, color: f.cierre ? VERDE : TINTA }}>{fechaHumanaConAno(f.fecha)}</div>
+                          <div style={{ fontSize: 15, fontWeight: 700, color: f.cierre ? VERDE : TINTA }}>{fechaHumanaConAno(f.fecha, idioma)}</div>
                         </div>
                       );
                     }

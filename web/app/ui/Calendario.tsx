@@ -21,7 +21,8 @@ import { NotaRapida } from "./NotaRapida";
 import { SuscripcionCalendario } from "./SuscripcionCalendario";
 import { grupoVigente, type CambioItem, type ChecklistData, type ItemChecklistUI } from "./ManosALaObra";
 import { generarIcs } from "@/lib/ics";
-import { fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
+import { fechaHumana, fechaHumanaCorta, fechaInputLocal, isoDesdeInputLocal, numeroDeDia } from "@/lib/fechas";
+import { interpolarEn } from "@/lib/i18n/elision";
 import { nombreDeMundo } from "@/lib/catalogoMundos";
 import { leerRechazo } from "@/lib/mensajeServidor";
 import { elegir, type Locale } from "@/lib/i18n/config";
@@ -47,6 +48,19 @@ type Vista = "agenda" | "mes" | "semana";
 type Estatus = "prevista" | "hecha" | "vencida";
 
 /** ordinal del día (local) desde epoch, para comparar por DÍA sin la hora. */
+/** "2 mar a 8 mar": el título de la vista Semana. i18n F6: el primero del mes
+ * como se escribe en el idioma (numeroDeDia: "1º", "1er") y la elisión del
+ * italiano ("Dal 2 mar all'8 mar"). En español, idéntico al de siempre. */
+export function tituloDeSemana(lunes: Date, domingo: Date, idioma: Locale): string {
+  const t = elegir(CALENDARIO, idioma);
+  return interpolarEn(idioma, t.rangoSemana, {
+    d1: numeroDeDia(lunes.getDate(), idioma),
+    m1: t.mesesCortos[lunes.getMonth()],
+    d2: numeroDeDia(domingo.getDate(), idioma),
+    m2: t.mesesCortos[domingo.getMonth()],
+  });
+}
+
 function ordinal(iso: string): number {
   return Math.floor(new Date(`${fechaInputLocal(new Date(iso))}T00:00:00`).getTime() / 86_400_000);
 }
@@ -203,8 +217,7 @@ export function Calendario({
     );
   const lunesRef = new Date(refDate.getFullYear(), refDate.getMonth(), refDate.getDate() - (((refDate.getDay() + 6) % 7)));
   const domRef = new Date(lunesRef.getFullYear(), lunesRef.getMonth(), lunesRef.getDate() + 6);
-  const mesCorto = (d: Date) => t.mesesCortos[d.getMonth()];
-  const tituloSemana = interpolar(t.rangoSemana, { d1: lunesRef.getDate(), m1: mesCorto(lunesRef), d2: domRef.getDate(), m2: mesCorto(domRef) });
+  const tituloSemana = tituloDeSemana(lunesRef, domRef, idioma);
   const titulo =
     vista === "mes"
       ? `${tf.meses[refDate.getMonth()]} ${refDate.getFullYear()}`.replace(/^./, (c) => c.toUpperCase())
@@ -544,9 +557,7 @@ function FilaDia({ d, manejo }: { d: Datado; manejo: ManejoDia }) {
 function PanelDia({ clave, items, manejo }: { clave: string; items: Datado[]; manejo: ManejoDia }) {
   const idioma = useIdioma();
   const t = elegir(CALENDARIO, idioma);
-  const tf = elegir(FECHAS, idioma);
-  const d = new Date(`${clave}T00:00:00`);
-  const label = interpolar(tf.diaSemanaDeMes, { dia: tf.dias[d.getDay()], d: d.getDate(), mes: tf.meses[d.getMonth()] });
+  const label = fechaHumana(`${clave}T00:00:00`, idioma);
   return (
     <div className="mt-4 rounded-panel border border-hairline bg-surface p-4">
       <p className="mb-3 text-[13px] font-semibold capitalize">{label}</p>

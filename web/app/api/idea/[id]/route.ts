@@ -256,6 +256,9 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       id: proyecto.id,
       nombre: nombreDeIdea(proyecto.titulo, proyecto.entrada_original),
       entrada_original: proyecto.entrada_original,
+      // i18n F6 (D2): el idioma del proyecto, para que el plan en pantalla lo
+      // siga como los documentos. null = idea de antes de F5 (español).
+      idioma: proyecto.idioma ?? null,
       fase_actual: proyecto.fase_actual,
       tipo_oferta: proyecto.tipo_oferta ?? null,
       // El modo del camino del CORE (dual-read) y si la idea ya es un proyecto.

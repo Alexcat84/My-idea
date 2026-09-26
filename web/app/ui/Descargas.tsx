@@ -18,7 +18,9 @@ import { BitacoraPapel, ContenidoBitacora } from "./BitacoraPapel";
 import { AnalisisPapel, type AnalisisPapelData } from "./AnalisisPapel";
 import { HojaImpresion, FilaPapel } from "./HojaImpresion";
 import type { EntradaBitacora } from "@/lib/bitacoraCliente";
-import { elegir } from "@/lib/i18n/config";
+import { PapelEnIdioma } from "./PapelEnIdioma";
+import { elegir, normalizarIdioma, type ActiveLocale } from "@/lib/i18n/config";
+import { interpolarEn } from "@/lib/i18n/elision";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { DESCARGAS } from "@/lib/i18n/mensajes/descargas";
@@ -179,7 +181,9 @@ export function Descargas({
   // La clave del error (no el texto): se pinta en el idioma de la pantalla.
   const [error, setError] = useState<"errorCargar" | "errorPreparar" | null>(null);
   const [ocupado, setOcupado] = useState<string | null>(null);
-  const [paraImprimir, setParaImprimir] = useState<{ titulo: string; markdown: string; papel?: PapelDoc } | null>(null);
+  // i18n F6 (D2): el papel va en el idioma del documento (el del proyecto, lo
+  // dice el servidor); este panel y sus botones, en el de la interfaz.
+  const [paraImprimir, setParaImprimir] = useState<{ titulo: string; markdown: string; papel?: PapelDoc; idioma: ActiveLocale } | null>(null);
 
   useEffect(() => {
     let vivo = true;
@@ -213,16 +217,16 @@ export function Descargas({
       try {
         const r = await fetch(`/api/project/${projectId}/documentos?doc=${encodeURIComponent(doc.clave)}`);
         if (!r.ok) throw new Error(String(r.status));
-        const d = (await r.json()) as { titulo: string; archivo: string; markdown: string; papel?: PapelDoc };
+        const d = (await r.json()) as { titulo: string; archivo: string; markdown: string; papel?: PapelDoc; idioma?: string };
         if (formato === "md") descargarMd(d.markdown, d.archivo);
-        else setParaImprimir({ titulo: d.titulo, markdown: d.markdown, papel: d.papel });
+        else setParaImprimir({ titulo: d.titulo, markdown: d.markdown, papel: d.papel, idioma: normalizarIdioma(d.idioma ?? idioma) });
       } catch {
         setError("errorPreparar");
       } finally {
         setOcupado(null);
       }
     },
-    [projectId]
+    [projectId, idioma]
   );
 
   // "Todo separado" (T7, D4): el panel de CUALQUIER espacio se parte en dos
@@ -278,7 +282,7 @@ export function Descargas({
           <p className="mt-0.5 text-[12.5px] leading-[1.5] text-dim [text-wrap:pretty]">{doc.subtitulo}</p>
           {doc.fecha && (
             <p className="mt-1.5 text-[12px] tabular-nums text-[#6F7076]">
-              {esExpediente ? interpolar(t.cerradoEl, { fecha: fechaHumanaConAno(doc.fecha, idioma) }) : fechaHumanaConAno(doc.fecha, idioma)}
+              {esExpediente ? interpolarEn(idioma, t.cerradoEl, { fecha: fechaHumanaConAno(doc.fecha, idioma) }) : fechaHumanaConAno(doc.fecha, idioma)}
             </p>
           )}
         </div>
@@ -373,43 +377,48 @@ export function Descargas({
           El Expediente compone: cuerpo (markdown) + resumen "Cómo te fue" y
           secuencia ESTRUCTURADOS (cada uno en su hoja). La bitácora suelta va
           como timeline estructurado. Los ciclos, como markdown. */}
-      {paraImprimir &&
-        (() => {
-          const p = paraImprimir.papel;
-          if (p?.bodyMarkdown) {
-            // El Expediente compone en UNA sola hoja (un solo pie que se repite
-            // y reserva su alto): cuerpo + resumen + bitácora, cada uno en su
-            // hoja. Antes eran tres bloques absolutos que se encimaban y traían
-            // tres pies (dos por página). Ahora fluyen como filas.
-            return (
-              <HojaImpresion oculto nombreIdea={nombreIdea} pieTitulo={t.pieExpediente}>
-                <FilaPapel>
-                  <ContenidoDocumento markdown={p.bodyMarkdown} titulo={t.expedienteCompleto} />
-                </FilaPapel>
-                {p.resumen && (
-                  <FilaPapel pagina>
-                    <ContenidoResumen nombreIdea={nombreIdea} {...p.resumen} />
+      {paraImprimir && (
+        <PapelEnIdioma idioma={paraImprimir.idioma}>
+          {(() => {
+            const p = paraImprimir.papel;
+            // Los rótulos del papel del Expediente, en el idioma del documento.
+            const tDoc = elegir(DESCARGAS, paraImprimir.idioma);
+            if (p?.bodyMarkdown) {
+              // El Expediente compone en UNA sola hoja (un solo pie que se repite
+              // y reserva su alto): cuerpo + resumen + bitácora, cada uno en su
+              // hoja. Antes eran tres bloques absolutos que se encimaban y traían
+              // tres pies (dos por página). Ahora fluyen como filas.
+              return (
+                <HojaImpresion oculto nombreIdea={nombreIdea} pieTitulo={tDoc.pieExpediente}>
+                  <FilaPapel>
+                    <ContenidoDocumento markdown={p.bodyMarkdown} titulo={tDoc.expedienteCompleto} />
                   </FilaPapel>
-                )}
-                {p.entradas && p.entradas.length > 0 && (
-                  <FilaPapel pagina>
-                    <ContenidoBitacora entradas={p.entradas} />
-                  </FilaPapel>
-                )}
-              </HojaImpresion>
-            );
-          }
-          if (p?.analisis) {
-            return <AnalisisPapel oculto nombre={nombreIdea} nombreIdea={nombreIdea} datos={p.analisis} />;
-          }
-          if (p?.resumen) {
-            return <ResumenPapel oculto nombreIdea={nombreIdea} {...p.resumen} />;
-          }
-          if (p?.entradas) {
-            return <BitacoraPapel oculto nombreIdea={nombreIdea} entradas={p.entradas} />;
-          }
-          return <DocumentoPapel oculto markdown={paraImprimir.markdown} nombreIdea={nombreIdea} titulo={paraImprimir.titulo} />;
-        })()}
+                  {p.resumen && (
+                    <FilaPapel pagina>
+                      <ContenidoResumen nombreIdea={nombreIdea} {...p.resumen} />
+                    </FilaPapel>
+                  )}
+                  {p.entradas && p.entradas.length > 0 && (
+                    <FilaPapel pagina>
+                      <ContenidoBitacora entradas={p.entradas} />
+                    </FilaPapel>
+                  )}
+                </HojaImpresion>
+              );
+            }
+            if (p?.analisis) {
+              return <AnalisisPapel oculto nombre={nombreIdea} nombreIdea={nombreIdea} datos={p.analisis} />;
+            }
+            if (p?.resumen) {
+              return <ResumenPapel oculto nombreIdea={nombreIdea} {...p.resumen} />;
+            }
+            if (p?.entradas) {
+              return <BitacoraPapel oculto nombreIdea={nombreIdea} entradas={p.entradas} />;
+            }
+            return <DocumentoPapel oculto markdown={paraImprimir.markdown} nombreIdea={nombreIdea} titulo={paraImprimir.titulo} />;
+          })()}
+        </PapelEnIdioma>
+      )}
     </section>
   );
 }

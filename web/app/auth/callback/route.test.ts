@@ -21,12 +21,14 @@ vi.mock("next/headers", () => ({
 }));
 
 const signOut = vi.fn(async () => ({ error: null }));
+const updateUser = vi.fn(async () => ({ error: null }));
 vi.mock("@/lib/supabase/server", () => ({
   createClient: async () => ({
     auth: {
       getUser: async () => ({ data: { user: { id: "u1", email: "colado@example.com" } } }),
       exchangeCodeForSession: async () => ({ error: null }),
       signOut,
+      updateUser,
       signInAnonymously: async () => ({ data: { user: { id: "anon-2" } }, error: null }),
     },
   }),
@@ -46,6 +48,20 @@ describe("GET /auth/callback: la allowlist vale para todo camino de sesión", ()
     estaEnAllowlist.mockClear();
     bienvenidaTrasLogin.mockClear();
     signOut.mockClear();
+    updateUser.mockClear();
+  });
+
+  // i18n F6 (D4): quien entra con Google también guarda su idioma de interfaz en
+  // user_metadata.idioma, para que sus correos de Supabase lleguen en su idioma.
+  it("entrar con Google guarda el idioma de la interfaz (cookie myidea_idioma)", async () => {
+    await GET(new Request("http://test/auth/callback?code=abc", { headers: { cookie: "myidea_idioma=fr" } }));
+    expect(updateUser).toHaveBeenCalledWith({ data: { idioma: "fr" } });
+  });
+
+  it("un correo no invitado no guarda nada", async () => {
+    invitado = false;
+    await GET(new Request("http://test/auth/callback?code=abc", { headers: { cookie: "myidea_idioma=fr" } }));
+    expect(updateUser).not.toHaveBeenCalled();
   });
 
   it("recuperación con un correo NO invitado: sesión fuera y de vuelta al login", async () => {

@@ -10,7 +10,8 @@
  * El verde solo se enciende con el cierre (ley de color). Pie en <tfoot> para
  * que no tape el texto. Se monta oculto y la hoja de impresión lo enciende.
  */
-import { elegir } from "@/lib/i18n/config";
+import { numeroDeDia } from "@/lib/fechas";
+import { elegir, type Locale } from "@/lib/i18n/config";
 import { interpolar } from "@/lib/i18n/interpolar";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { DOCUMENTOS_PAPEL } from "@/lib/i18n/mensajes/documentosPapel";
@@ -23,9 +24,9 @@ const SEC = "#4B4E55";
 const TER = "#6B6E75";
 const HILO = "#DFE1E6";
 
-function fechaMapa(iso: string, t: { meses: readonly string[]; fechaCorta: string }): string {
+function fechaMapa(iso: string, t: { meses: readonly string[]; fechaCorta: string }, idioma: Locale): string {
   const d = new Date(iso);
-  return interpolar(t.fechaCorta, { d: d.getUTCDate(), mes: t.meses[d.getUTCMonth()] });
+  return interpolar(t.fechaCorta, { d: numeroDeDia(d.getUTCDate(), idioma), mes: t.meses[d.getUTCMonth()] });
 }
 
 export interface HitoResumen {
@@ -57,7 +58,8 @@ export function ContenidoResumen({
   loQueMovio,
   loQuePendiente,
 }: { nombreIdea: string } & DatosResumen) {
-  const t = elegir(DOCUMENTOS_PAPEL, useIdioma()).resumen;
+  const idioma = useIdioma();
+  const t = elegir(DOCUMENTOS_PAPEL, idioma).resumen;
   const titulo = cerrada ? t.comoTeFue : t.tuProgreso;
   const N = hitos.length;
   const inset = N > 1 ? 100 / (2 * N) : 50;
@@ -117,7 +119,7 @@ export function ContenidoResumen({
                         const verde = cerrada && i === N - 1;
                         return (
                           <div key={i} style={{ textAlign: "center" }}>
-                            <div style={{ fontSize: 11.5, color: TER, fontVariantNumeric: "tabular-nums" }}>{fechaMapa(h.fecha, t)}</div>
+                            <div style={{ fontSize: 11.5, color: TER, fontVariantNumeric: "tabular-nums" }}>{fechaMapa(h.fecha, t, idioma)}</div>
                             <div style={{ fontSize: 12.5, fontWeight: verde ? 700 : 600, marginTop: 2, lineHeight: 1.35, color: verde ? VERDE : TINTA }}>{h.nombre}</div>
                           </div>
                         );

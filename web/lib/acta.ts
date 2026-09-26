@@ -10,6 +10,7 @@
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { Analytics } from "./analytics";
 import { elegir, LOCALE_BASE, type Locale } from "./i18n/config";
+import { interpolarEn } from "./i18n/elision";
 import { interpolar } from "./i18n/interpolar";
 import { ACTA } from "./i18n/mensajes/acta";
 
@@ -101,7 +102,7 @@ export function actaMarkdown(
   const i = acta.instantanea;
   const l: string[] = [];
   l.push(t.titulo);
-  l.push(interpolar(t.cerradaEl, { fecha: acta.cerrada_at.slice(0, 10) }));
+  l.push(interpolarEn(idioma, t.cerradaEl, { fecha: acta.cerrada_at.slice(0, 10) }));
   l.push(
     interpolar(t.accionesAlCerrar, {
       hechas: i.acciones.hechas,
@@ -110,7 +111,7 @@ export function actaMarkdown(
     })
   );
   for (const m of i.mundos) {
-    const estado = m.completado_at ? interpolar(t.completadoEl, { fecha: m.completado_at.slice(0, 10) }) : t.abierto;
+    const estado = m.completado_at ? interpolarEn(idioma, t.completadoEl, { fecha: m.completado_at.slice(0, 10) }) : t.abierto;
     l.push(
       interpolar(t.mundo, { mundo: nombreMundo(m.dominio), hechas: m.hechas, total: m.total, pct: pct(m.hechas, m.total), estado })
     );
