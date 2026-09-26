@@ -1,7 +1,7 @@
 /**
  * i18n F5 (DISENO §5): los MARCADORES NEUTROS del plan. Lo que se guarda lleva
- * siempre los rótulos de estructura en español ("## Etapa N:", "**Esta
- * semana:**", "_Plan completo_"...), porque eso es lo que leen checklist.ts y
+ * siempre los rótulos de estructura en español ("## Etapa N:", "**Primera
+ * acción:**", "_Plan completo_"...), porque eso es lo que leen checklist.ts y
  * planParser.ts. La pantalla y los documentos los pintan en el idioma de quien
  * lee. Si la IA los tradujo pese a la regla, se devuelven a su forma neutra
  * antes de guardar.
@@ -22,7 +22,7 @@ const NEUTRO = [
   "",
   "**Entregable:** 명단",
   "",
-  "**Esta semana:** 가격을 올리세요.",
+  "**Primera acción:** 가격을 올리세요.",
   "",
   "## ¿Puede sostenerse tu idea? Los números en simple",
   "",
@@ -50,7 +50,7 @@ describe("pintarRotulos: del neutro al idioma de quien lee", () => {
       "",
       "**결과물:** 명단",
       "",
-      "**이번 주:** 가격을 올리세요.",
+      "**첫 실행 항목:** 가격을 올리세요.",
       "",
       "## 아이디어가 지속될 수 있을까요? 쉽게 보는 숫자",
       "",
@@ -63,8 +63,8 @@ describe("pintarRotulos: del neutro al idioma de quien lee", () => {
   });
 
   it("en francés, con el espacio de no separación (U+00A0) antes de los dos puntos, como en sus catálogos", () => {
-    const md = "## Etapa 2: Vérifie la demande\n\n**Esta semana:** appelle trois clients.";
-    expect(pintarRotulos(md, "fr")).toBe("## Étape 2\u00a0: Vérifie la demande\n\n**Cette semaine\u00a0:** appelle trois clients.");
+    const md = "## Etapa 2: Vérifie la demande\n\n**Primera acción:** appelle trois clients.";
+    expect(pintarRotulos(md, "fr")).toBe("## Étape 2\u00a0: Vérifie la demande\n\n**Premi\u00e8re action\u00a0:** appelle trois clients.");
   });
 
   it("en japonés, con los dos puntos de ancho completo", () => {
@@ -87,7 +87,7 @@ describe("neutralizarRotulos: si la IA tradujo los rótulos, vuelven al neutro",
 
   it("un rótulo en inglés escrito por la IA con otros dos puntos también vuelve", () => {
     expect(neutralizarRotulos("## Stage 1 — Find buyers\n**This week**: call them")).toBe(
-      "## Etapa 1: Find buyers\n**Esta semana:** call them"
+      "## Etapa 1: Find buyers\n**Primera acción:** call them"
     );
   });
 
@@ -105,7 +105,43 @@ describe("neutralizarRotulos: si la IA tradujo los rótulos, vuelven al neutro",
 describe("rotulosPlan", () => {
   it("toma las palabras de los catálogos (una sola fuente)", () => {
     const en = rotulosPlan("en");
-    expect(en.estaSemana).toBe("This week");
+    expect(en.primeraAccion).toBe("First action");
     expect(en.etiquetaCompleto).toBe("Full plan");
+  });
+});
+
+// Decisión del fundador (26 sep 2026): "Esta semana" deja de repetirse en cada
+// etapa; el marcador neutro que se guarda es "**Primera acción:**". Los planes
+// ya guardados traen "**Esta semana:**" y NO se regeneran: se leen como el mismo
+// campo y se MUESTRAN con la etiqueta nueva, también en español.
+describe("compatibilidad: los planes viejos con **Esta semana:**", () => {
+  const VIEJO = NEUTRO.replace("**Primera acción:**", "**Esta semana:**");
+
+  it("en español solo cambia la etiqueta vieja; el resto queda igual", () => {
+    expect(VIEJO).toContain("**Esta semana:** 가격을 올리세요.");
+    expect(pintarRotulos(VIEJO, "es")).toBe(NEUTRO);
+  });
+
+  it.each([
+    ["en", "**First action:** 가격을 올리세요."],
+    ["fr", "**Première action :** 가격을 올리세요."],
+    ["ko", "**첫 실행 항목:** 가격을 올리세요."],
+    ["ja", "**最初のアクション：** 가격을 올리세요."],
+  ] as const)("%s: la etiqueta vieja se pinta como Primera acción", (l, linea) => {
+    expect(pintarRotulos(VIEJO, l)).toBe(pintarRotulos(NEUTRO, l));
+    expect(pintarRotulos(VIEJO, l)).toContain(linea);
+  });
+
+  it("neutralizar lleva la etiqueta vieja (o su traducción) al marcador nuevo", () => {
+    expect(neutralizarRotulos("**Esta semana:** llama")).toBe("**Primera acción:** llama");
+    expect(neutralizarRotulos("**Diese Woche:** ruf an")).toBe("**Primera acción:** ruf an");
+    expect(neutralizarRotulos("**Primera accion:** llama")).toBe("**Primera acción:** llama");
+  });
+
+  it("el checklist de un plan viejo sale igual que antes", () => {
+    const items = derivarChecklist(VIEJO);
+    expect(items.map((i) => i.texto)).toEqual(["5명에게 물어보세요.", "가격을 올리세요."]);
+    expect(items.map((i) => i.destacado)).toEqual([false, true]);
+    expect(derivarChecklist(NEUTRO)).toEqual(items);
   });
 });

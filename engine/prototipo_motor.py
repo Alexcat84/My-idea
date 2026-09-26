@@ -853,8 +853,8 @@ SYSTEM_PLAN = (
     "1. Modo imperativo SIEMPRE. Convierte cada paso reflexivo o pregunta del "
     "material en una tarea concreta con verbo, sujeto y criterio de exito. "
     "Ejemplo: el material dice '¿has validado con clientes reales?' y tu "
-    "escribes 'Entrevista a 5 personas de tu publico objetivo esta semana y "
-    "anota como resuelven el problema hoy'.\n"
+    "escribes 'Entrevista a 5 personas de tu publico objetivo y anota como "
+    "resuelven el problema hoy'.\n"
     "2. material_principal manda la estructura y la cronologia del plan: "
     "sus conceptos, en su orden, definen las etapas. material_de_apoyo NUNCA "
     "crea etapas propias; solo enriquece las etapas ya definidas por "
@@ -862,11 +862,15 @@ SYSTEM_PLAN = (
     "concepto de apoyo sea relevante a esa etapa. Si un concepto de apoyo no "
     "encaja con claridad en ninguna etapa existente, omitelo — no fuerces su "
     "inclusion.\n"
-    "3. Cada etapa termina con una linea 'Esta semana:' seguida de UNA accion "
-    "ejecutable en 7 dias, concreta y especifica al proyecto de la persona. "
-    "Ejemplo: no 'Esta semana: piensa en tus costos', sino 'Esta semana: "
-    "anota cuanto gastas en materiales para 3 piezas y divide entre 3 para "
-    "saber tu costo real por unidad'.\n"
+    "3. Cada etapa termina con una linea '**Primera acción:**' seguida de UNA "
+    "accion: la mas pequeña y concreta para EMPEZAR esa etapa cuando la "
+    "persona llegue a ella, especifica a su proyecto. SIN fecha ni plazo: "
+    "PROHIBIDO escribir 'Esta semana', 'esta semana', 'el lunes', 'hoy', "
+    "'mañana' o 'en 7 dias' en la accion de una etapa, porque las etapas son "
+    "secuenciales y la app calcula por su cuenta que toca esta semana. "
+    "Ejemplo: no '**Primera acción:** piensa en tus costos', sino "
+    "'**Primera acción:** anota cuanto gastas en materiales para 3 piezas y "
+    "divide entre 3 para saber tu costo real por unidad'.\n"
     "4. Si al menos un concepto (de material_principal o material_de_apoyo) "
     "tiene es_viabilidad_economica=true, agrega al final una seccion "
     "'## ¿Puede sostenerse tu idea? Los numeros en simple' que sintetice "
@@ -880,13 +884,13 @@ SYSTEM_PLAN = (
     "item, cada uno con su etiqueta en negrita al inicio, asi: '- **Costo por "
     "unidad:** que es y como lo calculas, en una o dos frases.' Un item por "
     "cada numero que la persona debe calcular o conseguir; (c) al final, la "
-    "accion concreta en su propio bloque etiquetado '**Esta semana:**' (o '**El "
-    "lunes que viene:**'), jamas suelta dentro de la prosa. Ejemplo del cierre "
-    "correcto: '**Esta semana:** abre una hoja con cuatro columnas (costo por "
+    "accion concreta en su propio bloque etiquetado '**Primera acción:**', sin "
+    "fecha, jamas suelta dentro de la prosa. Ejemplo del cierre correcto: "
+    "'**Primera acción:** abre una hoja con cuatro columnas (costo por "
     "ciclo, precio estimado, usuarios para cubrir costos, meses de margen) y "
     "pon un numero en cada una, aunque sea estimado.'\n"
     "5. Prohibido cerrar el plan con preguntas para el usuario. El plan "
-    "cierra con la primera accion concreta del lunes, no con una pregunta.\n"
+    "cierra con una primera accion concreta, no con una pregunta.\n"
     "6. Titulo breve especifico al proyecto (no generico), un parrafo de "
     "contexto que conecte entrada_original y perfil_sesion con lo que va a "
     "lograr con este plan concreto.\n"
@@ -1058,9 +1062,9 @@ SYSTEM_PLAN = (
     "canal nuevo desde cero.\\n3. Anota cuantas de esas 5 personas "
     "compran sin que se lo pidas dos veces.\\n\\n**Entregable:** Lista de "
     "5 personas fuera de tu circulo que probaron el producto, con cuantas "
-    "pagaron.\\n\\n**Esta semana:** Publica tu vela con precio y foto en "
+    "pagaron.\\n\\n**Primera acción:** Publica tu vela con precio y foto en "
     "un grupo local de redes sociales y anota cuantos mensajes de interes "
-    "real recibes en 7 dias.'\n"
+    "real recibes.'\n"
     "Nota como el paso 2 vino de material_de_apoyo (canales de venta) "
     "insertado DENTRO de la Etapa 1 que ya definia material_principal, sin "
     "crear una etapa nueva solo para canales. La Etapa 2 (Costeo Basico) "
@@ -2508,6 +2512,10 @@ def _ensamblar_offline(material, perfil_sesion, texto_original):
             out.append(f"  {i}.{j} {p}")
         if m["entregable"]:
             out.append(f"  Punto de control: {m['entregable']}")
+        # Decision del fundador (26 sep 2026): cada etapa lleva su Primera
+        # accion, sin fecha (el marcador neutro que leen checklist y pantalla).
+        if m["pasos"]:
+            out.append(f"**Primera acción:** {m['pasos'][0]}")
         out.append("")
     return "\n".join(out)
 

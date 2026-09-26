@@ -7,7 +7,7 @@
  * sistema, después del cacheado. En español no se agrega nada.
  *
  * `rotulosFijos`: los rótulos de estructura que el código LEE de la salida
- * (los "marcadores neutros": "## Etapa N:", "**Esta semana:**"...). La IA los
+ * (los "marcadores neutros": "## Etapa N:", "**Primera acción:**"...). La IA los
  * escribe tal cual, en español, en cualquier idioma; la pantalla y los
  * documentos los pintan en el idioma de quien lee.
  */

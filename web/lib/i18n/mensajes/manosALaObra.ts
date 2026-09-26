@@ -15,13 +15,28 @@ const es = {
     verDetalle: "Ver el detalle de esta actividad",
     noAplica: "no aplica",
     noAplicaConMotivo: "no aplica · {{motivo}}",
+    /** la chapa de la fila con fechas: la fecha vigente cae en esta semana */
     estaSemana: "esta semana",
+    /** la chapa de la fila a mi ritmo: la tarea destacada es la primera acción de su
+     * etapa, sin plazo (decisión del fundador, 26 sep 2026) */
+    primeraAccion: "primera acción",
     paraEl: "para el {{fecha}}",
     hechoEl: "hecho el {{fecha}}",
     cambiarFecha: "cambiar fecha",
     cambiarLaFecha: "Cambiar la fecha:",
     ariaCambiarFecha: "Cambiar la fecha en que lo hiciste",
     listo: "listo",
+  },
+
+  /** "Esta semana" UNA sola vez, calculado por la app (lib/estaSemana.ts,
+   * decisión del fundador del 26 sep 2026): la etapa activa, su primera acción
+   * y lo que cabe en las horas por semana. A mi ritmo, "Tu siguiente paso". */
+  semana: {
+    titulo: "Esta semana",
+    tituloRitmo: "Tu siguiente paso",
+    empiezaPor: "Empieza por",
+    tambienCabe: "También cabe en tu semana ({{horas}}):",
+    despues: "Después",
   },
 
   /** el ritual de 3 tarjetas de "Continuar mi idea" (núcleo y mundo) */
@@ -249,12 +264,21 @@ const en: typeof es = {
     noAplica: "doesn't apply",
     noAplicaConMotivo: "doesn't apply · {{motivo}}",
     estaSemana: "this week",
+    primeraAccion: "first action",
     paraEl: "due {{fecha}}",
     hechoEl: "done on {{fecha}}",
     cambiarFecha: "change date",
     cambiarLaFecha: "Change the date:",
     ariaCambiarFecha: "Change the date you did it",
     listo: "done",
+  },
+
+  semana: {
+    titulo: "This week",
+    tituloRitmo: "Your next step",
+    empiezaPor: "Start with",
+    tambienCabe: "Also fits in your week ({{horas}}):",
+    despues: "Next",
   },
 
   ritual: {
@@ -465,12 +489,21 @@ const fr: typeof es = {
     noAplica: "ne s'applique pas",
     noAplicaConMotivo: "ne s'applique pas · {{motivo}}",
     estaSemana: "cette semaine",
+    primeraAccion: "première action",
     paraEl: "pour le {{fecha}}",
     hechoEl: "faite le {{fecha}}",
     cambiarFecha: "changer la date",
     cambiarLaFecha: "Changer la date :",
     ariaCambiarFecha: "Changer la date à laquelle tu l'as faite",
     listo: "c'est bon",
+  },
+
+  semana: {
+    titulo: "Cette semaine",
+    tituloRitmo: "Ta prochaine étape",
+    empiezaPor: "Commence par",
+    tambienCabe: "Tient aussi dans ta semaine ({{horas}}) :",
+    despues: "Ensuite",
   },
   ritual: {
     encabezado: "Poursuivre mon idée · {{paso}} sur 3",
@@ -660,12 +693,21 @@ const pt: typeof es = {
     noAplica: "não se aplica",
     noAplicaConMotivo: "não se aplica · {{motivo}}",
     estaSemana: "esta semana",
+    primeraAccion: "primeira ação",
     paraEl: "para {{fecha}}",
     hechoEl: "feita em {{fecha}}",
     cambiarFecha: "alterar data",
     cambiarLaFecha: "Alterar a data:",
     ariaCambiarFecha: "Alterar a data em que você fez",
     listo: "pronto",
+  },
+
+  semana: {
+    titulo: "Esta semana",
+    tituloRitmo: "Seu próximo passo",
+    empiezaPor: "Comece por",
+    tambienCabe: "Também cabe na sua semana ({{horas}}):",
+    despues: "Depois",
   },
   ritual: {
     encabezado: "Continuar minha ideia · {{paso}} de 3",
@@ -855,12 +897,21 @@ const de: typeof es = {
     noAplica: "trifft nicht zu",
     noAplicaConMotivo: "trifft nicht zu · {{motivo}}",
     estaSemana: "diese Woche",
+    primeraAccion: "erster Schritt",
     paraEl: "bis {{fecha}}",
     hechoEl: "erledigt am {{fecha}}",
     cambiarFecha: "Datum ändern",
     cambiarLaFecha: "Datum ändern:",
     ariaCambiarFecha: "Das Datum ändern, an dem du es erledigt hast",
     listo: "fertig",
+  },
+
+  semana: {
+    titulo: "Diese Woche",
+    tituloRitmo: "Dein nächster Schritt",
+    empiezaPor: "Fang an mit",
+    tambienCabe: "Passt auch in deine Woche ({{horas}}):",
+    despues: "Danach",
   },
   ritual: {
     encabezado: "Meine Idee weiterführen · {{paso}} von 3",
@@ -1050,12 +1101,21 @@ const it: typeof es = {
     noAplica: "non si applica",
     noAplicaConMotivo: "non si applica · {{motivo}}",
     estaSemana: "questa settimana",
+    primeraAccion: "prima azione",
     paraEl: "entro il {{fecha}}",
     hechoEl: "fatta il {{fecha}}",
     cambiarFecha: "cambia data",
     cambiarLaFecha: "Cambia la data:",
     ariaCambiarFecha: "Cambia la data in cui l'hai fatta",
     listo: "fatto",
+  },
+
+  semana: {
+    titulo: "Questa settimana",
+    tituloRitmo: "Il tuo prossimo passo",
+    empiezaPor: "Inizia da",
+    tambienCabe: "Ci sta anche nella tua settimana ({{horas}}):",
+    despues: "Poi",
   },
   ritual: {
     encabezado: "Continua la mia idea · {{paso}} di 3",
@@ -1245,12 +1305,21 @@ const ja: typeof es = {
     noAplica: "対象外",
     noAplicaConMotivo: "対象外 · {{motivo}}",
     estaSemana: "今週",
+    primeraAccion: "最初のアクション",
     paraEl: "{{fecha}}予定",
     hechoEl: "{{fecha}}に完了",
     cambiarFecha: "日付を変更",
     cambiarLaFecha: "日付を変更：",
     ariaCambiarFecha: "完了した日付を変更",
     listo: "OK",
+  },
+
+  semana: {
+    titulo: "今週",
+    tituloRitmo: "次の一歩",
+    empiezaPor: "まずはここから",
+    tambienCabe: "今週の時間（{{horas}}）に収まるもの：",
+    despues: "その次",
   },
   ritual: {
     encabezado: "アイデアの続き · {{paso}}/3",
@@ -1440,12 +1509,21 @@ const zh: typeof es = {
     noAplica: "不适用",
     noAplicaConMotivo: "不适用 · {{motivo}}",
     estaSemana: "本周",
+    primeraAccion: "第一项行动",
     paraEl: "截止 {{fecha}}",
     hechoEl: "完成于 {{fecha}}",
     cambiarFecha: "更改日期",
     cambiarLaFecha: "更改日期：",
     ariaCambiarFecha: "更改你完成它的日期",
     listo: "完成",
+  },
+
+  semana: {
+    titulo: "本周",
+    tituloRitmo: "你的下一步",
+    empiezaPor: "先从这里开始",
+    tambienCabe: "本周的时间（{{horas}}）里还放得下：",
+    despues: "接下来",
   },
   ritual: {
     encabezado: "继续我的想法 · 第 {{paso}} 步，共 3 步",
@@ -1635,12 +1713,21 @@ const ko: typeof es = {
     noAplica: "해당 없음",
     noAplicaConMotivo: "해당 없음 · {{motivo}}",
     estaSemana: "이번 주",
+    primeraAccion: "첫 실행 항목",
     paraEl: "{{fecha}}까지",
     hechoEl: "{{fecha}} 완료",
     cambiarFecha: "날짜 변경",
     cambiarLaFecha: "날짜 변경:",
     ariaCambiarFecha: "완료한 날짜 변경하기",
     listo: "확인",
+  },
+
+  semana: {
+    titulo: "이번 주",
+    tituloRitmo: "다음 단계",
+    empiezaPor: "이것부터 시작해요",
+    tambienCabe: "이번 주 시간({{horas}}) 안에 함께 할 수 있어요:",
+    despues: "그다음",
   },
   ritual: {
     encabezado: "내 아이디어 이어가기 · {{paso}}/3",
@@ -1830,12 +1917,21 @@ const ar: typeof es = {
     noAplica: "لا تنطبق",
     noAplicaConMotivo: "لا تنطبق · {{motivo}}",
     estaSemana: "هذا الأسبوع",
+    primeraAccion: "الإجراء الأول",
     paraEl: "موعدها {{fecha}}",
     hechoEl: "أُنجزت في {{fecha}}",
     cambiarFecha: "تغيير التاريخ",
     cambiarLaFecha: "تغيير التاريخ:",
     ariaCambiarFecha: "تغيير تاريخ إنجازها",
     listo: "تم",
+  },
+
+  semana: {
+    titulo: "هذا الأسبوع",
+    tituloRitmo: "خطوتكم التالية",
+    empiezaPor: "ابدؤوا من هنا",
+    tambienCabe: "يتّسع له أسبوعكم أيضًا ({{horas}}):",
+    despues: "بعد ذلك",
   },
   ritual: {
     encabezado: "مواصلة فكرتي · {{paso}} من 3",
@@ -2025,12 +2121,21 @@ const hi: typeof es = {
     noAplica: "लागू नहीं",
     noAplicaConMotivo: "लागू नहीं · {{motivo}}",
     estaSemana: "इस हफ़्ते",
+    primeraAccion: "पहला कदम",
     paraEl: "{{fecha}} तक",
     hechoEl: "{{fecha}} को पूरा हुआ",
     cambiarFecha: "तारीख बदलें",
     cambiarLaFecha: "तारीख बदलें:",
     ariaCambiarFecha: "वह तारीख बदलें जिस दिन आपने इसे किया",
     listo: "हो गया",
+  },
+
+  semana: {
+    titulo: "इस हफ़्ते",
+    tituloRitmo: "आपका अगला कदम",
+    empiezaPor: "यहाँ से शुरू करें",
+    tambienCabe: "इस हफ़्ते के आपके समय ({{horas}}) में यह भी आ जाता है:",
+    despues: "उसके बाद",
   },
   ritual: {
     encabezado: "अपने विचार पर आगे बढ़ें · 3 में से {{paso}}",

@@ -20,6 +20,8 @@ const es = {
     miBitacora: "La bitácora de mi viaje",
     vacia: "Tu historia apenas empieza. Cada paso que des irá quedando aquí: cada estado que cambies, cada fecha que muevas, cada nota.",
     pie: "Esta es tu historia tal como quedó registrada, día por día. Nada se reescribe: si moviste una fecha, la original sigue aquí.",
+    /** el enlace que vuelve al inicio de la lista (pantalla, lista larga) */
+    irAlInicio: "Ir al inicio",
   },
   espacio: {
     errorCarga: "No pudimos cargar la bitácora de este espacio.",
@@ -106,6 +108,7 @@ const en: typeof es = {
     miBitacora: "The logbook of my journey",
     vacia: "Your story is just beginning. Every step you take will be kept here: every status you change, every date you move, every note.",
     pie: "This is your story exactly as it was recorded, day by day. Nothing gets rewritten: if you moved a date, the original is still here.",
+    irAlInicio: "Back to top",
   },
   espacio: {
     errorCarga: "We couldn't load this space's logbook.",
@@ -190,6 +193,7 @@ const fr: typeof es = {
     miBitacora: "Le journal de bord de mon parcours",
     vacia: "Ton histoire ne fait que commencer. Chaque pas que tu feras sera gardé ici : chaque statut que tu changeras, chaque date que tu déplaceras, chaque note.",
     pie: "Voici ton histoire telle qu'elle a été enregistrée, jour après jour. Rien n'est réécrit : si tu as déplacé une date, celle d'origine est toujours ici.",
+    irAlInicio: "Revenir en haut",
   },
   espacio: {
     errorCarga: "Nous n'avons pas pu charger le journal de bord de cet espace.",
@@ -276,6 +280,7 @@ const pt: typeof es = {
     miBitacora: "O diário de bordo da minha jornada",
     vacia: "Sua história está só começando. Cada passo que você der vai ficar aqui: cada estado que você mudar, cada data que mover, cada nota.",
     pie: "Esta é a sua história tal como ficou registrada, dia a dia. Nada é reescrito: se você mudou uma data, a original continua aqui.",
+    irAlInicio: "Voltar ao início",
   },
   espacio: {
     errorCarga: "Não conseguimos carregar o diário de bordo deste espaço.",
@@ -362,6 +367,7 @@ const de: typeof es = {
     miBitacora: "Das Logbuch meiner Reise",
     vacia: "Deine Geschichte fängt gerade erst an. Jeder Schritt, den du gehst, wird hier festgehalten: jeder Status, den du änderst, jeder Termin, den du verschiebst, jede Notiz.",
     pie: "Das ist deine Geschichte, so wie sie festgehalten wurde, Tag für Tag. Nichts wird umgeschrieben: Wenn du einen Termin verschoben hast, steht der ursprüngliche weiterhin hier.",
+    irAlInicio: "Nach oben",
   },
   espacio: {
     errorCarga: "Wir konnten das Logbuch dieses Bereichs nicht laden.",
@@ -448,6 +454,7 @@ const it: typeof es = {
     miBitacora: "Il diario di bordo del mio viaggio",
     vacia: "La tua storia è appena cominciata. Ogni passo che farai resterà qui: ogni stato che cambi, ogni data che sposti, ogni nota.",
     pie: "Questa è la tua storia così come è stata registrata, giorno per giorno. Niente viene riscritto: se hai spostato una data, quella originale è ancora qui.",
+    irAlInicio: "Torna all'inizio",
   },
   espacio: {
     errorCarga: "Non siamo riusciti a caricare il diario di bordo di questo spazio.",
@@ -534,6 +541,7 @@ const ja: typeof es = {
     miBitacora: "わたしの旅の活動ログ",
     vacia: "歩みは始まったばかりです。これから踏み出す一歩一歩が、ここに残っていきます。状態の変更も、期日の変更も、メモも、すべて。",
     pie: "これは、記録されたとおりの歩みを一日ずつ並べたものです。書き換えられるものは何もありません。期日を動かしても、元の期日はここに残ります。",
+    irAlInicio: "先頭に戻る",
   },
   espacio: {
     errorCarga: "このスペースの活動ログを読み込めませんでした。",
@@ -620,6 +628,7 @@ const zh: typeof es = {
     miBitacora: "我的旅程日志",
     vacia: "你的故事才刚刚开始。你走的每一步都会留在这里：你改的每个状态、挪的每个日期、写的每条笔记。",
     pie: "这是你的故事，按记录下来的样子，一天一天。什么都不会被改写：如果你挪动过某个日期，原来的日期仍然在这里。",
+    irAlInicio: "回到顶部",
   },
   espacio: {
     errorCarga: "我们没能加载这个空间的日志。",
@@ -706,6 +715,7 @@ const ko: typeof es = {
     miBitacora: "나의 여정 기록장",
     vacia: "이야기는 이제 막 시작됐어요. 앞으로 내딛는 걸음이 모두 여기에 남아요: 바꾸는 상태, 옮기는 날짜, 남기는 메모 하나하나까지요.",
     pie: "하루하루 기록된 그대로의 이야기예요. 다시 쓰이는 건 없어요. 날짜를 옮겼다면 원래 날짜도 여기에 그대로 있어요.",
+    irAlInicio: "맨 위로",
   },
   espacio: {
     errorCarga: "이 공간의 기록장을 불러오지 못했어요.",
@@ -792,6 +802,7 @@ const ar: typeof es = {
     miBitacora: "سجلّ رحلتي",
     vacia: "قصتكم في بدايتها. كل خطوة تخطونها ستُحفظ هنا: كل حالة تغيّرونها، وكل موعد تنقلونه، وكل ملاحظة.",
     pie: "هذه قصتكم كما سُجّلت، يومًا بيوم. لا شيء يُعاد كتابته: إن نقلتم موعدًا، يبقى الموعد الأصلي هنا.",
+    irAlInicio: "العودة إلى الأعلى",
   },
   espacio: {
     errorCarga: "لم نتمكّن من تحميل سجلّ رحلة هذه المساحة.",
@@ -878,6 +889,7 @@ const hi: typeof es = {
     miBitacora: "मेरी यात्रा की लॉगबुक",
     vacia: "आपकी कहानी अभी शुरू ही हुई है। आपका हर कदम यहाँ दर्ज होता जाएगा: हर स्थिति जो आप बदलें, हर तारीख जो आप खिसकाएँ, हर नोट।",
     pie: "यह आपकी कहानी है, ठीक वैसी ही जैसी दर्ज हुई, दिन-ब-दिन। कुछ भी दोबारा नहीं लिखा जाता: अगर आपने कोई तारीख खिसकाई, तो मूल तारीख यहीं रहती है।",
+    irAlInicio: "ऊपर जाएँ",
   },
   espacio: {
     errorCarga: "हम इस क्षेत्र की लॉगबुक लोड नहीं कर सके।",

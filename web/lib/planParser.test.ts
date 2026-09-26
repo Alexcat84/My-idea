@@ -163,3 +163,28 @@ describe("parsearPlan: los marcadores neutros se pintan en el idioma de quien le
     expect(p.secciones[1].titulo).toBe("¿Puede sostenerse tu idea? Los números en simple");
   });
 });
+
+// Decisión del fundador (26 sep 2026): la acción de cada etapa es "**Primera
+// acción:**"; los planes guardados con "**Esta semana:**" siguen leyéndose como
+// el mismo campo (el parser la saca a su caja igual), sin regenerarlos.
+describe("parsearSeccion — Primera acción y el rótulo viejo son el mismo campo", () => {
+  const cuerpo = (rotulo: string) =>
+    ["1. Llama a tres clientes.", "", "**Entregable:** una lista.", "", `${rotulo} Pregúntale a Ana cuánto pagaría.`].join("\n");
+
+  it("el marcador nuevo sale a la caja de la acción", () => {
+    const s = parsearSeccion("Etapa 1: Valida", cuerpo("**Primera acción:**"));
+    expect(s.estaSemana).toBe("Pregúntale a Ana cuánto pagaría.");
+    expect(s.descripcion).not.toContain("Primera acción");
+    expect(s.entregable).toBe("una lista.");
+  });
+
+  it("el viejo da exactamente la misma sección", () => {
+    expect(parsearSeccion("Etapa 1: Valida", cuerpo("**Esta semana:**"))).toEqual(
+      parsearSeccion("Etapa 1: Valida", cuerpo("**Primera acción:**"))
+    );
+  });
+
+  it("también sin tilde", () => {
+    expect(parsearSeccion("Etapa 1: Valida", cuerpo("**Primera accion:**")).estaSemana).toBe("Pregúntale a Ana cuánto pagaría.");
+  });
+});

@@ -251,6 +251,16 @@ describe("ensamblarOffline / extraerTitulo", () => {
     expect(md).toContain("Punto de control: un documento");
   });
 
+  it("cada etapa lleva su Primera acción sin fecha (decisión del fundador, 26 sep 2026)", () => {
+    // A MANO: la etapa 1 (Fundamentos) arranca por su primer paso, "paso uno",
+    // con el marcador neutro; nada de "Esta semana".
+    const md = ensamblarOffline(material, "perfil x", "mi idea original");
+    expect(md).toContain("**Primera acción:** paso uno");
+    expect(md).not.toContain("Esta semana");
+    // En coreano, el marcador también nace neutro (la pantalla lo pinta).
+    expect(ensamblarOffline(material, null, "", "ko")).toContain("**Primera acción:** paso uno");
+  });
+
   it("extraerTitulo toma la primera linea que empieza con '# '", () => {
     expect(extraerTitulo("_Plan completo_\n\n# Mi Plan Real\n\nresto")).toBe("Mi Plan Real");
     expect(extraerTitulo("sin ningun encabezado")).toBeNull();
@@ -409,7 +419,8 @@ describe("finalizarPlan y ensamblarOffline: marcadores neutros (i18n F5)", () =>
     const raw = "# 계획\n\n## 1단계: 수요 확인\n\n**이번 주:** 전화하세요.\n\n" + '===JSON===\n{"familias_tratadas": ["accion_clientes"]}';
     const r = finalizarPlan(raw, prep, ruta, families, "idea", undefined, undefined, "ko");
     expect(r.markdown).toContain("## Etapa 1: 수요 확인");
-    expect(r.markdown).toContain("**Esta semana:** 전화하세요.");
+    // "이번 주" es la traducción del rótulo VIEJO: se guarda con el nuevo (26 sep 2026).
+    expect(r.markdown).toContain("**Primera acción:** 전화하세요.");
     expect(r.markdown.startsWith("_Plan inicial_")).toBe(true);
     expect(r.markdown).toContain("## Lo que este plan aún no cubre");
     // El contenido de lo que falta sí va en el idioma de la idea.

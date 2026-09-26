@@ -1,6 +1,7 @@
 // i18n F2: la prueba de que la extracción no cambió ningún texto visible.
 //
-// Toma el diff del código (web/app, web/lib y web/proxy.ts, sin pruebas ni el
+// Toma el diff del código (web/app, web/lib y web/proxy.ts, sin pruebas, sin los
+// assets sincronizados (prompts de la IA y grafo: no son texto de pantalla) ni el
 // propio lib/i18n) contra la base, junta cada texto que SALIÓ de una línea
 // (cadenas entre comillas, piezas fijas de las plantillas `...${x}...` y texto
 // suelto de JSX) y exige que cada uno esté, letra por letra, en algún texto de
@@ -72,7 +73,7 @@ async function main() {
 
   const diff = execFileSync(
     "git",
-    ["diff", "-U0", base, "--", "app", "lib", "proxy.ts", ":(exclude)*.test.ts", ":(exclude)*.test.tsx", ":(exclude)lib/i18n"],
+    ["diff", "-U0", base, "--", "app", "lib", "proxy.ts", ":(exclude)*.test.ts", ":(exclude)*.test.tsx", ":(exclude)lib/i18n", ":(exclude)lib/assets"],
     { cwd: WEB, maxBuffer: 256 * 1024 * 1024 }
   ).toString();
 

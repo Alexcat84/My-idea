@@ -2,10 +2,17 @@
  * Los MARCADORES NEUTROS del plan (i18n F5, DISENO §5).
  *
  * El markdown de un plan se GUARDA siempre con sus rótulos de estructura en
- * español ("## Etapa N:", "**Pasos:**", "**Entregable:**", "**Esta semana:**",
+ * español ("## Etapa N:", "**Pasos:**", "**Entregable:**", "**Primera acción:**",
  * "**El lunes que viene:**", la sección económica, "_Plan completo_" y "## Lo
  * que este plan aún no cubre"): son las claves que leen checklist.ts,
  * planParser.ts y el redactor. El contenido va en el idioma de la idea.
+ *
+ * Decisión del fundador (26 sep 2026): la acción de cada etapa dejó de ser
+ * "**Esta semana:**" (prometía tiempos imposibles entre etapas secuenciales) y
+ * es "**Primera acción:**", sin fecha. Los planes guardados antes siguen con el
+ * rótulo viejo y no se regeneran: `neutralizarRotulos` lo lleva al nuevo (y
+ * también su traducción) y `pintarRotulos` lo muestra como "Primera acción" en
+ * el idioma de quien lee, español incluido.
  *
  * - `neutralizarRotulos`: si la IA tradujo un rótulo pese a la regla (o lo
  *   escribió con otra puntuación), vuelve a su forma neutra ANTES de guardar.
@@ -23,6 +30,9 @@ import { PLAN_DOCUMENTO } from "./mensajes/planDocumento";
 export interface RotulosPlan {
   /** "## Etapa {{n}}: {{concepto}}" en el idioma. */
   etapaPlantilla: string;
+  /** El rótulo de la acción de cada etapa (el marcador neutro que se guarda). */
+  primeraAccion: string;
+  /** El rótulo VIEJO de esa acción: solo se lee (planes guardados, IA terca). */
   estaSemana: string;
   elLunes: string;
   entregable: string;
@@ -56,6 +66,7 @@ export function rotulosPlan(idioma: Locale): RotulosPlan {
   const d = elegir(PLAN_DOCUMENTO, idioma);
   return {
     etapaPlantilla: m.offline.etapa,
+    primeraAccion: d.primeraAccion,
     estaSemana: d.estaSemana,
     elLunes: m.elLunes,
     entregable: d.entregable,
@@ -91,14 +102,16 @@ function reEtapa(plantilla: string): RegExp {
   );
 }
 
-/** "**This week:**", "**This week**:", "**This week :**" → el resto de la línea. */
+/** "**This week:**", "**This week**:", "**This week :**" → el resto de la línea.
+ * Tolera la "ó" escrita sin tilde ("Primera accion"): el prompt va sin tildes y
+ * la IA a veces lo imita. */
 function reEtiqueta(palabra: string): RegExp {
-  return new RegExp(`^\\*\\*\\s*${escapar(palabra)}\\s*[:：]?\\s*\\*\\*\\s*[:：]?\\s*(.*)$`, "u");
+  return new RegExp(`^\\*\\*\\s*${escapar(palabra).replace(/ó/g, "[oó]")}\\s*[:：]?\\s*\\*\\*\\s*[:：]?\\s*(.*)$`, "u");
 }
 
 interface Lector {
   etapa: RegExp;
-  etiquetas: Array<[RegExp, keyof Pick<RotulosPlan, "estaSemana" | "elLunes" | "entregable" | "pasos">]>;
+  etiquetas: Array<[RegExp, keyof Pick<RotulosPlan, "primeraAccion" | "estaSemana" | "elLunes" | "entregable" | "pasos">]>;
   r: RotulosPlan;
 }
 
@@ -107,7 +120,7 @@ const LECTORES: Lector[] = ACTIVE_LOCALES.map((l) => {
   return {
     r,
     etapa: reEtapa(r.etapaPlantilla),
-    etiquetas: (["estaSemana", "elLunes", "entregable", "pasos"] as const).map((k) => [reEtiqueta(r[k]), k]),
+    etiquetas: (["primeraAccion", "estaSemana", "elLunes", "entregable", "pasos"] as const).map((k) => [reEtiqueta(r[k]), k]),
   };
 });
 
@@ -120,7 +133,9 @@ function neutralizarLinea(linea: string): string {
       // "**Pasos para construir:**" del español se queda como está.
       if (r === NEUTRO && k === "pasos") continue;
       const mk = re.exec(t);
-      if (mk) return `**${NEUTRO[k]}:**${mk[1] ? ` ${mk[1]}` : ""}`;
+      // El rótulo viejo (o su traducción) es el mismo campo: se guarda con el nuevo.
+      const neutro = k === "estaSemana" ? NEUTRO.primeraAccion : NEUTRO[k];
+      if (mk) return `**${neutro}:**${mk[1] ? ` ${mk[1]}` : ""}`;
     }
     if (t === `_${r.etiquetaCompleto}_`) return `_${NEUTRO.etiquetaCompleto}_`;
     if (t === `_${r.etiquetaInicial}_`) return `_${NEUTRO.etiquetaInicial}_`;
@@ -141,20 +156,26 @@ export function neutralizarRotulos(md: string): string {
 const RE_ETAPA_NEUTRA = /^##\s+Etapa\s+(\d+)\s*:\s*(.*)$/;
 const RE_PASOS_NEUTRA = /^\*\*\s*Pasos\b[^*]*?:?\s*\*\*\s*(.*)$/;
 
-/** Pinta los rótulos neutros en el idioma de quien lee. En español, nada. */
+const RE_ESTA_SEMANA_NEUTRA = reEtiqueta(NEUTRO.estaSemana);
+
+/** Pinta los rótulos neutros en el idioma de quien lee. En español, solo el
+ * rótulo viejo "**Esta semana:**" de los planes guardados, que se muestra como
+ * "**Primera acción:**" (decisión del fundador, 26 sep 2026). */
 export function pintarRotulos(md: string, idioma: ActiveLocale): string {
-  if (idioma === LOCALE_BASE) return md;
   const r = rotulosPlan(idioma);
   const etiqueta = (palabra: string, resto: string) => `**${palabra}${r.dosPuntos}**${resto ? ` ${resto}` : ""}`;
   return md
     .split("\n")
     .map((linea) => {
       const t = linea.trim();
+      const mv = RE_ESTA_SEMANA_NEUTRA.exec(t);
+      if (mv) return etiqueta(r.primeraAccion, mv[1]);
+      if (idioma === LOCALE_BASE) return linea;
       const me = RE_ETAPA_NEUTRA.exec(t);
       if (me) return interpolar(r.etapaPlantilla, { n: me[1], concepto: me[2].trim() }).trimEnd();
       const mp = RE_PASOS_NEUTRA.exec(t);
       if (mp) return etiqueta(r.pasos, mp[1]);
-      for (const k of ["estaSemana", "elLunes", "entregable"] as const) {
+      for (const k of ["primeraAccion", "elLunes", "entregable"] as const) {
         const m = reEtiqueta(NEUTRO[k]).exec(t);
         if (m) return etiqueta(r[k], m[1]);
       }

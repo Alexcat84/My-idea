@@ -7,13 +7,13 @@
  *   - Cada "## " del motor es una BARRA-TOPIC colapsada que, al desplegarse,
  *     muestra la data estructurada en contenedores: descripción, Pasos como
  *     una mini-línea de puntos (sutil pero visual), y Entregable en su caja.
- *   - La ACCIÓN concreta ("Esta semana") va al FINAL de cada tramo, nunca al
+ *   - La ACCIÓN concreta ("Primera acción") va al FINAL de cada tramo, nunca al
  *     inicio; y el cierre es un CTA concreto (Empezar / Manos a la Obra).
  * El parser respeta el markdown REAL del motor: no inventa estructura, solo
  * pliega la que viene. Colores: azul piensa, verde ejecuta (REGLAS_Y_TOKENS).
  *
  * i18n F6 (D2): el plan es un documento y sigue el idioma del PROYECTO
- * (`idiomaDocumento`): sus rótulos (Pasos, Entregable, Esta semana, "N
+ * (`idiomaDocumento`): sus rótulos (Pasos, Entregable, Primera acción, "N
  * etapas") van en ese idioma; la barra lateral y los botones, en el de la
  * interfaz. Sin `idiomaDocumento`, todo en el de la interfaz, como antes.
  */
@@ -80,7 +80,9 @@ function CajaEstaSemana({
     >
       <p className="mb-2 flex items-center gap-2.5 text-[11px] font-bold uppercase tracking-[1.4px] text-done">
         <span className="anima-green-pulse h-[9px] w-[9px] rounded-full bg-done" />
-        {etiqueta ?? t.estaSemana}
+        {/* "Primera acción" (decisión del fundador, 26 sep 2026): también en los
+            planes viejos, cuyo rótulo era "Esta semana". */}
+        {etiqueta ?? t.primeraAccion}
       </p>
       <div className={grande ? "text-[17px] font-semibold leading-normal [text-wrap:pretty] sm:text-[19px]" : "text-[13.5px] leading-[1.6] [text-wrap:pretty]"}>
         <Markdown>{contenido}</Markdown>

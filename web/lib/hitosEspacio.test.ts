@@ -55,3 +55,25 @@ describe("hitosDeEspacio: un mundo cuenta desde su diagnóstico", () => {
     expect(core.some((h) => h.tipo === "diagnostico")).toBe(false);
   });
 });
+
+// "TU AVANCE" CONSERVA EL ORDEN CRONOLÓGICO Y MUESTRA LO QUE FALTA (decisión del
+// fundador, 26 sep 2026): es un camino, no un registro. Desde el principio se
+// ven en gris, después del hito actual, todas las etapas que faltan. Una etapa
+// ANTERIOR al hito actual que nunca ocurrió sigue sin dibujarse (no se inventa).
+describe("hitosDeEspacio: las etapas que faltan, en gris, después del hito actual", () => {
+  it("core recién nacido (solo La Chispa): Claridad, Tu Plan y el cierre van pendientes", () => {
+    const h = hitosDeEspacio({ espacio: "core", chispaAt: "2026-01-01T00:00:00Z", claridadAt: null, planAt: null, realizadaAt: null });
+    expect(h.map((x) => x.etiqueta)).toEqual(["La Chispa", "Claridad", "Tu Plan", "El cierre"]);
+    expect(h.map((x) => x.alcanzado)).toEqual([true, false, false, false]);
+    expect(h.map((x) => x.fecha)).toEqual(["2026-01-01T00:00:00Z", null, null, null]);
+  });
+  it("core con Claridad: falta Tu Plan y el cierre", () => {
+    const h = hitosDeEspacio({ espacio: "core", chispaAt: "2026-01-01T00:00:00Z", claridadAt: "2026-01-01T00:05:00Z", planAt: null, realizadaAt: null });
+    expect(h.map((x) => [x.etiqueta, x.alcanzado])).toEqual([["La Chispa", true], ["Claridad", true], ["Tu Plan", false], ["El cierre", false]]);
+  });
+  it("mundo recién activado (solo el diagnóstico): su plan y el cierre van pendientes", () => {
+    const h = hitosDeEspacio({ espacio: "mundo", nombre: "Calidad y Confianza", diagnosticoAt: "2026-03-01T00:00:00Z", planAt: null, cerradoAt: null });
+    expect(h.map((x) => x.alcanzado)).toEqual([true, false, false]);
+    expect(h[1].etiqueta).toBe("El plan de Calidad y Confianza");
+  });
+});

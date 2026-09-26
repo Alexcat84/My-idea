@@ -43,6 +43,7 @@ import {
   type MuestraCumplida,
 } from "@/lib/empaquetado";
 import { armarSnapshot } from "@/lib/engine/snapshotProyecto";
+import { calcularEstaSemana, primerasAccionesDelPlan } from "@/lib/estaSemana";
 import {
   armarRegistro,
   resolverProtegido,
@@ -442,7 +443,9 @@ function FilaItem({
             // solo si la fecha vigente cae en la semana actual; en a-mi-ritmo,
             // atada a `destacado`. Borde verde (no fondo lleno), como fija Design.
             <span className="mt-1 inline-block rounded-full border border-done/30 px-2.5 py-0.5 text-[11.5px] font-semibold text-done">
-              {t.fila.estaSemana}
+              {/* Decisión del fundador (26 sep 2026): a mi ritmo no hay semana que
+                  prometer; la destacada es la primera acción de su etapa. */}
+              {modo === "fechas" ? t.fila.estaSemana : t.fila.primeraAccion}
             </span>
           )}
           {/* AUD-09 M38: a mi ritmo no hay plazos: sin "para el …". */}
@@ -546,6 +549,87 @@ function GrupoEtapas({
         );
       })}
     </div>
+  );
+}
+
+/**
+ * "Esta semana", UNA sola vez y calculado por la app (decisión del fundador,
+ * 26 sep 2026; el cálculo vive en lib/estaSemana.ts): la etapa activa, su
+ * primera acción y, con fechas, lo que cabe en las horas por semana del
+ * espacio. A mi ritmo (o sin modo elegido) es "Tu siguiente paso", sin plazo:
+ * a quien eligió su ritmo no se le habla de calendario (BANCO §3). Nunca
+ * sugiere una tarea de una etapa posterior mientras la activa tenga pendientes.
+ */
+function BloqueSemana({
+  items,
+  planMd,
+  titulos,
+  modo,
+  capacidad,
+  onAbrirDetalle,
+}: {
+  items: ItemChecklistUI[];
+  planMd: string;
+  titulos: Record<number, string>;
+  modo: ModoCamino | null;
+  capacidad: CapacidadSemanal | null;
+  onAbrirDetalle: (item: ItemChecklistUI, tituloEtapa: string) => void;
+}) {
+  const idioma = useIdioma();
+  const t = elegir(MANOS_A_LA_OBRA, idioma);
+  const primerasAcciones = useMemo(() => primerasAccionesDelPlan(planMd), [planMd]);
+  const bloque = calcularEstaSemana({ items, modo, capacidad, primerasAcciones });
+  if (!bloque) return null;
+  const tituloEtapa = titulos[bloque.etapa] ?? interpolar(t.etapaN, { n: bloque.etapa });
+  const porId = new Map(items.map((i) => [i.id, i]));
+  const itemPrimera = bloque.primeraAccion.itemId ? porId.get(bloque.primeraAccion.itemId) : undefined;
+  const chip = capacidad ?? CAPACIDAD_DEFAULT;
+  // Igual que CapacidadDelEspacio: en minúscula dentro de la frase, salvo en alemán.
+  const horas = (idioma as Locale) === "de" ? t.capacidad[chip] : t.capacidad[chip].toLowerCase();
+  const botonTarea = (item: ItemChecklistUI, texto: string, fuerte?: boolean) => (
+    <button
+      onClick={() => onAbrirDetalle(item, tituloEtapa)}
+      title={t.fila.verDetalle}
+      className={"block w-full text-start hover:underline [text-wrap:pretty] " + (fuerte ? "text-[15px] font-semibold text-ink" : "text-[14px] text-ink")}
+    >
+      {texto}
+    </button>
+  );
+  const textoPrimera = bloque.primeraAccion.texto.replace(/\*\*/g, "");
+  return (
+    <section data-bloque-semana className="rounded-panel border border-done/35 bg-surface px-5 py-4">
+      <p className="flex items-center gap-2 text-[11px] font-bold uppercase tracking-[1.2px] text-done">
+        <span className="h-2 w-2 rounded-full bg-done" />
+        {bloque.modo === "semana" ? t.semana.titulo : t.semana.tituloRitmo}
+      </p>
+      <p className="mt-1 text-[13px] text-dim">
+        {interpolar(t.etapaN, { n: bloque.etapa })}
+        {titulos[bloque.etapa] ? ` · ${titulos[bloque.etapa]}` : ""}
+      </p>
+      <p className="mt-3 text-[11px] font-semibold uppercase tracking-[1px] text-dim">{t.semana.empiezaPor}</p>
+      <div className="mt-1">
+        {itemPrimera ? botonTarea(itemPrimera, textoPrimera, true) : <p className="text-[15px] font-semibold text-ink">{textoPrimera}</p>}
+      </div>
+      {bloque.modo === "semana" && bloque.tambienCaben.length > 0 && (
+        <>
+          <p className="mt-3 text-[12.5px] text-dim">{interpolar(t.semana.tambienCabe, { horas })}</p>
+          <ul className="mt-1.5 flex flex-col gap-1.5">
+            {bloque.tambienCaben.map((i) => (
+              <li key={i.id} className="flex items-start gap-2">
+                <span aria-hidden className="mt-[9px] h-1.5 w-1.5 shrink-0 rounded-full bg-done/70" />
+                {botonTarea(i, i.texto)}
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {bloque.modo === "ritmo" && bloque.siguiente && (
+        <>
+          <p className="mt-3 text-[11px] font-semibold uppercase tracking-[1px] text-dim">{t.semana.despues}</p>
+          <div className="mt-1">{botonTarea(bloque.siguiente, bloque.siguiente.texto)}</div>
+        </>
+      )}
+    </section>
   );
 }
 
@@ -2225,6 +2309,16 @@ export function ManosALaObra({
             {t.nucleo.pistaEstado}
           </p>
         )}
+        {core && (
+          <BloqueSemana
+            items={itemsCore}
+            planMd={planMd}
+            titulos={titulosCore}
+            modo={modoCamino}
+            capacidad={capacidadDe(ESPACIO_CORE)}
+            onAbrirDetalle={abrirDetalle}
+          />
+        )}
         {core ? (
           <GrupoEtapas grupo={core} titulos={titulosCore} ocupado={ocupado} modo={modoCamino} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
         ) : (
@@ -2419,6 +2513,15 @@ export function ManosALaObra({
                           onPonerFechas={() => setPospuesto(false)}
                           onRecalcular={() => setRecalcularPendientes(true)}
                           onDescargarIcs={() => descargarIcsDe(tareasMundo, mundo.nombre, mundo.nombre)}
+                        />
+                        {/* "Esta semana" del mundo: una sola vez, en SU hub. */}
+                        <BloqueSemana
+                          items={items}
+                          planMd={mundo.plan?.contenido_md ?? ""}
+                          titulos={titulosMundo}
+                          modo={modoMundo}
+                          capacidad={capacidadDe(mundo.dominio)}
+                          onAbrirDetalle={abrirDetalle}
                         />
                         <GrupoEtapas grupo={grupo} titulos={titulosMundo} ocupado={ocupado} modo={modoMundo} onCambio={aplicarCambio} onAbrirDetalle={abrirDetalle} />
                         {/* P3: la herramienta canónica del mundo, instanciada

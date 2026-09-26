@@ -121,6 +121,14 @@ export function fechaHumanaConAno(iso: string, idioma: Locale = LOCALE_BASE): st
   return diaDeMes(new Date(iso), idioma, true);
 }
 
+/** "septiembre de 2026" — el mes con su año, sin día: el encabezado de mes de
+ * la bitácora en pantalla (decisión del fundador, 26 sep 2026). Local. */
+export function mesConAno(iso: string, idioma: Locale = LOCALE_BASE): string {
+  const t = elegir(FECHAS, idioma);
+  const d = new Date(iso);
+  return interpolar(t.mesAno, { mes: t.meses[d.getMonth()], ano: d.getFullYear() });
+}
+
 /**
  * ¿La fecha cae en la MISMA semana ISO (lunes–domingo) que `ahora`? Local
  * (getDay/getDate): la semana del calendario del usuario, no una ventana UTC.

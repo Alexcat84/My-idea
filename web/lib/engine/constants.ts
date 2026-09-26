@@ -24,8 +24,9 @@ export const ROTULOS_PLAN: readonly string[] = [
   "## Etapa N:",
   "**Pasos:**",
   "**Entregable:**",
-  "**Esta semana:**",
-  "**El lunes que viene:**",
+  // Decisión del fundador (26 sep 2026): la acción de cada etapa, sin fecha.
+  // Los planes viejos con "**Esta semana:**" se leen como el mismo campo.
+  "**Primera acción:**",
   `## ${SECCION_ECONOMICA_TITULO} Los números en simple`,
   "===JSON===",
 ];

@@ -8,7 +8,10 @@
  *    último nodo vivo (o a la meta si hay cierre real) y termina ahí.
  *  - La PUNTA VIVA (el último punto, dónde vas ahora) LATE; si aparece otro
  *    punto, el latido pasa a ese.
- *  - El CIERRE (la meta) solo aparece cuando hay cierre REAL, nunca antes.
+ *  - El CIERRE (la meta, con su celebración) solo aparece cuando hay cierre REAL.
+ *  - Lo que FALTA (decisión del fundador, 26 sep 2026): desde el principio, en
+ *    gris y después del hito actual, todas las etapas que quedan (el cierre
+ *    incluido, sin celebración). El latido sigue en el hito actual.
  * Se mide con getBoundingClientRect (como el knob del selector) para ser robusto
  * a alturas de fila variables. Eje central (a la izquierda en móvil), hitos
  * alternando lados, nodos que toman el color a su altura (azul del pensar → verde
@@ -27,6 +30,8 @@ const VERDE = "#3FB950";
 const AZUL_T = "rgba(77,124,254,0.34)";
 const MEDIO_T = "rgba(63,155,142,0.34)";
 const VERDE_T = "rgba(63,185,80,0.34)";
+/** Lo que falta (decisión del fundador, 26 sep 2026): gris, sin latido. */
+const GRIS = "rgba(255,255,255,0.22)";
 
 function colorNodo(tipo: TipoHito): string {
   if (tipo === "cierre") return VERDE;
@@ -40,9 +45,9 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
   const cierre = hitos.at(-1);
   const arranques = hitos.slice(0, -1);
   const cerrado = cierre?.alcanzado ?? false;
-  // La punta viva: el último arranque, mientras el espacio no ha cerrado (ahí
-  // termina el riel y ahí late).
-  const vivaIndex = cerrado ? -1 : arranques.length - 1;
+  // La punta viva: el último arranque ALCANZADO, mientras el espacio no ha
+  // cerrado (ahí termina el riel y ahí late). Lo que sigue va en gris.
+  const vivaIndex = cerrado ? -1 : arranques.map((h) => h.alcanzado).lastIndexOf(true);
 
   const contRef = useRef<HTMLDivElement | null>(null);
   const primeraRef = useRef<HTMLSpanElement | null>(null);
@@ -101,11 +106,12 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
 
         {arranques.map((h, i) => {
           const izq = i % 2 === 0;
-          const color = colorNodo(h.tipo);
+          const pendiente = !h.alcanzado;
+          const color = pendiente ? GRIS : colorNodo(h.tipo);
           const viva = i === vivaIndex;
-          const esUltima = !cerrado && i === arranques.length - 1;
+          const esUltima = viva;
           return (
-            <div key={i} className="grid grid-cols-[40px_1fr] pb-8 sm:grid-cols-[1fr_4px_1fr] sm:gap-x-7">
+            <div key={i} data-pendiente={pendiente ? "true" : undefined} className="grid grid-cols-[40px_1fr] pb-8 sm:grid-cols-[1fr_4px_1fr] sm:gap-x-7">
               <div className="relative col-start-1 sm:col-start-2">
                 <span
                   ref={(el) => {
@@ -126,12 +132,33 @@ export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {
                 }
               >
                 {h.fecha && <span className="text-[13px] text-dim">{fechaHumanaCorta(h.fecha, idioma)}</span>}
-                <span className="text-[17px] font-bold tracking-[-0.01em] [text-wrap:pretty]">{h.etiqueta}</span>
+                <span className={"text-[17px] font-bold tracking-[-0.01em] [text-wrap:pretty]" + (pendiente ? " text-dim" : "")}>{h.etiqueta}</span>
                 {h.subtitulo && <span className="text-[13.5px] leading-snug text-dim [text-wrap:pretty]">{h.subtitulo}</span>}
               </div>
             </div>
           );
         })}
+
+        {/* el cierre que FALTA: una etapa más, en gris (sin celebración). */}
+        {!cerrado && cierre && (
+          <div data-pendiente="true" className="grid grid-cols-[40px_1fr] pb-2 sm:grid-cols-[1fr_4px_1fr] sm:gap-x-7">
+            <div className="relative col-start-1 sm:col-start-2">
+              <span
+                className="absolute start-5 top-[7px] z-[1] h-[13px] w-[13px] -translate-x-1/2 rtl:translate-x-1/2 rounded-full sm:start-1/2"
+                style={{ background: GRIS, boxShadow: "0 0 0 4px var(--bg)" }}
+              />
+            </div>
+            <div
+              className={
+                "col-start-2 flex min-w-0 flex-col gap-[3px] " +
+                (arranques.length % 2 === 0 ? "sm:col-start-1 sm:items-end sm:text-end" : "sm:col-start-3 sm:items-start sm:text-start")
+              }
+            >
+              <span className="text-[17px] font-bold tracking-[-0.01em] text-dim [text-wrap:pretty]">{cierre.etiqueta}</span>
+              {cierre.subtitulo && <span className="text-[13.5px] leading-snug text-dim [text-wrap:pretty]">{cierre.subtitulo}</span>}
+            </div>
+          </div>
+        )}
 
         {/* la META: SOLO cuando hay cierre REAL (nunca antes). */}
         {cerrado && cierre && (

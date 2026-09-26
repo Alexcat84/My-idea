@@ -4,7 +4,9 @@
  * Formato real de los planes (verificado contra examples/fase2_9_plan_macetas.md
  * y el plan de la mochila WiFi): etapas "## Etapa N: título", pasos como
  * párrafos numerados "1. ..." (a veces con **negrita** inicial), y el bloque
- * "**Esta semana:** ..." una vez por etapa.
+ * "**Primera acción:** ..." una vez por etapa (decisión del fundador, 26 sep
+ * 2026; los planes guardados antes traen "**Esta semana:** ...", que se lee
+ * como el mismo campo: no se regeneran).
  */
 import type { ChecklistEstado } from "../dbContract";
 import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
@@ -14,12 +16,15 @@ export interface ItemDerivado {
   etapa: number;
   orden: number;
   texto: string;
-  destacado: boolean; // true = "Esta semana"
+  destacado: boolean; // true = la "Primera acción" de la etapa (antes "Esta semana")
 }
 
 const RE_ETAPA = /^##\s+Etapa\s+(\d+)\s*:/;
 const RE_PASO = /^(\d+)\.\s+(.*)$/;
-const RE_SEMANA = /^\*\*Esta semana:?\*\*\s*(.*)$/i;
+/** La primera acción de una etapa: el marcador nuevo ("**Primera acción:**",
+ * también sin tilde) o el viejo ("**Esta semana:**") de los planes guardados.
+ * Una sola expresión para los dos: son el mismo campo. */
+export const RE_PRIMERA_ACCION = /^\*\*(?:Primera acci[oó]n|Esta semana):?\*\*\s*(.*)$/i;
 
 /** Primera oración del párrafo, sin markdown de énfasis, tope 180 chars. */
 function resumirPaso(cuerpo: string): string {
@@ -66,14 +71,14 @@ export function derivarChecklist(markdownPlan: string, idioma: Locale = LOCALE_B
     }
     if (etapaActual === 0) continue; // intro y secciones fuera de etapas
 
-    const mSemana = RE_SEMANA.exec(linea.trim());
+    const mSemana = RE_PRIMERA_ACCION.exec(linea.trim());
     if (mSemana) {
       cerrarPaso();
       orden += 1;
       items.push({
         etapa: etapaActual,
         orden,
-        texto: resumirPaso(mSemana[1] || elegir(MOTOR, idioma).checklistEstaSemana),
+        texto: resumirPaso(mSemana[1] || elegir(MOTOR, idioma).checklistPrimeraAccion),
         destacado: true,
       });
       continue;

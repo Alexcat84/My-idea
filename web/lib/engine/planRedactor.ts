@@ -571,6 +571,9 @@ export function ensamblarOffline(
     out.push(interpolar(etapaNeutra, { n: i + 1, concepto: m.concepto }));
     m.pasos.forEach((p, j) => out.push(`  ${i + 1}.${j + 1} ${p}`));
     if (m.entregable) out.push(`  ${interpolar(t.puntoDeControl, { entregable: m.entregable })}`);
+    // Decisión del fundador (26 sep 2026): cada etapa lleva su Primera acción,
+    // sin fecha: su primer paso, con el marcador neutro (paridad con Python).
+    if (m.pasos.length > 0) out.push(`**${rotulosPlan(LOCALE_BASE).primeraAccion}:** ${m.pasos[0]}`);
     out.push("");
   });
   return out.join("\n");

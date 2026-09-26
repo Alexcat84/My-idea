@@ -521,7 +521,9 @@ describe("POST /api/session/[id]/plan: el idioma de la idea (i18n F5)", () => {
     expect(sistema).toHaveLength(2);
     expect(sistema[1].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
     expect(sistema[1].text).toContain("«## Etapa N:»");
-    expect(sistema[1].text).toContain("«**Esta semana:**»");
+    // Decisión del fundador (26 sep 2026): la acción de cada etapa es "Primera acción".
+    expect(sistema[1].text).toContain("«**Primera acción:**»");
+    expect(sistema[1].text).not.toContain("Esta semana");
   });
 
   it("sesión de antes de F5 (sin idioma): un solo bloque, como siempre", async () => {

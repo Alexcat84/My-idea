@@ -125,3 +125,38 @@ describe("derivarChecklist contra el plan real de macetas (fase 2.9)", () => {
     }
   });
 });
+
+// Decisión del fundador (26 sep 2026): cada etapa lleva "**Primera acción:**"
+// (sin fecha) en vez de "**Esta semana:**". Los planes ya guardados siguen con
+// el marcador viejo y NO se regeneran: los dos son el mismo campo.
+// Cálculo manual: el MISMO plan de arriba con el marcador nuevo da los mismos
+// 7 ítems, con los mismos textos, órdenes y destacados (3.º de la etapa 1 y
+// 4.º de la etapa 2).
+describe("derivarChecklist: el marcador nuevo y el viejo son el mismo campo", () => {
+  const nuevo = PLAN.replaceAll("**Esta semana:**", "**Primera acción:**");
+
+  it("el plan con **Primera acción:** deriva exactamente lo mismo que el viejo", () => {
+    expect(nuevo).not.toContain("Esta semana");
+    expect(derivarChecklist(nuevo)).toEqual(derivarChecklist(PLAN));
+  });
+
+  it("el plan viejo sigue dando sus 7 ítems con el destacado en su sitio", () => {
+    const viejo = derivarChecklist(PLAN);
+    expect(viejo).toHaveLength(7);
+    expect(viejo.filter((i) => i.destacado).map((i) => [i.etapa, i.orden])).toEqual([
+      [1, 3],
+      [2, 4],
+    ]);
+  });
+
+  it("acepta la IA que escribió 'accion' sin tilde", () => {
+    const items = derivarChecklist("## Etapa 1: X\n\n**Primera accion:** Llama a Ana.");
+    expect(items).toEqual([{ etapa: 1, orden: 1, texto: "Llama a Ana.", destacado: true }]);
+  });
+
+  it("el marcador vacío toma la palabra del catálogo: Primera acción", () => {
+    const items = derivarChecklist("## Etapa 1: X\n\n**Primera acción:**");
+    expect(items[0].texto).toBe("Primera acción");
+    expect(derivarChecklist("## Etapa 1: X\n\n**Esta semana:**")[0].texto).toBe("Primera acción");
+  });
+});

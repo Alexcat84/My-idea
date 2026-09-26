@@ -74,8 +74,9 @@ Rama `i18n`. Diseño: `DISENO.md §3.3, §5` y las decisiones D2 y D3. Añadidos
 
 ### Los marcadores neutros (3)
 - El plan se **guarda** siempre con sus rótulos de estructura en español: "## Etapa N:",
-  "**Pasos:**", "**Entregable:**", "**Esta semana:**", "**El lunes que viene:**", la sección de
-  números, "_Plan completo_" y "## Lo que este plan aún no cubre". Son las claves que leen el
+  "**Pasos:**", "**Entregable:**", "**Primera acción:**" (desde el 26 sep 2026; los planes viejos
+  traen "**Esta semana:**", que se lee como el mismo campo y se pinta como "Primera acción"), la
+  sección de números, "_Plan completo_" y "## Lo que este plan aún no cubre". Son las claves que leen el
   checklist y la pantalla. El contenido va en el idioma de la idea.
 - Si la IA traduce un rótulo, `neutralizarRotulos` lo devuelve a la forma neutra antes de guardar.
   La pantalla lo **pinta** en el idioma de quien lee (`pintarRotulos`), con las palabras de los

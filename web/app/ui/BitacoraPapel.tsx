@@ -13,7 +13,7 @@
  */
 import { partirMotivo } from "@/lib/i18n/comillas";
 import { fechaHumanaConAno, fechaInputLocal } from "@/lib/fechas";
-import type { EntradaBitacora } from "@/lib/bitacoraCliente";
+import { ordenCronologico, type EntradaBitacora } from "@/lib/bitacoraCliente";
 import { elegir } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";
 import { interpolarEn } from "@/lib/i18n/elision";
@@ -72,7 +72,10 @@ function conMotivo(texto: string, color: string) {
 
 /** El CONTENIDO de la bitácora (sin andamio), para componerlo en el Expediente
  * o como documento suelto. */
-export function ContenidoBitacora({ entradas }: { entradas: EntradaBitacora[] }) {
+export function ContenidoBitacora({ entradas: recibidas }: { entradas: EntradaBitacora[] }) {
+  // Papel (PDF de la bitácora y secuencia del Expediente): siempre cronológico,
+  // del más antiguo al más reciente (decisión del fundador, 26 sep 2026).
+  const entradas = ordenCronologico(recibidas);
   const idioma = useIdioma();
   const t = elegir(DOCUMENTOS_PAPEL, idioma).bitacora;
   const filas = aFilas(entradas);

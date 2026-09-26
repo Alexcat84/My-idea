@@ -332,6 +332,41 @@ function hora(iso: string): string {
   return `${String(d.getHours()).padStart(2, "0")}:${String(d.getMinutes()).padStart(2, "0")}`;
 }
 
+/**
+ * El ORDEN de los DOCUMENTOS (decisión del fundador, 26 sep 2026): cronológico,
+ * del más antiguo al más reciente, sin importar cómo lleguen las entradas. Copia
+ * (no toca el arreglo de entrada); el sort es estable, así que a igual instante
+ * se conserva el orden de construcción. Lo usan el .md, el papel del PDF y la
+ * secuencia del Expediente.
+ */
+export function ordenCronologico(entradas: EntradaBitacora[]): EntradaBitacora[] {
+  return [...entradas].sort((a, b) => a.fecha.localeCompare(b.fecha));
+}
+
+/** Un mes de la bitácora en PANTALLA: `fecha` es la de su primera entrada (para
+ * el encabezado, `mesConAno`); `entradas`, de la más reciente a la más antigua. */
+export interface MesBitacora {
+  clave: string;
+  fecha: string;
+  entradas: EntradaBitacora[];
+}
+
+/**
+ * El orden de la PANTALLA (decisión del fundador, 26 sep 2026): lo más reciente
+ * ARRIBA, agrupado por mes (local, año incluido: enero de 2025 y enero de 2026
+ * son dos grupos). Es el inverso exacto del orden cronológico de los documentos.
+ */
+export function mesesDeBitacora(entradas: EntradaBitacora[]): MesBitacora[] {
+  const meses: MesBitacora[] = [];
+  for (const e of ordenCronologico(entradas).reverse()) {
+    const clave = fechaInputLocal(new Date(e.fecha)).slice(0, 7);
+    const ultimo = meses[meses.length - 1];
+    if (ultimo && ultimo.clave === clave) ultimo.entradas.push(e);
+    else meses.push({ clave, fecha: e.fecha, entradas: [e] });
+  }
+  return meses;
+}
+
 /** El cuerpo de la secuencia (agrupado por día), sin portada: lo comparten el
  * documento suelto y la sección del expediente. La hora solo aparece en los
  * días con 2+ entradas (regla del historial). `nivel` es el de los subtítulos
@@ -342,6 +377,8 @@ export function bitacoraCuerpo(
   etiquetar?: (e: EntradaBitacora) => string | null,
   idioma: Locale = LOCALE_BASE,
 ): string[] {
+  // Documento: siempre cronológico ascendente (decisión del fundador, 26 sep 2026).
+  entradas = ordenCronologico(entradas);
   const l: string[] = [];
   const almo = "#".repeat(nivel);
   const porDia = new Map<string, number>();
@@ -379,6 +416,8 @@ export function bitacoraMarkdown(
   idioma: Locale = LOCALE_BASE,
 ): string {
   const t = elegir(BITACORA, idioma).documento;
+  // Documento: el rango va del más antiguo al más reciente (26 sep 2026).
+  entradas = ordenCronologico(entradas);
   const l: string[] = [];
   // `titulo` sobreescribe el H1 (Fase 3: la bitácora POR ESPACIO se titula
   // "Bitácora de {espacio}"); sin él, el título de siempre.

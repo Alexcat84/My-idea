@@ -43,8 +43,8 @@ const es = {
     L: "una jornada",
     XL: "varios días",
   },
-  /** checklist.ts: la tarea cuando el bloque "Esta semana" viene sin texto. */
-  checklistEstaSemana: "Esta semana",
+  /** checklist.ts: la tarea cuando el bloque "Primera acción" (o el viejo "Esta semana") viene sin texto. */
+  checklistPrimeraAccion: "Primera acción",
   /** snapshotProyecto.ts ERROR_SNAPSHOT_ILEGIBLE. */
   errorSnapshotIlegible: "no pudimos leer las actividades de tu plan; intenta de nuevo en un momento",
 };
@@ -78,7 +78,7 @@ const en: typeof es = {
     L: "a full day",
     XL: "several days",
   },
-  checklistEstaSemana: "This week",
+  checklistPrimeraAccion: "First action",
   errorSnapshotIlegible: "we couldn't read your plan's activities; try again in a moment",
 };
 
@@ -108,7 +108,7 @@ const fr: typeof es = {
     L: "une journée",
     XL: "plusieurs jours",
   },
-  checklistEstaSemana: "Cette semaine",
+  checklistPrimeraAccion: "Première action",
   errorSnapshotIlegible: "nous n'avons pas pu lire les activités de ton plan; réessaie dans un instant",
 };
 
@@ -138,7 +138,7 @@ const pt: typeof es = {
     L: "um dia de trabalho",
     XL: "vários dias",
   },
-  checklistEstaSemana: "Esta semana",
+  checklistPrimeraAccion: "Primeira ação",
   errorSnapshotIlegible: "não conseguimos ler as atividades do seu plano; tente de novo daqui a pouco",
 };
 
@@ -168,7 +168,7 @@ const de: typeof es = {
     L: "ein ganzer Tag",
     XL: "mehrere Tage",
   },
-  checklistEstaSemana: "Diese Woche",
+  checklistPrimeraAccion: "Erster Schritt",
   errorSnapshotIlegible: "wir konnten die Aufgaben deines Plans nicht lesen; versuch es gleich noch einmal",
 };
 
@@ -198,7 +198,7 @@ const it: typeof es = {
     L: "una giornata",
     XL: "diversi giorni",
   },
-  checklistEstaSemana: "Questa settimana",
+  checklistPrimeraAccion: "Prima azione",
   errorSnapshotIlegible: "non siamo riusciti a leggere le attività del tuo piano; riprova tra un momento",
 };
 
@@ -228,7 +228,7 @@ const ja: typeof es = {
     L: "丸1日",
     XL: "数日",
   },
-  checklistEstaSemana: "今週",
+  checklistPrimeraAccion: "最初のアクション",
   errorSnapshotIlegible: "プランのアクションを読み込めませんでした。少し待ってからもう一度お試しください",
 };
 
@@ -258,7 +258,7 @@ const zh: typeof es = {
     L: "一整天",
     XL: "好几天",
   },
-  checklistEstaSemana: "本周",
+  checklistPrimeraAccion: "第一项行动",
   errorSnapshotIlegible: "我们没能读取你计划中的活动，请稍后再试",
 };
 
@@ -288,7 +288,7 @@ const ko: typeof es = {
     L: "하루 종일",
     XL: "며칠",
   },
-  checklistEstaSemana: "이번 주",
+  checklistPrimeraAccion: "첫 실행 항목",
   errorSnapshotIlegible: "계획의 활동을 읽지 못했어요. 잠시 후 다시 시도해 주세요",
 };
 
@@ -318,7 +318,7 @@ const ar: typeof es = {
     L: "يوم عمل كامل",
     XL: "عدة أيام",
   },
-  checklistEstaSemana: "هذا الأسبوع",
+  checklistPrimeraAccion: "الإجراء الأول",
   errorSnapshotIlegible: "لم نتمكّن من قراءة مهام خطتكم؛ حاولوا مجددًا بعد لحظات",
 };
 
@@ -348,7 +348,7 @@ const hi: typeof es = {
     L: "पूरा एक दिन",
     XL: "कई दिन",
   },
-  checklistEstaSemana: "इस हफ़्ते",
+  checklistPrimeraAccion: "पहला कदम",
   errorSnapshotIlegible: "हम आपकी योजना की गतिविधियाँ नहीं पढ़ सके; थोड़ी देर में फिर से कोशिश करें",
 };
 

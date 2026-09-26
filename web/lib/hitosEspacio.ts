@@ -7,7 +7,8 @@
  * Cada espacio cuenta SU historia desde su nacimiento:
  *  - core:  La Chispa → Claridad → Tu Plan → Realizada
  *  - mundo: Tu diagnóstico → Su Plan → Cerrado
- * Los hitos de arranque se muestran solo si YA ocurrieron (traen fecha); el
+ * Los hitos que ya ocurrieron traen su fecha; los que faltan DESPUÉS del hito
+ * actual van pendientes (gris, sin fecha; decisión del fundador, 26 sep 2026). El
  * cierre se muestra SIEMPRE como destino: alcanzado si ya cerró, pendiente (gris)
  * si no. Los hitos de un espacio NO incluyen los de otro (ley de lib/espacios).
  */
@@ -48,20 +49,26 @@ export type EntradaAvance = EntradaAvanceCore | EntradaAvanceMundo;
 export function hitosDeEspacio(entrada: EntradaAvance, idioma: Locale = LOCALE_BASE): HitoEspacio[] {
   const t = elegir(HITOS, idioma);
   const hitos: HitoEspacio[] = [];
-  const arranque = (tipo: TipoHito, etiqueta: string, subtitulo: string, fecha?: string | null) => {
-    // Solo si ya ocurrió (trae fecha): no se dibuja un arranque sin fecha, ni se
-    // inventa.
-    if (fecha) hitos.push({ tipo, etiqueta, subtitulo, fecha, alcanzado: true });
-  };
-
-  if (entrada.espacio === "core") {
-    arranque("chispa", t.core.chispa, t.core.chispaSub, entrada.chispaAt);
-    arranque("claridad", t.core.claridad, t.core.claridadSub, entrada.claridadAt);
-    arranque("plan", t.core.plan, t.core.planSub, entrada.planAt);
-  } else {
-    arranque("diagnostico", t.mundo.diagnostico, t.mundo.diagnosticoSub, entrada.diagnosticoAt);
-    arranque("plan", interpolar(t.mundo.plan, { mundo: entrada.nombre }), t.mundo.planSub, entrada.planAt);
-  }
+  const etapas: Array<{ tipo: TipoHito; etiqueta: string; subtitulo: string; fecha?: string | null }> =
+    entrada.espacio === "core"
+      ? [
+          { tipo: "chispa", etiqueta: t.core.chispa, subtitulo: t.core.chispaSub, fecha: entrada.chispaAt },
+          { tipo: "claridad", etiqueta: t.core.claridad, subtitulo: t.core.claridadSub, fecha: entrada.claridadAt },
+          { tipo: "plan", etiqueta: t.core.plan, subtitulo: t.core.planSub, fecha: entrada.planAt },
+        ]
+      : [
+          { tipo: "diagnostico", etiqueta: t.mundo.diagnostico, subtitulo: t.mundo.diagnosticoSub, fecha: entrada.diagnosticoAt },
+          { tipo: "plan", etiqueta: interpolar(t.mundo.plan, { mundo: entrada.nombre }), subtitulo: t.mundo.planSub, fecha: entrada.planAt },
+        ];
+  // "Tu avance" es un camino (decisión del fundador, 26 sep 2026): lo que ya
+  // ocurrió, con su fecha, y DESPUÉS del hito actual, en gris, todo lo que falta.
+  // Una etapa ANTERIOR al hito actual que nunca ocurrió no se dibuja: no se
+  // inventa un pasado.
+  const ultimaAlcanzada = etapas.map((e) => Boolean(e.fecha)).lastIndexOf(true);
+  etapas.forEach((e, i) => {
+    if (e.fecha) hitos.push({ tipo: e.tipo, etiqueta: e.etiqueta, subtitulo: e.subtitulo, fecha: e.fecha, alcanzado: true });
+    else if (i > ultimaAlcanzada) hitos.push({ tipo: e.tipo, etiqueta: e.etiqueta, subtitulo: e.subtitulo, fecha: null, alcanzado: false });
+  });
 
   // El cierre: el destino. Siempre presente; verde si ya cerró, gris si falta.
   const cierreAt = entrada.espacio === "core" ? entrada.realizadaAt : entrada.cerradoAt;

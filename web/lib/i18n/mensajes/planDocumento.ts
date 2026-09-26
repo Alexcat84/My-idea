@@ -5,7 +5,12 @@
 import type { PorIdioma } from "../config";
 
 const es = {
+  /** El rótulo viejo de la acción de cada etapa: ya no se pinta (los planes
+   * viejos se muestran con primeraAccion); vive para que la red del
+   * diagnóstico de mundo reconozca "esta semana" en los once idiomas. */
   estaSemana: "Esta semana",
+  /** El rótulo de la acción de cada etapa (decisión del fundador, 26 sep 2026). */
+  primeraAccion: "Primera acción",
   empezarConEsto: "Empezar con esto",
   pasos: "Pasos",
   entregable: "Entregable",
@@ -25,6 +30,7 @@ const es = {
 
 const en: typeof es = {
   estaSemana: "This week",
+  primeraAccion: "First action",
   empezarConEsto: "Start with this",
   pasos: "Steps",
   entregable: "Deliverable",
@@ -43,6 +49,7 @@ const en: typeof es = {
 
 const fr: typeof es = {
   estaSemana: "Cette semaine",
+  primeraAccion: "Première action",
   empezarConEsto: "Commencer par ceci",
   pasos: "Marche à suivre",
   entregable: "Livrable",
@@ -63,6 +70,7 @@ const fr: typeof es = {
 
 const pt: typeof es = {
   estaSemana: "Esta semana",
+  primeraAccion: "Primeira ação",
   empezarConEsto: "Começar por isto",
   pasos: "Passos",
   entregable: "Entrega",
@@ -83,6 +91,7 @@ const pt: typeof es = {
 
 const de: typeof es = {
   estaSemana: "Diese Woche",
+  primeraAccion: "Erster Schritt",
   empezarConEsto: "Damit anfangen",
   pasos: "Vorgehen",
   entregable: "Ergebnis",
@@ -103,6 +112,7 @@ const de: typeof es = {
 
 const it: typeof es = {
   estaSemana: "Questa settimana",
+  primeraAccion: "Prima azione",
   empezarConEsto: "Comincia da qui",
   pasos: "Passi",
   entregable: "Risultato atteso",
@@ -123,6 +133,7 @@ const it: typeof es = {
 
 const ja: typeof es = {
   estaSemana: "今週",
+  primeraAccion: "最初のアクション",
   empezarConEsto: "まずはこれから",
   pasos: "ステップ",
   entregable: "成果物",
@@ -143,6 +154,7 @@ const ja: typeof es = {
 
 const zh: typeof es = {
   estaSemana: "本周",
+  primeraAccion: "第一项行动",
   empezarConEsto: "从这里开始",
   pasos: "步骤",
   entregable: "交付成果",
@@ -163,6 +175,7 @@ const zh: typeof es = {
 
 const ko: typeof es = {
   estaSemana: "이번 주",
+  primeraAccion: "첫 실행 항목",
   empezarConEsto: "이것부터 시작하기",
   pasos: "진행 순서",
   entregable: "결과물",
@@ -183,6 +196,7 @@ const ko: typeof es = {
 
 const ar: typeof es = {
   estaSemana: "هذا الأسبوع",
+  primeraAccion: "الإجراء الأول",
   empezarConEsto: "ابدؤوا بهذا",
   pasos: "الخطوات",
   entregable: "المُخرَج",
@@ -203,6 +217,7 @@ const ar: typeof es = {
 
 const hi: typeof es = {
   estaSemana: "इस हफ़्ते",
+  primeraAccion: "पहला कदम",
   empezarConEsto: "इससे शुरू करें",
   pasos: "कैसे करें",
   entregable: "नतीजा",

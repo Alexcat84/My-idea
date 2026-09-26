@@ -5,7 +5,7 @@
  * que viene, y rescata la que el modelo emitio en prosa densa.
  *
  * i18n F2: los literales en español de las expresiones regulares ("Etapa",
- * "Esta semana", "El lunes", "Entregable", "Pasos", "_Plan completo_", "Este
+ * "Primera acción", "Esta semana", "El lunes", "Entregable", "Pasos", "_Plan completo_", "Este
  * plan se alimentó") son CLAVES DE LECTURA del markdown que escribe el motor,
  * no texto de pantalla: no van al catálogo. Solo va la etiqueta que el parser
  * agrega ("Los números que necesitas").
@@ -31,6 +31,10 @@ export interface Seccion {
   descripcion: string;
   bloquesPasos: BloquePasos[];
   entregable: string | null;
+  /** La acción concreta del tramo: "**Primera acción:**" (decisión del
+   * fundador, 26 sep 2026) o, en los planes guardados antes, "**Esta
+   * semana:**"; en la sección de números, "**El lunes que viene:**". El nombre
+   * del campo se quedó por compatibilidad; la pantalla lo rotula "Primera acción". */
   estaSemana: string | null;
 }
 
@@ -72,13 +76,14 @@ export function parsearSeccion(tituloCrudo: string, contenido: string, idioma: L
 
   let cuerpo = contenido.replace(/\n---\s*$/g, "\n").trim();
 
-  // 1) La acción concreta del tramo (va al final): "Esta semana" o su
+  // 1) La acción concreta del tramo (va al final): "Primera acción" (o el
+  //    rótulo viejo "Esta semana" de los planes guardados, el mismo campo) o su
   //    equivalente en la sección de números ("El lunes que viene").
-  const RE_SEMANA = /\*\*(?:Esta semana|El lunes(?: que viene)?):?\*\*[\s\S]*?(?=\n\s*\n|$)/i;
+  const RE_SEMANA = /\*\*(?:Primera acci[oó]n|Esta semana|El lunes(?: que viene)?):?\*\*[\s\S]*?(?=\n\s*\n|$)/i;
   const es = recortarBloque(cuerpo, RE_SEMANA);
   cuerpo = es.resto;
   let estaSemana = es.valor
-    ? es.valor.replace(/^\*\*(?:Esta semana|El lunes(?: que viene)?):?\*\*\s*/i, "").trim()
+    ? es.valor.replace(/^\*\*(?:Primera acci[oó]n|Esta semana|El lunes(?: que viene)?):?\*\*\s*/i, "").trim()
     : null;
 
   // 2) "Entregable" — el artefacto que queda.
@@ -133,7 +138,7 @@ export function parsearSeccion(tituloCrudo: string, contenido: string, idioma: L
   //    ("**Nota crítica:**") jamás dispara esto.
   if (tipo === "cierre") {
     if (!estaSemana) {
-      const m = descripcion.match(/(?:^|\.\s+)((?:El lunes|Esta semana)\b[\s\S]*)$/i);
+      const m = descripcion.match(/(?:^|\.\s+)((?:El lunes|Esta semana|Primera acci[oó]n)(?![\p{L}])[\s\S]*)$/iu);
       if (m && m[1].trim().length > 30) {
         estaSemana = m[1].trim();
         descripcion = descripcion.slice(0, (m.index ?? 0) + (m[0].length - m[1].length)).trim();
