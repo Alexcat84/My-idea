@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Define una política interna que prohíba represalias contra quien denuncia un problema de seguridad",
     "Cuéntale a las personas que trabajan contigo cuál es este derecho y cómo usarlo",
-    "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que suele ser corto y contarse en días calendario",
+    "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que es corto: en Estados Unidos, 30 días desde la represalia si es por seguridad y salud laboral (ley OSH, sección 11(c)), y hasta 180 días según otras leyes federales; verifica el plazo vigente en tu país",
     "No tomes ninguna acción adversa contra quien denunció un problema de seguridad, como despedirlo, bajarlo de puesto, sancionarlo o acusarlo falsamente de bajo rendimiento"
   ],
   "entregable_esperado": "Política escrita de no represalias y un canal simple para que cualquiera pueda reportar sin miedo",
@@ -58,6 +58,23 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro (LEGAL_CIFRA). Es materia legal: el consejo de documentar las sanciones para desligarlas de la denuncia no esta en el libro y puede leerse como forma de justificar una represalia. El libro cuenta sancionar ('Disciplining') y acusar falsamente de bajo rendimiento entre las represalias prohibidas (L1857-L1859). Quitarlo sin mas dejaria el paso vacio, asi que se reemplaza por lo que dice el libro. No aparece en otros campos.",
       "indice": 3,
       "auditoria": "tramo1 SB2-084"
+    },
+    {
+      "id": "saneamiento-t1-p03",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que suele ser corto y contarse en días calendario",
+      "texto_nuevo": "Si alguien de tu equipo cree haber sufrido represalias, debe contactar de inmediato a la autoridad de tu mercado y presentar la queja dentro del plazo legal, que es corto: en Estados Unidos, 30 días desde la represalia si es por seguridad y salud laboral (ley OSH, sección 11(c)), y hasta 180 días según otras leyes federales; verifica el plazo vigente en tu país",
+      "cita": {
+        "libro": "FUENTE OFICIAL: Occupational Safety and Health Act, seccion 11(c)(2) (29 U.S.C. 660(c)(2)); 29 CFR 1977.15(d)(1). Otros plazos federales",
+        "fichero": "https://www.osha.gov/laws-regs/regulations/standardnumber/1977/1977.15 ; https://www.whistleblowers.gov/complaint_page",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "Section 11(c)(2) provides that an employee who believes that he has been discriminated against in violation of section 11(c)(1) \"may, within 30 days after such violation occurs,\" file a complaint with the Secretary of Labor."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El nodo no da cifra ni jurisdiccion, asi que el plazo queda a medias. La fuente oficial fija 30 dias para la seccion 11(c) de la ley OSH, que es la que encaja con el mundo health_safety. whistleblowers.gov (OSHA) lista plazos de 30, 60, 90 y 180 dias segun la ley y dice literalmente: \"The time frame",
+      "indice": 2,
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
     }
   ]
 }

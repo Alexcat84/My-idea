@@ -52,6 +52,7 @@ import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { evaluacionBrecha } from "@/lib/engine/evaluacionBrecha";
 import { puedeRePreview } from "@/lib/engine/previewMundos";
 import { cargarGrafo, cargarPreguntasCache, etiquetaArbol, obtenerPregunta, resolverId } from "@/lib/engine/graph";
+import { avisosNodo } from "@/lib/engine/avisos";
 import { estadoInicial } from "@/lib/engine/recorrido";
 import { identidadLimite, mensajeFusible, mensajeLimite, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "@/lib/rateLimit";
 import { createClient } from "@/lib/supabase/server";
@@ -301,6 +302,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const puerta = {
     id: semillaId,
     etiqueta: etiquetaArbol(semillaId, graph, idioma),
+    avisos: avisosNodo(semillaId, graph, idioma),
     modo: "conversado" as const,
   };
   // P2b: en un mundo de protección la primera pregunta ya se ancla a una

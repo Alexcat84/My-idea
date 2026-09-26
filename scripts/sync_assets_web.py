@@ -29,6 +29,10 @@ ASSETS = {
     "preguntas_cache.json": BASE / "engine" / "preguntas_cache.json",
     "node_families.json": BASE / "engine" / "node_families.json",
     "entry_seeds.json": BASE / "dataset" / "metadata" / "entry_seeds.json",
+    # Las listas curadas de los avisos de la tarjeta (decision del fundador del 26 sep 2026,
+    # saneamiento tanda 1; docs/POLITICA_MARCO_PAIS.md): web/lib/engine/avisos.ts las lee.
+    "jurisdiccion.json": BASE / "dataset" / "metadata" / "jurisdiccion.json",
+    "vigencia.json": BASE / "dataset" / "metadata" / "vigencia.json",
 }
 
 PROMPTS_A_EXPORTAR = [

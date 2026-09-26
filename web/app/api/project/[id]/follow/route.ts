@@ -49,6 +49,7 @@ import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
 import { conceptoDelPlan, PRECIOS } from "@/lib/precios";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
+import { avisosNodo } from "@/lib/engine/avisos";
 import { analyticsDeMundo, calcularAnalytics } from "@/lib/analytics";
 import { cargarEntradaAnalytics, LecturaFallidaError, mensajeLecturaFallida } from "@/lib/analyticsEntrada";
 import { construirBloqueRealidad, construirBloqueRealidadMundo } from "@/lib/engine/bloqueRealidad";
@@ -413,6 +414,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   const nodoPuerta = {
     id: puerta.puertaId,
     etiqueta: etiquetaArbol(puerta.puertaId, graph, idioma),
+    avisos: avisosNodo(puerta.puertaId, graph, idioma),
     modo: "conversado" as const,
   };
 

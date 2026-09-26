@@ -23,6 +23,7 @@ vi.mock("../compass", () => ({
 import { usoVacio } from "../costmeter";
 import { cargarFamilies } from "../readiness";
 import { cargarGrafo, cargarPreguntasCache } from "./graph";
+import { avisosNodo } from "./avisos";
 import { avanzarTurno, estadoInicial } from "./recorrido";
 
 const graph = cargarGrafo();
@@ -90,14 +91,18 @@ describe("avanzarTurno: fase esperando_respuesta (orquestacion, interpretarMulti
     expect(r.estado.modos).toEqual(["conversado", "conversado"]);
     expect(r.pregunta).toBe("¿que capas has mapeado?");
     // El nodo que viaja al cliente lleva SOLO su etiqueta de cara: el
-    // titulo_concepto se queda adentro (decision del fundador, jul 2026).
+    // titulo_concepto se queda adentro (decision del fundador, jul 2026). Desde
+    // el 26 sep 2026 lleva tambien sus avisos de jurisdiccion y vigencia
+    // (lib/engine/avisos.ts), que son textos de la casa y nunca el titulo.
     expect(r.nodosNuevos).toEqual([
       {
         id: nid,
         etiqueta: graph[nid].etiqueta_arbol ?? graph[nid].titulo_concepto,
+        avisos: avisosNodo(nid, graph),
         modo: "conversado",
       },
     ]);
+    expect(JSON.stringify(r.nodosNuevos)).not.toContain(graph[nid].titulo_concepto);
   });
 
   it("accion=salir cierra la fase sin pedir mas nada", async () => {

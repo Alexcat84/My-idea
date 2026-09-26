@@ -26,6 +26,7 @@ import { idiomaDelProyecto } from "@/lib/i18n/detectarIdioma";
 import { nacerIdea } from "@/lib/nacerIdea";
 import { clasificarEntrada } from "@/lib/engine/clasificar";
 import { cargarEntrySeeds, cargarGrafo, cargarPreguntasCache, etiquetaArbol } from "@/lib/engine/graph";
+import { avisosNodo } from "@/lib/engine/avisos";
 import { avanzarTurno, estadoInicial } from "@/lib/engine/recorrido";
 import { avisoLogin, esInvitadoInvisible } from "@/lib/identidad";
 import { aviso2FA, faltaSegundoFactor } from "@/lib/seguridad";
@@ -210,6 +211,7 @@ export async function POST(request: Request) {
   const puerta = {
     id: clasificacion.puertaId,
     etiqueta: etiquetaArbol(clasificacion.puertaId, graph, idioma),
+    avisos: avisosNodo(clasificacion.puertaId, graph, idioma),
     modo: "conversado" as const,
   };
 

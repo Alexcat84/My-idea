@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Anclaje en Negociación de Términos",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "El anclaje consiste en identificar pocos puntos clave, declarar claramente lo que se desea y mantenerse firme en esas posiciones, dejando cierta flexibilidad para negociar en los puntos menos importantes. Es una técnica efectiva para conseguir lo que realmente importa al emprendedor sin perder credibilidad en la negociación.",
+  "resumen_teorico": "El anclaje consiste en identificar pocos puntos clave, declarar claramente lo que se desea y mantenerse firme en esas posiciones, que deben ser razonables y conservar un pequeño margen de flexibilidad. Es una técnica efectiva para acercarse a lo que realmente importa al emprendedor, siempre que esté dispuesto a ceder en los puntos menos importantes.",
   "pasos_accionables": [
     "Antes de negociar, identificar los 2-3 términos verdaderamente críticos para el negocio",
     "Definir posiciones razonables pero con margen de flexibilidad en esos puntos",
     "Comunicar estas posiciones de forma clara y consistente",
     "Estar dispuesto a ceder en puntos secundarios para proteger los términos anclados"
   ],
-  "entregable_esperado": "Lista priorizada de términos no negociables vs. negociables antes de sentarse a la mesa",
+  "entregable_esperado": "Lista priorizada de términos anclados, con su pequeño margen, vs. términos que se pueden ceder antes de sentarse a la mesa",
   "nodos_previos": [
     "gestion_multiples_term_sheets",
     "contrarrestar_argumento_mercado",
@@ -26,5 +26,39 @@
   "condiciones_activacion": [
     "Cuando se inicia la negociación formal de un term sheet con un VC"
   ],
-  "etiqueta_arbol": "Ancla tu Posición al Negociar"
+  "etiqueta_arbol": "Ancla tu Posición al Negociar",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c24-1",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "El anclaje consiste en identificar pocos puntos clave, declarar claramente lo que se desea y mantenerse firme en esas posiciones, dejando cierta flexibilidad para negociar en los puntos menos importantes. Es una técnica efectiva para conseguir lo que realmente importa al emprendedor sin perder credibilidad en la negociación.",
+      "texto_nuevo": "El anclaje consiste en identificar pocos puntos clave, declarar claramente lo que se desea y mantenerse firme en esas posiciones, que deben ser razonables y conservar un pequeño margen de flexibilidad. Es una técnica efectiva para acercarse a lo que realmente importa al emprendedor, siempre que esté dispuesto a ceder en los puntos menos importantes.",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Venture Deals - Brad Feld.txt",
+        "lineas": "L3627",
+        "frase": "Anchoring means to pick a few points, state clearly what you want, and then stick to your guns. If you anchor on positions that are reasonable while still having a little flexibility to give in the negotiation, you will get close to what you want as long as you are willing to trade away other points that aren’t as important to you."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro pone el pequeño margen de flexibilidad en las propias posiciones ancladas (razonables, con un poco que dar) y, como condicion aparte, pide estar dispuesto a ceder los otros puntos menos importantes. El resumen trasladaba la flexibilidad solo a lo secundario, contradiciendo el paso 2, que es el fiel. Ademas el libro dice 'get close to' (acercarse, no conseguir) y no habla de 'credibilidad', asi que esa segunda frase se ajusta al pasaje.",
+      "auditoria": "SANEAMIENTO pasada K, ficha C24 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c24-2",
+      "fecha": "2026-09-26",
+      "campo": "entregable_esperado",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Lista priorizada de términos no negociables vs. negociables antes de sentarse a la mesa",
+      "texto_nuevo": "Lista priorizada de términos anclados, con su pequeño margen, vs. términos que se pueden ceder antes de sentarse a la mesa",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Venture Deals - Brad Feld.txt",
+        "lineas": "L3627",
+        "frase": "If you anchor on positions that are reasonable while still having a little flexibility to give in the negotiation, you will get close to what you want as long as you are willing to trade away other points that aren’t as important to you."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro no habla de terminos 'no negociables': las posiciones ancladas conservan un poco de flexibilidad y lo que se intercambia son los otros puntos menos importantes. El entregable pasa a 'anclados con pequeño margen vs. cedibles', coherente con el libro y con los pasos 2 y 4.",
+      "auditoria": "SANEAMIENTO pasada K, ficha C24 (lector, verificador ciego y arbitro)"
+    }
+  ]
 }

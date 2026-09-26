@@ -4,10 +4,10 @@
   "dominio": "quality",
   "titulo_concepto": "Planificación para Recolección y Análisis de Datos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El proceso de planificación de datos sigue el principio de 'empezar con el fin en mente', trabajando hacia atrás desde la pregunta que se desea responder hasta el método de recolección. Involucra 17 pasos que van desde formular la pregunta específica, decidir qué medir, cómo medir, recolectar con mínimo sesgo, hasta presentar los resultados y determinar si las conclusiones aplican a otros problemas. Evita la práctica ineficiente de 'buceo de datos' sin objetivo claro.",
+  "resumen_teorico": "El proceso de planificación de datos sigue el principio de 'empezar con el fin en mente', trabajando hacia atrás desde la pregunta que se desea responder hasta el método de recolección. El libro lo detalla en 17 pasos, aquí agrupados, que van desde formular la pregunta específica, decidir qué medir, cómo medir, recolectar con mínimo sesgo, hasta presentar los resultados y determinar si las conclusiones aplican a otros problemas. Evita la práctica ineficiente de 'buceo de datos' sin objetivo claro.",
   "pasos_accionables": [
-    "Establecer objetivos de recolección de datos y formular la pregunta específica",
-    "Definir puntos de recolección de datos comprensivos",
+    "Establecer objetivos de recolección de datos, formular la pregunta específica y decidir qué medir pensando en cómo se analizará y comunicará",
+    "Decidir cómo medir la población o muestra, recolectar los datos con mínimo sesgo y definir puntos de recolección de datos comprensivos",
     "Seleccionar y capacitar recolectores de datos imparciales",
     "Diseñar, preparar y probar métodos, formularios e instrucciones de recolección (incluir MSA)",
     "Auditar el proceso de recolección y validar resultados",
@@ -34,5 +34,57 @@
     "Antes de iniciar cualquier esfuerzo de recolección de datos para resolver un problema de calidad",
     "Cuando se detecta que la organización practica 'buceo de datos' sin un objetivo claro"
   ],
-  "etiqueta_arbol": "Planifica tu Recolección de Datos"
+  "etiqueta_arbol": "Planifica tu Recolección de Datos",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c20-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Establecer objetivos de recolección de datos y formular la pregunta específica",
+      "texto_nuevo": "Establecer objetivos de recolección de datos, formular la pregunta específica y decidir qué medir pensando en cómo se analizará y comunicará",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L19042-L19052",
+        "frase": "2. Decide what to measure, with consideration as to how the data will be communicated and analyzed:"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro enumera 17 pasos y el resumen es fiel a ellos, incluido 'decidir qué medir'. La lista del nodo omite el paso 2 del libro. Se añade al paso 0, que ya recoge el paso 1 del libro, sin añadir elementos a la lista y en el orden del libro.",
+      "indice": 0,
+      "auditoria": "SANEAMIENTO pasada K, ficha C20 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c20-2",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Definir puntos de recolección de datos comprensivos",
+      "texto_nuevo": "Decidir cómo medir la población o muestra, recolectar los datos con mínimo sesgo y definir puntos de recolección de datos comprensivos",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L19066-L19078",
+        "frase": "3. Decide how to measure a population or sample: / 4. Collect the data with a minimum of bias. / 5. Define comprehensive data collection points:"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La lista salta del paso 1 al paso 5 del libro y deja fuera el 3 (cómo medir la población o muestra, L19066) y el 4 (recolectar con mínimo sesgo, L19076), aunque el resumen los nombra. Se suman al paso 1 del nodo, que ya recoge el paso 5 del libro (L19078), y se respeta el orden 3, 4, 5.",
+      "indice": 1,
+      "auditoria": "SANEAMIENTO pasada K, ficha C20 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c20-3",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "El proceso de planificación de datos sigue el principio de 'empezar con el fin en mente', trabajando hacia atrás desde la pregunta que se desea responder hasta el método de recolección. Involucra 17 pasos que van desde formular la pregunta específica, decidir qué medir, cómo medir, recolectar con mínimo sesgo, hasta presentar los resultados y determinar si las conclusiones aplican a otros problemas. Evita la práctica ineficiente de 'buceo de datos' sin objetivo claro.",
+      "texto_nuevo": "El proceso de planificación de datos sigue el principio de 'empezar con el fin en mente', trabajando hacia atrás desde la pregunta que se desea responder hasta el método de recolección. El libro lo detalla en 17 pasos, aquí agrupados, que van desde formular la pregunta específica, decidir qué medir, cómo medir, recolectar con mínimo sesgo, hasta presentar los resultados y determinar si las conclusiones aplican a otros problemas. Evita la práctica ineficiente de 'buceo de datos' sin objetivo claro.",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L19040-L19120",
+        "frase": "To generate useful information, planning for good data collection, analysis, and communication proceeds through the following steps and associated considerations:"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La cifra de 17 pasos es fiel al libro (pasos 1 a 17, L19042 a L19120) y se mantiene. La lista del nodo sigue teniendo 13 elementos porque agrupa pasos: los pasos 1 y 2 del libro, los pasos 3, 4 y 5, y los pasos 9 y 10 (filtrar y analizar). Sin esta aclaración, el choque medido (17 frente a 13) seguiría a la vista. Solo cambia 'Involucra 17 pasos' por 'El libro lo detalla en 17 pasos, aquí agrupados'.",
+      "auditoria": "SANEAMIENTO pasada K, ficha C20 (lector, verificador ciego y arbitro)"
+    }
+  ]
 }

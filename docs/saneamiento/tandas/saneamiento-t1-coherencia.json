@@ -1,0 +1,926 @@
+[
+ {
+  "id": "saneamiento-t1-c01-1",
+  "node_id": "breakup_fee_evaluation",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Acepta esta comisión solo en circunstancias excepcionales y bien justificadas",
+  "texto_nuevo": "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si sospechas una expedición de pesca o si asumes un gran riesgo con clientes o empleados",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Venture Deals - Brad Feld.txt",
+   "lineas": "L4338",
+   "frase": "There are some rare circumstances in which a seller can reasonably ask for a breakup fee. If the buyer is competitive and the seller is concerned that the buyer may be entering the process as a fishing expedition as opposed to a good-faith effort to buy the company, or if the seller incurs a massive amount of customer or employee risk by entering into the deal, a breakup fee may be appropriate."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro separa dos direcciones: la comisión que pide el comprador se resiste y se le remite a la cláusula de exclusividad (L4329: \"We generally resist any request of a buyer to institute a breakup fee and tell the potential buyer to rely on the no-shop clause instead.\"), y la excepción rara es que sea el vendedor quien la pida (L4338), por expedición de pesca o por gran riesgo con clientes o empleados. El paso 3 invertía esa excepción al convertirla en aceptar la comisión del comprador. El resumen, los pasos 0 a 2 y las condiciones ya son fieles; solo cambia este paso, con el mismo vocabulari",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C01 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c02-1",
+  "node_id": "distorsion_muestreo_mecanico",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Si usas un instrumento físico para muestrear, documenta y calibra el sesgo propio de esa herramienta",
+  "texto_nuevo": "Si usas un instrumento físico para muestrear, registra el promedio acumulado que produce esa herramienta como dato del proceso",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "L8064-L8066",
+   "frase": "As a matter of fact, the cumulated average for paddle No. 2 over many experiments in the past has settled down to 9.4 red beads per lot of 50. Paddle No. 1, used for 30 years, shows an average of 11.3. || The paddle is an important piece of information about the process."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Deming no manda calibrar un sesgo de la paleta. Dice que la diferencia no es sesgo (L8070), anota el promedio acumulado de cada paleta (9,4 y 11,3) y trata la paleta como información del proceso. El paso queda así, alineado con el resumen, que es fiel al libro.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C02 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c02-2",
+  "node_id": "distorsion_muestreo_mecanico",
+  "campo": "pasos_accionables",
+  "indice": 2,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Si es posible, implementa selección por números aleatorios generados formalmente para eliminar sesgos",
+  "texto_nuevo": "Si es posible, implementa selección por números aleatorios generados formalmente para evitar la distorsión del muestreo mecánico",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "L8092",
+   "frase": "The only safe plan is use of random numbers for selection of items from a lot, but it must be admitted that use of random numbers will in many cases not be practicable."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro llama distorsión, no sesgo, a lo que produce el muestreo mecánico (encabezado de L8089) y presenta los números aleatorios como el único plan seguro. Se dice 'evitar' y no 'eliminar' porque el libro reserva 'eliminate possible distortion' para la inspección del 100 % de una selección aleatoria de lotes, que ya es el paso 3.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C02 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c02-3",
+  "node_id": "distorsion_muestreo_mecanico",
+  "campo": "entregable_esperado",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Protocolo de muestreo documentado que especifique el método usado, su justificación y su posible sesgo frente al ideal aleatorio.",
+  "texto_nuevo": "Protocolo de muestreo documentado que especifique el método usado, su justificación y la diferencia que produce frente a la selección por números aleatorios.",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "L8070",
+   "frase": "The difference between the accumulated and 10 is often alluded to by people in the audience as bias. No, this difference is not bias. It is the difference between two methods of selection: (1) mechanical sampling, used here; (2) selection by random numbers."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El entregable llamaba sesgo justo a lo que el libro dice expresamente que no es sesgo, sino la diferencia entre dos métodos de selección. Se ajusta a esa formulación, igual que el resumen.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C02 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c02-4",
+  "node_id": "distorsion_muestreo_mecanico",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Cuando sospeches que tu método de muestreo introduce sesgo",
+  "texto_nuevo": "Cuando sospeches que tu método de muestreo distorsiona el promedio del proceso",
+  "cita": {
+   "libro": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
+   "lineas": "L8089-L8092",
+   "frase": "Mechanical sampling will distort the process average || It is a fact that the cumulated average of proportion defective calculated from inspection of samples drawn by inspectors, however conscientious they be, may not be a good approximation to the process average."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La condición repetía la idea de sesgo que el libro rechaza. Deming lo llama distorsión del promedio del proceso, y la condición pasa a decir eso.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C02 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c03-1",
+  "node_id": "planificacion_sucesion_ceo",
+  "campo": "pasos_accionables",
+  "indice": 5,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Evalúa si tienes la visión de producto e innovación necesaria para seguir liderando",
+  "texto_nuevo": "Valora primero a los candidatos internos: su conocimiento de la tecnología, las decisiones previas, la cultura y las personas cuesta más adquirir que saber gestionar una organización mayor",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2693",
+   "frase": "Knowledge of technology, prior decisions, culture, personnel, and more tends to be far more difficult to acquire than the skills required to manage a larger organization."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso trata de la autoevaluación del fundador como CEO, que viene del pasaje de la fundación de Andreessen Horowitz (L3365-L3377) y no de la sucesión que tratan el título, el resumen y el entregable. En el capítulo Ones and Twos, el libro explica por qué los candidatos internos superan a los externos.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c03-2",
+  "node_id": "planificacion_sucesion_ceo",
+  "campo": "pasos_accionables",
+  "indice": 6,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Identifica tus brechas específicas de habilidades de CEO, como gestión organizacional, ventas o relación con ejecutivos, frente a brechas de red de contactos",
+  "texto_nuevo": "Observa cómo decide cada candidato con poca información: un One decide con calma y un Two tiende a complicar el proceso",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2709",
+   "frase": "Circumstances often force both Ones and Twos to make critical decisions with insufficient data, but Ones generally feel fine about doing that and do not get overly anxious about the consequences. Twos, by contrast, can become highly agitated about such things and sometimes overcomplicate the decision-making process in order to provide a false feeling of thoroughness about the choice."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Las brechas de habilidades y de red del fundador frente a un CEO profesional son otro concepto del libro (L3367-L3371). El entregable pide el perfil One/Two de los candidatos, y el libro distingue al One del Two por cómo decide con datos insuficientes.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c03-3",
+  "node_id": "planificacion_sucesion_ceo",
+  "campo": "pasos_accionables",
+  "indice": 7,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Busca mentores con experiencia real fundando y dirigiendo empresas, no solo asesores teóricos",
+  "texto_nuevo": "Busca candidatos One también por debajo del equipo ejecutivo, donde es más probable que estén, y no los descartes por su nivel",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2729",
+   "frase": "Or do you reach deep into the organization and pull a One from a level lower where they are likely to exist?"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Los mentores para el fundador CEO pertenecen al pasaje de Andreessen Horowitz (L3377), no a la sucesión. En el pasaje de sucesión el libro plantea buscar al One en niveles inferiores, que es lo que ya dice el resumen y alimenta la lista de candidatos del entregable.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c03-4",
+  "node_id": "planificacion_sucesion_ceo",
+  "campo": "pasos_accionables",
+  "indice": 8,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Si no quieres ser CEO, enfócate en encontrar al CEO profesional adecuado e integrarlo preservando tus fortalezas",
+  "texto_nuevo": "Si promueves a un Two del equipo ejecutivo, prevé que las decisiones estratégicas se ralenticen y que los Ones naturales acaben marchándose",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2731",
+   "frase": "As the company faces forks in the road, decision making may slow down and the company may lose its edge. In addition, the natural Ones (in Microsoft’s case, stellar executives such as Paul Maritz and Brad Silverberg) will eventually leave."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Integrar a un CEO profesional preservando las fortalezas del fundador es del pasaje de L3377. El entregable pide los riesgos de rotación, y el libro describe el riesgo del primer escenario de sucesión: promover a un Two.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c03-5",
+  "node_id": "planificacion_sucesion_ceo",
+  "campo": "pasos_accionables",
+  "indice": 9,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Evalúa si tu equipo directivo actual tiene conocimiento profundo del producto y la tecnología",
+  "texto_nuevo": "Si promueves a un One por encima de todo el equipo ejecutivo, prevé una rotación masiva de directivos, más peligrosa en un negocio tecnológico muy dinámico",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2733",
+   "frase": "In scenario two, by promoting someone past everyone on the executive team and making them CEO (as GE did), you will likely cause massive turnover of the executive staff. In fact, in very short order, almost none of the original GE executives remained under Welch. In a diversified conglomerate like GE, this kind of rough transition is possible. For companies in the highly dynamic technology business, the super-high-turnover scenario is more dangerous."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Tal como está, el paso sirve a la idea del fundador técnico frente al CEO profesional (L3365). El libro describe el riesgo del segundo escenario de sucesión, la rotación masiva al promover a un One saltando al equipo, y dice que es más peligrosa en tecnología.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c03-6",
+  "node_id": "planificacion_sucesion_ceo",
+  "campo": "pasos_accionables",
+  "indice": 10,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Antes de aceptar inversion, comprueba si el inversor esta dispuesto a ayudarte a crecer como CEO en lugar de buscar reemplazarte",
+  "texto_nuevo": "Antes de buscar un CEO externo, ten presente que traerlo de fuera reduce tus probabilidades de éxito frente a promover desde dentro",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2737",
+   "frase": "If you bring people in from the outside, you lower your chances for success. If you promote from within, you must deal with the One-Two phenomenon."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La relación con el inversor que quiere reemplazar al fundador es del pasaje de Loudcloud y Andreessen Horowitz (L3347-L3365), ajeno a la sucesión. El título plantea interno frente a externo, y así concluye el libro sobre el candidato externo.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c03-7",
+  "node_id": "planificacion_sucesion_ceo",
+  "campo": "pasos_accionables",
+  "indice": 11,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Si contratas a un CEO externo, asegura una transición gradual en la que sigas involucrado en las decisiones de producto",
+  "texto_nuevo": "Si eliges un sucesor Two, pídele que invierta en las tareas de One, como la estrategia, para no perder la capacidad de pivotar",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2715",
+   "frase": "While people tend to be Ones or Twos, with discipline and hard work natural Twos can be competent at One tasks and Ones can be competent at Two tasks. If a CEO ignores the dimension of management she doesn’t like, she generally fails. Ones end up in chaos and Twos fail to pivot when necessary."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro no trata una transición gradual con el fundador implicado en producto. Sí dice que un Two puede ganar competencia en tareas de One y que, si no lo hace, no pivota cuando hace falta. Eso mitiga el riesgo de promover a un Two.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c03-8",
+  "node_id": "planificacion_sucesion_ceo",
+  "campo": "pasos_accionables",
+  "indice": 12,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Detecta señales tempranas de desalineación entre la dirección profesional y la visión de producto",
+  "texto_nuevo": "Aspira a promover a un One que el resto del equipo ejecutivo acepte de buen grado, sabiendo que rara vez se da ese caso ideal",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2737",
+   "frase": "Ideally, you’ll promote a One and the rest of the executive team will be glad you did. Too bad things are rarely ideal."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La desalineación entre la dirección profesional y la visión de producto pertenece al concepto del fundador frente al CEO profesional. El libro cierra la sucesión con el caso ideal y su advertencia, lo que coincide con el resumen: no hay una fórmula perfecta.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c04-1",
+  "node_id": "rentabilidad_incrementada_franquicia",
+  "campo": "resumen_teorico",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Debido al apalancamiento de personal y la delegación de responsabilidades operativas al franquiciado, las organizaciones franquiciantes suelen ser más rentables (estudios históricos muestran hasta 40-45% de margen neto en franquiciantes del cuartil superior), comparado con negocios tradicionales de estructura similar.",
+  "texto_nuevo": "Debido al apalancamiento de personal y la delegación de responsabilidades operativas al franquiciado, las organizaciones franquiciantes pueden ser mucho más rentables que negocios tradicionales de estructura similar, aunque es difícil cuantificarlo: los pocos estudios del sector son antiguos, tienen validez estadística limitada y no dan cifras fiables del margen neto.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\franquicias\\Franchise Your Business - Mark Siebert.txt",
+   "lineas": "L345-L349; L1468",
+   "frase": "So the net result is that a franchise organization can be much more profitable. / Unfortunately, it is difficult to quantify or prove this contention. / I would be the first to note that there was limited statistical validity to these numbers at the time they were produced, and they are now more than a decade old. / FYI, there are no reliable figures to use when estimating net margin."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro sostiene la tesis de mayor rentabilidad (L345) pero advierte que es difícil de cuantificar (L347), que los estudios del 40 y 45,6% del cuartil superior tienen validez estadística limitada y más de una década (L349), y que no hay cifras fiables para estimar el margen neto (L1468). El paso 2 y el entregable ya dicen eso y son fieles; el resumen daba la cifra como prueba sin la salvedad. Se retira la cifra (dato de mercado fechado, que por la política del marco sale) y se deja la advertencia del libro, con lo que resumen, paso y entregable quedan coherentes.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C04 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c05-1",
+  "node_id": "rotacion_equipo_fundador",
+  "campo": "resumen_teorico",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "La salida de un cofundador no siempre es negativa: puede reducir tensiones si había mal encaje inicial o si un fundador no está escalando con el crecimiento del startup. Sin embargo, la rotación casi siempre es dolorosa, especialmente entre amigos ('los altos son más altos, pero los bajos son mucho más bajos'). Existen consideraciones legales importantes: acuerdos de no competencia, no solicitación, o reclamos de propiedad intelectual de empleadores previos pueden generar obstáculos legales al cofundar con excompañeros de trabajo.",
+  "texto_nuevo": "La salida de un cofundador no siempre es negativa: puede reducir tensiones si había mal encaje inicial o si un fundador no está escalando con el crecimiento del startup, y en un equipo que lleva mucho tiempo junto y cuyas rutinas frenan la creatividad, reemplazar a un miembro por alguien nuevo puede dar un 'diversity shock' que la reactive. Sin embargo, la rotación casi siempre es dolorosa, especialmente entre amigos ('los altos son más altos, pero los bajos son mucho más bajos'). Existen consideraciones legales importantes: acuerdos de no competencia, no solicitación, o reclamos de propiedad intelectual de empleadores previos pueden generar obstáculos legales al cofundar con excompañeros de trabajo.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "L1191",
+   "frase": "On the other hand, studies have also shown that teams that have spent more time together have entrenched “standard operating procedures” that hinder creativity; the “diversity shock” when a homogeneous team member is replaced by someone new can help kick-start the creative process."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Wasserman trata el 'diversity shock' en el mismo párrafo sobre la rotación del equipo fundador (L1191). Lo presenta como otro de los casos en que la rotación resulta beneficiosa, junto al mal encaje y al fundador que no escala. La condición [2] es fiel al libro. Lo que falla es el resumen, que omite ese beneficio y deja la condición sin respaldo. Se añade solo esa cláusula al resumen, y la condición y los pasos no se tocan.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C05 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c06-1",
+  "node_id": "vesting_acciones_fundadores",
+  "campo": "resumen_teorico",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "El vesting es la forma en que ganas la propiedad de tus acciones u opciones con el tiempo, no de golpe. Lo comun: 4 años con un año de espera inicial (cliff), sin nada ese primer año; al cumplirlo recibes 25%, y el resto mes a mes durante los 3 años siguientes. Si te vas antes, la empresa puede recomprar lo no adquirido. Al fundar, tu acción de fundador se emite a precio bajo, sujeta a este calendario, y conviene presentar la eleccion fiscal 83(b) en los 30 días siguientes. También puedes pactar aceleracion si la empresa cambia de manos: de un solo gatillo, que libera todo de inmediato, o de doble gatillo -la mas usada en capital de riesgo- que exige el cambio de control y un despido sin causa en un plazo, normalmente 13 meses. Verifica estos detalles con un profesional en tu pais.",
+  "texto_nuevo": "El vesting es la forma en que ganas la propiedad de tus acciones u opciones con el tiempo, no de golpe. Lo comun: 4 años con un año de espera inicial (cliff), sin nada ese primer año; al cumplirlo recibes 25%, y el resto mes a mes durante los 3 años siguientes. Si te vas antes, la empresa puede recomprar lo no adquirido. Al fundar, tu acción de fundador se emite a precio bajo, sujeta a un calendario similar, a menudo con crédito por el tiempo que ya trabajaste, y conviene presentar la eleccion fiscal 83(b) en los 30 días siguientes. También puedes pactar aceleracion si la empresa cambia de manos: de un solo gatillo, que libera todo de inmediato, o de doble gatillo -la mas usada en capital de riesgo- que exige el cambio de control y un despido sin causa en un plazo, normalmente 13 meses. Verifica estos detalles con un profesional en tu pais.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Venture Deals - Brad Feld.txt",
+   "lineas": "L1179",
+   "frase": "Often, founders will get somewhat different vesting provisions than the rest of the employees. A common term is the second paragraph of the example clause, where the founders receive one year of vesting credit at the closing of the financing and then vest the balance of their stock over the remaining 36 months. This type of vesting arrangement is typical in cases where the founders started the company a year or more earlier than the VC investment and want to get some credit for existing time served."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro dice que los fundadores suelen tener un vesting algo distinto al de los empleados: terminos similares (L1171: \"will be subject to similar vesting terms provided that the Founders shall be credited with [one year] of vesting as of the Closing\") pero a menudo con credito por el tiempo ya trabajado. Los pasos que piden distinguir el calendario estandar del tuyo como fundador y negociar credito retroactivo son fieles; el resumen, que sometia la accion del fundador a 'este calendario' (el estandar), no lo era. Solo cambia esa frase del resumen.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C06 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c07-1",
+  "node_id": "asset_deal_vs_stock_deal",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Negociar por un stock deal siempre que sea posible, ya que ofrece protección equivalente al comprador con menos complicaciones",
+  "texto_nuevo": "Negociar por un stock deal siempre que sea posible, ya que puede configurarse para dar al comprador una protección funcionalmente equivalente con muchas menos complicaciones para el vendedor",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Venture Deals - Brad Feld.txt",
+   "lineas": "L4050",
+   "frase": "This is generally nonsense, since a stock deal can be configured to provide functionally equivalent protection for the buyer with a lot less hassle for the seller."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El resumen es fiel al libro: en L4040 los compradores piden el asset deal para 'leave certain liabilities (read: “warts”) behind' y para 'explicitly limit its liabilities', y en L4038 dice 'all sellers want to do stock deals and all buyers want to do asset deals'. Lo que no encaja es el paso 1. Dice que el stock deal 'ofrece' protección equivalente por sí mismo, pero el libro dice que PUEDE CONFIGURARSE para darla, y que las menores complicaciones son para el vendedor. Con ese matiz los dos campos cuadran: por defecto el asset deal es lo que protege al comprador, y un stock deal bien estructur",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C07 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c08-1",
+  "node_id": "atacar_mercados_establecidos_con_problema",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Identificar mercados grandes y maduros con necesidades no resueltas a largo plazo (grand challenges), y también mercados en fase embrionaria o de rápido crecimiento",
+  "texto_nuevo": "Identificar mercados grandes y establecidos, con potencial considerable a largo plazo, que enfrentan problemas nuevos o grandes sin resolver (grand challenges)",
+  "cita": {
+   "libro": "Winning at New Products - Robert G. Cooper",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Winning at New Products_ Creati - Robert G. Cooper.txt",
+   "lineas": "L7936",
+   "frase": "Thus, a third approach is to find large and established markets with considerable long-term potential but facing new or large unresolved problems."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Cooper separa dos enfoques. El segundo es 'Find Big Problems in New and Growing Markets' (L7914-L7917: 'A second approach is to look for embryonic or newer but rapidly growing markets or sectors where customers face many problems.'). El tercero, que es el concepto de este nodo, es 'Tackle Large, Established Markets That Have an Itch' (L7931-L7936). El paso 0 metía el segundo enfoque dentro del tercero. Se quita esa coletilla y el paso se ajusta a la frase del libro, en línea con el título y el resumen.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C08 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c09-1",
+  "node_id": "channels_hypothesis_web_mobile",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Prueba varios canales con un presupuesto parecido para comparar cuánto te cuesta conseguir cada cliente",
+  "texto_nuevo": "Si la elección no es obvia, antes de fijar el canal principal prueba varios con un presupuesto parecido y quédate con el que te consiga clientes al menor costo",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "L5880-L5883",
+   "frase": "Many products, however, will need to test both the cost-effectiveness and volume potential of several channels to determine where to put their energy, focus, and marketing dollars."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En el libro, probar varios canales con un gasto parecido no compite con elegir uno solo. Es la forma de elegirlo cuando la elección no es obvia: sección 'Tests Can Help You Pick the Channel' (L5880); en L5883, 'For some products, the channel choice is obvious', 'Design the test to spend roughly the same amount of money on each one' y 'Then see which program delivers customers at the lowest cost per customer'. El paso 2 ('Elige un único canal principal') es fiel a L5797 ('As a startup you should pick the one distribution channel...') y a L5801 ('Pick one distribution channel. You can add additi",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C09 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c10-1",
+  "node_id": "coraje_en_decisiones_dificiles",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Reconoce que lo que tus clientes actuales piden no siempre es el camino para ganar frente a la competencia.",
+  "texto_nuevo": "Reconoce que tu equipo o tu board pueden estar apoyando la opción que creen que tú prefieres, no la que han analizado.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2604",
+   "frase": "It turns out that the most important data point driving their earlier preference for selling the company was Hamlet’s initial ambivalence—the team supported the decision they thought the CEO wanted."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso injerta el concepto de producto frente a clientes, que el libro trata en otro pasaje (L627-L631, reinvencion del producto en Opsware). El capitulo del concepto del nodo (THE FINE LINE BETWEEN FEAR AND COURAGE, L2563-L2684) trata el coraje de decidir contra la opinion del equipo y el board; el caso Hamlet muestra que esa opinion a menudo refleja la ambivalencia del propio CEO. Coherente con el resumen y con la condicion 1 (opiniones divididas en el equipo directivo).",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C10 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c10-2",
+  "node_id": "coraje_en_decisiones_dificiles",
+  "campo": "pasos_accionables",
+  "indice": 5,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Decide reinventar el producto aunque eso contradiga lo que el feedback documentado, las opiniones registradas de clientes, te dice.",
+  "texto_nuevo": "No dejes que la presión del grupo convierta en tu cabeza una decisión clara (70 contra 30) en una que parece empatada (51 contra 49).",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2638",
+   "frase": "In reality, if you fall into this trap, the crowd will influence your thinking and make a 70-30 decision seem like a 51-49 decision. This is why courage is critical."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso impone una decision concreta (reinventar el producto contra el feedback de clientes) que el resumen no trata y que en el libro pertenece a otro pasaje (L629-L631). El capitulo del concepto advierte que decidir con la multitud distorsiona el juicio; el nuevo paso sigue al paso de 54% contra 46% y al resumen (actuar a pesar de la falta de consenso).",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C10 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c10-3",
+  "node_id": "coraje_en_decisiones_dificiles",
+  "campo": "pasos_accionables",
+  "indice": 6,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Dile con claridad a quien te ayuda con el producto que la visión pesa más que la lista de pendientes acumulada (backlog).",
+  "texto_nuevo": "Elige lo difícil y correcto frente a lo popular y fácil: cada vez que lo haces te vuelves un poco más valiente, y tu empresa también.",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2644, L2680",
+   "frase": "In life, everybody faces choices between doing what’s popular, easy, and wrong versus doing what’s lonely, difficult, and right. / Every time you make the hard, correct decision you become a bit more courageous and every time you make the easy, wrong decision you become a bit more cowardly. If you are CEO, these choices will lead to a courageous or cowardly company."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso (vision frente al backlog del equipo de producto) no guarda relacion con el resumen ni con las condiciones (ambiguedad de liderazgo, decisiones estrategicas divididas en el equipo directivo). El libro cierra el capitulo del concepto diciendo que el coraje se desarrolla eligiendo lo dificil y correcto; el nuevo paso encaja con el resumen y con el ultimo paso, que se conserva.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C10 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c11-1",
+  "node_id": "cuestionar_vision_zero",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Si necesitas justificar una inversión en seguridad antes de decidir",
+  "texto_nuevo": "Si vas a decidir en qué invertir en seguridad y solo miras tu cifra de accidentes",
+  "cita": {
+   "libro": "The Field Guide to Understandin - Dekker, Sidney",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\The Field Guide to Understandin - Dekker, Sidney;.txt",
+   "lineas": "L3578",
+   "frase": "If we want to make investments in safety, we normally specify the kinds of things that we want engineers, experts, managers, directors, supervisors and workers to do to organize work, communicate about it, write standards for it. We focus on what they need to manipulate, or on the manipulated or independent variable, in other words."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro no trata cómo justificar un gasto en seguridad. Lo único que dice sobre invertir en seguridad (L3578) es que la inversión se define por lo que la gente hace, es decir, por las variables que controlas, y no por el resultado. Eso mismo dicen el resumen, los pasos 0 y 3 y el entregable. La condición nueva conserva la decisión de invertir como disparador, pero ahora activa el nodo cuando esa decisión se guía solo por la cifra de accidentes, que es el error que el nodo corrige (L3565: \"Zero vision is defined by its dependent variable: the outcome\").",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C11 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c12-1",
+  "node_id": "customer_discovery_introduccion",
+  "campo": "entregable_esperado",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "El documento con las hipótesis iniciales de tu modelo de negocio, listo para validarlo en la calle",
+  "texto_nuevo": "Tus hipótesis iniciales sobre tu mercado y tus clientes convertidas en hechos, contrastadas en persona con clientes reales",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "L4661; L4670",
+   "frase": "So the No. 1 goal of customer discovery amounts to this: turning the founders’ initial hypotheses about their market and customers into facts. / Facts exist only outside the building, where customers live, so the most important aspect of customer discovery is getting out of the building, in front of customers."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Según el libro, la meta número 1 de Customer Discovery es convertir en hechos las hipótesis iniciales de los fundadores sobre su mercado y sus clientes (L4661). Esos hechos solo se obtienen fuera del edificio, delante de los clientes (L4670). El resumen y los tres pasos ya dicen eso: las 4 preguntas (L4646 y el pasaje anterior), salir repetidamente durante semanas o meses y no delegarlo. El entregable era lo único que no cuadraba, porque describía el documento de hipótesis previo, que es la entrada del proceso y que ningún paso redacta. Ahora nombra lo que el usuario tiene al terminar los paso",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C12 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c13-1",
+  "node_id": "defensas_en_profundidad_3",
+  "campo": "pasos_accionables",
+  "indice": 6,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Diseñar redundancia entre capas para evitar que un solo punto de falla comprometa todo el sistema",
+  "texto_nuevo": "Antes de añadir redundancia entre capas, evaluar si volverá el sistema más complejo y opaco o si un mismo error podría hacer fallar varias capas a la vez",
+  "cita": {
+   "libro": "Managing the Risks of Organizat - Reason, J. T_",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Health and Safety\\Managing the Risks of Organizat - Reason, J. T_.txt",
+   "lineas": "L1068-L1072",
+   "frase": "Redundant defensive back-ups increase the interactive complexity of high-technology organizations and thus increase the likelihood of unforeseeable common-mode failures. / Adding redundancy makes the system more opaque to the people who nominally control and manage it."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En la sección 'Defences-in-Depth: Protection or Dangerous Concealment?' (L1041-L1076), Reason, con Rasmussen y Perrow, presenta la redundancia añadida como origen de la 'falacia de las defensas en profundidad'. Según el libro, aumenta la complejidad interactiva y los fallos de modo común (L1068), vuelve el sistema más opaco para que se acumulen fallas latentes (L1072) y da una falsa sensación de seguridad (L1076). El resumento y los pasos 0 a 5 del nodo son fieles a eso. El paso 6 recetaba sumar redundancia como remedio, lo contrario del libro. El paso nuevo ya no receta redundancia: pide eval",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C13 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c14-1",
+  "node_id": "define_punto_maximo_de_stock",
+  "campo": "pasos_accionables",
+  "indice": 5,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Revisa estos cálculos cada vez que cambie tu volumen de ventas o el proveedor cambie su plazo de entrega.",
+  "texto_nuevo": "Decide cada cuánto revisarás y pedirás (tu ciclo de revisión) y suma a tu punto de reorden lo que usas en ese ciclo: ese es tu máximo. Recalcúlalo si cambian tus ventas o el plazo del proveedor.",
+  "cita": {
+   "libro": "Max Muller, Essentials of Inventory Management",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\OCR\\Essentials of Inventory Managem - Max Muller.txt",
+   "lineas": "L3980",
+   "frase": "ROP + Usage During the Review Cycle = Maximum"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro (L3962-L3980) trata el punto de reorden como el mínimo de un sistema min-max y calcula el máximo aparte. Primero fija cada cuánto se pide, el ciclo de revisión (L3964: \"To compute the maximum in these systems, you must first determine how often you will place orders. This time period is called the review cycle.\"), y luego Máximo = ROP + uso durante el ciclo de revisión (L3980). El título (punto máximo y cada cuánto lo revisas) y el entregable (nivel máximo calculado) son fieles al libro, pero ningún paso calculaba el máximo. Se cambia solo el último paso para que lo calcule con el cic",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C14 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c15-1",
+  "node_id": "descubrir_necesidades_del_cliente",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Cuando existan requisitos regulatorios o técnicos que puedan bloquear el proyecto si se ignoran",
+  "texto_nuevo": "Cuando cambios en la normativa puedan revelar necesidades actuales u oportunidades nuevas que el producto deba atender",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "L3763",
+   "frase": "Changes in federal, state, and local regulations that will identify current need or new opportunity"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En el paso 3 de Quality by Design (Discover Customer Needs), el libro no trata la normativa ni los requisitos técnicos como algo que bloquea el proyecto. La normativa aparece solo como una de las formas de recoger necesidades del cliente (Plan to Collect Customers' Needs, L3738-L3763), y los reguladores figuran entre los clientes ocultos (L3542). Por eso cambio solo la condición 1: ahora activa el nodo cuando la normativa revela necesidades que hay que descubrir, y así casa con el resumen y con el paso 0. Quito lo de 'federal, state, and local' para que valga en cualquier país.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C15 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c16-1",
+  "node_id": "evaluacion_balanceada_de_ejecutivos",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Evaluar honestamente si el empleado leal puede crecer con el puesto o no",
+  "texto_nuevo": "Fija un estándar de desempeño alto y claro antes de medir sus resultados",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2163",
+   "frase": "Perhaps most important, set a high and clear standard for performance."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso viene de DEMOTING A LOYAL FRIEND (L994-L1029), que es otro concepto. En el pasaje del método de Campbell, el área uno (Results against objectives, L2171) mide contra un estándar que hay que fijar antes. Este paso lo recoge.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C16 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c16-2",
+  "node_id": "evaluacion_balanceada_de_ejecutivos",
+  "campo": "pasos_accionables",
+  "indice": 5,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Decidir con firmeza antes de iniciar la conversación (no entrar con decisión abierta)",
+  "texto_nuevo": "Entrevista a quienes hacen un gran trabajo en esa función y suma su estándar al tuyo",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2167",
+   "frase": "One excellent way to develop a high standard is to interview people who you see doing a great job in their field. Find out what their standard is and add it to your own."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso original es de la conversación de degradación (L1013), no de la evaluación en cuatro áreas. El libro da este modo de fijar el estándar contra el que se miden los resultados.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C16 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c16-3",
+  "node_id": "evaluacion_balanceada_de_ejecutivos",
+  "campo": "pasos_accionables",
+  "indice": 6,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Anticipar las emociones de vergüenza y traición que sentirá el empleado",
+  "texto_nuevo": "Exígele ese estándar aunque tú no sepas cómo lograrlo: para eso lo contrataste",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L2167",
+   "frase": "Once you determine a high yet achievable performance bar, hold your executive to that high standard even if you have no idea how they might achieve it."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La vergüenza y la traición son las emociones de la degradación de un amigo leal (L1005-L1009). Justo antes del método de Campbell, el libro pide mantener al ejecutivo en ese estándar alto.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C16 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c16-4",
+  "node_id": "evaluacion_balanceada_de_ejecutivos",
+  "campo": "pasos_accionables",
+  "indice": 7,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Ofrecer alternativas de rol en otra área de la empresa si es posible",
+  "texto_nuevo": "Sube el estándar a medida que aprendes qué necesita tu empresa y qué es competitivo en tu sector",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L3231",
+   "frase": "While it feels awkward, it is perfectly reasonable to change and raise your standards as you learn more about what’s needed and what’s competitive in your industry."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Ofrecer otro rol forma parte de la degradación (L1017). En THE STANDARD, el pasaje sobre evaluar ejecutivos que ya nutre los pasos 11 a 14, el libro pide subir el estándar de evaluación.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C16 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c16-5",
+  "node_id": "evaluacion_balanceada_de_ejecutivos",
+  "campo": "pasos_accionables",
+  "indice": 8,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Usar lenguaje decisivo y admitir la realidad de las limitaciones propias como líder",
+  "texto_nuevo": "Si necesita mucha formación para rendir en el puesto, está por debajo del estándar",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L3235",
+   "frase": "If someone needs lots of training, she is below standard."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El lenguaje decisivo y admitir las propias limitaciones son claves de la conversación de degradación (L1023-L1025). Se sustituyen por el criterio de evaluación que da el libro en THE STANDARD.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C16 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c16-6",
+  "node_id": "evaluacion_balanceada_de_ejecutivos",
+  "campo": "pasos_accionables",
+  "indice": 9,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Considerar acompañar la degradación con un aumento de compensación si aplica",
+  "texto_nuevo": "No des por hecho que rinde bien porque tuvo una buena entrevista y buenas referencias",
+  "cita": {
+   "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+   "lineas": "L3227",
+   "frase": "The first thing to understand is that just because somebody interviewed well and reference-checked great, that does not mean she will perform superbly in your company."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El aumento de compensación acompaña a una degradación ya decidida (L1027), que es otro concepto. En THE STANDARD, el libro pide medir lo que el ejecutivo hace y no la impresión que dio al contratarlo.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C16 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c17-1",
+  "node_id": "eventos_offline_como_canal_traccion",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Empieza con un evento pequeño y de bajo costo, como una mini charla de un día; pregunta el precio en tu mercado, o un evento lujoso multi-día para decision makers de alto nivel",
+  "texto_nuevo": "Empieza con un evento pequeño y de bajo costo, como una mini charla de un día, que además te sirve para probar si tu audiencia quiere un evento más grande; pregunta el precio en tu mercado",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\marketing_y_crecimiento\\Traction - Gabriel Weinberg.txt",
+   "lineas": "L3224",
+   "frase": "Although MicroConf has become a huge event, Rob suggested that a day-long mini-conference could be a great way for a smaller startup to get traction. It can also be an easy and cheap way to test if there’s any interest among your audience for a larger event."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En OFFLINE EVENT TACTICS el libro manda arrancar con una mini conferencia de un día, barata, que sirve para probar si tu audiencia quiere un evento mayor (L3224). Solo después se escala: \"If your first event is a success, consider scaling up to larger events.\" (L3230). TARGETS lo repite: \"Test this channel first. Attend a couple conferences or host a few smaller meetups or a one-day mini-conference.\" (L3253). El evento lujoso de varios días de Enservio (L3181-L3185) es otro caso de éxito del libro y no una forma de arrancar. Por eso se quita del paso 1 la alternativa lujosa, que además traía \"",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C17 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c18-1",
+  "node_id": "framework_caracteristicas_ventajas_beneficios",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Evitar presentar Características y Ventajas antes de haber desarrollado necesidades explícitas",
+  "texto_nuevo": "En ventas grandes, evitar presentar Características y Ventajas antes de haber desarrollado necesidades explícitas",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\ventas\\SPIN Selling - Neil Rackham.txt",
+   "lineas": "L1871; L2060",
+   "frase": "In larger sales, Features have a negative effect when used early in the call and a neutral effect when used later. / In smaller sales you can uncover a problem and jump straight in with Advantages about how you can solve it, but this doesn’t work well in larger sales. It’s important in larger sales to develop Explicit Needs—by using Implication and Need-payoff Questions—before you offer solutions."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro limita a las ventas grandes la regla de no presentar capacidades antes de las Necesidades Explícitas. En ventas pequeñas las Características tienen una leve relación positiva con el éxito (L1869) y, con productos baratos y ricos en funciones, enumerarlas ayuda (L2159, L2161). Tal como estaba, el paso era universal y chocaba con el paso [5] (enumerar características si compites por precio bajo), que el libro sí sostiene. Acotarlo a ventas grandes deja ambos pasos compatibles y alinea el paso con la condición de activación [1].",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C18 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c18-2",
+  "node_id": "framework_caracteristicas_ventajas_beneficios",
+  "campo": "resumen_teorico",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Existen tres formas de presentar una solución: Características (hechos neutros del producto), Ventajas (cómo el producto puede usarse o ayudar en general) y Beneficios (cómo el producto satisface una Necesidad Explícita ya expresada por el cliente). La investigación demuestra que las Ventajas funcionan bien en ventas pequeñas pero pierden poder en ventas grandes, mientras que los Beneficios son consistentemente los más poderosos en todos los tamaños de venta, porque dependen de haber desarrollado previamente una necesidad explícita mediante preguntas de implicación y necesidad-beneficio.",
+  "texto_nuevo": "Existen tres formas de presentar una solución: Características (hechos neutros del producto), Ventajas (cómo el producto puede usarse o ayudar en general) y Beneficios (cómo el producto satisface una Necesidad Explícita ya expresada por el cliente). La investigación demuestra que las Ventajas funcionan bien en ventas pequeñas pero pierden poder en ventas grandes, mientras que los Beneficios son consistentemente los más poderosos en todos los tamaños de venta, porque dependen de haber desarrollado previamente una necesidad explícita mediante preguntas de implicación y necesidad-beneficio. Además, las Características aumentan la sensibilidad al precio: ayudan a vender productos baratos y ricos en funciones, pero restan ventas en productos de gama alta.",
+  "cita": {
+   "libro": "SPIN Selling - Neil Rackham",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\ventas\\SPIN Selling - Neil Rackham.txt",
+   "lineas": "L2159; L2169",
+   "frase": "It seems that the effect of Features is to increase the customer’s sensitivity to price. This isn’t necessarily a bad thing if you happen to be selling low-cost products that are relatively rich in Features. / With top-of-the-market products, the price concern created by Features will make people less likely to buy."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Lo que ya dice el resumen es fiel (L1912: el Beneficio de tipo B está muy relacionado con el éxito en todos los tamaños de venta) y se conserva palabra por palabra. La incoherencia medida entre resumen y pasos venía de que los pasos [4] a [7] aplican un criterio de precio (capítulo 6 del libro) que el resumen no trata. Se añade una sola frase con ese hallazgo para que el resumen sostenga esos pasos, que son fieles al libro.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C18 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c19-1",
+  "node_id": "hipotesis_propuesta_de_valor_producto",
+  "campo": "entregable_esperado",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Un documento breve con tu visión, la lista de características y beneficios, y la historia de tu producto",
+  "texto_nuevo": "Un documento breve con tu visión, la lista de características y beneficios, la historia de tu producto y tu producto mínimo viable",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "L5420",
+   "frase": "The MVP is the final portion of this first value proposition brief."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro divide el documento de propuesta de valor en tres partes: Product Vision, Product Features & Benefits y Minimum Viable Product (L5305-L5311). Además dice que el MVP es la parte final de ese mismo documento. El resumen del nodo es fiel al libro, pero al entregable le faltaba el producto mínimo viable. Lo añado y mantengo la historia de producto, que el libro también pide (L5397).",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C19 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c19-2",
+  "node_id": "hipotesis_propuesta_de_valor_producto",
+  "campo": "condiciones_activacion",
+  "indice": 1,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Antes de definir tu producto mínimo viable",
+  "texto_nuevo": "Antes de construir tu producto mínimo viable y ponerlo en manos de tus primeros clientes",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "L5315; L5432",
+   "frase": "The product development team produces much of the product brief, one of the few times it’s asked to engage in a paper exercise. / The sooner the MVP is in their hands, the sooner feedback can arrive."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En el libro, definir el MVP es la parte final de este mismo documento (L5420), así que el nodo no puede ir antes de definirlo. Como el documento es un ejercicio en papel, lo que sí va antes es construir el MVP y ponerlo en manos de los clientes. La condición conserva su forma \"Antes de\" y pasa a nombrar ese momento.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C19 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c19-3",
+  "node_id": "hipotesis_propuesta_de_valor_producto",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Haz una lista de máximo 10 características principales de tu producto",
+  "texto_nuevo": "Haz una lista de máximo 10 características principales de tu producto y marca el grupo mínimo que ya resuelve el problema central: ese es tu producto mínimo viable",
+  "cita": {
+   "libro": "The Startup Owner's Manual - Blank, Steve",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Startup Owner's Manual_ The - Blank, Steve.txt",
+   "lineas": "L5383; L5385; L5420",
+   "frase": "The product features list is a one-page document consisting of one- or two-sentence summaries of the top 10 (or fewer) features of the complete product vision. / Developing the MVP will start the prioritization process. / It’s a concise summary of the smallest possible group of features that will work as a stand-alone product while still solving at least the “core” problem and demonstrating the product’s value."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El resumen y ahora el entregable piden el MVP como tercera parte, pero ningún paso lo producía. El libro lo define como el grupo mínimo de características que resuelve el problema central, y dice que definirlo empieza la priorización de esa lista. Por eso amplío este paso en lugar de añadir uno nuevo, y lo que ya decía queda intacto.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C19 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c20-1",
+  "node_id": "planificacion_recoleccion_datos",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Establecer objetivos de recolección de datos y formular la pregunta específica",
+  "texto_nuevo": "Establecer objetivos de recolección de datos, formular la pregunta específica y decidir qué medir pensando en cómo se analizará y comunicará",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "L19042-L19052",
+   "frase": "2. Decide what to measure, with consideration as to how the data will be communicated and analyzed:"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro enumera 17 pasos y el resumen es fiel a ellos, incluido 'decidir qué medir'. La lista del nodo omite el paso 2 del libro. Se añade al paso 0, que ya recoge el paso 1 del libro, sin añadir elementos a la lista y en el orden del libro.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C20 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c20-2",
+  "node_id": "planificacion_recoleccion_datos",
+  "campo": "pasos_accionables",
+  "indice": 1,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Definir puntos de recolección de datos comprensivos",
+  "texto_nuevo": "Decidir cómo medir la población o muestra, recolectar los datos con mínimo sesgo y definir puntos de recolección de datos comprensivos",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "L19066-L19078",
+   "frase": "3. Decide how to measure a population or sample: / 4. Collect the data with a minimum of bias. / 5. Define comprehensive data collection points:"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La lista salta del paso 1 al paso 5 del libro y deja fuera el 3 (cómo medir la población o muestra, L19066) y el 4 (recolectar con mínimo sesgo, L19076), aunque el resumen los nombra. Se suman al paso 1 del nodo, que ya recoge el paso 5 del libro (L19078), y se respeta el orden 3, 4, 5.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C20 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c20-3",
+  "node_id": "planificacion_recoleccion_datos",
+  "campo": "resumen_teorico",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "El proceso de planificación de datos sigue el principio de 'empezar con el fin en mente', trabajando hacia atrás desde la pregunta que se desea responder hasta el método de recolección. Involucra 17 pasos que van desde formular la pregunta específica, decidir qué medir, cómo medir, recolectar con mínimo sesgo, hasta presentar los resultados y determinar si las conclusiones aplican a otros problemas. Evita la práctica ineficiente de 'buceo de datos' sin objetivo claro.",
+  "texto_nuevo": "El proceso de planificación de datos sigue el principio de 'empezar con el fin en mente', trabajando hacia atrás desde la pregunta que se desea responder hasta el método de recolección. El libro lo detalla en 17 pasos, aquí agrupados, que van desde formular la pregunta específica, decidir qué medir, cómo medir, recolectar con mínimo sesgo, hasta presentar los resultados y determinar si las conclusiones aplican a otros problemas. Evita la práctica ineficiente de 'buceo de datos' sin objetivo claro.",
+  "cita": {
+   "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+   "lineas": "L19040-L19120",
+   "frase": "To generate useful information, planning for good data collection, analysis, and communication proceeds through the following steps and associated considerations:"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La cifra de 17 pasos es fiel al libro (pasos 1 a 17, L19042 a L19120) y se mantiene. La lista del nodo sigue teniendo 13 elementos porque agrupa pasos: los pasos 1 y 2 del libro, los pasos 3, 4 y 5, y los pasos 9 y 10 (filtrar y analizar). Sin esta aclaración, el choque medido (17 frente a 13) seguiría a la vista. Solo cambia 'Involucra 17 pasos' por 'El libro lo detalla en 17 pasos, aquí agrupados'.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C20 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c21-1",
+  "node_id": "prevencion_gestion_calidad",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Antes de invertir en prevención, ten claro con números concretos el costo y el beneficio para decidir con confianza",
+  "texto_nuevo": "Actúa ahora para cosechar después: no esperes a que una falla te dé la evidencia para invertir en prevención",
+  "cita": {
+   "libro": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Quality is free _ the art of making quality certain -- Philip B_ Crosby.md",
+   "lineas": "L265-L271",
+   "frase": "To accomplish this you have to act now on situations which may cause problems some time from now. Act now for reward later."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro pide actuar hoy sobre problemas futuros (L265; L267: 'Management has to commit money this year to conduct quality testing so there won't be problems two years from now.') y dice que esperar a vivir la falla antes de avanzar es demasiado pedir (L271: 'But to wait until a failure is unassailable before learning from experience and only then advancing one more step is too much to expect of anyone.'). El paso 4 supeditaba la prevención a tener antes números concretos de costo y beneficio, lo contrario de lo que dicen el libro, el resumen y la condición 2. Resumen, pasos 0 a 2, entregable ",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C21 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c22-1",
+  "node_id": "seleccion_estructura_franquicia",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Evalúa si tu negocio funciona con un dueño pasivo o necesita que el dueño opere.",
+  "texto_nuevo": "Evalúa si tu negocio funciona con un dueño pasivo o necesita que el dueño opere, y si puedes agrupar varias unidades en una misma zona.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\franquicias\\Franchise Your Business - Mark Siebert.txt",
+   "lineas": "L1628-L1630",
+   "frase": "Does your business lend itself to passive ownership?\n\nAre you able to cluster units effectively?"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En L1620-L1636 el libro da exactamente ocho factores para elegir la estructura. El entregable dice 'ocho factores', así que es el campo fiel. Los pasos cubren solo seis. Aquí se añade el factor que falta, 'Are you able to cluster units effectively?', al paso que sigue el mismo orden del libro.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C22 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c22-2",
+  "node_id": "seleccion_estructura_franquicia",
+  "campo": "pasos_accionables",
+  "indice": 4,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Analiza qué tan fragmentado está tu mercado y cuánta competencia hay por franquiciados.",
+  "texto_nuevo": "Analiza qué tan fragmentado está tu mercado, cuánta competencia hay por franquiciados y qué propuesta de valor les ofreces.",
+  "cita": {
+   "libro": "Franchise Your Business - Mark Siebert",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\franquicias\\Franchise Your Business - Mark Siebert.txt",
+   "lineas": "L1632-L1636",
+   "frase": "How fragmented is the competitive market?\n\nWhat is the degree of competition for your targeted franchisee?\n\nWhat is your value position for your targeted franchisee?"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Falta el octavo factor del libro, 'What is your value position for your targeted franchisee?'. Con este cambio y el del paso 3, los pasos revisan los ocho factores que nombra el entregable, en el mismo orden que la lista del libro.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C22 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c23-1",
+  "node_id": "sem_estrategia_ejecucion",
+  "campo": "condiciones_activacion",
+  "indice": 0,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Cuando ya definiste tus métricas base de clics, costo por clic y costo por conversión, y quieres escalar la prueba",
+  "texto_nuevo": "Cuando empiezas con la publicidad en buscadores y quieres obtener tus primeras métricas base con una prueba pequeña y de bajo costo",
+  "cita": {
+   "libro": "Traction - Gabriel Weinberg",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\marketing_y_crecimiento\\Traction - Gabriel Weinberg.txt",
+   "lineas": "L1244",
+   "frase": "Matthew told us that someone just starting out in this channel should begin testing just four ads. Four ads will give you a good baseline for the performance of SEM as a whole, while still allowing you to test different messaging, demographics, and landing pages."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro sitúa este proceso al principio del canal: quien empieza prueba solo cuatro anuncios para CONSEGUIR la línea base (L1244), y usa el SEM para obtener datos tempranos de forma controlada con presupuestos pequeños (L1209). La optimización y el escalado vienen después, solo si la prueba promete (L1246), y las primeras pruebas no serán rentables (L1298). La condición actual presuponía la línea base ya hecha y el deseo de escalar, lo que contradice los pasos 6, 8 y 9 y el propio libro. Se cambia solo esa condición; el resto del nodo es fiel.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C23 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c24-1",
+  "node_id": "tecnica_anclaje_negociacion",
+  "campo": "resumen_teorico",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "El anclaje consiste en identificar pocos puntos clave, declarar claramente lo que se desea y mantenerse firme en esas posiciones, dejando cierta flexibilidad para negociar en los puntos menos importantes. Es una técnica efectiva para conseguir lo que realmente importa al emprendedor sin perder credibilidad en la negociación.",
+  "texto_nuevo": "El anclaje consiste en identificar pocos puntos clave, declarar claramente lo que se desea y mantenerse firme en esas posiciones, que deben ser razonables y conservar un pequeño margen de flexibilidad. Es una técnica efectiva para acercarse a lo que realmente importa al emprendedor, siempre que esté dispuesto a ceder en los puntos menos importantes.",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Venture Deals - Brad Feld.txt",
+   "lineas": "L3627",
+   "frase": "Anchoring means to pick a few points, state clearly what you want, and then stick to your guns. If you anchor on positions that are reasonable while still having a little flexibility to give in the negotiation, you will get close to what you want as long as you are willing to trade away other points that aren’t as important to you."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro pone el pequeño margen de flexibilidad en las propias posiciones ancladas (razonables, con un poco que dar) y, como condicion aparte, pide estar dispuesto a ceder los otros puntos menos importantes. El resumen trasladaba la flexibilidad solo a lo secundario, contradiciendo el paso 2, que es el fiel. Ademas el libro dice 'get close to' (acercarse, no conseguir) y no habla de 'credibilidad', asi que esa segunda frase se ajusta al pasaje.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C24 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c24-2",
+  "node_id": "tecnica_anclaje_negociacion",
+  "campo": "entregable_esperado",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Lista priorizada de términos no negociables vs. negociables antes de sentarse a la mesa",
+  "texto_nuevo": "Lista priorizada de términos anclados, con su pequeño margen, vs. términos que se pueden ceder antes de sentarse a la mesa",
+  "cita": {
+   "libro": "Venture Deals - Brad Feld",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Venture Deals - Brad Feld.txt",
+   "lineas": "L3627",
+   "frase": "If you anchor on positions that are reasonable while still having a little flexibility to give in the negotiation, you will get close to what you want as long as you are willing to trade away other points that aren’t as important to you."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro no habla de terminos 'no negociables': las posiciones ancladas conservan un poco de flexibilidad y lo que se intercambia son los otros puntos menos importantes. El entregable pasa a 'anclados con pequeño margen vs. cedibles', coherente con el libro y con los pasos 2 y 4.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C24 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c25-2",
+  "node_id": "test_rico_vs_rey",
+  "campo": "resumen_teorico",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Antes de invertir, tienes que evaluar si quien dirige el negocio busca sobre todo mantener el control ('rey') o ganar dinero ('rico'). Este diagnóstico te ayuda a predecir si esa persona resistirá un cambio de liderazgo que tú, como inversor, impulses más adelante. Si te mueve el control, tiendes a resistir con fuerza que te reemplacen; si te mueve la riqueza, sueles alinearte más fácil con los intereses financieros de quien invierte.",
+  "texto_nuevo": "Antes de invertir, tienes que evaluar si quien dirige el negocio busca sobre todo mantener el control ('rey') o ganar dinero ('rico'). Este diagnóstico te ayuda a predecir si esa persona resistirá un cambio de liderazgo que tú, como inversor, impulses más adelante. Si a esa persona la mueve el control, tiende a resistir con fuerza que la reemplacen; si la mueve la riqueza, suele alinearse más fácil con los intereses financieros de quien invierte.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "L3299",
+   "frase": "If the latter, the VCs can be more confident that the founder-CEO’s interests will be aligned with their own (financial) interests"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Solo cambia la ultima frase, que volvia a tratar al lector como el fundador ('te mueve', 'te reemplacen') dentro de un resumen escrito para el inversor; el libro describe como resiste o se alinea el fundador evaluado, asi que se habla de 'esa persona' como en la frase anterior.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C25 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c25-3",
+  "node_id": "test_rico_vs_rey",
+  "campo": "pasos_accionables",
+  "indice": 0,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Indaga, antes de invertir, si priorizas tener el control total o el retorno del dinero.",
+  "texto_nuevo": "Indaga, antes de invertir, si quien dirige el negocio prioriza tener el control total o el retorno del dinero.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "L3299",
+   "frase": "many professional investors, as part of their due diligence before they initially invest, try to gauge whether the founder-CEO will resist an investor-driven succession when the time comes."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro pone la indagacion en manos del inversor sobre el fundador-CEO antes de invertir; el paso indagaba al propio lector y chocaba con el paso 1 y el resumen. Se cambia solo el sujeto.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C25 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c25-4",
+  "node_id": "test_rico_vs_rey",
+  "campo": "pasos_accionables",
+  "indice": 3,
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Si ves que eres claramente 'rey', toma en cuenta el riesgo extra que esto le suma a tu inversión.",
+  "texto_nuevo": "Si ves que quien dirige es claramente 'rey', toma en cuenta el riesgo extra que esto le suma a tu inversión.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "L3299",
+   "frase": "If the former, many VCs will shy away from making the investment, expecting the founder-CEO to resist succession"
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso mezclaba destinatarios ('eres' rey y a la vez 'tu inversion'). En el libro es el inversor quien pondera el riesgo cuando el fundador-CEO se mueve por el control; se cambia solo el sujeto.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C25 (lector, verificador ciego y arbitro)"
+ },
+ {
+  "id": "saneamiento-t1-c25-5",
+  "node_id": "test_rico_vs_rey",
+  "campo": "entregable_esperado",
+  "veredicto": "INCOHERENTE",
+  "texto_anterior": "Un diagnóstico claro sobre qué te motiva como fundador, que armas como parte de tu evaluación antes de invertir.",
+  "texto_nuevo": "Un diagnóstico claro sobre qué motiva al fundador, que armas como parte de tu evaluación antes de invertir.",
+  "cita": {
+   "libro": "The Founder's Dilemmas - Wasserman, Noam",
+   "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+   "lineas": "L3337",
+   "frase": "when they have to assess whether the founder-CEO’s motivation will hinder or facilitate a smooth transition, should the need for one arise."
+  },
+  "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro situa el diagnostico en la evaluacion que hacen los inversores de la motivacion del fundador-CEO antes de su primera ronda; el entregable pasaba a la motivacion propia del lector. Se cambia solo de quien es la motivacion.",
+  "fecha": "2026-09-26",
+  "auditoria": "SANEAMIENTO pasada K, ficha C25 (lector, verificador ciego y arbitro)"
+ }
+]

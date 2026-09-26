@@ -11,14 +11,14 @@
     "Considerar el momento de la empresa (paz o guerra) al elegir el tipo de sucesor necesario",
     "Sugerencia de My Idea: preparar un plan de retención para los ejecutivos clave que podrían no ser elegidos en la sucesión.",
     "Comunicar de forma transparente los criterios usados para la decisión de sucesión",
-    "Evalúa si tienes la visión de producto e innovación necesaria para seguir liderando",
-    "Identifica tus brechas específicas de habilidades de CEO, como gestión organizacional, ventas o relación con ejecutivos, frente a brechas de red de contactos",
-    "Busca mentores con experiencia real fundando y dirigiendo empresas, no solo asesores teóricos",
-    "Si no quieres ser CEO, enfócate en encontrar al CEO profesional adecuado e integrarlo preservando tus fortalezas",
-    "Evalúa si tu equipo directivo actual tiene conocimiento profundo del producto y la tecnología",
-    "Antes de aceptar inversion, comprueba si el inversor esta dispuesto a ayudarte a crecer como CEO en lugar de buscar reemplazarte",
-    "Si contratas a un CEO externo, asegura una transición gradual en la que sigas involucrado en las decisiones de producto",
-    "Detecta señales tempranas de desalineación entre la dirección profesional y la visión de producto"
+    "Valora primero a los candidatos internos: su conocimiento de la tecnología, las decisiones previas, la cultura y las personas cuesta más adquirir que saber gestionar una organización mayor",
+    "Observa cómo decide cada candidato con poca información: un One decide con calma y un Two tiende a complicar el proceso",
+    "Busca candidatos One también por debajo del equipo ejecutivo, donde es más probable que estén, y no los descartes por su nivel",
+    "Si promueves a un Two del equipo ejecutivo, prevé que las decisiones estratégicas se ralenticen y que los Ones naturales acaben marchándose",
+    "Si promueves a un One por encima de todo el equipo ejecutivo, prevé una rotación masiva de directivos, más peligrosa en un negocio tecnológico muy dinámico",
+    "Antes de buscar un CEO externo, ten presente que traerlo de fuera reduce tus probabilidades de éxito frente a promover desde dentro",
+    "Si eliges un sucesor Two, pídele que invierta en las tareas de One, como la estrategia, para no perder la capacidad de pivotar",
+    "Aspira a promover a un One que el resto del equipo ejecutivo acepte de buen grado, sabiendo que rara vez se da ese caso ideal"
   ],
   "entregable_esperado": "Un plan de sucesión de liderazgo que identifique candidatos, su perfil (One/Two), riesgos de rotación y estrategia de comunicación",
   "nodos_previos": [
@@ -68,6 +68,142 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro no habla de negociar clausulas contractuales de control operativo antes de invertir (buscado clause, control, board seat sin resultado en ese sentido); es materia legal anadida.",
       "indice": 10,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-100"
+    },
+    {
+      "id": "saneamiento-t1-c03-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Evalúa si tienes la visión de producto e innovación necesaria para seguir liderando",
+      "texto_nuevo": "Valora primero a los candidatos internos: su conocimiento de la tecnología, las decisiones previas, la cultura y las personas cuesta más adquirir que saber gestionar una organización mayor",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2693",
+        "frase": "Knowledge of technology, prior decisions, culture, personnel, and more tends to be far more difficult to acquire than the skills required to manage a larger organization."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso trata de la autoevaluación del fundador como CEO, que viene del pasaje de la fundación de Andreessen Horowitz (L3365-L3377) y no de la sucesión que tratan el título, el resumen y el entregable. En el capítulo Ones and Twos, el libro explica por qué los candidatos internos superan a los externos.",
+      "indice": 5,
+      "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c03-2",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Identifica tus brechas específicas de habilidades de CEO, como gestión organizacional, ventas o relación con ejecutivos, frente a brechas de red de contactos",
+      "texto_nuevo": "Observa cómo decide cada candidato con poca información: un One decide con calma y un Two tiende a complicar el proceso",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2709",
+        "frase": "Circumstances often force both Ones and Twos to make critical decisions with insufficient data, but Ones generally feel fine about doing that and do not get overly anxious about the consequences. Twos, by contrast, can become highly agitated about such things and sometimes overcomplicate the decision-making process in order to provide a false feeling of thoroughness about the choice."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Las brechas de habilidades y de red del fundador frente a un CEO profesional son otro concepto del libro (L3367-L3371). El entregable pide el perfil One/Two de los candidatos, y el libro distingue al One del Two por cómo decide con datos insuficientes.",
+      "indice": 6,
+      "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c03-3",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Busca mentores con experiencia real fundando y dirigiendo empresas, no solo asesores teóricos",
+      "texto_nuevo": "Busca candidatos One también por debajo del equipo ejecutivo, donde es más probable que estén, y no los descartes por su nivel",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2729",
+        "frase": "Or do you reach deep into the organization and pull a One from a level lower where they are likely to exist?"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Los mentores para el fundador CEO pertenecen al pasaje de Andreessen Horowitz (L3377), no a la sucesión. En el pasaje de sucesión el libro plantea buscar al One en niveles inferiores, que es lo que ya dice el resumen y alimenta la lista de candidatos del entregable.",
+      "indice": 7,
+      "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c03-4",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Si no quieres ser CEO, enfócate en encontrar al CEO profesional adecuado e integrarlo preservando tus fortalezas",
+      "texto_nuevo": "Si promueves a un Two del equipo ejecutivo, prevé que las decisiones estratégicas se ralenticen y que los Ones naturales acaben marchándose",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2731",
+        "frase": "As the company faces forks in the road, decision making may slow down and the company may lose its edge. In addition, the natural Ones (in Microsoft’s case, stellar executives such as Paul Maritz and Brad Silverberg) will eventually leave."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Integrar a un CEO profesional preservando las fortalezas del fundador es del pasaje de L3377. El entregable pide los riesgos de rotación, y el libro describe el riesgo del primer escenario de sucesión: promover a un Two.",
+      "indice": 8,
+      "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c03-5",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Evalúa si tu equipo directivo actual tiene conocimiento profundo del producto y la tecnología",
+      "texto_nuevo": "Si promueves a un One por encima de todo el equipo ejecutivo, prevé una rotación masiva de directivos, más peligrosa en un negocio tecnológico muy dinámico",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2733",
+        "frase": "In scenario two, by promoting someone past everyone on the executive team and making them CEO (as GE did), you will likely cause massive turnover of the executive staff. In fact, in very short order, almost none of the original GE executives remained under Welch. In a diversified conglomerate like GE, this kind of rough transition is possible. For companies in the highly dynamic technology business, the super-high-turnover scenario is more dangerous."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Tal como está, el paso sirve a la idea del fundador técnico frente al CEO profesional (L3365). El libro describe el riesgo del segundo escenario de sucesión, la rotación masiva al promover a un One saltando al equipo, y dice que es más peligrosa en tecnología.",
+      "indice": 9,
+      "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c03-6",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Antes de aceptar inversion, comprueba si el inversor esta dispuesto a ayudarte a crecer como CEO en lugar de buscar reemplazarte",
+      "texto_nuevo": "Antes de buscar un CEO externo, ten presente que traerlo de fuera reduce tus probabilidades de éxito frente a promover desde dentro",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2737",
+        "frase": "If you bring people in from the outside, you lower your chances for success. If you promote from within, you must deal with the One-Two phenomenon."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La relación con el inversor que quiere reemplazar al fundador es del pasaje de Loudcloud y Andreessen Horowitz (L3347-L3365), ajeno a la sucesión. El título plantea interno frente a externo, y así concluye el libro sobre el candidato externo.",
+      "indice": 10,
+      "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c03-7",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Si contratas a un CEO externo, asegura una transición gradual en la que sigas involucrado en las decisiones de producto",
+      "texto_nuevo": "Si eliges un sucesor Two, pídele que invierta en las tareas de One, como la estrategia, para no perder la capacidad de pivotar",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2715",
+        "frase": "While people tend to be Ones or Twos, with discipline and hard work natural Twos can be competent at One tasks and Ones can be competent at Two tasks. If a CEO ignores the dimension of management she doesn’t like, she generally fails. Ones end up in chaos and Twos fail to pivot when necessary."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro no trata una transición gradual con el fundador implicado en producto. Sí dice que un Two puede ganar competencia en tareas de One y que, si no lo hace, no pivota cuando hace falta. Eso mitiga el riesgo de promover a un Two.",
+      "indice": 11,
+      "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c03-8",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Detecta señales tempranas de desalineación entre la dirección profesional y la visión de producto",
+      "texto_nuevo": "Aspira a promover a un One que el resto del equipo ejecutivo acepte de buen grado, sabiendo que rara vez se da ese caso ideal",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2737",
+        "frase": "Ideally, you’ll promote a One and the rest of the executive team will be glad you did. Too bad things are rarely ideal."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. La desalineación entre la dirección profesional y la visión de producto pertenece al concepto del fundador frente al CEO profesional. El libro cierra la sucesión con el caso ideal y su advertencia, lo que coincide con el resumen: no hay una fórmula perfecta.",
+      "indice": 12,
+      "auditoria": "SANEAMIENTO pasada K, ficha C03 (lector, verificador ciego y arbitro)"
     }
   ]
 }

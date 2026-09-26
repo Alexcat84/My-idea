@@ -10,7 +10,7 @@
     "Reunir los 23 ítems de divulgación requeridos por la FTC",
     "Incluir el contrato de franquicia y documentos legales ancilares (acuerdos de financiamiento, desarrollo de área, etc.)",
     "Preparar o crear una entidad corporativa nueva con estados financieros auditados si no se cuenta con ellos",
-    "Establecer el proceso interno para presentar el FDD al menos 14 días antes de la venta, y antes de cualquier firma o cobro",
+    "Establecer el proceso interno para entregar el FDD vigente al menos 14 días naturales antes de que el candidato firme cualquier acuerdo vinculante o pague cualquier cantidad al franquiciador o a una filial (y, si cambias el contrato por tu cuenta de forma sustancial, entregar la versión revisada al menos 7 días naturales antes de la firma)",
     "Asegurar que todas las cuotas y fuentes de ingresos estén completamente divulgadas",
     "Documentar la entrega del FDD mediante la página de recibo (Item 23)"
   ],
@@ -43,6 +43,25 @@
       "node_id": "elaboracion_fdd",
       "titulo": "Elaboración del Franchise Disclosure Document (FDD)",
       "fuente": "Franchise Your Business - Mark Siebert"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-p05",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Establecer el proceso interno para presentar el FDD al menos 14 días antes de la venta, y antes de cualquier firma o cobro",
+      "texto_nuevo": "Establecer el proceso interno para entregar el FDD vigente al menos 14 días naturales antes de que el candidato firme cualquier acuerdo vinculante o pague cualquier cantidad al franquiciador o a una filial (y, si cambias el contrato por tu cuenta de forma sustancial, entregar la versión revisada al menos 7 días naturales antes de la firma)",
+      "cita": {
+        "libro": "FUENTE OFICIAL: 16 CFR 436.2(a) (FTC Franchise Rule, Disclosure Requirements and Prohibitions Concerning Franchising)",
+        "fichero": "https://www.ecfr.gov/api/versioner/v1/full/2026-09-01/title-16.xml?part=436&section=436.2 (eCFR, texto vigente a 2026-09-01; pagina de lectura: https://www.ecfr.gov/current/title-16/chapter-I/subchapt",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "(a) For any franchisor to fail to furnish a prospective franchisee with a copy of the franchisor's current disclosure document, as described in subparts C and D of this part, at least 14 calendar-days before the prospective franchisee signs a binding agreement with, or makes any payment to, the franchisor or an affiliate in connection with the proposed franchise sale."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El plazo de 14 días sigue vigente, pero el nodo lo ancla a 'la venta' y deja la firma o el cobro solo como 'antes de', cuando la norma cuenta los 14 días naturales precisamente desde el primero de esos dos hechos: la firma de un acuerdo vinculante o cualquier pago. Tampoco dice que son días naturale",
+      "indice": 4,
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
     }
   ]
 }

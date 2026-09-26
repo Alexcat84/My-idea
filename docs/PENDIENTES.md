@@ -17,6 +17,19 @@ decisiones (`docs/fidelidad/`, las tandas y el campo `correcciones` de los nodos
 recoge (`git log --format=%ci`). Una fecha escrita en el texto es orientativa; si
 no coincide con la del commit, manda el commit.
 
+## 0b. Saneamiento del dataset: lo que la tanda 1 deja para despues (26 sep 2026)
+
+Ver `docs/SANEAMIENTO_DATASET.md` (tanda 1 cerrada).
+- **Vigencia, campania posterior:** fichas de vigencia con fecha de verificacion por nodo; las normas, cifras datadas e
+  instituciones de los 305 nodos contra su fuente oficial vigente (la tanda 1 verifico solo los 21 plazos legales); los unos
+  63 nodos con dependencia que la criba no marco; confirmar los 10 anos de libro de seguridad BAJA; corregir los enlaces de
+  `docs/saneamiento/ENLACES.md` (Half.com cerrado, NIST.gov/CyberFramework y otexa.ita.doc.gov movidos, confirmar los 403);
+  `incoterms_reglas_comerciales_internacionales` cita la edicion 2010 (la vigente es Incoterms 2020).
+- **Mundo 11, en la forja y por su proceso, antes de integrar:** `evitar_preguntas_ilegales_entrevista` sin clase y con
+  contratar como norma (clase C o B, y contratar como metodo); las 3 cifras de mercado (`repartir_material_antes_reunion`,
+  `vender_puesto_jugador`, `nombrar_delegados_amigos_casa`) salen.
+- **Sesion con credencial:** 75 nodos a re-embeber y 66 preguntas a regenerar (`docs/fidelidad/credencial/`).
+
 ## 0a. Campaña de FIDELIDAD: lo que queda para la integración del mundo 11 (24 sep 2026)
 
 Mandato del fundador: nunca le diremos a un cliente lo contrario de lo que dice

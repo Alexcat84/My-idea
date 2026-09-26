@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación y Proceso de Patentes para Startups",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Una patente te da un monopolio de 20 años sobre un invento. El proceso suele iniciar con una solicitud provisional, que dentro de un año puede convertirse en una solicitud completa. Pregunta el costo de cada etapa en tu mercado, porque varía según el país y el tipo de invento. Antes de avanzar, evalúa si la inversión vale la pena, sobre todo en mercados que cambian rápido, donde la tecnología puede quedar obsoleta antes de que termines de obtener la patente.",
+  "resumen_teorico": "Una patente de invención en Estados Unidos te da un derecho exclusivo sobre un invento que dura hasta 20 años contados desde la fecha en que presentaste la solicitud (no desde que te la conceden), siempre que pagues las tasas de mantenimiento. El proceso suele iniciar con una solicitud provisional, que dentro de un año puede convertirse en una solicitud completa. Pregunta el costo de cada etapa en tu mercado, porque varía según el país y el tipo de invento. Antes de avanzar, evalúa si la inversión vale la pena, sobre todo en mercados que cambian rápido, donde la tecnología puede quedar obsoleta antes de que termines de obtener la patente.",
   "pasos_accionables": [
     "Evaluar si tu mercado es lo bastante estable como para justificar invertir en una patente",
     "Presentar una solicitud de patente provisional dentro de los 12 meses de haber divulgado o vendido el invento",
@@ -21,5 +21,23 @@
   "condiciones_activacion": [
     "Si tienes una innovación tecnológica funcional que necesitas proteger"
   ],
-  "etiqueta_arbol": "Protege tu Idea con Patente"
+  "etiqueta_arbol": "Protege tu Idea con Patente",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-p13",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Una patente te da un monopolio de 20 años sobre un invento. El proceso suele iniciar con una solicitud provisional, que dentro de un año puede convertirse en una solicitud completa. Pregunta el costo de cada etapa en tu mercado, porque varía según el país y el tipo de invento. Antes de avanzar, evalúa si la inversión vale la pena, sobre todo en mercados que cambian rápido, donde la tecnología puede quedar obsoleta antes de que termines de obtener la patente.",
+      "texto_nuevo": "Una patente de invención en Estados Unidos te da un derecho exclusivo sobre un invento que dura hasta 20 años contados desde la fecha en que presentaste la solicitud (no desde que te la conceden), siempre que pagues las tasas de mantenimiento. El proceso suele iniciar con una solicitud provisional, que dentro de un año puede convertirse en una solicitud completa. Pregunta el costo de cada etapa en tu mercado, porque varía según el país y el tipo de invento. Antes de avanzar, evalúa si la inversión vale la pena, sobre todo en mercados que cambian rápido, donde la tecnología puede quedar obsoleta antes de que termines de obtener la patente.",
+      "cita": {
+        "libro": "FUENTE OFICIAL: 35 U.S.C. 154(a)(2)",
+        "fichero": "https://www.uspto.gov/web/offices/pac/mpep/s2701.html",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "Subject to the payment of fees under this title, such grant shall be for a term beginning on the date on which the patent issues and ending 20 years from the date on which the application for the patent was filed in the United States or, if the application contains a specific reference to an earlier filed application or applications under section 120, 121, 365(c), or 386(c) from the date on which "
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). La cifra de 20 años es correcta, pero el nodo omite que se cuentan desde la presentación de la solicitud y que la vigencia depende del pago de tasas; la vida útil real tras la concesión suele ser menor. Aplica a patentes de utilidad; las de diseño se rigen por 35 U.S.C. 173. MPEP 2701 revisado el 03",
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    }
+  ]
 }

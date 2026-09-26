@@ -24,9 +24,9 @@ integrar todavia.
 | 7 | Indice semantico | A MEDIAS (el mandato lo daba por VERIFICADO; ver la fila) |
 | 8 | Resumenes y entregables | A MEDIAS |
 | 9 | Los 61 puentes al nucleo sin declarar | A MEDIAS |
-| 10 | Vigencia de contenido legal, normativo, numerico y de enlaces | PENDIENTE (medido: 313 nodos) |
-| 11 | Jurisdiccion (nodos propios de un pais) | PENDIENTE (medido: 110 sin clase) |
-| 12 | Coherencia interna de cada nodo | PENDIENTE (medido: 25 incoherentes) |
+| 10 | Vigencia de contenido legal, normativo, numerico y de enlaces | A MEDIAS (tanda 1: aviso en 305 nodos, enlaces comprobados, 21 plazos verificados; el resto, campania posterior) |
+| 11 | Jurisdiccion (nodos propios de un pais) | VERIFICADO (tanda 1: 237 nodos con clase, aviso en la tarjeta, guarda) |
+| 12 | Coherencia interna de cada nodo | A MEDIAS (tanda 1: los 25 corregidos contra su libro; residuo estimado sin localizar) |
 | 13 | Aristas rancias tras las correcciones | PENDIENTE (medido: 1 por correccion, 149 de antes) |
 | 14 | Titulos y condiciones de activacion contra su contenido | PENDIENTE (muestra: 0,0 y 0,3 por ciento) |
 | 15 | Fase y dominio de cada nodo | PENDIENTE (muestra: fase 12,3 por ciento, dominio 0,7) |
@@ -224,3 +224,44 @@ lo marcado mas una muestra de lo limpio, arbitro en los desacuerdos; todos los a
 | Fase | 12,3 por ciento en la muestra (unos 390 nodos); validacion 46 por ciento y ideacion 24 | Pasada de fase con agentes, trampas y verificador sobre los 853 nodos marcados validacion o ideacion, y correccion declarada del campo `fase_proyecto` (mirar antes que la brujula y la brecha lo usan). |
 | Titulos, condiciones y dominio | 0,0, 0,3 y 0,7 por ciento | Sin campania: corregir los 3 casos hallados (1 condicion, 2 dominios). |
 | Mundo 11 | 1 nodo sin clase y con empleo como norma (`evitar_preguntas_ilegales_entrevista`); 3 cifras de mercado | Arreglarlos en la forja antes de la integracion (clase C o B, y contratar como metodo); la cifra de mercado sale. |
+
+---
+
+## TANDA 1 (decision del fundador del 26 sep 2026): LO QUE PUEDE DANAR A UN CLIENTE. CERRADA
+
+Todo por correccion declarada en el propio nodo (`scripts/fidelidad/aplicar_correcciones.py`, cada una con su cita),
+Gate 0, `engine/run_all_tests.py` y vitest en verde. Tandas en `docs/saneamiento/tandas/`.
+
+1. **Politica unica:** `docs/POLITICA_MARCO_PAIS.md`, las tres clases, la regla de la cifra, la regla del empleo (que no
+   estaba escrita) y la reversion de agosto (programas de gobierno como clase C), ratificada por el fundador.
+2. **Regresiones:** `saneamiento-t1-regresiones` (5 correcciones en 3 nodos): `programas_cooperativos_osha` y
+   `reglas_de_origen_fta_2` vuelven a clase C (sin la formula B); `valuacion_409a` vuelve a clase C con la condicion "si tu
+   empresa esta constituida en EE.UU. (por ejemplo, en Delaware para levantar capital alli)".
+3. **Jurisdiccion:** `dataset/metadata/jurisdiccion.json`, **237 nodos con clase** (A 12, B 121, C 104; EE.UU. casi todos) y
+   21 adjudicados sin pais con su motivo. Salen de la pasada J (clase medida) y de la pasada JC (clase declarada de los 110
+   sin clase y de los **21 que la criba no vio**, encontrados entre 678 candidatos legales; trampas 32 de 32 y 32 de 32).
+   **Solo se reescribio lo incoherente** en sentido estricto (clase C que prometia "el equivalente en tu mercado" o clase B
+   atada a un solo pais): `saneamiento-t1-jurisdiccion`, 9 correcciones en 5 nodos. La tarjeta de la app lo dice en los once
+   idiomas (`web/lib/engine/avisos.ts`, `web/lib/i18n/mensajes/avisoNodo.ts`, `app/ui/TarjetaPregunta.tsx`): B "Ejemplo de
+   Estados Unidos: busca el equivalente en tu pais", C "Aplica si operas o vendes en Estados Unidos". **Guarda:**
+   `engine/test_jurisdiccion.py`, ningun nodo con marca de pais sin clase (con caso negativo), y `web/lib/engine/avisos.test.ts`.
+4. **Vigencia, primer paso:** `dataset/metadata/vigencia.json`, **305 nodos** con norma, plazo legal, cifra con fecha o
+   institucion llevan en la tarjeta "Segun [libro], [ano]: verifica la norma vigente en tu pais". El ano de cada libro se
+   leyo en su propio fichero, con la linea que lo prueba y su seguridad (de 54 libros: 17 ALTA, 27 MEDIA, 10 BAJA; si no hay
+   ano, el aviso lo omite). **Comprobador de enlaces:** `scripts/saneamiento/comprobar_enlaces.py` y su informe
+   `docs/saneamiento/ENLACES.md` (24 enlaces: 14 vivos, 2 redirigen, 4 rotos, 4 no responden). **Los 21 plazos legales,
+   verificados HOY contra la fuente oficial** con cita (37 plazos: 16 vigentes, 18 imprecisos, 1 desactualizado, 2 que no
+   son plazo legal); corregidos por `saneamiento-t1-plazos`, 17 correcciones en 14 nodos (por ejemplo, las garantias GSM-102
+   del USDA pasan de "hasta 3 anos" a 24 meses; las auditorias de seguimiento, de "cada seis meses" a "al menos una vez al
+   ano"). El resto de la vigencia queda como campania posterior en `docs/PENDIENTES.md`.
+5. **Coherencia:** los 25 contra su libro, empezando por los 6 corregidos por la fidelidad: lector con el libro, verificador
+   ciego y arbitro, cada cita comprobada literal; `saneamiento-t1-coherencia`, **52 correcciones en los 25 nodos**. El titulo
+   de `test_rico_vs_rey` no se toca (doctrina: el titulo vive con el libro y no se muestra); su etiqueta de cara, que tambien
+   decia lo contrario, pasa a "Evalua si el Fundador Busca Control" (lista de fidelidad de etiquetas, en los once idiomas).
+6. **Mundo 11:** el nodo sin clase (`evitar_preguntas_ilegales_entrevista`, contratar como metodo) y las 3 cifras de mercado
+   se arreglan EN LA FORJA por su propio proceso antes de integrar: anotado en `docs/PENDIENTES.md`.
+
+**Textos derivados:** ninguna pregunta en cache contenia el texto corregido (no se retiro ninguna); 24 nodos van a
+re-embeber y 14 preguntas a regenerar en la proxima sesion con credencial (`docs/fidelidad/credencial/`, ahora 75 y 66).
+**Aviso con titulo de libro:** `AGENTS.md` reserva el titulo del libro al detalle del nodo; el fundador decidio que el aviso de
+vigencia lo nombre en la tarjeta ("segun [libro]"), y asi se hizo.

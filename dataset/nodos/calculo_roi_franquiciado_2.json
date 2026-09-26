@@ -27,7 +27,7 @@
     "evaluacion_riesgo_mercado_dinero_gestion"
   ],
   "condiciones_activacion": [
-    "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+    "Cuando vas a ofrecer tu franquicia y necesitas mostrar el retorno que obtendrá quien la compre",
     "Cuando estás evaluando si tu negocio es franquiciable en términos financieros",
     "Antes de definir cómo vas a estructurar las cuotas y regalías",
     "Si quieres validar que la oportunidad es atractiva frente a posibles compradores de franquicia"
@@ -42,5 +42,24 @@
   "ids_alias": [
     "calculo_roi_franquiciado"
   ],
-  "etiqueta_arbol": "Calcula el Retorno del Franquiciado"
+  "etiqueta_arbol": "Calcula el Retorno del Franquiciado",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-j01",
+      "fecha": "2026-09-26",
+      "campo": "condiciones_activacion",
+      "veredicto": "INCOHERENTE_DE_CLASE",
+      "texto_anterior": "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+      "texto_nuevo": "Cuando vas a ofrecer tu franquicia y necesitas mostrar el retorno que obtendrá quien la compre",
+      "cita": {
+        "libro": "POLITICA_MARCO_PAIS",
+        "fichero": "docs/POLITICA_MARCO_PAIS.md",
+        "lineas": "L18-L24",
+        "frase": "El ejemplo es de un pais, pero la clase existe en casi todos. El nodo lo dice y manda buscar lo propio"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase B: calcular el retorno del franquiciado es metodo universal y el FDD es el ejemplo de EE.UU.; la condicion de solo EE.UU. lo contradecia.",
+      "indice": 0,
+      "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+    }
+  ]
 }

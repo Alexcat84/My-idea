@@ -13,6 +13,8 @@ import { CampoConVoz } from "./CampoConVoz";
 
 interface Props {
   cintillo?: string | null;
+  /** Los avisos del nodo del cintillo (jurisdiccion y vigencia; lib/engine/avisos.ts), ya traducidos. */
+  avisos?: string[];
   pregunta: string;
   enviando: boolean;
   /** AUD-09 M27: true si el turno llegó; solo entonces se vacía el campo. */
@@ -20,7 +22,7 @@ interface Props {
   textoBoton?: string;
 }
 
-export function TarjetaPregunta({ cintillo, pregunta, enviando, onEnviar, textoBoton }: Props) {
+export function TarjetaPregunta({ cintillo, avisos, pregunta, enviando, onEnviar, textoBoton }: Props) {
   const t = elegir(TARJETA_PREGUNTA, useIdioma());
   const [respuesta, setRespuesta] = useState("");
 
@@ -31,6 +33,15 @@ export function TarjetaPregunta({ cintillo, pregunta, enviando, onEnviar, textoB
           <span aria-hidden className="h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
           {cintillo}
         </p>
+      )}
+      {cintillo && avisos && avisos.length > 0 && (
+        <ul className="-mt-1.5 mb-3.5 space-y-1" aria-label="avisos">
+          {avisos.map((a) => (
+            <li key={a} className="text-[12px] leading-[1.45] text-dim">
+              {a}
+            </li>
+          ))}
+        </ul>
       )}
       <p className="text-[17px] font-semibold leading-[1.5] [text-wrap:pretty] sm:text-[21px]">{pregunta}</p>
       <div className="mt-5">

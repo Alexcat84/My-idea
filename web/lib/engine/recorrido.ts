@@ -30,6 +30,7 @@ import { idiomaDePlantilla } from "../i18n/detectarIdioma";
 import { MOTOR } from "../i18n/mensajes/motor";
 import { FAMILIA_QUERY_BRUJULA, MAX_DEPTH, MAX_REPREGUNTAS_POR_PUNTO, MAX_TURNOS_EXTRA_SIGAMOS_DIRIGIDO } from "./constants";
 import { esOfrecible, etiquetaArbol, obtenerPregunta, preguntaDeNodo, resolverId, sucesoresNivel, tituloDeNodo, type Grafo, type PreguntasCache } from "./graph";
+import { avisosNodo } from "./avisos";
 import { preguntaEnIdioma } from "./preguntaEnIdioma";
 import { consultaAlEspanol } from "./consultaAlEspanol";
 import { ramaDe, reelegirPuertaDeMundo } from "./reeleccionPuerta";
@@ -163,6 +164,9 @@ export interface NodoTranscrito {
    * (jul 2026): el usuario nunca ve los nombres internos de los conceptos.
    * Dos idiomas: técnico adentro, natural afuera. */
   etiqueta: string;
+  /** Los avisos del nodo para la tarjeta (jurisdiccion y vigencia), en el idioma de la interfaz
+   * (lib/engine/avisos.ts; decision del fundador del 26 sep 2026). */
+  avisos?: string[];
   modo: ModoNodo;
 }
 
@@ -432,6 +436,7 @@ async function avanzarTurnoBase(params: AvanzarTurnoParams): Promise<ResultadoTu
     return estado.ruta.slice(rutaLongitudInicial).map((nid, i) => ({
       id: nid,
       etiqueta: etiquetaArbol(nid, graph, idiomaInterfaz),
+      avisos: avisosNodo(nid, graph, idiomaInterfaz),
       modo: estado.modos[rutaLongitudInicial + i],
     }));
   }

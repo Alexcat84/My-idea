@@ -7,12 +7,12 @@
   "resumen_teorico": "Documenta tu propuesta de valor en tres partes: tu Visión de Producto (a dónde quieres llegar a largo plazo), las Características y Beneficios (qué hace tu producto y por qué la gente lo compraría, distinguiendo entre lo que construyes -features- y el problema que le resuelves al cliente -benefits-), y tu producto mínimo viable. Escríbelo en viñetas, no en párrafos largos.",
   "pasos_accionables": [
     "Escribe tu visión a 3-5 años en viñetas cortas",
-    "Haz una lista de máximo 10 características principales de tu producto",
+    "Haz una lista de máximo 10 características principales de tu producto y marca el grupo mínimo que ya resuelve el problema central: ese es tu producto mínimo viable",
     "Traduce cada característica en un beneficio visto con los ojos de tu cliente",
     "Escribe una historia breve explicando qué trabajo hará tu producto y qué problema resuelve",
     "Piensa aspectos clave: si hay efectos de red, cómo vas a cobrar, qué tan atado se queda el cliente contigo, cuánto te queda de margen, si la gente lo recomienda sola"
   ],
-  "entregable_esperado": "Un documento breve con tu visión, la lista de características y beneficios, y la historia de tu producto",
+  "entregable_esperado": "Un documento breve con tu visión, la lista de características y beneficios, la historia de tu producto y tu producto mínimo viable",
   "nodos_previos": [
     "hipotesis_de_tamano_de_mercado"
   ],
@@ -25,7 +25,59 @@
   ],
   "condiciones_activacion": [
     "Cuando necesitas dejar clara tu visión de producto para ti y para quien trabaje contigo",
-    "Antes de definir tu producto mínimo viable"
+    "Antes de construir tu producto mínimo viable y ponerlo en manos de tus primeros clientes"
   ],
-  "etiqueta_arbol": "Define tu Propuesta de Valor"
+  "etiqueta_arbol": "Define tu Propuesta de Valor",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c19-1",
+      "fecha": "2026-09-26",
+      "campo": "entregable_esperado",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Un documento breve con tu visión, la lista de características y beneficios, y la historia de tu producto",
+      "texto_nuevo": "Un documento breve con tu visión, la lista de características y beneficios, la historia de tu producto y tu producto mínimo viable",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L5420",
+        "frase": "The MVP is the final portion of this first value proposition brief."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro divide el documento de propuesta de valor en tres partes: Product Vision, Product Features & Benefits y Minimum Viable Product (L5305-L5311). Además dice que el MVP es la parte final de ese mismo documento. El resumen del nodo es fiel al libro, pero al entregable le faltaba el producto mínimo viable. Lo añado y mantengo la historia de producto, que el libro también pide (L5397).",
+      "auditoria": "SANEAMIENTO pasada K, ficha C19 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c19-2",
+      "fecha": "2026-09-26",
+      "campo": "condiciones_activacion",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Antes de definir tu producto mínimo viable",
+      "texto_nuevo": "Antes de construir tu producto mínimo viable y ponerlo en manos de tus primeros clientes",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L5315; L5432",
+        "frase": "The product development team produces much of the product brief, one of the few times it’s asked to engage in a paper exercise. / The sooner the MVP is in their hands, the sooner feedback can arrive."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En el libro, definir el MVP es la parte final de este mismo documento (L5420), así que el nodo no puede ir antes de definirlo. Como el documento es un ejercicio en papel, lo que sí va antes es construir el MVP y ponerlo en manos de los clientes. La condición conserva su forma \"Antes de\" y pasa a nombrar ese momento.",
+      "indice": 1,
+      "auditoria": "SANEAMIENTO pasada K, ficha C19 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c19-3",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Haz una lista de máximo 10 características principales de tu producto",
+      "texto_nuevo": "Haz una lista de máximo 10 características principales de tu producto y marca el grupo mínimo que ya resuelve el problema central: ese es tu producto mínimo viable",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L5383; L5385; L5420",
+        "frase": "The product features list is a one-page document consisting of one- or two-sentence summaries of the top 10 (or fewer) features of the complete product vision. / Developing the MVP will start the prioritization process. / It’s a concise summary of the smallest possible group of features that will work as a stand-alone product while still solving at least the “core” problem and demonstrating the product’s value."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El resumen y ahora el entregable piden el MVP como tercera parte, pero ningún paso lo producía. El libro lo define como el grupo mínimo de características que resuelve el problema central, y dice que definirlo empieza la priorización de esa lista. Por eso amplío este paso en lugar de añadir uno nuevo, y lo que ya decía queda intacto.",
+      "indice": 1,
+      "auditoria": "SANEAMIENTO pasada K, ficha C19 (lector, verificador ciego y arbitro)"
+    }
+  ]
 }

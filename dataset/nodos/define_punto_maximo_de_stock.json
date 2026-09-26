@@ -11,7 +11,7 @@
     "Multiplica tu uso semanal por el tiempo de entrega para saber tu reserva de trabajo.",
     "Añade un colchón de seguridad, una porción extra de esa reserva, para cubrir retrasos o defectos.",
     "Suma reserva más colchón para obtener tu punto de reorden, y anótalo junto al producto.",
-    "Revisa estos cálculos cada vez que cambie tu volumen de ventas o el proveedor cambie su plazo de entrega."
+    "Decide cada cuánto revisarás y pedirás (tu ciclo de revisión) y suma a tu punto de reorden lo que usas en ese ciclo: ese es tu máximo. Recalcúlalo si cambian tus ventas o el plazo del proveedor."
   ],
   "entregable_esperado": "Un punto de reorden y un nivel máximo de stock calculados y escritos para cada producto clave.",
   "nodos_previos": [
@@ -25,5 +25,24 @@
     "Tienes dinero atrapado en productos que compraste de más y no se mueven.",
     "No sabes con certeza cuándo volver a pedir un producto a tu proveedor."
   ],
-  "etiqueta_arbol": "Fija tu punto de reorden"
+  "etiqueta_arbol": "Fija tu punto de reorden",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c14-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Revisa estos cálculos cada vez que cambie tu volumen de ventas o el proveedor cambie su plazo de entrega.",
+      "texto_nuevo": "Decide cada cuánto revisarás y pedirás (tu ciclo de revisión) y suma a tu punto de reorden lo que usas en ese ciclo: ese es tu máximo. Recalcúlalo si cambian tus ventas o el plazo del proveedor.",
+      "cita": {
+        "libro": "Max Muller, Essentials of Inventory Management",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\OCR\\Essentials of Inventory Managem - Max Muller.txt",
+        "lineas": "L3980",
+        "frase": "ROP + Usage During the Review Cycle = Maximum"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro (L3962-L3980) trata el punto de reorden como el mínimo de un sistema min-max y calcula el máximo aparte. Primero fija cada cuánto se pide, el ciclo de revisión (L3964: \"To compute the maximum in these systems, you must first determine how often you will place orders. This time period is called the review cycle.\"), y luego Máximo = ROP + uso durante el ciclo de revisión (L3980). El título (punto máximo y cada cuánto lo revisas) y el entregable (nivel máximo calculado) son fieles al libro, pero ningún paso calculaba el máximo. Se cambia solo el último paso para que lo calcule con el cic",
+      "indice": 5,
+      "auditoria": "SANEAMIENTO pasada K, ficha C14 (lector, verificador ciego y arbitro)"
+    }
+  ]
 }

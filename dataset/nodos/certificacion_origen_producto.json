@@ -11,7 +11,7 @@
     "Incluir descripción detallada del bien y su clasificación HS a 6 dígitos o más",
     "Indicar el criterio de preferencia según el cual el bien origina (código o explicación textual)",
     "Firmar el certificado por una persona con autoridad legal y acceso a los registros de respaldo",
-    "Conservar la documentación de respaldo hasta por 5 años en caso de auditoría aduanera"
+    "Conservar la documentación de respaldo durante al menos 5 años (desde la fecha de la certificación si eres exportador o productor; desde la importación si eres importador) en caso de auditoría aduanera"
   ],
   "entregable_esperado": "Certificado de Origen (COO) completo y firmado, junto con documentación de respaldo archivada",
   "nodos_previos": [
@@ -28,5 +28,24 @@
   "condiciones_activacion": [
     "Cuando el producto ya calificó bajo las Reglas de Origen del FTA y se requiere formalizar el beneficio arancelario ante aduanas"
   ],
-  "etiqueta_arbol": "Certifica el Origen del Producto"
+  "etiqueta_arbol": "Certifica el Origen del Producto",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-p09",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Conservar la documentación de respaldo hasta por 5 años en caso de auditoría aduanera",
+      "texto_nuevo": "Conservar la documentación de respaldo durante al menos 5 años (desde la fecha de la certificación si eres exportador o productor; desde la importación si eres importador) en caso de auditoría aduanera",
+      "cita": {
+        "libro": "FUENTE OFICIAL: 19 CFR 182.21(c)(1) (exportador o productor que certifica); 19 CFR 182.15(a) (importador); USMCA Art. 5.8",
+        "fichero": "https://www.ecfr.gov/api/versioner/v1/full/2026-09-01/title-19.xml?part=182&section=182.21",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "An exporter or producer who completes a certification of origin or a producer who provides a written representation for a good exported from the United States to Canada or Mexico must maintain, for a period of at least five years after the date the certification was completed, all records and supporting documents relating to the origin of a good for which the certification of origin was completed"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El plazo de 5 años sigue vigente, pero la norma lo fija como MÍNIMO (\"at least\" / \"minimum of\"), y el nodo dice \"hasta por 5 años\", que se lee como un máximo. Además, el punto desde el que se cuenta depende del papel: certificación para exportador/productor, importación para importador. ecfr.gov red",
+      "indice": 5,
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    }
+  ]
 }

@@ -9,7 +9,7 @@
     "Evalúa si el comprador tiene intención real de cerrar o si solo está buscando información sin compromiso",
     "Determina qué riesgo corres con tus clientes o empleados al iniciar el proceso de venta",
     "Resiste por defecto la petición de comisión por cancelación, apoyándote en la cláusula de exclusividad (no-shop)",
-    "Acepta esta comisión solo en circunstancias excepcionales y bien justificadas",
+    "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si sospechas una expedición de pesca o si asumes un gran riesgo con clientes o empleados",
     "Consulta con quien te asesore legalmente antes de aceptar cualquier comisión de este tipo"
   ],
   "entregable_esperado": "Una postura clara y por escrito sobre si aceptas o rechazas la comisión por cancelación en la carta de intención (LOI)",
@@ -41,6 +41,23 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R022-012 (CONTRARIO, lector y verificador de acuerdo): Invierte quién paga en los casos excepcionales: el libro no dice que ahí se acepte la petición del comprador, sino que el vendedor puede pedir él la comisión. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R022-012"
+    },
+    {
+      "id": "saneamiento-t1-c01-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Acepta esta comisión solo en circunstancias excepcionales y bien justificadas",
+      "texto_nuevo": "Pide tú la comisión por cancelación al comprador solo en casos puntuales: si sospechas una expedición de pesca o si asumes un gran riesgo con clientes o empleados",
+      "cita": {
+        "libro": "Venture Deals - Brad Feld",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\Venture Deals - Brad Feld.txt",
+        "lineas": "L4338",
+        "frase": "There are some rare circumstances in which a seller can reasonably ask for a breakup fee. If the buyer is competitive and the seller is concerned that the buyer may be entering the process as a fishing expedition as opposed to a good-faith effort to buy the company, or if the seller incurs a massive amount of customer or employee risk by entering into the deal, a breakup fee may be appropriate."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro separa dos direcciones: la comisión que pide el comprador se resiste y se le remite a la cláusula de exclusividad (L4329: \"We generally resist any request of a buyer to institute a breakup fee and tell the potential buyer to rely on the no-shop clause instead.\"), y la excepción rara es que sea el vendedor quien la pida (L4338), por expedición de pesca o por gran riesgo con clientes o empleados. El paso 3 invertía esa excepción al convertirla en aceptar la comisión del comprador. El resumen, los pasos 0 a 2 y las condiciones ya son fieles; solo cambia este paso, con el mismo vocabulari",
+      "indice": 3,
+      "auditoria": "SANEAMIENTO pasada K, ficha C01 (lector, verificador ciego y arbitro)"
     }
   ]
 }

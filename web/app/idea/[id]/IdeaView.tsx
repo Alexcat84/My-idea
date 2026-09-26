@@ -97,7 +97,7 @@ interface DetalleIdea {
     dominio?: string;
     /** AUD-09 H01: el tipo de la sesión decide qué ofrece el final y a qué precio. */
     es_seguimiento?: boolean;
-    ruta: Array<{ id: string; etiqueta: string; modo: string }>;
+    ruta: Array<{ id: string; etiqueta: string; avisos?: string[]; modo: string }>;
     /** El recorrido conversado ya guardado: se repinta al reentrar. */
     turnos?: Array<{ pregunta: string; respuesta: string }>;
   } | null;
@@ -127,6 +127,8 @@ interface NodoNuevo {
   /** La etiqueta_arbol: lo ÚNICO que el servidor manda para nombrar un tema.
    * El nombre técnico del concepto se queda adentro (decisión del fundador). */
   etiqueta: string;
+  /** Los avisos del nodo (jurisdiccion y vigencia), ya en el idioma de la interfaz. */
+  avisos?: string[];
   modo: string;
 }
 
@@ -209,6 +211,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
   const [sessionId, setSessionId] = useState<string | null>(null);
   const [pregunta, setPregunta] = useState<string | null>(null);
   const [cintillo, setCintillo] = useState<string | null>(null);
+  const [avisosCintillo, setAvisosCintillo] = useState<string[]>([]);
   const [enviando, setEnviando] = useState(false);
   const [listoParaPlan, setListoParaPlan] = useState(false);
   /** Fase 4.3 §2: el cierre honesto en pantalla (null = no hubo cierre). */
@@ -310,7 +313,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
       ...nuevos.map((n) => nodoArbolDesdeRuta(n, contadorNodos.current++, t.notaSilencioso)),
     ]);
     const conversado = [...nuevos].reverse().find((n) => n.modo !== "silencioso");
-    if (conversado) setCintillo(conversado.etiqueta);
+    if (conversado) {
+      setCintillo(conversado.etiqueta);
+      setAvisosCintillo(conversado.avisos ?? []);
+    }
   }
 
   function procesarTurno(data: RespuestaTurno) {
@@ -678,7 +684,10 @@ export function IdeaView({ projectId }: { projectId: string }) {
           // repinta en vez de arrancar vacío (antes solo vivía en pantalla).
           if (d.entrevista.turnos?.length) setRecorrido(d.entrevista.turnos);
           const conversado = [...d.entrevista.ruta].reverse().find((n) => n.modo !== "silencioso");
-          if (conversado) setCintillo(conversado.etiqueta);
+          if (conversado) {
+            setCintillo(conversado.etiqueta);
+            setAvisosCintillo(conversado.avisos ?? []);
+          }
         } else if (quiereEntrevista && !d.plan) {
           // Arranque: la entrevista sobre ESTA idea (el motor nunca
           // re-pregunta la idea inicial: se la mandamos como contexto).
@@ -1320,6 +1329,7 @@ export function IdeaView({ projectId }: { projectId: string }) {
               {pregunta && !tarjetaContextoFinal && (
                 <TarjetaPregunta
                   cintillo={cintillo}
+                  avisos={avisosCintillo}
                   pregunta={pregunta}
                   enviando={enviando}
                   onEnviar={responder}

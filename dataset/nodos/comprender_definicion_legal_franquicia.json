@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Entiende la definición legal de franquicia (regla federal FTC 436)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 en los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+  "resumen_teorico": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
   "pasos_accionables": [
     "Revisa si tu modelo de negocio hara que los operadores usen una marca o nombre en comun",
     "Identifica si vas a ejercer control significativo (sitio, horarios, técnicas de producción, contabilidad, etc.) o si vas a dar asistencia significativa (entrenamiento, manual de operaciones, marketing)",
@@ -24,5 +24,23 @@
     "Cuando estas diseñando un modelo de expansion que involucra a terceros operando bajo tu marca",
     "Cuando tienes dudas sobre si el acuerdo de licencia o distribucion que estas armando podria clasificar legalmente como franquicia"
   ],
-  "etiqueta_arbol": "Entiende la Definición Legal de Franquicia"
+  "etiqueta_arbol": "Entiende la Definición Legal de Franquicia",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-p07",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 en los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+      "texto_nuevo": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+      "cita": {
+        "libro": "FUENTE OFICIAL: 16 CFR 436.8(a)(1) (FTC Franchise Rule, exencion de pago minimo; ultima modificacion sustantiva 2024-07-12)",
+        "fichero": "https://www.ecfr.gov/api/versioner/v1/full/2026-09-24/title-16.xml?part=436&section=436.8",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "(1) The total of the required payments, or commitments to make a required payment, to the franchisor or an affiliate that are made any time from before to within six months after commencing operation of the franchisee's business is less than $735."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El plazo de seis meses sigue vigente, pero el nodo lo dice a medias: la norma cuenta tambien los pagos hechos antes de abrir (from before to within six months after commencing operation). Ademas, la cifra que acompana al plazo en el nodo ($500) esta DESACTUALIZADA: el eCFR registra ajustes sustantiv",
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    }
+  ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Exercise Period de Opciones",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Período de tiempo que tiene un empleado/fundador para ejercer (comprar) sus opciones vested pagando el precio de compra, después de dejar la empresa. Tradicionalmente 90 días, aunque algunas empresas han extendido este período hasta 10 años (máximo legal). Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+  "resumen_teorico": "Período de tiempo que tiene un empleado/fundador para ejercer (comprar) sus opciones vested pagando el precio de compra, después de dejar la empresa. Tradicionalmente 90 días, porque en Estados Unidos una opción ISO solo conserva su ventaja fiscal si se ejerce dentro de los 3 meses siguientes a tu salida (1 año si sales por incapacidad); el plan puede darte más tiempo, pero lo que ejerzas después tributa como opción no calificada (NSO), aunque algunas empresas han extendido este período hasta 10 años desde la concesión (el máximo legal para las opciones ISO en Estados Unidos, 5 años si tienes más del 10 % del voto; para las opciones no calificadas, los 10 años son la práctica habitual, no un límite legal). Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
   "pasos_accionables": [
     "Definir el período de ejercicio estándar (90 días) o evaluar extensión a mayor plazo",
     "Considerar el impacto fiscal de ejercer opciones tempranamente (capital gains vs ordinary income)",
@@ -20,5 +20,23 @@
   "condiciones_activacion": [
     "Si un empleado o fundador deja la empresa y tiene opciones vested pendientes de ejercer"
   ],
-  "etiqueta_arbol": "Conoce tu Plazo de Ejercicio"
+  "etiqueta_arbol": "Conoce tu Plazo de Ejercicio",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-p02",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Período de tiempo que tiene un empleado/fundador para ejercer (comprar) sus opciones vested pagando el precio de compra, después de dejar la empresa. Tradicionalmente 90 días, aunque algunas empresas han extendido este período hasta 10 años (máximo legal). Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+      "texto_nuevo": "Período de tiempo que tiene un empleado/fundador para ejercer (comprar) sus opciones vested pagando el precio de compra, después de dejar la empresa. Tradicionalmente 90 días, porque en Estados Unidos una opción ISO solo conserva su ventaja fiscal si se ejerce dentro de los 3 meses siguientes a tu salida (1 año si sales por incapacidad); el plan puede darte más tiempo, pero lo que ejerzas después tributa como opción no calificada (NSO), aunque algunas empresas han extendido este período hasta 10 años desde la concesión (el máximo legal para las opciones ISO en Estados Unidos, 5 años si tienes más del 10 % del voto; para las opciones no calificadas, los 10 años son la práctica habitual, no un límite legal). Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario. Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.",
+      "cita": {
+        "libro": "FUENTE OFICIAL: 26 U.S.C. 422(a)(2) (y 422(c)(6) para incapacidad) ; 26 U.S.C. 422(b)(3) y 422(c)(5)",
+        "fichero": "https://www.govinfo.gov/link/uscode/26/422 ; https://www.govinfo.gov/link/uscode/26/422",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "at all times during the period beginning on the date of the granting of the option and ending on the day 3 months before the date of such exercise, such individual was an employee of either the corporation granting such option || such option by its terms is not exercisable after the expiration of 10 years from the date such option is granted"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). Se verificó el texto de 26 U.S.C. 422 en el PDF oficial de govinfo (GPO), generado el 24 feb 2026; no hay reformas posteriores de este punto. uscode.house.gov no respondió (ECONNREFUSED) y ecfr.gov redirigió a una página de desbloqueo. El nodo es de clase B y el plazo es estadounidense, así que el t | La cifra de 10 años sigue vigente, pero el fragmento la presenta como máximo legal general. Solo lo es para las ISO. Omite la excepción de 5 años para quien tiene más del 10 % del voto y no dice que las NSO no tienen tope en esta norma. Verificado en el mismo PDF oficial de govinfo, 26 U.S.C. 422.",
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    }
+  ]
 }

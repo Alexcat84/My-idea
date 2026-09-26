@@ -10,7 +10,7 @@
     "Determinar por cual de las cuatro vias del Articulo 401 origina el producto: obtenido enteramente en la region, conforme a la regla especifica del Anexo 401 (cambio de clasificacion arancelaria, valor de contenido regional o ambos), producido solo con materiales originarios, o con el valor de contenido regional exigido",
     "Calcular el Regional Value Content del producto según el método correspondiente al tratado (Build-Up, Build-Down o Net Cost), con los umbrales de 60% método de transacción o 50% método de costo neto",
     "Preparar y firmar el Certificado de Origen correspondiente (ej. NAFTA) antes del embarque, en el formulario que corresponda: CF 434, Form B-232, o Certificado de Origen",
-    "Conservar la documentación de respaldo por el periodo requerido por la aduana, y disponible para el importador"
+    "Conservar la documentación de respaldo durante el plazo que fija la aduana: en Estados Unidos, bajo el T-MEC, al menos cinco años desde la importación (importador) o desde que se completó la certificación (exportador o productor); en Canadá, seis años para el importador; otros tratados pueden fijar su propio plazo., y disponible para el importador"
   ],
   "entregable_esperado": "Certificado de Origen firmado y cálculo de RVC documentado que respalde el trato arancelario preferencial",
   "nodos_previos": [
@@ -54,6 +54,23 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. Tiene razon B. El libro enumera las cuatro vias del Articulo 401: bienes obtenidos enteramente en la region, bienes que cumplen la regla especifica del Anexo 401, bienes producidos solo con materiales originarios, y bienes con valor regional de 60 o 50 por ciento (L2883-L2889; tambien criterios A a D en L6485). El paso afirma que las cuatro reglas son tariff shift, RVC y wholly obtained: tres elementos, uno de los cuales (el cambio de clasificacion) el libro situa dentro de la regla del Anexo 401 (L6485), y omite la via de materiales exclusivamente originarios. La accion de determinar la regla aplicable si tiene apoyo, pero la enumeracion de la norma queda cambiada respecto al libro, y eso es otro valor para el mismo dato. A reconoce el problema pero lo deja en OPERATIVO.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C013-045"
+    },
+    {
+      "id": "saneamiento-t1-p04",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Conservar la documentación de respaldo por el periodo requerido por la aduana, y disponible para el importador",
+      "texto_nuevo": "Conservar la documentación de respaldo durante el plazo que fija la aduana: en Estados Unidos, bajo el T-MEC, al menos cinco años desde la importación (importador) o desde que se completó la certificación (exportador o productor); en Canadá, seis años para el importador; otros tratados pueden fijar su propio plazo., y disponible para el importador",
+      "cita": {
+        "libro": "FUENTE OFICIAL: 19 CFR 182.15(a) (importador que reclama trato preferencial USMCA); 19 CFR 182.21(c)(1) (exportador o productor que comp",
+        "fichero": "https://www.ecfr.gov/api/renderer/v1/content/enhanced/current/title-19?part=182&section=182.15",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "An importer claiming USMCA preferential tariff treatment for a good must maintain for a minimum of five years from the date of importation of the good, all records and documents that the importer has demonstrating that the good qualifies for preferential tariff treatment under the USMCA, including the certification of origin and records related to transit and transshipment."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). ARBITRAJE: A y B coinciden en todo lo de EE.UU. y ambos tienen razón en ello; abrí hoy la API renderer oficial de ecfr.gov y las dos citas (182.15(a) y 182.21(c)(1)) son literales y vigentes. El nodo no da cifra, remite a 'el periodo requerido por la aduana': correcto pero a medias, de ahí IMPRECISO",
+      "indice": 4,
+      "auditoria": "SANEAMIENTO P21 (arbitro)"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Elementos Fundamentales de un Contrato Válido",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Bajo el common law, un contrato se considera válido cuando existen tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos —incluidos aquellos que tomarán más de un año en ejecutarse— se pongan por escrito.",
+  "resumen_teorico": "Bajo el common law, un contrato se considera válido cuando existen tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos, incluidos aquellos que, por sus propios términos, no pueden cumplirse dentro del año siguiente a su firma (regla estatal en EE.UU., por ejemplo California Civil Code § 1624(a)(1); en tu país busca la norma equivalente), se pongan por escrito.",
   "pasos_accionables": [
     "Identificar todos los acuerdos verbales existentes entre cofundadores, empleados clave o socios.",
     "Formalizar por escrito cualquier acuerdo que pueda tardar más de un año en cumplirse.",
@@ -24,5 +24,23 @@
     "Cuando se establecen acuerdos importantes entre fundadores o con terceros que puedan generar disputas futuras.",
     "Si existen negociaciones complejas o de largo plazo que requieren certeza legal."
   ],
-  "etiqueta_arbol": "Confirma los Elementos de tu Contrato"
+  "etiqueta_arbol": "Confirma los Elementos de tu Contrato",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-p17",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Bajo el common law, un contrato se considera válido cuando existen tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos —incluidos aquellos que tomarán más de un año en ejecutarse— se pongan por escrito.",
+      "texto_nuevo": "Bajo el common law, un contrato se considera válido cuando existen tres elementos: (a) una oferta, (b) la aceptación de esa oferta, y (c) la consideración (algo de valor intercambiado). Los acuerdos orales son difíciles de hacer cumplir en negociaciones largas o ambiguas, por lo que las leyes de fraude en muchos estados exigen que ciertos contratos, incluidos aquellos que, por sus propios términos, no pueden cumplirse dentro del año siguiente a su firma (regla estatal en EE.UU., por ejemplo California Civil Code § 1624(a)(1); en tu país busca la norma equivalente), se pongan por escrito.",
+      "cita": {
+        "libro": "FUENTE OFICIAL: California Civil Code § 1624(a)(1); equivalente New York General Obligations Law § 5-701(a)(1)",
+        "fichero": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=CIV&sectionNum=1624",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "(1) An agreement that by its terms is not to be performed within a year from the making thereof."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). A y B coinciden en estado (IMPRECISO), norma y cita, y ambos tenian razon. Verifique hoy en leginfo.legislature.ca.gov el texto literal de § 1624(a) y (a)(1) ('The following contracts are invalid, unless they, or some note or memorandum thereof, are in writing and subscribed by the party to be charg",
+      "auditoria": "SANEAMIENTO P21 (arbitro)"
+    }
+  ]
 }

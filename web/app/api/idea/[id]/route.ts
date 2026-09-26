@@ -13,6 +13,7 @@ import { preguntaTipoOferta } from "@/lib/engine/constants";
 import { obtenerCapacidadesPorEspacio, obtenerModosPorEspacio, obtenerProyecto, type EstadoSesionPersistido } from "@/lib/db";
 import { ESPACIO_CORE } from "@/lib/espacios";
 import { cargarGrafo, etiquetaArbol } from "@/lib/engine/graph";
+import { avisosNodo } from "@/lib/engine/avisos";
 import { avisoDelPlan } from "@/lib/engine/planRedactor";
 import { preguntasPorTipo } from "@/lib/engine/reporte";
 import { nombreDeIdea } from "@/lib/ideas";
@@ -201,6 +202,7 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
         // Solo la etiqueta de cara: el nombre técnico del concepto no sale
         // de casa (decisión del fundador, jul 2026).
         etiqueta: etiquetaArbol(nid, graph, idioma),
+        avisos: avisosNodo(nid, graph, idioma),
         modo: rec.modos[i],
       })),
       turnos: (s.estado_recorrido.turnos ?? []).map((t) => ({ pregunta: t.pregunta, respuesta: t.respuesta })),

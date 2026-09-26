@@ -10,7 +10,7 @@
     "Sal del edificio repetidamente, durante semanas o meses, a hablar con clientes reales",
     "No delegues esta tarea en otra persona; tienes que liderarla tú mismo"
   ],
-  "entregable_esperado": "El documento con las hipótesis iniciales de tu modelo de negocio, listo para validarlo en la calle",
+  "entregable_esperado": "Tus hipótesis iniciales sobre tu mercado y tus clientes convertidas en hechos, contrastadas en persona con clientes reales",
   "nodos_previos": [
     "buyin_customer_development",
     "actualizar_business_model_canvas_tuneup"
@@ -24,5 +24,23 @@
     "Al iniciar la etapa de validación de tu negocio",
     "Si tienes un plan de negocio pero todavía no has hablado con clientes reales"
   ],
-  "etiqueta_arbol": "Convierte Hipótesis en Hechos"
+  "etiqueta_arbol": "Convierte Hipótesis en Hechos",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c12-1",
+      "fecha": "2026-09-26",
+      "campo": "entregable_esperado",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "El documento con las hipótesis iniciales de tu modelo de negocio, listo para validarlo en la calle",
+      "texto_nuevo": "Tus hipótesis iniciales sobre tu mercado y tus clientes convertidas en hechos, contrastadas en persona con clientes reales",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L4661; L4670",
+        "frase": "So the No. 1 goal of customer discovery amounts to this: turning the founders’ initial hypotheses about their market and customers into facts. / Facts exist only outside the building, where customers live, so the most important aspect of customer discovery is getting out of the building, in front of customers."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Según el libro, la meta número 1 de Customer Discovery es convertir en hechos las hipótesis iniciales de los fundadores sobre su mercado y sus clientes (L4661). Esos hechos solo se obtienen fuera del edificio, delante de los clientes (L4670). El resumen y los tres pasos ya dicen eso: las 4 preguntas (L4646 y el pasaje anterior), salir repetidamente durante semanas o meses y no delegarlo. El entregable era lo único que no cuadraba, porque describía el documento de hipótesis previo, que es la entrada del proceso y que ningún paso redacta. Ahora nombra lo que el usuario tiene al terminar los paso",
+      "auditoria": "SANEAMIENTO pasada K, ficha C12 (lector, verificador ciego y arbitro)"
+    }
+  ]
 }

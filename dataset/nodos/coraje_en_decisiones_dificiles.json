@@ -10,9 +10,9 @@
     "Define estructuras claras de autoridad (un solo tomador de decisiones final) aunque sea incómodo",
     "Acepta que en decisiones complejas, poseer más información y perspectiva que otros justifica confiar en tu propio juicio, incluso frente a la oposición",
     "Actúa con decisión incluso cuando la certeza es baja (ej: 54% vs 46%)",
-    "Reconoce que lo que tus clientes actuales piden no siempre es el camino para ganar frente a la competencia.",
-    "Decide reinventar el producto aunque eso contradiga lo que el feedback documentado, las opiniones registradas de clientes, te dice.",
-    "Dile con claridad a quien te ayuda con el producto que la visión pesa más que la lista de pendientes acumulada (backlog).",
+    "Reconoce que tu equipo o tu board pueden estar apoyando la opción que creen que tú prefieres, no la que han analizado.",
+    "No dejes que la presión del grupo convierta en tu cabeza una decisión clara (70 contra 30) en una que parece empatada (51 contra 49).",
+    "Elige lo difícil y correcto frente a lo popular y fácil: cada vez que lo haces te vuelves un poco más valiente, y tu empresa también.",
     "Asume tú la responsabilidad y el riesgo de esta decisión si hay resistencia."
   ],
   "entregable_esperado": "Decisión documentada con su justificación, tomada a pesar de la incertidumbre o la oposición del equipo/board",
@@ -27,5 +27,58 @@
     "Cuando existe ambigüedad en la estructura de liderazgo (co-fundadores sin roles claros)",
     "Cuando se debe tomar una decisión estratégica difícil (ej: matar una línea de producto) con opiniones divididas en el equipo directivo"
   ],
-  "etiqueta_arbol": "Enfrenta lo Difícil con Coraje"
+  "etiqueta_arbol": "Enfrenta lo Difícil con Coraje",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c10-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Reconoce que lo que tus clientes actuales piden no siempre es el camino para ganar frente a la competencia.",
+      "texto_nuevo": "Reconoce que tu equipo o tu board pueden estar apoyando la opción que creen que tú prefieres, no la que han analizado.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2604",
+        "frase": "It turns out that the most important data point driving their earlier preference for selling the company was Hamlet’s initial ambivalence—the team supported the decision they thought the CEO wanted."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso injerta el concepto de producto frente a clientes, que el libro trata en otro pasaje (L627-L631, reinvencion del producto en Opsware). El capitulo del concepto del nodo (THE FINE LINE BETWEEN FEAR AND COURAGE, L2563-L2684) trata el coraje de decidir contra la opinion del equipo y el board; el caso Hamlet muestra que esa opinion a menudo refleja la ambivalencia del propio CEO. Coherente con el resumen y con la condicion 1 (opiniones divididas en el equipo directivo).",
+      "indice": 4,
+      "auditoria": "SANEAMIENTO pasada K, ficha C10 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c10-2",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Decide reinventar el producto aunque eso contradiga lo que el feedback documentado, las opiniones registradas de clientes, te dice.",
+      "texto_nuevo": "No dejes que la presión del grupo convierta en tu cabeza una decisión clara (70 contra 30) en una que parece empatada (51 contra 49).",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2638",
+        "frase": "In reality, if you fall into this trap, the crowd will influence your thinking and make a 70-30 decision seem like a 51-49 decision. This is why courage is critical."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso impone una decision concreta (reinventar el producto contra el feedback de clientes) que el resumen no trata y que en el libro pertenece a otro pasaje (L629-L631). El capitulo del concepto advierte que decidir con la multitud distorsiona el juicio; el nuevo paso sigue al paso de 54% contra 46% y al resumen (actuar a pesar de la falta de consenso).",
+      "indice": 5,
+      "auditoria": "SANEAMIENTO pasada K, ficha C10 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c10-3",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Dile con claridad a quien te ayuda con el producto que la visión pesa más que la lista de pendientes acumulada (backlog).",
+      "texto_nuevo": "Elige lo difícil y correcto frente a lo popular y fácil: cada vez que lo haces te vuelves un poco más valiente, y tu empresa también.",
+      "cita": {
+        "libro": "The Hard Thing About Hard Things - Ben Horowitz",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\liderazgo_y_crisis\\The Hard Thing About Hard Thing - Ben Horowitz.txt",
+        "lineas": "L2644, L2680",
+        "frase": "In life, everybody faces choices between doing what’s popular, easy, and wrong versus doing what’s lonely, difficult, and right. / Every time you make the hard, correct decision you become a bit more courageous and every time you make the easy, wrong decision you become a bit more cowardly. If you are CEO, these choices will lead to a courageous or cowardly company."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso (vision frente al backlog del equipo de producto) no guarda relacion con el resumen ni con las condiciones (ambiguedad de liderazgo, decisiones estrategicas divididas en el equipo directivo). El libro cierra el capitulo del concepto diciendo que el coraje se desarrolla eligiendo lo dificil y correcto; el nuevo paso encaja con el resumen y con el ultimo paso, que se conserva.",
+      "indice": 6,
+      "auditoria": "SANEAMIENTO pasada K, ficha C10 (lector, verificador ciego y arbitro)"
+    }
+  ]
 }

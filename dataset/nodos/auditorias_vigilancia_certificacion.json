@@ -4,13 +4,13 @@
   "dominio": "quality",
   "titulo_concepto": "Auditorías de seguimiento para mantener tu certificación",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Si tu negocio tiene la certificación ISO 9000, no la ganas una vez y ya: alguien externo (un registrador) te va a revisar periódicamente, normalmente cada seis meses, para confirmar que sigues cumpliendo. Estas revisiones suelen ser más cortas que la auditoría completa, que te toca cada pocos años. Este ciclo te obliga a mantener tu sistema de calidad funcionando de verdad y a seguir mejorándolo para cumplir tus propios objetivos de calidad.",
+  "resumen_teorico": "Si tu negocio tiene la certificación ISO 9000, no la ganas una vez y ya: alguien externo (un registrador) te va a revisar periódicamente, al menos una vez al año (algunas certificadoras las hacen cada seis meses), para confirmar que sigues cumpliendo. Estas revisiones suelen ser más cortas que la auditoría completa, que te toca cada pocos años. Este ciclo te obliga a mantener tu sistema de calidad funcionando de verdad y a seguir mejorándolo para cumplir tus propios objetivos de calidad.",
   "pasos_accionables": [
-    "Agenda con el organismo que te certificó las auditorías de seguimiento cada seis meses",
+    "Agenda con el organismo que te certificó las auditorías de seguimiento, al menos una vez al año (la primera, a más tardar 12 meses después de que te certifiquen)",
     "Ten lista y actualizada la documentación de tu sistema de gestión de calidad",
     "Revisa tú mismo antes, con una auditoría interna, para detectar fallos antes de que los vea el auditor",
     "Corrige cualquier hallazgo que encuentres, con acciones concretas",
-    "Planifica con tiempo la auditoría completa de recertificación que te toca cada pocos años"
+    "Planifica con tiempo la auditoría completa de recertificación que te toca cada tres años, antes de que venza el certificado"
   ],
   "entregable_esperado": "Un calendario de auditorías con evidencia de que sigues cumpliendo y un registro de las correcciones que hiciste",
   "nodos_previos": [
@@ -21,5 +21,57 @@
     "Cuando tu negocio ya tiene la certificación ISO 9000/9001 y necesitas conservarla",
     "Si se acerca la fecha de una auditoría de seguimiento o de recertificación"
   ],
-  "etiqueta_arbol": "Mantén Viva tu Certificación"
+  "etiqueta_arbol": "Mantén Viva tu Certificación",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-p10",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Si tu negocio tiene la certificación ISO 9000, no la ganas una vez y ya: alguien externo (un registrador) te va a revisar periódicamente, normalmente cada seis meses, para confirmar que sigues cumpliendo. Estas revisiones suelen ser más cortas que la auditoría completa, que te toca cada pocos años. Este ciclo te obliga a mantener tu sistema de calidad funcionando de verdad y a seguir mejorándolo para cumplir tus propios objetivos de calidad.",
+      "texto_nuevo": "Si tu negocio tiene la certificación ISO 9000, no la ganas una vez y ya: alguien externo (un registrador) te va a revisar periódicamente, al menos una vez al año (algunas certificadoras las hacen cada seis meses), para confirmar que sigues cumpliendo. Estas revisiones suelen ser más cortas que la auditoría completa, que te toca cada pocos años. Este ciclo te obliga a mantener tu sistema de calidad funcionando de verdad y a seguir mejorándolo para cumplir tus propios objetivos de calidad.",
+      "cita": {
+        "libro": "FUENTE OFICIAL: ISO/IEC 17021-1:2015, apartado 9.1.3.3 (auditorias de seguimiento)",
+        "fichero": "https://european-accreditation.org/sp_accordion_faqs/question-37-12-iso-17021-12015-clause-9-1-3/",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "Requirement of ISO/IEC 17021-1 § 9.1.3.3 is explicit: in each calendar year, at least (the CB can have a stricter regime but not an “easier” one), there shall be an audit, whether surveillance or recertification."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). No es un plazo legal de un pais sino un requisito de la norma ISO/IEC 17021-1:2015 que obliga a las certificadoras acreditadas; la sigue vigente (iso.org la marca como 'to be revised', sin edicion nueva publicada a la fecha). La frecuencia semestral es una opcion de algunas certificadoras, no la nor",
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    },
+    {
+      "id": "saneamiento-t1-p11",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Agenda con el organismo que te certificó las auditorías de seguimiento cada seis meses",
+      "texto_nuevo": "Agenda con el organismo que te certificó las auditorías de seguimiento, al menos una vez al año (la primera, a más tardar 12 meses después de que te certifiquen)",
+      "cita": {
+        "libro": "FUENTE OFICIAL: ISO/IEC 17021-1:2015, apartado 9.1.3.3",
+        "fichero": "https://www.iasonline.org/wp-content/uploads/2021/02/17021-1-2015-Section-9.pdf",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "Surveillance audits conducted at least once a calendar year, except in recertification years."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). La cita es de la diapositiva de IAS (International Accreditation Service, organismo de acreditacion de EE.UU.) que resume el apartado 9.1.3.3; la misma diapositiva añade: 'Date of the first surveillance audit following initial certification shall not be more than 12 months from the certification dec",
+      "indice": 0,
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    },
+    {
+      "id": "saneamiento-t1-p12",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Planifica con tiempo la auditoría completa de recertificación que te toca cada pocos años",
+      "texto_nuevo": "Planifica con tiempo la auditoría completa de recertificación que te toca cada tres años, antes de que venza el certificado",
+      "cita": {
+        "libro": "FUENTE OFICIAL: ISO/IEC 17021-1:2015, apartados 9.1.3.1 y 9.1.3.2 (ciclo de certificacion de tres años)",
+        "fichero": "https://www.iasonline.org/wp-content/uploads/2021/02/17021-1-2015-Section-9.pdf",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "The first three-year certification cycle begins with the certification decision."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). 'Cada pocos años' no es falso pero se queda a medias: la norma fija un ciclo de tres años. La misma diapositiva de IAS recoge 9.1.3.2: 'surveillance audits in the first and second years following the certification decision, and a recertification audit in the third year prior to expiration of certifi",
+      "indice": 4,
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    }
+  ]
 }

@@ -9,8 +9,8 @@
     "Redactar un programa escrito específico para el lugar de trabajo según 29 CFR 1910.134",
     "Asegurar que los respiradores sean aprobados por NIOSH para la aplicación específica",
     "Realizar evaluación médica antes del primer uso o prueba de ajuste",
-    "Realizar fit-test antes del primer uso y anualmente para respiradores ajustados",
-    "Capacitar a los trabajadores anualmente sobre uso, limitaciones y mantenimiento",
+    "Realizar fit-test antes del primer uso, cada vez que se cambie de pieza facial (talla, estilo, modelo o marca) y al menos anualmente para respiradores ajustados",
+    "Capacitar a los trabajadores antes de que usen el respirador y de nuevo al menos anualmente (y cuando cambien el puesto o el tipo de respirador o se detecten carencias) sobre uso, limitaciones y mantenimiento",
     "Establecer procedimientos de almacenamiento, limpieza e inspección regular"
   ],
   "entregable_esperado": "Documento de programa de protección respiratoria implementado, con registros de fit-test, evaluaciones médicas y capacitaciones.",
@@ -37,5 +37,41 @@
   "ids_alias": [
     "respiratory_protection_program"
   ],
-  "etiqueta_arbol": "Protege la Respiración del Equipo"
+  "etiqueta_arbol": "Protege la Respiración del Equipo",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-p15",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Realizar fit-test antes del primer uso y anualmente para respiradores ajustados",
+      "texto_nuevo": "Realizar fit-test antes del primer uso, cada vez que se cambie de pieza facial (talla, estilo, modelo o marca) y al menos anualmente para respiradores ajustados",
+      "cita": {
+        "libro": "FUENTE OFICIAL: 29 CFR 1910.134(f)(2)",
+        "fichero": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.134",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "The employer shall ensure that an employee using a tight-fitting facepiece respirator is fit tested prior to initial use of the respirator, whenever a different respirator facepiece (size, style, model or make) is used, and at least annually thereafter."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). Tiene razon B. Abri hoy osha.gov y la cita de (f)(2) que dan A y B es literal y esta vigente. Los dos plazos que da el nodo (antes del primer uso y anual) son correctos, pero la norma impone un tercer disparador obligatorio: repetir la prueba cada vez que se usa una pieza facial distinta. El propio ",
+      "indice": 3,
+      "auditoria": "SANEAMIENTO P21 (arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-p16",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Capacitar a los trabajadores anualmente sobre uso, limitaciones y mantenimiento",
+      "texto_nuevo": "Capacitar a los trabajadores antes de que usen el respirador y de nuevo al menos anualmente (y cuando cambien el puesto o el tipo de respirador o se detecten carencias) sobre uso, limitaciones y mantenimiento",
+      "cita": {
+        "libro": "FUENTE OFICIAL: 29 CFR 1910.134(k)(3) y (k)(5); contenido en (k)(1)",
+        "fichero": "https://www.osha.gov/laws-regs/regulations/standardnumber/1910/1910.134",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "Retraining shall be administered annually, and when the following situations occur:"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). Tiene razon B. Verifique hoy en osha.gov que las citas de (k)(5) (\"Retraining shall be administered annually, and when the following situations occur:\") y de (k)(3) son literales y vigentes. La periodicidad anual es correcta, pero el nodo omite la formacion inicial obligatoria antes de exigir el uso",
+      "indice": 4,
+      "auditoria": "SANEAMIENTO P21 (arbitro)"
+    }
+  ]
 }

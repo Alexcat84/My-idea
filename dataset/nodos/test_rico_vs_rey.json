@@ -4,14 +4,14 @@
   "dominio": "core",
   "titulo_concepto": "Test 'Rico versus Rey' para diagnosticar tu motivación como fundador",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-  "resumen_teorico": "Antes de invertir, tienes que evaluar si quien dirige el negocio busca sobre todo mantener el control ('rey') o ganar dinero ('rico'). Este diagnóstico te ayuda a predecir si esa persona resistirá un cambio de liderazgo que tú, como inversor, impulses más adelante. Si te mueve el control, tiendes a resistir con fuerza que te reemplacen; si te mueve la riqueza, sueles alinearte más fácil con los intereses financieros de quien invierte.",
+  "resumen_teorico": "Antes de invertir, tienes que evaluar si quien dirige el negocio busca sobre todo mantener el control ('rey') o ganar dinero ('rico'). Este diagnóstico te ayuda a predecir si esa persona resistirá un cambio de liderazgo que tú, como inversor, impulses más adelante. Si a esa persona la mueve el control, tiende a resistir con fuerza que la reemplacen; si la mueve la riqueza, suele alinearse más fácil con los intereses financieros de quien invierte.",
   "pasos_accionables": [
-    "Indaga, antes de invertir, si priorizas tener el control total o el retorno del dinero.",
+    "Indaga, antes de invertir, si quien dirige el negocio prioriza tener el control total o el retorno del dinero.",
     "Ten la conversación difícil sobre qué pasará si algún día decides cambiar al fundador, antes de invertir, no después.",
     "Pon en el contrato o en los acuerdos de gobierno cláusulas que ya prevean un posible cambio de liderazgo.",
-    "Si ves que eres claramente 'rey', toma en cuenta el riesgo extra que esto le suma a tu inversión."
+    "Si ves que quien dirige es claramente 'rey', toma en cuenta el riesgo extra que esto le suma a tu inversión."
   ],
-  "entregable_esperado": "Un diagnóstico claro sobre qué te motiva como fundador, que armas como parte de tu evaluación antes de invertir.",
+  "entregable_esperado": "Un diagnóstico claro sobre qué motiva al fundador, que armas como parte de tu evaluación antes de invertir.",
   "nodos_previos": [
     "dilema_riqueza_vs_control"
   ],
@@ -23,5 +23,73 @@
     "Antes de hacer una inversión importante en un negocio liderado por su fundador.",
     "Cuando negocias las condiciones de gobierno en una ronda de financiamiento."
   ],
-  "etiqueta_arbol": "Descubre si Buscas Control"
+  "etiqueta_arbol": "Descubre si Buscas Control",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c25-2",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Antes de invertir, tienes que evaluar si quien dirige el negocio busca sobre todo mantener el control ('rey') o ganar dinero ('rico'). Este diagnóstico te ayuda a predecir si esa persona resistirá un cambio de liderazgo que tú, como inversor, impulses más adelante. Si te mueve el control, tiendes a resistir con fuerza que te reemplacen; si te mueve la riqueza, sueles alinearte más fácil con los intereses financieros de quien invierte.",
+      "texto_nuevo": "Antes de invertir, tienes que evaluar si quien dirige el negocio busca sobre todo mantener el control ('rey') o ganar dinero ('rico'). Este diagnóstico te ayuda a predecir si esa persona resistirá un cambio de liderazgo que tú, como inversor, impulses más adelante. Si a esa persona la mueve el control, tiende a resistir con fuerza que la reemplacen; si la mueve la riqueza, suele alinearse más fácil con los intereses financieros de quien invierte.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L3299",
+        "frase": "If the latter, the VCs can be more confident that the founder-CEO’s interests will be aligned with their own (financial) interests"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. Solo cambia la ultima frase, que volvia a tratar al lector como el fundador ('te mueve', 'te reemplacen') dentro de un resumen escrito para el inversor; el libro describe como resiste o se alinea el fundador evaluado, asi que se habla de 'esa persona' como en la frase anterior.",
+      "auditoria": "SANEAMIENTO pasada K, ficha C25 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c25-3",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Indaga, antes de invertir, si priorizas tener el control total o el retorno del dinero.",
+      "texto_nuevo": "Indaga, antes de invertir, si quien dirige el negocio prioriza tener el control total o el retorno del dinero.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L3299",
+        "frase": "many professional investors, as part of their due diligence before they initially invest, try to gauge whether the founder-CEO will resist an investor-driven succession when the time comes."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro pone la indagacion en manos del inversor sobre el fundador-CEO antes de invertir; el paso indagaba al propio lector y chocaba con el paso 1 y el resumen. Se cambia solo el sujeto.",
+      "indice": 0,
+      "auditoria": "SANEAMIENTO pasada K, ficha C25 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c25-4",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Si ves que eres claramente 'rey', toma en cuenta el riesgo extra que esto le suma a tu inversión.",
+      "texto_nuevo": "Si ves que quien dirige es claramente 'rey', toma en cuenta el riesgo extra que esto le suma a tu inversión.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L3299",
+        "frase": "If the former, many VCs will shy away from making the investment, expecting the founder-CEO to resist succession"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El paso mezclaba destinatarios ('eres' rey y a la vez 'tu inversion'). En el libro es el inversor quien pondera el riesgo cuando el fundador-CEO se mueve por el control; se cambia solo el sujeto.",
+      "indice": 3,
+      "auditoria": "SANEAMIENTO pasada K, ficha C25 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "saneamiento-t1-c25-5",
+      "fecha": "2026-09-26",
+      "campo": "entregable_esperado",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Un diagnóstico claro sobre qué te motiva como fundador, que armas como parte de tu evaluación antes de invertir.",
+      "texto_nuevo": "Un diagnóstico claro sobre qué motiva al fundador, que armas como parte de tu evaluación antes de invertir.",
+      "cita": {
+        "libro": "The Founder's Dilemmas - Wasserman, Noam",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Founder's Dilemmas - Wasserman, Noam.txt",
+        "lineas": "L3337",
+        "frase": "when they have to assess whether the founder-CEO’s motivation will hinder or facilitate a smooth transition, should the need for one arise."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. El libro situa el diagnostico en la evaluacion que hacen los inversores de la motivacion del fundador-CEO antes de su primera ronda; el entregable pasaba a la motivacion propia del lector. Se cambia solo de quien es la motivacion.",
+      "auditoria": "SANEAMIENTO pasada K, ficha C25 (lector, verificador ciego y arbitro)"
+    }
+  ]
 }

@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Registro y Reporte de Lesiones y Enfermedades Ocupacionales",
   "fuente": "SMALL_BUSINESS",
-  "resumen_teorico": "Si tienes trabajadores, en muchos mercados existe la obligacion de llevar registro de lesiones y enfermedades laborales mediante formularios especificos: un registro general, un reporte por incidente y un resumen anual. Según el tamano de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o perdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad, un poco mas para hospitalizaciones o amputaciones. Conviene preguntar cuales son las reglas exactas en tu mercado.",
+  "resumen_teorico": "Si tienes trabajadores, en muchos mercados existe la obligacion de llevar registro de lesiones y enfermedades laborales mediante formularios especificos: un registro general, un reporte por incidente y un resumen anual. Según el tamano de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o perdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad (8 en Estados Unidos), algo mas para hospitalizaciones, amputaciones o perdida de un ojo (24 en Estados Unidos). Conviene preguntar cuales son las reglas exactas en tu mercado.",
   "pasos_accionables": [
     "Averigua si tu negocio esta exento o no de los requisitos de registro según su tamano y su actividad",
     "Registra cada lesion o enfermedad laboral que deba quedar registrada en tu formulario correspondiente",
@@ -59,6 +59,22 @@
       "decision": "Ajuste de fidelidad-t1-01, que ya estaba en produccion: su redaccion \"(en EE. UU., 8 horas ante OSHA)\" nombraba la sigla sin la formula de localizacion que exige la baranda de la casa dato_local_cableado (scripts/censo_duplicacion.py). Mismos plazos del libro, ahora localizados. Falta de la sesion, declarada: la baranda no esta en las suites para este nodo y la tanda 1 salio sin pasarla.",
       "indice": 5,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/TRAMO1_SEGURIDAD_Y_SALUD.md, ficha SB2-091"
+    },
+    {
+      "id": "saneamiento-t1-p06",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Si tienes trabajadores, en muchos mercados existe la obligacion de llevar registro de lesiones y enfermedades laborales mediante formularios especificos: un registro general, un reporte por incidente y un resumen anual. Según el tamano de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o perdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad, un poco mas para hospitalizaciones o amputaciones. Conviene preguntar cuales son las reglas exactas en tu mercado.",
+      "texto_nuevo": "Si tienes trabajadores, en muchos mercados existe la obligacion de llevar registro de lesiones y enfermedades laborales mediante formularios especificos: un registro general, un reporte por incidente y un resumen anual. Según el tamano de tu negocio y el tipo de actividad, puedes estar parcialmente exento, pero siempre debes reportar fatalidades, hospitalizaciones, amputaciones o perdida de un ojo. Suelen existir plazos estrictos para avisar a la autoridad: muy pocas horas para una fatalidad (8 en Estados Unidos), algo mas para hospitalizaciones, amputaciones o perdida de un ojo (24 en Estados Unidos). Conviene preguntar cuales son las reglas exactas en tu mercado.",
+      "cita": {
+        "libro": "FUENTE OFICIAL: 29 CFR 1904.39(a)(1) y (a)(2)",
+        "fichero": "https://www.osha.gov/laws-regs/regulations/standardnumber/1904/1904.39",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "Within twenty-four (24) hours after the in-patient hospitalization of one or more employees or an employee's amputation or an employee's loss of an eye, as a result of a work-related incident, you must report the in-patient hospitalization, amputation, or loss of an eye to OSHA."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). La proporcion es correcta, pero la frase es vaga y deja fuera la perdida de un ojo, que la norma incluye en el plazo de 24 horas. Como el nodo es de clase B (ejemplo de Estados Unidos), el tono general puede mantenerse, pero la lista de supuestos tiene que estar completa.",
+      "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
     }
   ]
 }

@@ -128,3 +128,11 @@ Siguen en la cache y no afirman nada falso, pero nacieron de texto que luego cam
 
 - `detectar_prioridad_cliente_entrega` (restaurada, puerta de mundo (guarda H13), fidelidad-t15-14 desde el caracter 88)
 - `disenar_empaque_logistica` (restaurada, puerta de mundo (guarda H13))
+
+## Anadido por el saneamiento del dataset, tanda 1 (26 sep 2026)
+
+Las tandas `saneamiento-t1-*` (regresiones de clase, coherencia, jurisdiccion y plazos legales;
+`docs/saneamiento/tandas/`) cambiaron el resumen o las condiciones de **24 nodos**: van a
+`nodos_a_reembeber.txt` para la misma sesion con credencial. **Ninguna pregunta en cache contiene el texto
+corregido**, asi que no se retiro ninguna; las **14** preguntas cuyo nodo cambio su resumen van a
+`preguntas_a_regenerar.txt` como recomendadas (la pregunta se genero con el resumen viejo).

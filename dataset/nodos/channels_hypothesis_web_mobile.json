@@ -9,7 +9,7 @@
     "Haz una lista de los canales digitales que tengan sentido para tu producto",
     "Evalúa las fortalezas y debilidades de cada canal: cuánto control tienes, cuánto cuesta, a cuánta gente llegas",
     "Elige un único canal principal para enfocar ahí tus recursos al inicio",
-    "Prueba varios canales con un presupuesto parecido para comparar cuánto te cuesta conseguir cada cliente",
+    "Si la elección no es obvia, antes de fijar el canal principal prueba varios con un presupuesto parecido y quédate con el que te consiga clientes al menor costo",
     "Calcula el ingreso que te queda después de descontar el costo del canal"
   ],
   "entregable_esperado": "Tu elección de canal de distribución digital, con la justificación de costos y alcance que la respalda",
@@ -25,5 +25,24 @@
     "Si tu producto es una aplicación web o móvil",
     "Cuando necesitas decidir cómo va a llegar tu producto al cliente por medios digitales"
   ],
-  "etiqueta_arbol": "Define tu Canal Digital"
+  "etiqueta_arbol": "Define tu Canal Digital",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c09-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Prueba varios canales con un presupuesto parecido para comparar cuánto te cuesta conseguir cada cliente",
+      "texto_nuevo": "Si la elección no es obvia, antes de fijar el canal principal prueba varios con un presupuesto parecido y quédate con el que te consiga clientes al menor costo",
+      "cita": {
+        "libro": "The Startup Owner's Manual - Blank, Steve",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\txt\\The Startup Owner's Manual_ The - Blank, Steve.txt",
+        "lineas": "L5880-L5883",
+        "frase": "Many products, however, will need to test both the cost-effectiveness and volume potential of several channels to determine where to put their energy, focus, and marketing dollars."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En el libro, probar varios canales con un gasto parecido no compite con elegir uno solo. Es la forma de elegirlo cuando la elección no es obvia: sección 'Tests Can Help You Pick the Channel' (L5880); en L5883, 'For some products, the channel choice is obvious', 'Design the test to spend roughly the same amount of money on each one' y 'Then see which program delivers customers at the lowest cost per customer'. El paso 2 ('Elige un único canal principal') es fiel a L5797 ('As a startup you should pick the one distribution channel...') y a L5801 ('Pick one distribution channel. You can add additi",
+      "indice": 3,
+      "auditoria": "SANEAMIENTO pasada K, ficha C09 (lector, verificador ciego y arbitro)"
+    }
+  ]
 }

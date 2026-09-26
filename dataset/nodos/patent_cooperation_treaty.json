@@ -7,7 +7,7 @@
   "resumen_teorico": "El PCT permite presentar una única solicitud internacional de patente que designa a los países miembros donde se busca protección, extendiendo por 18 meses el plazo para cumplir los requisitos nacionales de cada país, aunque no otorga una 'patente mundial' — cada país sigue decidiendo si concede protección.",
   "pasos_accionables": [
     "Presentar una solicitud internacional bajo el PCT designando los países de interés",
-    "Aprovechar el plazo extendido de 18 meses para decidir en qué países completar los requisitos nacionales",
+    "Aprovechar el plazo de 30 meses desde la fecha de prioridad (18 meses más que los 12 del Convenio de París) antes de entrar en la fase nacional de cada país para decidir en qué países completar los requisitos nacionales",
     "Consultar a un abogado de IP o a las oficinas nacionales de cada país para procedimientos y tasas específicas",
     "Completar los requisitos sustantivos y de tasas para cada país designado en el plazo correspondiente"
   ],
@@ -22,5 +22,24 @@
   "condiciones_activacion": [
     "Si el usuario busca proteger una invención en múltiples países simultáneamente sin presentar solicitudes separadas de inmediato"
   ],
-  "etiqueta_arbol": "Patenta tu Invento Globalmente"
+  "etiqueta_arbol": "Patenta tu Invento Globalmente",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-p01",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "PLAZO_IMPRECISO",
+      "texto_anterior": "Aprovechar el plazo extendido de 18 meses para decidir en qué países completar los requisitos nacionales",
+      "texto_nuevo": "Aprovechar el plazo de 30 meses desde la fecha de prioridad (18 meses más que los 12 del Convenio de París) antes de entrar en la fase nacional de cada país para decidir en qué países completar los requisitos nacionales",
+      "cita": {
+        "libro": "FUENTE OFICIAL: PCT, Artículo 22(1)",
+        "fichero": "https://www.wipo.int/pct/en/texts/articles/a22.html",
+        "lineas": "consultada el 26 sep 2026",
+        "frase": "to each designated Office not later than at the expiration of 30 months from the priority date."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). A y B coinciden en IMPRECISO, y es correcto: \"el plazo extendido de 18 meses\" se lee como si el plazo total fuera de 18 meses, cuando la norma fija 30 meses desde la fecha de prioridad (Art. 22(1) PCT, cita comprobada literalmente hoy). Los 18 meses son la extensión respecto al plazo de 12 meses de ",
+      "indice": 1,
+      "auditoria": "SANEAMIENTO P21 (arbitro)"
+    }
+  ]
 }

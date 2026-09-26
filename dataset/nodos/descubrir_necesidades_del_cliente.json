@@ -36,7 +36,7 @@
   ],
   "condiciones_activacion": [
     "Cuando ya se han identificado los clientes y se requiere entender a profundidad qué esperan del producto o servicio",
-    "Cuando existan requisitos regulatorios o técnicos que puedan bloquear el proyecto si se ignoran"
+    "Cuando cambios en la normativa puedan revelar necesidades actuales u oportunidades nuevas que el producto deba atender"
   ],
   "etiqueta_arbol": "Descubre lo que Realmente Quieren",
   "ids_alias": [
@@ -47,6 +47,25 @@
       "node_id": "descubrir_necesidades_cliente",
       "titulo": "Descubrir las Necesidades del Cliente",
       "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c15-1",
+      "fecha": "2026-09-26",
+      "campo": "condiciones_activacion",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Cuando existan requisitos regulatorios o técnicos que puedan bloquear el proyecto si se ignoran",
+      "texto_nuevo": "Cuando cambios en la normativa puedan revelar necesidades actuales u oportunidades nuevas que el producto deba atender",
+      "cita": {
+        "libro": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\Especificos\\Quality\\Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
+        "lineas": "L3763",
+        "frase": "Changes in federal, state, and local regulations that will identify current need or new opportunity"
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En el paso 3 de Quality by Design (Discover Customer Needs), el libro no trata la normativa ni los requisitos técnicos como algo que bloquea el proyecto. La normativa aparece solo como una de las formas de recoger necesidades del cliente (Plan to Collect Customers' Needs, L3738-L3763), y los reguladores figuran entre los clientes ocultos (L3542). Por eso cambio solo la condición 1: ahora activa el nodo cuando la normativa revela necesidades que hay que descubrir, y así casa con el resumen y con el paso 0. Quito lo de 'federal, state, and local' para que valga en cualquier país.",
+      "indice": 1,
+      "auditoria": "SANEAMIENTO pasada K, ficha C15 (lector, verificador ciego y arbitro)"
     }
   ]
 }

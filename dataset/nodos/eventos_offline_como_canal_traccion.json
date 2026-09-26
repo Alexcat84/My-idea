@@ -7,7 +7,7 @@
   "resumen_teorico": "Los eventos presenciales, como conferencias, encuentros o fiestas, son una forma poderosa de conseguir clientes, sobre todo si vendes a otras empresas (B2B) o si tu comunidad comparte intereses fuertes. Te dejan hablar directamente con quien podría comprarte, generan confianza en tu marca y crean vínculos que los canales digitales masivos no logran. Funcionan mejor cuando puedes identificar con claridad a tu mercado y este tiene necesidad de encontrarse con otros parecidos.",
   "pasos_accionables": [
     "Piensa si las personas a las que quieres llegar comparten intereses o buscan comunidad",
-    "Empieza con un evento pequeño y de bajo costo, como una mini charla de un día; pregunta el precio en tu mercado, o un evento lujoso multi-día para decision makers de alto nivel",
+    "Empieza con un evento pequeño y de bajo costo, como una mini charla de un día, que además te sirve para probar si tu audiencia quiere un evento más grande; pregunta el precio en tu mercado",
     "Invita a tres emprendedores o expertos locales relevantes para que den charlas cortas, y sin que el evento parezca un pitch de ventas",
     "Busca un espacio accesible, como una universidad, para reducir gastos",
     "Si el evento pequeño funciona, anímate a organizar uno más grande con auspiciantes",
@@ -49,6 +49,25 @@
       "node_id": "eventos_offline_propios",
       "titulo": "Organización de Eventos Offline Propios",
       "fuente": "Traction - Gabriel Weinberg"
+    }
+  ],
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-c17-1",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "INCOHERENTE",
+      "texto_anterior": "Empieza con un evento pequeño y de bajo costo, como una mini charla de un día; pregunta el precio en tu mercado, o un evento lujoso multi-día para decision makers de alto nivel",
+      "texto_nuevo": "Empieza con un evento pequeño y de bajo costo, como una mini charla de un día, que además te sirve para probar si tu audiencia quiere un evento más grande; pregunta el precio en tu mercado",
+      "cita": {
+        "libro": "Traction - Gabriel Weinberg",
+        "fichero": "C:\\Users\\AlexDesk\\Documents\\I have an idea\\books\\General\\marketing_y_crecimiento\\Traction - Gabriel Weinberg.txt",
+        "lineas": "L3224",
+        "frase": "Although MicroConf has become a huge event, Rob suggested that a day-long mini-conference could be a great way for a smaller startup to get traction. It can also be an easy and cheap way to test if there’s any interest among your audience for a larger event."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En OFFLINE EVENT TACTICS el libro manda arrancar con una mini conferencia de un día, barata, que sirve para probar si tu audiencia quiere un evento mayor (L3224). Solo después se escala: \"If your first event is a success, consider scaling up to larger events.\" (L3230). TARGETS lo repite: \"Test this channel first. Attend a couple conferences or host a few smaller meetups or a one-day mini-conference.\" (L3253). El evento lujoso de varios días de Enservio (L3181-L3185) es otro caso de éxito del libro y no una forma de arrancar. Por eso se quita del paso 1 la alternativa lujosa, que además traía \"",
+      "indice": 1,
+      "auditoria": "SANEAMIENTO pasada K, ficha C17 (lector, verificador ciego y arbitro)"
     }
   ]
 }

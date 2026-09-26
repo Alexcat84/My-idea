@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Disponibilidad de la Garantia Antes de la Venta (Pre-Sale Availability Rule)",
   "fuente": "Businessperson's Guide to Federal Warranty Law",
-  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantia escrita a clientes en ese pais, la norma exige que el texto completo de la garantia este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantia antes de decidirse. Si vendes fuera de Estados Unidos, revisa cual es la norma equivalente en tu propio mercado, porque puede variar.",
+  "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantia escrita a clientes en ese pais, la norma exige que el texto completo de la garantia este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantia antes de decidirse.",
   "pasos_accionables": [
     "Revisa por que canal vendes (tienda fisica, en línea, puerta a puerta) y define como vas a mostrar la garantia antes de que la persona compre en ese canal.",
     "Coloca el texto de la garantia visible junto al producto si vendes en persona, o en la misma pagina del producto si vendes en línea.",
@@ -26,5 +26,23 @@
   "ids_alias": [
     "regla_disponibilidad_previa_venta_2"
   ],
-  "etiqueta_arbol": "Muestra tu Garantía Antes de Vender"
+  "etiqueta_arbol": "Muestra tu Garantía Antes de Vender",
+  "correcciones": [
+    {
+      "id": "saneamiento-t1-j02",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "INCOHERENTE_DE_CLASE",
+      "texto_anterior": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantia escrita a clientes en ese pais, la norma exige que el texto completo de la garantia este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantia antes de decidirse. Si vendes fuera de Estados Unidos, revisa cual es la norma equivalente en tu propio mercado, porque puede variar.",
+      "texto_nuevo": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantia escrita a clientes en ese pais, la norma exige que el texto completo de la garantia este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantia antes de decidirse.",
+      "cita": {
+        "libro": "POLITICA_MARCO_PAIS",
+        "fichero": "docs/POLITICA_MARCO_PAIS.md",
+        "lineas": "L18-L33",
+        "frase": "Un nodo-frontera no lleva la formula de la clase B: si solo aplica en un pais, no promete un equivalente en el tuyo."
+      },
+      "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 3): solo se reescribe lo incoherente. Clase C (Magnuson-Moss): el resumen cerraba con la formula de equivalente local.",
+      "auditoria": "SANEAMIENTO pasada JC (lector, verificador ciego y arbitro)"
+    }
+  ]
 }
