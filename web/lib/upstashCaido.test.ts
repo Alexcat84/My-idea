@@ -6,7 +6,7 @@
 // con "algo se atoró de nuestro lado". El comentario del código prometía
 // "se permite y se registra" y solo lo cumplía si Upstash RESPONDÍA con error.
 import { afterEach, beforeEach, describe, expect, it, vi } from "vitest";
-import { MENSAJE_SERVICIO_NO_DISPONIBLE, limitarPorClave, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "./rateLimit";
+import { LIMITE_RESPALDO_ENVIOS, MENSAJE_SERVICIO_NO_DISPONIBLE, limitarPorClave, mensajeServicioNoDisponible, verificarFusibleGlobal, verificarLimiteDiario } from "./rateLimit";
 
 const caida = () => vi.fn(async () => { throw new TypeError("fetch failed (getaddrinfo ENOTFOUND tough-fox-158997.upstash.io)"); });
 
@@ -45,11 +45,44 @@ describe("base caída: la IA se detiene, dicho con claridad", () => {
     expect(mensajeServicioNoDisponible("es")).toBe(MENSAJE_SERVICIO_NO_DISPONIBLE);
   });
 
-  it("el límite de envíos del doble factor (no es IA) no bloquea el acceso: deja pasar y lo registra", async () => {
+  // Decisión del fundador (26 sep 2026): la excepción del doble factor queda,
+  // pero NUNCA sin límite. Con la base caída, los envíos de código usan un
+  // límite de respaldo en la memoria del servidor: LIMITE_RESPALDO_ENVIOS por
+  // clave y por hora (3), y queda registrado. A mano: 3 pasan, el 4.º no.
+  it("envíos del doble factor con la base caída: límite de respaldo (3 por cuenta y por hora), registrado", async () => {
     vi.stubGlobal("fetch", caida());
     const error = vi.spyOn(console, "error").mockImplementation(() => {});
-    expect(await limitarPorClave("2fa:u1", 600, 5)).toMatchObject({ permitido: true, caido: true });
-    expect(error).toHaveBeenCalled();
+    const clave = `2fa_email:user:respaldo-${Math.random()}`;
+    expect(LIMITE_RESPALDO_ENVIOS).toBe(3);
+    for (let k = 1; k <= 3; k++) expect(await limitarPorClave(clave, 600, 5), `envío ${k}`).toMatchObject({ permitido: true, caido: true });
+    expect(await limitarPorClave(clave, 600, 5)).toMatchObject({ permitido: false, caido: true });
+    // otra cuenta tiene su propio respaldo
+    expect(await limitarPorClave(`${clave}-otra`, 600, 5)).toMatchObject({ permitido: true });
+    expect(error).toHaveBeenCalledWith(expect.stringContaining("LÍMITE DE RESPALDO"), expect.anything());
+  });
+
+  it("el respaldo se reinicia pasada la hora", async () => {
+    vi.stubGlobal("fetch", caida());
+    vi.spyOn(console, "error").mockImplementation(() => {});
+    const clave = `2fa_email:user:hora-${Math.random()}`;
+    const t0 = Date.now();
+    const ahora = vi.spyOn(Date, "now").mockReturnValue(t0);
+    for (let k = 0; k < 3; k++) await limitarPorClave(clave, 600, 5);
+    expect(await limitarPorClave(clave, 600, 5)).toMatchObject({ permitido: false });
+    ahora.mockReturnValue(t0 + 60 * 60 * 1000 + 1);
+    expect(await limitarPorClave(clave, 600, 5)).toMatchObject({ permitido: true });
+  });
+
+  it("los INTENTOS de introducir el código no dependen de Upstash: el candado vive en la base (two_factor_attempts)", async () => {
+    const { readFileSync } = await import("node:fs");
+    const path = await import("node:path");
+    const seguridad = readFileSync(path.join(__dirname, "seguridad.ts"), "utf8");
+    expect(seguridad).toMatch(/export async function candado2FAActivo[\s\S]*?from\("two_factor_attempts"\)/);
+    for (const ruta of ["verificar", "desafio", "email/verificar"]) {
+      const src = readFileSync(path.join(__dirname, "..", "app", "api", "cuenta", "2fa", ruta, "route.ts"), "utf8");
+      expect(src, ruta).toMatch(/candado2FAActivo\(/);
+      expect(src, ruta).not.toMatch(/rateLimit/);
+    }
   });
 });
 

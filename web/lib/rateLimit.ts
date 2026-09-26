@@ -154,15 +154,41 @@ export async function verificarLimiteDiario(identidad: string, email?: string | 
   return contarEnUpstash(clave, 86400, limite);
 }
 
+/** El límite de respaldo de los envíos por clave cuando la base del contador
+ * cae (decisión del fundador, 26 sep 2026): unos pocos por clave y por hora,
+ * nunca sin límite. */
+export const LIMITE_RESPALDO_ENVIOS = 3;
+const VENTANA_RESPALDO_MS = 60 * 60 * 1000;
+/** En la memoria del servidor: cada instancia lleva su cuenta (es un respaldo
+ * de emergencia, no el límite normal; con varias instancias el tope real es
+ * LIMITE_RESPALDO_ENVIOS por instancia, sigue sin ser ilimitado). */
+const respaldoEnMemoria = new Map<string, { usados: number; venceMs: number }>();
+
+function contarEnRespaldo(clave: string): { permitido: boolean; usados: number } {
+  const ahora = Date.now();
+  const previo = respaldoEnMemoria.get(clave);
+  const vigente = previo && previo.venceMs > ahora ? previo : { usados: 0, venceMs: ahora + VENTANA_RESPALDO_MS };
+  vigente.usados += 1;
+  respaldoEnMemoria.set(clave, vigente);
+  return { permitido: vigente.usados <= LIMITE_RESPALDO_ENVIOS, usados: vigente.usados };
+}
+
 /** Limitador genérico por clave (patrón rateLimitByKey del I Ching): para
  * ventanas cortas ajenas al día UTC, como los envíos de código 2FA
- * (5 por usuario / 10 min). Upstash caído: aquí se deja pasar (no es la IA), ver el cuerpo. */
+ * (5 por usuario / 10 min). No es la IA: con la base caída NO se cierra (nadie
+ * pierde la entrada a su cuenta), pero tampoco queda sin límite: cae al límite
+ * de respaldo en memoria. */
 export async function limitarPorClave(clave: string, ttlSegundos: number, limite: number): Promise<ResultadoLimite> {
   const r = await contarEnUpstash(`myidea:k:${clave}`, ttlSegundos, limite);
-  // Este límite no es de la IA (los envíos del código de doble factor): con la
-  // base caída no se le cierra a nadie la entrada a su cuenta. Se deja pasar y
-  // el error ya quedó registrado en contarEnUpstash.
-  return r.caido ? { ...r, permitido: true } : r;
+  if (!r.caido) return r;
+  const respaldo = contarEnRespaldo(clave);
+  console.error("[rateLimit] UPSTASH NO RESPONDE: envíos con el LÍMITE DE RESPALDO en memoria", {
+    clave,
+    usados: respaldo.usados,
+    limite: LIMITE_RESPALDO_ENVIOS,
+    ventana: "1 h",
+  });
+  return { permitido: respaldo.permitido, usados: respaldo.usados, limite: LIMITE_RESPALDO_ENVIOS, caido: true };
 }
 
 /** Mensajes en palabras de persona (el usuario web nunca ve maquinaria). */
