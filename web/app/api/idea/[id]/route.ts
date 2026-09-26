@@ -270,6 +270,14 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
       realizada_at: proyecto.realizada_at ?? null,
       // Campaña "Espacios" (cara "Tu avance"): La Chispa = nacimiento del proyecto.
       created_at: proyecto.created_at,
+      // "Tu avance" (26 sep 2026): cuándo empezó La Exploración del núcleo, la
+      // primera sesión que no es de un mundo.
+      // (la MÁS ANTIGUA por fecha, sin fiarse del orden de la lista).
+      exploracion_at:
+        ((sesiones ?? []) as Array<{ created_at: string; dominio: string | null }>)
+          .filter((s) => !s.dominio || s.dominio === "core")
+          .map((s) => s.created_at)
+          .sort()[0] ?? null,
     },
     organizador: organizador && { contenido_md: organizador.contenido_md, created_at: organizador.created_at },
     plan: plan && {

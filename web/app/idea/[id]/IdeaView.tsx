@@ -83,6 +83,7 @@ interface DetalleIdea {
     realizada_at?: string | null;
     /** Campaña "Espacios" (cara "Tu avance"): La Chispa = nacimiento del proyecto. */
     created_at?: string | null;
+    exploracion_at?: string | null;
   };
   organizador: { contenido_md: string; created_at?: string | null } | null;
   /** AUD-09 H02: aviso del plan armado sin IA (null si fue redactado). */
@@ -1240,6 +1241,8 @@ export function IdeaView({ projectId }: { projectId: string }) {
               onCaraCambio={actualizarCara}
               proyectoCreatedAt={detalle.idea.created_at ?? null}
               organizadorAt={detalle.organizador?.created_at ?? null}
+              exploracionAt={detalle.idea.exploracion_at ?? null}
+              etapaIdea={etapaBase}
               realizadaAt={realizadaAt}
             />
           </>

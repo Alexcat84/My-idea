@@ -247,6 +247,9 @@ interface Props {
   /** Fechas para la cara "Tu avance" del CORE (los del mundo viajan en `mundos`). */
   proyectoCreatedAt?: string | null; // La Chispa
   organizadorAt?: string | null; // Claridad
+  exploracionAt?: string | null; // La Exploración (la primera sesión del núcleo)
+  /** La etapa actual del recorrido (lib/etapaIdea.ts), la misma del paso a paso. */
+  etapaIdea?: number;
   realizadaAt?: string | null; // Realizada
 }
 
@@ -1630,6 +1633,8 @@ export function ManosALaObra({
   onCaraCambio,
   proyectoCreatedAt,
   organizadorAt,
+  exploracionAt,
+  etapaIdea,
   realizadaAt,
 }: Props) {
   const idioma = useIdioma();
@@ -1840,8 +1845,18 @@ export function ManosALaObra({
   const hitosCore = hitosDeEspacio(
     {
       espacio: "core",
+      // "Tu avance" (decisión del fundador, 26 sep 2026): las seis etapas. La
+      // actual es la del paso a paso; Manos a la Obra lleva la fecha de la
+      // primera tarea hecha, si la hay (no se inventa una).
+      etapa: etapaIdea ?? (planCreatedAt ? 5 : organizadorAt ? 2 : 1),
       chispaAt: proyectoCreatedAt,
       claridadAt: organizadorAt,
+      exploracionAt,
+      manosAt:
+        itemsCore
+          .filter((i) => i.estado === "hecho" && i.completed_at)
+          .map((i) => i.completed_at as string)
+          .sort()[0] ?? null,
       planAt: planCreatedAt,
       realizadaAt,
     },

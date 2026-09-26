@@ -35,8 +35,8 @@ const GRIS = "rgba(255,255,255,0.22)";
 
 function colorNodo(tipo: TipoHito): string {
   if (tipo === "cierre") return VERDE;
-  if (tipo === "plan") return MEDIO;
-  return AZUL; // chispa, claridad, diagnostico
+  if (tipo === "plan" || tipo === "manos") return MEDIO;
+  return AZUL; // chispa, claridad, exploracion, diagnostico
 }
 
 export function LineaAvance({ hitos }: { hitos: HitoEspacio[] }) {

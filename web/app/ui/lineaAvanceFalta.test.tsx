@@ -10,12 +10,12 @@ import { LineaAvance } from "./LineaAvance";
 const html = (h: ReturnType<typeof hitosDeEspacio>) => renderToStaticMarkup(<LineaAvance hitos={h} />);
 
 describe("LineaAvance muestra lo que falta en gris", () => {
-  const soloChispa = hitosDeEspacio({ espacio: "core", chispaAt: "2026-01-01T00:00:00Z", claridadAt: null, planAt: null, realizadaAt: null });
+  const soloChispa = hitosDeEspacio({ espacio: "core", etapa: 1, chispaAt: "2026-01-01T00:00:00Z", claridadAt: null, exploracionAt: null, planAt: null, manosAt: null, realizadaAt: null });
 
-  it("las tres etapas que faltan aparecen, marcadas como pendientes", () => {
+  it("las cinco etapas que faltan aparecen, marcadas como pendientes", () => {
     const s = html(soloChispa);
-    for (const e of ["La Chispa", "Claridad", "Tu Plan", "El cierre"]) expect(s).toContain(e);
-    expect(s.match(/data-pendiente="true"/g)?.length).toBe(3);
+    for (const e of ["La Chispa", "Claridad", "La Exploración", "Tu Plan", "Manos a la Obra", "Realizado"]) expect(s).toContain(e);
+    expect(s.match(/data-pendiente="true"/g)?.length).toBe(5);
   });
 
   it("el latido queda en el hito actual (uno solo) y no en una pendiente", () => {
@@ -28,7 +28,7 @@ describe("LineaAvance muestra lo que falta en gris", () => {
 
   it("sin cierre real no hay celebración; con cierre real, sí, y nada pendiente", () => {
     expect(html(soloChispa)).not.toContain("🎉");
-    const cerrado = hitosDeEspacio({ espacio: "core", chispaAt: "2026-01-01T00:00:00Z", claridadAt: "2026-01-02T00:00:00Z", planAt: "2026-01-03T00:00:00Z", realizadaAt: "2026-02-01T00:00:00Z" });
+    const cerrado = hitosDeEspacio({ espacio: "core", etapa: 5, chispaAt: "2026-01-01T00:00:00Z", claridadAt: "2026-01-02T00:00:00Z", exploracionAt: "2026-01-02T12:00:00Z", planAt: "2026-01-03T00:00:00Z", manosAt: null, realizadaAt: "2026-02-01T00:00:00Z" });
     const s = html(cerrado);
     expect(s).toContain("🎉");
     expect(s).not.toContain('data-pendiente="true"');
