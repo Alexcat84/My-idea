@@ -1097,6 +1097,116 @@ async function faseMundoRiesgos(cookie: string, projectId: string) {
 }
 
 // ---------------------------------------------------------------------------
+// Fase 2g-quater (integracion del mundo 11, 28 sep 2026): Primer Equipo. Entra
+// OCULTO (no se lista, pero se resuelve por clave). Unlock gratis (aqui muerde
+// el CHECK de la migracion 048), la brecha elige una de SUS puertas, entrevista
+// hasta listo_para_plan y plan con dominio=primer_equipo. Ademas, las dos leyes
+// del plan que el cliente lee: sin rayas y sin titulos ni autores de libros.
+// ---------------------------------------------------------------------------
+const LIBROS_Y_AUTORES_M11 = [
+  "Radical Candor", "Kim Scott", "Making of a Manager", "Julie Zhuo", "High Output", "Andrew Grove", "Grove",
+  "E-Myth", "Gerber", "Turn the Ship", "Marquet", "Geoff Smart", "Randy Street", "Who: The A Method",
+];
+
+async function faseMundoPrimerEquipo(cookie: string, projectId: string) {
+  separador("FASE 2g-quater (mundo 11): Primer Equipo -- oculto, unlock gratis (048), su puerta y su plan");
+
+  const resUnlock = await fetch(`${BASE_URL}/api/project/${projectId}/world/primer_equipo/unlock`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (!resUnlock.ok) {
+    const cuerpo = await resUnlock.text();
+    throw new Error(
+      `unlock de primer_equipo respondio ${resUnlock.status} -- si el cuerpo huele a 23514, falta aplicar ` +
+        `my_idea_048_mundo_primer_equipo.sql. Cuerpo: ${cuerpo.slice(0, 300)}`
+    );
+  }
+  const u = (await resUnlock.json()) as Record<string, unknown>;
+  if (u.ok !== true || u.dominio !== "primer_equipo") {
+    throw new Error(`unlock de primer_equipo fallo: ${JSON.stringify(u)}`);
+  }
+  if (Number(u.creditos) !== PRECIOS.mundo_activar) {
+    throw new Error(`el catalogo de primer_equipo debio reportar precio ${PRECIOS.mundo_activar} (PRECIOS.mundo_activar), reporto ${u.creditos}`);
+  }
+  const { data: fila, error: errFila } = await supabaseAdmin
+    .from("project_unlocks")
+    .select("creditos_pagados")
+    .eq("project_id", projectId)
+    .eq("dominio", "primer_equipo")
+    .single();
+  if (errFila || fila?.creditos_pagados !== 0) {
+    throw new Error(`fila de project_unlocks primer_equipo: creditos_pagados debio ser 0: ${JSON.stringify(fila)} ${errFila?.message ?? ""}`);
+  }
+  log(`OK: unlock de primer_equipo (precio de catalogo ${u.creditos}, migracion 048 viva, fila gratis).`);
+
+  const resStart = await fetch(`${BASE_URL}/api/project/${projectId}/world/primer_equipo/start`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  if (!resStart.ok) {
+    throw new Error(`start de primer_equipo respondio ${resStart.status} (se esperaba 200): ${(await resStart.text()).slice(0, 300)}`);
+  }
+  let rw = (await resStart.json()) as Record<string, unknown>;
+  const worldSessionId = String(rw.session_id);
+  let costoW = Number(rw.costo_usd ?? 0);
+  const { data: ses } = await supabaseAdmin.from("sessions").select("dominio").eq("id", worldSessionId).single();
+  if (ses?.dominio !== "primer_equipo") {
+    throw new Error(`sessions.dominio esperado 'primer_equipo', llego '${ses?.dominio}'`);
+  }
+  log(`world session: ${worldSessionId}, tipo: ${rw.tipo}`);
+  log(`[primer_equipo brecha] primera pregunta: ${rw.pregunta}`);
+  exigirSinGuiones("primera pregunta de primer_equipo", String(rw.pregunta ?? ""));
+  const RESPUESTAS_EQUIPO = [
+    "Acabo de contratar a mis dos primeros empleados para el taller y no se dirigirlos: termino haciendo yo el trabajo porque me cuesta delegar y decirles cuando algo sale mal.",
+    "Nunca he tenido reuniones a solas con ellos; les hablo solo cuando hay un problema y a las carreras.",
+    "Uno de ellos entrega tarde y no se como decirselo sin que se ofenda; el otro va muy bien pero no se lo he dicho nunca.",
+    "Quiero aprender a dar opinion clara y a repartir el trabajo para dejar de apagar incendios.",
+    "Con eso me basta por ahora.",
+  ];
+  let turnos = 0;
+  while (rw.tipo === "pregunta" && turnos < MAX_TURNOS_SEGURIDAD) {
+    turnos++;
+    const respuesta = RESPUESTAS_EQUIPO[Math.min(turnos - 1, RESPUESTAS_EQUIPO.length - 1)];
+    log(`[primer_equipo turno ${turnos}] ${rw.pregunta}`);
+    exigirSinGuiones(`pregunta ${turnos} de primer_equipo`, String(rw.pregunta ?? ""));
+    rw = await postJson(cookie, `/api/session/${worldSessionId}/turn`, { respuesta });
+    costoW = Number(rw.costo_usd ?? costoW);
+  }
+  if (rw.tipo !== "listo_para_plan") {
+    throw new Error(`la sesion de primer_equipo no llego a listo_para_plan (tipo: ${rw.tipo})`);
+  }
+  const resPlan = await fetch(`${BASE_URL}/api/session/${worldSessionId}/plan`, {
+    method: "POST",
+    headers: { Cookie: cookie },
+  });
+  let md = "";
+  await consumirSSE(resPlan, ({ evento, data }) => {
+    if (evento === "done") {
+      const d = data as { markdown: string; costo_usd: number };
+      md = d.markdown;
+      costoW = d.costo_usd;
+    }
+  });
+  if (!md) throw new Error("el plan de primer_equipo salio vacio");
+  exigirSinGuiones("plan de primer_equipo", md);
+  const colados = LIBROS_Y_AUTORES_M11.filter((x) => md.includes(x));
+  if (colados.length) throw new Error(`el plan de primer_equipo cita libros o autores: ${colados.join(", ")}`);
+  log("  sin titulos ni autores de libros en el plan: OK");
+  const { data: planW } = await supabaseAdmin.from("plans").select("id, dominio").eq("session_id", worldSessionId).single();
+  if (planW?.dominio !== "primer_equipo") {
+    throw new Error(`plans.dominio esperado 'primer_equipo', llego '${planW?.dominio}'`);
+  }
+  const cl = await getJson(cookie, `/api/project/${projectId}/checklist`);
+  const resumen = cl.resumen as Record<string, { total: number }>;
+  if (!resumen.primer_equipo || resumen.primer_equipo.total === 0) {
+    throw new Error(`el checklist de primer_equipo no aparece agrupado por dominio: ${JSON.stringify(resumen)}`);
+  }
+  log(`OK: ciclo completo del mundo 11 (${turnos} turnos, plan dominio=primer_equipo, checklist con ${resumen.primer_equipo.total} items).`);
+  return { costoUsd: costoW };
+}
+
+// ---------------------------------------------------------------------------
 // Fase 2h (Fase 3.6): el contrato que la UI de convergencia consume.
 // GET /api/idea/[id] debe traer lo que las pantallas nuevas pintan:
 // unlocks (fila real de project_unlocks), mundos con su plan (post ciclo
@@ -2893,6 +3003,7 @@ async function main() {
     costos.mundos = mundos.costoUsd;
     costos.mundosNuevos = (await faseMundosNuevos(cookie, macetas.projectId)).costoUsd;
     costos.mundoRiesgos = (await faseMundoRiesgos(cookie, macetas.projectId)).costoUsd;
+    costos.mundoPrimerEquipo = (await faseMundoPrimerEquipo(cookie, macetas.projectId)).costoUsd;
     costos.contratoUI = (await faseContratoUI(cookie, macetas.projectId, mundos.cicloCompleto)).costoUsd;
     costos.sentidoDelTiempo = (await faseSentidoDelTiempo(cookie, macetas.projectId)).costoUsd;
     costos.bucleTracking = (await faseBucleTracking(cookie, macetas.projectId)).costoUsd;
@@ -2935,12 +3046,13 @@ async function main() {
   log("  6. mundos HSEQ: contrato 4.5 (candado 409 sin plan core, el muro 403 murio), unlock gratis idempotente, y ciclo positivo (preview -> plan dominio): OK");
   log("  7. mundos nuevos v1.3.2: exportacion/franquicias abren preview gratis (200, contrato 4.5) + ciclo completo de seguridad_digital (migracion 017): OK");
   log("  7-bis. Riesgos Bajo Control (v1.4): sin muro (contrato 4.5) + unlock (migracion 019) + ciclo completo dominio=risk_management: OK");
+  log("  7-quater. Primer Equipo (mundo 11): oculto, unlock gratis (migracion 048), puerta propia, ciclo completo dominio=primer_equipo, plan sin rayas ni libros: OK");
   log("  8. contrato de la UI de convergencia: unlocks + historial + mundos + grupo vigente (Fase 3.6): OK");
   log("  9. sentido del tiempo (Fase 3.8): modo, completed_at real, baseline con 3 clases de cumplimiento, celebracion+reabrir: OK");
   log("  10. reporte digital (equilibrio esperado 16), sin numeros huerfanos: OK");
   log("  11. guardian GIGO (numeros contaminados): OK");
 
-  separador("VUELO COMPLETO: 16/16 verificaciones OK");
+  separador("VUELO COMPLETO: 17/17 verificaciones OK");
   escribirTranscripcion();
 }
 
