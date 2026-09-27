@@ -1,0 +1,329 @@
+{
+  "node_id": "reservar_media_hora_semanal_talento",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Reservar media hora semanal para identificar y cultivar jugadores A",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Ningún sistema para seguir candidatos sirve si no se usa con regularidad, y el paso que más importa de toda la búsqueda es reservar media hora fija cada semana para llamar a los mejores nombres de tu lista. La cita fija te mantiene constante porque te obliga a llamar. Basta con una conversación real por semana, breve, y con cerrarla pidiendo nombres nuevos: la mayoría de la gente estará encantada de charlar, y esa pregunta sencilla, repetida con disciplina, hace que tu red de candidatos crezca de forma exponencial aunque la necesidad de contratar suba y baje.",
+  "notas_extraccion": "Es la mitad viva del punto 6 del recuadro How to Source, la que el propio punto nombra al mandar que el sistema reserve tiempo semanal en el calendario para hacer seguimiento, y el libro la llama el paso final del proceso de abastecimiento, el que importa mas que cualquier otra cosa que puedas hacer. El capitulo la presenta como una buena practica que pone esos treinta minutos a trabajar, y trae dos textos literales, el guion de apertura de la llamada y la pregunta de cierre, que son los unicos dos parrafos entrecomillados de todo el tramo. Lo que el libro dice que rinde: la mayoria de la gente estara encantada de charlar, y hecho bien se descubre que se puede conectar con cuarenta personas nuevas o mas al año, que es una forma rapida de construir una red impresionante. Y el cierre con el que el capitulo remata el asunto entero: las necesidades de contratacion siempre suben y bajan con el negocio, pero los sistemas y las disciplinas simples, y las preguntas simples como esta, permiten que tu red de abastecimiento crezca de forma exponencial con el tiempo.",
+  "pasos_accionables": [
+    "Reserva treinta minutos en tu calendario todas las semanas para identificar y cultivar jugadores A.",
+    "Ponlo como reunión fija el lunes o el viernes, que es lo que te mantiene constante al obligarte a llamar al mejor talento que tienes en el radar.",
+    "Llegada la hora, cierra la puerta de tu despacho o vete a una sala de reuniones.",
+    "Saca tu lista de jugadores A potenciales y ordénala por prioridad.",
+    "Empieza a llamar hasta que tengas al menos una conversación real con alguien.",
+    "La conversación no tiene por qué ser larga. Puedes abrir con algo sencillo: di quién te sugirió contactar con esa persona, que sabes que es muy buena en lo suyo, que siempre estás buscando gente con talento y que te gustaría conocerla, y que aunque esté perfectamente a gusto en su trabajo actual te encantaría presentarte y escuchar qué intereses tiene para su carrera.",
+    "Al terminar la llamada, si te ha impresionado aunque sea moderadamente lo que has oído, no olvides hacer la pregunta de seguimiento clave: ahora que sabes algo de mí, ¿quiénes son las personas más talentosas que conoces que podrían encajar bien en mi empresa?"
+  ],
+  "entregable_esperado": "Al menos una conversación real por semana con un jugador A potencial, y los nombres nuevos que salen de la pregunta de cierre. Si lo haces bien, puedes llegar a conectar con cuarenta personas nuevas o más al año.",
+  "nodos_previos": [
+    "crear_sistema_captura_seguimiento_candidatos"
+  ],
+  "nodos_siguientes": [
+    "seleccionar_jugador_cuatro_entrevistas",
+    "cultivar_relacion_talento_largo_plazo"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya tienes una lista de jugadores A potenciales anotada y hace falta que el seguimiento ocurra de verdad. Es el paso final de la búsqueda de candidatos, el que importa más que ninguna otra cosa que puedas hacer."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-reservar_media_hora_semanal_talento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Ningún sistema para seguir candidatos sirve si no se usa con regularidad, y el paso que más importa de toda la búsqueda es reservar media hora fija cada semana para llamar a los mejores nombres de tu lista. La cita fija te mantiene honesto porque te obliga a llamar. Basta con una conversación viva por semana, breve, y con cerrarla pidiendo nombres nuevos: la mayoría de la gente estará encantada de charlar, y esa pregunta sencilla, repetida con disciplina, hace que tu red de candidatos crezca de forma exponencial aunque la necesidad de contratar suba y baje.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "409-419"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)"
+    },
+    {
+      "id": "m11-limpieza-reservar_media_hora_semanal_talento-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ponlo como reunion fija el lunes o el viernes, que es lo que te mantiene honesto al obligarte a llamar al mejor talento que tienes en el radar.",
+      "texto_nuevo": "Ponlo como reunión fija el lunes o el viernes, que es lo que te mantiene honesto al obligarte a llamar al mejor talento que tienes en el radar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reservar_media_hora_semanal_talento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Saca tu lista de jugadores A potenciales y ordenala por prioridad.",
+      "texto_nuevo": "Saca tu lista de jugadores A potenciales y ordénala por prioridad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reservar_media_hora_semanal_talento-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Empieza a llamar hasta que tengas al menos una conversacion viva.",
+      "texto_nuevo": "Empieza a llamar hasta que tengas al menos una conversación viva.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reservar_media_hora_semanal_talento-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "La conversacion no tiene por que ser larga. El libro abre con algo simple como esto: Sue me recomendo que tu y yo nos conocieramos, tengo entendido que eres muy bueno en lo tuyo, siempre estoy al acecho de gente con talento y me encantaria tener la oportunidad de conocerte, y aunque estes perfectamente a gusto en tu trabajo actual me encantaria presentarme y escuchar cuales son tus intereses de carrera.",
+      "texto_nuevo": "La conversación no tiene por qué ser larga. Puedes abrir con algo sencillo: di quién te sugirió contactar con esa persona, que sabes que es muy buena en lo suyo, que siempre estás buscando gente con talento y que te gustaría conocerla, y que aunque esté perfectamente a gusto en su trabajo actual te encantaría presentarte y escuchar qué intereses tiene para su carrera.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro abre con algo simple como esto",
+          "Sue"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reservar_media_hora_semanal_talento-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al terminar la llamada, si te ha impresionado aunque sea moderadamente lo que has oido, no te dejes la pregunta de seguimiento clave: ahora que sabes algo de mi, quienes son las personas mas talentosas que conoces que podrian encajar bien en mi empresa.",
+      "texto_nuevo": "Al terminar la llamada, si te ha impresionado aunque sea moderadamente lo que has oído, no te dejes la pregunta de seguimiento clave: ahora que sabes algo de mí, ¿quiénes son las personas más talentosas que conoces que podrían encajar bien en mi empresa?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reservar_media_hora_semanal_talento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al menos una conversacion viva por semana con un jugador A potencial, y los nombres nuevos que salen de la pregunta de cierre. El libro dice que hecho bien se conecta con cuarenta personas nuevas o mas al año.",
+      "texto_nuevo": "Al menos una conversación viva por semana con un jugador A potencial, y los nombres nuevos que salen de la pregunta de cierre. Hecho bien, se conecta con cuarenta personas nuevas o más al año.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reservar_media_hora_semanal_talento-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya tienes una lista de jugadores A potenciales capturada y hace falta que el seguimiento ocurra de verdad. El libro lo llama el paso final del proceso de abastecimiento, el que importa mas que ninguna otra cosa que puedas hacer.",
+      "texto_nuevo": "Cuando ya tienes una lista de jugadores A potenciales capturada y hace falta que el seguimiento ocurra de verdad. Es el paso final de la búsqueda de candidatos, el que importa más que ninguna otra cosa que puedas hacer.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro lo llama",
+          "proceso de abastecimiento"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-reservar_media_hora_semanal_talento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ningún sistema para seguir candidatos sirve si no se usa con regularidad, y el paso que más importa de toda la búsqueda es reservar media hora fija cada semana para llamar a los mejores nombres de tu lista. La cita fija te mantiene honesto porque te obliga a llamar. Basta con una conversación viva por semana, breve, y con cerrarla pidiendo nombres nuevos: la mayoría de la gente estará encantada de charlar, y esa pregunta sencilla, repetida con disciplina, hace que tu red de candidatos crezca de forma exponencial aunque la necesidad de contratar suba y baje.",
+      "texto_nuevo": "Ningún sistema para seguir candidatos sirve si no se usa con regularidad, y el paso que más importa de toda la búsqueda es reservar media hora fija cada semana para llamar a los mejores nombres de tu lista. La cita fija te mantiene constante porque te obliga a llamar. Basta con una conversación real por semana, breve, y con cerrarla pidiendo nombres nuevos: la mayoría de la gente estará encantada de charlar, y esa pregunta sencilla, repetida con disciplina, hace que tu red de candidatos crezca de forma exponencial aunque la necesidad de contratar suba y baje.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "te mantiene honesto",
+          "conversación viva"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calcos de 'keep you honest' y 'live conversation'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-reservar_media_hora_semanal_talento-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ponlo como reunión fija el lunes o el viernes, que es lo que te mantiene honesto al obligarte a llamar al mejor talento que tienes en el radar.",
+      "texto_nuevo": "Ponlo como reunión fija el lunes o el viernes, que es lo que te mantiene constante al obligarte a llamar al mejor talento que tienes en el radar.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "te mantiene honesto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'keep you honest'.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-reservar_media_hora_semanal_talento-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Empieza a llamar hasta que tengas al menos una conversación viva.",
+      "texto_nuevo": "Empieza a llamar hasta que tengas al menos una conversación real con alguien.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "conversación viva"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'live conversation'.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-reservar_media_hora_semanal_talento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al menos una conversación viva por semana con un jugador A potencial, y los nombres nuevos que salen de la pregunta de cierre. Hecho bien, se conecta con cuarenta personas nuevas o más al año.",
+      "texto_nuevo": "Al menos una conversación real por semana con un jugador A potencial, y los nombres nuevos que salen de la pregunta de cierre. Hecho bien, se conecta con cuarenta personas nuevas o más al año.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "conversación viva"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'live conversation'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-reservar_media_hora_semanal_talento-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya tienes una lista de jugadores A potenciales capturada y hace falta que el seguimiento ocurra de verdad. Es el paso final de la búsqueda de candidatos, el que importa más que ninguna otra cosa que puedas hacer.",
+      "texto_nuevo": "Cuando ya tienes una lista de jugadores A potenciales anotada y hace falta que el seguimiento ocurra de verdad. Es el paso final de la búsqueda de candidatos, el que importa más que ninguna otra cosa que puedas hacer.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "capturada"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Capturar' está en la lista de calcos vetados.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-reservar_media_hora_semanal_talento-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al terminar la llamada, si te ha impresionado aunque sea moderadamente lo que has oído, no te dejes la pregunta de seguimiento clave: ahora que sabes algo de mí, ¿quiénes son las personas más talentosas que conoces que podrían encajar bien en mi empresa?",
+      "texto_nuevo": "Al terminar la llamada, si te ha impresionado aunque sea moderadamente lo que has oído, no olvides hacer la pregunta de seguimiento clave: ahora que sabes algo de mí, ¿quiénes son las personas más talentosas que conoces que podrían encajar bien en mi empresa?",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "no te dejes la pregunta"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'No te dejes' por 'no olvides' es uso peninsular.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase2-reservar_media_hora_semanal_talento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Al menos una conversación real por semana con un jugador A potencial, y los nombres nuevos que salen de la pregunta de cierre. Hecho bien, se conecta con cuarenta personas nuevas o más al año.",
+      "texto_nuevo": "Al menos una conversación real por semana con un jugador A potencial, y los nombres nuevos que salen de la pregunta de cierre. Si lo haces bien, puedes llegar a conectar con cuarenta personas nuevas o más al año.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_03.md 415",
+        "frase": "Done well, you will find you can connect with forty or more new people per year."
+      },
+      "decision": "auditoria completa M11 (matiz, calco): El libro dice que puedes llegar a conectar ('you will find you can connect'); el texto lo daba como resultado seguro. 'Hecho bien' calcaba 'Done well'.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Dedica Media Hora al Talento",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

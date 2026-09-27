@@ -1,0 +1,452 @@
+{
+  "node_id": "desplegar_tres_conversaciones_carrera",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Desplegar con tu equipo la serie de tres conversaciones de carrera, con su cadencia y su encargo de enseñarlas a los jefes de tu equipo",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Cada persona tiene su propia trayectoria de crecimiento, y no a todas hay que empujarlas a crecer deprisa: hay que equilibrar crecimiento y estabilidad. Para entenderla hay tres conversaciones de carrera, pensadas para conocer a la persona, saber a qué aspira y planear cómo ayudarla a llegar. Son tu mayor ocasión de demostrar que te importa, caben en tus reuniones uno a uno de siempre y se reparten en tres a seis semanas. Enseñarlas a los jefes de tu equipo extiende el método a todos, y hacerlas bien construye confianza y revela para qué papel encaja mejor cada persona.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_10.md, unidad Cap. 7, Team. Sale de las lineas 19, 21 y 43, que son 254 palabras medidas con sed -n '19p;21p;43p' | wc -w. ES LA PIEZA 14 DE LA FRONTERA DE cap_10 Y ES LA CABEZA DE LA SERIE DE LAS TRES CONVERSACIONES DE CARRERA. POR QUE ES NODO Y POR QUE LA CABEZA NO ES LA SEGUNDA COMPRESION QUE MANUAL 3.4 PROHIBE: manual 3.4 dice un nodo por paso mas UNA cabeza, jamas dos compresiones de la misma numeracion, asi que la cabeza esta prescrita y lo prohibido es la segunda. Esta es la primera y unica: las tres partes (conversar_historia_vida_descubrir_motivadores, conversar_suenios_cruzar_habilidades y trazar_plan_dieciocho_meses_aprendizaje) NO estan resumidas aqui en sus pasos, solo nombradas por su materia en el paso 11. LA CUENTA ESTA ESCRITA DOS VECES POR EL LIBRO, que es lo que hace de esto una serie D.37 y no una D.29: la linea 43 escribe a succession of three forty-five-minute conversations y la linea 91 escribe three conversations. La linea 91 NO aporta pasos a este nodo y se queda en el resto de la frontera, con su discutible declarado en el reporte de la vuelta 22. POR QUE SUS CINCO ACTOS NO VIAJAN A NINGUNA DE LAS TRES PARTES, comprobado y no supuesto: grep -l -i 'seis semanas' cuarentena/scott_radical_candor/*.json da cero lineas. Los cuarenta y cinco minutos que si viajan son otros: el paso 15 de conversar_historia_vida transcribe la linea 59, que habla de la primera conversacion sola y no de la cadencia de las tres. LO QUE MANUAL 3.5 MANDA HACER CON LA LINEA 43, que esta dentro del relato de Russ Laraway: el caso no es la casa, la doctrina vive en su nodo y el caso entra como ejemplo nombrado dentro de ella. La cadencia y el encargo de ensenar a los jefes son doctrina y viajan; el nombre de Russ entra nombrado en el paso 10 como ejemplo, y Google, la encuesta interna y los nombres de Todd y Sarah se quedan en el caso. La senial barata de manual 3.5 sale limpia: el entregable no lleva ni un dato del caso. RELECTURA DE FIDELIDAD D.30 EN EL ACTO, paso a paso contra su linea: 11 pasos, 11 TRANSCRIPCION, 0 PUENTE. P1 a P4 de la linea 19; P5 a P8 de la linea 21; P9, P10 y P11 de la linea 43. LOS DOS PASOS CON TRANSPOSICION DE PERSONA DECLARADA, y los declaro yo antes de que nadie los busque: el P10 y el P11 salen de una frase que el libro escribe en pasado y sobre otro (He taught every manager on his team...), y aqui van en imperativo dirigido al lector. La transposicion es la que manual 3.5 prescribe al decir que la doctrina del caso vive en su nodo, y manual seccion 2 pide pasos en imperativo. No anaden ni un medio, ni una etapa ni un objeto que la linea 43 no nombre. Van marcados como discutible en el reporte. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: quien convoca la reunion fuera de la oficina, cada cuanto se repite la serie con la misma persona, que se hace si una de las tres conversaciones no cabe en el hueco de 1:1, y como se comprueba que un jefe al que ensenaste las esta teniendo. Ninguna de esas cuatro cosas esta en las lineas 19, 21 ni 43, y las cuatro son exactamente las tres especies de puente que D.30 nombra (el destinatario, el periodo y el responsable). CORRECCION 3 DE LA COLA DE LA VUELTA 23, declarada y sin borrar nada (ACTA 22 seccion 3.7): ESTE NODO GANA UN PASO 12 QUE SALE DE LA PRIMERA MITAD DE LA LINEA 91, y con el la unidad de origen deja de ser solo las lineas 19, 21 y 43. La frase vieja de este resumen decia que la linea 91 NO aporta pasos a este nodo y se queda en el resto de la frontera, y esa frase es FALSA desde hoy: el auditor adjudico que los dos fines que la linea 91 escribe (construir confianza con quien te reporta, y averiguar para que papel encaja mejor cada persona para que el equipo consiga resultados) no estan entre los tres que el paso 4 recoge de la linea 19, y que esta casa no puede aceptar tres fines de la linea 19 como pasos y rechazar dos de la 91 por ser fines. LA SEGUNDA MITAD DE LA LINEA 91 NO VIAJA Y SE DICE POR QUE: la direccion web y el libro que Russ esta escribiendo son promocion, no doctrina. LO QUE ESTO MUEVE Y LO QUE NO: la frontera de cap_10 SIGUE EN 14 PIEZAS, este nodo pasa de 11 a 12 pasos, y el resto de cap_10 baja de 1.686 a 1.585 palabras porque el tramo L88 a L92 deja de ser resto. RELECTURA DE FIDELIDAD D.30 SOBRE EL PASO NUEVO: 12 pasos, 12 TRANSCRIPCION, 0 PUENTE. P12 de la primera mitad de la linea 91.",
+  "pasos_accionables": [
+    "Ten estas conversaciones de carrera con cada persona a tu cargo, sea cual sea su trayectoria de crecimiento dentro de tu equipo.",
+    "Parte de esta idea: todas las personas tienen su propia trayectoria de crecimiento, y es un error empujar a todo el mundo a ser o una superestrella o una estrella de rock. Lo que hay que equilibrar es crecimiento y estabilidad.",
+    "Tenlas para entender la trayectoria de crecimiento de la persona, que es lo que las hace importantes.",
+    "Persigue en ellas tres propósitos: conocer mejor a cada persona a tu cargo, aprender cuáles son sus aspiraciones, y planear cómo ayudarla a alcanzar esos sueños.",
+    "Ponlas como lo primerísimo que haces al empezar a practicar en tu equipo la franqueza que une importarte personalmente y desafiar directamente.",
+    "Cuenta con que llevan tiempo, y mételas en tus reuniones uno a uno de siempre: ahí pueden ocurrir.",
+    "Cuenta con lo que son: tu mayor oportunidad, la más grande de todas, de subir en el eje de importarte personalmente.",
+    "Y cuenta con lo que pasa cuando les tomas el ritmo: las esperarás con ganas, y generarán algunas de las conversaciones más disfrutables que tienes como jefe.",
+    "Dales esta cadencia: una sucesión de tres conversaciones de cuarenta y cinco minutos con cada persona a tu cargo, en el curso de tres a seis semanas.",
+    "Enseña a cada jefe de tu equipo a tenerlas con las personas a su cargo, por ejemplo reuniéndolos fuera de la oficina para enseñarles el método.",
+    "Y enséñales a hablar con las personas a su cargo no solo de sus metas de carrera o de cómo ascender, sino también de sus historias de vida y de sus sueños.",
+    "Y ten presente lo que está en juego en tu capacidad de hacerlas bien: construir confianza con la gente a tu cargo, y averiguar para qué papel encaja mejor cada persona, para que tu equipo pueda conseguir resultados."
+  ],
+  "entregable_esperado": "Las tres conversaciones tenidas con cada persona a tu cargo, en el curso de tres a seis semanas y dentro de tus reuniones uno a uno de siempre.",
+  "nodos_previos": [
+    "construir_confianza_equipo_tiempo_solas",
+    "desplegar_plan_orden_operaciones_franqueza_radical"
+  ],
+  "nodos_siguientes": [
+    "conversar_historia_vida_descubrir_motivadores",
+    "conversar_suenios_cruzar_habilidades",
+    "trazar_plan_dieciocho_meses_aprendizaje"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a desplegar las conversaciones de carrera con tu equipo, o cuando vas a enseñar a los jefes de tu equipo a tenerlas con las personas a su cargo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cada persona tiene su propia trayectoria de crecimiento, y no a todas hay que empujarlas a crecer deprisa: hay que equilibrar crecimiento y estabilidad. Para entenderla hay tres conversaciones de carrera, pensadas para conocer a la persona, saber a qué aspira y planear cómo ayudarla a llegar. Son tu mayor ocasión de demostrar que te importa, caben en tus reuniones uno a uno de siempre y se reparten en tres a seis semanas. Enseñarlas a los jefes de tu equipo extiende el método a todos, y hacerlas bien construye confianza y revela para qué papel encaja mejor cada persona.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_10.md",
+          "lineas": "19-91"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)"
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desplegar con tu equipo la serie de tres conversaciones de carrera, con su cadencia y su encargo de ensenarlas a tus jefes",
+      "texto_nuevo": "Desplegar con tu equipo la serie de tres conversaciones de carrera, con su cadencia y su encargo de enseñarlas a tus jefes",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 19, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten estas conversaciones de carrera con cada persona que te reporta directamente, sea cual sea el sitio que ocupe en el marco de equipo descrito en el capitulo tres.",
+      "texto_nuevo": "Ten estas conversaciones de carrera con cada persona que depende directamente de ti, sea cual sea el sitio que ocupe en el reparto de tu equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "te reporta directamente",
+          "en el marco de equipo descrito en el capitulo tres"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de lo que el texto pone debajo: todas las personas tienen su propia trayectoria de crecimiento, y es un error empujar a todo el mundo a ser o una superestrella o una roca. Lo que hay que equilibrar es crecimiento y estabilidad.",
+      "texto_nuevo": "Parte de esta idea: todas las personas tienen su propia trayectoria de crecimiento, y es un error empujar a todo el mundo a ser o una superestrella o una estrella de rock. Lo que hay que equilibrar es crecimiento y estabilidad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto pone debajo",
+          "una roca"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro",
+        "coherencia",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tenlas para entender la trayectoria de crecimiento de la persona, que es el motivo por el que el texto dice que son importantes.",
+      "texto_nuevo": "Tenlas para entender la trayectoria de crecimiento de la persona, que es lo que las hace importantes.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es el motivo por el que el texto dice que son importantes"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Persigue en ellas los tres propositos que el texto enumera: conocer mejor a cada persona a tu cargo, aprender cuales son sus aspiraciones, y planear como ayudarla a alcanzar esos suenios.",
+      "texto_nuevo": "Persigue en ellas tres propósitos: conocer mejor a cada persona a tu cargo, aprender cuáles son sus aspiraciones, y planear cómo ayudarla a alcanzar esos sueños.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los tres propositos que el texto enumera"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ponlas como lo primerisimo que haces al desplegar la franqueza radical en tu equipo, que es donde el texto las recomienda.",
+      "texto_nuevo": "Ponlas como lo primerísimo que haces al empezar a practicar en tu equipo la franqueza que une importarte personalmente y desafiar directamente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "al desplegar la franqueza radical en tu equipo",
+          "que es donde el texto las recomienda"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que llevan tiempo, y metelas en tus huecos de 1:1 de siempre: el texto dice que ahi pueden ocurrir.",
+      "texto_nuevo": "Cuenta con que llevan tiempo, y mételas en tus reuniones uno a uno de siempre: ahí pueden ocurrir.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "huecos de 1:1",
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto dice que son: tu mayor oportunidad, la unica mas grande, de subir en el eje de importarte personalmente del marco de la franqueza radical.",
+      "texto_nuevo": "Cuenta con lo que son: tu mayor oportunidad, la más grande de todas, de subir en el eje de importarte personalmente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto dice que son",
+          "del marco de la franqueza radical"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y cuenta con lo que el texto dice que pasa cuando les coges el tranquillo: las esperaras con ganas, y generaran algunas de las conversaciones mas disfrutables que tienes como jefe.",
+      "texto_nuevo": "Y cuenta con lo que pasa cuando les coges el tranquillo: las esperarás con ganas, y generarán algunas de las conversaciones más disfrutables que tienes como jefe.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que pasa"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dales la cadencia que el texto escribe: una sucesion de tres conversaciones de cuarenta y cinco minutos con cada persona a tu cargo, en el curso de tres a seis semanas.",
+      "texto_nuevo": "Dales esta cadencia: una sucesión de tres conversaciones de cuarenta y cinco minutos con cada persona a tu cargo, en el curso de tres a seis semanas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la cadencia que el texto escribe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ensenia a cada jefe de tu equipo a tenerlas con las personas a su cargo. Es lo que el texto cuenta que hizo Russ cuando se dio cuenta de que habia dado con un buen metodo: reunio a sus jefes fuera de la oficina y se lo ensenio.",
+      "texto_nuevo": "Enseña a cada jefe de tu equipo a tenerlas con las personas a su cargo, por ejemplo reuniéndolos fuera de la oficina para enseñarles el método.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Es lo que el texto cuenta que hizo Russ",
+          "cuando se dio cuenta de que habia dado con un buen metodo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y ensenia a hablar con las personas a su cargo no solo de sus metas de carrera o de como ascender, sino tambien de sus historias de vida y de sus suenios.",
+      "texto_nuevo": "Y enséñales a hablar con las personas a su cargo no solo de sus metas de carrera o de cómo ascender, sino también de sus historias de vida y de sus sueños.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 19, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y ten presente lo que el texto dice que se juega tu capacidad de hacerlas bien: construir confianza con la gente que te reporta, y averiguar para que papel encaja mejor cada persona, para que tu equipo pueda conseguir resultados.",
+      "texto_nuevo": "Y ten presente lo que está en juego en tu capacidad de hacerlas bien: construir confianza con la gente a tu cargo, y averiguar para qué papel encaja mejor cada persona, para que tu equipo pueda conseguir resultados.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto dice que se juega",
+          "que te reporta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 11,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Las tres conversaciones tenidas con cada persona a tu cargo, en el curso de tres a seis semanas y dentro de los huecos de 1:1 de siempre.",
+      "texto_nuevo": "Las tres conversaciones tenidas con cada persona a tu cargo, en el curso de tres a seis semanas y dentro de tus reuniones uno a uno de siempre.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los huecos de 1:1"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_tres_conversaciones_carrera-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando vas a desplegar las conversaciones de carrera con tu equipo, o cuando vas a ensenar a los jefes de tu equipo a tenerlas con las personas a su cargo.",
+      "texto_nuevo": "Cuando vas a desplegar las conversaciones de carrera con tu equipo, o cuando vas a enseñar a los jefes de tu equipo a tenerlas con las personas a su cargo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 19, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 19)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-desplegar_tres_conversaciones_carrera-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten estas conversaciones de carrera con cada persona que depende directamente de ti, sea cual sea el sitio que ocupe en el reparto de tu equipo.",
+      "texto_nuevo": "Ten estas conversaciones de carrera con cada persona a tu cargo, sea cual sea el sitio que ocupe en el reparto de tu equipo.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que depende directamente de ti"
+        ]
+      },
+      "decision": "pase de glosario (colaboradores_directos): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-glosario-desplegar_tres_conversaciones_carrera-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y cuenta con lo que pasa cuando les coges el tranquillo: las esperarás con ganas, y generarán algunas de las conversaciones más disfrutables que tienes como jefe.",
+      "texto_nuevo": "Y cuenta con lo que pasa cuando les tomas el ritmo: las esperarás con ganas, y generarán algunas de las conversaciones más disfrutables que tienes como jefe.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "coges",
+          "tranquillo"
+        ]
+      },
+      "decision": "pase de glosario (coger): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-desplegar_tres_conversaciones_carrera-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Desplegar con tu equipo la serie de tres conversaciones de carrera, con su cadencia y su encargo de enseñarlas a tus jefes",
+      "texto_nuevo": "Desplegar con tu equipo la serie de tres conversaciones de carrera, con su cadencia y su encargo de enseñarlas a los jefes de tu equipo",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'Tus jefes' se lee como tus superiores; el libro (scott cap_10.md 43: 'taught every manager on his team') y el paso 9 hablan de los jefes que dependen de ti."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Tus jefes' se lee como tus superiores; el libro (scott cap_10.md 43: 'taught every manager on his team') y el paso 9 hablan de los jefes que dependen de ti.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-desplegar_tres_conversaciones_carrera-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Ten estas conversaciones de carrera con cada persona a tu cargo, sea cual sea el sitio que ocupe en el reparto de tu equipo.",
+      "texto_nuevo": "Ten estas conversaciones de carrera con cada persona a tu cargo, sea cual sea su trayectoria de crecimiento dentro de tu equipo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "\"El reparto de tu equipo\" remite al marco del equipo de otro capítulo (scott cap_10 l.19, \"the team framework described in Chapter Three\") que el nodo no presenta; se ancla en la trayectoria de crecimiento, que el paso siguiente sí presenta."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"El reparto de tu equipo\" remite al marco del equipo de otro capítulo (scott cap_10 l.19, \"the team framework described in Chapter Three\") que el nodo no presenta; se ancla en la trayectoria de crecimiento, que el paso siguiente sí presenta.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Ten las Tres Conversaciones de Carrera",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

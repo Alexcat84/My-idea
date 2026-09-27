@@ -1,0 +1,431 @@
+{
+  "node_id": "despedir_persona_franqueza_radical",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Despedir con franqueza radical, sin distanciarte de la persona y con el trabajo siguiente imaginado antes de la reunión",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Despedir bien exige no distanciarte de la persona: si intentas no sentir el dolor de la situación, lo harás mal. Recordar un trabajo en el que tú fuiste malo ayuda a ver que dejar un puesto que no encaja abre la posibilidad de destacar en otro sitio. Antes de la reunión, imagina un trabajo concreto para esa persona, piensa que el problema está en el puesto y no en ella, y pregúntate si puedes presentarla a alguien. Además, retener a quien rinde mal castiga a quien rinde bien, que suele acabar cargando con el trabajo pendiente, y es aún más dañino si quien rinde mal es un jefe.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_06.md, unidad Cap. 3, Understand What Motivates Each Person on Your Team. ESCRITA EN LA VUELTA 19, 12 sep 2026, por la TAREA 2.b de su encargo, que es la que encarga anadir la unidad a los 24 candidatos de la bandeja que no la nombraban: la costumbre de nombrarla empieza en cap_07 y estos son anteriores. NO SE CAMBIA NI UN PASO NI UNA CITA: lo unico que se anade es de que unidad salio. LEIDA DEL FICHERO FUENTE Y NO DE UNA TABLA, con el ancla textual unica que la sostiene, 'person you are firing', corrida con grep contra las quince unidades del libro. El inventario es del texto y viene numerado por el mismo con dos recordatorios, uno y dos, cada uno con su desarrollo. Se extrae separado del procedimiento de decidir cuando toca porque el propio texto los separa con dos rotulos y porque son dos actos distintos: uno se hace con una lista de preguntas delante y el otro dentro de una conversacion. El caso del verano de cajera y el del empresario que sudaba van nombrados dentro de sus pasos, que es la condicion con la que esta casa admite la transcripcion de caso, y el entregable no lleva ningun dato de ninguno de los dos. Lo que el texto NO dice, y por eso no esta escrito aqui, es que palabras usar en la reunion, cuanto preaviso dar, ni que hacer si la persona no acepta la reformulacion del problema. CORRECCION DECLARADA DE LA VUELTA 27, 16 sep 2026, por el punto 3 de la TAREA 1 de su encargo y la adjudicacion 3.1 de la ACTA 25, SIN BORRAR LO QUE HAY ENCIMA: la frase de la vuelta 19 que llama ancla textual unica a 'person you are firing' es FALSA, y de la especie peor de las cuatro, porque la unidad declarada NO contiene su propia ancla. grep -ril 'person you are firing' contra las quince unidades del libro da un solo fichero y es cap_10.md, corrido el 16 sep 2026. La UNIDAD DE ORIGEN cap_06 SE SOSTIENE IGUAL, y no por la palabra sino por el texto: los pasos 3 y 4 salen de cap_06 linea 297, el verano de cajera de banco, y los pasos 5, 6, 7 y 8 salen de cap_06 linea 299, que es donde el libro escribe 'Can I help by making an introduction?'. El ancla que SI es unica de cap_06, comprobada con el mismo comando, es 'bank teller'. Lo que estaba mal es la etiqueta de procedencia, NO el procedimiento: ni un paso ni una cita cambian.",
+  "pasos_accionables": [
+    "No te distancies de la persona a la que vas a despedir: si intentas evitar sentir el dolor que hay en la situación, sobre todo el de la persona que se va, lo vas a hacer mal.",
+    "Cuenta con que esto es duro de verdad y con que no eres el único: un empresario de éxito, que parecía más descarado que compasivo a la hora de despedir, confesaba que las mañanas en que iba a despedir a alguien se despertaba con sudores fríos.",
+    "Para llegar con la actitud adecuada, primer recordatorio: acuérdate de un trabajo en el que tú fuiste malo y piensa en lo contento que estás de no estar ya en él. Un ejemplo: alguien que pasó un verano de cajera de banco haciendo mal las cuentas de cabeza, y cuya jefa no la despidió sino que la animó a intentarlo más, con lo que lo que era un problema de cálculo empezó a sentirse como un defecto de carácter.",
+    "Cuenta con la lección de ese caso: si aquella jefa la hubiera despedido diciendo que claramente ese trabajo no le interesaba y que por qué no buscaba otro ese verano, le habría hecho un gran favor y le habría ahorrado mucho dinero al banco.",
+    "Parte de que al despedir a alguien creas la posibilidad de que esa persona destaque y encuentre felicidad haciendo un trabajo con sentido en otro sitio, porque parte de conseguir un buen trabajo es dejar uno malo, o uno que es malo para ti.",
+    "Antes de la reunión, intenta imaginar concretamente cuál podría ser ese trabajo para esa persona.",
+    "Reformula el problema para ti y para ella: no es que la persona sea mala, es que el puesto es malo, al menos para esa persona.",
+    "Pregúntate si puedes ayudar presentando a esa persona a alguien.",
+    "Segundo recordatorio: mantener a quien hace un mal trabajo castiga a quien lo hace excelente, porque el trabajo sin hacer suele acabar recayendo en los que más rinden, sobrecargándolos.",
+    "Cuenta con lo que ha visto en la práctica una directiva: la moral mejoró siempre que retiró a alguien que rendía mal, y en cambio a veces perdió a la gente que más quería conservar por aguantar demasiado tiempo a quien rendía poco.",
+    "Presta atención especial cuando el que rinde mal es un jefe, porque retenerlo es especialmente dañino: los malos jefes tienen un impacto negativo enorme sobre la gente a su cargo, y eso es lo contrario de la palanca de un directivo."
+  ],
+  "entregable_esperado": "La conversación tenida sin distanciarte de la persona, con el problema reformulado en el puesto y no en ella, con un trabajo concreto imaginado para ella y, si puedes, la oferta de presentarla a alguien.",
+  "nodos_previos": [
+    "despedir_persona_respeto_franqueza",
+    "decidir_momento_despedir_persona"
+  ],
+  "nodos_siguientes": [
+    "contactar_despedido_mes_despues"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya has decidido que tienes que despedir a alguien y te toca preparar y tener esa conversación."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Despedir bien exige no distanciarte de la persona: si intentas no sentir el dolor de la situación, lo harás mal. Recordar un trabajo en el que tú fuiste malo ayuda a ver que dejar un puesto que no encaja abre la posibilidad de destacar en otro sitio. Antes de la reunión, imagina un trabajo concreto para esa persona, piensa que el problema está en el puesto y no en ella, y pregúntate si puedes presentarla a alguien. Además, retener a quien rinde mal castiga a quien rinde bien, que suele acabar cargando con el trabajo pendiente, y es aún más dañino si quien rinde mal es un jefe.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_06.md",
+          "lineas": "295-301"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): La moral que mejora al retirar a quien rinde mal es experiencia de la autora (301 'In practice, morale has always improved once I've removed') y 'cambia la conversación' no está en la 299. La propuesta quita la regla de la moral, conserva lo que la 301 da como general ('Work undone generally winds up', con su suele) y el agravante del jefe.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)"
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Despedir con franqueza radical, sin distanciarte de la persona y con el trabajo siguiente imaginado antes de la reunion",
+      "texto_nuevo": "Despedir con franqueza radical, sin distanciarte de la persona y con el trabajo siguiente imaginado antes de la reunión",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No te distancies de la persona a la que vas a despedir. El texto dice que si intentas evitar sentir el dolor que hay en la situacion, sobre todo el de la persona que se va, vas a hacer una chapuza.",
+      "texto_nuevo": "No te distancies de la persona a la que vas a despedir: si intentas evitar sentir el dolor que hay en la situación, sobre todo el de la persona que se va, vas a hacer una chapuza.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que esto es duro de verdad y con que no eres el unico: el texto cuenta el caso de un empresario de exito con fama de mas descarado que compasivo, que le conto que las manianas en que iba a despedir a alguien se despertaba con sudores frios.",
+      "texto_nuevo": "Cuenta con que esto es duro de verdad y con que no eres el único: un empresario de éxito, con fama de más descarado que compasivo, confesaba que las mañanas en que iba a despedir a alguien se despertaba con sudores fríos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto cuenta el caso de",
+          "que le conto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para llegar con la cabeza en el sitio correcto, primer recordatorio: acuerdate de un trabajo en el que tu fuiste malo y piensa en lo contento que estas de no estar ya en el. El texto pone el suyo, un verano de cajera de banco haciendo mal las cuentas de cabeza, y lo que su jefa hizo, que fue no despedirla y animarla a intentarlo mas, con lo que lo que era un problema de calculo empezo a sentirse como un defecto de caracter.",
+      "texto_nuevo": "Para llegar con la cabeza en el sitio correcto, primer recordatorio: acuérdate de un trabajo en el que tú fuiste malo y piensa en lo contento que estás de no estar ya en él. Un ejemplo: alguien que pasó un verano de cajera de banco haciendo mal las cuentas de cabeza, y cuya jefa no la despidió sino que la animó a intentarlo más, con lo que lo que era un problema de cálculo empezó a sentirse como un defecto de carácter.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto pone el suyo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto saca de ese caso: si aquella jefa la hubiera despedido diciendo que claramente ese trabajo no le interesaba y que por que no buscaba otro ese verano, le habria hecho un gran favor y le habria ahorrado mucho dinero al banco.",
+      "texto_nuevo": "Cuenta con la lección de ese caso: si aquella jefa la hubiera despedido diciendo que claramente ese trabajo no le interesaba y que por qué no buscaba otro ese verano, le habría hecho un gran favor y le habría ahorrado mucho dinero al banco.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto saca de ese caso"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de la reunion, intenta imaginar concretamente cual podria ser ese trabajo para esa persona.",
+      "texto_nuevo": "Antes de la reunión, intenta imaginar concretamente cuál podría ser ese trabajo para esa persona.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate si puedes ayudar haciendo una presentacion.",
+      "texto_nuevo": "Pregúntate si puedes ayudar haciendo una presentación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Segundo recordatorio: mantener a quien hace un mal trabajo castiga a quien lo hace excelente. El texto lo concreta: el trabajo sin hacer acaba recayendo en los que mas rinden, sobrecargandolos.",
+      "texto_nuevo": "Segundo recordatorio: mantener a quien hace un mal trabajo castiga a quien lo hace excelente, porque el trabajo sin hacer acaba recayendo en los que más rinden, sobrecargándolos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo concreta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto dice haber visto siempre en la practica: la moral ha mejorado cada vez que se ha retirado a alguien que rendia mal, y en cambio ha llegado a perder a la gente que mas queria conservar por aguantar demasiado tiempo a quien rendia poco.",
+      "texto_nuevo": "Cuenta con lo que se ve en la práctica: la moral ha mejorado siempre que se ha retirado a alguien que rendía mal, y en cambio se ha llegado a perder a la gente que más se quería conservar por aguantar demasiado tiempo a quien rendía poco.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto dice haber visto siempre en la practica"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Presta atencion especial cuando el que rinde mal es un jefe, porque el texto dice que retenerlo es especialmente daniino: los malos jefes tienen un impacto negativo enorme sobre la gente que les reporta, y eso es lo contrario de la palanca de un directivo.",
+      "texto_nuevo": "Presta atención especial cuando el que rinde mal es un jefe, porque retenerlo es especialmente dañino: los malos jefes tienen un impacto negativo enorme sobre la gente a su cargo, y eso es lo contrario de la palanca de un directivo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que",
+          "la gente que les reporta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La conversacion tenida sin distanciarte de la persona, con el problema reformulado en el puesto y no en ella, con un trabajo concreto imaginado para ella y una presentacion ofrecida si puedes hacerla.",
+      "texto_nuevo": "La conversación tenida sin distanciarte de la persona, con el problema reformulado en el puesto y no en ella, con un trabajo concreto imaginado para ella y una presentación ofrecida si puedes hacerla.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-despedir_persona_franqueza_radical-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya has decidido que tienes que despedir a alguien y te toca preparar y tener esa conversacion.",
+      "texto_nuevo": "Cuando ya has decidido que tienes que despedir a alguien y te toca preparar y tener esa conversación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-despedir_persona_franqueza_radical-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntate si puedes ayudar haciendo una presentación.",
+      "texto_nuevo": "Pregúntate si puedes ayudar presentando a esa persona a alguien.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "haciendo una presentación"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Hacer una presentación\" calca making an introduction y se lee como dar una charla.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-despedir_persona_franqueza_radical-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Segundo recordatorio: mantener a quien hace un mal trabajo castiga a quien lo hace excelente, porque el trabajo sin hacer acaba recayendo en los que más rinden, sobrecargándolos.",
+      "texto_nuevo": "Segundo recordatorio: mantener a quien hace un mal trabajo castiga a quien lo hace excelente, porque el trabajo sin hacer suele acabar recayendo en los que más rinden, sobrecargándolos.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_06.md 301",
+        "frase": "Work undone generally winds up getting picked up by the top performers, overburdening them."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice generally: suele acabar recayendo.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-despedir_persona_franqueza_radical-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con lo que se ve en la práctica: la moral ha mejorado siempre que se ha retirado a alguien que rendía mal, y en cambio se ha llegado a perder a la gente que más se quería conservar por aguantar demasiado tiempo a quien rendía poco.",
+      "texto_nuevo": "Cuenta con lo que ha visto en la práctica una directiva: la moral mejoró siempre que retiró a alguien que rendía mal, y en cambio a veces perdió a la gente que más quería conservar por aguantar demasiado tiempo a quien rendía poco.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_06.md 301",
+        "frase": "In practice, morale has always improved once I’ve removed a poor performer, whereas I’ve sometimes lost the people I most wanted to keep by hanging on to a low performer for too long."
+      },
+      "decision": "auditoria completa M11 (matiz): La experiencia de la autora (once I've removed, I've sometimes lost) estaba vuelta regla impersonal; se cuenta como caso.",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-despedir_persona_franqueza_radical-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "La conversación tenida sin distanciarte de la persona, con el problema reformulado en el puesto y no en ella, con un trabajo concreto imaginado para ella y una presentación ofrecida si puedes hacerla.",
+      "texto_nuevo": "La conversación tenida sin distanciarte de la persona, con el problema reformulado en el puesto y no en ella, con un trabajo concreto imaginado para ella y, si puedes, la oferta de presentarla a alguien.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "una presentación ofrecida si puedes hacerla"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Una presentación ofrecida\" calca making an introduction y se lee como una charla.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-despedir_persona_franqueza_radical-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para llegar con la cabeza en el sitio correcto, primer recordatorio: acuérdate de un trabajo en el que tú fuiste malo y piensa en lo contento que estás de no estar ya en él. Un ejemplo: alguien que pasó un verano de cajera de banco haciendo mal las cuentas de cabeza, y cuya jefa no la despidió sino que la animó a intentarlo más, con lo que lo que era un problema de cálculo empezó a sentirse como un defecto de carácter.",
+      "texto_nuevo": "Para llegar con la actitud adecuada, primer recordatorio: acuérdate de un trabajo en el que tú fuiste malo y piensa en lo contento que estás de no estar ya en él. Un ejemplo: alguien que pasó un verano de cajera de banco haciendo mal las cuentas de cabeza, y cuya jefa no la despidió sino que la animó a intentarlo más, con lo que lo que era un problema de cálculo empezó a sentirse como un defecto de carácter.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "con la cabeza en el sitio correcto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"to be in the right frame of mind\"; en español es la actitud o disposición adecuada.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-despedir_persona_franqueza_radical-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No te distancies de la persona a la que vas a despedir: si intentas evitar sentir el dolor que hay en la situación, sobre todo el de la persona que se va, vas a hacer una chapuza.",
+      "texto_nuevo": "No te distancies de la persona a la que vas a despedir: si intentas evitar sentir el dolor que hay en la situación, sobre todo el de la persona que se va, lo vas a hacer mal.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "vas a hacer una chapuza"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Chapuza' es forma de España (en México se lee como trampa); pasa a 'lo vas a hacer mal', como ya dice el resumen (libro: 'you'll make a hash of it', scott cap_06 295).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase5-despedir_persona_franqueza_radical-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que esto es duro de verdad y con que no eres el único: un empresario de éxito, con fama de más descarado que compasivo, confesaba que las mañanas en que iba a despedir a alguien se despertaba con sudores fríos.",
+      "texto_nuevo": "Cuenta con que esto es duro de verdad y con que no eres el único: un empresario de éxito, que parecía más descarado que compasivo a la hora de despedir, confesaba que las mañanas en que iba a despedir a alguien se despertaba con sudores fríos.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_06.md 269",
+        "frase": "I once talked to a crazy-successful New Yorker who seemed far more brash than compassionate about firing people."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro da la impresión de quien lo cuenta («seemed», y solo al despedir), no una fama pública; se devuelve la impresión y su alcance.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Despide con Franqueza Radical",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "node_id": "elegir_estilo_direccion_madurez_relevante_tarea",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Elegir el estilo de dirección de un subordinado según su madurez relevante para la tarea concreta: estructurado si es baja, comunicador si es media, mínimo si es alta, y siempre con vigilancia para no abandonar",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "El estilo de dirección más eficaz lo fija una variable fundamental: la madurez del subordinado para la tarea concreta, que suma su orientación al logro, su disposición a asumir responsabilidad, su formación y su experiencia. Es propia de cada tarea y cae si el puesto cambia o se acelera. Con madurez baja funciona decir qué, cuándo y cómo; al crecer, pesan más la comunicación y el apoyo a la persona; muy alta, basta acordar los objetivos. En todos los casos hay que vigilar para evitar sorpresas, porque esa vigilancia separa delegar de abandonar, y lo que manda es la eficacia, no la simpatía.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_13.md, unidad interna Cap. 12, titulo textual Task-Relevant Maturity. Sale de una PIEZA COMPUESTA de la frontera de esta vuelta (.v57ext/frontera.py, .v57ext/frontera.txt), NO de un tramo continuo: P6 (L19), P8 (L23), P9 (L25), P10 (L27) y P12 (L31 a L47, la tabla, que es la fila que cierra la cuenta y lleva el nodo). LA FRONTERA DENTRO DEL NODO, publicada antes de cortar como manda EXTRACTOR.md 10 cuando un nodo mezcla tramos que no son un bloque unico: entre P6 y P8 cae P7 (L21, el vendedor ascendido a jefe de planta cuya TRM cae en el puesto nuevo), y entre P10 y P12 cae P11 (L29, la analogia entera del padre y el hijo que madura). Los dos quedan FUERA de la pieza: P7 es CASO, manual 3.5, la narracion de UN hecho con un puesto nombrado y sin inventario que transferir; P11 es una analogia (padre-hijo, no organizacion) que el propio libro usa para explicar el mismo mecanismo con otro vocabulario, y que development sigue en P13 a P16 (L49 a L55), tambien excluidos. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: la tabla de P12 (L31 a L47) es EL INVENTARIO PROPIO DEL LIBRO de un OBJETO DE TRABAJO (el estilo de direccion) repartido en tres niveles nombrados uno a uno (low, medium, high) con su caracteristica cada uno, y P9 (L25) da la misma doctrina en prosa con dos piezas mas que la tabla no imprime: la vigilancia constante sea cual sea la TRM, y la frontera entre delegar y abandonar. DE DONDE SALE CADA PASO, uno a uno: paso 1 (L19: That variable is the task-relevant maturity (TRM) of the subordinates, which is a combination of the degree of their achievement orientation and readiness to take responsibility, as well as their education, training, and experience); paso 2 (L19: Moreover, all this is very specific to the task at hand, and it is entirely possible for a person or a group of people to have a TRM that is high in one job but low in another); paso 3 (L23: a person's TRM can be very high given a certain level of complexity, uncertainty, and ambiguity, but if the pace of the job accelerates or if the job itself abruptly changes, the TRM of that individual will drop); paso 4 (L25: when the TRM is low, the most effective approach is one that offers very precise and detailed instructions, wherein the supervisor tells the subordinate what needs to be done, when, and how: in other words, a highly structured approach; confirmado por la tabla de L37: Structured; task-oriented; tell what, when, how); paso 5 (L25: As the TRM of the subordinate grows, the most effective style moves from the structured to one more given to communication, emotional support, and encouragement, in which the manager pays more attention to the subordinate as an individual than to the task at hand; confirmado por L41: Individual-oriented; emphasis on two-way communication, support, mutual reasoning); paso 6 (L25: As the TRM becomes even greater... the manager's involvement should be kept to a minimum, and should primarily consist of making sure that the objectives toward which the subordinate is working are mutually agreed upon; confirmado por L45: Involvement by manager minimal: establishing objectives and monitoring); paso 7 (L25: regardless of what the TRM may be, the manager should always monitor a subordinate's work closely enough to avoid surprises. The presence or absence of monitoring... is the difference between a supervisor's delegating a task and abdicating it); paso 8 (L27: do not make a value judgment and consider a structured management style less worthy than a communication-oriented one... we are after what is most effective). LA TABLA (L31 a L47: TASK-RELEVANT MATURITY OF SUBORDINATE / CHARACTERISTICS OF THE EFFECTIVE MANAGEMENT STYLE / low / Structured... / medium / Individual-oriented... / high / Involvement by manager minimal...) NO GENERA PASOS PROPIOS ADICIONALES: es el resumen en caja del mismo contenido que L25 ya dio en prosa, y transcribirla de nuevo como pasos 9, 10 y 11 habria duplicado los pasos 4, 5 y 6 con las mismas tres frases en otro orden. Es, aun asi, la fila que cierra la cuenta de la pieza porque es donde el libro imprime EL INVENTARIO en su forma mas explicita (tabla con encabezados), y por eso lleva el 1 del nodo en la frontera. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: no escribo la analogia padre-hijo (P11, P13, P14) ni sus datos (la bicicleta, la universidad): son CASO ilustrativo de otro dominio (la crianza), no doctrina de la organizacion, y meterlos en el entregable pondria un dato del ejemplo donde no hace falta. NO escribo la precondicion de valores operativos compartidos (P15, L53, y P16, L55: sin esa comunidad de valores un supervisor no puede delegar con eficacia): es un contenido real y generalizable, pero pertenece a una condicion previa distinta (que exista una base comun de valores) y no al criterio de TRM que este nodo desarrolla; lo dejo PENDIENTE DE DOCTRINA como candidato a un nodo propio de una vuelta futura y lo declaro discutible mas abajo. NO escribo el caso del sargento (P19, L61, que continua en L63 a L65) ni el estudio de la palanca de mando (P18, L59): son POSTURA y CASO que repiten o ilustran lo que P6 a P12 ya establecieron, sin inventario nuevo. LA CIFRA DEL AUTOR (P24, L71: Some 90 percent of the supervisors saw their style as more communicating or delegating than their subordinates' view) VIAJA EN ATRIBUCIONES y no en pasos_accionables, porque es una medicion del propio autor sobre terceros (I tested this conclusion by asking a group of managers...) y no una instruccion de que hacer: entra aqui, en el nodo de la eleccion de estilo, porque documenta un sesgo que puede llevar al mando a fallar exactamente en el paso 8 (juzgar mal su propio estilo). ARISTA DECLARADA POR LECTURA, para cablearla el dia de la insercion (D.39 mide la puerta cerrada para grove_high_output en esta vuelta): D.29 con fijar_frecuencia_reunion_individual_madurez_tarea, ya vivo en cuarentena desde la vuelta 51: aquel usa la misma TRM (con su misma grafia, a proposito, EXTRACTOR.md 15.1) como criterio para decidir CADA CUANTO reunirse, y este la usa para decidir CON QUE ESTILO dirigir; comparten el criterio y no comparten el objeto que deciden, asi que la relacion es de PARIENTE POR CONTRASTE, del mismo tipo que aquel nodo ya declaro contra dirigir_reunion_individual_semanal. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO, y es el mas serio de los que traigo hoy: la pieza fusiona CINCO tramos que no son un bloque unico de lineas (L19, L23, L25, L27, L31 a L47), saltando dos tramos intermedios (L21 y L29) que si tienen contenido propio. Un lector estricto de EXTRACTOR.md 10 puede juzgar que esto ya no es 'un nodo puede traer material de dos libros con su frontera publicada', sino una fusion mas ancha de lo que esa regla previo, pensada para un nodo que mezcla FUENTES, no tramos del mismo capitulo separados por CASO. Lo sostengo porque cada exclusion (P7, P11 y su continuacion P13 a P16) queda nombrada con su propia razon en la tabla de frontera y en este mismo resumen, y porque las cinco partes que si entran son, literalmente, un solo argumento continuado sobre una sola variable (la TRM) que el propio texto interrumpe dos veces con ilustraciones y retoma cada vez con las mismas palabras (Similarly, a person's TRM...; The conclusion is that varying management styles...). Si cae, cae DENTRO de mi marcado, y el arreglo es partir esta ficha en dos o tres nodos mas pequenos, uno por cada segmento contiguo. SEGUNDO DISCUTIBLE: dejar fuera la precondicion de valores compartidos (P15 a P16) en vez de fundirla aqui como un paso mas o abrirle su propio nodo hoy mismo; la marco PENDIENTE DE DOCTRINA en vez de decidir, porque EXTRACTOR.md 7 permite seguir sin que un pendiente de doctrina detenga la vuelta.",
+  "pasos_accionables": [
+    "Evalúa la madurez relevante para la tarea de tu subordinado: la combinación de su orientación al logro, su disposición a asumir responsabilidad, su educación, su formación y su experiencia.",
+    "Trata esa madurez como específica de la tarea concreta y no como la madurez general de la persona: puede ser alta en un puesto y baja en otro.",
+    "Cuenta con que la madurez para la tarea de una persona puede caer si el ritmo del puesto se acelera o si el puesto cambia de golpe, aunque antes fuera alta para ese nivel de complejidad, incertidumbre y ambigüedad.",
+    "Si esa madurez es baja, usa un estilo estructurado y orientado a la tarea: dile al subordinado qué hay que hacer, cuándo y cómo, con instrucciones precisas y detalladas.",
+    "Si la madurez del subordinado crece, mueve el estilo hacia uno más dado a la comunicación, el apoyo emocional y el ánimo, prestando más atención al subordinado como individuo que a la tarea misma.",
+    "Si esa madurez se vuelve todavía mayor, mantén tu involucramiento al mínimo y limítate sobre todo a asegurar que los objetivos hacia los que trabaja el subordinado estén acordados mutuamente.",
+    "Sea cual sea su madurez para la tarea, vigila siempre el trabajo del subordinado lo bastante de cerca para evitar sorpresas: la presencia o ausencia de esa vigilancia es la diferencia entre delegar una tarea y abandonarla.",
+    "No juzgues un estilo estructurado como menos valioso que uno orientado a la comunicación, ni dejes que lo que te parezca más simpático decida tu elección: lo que importa es cuál de los dos es más eficaz."
+  ],
+  "entregable_esperado": "El estilo de dirección que corresponde a la madurez relevante de ese subordinado para esa tarea concreta (estructurado, orientado al individuo, o de involucramiento mínimo), más la vigilancia constante que evita que la elección se convierta en abandono, y no un estilo elegido por preferencia personal del mando.",
+  "nodos_previos": [
+    "escalonar_complejidad_puesto_empleado_nuevo",
+    "elegir_modo_control_motivacion_factor_cua"
+  ],
+  "nodos_siguientes": [
+    "fijar_frecuencia_reunion_individual_madurez_tarea",
+    "delegar_tarea_base_comun_seguimiento",
+    "decidir_amistad_subordinado_prueba_revision_dificil"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes que decidir con qué estilo dirigir a un subordinado en una tarea concreta y no sabes si conviene darle instrucciones detalladas, acompañarlo con comunicación y apoyo, o dejarlo actuar con poca supervisión."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "El estilo de dirección más eficaz lo fija una variable fundamental: la madurez del subordinado para la tarea concreta, que suma su orientación al logro, su disposición a asumir responsabilidad, su formación y su experiencia. Es propia de cada tarea y cae si el puesto cambia o se acelera. Con madurez baja funciona decir qué, cuándo y cómo; al crecer, pesan más la comunicación y el apoyo a la persona; muy alta, basta acordar los objetivos. En todos los casos hay que vigilar para evitar sorpresas, porque esa vigilancia separa delegar de abandonar, y lo que manda es la eficacia, no la simpatía.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_13.md",
+          "lineas": "19-47"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: verificador",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)"
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elegir el estilo de direccion de un subordinado segun su madurez relevante para la tarea concreta: estructurado si es baja, comunicador si es media, minimo si es alta, y siempre con vigilancia para no abandonar",
+      "texto_nuevo": "Elegir el estilo de dirección de un subordinado según su madurez relevante para la tarea concreta: estructurado si es baja, comunicador si es media, mínimo si es alta, y siempre con vigilancia para no abandonar",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evalua la madurez relevante para la tarea (TRM) de tu subordinado: la combinacion de su orientacion al logro, su disposicion a asumir responsabilidad, su educacion, su formacion y su experiencia.",
+      "texto_nuevo": "Evalúa la madurez relevante para la tarea de tu subordinado: la combinación de su orientación al logro, su disposición a asumir responsabilidad, su educación, su formación y su experiencia.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "(TRM)"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trata esa TRM como especifica de la tarea concreta y no como la madurez general de la persona: puede ser alta en un puesto y baja en otro.",
+      "texto_nuevo": "Trata esa madurez como específica de la tarea concreta y no como la madurez general de la persona: puede ser alta en un puesto y baja en otro.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "esa TRM"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que la TRM de una persona puede caer si el ritmo del puesto se acelera o si el puesto cambia de golpe, aunque antes fuera alta para ese nivel de complejidad, incertidumbre y ambiguedad.",
+      "texto_nuevo": "Cuenta con que la madurez para la tarea de una persona puede caer si el ritmo del puesto se acelera o si el puesto cambia de golpe, aunque antes fuera alta para ese nivel de complejidad, incertidumbre y ambigüedad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la TRM de una persona"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la TRM es baja, usa un estilo estructurado y orientado a la tarea: dile al subordinado que hay que hacer, cuando y como, con instrucciones precisas y detalladas.",
+      "texto_nuevo": "Si esa madurez es baja, usa un estilo estructurado y orientado a la tarea: dile al subordinado qué hay que hacer, cuándo y cómo, con instrucciones precisas y detalladas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Si la TRM es baja"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la TRM del subordinado crece, mueve el estilo hacia uno mas dado a la comunicacion, el apoyo emocional y el animo, prestando mas atencion al subordinado como individuo que a la tarea misma.",
+      "texto_nuevo": "Si la madurez del subordinado crece, mueve el estilo hacia uno más dado a la comunicación, el apoyo emocional y el ánimo, prestando más atención al subordinado como individuo que a la tarea misma.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Si la TRM del subordinado crece"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la TRM se vuelve todavia mayor, mantén tu involucramiento al minimo y limitate sobre todo a asegurar que los objetivos hacia los que trabaja el subordinado esten acordados mutuamente.",
+      "texto_nuevo": "Si esa madurez se vuelve todavía mayor, mantén tu involucramiento al mínimo y limítate sobre todo a asegurar que los objetivos hacia los que trabaja el subordinado estén acordados mutuamente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Si la TRM se vuelve"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sea cual sea la TRM, vigila siempre el trabajo del subordinado lo bastante de cerca para evitar sorpresas: la presencia o ausencia de esa vigilancia es la diferencia entre delegar una tarea y abandonarla.",
+      "texto_nuevo": "Sea cual sea su madurez para la tarea, vigila siempre el trabajo del subordinado lo bastante de cerca para evitar sorpresas: la presencia o ausencia de esa vigilancia es la diferencia entre delegar una tarea y abandonarla.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Sea cual sea la TRM"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No juzgues un estilo estructurado como menos valioso que uno orientado a la comunicacion, ni dejes que lo que te parezca mas simpatico decida tu eleccion: lo que importa es cual de los dos es mas eficaz.",
+      "texto_nuevo": "No juzgues un estilo estructurado como menos valioso que uno orientado a la comunicación, ni dejes que lo que te parezca más simpático decida tu elección: lo que importa es cuál de los dos es más eficaz.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El estilo de direccion que corresponde a la madurez relevante de ese subordinado para esa tarea concreta (estructurado, orientado al individuo, o de involucramiento minimo), mas la vigilancia constante que evita que la eleccion se convierta en abandono, y no un estilo elegido por preferencia personal del mando.",
+      "texto_nuevo": "El estilo de dirección que corresponde a la madurez relevante de ese subordinado para esa tarea concreta (estructurado, orientado al individuo, o de involucramiento mínimo), más la vigilancia constante que evita que la elección se convierta en abandono, y no un estilo elegido por preferencia personal del mando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-elegir_estilo_direccion_madurez_relevante_tarea-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes que decidir con que estilo dirigir a un subordinado en una tarea concreta y no sabes si conviene darle instrucciones detalladas, acompanarlo con comunicacion y apoyo, o dejarlo actuar con poca supervision.",
+      "texto_nuevo": "Cuando tienes que decidir con qué estilo dirigir a un subordinado en una tarea concreta y no sabes si conviene darle instrucciones detalladas, acompañarlo con comunicación y apoyo, o dejarlo actuar con poca supervisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Ajusta tu Estilo Según Madurez",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

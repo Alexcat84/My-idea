@@ -1,0 +1,313 @@
+{
+  "node_id": "dirigir_reunion_revision_trabajo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Dirigir una reunión cuyo resultado excelente es opinión útil sobre un trabajo en curso",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Una revisión de trabajo en curso existe para mejorar el trabajo, no para aprobarlo. Si el éxito se mide por si al jefe le gusta, buscar la aprobación empuja a cuidar más la apariencia de la presentación que la opinión que más ayuda. Una buena revisión deja a todos de acuerdo en qué significa el éxito del proyecto, cuenta el estado con honestidad, con cómo va, qué cambió desde la última revisión y qué viene, y enmarca bien las preguntas abiertas, las decisiones clave y las preocupaciones para conseguir la opinión más útil. Se cierra con pasos acordados y la fecha del próximo hito.",
+  "notas_extraccion": "Es la tercera razon del libro para juntarse en persona. Lo que la hace procedimentable no es solo el inventario de cuatro logros, sino que dos de ellos traen su propio desglose escrito por el libro: el segundo nombra las tres cosas que contiene un estado honesto, y el cuarto nombra que dentro de los pasos siguientes va la fecha del proximo hito. El paso 2 es el eje doctrinal y esta escrito como el libro lo escribe, en negativo: el error concreto que se comete es juzgar la revision por si gusto al jefe. Lo que el libro NO dice, y por eso no esta escrito aqui, es quien convoca la revision, cada cuanto se repite, ni quien decide cuando una opinion se incorpora al plan y cuando no.",
+  "pasos_accionables": [
+    "Ten claro para qué existe la reunión: para que las partes interesadas entiendan el trabajo en curso y den su aportación sobre él. A veces terminará con un tranquilo «esto se ve bien», y otras veces la opinión puede llevar a desviaciones importantes del plan.",
+    "No midas el éxito por si al jefe le gusta el trabajo o no. Eso es un error: las reuniones de opinión no existen para dar ni recibir juicio, sino para llegar al mejor resultado.",
+    "Desconfía de buscar la aprobación, porque eso crea incentivos para centrarse más en los espejismos de la presentación que en conseguir la opinión más útil para mejorar el trabajo.",
+    "Consigue el primer logro: que todo el mundo quede de acuerdo en qué significa el éxito para este proyecto.",
+    "Consigue el segundo: representar honestamente el estado actual del trabajo, con una valoración de cómo están yendo las cosas, los cambios que ha habido desde la última revisión y cuáles son los planes de futuro.",
+    "Consigue el tercero: enmarcar con claridad las preguntas abiertas, las decisiones clave o las preocupaciones conocidas, que es lo que consigue la opinión más útil.",
+    "Consigue el cuarto: terminar con unos pasos siguientes acordados, y que entre ellos esté cuándo será el próximo hito o la próxima revisión."
+  ],
+  "entregable_esperado": "Un trabajo en curso mejor encaminado, con las preguntas abiertas enmarcadas, y unos pasos siguientes acordados que incluyen cuándo será el próximo hito o la próxima revisión.",
+  "nodos_previos": [
+    "fijar_resultado_excelente_reunion"
+  ],
+  "nodos_siguientes": [
+    "cerrar_reunion_pasos_siguientes"
+  ],
+  "condiciones_activacion": [
+    "Cuando hay un trabajo en curso y el resultado excelente que persigues es que las partes interesadas lo entiendan y aporten sobre él."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una revisión de trabajo en curso existe para mejorar el trabajo, no para aprobarlo. Si el éxito se mide por si al jefe le gusta, buscar la aprobación empuja a cuidar más la apariencia de la presentación que la opinión que más ayuda. Una buena revisión deja a todos de acuerdo en qué significa el éxito del proyecto, cuenta el estado con honestidad, con cómo va, qué cambió desde la última revisión y qué viene, y enmarca bien las preguntas abiertas, las decisiones clave y las preocupaciones para conseguir la opinión más útil. Se cierra con pasos acordados y la fecha del próximo hito.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "117-131"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)"
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dirigir una reunion cuyo resultado excelente es opinion util sobre un trabajo en curso",
+      "texto_nuevo": "Dirigir una reunión cuyo resultado excelente es opinión útil sobre un trabajo en curso",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten claro para que existe la reunion: para que las partes interesadas entiendan el trabajo en curso y den su aportacion sobre el. A veces terminara con un tranquilo esto tiene buena pinta, y otras veces la opinion puede llevar a desviaciones importantes del plan.",
+      "texto_nuevo": "Ten claro para qué existe la reunión: para que las partes interesadas entiendan el trabajo en curso y den su aportación sobre él. A veces terminará con un tranquilo «esto tiene buena pinta», y otras veces la opinión puede llevar a desviaciones importantes del plan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No midas el exito por si al jefe le gusta el trabajo o no. El libro dice explicitamente que eso es un error: las reuniones de opinion no existen para dar ni recibir juicio, sino para llegar al mejor resultado.",
+      "texto_nuevo": "No midas el éxito por si al jefe le gusta el trabajo o no. Eso es un error: las reuniones de opinión no existen para dar ni recibir juicio, sino para llegar al mejor resultado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice explicitamente que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desconfia de ir a por la aprobacion, porque eso crea incentivos para centrarse mas en los espejismos de la presentacion que en conseguir la opinion mas util para mejorar el trabajo.",
+      "texto_nuevo": "Desconfía de ir a por la aprobación, porque eso crea incentivos para centrarse más en los espejismos de la presentación que en conseguir la opinión más útil para mejorar el trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue el primer logro: que todo el mundo quede de acuerdo en a que se parece el exito para este proyecto.",
+      "texto_nuevo": "Consigue el primer logro: que todo el mundo quede de acuerdo en a qué se parece el éxito para este proyecto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consigue el segundo: representar honestamente el estado actual del trabajo, y el libro dice que va dentro de ese estado, una valoracion de como estan yendo las cosas, los cambios que ha habido desde la ultima revision, y cuales son los planes de futuro.",
+      "texto_nuevo": "Consigue el segundo: representar honestamente el estado actual del trabajo, con una valoración de cómo están yendo las cosas, los cambios que ha habido desde la última revisión y cuáles son los planes de futuro.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el libro dice que va dentro de ese estado"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue el tercero: enmarcar con claridad las preguntas abiertas, las decisiones clave o las preocupaciones conocidas, que es lo que consigue la opinion mas util.",
+      "texto_nuevo": "Consigue el tercero: enmarcar con claridad las preguntas abiertas, las decisiones clave o las preocupaciones conocidas, que es lo que consigue la opinión más útil.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue el cuarto: terminar con unos pasos siguientes acordados, y que entre ellos este cuando sera el proximo hito o la proxima revision.",
+      "texto_nuevo": "Consigue el cuarto: terminar con unos pasos siguientes acordados, y que entre ellos esté cuándo será el próximo hito o la próxima revisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un trabajo en curso mejor encaminado, con las preguntas abiertas enmarcadas, y unos pasos siguientes acordados que incluyen cuando sera el proximo hito o la proxima revision.",
+      "texto_nuevo": "Un trabajo en curso mejor encaminado, con las preguntas abiertas enmarcadas, y unos pasos siguientes acordados que incluyen cuándo será el próximo hito o la próxima revisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_revision_trabajo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando hay un trabajo en curso y el resultado excelente que persigues es que las partes interesadas lo entiendan y aporten sobre el.",
+      "texto_nuevo": "Cuando hay un trabajo en curso y el resultado excelente que persigues es que las partes interesadas lo entiendan y aporten sobre él.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dirigir_reunion_revision_trabajo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desconfía de ir a por la aprobación, porque eso crea incentivos para centrarse más en los espejismos de la presentación que en conseguir la opinión más útil para mejorar el trabajo.",
+      "texto_nuevo": "Desconfía de buscar la aprobación, porque eso crea incentivos para centrarse más en los espejismos de la presentación que en conseguir la opinión más útil para mejorar el trabajo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "ir a por"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Ir a por\" es forma regional de España.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-barrido-dirigir_reunion_revision_trabajo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consigue el primer logro: que todo el mundo quede de acuerdo en a qué se parece el éxito para este proyecto.",
+      "texto_nuevo": "Consigue el primer logro: que todo el mundo quede de acuerdo en cómo es el éxito para este proyecto.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "en a qué se parece el éxito"
+        ]
+      },
+      "decision": "barrido final de calcos (a_que_se_parece)",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase3-dirigir_reunion_revision_trabajo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten claro para qué existe la reunión: para que las partes interesadas entiendan el trabajo en curso y den su aportación sobre él. A veces terminará con un tranquilo «esto tiene buena pinta», y otras veces la opinión puede llevar a desviaciones importantes del plan.",
+      "texto_nuevo": "Ten claro para qué existe la reunión: para que las partes interesadas entiendan el trabajo en curso y den su aportación sobre él. A veces terminará con un tranquilo «esto se ve bien», y otras veces la opinión puede llevar a desviaciones importantes del plan.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "tiene buena pinta"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Tener buena pinta\" es coloquial de región; el libro dice \"this looks fine\" (cap_07, línea 119), que en forma neutra es \"esto se ve bien\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase3-dirigir_reunion_revision_trabajo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consigue el primer logro: que todo el mundo quede de acuerdo en cómo es el éxito para este proyecto.",
+      "texto_nuevo": "Consigue el primer logro: que todo el mundo quede de acuerdo en qué significa el éxito para este proyecto.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cómo es el éxito"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"what success for the project looks like\" (cap_07, línea 125); el resumen del nodo ya lo dice bien: \"qué significa el éxito\".",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Dirige una Revisión de Trabajo"
+}

@@ -1,0 +1,260 @@
+{
+  "node_id": "preparar_respuestas_estandar_interrupciones_repetidas",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Preparar respuestas estándar para las clases de interrupción que se repiten, y tenerlas disponibles para delegar buena parte del trabajo en personal con menos experiencia",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Las interrupciones que te llegan no suelen ser del todo nuevas: las mismas preguntas y los mismos problemas tienden a aparecer una y otra vez. Igual que un fabricante saca productos estándar, puedes fijar qué clases de interrupción recibes y preparar una respuesta estándar para las que aparecen más a menudo. Con esas respuestas puedes reducir el tiempo que gastas atendiendo interrupciones, y tenerlas disponibles te deja además delegar buena parte de ese trabajo en personas con menos experiencia, que es una salida mejor que esconderte de quien te interrumpe.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_04.md, unidad Cap. 3, titulo textual Managerial Leverage. Sale de la PIEZA P41 de la frontera publicada en la vuelta 46 (HH.2.c), L315 a L315, 92 palabras. LAS 92 PALABRAS SON LAS QUE LA FRONTERA PUBLICA Y NO UNA CIFRA MIA: las recompute en la vuelta 50 con el mismo recuento de .v46/frontera.py linea 136 y me dan 92, identicas, antes de escribir esta ficha. EL TRAMO ENTERO ES DE ESTE NODO: cero frontera interna y cero solapes con ningun otro candidato. L315 es una sola linea de prosa corrida y no lleva rotulo. POR QUE ES PROCEDIMIENTO: el libro pone SU PROPIO INVENTARIO de los medios, nombrados uno a uno (aplicar el concepto de produccion del producto estandar, fijar que clase de interrupciones estas recibiendo, preparar respuestas estandar para las que mas aparecen, bajar con ellas el tiempo gastado en atender interrupciones, y tenerlas disponibles para delegar buena parte del trabajo en personal con menos experiencia). Es inventario de MEDIOS y de OBJETOS DE TRABAJO y no de metas, y el criterio no es un adjetivo de adecuacion: el libro dice exactamente que se prepara (respuestas estandar) y exactamente para que interrupciones (las que salen a la superficie una y otra vez). DE DONDE SALE CADA PASO, uno a uno: paso 1 (L315: There are better ways. Let's apply a production concept. Manufacturers turn out standard products); paso 2 (L315: By analogy, if you can pin down what kind of interruptions you're getting); paso 3 (L315: you can prepare standard responses for those that pop up most often); paso 4 (L315: Customers don't come up with totally new questions and problems day in and day out, and because the same ones tend to surface repeatedly); paso 5 (L315: a manager can reduce time spent handling interruptions using standard responses); paso 6 (L315: Having them available also means that a manager can delegate much of the job to less experienced personnel). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. DONDE ESTUVE A PUNTO DE ESCRIBIR UN PUENTE Y NO LO ESCRIBI, especie EL INVENTARIO INVENTADO: iba a escribir un paso que mandara CLASIFICAR las interrupciones en categorias y llevar un registro de su frecuencia para saber cuales son las mas frecuentes. El renglon dice pin down what kind of interruptions you're getting y no nombra ni un metodo, ni un registro, ni una categoria. El metodo habria sido mio, asi que el paso 2 escribe el acto que el libro escribe y para ahi. SEGUNDO SITIO DE TENTACION, especie EL RESPONSABLE Y EL PERIODO: iba a escribir cada cuanto se revisan esas respuestas estandar y quien las mantiene. El renglon no pone ni periodo ni responsable: dice Having them available, y nada mas. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo COMO se redacta una respuesta estandar, ni DONDE se guardan, ni CUANTAS clases de interrupcion hay, porque el tramo no lo pone. Y NO TRAIGO AQUI NI EL AGRUPAR LAS INTERRUPCIONES EN LAS REUNIONES REGULARES (L317), NI EL BANCO DE INDICADORES (L319), NI EL CARTEL Y LA HORA DE OFICINA ABIERTA (L321), que son P42, P43 y P44 de la frontera: los dos primeros tienen nodo propio en esta misma vuelta y P43 no tiene nodo por P.19, porque su objeto ya vive entero en archivar_indicadores_resolver_problemas de cap_03. Ese es el corte del tramo de hoy. ARISTAS DECLARADAS POR LECTURA, para cablearlas el dia de la insercion y no hoy: (1) D.29, MADRE subir_productividad_gerencial_tres_vias, cuyo paso 2 manda subir el ritmo con el que ejecutas tus actividades: este nodo es uno de los principios de produccion que el libro pone bajo el rotulo Increasing Managerial Activity Rate: Speeding Up the Line (L259), y por eso despliega en 6 pasos lo que aquel paso nombra en una linea. LA DECLARO D.29 Y NO D.37, Y LO RAZONO CONTRA MI PROPIO INTERES: la cabeza dice TRES vias y las nombra (el ritmo, la palanca y la mezcla), asi que sus partes de D.37 son esas tres y este nodo no es ninguna de las tres, sino un medio de la primera. D.37 exige que la parte sea LA QUE ESE PASO NOMBRA, y el paso 2 nombra el ritmo y no las respuestas estandar. (2) D.29, HERMANO buscar_regularidad_bloques_iguales_trabajo_mando, porque los dos salen de la misma seccion de interrupciones (Interruptions, The Plague of Managerial Work, L303) y no comparten ni un paso: alli el objeto es la regularidad del bloque de tiempo, aqui es la respuesta preparada de antemano. (3) D.29, HERMANO el nodo que sale de L317, que agrupa las interrupciones de los subordinados en las reuniones regulares: es el segundo remedio del mismo parrafo y ataca la MISMA interrupcion por otro sitio, el CUANDO se atiende en vez del QUE se responde. (4) D.29, HERMANO el nodo que sale de L321, el cartel en la puerta y la hora de oficina abierta: es el tercer remedio de la misma seccion. LAS DOS ULTIMAS VAN POR SU TRAMO Y NO POR UN ID, porque cuando escribo esta ficha esos dos nodos no existen todavia en ninguna sede, y un id inventado de antemano deja la arista colgada sin que ninguna guarda lo cante (leccion de JJ.2.b). Las dos primeras apuntan a ids que ya viven en la bandeja, comprobado antes de escribirlas. TRADUCCION DECLARADA: standard products, standard responses e interruptions viajan en denominaciones. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 4 es una CONSTATACION y no un acto, y un lector estricto dira que un nodo no manda contar con algo. Lo sostengo porque es la premisa sin la cual el paso 3 no tiene criterio: el libro pone ahi POR QUE las respuestas estandar funcionan (las mismas preguntas vuelven), y sin esa linea el paso 3 manda preparar respuestas para las mas frecuentes sin decir por que existen las mas frecuentes. Si cae, cae DENTRO de mi marcado. SEGUNDO DISCUTIBLE: declaro la arista 1 como D.29 y la ficha de P39 de la vuelta 48 declara esa MISMA relacion con esta MISMA cabeza como D.37. Un lector estricto dira que dos fichas del mismo capitulo no pueden etiquetar distinto la misma arista. Lo sostengo porque D.37 pide que la parte sea la que el paso nombra y el paso 2 nombra el ritmo, no el principio de produccion; y lo dejo dicho aqui en vez de callarlo, porque la diferencia se ve al leer las dos fichas juntas. NO TOCO la ficha de P39: no es mi encargo de hoy y no abro doctrina (D.56). CORRECCION DECLARADA DE LA VUELTA 51, SIN BORRAR LA LINEA VIEJA (manual principio 6, deuda d046, adjudicada por el auditor en la ACTA 49 y encargada en la TAREA 3.b de esta vuelta). DONDE ESTA FICHA AFIRMA MAS ARRIBA EL TRAMO ENTERO ES DE ESTE NODO: cero frontera interna y cero solapes con ningun otro candidato, TIENE QUE LEERSE ASI: el tramo entero es de este nodo y no solapa con ningun otro candidato, PERO EL PASO 1 TOMA PRESTADO SU REFERENTE DE L313, QUE ES LA PIEZA P40 Y DA CERO NODOS, Y ESE PRESTAMO SE DECLARA AQUI. QUE ES LO PRESTADO, exactamente: el paso 1 escribe porque hay formas mejores que esconderte, y L315, que es el tramo de este nodo, abre con There are better ways SIN DECIR mejores que que. Quien dice de que son mejores es L313: the idea mentioned most often was to create blocks of time for individual work by hiding physically, but this is a less than happy answer. O sea que el ESCONDERTE del paso 1 no esta en L315: esta en L313. POR QUE NO ES CAIDA, y lo adjudica el auditor y no yo: manual seccion 3.5 manda que el material de un tramo de cero entre NOMBRADO DENTRO del nodo de su doctrina, que es exactamente lo que este paso hace, y es el mismo criterio que el propio reporte aplica en LL.4.d a los cinco tramos de cero de cap_05. Un referente que se queda fuera convierte la frase del libro en una frase colgada. LO QUE SI FALTABA ERA DECIRLO, Y ES LO QUE ESTA LINEA HACE: la ficha afirmaba cero frontera interna y a la vez tomaba material de fuera del tramo, y las dos cosas no pueden estar escritas juntas sin explicacion. LA REGLA NUEVA QUE ME APLICO A PARTIR DE AQUI, y sale de esta misma deuda: si un paso resuelve su referente con un tramo vecino, SE DICE, aunque la regla lo autorice. Que algo este permitido no lo hace invisible. NI UN PASO, NI UNA ATRIBUCION, NI UN TITULO CAMBIAN CON ESTA CORRECCION: el paso 1 se queda como esta, porque el auditor adjudica que es correcto. Lo que cambia es que ahora el prestamo esta declarado.",
+  "pasos_accionables": [
+    "Aplica a las interrupciones que te llegan el siguiente concepto de producción, porque hay formas mejores que esconderte: los fabricantes sacan productos estándar.",
+    "Fija por esa analogía qué clase de interrupciones estás recibiendo.",
+    "Prepara respuestas estándar para las que aparecen más a menudo.",
+    "Cuenta con lo que hace que eso funcione: quienes te interrumpen no salen con preguntas y problemas totalmente nuevos un día tras otro, y los mismos tienden a aflorar una y otra vez.",
+    "Reduce con esas respuestas estándar el tiempo que gastas atendiendo interrupciones.",
+    "Ten esas respuestas disponibles, porque tenerlas a mano es además lo que te deja delegar buena parte de ese trabajo en personal con menos experiencia."
+  ],
+  "entregable_esperado": "Un juego de respuestas estándar preparadas para las clases de interrupción que más aparecen, disponibles y por eso delegables en personal con menos experiencia.",
+  "nodos_previos": [
+    "buscar_regularidad_bloques_iguales_trabajo_mando"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando las mismas preguntas y los mismos problemas te llegan como interrupción una y otra vez, y cada vez los atiendes desde cero."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-preparar_respuestas_estandar_interrupciones_repetidas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Las interrupciones que te llegan no suelen ser del todo nuevas: las mismas preguntas y los mismos problemas tienden a aparecer una y otra vez. Igual que un fabricante saca productos estándar, puedes fijar qué clases de interrupción recibes y preparar una respuesta estándar para las que aparecen más a menudo. Con esas respuestas reduces el tiempo que gastas atendiendo interrupciones, y tenerlas disponibles te deja además delegar buena parte de ese trabajo en personas con menos experiencia, que es una salida mejor que esconderte de quien te interrumpe.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_04.md",
+          "lineas": "315-315"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): L315 'the same ones tend to surface repeatedly' se había vuelto 'vuelven una y otra vez', y 'parecen imprevisibles' y 'cada pieza a medida' no están en la línea. La propuesta devuelve el 'tienden a', se ciñe a 'Customers don't come up with totally new questions' y conserva el resultado que sí da la línea (menos tiempo y delegar en personas con menos experiencia).",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)"
+    },
+    {
+      "id": "m11-limpieza-preparar_respuestas_estandar_interrupciones_repetidas-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preparar respuestas estandar para las clases de interrupcion que se repiten, y tenerlas disponibles para delegar buena parte del trabajo en personal con menos experiencia",
+      "texto_nuevo": "Preparar respuestas estándar para las clases de interrupción que se repiten, y tenerlas disponibles para delegar buena parte del trabajo en personal con menos experiencia",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_respuestas_estandar_interrupciones_repetidas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aplica a las interrupciones que te llegan el siguiente concepto de produccion, porque hay formas mejores que esconderte: los fabricantes sacan productos estandar.",
+      "texto_nuevo": "Aplica a las interrupciones que te llegan el siguiente concepto de producción, porque hay formas mejores que esconderte: los fabricantes sacan productos estándar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_respuestas_estandar_interrupciones_repetidas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fija por esa analogia que clase de interrupciones estas recibiendo.",
+      "texto_nuevo": "Fija por esa analogía qué clase de interrupciones estás recibiendo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_respuestas_estandar_interrupciones_repetidas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Prepara respuestas estandar para las que aparecen mas a menudo.",
+      "texto_nuevo": "Prepara respuestas estándar para las que aparecen más a menudo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_respuestas_estandar_interrupciones_repetidas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que hace que eso funcione: los clientes no salen con preguntas y problemas totalmente nuevos un dia tras otro, y las mismas tienden a aflorar una y otra vez.",
+      "texto_nuevo": "Cuenta con lo que hace que eso funcione: los clientes no salen con preguntas y problemas totalmente nuevos un día tras otro, y las mismas tienden a aflorar una y otra vez.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_respuestas_estandar_interrupciones_repetidas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reduce con esas respuestas estandar el tiempo que gastas atendiendo interrupciones.",
+      "texto_nuevo": "Reduce con esas respuestas estándar el tiempo que gastas atendiendo interrupciones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_respuestas_estandar_interrupciones_repetidas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten esas respuestas disponibles, porque tenerlas a mano es ademas lo que te deja delegar buena parte de ese trabajo en personal con menos experiencia.",
+      "texto_nuevo": "Ten esas respuestas disponibles, porque tenerlas a mano es además lo que te deja delegar buena parte de ese trabajo en personal con menos experiencia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_respuestas_estandar_interrupciones_repetidas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un juego de respuestas estandar preparadas para las clases de interrupcion que mas aparecen, disponibles y por eso delegables en personal con menos experiencia.",
+      "texto_nuevo": "Un juego de respuestas estándar preparadas para las clases de interrupción que más aparecen, disponibles y por eso delegables en personal con menos experiencia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_respuestas_estandar_interrupciones_repetidas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando las mismas preguntas y los mismos problemas te llegan como interrupcion una y otra vez, y cada vez los atiendes desde cero.",
+      "texto_nuevo": "Cuando las mismas preguntas y los mismos problemas te llegan como interrupción una y otra vez, y cada vez los atiendes desde cero.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 05, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 05)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-preparar_respuestas_estandar_interrupciones_repetidas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que hace que eso funcione: los clientes no salen con preguntas y problemas totalmente nuevos un día tras otro, y las mismas tienden a aflorar una y otra vez.",
+      "texto_nuevo": "Cuenta con lo que hace que eso funcione: los clientes no salen con preguntas y problemas totalmente nuevos un día tras otro, y los mismos tienden a aflorar una y otra vez.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "Concordancia: el antecedente es «preguntas y problemas», géneros mezclados, va en masculino."
+      },
+      "decision": "auditoria completa M11 (ortografia): Concordancia: el antecedente es «preguntas y problemas», géneros mezclados, va en masculino.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase3-preparar_respuestas_estandar_interrupciones_repetidas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las interrupciones que te llegan no suelen ser del todo nuevas: las mismas preguntas y los mismos problemas tienden a aparecer una y otra vez. Igual que un fabricante saca productos estándar, puedes fijar qué clases de interrupción recibes y preparar una respuesta estándar para las que aparecen más a menudo. Con esas respuestas reduces el tiempo que gastas atendiendo interrupciones, y tenerlas disponibles te deja además delegar buena parte de ese trabajo en personas con menos experiencia, que es una salida mejor que esconderte de quien te interrumpe.",
+      "texto_nuevo": "Las interrupciones que te llegan no suelen ser del todo nuevas: las mismas preguntas y los mismos problemas tienden a aparecer una y otra vez. Igual que un fabricante saca productos estándar, puedes fijar qué clases de interrupción recibes y preparar una respuesta estándar para las que aparecen más a menudo. Con esas respuestas puedes reducir el tiempo que gastas atendiendo interrupciones, y tenerlas disponibles te deja además delegar buena parte de ese trabajo en personas con menos experiencia, que es una salida mejor que esconderte de quien te interrumpe.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_04.md 315",
+        "frase": "Customers don’t come up with totally new questions and problems day in and day out, and because the same ones tend to surface repeatedly, a manager can reduce time spent handling interruptions using standard responses."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro da la reducción del tiempo como algo que el mando puede lograr (\"can reduce\"); el resumen la afirmaba como efecto seguro. Se devuelve el \"puedes\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase4-preparar_respuestas_estandar_interrupciones_repetidas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuenta con lo que hace que eso funcione: los clientes no salen con preguntas y problemas totalmente nuevos un día tras otro, y los mismos tienden a aflorar una y otra vez.",
+      "texto_nuevo": "Cuenta con lo que hace que eso funcione: quienes te interrumpen no salen con preguntas y problemas totalmente nuevos un día tras otro, y los mismos tienden a aflorar una y otra vez.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"los clientes\" no tiene antecedente en el nodo; en el libro son los consumidores de la autoridad y la información del mando, es decir, quienes le interrumpen (grove_high_output/cap_04.md 311 y 315)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"los clientes\" no tiene antecedente en el nodo; en el libro son los consumidores de la autoridad y la información del mando, es decir, quienes le interrumpen (grove_high_output/cap_04.md 311 y 315).",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Estandariza Respuestas y Delega Interrupciones"
+}

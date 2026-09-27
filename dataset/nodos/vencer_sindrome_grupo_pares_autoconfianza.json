@@ -1,0 +1,209 @@
+{
+  "node_id": "vencer_sindrome_grupo_pares_autoconfianza",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Vencer el síndrome del grupo de pares infundiendo autoconfianza y la constatación de que nadie se muere por decidir mal",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Un grupo de iguales puede atascarse porque a la mayoría le da miedo significarse: uno de los motivos es el temor a ir contra el grupo, y así todos tantean y esperan a que aparezca un consenso antes de arriesgar una postura. Lo que vence ese bloqueo es la autoconfianza de cada miembro. Una parte nace de conocer bien el asunto y otra de la experiencia, pero al final la mayor parte sale de asumir, en el fondo, que nadie se ha muerto nunca por una decisión de negocio equivocada, por una acción inapropiada o por ser desautorizado. Toda tu operación debería entenderlo, no solo quien decide.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_06.md, unidad Cap. 5, titulo textual Decisions, Decisions. Sale de la PIEZA P17 de la frontera publicada hoy en OO.2.a, L49, 68 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el tramo es corto, y aun asi pone su propio inventario de MEDIOS, no de fines, y los nombra uno a uno (being familiar with the issue under consideration; from experience; a gut-level realization that nobody has ever died from making a wrong business decision, or taking inappropriate action, or being overruled), y cierra con un mandato que no lleva adjetivo de adecuacion ninguno (And everyone in your operation should be made to understand this). EL AVISO DE 15.4 LO TENGO DELANTE: este es un parrafo POBRE, de una sola frase larga, y la casa tiene medido que el parrafo mas pobre del lote 1 dio 83 por ciento de puentes. Por eso los cinco pasos se quedan pegados a lo que la frase dice y ni uno completa el bucle que el libro deja abierto. DE DONDE SALE CADA PASO, uno a uno, todos de L49: paso 1 (You can overcome the peer-group syndrome if each of the members has self-confidence); paso 2 (which stems in part from being familiar with the issue under consideration); paso 3 (and from experience); paso 4 (But in the end self-confidence mostly comes from a gut-level realization that nobody has ever died from making a wrong business decision, or taking inappropriate action, or being overruled); paso 5 (And everyone in your operation should be made to understand this). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. LOS SITIOS DE TENTACION QUE DECLARO, y en los que NO escribi: NO escribo COMO se hace entender eso a toda la operacion, ni por que via, ni en que acto, porque el libro dice should be made to understand y no pone el medio; escribir ahi una charla, un correo o una reunion seria inventarme el procedimiento entero. NO escribo cada cuanto se repite, que es la segunda especie de PUENTE del lote 1. NO escribo quien responde de que se entienda. NO escribo como se mide si la autoconfianza subio. NI UNA CIFRA A atribuciones: el tramo no trae ninguna. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: con 68 palabras y cinco pasos, un lector estricto puede decir que esto es POSTURA sobre la autoconfianza y no un procedimiento. Lo sostengo porque el libro nombra las tres fuentes una a una, que es inventario de medios y no de fines, y porque el paso 5 es un mandato ejecutable sobre una poblacion nombrada, toda tu operacion. Si cae, cae DENTRO de mi marcado.",
+  "pasos_accionables": [
+    "Cuando quieras vencer el síndrome del grupo de pares, trabaja sobre la autoconfianza de cada uno de los miembros, que es lo que lo vence.",
+    "Apoya una parte de esa autoconfianza en que cada miembro esté familiarizado con el asunto que se está considerando.",
+    "Apoya otra parte en la experiencia.",
+    "Cuenta con que al final la autoconfianza sale sobre todo de una constatación visceral: que nadie se ha muerto nunca por tomar una decisión de negocio equivocada, ni por emprender una acción inapropiada, ni por ser desautorizado.",
+    "Haz que todo el mundo en tu operación entienda esto, y no solo los que se sientan a la mesa."
+  ],
+  "entregable_esperado": "Cada miembro del grupo con la autoconfianza para sostener una postura propia, y toda la operación sabiendo que nadie se ha muerto nunca por una decisión de negocio equivocada, una acción inapropiada o por ser desautorizado.",
+  "nodos_previos": [
+    "tomar_mando_reunion_pares_presidente_ausente"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando un grupo de iguales se reúne a decidir y da vueltas sin que nadie tome partido, porque cada uno espera a que aparezca el consenso antes de arriesgar una postura."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-vencer_sindrome_grupo_pares_autoconfianza-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un grupo de iguales puede atascarse porque a la mayoría le da miedo significarse: uno de los motivos es el temor a ir contra el grupo, y así todos tantean y esperan a que aparezca un consenso antes de arriesgar una postura. Lo que vence ese bloqueo es la autoconfianza de cada miembro. Una parte nace de conocer bien el asunto y otra de la experiencia, pero al final la mayor parte sale de asumir, en el fondo, que nadie se ha muerto nunca por una decisión de negocio equivocada, por una acción inapropiada o por ser desautorizado. Toda tu operación debería entenderlo, no solo quien decide.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_06.md",
+          "lineas": "43-49"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: L43 dice 'most people are afraid' y L45 da el temor a ir contra el grupo como 'One of the reasons'. La propuesta devuelve 'puede', 'la mayoría' y 'uno de los motivos', y cambia el 'por eso' por la instrucción de L49 ('everyone in your operation should be made to understand this').",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)"
+    },
+    {
+      "id": "m11-limpieza-vencer_sindrome_grupo_pares_autoconfianza-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vencer el sindrome del grupo de pares infundiendo autoconfianza, y la constatacion de que nadie se muere por decidir mal",
+      "texto_nuevo": "Vencer el síndrome del grupo de pares infundiendo autoconfianza, y la constatación de que nadie se muere por decidir mal",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vencer_sindrome_grupo_pares_autoconfianza-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieras vencer el sindrome del grupo de pares, trabaja sobre la autoconfianza de cada uno de los miembros, que es lo que lo vence.",
+      "texto_nuevo": "Cuando quieras vencer el síndrome del grupo de pares, trabaja sobre la autoconfianza de cada uno de los miembros, que es lo que lo vence.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vencer_sindrome_grupo_pares_autoconfianza-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Apoya una parte de esa autoconfianza en que cada miembro este familiarizado con el asunto que se esta considerando.",
+      "texto_nuevo": "Apoya una parte de esa autoconfianza en que cada miembro esté familiarizado con el asunto que se está considerando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vencer_sindrome_grupo_pares_autoconfianza-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que al final la autoconfianza sale sobre todo de una constatacion visceral: que nadie se ha muerto nunca por tomar una decision de negocio equivocada, ni por emprender una accion inapropiada, ni por ser desautorizado.",
+      "texto_nuevo": "Cuenta con que al final la autoconfianza sale sobre todo de una constatación visceral: que nadie se ha muerto nunca por tomar una decisión de negocio equivocada, ni por emprender una acción inapropiada, ni por ser desautorizado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vencer_sindrome_grupo_pares_autoconfianza-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz que todo el mundo en tu operacion entienda esto, y no solo los que se sientan a la mesa.",
+      "texto_nuevo": "Haz que todo el mundo en tu operación entienda esto, y no solo los que se sientan a la mesa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vencer_sindrome_grupo_pares_autoconfianza-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cada miembro del grupo con la autoconfianza para sostener una postura propia, y toda la operacion sabiendo que nadie se ha muerto nunca por una decision de negocio equivocada, una accion inapropiada o por ser desautorizado.",
+      "texto_nuevo": "Cada miembro del grupo con la autoconfianza para sostener una postura propia, y toda la operación sabiendo que nadie se ha muerto nunca por una decisión de negocio equivocada, una acción inapropiada o por ser desautorizado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vencer_sindrome_grupo_pares_autoconfianza-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando un grupo de iguales se reune a decidir y da vueltas sin que nadie se moje, porque cada uno espera a que aparezca el consenso antes de arriesgar una postura.",
+      "texto_nuevo": "Cuando un grupo de iguales se reúne a decidir y da vueltas sin que nadie se moje, porque cada uno espera a que aparezca el consenso antes de arriesgar una postura.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-vencer_sindrome_grupo_pares_autoconfianza-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando un grupo de iguales se reúne a decidir y da vueltas sin que nadie se moje, porque cada uno espera a que aparezca el consenso antes de arriesgar una postura.",
+      "texto_nuevo": "Cuando un grupo de iguales se reúne a decidir y da vueltas sin que nadie tome partido, porque cada uno espera a que aparezca el consenso antes de arriesgar una postura.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se moje"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): mojarse por comprometerse con una postura es coloquial de España",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase3-vencer_sindrome_grupo_pares_autoconfianza-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vencer el síndrome del grupo de pares infundiendo autoconfianza, y la constatación de que nadie se muere por decidir mal",
+      "texto_nuevo": "Vencer el síndrome del grupo de pares infundiendo autoconfianza y la constatación de que nadie se muere por decidir mal",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "Sobra la coma ante la \"y\" que une los dos complementos de \"infundiendo\"."
+      },
+      "decision": "auditoria completa M11 (ortografia): Sobra la coma ante la \"y\" que une los dos complementos de \"infundiendo\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Vence el Miedo a Decidir",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

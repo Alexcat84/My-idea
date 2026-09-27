@@ -1,0 +1,418 @@
+{
+  "node_id": "dominar_arte_socializar_trabajo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Dominar el arte de socializar en el trabajo, sabiendo que a la gente la conoces sobre todo trabajando y no en la fiesta anual",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "A la gente con la que trabajas la conoces sobre todo en el trabajo, como parte del ritmo de cada día, y no en la fiesta anual. Los actos sociales pueden sumar si tu equipo los quiere de verdad y no tienen por qué ser caros: valen un paseo, una comida en el campo o conocer a las familias, e invitarlos a comer a casa puede ayudarte a abrirte y mostrar que te importan. Pero cuando los propone la dirección pueden vivirse como obligatorios y forzados y minar la libertad del equipo, así que conviene usar las horas que ya pasas con ellos y, en general, dejar el tiempo libre para mantenerte centrado.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_08.md, lineas 67 a 75, bajo el rotulo MASTER THE ART OF SOCIALIZING AT WORK. ESTA CABECERA DE SECCION SI SE EXTRAE Y LAS OTRAS DOS DEL CAPITULO NO, Y LA DIFERENCIA ESTA MEDIDA: esta trae inventario propio de medios nombrados uno a uno, el paseo, la comida campestre, conocer a las familias y la comida en tu casa, mientras que STAY CENTERED (lineas 15 a 23) y RESPECT BOUNDARIES (lineas 89 a 91) solo anuncian a sus hijos, la segunda con la formula literal Here are some things I have learned about walking this line, que es la misma por la que la pieza 12 de cap_07 se dejo fuera. EL P9 ES LA CABEZA DE UNA SERIE QUE NO ES D.37: la linea 75 nombra sus dos advertencias pero NO dice cuantas son, asi que es D.29 y su arista pide razon escrita. La primera de las dos existe como nodo, evitar_presion_social_actos_equipo; la segunda, Booze, NO se extrajo porque es una advertencia sin un solo acto nombrado. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. P1 de la linea 69; P2, P3, P4 y P5 de la 71; P6, P7 y P8 de la 73; P9 de la 75. EL TRAJE DE CONEJO ROSA DE ALAN EUSTACE (linea 71) NO DA PASO PROPIO: es la ilustracion de conocer a las familias y no un medio que el lector pueda ejecutar. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: como se averigua si tu equipo quiere de verdad un retiro, y quien paga la comida en tu casa.",
+  "pasos_accionables": [
+    "Cuenta con que los retiros y las fiestas pueden ser productivos si la gente de tu equipo los quiere de verdad, y con que a la gente con la que trabajas la conoces sobre todo en el trabajo, cada día, como parte integrada del ritmo de trabajo, y no en la fiesta anual.",
+    "Pasa tiempo con la gente del trabajo en un ambiente más relajado, sin la presión de las fechas de entrega.",
+    "No hace falta que sea caro: puedes dar un paseo con ellos o hacer una comida campestre.",
+    "Conoce a las familias de tu equipo y deja que ellos conozcan a la tuya, que también puede tener un efecto grande.",
+    "Invita a tu equipo y a sus familias o a sus parejas a comer a tu casa, que puede ser una gran manera de abrirte y de demostrar que te importan.",
+    "Cuenta con que cuando estos actos los presenta la dirección pueden vivirse a la vez como obligatorios y forzados, y socavar sin querer una cultura de libertad y autonomía.",
+    "Usa para construir la relación las muchas horas que ya pasas cada día con tus compañeros y con la gente a tu cargo.",
+    "Y por lo general usa el tiempo de después del trabajo para mantenerte centrado tú, más que para socializar con compañeros de trabajo.",
+    "Cuando sí organices un acto social en el trabajo, ten presentes estas dos advertencias: que un acto no obligatorio puede vivirse como obligatorio, y que el alcohol puede meterte en terreno peligroso."
+  ],
+  "entregable_esperado": "Relaciones construidas sobre todo en el trabajo diario, y los actos sociales que sí organices hechos con las dos advertencias presentes: la presión de lo que parece obligatorio y el riesgo del alcohol.",
+  "nodos_previos": [
+    "cuidar_persona_completa_equipo"
+  ],
+  "nodos_siguientes": [
+    "evitar_presion_social_actos_equipo",
+    "construir_confianza_equipo_tiempo_solas"
+  ],
+  "condiciones_activacion": [
+    "Cuando te planteas juntar a tu equipo fuera de la oficina para construir relación con ellos."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "A la gente con la que trabajas la conoces sobre todo en el trabajo diario, como parte del ritmo de cada día, y no en la fiesta anual. Los actos sociales pueden sumar si tu equipo los quiere de verdad y no tienen por qué ser caros: un paseo, una comida en el campo, conocer a las familias o invitarlos a comer a tu casa pueden ayudarte a abrirte y a mostrar que te importan. Pero cuando los propone la dirección pueden sentirse obligatorios y forzados y minar la libertad del equipo, así que conviene usar las horas que ya pasas con ellos y dejar el tiempo libre para mantenerte centrado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_08.md",
+          "lineas": "67-75"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: 'can be a good way', 'can also have a big impact' y 'can be a great way to open yourself up' pasan a 'ayudan'. La propuesta cambia a 'pueden ayudarte' sin tocar lo demás (587).",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)"
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que los retiros y las fiestas pueden ser productivos si la gente de tu equipo los quiere de verdad, y con que a la gente con la que trabajas la conoces sobre todo en el trabajo, cada dia, como parte integrada del ritmo de trabajo, y no en la fiesta anual.",
+      "texto_nuevo": "Cuenta con que los retiros y las fiestas pueden ser productivos si la gente de tu equipo los quiere de verdad, y con que a la gente con la que trabajas la conoces sobre todo en el trabajo, cada día, como parte integrada del ritmo de trabajo, y no en la fiesta anual.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pasa tiempo con la gente del trabajo en un ambiente mas relajado, sin la presion de las fechas de entrega.",
+      "texto_nuevo": "Pasa tiempo con la gente del trabajo en un ambiente más relajado, sin la presión de las fechas de entrega.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No hace falta que sea caro: podeis dar un paseo juntos o hacer una comida campestre.",
+      "texto_nuevo": "No hace falta que sea caro: puedes dar un paseo con ellos o hacer una comida campestre.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "podeis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Conoced a las familias de unos y otros, que tambien puede tener un efecto grande.",
+      "texto_nuevo": "Conoce a las familias de tu equipo y deja que ellos conozcan a la tuya, que también puede tener un efecto grande.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Conoced"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Invita a tu equipo y a sus familias o a sus parejas a comer a tu casa, que el texto llama una gran manera de abrirte y de demostrar que te importan.",
+      "texto_nuevo": "Invita a tu equipo y a sus familias o a sus parejas a comer a tu casa, que es una gran manera de abrirte y de demostrar que te importan.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto llama"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que cuando estos actos los presenta la direccion pueden sentirse a la vez obligatorios y forzados, y socavar sin querer una cultura de libertad y autonomia.",
+      "texto_nuevo": "Cuenta con que cuando estos actos los presenta la dirección pueden sentirse a la vez obligatorios y forzados, y socavar sin querer una cultura de libertad y autonomía.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa para construir la relacion las muchas horas que ya pasas cada dia con tus companieros y con la gente que te reporta.",
+      "texto_nuevo": "Usa para construir la relación las muchas horas que ya pasas cada día con tus compañeros y con la gente que te reporta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y por lo general usa el tiempo de despues del trabajo para mantenerte centrado tu, mas que para socializar con companieros de trabajo.",
+      "texto_nuevo": "Y por lo general usa el tiempo de después del trabajo para mantenerte centrado tú, más que para socializar con compañeros de trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando si organices un acto social en el trabajo, ten presentes las dos advertencias que el texto deja escritas: que un acto no obligatorio puede sentirse obligatorio, y que el alcohol puede meterte en terreno peligroso.",
+      "texto_nuevo": "Cuando sí organices un acto social en el trabajo, ten presentes estas dos advertencias: que un acto no obligatorio puede sentirse obligatorio, y que el alcohol puede meterte en terreno peligroso.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto deja escritas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Relaciones construidas sobre todo en el trabajo diario, y los actos sociales que si organices hechos con las dos advertencias del libro delante.",
+      "texto_nuevo": "Relaciones construidas sobre todo en el trabajo diario, y los actos sociales que sí organices hechos con las dos advertencias presentes: la presión de lo que parece obligatorio y el riesgo del alcohol.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dominar_arte_socializar_trabajo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te planteas juntar a tu equipo fuera de la oficina para construir relacion con ellos.",
+      "texto_nuevo": "Cuando te planteas juntar a tu equipo fuera de la oficina para construir relación con ellos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-dominar_arte_socializar_trabajo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa para construir la relación las muchas horas que ya pasas cada día con tus compañeros y con la gente que te reporta.",
+      "texto_nuevo": "Usa para construir la relación las muchas horas que ya pasas cada día con tus compañeros y con la gente a tu cargo.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que te reporta"
+        ]
+      },
+      "decision": "pase de glosario (reporta): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dominar_arte_socializar_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "A la gente con la que trabajas la conoces sobre todo en el trabajo diario, como parte del ritmo de cada día, y no en la fiesta anual. Los actos sociales pueden sumar si tu equipo los quiere de verdad y no tienen por qué ser caros: un paseo, una comida en el campo, conocer a las familias o invitarlos a comer a tu casa pueden ayudarte a abrirte y a mostrar que te importan. Pero cuando los propone la dirección pueden sentirse obligatorios y forzados y minar la libertad del equipo, así que conviene usar las horas que ya pasas con ellos y dejar el tiempo libre para mantenerte centrado.",
+      "texto_nuevo": "A la gente con la que trabajas la conoces sobre todo en el trabajo diario, como parte del ritmo de cada día, y no en la fiesta anual. Los actos sociales pueden sumar si tu equipo los quiere de verdad y no tienen por qué ser caros: un paseo, una comida en el campo, conocer a las familias o invitarlos a comer a tu casa pueden ayudarte a abrirte y a mostrar que te importan. Pero cuando los propone la dirección pueden vivirse como obligatorios y forzados y minar la libertad del equipo, así que conviene usar las horas que ya pasas con ellos y dejar el tiempo libre para mantenerte centrado.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "pueden sentirse"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"can feel obligatory\" calcado: un acto no se siente, se vive como obligatorio.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dominar_arte_socializar_trabajo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que cuando estos actos los presenta la dirección pueden sentirse a la vez obligatorios y forzados, y socavar sin querer una cultura de libertad y autonomía.",
+      "texto_nuevo": "Cuenta con que cuando estos actos los presenta la dirección pueden vivirse a la vez como obligatorios y forzados, y socavar sin querer una cultura de libertad y autonomía.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "pueden sentirse a la vez obligatorios"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"can feel both obligatory and forced\" calcado. El matiz de \"sometimes\" no se sostiene: \"pueden\" ya conserva la posibilidad (can) y el texto no afirma que pase siempre.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dominar_arte_socializar_trabajo-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando sí organices un acto social en el trabajo, ten presentes estas dos advertencias: que un acto no obligatorio puede sentirse obligatorio, y que el alcohol puede meterte en terreno peligroso.",
+      "texto_nuevo": "Cuando sí organices un acto social en el trabajo, ten presentes estas dos advertencias: que un acto no obligatorio puede vivirse como obligatorio, y que el alcohol puede meterte en terreno peligroso.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "puede sentirse obligatorio"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"can feel mandatory\" calcado.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-dominar_arte_socializar_trabajo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Invita a tu equipo y a sus familias o a sus parejas a comer a tu casa, que es una gran manera de abrirte y de demostrar que te importan.",
+      "texto_nuevo": "Invita a tu equipo y a sus familias o a sus parejas a comer a tu casa, que puede ser una gran manera de abrirte y de demostrar que te importan.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_08.md 71",
+        "frase": "Inviting your team and their families or significant/insignificant others over to your home for a meal can be a great way to open yourself up and show you care."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que puede ser una gran manera ('can be').",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-dominar_arte_socializar_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A la gente con la que trabajas la conoces sobre todo en el trabajo diario, como parte del ritmo de cada día, y no en la fiesta anual. Los actos sociales pueden sumar si tu equipo los quiere de verdad y no tienen por qué ser caros: un paseo, una comida en el campo, conocer a las familias o invitarlos a comer a tu casa pueden ayudarte a abrirte y a mostrar que te importan. Pero cuando los propone la dirección pueden vivirse como obligatorios y forzados y minar la libertad del equipo, así que conviene usar las horas que ya pasas con ellos y dejar el tiempo libre para mantenerte centrado.",
+      "texto_nuevo": "A la gente con la que trabajas la conoces sobre todo en el trabajo, como parte del ritmo de cada día, y no en la fiesta anual. Los actos sociales pueden sumar si tu equipo los quiere de verdad y no tienen por qué ser caros: un paseo, una comida en el campo, conocer a las familias o invitarlos a comer a tu casa pueden ayudarte a abrirte y a mostrar que te importan. Pero cuando los propone la dirección pueden vivirse como obligatorios y forzados y minar la libertad del equipo, así que conviene usar las horas que ya pasas con ellos y, en general, dejar el tiempo libre para mantenerte centrado.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_08.md 73",
+        "frase": "For the most part, it’s better to use the time after work to keep yourself centered than to socialize with work colleagues."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro lo atenúa (\"For the most part\"), como ya hace el paso 7; el resumen lo daba como regla. Se añade \"en general\"; para caber en 600 sale \"diario\" de \"el trabajo diario\", redundante con \"el ritmo de cada día\" (591 a 597 caracteres).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase5-dominar_arte_socializar_trabajo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Dominar el arte de socializar en el trabajo, sabiendo que a la gente la conoces trabajando y no en la fiesta anual",
+      "texto_nuevo": "Dominar el arte de socializar en el trabajo, sabiendo que a la gente la conoces sobre todo trabajando y no en la fiesta anual",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_08.md 69",
+        "frase": "While retreats and parties can be productive if people on your team really want them, it is best to remember that mostly you get to know the people you work with on the job, every day, as an integrated part of the work rhythm, not at the annual holiday party."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice «mostly» (sobre todo); el título lo volvía absoluto. Se devuelve el matiz, como ya lo llevan el resumen y el paso 0.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase5-dominar_arte_socializar_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "A la gente con la que trabajas la conoces sobre todo en el trabajo, como parte del ritmo de cada día, y no en la fiesta anual. Los actos sociales pueden sumar si tu equipo los quiere de verdad y no tienen por qué ser caros: un paseo, una comida en el campo, conocer a las familias o invitarlos a comer a tu casa pueden ayudarte a abrirte y a mostrar que te importan. Pero cuando los propone la dirección pueden vivirse como obligatorios y forzados y minar la libertad del equipo, así que conviene usar las horas que ya pasas con ellos y, en general, dejar el tiempo libre para mantenerte centrado.",
+      "texto_nuevo": "A la gente con la que trabajas la conoces sobre todo en el trabajo, como parte del ritmo de cada día, y no en la fiesta anual. Los actos sociales pueden sumar si tu equipo los quiere de verdad y no tienen por qué ser caros: valen un paseo, una comida en el campo o conocer a las familias, e invitarlos a comer a casa puede ayudarte a abrirte y mostrar que te importan. Pero cuando los propone la dirección pueden vivirse como obligatorios y forzados y minar la libertad del equipo, así que conviene usar las horas que ya pasas con ellos y, en general, dejar el tiempo libre para mantenerte centrado.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_08.md 71",
+        "frase": "It doesn’t have to be expensive. You can take a walk together or have a picnic. Meeting each other’s families can also have a big impact. More memorable than the extravagant carnival set up at Google for “bring your kid to work” day was the fact that Alan Eustace, a senior vice president of Engineering, wore a pink bunny suit. Inviting your team and their families or significant/insignificant others over to your home for a meal can be a great way to open yourself up and show you care."
+      },
+      "decision": "auditoria completa M11 (invencion): Abrirte y mostrar que te importan el libro lo dice solo de invitar al equipo a comer a casa; del paseo y la comida campestre dice que no hace falta que sea caro y de conocer a las familias que puede tener un gran efecto. Se deja el efecto solo en la comida en casa (recorte medido para no pasar de 600).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Socializa Bien en el Trabajo",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

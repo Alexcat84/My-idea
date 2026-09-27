@@ -1,0 +1,316 @@
+{
+  "node_id": "aplicar_cinco_pasos_proceso_contratacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Aplicar los cinco componentes del proceso de contratación para comunicar tu idea desde el primer día",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "En un hotel, quien lo dirigía sabía que solo podría transmitir a su gente una forma ordenada y humana de atender a los clientes si se la comunicaba de forma ordenada y humana, y el medio llegó a importar tanto como la idea. La contratación se volvió el primer medio y el más esencial para comunicarla, en cinco pasos: una presentación guionizada en grupo, una conversación individual con cada aspirante, un aviso por teléfono al elegido, una carta firmada a quien no entra y un primer día que muestra cómo los sistemas y la gente dependen unos de otros.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_18.md, unidad Cap. 16, titulo textual Your People Strategy. Sale de la PIEZA C3 de la frontera publicada en esta misma vuelta (.gerber_v7/frontera_cap18.txt), L247 a L272, 266 palabras, bajo el subtitulo Playing the Game. ES UN CASO, Y SE TRATA COMO TAL (manual seccion 3.5, EXTRACTOR.md 9): el proceso lo narra el Manager del hotel Venetia (as the Manager explained it to me), pero la doctrina no es del hotel: es un inventario propio del libro, numerado 1 a 5 en el propio texto (L249 a L257), con el quinto componente desplegado en siete actividades en vineta (L259 a L269). Sigo el mismo patron que documentar_trabajo_manual_operaciones (cap_11) y aplicar_ocho_reglas_juego_personas (esta misma vuelta): UN SOLO NODO con el inventario entero transcrito, no cinco nodos mas cabeza, porque cada componente es un paso del mismo procedimiento y no un capitulo aparte. LA SENAL BARATA DE QUE SE HIZO MAL (manual 3.5): el entregable no lleva ningun dato del caso; los pasos no nombran al hotel Venetia, al Manager ni al Boss, solo el procedimiento generico de contratar. NO ES DUPLICADO DE documentar_trabajo_manual_operaciones (cap_11, vuelta 1, vivo en dataset/nodos.jsonl): ese nodo procedimenta los tres contenidos que el Manual de Operaciones tiene que traer; aqui el Manual de Operaciones aparece solo como UN objeto que se entrega y se revisa dentro del primer dia de entrenamiento (pasos 10 y 11), sin repetir sus tres contenidos, que es exactamente la frontera que d110 (G7.2) establecio entre el nombre generico del objeto y su contenido especifico. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 12 pasos, 12 TRANSCRIPCION, 0 PUENTE, cita pegada en .gerber_v7/cita_cap18_L247_L272.txt (D.35). No invento destinatario ni responsable ni periodo: el libro no dice cuando se hace cada notificacion (salvo el primer dia de entrenamiento, que si trae su propio nombre) y este candidato no completa esa ausencia.",
+  "pasos_accionables": [
+    "Diseña una presentación guionizada que comunique la idea de tu negocio en una reunión grupal a todos los aspirantes al mismo tiempo, describiendo la idea, la historia y la experiencia del negocio al ponerla en práctica con éxito, y los atributos que exige el puesto.",
+    "Reúnete con cada aspirante de forma individual para hablar de sus reacciones y sentimientos sobre la idea, su trasfondo y su experiencia, y pregunta por qué se cree apropiado para el papel que el puesto juega en implementar esa idea.",
+    "Notifica por teléfono al candidato elegido, otra vez con una presentación guionizada.",
+    "Notifica a los aspirantes no elegidos agradeciendo su interés, con una carta estándar firmada por quien entrevistó.",
+    "Dedica el primer día de entrenamiento a las siguientes actividades, tanto para ti como para el nuevo empleado.",
+    "Revisa con él la idea del negocio.",
+    "Resume el sistema con el que todo el negocio hace realidad esa idea.",
+    "Llévalo de recorrido por las instalaciones, resaltando a la gente trabajando y los sistemas funcionando para mostrar la interdependencia entre los sistemas y la gente.",
+    "Responde clara y completamente todas sus preguntas.",
+    "Entrégale su uniforme y su Manual de Operaciones.",
+    "Revisa con él su Manual de Operaciones, incluyendo el Objetivo Estratégico, la Estrategia Organizativa y el contrato de su propio puesto.",
+    "Completa con él los papeles de empleo."
+  ],
+  "entregable_esperado": "Un proceso de contratación con sus cinco componentes completos: la presentación guionizada en grupo, la reunión individual, la notificación al elegido, la notificación a los no elegidos, y el primer día de entrenamiento con sus siete actividades.",
+  "nodos_previos": [
+    "construir_estrategia_gente_cuatro_componentes"
+  ],
+  "nodos_siguientes": [
+    "disenar_incorporacion_cien_dias"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a contratar gente nueva y quieres que el proceso mismo, desde la primera reunión hasta el primer día de entrenamiento, sea el primer medio con el que le comunicas la idea de tu negocio."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "En un hotel, quien lo dirigía sabía que solo podría transmitir a su gente una forma ordenada y humana de atender a los clientes si se la comunicaba de forma ordenada y humana, y el medio llegó a importar tanto como la idea. La contratación se volvió el primer medio y el más esencial para comunicarla, en cinco pasos: una presentación guionizada en grupo, una conversación individual con cada aspirante, un aviso por teléfono al elegido, una carta firmada a quien no entra y un primer día que muestra cómo los sistemas y la gente dependen unos de otros.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_18.md",
+          "lineas": "241-271"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): L241-245 cuentan el caso de un hotel ('He knew...', 'the hotel's hiring process became the first and most essential medium'); el texto lo volvía regla con un 'funciona porque' y cerraba con 'la relación empieza ya dentro de la idea', que no está. La propuesta cuenta el caso como caso, conserva la razón que dan las líneas (orden y trato humano solo se transmiten de forma ordenada y humana; el medio pesa tanto como la idea) y enumera los cinco pasos.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)"
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplicar los cinco componentes del proceso de contratacion que el libro enumera para comunicar tu idea desde el primer dia",
+      "texto_nuevo": "Aplicar los cinco componentes del proceso de contratación para comunicar tu idea desde el primer día",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro enumera"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Disena una presentacion guionizada que comunique la idea de tu negocio en una reunion grupal a todos los aspirantes al mismo tiempo, describiendo la idea, la historia y la experiencia del negocio implementandola, y los atributos que exige el puesto.",
+      "texto_nuevo": "Diseña una presentación guionizada que comunique la idea de tu negocio en una reunión grupal a todos los aspirantes al mismo tiempo, describiendo la idea, la historia y la experiencia del negocio implementándola, y los atributos que exige el puesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reunete con cada aspirante de forma individual para hablar de sus reacciones y sentimientos sobre la idea, su trasfondo y su experiencia, y pregunta por que se cree apropiado para el papel que el puesto juega en implementar esa idea.",
+      "texto_nuevo": "Reúnete con cada aspirante de forma individual para hablar de sus reacciones y sentimientos sobre la idea, su trasfondo y su experiencia, y pregunta por qué se cree apropiado para el papel que el puesto juega en implementar esa idea.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Notifica por telefono al candidato elegido, otra vez con una presentacion guionizada.",
+      "texto_nuevo": "Notifica por teléfono al candidato elegido, otra vez con una presentación guionizada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Notifica a los aspirantes no elegidos agradeciendo su interes, con una carta estandar firmada por quien entrevisto.",
+      "texto_nuevo": "Notifica a los aspirantes no elegidos agradeciendo su interés, con una carta estándar firmada por quien entrevistó.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dedica el primer dia de entrenamiento a las siguientes actividades, tanto para ti como para el nuevo empleado.",
+      "texto_nuevo": "Dedica el primer día de entrenamiento a las siguientes actividades, tanto para ti como para el nuevo empleado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa con el la idea del negocio.",
+      "texto_nuevo": "Revisa con él la idea del negocio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Llevalo de recorrido por las instalaciones, resaltando a la gente trabajando y los sistemas funcionando para mostrar la interdependencia entre los sistemas y la gente.",
+      "texto_nuevo": "Llévalo de recorrido por las instalaciones, resaltando a la gente trabajando y los sistemas funcionando para mostrar la interdependencia entre los sistemas y la gente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Entregale su uniforme y su Manual de Operaciones.",
+      "texto_nuevo": "Entrégale su uniforme y su Manual de Operaciones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Revisa con el su Manual de Operaciones, incluyendo el Objetivo Estrategico, la Organizational Strategy y el Position Contract de su propio puesto.",
+      "texto_nuevo": "Revisa con él su Manual de Operaciones, incluyendo el Objetivo Estratégico, la Estrategia Organizativa y el contrato de su propio puesto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Organizational Strategy",
+          "Position Contract"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Completa con el los papeles de empleo.",
+      "texto_nuevo": "Completa con él los papeles de empleo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 11,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un proceso de contratacion con sus cinco componentes completos: la presentacion guionizada en grupo, la reunion individual, la notificacion al elegido, la notificacion a los no elegidos, y el primer dia de entrenamiento con sus siete actividades.",
+      "texto_nuevo": "Un proceso de contratación con sus cinco componentes completos: la presentación guionizada en grupo, la reunión individual, la notificación al elegido, la notificación a los no elegidos, y el primer día de entrenamiento con sus siete actividades.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_cinco_pasos_proceso_contratacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando vas a contratar gente nueva y quieres que el proceso mismo, desde la primera reunion hasta el primer dia de entrenamiento, sea el primer medio con el que le comunicas la idea de tu negocio.",
+      "texto_nuevo": "Cuando vas a contratar gente nueva y quieres que el proceso mismo, desde la primera reunión hasta el primer día de entrenamiento, sea el primer medio con el que le comunicas la idea de tu negocio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase4-aplicar_cinco_pasos_proceso_contratacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Diseña una presentación guionizada que comunique la idea de tu negocio en una reunión grupal a todos los aspirantes al mismo tiempo, describiendo la idea, la historia y la experiencia del negocio implementándola, y los atributos que exige el puesto.",
+      "texto_nuevo": "Diseña una presentación guionizada que comunique la idea de tu negocio en una reunión grupal a todos los aspirantes al mismo tiempo, describiendo la idea, la historia y la experiencia del negocio al ponerla en práctica con éxito, y los atributos que exige el puesto.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "implementándola"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Gerundio calcado (experience in successfully implementing that idea, gerber_emyth/cap_18 l.249) que modifica a un sustantivo; pasa a 'al ponerla en práctica con éxito', que recoge además el 'successfully' del libro.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Comunica Tu Idea al Contratar",
+  "fuentes_internas": [
+    "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber"
+  ]
+}

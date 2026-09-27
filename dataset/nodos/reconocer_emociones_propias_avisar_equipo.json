@@ -1,0 +1,239 @@
+{
+  "node_id": "reconocer_emociones_propias_avisar_equipo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Reconocer en voz alta el ánimo con el que llegas, para que tu equipo no crea que tu mal día es culpa suya",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Tu equipo se fija en tu ánimo al entrar por la puerta porque no le queda otra: todo el mundo se fija en cómo viene el jefe, y hay quien sabe qué día va a tener según cómo llegue el suyo. Reprimir lo que sientes suele no funcionar, porque a quien trabaja cerca de ti no le puedes esconder cómo te sientes, y tampoco quieres descargarlo sobre tu equipo. Lo mejor que puedes hacer es nombrarlo en voz alta y contar qué te pasa en el resto de tu vida, para que nadie sienta que tu ánimo es culpa suya. Y ante un disgusto grave, quédate en casa un día: las emociones se contagian igual que los gérmenes.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_08.md, lineas 151 a 159, bajo el rotulo Recognizing your own emotions, dentro de la seccion RESPECT BOUNDARIES, que no tiene cabeza propia. ES HERMANO DE dominar_reacciones_emociones_ajenas, que sale del rotulo siguiente, y la pareja es deliberada del libro: uno mira tus emociones y el otro las de los demas. EL P6 TRANSCRIBE UNA FORMULA LITERAL DEL LIBRO, la de la linea 157, incluida su version suavizada del taco; es un guion que el texto escribe para que se use, no una plantilla mia. EL DIA EN CASA DEL P7 NO ES UN PERIODO INVENTADO: el libro escribe stay home for a day. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. P1 de la linea 153; P2, P3, P4 y P5 de la 155; P6 de la 157; P7 de la 159. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto se cuenta de lo que pasa en el resto de tu vida y cuanto no, a quien se le avisa de que te quedas en casa, y que se hace cuando el mal dia dura semanas.",
+  "pasos_accionables": [
+    "Cuenta con que tu equipo nota en qué ánimo llegas: un compañero le dijo una mañana a su jefa que sabía qué clase de día iba a tener por el ánimo con el que ella entraba por la puerta, y todo el mundo se fija en el ánimo del jefe porque no le queda más remedio, porque es adaptativo.",
+    "No intentes reprimir lo que sientes, porque eso tampoco suele funcionar.",
+    "Cuenta con que no puedes esconder cómo te sientes a la gente que trabaja muy cerca de ti.",
+    "No lo pagues con tu equipo los días malos, pero tampoco escondas que no estás en tu mejor momento.",
+    "Reconoce en voz alta cómo te sientes y qué te está pasando en el resto de tu vida, para que los demás no sientan que tu ánimo es culpa suya.",
+    "Di algo parecido a esto: estoy teniendo un día malísimo, estoy intentando no estar de mal humor, pero si parece que hoy salto a la mínima es que salto, y no es por ti ni por tu trabajo, es porque he tenido una discusión fuerte con un amigo.",
+    "Y si lo que tienes es un disgusto emocional de verdad grave en tu vida, quédate en casa un día: no querrías ir repartiéndolo, como no querrías repartir un virus por la oficina; las emociones se contagian igual que los gérmenes, y los días de salud mental deberían tomarse más en serio de lo que se toman."
+  ],
+  "entregable_esperado": "Tu ánimo dicho en voz alta y situado donde corresponde, con el equipo sabiendo que no es culpa suya y sin haberlo pagado con ellos.",
+  "nodos_previos": [
+    "identificar_disparadores_propios_reaccion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando llegas al trabajo teniendo un mal día y tu equipo ya te lo ha notado en la cara al entrar por la puerta."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-reconocer_emociones_propias_avisar_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Tu equipo se fija en tu ánimo al entrar por la puerta porque no le queda otra: todo el mundo se fija en cómo viene el jefe, y hay quien sabe qué día va a tener según cómo llegue el suyo. Reprimir lo que sientes suele no funcionar, porque a quien trabaja cerca de ti no le puedes esconder cómo te sientes, y tampoco quieres descargarlo sobre tu equipo. Lo mejor que puedes hacer es nombrarlo en voz alta y contar qué te pasa en el resto de tu vida, para que nadie sienta que tu ánimo es culpa suya. Y ante un disgusto grave, quédate en casa un día: las emociones se contagian igual que los gérmenes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_08.md",
+          "lineas": "151-159"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La 155 dice 'repressing those feelings tends not to work' y el día que depende del ánimo del jefe es lo que un compañero le dijo a la autora (153). La propuesta devuelve el suele, cuenta la frase del compañero como caso ('hay quien') y deja lo que la 153 y la 155 dan como general.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)"
+    },
+    {
+      "id": "m11-limpieza-reconocer_emociones_propias_avisar_equipo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconocer en voz alta el animo con el que llegas, para que tu equipo no crea que tu mal dia es culpa suya",
+      "texto_nuevo": "Reconocer en voz alta el ánimo con el que llegas, para que tu equipo no crea que tu mal día es culpa suya",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_emociones_propias_avisar_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que tu equipo nota en que animo llegas: el texto cuenta que un companiero suyo le dijo una maniana que sabia que clase de dia iba a tener por el animo con el que ella entraba por la puerta, y que todo el mundo se fija en el animo del jefe porque no le queda mas remedio, porque es adaptativo.",
+      "texto_nuevo": "Cuenta con que tu equipo nota en qué ánimo llegas: un compañero le dijo una mañana a su jefa que sabía qué clase de día iba a tener por el ánimo con el que ella entraba por la puerta, y todo el mundo se fija en el ánimo del jefe porque no le queda más remedio, porque es adaptativo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto cuenta que un companiero suyo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_emociones_propias_avisar_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que no puedes esconder como te sientes a la gente que trabaja muy cerca de ti.",
+      "texto_nuevo": "Cuenta con que no puedes esconder cómo te sientes a la gente que trabaja muy cerca de ti.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_emociones_propias_avisar_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No lo pagues con tu equipo los dias malos, pero tampoco escondas que no estas en tu mejor momento.",
+      "texto_nuevo": "No lo pagues con tu equipo los días malos, pero tampoco escondas que no estás en tu mejor momento.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_emociones_propias_avisar_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce en voz alta como te sientes y que te esta pasando en el resto de tu vida, para que los demas no sientan que tu animo es culpa suya.",
+      "texto_nuevo": "Reconoce en voz alta cómo te sientes y qué te está pasando en el resto de tu vida, para que los demás no sientan que tu ánimo es culpa suya.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_emociones_propias_avisar_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Di algo parecido a lo que el texto dice haber aprendido a decir: estoy teniendo un dia malisimo, estoy intentando no estar de mal humor, pero si parece que hoy salto a la minima es que salto, y no es por ti ni por tu trabajo, es porque he tenido una discusion fuerte con un amigo.",
+      "texto_nuevo": "Di algo parecido a esto: estoy teniendo un día malísimo, estoy intentando no estar de mal humor, pero si parece que hoy salto a la mínima es que salto, y no es por ti ni por tu trabajo, es porque he tenido una discusión fuerte con un amigo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "a lo que el texto dice haber aprendido a decir"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_emociones_propias_avisar_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y si lo que tienes es un disgusto emocional de verdad grave en tu vida, quedate en casa un dia: el texto dice que no querrias ir repartiendolo mas de lo que querrias repartir un virus por la oficina, que las emociones se contagian igual que los germenes, y que los dias de salud mental deberian tomarse mas en serio de lo que se toman.",
+      "texto_nuevo": "Y si lo que tienes es un disgusto emocional de verdad grave en tu vida, quédate en casa un día: no querrías ir repartiéndolo más de lo que querrías repartir un virus por la oficina, las emociones se contagian igual que los gérmenes, y los días de salud mental deberían tomarse más en serio de lo que se toman.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_emociones_propias_avisar_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu animo dicho en voz alta y situado donde corresponde, con el equipo sabiendo que no es culpa suya y sin haberlo pagado con ellos.",
+      "texto_nuevo": "Tu ánimo dicho en voz alta y situado donde corresponde, con el equipo sabiendo que no es culpa suya y sin haberlo pagado con ellos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_emociones_propias_avisar_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando llegas al trabajo teniendo un mal dia y tu equipo ya te lo ha notado en la cara al entrar por la puerta.",
+      "texto_nuevo": "Cuando llegas al trabajo teniendo un mal día y tu equipo ya te lo ha notado en la cara al entrar por la puerta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 17, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 17)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-reconocer_emociones_propias_avisar_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y si lo que tienes es un disgusto emocional de verdad grave en tu vida, quédate en casa un día: no querrías ir repartiéndolo más de lo que querrías repartir un virus por la oficina, las emociones se contagian igual que los gérmenes, y los días de salud mental deberían tomarse más en serio de lo que se toman.",
+      "texto_nuevo": "Y si lo que tienes es un disgusto emocional de verdad grave en tu vida, quédate en casa un día: no querrías ir repartiéndolo, como no querrías repartir un virus por la oficina; las emociones se contagian igual que los gérmenes, y los días de salud mental deberían tomarse más en serio de lo que se toman.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "más de lo que querrías repartir un virus por la oficina, las emociones"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"No querrías... más de lo que querrías\" calca \"any more than you'd want to\"; se dice con una comparación de igualdad.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Avisa tu Ánimo a tu Equipo",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

@@ -1,0 +1,257 @@
+{
+  "node_id": "crear_plan_creible_equipo",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Crear un plan que tenga posibilidades reales de funcionar",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Un plan puede fallar ante las sorpresas y aun así planificar vale la pena, porque el acto de planificar es lo que te hace entender tu situación y te deja una base desde la que adaptarte rápido cuando llega una emergencia, en lugar de volver al caos de empezar de cero. Una buena estrategia tiene una posibilidad realista de funcionar, entiende el nudo del problema, concentra las fuerzas y los recursos propios del equipo en lo que más importa y, dentro de una organización mayor, se engancha a la estrategia de arriba.",
+  "notas_extraccion": "Es el puente entre la vision y la ejecucion, y su procedimiento es de comprobacion mas que de creacion: el libro no dice como se inventa una estrategia, dice que condiciones tiene que cumplir la que inventes. Esas condiciones son un inventario propio y por eso pasa D.27. El contraejemplo del puesto de limonada va dentro y completo porque es lo que hace ejecutable la primera comprobacion: sin el, posibilidad realista seria un adjetivo de adecuacion. Lo que el libro NO dice, y por eso no esta escrito aqui, es en que formato se escribe la estrategia, ni quien la aprueba, ni cada cuanto se revisa.",
+  "pasos_accionables": [
+    "Da por hecho que los planes no valen nada pero planificar lo es todo: aunque pasen sorpresas y no todo esté bajo tu control, es planificando como entiendes tu situación y trazas tu mejor oportunidad de éxito.",
+    "Cuenta con lo que eso te da cuando llega la emergencia: una estrategia sólida es la base para adaptar rápido tus planes, en vez de volver al caos de la casilla de salida.",
+    "Comprueba lo primero que se le exige a una estrategia: que tenga una posibilidad realista de funcionar. Si tu estrategia para poner un puesto de limonada en cada manzana es conseguir que todas las grandes celebridades del mundo lo respalden, te van a mirar con las cejas levantadas, porque o cuesta tanto dinero que difícilmente será buena inversión, o exige un producto tan asombroso que las estrellas quieran asociarse a él sin cobrar, que también es improbable.",
+    "Comprueba que tu estrategia entiende el nudo del problema que intenta resolver.",
+    "Comprueba que concentra las fuerzas, los recursos y la energía únicos de tu equipo en lo que más importa para conseguir sus metas.",
+    "Si lideras una parte pequeña de una organización mayor, comprueba que los planes de tu equipo se relacionan directamente con la estrategia de nivel superior de la organización."
+  ],
+  "entregable_esperado": "Una estrategia con posibilidades realistas de funcionar, centrada en el nudo del problema, y relacionada con la estrategia de nivel superior si formas parte de una organización mayor.",
+  "nodos_previos": [
+    "fijar_vision_concreta_equipo"
+  ],
+  "nodos_siguientes": [
+    "ajustar_plan_fuerzas_equipo",
+    "planificar_tres_pasos_demanda_estado_brecha"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya tienes una visión concreta y sabes cómo es el éxito, y toca averiguar cómo llegar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-crear_plan_creible_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un plan puede fallar ante las sorpresas y aun así valer, porque el acto de planificar es lo que te obliga a entender tu situación y te deja una base desde la que adaptarte rápido cuando llega una emergencia, en lugar de volver al caos de empezar de cero. Por eso no basta con tener una estrategia: hay que comprobarla. Una buena estrategia tiene una posibilidad realista de funcionar, entiende el nudo del problema, concentra las fuerzas y los recursos propios del equipo en lo que más importa y, dentro de una organización mayor, se engancha a la estrategia de arriba.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "61-69"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)"
+    },
+    {
+      "id": "m11-limpieza-crear_plan_creible_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Da por hecho lo que dijo Eisenhower, que los planes no valen nada pero planificar lo es todo: aunque pasen sorpresas y no todo este bajo control, es a traves del proceso de planificar como entendemos nuestra situacion y trazamos nuestro mejor tiro al exito.",
+      "texto_nuevo": "Da por hecho que los planes no valen nada pero planificar lo es todo: aunque pasen sorpresas y no todo esté bajo tu control, es planificando como entiendes tu situación y trazas tu mejor oportunidad de éxito.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "lo que dijo Eisenhower",
+          "nuestro mejor tiro al exito"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "autor_o_titulo",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_plan_creible_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que eso compra cuando llega la emergencia: una estrategia solida te da la base para adaptar rapido tus planes, en vez de volver al caos de la casilla de salida.",
+      "texto_nuevo": "Cuenta con lo que eso te da cuando llega la emergencia: una estrategia sólida es la base para adaptar rápido tus planes, en vez de volver al caos de la casilla de salida.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_plan_creible_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comprueba lo primero que el libro exige de una estrategia: que tenga una posibilidad realista de funcionar. Si tu estrategia para poner un puesto de limonada en cada manzana es conseguir que todas las grandes celebridades del mundo lo respalden, te van a mirar con las cejas levantadas, porque o cuesta tanto dinero que es mala inversion, o exige un producto tan asombroso que las estrellas quieran asociarse a el sin cobrar, que tambien es improbable.",
+      "texto_nuevo": "Comprueba lo primero que se le exige a una estrategia: que tenga una posibilidad realista de funcionar. Si tu estrategia para poner un puesto de limonada en cada manzana es conseguir que todas las grandes celebridades del mundo lo respalden, te van a mirar con las cejas levantadas, porque o cuesta tanto dinero que es mala inversión, o exige un producto tan asombroso que las estrellas quieran asociarse a él sin cobrar, que también es improbable.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo primero que el libro exige de una estrategia"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_plan_creible_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba que concentra las fuerzas, los recursos y la energia unicos de tu equipo en lo que mas importa para conseguir sus metas.",
+      "texto_nuevo": "Comprueba que concentra las fuerzas, los recursos y la energía únicos de tu equipo en lo que más importa para conseguir sus metas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_plan_creible_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si lideras una parte pequenia de una organizacion mayor, comprueba que los planes de tu equipo se relacionan directamente con la estrategia de nivel superior de la organizacion.",
+      "texto_nuevo": "Si lideras una parte pequeña de una organización mayor, comprueba que los planes de tu equipo se relacionan directamente con la estrategia de nivel superior de la organización.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_plan_creible_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una estrategia con posibilidades realistas de funcionar, centrada en el nudo del problema, y relacionada con la estrategia de nivel superior si formas parte de una organizacion mayor.",
+      "texto_nuevo": "Una estrategia con posibilidades realistas de funcionar, centrada en el nudo del problema, y relacionada con la estrategia de nivel superior si formas parte de una organización mayor.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_plan_creible_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya tienes una vision concreta y sabes a que se parece el exito, y toca averiguar como llegar.",
+      "texto_nuevo": "Cuando ya tienes una visión concreta y sabes a qué se parece el éxito, y toca averiguar cómo llegar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-crear_plan_creible_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Un plan puede fallar ante las sorpresas y aun así valer, porque el acto de planificar es lo que te obliga a entender tu situación y te deja una base desde la que adaptarte rápido cuando llega una emergencia, en lugar de volver al caos de empezar de cero. Por eso no basta con tener una estrategia: hay que comprobarla. Una buena estrategia tiene una posibilidad realista de funcionar, entiende el nudo del problema, concentra las fuerzas y los recursos propios del equipo en lo que más importa y, dentro de una organización mayor, se engancha a la estrategia de arriba.",
+      "texto_nuevo": "Un plan puede fallar ante las sorpresas y aun así planificar vale la pena, porque el acto de planificar es lo que te hace entender tu situación y te deja una base desde la que adaptarte rápido cuando llega una emergencia, en lugar de volver al caos de empezar de cero. Por eso no basta con tener una estrategia: hay que comprobarla. Una buena estrategia tiene una posibilidad realista de funcionar, entiende el nudo del problema, concentra las fuerzas y los recursos propios del equipo en lo que más importa y, dentro de una organización mayor, se engancha a la estrategia de arriba.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 65",
+        "frase": "“Plans are worthless, but planning is everything,”"
+      },
+      "decision": "auditoria completa M11 (contrario): El libro dice que los planes no valen nada y que lo que vale es planificar; el resumen decía que el plan conserva su valor.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "contrario"
+      ]
+    },
+    {
+      "id": "m11-barrido-crear_plan_creible_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando ya tienes una visión concreta y sabes a qué se parece el éxito, y toca averiguar cómo llegar.",
+      "texto_nuevo": "Cuando ya tienes una visión concreta y sabes cómo es el éxito, y toca averiguar cómo llegar.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "a qué se parece el éxito"
+        ]
+      },
+      "decision": "barrido final de calcos (a_que_se_parece)",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-crear_plan_creible_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Comprueba lo primero que se le exige a una estrategia: que tenga una posibilidad realista de funcionar. Si tu estrategia para poner un puesto de limonada en cada manzana es conseguir que todas las grandes celebridades del mundo lo respalden, te van a mirar con las cejas levantadas, porque o cuesta tanto dinero que es mala inversión, o exige un producto tan asombroso que las estrellas quieran asociarse a él sin cobrar, que también es improbable.",
+      "texto_nuevo": "Comprueba lo primero que se le exige a una estrategia: que tenga una posibilidad realista de funcionar. Si tu estrategia para poner un puesto de limonada en cada manzana es conseguir que todas las grandes celebridades del mundo lo respalden, te van a mirar con las cejas levantadas, porque o cuesta tanto dinero que difícilmente será buena inversión, o exige un producto tan asombroso que las estrellas quieran asociarse a él sin cobrar, que también es improbable.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "zhuo_manager/cap_09.md 65",
+        "frase": "Doing so will require either so much money that it’s unlikely to be a good investment"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que es improbable que sea buena inversión, no que lo sea con certeza.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase6-crear_plan_creible_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un plan puede fallar ante las sorpresas y aun así planificar vale la pena, porque el acto de planificar es lo que te hace entender tu situación y te deja una base desde la que adaptarte rápido cuando llega una emergencia, en lugar de volver al caos de empezar de cero. Por eso no basta con tener una estrategia: hay que comprobarla. Una buena estrategia tiene una posibilidad realista de funcionar, entiende el nudo del problema, concentra las fuerzas y los recursos propios del equipo en lo que más importa y, dentro de una organización mayor, se engancha a la estrategia de arriba.",
+      "texto_nuevo": "Un plan puede fallar ante las sorpresas y aun así planificar vale la pena, porque el acto de planificar es lo que te hace entender tu situación y te deja una base desde la que adaptarte rápido cuando llega una emergencia, en lugar de volver al caos de empezar de cero. Una buena estrategia tiene una posibilidad realista de funcionar, entiende el nudo del problema, concentra las fuerzas y los recursos propios del equipo en lo que más importa y, dentro de una organización mayor, se engancha a la estrategia de arriba.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 61-65",
+        "frase": "When emergencies do arise, a solid strategy provides the foundation for us to quickly adapt our plans instead of going back to the chaos of square one. What makes for a good strategy? First, it must have a realistic shot at working."
+      },
+      "decision": "doble lectura M11 (sexto pase) (invencion): El libro pasa del valor de planificar a la pregunta de qué hace buena a una estrategia sin deducir de lo primero que no baste con tenerla y haya que comprobarla; sale la frase con su 'Por eso'. La base para adaptarse se queda: en el libro es el argumento del mismo párrafo a favor de planificar (el plan es la estrategia).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Crea un Plan que Funcione"
+}

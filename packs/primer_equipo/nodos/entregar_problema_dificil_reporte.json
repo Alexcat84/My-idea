@@ -1,0 +1,370 @@
+{
+  "node_id": "entregar_problema_dificil_reporte",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Entregar un problema difícil a alguien de tu equipo y declararlo dueño en público",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Guardarte los problemas difíciles para proteger al equipo parece generoso, pero parte de dos errores: sobrestimar cuánto puedes resolver tú solo y suponer que nadie quiere retos, cuando la gente con más talento los busca. Entregar un nudo difícil a quien crees capaz es la mayor señal de confianza, y el mejor trabajo sale de quien puede dedicarse al problema entero. Declarar en público que esa persona es la dueña crea responsabilidad y le da autoridad ante los demás, y quedarte cerca, sin llevar el timón, evita que delegar se convierta en abandonar.",
+  "notas_extraccion": "Es el primer principio de delegacion del capitulo y el que mas cambia una practica corriente: el problema dificil no se guarda, se entrega. Lo que lo hace procedimentable son tres actos concretos, comprobar que crees en la capacidad, declarar la propiedad en publico, y quedarte en el barco sin llevar el timon; y el contraste del primer ejecutivo es la prueba de por que la declaracion tiene que ser publica y no privada. Los dos errores del razonamiento van dentro porque el libro los nombra como errores, y sin ellos el consejo pareceria comodidad del directivo. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se comprueba que el reporte es capaz, ni que se hace si a mitad se ve que no lo era.",
+  "pasos_accionables": [
+    "Desconfía del razonamiento de que los directivos buenos cargan con las mayores cargas del equipo para ahorrárselas a su gente.",
+    "Cuenta con el primer error de ese razonamiento: sobrestimar aquello de lo que tú, el directivo, eres capaz. Puede estar en tu mano resolver una gran variedad de asuntos, pero como una sola persona no puedes resolver tantos, y el mejor trabajo viene de quien tiene tiempo para meterse de lleno en un problema entero y dedicarse a encontrar la mejor solución.",
+    "Cuenta con el segundo: suponer que nadie quiere asumir problemas difíciles. De hecho, los empleados con más talento no buscan trato especial ni proyectos fáciles: quieren que se les rete.",
+    "Trata el problema difícil como lo que es: no hay mayor señal de confianza que poner en manos de alguien de tu equipo un nudo intrincado que crees que puede deshacer, aunque tú no estés seguro de cómo.",
+    "Comprueba antes la condición clave: que de verdad creas que esa persona es capaz de resolver el problema.",
+    "Si es así, dale el problema y da un paso atrás, para que tenga el espacio de liderar.",
+    "Dile a todos los demás que a partir de ahora esa persona es la dueña del problema.",
+    "Hazlo por sus dos efectos: crea responsabilidad y, más importante, la declaración pública da autoridad a quien recibe el encargo. Piénsalo con esta pregunta: si un primer ejecutivo pone a alguien a cargo de las finanzas de la empresa, ¿lo tendrá más fácil esa persona si el ejecutivo dice a toda la empresa que es la directora financiera, o si se lo pide en privado sin que nadie más lo sepa?",
+    "No confundas delegar con marcharte. Igual que no tirarías a un nadador novato a la parte honda de la piscina para irte a buscar algo de picar, no dejes a esa persona arreglárselas sola: ella lleva el timón, pero tú estás con ella en el barco, animándola, ayudándola con lo que necesite de ti y entrenándola para que llegue a su destino sin sobresaltos."
+  ],
+  "entregable_esperado": "El problema en manos de quien crees capaz de resolverlo, con esa persona declarada ante todo el mundo como su dueña y contigo cerca sin llevar el timón.",
+  "nodos_previos": [
+    "contratar_personas_capaces_mas",
+    "equilibrar_microdireccion_ausencia"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando aparece un problema difícil y tu primer impulso es cargar con él para ahorrárselo a tu equipo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Guardarte los problemas difíciles para proteger al equipo parece generoso, pero parte de dos errores: sobrestimar cuánto puedes resolver tú solo y suponer que nadie quiere retos, cuando la gente con más talento los busca. Entregar un nudo difícil a quien crees capaz es la mayor señal de confianza, y el mejor trabajo sale de quien puede dedicarse al problema entero. Declarar en público que esa persona es la dueña crea responsabilidad y le da autoridad ante los demás, y quedarte cerca, sin llevar el timón, evita que delegar se convierta en abandonar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_10.md",
+          "lineas": "115-123"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)"
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entregar un problema dificil a un reporte y declararlo dueno en publico",
+      "texto_nuevo": "Entregar un problema difícil a alguien de tu equipo y declararlo dueño en público",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "un reporte"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desconfia del razonamiento de que los directivos buenos cargan con las mayores cargas del equipo para ahorrarselas a sus reportes, que es lo que la autora creia.",
+      "texto_nuevo": "Desconfía del razonamiento de que los directivos buenos cargan con las mayores cargas del equipo para ahorrárselas a su gente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "sus reportes",
+          "que es lo que la autora creia"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con el primer error de ese razonamiento: sobrestimar de lo que tu, el directivo, eres capaz. Puede estar en tu mano resolver una gran variedad de asuntos, pero como individuo unico no puedes resolver tantos, y el mejor trabajo viene de quien tiene tiempo para vivir y respirar un problema entero y dedicarse a encontrar la mejor solucion.",
+      "texto_nuevo": "Cuenta con el primer error de ese razonamiento: sobrestimar de lo que tú, el directivo, eres capaz. Puede estar en tu mano resolver una gran variedad de asuntos, pero como individuo único no puedes resolver tantos, y el mejor trabajo viene de quien tiene tiempo para vivir y respirar un problema entero y dedicarse a encontrar la mejor solución.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con el segundo: suponer que nadie quiere asumir problemas dificiles. De hecho, los empleados con mas talento no buscan trato especial ni proyectos faciles: quieren que se les rete.",
+      "texto_nuevo": "Cuenta con el segundo: suponer que nadie quiere asumir problemas difíciles. De hecho, los empleados con más talento no buscan trato especial ni proyectos fáciles: quieren que se les rete.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trata el problema dificil por lo que el libro dice que es: no hay mayor senal de confianza que ponerle a tu reporte en las manos un nudo intrincado que crees que ella puede deshacer, aunque tu no estes seguro de como.",
+      "texto_nuevo": "Trata el problema difícil como lo que es: no hay mayor señal de confianza que poner en manos de alguien de tu equipo un nudo intrincado que crees que puede deshacer, aunque tú no estés seguro de cómo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "por lo que el libro dice que es",
+          "tu reporte"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comprueba antes la condicion que el libro llama la clave: que de verdad creas que tu reporte es capaz de resolver el problema.",
+      "texto_nuevo": "Comprueba antes la condición clave: que de verdad creas que esa persona es capaz de resolver el problema.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro llama la clave",
+          "tu reporte"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si es asi, dale el problema y da un paso atras, para que tenga el espacio de liderar.",
+      "texto_nuevo": "Si es así, dale el problema y da un paso atrás, para que tenga el espacio de liderar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dile a todos los demas que a partir de ahora esa persona es la duena del problema.",
+      "texto_nuevo": "Dile a todos los demás que a partir de ahora esa persona es la dueña del problema.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazlo por los dos efectos que el libro nombra: crea responsabilidad, y, mas importante, la declaracion publica apodera a quien recibe el encargo. El libro lo prueba con una pregunta: si un primer ejecutivo pone a alguien a cargo de las finanzas de la empresa, va a tenerlo mas facil esa persona si el ejecutivo dice a toda la empresa que es la directora financiera, o si se lo pide en privado sin que nadie mas lo sepa?",
+      "texto_nuevo": "Hazlo por sus dos efectos: crea responsabilidad y, más importante, la declaración pública da autoridad a quien recibe el encargo. Piénsalo con esta pregunta: si un primer ejecutivo pone a alguien a cargo de las finanzas de la empresa, ¿lo tendrá más fácil esa persona si el ejecutivo dice a toda la empresa que es la directora financiera, o si se lo pide en privado sin que nadie más lo sepa?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra",
+          "El libro lo prueba con una pregunta",
+          "apodera"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No confundas delegar con marcharte. Igual que no tirarias a un nadador novato a la parte honda de la piscina y te irias a por un aperitivo, no dejes a tu reporte apanarselas solo: el lleva el timon, pero tu estas con el en el barco, animandole, ayudandole con lo que necesite de ti, y entrenandole para que llegue a su destino sin sobresaltos.",
+      "texto_nuevo": "No confundas delegar con marcharte. Igual que no tirarías a un nadador novato a la parte honda de la piscina para irte a por un aperitivo, no dejes a esa persona apañárselas sola: ella lleva el timón, pero tú estás con ella en el barco, animándola, ayudándola con lo que necesite de ti y entrenándola para que llegue a su destino sin sobresaltos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tu reporte"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El problema en manos de quien crees capaz de resolverlo, con su propiedad declarada a todo el mundo y contigo cerca sin llevar el timon.",
+      "texto_nuevo": "El problema en manos de quien crees capaz de resolverlo, con su propiedad declarada a todo el mundo y contigo cerca sin llevar el timón.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_problema_dificil_reporte-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando aparece un problema dificil y tu primer impulso es cargar con el para ahorrarselo a tu equipo.",
+      "texto_nuevo": "Cuando aparece un problema difícil y tu primer impulso es cargar con él para ahorrárselo a tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-entregar_problema_dificil_reporte-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No confundas delegar con marcharte. Igual que no tirarías a un nadador novato a la parte honda de la piscina para irte a por un aperitivo, no dejes a esa persona apañárselas sola: ella lleva el timón, pero tú estás con ella en el barco, animándola, ayudándola con lo que necesite de ti y entrenándola para que llegue a su destino sin sobresaltos.",
+      "texto_nuevo": "No confundas delegar con marcharte. Igual que no tirarías a un nadador novato a la parte honda de la piscina para irte a buscar algo de picar, no dejes a esa persona arreglárselas sola: ella lleva el timón, pero tú estás con ella en el barco, animándola, ayudándola con lo que necesite de ti y entrenándola para que llegue a su destino sin sobresaltos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "irte a por un aperitivo",
+          "apañárselas"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Ir a por' y 'apañárselas' son formas de una sola region.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase2-entregar_problema_dificil_reporte-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el primer error de ese razonamiento: sobrestimar de lo que tú, el directivo, eres capaz. Puede estar en tu mano resolver una gran variedad de asuntos, pero como individuo único no puedes resolver tantos, y el mejor trabajo viene de quien tiene tiempo para vivir y respirar un problema entero y dedicarse a encontrar la mejor solución.",
+      "texto_nuevo": "Cuenta con el primer error de ese razonamiento: sobrestimar de lo que tú, el directivo, eres capaz. Puede estar en tu mano resolver una gran variedad de asuntos, pero como una sola persona no puedes resolver tantos, y el mejor trabajo viene de quien tiene tiempo para meterse de lleno en un problema entero y dedicarse a encontrar la mejor solución.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "como individuo único",
+          "vivir y respirar"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Vivir y respirar un problema\" calca \"live and breathe a problem\" y \"como individuo único\" calca \"as a single individual\" (zhuo cap_10 l.117).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-entregar_problema_dificil_reporte-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El problema en manos de quien crees capaz de resolverlo, con su propiedad declarada a todo el mundo y contigo cerca sin llevar el timón.",
+      "texto_nuevo": "El problema en manos de quien crees capaz de resolverlo, con esa persona declarada ante todo el mundo como su dueña y contigo cerca sin llevar el timón.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "con su propiedad declarada a todo el mundo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Su propiedad\" calca \"ownership\"; en español es que esa persona sea la dueña del problema, como dice el propio nodo.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-entregar_problema_dificil_reporte-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con el primer error de ese razonamiento: sobrestimar de lo que tú, el directivo, eres capaz. Puede estar en tu mano resolver una gran variedad de asuntos, pero como una sola persona no puedes resolver tantos, y el mejor trabajo viene de quien tiene tiempo para meterse de lleno en un problema entero y dedicarse a encontrar la mejor solución.",
+      "texto_nuevo": "Cuenta con el primer error de ese razonamiento: sobrestimar aquello de lo que tú, el directivo, eres capaz. Puede estar en tu mano resolver una gran variedad de asuntos, pero como una sola persona no puedes resolver tantos, y el mejor trabajo viene de quien tiene tiempo para meterse de lleno en un problema entero y dedicarse a encontrar la mejor solución.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "«Sobrestimar de lo que» no es correcto: el verbo pide complemento directo (cap_10 línea 117: «overestimating what you, the manager, are capable of»)."
+      },
+      "decision": "auditoria completa M11 (ortografia): «Sobrestimar de lo que» no es correcto: el verbo pide complemento directo (cap_10 línea 117: «overestimating what you, the manager, are capable of»).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Entrega tus Problemas Difíciles"
+}

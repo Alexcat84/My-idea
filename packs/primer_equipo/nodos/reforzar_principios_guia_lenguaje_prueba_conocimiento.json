@@ -1,0 +1,161 @@
+{
+  "node_id": "reforzar_principios_guia_lenguaje_prueba_conocimiento",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Reforzar los principios guía usando su vocabulario en premios y evaluaciones, y comprobar si de verdad los conoce quien no los escribió",
+  "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+  "resumen_teorico": "Una lista de principios colgada en la pared a menudo no llega a entrar en la vida diaria de la organización. Una forma de reforzarlos y hacerlos reales es usarlos: en un equipo, al escribir reconocimientos o evaluaciones, describían las conductas con las palabras de sus principios, como que alguien mostró valentía y apertura al informar de algo. Y conviene comprobar si están vivos: pregunta a las tres primeras personas que veas cuáles son. Hay quien lo hizo en una organización que lucía su lema en latín, y el único que sabía qué significaba era quien la dirigía.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_14.md, unidad Cap. 23, titulo textual \"Leadership at Every Level\". FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: el paso 1 sale de la linea 89 (77 palabras) y el paso 2 sale de la linea 99 (50 palabras), ambas dentro de la pieza combinada P1a mas P1b de la frontera de cap_14 publicada en esta vuelta, que reune LINEAS NO CONTIGUAS (L89 y L99) porque las dos son tecnicas independientes de refuerzo del mismo mecanismo nombrado por su propio rotulo en la linea 87, \"Mechanism: Use Guiding Principles for Decision Criteria\", saltando en medio dos lineas de reflexion personal (L91, mi propio comportamiento necesitaba ajuste) y un criterio con adjetivo de adecuacion (L93, \"accurately represent the principles of the real organization\", que tumba por si sola) mas un CASO (L95, la organizacion con el lema falso de seguridad primero), ninguna de las tres con inventario propio de accion. POR QUE ES PROCEDIMIENTO Y NO POSTURA, con D.27 delante: la linea 89 nombra su propio OBJETO DE TRABAJO (premios y evaluaciones escritas) y su propio metodo (usar el vocabulario de los principios al describir la conducta), con un ejemplo citado en la misma linea; la linea 99 nombra su propia ACCION DE PRUEBA (preguntar a las tres primeras personas) sin adjetivo de adecuacion en el sitio del criterio. LA LINEA 93 SE EXCLUYE A PROPOSITO: \"guiding principles have to accurately represent the principles of the real organization, not the imagined organization\" trae el adjetivo de adecuacion (accurately) en el sitio del criterio, y por la restriccion 2 de D.27 eso tumba aunque venga acompañada de un caso ilustrativo (L95). LA LINEA 35, ANTES DEL ROTULO DE MECANISMO, TAMBIEN SE EXCLUYE: la pregunta que el autor dice haber usado para filtrar que principios conservar (si un miembro de la tripulacion enfrentado a dos cursos de accion tendria con ellos el criterio correcto) es CASO, narrativa de como el autor construyo SU credo, a 52 lineas de distancia del rotulo de mecanismo y sin ningun \"Mechanism:\" que la encabece; incluirla habria estirado la pieza fuera de la seccion que el propio libro delimita como mecanismo. EL CASO ENTRA COMO EJEMPLO Y NO COMO NODO PROPIO (manual 3.5): las diez definiciones de los principios de Santa Fe (Initiative, Innovation, Intimate Technical Knowledge, Courage, Commitment, Continuous Improvement, Integrity, Empowerment, Teamwork, Timeliness, lineas 41 a 83) son el contenido especifico de ESE credo y no se minan como pasos propios: son CASO, la lista concreta de una tripulacion, no un procedimiento para que el lector redacte sus propios principios. DISCUTIBLE, MARCADO ANTES DE SABER SI ACIERTO: el paso 1 cita un ejemplo de premio (\"Petty Officer M exhibited Courage and Openness\") que es especifico de Santa Fe dentro de un paso que por lo demas es generico (usar vocabulario propio); lo dejo porque el propio libro lo ofrece como EL ejemplo del metodo y no como un caso aislado, pero si el auditor lee que el ejemplo contamina el paso con dato del caso (manual 9.1, señal barata de que se hizo mal: el entregable del caso lleva un dato del caso), el remedio es retirar la cita textual entre comillas y dejar solo la instruccion generica. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 2 pasos, 2 TRANSCRIPCION, 0 PUENTE.",
+  "pasos_accionables": [
+    "Cuando escribas premios o evaluaciones, procura describir el comportamiento en el lenguaje de tus principios guía, por ejemplo diciendo que un empleado mostró tal o cual principio al hacer algo.",
+    "Pon a prueba si tus principios guía son reales de verdad: sal y pregunta a las tres primeras personas que veas en tu organización cuáles son."
+  ],
+  "entregable_esperado": "Los principios guía usados como vocabulario activo en los reconocimientos escritos, más una comprobación honesta de si el resto de la organización realmente sabe cuáles son.",
+  "nodos_previos": [
+    "auditar_formacion_premios_ultima_fila",
+    "repetir_mensaje_invariable_diario_reunion_evento"
+  ],
+  "nodos_siguientes": [
+    "revisar_incentivos_trampas_equipo"
+  ],
+  "condiciones_activacion": [
+    "Cuando tu organización ya tiene principios guía escritos y quieres que dejen de ser un cartel en la pared y pasen a formar parte de la vida de la organización, con sus decisiones diarias."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-reforzar_principios_guia_lenguaje_prueba_conocimiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una lista de principios colgada en la pared a menudo no llega a entrar en la vida diaria de la organización. Una forma de reforzarlos y hacerlos reales es usarlos: en un equipo, al escribir reconocimientos o evaluaciones, describían las conductas con las palabras de sus principios, como que alguien mostró valentía y apertura al informar de algo. Y conviene comprobar si están vivos: pregunta a las tres primeras personas que veas cuáles son. Hay quien lo hizo en una organización que lucía su lema en latín, y el único que sabía qué significaba era quien la dirigía.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/marquet_turn_the_ship/cap_14.md",
+          "lineas": "89-99"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 'la gente aprende qué significan en la práctica y ve que cuentan' es un efecto que L89 no da, 'como es fácil creer que todos los conocen' no sale de las líneas, y L89 dice 'often those principles don't become part of the fabric'. La propuesta del lector lo arregla, pero convierte en regla general ('hay que usarlos') lo que L89 cuenta como experiencia de una tripulación ('We did several things to reinforce these principles'); se cuenta como caso ('en un equipo') y como una forma entre varias.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)"
+    },
+    {
+      "id": "m11-limpieza-reforzar_principios_guia_lenguaje_prueba_conocimiento-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reforzar los principios guia usando su vocabulario en premios y evaluaciones, y comprobar si de verdad los conoce quien no los escribio",
+      "texto_nuevo": "Reforzar los principios guía usando su vocabulario en premios y evaluaciones, y comprobar si de verdad los conoce quien no los escribió",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 12, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reforzar_principios_guia_lenguaje_prueba_conocimiento-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando escribas premios o evaluaciones, procura describir el comportamiento en el lenguaje de tus principios guia, por ejemplo diciendo que un empleado mostro tal o cual principio al hacer algo. El texto lo dice asi: For example, when we wrote awards or evaluations, we tried to couch behaviors in the language of these principles. 'Petty Officer M exhibited Courage and Openness when reporting . . .'",
+      "texto_nuevo": "Cuando escribas premios o evaluaciones, procura describir el comportamiento en el lenguaje de tus principios guía, por ejemplo diciendo que un empleado mostró tal o cual principio al hacer algo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: For example, when we wrote awards or evaluations, we tried to couch behaviors in the language of these principles. 'Petty Officer M exhibited Courage and Openness when reporting . . .'"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reforzar_principios_guia_lenguaje_prueba_conocimiento-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pon a prueba si tus principios guia son reales de verdad: sal y pregunta a las tres primeras personas que veas en tu organizacion cuales son. El texto lo dice asi: Most of you have organizational principles. Go out and ask the first three people you see what they are.",
+      "texto_nuevo": "Pon a prueba si tus principios guía son reales de verdad: sal y pregunta a las tres primeras personas que veas en tu organización cuáles son.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: Most of you have organizational principles. Go out and ask the first three people you see what they are."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reforzar_principios_guia_lenguaje_prueba_conocimiento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Los principios guia usados como vocabulario activo en los reconocimientos escritos, mas una comprobacion honesta de si el resto de la organizacion realmente sabe cuales son.",
+      "texto_nuevo": "Los principios guía usados como vocabulario activo en los reconocimientos escritos, más una comprobación honesta de si el resto de la organización realmente sabe cuáles son.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 12, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reforzar_principios_guia_lenguaje_prueba_conocimiento-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tu organizacion ya tiene principios guia escritos y quieres que dejen de ser un cartel en la pared y pasen a formar parte del tejido de la organizacion, con sus decisiones diarias.",
+      "texto_nuevo": "Cuando tu organización ya tiene principios guía escritos y quieres que dejen de ser un cartel en la pared y pasen a formar parte del tejido de la organización, con sus decisiones diarias.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 12, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 12)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-reforzar_principios_guia_lenguaje_prueba_conocimiento-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando tu organización ya tiene principios guía escritos y quieres que dejen de ser un cartel en la pared y pasen a formar parte del tejido de la organización, con sus decisiones diarias.",
+      "texto_nuevo": "Cuando tu organización ya tiene principios guía escritos y quieres que dejen de ser un cartel en la pared y pasen a formar parte de la vida de la organización, con sus decisiones diarias.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "del tejido de la organización"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"part of the fabric of the organization\" calcado.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Usa el Vocabulario de tus Principios"
+}

@@ -1,0 +1,448 @@
+{
+  "node_id": "ser_honesto_transparente_desempenio",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Ser honesto y transparente sobre el desempeño de la persona a tu cargo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Quien dirige decide en qué trabaja cada persona, si asciende y si se queda, así que su opinión sobre el desempeño ajeno pesa mucho más que la inversa. Ese desequilibrio de poder pone en ti la carga de ser claro: la persona a tu cargo debe saber siempre qué esperas y dónde está respecto a eso. Funciona porque quita las conjeturas: nadie tiene que leer entre líneas ni tomar el silencio por buena señal, y si a menudo se pregunta qué piensas de ella, te falta decirlo más. Si crees que va de maravilla, lo sabe; si crees que no llega al nivel que quieres, también, y sabe exactamente por qué.",
+  "notas_extraccion": "Es la tercera de las cuatro acciones que el libro pide para ganarse la confianza, y la que cuelga del desequilibrio de poder que el propio libro nombra: como el directivo decide el trabajo, el ascenso y el despido, su lectura pesa mas, y por eso la carga de ser transparente cae de su lado. El inventario propio del libro es la lista de cuatro mandatos concretos que siguen a la regla general, nombrados uno a uno en la misma linea: subir el nivel de opinion si la persona se lo pregunta, no dar por hecho que lee entre lineas, decirlo cuando es estupendo, y decirlo tambien cuando no lo es, con el por que. Lo que el libro NO dice, y por eso no esta escrito aqui, es con que frecuencia se dice ni en que formato, y para el como remite al capitulo siguiente.",
+  "pasos_accionables": [
+    "Parte del desequilibrio de poder: tu punto de vista sobre cómo lo está haciendo la persona a tu cargo pesa mucho más que el suyo sobre cómo lo estás haciendo tú, porque eres tú quien determina en qué trabaja y si debe ascender o si debe ser despedida.",
+    "Asume por eso que la responsabilidad de ser honesto y transparente sobre cómo evalúas el desempeño recae en ti.",
+    "Haz que la persona a tu cargo tenga en todo momento una idea clara de cuáles son tus expectativas y de dónde está ella respecto a ellas.",
+    "Si a menudo se está preguntando qué piensas de ella, dale más a menudo tu opinión sobre su trabajo.",
+    "No des por hecho que puede leer entre líneas, ni que la falta de noticias sean buenas noticias.",
+    "Si te parece que lo está haciendo de maravilla, díselo.",
+    "Y si no crees que esté rindiendo al nivel que te gustaría ver, también debe saberlo, y saber exactamente por qué lo crees."
+  ],
+  "entregable_esperado": "La persona a tu cargo sabiendo en todo momento cuáles son tus expectativas y dónde está ella respecto a ellas, y, si no rinde al nivel que te gustaría, sabiendo exactamente por qué lo crees.",
+  "nodos_previos": [
+    "ganar_confianza_personas_cargo"
+  ],
+  "nodos_siguientes": [
+    "elegir_forma_inspirar_cambio_conducta",
+    "avisar_pronto_incumplimiento_expectativas"
+  ],
+  "condiciones_activacion": [
+    "Siempre que tengas a alguien a tu cargo, y con más urgencia cuando notes que a menudo se está preguntando qué piensas de ella."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Quien dirige decide en qué trabaja cada persona, si asciende y si se queda, así que su opinión sobre el desempeño del otro pesa mucho más que la inversa. Ese desequilibrio de poder pone en ti la carga de ser claro: tu persona a cargo debe saber siempre qué esperas y dónde está respecto a eso. Funciona porque quita las conjeturas: nadie tiene que leer entre líneas ni tomar el silencio por buena señal, y si a menudo se pregunta qué piensas de ella, es la señal de que te falta decirlo más. Si va de maravilla, lo sabe; si no llega al nivel que quieres, también, y sabe exactamente por qué.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_04.md",
+          "lineas": "175-181"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)"
+    },
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ser honesto y transparente sobre el desempenio de tu persona a cargo",
+      "texto_nuevo": "Ser honesto y transparente sobre el desempeño de tu persona a cargo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Parte del desequilibrio de poder: tu punto de vista sobre como lo esta haciendo tu persona a cargo pesa mucho mas que el suyo sobre como lo estas haciendo tu, porque eres tu quien determina en que trabaja y si debe ascender o si debe ser despedida.",
+      "texto_nuevo": "Parte del desequilibrio de poder: tu punto de vista sobre cómo lo está haciendo tu persona a cargo pesa mucho más que el suyo sobre cómo lo estás haciendo tú, porque eres tú quien determina en qué trabaja y si debe ascender o si debe ser despedida.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asume por eso que la responsabilidad de ser honesto y transparente sobre como evaluas el desempenio recae en ti.",
+      "texto_nuevo": "Asume por eso que la responsabilidad de ser honesto y transparente sobre cómo evalúas el desempeño recae en ti.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz que tu persona a cargo tenga en todo momento una idea clara de cuales son tus expectativas y de donde esta ella respecto a ellas.",
+      "texto_nuevo": "Haz que tu persona a cargo tenga en todo momento una idea clara de cuáles son tus expectativas y de dónde está ella respecto a ellas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si a menudo se esta preguntando que piensa de ella su jefe, sube el nivel de opinion que le das.",
+      "texto_nuevo": "Si a menudo se está preguntando qué piensa de ella su jefe, sube el nivel de opinión que le das.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No des por hecho que puede leer entre lineas, ni que la falta de noticias sean buenas noticias.",
+      "texto_nuevo": "No des por hecho que puede leer entre líneas, ni que la falta de noticias sean buenas noticias.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si te parece la personificacion de lo estupendo, diselo.",
+      "texto_nuevo": "Si te parece la personificación de lo estupendo, díselo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y si no crees que este operando al nivel que te gustaria ver, tambien debe saberlo, y saber exactamente por que lo crees.",
+      "texto_nuevo": "Y si no crees que esté operando al nivel que te gustaría ver, también debe saberlo, y saber exactamente por qué lo crees.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu persona a cargo sabiendo en todo momento cuales son tus expectativas y donde esta ella respecto a ellas, y sabiendo exactamente por que lo crees.",
+      "texto_nuevo": "Tu persona a cargo sabiendo en todo momento cuáles son tus expectativas y dónde está ella respecto a ellas, y sabiendo exactamente por qué lo crees.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ser_honesto_transparente_desempenio-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Siempre que tengas a alguien a cargo, y con mas urgencia cuando notes que a menudo se esta preguntando que piensas de ella.",
+      "texto_nuevo": "Siempre que tengas a alguien a cargo, y con más urgencia cuando notes que a menudo se está preguntando qué piensas de ella.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-ser_honesto_transparente_desempenio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Tu persona a cargo sabiendo en todo momento cuáles son tus expectativas y dónde está ella respecto a ellas, y sabiendo exactamente por qué lo crees.",
+      "texto_nuevo": "Tu persona a cargo sabiendo en todo momento cuáles son tus expectativas y dónde está ella respecto a ellas, y, si no rinde al nivel que te gustaría, sabiendo exactamente por qué lo crees.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'lo crees' sin antecedente en el entregable; el libro liga el porqué a que no opere al nivel deseado (zhuo cap_04 l.181)."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'lo crees' sin antecedente en el entregable; el libro liga el porqué a que no opere al nivel deseado (zhuo cap_04 l.181).",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-ser_honesto_transparente_desempenio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si a menudo se está preguntando qué piensa de ella su jefe, sube el nivel de opinión que le das.",
+      "texto_nuevo": "Si a menudo se está preguntando qué piensa de ella su jefe, dale más a menudo tu opinión sobre su trabajo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "sube el nivel de opinión que le das"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"dial up your level of feedback\".",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-ser_honesto_transparente_desempenio-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si te parece la personificación de lo estupendo, díselo.",
+      "texto_nuevo": "Si te parece que lo está haciendo de maravilla, díselo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "la personificación de lo estupendo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"the epitome of awesome\".",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-ser_honesto_transparente_desempenio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Quien dirige decide en qué trabaja cada persona, si asciende y si se queda, así que su opinión sobre el desempeño del otro pesa mucho más que la inversa. Ese desequilibrio de poder pone en ti la carga de ser claro: tu persona a cargo debe saber siempre qué esperas y dónde está respecto a eso. Funciona porque quita las conjeturas: nadie tiene que leer entre líneas ni tomar el silencio por buena señal, y si a menudo se pregunta qué piensas de ella, es la señal de que te falta decirlo más. Si va de maravilla, lo sabe; si no llega al nivel que quieres, también, y sabe exactamente por qué.",
+      "texto_nuevo": "Quien dirige decide en qué trabaja cada persona, si asciende y si se queda, así que su opinión sobre el desempeño ajeno pesa mucho más que la inversa. Ese desequilibrio de poder pone en ti la carga de ser claro: tu persona a cargo debe saber siempre qué esperas y dónde está respecto a eso. Funciona porque quita las conjeturas: nadie tiene que leer entre líneas ni tomar el silencio por buena señal, y si a menudo se pregunta qué piensas de ella, te falta decirlo más. Si crees que va de maravilla, lo sabe; si crees que no llega al nivel que quieres, también, y sabe exactamente por qué lo crees.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 181",
+        "frase": "If you think he is the epitome of awesome, tell him. If you don’t think he is operating at the level you’d like to see, he should know that, too, and precisely why you feel that way."
+      },
+      "decision": "auditoria completa M11 (matiz, longitud): El libro lo plantea como tu valoración («If you think», «why you feel that way»); el resumen lo daba como un hecho del desempeño. Cambio mínimo en la última frase; como el arreglo lleva el resumen a 620 caracteres, se recorta «es la señal de que» y «del otro» pasa a «ajeno» (medido: 598).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz",
+        "longitud"
+      ]
+    },
+    {
+      "id": "m11-pase3-ser_honesto_transparente_desempenio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si a menudo se está preguntando qué piensa de ella su jefe, dale más a menudo tu opinión sobre su trabajo.",
+      "texto_nuevo": "Si a menudo se está preguntando qué piensas de ella, dale más a menudo tu opinión sobre su trabajo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "La frase pasa de «su jefe» en tercera persona a «tu opinión» refiriéndose a la misma persona (tú); la condición del nodo ya dice «qué piensas de ella»."
+      },
+      "decision": "auditoria completa M11 (coherencia): La frase pasa de «su jefe» en tercera persona a «tu opinión» refiriéndose a la misma persona (tú); la condición del nodo ya dice «qué piensas de ella».",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase3-ser_honesto_transparente_desempenio-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y si no crees que esté operando al nivel que te gustaría ver, también debe saberlo, y saber exactamente por qué lo crees.",
+      "texto_nuevo": "Y si no crees que esté rindiendo al nivel que te gustaría ver, también debe saberlo, y saber exactamente por qué lo crees.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "operando"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): «Operar al nivel» calca «operating at the level» (cap_04 l.181) para el rendimiento de una persona; el entregable del nodo ya dice «rinde al nivel».",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-ser_honesto_transparente_desempenio-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Ser honesto y transparente sobre el desempeño de tu persona a cargo",
+      "texto_nuevo": "Ser honesto y transparente sobre el desempeño de la persona a tu cargo",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"tu persona a cargo\" se puede leer como la persona que manda; pasa a la forma fijada \"la persona a tu cargo\" (decisión del orquestador del cuarto pase)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"tu persona a cargo\" se puede leer como la persona que manda; pasa a la forma fijada \"la persona a tu cargo\" (decisión del orquestador del cuarto pase).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-ser_honesto_transparente_desempenio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Quien dirige decide en qué trabaja cada persona, si asciende y si se queda, así que su opinión sobre el desempeño ajeno pesa mucho más que la inversa. Ese desequilibrio de poder pone en ti la carga de ser claro: tu persona a cargo debe saber siempre qué esperas y dónde está respecto a eso. Funciona porque quita las conjeturas: nadie tiene que leer entre líneas ni tomar el silencio por buena señal, y si a menudo se pregunta qué piensas de ella, te falta decirlo más. Si crees que va de maravilla, lo sabe; si crees que no llega al nivel que quieres, también, y sabe exactamente por qué lo crees.",
+      "texto_nuevo": "Quien dirige decide en qué trabaja cada persona, si asciende y si se queda, así que su opinión sobre el desempeño ajeno pesa mucho más que la inversa. Ese desequilibrio de poder pone en ti la carga de ser claro: la persona a tu cargo debe saber siempre qué esperas y dónde está respecto a eso. Funciona porque quita las conjeturas: nadie tiene que leer entre líneas ni tomar el silencio por buena señal, y si a menudo se pregunta qué piensas de ella, te falta decirlo más. Si crees que va de maravilla, lo sabe; si crees que no llega al nivel que quieres, también, y sabe exactamente por qué.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"tu persona a cargo\" se puede leer como la persona que manda; pasa a la forma fijada \"la persona a tu cargo\" (decisión del orquestador del cuarto pase). El cambio suma tres caracteres y el resumen pasaría a 601; se quita el \"lo crees\" final, que repite lo ya dicho, y queda en 592 (medido con script)."
+      },
+      "decision": "auditoria completa M11 (coherencia, longitud): \"tu persona a cargo\" se puede leer como la persona que manda; pasa a la forma fijada \"la persona a tu cargo\" (decisión del orquestador del cuarto pase). El cambio suma tres caracteres y el resumen pasaría a 601; se quita el \"lo crees\" final, que repite lo ya dicho, y queda en 592 (medido con script).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia",
+        "longitud"
+      ]
+    },
+    {
+      "id": "m11-pase4-ser_honesto_transparente_desempenio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Tu persona a cargo sabiendo en todo momento cuáles son tus expectativas y dónde está ella respecto a ellas, y, si no rinde al nivel que te gustaría, sabiendo exactamente por qué lo crees.",
+      "texto_nuevo": "La persona a tu cargo sabiendo en todo momento cuáles son tus expectativas y dónde está ella respecto a ellas, y, si no rinde al nivel que te gustaría, sabiendo exactamente por qué lo crees.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"tu persona a cargo\" se puede leer como la persona que manda; pasa a la forma fijada \"la persona a tu cargo\" (decisión del orquestador del cuarto pase)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"tu persona a cargo\" se puede leer como la persona que manda; pasa a la forma fijada \"la persona a tu cargo\" (decisión del orquestador del cuarto pase).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-ser_honesto_transparente_desempenio-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Parte del desequilibrio de poder: tu punto de vista sobre cómo lo está haciendo tu persona a cargo pesa mucho más que el suyo sobre cómo lo estás haciendo tú, porque eres tú quien determina en qué trabaja y si debe ascender o si debe ser despedida.",
+      "texto_nuevo": "Parte del desequilibrio de poder: tu punto de vista sobre cómo lo está haciendo la persona a tu cargo pesa mucho más que el suyo sobre cómo lo estás haciendo tú, porque eres tú quien determina en qué trabaja y si debe ascender o si debe ser despedida.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"tu persona a cargo\" se puede leer como la persona que manda; pasa a la forma fijada \"la persona a tu cargo\" (decisión del orquestador del cuarto pase)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"tu persona a cargo\" se puede leer como la persona que manda; pasa a la forma fijada \"la persona a tu cargo\" (decisión del orquestador del cuarto pase).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-ser_honesto_transparente_desempenio-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Haz que tu persona a cargo tenga en todo momento una idea clara de cuáles son tus expectativas y de dónde está ella respecto a ellas.",
+      "texto_nuevo": "Haz que la persona a tu cargo tenga en todo momento una idea clara de cuáles son tus expectativas y de dónde está ella respecto a ellas.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"tu persona a cargo\" se puede leer como la persona que manda; pasa a la forma fijada \"la persona a tu cargo\" (decisión del orquestador del cuarto pase)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"tu persona a cargo\" se puede leer como la persona que manda; pasa a la forma fijada \"la persona a tu cargo\" (decisión del orquestador del cuarto pase).",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-ser_honesto_transparente_desempenio-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Siempre que tengas a alguien a cargo, y con más urgencia cuando notes que a menudo se está preguntando qué piensas de ella.",
+      "texto_nuevo": "Siempre que tengas a alguien a tu cargo, y con más urgencia cuando notes que a menudo se está preguntando qué piensas de ella.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"a cargo\" sin posesivo se lee como quien manda; pasa a la forma fijada del pack (decisión del orquestador del cuarto pase)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"a cargo\" sin posesivo se lee como quien manda; pasa a la forma fijada del pack (decisión del orquestador del cuarto pase).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Sé Honesto sobre su Desempeño"
+}

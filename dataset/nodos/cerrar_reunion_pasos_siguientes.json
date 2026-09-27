@@ -1,0 +1,328 @@
+{
+  "node_id": "cerrar_reunion_pasos_siguientes",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Cerrar la reunión acordando los pasos siguientes y mandar después el resumen",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Una reunión no es un fin en sí misma, sino un peldaño de un camino mucho más largo, así que los seguimientos merecen tanto cuidado como la preparación. En los últimos minutos, acostúmbrate a proponer que, antes de que el grupo se levante, todos acuerden los pasos siguientes, y después envía un resumen con la discusión, cada acción con su responsable y la fecha de la próxima revisión. El seguimiento depende de lo que hubo: una decisión se comunica, una opinión sobre un trabajo se aplica y unas ideas necesitan un proceso para avanzar. Ese seguimiento puede ser la base de la siguiente agenda.",
+  "notas_extraccion": "Es el cierre del capitulo sobre preparacion y, de todas las piezas del capitulo, la que trae el inventario mas completo: el libro nombra los cuatro contenidos del resumen posterior y nombra las tres ramas del seguimiento, una por cada clase de reunion. Por eso los pasos son transcripcion y no requieren decidir nada. El paso 2 lleva la frase del libro casi literal porque el libro la pone entre comillas como habito que se coge. Lo que el libro NO dice, y por eso no esta escrito aqui, es en cuanto tiempo se manda el resumen, quien lo escribe cuando la reunion la convoco otro, ni que se hace si nadie cumple su accion.",
+  "pasos_accionables": [
+    "Trata los seguimientos con tanto cuidado como la preparación. Una sola reunión no es un fin en sí misma: es un peldaño en el camino mucho más largo de crear algo valioso para el mundo.",
+    "En los últimos minutos de la reunión, toma la costumbre de preguntar: antes de levantarnos, vamos a asegurarnos de que estamos de acuerdo en los pasos siguientes.",
+    "Después de la reunión, envía a los asistentes un resumen con la discusión, con una lista de las acciones concretas y de quién es responsable de cada una, y con cuándo será la próxima revisión.",
+    "Si lo que hubo fue una decisión, comunícala a las personas adecuadas.",
+    "Si lo que hubo fue opinión sobre un trabajo, aplícala.",
+    "Si lo que hubo fue generación de ideas, haz que quien organizó la reunión aclare cuál es el proceso para llevar esas ideas a la etapa siguiente.",
+    "Puedes usar esos seguimientos como base de la agenda de la próxima vez que el grupo se reúna."
+  ],
+  "entregable_esperado": "Unos pasos siguientes acordados en voz alta antes de levantarse, y un resumen enviado a los asistentes con la discusión, las acciones concretas con su responsable, y la fecha de la próxima revisión.",
+  "nodos_previos": [
+    "dirigir_reunion_decision",
+    "dirigir_reunion_revision_trabajo",
+    "dirigir_reunion_generar_ideas"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "En los últimos minutos de cualquier reunión, y en las horas siguientes a que termine."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una reunión no es un fin en sí misma, sino un peldaño de un camino mucho más largo, así que los seguimientos merecen tanto cuidado como la preparación. En los últimos minutos, acostúmbrate a proponer que, antes de que el grupo se levante, todos acuerden los pasos siguientes, y después envía un resumen con la discusión, cada acción con su responsable y la fecha de la próxima revisión. El seguimiento depende de lo que hubo: una decisión se comunica, una opinión sobre un trabajo se aplica y unas ideas necesitan un proceso para avanzar. Ese seguimiento ancla la agenda de la siguiente vez.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "203-207"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): Se sostiene: 'solo vale si se convierte en acción', 'deja claro qué se decidió' y 'fija esos compromisos por escrito' son efectos que las líneas no dan. La propuesta usa la razón que sí dan (peldaño de un camino largo, seguimientos con tanto cuidado como la preparación, l.203) y describe lo demás sin inventar.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)"
+    },
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cerrar la reunion acordando los pasos siguientes y mandar despues el resumen",
+      "texto_nuevo": "Cerrar la reunión acordando los pasos siguientes y mandar después el resumen",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Trata los seguimientos con tanto cuidado como la preparacion. Una sola reunion no es un fin en si misma: es un peldano en el camino mucho mas largo de crear algo valioso para el mundo.",
+      "texto_nuevo": "Trata los seguimientos con tanto cuidado como la preparación. Una sola reunión no es un fin en sí misma: es un peldaño en el camino mucho más largo de crear algo valioso para el mundo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En los ultimos minutos de la reunion, coge la costumbre de preguntar: antes de levantarnos, vamos a asegurarnos de que estamos de acuerdo en los pasos siguientes.",
+      "texto_nuevo": "En los últimos minutos de la reunión, coge la costumbre de preguntar: antes de levantarnos, vamos a asegurarnos de que estamos de acuerdo en los pasos siguientes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Despues de la reunion, envia a los asistentes un resumen con la discusion, con una lista de las acciones concretas y de quien es responsable de cada una, y con cuando sera la proxima revision.",
+      "texto_nuevo": "Después de la reunión, envía a los asistentes un resumen con la discusión, con una lista de las acciones concretas y de quién es responsable de cada una, y con cuándo será la próxima revisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si lo que hubo fue una decision, comunicala a las personas adecuadas.",
+      "texto_nuevo": "Si lo que hubo fue una decisión, comunícala a las personas adecuadas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si lo que hubo fue opinion sobre un trabajo, actua sobre ella.",
+      "texto_nuevo": "Si lo que hubo fue opinión sobre un trabajo, actúa sobre ella.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si lo que hubo fue generacion de ideas, haz que quien organizo la reunion aclare cual es el proceso para llevar esas ideas a la etapa siguiente.",
+      "texto_nuevo": "Si lo que hubo fue generación de ideas, haz que quien organizó la reunión aclare cuál es el proceso para llevar esas ideas a la etapa siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa esos seguimientos como ancla de la agenda de la proxima vez que el grupo se reuna.",
+      "texto_nuevo": "Usa esos seguimientos como ancla de la agenda de la próxima vez que el grupo se reúna.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Unos pasos siguientes acordados en voz alta antes de levantarse, y un resumen enviado a los asistentes con la discusion, las acciones concretas con su responsable, y la fecha de la proxima revision.",
+      "texto_nuevo": "Unos pasos siguientes acordados en voz alta antes de levantarse, y un resumen enviado a los asistentes con la discusión, las acciones concretas con su responsable, y la fecha de la próxima revisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_reunion_pasos_siguientes-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En los ultimos minutos de cualquier reunion, y en las horas siguientes a que termine.",
+      "texto_nuevo": "En los últimos minutos de cualquier reunión, y en las horas siguientes a que termine.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-cerrar_reunion_pasos_siguientes-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "En los últimos minutos de la reunión, coge la costumbre de preguntar: antes de levantarnos, vamos a asegurarnos de que estamos de acuerdo en los pasos siguientes.",
+      "texto_nuevo": "En los últimos minutos de la reunión, toma la costumbre de preguntar: antes de levantarnos, vamos a asegurarnos de que estamos de acuerdo en los pasos siguientes.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "coge"
+        ]
+      },
+      "decision": "pase de glosario (coger): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cerrar_reunion_pasos_siguientes-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si lo que hubo fue opinión sobre un trabajo, actúa sobre ella.",
+      "texto_nuevo": "Si lo que hubo fue opinión sobre un trabajo, aplícala.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "actúa sobre ella"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Actuar sobre\" una opinión es calco de \"act upon\"; la opinión se aplica.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-cerrar_reunion_pasos_siguientes-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una reunión no es un fin en sí misma, sino un peldaño de un camino mucho más largo, así que los seguimientos merecen tanto cuidado como la preparación. En los últimos minutos, acostúmbrate a proponer que, antes de que el grupo se levante, todos acuerden los pasos siguientes, y después envía un resumen con la discusión, cada acción con su responsable y la fecha de la próxima revisión. El seguimiento depende de lo que hubo: una decisión se comunica, una opinión sobre un trabajo se aplica y unas ideas necesitan un proceso para avanzar. Ese seguimiento ancla la agenda de la siguiente vez.",
+      "texto_nuevo": "Una reunión no es un fin en sí misma, sino un peldaño de un camino mucho más largo, así que los seguimientos merecen tanto cuidado como la preparación. En los últimos minutos, acostúmbrate a proponer que, antes de que el grupo se levante, todos acuerden los pasos siguientes, y después envía un resumen con la discusión, cada acción con su responsable y la fecha de la próxima revisión. El seguimiento depende de lo que hubo: una decisión se comunica, una opinión sobre un trabajo se aplica y unas ideas necesitan un proceso para avanzar. Ese seguimiento puede ser la base de la siguiente agenda.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 207",
+        "frase": "These follow-ups can then anchor the agenda for when the group reconvenes."
+      },
+      "decision": "auditoria completa M11 (matiz, calco): El libro dice que los seguimientos pueden anclar la agenda (\"can\"); el resumen lo afirmaba. Además \"anclar la agenda\" calca \"anchor the agenda\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-cerrar_reunion_pasos_siguientes-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa esos seguimientos como ancla de la agenda de la próxima vez que el grupo se reúna.",
+      "texto_nuevo": "Usa esos seguimientos como base de la agenda de la próxima vez que el grupo se reúna.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "como ancla de la agenda"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"anchor the agenda\" traducido palabra a palabra (zhuo cap_07 l.207); se alinea con el resumen.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-cerrar_reunion_pasos_siguientes-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa esos seguimientos como base de la agenda de la próxima vez que el grupo se reúna.",
+      "texto_nuevo": "Puedes usar esos seguimientos como base de la agenda de la próxima vez que el grupo se reúna.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 207",
+        "frase": "These follow-ups can then anchor the agenda for when the group reconvenes."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que los seguimientos pueden servir de base a la agenda (can then anchor); el paso lo volvía orden. Se devuelve el «puedes», como ya dice el resumen.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Cierra con los Pasos Siguientes",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

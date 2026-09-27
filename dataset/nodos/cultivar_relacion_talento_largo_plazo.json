@@ -1,0 +1,304 @@
+{
+  "node_id": "cultivar_relacion_talento_largo_plazo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Cultivar la relación con el mejor talento aunque hoy te diga que no",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Los mejores líderes no andan escasos de opciones, y cuando buscan su siguiente puesto tienden a elegir donde ya saben que les irá bien: donde trabaja un amigo o donde conocen a alguien del equipo. Por eso atraer talento es una inversión a largo plazo y no una búsqueda puntual. Conocer a las estrellas emergentes, cuidar la red y dar a conocer al equipo hace que te tengan presente, y despedir con buen tono a quien rechaza la oferta deja la puerta abierta: los trabajos pueden ser cortos, pero las carreras son largas, y quien hoy dice que no puede volver cuando su situación cambie.",
+  "notas_extraccion": "Es la tercera leccion de contratar a escala y la unica del capitulo cuyo horizonte es de anios en vez de de semanas. Lo que la hace procedimentable es que el libro nombra los medios del cultivo uno a uno, congresos, encuentros, comunidad, aportaciones a la especialidad, prensa y reputacion, y ademas escribe el acto concreto del cierre, que es que decir a quien rechaza la oferta. La doctrina del paso 3 no es un animo sino una explicacion de mercado: quien tiene muchas opciones elige por conocimiento previo, y eso es lo que convierte la relacion en una inversion y no en cortesia. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se retoma el contacto, ni como se lleva ese registro, ni cuantas veces se vuelve a preguntar.",
+  "pasos_accionables": [
+    "Cuenta con que pasa a menudo, tanto que es casi un tópico: reclutas a un líder que te impresiona, te imaginas atacando problemas juntos, le das la oferta y llega la llamada temida diciendo que ha decidido hacer otra cosa.",
+    "Cuenta también con que puede llegar el final feliz: a veces, meses o años después, llega un correo inesperado de esa misma persona diciendo que la situación ha cambiado, que ya está lista para algo nuevo, y preguntando si hay oportunidades en tu equipo.",
+    "Trata el reclutamiento del mejor talento como lo que es: una cuestión de las relaciones que construyes. Los buenos líderes curtidos no andan escasos de opciones porque todo el mundo quiere contratarlos, y cuando buscan su siguiente puesto tienden a elegir oportunidades que ya saben que son buenas, donde trabaja un buen amigo o donde ya conocen a alguno de los líderes. Si pudieras conseguir trabajo en cualquier sitio, ¿por qué te unirías a un equipo donde no conoces a nadie?",
+    "Presta atención a las estrellas emergentes de tu campo y conócelas a través de congresos, encuentros y otros eventos.",
+    "Construye tu red de forma continua.",
+    "Desarrolla también la reputación de tu equipo por estas vías: participando en la comunidad, aportando aprendizajes nuevos a tu especialidad, contando la historia de tu equipo en la prensa, o simplemente logrando que tu equipo sea conocido por hacer las cosas con clase.",
+    "A quien te diga que no, dile que esperas que su camino y el tuyo se vuelvan a cruzar. Los trabajos pueden ser cortos, pero las carreras son largas: puede que no hubiera la oportunidad adecuada en el momento adecuado, o que esa persona no estuviera lista todavía para algo nuevo, y un día eso puede cambiar."
+  ],
+  "entregable_esperado": "Una red viva de relaciones con el mejor talento de tu especialidad y una reputación de equipo conocida, de modo que cuando esas personas busquen, te conozcan.",
+  "nodos_previos": [
+    "reservar_media_hora_semanal_talento",
+    "mostrar_candidato_cuanto_quieres"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando un candidato excelente rechaza tu oferta, y también de forma continua, cuando no tienes ningún puesto abierto para él."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-cultivar_relacion_talento_largo_plazo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Los mejores líderes no andan escasos de opciones, y cuando buscan su siguiente puesto tienden a elegir donde ya saben que les irá bien: donde trabaja un amigo o donde conocen a alguien del equipo. Por eso atraer talento es una inversión a largo plazo y no una búsqueda puntual. Conocer a las estrellas emergentes, cuidar la red y dar a conocer al equipo hace que te tengan presente, y despedir con buen tono a quien rechaza la oferta deja la puerta abierta: los trabajos son cortos y las carreras largas, y quien hoy dice que no puede volver cuando su situación cambie.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "261-271"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: verificador",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)"
+    },
+    {
+      "id": "m11-limpieza-cultivar_relacion_talento_largo_plazo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cultivar la relacion con el mejor talento aunque hoy te diga que no",
+      "texto_nuevo": "Cultivar la relación con el mejor talento aunque hoy te diga que no",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cultivar_relacion_talento_largo_plazo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que va a pasar, porque el libro dice que es practicamente un topico: reclutas a un lider que te impresiona, te imaginas atacando problemas juntos, le das la oferta, y llega la llamada temida diciendo que ha decidido hacer otra cosa.",
+      "texto_nuevo": "Cuenta con que va a pasar, porque es casi un tópico: reclutas a un líder que te impresiona, te imaginas atacando problemas juntos, le das la oferta y llega la llamada temida diciendo que ha decidido hacer otra cosa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "porque el libro dice que es practicamente un topico"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cultivar_relacion_talento_largo_plazo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta tambien con el final feliz que el libro cuenta: meses o anios despues llega un correo inesperado de esa misma persona diciendo que la situacion ha cambiado, que ya esta lista para algo nuevo, y preguntando si hay oportunidades en tu equipo.",
+      "texto_nuevo": "Cuenta también con el final feliz: meses o años después llega un correo inesperado de esa misma persona diciendo que la situación ha cambiado, que ya está lista para algo nuevo, y preguntando si hay oportunidades en tu equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro cuenta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cultivar_relacion_talento_largo_plazo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trata el reclutamiento del mejor talento por lo que el libro dice que es: una cuestion de las relaciones que construyes. Los buenos lideres curtidos no andan escasos de opciones porque todo el mundo quiere contratarlos, y cuando buscan su siguiente puesto tienden a elegir oportunidades que ya saben que son buenas, donde trabaja un buen amigo o donde ya conocen a alguno de los lideres. Si pudieras conseguir trabajo en cualquier sitio, por que te unirias a un equipo donde no conoces a nadie?",
+      "texto_nuevo": "Trata el reclutamiento del mejor talento como lo que es: una cuestión de las relaciones que construyes. Los buenos líderes curtidos no andan escasos de opciones porque todo el mundo quiere contratarlos, y cuando buscan su siguiente puesto tienden a elegir oportunidades que ya saben que son buenas, donde trabaja un buen amigo o donde ya conocen a alguno de los líderes. Si pudieras conseguir trabajo en cualquier sitio, ¿por qué te unirías a un equipo donde no conoces a nadie?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "por lo que el libro dice que es"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cultivar_relacion_talento_largo_plazo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Presta atencion a las estrellas emergentes de tu campo y llega a conocerlas a traves de congresos, encuentros y otros eventos.",
+      "texto_nuevo": "Presta atención a las estrellas emergentes de tu campo y llega a conocerlas a través de congresos, encuentros y otros eventos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cultivar_relacion_talento_largo_plazo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Desarrolla tambien la reputacion de tu equipo, y el libro dice por que vias: participando en la comunidad, aportando aprendizajes nuevos a tu especialidad, contando vuestra historia en la prensa, o simplemente siendo conocidos por hacer las cosas con clase.",
+      "texto_nuevo": "Desarrolla también la reputación de tu equipo por estas vías: participando en la comunidad, aportando aprendizajes nuevos a tu especialidad, contando la historia de tu equipo en la prensa, o simplemente logrando que tu equipo sea conocido por hacer las cosas con clase.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el libro dice por que vias",
+          "vuestra historia"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: verificador",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cultivar_relacion_talento_largo_plazo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "A quien te diga que no, dile que esperas que vuestros caminos se crucen otra vez. Los trabajos pueden ser cortos, pero las carreras son largas: puede que no hubiera la oportunidad adecuada en el momento adecuado, o que esa persona no estuviera lista todavia para algo nuevo, y un dia eso puede cambiar.",
+      "texto_nuevo": "A quien te diga que no, dile que esperas que su camino y el tuyo se vuelvan a cruzar. Los trabajos pueden ser cortos, pero las carreras son largas: puede que no hubiera la oportunidad adecuada en el momento adecuado, o que esa persona no estuviera lista todavía para algo nuevo, y un día eso puede cambiar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "vuestros caminos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: propio",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cultivar_relacion_talento_largo_plazo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una red viva de relaciones con el mejor talento de tu especialidad y una reputacion de equipo conocida, de modo que cuando esas personas busquen, te conozcan.",
+      "texto_nuevo": "Una red viva de relaciones con el mejor talento de tu especialidad y una reputación de equipo conocida, de modo que cuando esas personas busquen, te conozcan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cultivar_relacion_talento_largo_plazo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando un candidato excelente rechaza tu oferta, y tambien de forma continua, cuando no tienes ningun puesto abierto para el.",
+      "texto_nuevo": "Cuando un candidato excelente rechaza tu oferta, y también de forma continua, cuando no tienes ningún puesto abierto para él.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cultivar_relacion_talento_largo_plazo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que va a pasar, porque es casi un tópico: reclutas a un líder que te impresiona, te imaginas atacando problemas juntos, le das la oferta y llega la llamada temida diciendo que ha decidido hacer otra cosa.",
+      "texto_nuevo": "Cuenta con que pasa a menudo, tanto que es casi un tópico: reclutas a un líder que te impresiona, te imaginas atacando problemas juntos, le das la oferta y llega la llamada temida diciendo que ha decidido hacer otra cosa.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 261-263",
+        "frase": "This happens so often that it’s practically a cliché: I’m actively recruiting for an amazing leader."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que pasa tan a menudo que es casi un topico, no que vaya a pasar siempre.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cultivar_relacion_talento_largo_plazo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta también con el final feliz: meses o años después llega un correo inesperado de esa misma persona diciendo que la situación ha cambiado, que ya está lista para algo nuevo, y preguntando si hay oportunidades en tu equipo.",
+      "texto_nuevo": "Cuenta también con que puede llegar el final feliz: a veces, meses o años después, llega un correo inesperado de esa misma persona diciendo que la situación ha cambiado, que ya está lista para algo nuevo, y preguntando si hay oportunidades en tu equipo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 265",
+        "frase": "But, see, this story has a happy ending. Because months or years down the road, I get an email out of the blue. It’s from the candidate."
+      },
+      "decision": "auditoria completa M11 (matiz): Es el final de la historia de la autora con una candidata, no una promesa; se deja como posibilidad. No se toma la propuesta porque pasa a 'una directiva' rompiendo el hilo del paso 0 (en tu) y mete 'su equipo'.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-cultivar_relacion_talento_largo_plazo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Presta atención a las estrellas emergentes de tu campo y llega a conocerlas a través de congresos, encuentros y otros eventos.",
+      "texto_nuevo": "Presta atención a las estrellas emergentes de tu campo y conócelas a través de congresos, encuentros y otros eventos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "llega a conocerlas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Llega a conocerlas\" calca \"get to know them\" (zhuo cap_08 l.269); en imperativo es conócelas.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-cultivar_relacion_talento_largo_plazo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los mejores líderes no andan escasos de opciones, y cuando buscan su siguiente puesto tienden a elegir donde ya saben que les irá bien: donde trabaja un amigo o donde conocen a alguien del equipo. Por eso atraer talento es una inversión a largo plazo y no una búsqueda puntual. Conocer a las estrellas emergentes, cuidar la red y dar a conocer al equipo hace que te tengan presente, y despedir con buen tono a quien rechaza la oferta deja la puerta abierta: los trabajos son cortos y las carreras largas, y quien hoy dice que no puede volver cuando su situación cambie.",
+      "texto_nuevo": "Los mejores líderes no andan escasos de opciones, y cuando buscan su siguiente puesto tienden a elegir donde ya saben que les irá bien: donde trabaja un amigo o donde conocen a alguien del equipo. Por eso atraer talento es una inversión a largo plazo y no una búsqueda puntual. Conocer a las estrellas emergentes, cuidar la red y dar a conocer al equipo hace que te tengan presente, y despedir con buen tono a quien rechaza la oferta deja la puerta abierta: los trabajos pueden ser cortos, pero las carreras son largas, y quien hoy dice que no puede volver cuando su situación cambie.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 271",
+        "frase": "Jobs may be short, but careers are long."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que los trabajos pueden ser cortos (\"may\"); el resumen lo afirmaba de todos. Se recupera el \"pueden\", como ya dice el paso 6.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Cultiva el Talento a Largo Plazo",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

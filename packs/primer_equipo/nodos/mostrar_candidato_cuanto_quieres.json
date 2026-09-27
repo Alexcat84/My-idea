@@ -1,0 +1,386 @@
+{
+  "node_id": "mostrar_candidato_cuanto_quieres",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Mostrar al candidato cuánto quieres que diga que sí",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Una oferta no se cierra sola: cuanta más distancia hay en el proceso, más probable es que la respuesta sea no. El cierre también es tu trabajo y no solo del reclutador. Procurar mantener el contacto a menudo, ofrecerte a resolver dudas y hablar del puesto con calma le muestra al candidato que de verdad lo quieres en tu equipo. Cuanto más veterano es, más cuenta tu implicación, porque probablemente tiene muchas opciones; pintarle cómo tendrá impacto y por qué es la persona ideal para los grandes problemas del puesto le da razones para decir que sí.",
+  "notas_extraccion": "Es la cuarta y ultima tactica de trabajo conjunto con el reclutamiento, y la unica que ocurre despues de la decision. Lo que la hace procedimentable es que el libro pone la cadencia con numero, cada dos dias, y el contraejemplo tambien con numero, una semana de silencio; sin esos dos numeros el paso seria un adjetivo de adecuacion y por D.27 no entraria. El paso 6 trae la regla de escala que el libro escribe: la implicacion crece con la veterania del candidato, y da la razon, que tiene opciones. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto tiempo se sostiene esa cadencia, ni que se hace cuando el candidato pide mas plazo, ni como se negocia la oferta.",
+  "pasos_accionables": [
+    "Trata el cierre como tu trabajo tanto como del reclutador: cuando decides hacer una oferta, es tan tuyo como suyo hacer que el candidato sienta que quieres que diga que sí.",
+    "No crees distancia en el proceso, por ejemplo dejando pasar una semana entre comunicaciones, porque cuanta más distancia creas, más probable es que la respuesta sea no.",
+    "Después de hacer la oferta, procura contactar con el candidato a menudo para hacerle saber que estás pensando en él y que te emociona darle la bienvenida a tu equipo; hay quien lo hace cada dos días.",
+    "Pregúntale si le gustaría hablar de cualquier duda que tenga.",
+    "Sal con él a veces a comer o a cenar para hablar del puesto con más detalle.",
+    "Cuenta con que, cuanto más veterano sea el candidato, más crítica es tu implicación en el cierre, porque esa persona probablemente tiene muchas opciones y lo que buscas es que asuma un papel de liderazgo dentro de tu equipo.",
+    "Pinta un cuadro vivo de cómo ves que esa persona va a tener impacto.",
+    "Ayúdale a entender por qué el puesto es emocionante y por qué es la persona perfecta para atacar los grandes problemas del puesto."
+  ],
+  "entregable_esperado": "Un candidato que sabe que lo quieres en el equipo, con sus preguntas resueltas y con una imagen viva de cómo tendría impacto.",
+  "nodos_previos": [
+    "repartir_papeles_directivo_reclutador",
+    "entregar_experiencia_entrevista_excelente",
+    "rechazar_contratacion_tibia"
+  ],
+  "nodos_siguientes": [
+    "celebrar_aceptacion_primer_dia",
+    "cultivar_relacion_talento_largo_plazo"
+  ],
+  "condiciones_activacion": [
+    "Desde el momento en que decides hacer una oferta y hasta que el candidato responde."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una oferta no se cierra sola: cuanta más distancia hay en el proceso, más probable es que la respuesta sea no. Por eso el cierre también es tu trabajo y no solo del reclutador. Mantener el contacto cada dos días, ofrecerte a resolver dudas y hablar del puesto con calma le muestra al candidato que de verdad lo quieres en tu equipo. Cuanto más veterano es, más cuenta tu implicación, porque probablemente tiene muchas opciones; pintarle cómo tendrá impacto y por qué es la persona ideal para esos problemas grandes le da razones para decir que sí.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "99-103"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)"
+    },
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mostrar al candidato cuanto quieres que diga que si",
+      "texto_nuevo": "Mostrar al candidato cuánto quieres que diga que sí",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Trata el cierre como tu trabajo tanto como del reclutador: cuando decides hacer una oferta, es tan tuyo como suyo hacer que el candidato sienta que quieres que diga que si.",
+      "texto_nuevo": "Trata el cierre como tu trabajo tanto como del reclutador: cuando decides hacer una oferta, es tan tuyo como suyo hacer que el candidato sienta que quieres que diga que sí.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No crees distancia en el proceso, por ejemplo dejando pasar una semana entre comunicaciones, porque cuanta mas distancia creas, mas probable es que la respuesta sea no.",
+      "texto_nuevo": "No crees distancia en el proceso, por ejemplo dejando pasar una semana entre comunicaciones, porque cuanta más distancia creas, más probable es que la respuesta sea no.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Despues de entregar la oferta, contacta con el candidato cada dos dias para hacerle saber que estas pensando en el y que te hace ilusion darle la bienvenida a tu equipo.",
+      "texto_nuevo": "Después de entregar la oferta, contacta con el candidato cada dos días para hacerle saber que estás pensando en él y que te hace ilusión darle la bienvenida a tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale si le gustaria hablar de cualquier duda que tenga.",
+      "texto_nuevo": "Pregúntale si le gustaría hablar de cualquier duda que tenga.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Quedad a veces a comer o a cenar para hablar del puesto con mas detalle.",
+      "texto_nuevo": "Queda con él a veces para comer o cenar y hablar del puesto con más detalle.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Quedad"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que, cuanto mas veterano sea el candidato, mas critica es tu implicacion en el cierre, porque esa persona probablemente tiene muchas opciones y lo que buscas es que asuma un papel de liderazgo dentro de tu equipo.",
+      "texto_nuevo": "Cuenta con que, cuanto más veterano sea el candidato, más crítica es tu implicación en el cierre, porque esa persona probablemente tiene muchas opciones y lo que buscas es que asuma un papel de liderazgo dentro de tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pinta un cuadro vivo de como ves que esa persona va a tener impacto.",
+      "texto_nuevo": "Pinta un cuadro vivo de cómo ves que esa persona va a tener impacto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ayudale a entender por que el puesto es emocionante y por que ella es la persona perfecta para atacar esos problemas grandes.",
+      "texto_nuevo": "Ayúdale a entender por qué el puesto es emocionante y por qué es la persona perfecta para atacar esos problemas grandes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mostrar_candidato_cuanto_quieres-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un candidato que sabe que le quieres en el equipo, con sus preguntas resueltas y con una imagen viva de como tendria impacto.",
+      "texto_nuevo": "Un candidato que sabe que lo quieres en el equipo, con sus preguntas resueltas y con una imagen viva de cómo tendría impacto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-mostrar_candidato_cuanto_quieres-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una oferta no se cierra sola: cuanta más distancia hay en el proceso, más probable es que la respuesta sea no. Por eso el cierre también es tu trabajo y no solo del reclutador. Mantener el contacto cada dos días, ofrecerte a resolver dudas y hablar del puesto con calma le muestra al candidato que de verdad lo quieres en tu equipo. Cuanto más veterano es, más cuenta tu implicación, porque probablemente tiene muchas opciones; pintarle cómo tendrá impacto y por qué es la persona ideal para esos problemas grandes le da razones para decir que sí.",
+      "texto_nuevo": "Una oferta no se cierra sola: cuanta más distancia hay en el proceso, más probable es que la respuesta sea no. Por eso el cierre también es tu trabajo y no solo del reclutador. Procurar mantener el contacto cada dos días, ofrecerte a resolver dudas y hablar del puesto con calma le muestra al candidato que de verdad lo quieres en tu equipo. Cuanto más veterano es, más cuenta tu implicación, porque probablemente tiene muchas opciones; pintarle cómo tendrá impacto y por qué es la persona ideal para esos problemas grandes le da razones para decir que sí.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 101",
+        "frase": "After I deliver an offer, I try to check in with the candidate every other day to let her know that I am thinking about her and that I’m excited to welcome her to my team."
+      },
+      "decision": "auditoria completa M11 (matiz): Contactar cada dos días es lo que la autora intenta hacer (I try); el resumen lo volvía norma.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-mostrar_candidato_cuanto_quieres-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Después de entregar la oferta, contacta con el candidato cada dos días para hacerle saber que estás pensando en él y que te hace ilusión darle la bienvenida a tu equipo.",
+      "texto_nuevo": "Después de entregar la oferta, procura contactar con el candidato cada dos días para hacerle saber que estás pensando en él y que te emociona darle la bienvenida a tu equipo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 101",
+        "frase": "After I deliver an offer, I try to check in with the candidate every other day to let her know that I am thinking about her and that I’m excited to welcome her to my team."
+      },
+      "decision": "auditoria completa M11 (matiz, regionalismo): Práctica de la autora con matiz (I try) vuelta regla: se devuelve el \"procura\". \"Te hace ilusión\" es forma peninsular: pasa a \"te emociona\".",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-auditoria-mostrar_candidato_cuanto_quieres-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Queda con él a veces para comer o cenar y hablar del puesto con más detalle.",
+      "texto_nuevo": "Sal con él a veces a comer o a cenar para hablar del puesto con más detalle.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Queda con él a veces para comer o cenar"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Quedar con alguien\" por citarse es forma peninsular. Se evita el \"invítalo\" de la propuesta, que añade que pagas tú; el libro dice \"sometimes we’ll do lunch or dinner\" (zhuo_manager/cap_08.md 101).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase3-mostrar_candidato_cuanto_quieres-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Después de entregar la oferta, procura contactar con el candidato cada dos días para hacerle saber que estás pensando en él y que te emociona darle la bienvenida a tu equipo.",
+      "texto_nuevo": "Después de entregar la oferta, procura contactar con el candidato a menudo para hacerle saber que estás pensando en él y que te emociona darle la bienvenida a tu equipo; hay quien lo hace cada dos días.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "zhuo_manager/cap_08.md 101",
+        "frase": "After I deliver an offer, I try to check in with the candidate every other day to let her know that I am thinking about her and that I’m excited to welcome her to my team."
+      },
+      "decision": "auditoria completa M11 (matiz): El \"cada dos días\" es la costumbre de la autora (\"I try to check in\"), no una pauta general; se cuenta como caso.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-mostrar_candidato_cuanto_quieres-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una oferta no se cierra sola: cuanta más distancia hay en el proceso, más probable es que la respuesta sea no. Por eso el cierre también es tu trabajo y no solo del reclutador. Procurar mantener el contacto cada dos días, ofrecerte a resolver dudas y hablar del puesto con calma le muestra al candidato que de verdad lo quieres en tu equipo. Cuanto más veterano es, más cuenta tu implicación, porque probablemente tiene muchas opciones; pintarle cómo tendrá impacto y por qué es la persona ideal para esos problemas grandes le da razones para decir que sí.",
+      "texto_nuevo": "Una oferta no se cierra sola: cuanta más distancia hay en el proceso, más probable es que la respuesta sea no. Por eso el cierre también es tu trabajo y no solo del reclutador. Procurar mantener el contacto a menudo, ofrecerte a resolver dudas y hablar del puesto con calma le muestra al candidato que de verdad lo quieres en tu equipo. Cuanto más veterano es, más cuenta tu implicación, porque probablemente tiene muchas opciones; pintarle cómo tendrá impacto y por qué es la persona ideal para los grandes problemas del puesto le da razones para decir que sí.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "zhuo_manager/cap_08.md 101",
+        "frase": "After I deliver an offer, I try to check in with the candidate every other day to let her know that I am thinking about her and that I’m excited to welcome her to my team."
+      },
+      "decision": "auditoria completa M11 (matiz, coherencia): La costumbre personal de la autora (cada dos días) dada como procedimiento; y \"esos problemas grandes\" sin antecedente en el resumen.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase3-mostrar_candidato_cuanto_quieres-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Ayúdale a entender por qué el puesto es emocionante y por qué es la persona perfecta para atacar esos problemas grandes.",
+      "texto_nuevo": "Ayúdale a entender por qué el puesto es emocionante y por qué es la persona perfecta para atacar los grandes problemas del puesto.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "\"esos problemas grandes\" no tiene antecedente en el nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"esos problemas grandes\" no tiene antecedente en el nodo.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-mostrar_candidato_cuanto_quieres-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Después de entregar la oferta, procura contactar con el candidato a menudo para hacerle saber que estás pensando en él y que te emociona darle la bienvenida a tu equipo; hay quien lo hace cada dos días.",
+      "texto_nuevo": "Después de hacer la oferta, procura contactar con el candidato a menudo para hacerle saber que estás pensando en él y que te emociona darle la bienvenida a tu equipo; hay quien lo hace cada dos días.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "entregar la oferta"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'After I deliver an offer' (cap_08 l. 101); una oferta se hace.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase6-mostrar_candidato_cuanto_quieres-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una oferta no se cierra sola: cuanta más distancia hay en el proceso, más probable es que la respuesta sea no. Por eso el cierre también es tu trabajo y no solo del reclutador. Procurar mantener el contacto a menudo, ofrecerte a resolver dudas y hablar del puesto con calma le muestra al candidato que de verdad lo quieres en tu equipo. Cuanto más veterano es, más cuenta tu implicación, porque probablemente tiene muchas opciones; pintarle cómo tendrá impacto y por qué es la persona ideal para los grandes problemas del puesto le da razones para decir que sí.",
+      "texto_nuevo": "Una oferta no se cierra sola: cuanta más distancia hay en el proceso, más probable es que la respuesta sea no. El cierre también es tu trabajo y no solo del reclutador. Procurar mantener el contacto a menudo, ofrecerte a resolver dudas y hablar del puesto con calma le muestra al candidato que de verdad lo quieres en tu equipo. Cuanto más veterano es, más cuenta tu implicación, porque probablemente tiene muchas opciones; pintarle cómo tendrá impacto y por qué es la persona ideal para los grandes problemas del puesto le da razones para decir que sí.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 99",
+        "frase": "When you decide to extend an offer, it's as much your job as it is the recruiter's to make the candidate feel that you want her to say yes. The more distance you create in the process—for example, letting a week lapse between communications—the more likely the answer is no."
+      },
+      "decision": "doble lectura M11 (sexto pase) (invencion): El libro pone juntas las dos ideas (el cierre es tan tuyo como del reclutador; cuanta más distancia, más probable el no) sin hacer de la segunda la razón de la primera; la razón de que sea tu trabajo la da en otra sección (eres quien responde del equipo). Sale 'Por eso'.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Muestra tus Ganas al Candidato"
+}

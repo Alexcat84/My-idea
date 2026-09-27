@@ -1,0 +1,239 @@
+{
+  "node_id": "comprobar_equipo_ejecuta_bien",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Comprobar con estas señales si tu equipo ejecuta bien",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Ejecutar bien es elegir una dirección razonable, moverse rápido para aprender qué funciona y qué no, y ajustar hasta llegar al resultado; la velocidad importa: un corredor rápido puede equivocarse de giro y aun así ganar a uno lento que conoce el camino más corto. Estas señales te dicen si tu equipo ejecuta bien: prioridades claras, un proceso de decisión eficiente en el que todos confían, rapidez, compromiso tras decidir, dueños con fecha y aprendizaje de cada fallo. Los errores más frustrantes son los que no te enseñan nada porque no está claro si falló la estrategia o la ejecución.",
+  "notas_extraccion": "Es una lista de comprobacion y no una tactica, y entra como nodo porque cada senal es observable y se puede contestar con un si o un no sobre un equipo concreto. El inventario es entero del libro, nombrado senal a senal, que es la condicion de D.27. El nodo se queda con las senales y no ensancha a que hacer cuando una falla, porque el libro no lo dice ahi. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantas senales hay que cumplir, ni quien hace la comprobacion, ni cada cuanto.",
+  "pasos_accionables": [
+    "Comprueba si las listas de proyectos o de tareas están priorizadas de más a menos importante, y si lo de arriba recibe más tiempo y más atención.",
+    "Comprueba si hay un proceso eficiente de toma de decisiones que todo el mundo entiende y en el que confía.",
+    "Comprueba si el equipo se mueve rápido, sobre todo con las decisiones reversibles.",
+    "Comprueba si, después de tomada una decisión, todo el mundo se compromete, incluidos los que discrepaban, y se mueve deprisa para hacerla realidad, sin cuestionarla otra vez, sin frenarla en silencio y sin arrastrar los pies, mientras no aparezca información nueva.",
+    "Comprueba si, cuando aparece información nueva importante, hay un proceso rápido para examinar si los planes actuales deben cambiar y cómo.",
+    "Comprueba si cada tarea tiene un quién y un para cuándo, y si los responsables fijan compromisos y los cumplen de forma fiable.",
+    "Comprueba si el equipo es resistente y busca aprender constantemente, de manera que cada fracaso lo hace más fuerte porque no comete dos veces el mismo error."
+  ],
+  "entregable_esperado": "Una lectura de cuáles de las señales cumple tu equipo y cuáles no.",
+  "nodos_previos": [
+    "ejecutar_ciclos_cortos_aprender"
+  ],
+  "nodos_siguientes": [
+    "hacer_repaso_posterior_proyecto"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres saber si el problema de tu equipo es de estrategia o de ejecución, que es la duda que hace más frustrante un error."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Ejecutar bien es elegir una dirección razonable, moverse rápido para aprender qué funciona y qué no, y ajustar hasta llegar al resultado; la velocidad importa: un corredor rápido puede equivocarse de giro y aun así ganar a uno lento que conoce el camino más corto. Estas señales te dicen si tu equipo ejecuta bien: prioridades claras, un proceso de decisión eficiente en el que todos confían, rapidez, compromiso tras decidir, dueños con fecha y aprendizaje de cada fallo. Los errores más frustrantes son los que no te enseñan nada porque no está claro si falló la estrategia o la ejecución.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "153-173"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): 'Al contestarlas separas los fallos de ejecución de los de estrategia, y así cada error te enseña algo' es un efecto que L153-173 no dan, y L157 'can take a few wrong turns and still beat' había perdido el 'puede'. La propuesta devuelve el matiz, presenta las señales como L159 ('ways to tell if your team is executing well') y deja L153 como lo que dice, sin atribuirle a las señales un resultado.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)"
+    },
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comprobar si tu equipo ejecuta bien con las senales que el libro da",
+      "texto_nuevo": "Comprobar con estas señales si tu equipo ejecuta bien",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con las senales que el libro da"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba si las listas de proyectos o de tareas estan priorizadas de mas a menos importante, y si lo de arriba recibe mas tiempo y mas atencion.",
+      "texto_nuevo": "Comprueba si las listas de proyectos o de tareas están priorizadas de más a menos importante, y si lo de arriba recibe más tiempo y más atención.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba si hay un proceso eficiente de toma de decisiones que todo el mundo entiende y en el que confia.",
+      "texto_nuevo": "Comprueba si hay un proceso eficiente de toma de decisiones que todo el mundo entiende y en el que confía.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba si el equipo se mueve rapido, sobre todo con las decisiones reversibles.",
+      "texto_nuevo": "Comprueba si el equipo se mueve rápido, sobre todo con las decisiones reversibles.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comprueba si despues de tomada una decision todo el mundo se compromete, incluidos los que discrepaban, y se mueve deprisa para hacerla realidad, sin cuestionarla otra vez, sin vetos de bolsillo y sin arrastrar los pies, mientras no aparezca informacion nueva.",
+      "texto_nuevo": "Comprueba si, después de tomada una decisión, todo el mundo se compromete, incluidos los que discrepaban, y se mueve deprisa para hacerla realidad, sin cuestionarla otra vez, sin frenarla en silencio y sin arrastrar los pies, mientras no aparezca información nueva.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "sin vetos de bolsillo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba si, cuando aparece informacion nueva importante, hay un proceso rapido para examinar si los planes actuales deben cambiar y como.",
+      "texto_nuevo": "Comprueba si, cuando aparece información nueva importante, hay un proceso rápido para examinar si los planes actuales deben cambiar y cómo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba si cada tarea tiene un quien y un para cuando, y si los responsables fijan compromisos y los cumplen de forma fiable.",
+      "texto_nuevo": "Comprueba si cada tarea tiene un quién y un para cuándo, y si los responsables fijan compromisos y los cumplen de forma fiable.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba si el equipo es resistente y busca aprender constantemente, de manera que cada fracaso le hace mas fuerte porque no comete dos veces el mismo error.",
+      "texto_nuevo": "Comprueba si el equipo es resistente y busca aprender constantemente, de manera que cada fracaso lo hace más fuerte porque no comete dos veces el mismo error.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lectura de cuales de las senales cumple tu equipo y cuales no.",
+      "texto_nuevo": "Una lectura de cuáles de las señales cumple tu equipo y cuáles no.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_equipo_ejecuta_bien-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando quieres saber si el problema de tu equipo es de estrategia o de ejecucion, que es la duda que segun el libro hace mas frustrante un error.",
+      "texto_nuevo": "Cuando quieres saber si el problema de tu equipo es de estrategia o de ejecución, que es la duda que hace más frustrante un error.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "segun el libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Comprueba si tu Equipo Ejecuta Bien",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "node_id": "reconocer_decision_dificil_valores",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Reconocer a la persona a tu cargo que hace algo difícil en el espíritu de los valores del equipo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Hablar de valores y dar ejemplo no basta: hace falta que el entorno premie a quien se comporta según los valores del equipo. Por eso, cuando una persona a tu cargo hace algo difícil en el espíritu de esos valores, como renunciar a una venta lucrativa por reparos éticos, despedir a quien rinde de maravilla pero crea un ambiente de trabajo tóxico, o admitir abiertamente un error, toca reconocérselo, admitir que fue difícil y darle las gracias por hacer lo correcto. Así es como el entorno premia esa conducta.",
+  "notas_extraccion": "Es el hermano de cara positiva del nodo anterior, y los dos cuelgan de la misma linea de los incentivos, la que dice que el entorno premia a quien se comporta segun los valores y pide cuentas a quien no. Es el nodo mas corto que escribo en esta vuelta y va marcado como discutible por eso: el libro lo escribe en un solo parrafo, con tres situaciones nombradas y tres actos nombrados, y no da nada mas. Lo que el libro NO dice, y por eso no esta escrito aqui, es si el reconocimiento es publico o privado, ni cuando se hace, ni si se registra en algun sitio.",
+  "pasos_accionables": [
+    "Reconoce a la persona a tu cargo cuando haga algo difícil que va en el espíritu de los valores de tu equipo.",
+    "Ten delante tres ejemplos de eso: dejar pasar un trato de venta lucrativo por reparos éticos, despedir a alguien que rinde de maravilla y está creando un ambiente de trabajo tóxico, o admitir abiertamente cuando ha cometido un error.",
+    "Admítele que fue difícil.",
+    "Dale las gracias por haber hecho lo correcto."
+  ],
+  "entregable_esperado": "La persona a tu cargo reconocida, con lo difícil que fue admitido en voz alta y las gracias dadas por haber hecho lo correcto.",
+  "nodos_previos": [
+    "revisar_incentivos_trampas_equipo"
+  ],
+  "nodos_siguientes": [
+    "inventar_tradiciones_celebrar_valores"
+  ],
+  "condiciones_activacion": [
+    "Cuando una persona a tu cargo hace algo difícil que va en el espíritu de los valores de tu equipo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-reconocer_decision_dificil_valores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Los valores de un equipo se sostienen con lo que el entorno premia: si la conducta correcta pasa sin que nadie la note, la gente aprende que no cuenta. Cuando alguien hace algo difícil por respetar esos valores, como renunciar a una venta lucrativa por reparos éticos, despedir a quien rinde de maravilla pero crea un ambiente tóxico, o admitir abiertamente un error, paga un coste real. Reconocerlo, admitir que fue difícil y darle las gracias por hacer lo correcto hace visible que ese coste vale la pena y deja claro qué conducta se valora de verdad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_11.md",
+          "lineas": "153-157"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)"
+    },
+    {
+      "id": "m11-limpieza-reconocer_decision_dificil_valores-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconocer al reporte que hace algo dificil en el espiritu de los valores del equipo",
+      "texto_nuevo": "Reconocer a la persona a cargo que hace algo difícil en el espíritu de los valores del equipo",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "reporte"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_decision_dificil_valores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce a tu reporte cuando haga algo dificil que va en el espiritu de los valores de tu equipo.",
+      "texto_nuevo": "Reconoce a tu persona a cargo cuando haga algo difícil que va en el espíritu de los valores de tu equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tu reporte"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_decision_dificil_valores-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante los tres casos que el libro nombra como ejemplos de eso: dejar pasar un trato de venta lucrativo por reparos eticos, despedir a alguien que rinde de maravilla y esta creando un ambiente de trabajo toxico, o admitir abiertamente cuando ha cometido un error.",
+      "texto_nuevo": "Ten delante tres ejemplos de eso: dejar pasar un trato de venta lucrativo por reparos éticos, despedir a alguien que rinde de maravilla y está creando un ambiente de trabajo tóxico, o admitir abiertamente cuando ha cometido un error.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los tres casos que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_decision_dificil_valores-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Admitele que fue dificil.",
+      "texto_nuevo": "Admítele que fue difícil.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_decision_dificil_valores-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El reporte reconocido, con lo dificil que fue admitido en voz alta y las gracias dadas por haber hecho lo correcto.",
+      "texto_nuevo": "La persona a cargo reconocida, con lo difícil que fue admitido en voz alta y las gracias dadas por haber hecho lo correcto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El reporte reconocido"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reconocer_decision_dificil_valores-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando un reporte tuyo hace algo dificil que va en el espiritu de los valores de tu equipo.",
+      "texto_nuevo": "Cuando una persona a tu cargo hace algo difícil que va en el espíritu de los valores de tu equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "un reporte tuyo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-reconocer_decision_dificil_valores-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los valores de un equipo se sostienen con lo que el entorno premia: si la conducta correcta pasa sin que nadie la note, la gente aprende que no cuenta. Cuando alguien hace algo difícil por respetar esos valores, como renunciar a una venta lucrativa por reparos éticos, despedir a quien rinde de maravilla pero crea un ambiente tóxico, o admitir abiertamente un error, paga un coste real. Reconocerlo, admitir que fue difícil y darle las gracias por hacer lo correcto hace visible que ese coste vale la pena y deja claro qué conducta se valora de verdad.",
+      "texto_nuevo": "Hablar de valores y dar ejemplo no basta: hace falta que el entorno premie a quien se comporta según los valores del equipo. Por eso, cuando una persona a tu cargo hace algo difícil en el espíritu de esos valores, como renunciar a una venta lucrativa por reparos éticos, despedir a quien rinde de maravilla pero crea un ambiente de trabajo tóxico, o admitir abiertamente un error, toca reconocérselo, admitir que fue difícil y darle las gracias por hacer lo correcto. Así es como el entorno premia esa conducta.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_11.md 127",
+        "frase": "The final piece is ensuring that your environment rewards people who behave according to your team’s values and holds people accountable when they don’t."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro no dice que la gente aprenda que la conducta correcta no cuenta, ni que se pague un coste que se haga visible que vale la pena; dice que la pieza final es que el entorno premie a quien se comporta segun los valores. Se reescribe desde ahi sin la referencia 'la pieza final' de la propuesta, que no tiene antecedente en el nodo.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-muestra-final3-reconocer_decision_dificil_valores-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Reconocer a la persona a cargo que hace algo difícil en el espíritu de los valores del equipo",
+      "texto_nuevo": "Reconocer a la persona a tu cargo que hace algo difícil en el espíritu de los valores del equipo",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'La persona a cargo' sin 'tu' se lee como la persona que manda, lo contrario de quien depende de ti; la condición y el resumen dicen 'una persona a tu cargo'."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'La persona a cargo' sin 'tu' se lee como la persona que manda, lo contrario de quien depende de ti; la condición y el resumen dicen 'una persona a tu cargo'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final3-reconocer_decision_dificil_valores-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "La persona a cargo reconocida, con lo difícil que fue admitido en voz alta y las gracias dadas por haber hecho lo correcto.",
+      "texto_nuevo": "La persona a tu cargo reconocida, con lo difícil que fue admitido en voz alta y las gracias dadas por haber hecho lo correcto.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'La persona a cargo' sin 'tu' se lee como la persona que manda, lo contrario de quien depende de ti; la condición y el resumen dicen 'una persona a tu cargo'."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'La persona a cargo' sin 'tu' se lee como la persona que manda, lo contrario de quien depende de ti; la condición y el resumen dicen 'una persona a tu cargo'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-reconocer_decision_dificil_valores-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Reconoce a tu persona a cargo cuando haga algo difícil que va en el espíritu de los valores de tu equipo.",
+      "texto_nuevo": "Reconoce a la persona a tu cargo cuando haga algo difícil que va en el espíritu de los valores de tu equipo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Decisión del orquestador: \"tu persona a cargo\" pasa a la forma fijada \"la persona a tu cargo\", como ya dicen el título, el entregable y la condición del nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): Decisión del orquestador: \"tu persona a cargo\" pasa a la forma fijada \"la persona a tu cargo\", como ya dicen el título, el entregable y la condición del nodo.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Reconoce las Decisiones Difíciles y Valiosas"
+}

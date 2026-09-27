@@ -1,0 +1,342 @@
+{
+  "node_id": "pedir_referencias_red_personal",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Pedir referencias a tus redes profesional y personal",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "La gente con la que tratas cada día es la fuente de talento más poderosa que vas a encontrar, y las personas talentosas conocen a otras personas talentosas y casi siempre se alegran de pasarte sus nombres. Pedir referencias a tus redes personales y profesionales es la forma más eficaz de encontrar candidatos que sean jugadores A, aunque pueda dar miedo y parecer que lleva mucho tiempo. Aquí importa mucho menos innovar que tener proceso y disciplina: una pregunta sencilla hecha a tus diez nombres iniciales puede darte con facilidad muchos más y abrirte otras redes.",
+  "notas_extraccion": "Es el punto 1 del recuadro How to Source y el metodo que el libro pone por delante de todos los demas. Los lideres del sector entrevistados no hablaban con una sola voz en todos los temas, pero en el de abastecerse de talento nuevo por referencias fueron casi unanimes. La razon de fondo que da el libro: la gente que interactua contigo todos los dias es la fuente de talento mas poderosa que vas a encontrar nunca, y la gente talentosa conoce a gente talentosa y casi siempre esta encantada de pasar los nombres de unos a otros. La advertencia con la que el capitulo lo presenta: este enfoque puede dar miedo y llevar tiempo, y es aun asi la forma mas eficaz que existe de encontrar jugadores A potenciales, y es un caso donde la innovacion importa mucho menos que el proceso y la disciplina. El caso que el libro pone con su nombre es el de Patrick Ryan, que hizo crecer Aon Corporation desde una empresa naciente en 1964 hasta una compañia de 13.000 millones de dolares: dice que no es mas listo que el de al lado y que lo unico que ha hecho distinto de la mayoria es estar constantemente a la caza de gente talentosa para su empresa. Se fijo el objetivo de reclutar personalmente a treinta personas al año para Aon y pidio a sus directivos que hicieran lo mismo. Cuando conoce a alguien nuevo le hace siempre la misma pregunta simple y poderosa, captura los nombres en una lista, se ocupa de llamar a unos pocos nuevos cada semana y mantiene el contacto con los mas prometedores. Asi llego a Greg Case, al que ficho pese a que la gente decia que a sus cuarenta y dos años no tenia experiencia de consejero delegado, y a su asesor juridico Cameron Findlay.",
+  "pasos_accionables": [
+    "Haz una lista de las diez personas más talentosas que conoces. Casi con seguridad puedes identificarlas de memoria.",
+    "Comprométete a hablar con al menos una de ellas por semana durante las diez semanas siguientes.",
+    "Al final de cada conversación haz la pregunta: ¿quiénes son las personas más talentosas que conoces que yo debería contratar?",
+    "Apunta esos nombres en la lista y sigue construyéndola, y sigue hablando con al menos una persona por semana.",
+    "No te pares en tu lista: mete también en la cacería a tu red más amplia de contactos de negocio. Pregunta a tus clientes por los nombres de los mejores vendedores que los visitan.",
+    "Pregunta a tus socios de negocio quiénes creen que son los responsables de desarrollo de negocio más eficaces.",
+    "Haz lo mismo con tus proveedores para identificar a sus mejores agentes de compras.",
+    "Entra en organizaciones profesionales y pregunta a la gente que conoces en sus eventos."
+  ],
+  "entregable_esperado": "Una lista de talento en crecimiento continuo, alimentada a razón de al menos una conversación por semana, que puede pasar de las diez personas iniciales a otros cincuenta o cien nombres.",
+  "nodos_previos": [
+    "abastecer_flujo_candidatos"
+  ],
+  "nodos_siguientes": [
+    "crear_sistema_captura_seguimiento_candidatos"
+  ],
+  "condiciones_activacion": [
+    "Siempre, y no solo cuando hay una plaza abierta. De todas las maneras de conseguir candidatos, la primera es pedir referencias a tus redes personal y profesional."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-pedir_referencias_red_personal-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La gente con la que tratas cada día es la fuente de talento más poderosa que vas a encontrar, y las personas talentosas conocen a otras personas talentosas y casi siempre se alegran de pasarte sus nombres. Pedir referencias a tus redes personales y profesionales es la forma más eficaz de encontrar candidatos de primer nivel, aunque pueda dar miedo y parecer que lleva mucho tiempo. Aquí importa mucho menos innovar que tener proceso y disciplina: una pregunta sencilla hecha a tus diez nombres iniciales puede darte con facilidad muchos más y abrirte otras redes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "301-317"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La 301 dice 'may feel scary and timeconsuming' y la 315 'can easily generate'; el actual los da como hecho. La propuesta devuelve ambos matices, conserva la razón de la 313 (la gente talentosa conoce a gente talentosa y casi siempre pasa sus nombres) y quita el 'Por eso' que enlazaba lo que la línea no enlaza.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)"
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_red_personal-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz una lista de las diez personas mas talentosas que conoces. El libro dice que casi con seguridad puedes identificarlas de memoria.",
+      "texto_nuevo": "Haz una lista de las diez personas más talentosas que conoces. Casi con seguridad puedes identificarlas de memoria.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_red_personal-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprometete a hablar con al menos una de ellas por semana durante las diez semanas siguientes.",
+      "texto_nuevo": "Comprométete a hablar con al menos una de ellas por semana durante las diez semanas siguientes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_red_personal-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al final de cada conversacion haz la pregunta: quienes son las personas mas talentosas que conoces que yo deberia contratar.",
+      "texto_nuevo": "Al final de cada conversación haz la pregunta: ¿quiénes son las personas más talentosas que conoces que yo debería contratar?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_red_personal-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Captura esos nombres en la lista y sigue construyendola, y sigue hablando con al menos una persona por semana.",
+      "texto_nuevo": "Captura esos nombres en la lista y sigue construyéndola, y sigue hablando con al menos una persona por semana.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_red_personal-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No te pares en tu lista: mete tambien a tus contactos de negocio mas amplios en la caceria. Pregunta a tus clientes por los nombres de los mejores vendedores que los visitan.",
+      "texto_nuevo": "No te pares en tu lista: mete también a tus contactos de negocio más amplios en la cacería. Pregunta a tus clientes por los nombres de los mejores vendedores que los visitan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_red_personal-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a tus socios de negocio quienes creen que son los desarrolladores de negocio mas eficaces.",
+      "texto_nuevo": "Pregunta a tus socios de negocio quiénes creen que son los desarrolladores de negocio más eficaces.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_red_personal-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz lo mismo con tus proveedores para identificar a sus agentes de compras mas fuertes.",
+      "texto_nuevo": "Haz lo mismo con tus proveedores para identificar a sus agentes de compras más fuertes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_red_personal-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una lista de talento en crecimiento continuo, alimentada a razon de al menos una conversacion por semana, que segun el libro pasa de las diez personas iniciales a otros cincuenta o cien nombres.",
+      "texto_nuevo": "Una lista de talento en crecimiento continuo, alimentada a razón de al menos una conversación por semana, que pasa de las diez personas iniciales a otros cincuenta o cien nombres.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "segun el libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_red_personal-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Siempre, y no solo cuando hay una plaza abierta. Es el punto 1 del recuadro de abastecimiento y el metodo que el libro pone como numero uno de todos: de todas las maneras de abastecer candidatos, la primera es pedir referencias a tus redes personal y profesional.",
+      "texto_nuevo": "Siempre, y no solo cuando hay una plaza abierta. De todas las maneras de conseguir candidatos, la primera es pedir referencias a tus redes personal y profesional.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Es el punto 1 del recuadro de abastecimiento y el metodo que el libro pone como numero uno de todos",
+          "abastecer candidatos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-pedir_referencias_red_personal-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "La gente con la que tratas cada día es la fuente de talento más poderosa que vas a encontrar, y las personas talentosas conocen a otras personas talentosas y casi siempre se alegran de pasarte sus nombres. Pedir referencias a tus redes personales y profesionales es la forma más eficaz de encontrar candidatos de primer nivel, aunque pueda dar miedo y parecer que lleva mucho tiempo. Aquí importa mucho menos innovar que tener proceso y disciplina: una pregunta sencilla hecha a tus diez nombres iniciales puede darte con facilidad muchos más y abrirte otras redes.",
+      "texto_nuevo": "La gente con la que tratas cada día es la fuente de talento más poderosa que vas a encontrar, y las personas talentosas conocen a otras personas talentosas y casi siempre se alegran de pasarte sus nombres. Pedir referencias a tus redes personales y profesionales es la forma más eficaz de encontrar candidatos que sean jugadores A, aunque pueda dar miedo y parecer que lleva mucho tiempo. Aquí importa mucho menos innovar que tener proceso y disciplina: una pregunta sencilla hecha a tus diez nombres iniciales puede darte con facilidad muchos más y abrirte otras redes.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "de primer nivel"
+        ]
+      },
+      "decision": "pase de glosario (primer_nivel): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-pedir_referencias_red_personal-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Captura esos nombres en la lista y sigue construyéndola, y sigue hablando con al menos una persona por semana.",
+      "texto_nuevo": "Apunta esos nombres en la lista y sigue construyéndola, y sigue hablando con al menos una persona por semana.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Captura"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Capturar' por anotar está en la lista de calcos.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-pedir_referencias_red_personal-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una lista de talento en crecimiento continuo, alimentada a razón de al menos una conversación por semana, que pasa de las diez personas iniciales a otros cincuenta o cien nombres.",
+      "texto_nuevo": "Una lista de talento en crecimiento continuo, alimentada a razón de al menos una conversación por semana, que puede pasar de las diez personas iniciales a otros cincuenta o cien nombres.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_03.md 315",
+        "frase": "can easily generate another fifty to one hundred names."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que la pregunta 'can easily generate' otros cincuenta a cien nombres; el entregable lo daba como resultado seguro.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase4-pedir_referencias_red_personal-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No te pares en tu lista: mete también a tus contactos de negocio más amplios en la cacería. Pregunta a tus clientes por los nombres de los mejores vendedores que los visitan.",
+      "texto_nuevo": "No te pares en tu lista: mete también en la cacería a tu red más amplia de contactos de negocio. Pregunta a tus clientes por los nombres de los mejores vendedores que los visitan.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "a tus contactos de negocio más amplios en la cacería"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'your broader business contacts' (smart_who/cap_03.md l. 317): en español los contactos no son 'amplios'; lo amplio es la red.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-pedir_referencias_red_personal-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregunta a tus socios de negocio quiénes creen que son los desarrolladores de negocio más eficaces.",
+      "texto_nuevo": "Pregunta a tus socios de negocio quiénes creen que son los responsables de desarrollo de negocio más eficaces.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "los desarrolladores de negocio"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'business developers' (smart_who/cap_03.md l. 317): 'desarrollador' se lee como programador; el puesto es el de desarrollo de negocio.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-pedir_referencias_red_personal-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz lo mismo con tus proveedores para identificar a sus agentes de compras más fuertes.",
+      "texto_nuevo": "Haz lo mismo con tus proveedores para identificar a sus mejores agentes de compras.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "agentes de compras más fuertes"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'strongest purchasing agents' (smart_who/cap_03.md l. 317): 'fuerte' por competente.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Pide Referencias a tus Redes",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

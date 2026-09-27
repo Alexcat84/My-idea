@@ -1,0 +1,395 @@
+{
+  "node_id": "probar_banquillo_vacaciones_largas",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Probar la fuerza de tu banquillo con la prueba de las vacaciones largas",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Un equipo que funciona sin ti durante meses es una de las señales más fuertes de buen liderazgo: tus lugartenientes pueden tomar el mando y no eres un punto único de fallo. Preguntar a cada líder cuánto tendría que intervenir su jefe si se fuera unas largas vacaciones mide eso de forma directa: poco significa buen banquillo, mucho señala una capa a la que le vendría bien un refuerzo. No te quita valor, porque hasta los mejores pueden mejorar y tú sigues multiplicando a tu gente. Y un banquillo fuerte te libera para el siguiente problema grande que tu equipo puede asumir.",
+  "notas_extraccion": "Es la cuarta leccion de contratar a escala y la unica que mide en vez de contratar: su entregable es un diagnostico del equipo actual, no una incorporacion. El libro da la pregunta literal y da tambien las dos lecturas de la respuesta, que es lo que la hace ejecutable y no una reflexion. La objecion del paso 7 va dentro porque el libro la plantea y la contesta, y sin ella el nodo dejaria abierta la duda que su propio consejo provoca. El caso del fundador de Facebook va dentro como ejemplo nombrado (manual seccion 3.5). Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se pasa la prueba, ni que se hace en concreto para reforzar la capa siguiente cuando la respuesta sale mal.",
+  "pasos_accionables": [
+    "Plantea a cada líder de tu equipo el escenario de la prueba de las vacaciones largas, mejor que la versión de que te atropelle un autobús, que resulta morbosa.",
+    "Hazle la pregunta: si te fueras a caminar por unas montañas lejanas o a tomar el sol en una isla remota durante unos meses, ¿cuánto tendría que meterse tu propio jefe para asegurar que todo sigue funcionando bien?",
+    "Lee la respuesta «no mucho» como lo que es: enhorabuena, ese líder tiene un gran banquillo.",
+    "Lee la respuesta «mi jefe tendría que hacer bastante» como la señal de que a la siguiente capa de liderazgo de ese líder le vendría bien un refuerzo.",
+    "Entiende qué significa tener un gran banquillo: que tus lugartenientes podrían tomar el mando por ti si te sacan de la oficina inesperadamente, que no eres un punto único de fallo, y que si no estás no se declaran incendios, no estalla el caos y el trabajo no se para.",
+    "Trata eso como una de las señales más fuertes de liderazgo sobresaliente, porque significa que el equipo que has construido puede llevar el barco y prosperar aunque tú no estés al timón.",
+    "Si alguien te objeta que un equipo que tiene éxito sin ti significa que tú no aportas valor, pregúntate si incluso a los mejores líderes se les puede entrenar para rendir todavía mejor. La respuesta es que sí, rotundamente, así que sigue viendo tu trabajo como el de un multiplicador para tu gente.",
+    "Usa lo que un banquillo fuerte te libera para abordar el siguiente gran reto que tengas por delante. Cuando una red social hoy enorme todavía se llevaba desde un cuarto de residencia universitaria, su fundador escribía personalmente la mayor parte del código del servicio, y contratar a sus primeros ingenieros no lo dejó obsoleto, solo le dejó centrar su atención en otras cosas: extender el servicio a otras universidades, desarrollar funciones nuevas y contratar a otros líderes que trabajaran con él.",
+    "Haz crecer tus ambiciones con la capacidad del grupo, porque el trabajo que hace tu equipo no debería ser estático, y pregúntate cuál es el siguiente problema grande que tu equipo puede asumir y cómo puedes ayudar a que ocurra."
+  ],
+  "entregable_esperado": "Una lectura de si cada líder es un punto único de fallo, y una idea de a qué capa de liderazgo le vendría bien un refuerzo.",
+  "nodos_previos": [
+    "pasar_direccion_directa_indirecta",
+    "reemplazarse_trabajo_propio"
+  ],
+  "nodos_siguientes": [
+    "aplicar_metodo_promocion_sucesion"
+  ],
+  "condiciones_activacion": [
+    "Con cada líder de tu equipo, y antes de plantearte si puedes atacar el siguiente problema grande."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un equipo que funciona sin ti durante meses es una de las señales más fuertes de buen liderazgo: tus lugartenientes pueden tomar el mando y no eres un punto único de fallo. Preguntar a cada líder cuánto tendría que intervenir su jefe si se fuera unas largas vacaciones mide eso de forma directa: poco significa buen banquillo, mucho señala la capa que hay que reforzar. No te quita valor, porque hasta los mejores pueden mejorar y tú sigues multiplicando a tu gente. Y un banquillo fuerte te libera para el siguiente problema grande que tu equipo puede asumir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "275-287"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)"
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Plantea a cada lider de tu equipo el escenario que la autora llama la prueba de las vacaciones largas, y que ella prefiere a la version de que te atropelle un autobus, que le parece morbosa.",
+      "texto_nuevo": "Plantea a cada líder de tu equipo el escenario de la prueba de las vacaciones largas, mejor que la versión de que te atropelle un autobús, que resulta morbosa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que la autora llama",
+          "que ella prefiere",
+          "que le parece morbosa"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hazle la pregunta: si te fueras a caminar por unas montanias lejanas o a tomar el sol en una isla remota durante unos meses, cuanto tendria que meterse tu propio jefe para asegurar que todo sigue funcionando bien?",
+      "texto_nuevo": "Hazle la pregunta: si te fueras a caminar por unas montañas lejanas o a tomar el sol en una isla remota durante unos meses, ¿cuánto tendría que meterse tu propio jefe para asegurar que todo sigue funcionando bien?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lee la respuesta no mucho como lo que es: enhorabuena, tienes un gran banquillo.",
+      "texto_nuevo": "Lee la respuesta «no mucho» como lo que es: enhorabuena, tienes un gran banquillo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lee la respuesta mi jefe tendria que hacer bastante como la senal de que tu siguiente capa de liderazgo necesita refuerzo.",
+      "texto_nuevo": "Lee la respuesta «mi jefe tendría que hacer bastante» como la señal de que tu siguiente capa de liderazgo necesita refuerzo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Entiende que significa tener un gran banquillo: que tus lugartenientes podrian tomar el mando por ti si te sacan de la oficina inesperadamente, que no eres un punto unico de fallo, y que si no estas no se declaran incendios, no estalla el caos y el trabajo no se para.",
+      "texto_nuevo": "Entiende qué significa tener un gran banquillo: que tus lugartenientes podrían tomar el mando por ti si te sacan de la oficina inesperadamente, que no eres un punto único de fallo, y que si no estás no se declaran incendios, no estalla el caos y el trabajo no se para.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Trata eso como una de las senales mas fuertes de liderazgo sobresaliente, porque significa que el equipo que has construido puede llevar el barco y prosperar aunque tu no estes al timon.",
+      "texto_nuevo": "Trata eso como una de las señales más fuertes de liderazgo sobresaliente, porque significa que el equipo que has construido puede llevar el barco y prosperar aunque tú no estés al timón.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si alguien te objeta que un equipo que tiene exito sin ti significa que tu no aportas valor, contesta lo que el libro contesta: preguntate si incluso a los mejores lideres se les puede entrenar para rendir todavia mejor. La respuesta es que si, rotundamente, asi que sigues viendo tu trabajo como el de un multiplicador para tu gente.",
+      "texto_nuevo": "Si alguien te objeta que un equipo que tiene éxito sin ti significa que tú no aportas valor, contéstale así: pregúntate si incluso a los mejores líderes se les puede entrenar para rendir todavía mejor. La respuesta es que sí, rotundamente, así que sigues viendo tu trabajo como el de un multiplicador para tu gente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "contesta lo que el libro contesta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa lo que un banquillo fuerte te libera para lo que el libro dice que sirve: atacar la siguiente colina grande del horizonte. Cuando Facebook todavia se llevaba desde una habitacion de residencia de Harvard, su fundador escribia personalmente la mayor parte del codigo del servicio, y contratar a sus primeros ingenieros no le dejo obsoleto, solo le dejo centrar su atencion en otras cosas, extender el servicio a otras universidades, desarrollar funciones nuevas y contratar a otros lideres que trabajaran con el.",
+      "texto_nuevo": "Usa lo que un banquillo fuerte te libera para atacar la siguiente colina grande del horizonte. Cuando una red social hoy enorme todavía se llevaba desde un cuarto de residencia universitaria, su fundador escribía personalmente la mayor parte del código del servicio, y contratar a sus primeros ingenieros no lo dejó obsoleto, solo le dejó centrar su atención en otras cosas: extender el servicio a otras universidades, desarrollar funciones nuevas y contratar a otros líderes que trabajaran con él.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "para lo que el libro dice que sirve",
+          "Facebook",
+          "habitacion de residencia de Harvard"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz crecer tus ambiciones con la capacidad del grupo, porque el trabajo que hace tu equipo no deberia ser estatico, y preguntate cual es el siguiente problema grande que tu equipo puede asumir y como puedes ayudar a que ocurra.",
+      "texto_nuevo": "Haz crecer tus ambiciones con la capacidad del grupo, porque el trabajo que hace tu equipo no debería ser estático, y pregúntate cuál es el siguiente problema grande que tu equipo puede asumir y cómo puedes ayudar a que ocurra.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lectura de si cada lider es un punto unico de fallo, y una idea de que capa de liderazgo hay que reforzar.",
+      "texto_nuevo": "Una lectura de si cada líder es un punto único de fallo, y una idea de qué capa de liderazgo hay que reforzar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_banquillo_vacaciones_largas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Con cada lider de tu equipo, y antes de plantearte si puedes atacar el siguiente problema grande.",
+      "texto_nuevo": "Con cada líder de tu equipo, y antes de plantearte si puedes atacar el siguiente problema grande.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-probar_banquillo_vacaciones_largas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lee la respuesta «mi jefe tendría que hacer bastante» como la señal de que tu siguiente capa de liderazgo necesita refuerzo.",
+      "texto_nuevo": "Lee la respuesta «mi jefe tendría que hacer bastante» como la señal de que a tu siguiente capa de liderazgo le vendría bien un refuerzo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "zhuo_manager/cap_08.md 277",
+        "frase": "If the answer is, “Hmm, my manager would need to do a lot,” then that’s a sign your next layer of leadership could use some shoring up."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que a esa capa le vendría bien un refuerzo, no que lo necesite; la propuesta del auditor era agramatical y se rehace.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-probar_banquillo_vacaciones_largas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Lee la respuesta «no mucho» como lo que es: enhorabuena, tienes un gran banquillo.",
+      "texto_nuevo": "Lee la respuesta «no mucho» como lo que es: enhorabuena, ese líder tiene un gran banquillo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "El banquillo que mide la respuesta es el del líder que contesta (en el libro el 'you' es ese líder), no el tuyo, que eres quien pregunta."
+      },
+      "decision": "auditoria completa M11 (coherencia): El banquillo que mide la respuesta es el del líder que contesta (en el libro el 'you' es ese líder), no el tuyo, que eres quien pregunta.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-probar_banquillo_vacaciones_largas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Lee la respuesta «mi jefe tendría que hacer bastante» como la señal de que a tu siguiente capa de liderazgo le vendría bien un refuerzo.",
+      "texto_nuevo": "Lee la respuesta «mi jefe tendría que hacer bastante» como la señal de que a la siguiente capa de liderazgo de ese líder le vendría bien un refuerzo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "La capa que hay que reforzar es la que está por debajo del líder que responde; 'tu siguiente capa' serían esos mismos líderes."
+      },
+      "decision": "auditoria completa M11 (coherencia): La capa que hay que reforzar es la que está por debajo del líder que responde; 'tu siguiente capa' serían esos mismos líderes.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-probar_banquillo_vacaciones_largas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un equipo que funciona sin ti durante meses es una de las señales más fuertes de buen liderazgo: tus lugartenientes pueden tomar el mando y no eres un punto único de fallo. Preguntar a cada líder cuánto tendría que intervenir su jefe si se fuera unas largas vacaciones mide eso de forma directa: poco significa buen banquillo, mucho señala la capa que hay que reforzar. No te quita valor, porque hasta los mejores pueden mejorar y tú sigues multiplicando a tu gente. Y un banquillo fuerte te libera para el siguiente problema grande que tu equipo puede asumir.",
+      "texto_nuevo": "Un equipo que funciona sin ti durante meses es una de las señales más fuertes de buen liderazgo: tus lugartenientes pueden tomar el mando y no eres un punto único de fallo. Preguntar a cada líder cuánto tendría que intervenir su jefe si se fuera unas largas vacaciones mide eso de forma directa: poco significa buen banquillo, mucho señala una capa a la que le vendría bien un refuerzo. No te quita valor, porque hasta los mejores pueden mejorar y tú sigues multiplicando a tu gente. Y un banquillo fuerte te libera para el siguiente problema grande que tu equipo puede asumir.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 277",
+        "frase": "If the answer is, “Hmm, my manager would need to do a lot,” then that’s a sign your next layer of leadership could use some shoring up."
+      },
+      "decision": "auditoria completa M11 (matiz): \"Could use some shoring up\" es que le vendría bien un refuerzo, no que haya que reforzarla.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-probar_banquillo_vacaciones_largas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una lectura de si cada líder es un punto único de fallo, y una idea de qué capa de liderazgo hay que reforzar.",
+      "texto_nuevo": "Una lectura de si cada líder es un punto único de fallo, y una idea de a qué capa de liderazgo le vendría bien un refuerzo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 277",
+        "frase": "If the answer is, “Hmm, my manager would need to do a lot,” then that’s a sign your next layer of leadership could use some shoring up."
+      },
+      "decision": "auditoria completa M11 (matiz): Mismo matiz que el resumen.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-probar_banquillo_vacaciones_largas-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si alguien te objeta que un equipo que tiene éxito sin ti significa que tú no aportas valor, contéstale así: pregúntate si incluso a los mejores líderes se les puede entrenar para rendir todavía mejor. La respuesta es que sí, rotundamente, así que sigues viendo tu trabajo como el de un multiplicador para tu gente.",
+      "texto_nuevo": "Si alguien te objeta que un equipo que tiene éxito sin ti significa que tú no aportas valor, pregúntate si incluso a los mejores líderes se les puede entrenar para rendir todavía mejor. La respuesta es que sí, rotundamente, así que sigue viendo tu trabajo como el de un multiplicador para tu gente.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "\"Contéstale así: pregúntate\" mezcla a quién se habla y \"sigues viendo\" vuelve descripción lo que el libro da como pauta (\"you should still see\", cap_08, línea 283)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"Contéstale así: pregúntate\" mezcla a quién se habla y \"sigues viendo\" vuelve descripción lo que el libro da como pauta (\"you should still see\", cap_08, línea 283).",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-probar_banquillo_vacaciones_largas-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa lo que un banquillo fuerte te libera para atacar la siguiente colina grande del horizonte. Cuando una red social hoy enorme todavía se llevaba desde un cuarto de residencia universitaria, su fundador escribía personalmente la mayor parte del código del servicio, y contratar a sus primeros ingenieros no lo dejó obsoleto, solo le dejó centrar su atención en otras cosas: extender el servicio a otras universidades, desarrollar funciones nuevas y contratar a otros líderes que trabajaran con él.",
+      "texto_nuevo": "Usa lo que un banquillo fuerte te libera para abordar el siguiente gran reto que tengas por delante. Cuando una red social hoy enorme todavía se llevaba desde un cuarto de residencia universitaria, su fundador escribía personalmente la mayor parte del código del servicio, y contratar a sus primeros ingenieros no lo dejó obsoleto, solo le dejó centrar su atención en otras cosas: extender el servicio a otras universidades, desarrollar funciones nuevas y contratar a otros líderes que trabajaran con él.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "atacar la siguiente colina grande del horizonte"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco literal de \"tackle the next big hill on the horizon\".",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Prueba tu Banquillo de Reemplazos",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

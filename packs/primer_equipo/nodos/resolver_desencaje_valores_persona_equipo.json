@@ -1,0 +1,338 @@
+{
+  "node_id": "resolver_desencaje_valores_persona_equipo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Resolver el desencaje de valores entre una persona y tu equipo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Mediar sin fin nace del error de creer que todo desacuerdo entre personas listas y de buena fe es un malentendido. Una directiva lo vivió con dos personas de valores y formas de trabajar distintas, y otro directivo le hizo ver que salvar aquello no merecía el tiempo de nadie. Lo que le importa a una persona tiene que importarle también al equipo y a la empresa, o puede chocar a menudo con lo que quiere para su carrera. A veces basta cambiar de equipo en la misma organización y, si no, separar caminos puede ser lo mejor para todos; hay quien, al contratar, es transparente sobre lo que valora.",
+  "notas_extraccion": "El capitulo dedica una seccion entera a desmontar una creencia de directivo novato, que es que todo desacuerdo se arregla con mediacion suficiente. La doctrina que pone en su lugar es que hay desencajes que no son malentendidos sino diferencias de valores, y que ahi la mediacion solo gasta tiempo de tres personas. El inventario propio del libro son las dos salidas escritas en orden, el movimiento dentro de la organizacion primero y la separacion de caminos despues, mas la accion preventiva del ultimo paso. Las dos frases que el nodo transcribe en boca de otros, la del directivo que le para los pies y la del propio error de la autora, van con su duenio dentro porque en el libro son de ellos y no mandatos al lector. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto se intenta antes de concluir que es de valores ni quien decide el movimiento interno.",
+  "pasos_accionables": [
+    "Deja de dar por hecho que tu trabajo es siempre hacer que funcione. Es el error que cometió una directiva al empezar: razonaba que si dos personas listas y bienintencionadas no se ponían de acuerdo tenía que ser por algún malentendido, y que su trabajo era aclararlo y conseguir que todos se dieran la mano.",
+    "Cuenta con que a veces no lo consigues. A esa directiva, después de la cuarta reunión, otro directivo le dijo que estaba intentando salvar una situación que no merecía ni el tiempo de ella, ni el de él, ni el de la persona a su cargo.",
+    "Reconoce que los valores personales y los de la organización pesan mucho en si alguien va a ser feliz en un equipo dado.",
+    "Llámalo como quieras, encaje, motivación o química, pero lo que a una persona le importa tiene que ser también lo que le importa al equipo y a la empresa.",
+    "Si no lo es, cuenta con que esa persona puede acabar chocando a menudo con lo que quiere para su propia carrera.",
+    "Si el encaje no es el bueno en un equipo concreto, prueba primero un movimiento dentro de la misma organización, porque a veces un entorno nuevo más un problema distinto en el que pensar es exactamente lo que hacía falta.",
+    "Y si eso no funciona, entonces quizá el problema de encaje sea con la empresa entera, y en ese caso separar los caminos puede ser el mejor resultado para todos.",
+    "De cara al futuro, dedica tiempo a entender qué valoran las personas candidatas y sé transparente sobre lo que valoran tú y tu empresa: si tu descripción es música para sus oídos y asienten al oírla, van a querer este trabajo, y si no, también está bien, porque aunque tengan exactamente las habilidades que buscas es mejor no forzar a nadie a encajar donde no encaja."
+  ],
+  "entregable_esperado": "Dicho si el desencaje es de valores o de otra cosa, y tomada la salida que corresponda: un movimiento dentro de la organización, o la separación de caminos.",
+  "nodos_previos": [
+    "cortar_efecto_divisor_persona_brillante",
+    "actuar_conducta_contraria_valores"
+  ],
+  "nodos_siguientes": [
+    "elegir_recolocar_despedir_persona"
+  ],
+  "condiciones_activacion": [
+    "Cuando dos personas bienintencionadas de tu entorno no logran trabajar juntas, o cuando alguien de tu equipo choca a menudo con lo que el equipo valora, y te notas empeñado en arreglarlo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-resolver_desencaje_valores_persona_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Mediar sin fin nace del error de creer que todo desacuerdo entre personas listas y de buena fe es un malentendido. Una directiva lo vivió con dos personas de valores y formas de trabajar distintas, y otro directivo le hizo ver que salvar esa situación no merecía el tiempo de nadie. Lo que le importa a una persona tiene que importarle también al equipo y a la empresa, o puede chocar a menudo con lo que quiere para su carrera. Por eso a veces basta cambiar de equipo en la misma organización y, si no, separar caminos puede ser lo mejor para todos; y se previene con transparencia al contratar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_04.md",
+          "lineas": "257-279"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)"
+    },
+    {
+      "id": "m11-limpieza-resolver_desencaje_valores_persona_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Deja de dar por hecho que tu trabajo es siempre hacer que funcione. El libro lo cuenta como error propio de la autora al empezar: razonaba que si dos personas listas y bienintencionadas no se ponian de acuerdo tenia que ser por algun malentendido, y que su trabajo era aclararlo y conseguir que todos se dieran la mano.",
+      "texto_nuevo": "Deja de dar por hecho que tu trabajo es siempre hacer que funcione. Es el error que cometió una directiva al empezar: razonaba que si dos personas listas y bienintencionadas no se ponían de acuerdo tenía que ser por algún malentendido, y que su trabajo era aclararlo y conseguir que todos se dieran la mano.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro lo cuenta como error propio de la autora al empezar"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: propio",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resolver_desencaje_valores_persona_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que a veces no lo consigues, y con lo que otro directivo le dijo a la autora despues de la cuarta reunion: estas intentando salvar una situacion que no merece ni tu tiempo, ni mi tiempo, ni el tiempo de tu persona a cargo.",
+      "texto_nuevo": "Cuenta con que a veces no lo consigues. Puede llegar el momento en que la otra parte, después de la cuarta reunión, te diga que estás intentando salvar una situación que no merece ni tu tiempo, ni el suyo, ni el de tu persona a cargo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con lo que otro directivo le dijo a la autora"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resolver_desencaje_valores_persona_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce que los valores personales y los de la organizacion pesan mucho en si alguien va a ser feliz en un equipo dado.",
+      "texto_nuevo": "Reconoce que los valores personales y los de la organización pesan mucho en si alguien va a ser feliz en un equipo dado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resolver_desencaje_valores_persona_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Llamalo como quieras, encaje, motivacion o quimica, pero lo que a una persona le importa tiene que ser tambien lo que le importa al equipo y a la empresa.",
+      "texto_nuevo": "Llámalo como quieras, encaje, motivación o química, pero lo que a una persona le importa tiene que ser también lo que le importa al equipo y a la empresa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resolver_desencaje_valores_persona_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si el encaje no es el bueno en un equipo concreto, prueba primero un movimiento dentro de la misma organizacion, porque a veces un entorno nuevo mas un problema distinto en el que pensar es exactamente lo que hacia falta.",
+      "texto_nuevo": "Si el encaje no es el bueno en un equipo concreto, prueba primero un movimiento dentro de la misma organización, porque a veces un entorno nuevo más un problema distinto en el que pensar es exactamente lo que hacía falta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resolver_desencaje_valores_persona_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y si eso no funciona, entonces quiza el encaje sea con la empresa entera, y en ese caso separar los caminos puede ser el mejor resultado para todos.",
+      "texto_nuevo": "Y si eso no funciona, entonces quizá el problema de encaje sea con la empresa entera, y en ese caso separar los caminos puede ser el mejor resultado para todos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resolver_desencaje_valores_persona_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "De cara al futuro, dedica tiempo a entender que valoran las personas candidatas y se transparente sobre lo que valorais tu y tu empresa: si tu descripcion les hace asentir como si fuera musica, van a querer este trabajo, y si no, tambien esta bien, porque aunque tengan exactamente las habilidades que buscas es mejor no meter una pieza redonda en un hueco cuadrado.",
+      "texto_nuevo": "De cara al futuro, dedica tiempo a entender qué valoran las personas candidatas y sé transparente sobre lo que valoran tú y tu empresa: si tu descripción les hace asentir como si fuera música, van a querer este trabajo, y si no, también está bien, porque aunque tengan exactamente las habilidades que buscas es mejor no meter una pieza redonda en un hueco cuadrado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "valorais"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resolver_desencaje_valores_persona_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dicho si el desencaje es de valores o de otra cosa, y tomada la salida que corresponda: un movimiento dentro de la organizacion, o la separacion de caminos.",
+      "texto_nuevo": "Dicho si el desencaje es de valores o de otra cosa, y tomada la salida que corresponda: un movimiento dentro de la organización, o la separación de caminos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-resolver_desencaje_valores_persona_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando dos personas bienintencionadas de tu entorno no logran trabajar juntas, o cuando alguien de tu equipo esta en desalineamiento frecuente con lo que el equipo valora, y te notas empeniado en arreglarlo.",
+      "texto_nuevo": "Cuando dos personas bienintencionadas de tu entorno no logran trabajar juntas, o cuando alguien de tu equipo está en desalineamiento frecuente con lo que el equipo valora, y te notas empeñado en arreglarlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-resolver_desencaje_valores_persona_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que a veces no lo consigues. Puede llegar el momento en que la otra parte, después de la cuarta reunión, te diga que estás intentando salvar una situación que no merece ni tu tiempo, ni el suyo, ni el de tu persona a cargo.",
+      "texto_nuevo": "Cuenta con que a veces no lo consigues. A esa directiva, después de la cuarta reunión, otro directivo le dijo que estaba intentando salvar una situación que no merecía ni el tiempo de ella, ni el de él, ni el de la persona a su cargo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 265",
+        "frase": "After my fourth meeting with the other manager, he said to me in exasperation, \"You're trying to save a situation that isn't worth your time, my time, or your report's time to save.\""
+      },
+      "decision": "auditoria completa M11 (matiz): La cuarta reunión y la frase del otro directivo son la anécdota de la autora; se cuenta como caso (la directiva ya está presentada en el paso anterior).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-resolver_desencaje_valores_persona_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "De cara al futuro, dedica tiempo a entender qué valoran las personas candidatas y sé transparente sobre lo que valoran tú y tu empresa: si tu descripción les hace asentir como si fuera música, van a querer este trabajo, y si no, también está bien, porque aunque tengan exactamente las habilidades que buscas es mejor no meter una pieza redonda en un hueco cuadrado.",
+      "texto_nuevo": "De cara al futuro, dedica tiempo a entender qué valoran las personas candidatas y sé transparente sobre lo que valoran tú y tu empresa: si tu descripción es música para sus oídos y asienten al oírla, van a querer este trabajo, y si no, también está bien, porque aunque tengan exactamente las habilidades que buscas es mejor no meter una pieza redonda en un hueco cuadrado.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "les hace asentir como si fuera música"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco roto de 'nodding along like it's music to their ears'.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-resolver_desencaje_valores_persona_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mediar sin fin nace del error de creer que todo desacuerdo entre personas listas y de buena fe es un malentendido. Una directiva lo vivió con dos personas de valores y formas de trabajar distintas, y otro directivo le hizo ver que salvar esa situación no merecía el tiempo de nadie. Lo que le importa a una persona tiene que importarle también al equipo y a la empresa, o puede chocar a menudo con lo que quiere para su carrera. Por eso a veces basta cambiar de equipo en la misma organización y, si no, separar caminos puede ser lo mejor para todos; y se previene con transparencia al contratar.",
+      "texto_nuevo": "Mediar sin fin nace del error de creer que todo desacuerdo entre personas listas y de buena fe es un malentendido. Una directiva lo vivió con dos personas de valores y formas de trabajar distintas, y otro directivo le hizo ver que salvar aquello no merecía el tiempo de nadie. Lo que le importa a una persona tiene que importarle también al equipo y a la empresa, o puede chocar a menudo con lo que quiere para su carrera. A veces basta cambiar de equipo en la misma organización y, si no, separar caminos puede ser lo mejor para todos; hay quien, al contratar, es transparente sobre lo que valora.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 279",
+        "frase": "These days, I spend a lot of time trying to understand what potential candidates value, as well as being transparent about what my company and I value."
+      },
+      "decision": "auditoria completa M11 (matiz): La práctica personal de la autora al contratar se volvía una regla con efecto de prevención que el libro no afirma; se cuenta como caso (\"hay quien\"). Se quita el \"Por eso\", que no está en el pasaje, y \"salvar esa situación\" pasa a \"salvar aquello\" para no pasar de 600 caracteres (propuesta del auditor).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-resolver_desencaje_valores_persona_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si no lo es, cuenta con que esa persona puede acabar en desalineamiento frecuente con lo que quiere para su propia carrera.",
+      "texto_nuevo": "Si no lo es, cuenta con que esa persona puede acabar chocando a menudo con lo que quiere para su propia carrera.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "en desalineamiento frecuente"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"desalineamiento frecuente\" calca \"frequent misalignment\".",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-resolver_desencaje_valores_persona_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "De cara al futuro, dedica tiempo a entender qué valoran las personas candidatas y sé transparente sobre lo que valoran tú y tu empresa: si tu descripción es música para sus oídos y asienten al oírla, van a querer este trabajo, y si no, también está bien, porque aunque tengan exactamente las habilidades que buscas es mejor no meter una pieza redonda en un hueco cuadrado.",
+      "texto_nuevo": "De cara al futuro, dedica tiempo a entender qué valoran las personas candidatas y sé transparente sobre lo que valoran tú y tu empresa: si tu descripción es música para sus oídos y asienten al oírla, van a querer este trabajo, y si no, también está bien, porque aunque tengan exactamente las habilidades que buscas es mejor no forzar a nadie a encajar donde no encaja.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "meter una pieza redonda en un hueco cuadrado"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Giro inglés \"a round peg into a square hole\" traducido palabra a palabra.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-resolver_desencaje_valores_persona_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando dos personas bienintencionadas de tu entorno no logran trabajar juntas, o cuando alguien de tu equipo está en desalineamiento frecuente con lo que el equipo valora, y te notas empeñado en arreglarlo.",
+      "texto_nuevo": "Cuando dos personas bienintencionadas de tu entorno no logran trabajar juntas, o cuando alguien de tu equipo choca a menudo con lo que el equipo valora, y te notas empeñado en arreglarlo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "está en desalineamiento frecuente"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"desalineamiento frecuente\" calca \"frequent misalignment\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Resuelve el Choque de Valores"
+}

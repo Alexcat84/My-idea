@@ -1,0 +1,263 @@
+{
+  "node_id": "dar_mala_noticia_decision_tomada",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Dar una mala noticia sobre una decisión que ya has tomado",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Cuando la decisión ya está tomada no hay nada que discutir, y el error a evitar es el que una directiva cometió muchas veces por no querer dar malas noticias: presentarla como algo que se decide entre los dos. Si nada de lo que diga la otra persona te hará cambiar, fingir que tiene voz es poco sincero y la deja sintiéndose no escuchada cuando rebate y solo recibe excusas. Por eso funciona decir la decisión primero, asumirla como tuya y no abrirla: respondes del resultado del equipo y puedes tener más información. Reconocer el desacuerdo con respeto y pedir cooperación cierra la conversación.",
+  "notas_extraccion": "Es el ultimo tramo del capitulo sobre el como, y se separa de la opinion critica en una cosa: aqui no hay nada que discutir porque la decision ya esta tomada, y el error tipico no es la dureza sino el disimulo. El libro lo razona con un error propio de la autora, que enmarcaba sus decisiones como deliberaciones conjuntas, y con el desarme de ese error paso a paso: si nada de lo que diga la otra persona va a cambiar la decision, fingir que decide es lo que de verdad la deja sin voz. El inventario propio son los tres mandatos de entrega, la decision primero, asumirla, no abrirla, mas la frase literal con la que se reconoce el desacuerdo. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto se explica la decision despues de anunciarla, ni que hacer si la persona se niega a cooperar.",
+  "pasos_accionables": [
+    "Si estás dando una mala noticia sobre una decisión, haz que la decisión sea lo primero que salga de tu boca en cuanto te sientes con esa persona: he decidido elegir a otra persona para liderar esta iniciativa.",
+    "Asume la decisión como tuya. Sé firme y no la abras a discusión.",
+    "No la presentes como algo que se decide entre los dos, un error que una directiva cometió muchas veces porque odiaba ser quien trae las malas noticias: quiero hablar del papel de liderazgo del proyecto tal, me preocupa que no tengas tiempo para él, ya estás haciendo mucho en esto y en aquello, así que creo que sería bueno que lo liderase otra persona, ¿qué te parece?",
+    "Ten claro por qué eso es peor y no mejor: si nada de lo que diga la persona a tu cargo va a cambiar tu decisión, es poco sincero actuar como si ella tuviera voz. Y si te responde que sí tiene tiempo, o te trae un montón de razones por las que es la mejor candidata, solo vas a poder improvisar otra excusa, y eso la dejará sintiéndose no escuchada.",
+    "Cuenta con que la persona a tu cargo puede no estar de acuerdo con tu opinión o con tu decisión, y con que eso está bien: hay decisiones que te toca tomar a ti, porque eres quien responde en última instancia del resultado de tu equipo y puedes tener más información o una perspectiva distinta sobre el mejor camino.",
+    "No gestiones por consenso solo porque así no ofendes a nadie: cuesta pensar en un solo líder influyente que no haya tenido que arriesgarse y hacer algo con lo que alguien no estaba de acuerdo.",
+    "Reconoce el desacuerdo con respeto y sigue adelante: reconozco que puedes no estar de acuerdo con mi decisión, pero te pido tu cooperación para avanzar."
+  ],
+  "entregable_esperado": "La decisión comunicada como lo primero que sale de tu boca, asumida como tuya, sin abrirla a discusión, y con el desacuerdo reconocido con respeto si lo hay.",
+  "nodos_previos": [
+    "decidir_directivo_no_encaja_papel",
+    "elegir_recolocar_despedir_persona"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando has decidido algo que la persona a tu cargo no va a querer oír: has elegido a otra persona para un puesto codiciado, la sacas de un proyecto, o ya no tienes un papel para ella en tu equipo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando la decisión ya está tomada no hay nada que discutir, y el error a evitar es el que una directiva cometió muchas veces por no querer dar malas noticias: presentarla como algo que se decide entre los dos. Si nada de lo que diga la otra persona te hará cambiar, fingir que tiene voz es poco sincero y la deja sintiéndose no escuchada cuando rebate y solo recibe excusas. Por eso funciona decir la decisión primero, asumirla como tuya y no abrirla: respondes del resultado del equipo y puedes tener más información. Reconocer el desacuerdo con respeto y pedir cooperación cierra la conversación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_05.md",
+          "lineas": "271-281"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)"
+    },
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dar una mala noticia sobre una decision que ya has tomado",
+      "texto_nuevo": "Dar una mala noticia sobre una decisión que ya has tomado",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si estas dando una mala noticia sobre una decision, haz que la decision sea lo primero que salga de tu boca cuando os senteis: he decidido tirar con otra persona para liderar esta iniciativa.",
+      "texto_nuevo": "Si estás dando una mala noticia sobre una decisión, haz que la decisión sea lo primero que salga de tu boca en cuanto te sientes con esa persona: he decidido elegir a otra persona para liderar esta iniciativa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "cuando os senteis",
+          "tirar con otra persona"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asume la decision como tuya. Se firme y no la abras a discusion.",
+      "texto_nuevo": "Asume la decisión como tuya. Sé firme y no la abras a discusión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No la posiciones como algo que estais decidiendo entre los dos, que es el error que la autora dice haber cometido muchas veces por odiar ser portadora de malas noticias: quiero hablar del papel de liderazgo del proyecto tal, me preocupa que no tengas tiempo para el, ya estas haciendo mucho en esto y en aquello, asi que creo que seria bueno que lo liderase otra persona, que te parece?",
+      "texto_nuevo": "No la presentes como algo que se decide entre los dos, que es un error fácil de cometer cuando odias ser quien trae las malas noticias: quiero hablar del papel de liderazgo del proyecto tal, me preocupa que no tengas tiempo para él, ya estás haciendo mucho en esto y en aquello, así que creo que sería bueno que lo liderase otra persona, ¿qué te parece?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "No la posiciones como algo que estais decidiendo entre los dos",
+          "que es el error que la autora dice haber cometido muchas veces por odiar ser portadora de malas noticias"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten claro por que eso es peor y no mejor: si nada de lo que diga tu persona a cargo va a cambiar tu decision, es poco sincero actuar como si ella tuviera voz. Y si te responde que si tiene tiempo, o te trae un montante de razones por las que es la mejor candidata, solo vas a poder improvisar otra excusa, y eso la dejara sintiendose no escuchada.",
+      "texto_nuevo": "Ten claro por qué eso es peor y no mejor: si nada de lo que diga la persona a tu cargo va a cambiar tu decisión, es poco sincero actuar como si ella tuviera voz. Y si te responde que sí tiene tiempo, o te trae un montón de razones por las que es la mejor candidata, solo vas a poder improvisar otra excusa, y eso la dejará sintiéndose no escuchada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que tu persona a cargo puede no estar de acuerdo con tu opinion o con tu decision, y con que eso esta bien: hay decisiones que te toca tomar a ti, porque eres quien responde en ultima instancia del resultado de tu equipo y puedes tener mas informacion o una perspectiva distinta sobre el mejor camino.",
+      "texto_nuevo": "Cuenta con que la persona a tu cargo puede no estar de acuerdo con tu opinión o con tu decisión, y con que eso está bien: hay decisiones que te toca tomar a ti, porque eres quien responde en última instancia del resultado de tu equipo y puedes tener más información o una perspectiva distinta sobre el mejor camino.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No gestiones por consenso solo porque asi no ofendes a nadie: el libro dice no ser capaz de pensar en un solo lider influyente que no haya tenido que salirse de la rama y hacer algo con lo que alguien no estaba de acuerdo.",
+      "texto_nuevo": "No gestiones por consenso solo porque así no ofendes a nadie: cuesta pensar en un solo líder influyente que no haya tenido que arriesgarse y hacer algo con lo que alguien no estaba de acuerdo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro dice no ser capaz de pensar en",
+          "salirse de la rama"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce el desacuerdo con respeto y sigue adelante: reconozco que puedes no estar de acuerdo con mi decision, pero te pido tu cooperacion para avanzar.",
+      "texto_nuevo": "Reconoce el desacuerdo con respeto y sigue adelante: reconozco que puedes no estar de acuerdo con mi decisión, pero te pido tu cooperación para avanzar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La decision comunicada como lo primero que sale de tu boca, asumida como tuya, sin abrirla a discusion, y con el desacuerdo reconocido con respeto si lo hay.",
+      "texto_nuevo": "La decisión comunicada como lo primero que sale de tu boca, asumida como tuya, sin abrirla a discusión, y con el desacuerdo reconocido con respeto si lo hay.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_mala_noticia_decision_tomada-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando has decidido algo que tu persona a cargo no va a querer oir: has elegido a otra persona para un puesto codiciado, la sacas de un proyecto, o ya no tienes un papel para ella en tu equipo.",
+      "texto_nuevo": "Cuando has decidido algo que la persona a tu cargo no va a querer oír: has elegido a otra persona para un puesto codiciado, la sacas de un proyecto, o ya no tienes un papel para ella en tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dar_mala_noticia_decision_tomada-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No la presentes como algo que se decide entre los dos, que es un error fácil de cometer cuando odias ser quien trae las malas noticias: quiero hablar del papel de liderazgo del proyecto tal, me preocupa que no tengas tiempo para él, ya estás haciendo mucho en esto y en aquello, así que creo que sería bueno que lo liderase otra persona, ¿qué te parece?",
+      "texto_nuevo": "No la presentes como algo que se decide entre los dos, un error que una directiva cometió muchas veces porque odiaba ser quien trae las malas noticias: quiero hablar del papel de liderazgo del proyecto tal, me preocupa que no tengas tiempo para él, ya estás haciendo mucho en esto y en aquello, así que creo que sería bueno que lo liderase otra persona, ¿qué te parece?",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_05.md 275",
+        "frase": "I failed at this many times in the past because I hated being the bearer of bad news."
+      },
+      "decision": "auditoria completa M11 (matiz): Es la experiencia de una directiva, vuelta regla general; se cuenta como caso, como en el resumen.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Da la Mala Noticia Directamente",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

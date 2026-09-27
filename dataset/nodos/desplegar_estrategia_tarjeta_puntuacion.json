@@ -1,0 +1,214 @@
+{
+  "node_id": "desplegar_estrategia_tarjeta_puntuacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Desplegar la estrategia en tarjetas de puntuación, nivel por nivel",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "La tarjeta de puntuación no sirve solo para contratar: une la estrategia con su ejecución. Muchas empresas saben que hay que pasar el plan anual a objetivos y presupuestos, pero pocas asignan a cada persona los resultados con los que esos objetivos se logran, y así nadie sabe bien en qué centrarse ni cuánto empujar. Traducir los objetivos en resultados para la dirección, y que cada nivel los baje a las tarjetas de quienes tiene debajo, hace que todos acaben con resultados que sostienen la estrategia y competencias que sostienen esos resultados y la cultura. Así el equipo entero queda alineado.",
+  "notas_extraccion": "Es el uso de la tarjeta de puntuacion que sale de la contratacion. La tesis del libro es que la tarjeta no es solo un documento de contratar: es el plano que enlaza la teoria de la estrategia con la realidad de la ejecucion, porque traduce los planes de negocio en resultados puesto por puesto y crea alineacion en el equipo. El diagnostico que el capitulo pone debajo viene de lejos: desde que Peter Drucker acuño la direccion por objetivos hace medio siglo, las empresas rinden homenaje a la necesidad de traducir el plan anual en objetivos y presupuestos, pero rara vez son buenas asignando a los individuos del equipo los resultados con los que esos objetivos se logran, y por eso a los autores les asombra lo pocos directivos que usan objetivos escritos. El caso nombrado es EMC, la empresa de almacenamiento de datos, que reconocio que podia batir a sus competidores centrandose en el gran servicio en vez de en vender cajas: Roger Marino, la M de EMC, ejecuto esa estrategia haciendo responsable del gran servicio a toda la casa de arriba abajo, y contrato especificamente a gente con una actitud de servicio al cliente inusualmente alta. El otro es el de Doug Williams, de iHealth Technologies, que llama a esto gestion activa de la tarjeta de puntuacion, o sea enlazar el plan de negocio con los puestos de las personas, y dice que la tarjeta obliga al directivo a elegir y a ser coherente con lo elegido.",
+  "pasos_accionables": [
+    "Parte de tu estrategia: del ciclo anual de planificación que culmina en el plan de negocio del año que viene.",
+    "Traduce los objetivos de la estrategia en resultados claros para el director general y el equipo directivo.",
+    "Haz que el equipo directivo traduzca después sus propios resultados a las tarjetas de puntuación de quienes están por debajo de ellos.",
+    "Repite ese descenso nivel por nivel, hasta que todas las personas de la organización acaben con un conjunto de resultados que apoyan la estrategia y con competencias que apoyan esos resultados y la cultura."
+  ],
+  "entregable_esperado": "Todas las personas de la organización con un conjunto de resultados que apoyan la estrategia, y con competencias que apoyan esos resultados y la cultura.",
+  "nodos_previos": [
+    "alinear_comunicar_tarjeta_puntuacion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando tienes el plan de negocio del año que viene salido de tu ciclo anual de planificación y quieres que la estrategia llegue a los puestos concretos. El problema de fondo es este: las organizaciones reconocen la necesidad de traducir el plan anual en objetivos y presupuestos, pero rara vez son buenas asignando a las personas del equipo los resultados con los que se logran esos objetivos."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-desplegar_estrategia_tarjeta_puntuacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La tarjeta de puntuación no sirve solo para contratar: une la estrategia con su ejecución. Muchas empresas convierten el plan anual en objetivos y presupuestos, pero pocas asignan a cada persona los resultados con los que esos objetivos se logran, y así nadie sabe bien en qué centrarse ni cuánto empujar. Traducir los objetivos en resultados para la dirección, y que cada nivel los baje a las tarjetas de quienes tiene debajo, hace que todos acaben con resultados que sostienen la estrategia y competencias que sostienen esos resultados y la cultura. Así el equipo entero queda alineado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "219-227"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)"
+    },
+    {
+      "id": "m11-limpieza-desplegar_estrategia_tarjeta_puntuacion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Desplegar la estrategia en tarjetas de puntuacion, nivel por nivel",
+      "texto_nuevo": "Desplegar la estrategia en tarjetas de puntuación, nivel por nivel",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_estrategia_tarjeta_puntuacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Parte de tu estrategia: del ciclo anual de planificacion que culmina en el plan de negocio del año que viene.",
+      "texto_nuevo": "Parte de tu estrategia: del ciclo anual de planificación que culmina en el plan de negocio del año que viene.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_estrategia_tarjeta_puntuacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz que el equipo directivo traduzca despues sus propios resultados a las tarjetas de puntuacion de quienes estan por debajo de ellos.",
+      "texto_nuevo": "Haz que el equipo directivo traduzca después sus propios resultados a las tarjetas de puntuación de quienes están por debajo de ellos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_estrategia_tarjeta_puntuacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Repite ese descenso nivel por nivel, hasta que todas las personas de la organizacion acaben con un conjunto de resultados que apoyan la estrategia y con competencias que apoyan esos resultados y la cultura.",
+      "texto_nuevo": "Repite ese descenso nivel por nivel, hasta que todas las personas de la organización acaben con un conjunto de resultados que apoyan la estrategia y con competencias que apoyan esos resultados y la cultura.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_estrategia_tarjeta_puntuacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Todas las personas de la organizacion con un conjunto de resultados que apoyan la estrategia, y con competencias que apoyan esos resultados y la cultura.",
+      "texto_nuevo": "Todas las personas de la organización con un conjunto de resultados que apoyan la estrategia, y con competencias que apoyan esos resultados y la cultura.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-desplegar_estrategia_tarjeta_puntuacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando tienes el plan de negocio del año que viene salido de tu ciclo anual de planificacion y quieres que la estrategia llegue a los puestos concretos. El libro lo activa por el problema que mide: las organizaciones rinden homenaje a la necesidad de traducir el plan anual en objetivos y presupuestos, pero rara vez son buenas asignando a las personas del equipo los resultados con los que se logran esos objetivos.",
+      "texto_nuevo": "Cuando tienes el plan de negocio del año que viene salido de tu ciclo anual de planificación y quieres que la estrategia llegue a los puestos concretos. El problema de fondo es este: las organizaciones rinden homenaje a la necesidad de traducir el plan anual en objetivos y presupuestos, pero rara vez son buenas asignando a las personas del equipo los resultados con los que se logran esos objetivos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro lo activa por el problema que mide"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-desplegar_estrategia_tarjeta_puntuacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Traduce los objetivos de la estrategia en resultados claros para el consejero delegado y el equipo directivo.",
+      "texto_nuevo": "Traduce los objetivos de la estrategia en resultados claros para el director general y el equipo directivo.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "consejero delegado"
+        ]
+      },
+      "decision": "pase de glosario (consejero_delegado): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-desplegar_estrategia_tarjeta_puntuacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando tienes el plan de negocio del año que viene salido de tu ciclo anual de planificación y quieres que la estrategia llegue a los puestos concretos. El problema de fondo es este: las organizaciones rinden homenaje a la necesidad de traducir el plan anual en objetivos y presupuestos, pero rara vez son buenas asignando a las personas del equipo los resultados con los que se logran esos objetivos.",
+      "texto_nuevo": "Cuando tienes el plan de negocio del año que viene salido de tu ciclo anual de planificación y quieres que la estrategia llegue a los puestos concretos. El problema de fondo es este: las organizaciones reconocen la necesidad de traducir el plan anual en objetivos y presupuestos, pero rara vez son buenas asignando a las personas del equipo los resultados con los que se logran esos objetivos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "rinden homenaje a"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Rinden homenaje a la necesidad\" calca \"paying homage to the need\"; en español se dice que la reconocen.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-desplegar_estrategia_tarjeta_puntuacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La tarjeta de puntuación no sirve solo para contratar: une la estrategia con su ejecución. Muchas empresas convierten el plan anual en objetivos y presupuestos, pero pocas asignan a cada persona los resultados con los que esos objetivos se logran, y así nadie sabe bien en qué centrarse ni cuánto empujar. Traducir los objetivos en resultados para la dirección, y que cada nivel los baje a las tarjetas de quienes tiene debajo, hace que todos acaben con resultados que sostienen la estrategia y competencias que sostienen esos resultados y la cultura. Así el equipo entero queda alineado.",
+      "texto_nuevo": "La tarjeta de puntuación no sirve solo para contratar: une la estrategia con su ejecución. Muchas empresas saben que hay que pasar el plan anual a objetivos y presupuestos, pero pocas asignan a cada persona los resultados con los que esos objetivos se logran, y así nadie sabe bien en qué centrarse ni cuánto empujar. Traducir los objetivos en resultados para la dirección, y que cada nivel los baje a las tarjetas de quienes tiene debajo, hace que todos acaben con resultados que sostienen la estrategia y competencias que sostienen esos resultados y la cultura. Así el equipo entero queda alineado.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_03.md 221",
+        "frase": "companies have been paying homage to the need to translate annual business plans into objectives and budgets, but organizations are rarely so good at assigning outcomes for achieving objectives to the individuals on the team."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro dice que las empresas reconocen la necesidad, no que la cumplan. El segundo defecto (\"nadie sabe bien en qué centrarse\") no se sostiene: la pregunta retórica del libro (línea 223) afirma justo eso, y el \"bien\" ya matiza.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Despliega tu Estrategia en Tarjetas",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

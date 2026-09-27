@@ -1,0 +1,321 @@
+{
+  "node_id": "nombrar_delegados_amigos_casa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Nombrar delegados entre los amigos de la casa",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Pedir a las personas más influyentes de tu red que actúen como delegados de tu búsqueda abre fuentes de talento nuevas y más rápidas. Un socio de un fondo lo compara con las citas: que te presente alguien de confianza tiene más probabilidades de salir bien que un encuentro al azar. Los delegados necesitan un incentivo que de verdad mueva a gente ocupada, y muchas empresas jóvenes usan un consejo asesor para el mismo papel. Aun así, hace falta disciplina: que informen con regularidad y que las recomendaciones vengan de gente excelente, porque hace falta serlo para reconocer a otro.",
+  "notas_extraccion": "Es el punto 3 del recuadro How to Source. La metafora con la que el libro lo presenta viene del lejano Oeste: cuando el sheriff se preparaba para salir al monte a cazar a una banda de villanos, reunia a un puñado de ciudadanos principales del pueblo, los nombraba agentes temporales y la partida salia cabalgando hacia el atardecer. La aplicacion de los autores es que extender el alcance de tu busqueda nombrando delegados entre las personas mas influyentes de tu red sigue siendo una buena idea. El caso nombrado es BSMB, un fondo de compras apalancadas de varios miles de millones con sede en Nueva York, que ha construido a proposito una red extensa de delegados para abastecer a las empresas de su cartera: su consejero delegado John Howard la describe como un grupo de directivos senior con toda clase de pericia a los que pueden llamar en cualquier momento cuando necesitan jugadores A de un sector concreto, y el incentivo que usan es particular del negocio e ingenioso, porque los delegados pueden invertir en sus fondos sin comisiones. El otro caso es WHI Capital Partners, que ha construido a la vez red y varios consejos asesores y que, segun su socio director Eric Cohen, no ha usado ni un reclutador para contratar a los cinco consejeros delegados y los diez directivos de alto nivel de su cartera. Su comparacion: es como el cortejo, porque si te presentan a alguien al azar en un bar hay una posibilidad de que salga bien, pero la tasa de exito es mas alta si te presenta un amigo o un familiar. CORRECCION DECLARADA (26 sep 2026, politica marco contra pais, regla de la cifra): el campo pasos_accionables, paso 2 se sustituyo por decision del fundador; el texto anterior queda literal en bitacora/VEREDICTOS.jsonl.",
+  "pasos_accionables": [
+    "Elige a unos cuantos amigos de la casa entre las personas más influyentes de tu red y nómbralos delegados de tu búsqueda.",
+    "Ofréceles una recompensa. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay una empresa que da primas en efectivo según el nivel del puesto si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+    "Si tu empresa está empezando, considera montar un consejo asesor que haga el mismo papel: unos asesores que no se meten en el gobierno de la compañía ni asumen responsabilidad fiduciaria, y cuya razón de ser es aconsejar y hacer presentaciones, a cambio de una pequeña cantidad de participación o de una compensación modesta en efectivo.",
+    "Asegúrate de que los delegados informen con regularidad.",
+    "Comprueba y vuelve a comprobar que el incentivo que has elegido basta para que gente ocupada participe.",
+    "Recuerda que quieres que las recomendaciones vengan de jugadores A, porque solo un jugador A sabe reconocer a otro."
+  ],
+  "entregable_esperado": "Una red de delegados y, si procede, un consejo asesor, informando con regularidad y trayendo fuentes de talento nuevas y más rápidas.",
+  "nodos_previos": [
+    "abastecer_flujo_candidatos"
+  ],
+  "nodos_siguientes": [
+    "crear_sistema_captura_seguimiento_candidatos"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres extender el alcance de tu búsqueda más allá de tu propia red y de tus empleados, apoyándote en las personas más influyentes que conoces."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-nombrar_delegados_amigos_casa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Pedir a las personas más influyentes de tu red que actúen como delegados de tu búsqueda abre fuentes de talento nuevas y más rápidas. Un socio de un fondo lo compara con las citas: que te presente alguien de confianza tiene más probabilidades de salir bien que un encuentro al azar. Los delegados necesitan un incentivo que de verdad mueva a gente ocupada, y muchas empresas jóvenes usan un consejo asesor para el mismo papel. Aun así, hace falta disciplina: que informen con regularidad y que las recomendaciones vengan de gente excelente, porque hace falta serlo para reconocer a otro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "353-371"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): Se sostiene: la comparación con las citas es de un socio de un fondo ('It's kind of like dating'), no la causa general del método. La propuesta la cuenta como caso y además devuelve el 'Many early-stage companies' del consejo asesor.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)"
+    },
+    {
+      "id": "m11-limpieza-nombrar_delegados_amigos_casa-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elige a unos cuantos amigos de la casa entre las personas mas influyentes de tu red y nombralos delegados de tu busqueda.",
+      "texto_nuevo": "Elige a unos cuantos amigos de la casa entre las personas más influyentes de tu red y nómbralos delegados de tu búsqueda.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-nombrar_delegados_amigos_casa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ofreceles una recompensa por referencia. El libro dice que puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa, y da los dos extremos que ha visto: primas en efectivo, cuyo importe preguntas en tu mercado, si la empresa contrata a alguien que el delegado abastecio, segun el nivel del fichaje, y en otras casas vales regalo, aparatos electronicos y otros articulos de valor.",
+      "texto_nuevo": "Ofréceles una recompensa por referencia. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay empresas que dan primas en efectivo según el nivel del fichaje si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que",
+          "da los dos extremos que ha visto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-nombrar_delegados_amigos_casa-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu empresa es temprana, considera montar un consejo asesor que haga el mismo papel: unos asesores que no se meten en el gobierno de la compañia ni asumen responsabilidad fiduciaria, y cuya razon de ser es aconsejar y hacer presentaciones, a cambio de una pequeña cantidad de participacion o de una compensacion modesta en efectivo.",
+      "texto_nuevo": "Si tu empresa es temprana, considera montar un consejo asesor que haga el mismo papel: unos asesores que no se meten en el gobierno de la compañía ni asumen responsabilidad fiduciaria, y cuya razón de ser es aconsejar y hacer presentaciones, a cambio de una pequeña cantidad de participación o de una compensación modesta en efectivo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-nombrar_delegados_amigos_casa-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurate de que los delegados reportan con regularidad.",
+      "texto_nuevo": "Asegúrate de que los delegados reportan con regularidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-nombrar_delegados_amigos_casa-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres extender el alcance de tu busqueda mas alla de tu propia red y de tus empleados, apoyandote en las personas mas influyentes que conoces.",
+      "texto_nuevo": "Cuando quieres extender el alcance de tu búsqueda más allá de tu propia red y de tus empleados, apoyándote en las personas más influyentes que conoces.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-nombrar_delegados_amigos_casa-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una red de delegados y, si procede, un consejo asesor, reportando con regularidad y trayendo fuentes de talento nuevas y aceleradas.",
+      "texto_nuevo": "Una red de delegados y, si procede, un consejo asesor, informando con regularidad y trayendo fuentes de talento nuevas y aceleradas.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "reportando con regularidad"
+        ]
+      },
+      "decision": "pase de glosario (orquestador): arbitro (redactor): fila anadida a glosario/DECISIONES.md por el orquestador (mismo criterio: espanol llano y neutro, un concepto un nombre); el verificador confirma que el sentido no cambia",
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-glosario-nombrar_delegados_amigos_casa-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asegúrate de que los delegados reportan con regularidad.",
+      "texto_nuevo": "Asegúrate de que los delegados informen con regularidad.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los delegados reportan con regularidad"
+        ]
+      },
+      "decision": "pase de glosario (orquestador): arbitro (propio): sin el \"te\" anadido (no estaba en el texto); el subjuntivo tras \"asegurate de que\" es la forma correcta; fila anadida a DECISIONES",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-auditoria-nombrar_delegados_amigos_casa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ofréceles una recompensa por referencia. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay empresas que dan primas en efectivo según el nivel del fichaje si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+      "texto_nuevo": "Ofréceles una recompensa por referencia. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay una empresa que da primas en efectivo según el nivel del fichaje si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_03.md 357",
+        "frase": "One company we know offers recruiting bonuses to its deputies—rewards of up to $5,000 if the company hires somebody the deputy sourced, depending on the level of the hire."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro cuenta el caso de una empresa (\"One company we know\"); el paso lo volvía práctica de varias.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-nombrar_delegados_amigos_casa-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si tu empresa es temprana, considera montar un consejo asesor que haga el mismo papel: unos asesores que no se meten en el gobierno de la compañía ni asumen responsabilidad fiduciaria, y cuya razón de ser es aconsejar y hacer presentaciones, a cambio de una pequeña cantidad de participación o de una compensación modesta en efectivo.",
+      "texto_nuevo": "Si tu empresa está empezando, considera montar un consejo asesor que haga el mismo papel: unos asesores que no se meten en el gobierno de la compañía ni asumen responsabilidad fiduciaria, y cuya razón de ser es aconsejar y hacer presentaciones, a cambio de una pequeña cantidad de participación o de una compensación modesta en efectivo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "es temprana"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"empresa temprana\" calca \"early-stage\".",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-nombrar_delegados_amigos_casa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ofréceles una recompensa por referencia. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay una empresa que da primas en efectivo según el nivel del fichaje si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+      "texto_nuevo": "Ofréceles una recompensa por cada recomendación. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay una empresa que da primas en efectivo según el nivel del fichaje si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "por referencia"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"referral bounty\": en contratación \"referencia\" es la comprobación de referencias; aquí es recomendar a un candidato.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-nombrar_delegados_amigos_casa-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recuerda que quieres que las recomendaciones vengan de jugadores A, porque hace falta uno para conocer a otro.",
+      "texto_nuevo": "Recuerda que quieres que las recomendaciones vengan de jugadores A, porque solo un jugador A sabe reconocer a otro.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "hace falta uno para conocer a otro"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Dicho inglés \"it takes one to know one\" traducido palabra a palabra.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-nombrar_delegados_amigos_casa-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una red de delegados y, si procede, un consejo asesor, informando con regularidad y trayendo fuentes de talento nuevas y aceleradas.",
+      "texto_nuevo": "Una red de delegados y, si procede, un consejo asesor, informando con regularidad y trayendo fuentes de talento nuevas y más rápidas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "aceleradas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"accelerated sources\" calcado: una fuente no es acelerada.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-nombrar_delegados_amigos_casa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ofréceles una recompensa por cada recomendación. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay una empresa que da primas en efectivo según el nivel del fichaje si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+      "texto_nuevo": "Ofréceles una recompensa. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay una empresa que da primas en efectivo según el nivel del fichaje si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_03.md 357",
+        "frase": "One company we know offers recruiting bonuses to its deputies—rewards of up to $5,000 if the company hires somebody the deputy sourced, depending on the level of the hire."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro no premia cada recomendación: la empresa del ejemplo paga si contrata a alguien que el delegado aportó, y las otras no dicen sobre qué base.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase4-nombrar_delegados_amigos_casa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ofréceles una recompensa. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay una empresa que da primas en efectivo según el nivel del fichaje si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+      "texto_nuevo": "Ofréceles una recompensa. Puede ser tan barata como un vale regalo o tan cara como una prima en efectivo significativa: hay una empresa que da primas en efectivo según el nivel del puesto si contratan a alguien que el delegado aportó (pregunta lo que se paga en tu mercado), y otras que dan vales regalo, aparatos electrónicos y otros artículos de valor.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "fichaje"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Fichaje' por contratación es forma deportiva de España; 'el nivel del puesto' es neutro y fiel a 'the level of the hire' (cap_03 l. 357).",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Nombra Delegados de Confianza",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

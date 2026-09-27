@@ -438,3 +438,65 @@ problemas, 8 semillas y brecha de 8 fases sin nodos fuera del pack.
 **Queda para el paso 5**, con la clave: la integracion con `integrar_packs.py --ejecutar` y la compuerta semantica, las
 dieciocho tandas m11-* aplicadas sobre el pack importado, y las dos entradas de jurisdiccion y vigencia de los nodos de
 EE. UU. y Canada (`docs/saneamiento/resultados/M11/jurisdiccion_vigencia_m11.json`) a `dataset/metadata/`.
+
+## PASO 5 (28 sep 2026): duplicados, alcanzabilidad, puertas e integracion
+
+**Duplicados contra el catalogo, leidos y decididos antes de entrar.** Los 471 nodos contra los 3.169 vivos: 106 pares
+sobre el umbral semantico (76 nucleo, 18 calidad, 7 franquicias, 4 compras, 1 seguridad y salud, 0 entrega). Los 106,
+`continua`; un desacuerdo entre lectores (`preparar_guion_reunion_individual_subordinado` frente a
+`reuniones_uno_a_uno`) lo resolvio una segunda lectura en `continua`. Los 13 pares de la franja justo bajo el umbral,
+tambien `continua`. 0 `repite`, 0 nodos retirados. Los 119 veredictos: `dataset/metadata/veredictos_aduana.json`.
+
+**La primera corrida real se paro en Gate 0** (259 componentes, 229 nodos aislados, cobertura 91,93 por ciento) y se
+deshizo entera. LECCION, decision del fundador: el seco de una integracion corre el Gate 0 de grafo completo, con
+alcanzabilidad. Queda codificada en `scripts/seco_gate0_pack.py` (test `engine/test_seco_gate0_pack.py`): teje el pack
+y sus puentes en memoria sobre el catalogo y corre las mismas funciones de `run_phase1.py` (componentes, cobertura,
+alcanzabilidad dirigida) mas la vara del mundo (100 por ciento alcanzable, ningun aislado). Sobre el pack de aquella
+corrida reproduce el fallo: 259 componentes.
+
+**Aristas internas, leidas y verificadas a ciegas con trampas sin marca** (la arista es continuidad de contenido,
+regla del fundador del 25 sep 2026). Siembra de 502 propuestas en 14 lotes (5 descartadas por ciclo); verificacion de
+las 502: 412 se sostienen, 84 flojas, 6 no se sostienen. Rondas de entradas para las raices que quedaron sin previo
+(previo del mundo, puente del nucleo con la ley del ancla, o puerta), cada una verificada a ciegas: 61 propuestas con
+3 trampas (3 de 3 cazadas; 31 aristas y 6 puentes se sostienen, 21 flojas), 16 con 2 trampas (2 de 2; 6 se
+sostienen, 8 flojas), parejas sueltas 5 con 2 trampas (2 de 2; 2 se sostienen) y 3 con 2 trampas (2 de 2; 0 se
+sostienen). Entran **450 aristas** (`docs/puente_forja/aristas_internas_mundo11.json`, cada una con su por que,
+aplicadas con `scripts/aplicar_aristas_internas.py`) y **21 puentes** (15 del paso 4 mas 6), ninguna ancla pasa de 2.
+
+**Puertas, decision del fundador del 28 sep 2026 (opcion 2, con la correccion del auditor).** No hay tope de puertas
+por fase en el codigo; el criterio es el contenido: un nodo es puerta legitima si arranca con una situacion que la
+persona cuenta y que ningun otro nodo produce. Las condiciones de las 11 puertas propuestas se verificaron a ciegas
+tal como estan en el nodo (la semilla copia titulo y condiciones del nodo, como en todo mundo), con 2 trampas sin
+marca (2 de 2 cazadas): 10 precisas y 1 `no_corresponde`, `responder_4_preguntas_estandares_objetivo_estrategico`,
+cuya condicion es el punto intermedio que deja el nodo de los dos primeros estandares de Gerber que la extraccion no
+saco. Por el criterio del fundador no es puerta y sale con los aislados. Entran **10 puertas nuevas**. Ademas
+`probar_gestion_antes_decidir` (puerta del paso 4) deja de ser puerta: no tiene ningun siguiente real (una lectura
+dirigida lo confirmo: es el final de la rama "dirigir es para mi") y la regla AUD-09 H13 pide a toda puerta pregunta y
+salida; sigue alcanzable por sus previos, y la fase validacion del mapa de brecha apunta a
+`responder_tres_preguntas_vocacion_directiva`, la entrada de su rama. **17 puertas**: ideacion 1, validacion 3,
+planificacion 5, ejecucion 8.
+
+**Preguntas preparadas de las puertas, verificadas a ciegas con trampas sin marca** (tres rondas, 6 de 6 trampas
+cazadas): la primera dio 10 adecuadas y 7 flojas de 17; el generador (`engine/build_question_cache.py`) solo veia el
+titulo y el resumen del nodo, nunca su situacion. Arreglo con test rojo primero (`engine/test_question_cache_contexto.py`):
+el contexto del nodo actual lleva su condicion y su entregable. Tras regenerar, las 17 son adecuadas y ninguna usa
+voseo. (El voseo existe en toda la cache, 199 preguntas de otros dominios: queda medido en la ficha `n2-voz-de-la-casa`.)
+
+**Aparcados, sin borrarse** (`docs/puente_forja/aparcados_mundo11.json`, leidos por `scripts/importar_forja.py`, ficha
+`m11-aparcados-reextraccion` en `docs/PENDIENTES.md` con la reextraccion dirigida para despues): los 5 aislados sin
+arista real y `responder_4_preguntas`. El pack queda en **465 nodos**.
+
+**Seco del Gate 0 de grafo con todo aplicado:** 2 componentes (el catalogo mas la pareja
+`responder_primer_aviso_renuncia_subordinado` y `gestionar_retencion_subordinado_valioso_renuncia`, una puerta y su
+siguiente sin arista real hacia el resto: tres siguientes propuestos se dieron por flojos; Gate 0 admite 2 y esta
+pareja gasta ese margen, declarado), cobertura 99,94 por ciento, alcanzabilidad dirigida 100 por ciento, mundo 465 de
+465 alcanzables, 0 aislados.
+
+
+**Integracion real** (`integrar_packs.py --ejecutar`, con la aduana semantica activa y los 119 veredictos): 465 nodos
+y 21 puentes tejidos sobre 19 nodos del nucleo; Gate 0 OK (2 componentes, cobertura 99,95 por ciento, alcanzabilidad
+dirigida 100 por ciento, 3.634 activos, 103 semillas); rumbos 42 verdes, 1 ambar, 0 rojos, sin deriva; suite web 2.107
+de 2.107; suite python 39 de 39. El integrador no pudo cerrar solo (ficha `integrar-packs-orden-gate0`): su paso (e)
+corre el Gate 0 antes de que exista el indice, y tampoco conoce `scripts/fuentes_internas.py`; se siguio el remedio
+que el propio Gate escribe. Costes: Voyage ~98 mil tokens por cada embebido del candidato y ~632 mil por cada indice
+completo (voyage-4-lite, dentro de la franja gratuita); cache de preguntas $0,4214 mas $0,0142 de las regeneraciones.

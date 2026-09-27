@@ -1,0 +1,306 @@
+{
+  "node_id": "trazar_modelo_negocio_cliente_primero",
+  "fase_proyecto": "ideacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Trazar el modelo de tu negocio arrancando del retrato del cliente y no del retrato del negocio",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "Un negocio compite como un producto en un estante: lo que cuenta no es tanto qué hace como la manera en que lo entrega. Por eso el modelo se traza desde fuera hacia dentro: primero se busca la oportunidad en el mundo, luego se construye una solución a las frustraciones de un grupo concreto de clientes, y esa solución toma la forma que el cliente necesita, no la que prefiere el dueño. Arrancar del retrato del cliente y no del retrato del negocio evita diseñar el negocio para ti mismo, y sin un retrato claro de ese cliente ningún negocio puede tener éxito.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_08.md, unidad Cap. 6, titulo textual Maturity and the Entrepreneurial Perspective. Sale de la PIEZA P2 de la frontera publicada en esta misma vuelta, L106 a L121, 245 palabras. Es la segunda de las dos piezas con procedimiento propio de las seis del capitulo. POR QUE ES PROCEDIMIENTO Y NO POSTURA, con D.27 delante: la seccion que lo rodea es una contraposicion de dos perspectivas y es postura entera, y de hecho la pieza R3 de la frontera, con sus seis contraposiciones, queda declarada como residuo por eso mismo. Esta pieza es distinta porque el libro pone su propio inventario de ETAPAS con verbos: mirar el mundo y preguntar donde esta la oportunidad, volver al tablero, construir la solucion, darle la forma que el cliente necesita, y dos preguntas transcritas una a una. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE, con su cita pegada en .gerber_v1/cita_cap08_P2.txt. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: como se averiguan las frustraciones de ese grupo, como se delimita el segmento, ni con que se comprueba que el retrato del cliente es claro. El texto no lo dice en esta pieza y ponerlo seria inventarle al libro un metodo de investigacion que no tiene. ARISTA DECLARADA POR LECTURA, no por senal (D.29): este nodo y construir_empresa_plantilla_vision_diaria salen del mismo capitulo y los dos hablan de retratos, pero no son el mismo procedimiento y la frontera lo ensena: aquel arranca del retrato de la EMPRESA terminada y este dice expresamente que NO se arranca del retrato del negocio sino del cliente. La razon completa va en el reporte de esta vuelta, porque este frente no inserta y las aristas no se cablean aqui.",
+  "pasos_accionables": [
+    "Parte de lo que es el modelo: un modelo de negocio que satisface las necesidades percibidas de un segmento concreto de clientes de una manera innovadora.",
+    "Mira el mundo y pregunta dónde está la oportunidad, que es por donde empieza el emprendedor cuando crea el modelo.",
+    "Una vez la has identificado, vuelve a la mesa de trabajo.",
+    "Construye allí una solución a las frustraciones que encuentres entre un grupo concreto de clientes.",
+    "Dale a esa solución la forma de un negocio que se ve y actúa de una manera muy concreta: la manera en que el cliente necesita que se vea y actúe, y no la que necesites tú.",
+    "Pregúntate cómo verá el cliente tu negocio.",
+    "Pregúntate cómo destacará tu negocio entre todos los demás.",
+    "No arranques del retrato del negocio que vas a crear sino del retrato del cliente para el que lo vas a crear: esa es la diferencia del modelo emprendedor.",
+    "Cuenta con esta condición: sin un retrato claro de ese cliente, ningún negocio puede tener éxito."
+  ],
+  "entregable_esperado": "El modelo del negocio trazado como solución a las frustraciones de un grupo concreto de clientes, con el retrato de ese cliente hecho antes que el del negocio y con las dos preguntas contestadas.",
+  "nodos_previos": [
+    "hacer_trabajo_futuro_imaginar_negocio"
+  ],
+  "nodos_siguientes": [
+    "dar_valor_constante_cuatro_publicos"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a definir qué negocio montar o rehacer y tienes que decidir por dónde se empieza el modelo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un negocio compite como un producto en un estante: lo que cuenta no es tanto qué hace como la manera en que lo entrega. Por eso el modelo se traza desde fuera hacia dentro: primero se busca la oportunidad en el mundo, luego se construye una solución a las frustraciones de un grupo concreto de clientes, y esa solución toma la forma que el cliente necesita, no la que prefiere el dueño. Arrancar del retrato del cliente y no del retrato del negocio evita diseñar el negocio para ti mismo, y sin un retrato claro de ese cliente ningún negocio puede tener éxito.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_08.md",
+          "lineas": "109-121"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)"
+    },
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de lo que el texto dice que es el modelo: un modelo de negocio que satisface las necesidades percibidas de un segmento concreto de clientes de una manera innovadora.",
+      "texto_nuevo": "Parte de lo que es el modelo: un modelo de negocio que satisface las necesidades percibidas de un segmento concreto de clientes de una manera innovadora.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira el mundo y pregunta donde esta la oportunidad, que es por donde el texto dice que el emprendedor empieza cuando crea el modelo.",
+      "texto_nuevo": "Mira el mundo y pregunta dónde está la oportunidad, que es por donde empieza el emprendedor cuando crea el modelo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Construye alli una solucion a las frustraciones que encuentres entre un grupo concreto de clientes.",
+      "texto_nuevo": "Construye allí una solución a las frustraciones que encuentres entre un grupo concreto de clientes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dale a esa solucion la forma de un negocio que se ve y actua de una manera muy concreta: la manera en que el cliente necesita que se vea y actue, y no la que necesites tu.",
+      "texto_nuevo": "Dale a esa solución la forma de un negocio que se ve y actúa de una manera muy concreta: la manera en que el cliente necesita que se vea y actúe, y no la que necesites tú.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate como se vera tu negocio para el cliente.",
+      "texto_nuevo": "Pregúntate cómo se verá tu negocio para el cliente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate como destacara tu negocio entre todos los demas.",
+      "texto_nuevo": "Pregúntate cómo destacará tu negocio entre todos los demás.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No arranques del retrato del negocio que vas a crear sino del retrato del cliente para el que lo vas a crear, que es lo que el texto pone como la diferencia del modelo emprendedor.",
+      "texto_nuevo": "No arranques del retrato del negocio que vas a crear sino del retrato del cliente para el que lo vas a crear: esa es la diferencia del modelo emprendedor.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el texto pone como"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con la condicion con la que el texto lo cierra: sin un retrato claro de ese cliente, ningun negocio puede tener exito.",
+      "texto_nuevo": "Cuenta con esta condición: sin un retrato claro de ese cliente, ningún negocio puede tener éxito.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con la que el texto lo cierra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El modelo del negocio trazado como solucion a las frustraciones de un grupo concreto de clientes, con el retrato de ese cliente hecho antes que el del negocio y con las dos preguntas del libro contestadas.",
+      "texto_nuevo": "El modelo del negocio trazado como solución a las frustraciones de un grupo concreto de clientes, con el retrato de ese cliente hecho antes que el del negocio y con las dos preguntas contestadas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "las dos preguntas del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-trazar_modelo_negocio_cliente_primero-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando vas a definir que negocio montar o rehacer y tienes que decidir por donde se empieza el modelo.",
+      "texto_nuevo": "Cuando vas a definir qué negocio montar o rehacer y tienes que decidir por dónde se empieza el modelo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-trazar_modelo_negocio_cliente_primero-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una vez la has identificado, vuelve al tablero de dibujo.",
+      "texto_nuevo": "Una vez la has identificado, vuelve a la mesa de diseño.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "al tablero de dibujo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco literal de 'goes back to the drawing board'; el 'allí' del paso siguiente sigue teniendo antecedente.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-trazar_modelo_negocio_cliente_primero-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una vez la has identificado, vuelve a la mesa de diseño.",
+      "texto_nuevo": "Una vez la has identificado, vuelve a la mesa de trabajo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "mesa de diseño"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"goes back to the drawing board\" (gerber cap_08 L115). No se toma \"ponte a diseñar\" de la propuesta porque el paso siguiente dice \"Construye allí\" y se quedaría sin referente; \"la mesa de trabajo\" lo conserva.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-trazar_modelo_negocio_cliente_primero-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntate cómo se verá tu negocio para el cliente.",
+      "texto_nuevo": "Pregúntate cómo verá el cliente tu negocio.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se verá tu negocio para el cliente"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de «How will my business look to the customer?» (fuentes/gerber_emyth/cap_08.md, 117): «se verá ... para el cliente» no es construcción española natural.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Empieza tu Modelo desde el Cliente",
+  "fuentes_internas": [
+    "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber"
+  ]
+}

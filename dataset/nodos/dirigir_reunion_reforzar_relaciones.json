@@ -1,0 +1,301 @@
+{
+  "node_id": "dirigir_reunion_reforzar_relaciones",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Dirigir una reunión cuyo resultado excelente es que la gente se entienda mejor",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Para que un equipo rinda alto, su gente tiene que trabajar bien junta, y eso pide cuidar a propósito la empatía, la confianza y la colaboración. Conocer a los colegas como personas, sus valores, aficiones, familias e historias de vida, hace que trabajar juntos sea más fácil y más disfrutable. Por eso a veces conviene juntarse solo para eso, en comidas, cenas u otros eventos sociales, o en algunas reuniones individuales y de equipo. Lo que cuenta no son las horas ni el lujo del evento, sino que crezcan el entendimiento y la confianza, que la gente se abra con autenticidad y se sienta cuidada.",
+  "notas_extraccion": "Es la quinta y ultima razon del libro para juntarse en persona, y la mas delgada de las cinco en inventario: tres logros en vez de cuatro. Lo que la salva de ser postura es que el libro SI nombra sus medios uno a uno, comidas, cenas, eventos sociales, algunas reuniones individuales y algunas de equipo, y nombra tambien los objetos de la conversacion, valores, aficiones, familias, historias de vida. Por D.27 ese es un inventario de medios y de objetos, no de metas, y por eso los pasos son transcripcion. El paso 5 esta escrito porque el libro lo escribe en negativo y descarta dos varas concretas, las horas y el lujo. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se hace, quien paga, ni que hacer con quien no quiere ir.",
+  "pasos_accionables": [
+    "Parte de que para tener un equipo que funcione muy bien la gente necesita trabajar bien entre sí, así que tienes que buscar formas de nutrir la empatía, crear confianza y animar a la colaboración.",
+    "Junta a veces a un grupo con el simple propósito de cuidar las relaciones.",
+    "Usa para eso estos medios: comidas de equipo, cenas y otros eventos sociales, y también algunas reuniones individuales y algunas reuniones de equipo.",
+    "Invierte tiempo en conocer un poco mejor a los colegas como seres humanos, sus valores, sus aficiones, sus familias, sus historias de vida, porque cuando nos entendemos mejor trabajar juntos se vuelve más fácil y más disfrutable.",
+    "No midas la reunión por el número de horas pasadas juntos ni por lo fastuoso del evento: una gran reunión para unir al equipo no consiste en eso.",
+    "Consigue el primer logro: crear mejor entendimiento y más confianza entre los participantes.",
+    "Consigue el segundo: animar a la gente a ser abierta y auténtica.",
+    "Consigue el tercero: hacer que la gente se sienta cuidada."
+  ],
+  "entregable_esperado": "Más entendimiento y más confianza entre los que estuvieron, gente que se anima a ser abierta y auténtica, y gente que se siente cuidada.",
+  "nodos_previos": [
+    "fijar_resultado_excelente_reunion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando decides juntar a un grupo con el simple propósito de cuidar las relaciones, porque un equipo que funciona muy bien necesita que la gente trabaje bien entre sí."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Para que un equipo rinda alto, su gente tiene que trabajar bien junta, y eso pide cuidar a propósito la empatía, la confianza y la colaboración. Conocer a los colegas como personas, sus valores, aficiones, familias e historias de vida, hace que trabajar juntos sea más fácil y más disfrutable. Por eso a veces conviene juntarse solo para eso, en comidas, cenas u otros eventos sociales, o en algunas reuniones individuales y de equipo. Lo que cuenta no son las horas ni el lujo del evento, sino que crezcan el entendimiento y la confianza, que la gente se abra con autenticidad y se sienta cuidada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "151-163"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: verificador",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)"
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dirigir una reunion cuyo resultado excelente es que la gente se entienda mejor",
+      "texto_nuevo": "Dirigir una reunión cuyo resultado excelente es que la gente se entienda mejor",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Parte de que para tener un equipo que funcione alto la gente necesita trabajar bien entre si, asi que tienes que buscar formas de nutrir la empatia, crear confianza y animar a la colaboracion.",
+      "texto_nuevo": "Parte de que para tener un equipo que funcione alto la gente necesita trabajar bien entre sí, así que tienes que buscar formas de nutrir la empatía, crear confianza y animar a la colaboración.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Junta a veces a un grupo con el proposito simple de centraros en las relaciones.",
+      "texto_nuevo": "Junta a veces a un grupo con el simple propósito de cuidar las relaciones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "centraros"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa los medios que el libro nombra para eso: comidas de equipo, cenas y otros eventos sociales, y tambien algunas reuniones individuales y algunas reuniones de equipo.",
+      "texto_nuevo": "Usa para eso estos medios: comidas de equipo, cenas y otros eventos sociales, y también algunas reuniones individuales y algunas reuniones de equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los medios que el libro nombra para eso"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Invierte tiempo en conocer un poco mejor a los colegas como seres humanos, sus valores, sus aficiones, sus familias, sus historias de vida, porque cuando nos entendemos mejor trabajar juntos se vuelve mas facil y mas disfrutable.",
+      "texto_nuevo": "Invierte tiempo en conocer un poco mejor a los colegas como seres humanos, sus valores, sus aficiones, sus familias, sus historias de vida, porque cuando nos entendemos mejor trabajar juntos se vuelve más fácil y más disfrutable.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No midas la reunion por el numero de horas pasadas juntos ni por lo fastuoso del evento: el libro dice expresamente que una gran reunion de union de equipo no va de eso.",
+      "texto_nuevo": "No midas la reunión por el número de horas pasadas juntos ni por lo fastuoso del evento: una gran reunión para unir al equipo no va de eso.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro dice expresamente que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue el primer logro: crear mejor entendimiento y mas confianza entre los participantes.",
+      "texto_nuevo": "Consigue el primer logro: crear mejor entendimiento y más confianza entre los participantes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue el segundo: animar a la gente a ser abierta y autentica.",
+      "texto_nuevo": "Consigue el segundo: animar a la gente a ser abierta y auténtica.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mas entendimiento y mas confianza entre los que estuvieron, gente que se anima a ser abierta y autentica, y gente que se siente cuidada.",
+      "texto_nuevo": "Más entendimiento y más confianza entre los que estuvieron, gente que se anima a ser abierta y auténtica, y gente que se siente cuidada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_reforzar_relaciones-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando decides juntar a un grupo con el proposito simple de centraros en las relaciones, porque un equipo que funciona alto necesita que la gente trabaje bien entre si.",
+      "texto_nuevo": "Cuando decides juntar a un grupo con el simple propósito de cuidar las relaciones, porque un equipo que funciona alto necesita que la gente trabaje bien entre sí.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "centraros"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dirigir_reunion_reforzar_relaciones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de que para tener un equipo que funcione alto la gente necesita trabajar bien entre sí, así que tienes que buscar formas de nutrir la empatía, crear confianza y animar a la colaboración.",
+      "texto_nuevo": "Parte de que para tener un equipo que funcione muy bien la gente necesita trabajar bien entre sí, así que tienes que buscar formas de nutrir la empatía, crear confianza y animar a la colaboración.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "funcione alto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Funcionar alto\" es calco de \"high-functioning\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dirigir_reunion_reforzar_relaciones-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando decides juntar a un grupo con el simple propósito de cuidar las relaciones, porque un equipo que funciona alto necesita que la gente trabaje bien entre sí.",
+      "texto_nuevo": "Cuando decides juntar a un grupo con el simple propósito de cuidar las relaciones, porque un equipo que funciona muy bien necesita que la gente trabaje bien entre sí.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "funciona alto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Funcionar alto\" es calco de \"high-functioning\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-dirigir_reunion_reforzar_relaciones-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No midas la reunión por el número de horas pasadas juntos ni por lo fastuoso del evento: una gran reunión para unir al equipo no va de eso.",
+      "texto_nuevo": "No midas la reunión por el número de horas pasadas juntos ni por lo fastuoso del evento: una gran reunión para unir al equipo no consiste en eso.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "no va de eso"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"ir de\" por \"tratarse de\" es coloquial de España. La propuesta \"una reunión no se trata de eso\" usa \"tratarse de\" con sujeto, que no es norma; \"no consiste en eso\" es neutro.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Dirige una Reunión de Relaciones",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

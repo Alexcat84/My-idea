@@ -1,0 +1,377 @@
+{
+  "node_id": "definir_vision_larga_trabajar_atras",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Definir la visión larga y trabajar hacia atrás desde ella",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Sin un destino claro es fácil acabar en otro sitio, así que una misión explícita sirve de estrella polar para cada decisión, grande o pequeña. Funciona porque te da una vara con la que medir incluso la petición más repetida: un botón de no me gusta parecía lógico, pero se juzgó que no crearía empatía porque se malinterpreta con facilidad. En lugar de construir lo pedido al pie de la letra, investigar qué quería expresar la gente llevó a una solución que sí encajaba con la misión. Por eso se empieza por el panorama general, los problemas y el valor esperado, y de ahí salen las prioridades.",
+  "notas_extraccion": "Es la primera de las tacticas de equilibrio y la unica del capitulo que ensena a decir que no a la peticion mas popular. Lo que la hace procedimentable es el caso entero, que trae los actos uno a uno: medir contra la mision, probar la ambiguedad con un ejemplo concreto, volver a investigar que queria decir la gente, y construir desde esa respuesta. La regla de los enchufes va dentro porque es la forma en que el libro enuncia el orden, y las tres preguntas del final son el inventario de arranque. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se decide la vara cuando la mision es ambigua, ni que se le contesta a quien pidio lo que rechazaste.",
+  "pasos_accionables": [
+    "Ten a mano este aviso: si no sabes adónde vas, puedes acabar en otro sitio.",
+    "Ten una declaración de misión de la organización y úsala como estrella polar que guía la toma de decisiones de cada equipo, en miles de formas grandes y pequeñas.",
+    "Mide contra ella las peticiones, incluso las más repetidas. Un caso: al ampliar el botón de me gusta, la sugerencia más común de la gente era construir un botón de no me gusta, que era la forma lógica de expresar que algo no era digno de gustar.",
+    "Rechaza la petición si no pasa la vara de la visión, aunque hayas llegado a diseñarla. En ese caso consideraron la idea e incluso hicieron varios diseños, y decidieron que no estaba bien: acercar a la gente significaba diseñar experiencias que crearan empatía, y el botón de no me gusta no llegaba a esa vara porque se malinterpreta con demasiada facilidad.",
+    "Prueba la ambigüedad con un ejemplo concreto: si alguien comparte que fue a ver una película y no estuvo a la altura, y tú le pones no me gusta, ¿cómo se lee tu acción? ¿Que también te disgustó la película? ¿Que te disgustó que fuera a verla? ¿Que te molestó que hablara mal de algo que a ti te parecía estupendo?",
+    "Haz más investigación en vez de quedarte con la petición literal. Cuando preguntaron a la gente qué quería decir cuando pedía un botón de no me gusta, descubrieron que normalmente quería expresar una de un puñado de emociones: tristeza, enfado, simpatía o sorpresa.",
+    "Construye desde ahí la solución que sí pasa la vara. Tomaron esas y las otras dos sensaciones más populares, amor y risa, y desarrollaron un sistema de reacciones ligeras que se añaden al me gusta, lo cual dejaba a la gente expresar un abanico más ancho de emociones sin salirse de su misión.",
+    "Aplica esta regla del orden: no es buena idea diseñar dónde van los enchufes de tu cocina cuando todavía no has cerrado el plano de la casa.",
+    "Empieza entonces por entender el panorama general, con estas preguntas: ¿qué problemas esperas resolver con lo que estás haciendo? ¿Cómo imaginas que la gente va a sacar valor de tu trabajo? Y a partir de eso, ¿cuáles son las prioridades más importantes del equipo ahora?"
+  ],
+  "entregable_esperado": "Las prioridades del equipo deducidas del panorama general, con las peticiones obvias medidas contra la visión antes de aceptarlas.",
+  "nodos_previos": [
+    "atender_modo_supervivencia_equipo",
+    "fijar_vision_concreta_equipo"
+  ],
+  "nodos_siguientes": [
+    "ligar_tareas_proposito_organizacion"
+  ],
+  "condiciones_activacion": [
+    "Antes de decidir el detalle de cualquier trabajo, y sobre todo cuando la petición más repetida de los usuarios parece la respuesta obvia."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Sin un destino claro es fácil acabar en otro sitio, así que una misión explícita sirve de estrella polar para cada decisión, grande o pequeña. Funciona porque te da una vara con la que medir incluso la petición más repetida: un botón de no me gusta parecía lógico, pero se malinterpretaba y no creaba empatía. En lugar de construir lo pedido al pie de la letra, investigar qué quería expresar la gente llevó a una solución que sí encajaba con la misión. Por eso se empieza por el cuadro grande, los problemas y el valor esperado, y de ahí salen las prioridades.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "207-221"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)"
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir la vision larga y trabajar hacia atras desde ella",
+      "texto_nuevo": "Definir la visión larga y trabajar hacia atrás desde ella",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten a mano el aviso de Yogi Berra que el libro cita: si no sabes adonde vas, puedes acabar en otro sitio.",
+      "texto_nuevo": "Ten a mano este aviso: si no sabes adónde vas, puedes acabar en otro sitio.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el aviso de Yogi Berra que el libro cita"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten una declaracion de mision de la organizacion y usala como estrella polar que guia la toma de decisiones de cada equipo, en miles de formas grandes y pequenias.",
+      "texto_nuevo": "Ten una declaración de misión de la organización y úsala como estrella polar que guía la toma de decisiones de cada equipo, en miles de formas grandes y pequeñas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mide contra ella las peticiones, incluso las mas repetidas. El libro cuenta el caso: al ampliar el boton de me gusta, la sugerencia mas comun de la gente era construir un boton de no me gusta, que era la forma logica de expresar que algo no era digno de gustar.",
+      "texto_nuevo": "Mide contra ella las peticiones, incluso las más repetidas. Un caso: al ampliar el botón de me gusta, la sugerencia más común de la gente era construir un botón de no me gusta, que era la forma lógica de expresar que algo no era digno de gustar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro cuenta el caso"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Rechaza la peticion si no pasa la vara de la vision, aunque hayas llegado a disenarla. Ellos la consideraron e incluso hicieron varios disenos, y decidieron que no estaba bien: acercar a la gente significaba disenar experiencias que crearan empatia, y el boton de no me gusta no llegaba a esa vara porque se malinterpreta con demasiada facilidad.",
+      "texto_nuevo": "Rechaza la petición si no pasa la vara de la visión, aunque hayas llegado a diseñarla. En ese caso consideraron la idea e incluso hicieron varios diseños, y decidieron que no estaba bien: acercar a la gente significaba diseñar experiencias que crearan empatía, y el botón de no me gusta no llegaba a esa vara porque se malinterpreta con demasiada facilidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Prueba la ambiguedad con un ejemplo concreto, que es como ellos lo comprobaron: si alguien comparte que fue a ver una pelicula y no estuvo a la altura, y tu le pones no me gusta, como se lee tu accion? Que tambien te disgusto la pelicula? Que te disgusto que fuera a verla? Que te molesto que hablara mal de algo que a ti te parecia estupendo?",
+      "texto_nuevo": "Prueba la ambigüedad con un ejemplo concreto, que es como lo comprobaron: si alguien comparte que fue a ver una película y no estuvo a la altura, y tú le pones no me gusta, ¿cómo se lee tu acción? ¿Que también te disgustó la película? ¿Que te disgustó que fuera a verla? ¿Que te molestó que hablara mal de algo que a ti te parecía estupendo?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz mas investigacion en vez de quedarte con la peticion literal. Cuando preguntaron a la gente que queria decir cuando pedia un boton de no me gusta, descubrieron que normalmente queria expresar una de un punado de emociones, tristeza, enfado, simpatia o sorpresa.",
+      "texto_nuevo": "Haz más investigación en vez de quedarte con la petición literal. Cuando preguntaron a la gente qué quería decir cuando pedía un botón de no me gusta, descubrieron que normalmente quería expresar una de un puñado de emociones: tristeza, enfado, simpatía o sorpresa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Construye desde ahi la solucion que si pasa la vara. Ellos tomaron esas y las otras dos sensaciones mas populares, amor y risa, y desarrollaron un sistema de reacciones ligeras que se anaden al me gusta, lo cual dejaba a la gente expresar un abanico mas ancho de emociones sin salirse de su mision.",
+      "texto_nuevo": "Construye desde ahí la solución que sí pasa la vara. Tomaron esas y las otras dos sensaciones más populares, amor y risa, y desarrollaron un sistema de reacciones ligeras que se añaden al me gusta, lo cual dejaba a la gente expresar un abanico más ancho de emociones sin salirse de su misión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplica la regla del orden que el libro cita de su jefe: no es buena idea disenar donde van los enchufes de tu cocina cuando todavia no has cerrado el plano de la casa.",
+      "texto_nuevo": "Aplica esta regla del orden: no es buena idea diseñar dónde van los enchufes de tu cocina cuando todavía no has cerrado el plano de la casa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro cita de su jefe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Empieza entonces por entender el cuadro grande, con las preguntas que el libro pone: que problemas esperas resolver con lo que estas haciendo? Como imaginas que la gente va a sacar valor de tu trabajo? Y a partir de eso, cuales son las prioridades mas importantes del equipo ahora?",
+      "texto_nuevo": "Empieza entonces por entender el cuadro grande, con estas preguntas: ¿qué problemas esperas resolver con lo que estás haciendo? ¿Cómo imaginas que la gente va a sacar valor de tu trabajo? Y a partir de eso, ¿cuáles son las prioridades más importantes del equipo ahora?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "con las preguntas que el libro pone"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las prioridades del equipo deducidas del cuadro grande, con las peticiones obvias medidas contra la vision antes de aceptarlas.",
+      "texto_nuevo": "Las prioridades del equipo deducidas del cuadro grande, con las peticiones obvias medidas contra la visión antes de aceptarlas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-definir_vision_larga_trabajar_atras-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de decidir el detalle de cualquier trabajo, y sobre todo cuando la peticion mas repetida de los usuarios parece la respuesta obvia.",
+      "texto_nuevo": "Antes de decidir el detalle de cualquier trabajo, y sobre todo cuando la petición más repetida de los usuarios parece la respuesta obvia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-definir_vision_larga_trabajar_atras-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Sin un destino claro es fácil acabar en otro sitio, así que una misión explícita sirve de estrella polar para cada decisión, grande o pequeña. Funciona porque te da una vara con la que medir incluso la petición más repetida: un botón de no me gusta parecía lógico, pero se malinterpretaba y no creaba empatía. En lugar de construir lo pedido al pie de la letra, investigar qué quería expresar la gente llevó a una solución que sí encajaba con la misión. Por eso se empieza por el cuadro grande, los problemas y el valor esperado, y de ahí salen las prioridades.",
+      "texto_nuevo": "Sin un destino claro es fácil acabar en otro sitio, así que una misión explícita sirve de estrella polar para cada decisión, grande o pequeña. Funciona porque te da una vara con la que medir incluso la petición más repetida: un botón de no me gusta parecía lógico, pero se juzgó que no crearía empatía porque se malinterpreta con facilidad. En lugar de construir lo pedido al pie de la letra, investigar qué quería expresar la gente llevó a una solución que sí encajaba con la misión. Por eso se empieza por el cuadro grande, los problemas y el valor esperado, y de ahí salen las prioridades.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 217",
+        "frase": "we didn’t feel the Dislike button met that bar because it’s so easily misinterpreted."
+      },
+      "decision": "auditoria completa M11 (matiz): En el libro es un juicio del equipo sobre un botón que nunca se lanzó, no un efecto observado.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-definir_vision_larga_trabajar_atras-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sin un destino claro es fácil acabar en otro sitio, así que una misión explícita sirve de estrella polar para cada decisión, grande o pequeña. Funciona porque te da una vara con la que medir incluso la petición más repetida: un botón de no me gusta parecía lógico, pero se juzgó que no crearía empatía porque se malinterpreta con facilidad. En lugar de construir lo pedido al pie de la letra, investigar qué quería expresar la gente llevó a una solución que sí encajaba con la misión. Por eso se empieza por el cuadro grande, los problemas y el valor esperado, y de ahí salen las prioridades.",
+      "texto_nuevo": "Sin un destino claro es fácil acabar en otro sitio, así que una misión explícita sirve de estrella polar para cada decisión, grande o pequeña. Funciona porque te da una vara con la que medir incluso la petición más repetida: un botón de no me gusta parecía lógico, pero se juzgó que no crearía empatía porque se malinterpreta con facilidad. En lugar de construir lo pedido al pie de la letra, investigar qué quería expresar la gente llevó a una solución que sí encajaba con la misión. Por eso se empieza por el panorama general, los problemas y el valor esperado, y de ahí salen las prioridades.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cuadro grande"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"the bigger picture\": en español, el panorama general.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-definir_vision_larga_trabajar_atras-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Empieza entonces por entender el cuadro grande, con estas preguntas: ¿qué problemas esperas resolver con lo que estás haciendo? ¿Cómo imaginas que la gente va a sacar valor de tu trabajo? Y a partir de eso, ¿cuáles son las prioridades más importantes del equipo ahora?",
+      "texto_nuevo": "Empieza entonces por entender el panorama general, con estas preguntas: ¿qué problemas esperas resolver con lo que estás haciendo? ¿Cómo imaginas que la gente va a sacar valor de tu trabajo? Y a partir de eso, ¿cuáles son las prioridades más importantes del equipo ahora?",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cuadro grande"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"the bigger picture\": en español, el panorama general.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-definir_vision_larga_trabajar_atras-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Las prioridades del equipo deducidas del cuadro grande, con las peticiones obvias medidas contra la visión antes de aceptarlas.",
+      "texto_nuevo": "Las prioridades del equipo deducidas del panorama general, con las peticiones obvias medidas contra la visión antes de aceptarlas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cuadro grande"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"the bigger picture\": en español, el panorama general.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-muestra-final4-definir_vision_larga_trabajar_atras-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Prueba la ambigüedad con un ejemplo concreto, que es como lo comprobaron: si alguien comparte que fue a ver una película y no estuvo a la altura, y tú le pones no me gusta, ¿cómo se lee tu acción? ¿Que también te disgustó la película? ¿Que te disgustó que fuera a verla? ¿Que te molestó que hablara mal de algo que a ti te parecía estupendo?",
+      "texto_nuevo": "Prueba la ambigüedad con un ejemplo concreto: si alguien comparte que fue a ver una película y no estuvo a la altura, y tú le pones no me gusta, ¿cómo se lee tu acción? ¿Que también te disgustó la película? ¿Que te disgustó que fuera a verla? ¿Que te molestó que hablara mal de algo que a ti te parecía estupendo?",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 217",
+        "frase": "we didn’t feel the Dislike button met that bar because it’s so easily misinterpreted. If you share, “I went to see Movie X tonight and it didn’t live up to the hype,” and I “dislike” your post, how should you read my action?"
+      },
+      "decision": "auditoria completa M11 (invencion): El libro da el ejemplo de la película como ilustración de por qué juzgaron (\"we didn't feel\") que el botón se malinterpreta; en ninguna parte del pasaje (215-221) dice que el equipo lo comprobara con ese ejemplo ni con prueba alguna. \"que es como lo comprobaron\" atribuye al equipo una verificación que el libro no cuenta; sale la cláusula y el paso queda igual.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Define tu Visión y Retrocede",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

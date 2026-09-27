@@ -1,0 +1,289 @@
+{
+  "node_id": "construir_grafico_escalonado_pronosticos",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Construir el gráfico escalonado que pone cada pronóstico nuevo junto a los anteriores",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Un pronóstico suelto dice qué esperas; el gráfico escalonado dice además cómo ha cambiado lo que esperas. Al actualizarlo cada mes, el pronóstico vigente queda junto a los anteriores y junto al dato real, así que se ve de un vistazo la variación de un pronóstico al siguiente, y eso puede ayudarte a anticipar la tendencia mejor que un gráfico de tendencia simple. Hay quien ve en esa mejora o empeoramiento mes a mes el mejor indicador de tendencia que conoce. Y como cada pronóstico se va a comparar con los siguientes y con el resultado, quien pronostica se toma su tarea en serio.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_03.md, unidad Cap. 2, titulo textual Managing the Breakfast Factory. Sale de la PIEZA P11 de la frontera publicada en la vuelta 2 del frente, L91 a L97, 306 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro nombra el instrumento (the stagger chart), dice que contiene (an output over the next several months), dice su ritmo de actualizacion CON SUS PROPIAS PALABRAS Y NO CON LAS MIAS (The chart is updated monthly), dice que se lee en el (the variation of one forecast from the next), dice como se marca el dato real (el pie de figura de L95: means the actual number for that month) y lo despliega sobre una poblacion concreta (forecasted rates of incoming orders for an Intel division). Inventario de MEDIOS y de OBJETOS DE TRABAJO. DE DONDE SALE CADA PASO, uno a uno: paso 1 de L91 (Another sound way to anticipate the future is through the use of the stagger chart, which forecasts an output over the next several months); paso 2 de L91 (The chart is updated monthly, so that each month you will have an updated version of the then-current forecast information as compared to several prior forecasts); paso 3 del pie de figura de L95; paso 4 de L91 (You can readily see the variation of one forecast from the next, which can help you anticipate future trends better than if you used a simple trend chart); paso 5 de L93 (which gives us forecasted rates of incoming orders for an Intel division. The stagger chart then provides the same forecast prepared in the following month, in the month after that, and so on); paso 6 de L93 (Such a chart shows not only your outlook for business month by month but also how your outlook varied from one month to the next); paso 7 de L93 (his forecast for any given month will be routinely compared with future forecasts and eventually with the actual result); paso 8 de L93 (the improvement or deterioration of the forecasted outlook from one month to the next provides the most valuable indicator of business trends that I have ever seen). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE. EL PERIODO DE ESTE NODO NO ES UN PUENTE Y LO DIGO PORQUE PARECE UNO: el paso 2 dice cada mes, y en el lote 1 el periodo fue una de las tres especies de puente. Aqui no lo es porque el periodo lo pone EL LIBRO con esas palabras (updated monthly), no yo; la especie puente es el periodo que el extractor rellena cuando el libro dice periodically. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo cuantos meses hacia delante pronostica el grafico, porque el libro dice the next several months y no dice cuantos. NO escribo cuantos pronosticos anteriores se conservan a la vista, porque dice several prior forecasts. NO escribo quien hace el pronostico: el libro dice whoever does the forecasting, que es a proposito cualquiera, y nombrar ahi un cargo seria puente de la especie responsable. NO TRAIGO NINGUNA CIFRA a atribuciones: las tasas de pedidos de la division de Intel viven en una figura que este recorte no trae, y el unico juicio numerable del tramo (the most valuable indicator de business trends that I have ever seen) es una opinion del autor y no una tasa, asi que no hay cifra con fecha de corte que registrar. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 8 convierte en instruccion lo que el libro dice como juicio propio (provides the most valuable indicator I have ever seen). Un lector estricto puede decir que eso es POSTURA del autor y no paso. Lo sostengo porque lo que se ejecuta es mirable y concreto, la diferencia entre dos pronosticos consecutivos, y porque sin ese paso el grafico se monta y no se usa. Si cae, cae DENTRO de mi marcado. SEGUNDO DISCUTIBLE, de familia: este nodo y el del indicador de tendencia comparten la palabra pronostico y la unidad mes. No los fundo porque el libro los CONTRASTA de forma expresa (better than if you used a simple trend chart), o sea que el propio texto dice que son dos instrumentos distintos. Si la aduana los levanta como gemelos, mi veredicto sera CONTINUA y no SANO. CORRECCION DECLARADA de la vuelta 64 de la linea serial, la de saneamiento, en la relectura de fidelidad entera que el encargo de la 64 y D.30 mandan sobre los seis de d005, ANTES de su insercion y sin insertar nada. EL PASO 5 TRAIA UNA CLAUSULA PUENTE DE DISPOSICION, Y EL TITULO Y EL ENTREGABLE LA MISMA ESPECIE; SE REESCRIBEN SIN BORRAR EL RASTRO. El paso 5 decia y debajo el mismo pronostico preparado el mes siguiente y hoy dice y con el el mismo pronostico preparado el mes siguiente. El titulo decia que pone cada pronostico nuevo encima de los anteriores y hoy dice junto a los anteriores. El entregable decia El grafico con una fila por mes de pronostico, los meses pronosticados en columnas, y hoy dice El grafico con cada pronostico mensual junto a los anteriores. L91 y L93 dicen as compared to several prior forecasts y The stagger chart then provides the same forecast prepared in the following month, in the month after that, and so on, y la disposicion vive en una figura que este recorte no trae: ni debajo, ni encima, ni filas ni columnas estan en el texto, y la propia ficha decia debajo en un sitio y encima en otro. CIFRA DE FIDELIDAD DE ESTA RELECTURA: 8 pasos, 7 TRANSCRIPCION y 1 PUENTE de clausula reescrito, el paso 5, que CUENTA como puente (ACTA 62 62.5). La cifra vieja de arriba no se borra.",
+  "pasos_accionables": [
+    "Monta un gráfico escalonado, que es el que pronostica la producción de los próximos meses.",
+    "Actualízalo cada mes, de manera que cada mes tengas la versión puesta al día del pronóstico vigente junto a varios pronósticos anteriores.",
+    "Marca con un asterisco el número real de cada mes, para poder distinguirlo de los pronosticados.",
+    "Lee la variación de un pronóstico al siguiente, que es lo que puede ayudarte a anticipar la tendencia mejor que un gráfico de tendencia simple.",
+    "Por ejemplo, con la tasa de pedidos entrantes: pon el pronóstico de esa tasa, y con él el mismo pronóstico preparado el mes siguiente, y el del mes de después, y así sucesivamente.",
+    "Lee en él las dos cosas a la vez: tu perspectiva de negocio mes a mes, y cuánto varió esa perspectiva de un mes al siguiente.",
+    "Compara de forma rutinaria el pronóstico de cualquier mes con los pronósticos posteriores y, al final, con el resultado real.",
+    "Toma la mejora o el empeoramiento de la perspectiva pronosticada de un mes al siguiente como tu indicador de la tendencia del negocio."
+  ],
+  "entregable_esperado": "El gráfico con cada pronóstico mensual junto a los anteriores, el número real marcado con asterisco, y leída la variación de un pronóstico al siguiente.",
+  "nodos_previos": [
+    "construir_indicador_tendencia_patron"
+  ],
+  "nodos_siguientes": [
+    "casar_flujo_fabricacion_flujo_ventas"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres anticipar hacia dónde va tu negocio y un gráfico de tendencia simple no te llega, porque te enseña lo que pasó pero no cómo se ha ido moviendo tu propia manera de pronosticarlo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un pronóstico suelto dice qué esperas; el gráfico escalonado dice además cómo ha cambiado lo que esperas. Al actualizarlo cada mes, el pronóstico vigente queda junto a los anteriores y junto al dato real, así que se ve de un vistazo la variación de un pronóstico al siguiente, y eso puede ayudarte a anticipar la tendencia mejor que un gráfico de tendencia simple. Hay quien ve en esa mejora o empeoramiento mes a mes el mejor indicador de tendencia que conoce. Y como cada pronóstico se va a comparar con los siguientes y con el resultado, quien pronostica se toma su tarea en serio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_03.md",
+          "lineas": "91-95"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: 'can help you anticipate future trends better' y 'the most valuable indicator... that I have ever seen' quedan como hecho. La propuesta devuelve 'puede ayudarte' y cuenta el mejor indicador como juicio de alguien ('hay quien ve'), 584.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)"
+    },
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Construir el grafico escalonado que pone cada pronostico nuevo junto a los anteriores",
+      "texto_nuevo": "Construir el gráfico escalonado que pone cada pronóstico nuevo junto a los anteriores",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Monta un grafico escalonado, que es el que pronostica una salida para los varios meses que vienen.",
+      "texto_nuevo": "Monta un gráfico escalonado, que es el que pronostica una salida para los varios meses que vienen.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Actualizalo cada mes, de manera que cada mes tengas la version puesta al dia del pronostico vigente junto a varios pronosticos anteriores.",
+      "texto_nuevo": "Actualízalo cada mes, de manera que cada mes tengas la versión puesta al día del pronóstico vigente junto a varios pronósticos anteriores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Marca con un asterisco el numero real de cada mes, para poder distinguirlo de los pronosticados.",
+      "texto_nuevo": "Marca con un asterisco el número real de cada mes, para poder distinguirlo de los pronosticados.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lee la variacion de un pronostico al siguiente, que es lo que te deja anticipar la tendencia mejor que un grafico de tendencia simple.",
+      "texto_nuevo": "Lee la variación de un pronóstico al siguiente, que es lo que te deja anticipar la tendencia mejor que un gráfico de tendencia simple.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hazlo con la tasa de pedidos entrantes: pon el pronostico de esa tasa, y con el el mismo pronostico preparado el mes siguiente, y el del mes de despues, y asi sucesivamente.",
+      "texto_nuevo": "Hazlo con la tasa de pedidos entrantes: pon el pronóstico de esa tasa, y con él el mismo pronóstico preparado el mes siguiente, y el del mes de después, y así sucesivamente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lee en el las dos cosas a la vez: tu perspectiva de negocio mes a mes, y cuanto vario esa perspectiva de un mes al siguiente.",
+      "texto_nuevo": "Lee en él las dos cosas a la vez: tu perspectiva de negocio mes a mes, y cuánto varió esa perspectiva de un mes al siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara de forma rutinaria el pronostico de cualquier mes con los pronosticos posteriores y, al final, con el resultado real.",
+      "texto_nuevo": "Compara de forma rutinaria el pronóstico de cualquier mes con los pronósticos posteriores y, al final, con el resultado real.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El grafico con cada pronostico mensual junto a los anteriores, el numero real marcado con asterisco, y leida la variacion de un pronostico al siguiente.",
+      "texto_nuevo": "El gráfico con cada pronóstico mensual junto a los anteriores, el número real marcado con asterisco, y leída la variación de un pronóstico al siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-construir_grafico_escalonado_pronosticos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres anticipar hacia donde va tu negocio y un grafico de tendencia simple no te llega, porque te ensena lo que paso pero no como se ha ido moviendo tu propia manera de pronosticarlo.",
+      "texto_nuevo": "Cuando quieres anticipar hacia dónde va tu negocio y un gráfico de tendencia simple no te llega, porque te enseña lo que pasó pero no cómo se ha ido moviendo tu propia manera de pronosticarlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-construir_grafico_escalonado_pronosticos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lee la variación de un pronóstico al siguiente, que es lo que te deja anticipar la tendencia mejor que un gráfico de tendencia simple.",
+      "texto_nuevo": "Lee la variación de un pronóstico al siguiente, que es lo que puede ayudarte a anticipar la tendencia mejor que un gráfico de tendencia simple.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_03.md 91",
+        "frase": "You can readily see the variation of one forecast from the next, which can help you anticipate future trends better than if you used a simple trend chart."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'can help you anticipate'; el paso lo volvía certeza.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-construir_grafico_escalonado_pronosticos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monta un gráfico escalonado, que es el que pronostica una salida para los varios meses que vienen.",
+      "texto_nuevo": "Monta un gráfico escalonado, que es el que pronostica la producción de los próximos meses.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "una salida para los varios meses que vienen"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): calco de \"forecasts an output over the next several months\" (salida por output: decisión del orquestador, la producción)",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-construir_grafico_escalonado_pronosticos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hazlo con la tasa de pedidos entrantes: pon el pronóstico de esa tasa, y con él el mismo pronóstico preparado el mes siguiente, y el del mes de después, y así sucesivamente.",
+      "texto_nuevo": "Por ejemplo, con la tasa de pedidos entrantes: pon el pronóstico de esa tasa, y con él el mismo pronóstico preparado el mes siguiente, y el del mes de después, y así sucesivamente.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_03.md 93",
+        "frase": "The way it works is shown in the figure below, which gives us forecasted rates of incoming orders for an Intel division."
+      },
+      "decision": "auditoria completa M11 (matiz): La tasa de pedidos entrantes es el ejemplo de la figura, sacado de la experiencia de quien lo cuenta (\"In my experience\"); el paso lo volvía la regla de con qué montar el gráfico. Queda como ejemplo.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Compara tus Pronósticos en el Tiempo",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

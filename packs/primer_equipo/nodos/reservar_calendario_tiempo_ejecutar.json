@@ -1,0 +1,197 @@
+{
+  "node_id": "reservar_calendario_tiempo_ejecutar",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Reservar en el calendario el tiempo de ejecutar, que suele ser solitario y por eso a menudo se queda sin apuntar",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Ejecutar suele ser una tarea solitaria, y el calendario se usa sobre todo para lo colaborativo: convocar reuniones y cosas así. Por eso lo que se hace a solas a menudo se queda fuera de él. Uno de tus trabajos de jefe es asegurarte de que las tareas colaborativas no se coman tanto tiempo tuyo ni de tu equipo que ya no quede tiempo para ejecutar. Para eso, bloquea en el calendario tiempo para ejecutar el plan que ya se decidió y se aceptó, y cuida que ese hueco exista para ti y para tu gente.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 385 a 387, bajo el rotulo Block time to execute, y es la TERCERA de las tres partes que la linea 373 enumera dentro del paso EXECUTE de la rueda de hacer cosas. Su madre es minimizar_impuesto_colaboracion_equipo, que la nombra en su paso 4, y la arista va bajo D.37. ES LA PIEZA MAS DELGADA DE TODO EL CAPITULO Y LO DIGO ANTES QUE NADIE: cuatro pasos de un solo parrafo de tres frases. La escribo igual porque el libro la cuenta como una de las tres, con su rotulo propio, y porque tiene su causa nombrada (el calendario solo recoge lo colaborativo) y su acto (bloquear el tiempo). D.30 avisa de que un parrafo pobre no produce un nodo pobre sino un nodo inventado, asi que aqui hice lo contrario de completar: me quede en los cuatro actos que las tres frases dicen, y el nodo se queda corto a proposito. LO QUE HABRIA SIDO PUENTE Y NO ESCRIBI: cuanto tiempo se bloquea, con que frecuencia, y si se bloquea tambien el de cada persona del equipo. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. Los cuatro de la linea 387.",
+  "pasos_accionables": [
+    "Cuenta con que ejecutar suele ser una tarea solitaria.",
+    "Cuenta con que el calendario se usa sobre todo para las tareas colaborativas, para convocar reuniones y cosas así, y por eso lo que se hace a solas a menudo se queda fuera de él.",
+    "Asume como uno de tus trabajos de jefe asegurarte de que las tareas colaborativas no se coman tanto tiempo tuyo ni de tu equipo que no quede tiempo para ejecutar.",
+    "Bloquea ese tiempo para el plan que ya se decidió y se aceptó."
+  ],
+  "entregable_esperado": "Tiempo de ejecución bloqueado en el calendario, tuyo y de tu equipo, con hueco real para el plan decidido.",
+  "nodos_previos": [
+    "minimizar_impuesto_colaboracion_equipo",
+    "repartir_semana_cuarenta_horas_jefe",
+    "partir_meta_grande_hitos"
+  ],
+  "nodos_siguientes": [
+    "pelear_proliferacion_reuniones_bloquear_ejecucion",
+    "aprender_resultados_vencer_dos_presiones"
+  ],
+  "condiciones_activacion": [
+    "Cuando las tareas colaborativas se están comiendo tu calendario o el de tu equipo y no queda hueco para ejecutar el plan que ya se decidió y se aceptó."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-reservar_calendario_tiempo_ejecutar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Ejecutar suele ser una tarea solitaria, y el calendario se usa sobre todo para lo colaborativo: convocar reuniones y cosas así. Por eso lo que se hace a solas no aparece en él. Uno de tus trabajos de jefe es asegurarte de que las tareas colaborativas no se coman tanto tiempo tuyo ni de tu equipo que ya no quede tiempo para ejecutar. Para eso, bloquea en el calendario tiempo para ejecutar el plan que ya se decidió y se aceptó, y cuida que ese hueco exista para ti y para tu gente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_07.md",
+          "lineas": "385-387"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: L387 plantea como tarea del jefe que lo colaborativo no se coma el tiempo de ejecutar; no afirma que se lo coma como hecho, ni dice 'el sitio que de otro modo no tendría' ni 'no un lujo'. La propuesta del lector se queda en L387 y en los pasos.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)"
+    },
+    {
+      "id": "m11-limpieza-reservar_calendario_tiempo_ejecutar-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el sesgo que el texto nombra: usamos el calendario sobre todo para las tareas colaborativas, para convocar reuniones y cosas asi, y por eso lo que se hace a solas no aparece en el.",
+      "texto_nuevo": "Cuenta con este sesgo: usamos el calendario sobre todo para las tareas colaborativas, para convocar reuniones y cosas así, y por eso lo que se hace a solas no aparece en él.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reservar_calendario_tiempo_ejecutar-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Bloquea ese tiempo para el plan que ya se decidio y se acepto.",
+      "texto_nuevo": "Bloquea ese tiempo para el plan que ya se decidió y se aceptó.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reservar_calendario_tiempo_ejecutar-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tiempo de ejecucion bloqueado en el calendario, tuyo y de tu equipo, con hueco real para el plan decidido.",
+      "texto_nuevo": "Tiempo de ejecución bloqueado en el calendario, tuyo y de tu equipo, con hueco real para el plan decidido.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reservar_calendario_tiempo_ejecutar-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando las tareas colaborativas se estan comiendo tu calendario o el de tu equipo y no queda hueco para ejecutar el plan que ya se decidio y se acepto.",
+      "texto_nuevo": "Cuando las tareas colaborativas se están comiendo tu calendario o el de tu equipo y no queda hueco para ejecutar el plan que ya se decidió y se aceptó.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-reservar_calendario_tiempo_ejecutar-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reservar en el calendario el tiempo de ejecutar, que es solitario y por eso nunca se apunta",
+      "texto_nuevo": "Reservar en el calendario el tiempo de ejecutar, que suele ser solitario y por eso casi nunca se apunta",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 387",
+        "frase": "Often, execution is a solitary task. We use calendars mostly for collaborative tasks—to schedule meetings, etc."
+      },
+      "decision": "auditoria completa M11 (matiz): Se pierden 'Often' y 'mostly'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-reservar_calendario_tiempo_ejecutar-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reservar en el calendario el tiempo de ejecutar, que suele ser solitario y por eso casi nunca se apunta",
+      "texto_nuevo": "Reservar en el calendario el tiempo de ejecutar, que suele ser solitario y por eso a menudo se queda sin apuntar",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 387",
+        "frase": "We use calendars mostly for collaborative tasks—to schedule meetings, etc."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro solo dice que el calendario se usa sobre todo ('mostly') para lo colaborativo; 'casi nunca se apunta' es una cuantificación que no está.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-reservar_calendario_tiempo_ejecutar-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ejecutar suele ser una tarea solitaria, y el calendario se usa sobre todo para lo colaborativo: convocar reuniones y cosas así. Por eso lo que se hace a solas no aparece en él. Uno de tus trabajos de jefe es asegurarte de que las tareas colaborativas no se coman tanto tiempo tuyo ni de tu equipo que ya no quede tiempo para ejecutar. Para eso, bloquea en el calendario tiempo para ejecutar el plan que ya se decidió y se aceptó, y cuida que ese hueco exista para ti y para tu gente.",
+      "texto_nuevo": "Ejecutar suele ser una tarea solitaria, y el calendario se usa sobre todo para lo colaborativo: convocar reuniones y cosas así. Por eso lo que se hace a solas a menudo se queda fuera de él. Uno de tus trabajos de jefe es asegurarte de que las tareas colaborativas no se coman tanto tiempo tuyo ni de tu equipo que ya no quede tiempo para ejecutar. Para eso, bloquea en el calendario tiempo para ejecutar el plan que ya se decidió y se aceptó, y cuida que ese hueco exista para ti y para tu gente.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 387",
+        "frase": "We use calendars mostly for collaborative tasks—to schedule meetings, etc."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'mostly'; el resumen lo volvía absoluto.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-reservar_calendario_tiempo_ejecutar-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con este sesgo: usamos el calendario sobre todo para las tareas colaborativas, para convocar reuniones y cosas así, y por eso lo que se hace a solas no aparece en él.",
+      "texto_nuevo": "Cuenta con que el calendario se usa sobre todo para las tareas colaborativas, para convocar reuniones y cosas así, y por eso lo que se hace a solas a menudo se queda fuera de él.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 387",
+        "frase": "We use calendars mostly for collaborative tasks—to schedule meetings, etc."
+      },
+      "decision": "auditoria completa M11 (matiz, voz): El libro dice 'mostly'; el paso lo volvía absoluto y lo etiquetaba de 'sesgo', que el libro no dice. 'Usamos' es primera persona de libro.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz",
+        "voz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Agenda tu Tiempo de Ejecución"
+}

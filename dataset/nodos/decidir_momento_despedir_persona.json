@@ -1,0 +1,474 @@
+{
+  "node_id": "decidir_momento_despedir_persona",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Decidir si ha llegado el momento de despedir, con tres preguntas y las cuatro mentiras que lo retrasan",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Despedir tarde es el error habitual, y probablemente la mayoría de los jefes lo comete porque se convence de que no hace falta. Tres preguntas sostienen la decisión: si diste guía franca de verdad, clara, concreta, humilde y repetida en el tiempo, y aun así no hubo mejora; cómo afecta el mal desempeño al resto del equipo; y si una segunda opinión confirma que fuiste claro y justo. Nombrar las cuatro mentiras que retrasan el paso, que mejorará, que alguien es mejor que nadie, que un traslado lo arregla y que despedir daña la moral, deja ver cuándo te estás engañando.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_06.md, unidad Cap. 3, Understand What Motivates Each Person on Your Team. ESCRITA EN LA VUELTA 19, 12 sep 2026, por la TAREA 2.b de su encargo, que es la que encarga anadir la unidad a los 24 candidatos de la bandeja que no la nombraban: la costumbre de nombrarla empieza en cap_07 y estos son anteriores. NO SE CAMBIA NI UN PASO NI UNA CITA: lo unico que se anade es de que unidad salio. LEIDA DEL FICHERO FUENTE Y NO DE UNA TABLA, con el ancla textual unica que la sostiene, 'time to fire somebody', corrida con grep contra las quince unidades del libro. El inventario es del texto dos veces y numerado por el mismo: tres preguntas nombradas una a una, y cuatro mentiras con su rotulo propio y su desmontaje cada una. Se extrae separado del procedimiento de como despedir porque el propio texto los separa con dos rotulos distintos y porque son dos actos distintos en el tiempo, decidir y hacer. La primera pregunta es larga a proposito: el texto la despliega en cinco comprobaciones dentro de la misma pregunta y no en una formula general, y comprimirla habria perdido justo lo que la hace verificable. Lo que el texto NO dice, y por eso no esta escrito aqui, es cuanto tiempo son varias ocasiones a lo largo del tiempo, ni a quien hay que preguntar la segunda opinion.",
+  "pasos_accionables": [
+    "Parte de esta condición: cuando alguien lo hace mal y, habiendo recibido comunicación clara sobre cuál es el problema, no da ninguna señal de mejora, tienes que despedirlo. Y parte también de por qué importa cómo lo haces: manda una señal clara a todo el equipo de si de verdad te importan las personas por algo más que por lo que pueden hacer por ti en el trabajo.",
+    "Cuenta con que no hay una respuesta absoluta a cuándo toca, pero sí tres preguntas que te orientan.",
+    "Primera pregunta: ¿le has dado guía radicalmente franca? Es decir, ¿le has demostrado que te importan personalmente su trabajo y su vida, has sido clarísimo al desafiarle a mejorar, tu elogio ha sido sustancioso y concreto sobre lo que ha hecho bien en vez de un bálsamo para su ego, y has sido humilde además de directo en tu crítica, ofreciéndote a ayudarle a buscar soluciones en vez de atacarle como persona? ¿Y has hecho todo eso en varias ocasiones a lo largo del tiempo?",
+    "Si la respuesta a esa primera pregunta es que sí y no has visto mejora, o solo destellos de mejora, ha llegado el momento. Recuerda la definición de locura: seguir haciendo lo mismo y esperar un resultado distinto.",
+    "Segunda pregunta: ¿cómo está afectando su mal desempeño al resto del equipo? Tu trabajo incluye entender la perspectiva de los demás, y esto es lo que te vas a encontrar: cuando te enteras del mal desempeño de alguien a tu cargo, normalmente lleva mucho tiempo sacando de quicio a sus pares.",
+    "Tercera pregunta: ¿has buscado una segunda opinión, alguien de confianza con quien hablar el problema? Por dos motivos: a veces crees que has sido claro y no lo has sido, y una perspectiva de fuera puede ayudarte a comprobar que estás siendo justo.",
+    "Y si no tienes experiencia despidiendo, habla con alguien que sí la tenga. Hoy la mayoría de las empresas tienen guías estrictas que hay que seguir, y hay muchas trampas legales que pueden consumir muchísimo tiempo después si no vas con cuidado.",
+    "Cuenta con que los jefes casi siempre esperan demasiado, y probablemente la mayoría lo hace porque se ha engañado creyendo que no hace falta.",
+    "Primera mentira: va a mejorar. Párate y pregúntate cómo exactamente va a mejorar, qué vas a hacer tú de otra forma, qué va a hacer la persona de otra forma y cómo podrían cambiar las circunstancias. Y aunque haya mejorado un poco, pregunta si ha mejorado lo bastante. Si no tienes respuestas bastante precisas a esas preguntas, probablemente no va a mejorar.",
+    "Segunda mentira: alguien es mejor que nadie. Los hechos la desmontan: quien lo hace mal a menudo genera a los demás tanto trabajo extra como el que saca adelante, porque deja partes de su trabajo sin hacer, hace otras de cualquier manera o se comporta de formas que otros tienen que compensar.",
+    "Tercera mentira: un traslado es la solución. Pasarle la persona a un colega que no sospecha nada parece más amable que despedirla, pero obviamente no lo es para el colega, y en general tampoco lo es para la persona con la que estás intentando ser amable.",
+    "Cuarta mentira: es malo para la moral. Al contrario, mantener a alguien que no puede hacer el trabajo es mucho peor para la moral: para la tuya, para la de quien lo está haciendo mal y para la de todos los demás que lo están haciendo bien."
+  ],
+  "entregable_esperado": "Las tres preguntas contestadas con sus respuestas escritas, la segunda opinión pedida, y la decisión tomada sabiendo cuál de las cuatro mentiras estabas a punto de creerte.",
+  "nodos_previos": [
+    "analisis_causa_raiz_despido_ejecutivo"
+  ],
+  "nodos_siguientes": [
+    "despedir_persona_franqueza_radical"
+  ],
+  "condiciones_activacion": [
+    "Cuando alguien de tu equipo lo hace mal, no mejora o incluso empeora, y te preguntas si ha llegado el momento de despedirle."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Despedir tarde es el error habitual, porque el jefe se convence de que no hace falta. Tres preguntas sostienen la decisión: si diste guía franca de verdad, clara, concreta, humilde y repetida en el tiempo, y aun así no hubo mejora; cómo afecta el mal desempeño al resto del equipo; y si una segunda opinión confirma que fuiste claro y justo. Nombrar las cuatro mentiras que retrasan el paso, que mejorará, que alguien es mejor que nadie, que un traslado lo arregla y que despedir daña la moral, deja ver cuándo te estás engañando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_06.md",
+          "lineas": "265-291"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)"
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decidir si ha llegado el momento de despedir, con las tres preguntas del texto y las cuatro mentiras que lo retrasan",
+      "texto_nuevo": "Decidir si ha llegado el momento de despedir, con tres preguntas y las cuatro mentiras que lo retrasan",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "las tres preguntas del texto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de la condicion que el texto pone: cuando alguien lo hace mal y, habiendo recibido comunicacion clara sobre cual es el problema, no da ninguna senial de mejora, tienes que despedirlo. Y parte tambien de por que importa como lo haces: manda una senial clara a todo el equipo de si de verdad te importan las personas por algo mas que por lo que pueden hacer por ti en el trabajo.",
+      "texto_nuevo": "Parte de esta condición: cuando alguien lo hace mal y, habiendo recibido comunicación clara sobre cuál es el problema, no da ninguna señal de mejora, tienes que despedirlo. Y parte también de por qué importa cómo lo haces: manda una señal clara a todo el equipo de si de verdad te importan las personas por algo más que por lo que pueden hacer por ti en el trabajo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "de la condicion que el texto pone"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que no hay respuesta absoluta a cuando toca, que es lo que el texto dice antes de dar sus tres preguntas.",
+      "texto_nuevo": "Cuenta con que no hay una respuesta absoluta a cuándo toca, pero sí tres preguntas que te orientan.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el texto dice antes de dar sus tres preguntas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Primera pregunta: le has dado guia radicalmente franca? Es decir, le has demostrado que te importan personalmente su trabajo y su vida, has sido cristalinamente claro al desafiarle a mejorar, tu elogio ha sido sustancioso y concreto sobre lo que ha hecho bien en vez de un balsamo para su ego, y has sido humilde ademas de directo en tu critica, ofreciendote a ayudarle a buscar soluciones en vez de atacarle como persona. Y has hecho todo eso en varias ocasiones a lo largo del tiempo.",
+      "texto_nuevo": "Primera pregunta: ¿le has dado guía radicalmente franca? Es decir, ¿le has demostrado que te importan personalmente su trabajo y su vida, has sido cristalinamente claro al desafiarle a mejorar, tu elogio ha sido sustancioso y concreto sobre lo que ha hecho bien en vez de un bálsamo para su ego, y has sido humilde además de directo en tu crítica, ofreciéndote a ayudarle a buscar soluciones en vez de atacarle como persona? ¿Y has hecho todo eso en varias ocasiones a lo largo del tiempo?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la respuesta a esa primera pregunta es que si y no has visto mejora, o solo destellos de mejora, ha llegado el momento. El texto lo cierra con la definicion de locura: seguir haciendo lo mismo y esperar un resultado distinto.",
+      "texto_nuevo": "Si la respuesta a esa primera pregunta es que sí y no has visto mejora, o solo destellos de mejora, ha llegado el momento. Recuerda la definición de locura: seguir haciendo lo mismo y esperar un resultado distinto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo cierra con"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Segunda pregunta: como esta afectando su mal desempenio al resto del equipo? Tu trabajo incluye entender la perspectiva de los demas, y el texto avisa de lo que te vas a encontrar: cuando el mal desempenio de un reporte tuyo llega a tu atencion, normalmente lleva mucho tiempo sacando de quicio a sus pares.",
+      "texto_nuevo": "Segunda pregunta: ¿cómo está afectando su mal desempeño al resto del equipo? Tu trabajo incluye entender la perspectiva de los demás, y esto es lo que te vas a encontrar: cuando el mal desempeño de alguien a tu cargo llega a tu atención, normalmente lleva mucho tiempo sacando de quicio a sus pares.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto avisa de lo que",
+          "un reporte tuyo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tercera pregunta: has buscado una segunda opinion, alguien de confianza con quien hablar el problema? El texto da dos motivos: a veces crees que has sido claro y no lo has sido, y una perspectiva de fuera te ayuda a comprobar que estas siendo justo.",
+      "texto_nuevo": "Tercera pregunta: ¿has buscado una segunda opinión, alguien de confianza con quien hablar el problema? Por dos motivos: a veces crees que has sido claro y no lo has sido, y una perspectiva de fuera te ayuda a comprobar que estás siendo justo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto da dos motivos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y si no tienes experiencia despidiendo, habla con alguien que si la tenga. El texto avisa de que hoy la mayoria de las empresas tienen guias estrictas que hay que seguir y de que hay muchas trampas legales que pueden consumir muchisimo tiempo despues si no vas con cuidado.",
+      "texto_nuevo": "Y si no tienes experiencia despidiendo, habla con alguien que sí la tenga. Hoy la mayoría de las empresas tienen guías estrictas que hay que seguir, y hay muchas trampas legales que pueden consumir muchísimo tiempo después si no vas con cuidado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto avisa de que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que los jefes casi siempre esperan demasiado, y que la razon que el texto da es que se han enganiado creyendo que no hace falta.",
+      "texto_nuevo": "Cuenta con que los jefes casi siempre esperan demasiado, porque se han engañado creyendo que no hace falta.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y que la razon que el texto da es que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Primera mentira: va a mejorar. Parate y preguntate como exactamente va a mejorar, que vas a hacer tu de otra forma, que va a hacer la persona de otra forma, y como podrian cambiar las circunstancias. Y aunque haya mejorado un poco, pregunta si ha mejorado lo bastante. Si no tienes respuestas bastante precisas a esas preguntas, probablemente no va a mejorar.",
+      "texto_nuevo": "Primera mentira: va a mejorar. Párate y pregúntate cómo exactamente va a mejorar, qué vas a hacer tú de otra forma, qué va a hacer la persona de otra forma y cómo podrían cambiar las circunstancias. Y aunque haya mejorado un poco, pregunta si ha mejorado lo bastante. Si no tienes respuestas bastante precisas a esas preguntas, probablemente no va a mejorar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Segunda mentira: alguien es mejor que nadie. El texto lo desmonta con un hecho: quien lo hace mal a menudo genera a los demas tanto trabajo extra como el que saca adelante, porque deja partes de su trabajo sin hacer, hace otras de cualquier manera, o se comporta de formas que otros tienen que compensar.",
+      "texto_nuevo": "Segunda mentira: alguien es mejor que nadie. Los hechos la desmontan: quien lo hace mal a menudo genera a los demás tanto trabajo extra como el que saca adelante, porque deja partes de su trabajo sin hacer, hace otras de cualquier manera o se comporta de formas que otros tienen que compensar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo desmonta con un hecho"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tercera mentira: un traslado es la solucion. Pasarle la persona a un colega que no sospecha nada parece mas amable que despedirla, y el texto dice que obviamente no lo es para el colega y que en general tampoco lo es para la persona con la que estas intentando ser amable.",
+      "texto_nuevo": "Tercera mentira: un traslado es la solución. Pasarle la persona a un colega que no sospecha nada parece más amable que despedirla, pero obviamente no lo es para el colega, y en general tampoco lo es para la persona con la que estás intentando ser amable.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuarta mentira: es malo para la moral. El texto responde que mantener a alguien que no puede hacer el trabajo es mucho peor para la moral, para la tuya, para la de quien lo esta haciendo mal y para la de todos los demas que lo estan haciendo bien.",
+      "texto_nuevo": "Cuarta mentira: es malo para la moral. Al contrario, mantener a alguien que no puede hacer el trabajo es mucho peor para la moral: para la tuya, para la de quien lo está haciendo mal y para la de todos los demás que lo están haciendo bien.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto responde que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 11,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_momento_despedir_persona-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las tres preguntas contestadas con sus respuestas escritas, la segunda opinion pedida, y la decision tomada sabiendo cual de las cuatro mentiras estabas a punto de creerte.",
+      "texto_nuevo": "Las tres preguntas contestadas con sus respuestas escritas, la segunda opinión pedida, y la decisión tomada sabiendo cuál de las cuatro mentiras estabas a punto de creerte.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-decidir_momento_despedir_persona-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Despedir tarde es el error habitual, porque el jefe se convence de que no hace falta. Tres preguntas sostienen la decisión: si diste guía franca de verdad, clara, concreta, humilde y repetida en el tiempo, y aun así no hubo mejora; cómo afecta el mal desempeño al resto del equipo; y si una segunda opinión confirma que fuiste claro y justo. Nombrar las cuatro mentiras que retrasan el paso, que mejorará, que alguien es mejor que nadie, que un traslado lo arregla y que despedir daña la moral, deja ver cuándo te estás engañando.",
+      "texto_nuevo": "Despedir tarde es el error habitual, y la mayoría de los jefes lo comete porque se convence de que no hace falta. Tres preguntas sostienen la decisión: si diste guía franca de verdad, clara, concreta, humilde y repetida en el tiempo, y aun así no hubo mejora; cómo afecta el mal desempeño al resto del equipo; y si una segunda opinión confirma que fuiste claro y justo. Nombrar las cuatro mentiras que retrasan el paso, que mejorará, que alguien es mejor que nadie, que un traslado lo arregla y que despedir daña la moral, deja ver cuándo te estás engañando.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_06.md 283",
+        "frase": "Being too cautious may be preferable to being too hasty, but I’d say that most managers wait far too long to do it because they have fooled themselves into believing that it’s unnecessary."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro atribuye la causa (engañarse creyendo que no hace falta) a la mayoría de los jefes, no a todo jefe.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-decidir_momento_despedir_persona-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que los jefes casi siempre esperan demasiado, porque se han engañado creyendo que no hace falta.",
+      "texto_nuevo": "Cuenta con que los jefes casi siempre esperan demasiado, y la mayoría lo hace porque se ha engañado creyendo que no hace falta.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_06.md 283",
+        "frase": "Managers almost always wait too long to fire people. Being too cautious may be preferable to being too hasty, but I’d say that most managers wait far too long to do it because they have fooled themselves into believing that it’s unnecessary."
+      },
+      "decision": "auditoria completa M11 (matiz): El 'casi siempre' es de la espera; la causa el libro la da para la mayoría, y el texto la extendía a todos.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-decidir_momento_despedir_persona-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tercera pregunta: ¿has buscado una segunda opinión, alguien de confianza con quien hablar el problema? Por dos motivos: a veces crees que has sido claro y no lo has sido, y una perspectiva de fuera te ayuda a comprobar que estás siendo justo.",
+      "texto_nuevo": "Tercera pregunta: ¿has buscado una segunda opinión, alguien de confianza con quien hablar el problema? Por dos motivos: a veces crees que has sido claro y no lo has sido, y una perspectiva de fuera puede ayudarte a comprobar que estás siendo justo.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_06.md 279",
+        "frase": "Getting an outside perspective can help you make sure you’re being fair."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que la perspectiva de fuera puede ayudar (can help); el texto lo daba como efecto seguro.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-decidir_momento_despedir_persona-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Despedir tarde es el error habitual, y la mayoría de los jefes lo comete porque se convence de que no hace falta. Tres preguntas sostienen la decisión: si diste guía franca de verdad, clara, concreta, humilde y repetida en el tiempo, y aun así no hubo mejora; cómo afecta el mal desempeño al resto del equipo; y si una segunda opinión confirma que fuiste claro y justo. Nombrar las cuatro mentiras que retrasan el paso, que mejorará, que alguien es mejor que nadie, que un traslado lo arregla y que despedir daña la moral, deja ver cuándo te estás engañando.",
+      "texto_nuevo": "Despedir tarde es el error habitual, y probablemente la mayoría de los jefes lo comete porque se convence de que no hace falta. Tres preguntas sostienen la decisión: si diste guía franca de verdad, clara, concreta, humilde y repetida en el tiempo, y aun así no hubo mejora; cómo afecta el mal desempeño al resto del equipo; y si una segunda opinión confirma que fuiste claro y justo. Nombrar las cuatro mentiras que retrasan el paso, que mejorará, que alguien es mejor que nadie, que un traslado lo arregla y que despedir daña la moral, deja ver cuándo te estás engañando.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_06.md 283",
+        "frase": "but I'd say that most managers wait far too long to do it because they have fooled themselves into believing that it's unnecessary."
+      },
+      "decision": "auditoria completa M11 (matiz): La causa es una apreciación de quien escribe (\"I'd say\"); el resumen la daba como hecho.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-decidir_momento_despedir_persona-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que los jefes casi siempre esperan demasiado, y la mayoría lo hace porque se ha engañado creyendo que no hace falta.",
+      "texto_nuevo": "Cuenta con que los jefes casi siempre esperan demasiado, y probablemente la mayoría lo hace porque se ha engañado creyendo que no hace falta.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_06.md 283",
+        "frase": "but I'd say that most managers wait far too long to do it because they have fooled themselves into believing that it's unnecessary."
+      },
+      "decision": "auditoria completa M11 (matiz): La causa es una apreciación de quien escribe (\"I'd say\"); el paso la daba como hecho.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-decidir_momento_despedir_persona-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Primera pregunta: ¿le has dado guía radicalmente franca? Es decir, ¿le has demostrado que te importan personalmente su trabajo y su vida, has sido cristalinamente claro al desafiarle a mejorar, tu elogio ha sido sustancioso y concreto sobre lo que ha hecho bien en vez de un bálsamo para su ego, y has sido humilde además de directo en tu crítica, ofreciéndote a ayudarle a buscar soluciones en vez de atacarle como persona? ¿Y has hecho todo eso en varias ocasiones a lo largo del tiempo?",
+      "texto_nuevo": "Primera pregunta: ¿le has dado guía radicalmente franca? Es decir, ¿le has demostrado que te importan personalmente su trabajo y su vida, has sido clarísimo al desafiarle a mejorar, tu elogio ha sido sustancioso y concreto sobre lo que ha hecho bien en vez de un bálsamo para su ego, y has sido humilde además de directo en tu crítica, ofreciéndote a ayudarle a buscar soluciones en vez de atacarle como persona? ¿Y has hecho todo eso en varias ocasiones a lo largo del tiempo?",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "has sido cristalinamente claro"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Cristalinamente claro\" calca \"crystal clear\" (scott cap_06 l.275).",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-decidir_momento_despedir_persona-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Segunda pregunta: ¿cómo está afectando su mal desempeño al resto del equipo? Tu trabajo incluye entender la perspectiva de los demás, y esto es lo que te vas a encontrar: cuando el mal desempeño de alguien a tu cargo llega a tu atención, normalmente lleva mucho tiempo sacando de quicio a sus pares.",
+      "texto_nuevo": "Segunda pregunta: ¿cómo está afectando su mal desempeño al resto del equipo? Tu trabajo incluye entender la perspectiva de los demás, y esto es lo que te vas a encontrar: cuando te enteras del mal desempeño de alguien a tu cargo, normalmente lleva mucho tiempo sacando de quicio a sus pares.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cuando el mal desempeño de alguien a tu cargo llega a tu atención"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Llega a tu atención\" calca \"has come to your attention\" (scott cap_06 l.277).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Decide Cuándo Toca Despedir",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

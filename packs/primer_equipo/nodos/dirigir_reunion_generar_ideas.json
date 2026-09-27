@@ -1,0 +1,284 @@
+{
+  "node_id": "dirigir_reunion_generar_ideas",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Dirigir una reunión cuyo resultado excelente es un montón de ideas diversas",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Juntar a mucha gente a soltar ideas en voz alta rinde menos de lo que parece: se tiende a ajustar las ideas a lo ya dicho y a aportar menos suponiendo que otros cargan con el trabajo. La buena generación de ideas combina dos tiempos: pensar a solas, que es cuando la mente es más creativa, y cruzarse con otros, porque oír perspectivas distintas enciende ideas mejores. Por eso cada persona escribe sus ideas en silencio antes o durante la reunión, se consideran todas y no solo las de las voces más altas, se construye sobre ellas con una discusión con sustancia y se termina con pasos claros.",
+  "notas_extraccion": "Es la cuarta razon del libro para juntarse en persona, y la que mas explicitamente desmonta una practica corriente: la lluvia de ideas tal como se popularizo. El inventario propio del libro aqui es de MEDIOS y no de metas, que es lo que la hace procedimentable por D.27: nombra el tiempo a solas y el tiempo en grupo como los dos ingredientes, y dentro del primer logro nombra el acto concreto, escribir las ideas en silencio antes o durante. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto dura el tiempo a solas en una sesion generativa cualquiera, ni quien facilita, ni como se eligen despues las ideas que siguen adelante. El arranque con notas adhesivas del final del capitulo si trae esos numeros, y vive en su propio nodo.",
+  "pasos_accionables": [
+    "No montes la sesión como doce personas en una sala soltando lo primero que se les pasa por la cabeza. Eso no es efectivo para innovar, por dos razones: la gente tiende a ajustar sus ideas nuevas a lo que ya se ha discutido, y tiende a sugerir menos ideas porque supone que otros están cargando con el trabajo.",
+    "Monta la sesión sobre las dos necesidades a la vez, que es de donde sale la mejor generación de ideas: tiempo para pensar a solas, porque la mente es más creativa cuando estás a solas, y tiempo para relacionarse con otros, porque oír perspectivas distintas crea chispas que llevan a ideas todavía mejores.",
+    "Prepara la sesión y facilítala bien, que es la clave.",
+    "Consigue el primer logro: producir muchas soluciones diversas y no obvias. Se consigue asegurando que cada participante tenga tiempo a solas y en silencio para pensar ideas y escribirlas, sea antes de la reunión o durante ella.",
+    "Consigue el segundo: considerar la totalidad de las ideas de todo el mundo, y no solo las de las voces más altas.",
+    "Consigue el tercero: ayudar a que las ideas evolucionen y se construyan unas sobre otras mediante una discusión con sustancia.",
+    "Consigue el cuarto: terminar con pasos siguientes claros sobre cómo convertir las ideas en acción."
+  ],
+  "entregable_esperado": "Muchas soluciones diversas y no obvias, consideradas todas y no solo las de las voces más altas, y unos pasos siguientes claros para convertir las ideas en acción.",
+  "nodos_previos": [
+    "fijar_resultado_excelente_reunion"
+  ],
+  "nodos_siguientes": [
+    "cerrar_reunion_pasos_siguientes",
+    "ejecutar_ciclos_cortos_aprender"
+  ],
+  "condiciones_activacion": [
+    "Cuando juntas a un grupo para que proponga soluciones a un problema y el resultado excelente que persigues son ideas, no una decisión."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Juntar a mucha gente a soltar ideas en voz alta rinde menos de lo que parece: se tiende a ajustar las ideas a lo ya dicho y a aportar menos suponiendo que otros cargan con el trabajo. La buena generación de ideas combina dos tiempos: pensar a solas, que es cuando la mente es más creativa, y cruzarse con otros, porque oír perspectivas distintas enciende ideas mejores. Por eso cada persona escribe sus ideas en silencio antes o durante la reunión, se consideran todas y no solo las de las voces más altas, se construye sobre ellas con una discusión con sustancia y se termina con pasos claros.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "133-149"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: verificador",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)"
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dirigir una reunion cuyo resultado excelente es un monton de ideas diversas",
+      "texto_nuevo": "Dirigir una reunión cuyo resultado excelente es un montón de ideas diversas",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No montes la sesion como doce personas en una sala soltando lo primero que se les pasa por la cabeza. El libro dice que eso no es efectivo para innovar, y da las dos razones: tendemos a conformar nuestras ideas nuevas a lo que ya se ha discutido, y tendemos a sugerir menos ideas porque suponemos que otros estan cargando con el trabajo.",
+      "texto_nuevo": "No montes la sesión como doce personas en una sala soltando lo primero que se les pasa por la cabeza. Eso no es efectivo para innovar, por dos razones: tendemos a conformar nuestras ideas nuevas a lo que ya se ha discutido, y tendemos a sugerir menos ideas porque suponemos que otros están cargando con el trabajo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que eso",
+          "y da las dos razones"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monta la sesion sobre las dos necesidades a la vez, que es de donde el libro dice que sale la mejor generacion de ideas: tiempo para pensar a solas, porque nuestros cerebros son mas creativos cuando estamos solos, y tiempo para relacionarse con otros, porque oir perspectivas distintas crea chispas que llevan a ideas todavia mejores.",
+      "texto_nuevo": "Monta la sesión sobre las dos necesidades a la vez, que es de donde sale la mejor generación de ideas: tiempo para pensar a solas, porque nuestros cerebros son más creativos cuando estamos solos, y tiempo para relacionarse con otros, porque oír perspectivas distintas crea chispas que llevan a ideas todavía mejores.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Prepara la sesion y facilitala bien, que el libro senala como la clave.",
+      "texto_nuevo": "Prepara la sesión y facilítala bien, que es la clave.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro senala como la clave"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consigue el primer logro: producir muchas soluciones diversas y no obvias, y el libro dice con que se consigue, asegurando que cada participante tenga tiempo a solas y en silencio para pensar ideas y escribirlas, sea antes de la reunion o durante ella.",
+      "texto_nuevo": "Consigue el primer logro: producir muchas soluciones diversas y no obvias. Se consigue asegurando que cada participante tenga tiempo a solas y en silencio para pensar ideas y escribirlas, sea antes de la reunión o durante ella.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el libro dice con que se consigue"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue el segundo: considerar la totalidad de las ideas de todo el mundo, y no solo las de las voces mas altas.",
+      "texto_nuevo": "Consigue el segundo: considerar la totalidad de las ideas de todo el mundo, y no solo las de las voces más altas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue el tercero: ayudar a que las ideas evolucionen y se construyan unas sobre otras mediante una discusion con sustancia.",
+      "texto_nuevo": "Consigue el tercero: ayudar a que las ideas evolucionen y se construyan unas sobre otras mediante una discusión con sustancia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue el cuarto: terminar con pasos siguientes claros sobre como convertir las ideas en accion.",
+      "texto_nuevo": "Consigue el cuarto: terminar con pasos siguientes claros sobre cómo convertir las ideas en acción.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Muchas soluciones diversas y no obvias, consideradas todas y no solo las de las voces mas altas, y unos pasos siguientes claros para convertir las ideas en accion.",
+      "texto_nuevo": "Muchas soluciones diversas y no obvias, consideradas todas y no solo las de las voces más altas, y unos pasos siguientes claros para convertir las ideas en acción.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_generar_ideas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando juntas a un grupo para que proponga soluciones a un problema y el resultado excelente que persigues son ideas, no una decision.",
+      "texto_nuevo": "Cuando juntas a un grupo para que proponga soluciones a un problema y el resultado excelente que persigues son ideas, no una decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase4-dirigir_reunion_generar_ideas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No montes la sesión como doce personas en una sala soltando lo primero que se les pasa por la cabeza. Eso no es efectivo para innovar, por dos razones: tendemos a conformar nuestras ideas nuevas a lo que ya se ha discutido, y tendemos a sugerir menos ideas porque suponemos que otros están cargando con el trabajo.",
+      "texto_nuevo": "No montes la sesión como doce personas en una sala soltando lo primero que se les pasa por la cabeza. Eso no es efectivo para innovar, por dos razones: la gente tiende a ajustar sus ideas nuevas a lo que ya se ha discutido, y tiende a sugerir menos ideas porque supone que otros están cargando con el trabajo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "tendemos a conformar nuestras ideas nuevas",
+          "y tendemos a sugerir",
+          "porque suponemos"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz, calco): Nosotros genérico de quien escribe (we have a tendency to conform our new ideas... because we assume, zhuo_manager/cap_07 l.137): pasa a tercera persona; 'conformar a', calcado de conform to, pasa a 'ajustar a', como en el resumen del nodo. Se conserva la tendencia del libro.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "voz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-dirigir_reunion_generar_ideas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monta la sesión sobre las dos necesidades a la vez, que es de donde sale la mejor generación de ideas: tiempo para pensar a solas, porque nuestros cerebros son más creativos cuando estamos solos, y tiempo para relacionarse con otros, porque oír perspectivas distintas crea chispas que llevan a ideas todavía mejores.",
+      "texto_nuevo": "Monta la sesión sobre las dos necesidades a la vez, que es de donde sale la mejor generación de ideas: tiempo para pensar a solas, porque la mente es más creativa cuando estás a solas, y tiempo para relacionarse con otros, porque oír perspectivas distintas crea chispas que llevan a ideas todavía mejores.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "porque nuestros cerebros son más creativos cuando estamos solos"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Nosotros genérico de quien escribe (our brains are most creative when we're by ourselves, zhuo_manager/cap_07 l.139): pasa a tú.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "voz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Dirige una Reunión de Ideas"
+}

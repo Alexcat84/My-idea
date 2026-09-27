@@ -1,0 +1,334 @@
+{
+  "node_id": "retirar_directivos_rechazan_metodo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Retirar a los directivos que no se suman al método",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Un directivo que se niega a construir un equipo mejor con el método de contratación puede abrir la puerta a un motín, y quienes llevan bien el método cortan de raíz esa posibilidad retirándolo. Pero antes de tomar esa decisión, por supuesto, le das todas las oportunidades de conseguirlo. El motivo es esa negativa a construir un equipo mejor usando el método. Y cuando queda claro que no va a cooperar, no vacilas: lo retiras.",
+  "notas_extraccion": "Es la novena de las diez cosas que hay que hacer para instalar el metodo de contratacion en una empresa, y es la unica que pone sus etapas en un orden que importa. El libro las escribe una a una: primero se dan todas las oportunidades de conseguirlo, el motivo que cuenta es uno y esta nombrado, la negativa a construir un equipo mejor con el metodo, y la retirada llega cuando queda claro que la persona no va a cooperar. La razon que el libro da para esa retirada no es de rendimiento sino de gobierno, y es lo que da nombre al paso: asi es como los capitanes de industria cortocircuitan cualquier posibilidad de motin. Lo que el libro no dice, y por eso no esta escrito aqui, es cuantas oportunidades son todas ni cuanto tiempo se espera: quien escriba un plazo lo estara escribiendo el, no el libro.",
+  "pasos_accionables": [
+    "Dale a la persona todas las oportunidades de conseguirlo antes de tomar esta decisión.",
+    "Ten claro el motivo: que la persona se niegue a construir un equipo mejor usando el método.",
+    "Cuando quede claro que alguien no va a cooperar, no dudes: los grandes empresarios no vacilan una vez que eso está claro.",
+    "Retira a esa persona, que es como se corta de raíz cualquier posibilidad de motín."
+  ],
+  "entregable_esperado": "Fuera de su puesto el directivo que se negó a construir un equipo mejor con el método, después de habérsele dado todas las oportunidades de conseguirlo.",
+  "nodos_previos": [
+    "instalar_metodo_contratacion_empresa",
+    "reconocer_recompensar_uso_metodo"
+  ],
+  "nodos_siguientes": [
+    "despedir_persona_respeto_franqueza"
+  ],
+  "condiciones_activacion": [
+    "Cuando estás instalando el método de contratación en tu empresa, ha quedado claro que un directivo no va a cooperar, y sigue en su puesto."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-retirar_directivos_rechazan_metodo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un directivo que se niega a construir un equipo mejor con el método de contratación puede abrir la puerta a un motín, y quienes llevan bien el método cortocircuitan esa posibilidad retirándolo. Aquí el orden de las etapas importa. Primero le das todas las oportunidades de conseguirlo, y no como cortesía. El único motivo que cuenta es esa negativa a construir un equipo mejor usando el método, no otro. Y cuando queda claro que no va a cooperar, no vacilas: lo retiras.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "275-275"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (ajeno): La objeción se sostiene: 'un método solo se instala si los directivos lo usan' y 'porque nadie puede seguir en su puesto rechazando el método mientras los demás lo aplican' no salen de la línea 275, que solo dice que retirarlos cortocircuita cualquier posibilidad de motín. La propuesta se ciñe a la línea y a los pasos y mide 470 caracteres.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)"
+    },
+    {
+      "id": "m11-limpieza-retirar_directivos_rechazan_metodo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Retirar a los directivos que no se suben al metodo",
+      "texto_nuevo": "Retirar a los directivos que no se suben al método",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_directivos_rechazan_metodo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dale a la persona todas las oportunidades de conseguirlo antes de tomar esta decision. El libro pone esta etapa por delante y no como cortesia.",
+      "texto_nuevo": "Dale a la persona todas las oportunidades de conseguirlo antes de tomar esta decisión.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro pone esta etapa por delante y no como cortesia."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_directivos_rechazan_metodo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con cual es el motivo que el libro nombra, y no otro: que la persona se niegue a construir un equipo mejor usando el metodo.",
+      "texto_nuevo": "Ten claro que el motivo es este, y no otro: que la persona se niegue a construir un equipo mejor usando el método.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Cuenta con cual es el motivo que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_directivos_rechazan_metodo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando quede claro que alguien no va a cooperar, no dudes. El libro dice que los capitanes no vacilan una vez que eso esta claro.",
+      "texto_nuevo": "Cuando quede claro que alguien no va a cooperar, no dudes: los capitanes de industria no vacilan una vez que eso está claro.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_directivos_rechazan_metodo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Retira a esa persona, que es como se cortocircuita cualquier posibilidad de motin.",
+      "texto_nuevo": "Retira a esa persona, que es como se cortocircuita cualquier posibilidad de motín.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_directivos_rechazan_metodo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fuera de su puesto el directivo que se nego a construir un equipo mejor con el metodo, despues de habersele dado todas las oportunidades de conseguirlo.",
+      "texto_nuevo": "Fuera de su puesto el directivo que se negó a construir un equipo mejor con el método, después de habérsele dado todas las oportunidades de conseguirlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_directivos_rechazan_metodo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando estas instalando el metodo de contratacion en tu empresa y toca la novena de las diez cosas: ha quedado claro que un directivo no va a cooperar, y sigue en su puesto.",
+      "texto_nuevo": "Cuando estás instalando el método de contratación en tu empresa y toca la novena de las diez cosas: ha quedado claro que un directivo no va a cooperar, y sigue en su puesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-retirar_directivos_rechazan_metodo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando quede claro que alguien no va a cooperar, no dudes: los capitanes de industria no vacilan una vez que eso está claro.",
+      "texto_nuevo": "Cuando quede claro que alguien no va a cooperar, no dudes: los grandes empresarios no vacilan una vez que eso está claro.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "capitanes de industria"
+        ]
+      },
+      "decision": "pase de glosario (capitanes): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-auditoria-retirar_directivos_rechazan_metodo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un directivo que se niega a construir un equipo mejor con el método de contratación puede abrir la puerta a un motín, y quienes llevan bien el método cortocircuitan esa posibilidad retirándolo. Aquí el orden de las etapas importa. Primero le das todas las oportunidades de conseguirlo, y no como cortesía. El único motivo que cuenta es esa negativa a construir un equipo mejor usando el método, no otro. Y cuando queda claro que no va a cooperar, no vacilas: lo retiras.",
+      "texto_nuevo": "Un directivo que se niega a construir un equipo mejor con el método de contratación puede abrir la puerta a un motín, y quienes llevan bien el método cortocircuitan esa posibilidad retirándolo. Pero antes de tomar esa decisión, por supuesto, le das todas las oportunidades de conseguirlo. El único motivo que cuenta es esa negativa a construir un equipo mejor usando el método, no otro. Y cuando queda claro que no va a cooperar, no vacilas: lo retiras.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_06.md 275",
+        "frase": "Of course, they give people every opportunity to succeed before they make this decision, but they do not hesitate once it becomes clear that someone is not going to cooperate."
+      },
+      "decision": "auditoria completa M11 (invencion): \"Aquí el orden de las etapas importa\" y \"y no como cortesía\" no están en el libro, que solo dice que antes de decidir se dan todas las oportunidades.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-auditoria-retirar_directivos_rechazan_metodo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando estás instalando el método de contratación en tu empresa y toca la novena de las diez cosas: ha quedado claro que un directivo no va a cooperar, y sigue en su puesto.",
+      "texto_nuevo": "Cuando estás instalando el método de contratación en tu empresa, ha quedado claro que un directivo no va a cooperar, y sigue en su puesto.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "La lista de las diez cosas no está en el nodo; \"la novena\" no tiene referente."
+      },
+      "decision": "auditoria completa M11 (coherencia): La lista de las diez cosas no está en el nodo; \"la novena\" no tiene referente.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-retirar_directivos_rechazan_metodo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Retirar a los directivos que no se suben al método",
+      "texto_nuevo": "Retirar a los directivos que no se suman al método",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "no se suben al método"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): calco de \"not on board\": subirse al método no se dice en español",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-retirar_directivos_rechazan_metodo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un directivo que se niega a construir un equipo mejor con el método de contratación puede abrir la puerta a un motín, y quienes llevan bien el método cortocircuitan esa posibilidad retirándolo. Pero antes de tomar esa decisión, por supuesto, le das todas las oportunidades de conseguirlo. El único motivo que cuenta es esa negativa a construir un equipo mejor usando el método, no otro. Y cuando queda claro que no va a cooperar, no vacilas: lo retiras.",
+      "texto_nuevo": "Un directivo que se niega a construir un equipo mejor con el método de contratación puede abrir la puerta a un motín, y quienes llevan bien el método cortan de raíz esa posibilidad retirándolo. Pero antes de tomar esa decisión, por supuesto, le das todas las oportunidades de conseguirlo. El único motivo que cuenta es esa negativa a construir un equipo mejor usando el método, no otro. Y cuando queda claro que no va a cooperar, no vacilas: lo retiras.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cortocircuitan"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): calco de \"short-circuit any potential for mutiny\"",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-retirar_directivos_rechazan_metodo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Retira a esa persona, que es como se cortocircuita cualquier posibilidad de motín.",
+      "texto_nuevo": "Retira a esa persona, que es como se corta de raíz cualquier posibilidad de motín.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se cortocircuita"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): calco de \"short-circuit any potential for mutiny\"",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase5-retirar_directivos_rechazan_metodo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un directivo que se niega a construir un equipo mejor con el método de contratación puede abrir la puerta a un motín, y quienes llevan bien el método cortan de raíz esa posibilidad retirándolo. Pero antes de tomar esa decisión, por supuesto, le das todas las oportunidades de conseguirlo. El único motivo que cuenta es esa negativa a construir un equipo mejor usando el método, no otro. Y cuando queda claro que no va a cooperar, no vacilas: lo retiras.",
+      "texto_nuevo": "Un directivo que se niega a construir un equipo mejor con el método de contratación puede abrir la puerta a un motín, y quienes llevan bien el método cortan de raíz esa posibilidad retirándolo. Pero antes de tomar esa decisión, por supuesto, le das todas las oportunidades de conseguirlo. El motivo es esa negativa a construir un equipo mejor usando el método. Y cuando queda claro que no va a cooperar, no vacilas: lo retiras.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_06.md 275",
+        "frase": "Captains short-circuit any potential for mutiny by removing those who refuse to build a better team using the method."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro da la negativa como motivo de la retirada pero no dice que sea el único ni excluye otros; sale la exclusividad.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase5-retirar_directivos_rechazan_metodo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Ten claro que el motivo es este, y no otro: que la persona se niegue a construir un equipo mejor usando el método.",
+      "texto_nuevo": "Ten claro el motivo: que la persona se niegue a construir un equipo mejor usando el método.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_06.md 275",
+        "frase": "Captains short-circuit any potential for mutiny by removing those who refuse to build a better team using the method."
+      },
+      "decision": "auditoria completa M11 (invencion): La misma exclusividad ('y no otro') que el libro no dice; decidido igual que el resumen del nodo.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Retira a Quien Rechaza el Método",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

@@ -1,0 +1,350 @@
+{
+  "node_id": "vender_abastecimiento_candidatos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Vender ya en la primera ola, mientras captas candidatos",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Vender no es el remate del proceso, sino algo que empieza con el primer contacto. Al captar candidatos la conversación ya gira en torno a intereses y talentos, así que es la primera ocasión de calibrar cuáles de las cinco áreas de la venta le importarán a esta persona. Para dar con sus ganchos hay que escuchar y preguntar dónde está hoy y qué busca de verdad. Además, quien siente que le venden desde el principio baja antes la guardia, y eso te da una visión más rápida y más rica de quién es y qué quiere, para presentarle el puesto como su siguiente paso correcto.",
+  "notas_extraccion": "Es la primera de las cinco olas de la venta y la que mas cambia la practica corriente, porque cae antes de que exista siquiera un proceso con la persona. La razon que el libro da es que el abastecimiento ya pone el enfasis en intereses y talentos, de modo que es la primera ocasion de calibrar que efes le van a importar al candidato sin tener que preguntarselo de frente. Mark Stone, director general senior del Gores Group, es quien lo dice del todo: se vende desde el momento en que arranca el proceso entero, todo empieza por entender donde esta alguien con sus intereses, eso ayuda a localizar donde estan sus ganchos, y para localizar los ganchos hay que escuchar. Las dos preguntas que el libro imprime literalmente son suyas: donde estas hoy, y que es lo que buscas de verdad. La segunda razon que Stone da, y que el libro recoge, es que vender desde el principio hace que la gente baje la guardia antes, lo que da una vision mas rapida y mas rica de quienes son y de que quieren.",
+  "pasos_accionables": [
+    "Vende desde el momento en que arrancas el proceso entero de contratación, y no cuando ya tienes que cerrar.",
+    "Aprovecha el énfasis en intereses y talentos que el propio proceso de captación pone: es tu primera oportunidad de calibrar cuáles de las cinco áreas de la venta le van a importar a este candidato.",
+    "Empieza por entender dónde está esta persona con sus intereses: eso te ayuda a ver dónde están sus ganchos.",
+    "Para localizar los ganchos, escucha. Y pregunta: ¿dónde estás hoy?, ¿qué es lo que buscas de verdad?",
+    "Cuenta con la segunda razón para vender desde el principio: así la gente baja la guardia antes, tú consigues una visión más rápida y más rica de quiénes son y de qué quieren, y entonces puedes venderles el puesto como, claramente, el siguiente paso correcto para ellos."
+  ],
+  "entregable_esperado": "Los ganchos del candidato localizados: cuáles de las cinco áreas de la venta le van a importar, dicho por él, y una primera venta hecha del puesto como el siguiente paso correcto para él.",
+  "nodos_previos": [
+    "planificar_cinco_olas_venta",
+    "abastecer_flujo_candidatos"
+  ],
+  "nodos_siguientes": [
+    "vender_final_entrevista"
+  ],
+  "condiciones_activacion": [
+    "Cuando estás captando candidatos y hablas por primera vez con alguien que te interesa. Es la primera de las cinco olas de la venta."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-vender_abastecimiento_candidatos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Vender no es el remate del proceso, sino algo que empieza con el primer contacto. Al abastecer candidatos la conversación ya gira en torno a intereses y talentos, así que es la primera ocasión de calibrar cuáles de las cinco efes le importarán a esta persona. Para dar con sus ganchos hay que escuchar y preguntar dónde está hoy y qué busca de verdad. Además, quien siente que le venden desde el principio baja antes la guardia, y eso te da una visión más rápida y más rica de quién es y qué quiere, para presentarle el puesto como su siguiente paso correcto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "143-163"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)"
+    },
+    {
+      "id": "m11-limpieza-vender_abastecimiento_candidatos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vende desde el momento en que arrancas el proceso entero de contratacion, y no cuando ya tienes que cerrar.",
+      "texto_nuevo": "Vende desde el momento en que arrancas el proceso entero de contratación, y no cuando ya tienes que cerrar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_abastecimiento_candidatos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprovecha el enfasis en intereses y talentos que el propio proceso de abastecimiento pone: es tu primera oportunidad de calibrar cuales de las cinco efes le van a importar a este candidato.",
+      "texto_nuevo": "Aprovecha el énfasis en intereses y talentos que el propio proceso de abastecimiento pone: es tu primera oportunidad de calibrar cuáles de las cinco efes le van a importar a este candidato.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_abastecimiento_candidatos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Empieza por entender donde esta esta persona con sus intereses. Ahi es donde estan sus ganchos.",
+      "texto_nuevo": "Empieza por entender dónde está esta persona con sus intereses. Ahí es donde están sus ganchos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_abastecimiento_candidatos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Para localizar los ganchos, escucha. Y pregunta: donde estas hoy, y que es lo que buscas de verdad.",
+      "texto_nuevo": "Para localizar los ganchos, escucha. Y pregunta: ¿dónde estás hoy?, ¿qué es lo que buscas de verdad?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_abastecimiento_candidatos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con la segunda razon para vender desde el principio: asi la gente baja la guardia antes, tu consigues una vision mas rapida y mas rica de quienes son y de que quieren, y entonces puedes venderles esto como claramente el siguiente movimiento correcto para ellos.",
+      "texto_nuevo": "Cuenta con la segunda razón para vender desde el principio: así la gente baja la guardia antes, tú consigues una visión más rápida y más rica de quiénes son y de qué quieren, y entonces puedes venderles esto como claramente el siguiente movimiento correcto para ellos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_abastecimiento_candidatos-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Los ganchos del candidato localizados: que efes le van a importar, dicho por el, y una primera venta hecha del puesto como el siguiente movimiento correcto para el.",
+      "texto_nuevo": "Los ganchos del candidato localizados: qué efes le van a importar, dicho por él, y una primera venta hecha del puesto como el siguiente movimiento correcto para él.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vender_abastecimiento_candidatos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando estas abasteciendo el flujo de candidatos y hablas por primera vez con alguien que te interesa. Es la primera de las cinco olas de la venta, y es la unica que ocurre antes de que exista ningun proceso formal con esa persona.",
+      "texto_nuevo": "Cuando estás abasteciendo el flujo de candidatos y hablas por primera vez con alguien que te interesa. Es la primera de las cinco olas de la venta, y es la única que ocurre antes de que exista ningún proceso formal con esa persona.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-vender_abastecimiento_candidatos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vender no es el remate del proceso, sino algo que empieza con el primer contacto. Al abastecer candidatos la conversación ya gira en torno a intereses y talentos, así que es la primera ocasión de calibrar cuáles de las cinco efes le importarán a esta persona. Para dar con sus ganchos hay que escuchar y preguntar dónde está hoy y qué busca de verdad. Además, quien siente que le venden desde el principio baja antes la guardia, y eso te da una visión más rápida y más rica de quién es y qué quiere, para presentarle el puesto como su siguiente paso correcto.",
+      "texto_nuevo": "Vender no es el remate del proceso, sino algo que empieza con el primer contacto. Al abastecer candidatos la conversación ya gira en torno a intereses y talentos, así que es la primera ocasión de calibrar cuáles de las cinco áreas de la venta le importarán a esta persona. Para dar con sus ganchos hay que escuchar y preguntar dónde está hoy y qué busca de verdad. Además, quien siente que le venden desde el principio baja antes la guardia, y eso te da una visión más rápida y más rica de quién es y qué quiere, para presentarle el puesto como su siguiente paso correcto.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "efes"
+        ]
+      },
+      "decision": "pase de glosario (cinco_efes): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-glosario-vender_abastecimiento_candidatos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aprovecha el énfasis en intereses y talentos que el propio proceso de abastecimiento pone: es tu primera oportunidad de calibrar cuáles de las cinco efes le van a importar a este candidato.",
+      "texto_nuevo": "Aprovecha el énfasis en intereses y talentos que el propio proceso de abastecimiento pone: es tu primera oportunidad de calibrar cuáles de las cinco áreas de la venta le van a importar a este candidato.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "efes"
+        ]
+      },
+      "decision": "pase de glosario (cinco_efes): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-vender_abastecimiento_candidatos-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vender ya en la primera ola, mientras abasteces",
+      "texto_nuevo": "Vender ya en la primera ola, mientras captas candidatos",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "mientras abasteces"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Abastecer\" calca sourcing y queda sin complemento; el pack lo llama captación de candidatos.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-vender_abastecimiento_candidatos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vender no es el remate del proceso, sino algo que empieza con el primer contacto. Al abastecer candidatos la conversación ya gira en torno a intereses y talentos, así que es la primera ocasión de calibrar cuáles de las cinco áreas de la venta le importarán a esta persona. Para dar con sus ganchos hay que escuchar y preguntar dónde está hoy y qué busca de verdad. Además, quien siente que le venden desde el principio baja antes la guardia, y eso te da una visión más rápida y más rica de quién es y qué quiere, para presentarle el puesto como su siguiente paso correcto.",
+      "texto_nuevo": "Vender no es el remate del proceso, sino algo que empieza con el primer contacto. Al captar candidatos la conversación ya gira en torno a intereses y talentos, así que es la primera ocasión de calibrar cuáles de las cinco áreas de la venta le importarán a esta persona. Para dar con sus ganchos hay que escuchar y preguntar dónde está hoy y qué busca de verdad. Además, quien siente que le venden desde el principio baja antes la guardia, y eso te da una visión más rápida y más rica de quién es y qué quiere, para presentarle el puesto como su siguiente paso correcto.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Al abastecer candidatos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Abastecer candidatos\" calca sourcing.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-vender_abastecimiento_candidatos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aprovecha el énfasis en intereses y talentos que el propio proceso de abastecimiento pone: es tu primera oportunidad de calibrar cuáles de las cinco áreas de la venta le van a importar a este candidato.",
+      "texto_nuevo": "Aprovecha el énfasis en intereses y talentos que el propio proceso de captación pone: es tu primera oportunidad de calibrar cuáles de las cinco áreas de la venta le van a importar a este candidato.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "proceso de abastecimiento"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Proceso de abastecimiento\" calca sourcing process.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-vender_abastecimiento_candidatos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con la segunda razón para vender desde el principio: así la gente baja la guardia antes, tú consigues una visión más rápida y más rica de quiénes son y de qué quieren, y entonces puedes venderles esto como claramente el siguiente movimiento correcto para ellos.",
+      "texto_nuevo": "Cuenta con la segunda razón para vender desde el principio: así la gente baja la guardia antes, tú consigues una visión más rápida y más rica de quiénes son y de qué quieren, y entonces puedes venderles el puesto como, claramente, el siguiente paso correcto para ellos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "esto como claramente el siguiente movimiento correcto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco literal de \"sell this as clearly the right next move\": \"movimiento\" por paso y \"esto\" sin referente (es el puesto).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-vender_abastecimiento_candidatos-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Los ganchos del candidato localizados: qué efes le van a importar, dicho por él, y una primera venta hecha del puesto como el siguiente movimiento correcto para él.",
+      "texto_nuevo": "Los ganchos del candidato localizados: cuáles de las cinco áreas de la venta le van a importar, dicho por él, y una primera venta hecha del puesto como el siguiente paso correcto para él.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "qué efes",
+          "siguiente movimiento"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, coherencia): \"Efes\" es la sigla inglesa de las five F's, sin sentido en español; el nodo las llama las cinco áreas de la venta. \"Siguiente movimiento\" calca \"next move\".",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-vender_abastecimiento_candidatos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando estás abasteciendo el flujo de candidatos y hablas por primera vez con alguien que te interesa. Es la primera de las cinco olas de la venta, y es la única que ocurre antes de que exista ningún proceso formal con esa persona.",
+      "texto_nuevo": "Cuando estás captando candidatos y hablas por primera vez con alguien que te interesa. Es la primera de las cinco olas de la venta.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_06.md 149-161",
+        "frase": "You sell from the moment you start the whole hiring process."
+      },
+      "decision": "auditoria completa M11 (invencion, calco): El libro no dice que la primera ola ocurra antes de ningún proceso formal: la captación es la primera fase del propio proceso de contratación y se vende desde que arranca. \"Abasteciendo el flujo\" calca sourcing.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-vender_abastecimiento_candidatos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Empieza por entender dónde está esta persona con sus intereses. Ahí es donde están sus ganchos.",
+      "texto_nuevo": "Empieza por entender dónde está esta persona con sus intereses: eso te ayuda a ver dónde están sus ganchos.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "smart_who/cap_06.md 161",
+        "frase": "It all starts with understanding where somebody is with their interests. It helps you spot where their hooks are"
+      },
+      "decision": "auditoria completa M11 (invencion): Marcado como coherencia, pero es un añadido: el pasaje dice que entender sus intereses ayuda a localizar los ganchos, no que los ganchos estén ahí.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Vende Desde el Primer Contacto"
+}

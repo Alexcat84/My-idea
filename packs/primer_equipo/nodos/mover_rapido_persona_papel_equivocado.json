@@ -1,0 +1,493 @@
+{
+  "node_id": "mover_rapido_persona_papel_equivocado",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Mover rápido a quien no está preparado para tener éxito en su papel",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Querer defender a cada persona puede llevar a volcar reuniones y charlas en quien no rinde, y a una directiva ese esfuerzo no le sirvió ocho de cada diez veces. Depende de la causa: ignorar las expectativas o no sentirse apreciado suele arreglarse hablando con honestidad, pero un desencaje de valores no se cura con charlas, y no es razonable esperar que una falta de habilidades de fondo se supla en pocos meses. Alargar el ciclo puede estresar a la persona, que se siente vigilada, y desgastar al equipo. Si no la ves capaz, lo más amable es ser honesto pronto y apoyarla para que siga su camino.",
+  "notas_extraccion": "La seccion existe para corregir un instinto de directivo novato, el de ser el campeon del equipo pase lo que pase, y lo corrige con una cifra propia y con un inventario de cinco causas. El inventario es lo que hace procedimentable la linea: sin las cinco razones nombradas una a una, mover rapido seria solo una postura. Y las cinco no valen igual, porque el libro las parte en dos grupos con criterio propio, las que una serie de conversaciones honestas arregla y las que no, que son el desencaje de valores y el hueco de habilidades, cada una razonada con un caso del propio equipo de la autora. El argumento que cierra es de Jack Welch y va con su duenio dentro. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto tiempo es rapido ni cuantas conversaciones honestas son una serie.",
+  "pasos_accionables": [
+    "Parte de la idea con la que una directiva empezó a dirigir: su papel era ante todo estar del lado de su gente, apoyarlos, defenderlos y escucharlos, y si una persona a su cargo batallaba por hacer trabajo de calidad, no era productiva o bajaba la moral del equipo, pensaba que si ella no daba un paso al frente con empatía no lo haría nadie. Nadie lo haría: ese era su trabajo, y todo el mundo merecía una segunda oportunidad.",
+    "Pero cuenta con que, en la experiencia de esa directiva, el ochenta por ciento de las veces ese esfuerzo, que son más reuniones a solas, ayuda en los proyectos, conversaciones con los pares y charlas de ánimo, acabó siendo inútil.",
+    "Ten delante las cinco razones principales por las que alguien puede no estar haciendo un gran trabajo: no sabe cómo es un gran trabajo, sus aspiraciones no encajan con lo que el puesto necesita, no se siente apreciado, le faltan las habilidades, o hunde a los demás.",
+    "Cuenta con que los casos de quien no sabe cómo es un gran trabajo o de quien no se siente apreciado sí suelen poder abordarse con una serie de conversaciones honestas.",
+    "Pero si lo que motiva a una persona sencillamente no casa con los valores del equipo, las charlas de ánimo pueden aliviar los síntomas a corto plazo y no curan nada.",
+    "Y si la persona a tu cargo tiene una carencia de habilidades de fondo que le impide hacer bien el trabajo, no es razonable esperar que ni el mejor entrenamiento le dé la vuelta en unos pocos meses.",
+    "Vigila lo que el ciclo de intentarlo una y otra vez le hace a la otra persona y no solo a ti, porque ese fue el punto de inflexión en el caso de esa directiva: quien recibía su ayuda se estresaba porque sabía que no lo estaba haciendo bien, vivía esa ayuda como un ojo que vigilaba cada uno de sus movimientos, y el resto del equipo esperaba impaciente a que la cosa mejorase porque también sufría los efectos.",
+    "Así que si no crees que alguien esté preparado para tener éxito en su papel actual, lo más amable que puedes hacer es ser honesto con él y apoyarlo para que siga su camino.",
+    "Ten presente este argumento: proteger a los que rinden poco solo aumenta el daño cuando, inevitablemente, un directivo se ve obligado a despedirlos. Lo verdaderamente duro, y una falsa amabilidad, es mantener cerca a gente que no va a crecer ni a prosperar, porque no hay crueldad mayor que esperar y decirle a alguien, tarde en su carrera, que no encaja."
+  ],
+  "entregable_esperado": "Dicho cuál de las cinco razones es la que falla, dicho si se arregla hablando o no, y tomada la decisión sin alargarla.",
+  "nodos_previos": [
+    "revisar_cinco_causas_mal_desempenio",
+    "diagnosticar_falta_motivacion_habilidad"
+  ],
+  "nodos_siguientes": [
+    "decidir_directivo_no_encaja_papel",
+    "elegir_recolocar_despedir_persona"
+  ],
+  "condiciones_activacion": [
+    "Cuando alguien de tu equipo lleva tiempo sin hacer trabajo de calidad, sin ser productivo o bajando la moral, y llevas meses volcando esfuerzo en arreglarlo sin que cambie nada."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Querer defender a cada persona puede llevar a volcar reuniones y charlas en quien no rinde, y a una directiva ese esfuerzo no le sirvió ocho de cada diez veces. Depende de la causa: ignorar las expectativas o no sentirse apreciado suele arreglarse hablando con honestidad, pero un desencaje de valores no se cura con charlas, y no es razonable esperar que un hueco de habilidades de fondo se cierre en pocos meses. Alargar el ciclo puede estresar a la persona, que se siente vigilada, y desgastar al resto del equipo. Por eso lo más amable es ser honesto pronto y apoyarla para que siga su camino.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_04.md",
+          "lineas": "283-303"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio; ajuste del orquestador: baranda voz_de_libro de la casa (scripts/censo_duplicacion.py): el impersonal reflexivo o el sujeto en tercera con deber pasa a tu o a forma directa; el sentido no cambia",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)"
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mover rapido a quien no esta preparado para tener exito en su papel",
+      "texto_nuevo": "Mover rápido a quien no está preparado para tener éxito en su papel",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de donde el libro cuenta que se parte, y lo ratifica: que tu papel es ante todo ser el campeon de tu equipo, apoyarlos, defenderlos y escucharlos, y que si una persona a cargo esta batallando por hacer trabajo de calidad, por ser productiva, o porque baja la moral del equipo, si tu no das un paso al frente con empatia no lo hara nadie. Nadie lo hara: ese es tu trabajo, y todo el mundo merece una segunda oportunidad.",
+      "texto_nuevo": "Parte de esta idea: tu papel es ante todo ser el campeón de tu equipo, apoyarlos, defenderlos y escucharlos, y si una persona a cargo está batallando por hacer trabajo de calidad, por ser productiva, o porque baja la moral del equipo, si tú no das un paso al frente con empatía no lo hará nadie. Nadie lo hará: ese es tu trabajo, y todo el mundo merece una segunda oportunidad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Parte de donde el libro cuenta que se parte, y lo ratifica"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pero cuenta con la cifra que la autora da de su propia experiencia: el ochenta por ciento de las veces ese esfuerzo, que son mas reuniones a solas, ayuda en los proyectos, conversaciones con los pares y charlas de animo, acabo siendo inutil.",
+      "texto_nuevo": "Pero cuenta con que, en la experiencia de una directiva, el ochenta por ciento de las veces ese esfuerzo, que son más reuniones a solas, ayuda en los proyectos, conversaciones con los pares y charlas de ánimo, acabó siendo inútil.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la cifra que la autora da de su propia experiencia"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten delante las cinco razones principales por las que alguien puede no estar haciendo un gran trabajo: no sabe a que se parece un gran trabajo, sus aspiraciones no encajan con lo que el puesto necesita, no se siente apreciado, le faltan las habilidades, o hunde a los demas.",
+      "texto_nuevo": "Ten delante las cinco razones principales por las que alguien puede no estar haciendo un gran trabajo: no sabe a qué se parece un gran trabajo, sus aspiraciones no encajan con lo que el puesto necesita, no se siente apreciado, le faltan las habilidades, o hunde a los demás.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que los asuntos de conciencia o de falta de aprecio si suelen poder abordarse con una serie de conversaciones honestas.",
+      "texto_nuevo": "Cuenta con que los asuntos de conciencia o de falta de aprecio sí suelen poder abordarse con una serie de conversaciones honestas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pero si lo que motiva a una persona sencillamente no casa con los valores del equipo, las charlas de animo pueden aliviar los sintomas a corto plazo y no curan nada.",
+      "texto_nuevo": "Pero si lo que motiva a una persona sencillamente no casa con los valores del equipo, las charlas de ánimo pueden aliviar los síntomas a corto plazo y no curan nada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y si tu persona a cargo tiene un hueco de habilidades de fondo que le impide hacer bien el trabajo, no es razonable esperar que ni el mejor entrenamiento le de la vuelta en unos pocos meses.",
+      "texto_nuevo": "Y si tu persona a cargo tiene un hueco de habilidades de fondo que le impide hacer bien el trabajo, no es razonable esperar que ni el mejor entrenamiento le dé la vuelta en unos pocos meses.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vigila lo que el ciclo de intentarlo una y otra vez le hace a la otra persona y no solo a ti, que es el punto de inflexion que la autora cuenta de si misma: quien recibia su ayuda se estresaba porque sabia que no lo estaba haciendo bien, esa ayuda se le sentia como un ojo que le vigilaba cada movimiento, y el resto del equipo esperaba impaciente a que la cosa mejorase porque tambien sufria los efectos.",
+      "texto_nuevo": "Vigila lo que el ciclo de intentarlo una y otra vez le hace a la otra persona y no solo a ti, porque ese fue el punto de inflexión en el caso de una directiva: quien recibía su ayuda se estresaba porque sabía que no lo estaba haciendo bien, esa ayuda se le sentía como un ojo que le vigilaba cada movimiento, y el resto del equipo esperaba impaciente a que la cosa mejorase porque también sufría los efectos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que la autora cuenta de si misma"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: verificador",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asi que si no crees que alguien este preparado para tener exito en su papel actual, lo mas amable que puedes hacer es ser honesto con el y apoyarlo para que siga su camino.",
+      "texto_nuevo": "Así que si no crees que alguien esté preparado para tener éxito en su papel actual, lo más amable que puedes hacer es ser honesto con él y apoyarlo para que siga su camino.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Ten presente el argumento de Jack Welch: proteger a los que rinden poco solo aumenta el danio cuando, inevitablemente, un directivo se ve obligado a dejarlos ir, y lo brutal y la falsa amabilidad son mantener cerca a gente que no va a crecer ni a prosperar, porque no hay crueldad como esperar y decirle a alguien tarde en su carrera que no encaja.",
+      "texto_nuevo": "Ten presente este argumento: proteger a los que rinden poco solo aumenta el daño cuando, inevitablemente, un directivo se ve obligado a dejarlos ir. Lo verdaderamente duro, y una falsa amabilidad, es mantener cerca a gente que no va a crecer ni a prosperar, porque no hay crueldad mayor que esperar y decirle a alguien, tarde en su carrera, que no encaja.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "de Jack Welch"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mover_rapido_persona_papel_equivocado-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dicho cual de las cinco razones es la que falla, dicho si se arregla hablando o no, y tomada la decision sin alargarla.",
+      "texto_nuevo": "Dicho cuál de las cinco razones es la que falla, dicho si se arregla hablando o no, y tomada la decisión sin alargarla.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-mover_rapido_persona_papel_equivocado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de esta idea: tu papel es ante todo ser el campeón de tu equipo, apoyarlos, defenderlos y escucharlos, y si una persona a cargo está batallando por hacer trabajo de calidad, por ser productiva, o porque baja la moral del equipo, si tú no das un paso al frente con empatía no lo hará nadie. Nadie lo hará: ese es tu trabajo, y todo el mundo merece una segunda oportunidad.",
+      "texto_nuevo": "Parte de esta idea: tu papel es ante todo estar del lado de tu equipo, apoyarlos, defenderlos y escucharlos, y si una persona a cargo está batallando por hacer trabajo de calidad, por ser productiva, o porque baja la moral del equipo, si tú no das un paso al frente con empatía no lo hará nadie. Nadie lo hará: ese es tu trabajo, y todo el mundo merece una segunda oportunidad.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "ser el campeón de tu equipo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'ser el campeón de tu equipo' calca 'a champion for my team' y en español se lee como el mejor del equipo; la propuesta 'defensor' repetía 'defenderlos'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-barrido-mover_rapido_persona_papel_equivocado-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante las cinco razones principales por las que alguien puede no estar haciendo un gran trabajo: no sabe a qué se parece un gran trabajo, sus aspiraciones no encajan con lo que el puesto necesita, no se siente apreciado, le faltan las habilidades, o hunde a los demás.",
+      "texto_nuevo": "Ten delante las cinco razones principales por las que alguien puede no estar haciendo un gran trabajo: no sabe cómo es un gran trabajo, sus aspiraciones no encajan con lo que el puesto necesita, no se siente apreciado, le faltan las habilidades, o hunde a los demás.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "no sabe a qué se parece un gran trabajo"
+        ]
+      },
+      "decision": "barrido final de calcos (a_que_se_parece)",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-mover_rapido_persona_papel_equivocado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Parte de esta idea: tu papel es ante todo estar del lado de tu equipo, apoyarlos, defenderlos y escucharlos, y si una persona a cargo está batallando por hacer trabajo de calidad, por ser productiva, o porque baja la moral del equipo, si tú no das un paso al frente con empatía no lo hará nadie. Nadie lo hará: ese es tu trabajo, y todo el mundo merece una segunda oportunidad.",
+      "texto_nuevo": "Parte de la idea con la que una directiva empezó a dirigir: su papel era ante todo estar del lado de su gente, apoyarlos, defenderlos y escucharlos, y si una persona a su cargo batallaba por hacer trabajo de calidad, no era productiva o bajaba la moral del equipo, pensaba que si ella no daba un paso al frente con empatía no lo haría nadie. Nadie lo haría: ese era su trabajo, y todo el mundo merecía una segunda oportunidad.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 283-285",
+        "frase": "When I first started managing, I considered my role above all to be a champion for my team."
+      },
+      "decision": "auditoria completa M11 (matiz, coherencia): Es la creencia con la que la autora empezó a dirigir y que el resto del pasaje (y el paso 1) matiza; el paso la daba como premisa del lector. Se arregla también la enumeración que no concordaba ('batallando por ... o porque baja la moral') y 'a cargo' sin posesivo. | AJUSTE DEL ORQUESTADOR: \"su equipo\" (baranda residuo_corporativo) pasa a \"su gente\"; el sentido no cambia.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-mover_rapido_persona_papel_equivocado-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vigila lo que el ciclo de intentarlo una y otra vez le hace a la otra persona y no solo a ti, porque ese fue el punto de inflexión en el caso de una directiva: quien recibía su ayuda se estresaba porque sabía que no lo estaba haciendo bien, esa ayuda se le sentía como un ojo que le vigilaba cada movimiento, y el resto del equipo esperaba impaciente a que la cosa mejorase porque también sufría los efectos.",
+      "texto_nuevo": "Vigila lo que el ciclo de intentarlo una y otra vez le hace a la otra persona y no solo a ti, porque ese fue el punto de inflexión en el caso de una directiva: quien recibía su ayuda se estresaba porque sabía que no lo estaba haciendo bien, vivía esa ayuda como un ojo que vigilaba cada uno de sus movimientos, y el resto del equipo esperaba impaciente a que la cosa mejorase porque también sufría los efectos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "esa ayuda se le sentía como un ojo que le vigilaba cada movimiento"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Se le sentía como' calca 'felt like' y no es construcción española.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-mover_rapido_persona_papel_equivocado-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten presente este argumento: proteger a los que rinden poco solo aumenta el daño cuando, inevitablemente, un directivo se ve obligado a dejarlos ir. Lo verdaderamente duro, y una falsa amabilidad, es mantener cerca a gente que no va a crecer ni a prosperar, porque no hay crueldad mayor que esperar y decirle a alguien, tarde en su carrera, que no encaja.",
+      "texto_nuevo": "Ten presente este argumento: proteger a los que rinden poco solo aumenta el daño cuando, inevitablemente, un directivo se ve obligado a despedirlos. Lo verdaderamente duro, y una falsa amabilidad, es mantener cerca a gente que no va a crecer ni a prosperar, porque no hay crueldad mayor que esperar y decirle a alguien, tarde en su carrera, que no encaja.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "dejarlos ir"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Dejarlos ir' calca 'let them go' por despedir.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-mover_rapido_persona_papel_equivocado-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y si tu persona a cargo tiene un hueco de habilidades de fondo que le impide hacer bien el trabajo, no es razonable esperar que ni el mejor entrenamiento le dé la vuelta en unos pocos meses.",
+      "texto_nuevo": "Y si tu persona a cargo tiene una carencia de habilidades de fondo que le impide hacer bien el trabajo, no es razonable esperar que ni el mejor entrenamiento le dé la vuelta en unos pocos meses.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "un hueco de habilidades"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"fundamental skills gap\": en español es una carencia de habilidades.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-mover_rapido_persona_papel_equivocado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Querer defender a cada persona puede llevar a volcar reuniones y charlas en quien no rinde, y a una directiva ese esfuerzo no le sirvió ocho de cada diez veces. Depende de la causa: ignorar las expectativas o no sentirse apreciado suele arreglarse hablando con honestidad, pero un desencaje de valores no se cura con charlas, y no es razonable esperar que un hueco de habilidades de fondo se cierre en pocos meses. Alargar el ciclo puede estresar a la persona, que se siente vigilada, y desgastar al resto del equipo. Por eso lo más amable es ser honesto pronto y apoyarla para que siga su camino.",
+      "texto_nuevo": "Querer defender a cada persona puede llevar a volcar reuniones y charlas en quien no rinde, y a una directiva ese esfuerzo no le sirvió ocho de cada diez veces. Depende de la causa: ignorar las expectativas o no sentirse apreciado suele arreglarse hablando con honestidad, pero un desencaje de valores no se cura con charlas, y no es razonable esperar que una falta de habilidades de fondo se supla en pocos meses. Alargar el ciclo puede estresar a la persona, que se siente vigilada, y desgastar al resto del equipo. Por eso lo más amable es ser honesto pronto y apoyarla para que siga su camino.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "un hueco de habilidades de fondo se cierre"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"skills gap\" como hueco que se cierra.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-mover_rapido_persona_papel_equivocado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Pero cuenta con que, en la experiencia de una directiva, el ochenta por ciento de las veces ese esfuerzo, que son más reuniones a solas, ayuda en los proyectos, conversaciones con los pares y charlas de ánimo, acabó siendo inútil.",
+      "texto_nuevo": "Pero cuenta con que, en la experiencia de esa directiva, el ochenta por ciento de las veces ese esfuerzo, que son más reuniones a solas, ayuda en los proyectos, conversaciones con los pares y charlas de ánimo, acabó siendo inútil.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Es la misma directiva del paso anterior (en el libro, la misma persona: zhuo cap_04 l.283-287); con \"una\" parece otra."
+      },
+      "decision": "auditoria completa M11 (coherencia): Es la misma directiva del paso anterior (en el libro, la misma persona: zhuo cap_04 l.283-287); con \"una\" parece otra.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-mover_rapido_persona_papel_equivocado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que los asuntos de conciencia o de falta de aprecio sí suelen poder abordarse con una serie de conversaciones honestas.",
+      "texto_nuevo": "Cuenta con que los casos de quien no sabe cómo es un gran trabajo o de quien no se siente apreciado sí suelen poder abordarse con una serie de conversaciones honestas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "los asuntos de conciencia o de falta de aprecio"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"Issues of awareness\" (zhuo cap_04 l.291): en español \"asuntos de conciencia\" son cuestiones morales; aquí es no saber cómo es un gran trabajo (l.289).",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-mover_rapido_persona_papel_equivocado-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Y si tu persona a cargo tiene una carencia de habilidades de fondo que le impide hacer bien el trabajo, no es razonable esperar que ni el mejor entrenamiento le dé la vuelta en unos pocos meses.",
+      "texto_nuevo": "Y si la persona a tu cargo tiene una carencia de habilidades de fondo que le impide hacer bien el trabajo, no es razonable esperar que ni el mejor entrenamiento le dé la vuelta en unos pocos meses.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Forma fijada del pack: \"la persona a tu cargo\"."
+      },
+      "decision": "auditoria completa M11 (coherencia): Forma fijada del pack: \"la persona a tu cargo\".",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-mover_rapido_persona_papel_equivocado-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Vigila lo que el ciclo de intentarlo una y otra vez le hace a la otra persona y no solo a ti, porque ese fue el punto de inflexión en el caso de una directiva: quien recibía su ayuda se estresaba porque sabía que no lo estaba haciendo bien, vivía esa ayuda como un ojo que vigilaba cada uno de sus movimientos, y el resto del equipo esperaba impaciente a que la cosa mejorase porque también sufría los efectos.",
+      "texto_nuevo": "Vigila lo que el ciclo de intentarlo una y otra vez le hace a la otra persona y no solo a ti, porque ese fue el punto de inflexión en el caso de esa directiva: quien recibía su ayuda se estresaba porque sabía que no lo estaba haciendo bien, vivía esa ayuda como un ojo que vigilaba cada uno de sus movimientos, y el resto del equipo esperaba impaciente a que la cosa mejorase porque también sufría los efectos.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Misma directiva de los pasos anteriores (zhuo cap_04 l.301, \"The turning point was when I realized\"); con \"una\" parece otra."
+      },
+      "decision": "auditoria completa M11 (coherencia): Misma directiva de los pasos anteriores (zhuo cap_04 l.301, \"The turning point was when I realized\"); con \"una\" parece otra.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final4-mover_rapido_persona_papel_equivocado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Querer defender a cada persona puede llevar a volcar reuniones y charlas en quien no rinde, y a una directiva ese esfuerzo no le sirvió ocho de cada diez veces. Depende de la causa: ignorar las expectativas o no sentirse apreciado suele arreglarse hablando con honestidad, pero un desencaje de valores no se cura con charlas, y no es razonable esperar que una falta de habilidades de fondo se supla en pocos meses. Alargar el ciclo puede estresar a la persona, que se siente vigilada, y desgastar al resto del equipo. Por eso lo más amable es ser honesto pronto y apoyarla para que siga su camino.",
+      "texto_nuevo": "Querer defender a cada persona puede llevar a volcar reuniones y charlas en quien no rinde, y a una directiva ese esfuerzo no le sirvió ocho de cada diez veces. Depende de la causa: ignorar las expectativas o no sentirse apreciado suele arreglarse hablando con honestidad, pero un desencaje de valores no se cura con charlas, y no es razonable esperar que una falta de habilidades de fondo se supla en pocos meses. Alargar el ciclo puede estresar a la persona, que se siente vigilada, y desgastar al equipo. Si no la ves capaz, lo más amable es ser honesto pronto y apoyarla para que siga su camino.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 301-303",
+        "frase": "At the end of the day, if you don't believe someone is set up to succeed in his current role, the kindest thing you can do is to be honest with him and support him in moving on."
+      },
+      "decision": "auditoria completa M11 (matiz, longitud): El libro condiciona la conclusión (\"if you don't believe someone is set up to succeed in his current role\"); el resumen la da sin condición justo después de decir que la falta de claridad o de aprecio suele arreglarse hablando, y así parece regla para todo el que no rinde. Se devuelve la condición (\"Si no la ves capaz\" en lugar de \"Por eso\") y, como el resumen estaba en 597 caracteres, \"al resto del equipo\" pasa a \"al equipo\" para quedar en 599 (medido con script). La propuesta del auditor quitaba además \"ese esfuerzo\" (dejaba sin sujeto \"no le sirvió\") y \"que se siente vigilada\" (el ojo que vigila, línea 301), contenido que el libro sí dice, así que no se toma.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "longitud"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Actúa Rápido ante el Desajuste"
+}

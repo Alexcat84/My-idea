@@ -1,0 +1,250 @@
+{
+  "node_id": "mediar_tiempo_palabra_reunion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Mediar el tiempo de palabra cuando unos pocos dominan la reunión",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Cuando unas pocas voces tienden a acaparar tus reuniones, puedes mediar el tiempo de palabra que recibe cada persona, con una frase concreta para cada caso: proteger a quien interrumpen, abrir hueco a quien quiere entrar, preguntar directamente a quien calla y pedir con claridad y educación a quien habla de más que ceda el turno. No siempre es cómodo cortar a otros, pero hacerlo manda una señal fuerte de que crees que los mejores resultados salen de oír perspectivas diversas. Y hay quien ha comprobado que proteger a quien interrumpen refuerza además la credibilidad de quien lo hace.",
+  "notas_extraccion": "Es la tercera tactica del capitulo para hacer seguro contribuir, y la unica que se ejecuta en tiempo real dentro de la reunion en vez de en su diseno. Lo que la hace procedimentable son las frases: el libro no dice modera con tacto, sino que pone entre comillas la intervencion concreta para cada uno de los cuatro casos, el interrumpido, el que busca hueco, el que calla y el que habla de mas. Los nombres propios de los ejemplos estan castellanizados porque son ejemplos y no personas reales del libro. El paso 6 esta escrito porque el libro cierra la seccion reconociendo la incomodidad en vez de negarla, y eso es parte del procedimiento y no un adorno. Lo que el libro NO dice, y por eso no esta escrito aqui, es que hacer si el que habla de mas es tu propio jefe, ni cuantas veces se puede intervenir antes de que la mediacion sea peor que el problema.",
+  "pasos_accionables": [
+    "Si tus reuniones tienden a estar dominadas por unos pocos individuos, prueba a mediar la cantidad de tiempo de palabra que recibe cada uno.",
+    "Mantén la vigilancia sobre las interrupciones. Si alguien empieza a exponer un punto y otra voz más alta le corta, sal en su defensa diciendo: «Espera, Ana no había terminado». Hay quien ha comprobado que, de propina, esto refuerza además la credibilidad de quien lo hace.",
+    "Si ves a alguien que intenta intervenir, ayúdale a abrir el hueco: «Parece que Juan quiere decir algo». Por ejemplo, alguien a quien un colega le hizo ese gesto en una revisión con veinte personas todavía recuerda la oleada de gratitud que sintió.",
+    "Prueba las preguntas dirigidas, propias de los directivos especialmente perceptivos: «Susana, te veo con cara de duda, ¿qué crees que deberíamos hacer?». O bien: «Ricardo, todavía no te hemos oído, ¿cuál es tu opinión?».",
+    "Con los que hablan de más, sé claro pero educado al hacerles saber que es el turno de otro: «Iván, está claro que tienes más cosas que decir, pero vamos a asegurarnos primero de que otras personas tienen ocasión de opinar». O bien: «Laura, te oigo decir que crees firmemente que deberíamos hacer X; antes de cerrar, ¿tiene alguien otra opinión? Quiero asegurarme de que se oyen todos los puntos de vista».",
+    "Cuenta con que no siempre resulta cómodo interrumpir a otros y llevar así el flujo de la conversación, y hazlo igual por lo que señala: manda una señal fuerte de que crees que los mejores resultados vienen de oír una diversidad de perspectivas."
+  ],
+  "entregable_esperado": "Una reunión en la que quien fue interrumpido termina su frase, quien buscaba hueco lo recibe, quien callaba es preguntado, y quien habla de más cede el turno.",
+  "nodos_previos": [
+    "conducir_etapas_modelo_ideal_decision"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando tus reuniones tienden a estar dominadas por unos pocos individuos."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-mediar_tiempo_palabra_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando unas pocas voces acaparan una reunión, las demás perspectivas no llegan a la mesa. Mediar el tiempo de palabra corrige ese desequilibrio en el momento, con una frase concreta para cada caso: proteger a quien interrumpen, abrir hueco a quien quiere entrar, preguntar directamente a quien calla y pedir con claridad y educación a quien habla de más que ceda el turno. No siempre es cómodo cortar a otros, pero hacerlo manda una señal fuerte de que crees que los mejores resultados salen de oír perspectivas diversas, y de paso refuerza tu credibilidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "245-255"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)"
+    },
+    {
+      "id": "m11-limpieza-mediar_tiempo_palabra_reunion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mediar el tiempo de palabra cuando unos pocos dominan la reunion",
+      "texto_nuevo": "Mediar el tiempo de palabra cuando unos pocos dominan la reunión",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mediar_tiempo_palabra_reunion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Manten la vigilancia sobre las interrupciones. Si alguien empieza a exponer un punto y otra voz mas alta le corta, dale cobertura diciendo: espera, Ana no habia terminado. El libro anade que hacer esto, de propina, refuerza tu propia credibilidad.",
+      "texto_nuevo": "Mantén la vigilancia sobre las interrupciones. Si alguien empieza a exponer un punto y otra voz más alta le corta, dale cobertura diciendo: «Espera, Ana no había terminado». Hacer esto, de propina, refuerza tu propia credibilidad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro anade que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mediar_tiempo_palabra_reunion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si ves a alguien buscando meter baza, ayudale a abrir el hueco: parece que Juan quiere decir algo. La autora cuenta que un colega hizo eso por ella una vez en una revision con veinte personas, y que todavia recuerda la oleada de gratitud que sintio.",
+      "texto_nuevo": "Si ves a alguien buscando meter baza, ayúdale a abrir el hueco: «Parece que Juan quiere decir algo». Por ejemplo, alguien a quien un colega le hizo ese gesto en una revisión con veinte personas todavía recuerda la oleada de gratitud que sintió.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora cuenta que un colega hizo eso por ella una vez"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: verificador",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mediar_tiempo_palabra_reunion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Prueba las preguntas dirigidas, que el libro atribuye a los directivos especialmente perceptivos: Susana, te veo con cara de duda, que crees que deberiamos hacer? O bien: Ricardo, todavia no te hemos oido, cual es tu opinion?",
+      "texto_nuevo": "Prueba las preguntas dirigidas, propias de los directivos especialmente perceptivos: «Susana, te veo con cara de duda, ¿qué crees que deberíamos hacer?». O bien: «Ricardo, todavía no te hemos oído, ¿cuál es tu opinión?».",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro atribuye a los directivos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mediar_tiempo_palabra_reunion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Con los que hablan de mas, se claro pero educado al hacerles saber que es el turno de otro: Ivan, esta claro que tienes mas cosas que decir, pero vamos a asegurarnos primero de que otras personas tienen ocasion de opinar. O bien: Laura, te oigo decir que crees firmemente que deberiamos hacer X, y antes de cerrar, tiene alguien otra opinion? Quiero asegurarme de que se oyen todos los puntos de vista.",
+      "texto_nuevo": "Con los que hablan de más, sé claro pero educado al hacerles saber que es el turno de otro: «Iván, está claro que tienes más cosas que decir, pero vamos a asegurarnos primero de que otras personas tienen ocasión de opinar». O bien: «Laura, te oigo decir que crees firmemente que deberíamos hacer X; antes de cerrar, ¿tiene alguien otra opinión? Quiero asegurarme de que se oyen todos los puntos de vista».",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mediar_tiempo_palabra_reunion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que no siempre resulta comodo interrumpir a otros y llevar asi el flujo de la conversacion, y hazlo igual por lo que senala: manda una senal fuerte de que crees que los mejores resultados vienen de oir una diversidad de perspectivas.",
+      "texto_nuevo": "Cuenta con que no siempre resulta cómodo interrumpir a otros y llevar así el flujo de la conversación, y hazlo igual por lo que señala: manda una señal fuerte de que crees que los mejores resultados vienen de oír una diversidad de perspectivas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-mediar_tiempo_palabra_reunion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una reunion en la que quien fue interrumpido termina su frase, quien buscaba hueco lo recibe, quien callaba es preguntado, y quien habla de mas cede el turno.",
+      "texto_nuevo": "Una reunión en la que quien fue interrumpido termina su frase, quien buscaba hueco lo recibe, quien callaba es preguntado, y quien habla de más cede el turno.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limites-mediar_tiempo_palabra_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando unas pocas voces acaparan una reunión, las demás perspectivas no llegan a la mesa. Mediar el tiempo de palabra corrige ese desequilibrio en el momento, con una frase concreta para cada caso: proteger a quien interrumpen, abrir hueco a quien quiere entrar, preguntar directamente a quien calla y pedir con claridad y educación a quien habla de más que ceda el turno. No siempre es cómodo cortar a otros, pero hacerlo manda una señal fuerte de que crees que los mejores resultados salen de oír perspectivas diversas, y de paso refuerza tu credibilidad.",
+      "texto_nuevo": "Cuando unas pocas voces tienden a acaparar tus reuniones, puedes mediar el tiempo de palabra que recibe cada persona, con una frase concreta para cada caso: proteger a quien interrumpen, abrir hueco a quien quiere entrar, preguntar directamente a quien calla y pedir con claridad y educación a quien habla de más que ceda el turno. No siempre es cómodo cortar a otros, pero hacerlo manda una señal fuerte de que crees que los mejores resultados salen de oír perspectivas diversas. Y hay quien ha comprobado que proteger a quien interrumpen refuerza además la credibilidad de quien lo hace.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 247",
+        "frase": "As an added bonus, I've found that doing this also bolsters your own credibility"
+      },
+      "decision": "arbitro de limites de la limpieza M11 (casos que los verificadores dejaron en OK senalados como dudosos): La nota se sostiene. zhuo_manager/cap_07.md línea 247: \"As an added bonus, I've found that doing this also bolsters your own credibility\". Es la experiencia de una persona y el texto la afirmaba como efecto seguro (\"de paso refuerza tu credibilidad\"); se cuenta con \"hay quien ha comprobado\". Además \"las demás perspectivas no llegan a la mesa\" y \"corrige ese desequilibrio\" no están en las líneas 245-255 (la línea 245 solo dice \"If your meetings tend to be dominated by a few individuals, try mediating\"); se quitan y se devuelve el tend to.",
+      "auditoria": "docs/saneamiento/resultados/M11/limites/"
+    },
+    {
+      "id": "m11-limites-mediar_tiempo_palabra_reunion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mantén la vigilancia sobre las interrupciones. Si alguien empieza a exponer un punto y otra voz más alta le corta, dale cobertura diciendo: «Espera, Ana no había terminado». Hacer esto, de propina, refuerza tu propia credibilidad.",
+      "texto_nuevo": "Mantén la vigilancia sobre las interrupciones. Si alguien empieza a exponer un punto y otra voz más alta le corta, dale cobertura diciendo: «Espera, Ana no había terminado». Hay quien ha comprobado que, de propina, esto refuerza además la credibilidad de quien lo hace.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 247",
+        "frase": "As an added bonus, I've found that doing this also bolsters your own credibility."
+      },
+      "decision": "arbitro de limites de la limpieza M11 (casos que los verificadores dejaron en OK senalados como dudosos): La nota se sostiene. zhuo_manager/cap_07.md línea 247: \"As an added bonus, I've found that doing this also bolsters your own credibility.\" El I've found es la experiencia de una persona; se cuenta como caso (\"hay quien ha comprobado\") y deja de afirmarse como regla.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/limites/"
+    },
+    {
+      "id": "m11-pase2-mediar_tiempo_palabra_reunion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mantén la vigilancia sobre las interrupciones. Si alguien empieza a exponer un punto y otra voz más alta le corta, dale cobertura diciendo: «Espera, Ana no había terminado». Hay quien ha comprobado que, de propina, esto refuerza además la credibilidad de quien lo hace.",
+      "texto_nuevo": "Mantén la vigilancia sobre las interrupciones. Si alguien empieza a exponer un punto y otra voz más alta le corta, sal en su defensa diciendo: «Espera, Ana no había terminado». Hay quien ha comprobado que, de propina, esto refuerza además la credibilidad de quien lo hace.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "dale cobertura"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): calco de \"provide cover\"",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-mediar_tiempo_palabra_reunion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si ves a alguien buscando meter baza, ayúdale a abrir el hueco: «Parece que Juan quiere decir algo». Por ejemplo, alguien a quien un colega le hizo ese gesto en una revisión con veinte personas todavía recuerda la oleada de gratitud que sintió.",
+      "texto_nuevo": "Si ves a alguien que intenta intervenir, ayúdale a abrir el hueco: «Parece que Juan quiere decir algo». Por ejemplo, alguien a quien un colega le hizo ese gesto en una revisión con veinte personas todavía recuerda la oleada de gratitud que sintió.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "buscando meter baza"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Meter baza' es forma de España que en América se lee como ajena; pasa a 'que intenta intervenir' (libro: 'seeking to get a word in', zhuo cap_07 249). La propuesta del auditor repetía 'hueco' dos veces seguidas.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Media el Tiempo de Palabra"
+}

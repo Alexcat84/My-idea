@@ -1,0 +1,180 @@
+{
+  "node_id": "minimizar_impuesto_colaboracion_equipo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Minimizar el impuesto de colaboración de tu equipo cargando tú con él, con las tres cosas que equilibran la balanza",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Como jefe, parte de tu trabajo es cargar con buena parte del impuesto de colaboración para que tu equipo pueda dedicar más tiempo a ejecutar. Las responsabilidades de jefe se comen una cantidad enorme de tiempo, y una de las cosas más difíciles del puesto es equilibrarlas con el trabajo que tienes que hacer tú en tu especialidad. Hay quien ha aprendido a acertar con ese equilibrio con tres cosas: no malgastar el tiempo del equipo, mantener las manos en el trabajo real y bloquear en el calendario tiempo para ejecutar.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 367 a 373, bajo los rotulos EXECUTE y Minimize the collaboration tax, y es la cabeza del paso EXECUTE de la rueda de hacer cosas. ES UNA CABEZA DE SERIE D.37 Y ESO TIENE CONSECUENCIA: la linea 373 dice CUANTAS partes tiene Y LAS NOMBRA, con estas palabras, here are the three things I have learned about getting this balance right, seguidas de los tres rotulos. D.37 manda que las aristas de esta cabeza a sus tres partes se declaren en la misma vuelta en que se insertan las partes, sin esperar a que ninguna señal las levante, y con el paso de la madre citado. El paso que las enumera es el P4. Es una cabeza corta a proposito: su contenido propio son los dos costes del equilibrio y el reparto; el procedimiento de cada parte vive en su nodo. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. P1, P2 y P3 de la linea 371; P4 de la linea 373. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: que proporcion del impuesto se echa uno encima, y como se sabe que te has echado demasiado.",
+  "pasos_accionables": [
+    "Échate encima buena parte del impuesto de colaboración, para que tu equipo pueda dedicar más tiempo a ejecutar: eso es parte de tu puesto.",
+    "Cuenta con que las responsabilidades que tienes como jefe se llevan una cantidad tremenda de tiempo.",
+    "Cuenta también con que una de las cosas más difíciles de ser jefe es equilibrar esas responsabilidades con el trabajo que tienes que hacer tú personalmente en tu especialidad.",
+    "Aplica estas tres cosas para acertar con ese equilibrio: no malgastes el tiempo de tu equipo, mantén las manos en el trabajo real, y reserva tiempo para ejecutar."
+  ],
+  "entregable_esperado": "Buena parte del impuesto de colaboración cargada sobre ti para que tu equipo pueda dedicar más tiempo a ejecutar, y las tres cosas del equilibrio puestas en práctica: su tiempo no malgastado, tus manos todavía en el trabajo, y tiempo reservado para ejecutar.",
+  "nodos_previos": [
+    "persuadir_emocion_oyente_no_propia"
+  ],
+  "nodos_siguientes": [
+    "proteger_tiempo_equipo_jefe",
+    "mantener_manos_trabajo_real_equipo",
+    "reservar_calendario_tiempo_ejecutar"
+  ],
+  "condiciones_activacion": [
+    "Cuando tus responsabilidades de jefe te están comiendo el tiempo y a la vez tienes trabajo propio que hacer en tu especialidad, y tu equipo necesita tiempo para ejecutar."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-minimizar_impuesto_colaboracion_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Como jefe, parte de tu trabajo es cargar con buena parte del impuesto de colaboración para que tu equipo pueda dedicar más tiempo a ejecutar. Las responsabilidades de jefe se comen una cantidad enorme de tiempo, y una de las cosas más difíciles del puesto es equilibrarlas con el trabajo que tienes que hacer tú en tu especialidad. Hay quien ha aprendido a acertar con ese equilibrio con tres cosas: no malgastar el tiempo del equipo, mantener las manos en el trabajo real y bloquear en el calendario tiempo para ejecutar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_07.md",
+          "lineas": "367-373"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): Se sostiene: el efecto final no está en la 371 y las tres cosas son 'the three things I've learned' (373). La propuesta del lector lo cuenta como caso, pero añade 'sin interrupciones', que la 373 no dice ('Block time to execute'); se quita.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)"
+    },
+    {
+      "id": "m11-limpieza-minimizar_impuesto_colaboracion_equipo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Minimizar el impuesto de colaboracion de tu equipo cargando tu con el, con las tres cosas que equilibran la balanza",
+      "texto_nuevo": "Minimizar el impuesto de colaboración de tu equipo cargando tú con él, con las tres cosas que equilibran la balanza",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-minimizar_impuesto_colaboracion_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Echate encima buena parte del impuesto de colaboracion, para que tu equipo pueda dedicar mas tiempo a ejecutar. El texto dice que eso es parte de tu puesto.",
+      "texto_nuevo": "Échate encima buena parte del impuesto de colaboración, para que tu equipo pueda dedicar más tiempo a ejecutar: eso es parte de tu puesto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-minimizar_impuesto_colaboracion_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta tambien con que una de las cosas mas dificiles de ser jefe es equilibrar esas responsabilidades con el trabajo que tienes que hacer tu personalmente en tu especialidad.",
+      "texto_nuevo": "Cuenta también con que una de las cosas más difíciles de ser jefe es equilibrar esas responsabilidades con el trabajo que tienes que hacer tú personalmente en tu especialidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-minimizar_impuesto_colaboracion_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aplica las tres cosas que el texto dice haber aprendido sobre como acertar con ese equilibrio: no malgastes el tiempo de tu equipo, manten la tierra bajo tus uñas, y reserva tiempo para ejecutar.",
+      "texto_nuevo": "Aplica estas tres cosas para acertar con ese equilibrio: no malgastes el tiempo de tu equipo, mantén las manos en el trabajo real, y reserva tiempo para ejecutar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto dice haber aprendido",
+          "manten la tierra bajo tus uñas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-minimizar_impuesto_colaboracion_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El impuesto de colaboracion cargado sobre ti y no sobre tu equipo, y las tres cosas del equilibrio puestas en practica: su tiempo no malgastado, tus manos todavia en el trabajo, y tiempo reservado para ejecutar.",
+      "texto_nuevo": "El impuesto de colaboración cargado sobre ti y no sobre tu equipo, y las tres cosas del equilibrio puestas en práctica: su tiempo no malgastado, tus manos todavía en el trabajo, y tiempo reservado para ejecutar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-minimizar_impuesto_colaboracion_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tus responsabilidades de jefe te estan comiendo el tiempo y a la vez tienes trabajo propio que hacer en tu especialidad, y tu equipo necesita tiempo para ejecutar.",
+      "texto_nuevo": "Cuando tus responsabilidades de jefe te están comiendo el tiempo y a la vez tienes trabajo propio que hacer en tu especialidad, y tu equipo necesita tiempo para ejecutar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase5-minimizar_impuesto_colaboracion_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El impuesto de colaboración cargado sobre ti y no sobre tu equipo, y las tres cosas del equilibrio puestas en práctica: su tiempo no malgastado, tus manos todavía en el trabajo, y tiempo reservado para ejecutar.",
+      "texto_nuevo": "Buena parte del impuesto de colaboración cargada sobre ti para que tu equipo pueda dedicar más tiempo a ejecutar, y las tres cosas del equilibrio puestas en práctica: su tiempo no malgastado, tus manos todavía en el trabajo, y tiempo reservado para ejecutar.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 371",
+        "frase": "AS THE BOSS, part of your job is to take a lot of the “collaboration tax” on yourself so that your team can spend more time executing."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que cargas con buena parte (a lot of) del impuesto para que el equipo ejecute más, y en la línea 387 el equipo sigue teniendo tareas colaborativas; \"y no sobre tu equipo\" es un absoluto que además contradice el resumen y el paso 0 del nodo.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Minimiza el Impuesto de Colaboración"
+}

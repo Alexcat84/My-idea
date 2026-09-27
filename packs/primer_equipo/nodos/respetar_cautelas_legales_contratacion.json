@@ -1,0 +1,278 @@
+{
+  "node_id": "respetar_cautelas_legales_contratacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Respetar las cuatro áreas de cautela legal al contratar",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Contratar es un asunto serio y nadie puede ignorar la ley laboral: muchos directivos meten en problemas a su empresa y a sí mismos por saltarse principios básicos. Un proceso consistente y centrado en reunir datos es más legal y justo que contratar sobre la marcha, y cuatro cautelas lo mantienen dentro de la ley: rechazar solo por razones del puesto, usar el mismo proceso con todos, hablar sin discriminar y no hacer preguntas ilegales. Todo se ata a las herramientas de selección: la tarjeta de puntuación fija el estándar y las entrevistas reúnen los hechos que se contrastan con él.",
+  "notas_extraccion": "El libro abre esta seccion diciendo que contratar es un asunto serio y que nadie, ni el lector ni los autores, puede ignorar las legalidades de la contratacion, porque muchos directivos se meten a si mismos y a sus empresas en problemas serios por ignorar principios basicos. Su tesis propia, y es la que sostiene el resto, es que el metodo no solo es legal y justo sino que la consistencia del proceso y el enfoque en reunir datos lo hacen mucho mas legal y justo que las practicas de contratacion improvisadas que se usan habitualmente; los autores respaldan eso con su propia experiencia, que declaran como no haber encontrado nunca problemas legales por usar el metodo ni tener noticia de que los tuviera ningun cliente suyo. De las cuatro cautelas, tres traen inventario propio y viven ademas en su nodo: la relevancia, el lenguaje y las preguntas ilegales. La segunda, la estandarizacion, se queda aqui como paso de la cabeza y no da hijo, porque es una sola instruccion cuyo objeto, el proceso que hay que usar con todos, esta definido en otro sitio: es el caso de nombrar el procedimiento de otro. La linea de fondo del libro cierra la seccion atando las cuatro cautelas a las herramientas del propio metodo, y por eso se transcribe entera aqui: la tarjeta de puntuacion define el estandar y las cuatro entrevistas reunen los hechos que se contrastan con el.",
+  "pasos_accionables": [
+    "Asegúrate de cumplir todas las leyes laborales aplicables en los tres niveles: federal o central, provincial o estatal, y local, en cualquier parte del mundo donde estés contratando.",
+    "Trabaja con tu gente de personal y con tu equipo jurídico laboral para entender a fondo todos los asuntos de los que hay que estar al tanto.",
+    "Cautela uno, la relevancia: no rechaces a un candidato por razones que no sean relevantes para el puesto.",
+    "Cautela dos, la estandarización del proceso: usa el mismo proceso con todos los candidatos, sea cual sea su grupo demográfico. Los directivos se meten en líos cuando, a propósito o sin darse cuenta, someten a grupos distintos a procesos distintos.",
+    "Cautela tres, el lenguaje no discriminatorio en las entrevistas y en los formularios escritos.",
+    "Cautela cuatro, evitar las preguntas ilegales.",
+    "Cierra con esta regla de fondo: no discrimines. Selecciona a la gente por si es probable o no que pueda desempeñar el puesto.",
+    "Usa la tarjeta de puntuación para definir el estándar, y la entrevista de criba, la cronológica, las enfocadas y las de referencias para reunir los hechos que se contrastan con ese estándar.",
+    "Evalúa a las personas por los factores que importan para el puesto en cuestión, y solo por esos factores."
+  ],
+  "entregable_esperado": "El proceso de contratación revisado contra las cuatro áreas de cautela y contra la legislación laboral aplicable en los tres niveles, con la gente de personal y el equipo jurídico laboral consultados antes de empezar.",
+  "nodos_previos": [
+    "crear_tarjeta_puntuacion_puesto"
+  ],
+  "nodos_siguientes": [
+    "rechazar_candidato_razones_relevantes",
+    "usar_lenguaje_no_discriminatorio_entrevista",
+    "evitar_preguntas_ilegales_entrevista",
+    "preparar_preguntas_entrevista_antemano"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a contratar con tarjeta de puntuación y entrevistas, en cualquier país, y antes de la primera entrevista: es un aviso previo al proceso y no una revisión posterior."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-respetar_cautelas_legales_contratacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Contratar es un asunto serio y nadie puede ignorar la ley laboral: muchos directivos meten en problemas a su empresa y a sí mismos por saltarse principios básicos. Un proceso consistente y centrado en reunir datos es más legal y justo que contratar sobre la marcha, y cuatro cautelas lo mantienen dentro de la ley: rechazar solo por razones del puesto, usar el mismo proceso con todos, hablar sin discriminar y no hacer preguntas ilegales. Todo se ata a las herramientas del método: la tarjeta de puntuación fija el estándar y las entrevistas reúnen los hechos que se contrastan con él.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "297-317"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)"
+    },
+    {
+      "id": "m11-limpieza-respetar_cautelas_legales_contratacion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Respetar las cuatro areas de cautela legal al contratar",
+      "texto_nuevo": "Respetar las cuatro áreas de cautela legal al contratar",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cautelas_legales_contratacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asegurate de cumplir todas las leyes laborales aplicables en los tres niveles que el libro nombra: federal o central, provincial o estatal, y local, en cualquier parte del mundo donde estes contratando.",
+      "texto_nuevo": "Asegúrate de cumplir todas las leyes laborales aplicables en los tres niveles: federal o central, provincial o estatal, y local, en cualquier parte del mundo donde estés contratando.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cautelas_legales_contratacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Trabaja con tu gente de personal y con tu equipo juridico laboral para entender a fondo todos los asuntos de los que hay que estar al tanto.",
+      "texto_nuevo": "Trabaja con tu gente de personal y con tu equipo jurídico laboral para entender a fondo todos los asuntos de los que hay que estar al tanto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cautelas_legales_contratacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cautela dos, la estandarizacion del proceso: usa el mismo proceso con todos los candidatos, sea cual sea su grupo demografico. Los directivos se meten en lios cuando, a proposito o sin darse cuenta, meten a grupos distintos por procesos distintos.",
+      "texto_nuevo": "Cautela dos, la estandarización del proceso: usa el mismo proceso con todos los candidatos, sea cual sea su grupo demográfico. Los directivos se meten en líos cuando, a propósito o sin darse cuenta, meten a grupos distintos por procesos distintos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cautelas_legales_contratacion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cierra con la linea de fondo que el libro escribe: no discrimines. Selecciona a la gente por si es probable o no que pueda desempenar el puesto.",
+      "texto_nuevo": "Cierra con esta regla de fondo: no discrimines. Selecciona a la gente por si es probable o no que pueda desempeñar el puesto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la linea de fondo que el libro escribe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cautelas_legales_contratacion-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa la tarjeta de puntuacion para definir el estandar, y la entrevista de criba, la cronologica, las enfocadas y las de referencias para reunir los hechos que se contrastan con ese estandar.",
+      "texto_nuevo": "Usa la tarjeta de puntuación para definir el estándar, y la entrevista de criba, la cronológica, las enfocadas y las de referencias para reunir los hechos que se contrastan con ese estándar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cautelas_legales_contratacion-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua a las personas por los factores que importan para el puesto en cuestion, y solo por esos factores.",
+      "texto_nuevo": "Evalúa a las personas por los factores que importan para el puesto en cuestión, y solo por esos factores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cautelas_legales_contratacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El proceso de contratacion revisado contra las cuatro areas de cautela y contra la legislacion laboral aplicable en los tres niveles, con la gente de personal y el equipo juridico laboral consultados antes de empezar.",
+      "texto_nuevo": "El proceso de contratación revisado contra las cuatro áreas de cautela y contra la legislación laboral aplicable en los tres niveles, con la gente de personal y el equipo jurídico laboral consultados antes de empezar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cautelas_legales_contratacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando vas a contratar con este metodo, en cualquier pais, y antes de la primera entrevista. El libro lo pone como aviso previo al proceso y no como revision posterior.",
+      "texto_nuevo": "Cuando vas a contratar con este método, en cualquier país, y antes de la primera entrevista: es un aviso previo al proceso y no una revisión posterior.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro lo pone como"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-respetar_cautelas_legales_contratacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cautela dos, la estandarización del proceso: usa el mismo proceso con todos los candidatos, sea cual sea su grupo demográfico. Los directivos se meten en líos cuando, a propósito o sin darse cuenta, meten a grupos distintos por procesos distintos.",
+      "texto_nuevo": "Cautela dos, la estandarización del proceso: usa el mismo proceso con todos los candidatos, sea cual sea su grupo demográfico. Los directivos se meten en líos cuando, a propósito o sin darse cuenta, someten a grupos distintos a procesos distintos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "meten a grupos distintos por procesos distintos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"put different groups through different processes\".",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-respetar_cautelas_legales_contratacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Contratar es un asunto serio y nadie puede ignorar la ley laboral: muchos directivos meten en problemas a su empresa y a sí mismos por saltarse principios básicos. Un proceso consistente y centrado en reunir datos es más legal y justo que contratar sobre la marcha, y cuatro cautelas lo mantienen dentro de la ley: rechazar solo por razones del puesto, usar el mismo proceso con todos, hablar sin discriminar y no hacer preguntas ilegales. Todo se ata a las herramientas del método: la tarjeta de puntuación fija el estándar y las entrevistas reúnen los hechos que se contrastan con él.",
+      "texto_nuevo": "Contratar es un asunto serio y nadie puede ignorar la ley laboral: muchos directivos meten en problemas a su empresa y a sí mismos por saltarse principios básicos. Un proceso consistente y centrado en reunir datos es más legal y justo que contratar sobre la marcha, y cuatro cautelas lo mantienen dentro de la ley: rechazar solo por razones del puesto, usar el mismo proceso con todos, hablar sin discriminar y no hacer preguntas ilegales. Todo se ata a las herramientas de selección: la tarjeta de puntuación fija el estándar y las entrevistas reúnen los hechos que se contrastan con él.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'El método' no tiene antecedente en el nodo; las herramientas que siguen son de selección."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'El método' no tiene antecedente en el nodo; las herramientas que siguen son de selección.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-respetar_cautelas_legales_contratacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando vas a contratar con este método, en cualquier país, y antes de la primera entrevista: es un aviso previo al proceso y no una revisión posterior.",
+      "texto_nuevo": "Cuando vas a contratar con tarjeta de puntuación y entrevistas, en cualquier país, y antes de la primera entrevista: es un aviso previo al proceso y no una revisión posterior.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'Este método' sin antecedente; se nombran sus herramientas, las del paso 7."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Este método' sin antecedente; se nombran sus herramientas, las del paso 7.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Respeta las Cautelas Legales al Contratar"
+}

@@ -1,0 +1,265 @@
+{
+  "node_id": "contratar_investigadores_reclutamiento",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Contratar investigadores de reclutamiento por encargo",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Los investigadores de reclutamiento amplían tu búsqueda a bajo coste: exploran un mercado, localizan fuentes de talento y te devuelven nombres para que tu equipo los contacte, y contratarlos por encargo mantiene el coste variable. Su límite es que no entrevistan y filtran menos a fondo de lo que querrías, así que la criba recae en tus reclutadores internos o en quien contrata, y si prima la cantidad sobre la calidad el proceso puede atascarse. Fija tus requisitos en una tarjeta de puntuación y oriéntalos al principio a tu negocio y tu cultura: cuanto más sepan al entrar, más sacarás de ellos.",
+  "notas_extraccion": "Es el punto 5 del recuadro How to Source. Los beneficios que el libro le atribuye son obvios: por un coste minimo las empresas obtienen una tuberia que pincha en una fuente rica de talento, y contratarlos por contrato ayuda ademas a mantener una estructura de coste variable. Las dos pegas que el libro pone enfrente, y que son la razon de la mayoria de los pasos: la primera es que los investigadores no van a cualificar a los candidatos tan a fondo como a ti te gustaria, y ese trabajo de verificacion recae sobre los reclutadores internos o sobre el jefe que contrata; la segunda es que un enfasis en la cantidad por encima de la calidad puede atascar el proceso de contratacion con cuerpos calientes, y el libro cuenta el caso de una empresa que se vio tan desbordada por el flujo entrante que acabo pidiendo a sus investigadores que cribaran algo mas a fondo, lo que redujo el flujo de gente pero aumento su valor. La diferencia con el reclutador externo, que el propio libro subraya: a diferencia de los reclutadores ejecutivos de fuera, no es probable que los investigadores se conviertan en tu nuevo mejor amigo.",
+  "pasos_accionables": [
+    "Identifica investigadores de reclutamiento a los que puedas contratar por encargo.",
+    "Usa una tarjeta de puntuación para especificar tus requisitos.",
+    "Asegúrate de que entienden tu negocio y tu cultura.",
+    "Cuenta con que no van a entrevistar ellos: lo que hacen es identificar nombres para que tu equipo interno de reclutamiento o tus mandos los contacten, y el proceso de filtrado cae sobre los reclutadores internos o directamente sobre el jefe que contrata.",
+    "Tómate tiempo al principio para orientarlos a tu cultura, a tus necesidades de negocio e incluso a tu estilo y tus preferencias de dirección, porque cuanto más sepan al entrar, más sacarás de ellos al final."
+  ],
+  "entregable_esperado": "Un flujo de nombres que entra a coste mínimo para que tu equipo interno de reclutamiento o tus mandos los contacten, con los investigadores contratados por encargo y orientados a tu negocio y tu cultura.",
+  "nodos_previos": [
+    "abastecer_flujo_candidatos"
+  ],
+  "nodos_siguientes": [
+    "crear_sistema_captura_seguimiento_candidatos"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres ampliar tu esfuerzo de captación de candidatos con un coste mínimo y variable. Las firmas de reclutamiento externas contratan a menudo investigadores para explorar un mercado, identificar fuentes de talento y devolverles nombres, y tú puedes hacer lo mismo directamente."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-contratar_investigadores_reclutamiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Los investigadores de reclutamiento amplían tu búsqueda a bajo coste: exploran un mercado, localizan fuentes de talento y te devuelven nombres para que tu equipo los persiga, y contratarlos por contrato mantiene el coste variable. Su límite es que no entrevistan ni filtran tan a fondo como querrías, así que la criba recae en tus reclutadores internos o en quien contrata, y si prima la cantidad sobre la calidad el proceso puede atascarse. Fija tus requisitos en una tarjeta de puntuación y oriéntalos al principio a tu negocio y tu cultura: cuanto más sepan al entrar, más sacarás de ellos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "385-395"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: la línea 391 dice 'as thoroughly as you might like' y la 393 'can also clog'; el texto afirmaba 'no filtran a fondo' y 'el proceso se atasca'. La propuesta devuelve 'tan a fondo como querrías' y 'puede atascarse' y quita el 'por eso conviene' como enlace causal.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)"
+    },
+    {
+      "id": "m11-limpieza-contratar_investigadores_reclutamiento-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa una tarjeta de puntuacion para especificar tus requisitos.",
+      "texto_nuevo": "Usa una tarjeta de puntuación para especificar tus requisitos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_investigadores_reclutamiento-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurate de que entienden tu negocio y tu cultura.",
+      "texto_nuevo": "Asegúrate de que entienden tu negocio y tu cultura.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_investigadores_reclutamiento-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tomate tiempo al principio para orientarlos a tu cultura, a tus necesidades de negocio e incluso a tu estilo y tus preferencias de direccion, porque cuanto mas sepan al entrar mas sacaras de ellos al final.",
+      "texto_nuevo": "Tómate tiempo al principio para orientarlos a tu cultura, a tus necesidades de negocio e incluso a tu estilo y tus preferencias de dirección, porque cuanto más sepan al entrar, más sacarás de ellos al final.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_investigadores_reclutamiento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una tuberia de nombres entrando a coste minimo para que tu equipo interno de reclutamiento o tus mandos los persigan, con los investigadores contratados por contrato y orientados a tu negocio y tu cultura.",
+      "texto_nuevo": "Un flujo de nombres que entra a coste mínimo para que tu equipo interno de reclutamiento o tus mandos los persigan, con los investigadores contratados por contrato y orientados a tu negocio y tu cultura.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Una tuberia de nombres"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-contratar_investigadores_reclutamiento-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando quieres ampliar tu esfuerzo de abastecimiento con un coste minimo y variable. El libro dice que las firmas de reclutamiento externas contratan a menudo investigadores para explorar un mercado, identificar fuentes de talento y devolverle nombres a la firma, y que tu puedes hacer lo mismo directamente.",
+      "texto_nuevo": "Cuando quieres ampliar tu esfuerzo de abastecimiento con un coste mínimo y variable. Las firmas de reclutamiento externas contratan a menudo investigadores para explorar un mercado, identificar fuentes de talento y devolverles nombres, y tú puedes hacer lo mismo directamente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-barrido-contratar_investigadores_reclutamiento-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando quieres ampliar tu esfuerzo de abastecimiento con un coste mínimo y variable. Las firmas de reclutamiento externas contratan a menudo investigadores para explorar un mercado, identificar fuentes de talento y devolverles nombres, y tú puedes hacer lo mismo directamente.",
+      "texto_nuevo": "Cuando quieres ampliar tu esfuerzo de captación de candidatos con un coste mínimo y variable. Las firmas de reclutamiento externas contratan a menudo investigadores para explorar un mercado, identificar fuentes de talento y devolverles nombres, y tú puedes hacer lo mismo directamente.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "esfuerzo de abastecimiento"
+        ]
+      },
+      "decision": "barrido final de calcos (abastecer)",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase4-contratar_investigadores_reclutamiento-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contratar investigadores de reclutamiento por contrato",
+      "texto_nuevo": "Contratar investigadores de reclutamiento por encargo",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "por contrato"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Contratar por contrato\" es redundante y calca \"hiring the researchers on a contract basis\" (smart_who cap_03 l.389); pasa a \"por encargo\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-contratar_investigadores_reclutamiento-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica investigadores de reclutamiento a los que puedas contratar por contrato.",
+      "texto_nuevo": "Identifica investigadores de reclutamiento a los que puedas contratar por encargo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "por contrato"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Contratar por contrato\" calca \"on a contract basis\" (smart_who cap_03 l.389); pasa a \"por encargo\", igual que el título.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-contratar_investigadores_reclutamiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Los investigadores de reclutamiento amplían tu búsqueda a bajo coste: exploran un mercado, localizan fuentes de talento y te devuelven nombres para que tu equipo los persiga, y contratarlos por contrato mantiene el coste variable. Su límite es que no entrevistan ni filtran tan a fondo como querrías, así que la criba recae en tus reclutadores internos o en quien contrata, y si prima la cantidad sobre la calidad el proceso puede atascarse. Fija tus requisitos en una tarjeta de puntuación y oriéntalos al principio a tu negocio y tu cultura: cuanto más sepan al entrar, más sacarás de ellos.",
+      "texto_nuevo": "Los investigadores de reclutamiento amplían tu búsqueda a bajo coste: exploran un mercado, localizan fuentes de talento y te devuelven nombres para que tu equipo los contacte, y contratarlos por encargo mantiene el coste variable. Su límite es que no entrevistan y filtran menos a fondo de lo que querrías, así que la criba recae en tus reclutadores internos o en quien contrata, y si prima la cantidad sobre la calidad el proceso puede atascarse. Fija tus requisitos en una tarjeta de puntuación y oriéntalos al principio a tu negocio y tu cultura: cuanto más sepan al entrar, más sacarás de ellos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "por contrato",
+          "persiga"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, coherencia): \"Contratar por contrato\" calca \"on a contract basis\" (l.389) y \"perseguir\" nombres calca \"pursue\" (l.387); pasan a \"por encargo\" y \"contacte\". \"No entrevistan ni filtran tan a fondo\" deja leer que entrevistan aunque poco; el libro separa las dos cosas: no entrevistan (l.387) y filtran menos a fondo de lo que querrías (l.391).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-contratar_investigadores_reclutamiento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que no van a entrevistar ellos: lo que hacen es identificar nombres para que tu equipo interno de reclutamiento o tus mandos los persigan, y el proceso de filtrado cae sobre los reclutadores internos o directamente sobre el jefe que contrata.",
+      "texto_nuevo": "Cuenta con que no van a entrevistar ellos: lo que hacen es identificar nombres para que tu equipo interno de reclutamiento o tus mandos los contacten, y el proceso de filtrado cae sobre los reclutadores internos o directamente sobre el jefe que contrata.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "persigan"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Perseguir\" nombres calca \"to pursue\" (smart_who cap_03 l.387) y en español suena a acosar; pasa a \"contactar\".",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-contratar_investigadores_reclutamiento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un flujo de nombres que entra a coste mínimo para que tu equipo interno de reclutamiento o tus mandos los persigan, con los investigadores contratados por contrato y orientados a tu negocio y tu cultura.",
+      "texto_nuevo": "Un flujo de nombres que entra a coste mínimo para que tu equipo interno de reclutamiento o tus mandos los contacten, con los investigadores contratados por encargo y orientados a tu negocio y tu cultura.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "persigan",
+          "por contrato"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Perseguir\" calca \"pursue\" (l.387) y \"contratados por contrato\" calca \"on a contract basis\" (l.389); se decide igual que el título, el resumen y los pasos.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Contrata Investigadores por Encargo",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

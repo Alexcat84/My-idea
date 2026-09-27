@@ -1,0 +1,245 @@
+{
+  "node_id": "pedir_hechos_decision_evitar_recomendaciones",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Pedir hechos y no recomendaciones cuando reúnes información para una decisión",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Cuando reúnes información para decidir, a menudo tienta preguntar qué deberíamos hacer. Una directiva lo desaconsejaba: la gente tiende a poner su ego en una recomendación de una manera que puede llevar a la política interna y a peores decisiones. Por eso recomendaba pedir hechos y no recomendaciones. Los hechos tampoco son neutros, porque llegan teñidos del punto de vista de quien los cuenta, pero es menos probable que se conviertan en una postura innegociable que una recomendación, y por eso conviene pedirlos igual.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 291 a 293, bajo el rotulo The decider should get facts, not recommendations, dentro del paso DECIDE de la rueda de hacer cosas. Es una pieza corta, de cinco pasos salidos de un parrafo, y la dejo como nodo propio porque el libro le da rotulo y porque trae lo que un procedimiento necesita: el acto que se evita, el que se hace en su lugar, el motivo escrito, el limite del propio metodo y la razon de aplicarlo aun asi. EL P4 ES EL QUE MAS ME IMPORTA de toda la pieza, porque el libro se pone a si mismo la objecion (los hechos tambien vienen teñidos) y la contesta sin retirar el consejo; dejarlo fuera habria dado un nodo mas limpio y menos fiel. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. Los cinco de la linea 293. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: como se le pide un hecho a alguien que solo quiere darte su recomendacion, y que se hace con la recomendacion que llega sin haberla pedido.",
+  "pasos_accionables": [
+    "Resiste la tentación de pedir recomendaciones, que es la forma en que a menudo sale sola la pregunta: ¿tú qué crees que deberíamos hacer?",
+    "Pide en su lugar hechos, no recomendaciones.",
+    "Cuenta con el motivo: la gente tiende a meter su ego en una recomendación de una manera que puede llevar a la política interna, y con ella a peores decisiones.",
+    "Cuenta también con el límite de este método: los hechos vienen teñidos del punto de vista particular de cada uno.",
+    "Pídelos igual, porque un hecho tiene menos probabilidad que una recomendación de convertirse en una postura innegociable."
+  ],
+  "entregable_esperado": "La información de la decisión reunida en forma de hechos, sin recomendaciones que nadie tenga después que defender como suyas.",
+  "nodos_previos": [
+    "repartir_decision_cercanos_hechos"
+  ],
+  "nodos_siguientes": [
+    "bajar_detalle_organizacion_fuente_hechos"
+  ],
+  "condiciones_activacion": [
+    "Cuando estás reuniendo información para tomar una decisión y te sale solo preguntar a la gente qué cree que habría que hacer."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-pedir_hechos_decision_evitar_recomendaciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando reúnes información para decidir, a menudo tienta preguntar qué deberíamos hacer. Una directiva lo desaconsejaba: la gente tiende a poner su ego en una recomendación de una manera que puede llevar a la política interna y a peores decisiones. Por eso recomendaba pedir hechos y no recomendaciones. Los hechos tampoco son neutros, porque llegan teñidos del punto de vista de quien los cuenta, pero es menos probable que se conviertan en una raya en el suelo que una recomendación, y por eso conviene pedirlos igual.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_07.md",
+          "lineas": "291-293"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: 293 es la opinión de una directiva con 'tend to' y 'can lead', y 'mantiene la conversación en lo que pasa' no está. La propuesta del lector lo corrige pero pierde el 'we are often tempted' de 293 ('la tentación es'); se devuelve el 'a menudo' y se quita 'aunque el método no sea perfecto', que no está en la línea.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)"
+    },
+    {
+      "id": "m11-limpieza-pedir_hechos_decision_evitar_recomendaciones-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pedir hechos y no recomendaciones cuando reunes informacion para una decision",
+      "texto_nuevo": "Pedir hechos y no recomendaciones cuando reúnes información para una decisión",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_hechos_decision_evitar_recomendaciones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Resiste la tentacion de pedir recomendaciones, que es la forma en que sale sola la pregunta: tu que crees que deberiamos hacer.",
+      "texto_nuevo": "Resiste la tentación de pedir recomendaciones, que es la forma en que sale sola la pregunta: ¿tú qué crees que deberíamos hacer?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_hechos_decision_evitar_recomendaciones-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pide en su lugar hechos, no recomendaciones, que es lo que una directiva de Apple le recomendo a la autora.",
+      "texto_nuevo": "Pide en su lugar hechos, no recomendaciones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que una directiva de Apple le recomendo a la autora"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_hechos_decision_evitar_recomendaciones-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el motivo que esa directiva puso: la gente tiende a meter su ego en una recomendacion de una manera que puede llevar a la politica, y con ella a peores decisiones.",
+      "texto_nuevo": "Cuenta con el motivo: la gente tiende a meter su ego en una recomendación de una manera que puede llevar a la política interna, y con ella a peores decisiones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que esa directiva puso"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_hechos_decision_evitar_recomendaciones-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta tambien con el limite que el propio texto le pone: los hechos vienen teñidos del punto de vista particular de cada uno.",
+      "texto_nuevo": "Cuenta también con el límite de este método: los hechos vienen teñidos del punto de vista particular de cada uno.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el limite que el propio texto le pone"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_hechos_decision_evitar_recomendaciones-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pidelos igual, porque un hecho tiene menos probabilidad que una recomendacion de convertirse en una raya en el suelo.",
+      "texto_nuevo": "Pídelos igual, porque un hecho tiene menos probabilidad que una recomendación de convertirse en una postura innegociable.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "una raya en el suelo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_hechos_decision_evitar_recomendaciones-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La informacion de la decision reunida en forma de hechos, sin recomendaciones que nadie tenga despues que defender como suyas.",
+      "texto_nuevo": "La información de la decisión reunida en forma de hechos, sin recomendaciones que nadie tenga después que defender como suyas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_hechos_decision_evitar_recomendaciones-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando estas reuniendo informacion para tomar una decision y te sale solo preguntar a la gente que cree que deberiais hacer.",
+      "texto_nuevo": "Cuando estás reuniendo información para tomar una decisión y te sale solo preguntar a la gente qué cree que habría que hacer.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "deberiais"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-pedir_hechos_decision_evitar_recomendaciones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando reúnes información para decidir, a menudo tienta preguntar qué deberíamos hacer. Una directiva lo desaconsejaba: la gente tiende a poner su ego en una recomendación de una manera que puede llevar a la política interna y a peores decisiones. Por eso recomendaba pedir hechos y no recomendaciones. Los hechos tampoco son neutros, porque llegan teñidos del punto de vista de quien los cuenta, pero es menos probable que se conviertan en una raya en el suelo que una recomendación, y por eso conviene pedirlos igual.",
+      "texto_nuevo": "Cuando reúnes información para decidir, a menudo tienta preguntar qué deberíamos hacer. Una directiva lo desaconsejaba: la gente tiende a poner su ego en una recomendación de una manera que puede llevar a la política interna y a peores decisiones. Por eso recomendaba pedir hechos y no recomendaciones. Los hechos tampoco son neutros, porque llegan teñidos del punto de vista de quien los cuenta, pero es menos probable que se conviertan en una postura innegociable que una recomendación, y por eso conviene pedirlos igual.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "una raya en el suelo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'a line in the sand'; se dice en español llano como en el paso 5.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-pedir_hechos_decision_evitar_recomendaciones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Resiste la tentación de pedir recomendaciones, que es la forma en que sale sola la pregunta: ¿tú qué crees que deberíamos hacer?",
+      "texto_nuevo": "Resiste la tentación de pedir recomendaciones, que es la forma en que a menudo sale sola la pregunta: ¿tú qué crees que deberíamos hacer?",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 293",
+        "frase": "When collecting information for a decision, we are often tempted to ask people for their recommendations—“What do you think we should do?”—but as one executive I worked with at Apple explained to me, people tend to put their egos into recommendations in a way that can lead to politics, and thus worse decisions."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que a menudo tienta pedir recomendaciones (\"often tempted\"); el paso daba esa pregunta como la forma en que sale siempre. Se devuelve el \"a menudo\", como en el resumen.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Pide Hechos, no Recomendaciones",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

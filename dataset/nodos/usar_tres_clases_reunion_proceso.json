@@ -1,0 +1,199 @@
+{
+  "node_id": "usar_tres_clases_reunion_proceso",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Usar las tres clases de reunión de proceso: el uno a uno, la reunión de personal y la revisión de operaciones",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Las reuniones de proceso son las que se tienen con regularidad para compartir conocimiento e intercambiar información, a diferencia de las que se convocan para resolver un problema concreto. Para sacarles el máximo conviene darles regularidad: que quien asiste sepa cómo se llevan, de qué se habla y qué se busca conseguir. Esa regularidad permite prever el tiempo que pide el trabajo y que la reunión estorbe lo menos posible a lo demás. En una gran empresa de chips se usan tres clases, cada una con su nombre: el uno a uno, la reunión de personal y la revisión de operaciones.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_05.md, unidad Cap. 4, titulo textual Meetings, The Medium of Managerial Work. Sale de la PIEZA P7 de la frontera de cap_05 publicada en la vuelta 50 (LL.4.b), L23 a L23, 18 palabras. LAS PALABRAS LAS RECOMPUTE YO EN LA VUELTA 51 ANTES DE CORTAR y reproducen la frontera al digito: 18, que es lo que LL.4.b publica (.v51/palabras_tramos.txt). EL TRAMO ENTERO ES DE ESTE NODO: cero frontera interna, cero solapes y cero prestamo de tramos vecinos. Los cuatro pasos salen de L23 y de ninguna otra linea. ES UNA CABEZA DE SERIE, Y ENTRA COMO TAL (EXTRACTOR.md 9, manual seccion 3.4, y D.37): el texto DICE CUANTAS partes tiene (three kinds) y LAS NOMBRA una a una (the one-on-one, the staff meeting, and the operation review). La cuenta es condicion y esta escrita, no deducida. LA CITA ENTERA DEL TRAMO, que cabe en una linea: At Intel we use three kinds of process-oriented meetings: the one-on-one, the staff meeting, and the operation review. DE DONDE SALE CADA PASO, uno a uno, y los cuatro salen de L23: paso 1 (At Intel we use three kinds of process-oriented meetings); paso 2 (the one-on-one); paso 3 (the staff meeting); paso 4 (and the operation review). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. Y AQUI LA RELECTURA IMPORTA MAS QUE EN NINGUN OTRO NODO DE ESTA TANDA, porque este es el tramo MAS POBRE que toco: 18 palabras, la cifra mas baja de los seis. EXTRACTOR.md 15.4 dice que un parrafo pobre no produce un nodo pobre sino un nodo INVENTADO, y que el parrafo mas pobre del lote 1 dio 83 por ciento de puentes. Por eso este nodo se queda en los cuatro pasos que el renglon escribe y ni uno mas. DONDE ESTUVE A PUNTO DE ESCRIBIR UN PUENTE Y NO LO ESCRIBI, y son tres sitios, todos de la misma especie: EL CONTENIDO DE CADA CLASE. Iba a escribir que el uno a uno es entre un supervisor y un subordinado, que la reunion de personal es del supervisor con todos sus subordinados juntos, y que la revision de operaciones es para los que no se tratan a diario. LAS TRES COSAS SON CIERTAS Y NINGUNA ESTA EN L23: la primera esta en L27, la segunda en L69 y la tercera en L87, que son las piezas P9, P25 y P30, tramos distintos y nodos distintos. Un paso que trae material de otro tramo sin declararlo es exactamente la deuda d046, y no la repito el dia que la pago. CUARTO SITIO DE TENTACION, especie EL PERIODO: iba a escribir que las tres se tienen con regularidad. Lo dice L17 (Such meetings take place on a regularly scheduled basis), que es la pieza P4 y da cero nodos, y L21, que es el candidato 1 de esta misma tanda. NO esta en L23 y no lo escribo aqui. EL AT INTEL NO LO CONVIERTO EN ATRIBUCION NI EN DATO DEL CASO: el renglon dice donde se usan esas tres clases, y manual 3.5 manda que el caso entre nombrado dentro de la doctrina y no que su dato viaje en el entregable. El paso 1 escribe las reuniones de proceso que se usan y no mete el nombre de la empresa en el entregable. CERO ATRIBUCIONES: no hay en L23 ni cifra con banda ni frase de otro autor. ARISTAS DECLARADAS POR LECTURA, para cablearlas el dia de la insercion y no hoy (D.39 mide la puerta CERRADA para este libro en esta vuelta): (1) D.29 hacia infundir_regularidad_reunion_proceso, el candidato 1 de esta misma tanda: aquel dice QUE hay que infundirle a toda reunion de proceso, esta dice CUALES son. El libro las pone seguidas, L21 y L23. (2) D.29 hacia los cuatro nodos del uno a uno de esta misma tanda (fijar_frecuencia_uno_a_uno_madurez_tarea, fijar_duracion_lugar_uno_a_uno, preparar_guion_uno_a_uno_subordinado y cubrir_asuntos_uno_a_uno_indicadores_problema_potencial), y mas adelante hacia los de la reunion de personal y los de la revision de operaciones. Y POR QUE D.29 Y NO D.37, QUE ES LO QUE PARECERIA, con la razon escrita porque aqui si hay algo que argumentar: D.37 ata la cabeza con las partes que la cabeza NOMBRA, y esta cabeza nombra TRES CLASES DE REUNION, no cuatro maneras de llevar una de ellas. Los cuatro nodos de esta tanda son MEDIOS de la primera clase, igual que los dos nodos de la deuda d045 son medios de la primera de las tres vias de su cabeza. Es la misma figura y le aplico la misma etiqueta, que es la que el auditor firmo en la ACTA 49 al adjudicar d045 y que el encargo de esta vuelta me manda aplicar en su TAREA 3.a. Y LO QUE ESO DEJA ABIERTO, dicho en vez de escondido: si alguna vez existe un nodo que SEA el uno a uno entero, ese si seria parte de D.37 de esta cabeza. Hoy no existe, porque P9, que es el tramo donde el libro define el uno a uno, da CERO nodos por ser definicion mas caso (LL.4.b y LL.4.d). DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: un lector estricto puede decir que esta cabeza no es un procedimiento sino una ENUMERACION, y que EXTRACTOR.md 9 tumba lo que solo nombra. Lo sostengo por dos motivos escritos y no por preferencia: manual 3.4 autoriza expresamente un nodo por paso MAS UNA CABEZA para la serie numerada, y la ACTA 49 adjudica que la cabeza de serie de este capitulo es P7. Si cae, cae DENTRO de mi marcado, y lo que caeria conmigo seria la figura entera de la cabeza de serie, no este renglon. SEGUNDO DISCUTIBLE: la etiqueta D.29 de la arista (2) en vez de D.37. La razon esta escrita arriba y es la aplicacion directa de la adjudicacion de d045. Si el auditor lee que una cabeza de serie tiene que atar D.37 a algo si o si, esto cae, y cae DENTRO de mi marcado. CORRECCION DECLARADA DENTRO DE LA MISMA VUELTA 51, SIN BORRAR LAS LINEAS VIEJAS (manual principio 6): donde la arista (2) de mas arriba escribe fijar_frecuencia_uno_a_uno_madurez_tarea, fijar_duracion_lugar_uno_a_uno, preparar_guion_uno_a_uno_subordinado y cubrir_asuntos_uno_a_uno_indicadores_problema_potencial, TIENEN QUE LEERSE fijar_frecuencia_reunion_individual_madurez_tarea, fijar_duracion_lugar_reunion_individual, preparar_guion_reunion_individual_subordinado y cubrir_indicadores_problemas_reunion_individual, que son los cuatro ids con los que esos candidatos se escribieron y pasaron su aduana. EL MOTIVO, y son dos, los dos de regla escrita: uno, la a de uno_a_uno es una preposicion y la regla 3 de id prohibe preposiciones, que es la regla que mas cae de todas. Dos, y pesa mas, la regla 4 prohibe las familias repetidas: el grafo ya tiene dirigir_reunion_individual_semanal y preguntar_conducir_reunion_individual para este mismo objeto, y escribir uno_a_uno habria partido la familia en dos, con lo que la senial 2 habria dejado de ver juntos a los nodos que de verdad hablan de lo mismo. Eso es exactamente el motivo que EXTRACTOR.md 15.1 da para la regla del idioma unico, aplicado aqui a la grafia. LA RELACION QUE LA ARISTA DECLARA NO CAMBIA: sigue siendo D.29, con la razon escrita mas arriba. CORRECCION DECLARADA EN LA VUELTA 52, SIN BORRAR NI UNA LINEA DE LO DE ARRIBA (manual principio 6). ES EL PAGO DE d051, QUE EL AUDITOR DESENTERRO EN LA ACTA 50 SECCION 50.5.a Y ADJUDICO QUE NO ERA CAIDA DE NADIE. ESTE BLOQUE NO ESCRIBE NI UN DIGITO DE SENIAL, porque el informe de aquel acto no levanto ningun vecino, medida por la aduana el 19 sep 2026 sobre la poblacion de aquel momento, y SU SEDE ES .v51/aduana_c2.txt, que es el informe que la aduana imprimio en la pasada de esta misma ficha en la vuelta 51 (pieza P7). NO SON UNA MEDIDA VIVA DEL TEXTO DE HOY, y desde esta linea dejan de presentarse como tal. POR QUE NO PUEDEN SERLO, Y ESTA MEDIDO Y NO SUPUESTO: la senial 1 de esta casa compara titulo mas resumen mas pasos (src/aduana.py senal_similitud_texto sobre comun.texto_comparable), o sea que el resumen_teorico ENTRA en el texto que la senial mide; y este bloque VEREDICTO, que es el que escribe el digito, vive dentro de ese mismo resumen_teorico. Asi que escribir el digito aqui cambia el numero que el digito nombra. LA MEDIDA DE LO QUE ESO MUEVE, corrida por el auditor y por mi con el mismo instrumento (.v51/por_que_0445.py y .v51aud/44_crecimiento_ficha.py): el par mas alto de la tanda se publico en 0,445 y hoy da 0,550, y el corte del primer bloque VEREDICTO cae en el caracter 6705 y 7217 de las dos fichas, que es exactamente todo lo que esas fichas crecieron despues de medir. LA FRASE QUE LO RESUELVE LA ESCRIBI YO AL PAGAR d044 Y ME LA DEVUELVE EL AUDITOR: un comando escrito dentro de su propia poblacion no se arregla afinandolo, se arregla sacandolo. El digito es el mismo caso que el comando. QUE SE QUEDA Y QUE SE VA: se quedan la CLASE del veredicto, el VECINO nombrado, la RAZON entera y el PAR EMPAREJADO, que son lo que hace releible el veredicto y no dependen de ninguna cifra. Se va el digito COMO MEDIDA VIVA, y no se borra: queda arriba, escrito, y esta linea dice de que acto es y donde vive su informe. EL DIA DE LA INSERCION, el veredicto que llegue a bitacora/VEREDICTOS.jsonl llevara el digito QUE LA ADUANA MIDA EN ESE ACTO, no el de arriba, y la razon sera esta misma porque la razon no caduca. Y DESDE LA VUELTA 52 ESTO NO SE VUELVE A PAGAR: los veredictos que escribo hoy dentro de las fichas nuevas de cap_05 nombran su informe y no se llevan el numero dentro como si fuera de hoy.",
+  "pasos_accionables": [
+    "Cuenta con que las reuniones de proceso que se usan en una gran empresa de chips son de tres clases, cada una con su nombre.",
+    "Primera clase: el uno a uno.",
+    "Segunda clase: la reunión de personal.",
+    "Tercera clase: la revisión de operaciones."
+  ],
+  "entregable_esperado": "Las tres clases de reunión de proceso identificadas por su nombre, para poder ir después a la que toque.",
+  "nodos_previos": [
+    "agrupar_interrupciones_subordinados_reuniones_regulares"
+  ],
+  "nodos_siguientes": [
+    "fijar_frecuencia_reunion_individual_madurez_tarea",
+    "infundir_regularidad_reunion_proceso"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a montar las reuniones de proceso de tu organización y quieres un modelo de qué clases montar, antes de entrar en cómo se lleva cada una."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-usar_tres_clases_reunion_proceso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Las reuniones de proceso son las que se tienen con regularidad para compartir conocimiento e intercambiar información, a diferencia de las que se convocan para resolver un problema concreto. Para sacarles el máximo conviene darles regularidad: que quien asiste sepa cómo se llevan, de qué se habla y qué se busca conseguir. Esa regularidad permite prever el tiempo que pide el trabajo y que la reunión estorbe lo menos posible a lo demás. En una gran empresa de chips se usan tres clases, cada una con su nombre: el uno a uno, la reunión de personal y la revisión de operaciones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_05.md",
+          "lineas": "17-23"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): Se sostiene: l.23 es la práctica de una empresa ('At Intel we use'), y 'permite ir a la que toca' es un efecto inventado. La propuesta del lector trae la razón que sí dan las líneas (regularidad, l.21) y cuenta las tres clases como práctica de una empresa.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)"
+    },
+    {
+      "id": "m11-limpieza-usar_tres_clases_reunion_proceso-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usar las tres clases de reunion de proceso que el libro cuenta y nombra: el uno a uno, la reunion de personal y la revision de operaciones",
+      "texto_nuevo": "Usar las tres clases de reunión de proceso: el uno a uno, la reunión de personal y la revisión de operaciones",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro cuenta y nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_tres_clases_reunion_proceso-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que las reuniones de proceso que se usan son de tres clases, y con que el libro las nombra una a una.",
+      "texto_nuevo": "Cuenta con que las reuniones de proceso que se usan son de tres clases, cada una con su nombre.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y con que el libro las nombra una a una"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_tres_clases_reunion_proceso-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Segunda clase: la reunion de personal.",
+      "texto_nuevo": "Segunda clase: la reunión de personal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_tres_clases_reunion_proceso-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tercera clase: la revision de operaciones.",
+      "texto_nuevo": "Tercera clase: la revisión de operaciones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_tres_clases_reunion_proceso-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las tres clases de reunion de proceso identificadas por su nombre, para poder ir despues a la que toque.",
+      "texto_nuevo": "Las tres clases de reunión de proceso identificadas por su nombre, para poder ir después a la que toque.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_tres_clases_reunion_proceso-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando vas a montar las reuniones de proceso de tu organizacion y necesitas saber cuantas clases hay y cuales son, antes de entrar en como se lleva cada una.",
+      "texto_nuevo": "Cuando vas a montar las reuniones de proceso de tu organización y necesitas saber cuántas clases hay y cuáles son, antes de entrar en cómo se lleva cada una.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 07, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 07)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-usar_tres_clases_reunion_proceso-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que las reuniones de proceso que se usan son de tres clases, cada una con su nombre.",
+      "texto_nuevo": "Cuenta con que las reuniones de proceso que se usan en una gran empresa de chips son de tres clases, cada una con su nombre.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "grove_high_output/cap_05.md 23",
+        "frase": "At Intel we use three kinds of process-oriented meetings: the one-on-one, the staff meeting, and the operation review."
+      },
+      "decision": "auditoria completa M11 (matiz): Es la práctica de una empresa (el resumen ya la cuenta como caso); el paso la volvía clasificación general.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-usar_tres_clases_reunion_proceso-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando vas a montar las reuniones de proceso de tu organización y necesitas saber cuántas clases hay y cuáles son, antes de entrar en cómo se lleva cada una.",
+      "texto_nuevo": "Cuando vas a montar las reuniones de proceso de tu organización y quieres un modelo de qué clases montar, antes de entrar en cómo se lleva cada una.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "grove_high_output/cap_05.md 23",
+        "frase": "At Intel we use three kinds of process-oriented meetings: the one-on-one, the staff meeting, and the operation review."
+      },
+      "decision": "auditoria completa M11 (matiz): \"Cuántas clases hay\" da por hecho un número fijo universal; en el libro son las tres que usa una empresa.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Usa las Tres Reuniones de Proceso",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

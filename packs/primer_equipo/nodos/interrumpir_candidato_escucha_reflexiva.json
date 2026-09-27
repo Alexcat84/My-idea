@@ -1,0 +1,238 @@
+{
+  "node_id": "interrumpir_candidato_escucha_reflexiva",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Interrumpir al candidato con escucha reflexiva y redirección",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Dejar que el candidato divague no es cortesía: le quita tiempo para contar lo importante de su carrera. Por eso hay que interrumpir, y a menudo; lo que decide el resultado es la manera. Cortar en seco avergüenza y cierra a la persona, y con ella se cierran los datos. Devolverle con entusiasmo lo que acaba de contar hace que se sienta escuchada, y enlazar enseguida con un tema más relevante le da algo nuevo que contar. Así la sintonía se mantiene alta, y es a través de esa sintonía como llegan los datos más valiosos de la entrevista.",
+  "notas_extraccion": "La primera tactica maestra es la que mas cuesta aceptar y la que el libro repite dos veces en la misma frase: hay que interrumpir al candidato, no hay manera de evitarlo. La objecion es de educacion, porque parece grosero cortar a alguien que cuenta con entusiasmo una historia irrelevante, y los autores le dan la vuelta: lo grosero es dejar divagar a alguien, porque le quita la posibilidad de cubrir los sucesos importantes de su carrera dentro del tiempo que hay. Lo que convierte la tactica en procedimiento es que el libro pone las dos vias enfrentadas, la mala y la buena, con su frase literal cada una, y explica por que la diferencia importa: el enfoque de callate desinfla la disposicion del candidato a revelar informacion, y el enfoque de me muero por saber mas de tal cosa mantiene alta la sintonia y ademas le da un tema nuevo y mas relevante del que hablar. La sintonia no es cortesia: es el canal por el que llegan los datos que valen.",
+  "pasos_accionables": [
+    "Interrumpe en cuanto creas que el candidato se está yendo del rumbo, y cuenta con hacerlo al menos una vez cada tres o cuatro minutos. Si no interrumpes, puede hablar diez horas seguidas de cosas que no vienen a cuento.",
+    "No interrumpas por la vía mala: levantar la mano como quien ordena detenerse y cortarlo en seco para pedirle que vuelva al tema. Eso avergüenza al candidato, da a entender que ha hecho algo mal y hace que se cierre para siempre, y costará mucho que vuelva a abrirse.",
+    "Interrumpe por la vía buena: sonríe abiertamente, iguala su nivel de entusiasmo y usa la escucha reflexiva para que pare de hablar sin desmoralizarse. Devuélvele lo que acaba de contar con su misma energía (si te hablaba de la granja de cerdos que olía fatal junto a las oficinas, comenta lo terrible que debía de ser) para que asienta y se sienta comprendido y respetado.",
+    "Enlaza inmediatamente con el tema al que quieres volver, dándole algo nuevo y más relevante que contar: recuérdale que te hablaba del lanzamiento de aquella campaña de correo directo y dile que te encantaría saber cómo fue y qué tal salió.",
+    "Mantén alta la sintonía durante toda la entrevista, porque es a través de ella como se consiguen los datos más valiosos, y una interrupción cortés puede construirla."
+  ],
+  "entregable_esperado": "Una entrevista que se mantiene en los sucesos importantes de la carrera del candidato sin que el candidato se cierre, con la sintonía alta y con el tiempo repartido donde importa.",
+  "nodos_previos": [
+    "aplicar_tacticas_maestras_entrevista"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Durante la entrevista cronológica de trayectoria, en cuanto creas que el candidato se está yendo del rumbo. Se activa varias veces por entrevista, al menos una cada tres o cuatro minutos."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-interrumpir_candidato_escucha_reflexiva-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Dejar que el candidato divague no es cortesía: le quita tiempo para contar lo importante de su carrera. Por eso hay que interrumpir, y a menudo; lo que decide el resultado es la manera. Cortar en seco avergüenza y cierra a la persona, y con ella se cierran los datos. Devolverle con entusiasmo lo que acaba de contar hace que se sienta escuchada, y enlazar enseguida con un tema más relevante le da algo nuevo que contar. Así la sintonía se mantiene alta, y es a través de esa sintonía como llegan los datos más valiosos de la entrevista.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_05.md",
+          "lineas": "47-59"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)"
+    },
+    {
+      "id": "m11-limpieza-interrumpir_candidato_escucha_reflexiva-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Interrumpir al candidato con escucha reflectiva y redireccion",
+      "texto_nuevo": "Interrumpir al candidato con escucha reflexiva y redirección",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "reflectiva"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-interrumpir_candidato_escucha_reflexiva-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Interrumpe en cuanto creas que el candidato se esta yendo del rumbo, y cuenta con hacerlo al menos una vez cada tres o cuatro minutos. Si no interrumpes puede hablar diez horas seguidas de cosas que no vienen a cuento.",
+      "texto_nuevo": "Interrumpe en cuanto creas que el candidato se está yendo del rumbo, y cuenta con hacerlo al menos una vez cada tres o cuatro minutos. Si no interrumpes, puede hablar diez horas seguidas de cosas que no vienen a cuento.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-interrumpir_candidato_escucha_reflexiva-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No interrumpas por la via mala: levantar la mano como una señal de stop y decir espera, espera, espera, dejame pararte ahi, podemos volver al tema. Eso avergüenza al candidato, da a entender que ha hecho algo mal y hace que se cierre para siempre, y costara mucho que vuelva a abrirse.",
+      "texto_nuevo": "No interrumpas por la vía mala: levantar la mano como quien ordena detenerse y cortarlo en seco para pedirle que vuelva al tema. Eso avergüenza al candidato, da a entender que ha hecho algo mal y hace que se cierre para siempre, y costará mucho que vuelva a abrirse.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "señal de stop",
+          "espera, espera, espera, dejame pararte ahi, podemos volver al tema"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-interrumpir_candidato_escucha_reflexiva-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Interrumpe por la via buena: sonrie abiertamente, iguala su nivel de entusiasmo y usa escucha reflectiva para que pare de hablar sin desmoralizarse. Devuelvele lo que acaba de contar con su misma energia, del tipo vaya, parece que aquella granja de cerdos junto a las oficinas olia fatal, para que asienta y se sienta comprendido y respetado.",
+      "texto_nuevo": "Interrumpe por la vía buena: sonríe abiertamente, iguala su nivel de entusiasmo y usa la escucha reflexiva para que pare de hablar sin desmoralizarse. Devuélvele lo que acaba de contar con su misma energía (si te hablaba de la granja de cerdos que olía fatal junto a las oficinas, comenta lo terrible que debía de ser) para que asienta y se sienta comprendido y respetado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "reflectiva",
+          "del tipo vaya, parece que aquella granja de cerdos junto a las oficinas olia fatal"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-interrumpir_candidato_escucha_reflexiva-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Enlaza inmediatamente con el tema al que quieres volver, dandole algo nuevo y mas relevante que contar: me estabas hablando de lanzar aquella campaña de correo directo, me encantaria oir como fue aquello y que tal salio.",
+      "texto_nuevo": "Enlaza inmediatamente con el tema al que quieres volver, dándole algo nuevo y más relevante que contar: recuérdale que te hablaba del lanzamiento de aquella campaña de correo directo y dile que te encantaría saber cómo fue y qué tal salió.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "me estabas hablando de lanzar aquella campaña de correo directo, me encantaria oir como fue aquello y que tal salio"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-interrumpir_candidato_escucha_reflexiva-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Manten alta la sintonia durante toda la entrevista, porque es a traves de ella como se consiguen los datos mas valiosos, y una interrupcion cortes es lo que la construye.",
+      "texto_nuevo": "Mantén alta la sintonía durante toda la entrevista, porque es a través de ella como se consiguen los datos más valiosos, y una interrupción cortés es lo que la construye.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-interrumpir_candidato_escucha_reflexiva-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una entrevista que se mantiene en los sucesos importantes de la carrera del candidato sin que el candidato se cierre, con la sintonia alta y con el tiempo repartido donde importa.",
+      "texto_nuevo": "Una entrevista que se mantiene en los sucesos importantes de la carrera del candidato sin que el candidato se cierre, con la sintonía alta y con el tiempo repartido donde importa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-interrumpir_candidato_escucha_reflexiva-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Durante la entrevista cronologica de trayectoria, en cuanto creas que el candidato se esta yendo del rumbo. Es la primera de las cinco tacticas maestras y se activa varias veces por entrevista, al menos una cada tres o cuatro minutos.",
+      "texto_nuevo": "Durante la entrevista cronológica de trayectoria, en cuanto creas que el candidato se está yendo del rumbo. Es la primera de las cinco tácticas maestras y se activa varias veces por entrevista, al menos una cada tres o cuatro minutos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-interrumpir_candidato_escucha_reflexiva-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mantén alta la sintonía durante toda la entrevista, porque es a través de ella como se consiguen los datos más valiosos, y una interrupción cortés es lo que la construye.",
+      "texto_nuevo": "Mantén alta la sintonía durante toda la entrevista, porque es a través de ella como se consiguen los datos más valiosos, y una interrupción cortés puede construirla.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_05.md 59",
+        "frase": "It is through maintaining very high rapport that you get the most valuable data, and polite interrupting can build that rapport."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que la interrupción cortés puede construir la sintonía (can build).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-interrumpir_candidato_escucha_reflexiva-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Durante la entrevista cronológica de trayectoria, en cuanto creas que el candidato se está yendo del rumbo. Es la primera de las cinco tácticas maestras y se activa varias veces por entrevista, al menos una cada tres o cuatro minutos.",
+      "texto_nuevo": "Durante la entrevista cronológica de trayectoria, en cuanto creas que el candidato se está yendo del rumbo. Se activa varias veces por entrevista, al menos una cada tres o cuatro minutos.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "\"La primera de las cinco tácticas maestras\" remite a una serie que no existe en el nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"La primera de las cinco tácticas maestras\" remite a una serie que no existe en el nodo.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Interrumpe con Escucha Reflexiva"
+}

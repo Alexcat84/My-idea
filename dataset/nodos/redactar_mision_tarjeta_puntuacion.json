@@ -1,0 +1,236 @@
+{
+  "node_id": "redactar_mision_tarjeta_puntuacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Redactar la misión del puesto en la tarjeta de puntuación",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "La misión es el resumen del propósito central del puesto: reduce el trabajo a su esencia para que todo el mundo entienda por qué hace falta contratar a alguien. Va corta y en lenguaje llano, sin jerga, y sabes que es buena cuando candidatos, reclutadores y tu propio equipo entienden qué buscas sin tener que preguntar. Detrás de las frases infladas probablemente hay alguien que no sabía cuál era el trabajo de verdad. Una misión clara también te ayuda a no contratar a un generalista brillante cuando el puesto pide un especialista, y se revisa cada vez que el puesto se vuelve a cubrir.",
+  "notas_extraccion": "La mision es el resumen ejecutivo del proposito central del puesto, y es la primera de las tres partes de la tarjeta de puntuacion. El contraejemplo que el libro pone para enseñar que es la jerga: la mision de este papel es maximizar el valor para el accionista apalancando los activos nucleares de la division NPC mientras se minimizan las deficiencias y ofuscaciones de comunicacion. Los autores dicen que es una exageracion, pero no por mucho, y apuestan a que en cualquier empresa se encuentran frases sin sentido parecidas, escritas por alguien que no tenia ni idea de cual era el trabajo de verdad. La advertencia que el capitulo cuelga de la mision es la del atleta polivalente: las declaraciones de mision te ayudan a evitar una de las trampas mas comunes de la contratacion, que es contratar al generalista brillante en vez del especialista, porque los requisitos de un puesto rara vez son generales. Los casos que el libro pone con su nombre son el de Nick Chabraja, consejero delegado de General Dynamics, que se equivoco poniendo a un excelente desarrollador de negocio donde hacia falta un hombre de operaciones y tardo un par de años en corregirlo, y el de Alec Gores, del Gores Group, que mira a su equipo como a un equipo de futbol americano y no intenta que el quarterback juegue de center. Arthur Rock lo dijo de Intel: primero Bob Noyce el inventor y promotor, luego Gordon Moore el tecnologo, y luego Andy Grove el que empuja.",
+  "pasos_accionables": [
+    "Escribe una declaración corta, de una a cinco frases, que describa por qué existe el puesto.",
+    "Reduce el trabajo a su esencia, de forma que todo el mundo entienda por qué hace falta contratar a alguien para esa plaza. Por ejemplo, la misión de un vicepresidente de ventas puede ser hacer crecer los ingresos mediante el contacto directo con clientes industriales, y nada más que eso.",
+    "Escríbela en lenguaje llano y no en la jerga que tanto abunda hoy en los negocios. Quita la hojarasca, que es lo que mantiene las misiones cortas, al grano y sobre todo comprensibles.",
+    "Comprueba que la misión es buena por esta señal: los candidatos, los reclutadores e incluso otros miembros de tu equipo entienden qué estás buscando sin tener que hacer preguntas aclaratorias.",
+    "No saques una misión de la estantería para desempolvarla cada vez que el puesto se vuelve a cubrir: los asuntos cambian y hace falta pericia nueva, y por eso la tarjeta de puntuación tiene que ser un documento vivo y no estático."
+  ],
+  "entregable_esperado": "La misión del puesto escrita: una declaración corta, de una a cinco frases y en lenguaje llano, que dice por qué existe el puesto, y que candidatos, reclutadores y el resto del equipo entienden sin tener que hacer preguntas aclaratorias.",
+  "nodos_previos": [
+    "crear_tarjeta_puntuacion_puesto"
+  ],
+  "nodos_siguientes": [
+    "definir_resultados_tarjeta_puntuacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando empiezas la tarjeta de puntuación de un puesto. Es el primero de sus cuatro pasos y va antes que los resultados y que las competencias, porque las competencias se derivan directamente de los dos primeros elementos de la tarjeta y es la misión la que define la esencia del trabajo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-redactar_mision_tarjeta_puntuacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La misión es el resumen del propósito central del puesto: reduce el trabajo a su esencia para que todo el mundo entienda por qué hace falta contratar a alguien. Va corta y en lenguaje llano, sin jerga, y sabes que es buena cuando candidatos, reclutadores y tu propio equipo entienden qué buscas sin tener que preguntar. Detrás de las frases infladas probablemente hay alguien que no sabía cuál era el trabajo de verdad. Una misión clara también te ayuda a no contratar a un generalista brillante cuando el puesto pide un especialista, y se revisa cada vez que el puesto se vuelve a cubrir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "31-61"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Objecion sostenida: 'Mission statements help you avoid' quedó como 'evita' y el 'We bet' de la 37 como 'suelen delatar'. La propuesta del lector devuelve ambos matices pero arranca con un participio suelto ('Escrita corta..., sabes que es buena'), que deja la frase sin sujeto coherente; se reescribe esa frase y el resto queda igual.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)"
+    },
+    {
+      "id": "m11-limpieza-redactar_mision_tarjeta_puntuacion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Redactar la mision del puesto en la tarjeta de puntuacion",
+      "texto_nuevo": "Redactar la misión del puesto en la tarjeta de puntuación",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-redactar_mision_tarjeta_puntuacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribe una declaracion corta, de una a cinco frases, que describa por que existe el puesto.",
+      "texto_nuevo": "Escribe una declaración corta, de una a cinco frases, que describa por qué existe el puesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-redactar_mision_tarjeta_puntuacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reduce el trabajo a su esencia, de forma que todo el mundo entienda por que hace falta contratar a alguien para esa plaza. El ejemplo del libro es la mision del vicepresidente de ventas: hacer crecer los ingresos mediante el contacto directo con clientes industriales, y nada mas que eso.",
+      "texto_nuevo": "Reduce el trabajo a su esencia, de forma que todo el mundo entienda por qué hace falta contratar a alguien para esa plaza. Por ejemplo, la misión de un vicepresidente de ventas puede ser hacer crecer los ingresos mediante el contacto directo con clientes industriales, y nada más que eso.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El ejemplo del libro es"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-redactar_mision_tarjeta_puntuacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribela en lenguaje llano y no en la jerga que tanto abunda hoy en los negocios. Quita la hojarasca, que es lo que mantiene las misiones cortas, agradables y sobre todo comprensibles.",
+      "texto_nuevo": "Escríbela en lenguaje llano y no en la jerga que tanto abunda hoy en los negocios. Quita la hojarasca, que es lo que mantiene las misiones cortas, agradables y sobre todo comprensibles.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-redactar_mision_tarjeta_puntuacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba que la mision es buena por esta señal: los candidatos, los reclutadores e incluso otros miembros de tu equipo entienden que estas buscando sin tener que hacer preguntas aclaratorias.",
+      "texto_nuevo": "Comprueba que la misión es buena por esta señal: los candidatos, los reclutadores e incluso otros miembros de tu equipo entienden qué estás buscando sin tener que hacer preguntas aclaratorias.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-redactar_mision_tarjeta_puntuacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No saques una mision de la estanteria para desempolvarla cada vez que el puesto se vuelve a cubrir: por eso la tarjeta de puntuacion tiene que ser un documento vivo y no estatico.",
+      "texto_nuevo": "No saques una misión de la estantería para desempolvarla cada vez que el puesto se vuelve a cubrir: por eso la tarjeta de puntuación tiene que ser un documento vivo y no estático.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-redactar_mision_tarjeta_puntuacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La mision del puesto escrita: una declaracion corta, de una a cinco frases y en lenguaje llano, que dice por que existe el puesto, y que candidatos, reclutadores y el resto del equipo entienden sin tener que hacer preguntas aclaratorias.",
+      "texto_nuevo": "La misión del puesto escrita: una declaración corta, de una a cinco frases y en lenguaje llano, que dice por qué existe el puesto, y que candidatos, reclutadores y el resto del equipo entienden sin tener que hacer preguntas aclaratorias.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-redactar_mision_tarjeta_puntuacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando empiezas la tarjeta de puntuacion de un puesto. Es el primero de sus cuatro pasos y va antes que los resultados y que las competencias, porque el libro dice que las competencias fluyen directamente de los dos primeros elementos de la tarjeta y que es la mision la que define la esencia del trabajo.",
+      "texto_nuevo": "Cuando empiezas la tarjeta de puntuación de un puesto. Es el primero de sus cuatro pasos y va antes que los resultados y que las competencias, porque las competencias se derivan directamente de los dos primeros elementos de la tarjeta y es la misión la que define la esencia del trabajo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-redactar_mision_tarjeta_puntuacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escríbela en lenguaje llano y no en la jerga que tanto abunda hoy en los negocios. Quita la hojarasca, que es lo que mantiene las misiones cortas, agradables y sobre todo comprensibles.",
+      "texto_nuevo": "Escríbela en lenguaje llano y no en la jerga que tanto abunda hoy en los negocios. Quita la hojarasca, que es lo que mantiene las misiones cortas, al grano y sobre todo comprensibles.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "agradables"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'short, sweet'.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-redactar_mision_tarjeta_puntuacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "No saques una misión de la estantería para desempolvarla cada vez que el puesto se vuelve a cubrir: por eso la tarjeta de puntuación tiene que ser un documento vivo y no estático.",
+      "texto_nuevo": "No saques una misión de la estantería para desempolvarla cada vez que el puesto se vuelve a cubrir: los asuntos cambian y hace falta pericia nueva, y por eso la tarjeta de puntuación tiene que ser un documento vivo y no estático.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "'por eso' quedaba sin antecedente; se pone la razón del libro (cap_03 l.61: issues change, new expertise is required)."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'por eso' quedaba sin antecedente; se pone la razón del libro (cap_03 l.61: issues change, new expertise is required).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Redacta la Misión del Puesto",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

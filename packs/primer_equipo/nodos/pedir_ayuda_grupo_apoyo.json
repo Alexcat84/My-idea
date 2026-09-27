@@ -1,0 +1,350 @@
+{
+  "node_id": "pedir_ayuda_grupo_apoyo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Pedir ayuda a gente con la que puedas ser auténtico",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Una directiva pasó años fingiendo control cuando estaba en el Pozo (el bache de desánimo) para dejar de sentirse un fraude, y fue un error: se negó el alivio de compartir sus miedos con gente de confianza y se perdió su empatía y sus consejos. Admitir que batallas y pedir ayuda no es debilidad: muestra coraje y conciencia de ti mismo. Funciona porque que otros entiendan tu situación ayuda mucho: la investigación sugiere que los grupos de apoyo son muy eficaces, incluso en problemas serios de salud mental. Por eso buscas tu grupo y lo usas para que te anime y te sirva de caja de resonancia.",
+  "notas_extraccion": "Es el cuarto consejo del Pozo y el unico que necesita a otras personas para ejecutarse. Su inventario propio son los cuatro sitios donde buscar el grupo, nombrados uno a uno, y los dos usos que se le da, animadores y caja de resonancia, que es lo que impide que encuentra tu grupo de apoyo quede en un enunciado sin acto. El libro apoya la peticion con un dato atribuido y con su propio caso, y los mantiene separados: uno es investigacion y el otro es experiencia suya. Lo que el libro NO dice, y por eso no esta escrito: ni cada cuanto se reune un grupo de apoyo, ni cuantos son, mas alla del ejemplo que cuenta de si misma.",
+  "pasos_accionables": [
+    "Mira primero un error que una directiva cuenta haber cometido durante años: cuando se encontraba en el Pozo se mordía la lengua y se lo guardaba, porque como dice el dicho hay que fingirlo hasta lograrlo, y pensaba que aparentando tenerlo todo bajo control dejaría de sentirse un fraude y nadie se enteraría.",
+    "Ten claro por qué fue un error: se negaba a sí misma el alivio que da poder compartir los miedos con gente en la que confiaba, y se perdía su empatía y sus consejos.",
+    "Cuenta con lo que admitir que estás batallando y pedir ayuda es de verdad: lo contrario de debilidad. De hecho muestra coraje y conciencia de uno mismo, porque estás diciendo que te importa más volver a estar bien que tu ego.",
+    "Ten delante que cuando otros entienden tu situación te beneficias enormemente: la investigación sugiere que los grupos de apoyo son notablemente efectivos, incluso para problemas serios de salud mental, y en un ejemplo el ochenta y dos por ciento de las personas con trastorno maniacodepresivo declararon sobrellevar mejor su enfermedad después de unirse a un grupo de autoayuda.",
+    "Un ejemplo vivido: una directiva formó un círculo de apoyo con una docena de mujeres de su empresa, y dos horas cada mes se turnaban para compartir aquello con lo que estaba lidiando cada una: relaciones difíciles, incertidumbre sobre sus carreras, la lucha por equilibrar la maternidad con el trabajo. Las lágrimas no eran raras porque algunos de los retos eran de verdad duros, y donde podían se daban ayuda y consejo, y donde no, se ofrecían abrazos y se escuchaban con comprensión.",
+    "Encuentra tu grupo de apoyo, ya sea con tu familia, tu mejor amigo, un entrenador o un grupo de colegas de confianza.",
+    "Y úsalos para dos cosas: como tus animadores y como tu caja de resonancia. Ninguna persona es una isla, y tu comunidad puede alumbrarte el camino y echarte una mano en la subida para salir del Pozo."
+  ],
+  "entregable_esperado": "Un grupo de apoyo encontrado y en uso como animadores y como caja de resonancia, en lugar del silencio.",
+  "nodos_previos": [
+    "evitar_doble_impuesto_malestar"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando te encuentras en el Pozo y te lo estás callando, aguantando el tipo y fingiendo que lo tienes todo bajo control."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-pedir_ayuda_grupo_apoyo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una directiva pasó años fingiendo control cuando estaba en el Pozo para dejar de sentirse un fraude, y fue un error: se negó el alivio de compartir sus miedos con gente de confianza y se perdió su empatía y sus consejos. Admitir que batallas y pedir ayuda no es debilidad: muestra coraje y conciencia de ti mismo. Funciona porque que otros entiendan tu situación ayuda mucho: la investigación sugiere que los grupos de apoyo son notablemente eficaces, incluso en problemas serios de salud mental. Por eso buscas tu grupo y lo usas para dos cosas: que te anime y que te sirva de caja de resonancia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_06.md",
+          "lineas": "325-335"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)"
+    },
+    {
+      "id": "m11-limpieza-pedir_ayuda_grupo_apoyo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pedir ayuda a gente con la que puedas ser autentico",
+      "texto_nuevo": "Pedir ayuda a gente con la que puedas ser auténtico",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_ayuda_grupo_apoyo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira primero el error que la autora cuenta haber cometido durante anios: cuando se encontraba en el Pozo se mordia el labio y se lo guardaba, porque como dice el dicho hay que fingirlo hasta lograrlo, y pensaba que aparentando tenerlo todo bajo control dejaria de sentirse un fraude y nadie se enteraria.",
+      "texto_nuevo": "Mira primero un error que una directiva cuenta haber cometido durante años: cuando se encontraba en el Pozo se mordía el labio y se lo guardaba, porque como dice el dicho hay que fingirlo hasta lograrlo, y pensaba que aparentando tenerlo todo bajo control dejaría de sentirse un fraude y nadie se enteraría.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el error que la autora cuenta haber cometido"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: verificador",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_ayuda_grupo_apoyo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten claro por que dice que era un error: se negaba a si misma el alivio que da poder compartir tus miedos con gente en la que confias, y se perdia su empatia y sus consejos.",
+      "texto_nuevo": "Ten claro por qué fue un error: se negaba a sí misma el alivio que da poder compartir los miedos con gente en la que confiaba, y se perdía su empatía y sus consejos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "por que dice que era un error",
+          "se negaba a si misma"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: verificador",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_ayuda_grupo_apoyo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que admitir que estas batallando y pedir ayuda es de verdad: lo contrario de debilidad. De hecho muestra coraje y conciencia de uno mismo, porque estas diciendo que te importa mas llevarte a un buen sitio que tu ego.",
+      "texto_nuevo": "Cuenta con lo que admitir que estás batallando y pedir ayuda es de verdad: lo contrario de debilidad. De hecho muestra coraje y conciencia de uno mismo, porque estás diciendo que te importa más llevarte a un buen sitio que tu ego.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_ayuda_grupo_apoyo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante que cuando otros entienden nuestra situacion nos beneficiamos enormemente: el libro dice que la investigacion sugiere que los grupos de apoyo son notablemente efectivos, incluso para problemas serios de salud mental, y da como ejemplo que el ochenta y dos por ciento de las personas con trastorno maniaco depresivo declararon sobrellevar mejor su enfermedad despues de unirse a un grupo de autoayuda.",
+      "texto_nuevo": "Ten delante que cuando otros entienden nuestra situación nos beneficiamos enormemente: la investigación sugiere que los grupos de apoyo son notablemente efectivos, incluso para problemas serios de salud mental, y en un ejemplo el ochenta y dos por ciento de las personas con trastorno maníaco depresivo declararon sobrellevar mejor su enfermedad después de unirse a un grupo de autoayuda.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro dice que",
+          "da como ejemplo que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_ayuda_grupo_apoyo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "El libro lo cuenta ademas de primera mano: la autora formo un circulo de Lean In con una docena de mujeres de la empresa, y dos horas cada mes daban la vuelta a la sala compartiendo aquello con lo que estaba lidiando cada una, relaciones dificiles, incertidumbre sobre sus carreras, la lucha por equilibrar la maternidad con el trabajo. Las lagrimas no eran raras porque algunos de los retos eran de verdad duros, y donde podian se daban ayuda y consejo, y donde no, ofrecian abrazos y oidos comprensivos.",
+      "texto_nuevo": "Un ejemplo vivido: una directiva formó un círculo de apoyo con una docena de mujeres de su empresa, y dos horas cada mes daban la vuelta a la sala compartiendo aquello con lo que estaba lidiando cada una: relaciones difíciles, incertidumbre sobre sus carreras, la lucha por equilibrar la maternidad con el trabajo. Las lágrimas no eran raras porque algunos de los retos eran de verdad duros, y donde podían se daban ayuda y consejo, y donde no, ofrecían abrazos y oídos comprensivos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro lo cuenta ademas de primera mano",
+          "la autora formo un circulo de Lean In"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_ayuda_grupo_apoyo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y usalos para las dos cosas que el libro nombra: como tus animadores y como tu caja de resonancia. Ninguna persona es una isla, y nuestra comunidad puede alumbrarnos el camino y echarnos una mano en la subida para salir del Pozo.",
+      "texto_nuevo": "Y úsalos para dos cosas: como tus animadores y como tu caja de resonancia. Ninguna persona es una isla, y nuestra comunidad puede alumbrarnos el camino y echarnos una mano en la subida para salir del Pozo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "las dos cosas que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_ayuda_grupo_apoyo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te encuentras en el Pozo y te lo estas callando, aguantando el tipo y fingiendo que lo tienes todo bajo control.",
+      "texto_nuevo": "Cuando te encuentras en el Pozo y te lo estás callando, aguantando el tipo y fingiendo que lo tienes todo bajo control.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-pedir_ayuda_grupo_apoyo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una directiva pasó años fingiendo control cuando estaba en el Pozo para dejar de sentirse un fraude, y fue un error: se negó el alivio de compartir sus miedos con gente de confianza y se perdió su empatía y sus consejos. Admitir que batallas y pedir ayuda no es debilidad: muestra coraje y conciencia de ti mismo. Funciona porque que otros entiendan tu situación ayuda mucho: la investigación sugiere que los grupos de apoyo son notablemente eficaces, incluso en problemas serios de salud mental. Por eso buscas tu grupo y lo usas para dos cosas: que te anime y que te sirva de caja de resonancia.",
+      "texto_nuevo": "Una directiva pasó años fingiendo control cuando estaba en el Pozo (el bache de desánimo) para dejar de sentirse un fraude, y fue un error: se negó el alivio de compartir sus miedos con gente de confianza y se perdió su empatía y sus consejos. Admitir que batallas y pedir ayuda no es debilidad: muestra coraje y conciencia de ti mismo. Funciona porque que otros entiendan tu situación ayuda mucho: la investigación sugiere que los grupos de apoyo son muy eficaces, incluso en problemas serios de salud mental. Por eso buscas tu grupo y lo usas para que te anime y te sirva de caja de resonancia.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Pozo para dejar",
+          "notablemente",
+          "dos cosas: que te anime y que te sirva"
+        ]
+      },
+      "decision": "pase de glosario (pozo): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-pedir_ayuda_grupo_apoyo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten delante que cuando otros entienden nuestra situación nos beneficiamos enormemente: la investigación sugiere que los grupos de apoyo son notablemente efectivos, incluso para problemas serios de salud mental, y en un ejemplo el ochenta y dos por ciento de las personas con trastorno maníaco depresivo declararon sobrellevar mejor su enfermedad después de unirse a un grupo de autoayuda.",
+      "texto_nuevo": "Ten delante que cuando otros entienden nuestra situación nos beneficiamos enormemente: la investigación sugiere que los grupos de apoyo son notablemente efectivos, incluso para problemas serios de salud mental, y en un ejemplo el ochenta y dos por ciento de las personas con trastorno maniacodepresivo declararon sobrellevar mejor su enfermedad después de unirse a un grupo de autoayuda.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "El compuesto se escribe en una palabra: maniacodepresivo."
+      },
+      "decision": "auditoria completa M11 (ortografia): El compuesto se escribe en una palabra: maniacodepresivo.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-pedir_ayuda_grupo_apoyo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que admitir que estás batallando y pedir ayuda es de verdad: lo contrario de debilidad. De hecho muestra coraje y conciencia de uno mismo, porque estás diciendo que te importa más llevarte a un buen sitio que tu ego.",
+      "texto_nuevo": "Cuenta con lo que admitir que estás batallando y pedir ayuda es de verdad: lo contrario de debilidad. De hecho muestra coraje y conciencia de uno mismo, porque estás diciendo que te importa más volver a estar bien que tu ego.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "llevarte a un buen sitio"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"getting yourself to a good place\" (zhuo cap_06 331); se toma la propuesta.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-pedir_ayuda_grupo_apoyo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un ejemplo vivido: una directiva formó un círculo de apoyo con una docena de mujeres de su empresa, y dos horas cada mes daban la vuelta a la sala compartiendo aquello con lo que estaba lidiando cada una: relaciones difíciles, incertidumbre sobre sus carreras, la lucha por equilibrar la maternidad con el trabajo. Las lágrimas no eran raras porque algunos de los retos eran de verdad duros, y donde podían se daban ayuda y consejo, y donde no, ofrecían abrazos y oídos comprensivos.",
+      "texto_nuevo": "Un ejemplo vivido: una directiva formó un círculo de apoyo con una docena de mujeres de su empresa, y dos horas cada mes se turnaban para compartir aquello con lo que estaba lidiando cada una: relaciones difíciles, incertidumbre sobre sus carreras, la lucha por equilibrar la maternidad con el trabajo. Las lágrimas no eran raras porque algunos de los retos eran de verdad duros, y donde podían se daban ayuda y consejo, y donde no, se ofrecían abrazos y se escuchaban con comprensión.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "daban la vuelta a la sala compartiendo",
+          "ofrecían abrazos y oídos comprensivos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calcos de \"go around the room\" y \"sympathetic ears\" (zhuo cap_06 333); se toma la propuesta.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-pedir_ayuda_grupo_apoyo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante que cuando otros entienden nuestra situación nos beneficiamos enormemente: la investigación sugiere que los grupos de apoyo son notablemente efectivos, incluso para problemas serios de salud mental, y en un ejemplo el ochenta y dos por ciento de las personas con trastorno maniacodepresivo declararon sobrellevar mejor su enfermedad después de unirse a un grupo de autoayuda.",
+      "texto_nuevo": "Ten delante que cuando otros entienden tu situación te beneficias enormemente: la investigación sugiere que los grupos de apoyo son notablemente efectivos, incluso para problemas serios de salud mental, y en un ejemplo el ochenta y dos por ciento de las personas con trastorno maniacodepresivo declararon sobrellevar mejor su enfermedad después de unirse a un grupo de autoayuda.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "nuestra situación nos beneficiamos"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Primera persona del plural del libro (our plight, we benefit); la voz de la casa habla de tú.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase3-pedir_ayuda_grupo_apoyo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y úsalos para dos cosas: como tus animadores y como tu caja de resonancia. Ninguna persona es una isla, y nuestra comunidad puede alumbrarnos el camino y echarnos una mano en la subida para salir del Pozo.",
+      "texto_nuevo": "Y úsalos para dos cosas: como tus animadores y como tu caja de resonancia. Ninguna persona es una isla, y tu comunidad puede alumbrarte el camino y echarte una mano en la subida para salir del Pozo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "nuestra comunidad puede alumbrarnos el camino y echarnos una mano"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Primera persona del plural del libro (our community ... for us); la voz de la casa habla de tú.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase4-pedir_ayuda_grupo_apoyo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira primero un error que una directiva cuenta haber cometido durante años: cuando se encontraba en el Pozo se mordía el labio y se lo guardaba, porque como dice el dicho hay que fingirlo hasta lograrlo, y pensaba que aparentando tenerlo todo bajo control dejaría de sentirse un fraude y nadie se enteraría.",
+      "texto_nuevo": "Mira primero un error que una directiva cuenta haber cometido durante años: cuando se encontraba en el Pozo se mordía la lengua y se lo guardaba, porque como dice el dicho hay que fingirlo hasta lograrlo, y pensaba que aparentando tenerlo todo bajo control dejaría de sentirse un fraude y nadie se enteraría.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se mordía el labio"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): calco de \"I bit my lip\" (zhuo_manager/cap_06.md l.327): en español callarse algo es morderse la lengua",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Busca Apoyo Auténtico"
+}

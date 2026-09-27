@@ -1,0 +1,378 @@
+{
+  "node_id": "investigar_antes_contratar_lideres",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Investigar qué buscar antes de contratar a un líder para tu equipo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Una mala contratación de liderazgo pesa mucho más que otras porque afecta a más gente: quien entra con valores distintos de los tuyos contratará a gente que quizá tú no consideres adecuada. Por eso, antes de decidir, necesitas saber cómo es el candidato ideal, y más aún si nunca has hecho ese trabajo. La calibración sale de fuera y de dentro: líderes del oficio que te cuentan qué miran y qué preguntan, y tu propio equipo, que sabe qué necesita de un líder y puede evaluar lo técnico. Así decides con criterio propio, y una buena elección rinde durante años.",
+  "notas_extraccion": "Es la segunda leccion de contratar a escala y la unica del capitulo que se dirige a quien no sabe evaluar el puesto que contrata. El caso de la primera ejecutiva de ventas que busca responsable de ingenieria va dentro y no a nodo propio (manual seccion 3.5), y es ademas el que aporta el inventario: las preguntas del cafe y los dos pasos con el equipo propio salen de ese ejemplo, escritos uno a uno por el libro. Sin ese caso, la seccion seria el consejo de investigar, que es un adjetivo de adecuacion y no entraria por D.27. Lo que el libro NO dice, y por eso no esta escrito aqui, es con cuantos lideres externos hay que hablar, ni cuanto tiempo dura esa calibracion, ni que se hace si el equipo propio y los externos discrepan sobre el liston.",
+  "pasos_accionables": [
+    "Trata la contratación de un directivo o de un especialista veterano como lo que es, una inversión grande, y cuenta con que las malas contrataciones de liderazgo son desproporcionadamente más perturbadoras porque afectan a más gente: si traes a un directivo cuyos valores no están alineados con los tuyos, contratará a gente que quizá tú no consideres adecuada, y si resulta ser un mal colaborador vas a tener cola de quejas en la puerta.",
+    "No corras a contratar liderazgo. Asegúrate antes de saber cómo es un aspirante ideal.",
+    "La forma más fácil de saberlo es hablar con tantos candidatos potenciales como puedas, incluidos aquellos que quizá no quieran el puesto pero conozcan bien el oficio.",
+    "Si contratas para un puesto que no te resulta familiar, infórmate a fondo para entender dónde debería estar el listón.",
+    "Pide a tu red que te conecte con los mejores líderes de esa especialidad. Por ejemplo, una directora general que viene de ventas y busca responsable de ingeniería sin haber hecho nunca ese puesto empezaría por ahí.",
+    "Invítalos a tomar un café aunque no les interese tu puesto, para aprender de ellos, y pregúntales qué miran en un historial, qué preguntas hacen en las entrevistas y qué clase de respuestas buscan, y si tienen alguna recomendación sobre dónde buscar candidatos fuertes.",
+    "Habla después con la gente de tu propio equipo que hace ese trabajo, para entender qué consideran ellos importante en un líder.",
+    "Pide a algunos de ellos que te ayuden a evaluar las habilidades técnicas de un candidato.",
+    "Entrevista a personas de perfiles variados, para afinar mejor tu idea de lo que hay que buscar.",
+    "No abordes una contratación de liderazgo a la ligera: cuando haces una buena, el impacto en tu equipo es enorme durante años."
+  ],
+  "entregable_esperado": "Una idea calibrada de cómo es el candidato ideal para ese puesto, sacada de hablar con gente que conoce el oficio y con tu propio equipo, antes de decidir.",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "describir_candidato_ideal_precision",
+    "preparar_preguntas_entrevista_antemano"
+  ],
+  "condiciones_activacion": [
+    "Al contratar a un directivo o a un especialista veterano, y con más motivo cuando es un puesto que tú nunca has hecho."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una mala contratación de liderazgo pesa mucho más que otras porque afecta a más gente: quien entra con valores distintos contrata a gente que no encaja y multiplica el problema. Por eso, antes de decidir, necesitas saber cómo es el candidato ideal, y más aún si nunca has hecho ese trabajo. La calibración sale de fuera y de dentro: líderes del oficio que te cuentan qué miran y qué preguntan, y tu propio equipo, que sabe qué necesita de un líder y puede evaluar lo técnico. Así decides con criterio propio, y una buena elección rinde durante años.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "249-257"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)"
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Investigar que buscar antes de contratar a un lider para tu equipo",
+      "texto_nuevo": "Investigar qué buscar antes de contratar a un líder para tu equipo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trata la contratacion de un directivo o de un contribuidor veterano como lo que es, una inversion grande, y cuenta con que las malas contrataciones de liderazgo son desproporcionadamente mas perturbadoras porque afectan a mas gente: si traes a un directivo cuyos valores no estan alineados con los tuyos, contratara a gente que tu puedes no considerar adecuada, y si resulta ser un mal colaborador vas a tener cola de quejas en la puerta.",
+      "texto_nuevo": "Trata la contratación de un directivo o de un especialista veterano como lo que es, una inversión grande, y cuenta con que las malas contrataciones de liderazgo son desproporcionadamente más perturbadoras porque afectan a más gente: si traes a un directivo cuyos valores no están alineados con los tuyos, contratará a gente que tú puedes no considerar adecuada, y si resulta ser un mal colaborador vas a tener cola de quejas en la puerta.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "contribuidor veterano"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No corras a contratar liderazgo. Asegurate antes de saber como es un aspirante ideal.",
+      "texto_nuevo": "No corras a contratar liderazgo. Asegúrate antes de saber cómo es un aspirante ideal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz lo que el libro llama la forma mas facil de saberlo: habla con tantos candidatos potenciales como puedas, incluidos aquellos que puedan no querer el puesto pero conozcan bien el oficio.",
+      "texto_nuevo": "La forma más fácil de saberlo es hablar con tantos candidatos potenciales como puedas, incluidos aquellos que quizá no quieran el puesto pero conozcan bien el oficio.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el libro llama"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si contratas para un puesto que no te resulta familiar, haz los deberes para entender donde deberia estar el liston.",
+      "texto_nuevo": "Si contratas para un puesto que no te resulta familiar, haz los deberes para entender dónde debería estar el listón.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pide a tu red que te conecte con los mejores lideres de esa especialidad, como hace la primera ejecutiva del ejemplo del libro, que viene de ventas y busca responsable de ingenieria sin haber hecho nunca el puesto.",
+      "texto_nuevo": "Pide a tu red que te conecte con los mejores líderes de esa especialidad. Por ejemplo, una directora general que viene de ventas y busca responsable de ingeniería sin haber hecho nunca ese puesto empezaría por ahí.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "como hace la primera ejecutiva del ejemplo del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Invitales a tomar un cafe aunque no les interese tu puesto, para aprender de ellos, y preguntales lo que ella pregunta: que miran en un historial; que preguntas hacen en las entrevistas y que clase de respuestas buscan; y si tienen alguna recomendacion sobre donde buscar candidatos fuertes.",
+      "texto_nuevo": "Invítalos a tomar un café aunque no les interese tu puesto, para aprender de ellos, y pregúntales qué miran en un historial, qué preguntas hacen en las entrevistas y qué clase de respuestas buscan, y si tienen alguna recomendación sobre dónde buscar candidatos fuertes.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que ella pregunta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Habla despues con la gente de tu propio equipo que hace ese trabajo, para entender que consideran ellos importante en un lider.",
+      "texto_nuevo": "Habla después con la gente de tu propio equipo que hace ese trabajo, para entender qué consideran ellos importante en un líder.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pide a algunos de ellos que te ayuden a evaluar las habilidades tecnicas de un candidato.",
+      "texto_nuevo": "Pide a algunos de ellos que te ayuden a evaluar las habilidades técnicas de un candidato.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Traete a una variedad de personas a entrevistar, para calibrarte mejor sobre lo que hay que buscar.",
+      "texto_nuevo": "Trae a entrevistar a una variedad de personas, para calibrarte mejor sobre lo que hay que buscar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No abordes una contratacion de liderazgo a la ligera: cuando haces una buena, el impacto en tu equipo es enorme durante anios.",
+      "texto_nuevo": "No abordes una contratación de liderazgo a la ligera: cuando haces una buena, el impacto en tu equipo es enorme durante años.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una idea calibrada de como es el candidato ideal para ese puesto, sacada de hablar con gente que conoce el oficio y con tu propio equipo, antes de decidir.",
+      "texto_nuevo": "Una idea calibrada de cómo es el candidato ideal para ese puesto, sacada de hablar con gente que conoce el oficio y con tu propio equipo, antes de decidir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 36, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-investigar_antes_contratar_lideres-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al contratar a un directivo o a un contribuidor veterano, y con mas motivo cuando es un puesto que tu nunca has hecho.",
+      "texto_nuevo": "Al contratar a un directivo o a un especialista veterano, y con más motivo cuando es un puesto que tú nunca has hecho.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "contribuidor veterano"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-investigar_antes_contratar_lideres-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una mala contratación de liderazgo pesa mucho más que otras porque afecta a más gente: quien entra con valores distintos contrata a gente que no encaja y multiplica el problema. Por eso, antes de decidir, necesitas saber cómo es el candidato ideal, y más aún si nunca has hecho ese trabajo. La calibración sale de fuera y de dentro: líderes del oficio que te cuentan qué miran y qué preguntan, y tu propio equipo, que sabe qué necesita de un líder y puede evaluar lo técnico. Así decides con criterio propio, y una buena elección rinde durante años.",
+      "texto_nuevo": "Una mala contratación de liderazgo pesa mucho más que otras porque afecta a más gente: quien entra con valores distintos de los tuyos contratará a gente que quizá tú no consideres adecuada. Por eso, antes de decidir, necesitas saber cómo es el candidato ideal, y más aún si nunca has hecho ese trabajo. La calibración sale de fuera y de dentro: líderes del oficio que te cuentan qué miran y qué preguntan, y tu propio equipo, que sabe qué necesita de un líder y puede evaluar lo técnico. Así decides con criterio propio, y una buena elección rinde durante años.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 249",
+        "frase": "If you bring on a new manager whose values aren’t aligned with yours, he will hire people that you may not think are a good fit."
+      },
+      "decision": "auditoria completa M11 (invencion, matiz): 'multiplica el problema' es efecto añadido y se pierde 'you may not think'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion",
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-investigar_antes_contratar_lideres-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trata la contratación de un directivo o de un especialista veterano como lo que es, una inversión grande, y cuenta con que las malas contrataciones de liderazgo son desproporcionadamente más perturbadoras porque afectan a más gente: si traes a un directivo cuyos valores no están alineados con los tuyos, contratará a gente que tú puedes no considerar adecuada, y si resulta ser un mal colaborador vas a tener cola de quejas en la puerta.",
+      "texto_nuevo": "Trata la contratación de un directivo o de un especialista veterano como lo que es, una inversión grande, y cuenta con que las malas contrataciones de liderazgo son desproporcionadamente más perturbadoras porque afectan a más gente: si traes a un directivo cuyos valores no están alineados con los tuyos, contratará a gente que quizá tú no consideres adecuada, y si resulta ser un mal colaborador vas a tener cola de quejas en la puerta.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "tú puedes no considerar"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Puedes no considerar\" calca \"you may not think\"; el matiz va con \"quizá\" y subjuntivo, como ya lo dice el resumen.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-investigar_antes_contratar_lideres-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trae a entrevistar a una variedad de personas, para calibrarte mejor sobre lo que hay que buscar.",
+      "texto_nuevo": "Entrevista a personas de perfiles variados, para afinar mejor tu idea de lo que hay que buscar.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Trae a entrevistar a una variedad de personas",
+          "calibrarte mejor sobre"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"bring in a variety of people to interview so she can become better calibrated\" (zhuo cap_08 l.255); se dice en giro español sin cambiar el sentido.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-investigar_antes_contratar_lideres-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si contratas para un puesto que no te resulta familiar, haz los deberes para entender dónde debería estar el listón.",
+      "texto_nuevo": "Si contratas para un puesto que no te resulta familiar, infórmate a fondo para entender dónde debería estar el listón.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "haz los deberes"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Hacer los deberes\" es forma de España (en otras regiones, \"la tarea\"); \"infórmate a fondo\" conserva el sentido de \"do your homework\" (zhuo cap_08 l.251).",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Investiga Antes de Contratar Líderes"
+}

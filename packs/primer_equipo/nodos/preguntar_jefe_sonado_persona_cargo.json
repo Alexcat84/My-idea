@@ -1,0 +1,338 @@
+{
+  "node_id": "preguntar_jefe_sonado_persona_cargo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Preguntar a cada persona a tu cargo cómo es su jefe soñado",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Al llegar de jefe nuevo empiezas desde cero, y eso vale también para tu gente: algunas personas a tu cargo agradecerán la ocasión de construir con su jefe la relación que siempre quisieron. Esa relación se habla mejor al principio, antes de caer en patrones y rutinas, por eso las primeras reuniones a solas con cada persona sirven para preguntarle qué le ayudaba antes, cómo quiere que la apoyes, cómo quiere que se reconozca su buen trabajo y qué opinión le es útil, y para pedirle que imagine la relación ideal. Mantener la mente abierta y decir qué clase de jefe quieres ser completa el acuerdo.",
+  "notas_extraccion": "Es el instrumento con el que se aprovecha la segunda ventaja del jefe nuevo, la pizarra en blanco, y el libro dice para que sirve antes de darlo: para entender a que se parece el jefe sonado de cada persona a tu cargo. Las cinco preguntas son las cinco que el libro escribe una a una, y la quinta es de otra especie que las cuatro primeras, porque pide imaginar en vez de recordar. El libro razona por que se hace ahora y no luego: estos temas son mas faciles de hablar por delante, antes de que os asenteis en patrones y rutinas. La doctrina de fondo la ilustra el libro con el caso de una amiga suya, jefa nueva, a la que un colega le dijo que una de las personas a su cargo era peor que la media: le agradecio la informacion pero decidio llegar a sus propias conclusiones, y en un anio esa persona fue promovida a responsable de equipo. Lo que el libro NO dice, y por eso no esta escrito aqui, es que se hace con las respuestas, donde se anotan ni cada cuanto se vuelven a preguntar.",
+  "pasos_accionables": [
+    "En tus primeras reuniones a solas, pregúntale qué temas trataba con su jefe anterior que le resultaran más útiles.",
+    "Pregúntale de qué maneras le gustaría que le apoyaras.",
+    "Pregúntale cómo le gusta que se le reconozca un gran trabajo.",
+    "Pregúntale qué clase de opinión sobre su trabajo le resulta más útil.",
+    "Y pídele que imagine que su relación contigo es estupenda, y que te cuente cómo sería eso.",
+    "Mantén la mente abierta y la curiosidad mientras conoces a cada uno, y sé claro desde el principio sobre la clase de relación que te gustaría construir y la clase de directivo que quieres ser."
+  ],
+  "entregable_esperado": "Entendido cómo es el jefe soñado de cada persona a tu cargo, con sus cinco respuestas, y hablada desde el principio la clase de relación que quieres construir entre los dos.",
+  "nodos_previos": [
+    "transitar_jefe_nuevo_equipo_establecido"
+  ],
+  "nodos_siguientes": [
+    "dirigir_reunion_individual_semanal"
+  ],
+  "condiciones_activacion": [
+    "En tus primeras reuniones a solas con cada persona a tu cargo, cuando llegas de jefe nuevo y quieres hablar de la clase de relación que se va a construir entre los dos antes de que se asiente en patrones y rutinas."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-preguntar_jefe_sonado_persona_cargo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Al llegar de jefe nuevo empiezas con una pizarra en blanco, y eso vale también para tu gente: algunas personas a tu cargo agradecerán la ocasión de construir con su jefe la relación que siempre quisieron. Esa relación se habla mejor al principio, antes de caer en patrones y rutinas, por eso las primeras reuniones a solas sirven para preguntar qué le ayudaba antes, cómo quiere que la apoyes, cómo quiere que se reconozca su buen trabajo y qué opinión le es útil, y para pedirle que imagine la relación ideal. Mantener la mente abierta y decir qué clase de jefe quieres ser completa el acuerdo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_03.md",
+          "lineas": "151-167"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: verificador",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)"
+    },
+    {
+      "id": "m11-limpieza-preguntar_jefe_sonado_persona_cargo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntar a cada persona a tu cargo como es su jefe sonado",
+      "texto_nuevo": "Preguntar a cada persona a tu cargo cómo es su jefe soñado",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_jefe_sonado_persona_cargo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En tus primeras reuniones a solas, preguntale que discutia con su jefe anterior que le resultara mas util.",
+      "texto_nuevo": "En tus primeras reuniones a solas, pregúntale qué discutía con su jefe anterior que le resultara más útil.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_jefe_sonado_persona_cargo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale de que maneras le gustaria que le apoyaras.",
+      "texto_nuevo": "Pregúntale de qué maneras le gustaría que le apoyaras.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_jefe_sonado_persona_cargo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale como le gusta que se le reconozca un gran trabajo.",
+      "texto_nuevo": "Pregúntale cómo le gusta que se le reconozca un gran trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_jefe_sonado_persona_cargo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale que clase de opinion sobre su trabajo le resulta mas util.",
+      "texto_nuevo": "Pregúntale qué clase de opinión sobre su trabajo le resulta más útil.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_jefe_sonado_persona_cargo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y pidele que imagine que tu y el teneis una relacion estupenda, y que te cuente a que se pareceria eso.",
+      "texto_nuevo": "Y pídele que imagine que su relación contigo es estupenda, y que te cuente a qué se parecería eso.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tu y el teneis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_jefe_sonado_persona_cargo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Manten la mente abierta y la curiosidad mientras conoces a cada uno, y se claro por delante sobre la clase de relacion que te gustaria construir y la clase de directivo que quieres ser.",
+      "texto_nuevo": "Mantén la mente abierta y la curiosidad mientras conoces a cada uno, y sé claro por delante sobre la clase de relación que te gustaría construir y la clase de directivo que quieres ser.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_jefe_sonado_persona_cargo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entendido a que se parece el jefe sonado de cada persona a tu cargo, con sus cinco respuestas, y hablada por delante la clase de relacion que quereis construir.",
+      "texto_nuevo": "Entendido a qué se parece el jefe soñado de cada persona a tu cargo, con sus cinco respuestas, y hablada por delante la clase de relación que se quiere construir entre los dos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "quereis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_jefe_sonado_persona_cargo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "En tus primeras reuniones a solas con cada persona a tu cargo, cuando llegas de jefe nuevo y quieres hablar la clase de relacion que vais a construir antes de que os asenteis en patrones y rutinas.",
+      "texto_nuevo": "En tus primeras reuniones a solas con cada persona a tu cargo, cuando llegas de jefe nuevo y quieres hablar de la clase de relación que se va a construir entre los dos antes de que se asiente en patrones y rutinas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "vais a construir",
+          "os asenteis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-barrido-preguntar_jefe_sonado_persona_cargo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entendido a qué se parece el jefe soñado de cada persona a tu cargo, con sus cinco respuestas, y hablada por delante la clase de relación que se quiere construir entre los dos.",
+      "texto_nuevo": "Entendido cómo es el jefe soñado de cada persona a tu cargo, con sus cinco respuestas, y hablada desde el principio la clase de relación que se quiere construir entre los dos.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "Entendido a qué se parece el jefe",
+          "hablada por delante"
+        ]
+      },
+      "decision": "barrido final de calcos (a_que_se_parece,por_delante)",
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-preguntar_jefe_sonado_persona_cargo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y pídele que imagine que su relación contigo es estupenda, y que te cuente a qué se parecería eso.",
+      "texto_nuevo": "Y pídele que imagine que su relación contigo es estupenda, y que te cuente cómo sería eso.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "a qué se parecería eso"
+        ]
+      },
+      "decision": "barrido final de calcos (a_que_se_parece)",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-preguntar_jefe_sonado_persona_cargo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mantén la mente abierta y la curiosidad mientras conoces a cada uno, y sé claro por delante sobre la clase de relación que te gustaría construir y la clase de directivo que quieres ser.",
+      "texto_nuevo": "Mantén la mente abierta y la curiosidad mientras conoces a cada uno, y sé claro desde el principio sobre la clase de relación que te gustaría construir y la clase de directivo que quieres ser.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "sé claro por delante"
+        ]
+      },
+      "decision": "barrido final de calcos (por_delante)",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-preguntar_jefe_sonado_persona_cargo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al llegar de jefe nuevo empiezas con una pizarra en blanco, y eso vale también para tu gente: algunas personas a tu cargo agradecerán la ocasión de construir con su jefe la relación que siempre quisieron. Esa relación se habla mejor al principio, antes de caer en patrones y rutinas, por eso las primeras reuniones a solas sirven para preguntar qué le ayudaba antes, cómo quiere que la apoyes, cómo quiere que se reconozca su buen trabajo y qué opinión le es útil, y para pedirle que imagine la relación ideal. Mantener la mente abierta y decir qué clase de jefe quieres ser completa el acuerdo.",
+      "texto_nuevo": "Al llegar de jefe nuevo empiezas desde cero, y eso vale también para tu gente: algunas personas a tu cargo agradecerán la ocasión de construir con su jefe la relación que siempre quisieron. Esa relación se habla mejor al principio, antes de caer en patrones y rutinas, por eso las primeras reuniones a solas con cada persona sirven para preguntarle qué le ayudaba antes, cómo quiere que la apoyes, cómo quiere que se reconozca su buen trabajo y qué opinión le es útil, y para pedirle que imagine la relación ideal. Mantener la mente abierta y decir qué clase de jefe quieres ser completa el acuerdo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "con una pizarra en blanco",
+          "reuniones a solas sirven para preguntar qué"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, coherencia): Calco de \"blank slate\" (zhuo cap_03 151) y \"le/la\" en singular sin antecedente tras un plural; se toma la propuesta.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-preguntar_jefe_sonado_persona_cargo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "En tus primeras reuniones a solas, pregúntale qué discutía con su jefe anterior que le resultara más útil.",
+      "texto_nuevo": "En tus primeras reuniones a solas, pregúntale qué temas trataba con su jefe anterior que le resultaran más útiles.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "qué discutía con su jefe anterior que le resultara más útil"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Discutir\" por \"discuss\" se lee como pelear (zhuo cap_03 159); se corrige a tratar temas.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-preguntar_jefe_sonado_persona_cargo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entendido cómo es el jefe soñado de cada persona a tu cargo, con sus cinco respuestas, y hablada desde el principio la clase de relación que se quiere construir entre los dos.",
+      "texto_nuevo": "Entendido cómo es el jefe soñado de cada persona a tu cargo, con sus cinco respuestas, y hablada desde el principio la clase de relación que quieres construir entre los dos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se quiere"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): El impersonal «se quiere» escondía el sujeto; en el libro y en el paso 6 es la relación que tú quieres construir (the kind of relationship you'd like to build, cap_03 l. 157). Pasa a tú.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "voz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Pregunta por su Jefe Ideal"
+}

@@ -1,0 +1,341 @@
+{
+  "node_id": "montar_tablero_kanban_medir_actividades",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Montar un tablero de tareas de tres columnas para hacer visibles las actividades y los flujos de trabajo, y medir la actividad y no solo el resultado",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Un tablero de tres columnas con notas de colores hace visible lo que un cuadro de resultados esconde: quién hace qué y dónde se atasca el trabajo. Al centrarse en la actividad y no solo en el resultado, deja tiempo para resolver problemas antes de que dañen los resultados. Cuando todos ven el cuello de botella, la ayuda fluye sola hacia allí sin que nadie la ordene. Y medir la actividad aclara qué impulsa de verdad el éxito, ayuda a separar a quien empuja de quien va subido al carro, crea respeto entre equipos y tiende a dejar menos sitio al sesgo al evaluar y ascender.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_11.md, unidad Cap. 8, Results. Sale de las lineas 235 a 249, bajo el rotulo KANBAN BOARDS. ES LA PIEZA P13 DE LA FRONTERA DE cap_11. POR QUE ES PROCEDIMIENTO, con D.27 delante: la linea 239 pone el INVENTARIO DE MEDIOS literal y completo, el tablero, las TRES columnas con su nombre, las notas adhesivas de colores y lo que cada color representa, y el acto de moverlas. Transcribir eso no inventa nada. kanban SE ESCRIBE TAL CUAL PORQUE ESTA EN LA LISTA BLANCA DE EXTRACTOR.md 15.1, entre los prestamos asentados. No se traduce y no se caza. EL ORIGEN HISTORICO DE LA LINEA 239 (el ingeniero industrial de Toyota que desarrollo el kanban como sistema de programacion para la cadena de suministro) NO VIAJA A NINGUN PASO: es atribucion, no procedimiento, y por principio 5 y 8 del manual una atribucion va en el campo atribuciones con autor, fuente y fecha de corte. Aqui NO se escribe como atribucion porque el texto no da fecha de corte ni cifra, y una atribucion sin eso es media cifra. Se deja dicho aqui y no se inventa el resto. LOS DOS CASOS NOMBRADOS DE LAS LINEAS 245 Y 249 (el equipo de ventas que atendia llamadas en vez de buscar clientes grandes, y el jefe de analisis que subio del puesto quince al primero) NO VIAJAN A NINGUN PASO, ni sus cifras ni sus anios ni el nombre de sus empresas. Manual 3.5. Lo que viaja es la doctrina que ilustran, y esa esta en las lineas 243, 245, 247 y 249. POR QUE LOS CINCO cuenta con SI SON PASOS Y NO METAS SUELTAS: cada uno es lo que el texto dice que pasa al hacerlo, escrito por el como another reason why, also y tends to. La restriccion 1 de D.27 excluye que un inventario de fines SOSTENGA un nodo; aqui el nodo lo sostiene el inventario de medios de la linea 239, y los cinco efectos entran detras como transcripcion. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 10 pasos, 10 TRANSCRIPCION, 0 PUENTE. P1 a P5 de la linea 239; P6 de la 241; P7 de la 243; P8 de la 245; P9 de la 247; P10 de la 249. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cada cuanto se revisa el tablero, quien lo mantiene, que actividades se miden y cuales no, y donde se cuelga.",
+  "pasos_accionables": [
+    "Monta el tablero en su forma más simple: pon un tablero con tres columnas, por hacer, en curso y hecho.",
+    "Compra un montón de notas adhesivas de colores distintos, y que los colores representen a las distintas personas o equipos.",
+    "Haz que cada cual escriba sus tareas en su color de nota y las vaya moviendo entre por hacer, en curso y hecho.",
+    "Úsalo para lo que sirve al momento: ver rápidamente quién es el cuello de botella.",
+    "Distingue el tablero del cuadro de mando, porque no son lo mismo: el tablero se centra en las actividades y en el trabajo en curso, y por eso da tiempo al equipo a detectar y resolver problemas antes de que dañen los resultados.",
+    "Cuenta con lo primero que consigue hacer visible el avance: da más autonomía al equipo y no menos, porque cuando todos ven dónde están los cuellos de botella los recursos fluyen solos hacia donde más falta hacen, sin que la dirección intervenga; y quien va adelantado se motiva para ir a ayudar a quien se ha quedado atrás, porque sabe que si esa tarea no sale, su propio trabajo no vale para nada o se retrasa.",
+    "Cuenta con lo segundo: cuando un negocio va muy bien, por los resultados solos cuesta distinguir quién va subido al carro y quién está haciendo de verdad que las cosas pasen; y cuando la economía se hunde por factores que nadie controla, si solo mides resultados cuesta saber quién está achicando agua y quién está entrando en pánico o empeorando las cosas.",
+    "Cuenta con lo tercero: medir actividades y visualizar flujos de trabajo te empuja a ti y a tu equipo a entender de verdad cómo lo que hace cada uno impulsa o no impulsa el éxito.",
+    "Cuenta con lo cuarto: medir actividades crea más respeto entre equipos, porque sorprende lo rápido que un equipo da por hecho que otro está sentado sin hacer nada y cuánto resentimiento se acumula con eso; cuando se ve en un tablero lo que la gente hace, el respeto tiende a fluir con bastante naturalidad.",
+    "Cuenta con lo quinto: medir actividades y enseñarlas públicamente tiende a llevar a evaluaciones y ascensos menos propensos a los sesgos que acechan a todo el mundo y que premian de forma más consistente a los que más rinden, porque cuando queda claro para todos qué es lo que empuja el éxito es menos probable que el sesgo se cuele en las decisiones de contratar, evaluar y ascender."
+  ],
+  "entregable_esperado": "Un tablero con las tareas de cada persona o equipo colocadas en las tres columnas y movidas por ellos mismos, con el cuello de botella a la vista de todos y la actividad medida además del resultado.",
+  "nodos_previos": [
+    "decidir_quien_comunica_cada_cuanto"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando no ves dónde está el cuello de botella de tu equipo, o cuando por los resultados solos no puedes distinguir quién está haciendo que las cosas pasen y quién va subido al carro."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un tablero de tres columnas con notas de colores hace visible lo que un cuadro de resultados esconde: quién hace qué y dónde se atasca el trabajo. Al centrarse en la actividad y no solo en el resultado, deja tiempo para resolver problemas antes de que dañen los resultados. Cuando todos ven el cuello de botella, la ayuda fluye sola hacia allí sin que nadie la ordene. Y medir la actividad aclara qué impulsa de verdad el éxito, ayuda a separar a quien empuja de quien va subido al carro, crea respeto entre equipos y tiende a dejar menos sitio al sesgo al evaluar y ascender.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_11.md",
+          "lineas": "239-249"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: 'tends to lead to ratings and promotions... less prone to the biases' pierde el 'tends to'. La propuesta lo devuelve ('tiende a') y suaviza 'separa' a 'ayuda a separar', fiel a 'it's hard to tell from the results' (576).",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)"
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Montar un tablero kanban de tres columnas para hacer visibles las actividades y los flujos de trabajo, y medir la actividad y no solo el resultado",
+      "texto_nuevo": "Montar un tablero de tareas de tres columnas para hacer visibles las actividades y los flujos de trabajo, y medir la actividad y no solo el resultado",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "kanban"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monta el tablero en su forma mas simple, que es la que el texto describe: pon un tablero con tres columnas, por hacer, en curso y hecho.",
+      "texto_nuevo": "Monta el tablero en su forma más simple: pon un tablero con tres columnas, por hacer, en curso y hecho.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es la que el texto describe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compra un monton de notas adhesivas de colores distintos, y que los colores representen a las distintas personas o equipos.",
+      "texto_nuevo": "Compra un montón de notas adhesivas de colores distintos, y que los colores representen a las distintas personas o equipos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usalo para lo que el texto dice que sirve al momento: ver rapidamente quien es el cuello de botella.",
+      "texto_nuevo": "Úsalo para lo que sirve al momento: ver rápidamente quién es el cuello de botella.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que "
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Distingue el tablero del cuadro de mando, porque el texto dice que no son lo mismo: el tablero se centra en las actividades y en el trabajo en curso, y por eso da tiempo al equipo a detectar y resolver problemas antes de que danien los resultados.",
+      "texto_nuevo": "Distingue el tablero del cuadro de mando, porque no son lo mismo: el tablero se centra en las actividades y en el trabajo en curso, y por eso da tiempo al equipo a detectar y resolver problemas antes de que dañen los resultados.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que no son lo mismo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo primero que consigue hacer visible el avance: da mas autonomia al equipo y no menos, porque cuando todos ven donde estan los cuellos de botella los recursos fluyen solos hacia donde mas falta hacen, sin que la direccion intervenga; y quien va adelantado se motiva para ir a ayudar a quien se ha quedado atras, porque sabe que si esa tarea no sale, su propio trabajo no vale para nada o se retrasa.",
+      "texto_nuevo": "Cuenta con lo primero que consigue hacer visible el avance: da más autonomía al equipo y no menos, porque cuando todos ven dónde están los cuellos de botella los recursos fluyen solos hacia donde más falta hacen, sin que la dirección intervenga; y quien va adelantado se motiva para ir a ayudar a quien se ha quedado atrás, porque sabe que si esa tarea no sale, su propio trabajo no vale para nada o se retrasa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo segundo: cuando un negocio va muy bien, por los resultados solos cuesta distinguir quien va subido al carro y quien esta haciendo de verdad que las cosas pasen; y cuando la economia se hunde por factores que nadie controla, si solo mides resultados no sabes quien esta achicando agua y quien esta entrando en panico o empeorando las cosas.",
+      "texto_nuevo": "Cuenta con lo segundo: cuando un negocio va muy bien, por los resultados solos cuesta distinguir quién va subido al carro y quién está haciendo de verdad que las cosas pasen; y cuando la economía se hunde por factores que nadie controla, si solo mides resultados no sabes quién está achicando agua y quién está entrando en pánico o empeorando las cosas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo tercero: medir actividades y visualizar flujos de trabajo os empuja a ti y a tu equipo a entender de verdad como lo que haceis empuja o no empuja el exito.",
+      "texto_nuevo": "Cuenta con lo tercero: medir actividades y visualizar flujos de trabajo te empuja a ti y a tu equipo a entender de verdad cómo lo que hace cada uno impulsa o no impulsa el éxito.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "os empuja",
+          "haceis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo cuarto: medir actividades crea mas respeto entre equipos, porque el texto dice que sorprende lo rapido que un equipo da por hecho que otro esta sentado sin hacer nada y cuanto resentimiento se acumula con eso; cuando se ve en un tablero lo que la gente hace, el respeto fluye con bastante naturalidad.",
+      "texto_nuevo": "Cuenta con lo cuarto: medir actividades crea más respeto entre equipos, porque sorprende lo rápido que un equipo da por hecho que otro está sentado sin hacer nada y cuánto resentimiento se acumula con eso; cuando se ve en un tablero lo que la gente hace, el respeto fluye con bastante naturalidad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que "
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo quinto: medir actividades y ensenarlas publicamente tiende a llevar a evaluaciones y ascensos que premian de forma mas consistente a los que mas rinden y son menos propensos a los sesgos que nos acechan a todos, porque cuando queda claro para todos que es lo que empuja el exito es menos probable que el sesgo se cuele en las decisiones de contratar, evaluar y ascender.",
+      "texto_nuevo": "Cuenta con lo quinto: medir actividades y enseñarlas públicamente tiende a llevar a evaluaciones y ascensos que premian de forma más consistente a los que más rinden y son menos propensos a los sesgos que nos acechan a todos, porque cuando queda claro para todos qué es lo que empuja el éxito es menos probable que el sesgo se cuele en las decisiones de contratar, evaluar y ascender.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un tablero con las tareas de cada persona o equipo colocadas en las tres columnas y movidas por ellos mismos, con el cuello de botella a la vista de todos y la actividad medida ademas del resultado.",
+      "texto_nuevo": "Un tablero con las tareas de cada persona o equipo colocadas en las tres columnas y movidas por ellos mismos, con el cuello de botella a la vista de todos y la actividad medida además del resultado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-montar_tablero_kanban_medir_actividades-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando no ves donde esta el cuello de botella de tu equipo, o cuando por los resultados solos no puedes distinguir quien esta haciendo que las cosas pasen y quien va subido al carro.",
+      "texto_nuevo": "Cuando no ves dónde está el cuello de botella de tu equipo, o cuando por los resultados solos no puedes distinguir quién está haciendo que las cosas pasen y quién va subido al carro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 21, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 21)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-montar_tablero_kanban_medir_actividades-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con lo segundo: cuando un negocio va muy bien, por los resultados solos cuesta distinguir quién va subido al carro y quién está haciendo de verdad que las cosas pasen; y cuando la economía se hunde por factores que nadie controla, si solo mides resultados no sabes quién está achicando agua y quién está entrando en pánico o empeorando las cosas.",
+      "texto_nuevo": "Cuenta con lo segundo: cuando un negocio va muy bien, por los resultados solos cuesta distinguir quién va subido al carro y quién está haciendo de verdad que las cosas pasen; y cuando la economía se hunde por factores que nadie controla, si solo mides resultados cuesta saber quién está achicando agua y quién está entrando en pánico o empeorando las cosas.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_11.md 243",
+        "frase": "if you just measure results it’s hard to know who’s doing a great job bailing out your boat and who’s simply panicking or making the situation worse"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que cuesta saberlo (it’s hard to know), no que no lo sepas.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-montar_tablero_kanban_medir_actividades-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con lo cuarto: medir actividades crea más respeto entre equipos, porque sorprende lo rápido que un equipo da por hecho que otro está sentado sin hacer nada y cuánto resentimiento se acumula con eso; cuando se ve en un tablero lo que la gente hace, el respeto fluye con bastante naturalidad.",
+      "texto_nuevo": "Cuenta con lo cuarto: medir actividades crea más respeto entre equipos, porque sorprende lo rápido que un equipo da por hecho que otro está sentado sin hacer nada y cuánto resentimiento se acumula con eso; cuando se ve en un tablero lo que la gente hace, el respeto tiende a fluir con bastante naturalidad.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_11.md 247",
+        "frase": "When you can see from a Kanban board what people are doing, respect tends to flow pretty naturally."
+      },
+      "decision": "auditoria completa M11 (matiz): El respeto tiende a fluir (tends to flow).",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase4-montar_tablero_kanban_medir_actividades-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo quinto: medir actividades y enseñarlas públicamente tiende a llevar a evaluaciones y ascensos que premian de forma más consistente a los que más rinden y son menos propensos a los sesgos que nos acechan a todos, porque cuando queda claro para todos qué es lo que empuja el éxito es menos probable que el sesgo se cuele en las decisiones de contratar, evaluar y ascender.",
+      "texto_nuevo": "Cuenta con lo quinto: medir actividades y enseñarlas públicamente tiende a llevar a evaluaciones y ascensos menos propensos a los sesgos que acechan a todo el mundo y que premian de forma más consistente a los que más rinden, porque cuando queda claro para todos qué es lo que empuja el éxito es menos probable que el sesgo se cuele en las decisiones de contratar, evaluar y ascender.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "que nos acechan a todos"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz, coherencia): Sujeto ambiguo: 'y son menos propensos a los sesgos' se leía dicho de 'los que más rinden', cuando lo menos propenso al sesgo son las evaluaciones y los ascensos ('ratings and promotions that more consistently reward the top performers and are less prone to the biases that bedevil us all', scott_radical_candor/cap_11.md l. 249); se reordena. Al tocar el campo se aplica además la decisión del orquestador para todo el pack: el nosotros genérico de quien escribe ('que nos acechan a todos', de 'bedevil us all') es voz de libro y pasa a 'que acechan a todo el mundo'.",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "voz",
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Haz Visible tu Trabajo"
+}

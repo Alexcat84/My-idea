@@ -1,0 +1,247 @@
+{
+  "node_id": "dar_valor_constante_cuatro_publicos",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Dar valor constante y por encima de lo esperado a los cuatro públicos del modelo, en formas concretas",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "Una forma de entender el valor es que es lo que la gente percibe, y nada más. Desde ahí, la pregunta que tienes que hacerte es qué podría hacer tu negocio para dar valor constante a clientes, empleados, proveedores y prestamistas, y además por encima de lo que esperan. La respuesta está en cómo afecta el negocio a cada persona con la que se cruza: el valor puede ser una palabra en la puerta, un regalo inesperado, un reconocimiento por un trabajo bien hecho, un precio razonable, la dedicación al explicar o un agradecimiento. En entender así el valor vive todo negocio extraordinario.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_11.md, unidad Cap. 9, titulo textual Working On Your Business, Not In It. Sale de la PIEZA P2 de la frontera publicada en esta misma vuelta, L58 a L83, 313 palabras. ES LA PARTE 1 DE LA SERIE NUMERADA cuya cabeza es fingir_prototipo_cinco_mil_replicas (manual seccion 3.4). POR QUE ES PROCEDIMIENTO Y NO POSTURA, con D.27 delante: la regla enunciada sola seria un mandato con adjetivo de adecuacion (valor constante, por encima de lo esperado), y el propio EXTRACTOR.md 9.1 dice que eso TUMBA. Lo que la salva es que el libro, despues de enunciarla, PONE SU PROPIO INVENTARIO DE MEDIOS y los nombra uno a uno: cinco formas concretas de valor, cada una con su objeto (la palabra en la puerta, el regalo por correo, el reconocimiento al novato y al veterano, el precio razonable y la dedicacion al explicar, y el agradecimiento al banquero). Esos son medios, no fines, que es la restriccion 1. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE, con su cita pegada en .gerber_v1/cita_cap11_P2.txt. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: cada cuanto se hace cada una de esas cosas, quien las hace, ni como se comprueba que el valor llego. El texto pone las formas y no pone ni periodo ni responsable ni medicion, y ponerlos seria puente de las tres especies que D.30 tiene tabuladas. LA ARISTA DE CABEZA A PARTE queda escrita en el reporte de esta vuelta con su paso citado, el paso 5 de la cabeza, y se cablea el dia de la insercion.",
+  "pasos_accionables": [
+    "Parte de esta idea del valor: es lo que la gente percibe que es, y nada más.",
+    "Hazte la pregunta que todo emprendedor tiene que hacerse: qué podría hacer tu prototipo que no solo diera valor constante a tus clientes, empleados, proveedores y prestamistas, sino que se lo diera muy por encima de lo que esperan.",
+    "Busca ese valor en cómo afecta a cada persona con la que tu negocio se cruza, que es donde vive todo negocio extraordinario.",
+    "Cuenta como valor una palabra dicha en la puerta del negocio cuando un cliente se va.",
+    "Cuenta como valor un regalo inesperado del negocio que llega por correo.",
+    "Cuenta como valor una palabra de reconocimiento a un recién llegado por un trabajo bien hecho, o a un vendedor veterano que lleva años acertando.",
+    "Cuenta como valor el precio razonable de tus productos, o la dedicación que pones al explicarlos a un cliente que necesita más ayuda de la normal.",
+    "Cuenta como valor una simple palabra de agradecimiento a tu banquero por su diligencia."
+  ],
+  "entregable_esperado": "La pregunta del valor contestada para tu prototipo, con las formas concretas de valor elegidas para cada uno de los cuatro públicos: clientes, empleados, proveedores y prestamistas.",
+  "nodos_previos": [
+    "fingir_prototipo_cinco_mil_replicas",
+    "trazar_modelo_negocio_cliente_primero"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando trabajas el prototipo de tu negocio y tienes que decidir qué hará tu modelo para dar valor."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-dar_valor_constante_cuatro_publicos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una forma de entender el valor es que es lo que la gente percibe, y nada más. Desde ahí, la pregunta que tienes que hacerte es qué podría hacer tu negocio para dar valor constante a clientes, empleados, proveedores y prestamistas, y además por encima de lo que esperan. La respuesta está en cómo afecta el negocio a cada persona con la que se cruza: el valor puede ser una palabra en la puerta, un regalo inesperado, un reconocimiento por un trabajo bien hecho, un precio razonable, la dedicación al explicar o un agradecimiento. En entender así el valor vive todo negocio extraordinario.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_11.md",
+          "lineas": "59-83"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: la línea 63 es una propuesta ('I would suggest') y el contraste 'no es lo que el negocio cree que da' no está; los ejemplos son 'Value can be'. La propuesta lo devuelve como 'una forma de entender' y 'puede ser', y mide 588.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)"
+    },
+    {
+      "id": "m11-limpieza-dar_valor_constante_cuatro_publicos-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dar valor constante y por encima de lo esperado a los cuatro publicos del modelo, en las formas que el libro nombra",
+      "texto_nuevo": "Dar valor constante y por encima de lo esperado a los cuatro públicos del modelo, en formas concretas",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "en las formas que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_valor_constante_cuatro_publicos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de lo que el texto propone que es el valor: lo que la gente percibe que es, y nada mas.",
+      "texto_nuevo": "Parte de esta idea del valor: es lo que la gente percibe que es, y nada más.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto propone que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_valor_constante_cuatro_publicos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazte la pregunta que el texto dice que todo emprendedor tiene que hacerse: que podria hacer tu prototipo que no solo diera valor constante a tus clientes, empleados, proveedores y prestamistas, sino que se lo diera por encima de sus expectativas mas locas.",
+      "texto_nuevo": "Hazte la pregunta que todo emprendedor tiene que hacerse: qué podría hacer tu prototipo que no solo diera valor constante a tus clientes, empleados, proveedores y prestamistas, sino que se lo diera por encima de sus expectativas más locas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_valor_constante_cuatro_publicos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Busca ese valor en como afecta a cada persona con la que tu negocio se cruza, que es donde el texto dice que vive todo negocio extraordinario.",
+      "texto_nuevo": "Busca ese valor en cómo afecta a cada persona con la que tu negocio se cruza, que es donde vive todo negocio extraordinario.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_valor_constante_cuatro_publicos-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta como valor una palabra de reconocimiento a un recien llegado por un trabajo bien hecho, o a un vendedor veterano que lleva anos acertando.",
+      "texto_nuevo": "Cuenta como valor una palabra de reconocimiento a un recién llegado por un trabajo bien hecho, o a un vendedor veterano que lleva años acertando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_valor_constante_cuatro_publicos-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta como valor el precio razonable de tus productos, o la dedicacion que pones al explicarlos a un cliente que necesita mas ayuda de la normal.",
+      "texto_nuevo": "Cuenta como valor el precio razonable de tus productos, o la dedicación que pones al explicarlos a un cliente que necesita más ayuda de la normal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_valor_constante_cuatro_publicos-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "La pregunta del valor contestada para tu prototipo, con las formas concretas de valor elegidas para cada uno de los cuatro publicos que el libro nombra.",
+      "texto_nuevo": "La pregunta del valor contestada para tu prototipo, con las formas concretas de valor elegidas para cada uno de los cuatro públicos: clientes, empleados, proveedores y prestamistas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dar_valor_constante_cuatro_publicos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando trabajas la regla 1 del prototipo de tu negocio y tienes que decidir que hara tu modelo para dar valor.",
+      "texto_nuevo": "Cuando trabajas la regla 1 del prototipo de tu negocio y tienes que decidir qué hará tu modelo para dar valor.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 01, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 01)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dar_valor_constante_cuatro_publicos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazte la pregunta que todo emprendedor tiene que hacerse: qué podría hacer tu prototipo que no solo diera valor constante a tus clientes, empleados, proveedores y prestamistas, sino que se lo diera por encima de sus expectativas más locas.",
+      "texto_nuevo": "Hazte la pregunta que todo emprendedor tiene que hacerse: qué podría hacer tu prototipo que no solo diera valor constante a tus clientes, empleados, proveedores y prestamistas, sino que se lo diera muy por encima de lo que esperan.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "por encima de sus expectativas más locas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"beyond their wildest expectations\".",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dar_valor_constante_cuatro_publicos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando trabajas la regla 1 del prototipo de tu negocio y tienes que decidir qué hará tu modelo para dar valor.",
+      "texto_nuevo": "Cuando trabajas el prototipo de tu negocio y tienes que decidir qué hará tu modelo para dar valor.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "\"La regla 1\" remite a una lista que el nodo no contiene."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"La regla 1\" remite a una lista que el nodo no contiene.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Da Valor a Todos",
+  "fuentes_internas": [
+    "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber"
+  ]
+}

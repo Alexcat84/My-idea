@@ -1,0 +1,228 @@
+{
+  "node_id": "empezar_cultura_franqueza_radical",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Empezar una cultura de franqueza radical en su orden, pidiendo antes que dando",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Es frecuente que, al hablar de poner en marcha una cultura de franqueza radical, la gente esté de acuerdo con la idea y se ponga nerviosa a la hora de practicarla. Sigue un orden: primero se explica la idea y se pide a la gente que sea franca contigo, de modo que recibes guía antes de repartirla y demuestras que aguantas lo que luego vas a dar. Después, al empezar a darla, el elogio va antes que la crítica, y la crítica solo llega cuando entiendes dónde está la frontera peligrosa entre la franqueza radical y la agresión odiosa.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_05.md, unidad Cap. 2, Get, Give, and Encourage Guidance. ESCRITA EN LA VUELTA 19, 12 sep 2026, por la TAREA 2.b de su encargo, que es la que encarga anadir la unidad a los 24 candidatos de la bandeja que no la nombraban: la costumbre de nombrarla empieza en cap_07 y estos son anteriores. NO SE CAMBIA NI UN PASO NI UNA CITA: lo unico que se anade es de que unidad salio. LEIDA DEL FICHERO FUENTE Y NO DE UNA TABLA, con el ancla textual unica que la sostiene, 'start by getting', corrida con grep contra las quince unidades del libro. Es la cabeza de la ultima parte de la unidad, y se extrae como nodo propio porque el texto no se limita a nombrar los tres trabajos: los pone en un orden y dice por que ese orden y no otro, que es empezar recibiendo y no repartiendo. Las tres piezas que enumera son ademas los titulos de las tres secciones que vienen justo detras, asi que cada una tiene su propio procedimiento desplegado en el mismo capitulo. El texto NO dice cuantas piezas son, asi que la cuenta la pone quien lee la enumeracion y no el libro: las aristas de esta cabeza a sus partes van bajo D.29 con razon escrita, y no bajo D.37. Lo que el texto NO dice, y por eso no esta escrito aqui, es cuanto se tarda en pasar de una fase a la siguiente, ni que hacer si nadie te critica cuando lo pides, que es lo que despliega el procedimiento de pedir critica. CORRECCION DECLARADA EN LA VUELTA 25, EN LA RELECTURA ANCHA DE LA FILA cap_05: el paso 1 decia lo que el texto observa CADA VEZ que habla de esto, y la linea 215 de fuentes/scott_radical_candor/cap_05.md abre con OFTEN WHEN I talk to people about developing a culture of Radical Candor. A menudo no es cada vez. Es la misma especie de puente que el auditor cazo en cap_14 con la palabra teamwork: no es un paso inventado, es el texto reforzado, y el metodo que lo produce es el mismo. Se cuenta como 1 PUENTE en la fila cap_05 y va marcado como discutible en el reporte de la vuelta 25.",
+  "pasos_accionables": [
+    "Cuenta con lo que suele pasar cuando se habla de esto: la gente está de acuerdo con la idea y se pone nerviosa ante la idea de ponerla en práctica.",
+    "Empieza explicando la idea.",
+    "Y después pide a tu gente que sea radicalmente franca contigo.",
+    "Dicho de otra manera: empieza recibiendo guía, no repartiéndola.",
+    "Cuando empieces a darla, empieza por el elogio y no por la crítica.",
+    "Cuando pases a la crítica, asegúrate de entender dónde está la frontera peligrosa entre la franqueza radical y la agresión odiosa."
+  ],
+  "entregable_esperado": "El arranque hecho en su orden: la idea explicada, la crítica pedida antes que dada, el elogio dado antes que la crítica, y la frontera peligrosa entendida antes de empezar a criticar.",
+  "nodos_previos": [
+    "feedback_efectivo_liderazgo"
+  ],
+  "nodos_siguientes": [
+    "criticar_trabajo_evitar_desanimo",
+    "pedir_critica_equipo_premiarla",
+    "contar_historias_propias_explicar_franqueza_radical",
+    "pedir_critica_primero_crear_seguridad_psicologica",
+    "equilibrar_elogio_critica_equipo",
+    "desplegar_plan_orden_operaciones_franqueza_radical"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a poner en marcha una cultura de franqueza radical en tu equipo, la gente está de acuerdo con la idea y se pone nerviosa a la hora de practicarla."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-empezar_cultura_franqueza_radical-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Es frecuente que, al hablar de poner en marcha una cultura de franqueza radical, la gente esté de acuerdo con la idea y se ponga nerviosa a la hora de practicarla. El consejo es seguir un orden: primero se explica la idea y se pide a la gente que sea franca contigo, de modo que recibes guía antes de repartirla y demuestras que aguantas lo que luego vas a dar. Después, al empezar a darla, el elogio va antes que la crítica, y la crítica solo llega cuando entiendes dónde está la frontera peligrosa entre la franqueza radical y la agresión odiosa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_05.md",
+          "lineas": "215-221"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Se sostiene: l.215 'OFTEN' se perdió y 'El orden resuelve esos nervios' / 'para no cruzarla sin darte cuenta' no están en la línea. La propuesta del lector lo corrige.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)"
+    },
+    {
+      "id": "m11-limpieza-empezar_cultura_franqueza_radical-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Empezar una cultura de franqueza radical por el orden que el texto pone, pidiendo antes que dando",
+      "texto_nuevo": "Empezar una cultura de franqueza radical en su orden, pidiendo antes que dando",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "por el orden que el texto pone"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empezar_cultura_franqueza_radical-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto observa a menudo que habla de esto: la gente esta de acuerdo con la idea y se pone nerviosa ante la idea de ponerla en practica.",
+      "texto_nuevo": "Cuenta con lo que suele pasar cuando se habla de esto: la gente está de acuerdo con la idea y se pone nerviosa ante la idea de ponerla en práctica.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto observa a menudo que habla de esto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empezar_cultura_franqueza_radical-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y despues pide a tu gente que sea radicalmente franca contigo.",
+      "texto_nuevo": "Y después pide a tu gente que sea radicalmente franca contigo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empezar_cultura_franqueza_radical-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dicho de otra manera, que es como el propio texto lo resume: empieza recibiendo guia, no repartiendola.",
+      "texto_nuevo": "Dicho de otra manera: empieza recibiendo guía, no repartiéndola.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es como el propio texto lo resume"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empezar_cultura_franqueza_radical-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando empieces a darla, empieza por el elogio y no por la critica.",
+      "texto_nuevo": "Cuando empieces a darla, empieza por el elogio y no por la crítica.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empezar_cultura_franqueza_radical-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando pases a la critica, asegurate de entender donde esta la frontera peligrosa entre la franqueza radical y la agresion odiosa.",
+      "texto_nuevo": "Cuando pases a la crítica, asegúrate de entender dónde está la frontera peligrosa entre la franqueza radical y la agresión odiosa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empezar_cultura_franqueza_radical-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El arranque hecho en el orden del texto: la idea explicada, la critica pedida antes que dada, el elogio dado antes que la critica, y la frontera peligrosa entendida antes de empezar a criticar.",
+      "texto_nuevo": "El arranque hecho en su orden: la idea explicada, la crítica pedida antes que dada, el elogio dado antes que la crítica, y la frontera peligrosa entendida antes de empezar a criticar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "en el orden del texto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-empezar_cultura_franqueza_radical-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando vas a poner en marcha una cultura de franqueza radical en tu equipo, la gente esta de acuerdo con la idea y se pone nerviosa a la hora de practicarla.",
+      "texto_nuevo": "Cuando vas a poner en marcha una cultura de franqueza radical en tu equipo, la gente está de acuerdo con la idea y se pone nerviosa a la hora de practicarla.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 13, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 13)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-empezar_cultura_franqueza_radical-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Es frecuente que, al hablar de poner en marcha una cultura de franqueza radical, la gente esté de acuerdo con la idea y se ponga nerviosa a la hora de practicarla. El consejo es seguir un orden: primero se explica la idea y se pide a la gente que sea franca contigo, de modo que recibes guía antes de repartirla y demuestras que aguantas lo que luego vas a dar. Después, al empezar a darla, el elogio va antes que la crítica, y la crítica solo llega cuando entiendes dónde está la frontera peligrosa entre la franqueza radical y la agresión odiosa.",
+      "texto_nuevo": "Es frecuente que, al hablar de poner en marcha una cultura de franqueza radical, la gente esté de acuerdo con la idea y se ponga nerviosa a la hora de practicarla. Sigue un orden: primero se explica la idea y se pide a la gente que sea franca contigo, de modo que recibes guía antes de repartirla y demuestras que aguantas lo que luego vas a dar. Después, al empezar a darla, el elogio va antes que la crítica, y la crítica solo llega cuando entiendes dónde está la frontera peligrosa entre la franqueza radical y la agresión odiosa.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "El consejo es seguir un orden"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Resto de la voz del libro ('My advice is'): un consejo sin dueño en el nodo, del mismo corte que 'se recomienda'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Empieza Pidiendo Franqueza Primero",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

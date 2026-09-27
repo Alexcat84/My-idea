@@ -1,0 +1,230 @@
+{
+  "node_id": "variar_frecuencia_inspeccion_nivel_calidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Variar cada cuánto inspeccionas según vaya el nivel de calidad, en vez de inspeccionar siempre igual",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "La calidad no se queda quieta en el tiempo, así que inspeccionar siempre con la misma frecuencia es gastar de más cuando todo va bien. Si la frecuencia sigue al nivel de calidad, aflojando tras semanas sin problemas y apretando en cuanto aparecen hasta que la calidad vuelve a su nivel alto, el aseguramiento cuesta menos y estorba menos al flujo de producción. Es solo sentido común, pero casi no se usa, y la razón probable es la costumbre de seguir haciendo las cosas como siempre.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_03.md, unidad Cap. 2, titulo textual Managing the Breakfast Factory. Sale de la PIEZA P19 de la frontera publicada en la vuelta 2 del frente, L143 a L145, 157 palabras, y de ningun otro tramo EN PASOS. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro nombra el instrumento (variable inspections), da la regla que mueve la frecuencia en los DOS sentidos con su disparador en cada uno (if for weeks we do not find problems, check less often; if problems begin to develop, test ever more frequently), pone la condicion de parada de la subida (until quality again returns to the previous high levels) y nombra la ganancia. Inventario de MEDIOS. DE DONDE SALE CADA PASO, uno a uno, y todos de L143: paso 1 de Another way to lower the cost of quality assurance is to use variable inspections; paso 2 de Because quality levels vary over time, it is only common sense to vary how often we inspect; paso 3 de if for weeks we do not find problems, it would seem logical to check less often; paso 4 de But if problems begin to develop, we can test ever more frequently until quality again returns to the previous high levels; paso 5 de The advantage here is still lower costs and even less interference with the production flow; paso 6 de Yet this approach is not used very often, even in widget manufacturing. Why not? Probably because we are creatures of habit and keep doing things the way we always have, whether it be from week to week or year to year. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. EL CASO DE LA EMBAJADA ENTRA AQUI NOMBRADO Y NO DA NI UN PASO, y es la decision de corte mas cara de este candidato, asi que la escribo entera: L147 a L153 son 397 palabras sobre el atasco de visados de la embajada americana en Londres, y la frontera publicada les da CERO nodos. Son el CASO de este nodo (manual 3.5, el caso no es la casa) y viven aqui, en el resumen_teorico, que es donde el manual los pone. El libro lo usa para ensenar que un esquema de inspeccion inteligente sirve fuera de la fabrica: la embajada comprobaba el cien por cien de las solicitudes, sus apanos para acelerar solo empeoraron el atasco porque no tocaban el problema de fondo, y la salida que el libro propone es sustituir ese esquema por una prueba de aseguramiento de la calidad, o sea un muestreo, con la muestra elegida segun criterios fijados de antemano, como hace la agencia tributaria, que consigue que la mayoria cumpla sin mirar cada declaracion. EL PASO QUE NO ESCRIBI CON ESE CASO, y lo declaro porque estuve a punto: iba a poner cuando compruebes el cien por cien de algo, pregunta si esa comprobacion total es necesaria y sustituyela por un muestreo. El libro dice eso DE LA EMBAJADA, no de cualquier proceso, y generalizarlo lo generalizaria yo. Ademas la senal barata del manual 3.5 avisa justo de eso: si el entregable del caso lleva un dato del caso, el corte esta mal hecho. SUS CIFRAS TAMPOCO SE EXTRAEN: some one million Britons, about 98 percent, sixty people, 6,000 applications a day y from 60,000 to 80,000 British passports salen de a story in a news magazine sin nombre de publicacion y sin fecha, y una cifra del autor sin fecha de corte es media cifra (manual principio 5). Por eso atribuciones va vacio. LO QUE TAMPOCO ESCRIBO: NO escribo cuantas semanas sin problemas hacen falta para aflojar, porque el libro dice for weeks y no dice cuantas. NO escribo cuanto se aprieta la frecuencia ni desde que valor, ni quien decide moverla. NO escribo que nivel es el nivel alto anterior. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 6 es una advertencia sobre la costumbre propia, y una advertencia es linea y no procedimiento (manual seccion 4, P.11). Un lector estricto lo tumbaria. Lo sostengo como paso porque lo que manda hacer es comprobable, desconfiar de la costumbre antes de descartar el metodo, y porque el libro lo pone como la razon de que un metodo bueno no se use, no como un adorno. Si cae, cae DENTRO de mi marcado. CORRECCION DECLARADA de la vuelta 44 (deuda d003, cita grove PARA_ALEXIS 5.3.3, adjudicada por la ACTA 42): el paso 6 tenia una CABEZA QUE EL LIBRO NO ENCARGA y hoy se reescribe sin borrar lo anterior. DECIA: \"Desconfia de tu propia costumbre antes de descartarlo, porque este metodo casi no se usa ni siquiera en la fabricacion corriente, y la razon probable es que somos animales de costumbres y seguimos haciendo las cosas como las hemos hecho siempre, sea de una semana a otra o de un ano a otro.\" DICE: \"Cuenta con que este metodo casi no se usa ni siquiera en la fabricacion corriente, y con que la razon probable es que somos animales de costumbres y seguimos haciendo las cosas como las hemos hecho siempre, sea de una semana a otra o de un ano a otro.\". LA RAZON, contra su parrafo: L143 de fuentes/grove_high_output/cap_03.md pone \"Yet this approach is not used very often, even in widget manufacturing. Why not? Probably because we are creatures of habit and keep doing things the way we always have, whether it be from week to week or year to year\", que es una OBSERVACION del autor sobre por que el metodo no se usa. El libro NO encarga desconfiar de la costumbre propia antes de descartar el metodo: ese mandato lo escribi yo, y es un PUENTE de la especie que D.30 llama el responsable, aqui en su forma de imperativo anadido a una constatacion. Queda la transcripcion y se va la cabeza. Y LO QUE ESTO CORRIGE DENTRO DEL PROPIO RESUMEN: la linea RELECTURA DE FIDELIDAD D.30 EN EL ACTO decia 6 pasos, 6 TRANSCRIPCION, 0 PUENTE, y no era cierto: eran 5 TRANSCRIPCION y 1 PUENTE. Tras esta correccion son 6 TRANSCRIPCION y 0 PUENTE. Tampoco se borra el DISCUTIBLE que marque antes de saber si acertaba, que apuntaba a este mismo paso 6 y lo sostenia: CAYO DENTRO DEL MARCADO.",
+  "pasos_accionables": [
+    "Usa la inspección variable como otra manera de bajar el coste del aseguramiento de la calidad.",
+    "Varía cada cuánto inspeccionas, porque los niveles de calidad varían con el tiempo y es solo sentido común que la frecuencia los siga.",
+    "Si pasan semanas sin que encuentres problemas, comprueba menos a menudo.",
+    "Si los problemas empiezan a aparecer, prueba cada vez con más frecuencia, hasta que la calidad vuelva a los niveles altos que tenía antes.",
+    "Cuenta con lo que ganas con eso: costes todavía más bajos y todavía menos interferencia en el flujo de producción.",
+    "Cuenta con que este método casi no se usa ni siquiera en la fabricación corriente, y con que la razón probable es que las personas son animales de costumbres y siguen haciendo las cosas como las han hecho siempre, sea de una semana a otra o de un año a otro."
+  ],
+  "entregable_esperado": "La frecuencia de inspección movida en los dos sentidos según el nivel de calidad observado, con el coste y la interferencia en el flujo más bajos que con la frecuencia fija.",
+  "nodos_previos": [
+    "elegir_inspeccion_barrera_monitorizacion"
+  ],
+  "nodos_siguientes": [
+    "supervisar_tarea_delegada_etapa_menor_valor"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya tienes puesto un punto de inspección con una frecuencia fija y quieres bajar su coste, sabiendo que el nivel de calidad no se queda quieto en el tiempo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-variar_frecuencia_inspeccion_nivel_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La calidad no se queda quieta en el tiempo, así que inspeccionar siempre con la misma frecuencia es gastar de más cuando todo va bien y mirar poco cuando empieza a ir mal. Si la frecuencia sigue al nivel de calidad, aflojando tras semanas sin problemas y apretando en cuanto aparecen hasta que la calidad vuelve a su nivel alto, el aseguramiento cuesta menos y estorba menos al flujo de producción. Es solo sentido común, pero casi no se usa, y la razón probable es la costumbre de seguir haciendo las cosas como siempre.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_03.md",
+          "lineas": "143-143"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)"
+    },
+    {
+      "id": "m11-limpieza-variar_frecuencia_inspeccion_nivel_calidad-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Variar cada cuanto inspeccionas segun vaya el nivel de calidad, en vez de inspeccionar siempre igual",
+      "texto_nuevo": "Variar cada cuánto inspeccionas según vaya el nivel de calidad, en vez de inspeccionar siempre igual",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-variar_frecuencia_inspeccion_nivel_calidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa la inspeccion variable como otra manera de bajar el coste del aseguramiento de la calidad.",
+      "texto_nuevo": "Usa la inspección variable como otra manera de bajar el coste del aseguramiento de la calidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-variar_frecuencia_inspeccion_nivel_calidad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Varia cada cuanto inspeccionas, porque los niveles de calidad varian con el tiempo y es solo sentido comun que la frecuencia los siga.",
+      "texto_nuevo": "Varía cada cuánto inspeccionas, porque los niveles de calidad varían con el tiempo y es solo sentido común que la frecuencia los siga.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-variar_frecuencia_inspeccion_nivel_calidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si los problemas empiezan a aparecer, prueba cada vez con mas frecuencia, hasta que la calidad vuelva a los niveles altos que tenia antes.",
+      "texto_nuevo": "Si los problemas empiezan a aparecer, prueba cada vez con más frecuencia, hasta que la calidad vuelva a los niveles altos que tenía antes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-variar_frecuencia_inspeccion_nivel_calidad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que ganas con eso: costes todavia mas bajos y todavia menos interferencia en el flujo de produccion.",
+      "texto_nuevo": "Cuenta con lo que ganas con eso: costes todavía más bajos y todavía menos interferencia en el flujo de producción.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-variar_frecuencia_inspeccion_nivel_calidad-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que este metodo casi no se usa ni siquiera en la fabricacion corriente, y con que la razon probable es que somos animales de costumbres y seguimos haciendo las cosas como las hemos hecho siempre, sea de una semana a otra o de un ano a otro.",
+      "texto_nuevo": "Cuenta con que este método casi no se usa ni siquiera en la fabricación corriente, y con que la razón probable es que somos animales de costumbres y seguimos haciendo las cosas como las hemos hecho siempre, sea de una semana a otra o de un año a otro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-variar_frecuencia_inspeccion_nivel_calidad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La frecuencia de inspeccion movida en los dos sentidos segun el nivel de calidad observado, con el coste y la interferencia en el flujo mas bajos que con la frecuencia fija.",
+      "texto_nuevo": "La frecuencia de inspección movida en los dos sentidos según el nivel de calidad observado, con el coste y la interferencia en el flujo más bajos que con la frecuencia fija.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-variar_frecuencia_inspeccion_nivel_calidad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya tienes puesto un punto de inspeccion con una frecuencia fija y quieres bajar su coste, sabiendo que el nivel de calidad no se queda quieto en el tiempo.",
+      "texto_nuevo": "Cuando ya tienes puesto un punto de inspección con una frecuencia fija y quieres bajar su coste, sabiendo que el nivel de calidad no se queda quieto en el tiempo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 04, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 04)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-variar_frecuencia_inspeccion_nivel_calidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La calidad no se queda quieta en el tiempo, así que inspeccionar siempre con la misma frecuencia es gastar de más cuando todo va bien y mirar poco cuando empieza a ir mal. Si la frecuencia sigue al nivel de calidad, aflojando tras semanas sin problemas y apretando en cuanto aparecen hasta que la calidad vuelve a su nivel alto, el aseguramiento cuesta menos y estorba menos al flujo de producción. Es solo sentido común, pero casi no se usa, y la razón probable es la costumbre de seguir haciendo las cosas como siempre.",
+      "texto_nuevo": "La calidad no se queda quieta en el tiempo, así que inspeccionar siempre con la misma frecuencia es gastar de más cuando todo va bien. Si la frecuencia sigue al nivel de calidad, aflojando tras semanas sin problemas y apretando en cuanto aparecen hasta que la calidad vuelve a su nivel alto, el aseguramiento cuesta menos y estorba menos al flujo de producción. Es solo sentido común, pero casi no se usa, y la razón probable es la costumbre de seguir haciendo las cosas como siempre.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_03.md 143",
+        "frase": "The advantage here is still lower costs and even less interference with the production flow."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro solo da como ventaja menos coste y menos interferencia; que la frecuencia fija haga mirar poco cuando empieza a ir mal es un efecto que no afirma. Se quita esa parte.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase4-variar_frecuencia_inspeccion_nivel_calidad-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que este método casi no se usa ni siquiera en la fabricación corriente, y con que la razón probable es que somos animales de costumbres y seguimos haciendo las cosas como las hemos hecho siempre, sea de una semana a otra o de un año a otro.",
+      "texto_nuevo": "Cuenta con que este método casi no se usa ni siquiera en la fabricación corriente, y con que la razón probable es que las personas son animales de costumbres y siguen haciendo las cosas como las han hecho siempre, sea de una semana a otra o de un año a otro.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "somos animales de costumbres",
+          "seguimos haciendo",
+          "las hemos hecho"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Nosotros genérico de quien escribe (\"we are creatures of habit\"), voz de libro: pasa a tercera persona; el \"probable\" se conserva.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "voz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Ajusta cuánto Inspeccionas la Calidad"
+}

@@ -1,0 +1,288 @@
+{
+  "node_id": "preparar_resena_mixta_hoja_trabajo",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Preparar una revisión de desempeño mixta con el método de la hoja de trabajo: volcar todo sin editar, buscar relaciones, convertirlas en mensajes y recortar los que el subordinado no pueda retener",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "La hoja de trabajo sirve para centrar una revisión mixta en pocas áreas clave. Primero se reúne el material y se vuelca en una hoja sin editar, lo grande y lo trivial, sabiendo que anotarlo no compromete a nada. Después, sin los papeles delante, se buscan relaciones: probablemente varios puntos resulten ser caras de un mismo fenómeno, y puede haber indicios de por qué existe una fortaleza o una debilidad. Esas relaciones son los mensajes, con sus conclusiones y ejemplos. Al final se recortan hasta los que el subordinado pueda recordar; lo que no entre probablemente quepa en la próxima.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_14.md, unidad Cap. 13, titulo textual Performance Appraisal: Manager as Judge and Jury. Sale de la PIEZA P41 a P42 de la frontera publicada hoy en .v58ext/frontera.txt, L129 a L131, 264 palabras. FRONTERA DENTRO DEL NODO, PUBLICADA ANTES DE CORTAR (EXTRACTOR.md 10): L129 trae la primera mitad del metodo (reunir el material y volcarlo sin editar) y L131 trae la segunda mitad (buscar relaciones, nombrarlas mensajes y recortar la lista), las dos mitades del mismo parrafo compuesto. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el propio texto da la secuencia de pasos completa en orden (first... scan... sit down... write everything down... now, from your worksheet, look for relationships... call them messages... ask yourself if...), un inventario de ETAPAS de trabajo del mando y no de fines. DE DONDE SALE CADA PASO, uno a uno: paso 1 de L129 (consider as many aspects of your subordinate's performance as possible. You should scan material such as progress reports, performance against quarterly objectives, and one-on-one meeting notes); paso 2 de L129 (sit down with a blank piece of paper. As you consider your subordinate's performance, write everything down on the paper. Do not edit in your head... Things major, minor, and trivial can be included in no particular order); paso 3 de L129 (When you have run out of items, you can put all of your supporting documentation away); paso 4 de L131 (look for relationships between the various items listed. You will probably begin to notice that certain items are different manifestations of the same phenomenon, and that there may be some indications why a certain strength or weakness exists); paso 5 de L131 (When you find such relationships, you can start calling them messages for the subordinate... begin to draw conclusions and specific examples to support them); paso 6 de L131 (ask yourself if your subordinate will be able to remember all of the messages you have chosen to deliver. If not, you must delete the less important ones. Remember, what you couldn't include in this review, you can probably take up in the next one). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. EL EJEMPLO RELLENO DE LA HOJA DE TRABAJO NO ENTRA (manual 3.5): L133 a L157 dan un caso concreto ya resuelto, con positivos, negativos y tres mensajes numerados de un subordinado sin nombrar, y es el EJEMPLO NOMBRADO del metodo, no su casa: ningun paso ni el entregable llevan el dato de planning process o de spec process que aparecen en ese ejemplo.",
+  "pasos_accionables": [
+    "Reúne tantos aspectos del desempeño del subordinado como puedas: revisa informes de avance, el desempeño contra los objetivos trimestrales y las notas de las reuniones individuales.",
+    "Siéntate con una hoja en blanco y, sin editar en tu cabeza, anota todo lo que se te ocurra sobre el desempeño del subordinado, cosas mayores, menores y triviales, sin ningún orden particular.",
+    "Cuando hayas agotado los ítems, guarda toda la documentación de apoyo.",
+    "Busca relaciones entre los distintos ítems anotados en la hoja: probablemente notarás que algunos son manifestaciones distintas de un mismo fenómeno, y puede haber indicios de por qué existe cierta fortaleza o debilidad.",
+    "Cuando encuentres esas relaciones, empieza a llamarlas mensajes para el subordinado, y a partir de ahí extrae las conclusiones y los ejemplos concretos que las sostienen.",
+    "Pregúntate si el subordinado será capaz de recordar todos los mensajes que has elegido transmitir; si la respuesta es no, elimina los menos importantes, sabiendo que lo que no entra en esta revisión puede entrar en la siguiente."
+  ],
+  "entregable_esperado": "Una lista corta de mensajes, cada uno respaldado por varios ítems del subordinado que son manifestaciones del mismo fenómeno, recortada al número que el subordinado pueda retener.",
+  "nodos_previos": [
+    "recoger_opinion_360_grados"
+  ],
+  "nodos_siguientes": [
+    "entregar_evaluacion_desempeno_tres_claves"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a preparar una revisión de desempeño mixta, que mezcla observaciones positivas y negativas de alguien a tu cargo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-preparar_resena_mixta_hoja_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La hoja de trabajo sirve para centrar una revisión mixta en pocas áreas clave. Primero se reúne el material y se vuelca en una hoja sin editar, lo grande y lo trivial, sabiendo que anotarlo no compromete a nada. Después, sin los papeles delante, se buscan relaciones: probablemente varios puntos resulten ser caras de un mismo fenómeno, y puede haber indicios de por qué existe una fortaleza o una debilidad. Esas relaciones son los mensajes, con sus conclusiones y ejemplos. Al final se recortan hasta los que el subordinado pueda recordar; lo que no entre probablemente quepa en la próxima.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_14.md",
+          "lineas": "129-131"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Se sostiene: L131 'there may be some indications why' y 'you can probably take up in the next one'. La propuesta del lector devuelve los matices pero mezcla 'notarás' con el impersonal, cierra con el doble matiz 'probablemente pueda' y pierde el 'mixta' del nodo; el propio lo arregla.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)"
+    },
+    {
+      "id": "m11-limpieza-preparar_resena_mixta_hoja_trabajo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preparar una revision de desempeno mixta con el metodo de la hoja de trabajo: volcar todo sin editar, buscar relaciones, convertirlas en mensajes y recortar los que el subordinado no pueda retener",
+      "texto_nuevo": "Preparar una revisión de desempeño mixta con el método de la hoja de trabajo: volcar todo sin editar, buscar relaciones, convertirlas en mensajes y recortar los que el subordinado no pueda retener",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_resena_mixta_hoja_trabajo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reune tantos aspectos del desempeno del subordinado como puedas: revisa informes de avance, el desempeno contra los objetivos trimestrales y las notas de las reuniones individuales.",
+      "texto_nuevo": "Reúne tantos aspectos del desempeño del subordinado como puedas: revisa informes de avance, el desempeño contra los objetivos trimestrales y las notas de las reuniones individuales.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_resena_mixta_hoja_trabajo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sientate con una hoja en blanco y, sin editar en tu cabeza, anota todo lo que se te ocurra sobre el desempeno del subordinado, cosas mayores, menores y triviales, sin ningun orden particular.",
+      "texto_nuevo": "Siéntate con una hoja en blanco y, sin editar en tu cabeza, anota todo lo que se te ocurra sobre el desempeño del subordinado, cosas mayores, menores y triviales, sin ningún orden particular.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_resena_mixta_hoja_trabajo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando hayas agotado los items, guarda toda la documentacion de apoyo.",
+      "texto_nuevo": "Cuando hayas agotado los ítems, guarda toda la documentación de apoyo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_resena_mixta_hoja_trabajo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Busca relaciones entre los distintos items anotados en la hoja: observa cuales son manifestaciones distintas de un mismo fenomeno y por que existe cierta fortaleza o debilidad.",
+      "texto_nuevo": "Busca relaciones entre los distintos ítems anotados en la hoja: observa cuáles son manifestaciones distintas de un mismo fenómeno y por qué existe cierta fortaleza o debilidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_resena_mixta_hoja_trabajo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando encuentres esas relaciones, empieza a llamarlas mensajes para el subordinado, y a partir de ahi extrae las conclusiones y los ejemplos concretos que las sostienen.",
+      "texto_nuevo": "Cuando encuentres esas relaciones, empieza a llamarlas mensajes para el subordinado, y a partir de ahí extrae las conclusiones y los ejemplos concretos que las sostienen.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_resena_mixta_hoja_trabajo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate si el subordinado sera capaz de recordar todos los mensajes que has elegido entregar; si la respuesta es no, elimina los menos importantes, sabiendo que lo que no entra en esta revision puede entrar en la siguiente.",
+      "texto_nuevo": "Pregúntate si el subordinado será capaz de recordar todos los mensajes que has elegido entregar; si la respuesta es no, elimina los menos importantes, sabiendo que lo que no entra en esta revisión puede entrar en la siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_resena_mixta_hoja_trabajo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista corta de mensajes, cada uno respaldado por varios items del subordinado que son manifestaciones del mismo fenomeno, recortada al numero que el subordinado pueda retener.",
+      "texto_nuevo": "Una lista corta de mensajes, cada uno respaldado por varios ítems del subordinado que son manifestaciones del mismo fenómeno, recortada al número que el subordinado pueda retener.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preparar_resena_mixta_hoja_trabajo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el mando va a preparar una revision de desempeno del tipo por un lado y por otro, que mezcla observaciones positivas y negativas del subordinado.",
+      "texto_nuevo": "Cuando el mando va a preparar una revisión de desempeño del tipo por un lado y por otro, que mezcla observaciones positivas y negativas del subordinado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-preparar_resena_mixta_hoja_trabajo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Busca relaciones entre los distintos ítems anotados en la hoja: observa cuáles son manifestaciones distintas de un mismo fenómeno y por qué existe cierta fortaleza o debilidad.",
+      "texto_nuevo": "Busca relaciones entre los distintos ítems anotados en la hoja: probablemente notarás que algunos son manifestaciones distintas de un mismo fenómeno, y puede haber indicios de por qué existe cierta fortaleza o debilidad.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_14.md 131",
+        "frase": "You will probably begin to notice that certain items are different manifestations of the same phenomenon, and that there may be some indications why a certain strength or weakness exists."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'probably' y 'there may be some indications'; el paso lo daba por seguro.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-preparar_resena_mixta_hoja_trabajo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando el mando va a preparar una revisión de desempeño del tipo por un lado y por otro, que mezcla observaciones positivas y negativas del subordinado.",
+      "texto_nuevo": "Cuando vas a preparar una revisión de desempeño del tipo por un lado y por otro, que mezcla observaciones positivas y negativas de alguien a tu cargo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "el mando va a preparar",
+          "del subordinado"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): La condición estaba en tercera persona ('el mando'); la casa habla de tú.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase2-preparar_resena_mixta_hoja_trabajo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando vas a preparar una revisión de desempeño del tipo por un lado y por otro, que mezcla observaciones positivas y negativas de alguien a tu cargo.",
+      "texto_nuevo": "Cuando vas a preparar una revisión de desempeño mixta, que mezcla observaciones positivas y negativas de alguien a tu cargo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "del tipo por un lado y por otro"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): calco de \"an on the one hand, on the other hand kind of performance review\"",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-preparar_resena_mixta_hoja_trabajo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntate si el subordinado será capaz de recordar todos los mensajes que has elegido entregar; si la respuesta es no, elimina los menos importantes, sabiendo que lo que no entra en esta revisión puede entrar en la siguiente.",
+      "texto_nuevo": "Pregúntate si el subordinado será capaz de recordar todos los mensajes que has elegido transmitir; si la respuesta es no, elimina los menos importantes, sabiendo que lo que no entra en esta revisión puede entrar en la siguiente.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "elegido entregar"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de «messages you have chosen to deliver» (cap_14, línea 131): un mensaje de una revisión se transmite, no se entrega.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Prepara tu Revisión Mixta"
+}

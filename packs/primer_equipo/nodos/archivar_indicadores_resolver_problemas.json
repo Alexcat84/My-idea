@@ -1,0 +1,304 @@
+{
+  "node_id": "archivar_indicadores_resolver_problemas",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Mantener un archivo de indicadores para poder repasarlos el día que algo vaya mal",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Los indicadores pueden ayudar mucho a resolver cualquier tipo de problema, pero solo si existen cuando hacen falta. Si los recoges de forma sistemática y los guardas, el día que algo falla tienes un banco de información con todos los parámetros de tu operación a la vista, y puedes repasarlos buscando las desviaciones preocupantes respecto de la norma. Sin ese archivo tendrías que investigar a toda prisa para reunir los datos, y para cuando los tuvieras el problema probablemente habría empeorado. Guardar a tiempo es lo que convierte la urgencia en una consulta.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_03.md, unidad Cap. 2, titulo textual Managing the Breakfast Factory. Sale de la PIEZA P12 de la frontera publicada en la vuelta 2 del frente, L99 a L99, 88 palabras, y de ningun otro tramo. ES EL TRAMO MAS CORTO DE MI TANDA QUE DA NODO, y el mas pequeno que da uno en toda la unidad: 88 palabras contra las 397 de la embajada de Londres, que da cero. Eso es lo que prueba que la vara no es el tamano sino el inventario. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro nombra sus propios objetos de trabajo uno a uno, el archivo de indicadores, el banco de informacion, los parametros de la operacion y la desviacion respecto de la norma, y dice que se hace con cada uno. No hay un solo adjetivo de adecuacion en el sitio del criterio. DE DONDE SALE CADA PASO, uno a uno, y todos de L99: paso 1 de If you do not systematically collect and maintain an archive of indicators; paso 2 de you will have a bank of information that readily shows all the parameters of your operation; paso 3 de If something goes wrong, unido a allowing you to scan them; paso 4 de allowing you to scan them for unhealthy departures from the norm. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. POR QUE SON CUATRO PASOS Y NO SEIS, y lo digo porque la tentacion de estirarlo estuvo ahi: el libro cierra el tramo con el precio de no tener el archivo (you will have to do an awful lot of quick research, y by the time you have it, the problem is likely to have gotten worse). Eso es el PORQUE del procedimiento, no un paso suyo, y por eso vive aqui en el resumen y no en pasos_accionables. Convertir un motivo en un paso es inflar la ficha con material que el libro no puso como accion. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo cada cuanto se actualiza el archivo, porque el libro dice systematically y no dice con que ritmo; ese habria sido un puente de la especie periodo, que es la misma que el lote 1 pago trece veces. NO escribo en que soporte vive el archivo ni quien lo mantiene: el libro no pone ni soporte ni responsable. NO escribo que es una desviacion no sana ni a partir de cuanto lo es, porque el libro dice unhealthy departures from the norm y no pone vara; poner una cifra ahi seria inventarla entera. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: un lector estricto puede decir que cuatro pasos salidos de una sola frase larga son una LINEA y no un procedimiento, y que su sitio es un paso dentro del nodo de los cinco indicadores diarios. Lo sostengo porque el objeto es distinto, alli se eligen los indicadores que se miran cada dia y aqui se guarda la serie historica de todos ellos, y porque el disparador tambien es distinto, alli la primera hora de cada dia y aqui el momento en que algo se rompe. Si cae, cae DENTRO de mi marcado, y es el segundo de mi cola de relectura despues de la caja negra.",
+  "pasos_accionables": [
+    "Recoge de forma sistemática los indicadores de tu operación y mantenlos en un archivo, en vez de dejar que se pierdan según pasan los días.",
+    "Haz que ese archivo sea un banco de información que enseñe de golpe todos los parámetros de tu operación.",
+    "Cuando algo vaya mal, repasa en ese archivo todos esos parámetros.",
+    "Busca en ese repaso las desviaciones preocupantes respecto de la norma, que es lo que te señala dónde está el problema."
+  ],
+  "entregable_esperado": "El archivo de indicadores al día, y, cuando algo falla, el repaso hecho sobre él con las desviaciones preocupantes respecto de la norma ya señaladas.",
+  "nodos_previos": [
+    "elegir_cinco_indicadores_diarios_fabrica",
+    "construir_indicador_tendencia_patron"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando ya tienes indicadores en marcha y tienes que decidir si los guardas o los tiras, sabiendo que, si los tiras, el día que algo se rompa tendrás que buscar la información a toda prisa y para entonces el problema probablemente habrá empeorado."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-archivar_indicadores_resolver_problemas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Los indicadores ayudan mucho a resolver cualquier tipo de problema, pero solo si existen cuando hacen falta. Si los recoges de forma sistemática y los guardas, el día que algo falla tienes un banco de información con todos los parámetros de tu operación a la vista, y puedes repasarlos buscando las desviaciones no sanas respecto de la norma. Sin ese archivo tendrías que investigar a toda prisa para reunir los datos, y para cuando los tuvieras el problema probablemente habría empeorado. Guardar a tiempo es lo que convierte la urgencia en una consulta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_03.md",
+          "lineas": "99-99"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)"
+    },
+    {
+      "id": "m11-limpieza-archivar_indicadores_resolver_problemas-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mantener un archivo de indicadores para poder repasarlos el dia que algo vaya mal",
+      "texto_nuevo": "Mantener un archivo de indicadores para poder repasarlos el día que algo vaya mal",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-archivar_indicadores_resolver_problemas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recoge de forma sistematica los indicadores de tu operacion y mantenlos en un archivo, en vez de dejar que se pierdan segun pasan los dias.",
+      "texto_nuevo": "Recoge de forma sistemática los indicadores de tu operación y mantenlos en un archivo, en vez de dejar que se pierdan según pasan los días.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-archivar_indicadores_resolver_problemas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz que ese archivo sea un banco de informacion que ensene de golpe todos los parametros de tu operacion.",
+      "texto_nuevo": "Haz que ese archivo sea un banco de información que enseñe de golpe todos los parámetros de tu operación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-archivar_indicadores_resolver_problemas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando algo vaya mal, repasa en ese archivo todos esos parametros.",
+      "texto_nuevo": "Cuando algo vaya mal, repasa en ese archivo todos esos parámetros.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-archivar_indicadores_resolver_problemas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Busca en ese repaso las desviaciones no sanas respecto de la norma, que es lo que te senala donde esta el problema.",
+      "texto_nuevo": "Busca en ese repaso las desviaciones no sanas respecto de la norma, que es lo que te señala dónde está el problema.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-archivar_indicadores_resolver_problemas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El archivo de indicadores al dia, y, cuando algo falla, el repaso hecho sobre el con las desviaciones no sanas respecto de la norma ya senaladas.",
+      "texto_nuevo": "El archivo de indicadores al día, y, cuando algo falla, el repaso hecho sobre él con las desviaciones no sanas respecto de la norma ya señaladas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-archivar_indicadores_resolver_problemas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya tienes indicadores en marcha y tienes que decidir si los guardas o los tiras, sabiendo que el dia que algo se rompa no vas a tener tiempo de salir a buscar la informacion.",
+      "texto_nuevo": "Cuando ya tienes indicadores en marcha y tienes que decidir si los guardas o los tiras, sabiendo que el día que algo se rompa no vas a tener tiempo de salir a buscar la información.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 03, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 03)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-archivar_indicadores_resolver_problemas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando ya tienes indicadores en marcha y tienes que decidir si los guardas o los tiras, sabiendo que el día que algo se rompa no vas a tener tiempo de salir a buscar la información.",
+      "texto_nuevo": "Cuando ya tienes indicadores en marcha y tienes que decidir si los guardas o los tiras, sabiendo que, si los tiras, el día que algo se rompa tendrás que buscar la información a toda prisa y para entonces el problema probablemente habrá empeorado.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_03.md 99",
+        "frase": "you will have to do an awful lot of quick research to get the information you need, and by the time you have it, the problem is likely to have gotten worse."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro no dice que no habrá tiempo, sino que sin archivo habrá que investigar a toda prisa y el problema probablemente habrá empeorado.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-archivar_indicadores_resolver_problemas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Los indicadores ayudan mucho a resolver cualquier tipo de problema, pero solo si existen cuando hacen falta. Si los recoges de forma sistemática y los guardas, el día que algo falla tienes un banco de información con todos los parámetros de tu operación a la vista, y puedes repasarlos buscando las desviaciones no sanas respecto de la norma. Sin ese archivo tendrías que investigar a toda prisa para reunir los datos, y para cuando los tuvieras el problema probablemente habría empeorado. Guardar a tiempo es lo que convierte la urgencia en una consulta.",
+      "texto_nuevo": "Los indicadores pueden ayudar mucho a resolver cualquier tipo de problema, pero solo si existen cuando hacen falta. Si los recoges de forma sistemática y los guardas, el día que algo falla tienes un banco de información con todos los parámetros de tu operación a la vista, y puedes repasarlos buscando las desviaciones malsanas respecto de la norma. Sin ese archivo tendrías que investigar a toda prisa para reunir los datos, y para cuando los tuvieras el problema probablemente habría empeorado. Guardar a tiempo es lo que convierte la urgencia en una consulta.",
+      "cita": {
+        "libro": "High Output Management - Andrew S. Grove",
+        "lineas": "fuentes/grove_high_output/cap_03.md 99",
+        "frase": "Finally, indicators can be a big help in solving all types of problems."
+      },
+      "decision": "auditoria completa M11 (matiz, calco): Matiz: el libro dice que pueden ser de gran ayuda (\"can be\"). Calco: \"desviaciones no sanas\" traduce palabra a palabra \"unhealthy departures\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-archivar_indicadores_resolver_problemas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Busca en ese repaso las desviaciones no sanas respecto de la norma, que es lo que te señala dónde está el problema.",
+      "texto_nuevo": "Busca en ese repaso las desviaciones malsanas respecto de la norma, que es lo que te señala dónde está el problema.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "las desviaciones no sanas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"No sanas\" traduce palabra a palabra \"unhealthy\" (grove cap_03 l.99).",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-archivar_indicadores_resolver_problemas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El archivo de indicadores al día, y, cuando algo falla, el repaso hecho sobre él con las desviaciones no sanas respecto de la norma ya señaladas.",
+      "texto_nuevo": "El archivo de indicadores al día, y, cuando algo falla, el repaso hecho sobre él con las desviaciones malsanas respecto de la norma ya señaladas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "las desviaciones no sanas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"No sanas\" traduce palabra a palabra \"unhealthy\" (grove cap_03 l.99).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-archivar_indicadores_resolver_problemas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Los indicadores pueden ayudar mucho a resolver cualquier tipo de problema, pero solo si existen cuando hacen falta. Si los recoges de forma sistemática y los guardas, el día que algo falla tienes un banco de información con todos los parámetros de tu operación a la vista, y puedes repasarlos buscando las desviaciones malsanas respecto de la norma. Sin ese archivo tendrías que investigar a toda prisa para reunir los datos, y para cuando los tuvieras el problema probablemente habría empeorado. Guardar a tiempo es lo que convierte la urgencia en una consulta.",
+      "texto_nuevo": "Los indicadores pueden ayudar mucho a resolver cualquier tipo de problema, pero solo si existen cuando hacen falta. Si los recoges de forma sistemática y los guardas, el día que algo falla tienes un banco de información con todos los parámetros de tu operación a la vista, y puedes repasarlos buscando las desviaciones preocupantes respecto de la norma. Sin ese archivo tendrías que investigar a toda prisa para reunir los datos, y para cuando los tuvieras el problema probablemente habría empeorado. Guardar a tiempo es lo que convierte la urgencia en una consulta.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "desviaciones malsanas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"unhealthy departures from the norm\" (grove cap_03 l.99); \"malsano\" es lo dañino para la salud. Se decide igual en los tres campos del nodo.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-archivar_indicadores_resolver_problemas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Busca en ese repaso las desviaciones malsanas respecto de la norma, que es lo que te señala dónde está el problema.",
+      "texto_nuevo": "Busca en ese repaso las desviaciones preocupantes respecto de la norma, que es lo que te señala dónde está el problema.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "desviaciones malsanas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"unhealthy departures from the norm\" (grove cap_03 l.99); \"malsano\" es lo dañino para la salud. Se decide igual en los tres campos del nodo.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-archivar_indicadores_resolver_problemas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El archivo de indicadores al día, y, cuando algo falla, el repaso hecho sobre él con las desviaciones malsanas respecto de la norma ya señaladas.",
+      "texto_nuevo": "El archivo de indicadores al día, y, cuando algo falla, el repaso hecho sobre él con las desviaciones preocupantes respecto de la norma ya señaladas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "desviaciones malsanas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"unhealthy departures from the norm\" (grove cap_03 l.99); \"malsano\" es lo dañino para la salud. Se decide igual en los tres campos del nodo.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Guarda Indicadores para el Día Difícil"
+}

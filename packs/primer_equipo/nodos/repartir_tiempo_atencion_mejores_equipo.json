@@ -1,0 +1,415 @@
+{
+  "node_id": "repartir_tiempo_atencion_mejores_equipo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Repartir tu tiempo y tu atención hacia los mejores de tu equipo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Gestionar según las fortalezas también vale para el equipo: tu tiempo rinde más donde ya hay talento que puede crecer. Es contraintuitivo, porque quizá sientas que debes volcarte en quien se atasca y quien va bien no suele pedir ayuda. La cuenta es clara: si alguien vende treinta vasos por hora y otro diez, mejorar un diez por ciento al primero da tres vasos más, y sacar lo mismo del segundo exige que mejore un treinta y tres por ciento, probablemente mucho más difícil. Por eso los problemas de quien se atasca se diagnostican y resuelven rápido, y la atención de fondo va a quienes ya van bien.",
+  "notas_extraccion": "El libro dice literalmente que si llevas el principio de gestionar hacia las fortalezas un paso mas alla, descubres que tambien se aplica a los equipos, asi que este nodo es el mismo principio en otra escala y con otro acto: alli se reconocia una fortaleza, aqui se reparte el tiempo del directivo. Va en nodo propio y no dentro del anterior porque el acto, el entregable y el disparador son distintos, y porque el libro le pone su propia aritmetica. Esa aritmetica es el inventario que lo hace procedimentable: las dos cifras del puesto de limonada y los dos porcentajes que las comparan estan escritos en el libro, no calculados por nadie mas. Lo que el libro NO dice, y por eso no esta escrito aqui, es que proporcion del tiempo va a cada grupo ni cuanto es rapido cuando manda resolver rapido los asuntos del que se atasca.",
+  "pasos_accionables": [
+    "Lleva el principio de gestionar según las fortalezas un paso más allá y aplícalo también a los equipos, no solo a las personas.",
+    "Si tienes cinco personas en el equipo, cuatro van bien y una no, no vuelques la mayor parte de tu tiempo y tu energía en la que se atasca solo porque quieres arreglar el problema.",
+    "Presta atención al mejor talento de tu equipo, a quienes ya van bien y podrían ir todavía mejor, del mismo modo que cada persona debe apoyarse en sus fortalezas.",
+    "No dejes que quienes rinden peor dominen tu tiempo: diagnostica, aborda y resuelve sus asuntos tan rápido como puedas.",
+    "Cuenta con que esto es contraintuitivo, porque tus personas más fuertes no suelen estar pidiéndote ayuda.",
+    "Haz la cuenta con un puesto de limonada: si una persona vende treinta vasos por hora y otra solo diez, puede que te sientas empujado a pasar la mayoría de tu tiempo con la segunda para subir su producción, pero si entrenar a la primera la mejora un diez por ciento son tres vasos más, y para sacar lo mismo de la segunda tendrías que hacerla mejorar un treinta y tres por ciento, que probablemente será mucho más difícil de lograr.",
+    "Toma esta comparación: los buenos directores generales saben que hay que doblar la apuesta en los proyectos que funcionan y ponerles más gente, más recursos y más atención, en vez de llevar cada proyecto al punto de no fracasar, y los buenos inversores saben que ayudar a identificar y hacer crecer una sola empresa naciente hasta convertirla en una empresa enorme vale por docenas de inversiones que pierden dinero.",
+    "Y ayuda a las estrellas ascendentes de tu equipo a tener sueños más ambiciosos y a hacerse líderes más capaces, aunque no estén clamando por tu atención."
+  ],
+  "entregable_esperado": "Tu tiempo repartido a propósito y no por gravedad: los asuntos de quien se atasca diagnosticados y resueltos rápido, y atención de verdad puesta en quienes ya van bien y podrían ir mejor.",
+  "nodos_previos": [
+    "ayudar_personas_jugar_fortalezas"
+  ],
+  "nodos_siguientes": [
+    "acompaniar_mejores_equipo_socio"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes un equipo en el que la mayoría va bien y alguien no, y te notas volcando la mayor parte de tu tiempo y tu energía en quien se atasca."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Gestionar hacia las fortalezas también vale para el equipo entero: tu tiempo rinde más donde ya hay talento que puede crecer. Es contraintuitivo, porque quien se atasca tira de tu atención y quien va bien no suele pedir ayuda. Pero la cuenta es clara: si alguien vende treinta vasos por hora y otro diez, mejorar un diez por ciento al primero da tres vasos más, y sacar lo mismo del segundo exige que mejore un treinta y tres por ciento, probablemente mucho más difícil. Por eso los problemas de quien se atasca se diagnostican y resuelven rápido, y la atención de fondo va a quienes ya van bien.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_04.md",
+          "lineas": "233-239"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: verificador",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)"
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Repartir tu tiempo y tu atencion hacia los mejores de tu equipo",
+      "texto_nuevo": "Repartir tu tiempo y tu atención hacia los mejores de tu equipo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lleva el principio de gestionar hacia las fortalezas un paso mas alla y aplicalo tambien a los equipos, no solo a los individuos.",
+      "texto_nuevo": "Lleva el principio de gestionar hacia las fortalezas un paso más allá y aplícalo también a los equipos, no solo a las personas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tienes cinco personas en el equipo, cuatro van bien y una no, no vuelques la mayor parte de tu tiempo y tu energia en la que se atasca solo porque quieres arreglar el problema.",
+      "texto_nuevo": "Si tienes cinco personas en el equipo, cuatro van bien y una no, no vuelques la mayor parte de tu tiempo y tu energía en la que se atasca solo porque quieres arreglar el problema.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Presta atencion al talento de arriba de tu equipo, a los que ya van bien y podrian ir todavia mejor, del mismo modo que los individuos deben jugar a sus fortalezas.",
+      "texto_nuevo": "Presta atención al mejor talento de tu equipo, a quienes ya van bien y podrían ir todavía mejor, del mismo modo que cada persona debe jugar a sus fortalezas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No dejes que los peores rendimientos dominen tu tiempo: diagnostica, aborda y resuelve sus asuntos tan rapido como puedas.",
+      "texto_nuevo": "No dejes que los peores rendimientos dominen tu tiempo: diagnostica, aborda y resuelve sus asuntos tan rápido como puedas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que esto es contraintuitivo, porque tus personas mas fuertes no suelen estar pidiendote ayuda.",
+      "texto_nuevo": "Cuenta con que esto es contraintuitivo, porque tus personas más fuertes no suelen estar pidiéndote ayuda.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz la cuenta que el libro hace con el puesto de limonada: si Toby vende treinta vasos por hora y Henry solo diez, te sentiras empujado a pasar la mayoria de tu tiempo con Henry para subir su produccion, pero si entrenar a Toby lo mejora un diez por ciento son tres vasos mas, y para sacar lo mismo de Henry tendrias que hacerlo mejorar un treinta y tres por ciento, que probablemente sera mucho mas dificil de lograr.",
+      "texto_nuevo": "Haz la cuenta con un puesto de limonada: si una persona vende treinta vasos por hora y otra solo diez, te sentirás empujado a pasar la mayoría de tu tiempo con la segunda para subir su producción, pero si entrenar a la primera la mejora un diez por ciento son tres vasos más, y para sacar lo mismo de la segunda tendrías que hacerla mejorar un treinta y tres por ciento, que probablemente será mucho más difícil de lograr.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro hace",
+          "Toby",
+          "Henry"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Toma la comparacion que el libro pone: los buenos consejeros delegados saben que hay que doblar la apuesta en los proyectos que funcionan y ponerles mas gente, mas recursos y mas atencion, en vez de llevar cada proyecto al punto de no fracasar, y los buenos inversores saben que ayudar a identificar y hacer crecer una sola empresa naciente hasta los mil millones vale por docenas de inversiones que pierden dinero.",
+      "texto_nuevo": "Toma esta comparación: los buenos consejeros delegados saben que hay que doblar la apuesta en los proyectos que funcionan y ponerles más gente, más recursos y más atención, en vez de llevar cada proyecto al punto de no fracasar, y los buenos inversores saben que ayudar a identificar y hacer crecer una sola empresa naciente hasta convertirla en una empresa enorme vale por docenas de inversiones que pierden dinero.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la comparacion que el libro pone",
+          "hasta los mil millones"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "voz_de_libro",
+        "cifra_de_mercado",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y ayuda a las estrellas ascendentes de tu equipo a sonar mas grande y a hacerse lideres mas capaces, aunque no esten clamando por tu atencion.",
+      "texto_nuevo": "Y ayuda a las estrellas ascendentes de tu equipo a soñar más grande y a hacerse líderes más capaces, aunque no estén clamando por tu atención.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu tiempo repartido a proposito y no por gravedad: los asuntos del que se atasca diagnosticados y resueltos rapido, y atencion de verdad puesta en los que ya van bien y podrian ir mejor.",
+      "texto_nuevo": "Tu tiempo repartido a propósito y no por gravedad: los asuntos de quien se atasca diagnosticados y resueltos rápido, y atención de verdad puesta en quienes ya van bien y podrían ir mejor.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_tiempo_atencion_mejores_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes un equipo en el que la mayoria va bien y alguien no, y te notas volcando la mayor parte de tu tiempo y tu energia en quien se atasca.",
+      "texto_nuevo": "Cuando tienes un equipo en el que la mayoría va bien y alguien no, y te notas volcando la mayor parte de tu tiempo y tu energía en quien se atasca.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Toma esta comparación: los buenos consejeros delegados saben que hay que doblar la apuesta en los proyectos que funcionan y ponerles más gente, más recursos y más atención, en vez de llevar cada proyecto al punto de no fracasar, y los buenos inversores saben que ayudar a identificar y hacer crecer una sola empresa naciente hasta convertirla en una empresa enorme vale por docenas de inversiones que pierden dinero.",
+      "texto_nuevo": "Toma esta comparación: los buenos directores generales saben que hay que doblar la apuesta en los proyectos que funcionan y ponerles más gente, más recursos y más atención, en vez de llevar cada proyecto al punto de no fracasar, y los buenos inversores saben que ayudar a identificar y hacer crecer una sola empresa naciente hasta convertirla en una empresa enorme vale por docenas de inversiones que pierden dinero.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "consejeros delegados"
+        ]
+      },
+      "decision": "pase de glosario (consejero_delegado): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-repartir_tiempo_atencion_mejores_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Gestionar hacia las fortalezas también vale para el equipo entero: tu tiempo rinde más donde ya hay talento que puede crecer. Es contraintuitivo, porque quien se atasca tira de tu atención y quien va bien no suele pedir ayuda. Pero la cuenta es clara: si alguien vende treinta vasos por hora y otro diez, mejorar un diez por ciento al primero da tres vasos más, y sacar lo mismo del segundo exige que mejore un treinta y tres por ciento, probablemente mucho más difícil. Por eso los problemas de quien se atasca se diagnostican y resuelven rápido, y la atención de fondo va a quienes ya van bien.",
+      "texto_nuevo": "Gestionar según las fortalezas también vale para el equipo entero: tu tiempo rinde más donde ya hay talento que puede crecer. Es contraintuitivo, porque quien se atasca reclama tu atención y quien va bien no suele pedir ayuda. Pero la cuenta es clara: si alguien vende treinta vasos por hora y otro diez, mejorar un diez por ciento al primero da tres vasos más, y sacar lo mismo del segundo exige que mejore un treinta y tres por ciento, probablemente mucho más difícil. Por eso los problemas de quien se atasca se diagnostican y resuelven rápido, y la atención de fondo va a quienes ya van bien.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "hacia las fortalezas",
+          "tira de"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, regionalismo): \"Gestionar hacia las fortalezas\" calca \"managing to strengths\"; \"tira de\" es forma regional.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco",
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-auditoria-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Lleva el principio de gestionar hacia las fortalezas un paso más allá y aplícalo también a los equipos, no solo a las personas.",
+      "texto_nuevo": "Lleva el principio de gestionar según las fortalezas un paso más allá y aplícalo también a los equipos, no solo a las personas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "hacia las fortalezas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Gestionar hacia las fortalezas\" calca \"managing to strengths\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Presta atención al mejor talento de tu equipo, a quienes ya van bien y podrían ir todavía mejor, del mismo modo que cada persona debe jugar a sus fortalezas.",
+      "texto_nuevo": "Presta atención al mejor talento de tu equipo, a quienes ya van bien y podrían ir todavía mejor, del mismo modo que cada persona debe apoyarse en sus fortalezas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "jugar a sus fortalezas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Jugar a sus fortalezas\" calca \"play to their strengths\".",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Haz la cuenta con un puesto de limonada: si una persona vende treinta vasos por hora y otra solo diez, te sentirás empujado a pasar la mayoría de tu tiempo con la segunda para subir su producción, pero si entrenar a la primera la mejora un diez por ciento son tres vasos más, y para sacar lo mismo de la segunda tendrías que hacerla mejorar un treinta y tres por ciento, que probablemente será mucho más difícil de lograr.",
+      "texto_nuevo": "Haz la cuenta con un puesto de limonada: si una persona vende treinta vasos por hora y otra solo diez, puede que te sientas empujado a pasar la mayoría de tu tiempo con la segunda para subir su producción, pero si entrenar a la primera la mejora un diez por ciento son tres vasos más, y para sacar lo mismo de la segunda tendrías que hacerla mejorar un treinta y tres por ciento, que probablemente será mucho más difícil de lograr.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 237",
+        "frase": "you might feel compelled to spend a majority of your time with Henry to improve his output."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice \"might feel compelled\"; el paso lo afirmaba como seguro.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y ayuda a las estrellas ascendentes de tu equipo a soñar más grande y a hacerse líderes más capaces, aunque no estén clamando por tu atención.",
+      "texto_nuevo": "Y ayuda a las estrellas ascendentes de tu equipo a tener sueños más ambiciosos y a hacerse líderes más capaces, aunque no estén clamando por tu atención.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "soñar más grande"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"dream bigger\" (zhuo cap_04 239).",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-repartir_tiempo_atencion_mejores_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Gestionar según las fortalezas también vale para el equipo entero: tu tiempo rinde más donde ya hay talento que puede crecer. Es contraintuitivo, porque quien se atasca reclama tu atención y quien va bien no suele pedir ayuda. Pero la cuenta es clara: si alguien vende treinta vasos por hora y otro diez, mejorar un diez por ciento al primero da tres vasos más, y sacar lo mismo del segundo exige que mejore un treinta y tres por ciento, probablemente mucho más difícil. Por eso los problemas de quien se atasca se diagnostican y resuelven rápido, y la atención de fondo va a quienes ya van bien.",
+      "texto_nuevo": "Gestionar según las fortalezas también vale para el equipo: tu tiempo rinde más donde ya hay talento que puede crecer. Es contraintuitivo, porque quizá sientas que debes volcarte en quien se atasca y quien va bien no suele pedir ayuda. La cuenta es clara: si alguien vende treinta vasos por hora y otro diez, mejorar un diez por ciento al primero da tres vasos más, y sacar lo mismo del segundo exige que mejore un treinta y tres por ciento, probablemente mucho más difícil. Por eso los problemas de quien se atasca se diagnostican y resuelven rápido, y la atención de fondo va a quienes ya van bien.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 235",
+        "frase": "If you have five people on your team, four of whom are doing well and one who isn’t, you may feel like you should focus most of your time and energy on the struggling report because you want to “fix” the problem."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que quizá sientas que debes volcarte en quien se atasca; el resumen lo daba como hecho y ponía a quien se atasca a reclamar. Se quitan \"entero\" y \"Pero\" para no pasar de 600.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase4-repartir_tiempo_atencion_mejores_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No dejes que los peores rendimientos dominen tu tiempo: diagnostica, aborda y resuelve sus asuntos tan rápido como puedas.",
+      "texto_nuevo": "No dejes que quienes rinden peor dominen tu tiempo: diagnostica, aborda y resuelve sus asuntos tan rápido como puedas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "los peores rendimientos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): calco de \"worst performers\" (zhuo_manager/cap_04.md l.235): son personas, no rendimientos, y \"sus asuntos\" se queda sin sujeto humano",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Invierte Tiempo en tus Mejores"
+}

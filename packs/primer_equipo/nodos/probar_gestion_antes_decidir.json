@@ -1,0 +1,281 @@
+{
+  "node_id": "probar_gestion_antes_decidir",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Probar la gestión antes de decidir si es tu camino",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Decir que sí a dirigir por obligación, porque te lo piden o parece el paso lógico, puede acabar en un papel que no encaja y en un costo que paga todo el equipo. Probar la gestión antes de decidir reemplaza la imagen que tienes por experiencia real: hacer de mentor de compañeros, hacerte cargo de alguien en prácticas o preguntar a quienes dieron el paso hace poco. Y la decisión no queda cerrada: si descubres que no es lo tuyo, también está bien, y puedes tener una conversación honesta con tu jefe sobre tus metas y pedirle que te ayude a explorar caminos de carrera alternativos.",
+  "notas_extraccion": "Es la salida que el libro pone al final del bloque de los motivos, y la unica linea de todo el bloque que trae un inventario de medios nombrados uno a uno en vez de una correccion de expectativa. Las tres maneras son las tres que el libro escribe, y el libro las presenta con un como, es decir como ejemplos y no como lista cerrada, asi que aqui estan los tres que nombra y ninguno mas. La segunda mitad del nodo es la puerta de salida, que el libro se ocupa de dejar abierta con dos frases seguidas: que probar y descubrir que no es lo tuyo tambien esta bien, y que entonces toca una conversacion honesta con tu jefe sobre tus metas pidiendole ayuda para explorar alternativas. El libro llega aqui despues de contar que a el le paso: su disenadora estrella dijo que si porque era una jugadora de equipo que no queria dejar tirados a los demas, el papel no le encajaba, y lo pagaron todos cuando decidio marcharse. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto dura la prueba, a cuantos directivos hay que entrevistar, ni como se decide con lo que salga.",
+  "pasos_accionables": [
+    "Si no tienes claro que la gestión sea el camino adecuado para ti, no lo decidas a ciegas: hay cosas que puedes hacer para hacerte una idea mejor.",
+    "Haz de mentor de otras personas del equipo.",
+    "Hazte cargo de alguien en prácticas.",
+    "Entrevista a directivos que hayan hecho la transición hace poco, para entender cómo fue su experiencia.",
+    "Si pruebas la gestión y después te das cuenta de que no es lo que quieres hacer, eso también está bien.",
+    "Y en ese caso ten la conversación honesta con tu jefe sobre tus metas, y pídele que te ayude a explorar caminos de carrera alternativos."
+  ],
+  "entregable_esperado": "Una idea de la gestión hecha con experiencia propia o ajena y no con la imagen que tenías, y si la prueba sale que no, la conversación honesta ya tenida y caminos de carrera alternativos en exploración.",
+  "nodos_previos": [
+    "comprobar_gusto_trato_personas",
+    "dar_estabilidad_situacion_emocional",
+    "contrastar_motivos_querer_gestionar"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando no tienes claro si la gestión es el camino adecuado para ti y no quieres decidirlo a ciegas ni decidirlo para siempre."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-probar_gestion_antes_decidir-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Decir que sí a dirigir por obligación, porque te lo piden o parece el paso lógico, puede acabar en un papel que no encaja y en un costo que paga todo el equipo. Probar la gestión antes de decidir reemplaza la imagen que tienes por experiencia real: acompañar a compañeros, hacerte cargo de alguien en prácticas o preguntar a quienes dieron el paso hace poco. Funciona porque la decisión no queda cerrada: si descubres que no es lo tuyo, también está bien, y una conversación honesta con tu jefe sobre tus metas abre caminos de carrera alternativos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_02.md",
+          "lineas": "263-267"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)"
+    },
+    {
+      "id": "m11-limpieza-probar_gestion_antes_decidir-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Probar la gestion antes de decidir si es tu camino",
+      "texto_nuevo": "Probar la gestión antes de decidir si es tu camino",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_gestion_antes_decidir-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si no tienes claro que la gestion sea el camino adecuado para ti, no lo decidas a ciegas: hay cosas que puedes hacer para hacerte una idea mejor.",
+      "texto_nuevo": "Si no tienes claro que la gestión sea el camino adecuado para ti, no lo decidas a ciegas: hay cosas que puedes hacer para hacerte una idea mejor.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_gestion_antes_decidir-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Acompania a otras personas del equipo.",
+      "texto_nuevo": "Acompaña a otras personas del equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_gestion_antes_decidir-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hazte cargo de alguien en practicas.",
+      "texto_nuevo": "Hazte cargo de alguien en prácticas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_gestion_antes_decidir-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Entrevista a directivos que hayan hecho la transicion hace poco, para entender como fue su experiencia.",
+      "texto_nuevo": "Entrevista a directivos que hayan hecho la transición hace poco, para entender cómo fue su experiencia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_gestion_antes_decidir-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si pruebas la gestion y despues te das cuenta de que no es lo que quieres hacer, eso tambien esta bien.",
+      "texto_nuevo": "Si pruebas la gestión y después te das cuenta de que no es lo que quieres hacer, eso también está bien.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_gestion_antes_decidir-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y en ese caso ten la conversacion honesta con tu jefe sobre tus metas, y pidele que te ayude a explorar caminos de carrera alternativos.",
+      "texto_nuevo": "Y en ese caso ten la conversación honesta con tu jefe sobre tus metas, y pídele que te ayude a explorar caminos de carrera alternativos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_gestion_antes_decidir-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una idea de la gestion hecha con experiencia propia o ajena y no con la imagen que tenias, y si la prueba sale que no, la conversacion honesta ya tenida y caminos de carrera alternativos en exploracion.",
+      "texto_nuevo": "Una idea de la gestión hecha con experiencia propia o ajena y no con la imagen que tenías, y si la prueba sale que no, la conversación honesta ya tenida y caminos de carrera alternativos en exploración.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-probar_gestion_antes_decidir-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando no tienes claro si la gestion es el camino adecuado para ti y no quieres decidirlo a ciegas ni decidirlo para siempre.",
+      "texto_nuevo": "Cuando no tienes claro si la gestión es el camino adecuado para ti y no quieres decidirlo a ciegas ni decidirlo para siempre.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-probar_gestion_antes_decidir-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Decir que sí a dirigir por obligación, porque te lo piden o parece el paso lógico, puede acabar en un papel que no encaja y en un costo que paga todo el equipo. Probar la gestión antes de decidir reemplaza la imagen que tienes por experiencia real: acompañar a compañeros, hacerte cargo de alguien en prácticas o preguntar a quienes dieron el paso hace poco. Funciona porque la decisión no queda cerrada: si descubres que no es lo tuyo, también está bien, y una conversación honesta con tu jefe sobre tus metas abre caminos de carrera alternativos.",
+      "texto_nuevo": "Decir que sí a dirigir por obligación, porque te lo piden o parece el paso lógico, puede acabar en un papel que no encaja y en un costo que paga todo el equipo. Probar la gestión antes de decidir reemplaza la imagen que tienes por experiencia real: hacer de mentor de compañeros, hacerte cargo de alguien en prácticas o preguntar a quienes dieron el paso hace poco. Funciona porque la decisión no queda cerrada: si descubres que no es lo tuyo, también está bien, y una conversación honesta con tu jefe sobre tus metas abre caminos de carrera alternativos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 267",
+        "frase": "like mentoring other folks on the team, taking on an intern, or interviewing managers who have recently transitioned"
+      },
+      "decision": "auditoria completa M11 (contrario): 'mentoring other folks' es hacer tú de mentor; 'acompañar a compañeros' se lee como seguir a otros y cambia quién guía a quién.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "contrario"
+      ]
+    },
+    {
+      "id": "m11-auditoria-probar_gestion_antes_decidir-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Acompaña a otras personas del equipo.",
+      "texto_nuevo": "Haz de mentor de otras personas del equipo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 267",
+        "frase": "like mentoring other folks on the team"
+      },
+      "decision": "auditoria completa M11 (contrario): 'mentoring' es hacer de mentor; 'acompaña' pierde quién guía a quién.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "contrario"
+      ]
+    },
+    {
+      "id": "m11-pase2-probar_gestion_antes_decidir-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decir que sí a dirigir por obligación, porque te lo piden o parece el paso lógico, puede acabar en un papel que no encaja y en un costo que paga todo el equipo. Probar la gestión antes de decidir reemplaza la imagen que tienes por experiencia real: hacer de mentor de compañeros, hacerte cargo de alguien en prácticas o preguntar a quienes dieron el paso hace poco. Funciona porque la decisión no queda cerrada: si descubres que no es lo tuyo, también está bien, y una conversación honesta con tu jefe sobre tus metas abre caminos de carrera alternativos.",
+      "texto_nuevo": "Decir que sí a dirigir por obligación, porque te lo piden o parece el paso lógico, puede acabar en un papel que no encaja y en un costo que paga todo el equipo. Probar la gestión antes de decidir reemplaza la imagen que tienes por experiencia real: hacer de mentor de compañeros, hacerte cargo de alguien en prácticas o preguntar a quienes dieron el paso hace poco. Funciona porque la decisión no queda cerrada: si descubres que no es lo tuyo, también está bien, y puedes tener una conversación honesta con tu jefe sobre tus metas y pedirle que te ayude a explorar caminos de carrera alternativos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "zhuo_manager/cap_02.md 267",
+        "frase": "Have the honest conversation with your manager about your goals and ask her to help you explore alternative career paths."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro no promete que la conversación abra caminos: aconseja tenerla y pedir ayuda para explorarlos.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase5-probar_gestion_antes_decidir-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decir que sí a dirigir por obligación, porque te lo piden o parece el paso lógico, puede acabar en un papel que no encaja y en un costo que paga todo el equipo. Probar la gestión antes de decidir reemplaza la imagen que tienes por experiencia real: hacer de mentor de compañeros, hacerte cargo de alguien en prácticas o preguntar a quienes dieron el paso hace poco. Funciona porque la decisión no queda cerrada: si descubres que no es lo tuyo, también está bien, y puedes tener una conversación honesta con tu jefe sobre tus metas y pedirle que te ayude a explorar caminos de carrera alternativos.",
+      "texto_nuevo": "Decir que sí a dirigir por obligación, porque te lo piden o parece el paso lógico, puede acabar en un papel que no encaja y en un costo que paga todo el equipo. Probar la gestión antes de decidir reemplaza la imagen que tienes por experiencia real: hacer de mentor de compañeros, hacerte cargo de alguien en prácticas o preguntar a quienes dieron el paso hace poco. Y la decisión no queda cerrada: si descubres que no es lo tuyo, también está bien, y puedes tener una conversación honesta con tu jefe sobre tus metas y pedirle que te ayude a explorar caminos de carrera alternativos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 267",
+        "frase": "If you do try management and later realize that it isn’t what you want to do, that’s okay too."
+      },
+      "decision": "auditoria completa M11 (invencion): Nexo causal inventado: el libro no dice que probar funcione porque la decisión sea reversible; dice que probar da una idea mejor y, aparte, que si luego no es lo tuyo está bien. Sale 'Funciona porque'.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Prueba Gestionar Antes de Decidir"
+}

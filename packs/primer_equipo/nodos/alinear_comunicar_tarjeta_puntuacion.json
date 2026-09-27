@@ -1,0 +1,255 @@
+{
+  "node_id": "alinear_comunicar_tarjeta_puntuacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Asegurar la alineación de la tarjeta de puntuación y comunicarla",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Una tarjeta de puntuación se arma en cuatro pasos: la misión del puesto en pocas frases, de tres a ocho resultados concretos y objetivos, y las competencias que el puesto pide junto con las de tu cultura. El cuarto paso es alinearla y comunicarla. Primero la pones a prueba comparándola con el plan de negocio y con las tarjetas de las personas que van a relacionarse con ese puesto, y compruebas que hay coherencia y alineación. Después la compartes con las partes que corresponda, incluidos los pares y los reclutadores.",
+  "notas_extraccion": "Es el cuarto paso del recuadro How to Create a Scorecard y el que cierra el documento. El propio capitulo da la señal de que la parte de comunicar funciono: sabes que tienes una buena mision cuando los candidatos, los reclutadores e incluso otros miembros de tu equipo entienden que estas buscando sin tener que hacer preguntas aclaratorias. Este es el paso mas escueto de los cuatro en el libro, y lo que trae es exactamente su inventario: cuatro objetos nombrados, el plan de negocio, las tarjetas de puntuacion de los puestos que se relacionan con este, los pares y los reclutadores.",
+  "pasos_accionables": [
+    "Pon a prueba la tarjeta de puntuación comparándola con el plan de negocio.",
+    "Compárala también con las tarjetas de puntuación de las personas que van a relacionarse con el puesto.",
+    "Comprueba que hay coherencia y alineación.",
+    "Comparte después la tarjeta con las partes a las que corresponda, incluidos los pares y los reclutadores."
+  ],
+  "entregable_esperado": "La tarjeta de puntuación contrastada contra el plan de negocio y contra las tarjetas de los puestos que se relacionan con este, con la coherencia y la alineación comprobadas, y ya compartida con las partes a las que corresponda.",
+  "nodos_previos": [
+    "crear_tarjeta_puntuacion_puesto",
+    "identificar_competencias_tarjeta_puntuacion"
+  ],
+  "nodos_siguientes": [
+    "desplegar_estrategia_tarjeta_puntuacion",
+    "contratar_reclutadores_externos"
+  ],
+  "condiciones_activacion": [
+    "Cuando la tarjeta de puntuación ya tiene escritas sus tres partes, la misión, los resultados y las competencias. Es el cuarto y último paso para crear la tarjeta."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-alinear_comunicar_tarjeta_puntuacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una tarjeta de puntuación se arma en cuatro pasos: la misión del puesto en pocas frases, de tres a ocho resultados concretos y objetivos, y las competencias que el puesto pide junto con las de tu cultura. El cuarto paso es alinearla y comunicarla. Primero la sometes a prueba de presión comparándola con el plan de negocio y con las tarjetas de las personas que van a relacionarse con ese puesto, y compruebas que hay coherencia y alineación. Después la compartes con las partes que corresponda, incluidos los pares y los reclutadores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "269-277"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 277 solo manda comparar, asegurar coherencia y compartir; la razón y los efectos del texto actual son inventados. La propuesta del lector describe el procedimiento de 271-277 sin inventar por qué funciona y mide 535.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)"
+    },
+    {
+      "id": "m11-limpieza-alinear_comunicar_tarjeta_puntuacion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurar la alineacion de la tarjeta de puntuacion y comunicarla",
+      "texto_nuevo": "Asegurar la alineación de la tarjeta de puntuación y comunicarla",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-alinear_comunicar_tarjeta_puntuacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Somete la tarjeta de puntuacion a prueba de presion comparandola con el plan de negocio.",
+      "texto_nuevo": "Somete la tarjeta de puntuación a prueba de presión comparándola con el plan de negocio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-alinear_comunicar_tarjeta_puntuacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comparala tambien con las tarjetas de puntuacion de las personas que van a relacionarse con el puesto.",
+      "texto_nuevo": "Compárala también con las tarjetas de puntuación de las personas que van a relacionarse con el puesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-alinear_comunicar_tarjeta_puntuacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba que hay coherencia y alineacion.",
+      "texto_nuevo": "Comprueba que hay coherencia y alineación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-alinear_comunicar_tarjeta_puntuacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comparte despues la tarjeta con las partes relevantes, incluidos los pares y los reclutadores.",
+      "texto_nuevo": "Comparte después la tarjeta con las partes relevantes, incluidos los pares y los reclutadores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-alinear_comunicar_tarjeta_puntuacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La tarjeta de puntuacion contrastada contra el plan de negocio y contra las tarjetas de los puestos que se relacionan con este, con la coherencia y la alineacion comprobadas, y ya compartida con las partes relevantes.",
+      "texto_nuevo": "La tarjeta de puntuación contrastada contra el plan de negocio y contra las tarjetas de los puestos que se relacionan con este, con la coherencia y la alineación comprobadas, y ya compartida con las partes relevantes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-alinear_comunicar_tarjeta_puntuacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando la tarjeta de puntuacion ya tiene escritas sus tres partes, la mision, los resultados y las competencias. Es el cuarto y ultimo de los pasos del recuadro del libro.",
+      "texto_nuevo": "Cuando la tarjeta de puntuación ya tiene escritas sus tres partes, la misión, los resultados y las competencias. Es el cuarto y último paso para crear la tarjeta.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "de los pasos del recuadro del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-alinear_comunicar_tarjeta_puntuacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una tarjeta de puntuación se arma en cuatro pasos: la misión del puesto en pocas frases, de tres a ocho resultados concretos y objetivos, y las competencias que el puesto pide junto con las de tu cultura. El cuarto paso es alinearla y comunicarla. Primero la sometes a prueba de presión comparándola con el plan de negocio y con las tarjetas de las personas que van a relacionarse con ese puesto, y compruebas que hay coherencia y alineación. Después la compartes con las partes que corresponda, incluidos los pares y los reclutadores.",
+      "texto_nuevo": "Una tarjeta de puntuación se arma en cuatro pasos: la misión del puesto en pocas frases, de tres a ocho resultados concretos y objetivos, y las competencias que el puesto pide junto con las de tu cultura. El cuarto paso es alinearla y comunicarla. Primero la pones a prueba comparándola con el plan de negocio y con las tarjetas de las personas que van a relacionarse con ese puesto, y compruebas que hay coherencia y alineación. Después la compartes con las partes que corresponda, incluidos los pares y los reclutadores.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "sometes",
+          "de presión"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Prueba de presión\" es calco de \"pressure-test\".",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-alinear_comunicar_tarjeta_puntuacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Somete la tarjeta de puntuación a prueba de presión comparándola con el plan de negocio.",
+      "texto_nuevo": "Pon a prueba la tarjeta de puntuación comparándola con el plan de negocio.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Somete",
+          "de presión"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Prueba de presión\" es calco de \"pressure-test\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-alinear_comunicar_tarjeta_puntuacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Comparte después la tarjeta con las partes relevantes, incluidos los pares y los reclutadores.",
+      "texto_nuevo": "Comparte después la tarjeta con las partes a las que corresponda, incluidos los pares y los reclutadores.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "relevantes"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"relevant parties\": \"relevante\" en español es importante, no pertinente.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-alinear_comunicar_tarjeta_puntuacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "La tarjeta de puntuación contrastada contra el plan de negocio y contra las tarjetas de los puestos que se relacionan con este, con la coherencia y la alineación comprobadas, y ya compartida con las partes relevantes.",
+      "texto_nuevo": "La tarjeta de puntuación contrastada contra el plan de negocio y contra las tarjetas de los puestos que se relacionan con este, con la coherencia y la alineación comprobadas, y ya compartida con las partes a las que corresponda.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "relevantes"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"relevant parties\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Alinea y Comunica la Tarjeta"
+}

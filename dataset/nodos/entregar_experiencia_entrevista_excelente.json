@@ -1,0 +1,371 @@
+{
+  "node_id": "entregar_experiencia_entrevista_excelente",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Ofrecer una experiencia de entrevista atenta, enfocada y rápida",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Muchos candidatos que aceptaron le contaron a una directiva que parte de su razón fue un proceso de entrevista atento, enfocado y rápido, que les dio confianza en la empresa y en el equipo. Aun sin oferta, una experiencia así dice a los futuros candidatos que te importan las personas. Lo sostiene una relación estrecha entre quien contrata y quien recluta; ella y su reclutador se escribían varias veces al día: notas de contexto, quién evaluaba qué, qué entrevistador conectaba mejor y quién daba las gracias. Así evitaban días muertos entre pasos, preguntas repetidas y mensajes contradictorios.",
+  "notas_extraccion": "Es la tercera tactica de trabajo conjunto con el reclutamiento y la que convierte la relacion con el reclutador en actos diarios. El inventario propio del libro son las preguntas que los dos se mandaban, nombradas una a una, y los errores comunes que evitaban, tambien nombrados; por eso los pasos 4 a 7 son transcripcion de preguntas reales y no una lista de buenas intenciones. El paso 2 esta escrito porque el libro lo dice expresamente: la experiencia importa incluso sin oferta. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantos dias son demasiados entre pasos, ni que formato tienen las notas de contexto, ni quien las escribe.",
+  "pasos_accionables": [
+    "Cuenta con lo que consigue: hay quien ha perdido la cuenta de las veces que un candidato aceptó y le contó que parte de su razón fue que el proceso de entrevista le pareció atento, enfocado y rápido, y que eso le dio confianza en la empresa y en el equipo con el que iba a trabajar.",
+    "Hazlo también cuando al final no vayas a hacer oferta, porque una experiencia de entrevista asombrosa les dice a los futuros candidatos que te importan las personas que podrían ser el futuro de tu organización.",
+    "Monta para eso una relación fuerte entre quien contrata y quien recluta: en un caso, los dos funcionaban como una pareja de héroes de cómic para cualquier candidato que entraba a entrevistarse, y se escribían varias veces al día sobre los detalles.",
+    "Comprueba que todos los entrevistadores tienen las notas de contexto.",
+    "Comprueba quién está evaluando qué habilidad.",
+    "Busca un entrevistador que conecte bien con el candidato, por ejemplo alguien que venga de la misma empresa anterior, o alguien que también sea nuevo en la ciudad.",
+    "Decide quién va a escribir al candidato para agradecerle su tiempo.",
+    "Trabajando así a la par, evita estos errores comunes: dejar días o semanas entre un paso y el siguiente, pedir al candidato que se repita una y otra vez, o darle información contradictoria o confusa."
+  ],
+  "entregable_esperado": "Un proceso de entrevista que el candidato describe como atento, enfocado y rápido, sin días ni semanas muertas entre pasos y sin información contradictoria.",
+  "nodos_previos": [
+    "desarrollar_estrategia_busqueda_candidatos"
+  ],
+  "nodos_siguientes": [
+    "mostrar_candidato_cuanto_quieres"
+  ],
+  "condiciones_activacion": [
+    "Con todo candidato que entra a entrevistarse, y también con aquellos a los que no vas a hacer oferta."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Muchos candidatos que aceptaron han contado que parte de su razón fue un proceso de entrevista atento, enfocado y rápido, que les dio confianza en la empresa y en el equipo. Aunque no haya oferta, una experiencia así dice a los futuros candidatos que te importan las personas. Lo sostiene una relación estrecha entre quien contrata y quien recluta, que revisan juntos los detalles varias veces al día: notas de contexto, quién evalúa qué, qué entrevistador conecta mejor y quién da las gracias. Así se evitan errores comunes: días muertos entre pasos, preguntas repetidas y mensajes contradictorios.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "87-95"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)"
+    },
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Entregar una experiencia de entrevista atenta, enfocada y rapida",
+      "texto_nuevo": "Entregar una experiencia de entrevista atenta, enfocada y rápida",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que compra: la autora dice que ha perdido la cuenta de las veces que un candidato acepto y le conto que parte de su razon fue que el proceso de entrevista se sintio atento, enfocado y rapido, y que eso les dio confianza en la empresa y en el equipo con el que iban a trabajar.",
+      "texto_nuevo": "Cuenta con lo que compra: hay quien ha perdido la cuenta de las veces que un candidato aceptó y le contó que parte de su razón fue que el proceso de entrevista se sintió atento, enfocado y rápido, y que eso le dio confianza en la empresa y en el equipo con el que iba a trabajar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la autora dice que ha perdido la cuenta de las veces que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: propio",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hazlo tambien cuando al final no vayas a hacer oferta, porque una experiencia de entrevista asombrosa le dice a los futuros candidatos que te importan las personas que podrian ser el futuro de tu organizacion.",
+      "texto_nuevo": "Hazlo también cuando al final no vayas a hacer oferta, porque una experiencia de entrevista asombrosa les dice a los futuros candidatos que te importan las personas que podrían ser el futuro de tu organización.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Monta para eso una relacion fuerte entre quien contrata y quien recluta. La autora y su companiero de reclutamiento se volvian como una pareja de comic para cualquier candidato que entraba a entrevistarse, y se escribian varias veces al dia sobre los detalles.",
+      "texto_nuevo": "Monta para eso una relación fuerte entre quien contrata y quien recluta: los dos funcionan como una pareja de héroes de cómic para cualquier candidato que entra a entrevistarse, y se escriben varias veces al día sobre los detalles.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora y su companiero de reclutamiento"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba quien esta evaluando que habilidad.",
+      "texto_nuevo": "Comprueba quién está evaluando qué habilidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Busca un entrevistador que conecte bien con el candidato, por ejemplo alguien que venga de la misma empresa anterior, o alguien que tambien sea nuevo en la ciudad.",
+      "texto_nuevo": "Busca un entrevistador que conecte bien con el candidato, por ejemplo alguien que venga de la misma empresa anterior, o alguien que también sea nuevo en la ciudad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide quien va a escribir al candidato para agradecerle su tiempo.",
+      "texto_nuevo": "Decide quién va a escribir al candidato para agradecerle su tiempo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trabajando asi en tandem, evita los errores comunes que el libro nombra: dejar dias o semanas entre un paso y el siguiente, pedir al candidato que se repita una y otra vez, o darle informacion contradictoria o confusa.",
+      "texto_nuevo": "Trabajando así a la par, evita estos errores comunes: dejar días o semanas entre un paso y el siguiente, pedir al candidato que se repita una y otra vez, o darle información contradictoria o confusa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un proceso de entrevista que el candidato describe como atento, enfocado y rapido, sin dias ni semanas muertas entre pasos y sin informacion contradictoria.",
+      "texto_nuevo": "Un proceso de entrevista que el candidato describe como atento, enfocado y rápido, sin días ni semanas muertas entre pasos y sin información contradictoria.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-entregar_experiencia_entrevista_excelente-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Con todo candidato que entra a entrevistarse, y tambien con aquellos a los que no vas a hacer oferta.",
+      "texto_nuevo": "Con todo candidato que entra a entrevistarse, y también con aquellos a los que no vas a hacer oferta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-entregar_experiencia_entrevista_excelente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos candidatos que aceptaron han contado que parte de su razón fue un proceso de entrevista atento, enfocado y rápido, que les dio confianza en la empresa y en el equipo. Aunque no haya oferta, una experiencia así dice a los futuros candidatos que te importan las personas. Lo sostiene una relación estrecha entre quien contrata y quien recluta, que revisan juntos los detalles varias veces al día: notas de contexto, quién evalúa qué, qué entrevistador conecta mejor y quién da las gracias. Así se evitan errores comunes: días muertos entre pasos, preguntas repetidas y mensajes contradictorios.",
+      "texto_nuevo": "Muchos candidatos que aceptaron le contaron a una directiva que parte de su razón fue un proceso de entrevista atento, enfocado y rápido, que les dio confianza en la empresa y en el equipo. Aunque no haya oferta, una experiencia así dice a los futuros candidatos que te importan las personas. Lo sostiene una relación estrecha entre quien contrata y quien recluta, que revisan juntos los detalles varias veces al día: notas de contexto, quién evalúa qué, qué entrevistador conecta mejor y quién da las gracias. Así se evitan días muertos entre pasos, preguntas repetidas y mensajes contradictorios.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 89",
+        "frase": "I can’t tell you how many times I have had candidates accept and tell me that part of their reason for doing so was because the interview process felt so attentive, focused, and fast."
+      },
+      "decision": "auditoria completa M11 (matiz): La experiencia de la autora estaba vuelta hecho general; se cuenta como caso, igual que en el paso 1.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-entregar_experiencia_entrevista_excelente-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que compra: hay quien ha perdido la cuenta de las veces que un candidato aceptó y le contó que parte de su razón fue que el proceso de entrevista se sintió atento, enfocado y rápido, y que eso le dio confianza en la empresa y en el equipo con el que iba a trabajar.",
+      "texto_nuevo": "Cuenta con lo que consigue: hay quien ha perdido la cuenta de las veces que un candidato aceptó y le contó que parte de su razón fue que el proceso de entrevista se sintió atento, enfocado y rápido, y que eso le dio confianza en la empresa y en el equipo con el que iba a trabajar.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Cuenta con lo que compra"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Lo que compra\" calca what it buys; en español, lo que consigue.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-entregar_experiencia_entrevista_excelente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Muchos candidatos que aceptaron le contaron a una directiva que parte de su razón fue un proceso de entrevista atento, enfocado y rápido, que les dio confianza en la empresa y en el equipo. Aunque no haya oferta, una experiencia así dice a los futuros candidatos que te importan las personas. Lo sostiene una relación estrecha entre quien contrata y quien recluta, que revisan juntos los detalles varias veces al día: notas de contexto, quién evalúa qué, qué entrevistador conecta mejor y quién da las gracias. Así se evitan días muertos entre pasos, preguntas repetidas y mensajes contradictorios.",
+      "texto_nuevo": "Muchos candidatos que aceptaron le contaron a una directiva que parte de su razón fue un proceso de entrevista atento, enfocado y rápido, que les dio confianza en la empresa y en el equipo. Aunque no haya oferta, una experiencia así dice a los futuros candidatos que te importan las personas. Lo sostiene una relación estrecha entre quien contrata y quien recluta; esa directiva y su reclutador se escribían varias veces al día sobre los detalles: notas de contexto, quién evaluaba qué, qué entrevistador conectaba mejor y quién daba las gracias. Así evitaban días muertos entre pasos, preguntas repetidas y mensajes contradictorios.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 93-95",
+        "frase": "We’d message each other multiple times a day about the details"
+      },
+      "decision": "auditoria completa M11 (matiz): Lo que hacían una directiva y su socio de reclutamiento se contaba como regla general.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-entregar_experiencia_entrevista_excelente-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que consigue: hay quien ha perdido la cuenta de las veces que un candidato aceptó y le contó que parte de su razón fue que el proceso de entrevista se sintió atento, enfocado y rápido, y que eso le dio confianza en la empresa y en el equipo con el que iba a trabajar.",
+      "texto_nuevo": "Cuenta con lo que consigue: hay quien ha perdido la cuenta de las veces que un candidato aceptó y le contó que parte de su razón fue que el proceso de entrevista le pareció atento, enfocado y rápido, y que eso le dio confianza en la empresa y en el equipo con el que iba a trabajar.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se sintió atento"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'felt so attentive'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-entregar_experiencia_entrevista_excelente-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Monta para eso una relación fuerte entre quien contrata y quien recluta: los dos funcionan como una pareja de héroes de cómic para cualquier candidato que entra a entrevistarse, y se escriben varias veces al día sobre los detalles.",
+      "texto_nuevo": "Monta para eso una relación fuerte entre quien contrata y quien recluta: en un caso, los dos funcionaban como una pareja de héroes de cómic para cualquier candidato que entraba a entrevistarse, y se escribían varias veces al día sobre los detalles.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 93",
+        "frase": "My recruiting partner and I become like Batman and Robin for any candidate who comes in to interview. We’d message each other multiple times a day about the details"
+      },
+      "decision": "auditoria completa M11 (matiz): La pareja de héroes y los mensajes varias veces al día son el caso de una directiva, no lo que pasa siempre.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-entregar_experiencia_entrevista_excelente-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Muchos candidatos que aceptaron le contaron a una directiva que parte de su razón fue un proceso de entrevista atento, enfocado y rápido, que les dio confianza en la empresa y en el equipo. Aunque no haya oferta, una experiencia así dice a los futuros candidatos que te importan las personas. Lo sostiene una relación estrecha entre quien contrata y quien recluta; esa directiva y su reclutador se escribían varias veces al día sobre los detalles: notas de contexto, quién evaluaba qué, qué entrevistador conectaba mejor y quién daba las gracias. Así evitaban días muertos entre pasos, preguntas repetidas y mensajes contradictorios.",
+      "texto_nuevo": "Muchos candidatos que aceptaron le contaron a una directiva que parte de su razón fue un proceso de entrevista atento, enfocado y rápido, que les dio confianza en la empresa y en el equipo. Aun sin oferta, una experiencia así dice a los futuros candidatos que te importan las personas. Lo sostiene una relación estrecha entre quien contrata y quien recluta; ella y su reclutador se escribían varias veces al día: notas de contexto, quién evaluaba qué, qué entrevistador conectaba mejor y quién daba las gracias. Así evitaban días muertos entre pasos, preguntas repetidas y mensajes contradictorios.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "El resumen medía 633 caracteres; recorte mínimo a 598: fuera «sobre los detalles», «Aunque no haya oferta» pasa a «Aun sin oferta» y «esa directiva» a «ella»."
+      },
+      "decision": "auditoria completa M11 (longitud): El resumen medía 633 caracteres; recorte mínimo a 598: fuera «sobre los detalles», «Aunque no haya oferta» pasa a «Aun sin oferta» y «esa directiva» a «ella».",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "longitud"
+      ]
+    },
+    {
+      "id": "m11-pase4-entregar_experiencia_entrevista_excelente-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entregar una experiencia de entrevista atenta, enfocada y rápida",
+      "texto_nuevo": "Ofrecer una experiencia de entrevista atenta, enfocada y rápida",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Entregar"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Entregar una experiencia' calca 'Deliver an Amazing Interview Experience' (zhuo cap_08 l.87); en español una experiencia se ofrece.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Ofrece una Entrevista Memorable",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

@@ -1,0 +1,311 @@
+{
+  "node_id": "zanjar_seis_preguntas_decision_adelantado",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Zanjar por adelantado las seis preguntas de una decisión: qué, cuándo, quién decide, a quién se consulta, quién ratifica y a quién se informa",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Decidir es un trabajo con su propio resultado, la decisión misma, y como cualquier otro proceso de mando tiene más probabilidades de dar un resultado de calidad y a tiempo si desde el principio dices con claridad qué esperas exactamente. Dicho de otro modo, una de las tareas clave del mando es zanjar antes de empezar seis preguntas: qué hay que decidir, para cuándo, quién decide, a quién se consulta antes, quién ratifica o veta y a quién se informa después. Contestadas de antemano, vuelven concreta la expectativa: el proceso sabe desde el inicio qué resultado entregar, para cuándo y con quién.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_06.md, unidad Cap. 5, titulo textual Decisions, Decisions. Sale de la PIEZA P25 de la frontera publicada hoy en OO.2.a, L65, 65 palabras. FRONTERA DENTRO DEL NODO, PUBLICADA ANTES DE CORTAR (EXTRACTOR.md 10): los pasos 1, 2 y 3 salen de L65, que es la cabeza; los pasos 4 a 9 salen de la PIEZA P26, L67 a L77, que es la lista de las seis preguntas, una por linea. POR ESO P26 LLEVA CERO NODOS EN LA FRONTERA: sus seis lineas son partes de esta cabeza y ninguna de las seis trae procedimiento propio, cada una es una sola pregunta. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro DICE CUANTAS SON (six important questions), las nombra una a una en su propia linea, y las pone como tarea clave del mando a resolver in advance. Inventario de OBJETOS DE TRABAJO, no de fines. POR QUE NO DECLARO NINGUNA ARISTA DE D.37 PESE A SER CABEZA CONTADA: D.37 pide que las partes EXISTAN COMO NODOS, y en mi frontera de hoy las seis preguntas dan cero nodos precisamente porque no tienen procedimiento propio. No hay hijo al que apuntar, asi que no hay arista que cablear. Si una vuelta posterior encontrara procedimiento propio para alguna, la arista se declara entonces. DE DONDE SALE CADA PASO, uno a uno: paso 1 de L65 (Basically, like other things managers do, decision-making has an output associated with it, which in this case is the decision itself); paso 2 de L65 (Like other managerial processes, decision-making is likelier to generate high-quality output in a timely fashion if we say clearly at the outset that we expect exactly that); paso 3 de L65 (In other words, one of the manager's key tasks is to settle six important questions in advance); paso 4 de L67 (What decision needs to be made?); paso 5 de L69 (When does it have to be made?); paso 6 de L71 (Who will decide?); paso 7 de L73 (Who will need to be consulted prior to making the decision?); paso 8 de L75 (Who will ratify or veto the decision?); paso 9 de L77 (Who will need to be informed of the decision?). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. AQUI LA TENTACION ERA LA PEOR DE TODAS Y LA DECLARO ENTERA: este nodo trata justo de destinatarios, responsables y plazos, que son las TRES especies de PUENTE que el lote 1 pago. La diferencia es que aqui el libro las pone como PREGUNTAS que el mando tiene que contestar, no como respuestas. Por eso los pasos 4 a 9 preguntan y no contestan: NO escribo quien debe decidir, ni a quien hay que consultar, ni cuanto plazo se da, ni a quien se informa, porque eso lo contesta cada caso y el libro no lo contesta aqui. Convertir estas seis preguntas en seis respuestas seria escribir el nodo entero yo. NO escribo tampoco donde se anotan ni quien las custodia. EL CASO DE FILIPINAS NO ENTRA (manual 3.5): L79 a L89 aplican estas seis preguntas a la ampliacion de la planta de Filipinas, y ese caso es el EJEMPLO NOMBRADO de esta doctrina, no su casa. Por eso ni el entregable ni ningun paso llevan un dato de aquel caso, ni el plazo de un mes, ni el nombre de Gordon Moore, ni las cuatro plantas. NI UNA CIFRA A atribuciones: el seis es denominacion de la serie, no una medicion del autor con fecha de corte. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: los pasos 4 a 9 son preguntas y no imperativos de accion, y un lector estricto puede decir que un nodo cuyos pasos preguntan no ejecuta nada. Lo sostengo porque el propio libro los llama key task del mando y manda settle, zanjar, y porque lo ejecutable aqui es exactamente obtener las seis respuestas antes de empezar. Si cae, cae DENTRO de mi marcado.",
+  "pasos_accionables": [
+    "Cuenta con que la toma de decisiones, como las demás cosas que hace un mando, lleva asociado un resultado, y en este caso ese resultado es la decisión misma.",
+    "Di con claridad desde el principio que esperas exactamente eso, un resultado de alta calidad y en plazo, porque es entonces cuando el proceso tiene más probabilidades de darlo, igual que los demás procesos de mando.",
+    "Zanja por adelantado las seis preguntas importantes, que es una de las tareas clave del mando.",
+    "Pregunta primero qué decisión hay que tomar.",
+    "Pregunta cuándo tiene que estar tomada.",
+    "Pregunta quién va a decidir.",
+    "Pregunta a quién hay que consultar antes de tomar la decisión.",
+    "Pregunta quién va a ratificar o vetar la decisión.",
+    "Pregunta a quién hay que informar de la decisión."
+  ],
+  "entregable_esperado": "Las seis preguntas contestadas por escrito antes de empezar: la decisión que hay que tomar, su plazo, quién decide, a quién se consulta antes, quién ratifica o veta, y a quién se informa después.",
+  "nodos_previos": [
+    "elegir_momento_actividad_palanca_maxima"
+  ],
+  "nodos_siguientes": [
+    "conducir_etapas_modelo_ideal_decision"
+  ],
+  "condiciones_activacion": [
+    "Cuando va a empezar un proceso de decisión y todavía nadie ha dicho qué se decide, quién decide, a quién se consulta, quién puede vetarlo y a quién hay que contárselo después."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Decidir es un trabajo con su propia salida, la decisión misma, y como cualquier otro proceso de mando tiene más probabilidades de dar una salida de calidad y a tiempo si desde el principio dices con claridad qué esperas exactamente. Dicho de otro modo, una de las tareas clave del mando es zanjar antes de empezar seis preguntas: qué hay que decidir, para cuándo, quién decide, a quién se consulta antes, quién ratifica o veta y a quién se informa después. Contestadas de antemano, vuelven concreta la expectativa: el proceso sabe desde el inicio qué salida entregar, para cuándo y con quién.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_06.md",
+          "lineas": "65-77"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: baranda voz_de_libro de la casa: el impersonal reflexivo 'se espera' pasa a la segunda persona, sin cambiar el sentido; pase de matices (matiz): La objeción se sostiene: 'likelier to generate' y 'one of the manager's key tasks' (l.65). La propuesta del lector los devuelve, pero enlaza con 'Por eso' lo que las líneas presentan como 'In other words': las seis preguntas son la forma de decir lo que esperas, no su consecuencia. El texto propio cambia solo ese enlace por 'Dicho de otro modo'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)"
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Zanjar por adelantado las seis preguntas de una decision: que, cuando, quien decide, a quien se consulta, quien ratifica y a quien se informa",
+      "texto_nuevo": "Zanjar por adelantado las seis preguntas de una decisión: qué, cuándo, quién decide, a quién se consulta, quién ratifica y a quién se informa",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que la toma de decisiones, como las demas cosas que hace un mando, lleva asociada una salida, y en este caso esa salida es la decision misma.",
+      "texto_nuevo": "Cuenta con que la toma de decisiones, como las demás cosas que hace un mando, lleva asociada una salida, y en este caso esa salida es la decisión misma.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Di con claridad desde el principio que esperas exactamente eso, una salida de alta calidad y en plazo, porque es entonces cuando el proceso tiene mas probabilidades de darla, igual que los demas procesos de mando.",
+      "texto_nuevo": "Di con claridad desde el principio que esperas exactamente eso, una salida de alta calidad y en plazo, porque es entonces cuando el proceso tiene más probabilidades de darla, igual que los demás procesos de mando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta primero que decision hay que tomar.",
+      "texto_nuevo": "Pregunta primero qué decisión hay que tomar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta cuando tiene que estar tomada.",
+      "texto_nuevo": "Pregunta cuándo tiene que estar tomada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta quien va a decidir.",
+      "texto_nuevo": "Pregunta quién va a decidir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a quien hay que consultar antes de tomar la decision.",
+      "texto_nuevo": "Pregunta a quién hay que consultar antes de tomar la decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta quien va a ratificar o vetar la decision.",
+      "texto_nuevo": "Pregunta quién va a ratificar o vetar la decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a quien hay que informar de la decision.",
+      "texto_nuevo": "Pregunta a quién hay que informar de la decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las seis preguntas contestadas por escrito antes de empezar: la decision que hay que tomar, su plazo, quien decide, a quien se consulta antes, quien ratifica o veta, y a quien se informa despues.",
+      "texto_nuevo": "Las seis preguntas contestadas por escrito antes de empezar: la decisión que hay que tomar, su plazo, quién decide, a quién se consulta antes, quién ratifica o veta, y a quién se informa después.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-zanjar_seis_preguntas_decision_adelantado-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando va a empezar un proceso de decision y todavia nadie ha dicho que se decide, quien decide, a quien se consulta, quien puede vetarlo y a quien hay que contarselo despues.",
+      "texto_nuevo": "Cuando va a empezar un proceso de decisión y todavía nadie ha dicho qué se decide, quién decide, a quién se consulta, quién puede vetarlo y a quién hay que contárselo después.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-salida-zanjar_seis_preguntas_decision_adelantado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decidir es un trabajo con su propia salida, la decisión misma, y como cualquier otro proceso de mando tiene más probabilidades de dar una salida de calidad y a tiempo si desde el principio dices con claridad qué esperas exactamente. Dicho de otro modo, una de las tareas clave del mando es zanjar antes de empezar seis preguntas: qué hay que decidir, para cuándo, quién decide, a quién se consulta antes, quién ratifica o veta y a quién se informa después. Contestadas de antemano, vuelven concreta la expectativa: el proceso sabe desde el inicio qué salida entregar, para cuándo y con quién.",
+      "texto_nuevo": "Decidir es un trabajo con su propio resultado, la decisión misma, y como cualquier otro proceso de mando tiene más probabilidades de dar un resultado de calidad y a tiempo si desde el principio dices con claridad qué esperas exactamente. Dicho de otro modo, una de las tareas clave del mando es zanjar antes de empezar seis preguntas: qué hay que decidir, para cuándo, quién decide, a quién se consulta antes, quién ratifica o veta y a quién se informa después. Contestadas de antemano, vuelven concreta la expectativa: el proceso sabe desde el inicio qué resultado entregar, para cuándo y con quién.",
+      "cita": {
+        "regla": "salida como calco de output (Grove): produccion en una operacion, resultado en un mando, unidad o proceso; se conserva en el par entrada/salida (docs/saneamiento/resultados/M11/glosario_pendiente.txt, 28 sep 2026)",
+        "fragmentos": [
+          "con su propia salida",
+          "dar una salida de calidad",
+          "qué salida entregar"
+        ]
+      },
+      "decision": "barrido de salida (output)",
+      "auditoria": "docs/saneamiento/resultados/M11/salida/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-salida-zanjar_seis_preguntas_decision_adelantado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que la toma de decisiones, como las demás cosas que hace un mando, lleva asociada una salida, y en este caso esa salida es la decisión misma.",
+      "texto_nuevo": "Cuenta con que la toma de decisiones, como las demás cosas que hace un mando, lleva asociado un resultado, y en este caso ese resultado es la decisión misma.",
+      "cita": {
+        "regla": "salida como calco de output (Grove): produccion en una operacion, resultado en un mando, unidad o proceso; se conserva en el par entrada/salida (docs/saneamiento/resultados/M11/glosario_pendiente.txt, 28 sep 2026)",
+        "fragmentos": [
+          "lleva asociada una salida, y en este caso esa salida es"
+        ]
+      },
+      "decision": "barrido de salida (output)",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/salida/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-salida-zanjar_seis_preguntas_decision_adelantado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Di con claridad desde el principio que esperas exactamente eso, una salida de alta calidad y en plazo, porque es entonces cuando el proceso tiene más probabilidades de darla, igual que los demás procesos de mando.",
+      "texto_nuevo": "Di con claridad desde el principio que esperas exactamente eso, un resultado de alta calidad y en plazo, porque es entonces cuando el proceso tiene más probabilidades de darlo, igual que los demás procesos de mando.",
+      "cita": {
+        "regla": "salida como calco de output (Grove): produccion en una operacion, resultado en un mando, unidad o proceso; se conserva en el par entrada/salida (docs/saneamiento/resultados/M11/glosario_pendiente.txt, 28 sep 2026)",
+        "fragmentos": [
+          "una salida de alta calidad"
+        ]
+      },
+      "decision": "barrido de salida (output); concordancia corregida por el verificador",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/salida/",
+      "motivos": [
+        "ingles"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Zanja las Seis Preguntas Antes",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

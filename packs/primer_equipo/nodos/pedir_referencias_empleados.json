@@ -1,0 +1,268 @@
+{
+  "node_id": "pedir_referencias_empleados",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Pedir a tus propios empleados que te recomienden candidatos",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Nadie conoce mejor lo que necesita tu empresa y cómo es su cultura que la gente que ya trabaja en ella, por eso las recomendaciones internas suelen apuntar mejor que las de fuera. Aun así, pocos directivos se toman el tiempo de pedirlas, y el procedimiento lo resuelve volviéndolas un resultado exigible: la captación de candidatos entra en la tarjeta de puntuación de cada persona y lleva un incentivo detrás. Quizá el mayor beneficio sea el cambio de mirada: cuando todos buscan talento, la empresa entera empieza a fijarse en quién hace el trabajo y no solo en qué se hace.",
+  "notas_extraccion": "Es el punto 2 del recuadro How to Source. Por valiosas que sean las referencias de fuera, las de dentro suelen dar un abastecimiento mejor dirigido, y sin embargo a los autores les asombra constantemente lo pocos directivos que se toman el tiempo de pedir ayuda a sus empleados. El beneficio mayor del abastecimiento interno, segun el libro, no es el numero de nombres sino que cambia la mentalidad de toda la empresa: al convertir a los empleados en detectores de talento, todo el mundo empieza a mirar el negocio por la lente del quien y no solo por la del que. Los casos que el libro pone con su nombre y con sus cifras, que son de ellos y no de la casa: Selim Bassoul, presidente y consejero delegado de Middleby Corporation, dice que sus empleados se convirtieron en su tecnica de reclutamiento numero uno y que refirieron el 85 por ciento de sus nuevas contrataciones mientras el doblaba el negocio en cinco años; Paul Tudor Jones, de Tudor Investment Corporation, razona que hace falta un jugador A para conocer a otro y dice que su tasa de exito es un 60 por ciento mas alta con la gente referida por alguien de la firma; y en el propio ghSMART las referencias internas son parte no solo de la politica de plantilla sino tambien de las promociones, ya que un principal tiene que abastecer tres candidatos capaces de pasar la criba telefonica del consejero delegado para poder optar a socio, y el 80 por ciento de sus nuevas incorporaciones en dos años vino de referencias del equipo.",
+  "pasos_accionables": [
+    "Añade la captación de candidatos como un resultado en la tarjeta de puntuación de cada persona de tu equipo. Por ejemplo: conseguir cierto número de jugadores A al año que pasen tu criba telefónica.",
+    "Anima a tus empleados a preguntar a la gente de sus redes quiénes son las personas más talentosas que conocen y que tu empresa debería contratar.",
+    "Ofrece una prima por candidato recomendado, o premia el esfuerzo con un incentivo económico o de otro tipo, como días extra de vacaciones para quienes alcancen y superen el objetivo.",
+    "Haz a los empleados responsables de captar candidatos a través de sus redes."
+  ],
+  "entregable_esperado": "La captación de candidatos convertida en un resultado exigible dentro de la tarjeta de puntuación de cada persona del equipo, con su incentivo detrás y con los empleados convertidos en detectores de talento.",
+  "nodos_previos": [
+    "abastecer_flujo_candidatos"
+  ],
+  "nodos_siguientes": [
+    "crear_sistema_captura_seguimiento_candidatos"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres una captación de candidatos más certera que la de fuera, porque nadie conoce tus necesidades y tu cultura mejor que la gente que ya trabaja contigo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-pedir_referencias_empleados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Nadie conoce mejor lo que necesita tu empresa y cómo es su cultura que la gente que ya trabaja en ella, por eso las referencias internas suelen apuntar mejor que las de fuera. Aun así, pocos directivos se toman el tiempo de pedirlas, y el procedimiento lo resuelve volviéndolas un resultado exigible: la captación de candidatos entra en la tarjeta de puntuación de cada persona y lleva un incentivo detrás. Quizá el mayor beneficio sea el cambio de mirada: cuando todos buscan talento, la empresa entera empieza a fijarse en quién hace el trabajo y no solo en qué se hace.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "337-351"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): L351 'Maybe the greatest benefit' se había vuelto 'El mayor beneficio' y el contraste con 'la cantidad de nombres' no está en las líneas. La propuesta devuelve el 'quizá' y quita lo añadido sin tocar lo demás, que es fiel (L339 'often provide better-targeted sourcing' como 'suelen apuntar mejor').",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)"
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_empleados-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Añade el abastecimiento como un resultado en la tarjeta de puntuacion de todas las personas de tu equipo. El ejemplo del libro: abastecer cinco jugadores A al año que pasen nuestra criba telefonica.",
+      "texto_nuevo": "Añade la captación de candidatos como un resultado en la tarjeta de puntuación de cada persona de tu equipo. Por ejemplo: conseguir cinco jugadores A al año que pasen nuestra criba telefónica.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El ejemplo del libro",
+          "abastecimiento",
+          "abastecer"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_empleados-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Anima a tus empleados a preguntar a la gente de sus redes quienes son las personas mas talentosas que conocen y que deberiais contratar.",
+      "texto_nuevo": "Anima a tus empleados a preguntar a la gente de sus redes quiénes son las personas más talentosas que conocen y que tu empresa debería contratar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "deberiais"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_empleados-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ofrece una prima por referencia, o premia el esfuerzo con un incentivo economico o de otro tipo, como dias extra de vacaciones para quienes alcancen y superen el objetivo.",
+      "texto_nuevo": "Ofrece una prima por referencia, o premia el esfuerzo con un incentivo económico o de otro tipo, como días extra de vacaciones para quienes alcancen y superen el objetivo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_empleados-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz a los empleados responsables de abastecer gente a traves de sus redes.",
+      "texto_nuevo": "Haz a los empleados responsables de captar candidatos a través de sus redes.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "abastecer gente"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_empleados-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El abastecimiento convertido en un resultado exigible dentro de la tarjeta de puntuacion de cada persona del equipo, con su incentivo detras y con los empleados convertidos en detectores de talento.",
+      "texto_nuevo": "La captación de candidatos convertida en un resultado exigible dentro de la tarjeta de puntuación de cada persona del equipo, con su incentivo detrás y con los empleados convertidos en detectores de talento.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El abastecimiento"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-pedir_referencias_empleados-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando quieres abastecimiento mejor dirigido que el de fuera. El libro lo razona por la pregunta: quien conoce tus necesidades y tu cultura mejor que la gente que ya trabaja contigo.",
+      "texto_nuevo": "Cuando quieres una captación de candidatos más certera que la de fuera, porque nadie conoce tus necesidades y tu cultura mejor que la gente que ya trabaja contigo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro lo razona por la pregunta:",
+          "abastecimiento mejor dirigido"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-pedir_referencias_empleados-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Añade la captación de candidatos como un resultado en la tarjeta de puntuación de cada persona de tu equipo. Por ejemplo: conseguir cinco jugadores A al año que pasen nuestra criba telefónica.",
+      "texto_nuevo": "Añade la captación de candidatos como un resultado en la tarjeta de puntuación de cada persona de tu equipo. Por ejemplo: conseguir cierto número de jugadores A al año que pasen nuestra criba telefónica.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_03.md 349",
+        "frase": "Try including something along the lines of “Source [number] A Player candidates per year,”"
+      },
+      "decision": "auditoria completa M11 (invencion): La cifra cinco no está en el libro: la fórmula deja el número abierto.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase2-pedir_referencias_empleados-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Añade la captación de candidatos como un resultado en la tarjeta de puntuación de cada persona de tu equipo. Por ejemplo: conseguir cierto número de jugadores A al año que pasen nuestra criba telefónica.",
+      "texto_nuevo": "Añade la captación de candidatos como un resultado en la tarjeta de puntuación de cada persona de tu equipo. Por ejemplo: conseguir cierto número de jugadores A al año que pasen tu criba telefónica.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "El posesivo salta a \"nuestra\" (la empresa de quien escribe) en un paso en tú."
+      },
+      "decision": "auditoria completa M11 (coherencia): El posesivo salta a \"nuestra\" (la empresa de quien escribe) en un paso en tú.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-pedir_referencias_empleados-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pedir referencias a tus propios empleados",
+      "texto_nuevo": "Pedir a tus propios empleados que te recomienden candidatos",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Pedir referencias"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'referrals': 'pedir referencias' en español es pedir informes sobre alguien (la comprobación de referencias, otro método del pack); aquí se piden candidatos recomendados (smart_who cap_03 337-351).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-pedir_referencias_empleados-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Nadie conoce mejor lo que necesita tu empresa y cómo es su cultura que la gente que ya trabaja en ella, por eso las referencias internas suelen apuntar mejor que las de fuera. Aun así, pocos directivos se toman el tiempo de pedirlas, y el procedimiento lo resuelve volviéndolas un resultado exigible: la captación de candidatos entra en la tarjeta de puntuación de cada persona y lleva un incentivo detrás. Quizá el mayor beneficio sea el cambio de mirada: cuando todos buscan talento, la empresa entera empieza a fijarse en quién hace el trabajo y no solo en qué se hace.",
+      "texto_nuevo": "Nadie conoce mejor lo que necesita tu empresa y cómo es su cultura que la gente que ya trabaja en ella, por eso las recomendaciones internas suelen apuntar mejor que las de fuera. Aun así, pocos directivos se toman el tiempo de pedirlas, y el procedimiento lo resuelve volviéndolas un resultado exigible: la captación de candidatos entra en la tarjeta de puntuación de cada persona y lleva un incentivo detrás. Quizá el mayor beneficio sea el cambio de mirada: cuando todos buscan talento, la empresa entera empieza a fijarse en quién hace el trabajo y no solo en qué se hace.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "las referencias internas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'referrals', igual que en el título y el paso del nodo. La propuesta del auditor rompía la concordancia ('los candidatos recomendados... que las de fuera... pedirlas'); 'las recomendaciones internas' la conserva.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-pedir_referencias_empleados-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ofrece una prima por referencia, o premia el esfuerzo con un incentivo económico o de otro tipo, como días extra de vacaciones para quienes alcancen y superen el objetivo.",
+      "texto_nuevo": "Ofrece una prima por candidato recomendado, o premia el esfuerzo con un incentivo económico o de otro tipo, como días extra de vacaciones para quienes alcancen y superen el objetivo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "prima por referencia"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'referral bonus' (smart_who cap_04 11): 'referencia' en español es un informe sobre alguien, no un candidato recomendado.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Pide Referencias a tu Equipo"
+}

@@ -1,0 +1,275 @@
+{
+  "node_id": "dirigir_reunion_informativa",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Dirigir una reunión cuyo resultado excelente es que el grupo aprenda algo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Hoy el correo y el chat hacen menos necesario, y a menudo menos eficiente, juntar a la gente solo para pasar información, así que una reunión informativa vale por lo que el cara a cara añade: interactividad, para que el grupo pregunte o reaccione ante una noticia polémica, y presencia, porque el contacto visual, el lenguaje corporal y la pasión visible dan vida al mensaje. Esa ventaja pide mucha preparación. Una buena reunión informativa se mide por si el grupo aprendió algo valioso, captó los mensajes clave, mantuvo la atención y sintió la emoción buscada.",
+  "notas_extraccion": "Es la segunda razon del libro para juntarse en persona, y la unica de las cinco cuyo primer paso es dudar de si la reunion debe existir. El inventario propio que la hace procedimentable es doble: dos ventajas nombradas del cara a cara sobre los canales escritos, y cuatro logros de la reunion buena. El tercer logro trae ademas sus medios nombrados, ponentes dinamicos, narracion rica, ritmo habil e interactividad, y por eso se transcribe entero y no se resume en una palabra. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se convoca, quien prepara el contenido ni como se comprueba despues que el grupo aprendio algo.",
+  "pasos_accionables": [
+    "Empieza dudando de que haga falta la reunión. Hace unas décadas las reuniones eran la vía principal por la que los grupos compartían y recibían información, y hoy, con el correo y el chat al alcance de la mano, es menos necesario y a menudo menos eficiente juntarse en persona solo para transferir conocimiento.",
+    "Quédate con la reunión si buscas su primera ventaja: que permite más interactividad. Si quieres que todo el mundo conozca un cambio de política potencialmente polémico, dar esa noticia en persona deja al grupo preguntar o expresar sus reacciones.",
+    "Quédate con ella si buscas la segunda: una reunión informativa bien preparada suele ser mucho más interesante que un puñado de palabras en una página, porque el contacto visual, el lenguaje corporal y la pasión visible ayudan a que un mensaje cobre vida.",
+    "Pon detrás mucha más preparación. Esa es la diferencia entre una reunión periódica de una organización de diseño, que funciona, y una reunión de seguimiento que se dejó de hacer, que no funcionaba: la primera tiene detrás mucha más preparación para asegurar que el contenido resulte interesante.",
+    "Consigue el primer logro: que el grupo sienta que aprendió algo valioso.",
+    "Consigue el segundo: transmitir los mensajes clave de forma clara y memorable.",
+    "Consigue el tercero: mantener la atención del público, con ponentes dinámicos, narración rica, ritmo hábil e interactividad.",
+    "Consigue el cuarto: evocar una emoción buscada, sea inspiración, confianza, orgullo, coraje o empatía."
+  ],
+  "entregable_esperado": "O bien la decisión de no reunir a nadie y mandarlo por escrito, o bien una reunión preparada de la que el grupo sale sintiendo que aprendió algo valioso.",
+  "nodos_previos": [
+    "fijar_resultado_excelente_reunion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando el resultado excelente que persigues es que un grupo reciba información, y antes de dar por hecho que esa información merece una reunión."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Hoy el correo y el chat hacen menos necesario, y a menudo menos eficiente, juntar a la gente solo para pasar información, así que una reunión informativa vale por lo que el cara a cara añade: interactividad, para que el grupo pregunte o reaccione ante una noticia polémica, y presencia, porque el contacto visual, el lenguaje corporal y la pasión visible dan vida al mensaje. Esa ventaja pide mucha preparación. Por eso una buena reunión informativa se mide por si el grupo aprendió algo valioso, captó los mensajes clave, mantuvo la atención y sintió la emoción buscada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "97-115"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)"
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dirigir una reunion cuyo resultado excelente es que el grupo aprenda algo",
+      "texto_nuevo": "Dirigir una reunión cuyo resultado excelente es que el grupo aprenda algo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Empieza dudando de que haga falta la reunion. Hace unas decadas las reuniones eran la via principal por la que los grupos compartian y recibian informacion, y hoy, con el correo y el chat al alcance de la mano, es menos necesario y a menudo menos eficiente juntarse en persona solo para transferir conocimiento.",
+      "texto_nuevo": "Empieza dudando de que haga falta la reunión. Hace unas décadas las reuniones eran la vía principal por la que los grupos compartían y recibían información, y hoy, con el correo y el chat al alcance de la mano, es menos necesario y a menudo menos eficiente juntarse en persona solo para transferir conocimiento.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Quedate con la reunion si buscas la primera ventaja que el libro nombra: que permite mas interactividad. Si quieres que todo el mundo conozca un cambio de politica potencialmente polemico, dar esa noticia en persona deja al grupo preguntar o expresar sus reacciones.",
+      "texto_nuevo": "Quédate con la reunión si buscas su primera ventaja: que permite más interactividad. Si quieres que todo el mundo conozca un cambio de política potencialmente polémico, dar esa noticia en persona deja al grupo preguntar o expresar sus reacciones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Quedate con ella si buscas la segunda: una reunion informativa bien preparada suele ser mucho mas interesante que un punado de palabras en una pagina, porque el contacto visual, el lenguaje corporal y la pasion visible ayudan a que un mensaje cobre vida.",
+      "texto_nuevo": "Quédate con ella si buscas la segunda: una reunión informativa bien preparada suele ser mucho más interesante que un puñado de palabras en una página, porque el contacto visual, el lenguaje corporal y la pasión visible ayudan a que un mensaje cobre vida.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pon detras mucha mas preparacion. El libro dice que esa es la diferencia entre la reunion periodica de su organizacion de diseno, que funciona, y su reunion de estado descontinuada, que no: esta tiene detras mucha mas preparacion para asegurar que el contenido resulte interesante.",
+      "texto_nuevo": "Pon detrás mucha más preparación. Esa es la diferencia entre una reunión periódica de una organización de diseño, que funciona, y una reunión de estado que se dejó de hacer, que no funcionaba: la primera tiene detrás mucha más preparación para asegurar que el contenido resulte interesante.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que",
+          "su organizacion de diseno",
+          "su reunion de estado descontinuada"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue el primer logro: que el grupo sienta que aprendio algo valioso.",
+      "texto_nuevo": "Consigue el primer logro: que el grupo sienta que aprendió algo valioso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Consigue el tercero: mantener la atencion del publico, y el libro dice con que se mantiene, con ponentes dinamicos, narracion rica, ritmo habil e interactividad.",
+      "texto_nuevo": "Consigue el tercero: mantener la atención del público, con ponentes dinámicos, narración rica, ritmo hábil e interactividad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el libro dice con que se mantiene"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consigue el cuarto: evocar una emocion buscada, sea inspiracion, confianza, orgullo, coraje o empatia.",
+      "texto_nuevo": "Consigue el cuarto: evocar una emoción buscada, sea inspiración, confianza, orgullo, coraje o empatía.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "O bien la decision de no reunir a nadie y mandarlo por escrito, o bien una reunion preparada de la que el grupo sale sintiendo que aprendio algo valioso.",
+      "texto_nuevo": "O bien la decisión de no reunir a nadie y mandarlo por escrito, o bien una reunión preparada de la que el grupo sale sintiendo que aprendió algo valioso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-dirigir_reunion_informativa-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el resultado excelente que persigues es que un grupo reciba informacion, y antes de dar por hecho que esa informacion merece una reunion.",
+      "texto_nuevo": "Cuando el resultado excelente que persigues es que un grupo reciba información, y antes de dar por hecho que esa información merece una reunión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 33, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 33)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dirigir_reunion_informativa-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hoy el correo y el chat hacen menos necesario, y a menudo menos eficiente, juntar a la gente solo para pasar información, así que una reunión informativa vale por lo que el cara a cara añade: interactividad, para que el grupo pregunte o reaccione ante una noticia polémica, y presencia, porque el contacto visual, el lenguaje corporal y la pasión visible dan vida al mensaje. Esa ventaja pide mucha preparación. Por eso una buena reunión informativa se mide por si el grupo aprendió algo valioso, captó los mensajes clave, mantuvo la atención y sintió la emoción buscada.",
+      "texto_nuevo": "Hoy el correo y el chat hacen menos necesario, y a menudo menos eficiente, juntar a la gente solo para pasar información, así que una reunión informativa vale por lo que el cara a cara añade: interactividad, para que el grupo pregunte o reaccione ante una noticia polémica, y presencia, porque el contacto visual, el lenguaje corporal y la pasión visible dan vida al mensaje. Esa ventaja pide mucha preparación. Una buena reunión informativa se mide por si el grupo aprendió algo valioso, captó los mensajes clave, mantuvo la atención y sintió la emoción buscada.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 107-115",
+        "frase": "A great informational meeting accomplishes the following: Enables the group to feel like they learned something valuable"
+      },
+      "decision": "auditoria completa M11 (invencion): 'Por eso' inventa una causa: el libro enumera lo que logra una gran reunión informativa sin derivarlo de la preparación.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-auditoria-dirigir_reunion_informativa-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pon detrás mucha más preparación. Esa es la diferencia entre una reunión periódica de una organización de diseño, que funciona, y una reunión de estado que se dejó de hacer, que no funcionaba: la primera tiene detrás mucha más preparación para asegurar que el contenido resulte interesante.",
+      "texto_nuevo": "Pon detrás mucha más preparación. Esa es la diferencia entre una reunión periódica de una organización de diseño, que funciona, y una reunión de seguimiento que se dejó de hacer, que no funcionaba: la primera tiene detrás mucha más preparación para asegurar que el contenido resulte interesante.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "reunión de estado"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'status meeting'; en español es reunión de seguimiento.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Dirige una Reunión Informativa"
+}

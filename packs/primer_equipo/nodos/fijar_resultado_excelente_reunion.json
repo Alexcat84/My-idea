@@ -1,0 +1,500 @@
+{
+  "node_id": "fijar_resultado_excelente_reunion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Fijar cómo sería un resultado excelente antes de convocar la reunión",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Tener un propósito no basta para que una reunión salga bien: una reunión informativa puede tenerlo y aun así fracasar si nadie se preguntó antes cómo sería un gran resultado. Solo hay un puñado de razones para juntarse en persona, así que tener clarísimo el resultado que persigues es el primer paso. Cuando cada reunión persigue una sola de esas razones, no se le pide que haga demasiado y puedes recordarle al grupo su propósito en cuanto la conversación se desvía. Esa claridad y esa eficiencia respetan el tiempo de la gente, y por eso te lo agradecen.",
+  "notas_extraccion": "Es la cabeza del capitulo de reuniones y la pieza que hace procedimentables a las otras cinco: el libro sostiene que el consejo corriente de tener un proposito no basta, y que lo que ordena una reunion es el resultado concreto que se persigue. El inventario propio del libro es el punado de razones para juntarse en persona, nombradas una a una en los cinco epigrafes que siguen, y por eso escribir el paso 4 es transcribir y no inventar. El libro NO dice cuantas son con un numero, asi que la arista a cada una de las cinco se declara por lectura y no como serie contada. Lo que tampoco dice, y por eso no esta escrito aqui, es quien fija el resultado cuando la reunion la convoca otro, ni donde se apunta ese resultado, ni que hacer si la reunion necesita de verdad dos propositos.",
+  "pasos_accionables": [
+    "No te quedes en el consejo corriente de que toda reunión debe tener un propósito. Es buen consejo, pero no llega lo bastante lejos: una reunión de seguimiento puede tener propósito, mantener a todo el mundo informado del avance semanal del equipo, y aun así salir mala.",
+    "Pregúntate a ti mismo, antes de nada, cómo sería un gran resultado.",
+    "Ten clarísimo el resultado que persigues: ese es el primer paso para dirigir grandes reuniones.",
+    "Elige cuál es tu razón, porque solo hay un puñado de razones para que la gente se junte en persona: tomar una decisión, compartir información, dar opinión sobre un trabajo en curso, generar ideas y reforzar relaciones.",
+    "Deja claro en cada reunión cuál de esas está intentando conseguir.",
+    "No intentes que una sola reunión haga demasiado.",
+    "Recuerda al grupo su propósito principal cuando la conversación empiece a desviarse.",
+    "Si lo que buscas es una decisión sobre precios y la gente empieza a proponer funciones nuevas, di que buscarás tiempo aparte para ese otro tema, y después devuelve la conversación a la agenda prevista.",
+    "No cuentes con que la estructura de una reunión de decisión sirva de foro para generar ideas: en la experiencia de una directiva, es improbable.",
+    "Practica claridad y eficiencia despiadada con tus reuniones, y la gente te lo agradecerá por respetar lo sagrado de su tiempo."
+  ],
+  "entregable_esperado": "Una reunión con su resultado excelente nombrado, con una sola de esas razones como propósito principal, y una conversación que vuelve a la agenda prevista cuando se desvía.",
+  "nodos_previos": [
+    "fijar_proceso_trabajo_equipo"
+  ],
+  "nodos_siguientes": [
+    "dirigir_reunion_decision",
+    "dirigir_reunion_informativa",
+    "dirigir_reunion_revision_trabajo",
+    "dirigir_reunion_generar_ideas",
+    "dirigir_reunion_reforzar_relaciones",
+    "invitar_personas_necesarias_reunion"
+  ],
+  "condiciones_activacion": [
+    "Antes de convocar cualquier reunión, y otra vez dentro de ella en cuanto la conversación empieza a desviarse del tema."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Tener un propósito no basta para que una reunión salga bien: una reunión informativa puede tenerlo y aun así fracasar si nadie se preguntó antes a qué se parece un gran resultado. Solo hay un puñado de razones para juntarse en persona, así que tener cristalinamente claro el resultado que persigues es el primer paso. Cuando cada reunión persigue una sola de esas razones, no se le pide que haga demasiado y es fácil devolver la conversación a la agenda en cuanto se desvía. Esa claridad y esa eficiencia respetan el tiempo de la gente, y por eso te lo agradecen.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "47-167"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)"
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fijar a que se parece un resultado excelente antes de convocar la reunion",
+      "texto_nuevo": "Fijar a qué se parece un resultado excelente antes de convocar la reunión",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No te quedes en el consejo corriente de que toda reunion debe tener un proposito. Es buen consejo, pero no llega lo bastante lejos: la autora cuenta que su reunion de estado si tenia proposito, mantener a todo el mundo informado del avance semanal del equipo, y aun asi salio mala.",
+      "texto_nuevo": "No te quedes en el consejo corriente de que toda reunión debe tener un propósito. Es buen consejo, pero no llega lo bastante lejos: una reunión de estado puede tener propósito, mantener a todo el mundo informado del avance semanal del equipo, y aun así salir mala.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la autora cuenta que su reunion de estado si tenia proposito"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Preguntate a ti mismo, antes de nada, a que se parece un gran resultado. Esa es la pregunta que ella no se hizo.",
+      "texto_nuevo": "Pregúntate a ti mismo, antes de nada, a qué se parece un gran resultado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Esa es la pregunta que ella no se hizo."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten cristalinamente claro el resultado que persigues: el libro dice que ese es el primer paso para dirigir grandes reuniones.",
+      "texto_nuevo": "Ten cristalinamente claro el resultado que persigues: ese es el primer paso para dirigir grandes reuniones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elige cual es tu razon, porque solo hay un punado de razones para que la gente se junte en persona, y el libro las nombra una a una: tomar una decision, compartir informacion, dar opinion sobre un trabajo en curso, generar ideas, y reforzar relaciones.",
+      "texto_nuevo": "Elige cuál es tu razón, porque solo hay un puñado de razones para que la gente se junte en persona: tomar una decisión, compartir información, dar opinión sobre un trabajo en curso, generar ideas y reforzar relaciones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el libro las nombra una a una"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Deja claro en cada reunion cual de esas esta intentando conseguir.",
+      "texto_nuevo": "Deja claro en cada reunión cuál de esas está intentando conseguir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No intentes que una sola reunion haga demasiado.",
+      "texto_nuevo": "No intentes que una sola reunión haga demasiado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recuerda al grupo su proposito primario cuando la conversacion empiece a desviarse.",
+      "texto_nuevo": "Recuerda al grupo su propósito primario cuando la conversación empiece a desviarse.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si lo que buscas es una decision sobre precios y la gente empieza a proponer funciones nuevas, di que buscaras tiempo aparte para ese otro tema, y despues devuelve la conversacion a la agenda prevista.",
+      "texto_nuevo": "Si lo que buscas es una decisión sobre precios y la gente empieza a proponer funciones nuevas, di que buscarás tiempo aparte para ese otro tema, y después devuelve la conversación a la agenda prevista.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No cuentes con que la estructura de una reunion de decision sirva de foro para generar ideas: en la experiencia de la autora es improbable.",
+      "texto_nuevo": "No cuentes con que la estructura de una reunión de decisión sirva de foro para generar ideas: es improbable.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "en la experiencia de la autora"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Practica claridad y eficiencia despiadada con tus reuniones, y la gente te lo agradecera por respetar lo sagrado de su tiempo.",
+      "texto_nuevo": "Practica claridad y eficiencia despiadada con tus reuniones, y la gente te lo agradecerá por respetar lo sagrado de su tiempo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una reunion con su resultado excelente nombrado, con una sola de las razones del libro como proposito primario, y una conversacion que vuelve a la agenda prevista cuando se desvia.",
+      "texto_nuevo": "Una reunión con su resultado excelente nombrado, con una sola de esas razones como propósito primario, y una conversación que vuelve a la agenda prevista cuando se desvía.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "de las razones del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_resultado_excelente_reunion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de convocar cualquier reunion, y otra vez dentro de ella en cuanto la conversacion empieza a desviarse del tema.",
+      "texto_nuevo": "Antes de convocar cualquier reunión, y otra vez dentro de ella en cuanto la conversación empieza a desviarse del tema.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-fijar_resultado_excelente_reunion-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No cuentes con que la estructura de una reunión de decisión sirva de foro para generar ideas: es improbable.",
+      "texto_nuevo": "No cuentes con que la estructura de una reunión de decisión sirva de foro para generar ideas: en la experiencia de una directiva, es improbable.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 165",
+        "frase": "In my experience, it's unlikely that the structure of a decision meeting makes it a good forum for generating ideas."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro lo da como experiencia de la autora ('In my experience'); se cuenta como caso.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-fijar_resultado_excelente_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tener un propósito no basta para que una reunión salga bien: una reunión informativa puede tenerlo y aun así fracasar si nadie se preguntó antes a qué se parece un gran resultado. Solo hay un puñado de razones para juntarse en persona, así que tener cristalinamente claro el resultado que persigues es el primer paso. Cuando cada reunión persigue una sola de esas razones, no se le pide que haga demasiado y es fácil devolver la conversación a la agenda en cuanto se desvía. Esa claridad y esa eficiencia respetan el tiempo de la gente, y por eso te lo agradecen.",
+      "texto_nuevo": "Tener un propósito no basta para que una reunión salga bien: una reunión informativa puede tenerlo y aun así fracasar si nadie se preguntó antes a qué se parece un gran resultado. Solo hay un puñado de razones para juntarse en persona, así que tener cristalinamente claro el resultado que persigues es el primer paso. Cuando cada reunión persigue una sola de esas razones, no se le pide que haga demasiado y puedes recordarle al grupo su propósito en cuanto la conversación se desvía. Esa claridad y esa eficiencia respetan el tiempo de la gente, y por eso te lo agradecen.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 165",
+        "frase": "Don't try to make a single meeting do too much, and remind the group of its primary purpose when the conversation starts to deviate."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro no dice que sea fácil devolver la conversación; dice que recuerdes al grupo su propósito primario cuando se desvía.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-auditoria-fijar_resultado_excelente_reunion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No te quedes en el consejo corriente de que toda reunión debe tener un propósito. Es buen consejo, pero no llega lo bastante lejos: una reunión de estado puede tener propósito, mantener a todo el mundo informado del avance semanal del equipo, y aun así salir mala.",
+      "texto_nuevo": "No te quedes en el consejo corriente de que toda reunión debe tener un propósito. Es buen consejo, pero no llega lo bastante lejos: una reunión de seguimiento puede tener propósito, mantener a todo el mundo informado del avance semanal del equipo, y aun así salir mala.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "reunión de estado"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Reunión de estado' calca 'status meeting' (zhuo_manager/cap_07.md:47); en español es reunión de seguimiento. Se toma la propuesta del auditor.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-barrido-fijar_resultado_excelente_reunion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Fijar a qué se parece un resultado excelente antes de convocar la reunión",
+      "texto_nuevo": "Fijar cómo sería un resultado excelente antes de convocar la reunión",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "a qué se parece un resultado excelente"
+        ]
+      },
+      "decision": "barrido final de calcos (a_que_se_parece)",
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-fijar_resultado_excelente_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tener un propósito no basta para que una reunión salga bien: una reunión informativa puede tenerlo y aun así fracasar si nadie se preguntó antes a qué se parece un gran resultado. Solo hay un puñado de razones para juntarse en persona, así que tener cristalinamente claro el resultado que persigues es el primer paso. Cuando cada reunión persigue una sola de esas razones, no se le pide que haga demasiado y puedes recordarle al grupo su propósito en cuanto la conversación se desvía. Esa claridad y esa eficiencia respetan el tiempo de la gente, y por eso te lo agradecen.",
+      "texto_nuevo": "Tener un propósito no basta para que una reunión salga bien: una reunión informativa puede tenerlo y aun así fracasar si nadie se preguntó antes cómo sería un gran resultado. Solo hay un puñado de razones para juntarse en persona, así que tener cristalinamente claro el resultado que persigues es el primer paso. Cuando cada reunión persigue una sola de esas razones, no se le pide que haga demasiado y puedes recordarle al grupo su propósito en cuanto la conversación se desvía. Esa claridad y esa eficiencia respetan el tiempo de la gente, y por eso te lo agradecen.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "a qué se parece un gran resultado"
+        ]
+      },
+      "decision": "barrido final de calcos (a_que_se_parece)",
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-barrido-fijar_resultado_excelente_reunion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pregúntate a ti mismo, antes de nada, a qué se parece un gran resultado.",
+      "texto_nuevo": "Pregúntate a ti mismo, antes de nada, cómo sería un gran resultado.",
+      "cita": {
+        "regla": "barrido final de calcos de la limpieza M11 (barrido/INSTRUCCIONES.md; espanol llano, decisiones del fundador del 28 sep 2026)",
+        "fragmentos": [
+          "a qué se parece un gran resultado"
+        ]
+      },
+      "decision": "barrido final de calcos (a_que_se_parece)",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/barrido/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-pase2-fijar_resultado_excelente_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tener un propósito no basta para que una reunión salga bien: una reunión informativa puede tenerlo y aun así fracasar si nadie se preguntó antes cómo sería un gran resultado. Solo hay un puñado de razones para juntarse en persona, así que tener cristalinamente claro el resultado que persigues es el primer paso. Cuando cada reunión persigue una sola de esas razones, no se le pide que haga demasiado y puedes recordarle al grupo su propósito en cuanto la conversación se desvía. Esa claridad y esa eficiencia respetan el tiempo de la gente, y por eso te lo agradecen.",
+      "texto_nuevo": "Tener un propósito no basta para que una reunión salga bien: una reunión informativa puede tenerlo y aun así fracasar si nadie se preguntó antes cómo sería un gran resultado. Solo hay un puñado de razones para juntarse en persona, así que tener clarísimo el resultado que persigues es el primer paso. Cuando cada reunión persigue una sola de esas razones, no se le pide que haga demasiado y puedes recordarle al grupo su propósito en cuanto la conversación se desvía. Esa claridad y esa eficiencia respetan el tiempo de la gente, y por eso te lo agradecen.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "tener cristalinamente claro"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Cristalinamente claro\" calca \"crystal clear\" (zhuo cap_07 l.51).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-fijar_resultado_excelente_reunion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten cristalinamente claro el resultado que persigues: ese es el primer paso para dirigir grandes reuniones.",
+      "texto_nuevo": "Ten clarísimo el resultado que persigues: ese es el primer paso para dirigir grandes reuniones.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Ten cristalinamente claro"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Cristalinamente claro\" calca \"crystal clear\" (zhuo cap_07 l.51).",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-fijar_resultado_excelente_reunion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recuerda al grupo su propósito primario cuando la conversación empiece a desviarse.",
+      "texto_nuevo": "Recuerda al grupo su propósito principal cuando la conversación empiece a desviarse.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "su propósito primario"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Propósito primario\" calca \"primary purpose\" (zhuo cap_07 l.165).",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-fijar_resultado_excelente_reunion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una reunión con su resultado excelente nombrado, con una sola de esas razones como propósito primario, y una conversación que vuelve a la agenda prevista cuando se desvía.",
+      "texto_nuevo": "Una reunión con su resultado excelente nombrado, con una sola de esas razones como propósito principal, y una conversación que vuelve a la agenda prevista cuando se desvía.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "como propósito primario"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Propósito primario\" calca \"primary purpose\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Define un Resultado Excelente Antes"
+}

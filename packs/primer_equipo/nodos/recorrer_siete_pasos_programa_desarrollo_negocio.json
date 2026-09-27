@@ -1,0 +1,355 @@
+{
+  "node_id": "recorrer_siete_pasos_programa_desarrollo_negocio",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Recorrer los siete pasos del Programa de Desarrollo del Negocio, empezando por tu Objetivo Principal",
+  "fuente": "The E-Myth Revisited: Why Most Small Businesses Don't Work and What to Do About It - Michael E. Gerber",
+  "resumen_teorico": "Tu Programa de Desarrollo del Negocio es el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de réplicas iguales, y es el vehículo con el que puedes construir tu Prototipo de Franquicia. Lo recorres en siete pasos distintos y en este orden: tu Objetivo Principal, tu Objetivo Estratégico y tus estrategias de Organización, Gestión, Personas, Mercadotecnia y Sistemas. La meta es un negocio que alguien querría comprar solo si funciona, y solo si funciona sin mucho trabajo y sin ti.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/gerber_emyth/cap_13.md, unidad Cap. 11, titulo textual Your Business Development Program. Sale de la PIEZA R3 de la frontera publicada en esta misma vuelta (.gerber_v4/frontera_cap13.txt), L39 a L58, 82 palabras. ESTO ES UNA SERIE NUMERADA Y SE TRATA COMO TAL (manual seccion 3.4, EXTRACTOR.md 9): un nodo por paso mas UNA cabeza, y esta es la CABEZA. Es el mismo patron de fingir_prototipo_cinco_mil_replicas (cap_11, vuelta 1) y de recorrer_trece_elementos_proceso_evaluacion_formal (scott_radical_candor): EXTRACTOR.md 9.1, tabla SI ES UN NODO, tercera fila, un procedimiento que el libro nombra en una tabla y desarrolla en otro sitio. La tabla es literal aqui: siete lineas numeradas 1 a 7, cada una el titulo exacto de un capitulo futuro (cap_14 a cap_19, mas el cap. 17 reservado). ES D.37 Y NO D.29: el texto DICE CUANTAS PARTES TIENE (seven distinct steps) Y LAS NOMBRA UNA A UNA, las dos condiciones que D.37 pide. HOY NINGUNA DE LAS SIETE EXISTE COMO NODO: cap_14 a cap_19 estan SIN TOCAR (ACTA G3 seccion 2, unidades SIN TOCAR). Al entrar esta cabeza quedaria en 0 de 7 partes en el grafo, igual que recorrer_trece_elementos_proceso_evaluacion_formal entro con 0 de 13. Las aristas cabeza a parte se declaran cuando cada capitulo se mine y produzca su cabeza propia, citando esta misma linea (L43 a L57), no antes. PUNTERO PARA LA VUELTA QUE MINE cap_14 A cap_19: si alguna de las siete no llega a tener nodo cabeza propio (por ejemplo si el capitulo entero es postura sin inventario, como paso con cap_09 y cap_10), la serie se queda incompleta a proposito, que ya tiene precedente (fingir_prototipo entro con 4 de 6 partes, D.27 descarto dos por ser fines y no medios). NOTA QUE NO ES DISCUTIBLE PERO CONVIENE DEJAR ESCRITA: el paso 6 (Your Marketing Strategy) corresponde al cap. 17, que esta APARTADO en fuentes/gerber_emyth_cap17_reservado/ y no en las 22 unidades normales del libro; si esa reserva no se revierte, esta serie puede quedarse permanentemente en 6 de 7. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 10 pasos, 10 TRANSCRIPCION, 0 PUENTE, con su cita pegada en .gerber_v4/cita_cap13_L39.txt (D.35). LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: el libro no dice nada mas de cada paso en este capitulo (ni una linea de descripcion, a diferencia de las seis reglas del Prototipo que si traian una frase cada una); escribir una glosa por paso seria inventar exactamente lo que D.30 15.4 llama completar un inventario delgado, asi que cada paso se queda con su nombre desnudo, tal como el libro lo deja.",
+  "pasos_accionables": [
+    "Entiende tu Programa de Desarrollo del Negocio como el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de réplicas iguales.",
+    "Úsalo también como el vehículo con el que construyes tu Prototipo de Franquicia.",
+    "Recorre el programa en sus siete pasos distintos, en este orden.",
+    "Paso 1: tu Objetivo Principal.",
+    "Paso 2: tu Objetivo Estratégico.",
+    "Paso 3: tu Estrategia Organizativa.",
+    "Paso 4: tu Estrategia de Gestión.",
+    "Paso 5: tu Estrategia de Personas.",
+    "Paso 6: tu Estrategia de Mercadotecnia.",
+    "Paso 7: tu Estrategia de Sistemas."
+  ],
+  "entregable_esperado": "Tu Programa de Desarrollo del Negocio recorrido en sus siete pasos distintos, en este orden, como el vehículo con el que construyes tu Prototipo de Franquicia.",
+  "nodos_previos": [
+    "fingir_prototipo_cinco_mil_replicas"
+  ],
+  "nodos_siguientes": [
+    "construir_estrategia_gente_cuatro_componentes",
+    "responder_8_preguntas_construir_primary_aim",
+    "distinguir_tres_tipos_sistemas_negocio"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya finges que tu negocio es el prototipo de 5.000 réplicas y necesitas el programa paso a paso con el que conviertes ese negocio, el que tienes o el que vas a crear, en un modelo organizado."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Tu Programa de Desarrollo del Negocio es el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de réplicas iguales, y es el vehículo con el que puedes construir tu Prototipo de Franquicia. Lo recorres en siete pasos distintos y en este orden: tu Objetivo Principal, tu Objetivo Estratégico y tus estrategias de Organización, Dirección, Personas, Marketing y Sistemas. La meta es un negocio que alguien querría comprar solo si funciona, y solo si funciona sin mucho trabajo y sin ti.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/gerber_emyth/cap_13.md",
+          "lineas": "21-57"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 'funciona porque', 'en lugar de arreglar piezas sueltas' y 'seguirlo es lo que vuelve al programa el vehículo' no están en las líneas 39-41, que dicen que el programa es el proceso paso a paso y el vehículo con el que CAN crear el prototipo. La propuesta devuelve el 'puedes', lista los siete pasos y toma la meta de las líneas 23-25 (only if it works, without a lot of work and without you).",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)"
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recorrer los siete pasos del Business Development Program, empezando por tu Primary Aim",
+      "texto_nuevo": "Recorrer los siete pasos del Programa de Desarrollo del Negocio, empezando por tu Objetivo Principal",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Business Development Program",
+          "Primary Aim"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entiende tu Business Development Program como el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de replicas iguales.",
+      "texto_nuevo": "Entiende tu Programa de Desarrollo del Negocio como el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de réplicas iguales.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Business Development Program"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usalo tambien como el vehiculo con el que construyes tu Franchise Prototype.",
+      "texto_nuevo": "Úsalo también como el vehículo con el que construyes tu Prototipo de Franquicia.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Franchise Prototype"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paso 1: Your Primary Aim.",
+      "texto_nuevo": "Paso 1: tu Objetivo Principal.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Your Primary Aim"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paso 2: Your Strategic Objective.",
+      "texto_nuevo": "Paso 2: tu Objetivo Estratégico.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Your Strategic Objective"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paso 3: Your Organizational Strategy.",
+      "texto_nuevo": "Paso 3: tu Estrategia Organizativa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Your Organizational Strategy"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paso 4: Your Management Strategy.",
+      "texto_nuevo": "Paso 4: tu Estrategia de Gestión.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Your Management Strategy"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paso 5: Your People Strategy.",
+      "texto_nuevo": "Paso 5: tu Estrategia de Personas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Your People Strategy"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paso 6: Your Marketing Strategy.",
+      "texto_nuevo": "Paso 6: tu Estrategia de Mercadeo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Your Marketing Strategy"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paso 7: Your Systems Strategy.",
+      "texto_nuevo": "Paso 7: tu Estrategia de Sistemas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Your Systems Strategy"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tu Business Development Program recorrido en sus siete pasos distintos, en el orden que el libro los nombra, como el vehiculo con el que construyes tu Franchise Prototype.",
+      "texto_nuevo": "Tu Programa de Desarrollo del Negocio recorrido en sus siete pasos distintos, en este orden, como el vehículo con el que construyes tu Prototipo de Franquicia.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "en el orden que el libro los nombra",
+          "Business Development Program",
+          "Franchise Prototype"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-recorrer_siete_pasos_programa_desarrollo_negocio-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya finges que tu negocio es el prototipo de 5.000 replicas y necesitas el programa paso a paso con el que conviertes ese negocio, el que tienes o el que vas a crear, en un modelo organizado.",
+      "texto_nuevo": "Cuando ya finges que tu negocio es el prototipo de 5.000 réplicas y necesitas el programa paso a paso con el que conviertes ese negocio, el que tienes o el que vas a crear, en un modelo organizado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 02, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 02)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-recorrer_siete_pasos_programa_desarrollo_negocio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tu Programa de Desarrollo del Negocio es el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de réplicas iguales, y es el vehículo con el que puedes construir tu Prototipo de Franquicia. Lo recorres en siete pasos distintos y en este orden: tu Objetivo Principal, tu Objetivo Estratégico y tus estrategias de Organización, Dirección, Personas, Marketing y Sistemas. La meta es un negocio que alguien querría comprar solo si funciona, y solo si funciona sin mucho trabajo y sin ti.",
+      "texto_nuevo": "Tu Programa de Desarrollo del Negocio es el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de réplicas iguales, y es el vehículo con el que puedes construir tu Prototipo de Franquicia. Lo recorres en siete pasos distintos y en este orden: tu Objetivo Principal, tu Objetivo Estratégico y tus estrategias de Organización, Dirección, Personas, Mercadotecnia y Sistemas. La meta es un negocio que alguien querría comprar solo si funciona, y solo si funciona sin mucho trabajo y sin ti.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Marketing"
+        ]
+      },
+      "decision": "pase de glosario (marketing): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-glosario-recorrer_siete_pasos_programa_desarrollo_negocio-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Paso 6: tu Estrategia de Mercadeo.",
+      "texto_nuevo": "Paso 6: tu Estrategia de Mercadotecnia.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Mercadeo"
+        ]
+      },
+      "decision": "pase de glosario (orquestador): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-recorrer_siete_pasos_programa_desarrollo_negocio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Tu Programa de Desarrollo del Negocio es el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de réplicas iguales, y es el vehículo con el que puedes construir tu Prototipo de Franquicia. Lo recorres en siete pasos distintos y en este orden: tu Objetivo Principal, tu Objetivo Estratégico y tus estrategias de Organización, Dirección, Personas, Mercadotecnia y Sistemas. La meta es un negocio que alguien querría comprar solo si funciona, y solo si funciona sin mucho trabajo y sin ti.",
+      "texto_nuevo": "Tu Programa de Desarrollo del Negocio es el proceso paso a paso con el que conviertes tu negocio actual, o el que vas a crear, en un modelo perfectamente organizado para miles de réplicas iguales, y es el vehículo con el que puedes construir tu Prototipo de Franquicia. Lo recorres en siete pasos distintos y en este orden: tu Objetivo Principal, tu Objetivo Estratégico y tus estrategias de Organización, Gestión, Personas, Mercadotecnia y Sistemas. La meta es un negocio que alguien querría comprar solo si funciona, y solo si funciona sin mucho trabajo y sin ti.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "El paso 6 llama al cuarto paso \"Estrategia de Gestión\" (Management Strategy); el resumen lo llama \"Dirección\". Se unifica en Gestión."
+      },
+      "decision": "auditoria completa M11 (coherencia): El paso 6 llama al cuarto paso \"Estrategia de Gestión\" (Management Strategy); el resumen lo llama \"Dirección\". Se unifica en Gestión.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Sigue los Siete Pasos del Programa"
+}

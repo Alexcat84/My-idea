@@ -1,0 +1,178 @@
+{
+  "node_id": "cerrar_brecha_dos_preguntas_estrategia",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Cerrar la brecha entre demanda y rendimiento contestando por separado qué necesitas hacer y qué puedes hacer, y llamar estrategia al conjunto que decidas",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Planificar termina en actuar sobre la brecha entre lo que tu entorno te va a pedir y lo que tus actividades presentes van a rendir, emprendiendo tareas nuevas o cambiando las que ya tienes. Para eso te haces dos preguntas: qué necesitas hacer para cerrarla y qué puedes hacer para cerrarla, y consideras cada una por separado. Solo después decides qué vas a hacer de verdad, evaluando qué efecto tendrá cada acción sobre la brecha y cuándo lo tendrá. Ese conjunto de acciones que decides es tu estrategia.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_07.md, PIEZA P14 de la frontera publicada en la vuelta 53 (docs/loop/REPORTE.md L50894), tramo L39 a L39, 89 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro pone sus ETAPAS una a una y, sobre todo, pone SUS DOS PREGUNTAS LITERALES con la instruccion expresa de tratarlas por separado (Consider each question separately), que es un medio y no un adjetivo de adecuacion. DE DONDE SALE CADA PASO, uno a uno, todos de L39: paso 1 (The final step of planning consists of undertaking new tasks or modifying old ones to close the gap between your environmental demand and what your present activities will yield); paso 2 (The first question is, What do you need to do to close the gap?); paso 3 (The second is, What can you do to close the gap?); paso 4 (Consider each question separately); paso 5 (and then decide what you actually will do); paso 6 (evaluating what effect your actions will have on narrowing the gap, and when); paso 7 (The set of actions you decide upon is your strategy). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 7 pasos, 7 TRANSCRIPCION, 0 PUENTE. LOS SITIOS DE TENTACION EN LOS QUE NO ESCRIBI: NO escribo con que criterio se elige entre lo que necesitas hacer y lo que puedes hacer cuando no coinciden, porque el libro no lo pone y ese hueco es exactamente donde el extractor del lote 1 escribia sus puentes. NO escribo en que documento se recoge la estrategia. NO escribo el plazo en que se revisa. NO escribo quien decide. LA DISTINCION ENTRE ESTRATEGIA Y TACTICA NO ENTRA AQUI, y es frontera y no olvido: vive en la pieza P15 (L41), que la vuelta 53 adjudico DEFINICION con CASO y cero nodos; lo unico que traigo de estrategia es la frase de L39 que la define como el conjunto de acciones decidido, porque esa frase esta en ESTE tramo. NI UNA CIFRA A atribuciones: el tramo no trae ninguna. ARISTA QUE ANUNCIO Y NO CABLEO HOY: parte de la cabeza planificar_tres_pasos_demanda_estado_brecha (P5), caso de D.37, cableada el dia de la insercion porque esta vuelta NO INSERTA. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 1 enuncia el paso 3 entero y podria leerse como titulo del nodo y no como paso ejecutable, con lo que el nodo tendria seis pasos y no siete. Lo dejo porque es la frase que nombra el objeto sobre el que actuan los otros seis, y sin ella el paso 2 empieza a hablar de una brecha que nadie ha definido en el nodo.",
+  "pasos_accionables": [
+    "Emprende tareas nuevas o modifica las que ya tienes para cerrar la brecha entre la demanda de tu entorno y lo que tus actividades presentes van a rendir.",
+    "Contesta la primera pregunta: qué necesitas hacer para cerrar la brecha.",
+    "Contesta la segunda pregunta: qué puedes hacer para cerrar la brecha.",
+    "Considera cada una de las dos preguntas por separado.",
+    "Decide después qué vas a hacer realmente.",
+    "Evalúa al decidirlo qué efecto van a tener tus acciones sobre el estrechamiento de la brecha, y cuándo lo van a tener.",
+    "Llama estrategia al conjunto de acciones que decidas."
+  ],
+  "entregable_esperado": "Las dos preguntas contestadas por separado y, aparte de ellas, la decisión de qué vas a hacer realmente, con el efecto previsto de cada acción sobre la brecha y el momento en que lo tendrá. Ese conjunto de acciones escrito es tu estrategia.",
+  "nodos_previos": [
+    "planificar_tres_pasos_demanda_estado_brecha",
+    "determinar_estado_presente_capacidades_proyectos_merma"
+  ],
+  "nodos_siguientes": [
+    "fijar_horizonte_ventana_replanificacion",
+    "contestar_dos_preguntas_direccion_objetivos"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya tienes medida la demanda de tu entorno y tu estado presente, y te queda decidir qué vas a hacer con la diferencia entre los dos."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-cerrar_brecha_dos_preguntas_estrategia-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Planificar termina en actuar sobre la brecha entre lo que tu entorno te va a pedir y lo que tus actividades presentes van a rendir, emprendiendo tareas nuevas o cambiando las que ya tienes. Para eso te haces dos preguntas: qué necesitas hacer para cerrarla y qué puedes hacer para cerrarla, y consideras cada una por separado. Solo después decides qué vas a hacer de verdad, evaluando qué efecto tendrá cada acción sobre la brecha y cuándo lo tendrá. Ese conjunto de acciones que decides es tu estrategia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_07.md",
+          "lineas": "37-39"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 'evita que una confunda a la otra' es una causa que las líneas no dan ('Consider each question separately'). La propuesta describe el procedimiento sin inventar la razón y mide 505.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)"
+    },
+    {
+      "id": "m11-limpieza-cerrar_brecha_dos_preguntas_estrategia-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cerrar la brecha entre demanda y rendimiento contestando por separado que necesitas hacer y que puedes hacer, y llamar estrategia al conjunto que decidas",
+      "texto_nuevo": "Cerrar la brecha entre demanda y rendimiento contestando por separado qué necesitas hacer y qué puedes hacer, y llamar estrategia al conjunto que decidas",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_brecha_dos_preguntas_estrategia-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contesta la primera pregunta: que necesitas hacer para cerrar la brecha.",
+      "texto_nuevo": "Contesta la primera pregunta: qué necesitas hacer para cerrar la brecha.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_brecha_dos_preguntas_estrategia-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contesta la segunda pregunta: que puedes hacer para cerrar la brecha.",
+      "texto_nuevo": "Contesta la segunda pregunta: qué puedes hacer para cerrar la brecha.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_brecha_dos_preguntas_estrategia-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide despues que vas a hacer realmente.",
+      "texto_nuevo": "Decide después qué vas a hacer realmente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_brecha_dos_preguntas_estrategia-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua al decidirlo que efecto van a tener tus acciones sobre el estrechamiento de la brecha, y cuando lo van a tener.",
+      "texto_nuevo": "Evalúa al decidirlo qué efecto van a tener tus acciones sobre el estrechamiento de la brecha, y cuándo lo van a tener.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_brecha_dos_preguntas_estrategia-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las dos preguntas contestadas por separado y, aparte de ellas, la decision de que vas a hacer realmente, con el efecto previsto de cada accion sobre la brecha y el momento en que lo tendra. Ese conjunto de acciones escrito es tu estrategia.",
+      "texto_nuevo": "Las dos preguntas contestadas por separado y, aparte de ellas, la decisión de qué vas a hacer realmente, con el efecto previsto de cada acción sobre la brecha y el momento en que lo tendrá. Ese conjunto de acciones escrito es tu estrategia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cerrar_brecha_dos_preguntas_estrategia-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando ya tienes medida la demanda de tu entorno y tu estado presente, y te queda decidir que vas a hacer con la diferencia entre los dos.",
+      "texto_nuevo": "Cuando ya tienes medida la demanda de tu entorno y tu estado presente, y te queda decidir qué vas a hacer con la diferencia entre los dos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Define tu Estrategia en Dos Preguntas",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

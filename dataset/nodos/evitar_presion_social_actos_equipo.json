@@ -1,0 +1,220 @@
+{
+  "node_id": "evitar_presion_social_actos_equipo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Evitar que un acto no obligatorio se sienta obligatorio, y que el intento de hacer equipo acabe empeorando el ánimo",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Los actos divertidos pueden ser una buena manera de que tu equipo se conozca, pero cuando los organizas tú, la presión social arrastra a algunos a situaciones que preferirían evitar, aunque en teoría nadie esté obligado. Hay intentos de hacer equipo y subir el ánimo que acaban empeorando las cosas, como el de un equipo que trabajaba ochenta horas a la semana y habría preferido saltarse la actividad divertida de su retiro. No insistas a quien no quiere ir, y recuerda que a veces el mayor regalo que puedes hacerle a tu equipo es dejarlo irse a casa.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_08.md, lineas 77 a 81, bajo el rotulo Even non-mandatory events can feel mandatory. Es la PRIMERA de las dos advertencias que la linea 75 nombra, y su madre es dominar_arte_socializar_trabajo, que la nombra en su paso 9. LA ARISTA ES D.29 Y NO D.37, y lo digo porque la tentacion es contarla como D.37: la linea 75 nombra sus dos advertencias una a una pero NO dice cuantas son, y la cuenta es condicion y no adorno (correccion del titular del 11 sep 2026). ESTA PIEZA ES UNA ADVERTENCIA Y AUN ASI SE EXTRAE, Y LA RAZON ES LA MISMA POR LA QUE LA OTRA NO: esta nombra actos que el lector puede ejecutar (no presionar a quien no quiere ir, evitar el acto que empeora el animo, dejarles irse a casa) y la de Booze, lineas 83 a 87, no nombra ninguno: es una frase de aviso y una lista de desastres. LOS DOS CASOS, el de Marissa Mayer y el del retiro de los karts, van NOMBRADOS DENTRO de los pasos que los usan, que es la condicion de esta casa para la transcripcion de caso. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. P1, P2 y P3 de la linea 79; P4, P5 y P6 de la 81. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: como se averigua antes quien no quiere ir, y como se cancela un acto ya convocado.",
+  "pasos_accionables": [
+    "Cuenta con que los actos divertidos pueden ser una buena manera de conocer a la gente de tu equipo y de que se conozcan entre ellos.",
+    "Pero cuenta también con que si lo organizas tú, la presión social va a arrastrar a algunos a situaciones que preferirían evitar.",
+    "No presiones a quien no quiere ir diciéndole que vaya igual para ser buen compañero de equipo: a una persona que se marea en el mar su jefe la presionó para que fuera a una salida a ver ballenas organizada para unir al equipo, y nadie debería tener que vomitar por la borda para demostrar que es buen compañero.",
+    "Evita los momentos irónicos en que el intento de hacer equipo y de mejorar el ánimo acaba empeorando las cosas.",
+    "Cuenta con este ejemplo: un equipo que trabajaba ochenta horas a la semana tenía el equilibrio entre trabajo y vida en el orden del día de su retiro, a las nueve de la noche y después de montar en karts, y la verdad es que todos habrían preferido saltarse los karts pero creían que tenían que hacer cosas divertidas para unirse.",
+    "Y cuenta con que a veces el mayor regalo que le puedes hacer a tu equipo es dejarlos irse a casa."
+  ],
+  "entregable_esperado": "Un acto al que va quien quiere ir, sin nadie arrastrado por la presión social ni un equipo que sale de él con peor ánimo que cuando entró.",
+  "nodos_previos": [
+    "dominar_arte_socializar_trabajo"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando eres tú quien organiza un acto divertido para tu equipo, que es justo cuando tu invitación pesa más de lo que crees."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-evitar_presion_social_actos_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Los actos divertidos pueden ser una buena manera de que tu equipo se conozca, pero cuando los organizas tú, la presión social arrastra a algunos a situaciones que preferirían evitar, aunque en teoría nadie esté obligado. Hay intentos de hacer equipo y subir el ánimo que acaban empeorando las cosas, como el de un equipo que trabajaba ochenta horas a la semana y habría preferido saltarse la actividad divertida de su retiro. No insistas a quien no quiere ir, y recuerda que a veces el mayor regalo que puedes hacerle a tu equipo es dejarlo irse a casa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_08.md",
+          "lineas": "77-81"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): El efecto final ('hace que al acto vaya quien quiere y que sirva de verdad') no está en las 77 a 81, y el equipo agotado es un caso de la 81 vuelto agravante general. La propuesta cuenta ese caso como caso, conserva el 'can be a good way' de la 79 y el 'Sometimes' del cierre.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)"
+    },
+    {
+      "id": "m11-limpieza-evitar_presion_social_actos_equipo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evitar que un acto no obligatorio se sienta obligatorio, y que el intento de hacer equipo acabe empeorando el animo",
+      "texto_nuevo": "Evitar que un acto no obligatorio se sienta obligatorio, y que el intento de hacer equipo acabe empeorando el ánimo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_presion_social_actos_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pero cuenta tambien con que si lo organizas tu, la presion social va a arrastrar a algunos a situaciones que preferirian evitar.",
+      "texto_nuevo": "Pero cuenta también con que si lo organizas tú, la presión social va a arrastrar a algunos a situaciones que preferirían evitar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_presion_social_actos_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No presiones a quien no quiere ir diciendole que vaya igual para ser buen companiero de equipo: el texto cuenta que a Marissa Mayer, que se marea en el mar, su jefe la presiono para que fuera a una salida a ver ballenas organizada para unir al equipo, y remata que nadie deberia tener que vomitar por la borda para demostrar que es buen companiero.",
+      "texto_nuevo": "No presiones a quien no quiere ir diciéndole que vaya igual para ser buen compañero de equipo: a una persona que se marea en el mar su jefe la presionó para que fuera a una salida a ver ballenas organizada para unir al equipo, y nadie debería tener que vomitar por la borda para demostrar que es buen compañero.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto cuenta que a Marissa Mayer",
+          "y remata que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_presion_social_actos_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita los momentos ironicos en que el intento de hacer equipo y de mejorar el animo acaba empeorando las cosas.",
+      "texto_nuevo": "Evita los momentos irónicos en que el intento de hacer equipo y de mejorar el ánimo acaba empeorando las cosas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_presion_social_actos_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el ejemplo que el texto pone: un equipo que trabajaba ochenta horas a la semana tenia el equilibrio entre trabajo y vida en el orden del dia de su retiro, a las nueve de la noche y despues de montar en karts, y la verdad es que todos habrian preferido saltarse los karts pero creian que tenian que hacer cosas divertidas para unirse.",
+      "texto_nuevo": "Cuenta con este ejemplo: un equipo que trabajaba ochenta horas a la semana tenía el equilibrio entre trabajo y vida en el orden del día de su retiro, a las nueve de la noche y después de montar en karts, y la verdad es que todos habrían preferido saltarse los karts pero creían que tenían que hacer cosas divertidas para unirse.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el ejemplo que el texto pone"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_presion_social_actos_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y cuenta con lo que el texto dice que a veces es el mayor regalo que le puedes hacer a tu equipo: dejarles irse a casa.",
+      "texto_nuevo": "Y cuenta con que a veces el mayor regalo que le puedes hacer a tu equipo es dejarlos irse a casa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_presion_social_actos_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un acto al que va quien quiere ir, sin nadie arrastrado por la presion social ni un equipo que sale de el mas cansado que entro.",
+      "texto_nuevo": "Un acto al que va quien quiere ir, sin nadie arrastrado por la presión social ni un equipo que sale de él más cansado que entró.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-evitar_presion_social_actos_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando eres tu quien organiza un acto divertido para tu equipo, que es justo cuando tu invitacion pesa mas de lo que crees.",
+      "texto_nuevo": "Cuando eres tú quien organiza un acto divertido para tu equipo, que es justo cuando tu invitación pesa más de lo que crees.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 16, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 16)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-evitar_presion_social_actos_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un acto al que va quien quiere ir, sin nadie arrastrado por la presión social ni un equipo que sale de él más cansado que entró.",
+      "texto_nuevo": "Un acto al que va quien quiere ir, sin nadie arrastrado por la presión social ni un equipo que sale de él con peor ánimo que cuando entró.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_08.md 81",
+        "frase": "It’s important to avoid those ironic moments when attempts to team-build and improve morale actually make things worse."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro dice que el intento de subir el ánimo puede empeorar las cosas, no que el equipo salga más cansado.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Evita la Presión en Actos",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

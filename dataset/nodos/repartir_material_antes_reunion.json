@@ -1,0 +1,310 @@
+{
+  "node_id": "repartir_material_antes_reunion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Repartir el material y la agenda antes de la reunión para que todos lleguen preparados",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Quien presenta conoce su material de arriba abajo y por eso puede costarle recordar cómo se ve por primera vez; puede dar por hecho que la sala capta al vuelo lo que a los demás les exige tiempo. Si la reunión busca decidir o dar opinión, puede ser difícil llegar a conclusiones meditadas procesando información nueva en una sola sesión. El remedio es mover el material en el tiempo: presentaciones y documentos el día antes, y la agenda por adelantado para mantener el foco. Cuanto mayor es la reunión, más horas de todos se pierden si se llega sin preparar.",
+  "notas_extraccion": "El procedimiento se sostiene sobre un mecanismo nombrado por el libro, la maldicion del conocimiento, y sobre su consecuencia medible: quien ve el material por primera vez dentro de la reunion no puede contribuir bien a una decision ni a una opinion. Por eso el remedio no es pedir mas atencion sino mover el material en el tiempo. El paso 4 trae el plazo porque el libro lo trae, el dia antes, y no lo puse yo; el paso 6 trae la escala porque el libro dice de cualquier tamano, incluidas las individuales. El paso 7 trae la cuenta del coste monetario en horas persona, que cada uno pasa a su moneda, y es el argumento con el que el libro justifica el gasto de preparar. Lo que el libro NO dice, y por eso no esta escrito aqui, es que se hace cuando el material no esta listo el dia antes, ni si se comprueba que la gente lo leyo, ni que pasa con quien llega sin haberlo leido. CORRECCION DECLARADA (26 sep 2026, politica marco contra pais, regla de la cifra): el campo pasos_accionables, paso 7 se sustituyo por decision del fundador; el texto anterior queda literal en bitacora/VEREDICTOS.jsonl. CORRECCION DECLARADA (26 sep 2026, politica marco contra pais, regla de la cifra): el campo resumen_teorico se sustituyo por decision del fundador; el texto anterior queda literal en bitacora/VEREDICTOS.jsonl.",
+  "pasos_accionables": [
+    "Ten presente que quien presenta puede sufrir lo que los psicólogos sociales llaman la maldición del conocimiento: como conoce su material de arriba abajo, ese sesgo cognitivo le hace difícil recordar qué se siente al ser un principiante que ve el contenido por primera vez, y por eso puede dar por supuesto que la sala capta rápido todos los puntos importantes según pasa de diapositiva en diapositiva.",
+    "No te sientas mal por no seguir el ritmo ni supongas que eres tú quien va lento: hay quien se ha visto en muchas revisiones entrecerrando los ojos ante gráficas y datos mientras alguien decía «como se ve claramente en estos datos», y acabó entendiendo que esa reacción no es rara y que hasta sus colegas más duchos en datos necesitan tiempo para procesar información nueva.",
+    "Reconoce el límite real: si la meta de la reunión es tomar decisiones o dar opinión, a las partes interesadas les puede costar entender el material lo bastante bien dentro de una sola reunión como para llegar a conclusiones meditadas.",
+    "En las reuniones de decisión y de revisión, pide a quien organiza que envíe cualquier presentación o documento el día antes, para que todo el mundo tenga ocasión de procesar la información por adelantado.",
+    "Envía también la agenda por adelantado, que muestra cuidado e intención por ayudar al grupo a no perder el foco.",
+    "Hazlo con reuniones de cualquier tamaño, incluidas las individuales, y ten presente que cuanto mayor es la reunión más importante es la preparación.",
+    "Si te parece mucho trabajo preparar, considera el coste monetario real de una reunión dada: si una reunión de toda la empresa a la que asisten quinientos empleados no es atractiva ni memorable, la empresa habrá desperdiciado quinientas horas persona, que puedes pasar a dinero multiplicándolas por el coste por hora de tu equipo. Gastar aunque sean cinco horas del tiempo de cinco personas en preparar esa reunión merece la pena sin duda."
+  ],
+  "entregable_esperado": "Las presentaciones o documentos en manos de los asistentes el día antes, y una agenda enviada por adelantado.",
+  "nodos_previos": [
+    "invitar_personas_necesarias_reunion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando la meta de la reunión es tomar decisiones o dar opinión y los asistentes van a ver el material por primera vez allí dentro."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Quien presenta conoce su material de arriba abajo y por eso le cuesta recordar cómo se ve por primera vez; da por hecho que la sala capta al vuelo lo que a los demás les exige tiempo. Si la reunión busca decidir o dar opinión, es difícil llegar a conclusiones meditadas procesando información nueva en una sola sesión. El remedio no es pedir más atención, sino mover el material en el tiempo: presentaciones y documentos el día antes, y la agenda por adelantado para mantener el foco. Cuanto mayor es la reunión, más horas de todos se pierden si se llega sin preparar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_07.md",
+          "lineas": "187-201"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)"
+    },
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Repartir el material y la agenda antes de la reunion para que todos lleguen preparados",
+      "texto_nuevo": "Repartir el material y la agenda antes de la reunión para que todos lleguen preparados",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Da por hecho que quien presenta sufre lo que los psicologos sociales llaman la maldicion del conocimiento: como conoce su material de arriba abajo, el sesgo cognitivo le hace dificil recordar que se siente al ser un principiante que ve el contenido por primera vez, y por eso da por supuesto que la sala puede captar rapido todos los puntos importantes segun pasa de diapositiva en diapositiva.",
+      "texto_nuevo": "Da por hecho que quien presenta sufre lo que los psicólogos sociales llaman la maldición del conocimiento: como conoce su material de arriba abajo, ese sesgo cognitivo le hace difícil recordar qué se siente al ser un principiante que ve el contenido por primera vez, y por eso da por supuesto que la sala puede captar rápido todos los puntos importantes según pasa de diapositiva en diapositiva.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No te sientas mal por no seguir el ritmo ni supongas que eres tu quien va lento: la autora cuenta que a ella le pasaba en muchas revisiones, entrecerrando los ojos ante graficas y datos mientras le decian como se ve claramente en estos datos, y que aprendio que su reaccion no era rara y que hasta sus colegas mas duchos en datos necesitan tiempo para procesar informacion nueva.",
+      "texto_nuevo": "No te sientas mal por no seguir el ritmo ni supongas que eres tú quien va lento: es habitual quedarse entrecerrando los ojos ante gráficas y datos mientras alguien dice «como se ve claramente en estos datos», esa reacción no es rara, y hasta las personas más duchas en datos necesitan tiempo para procesar información nueva.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la autora cuenta que a ella le pasaba en muchas revisiones",
+          "sus colegas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce el limite real: si la meta de la reunion es tomar decisiones o dar opinion, a las partes interesadas les puede costar entender el material lo bastante bien dentro de una sola reunion como para llegar a conclusiones meditadas.",
+      "texto_nuevo": "Reconoce el límite real: si la meta de la reunión es tomar decisiones o dar opinión, a las partes interesadas les puede costar entender el material lo bastante bien dentro de una sola reunión como para llegar a conclusiones meditadas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pide a quien organiza que envie cualquier presentacion o documento el dia antes, que es el cambio concreto que ellos hicieron en sus reuniones de decision y de revision, para que todo el mundo tenga ocasion de procesar la informacion por adelantado.",
+      "texto_nuevo": "En las reuniones de decisión y de revisión, pide a quien organiza que envíe cualquier presentación o documento el día antes, para que todo el mundo tenga ocasión de procesar la información por adelantado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es el cambio concreto que ellos hicieron en sus reuniones"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Envia tambien la agenda por adelantado, que muestra un nivel de cuidado e intencion al ayudar al grupo a mantenerse enfocado.",
+      "texto_nuevo": "Envía también la agenda por adelantado, que muestra un nivel de cuidado e intención al ayudar al grupo a mantenerse enfocado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hazlo con reuniones de cualquier tamano, incluidas las individuales, y ten presente que cuanto mayor es la reunion mas importante es la preparacion.",
+      "texto_nuevo": "Hazlo con reuniones de cualquier tamaño, incluidas las individuales, y ten presente que cuanto mayor es la reunión más importante es la preparación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si te parece mucho trabajo preparar, considera el coste monetario real de una reunion dada: si una reunion de toda la empresa a la que asisten quinientos empleados no es atractiva ni memorable, la empresa habra desperdiciado quinientas horas persona, que puedes pasar a dinero multiplicandolas por el coste por hora de tu equipo. Gastar aunque sean cinco horas del tiempo de cinco personas en preparar esa reunion merece la pena sin duda.",
+      "texto_nuevo": "Si te parece mucho trabajo preparar, considera el coste monetario real de una reunión dada: si una reunión de toda la empresa a la que asisten quinientos empleados no es atractiva ni memorable, la empresa habrá desperdiciado quinientas horas persona, que puedes pasar a dinero multiplicándolas por el coste por hora de tu equipo. Gastar aunque sean cinco horas del tiempo de cinco personas en preparar esa reunión merece la pena sin duda.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Las presentaciones o documentos en manos de los asistentes el dia antes, y una agenda enviada por adelantado.",
+      "texto_nuevo": "Las presentaciones o documentos en manos de los asistentes el día antes, y una agenda enviada por adelantado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_material_antes_reunion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando la meta de la reunion es tomar decisiones o dar opinion y los asistentes van a ver el material por primera vez alli dentro.",
+      "texto_nuevo": "Cuando la meta de la reunión es tomar decisiones o dar opinión y los asistentes van a ver el material por primera vez allí dentro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 38, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 38)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limites-repartir_material_antes_reunion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No te sientas mal por no seguir el ritmo ni supongas que eres tú quien va lento: es habitual quedarse entrecerrando los ojos ante gráficas y datos mientras alguien dice «como se ve claramente en estos datos», esa reacción no es rara, y hasta las personas más duchas en datos necesitan tiempo para procesar información nueva.",
+      "texto_nuevo": "No te sientas mal por no seguir el ritmo ni supongas que eres tú quien va lento: hay quien se ha visto en muchas revisiones entrecerrando los ojos ante gráficas y datos mientras alguien decía «como se ve claramente en estos datos», y acabó entendiendo que esa reacción no es rara y que hasta sus colegas más duchos en datos necesitan tiempo para procesar información nueva.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 189-191",
+        "frase": "In many a review, I'd be the person in the room with the perplexed expression"
+      },
+      "decision": "arbitro de limites de la limpieza M11 (casos que los verificadores dejaron en OK senalados como dudosos): La nota se sostiene. zhuo_manager/cap_07.md líneas 189-191: \"In many a review, I'd be the person in the room with the perplexed expression\" y \"I've since learned that my reaction wasn't unusual [...] Even my data-savviest colleagues need time to process new information.\" \"Es habitual\" endurece el \"no es raro\", la escena era de una persona y \"las personas más duchas en datos\" generaliza lo que se dice de sus colegas. Se cuenta como caso con el matiz devuelto.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/limites/"
+    },
+    {
+      "id": "m11-auditoria-repartir_material_antes_reunion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Da por hecho que quien presenta sufre lo que los psicólogos sociales llaman la maldición del conocimiento: como conoce su material de arriba abajo, ese sesgo cognitivo le hace difícil recordar qué se siente al ser un principiante que ve el contenido por primera vez, y por eso da por supuesto que la sala puede captar rápido todos los puntos importantes según pasa de diapositiva en diapositiva.",
+      "texto_nuevo": "Ten presente que quien presenta puede sufrir lo que los psicólogos sociales llaman la maldición del conocimiento: como conoce su material de arriba abajo, ese sesgo cognitivo le hace difícil recordar qué se siente al ser un principiante que ve el contenido por primera vez, y por eso puede dar por supuesto que la sala capta rápido todos los puntos importantes según pasa de diapositiva en diapositiva.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 193",
+        "frase": "Because the presenters knew their material forward and back, they experienced what social psychologists call “the curse of knowledge”"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro cuenta lo que les pasó a los presentadores de unas revisiones concretas; el paso lo volvía regla fija para todo el que presenta.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-repartir_material_antes_reunion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Quien presenta conoce su material de arriba abajo y por eso le cuesta recordar cómo se ve por primera vez; da por hecho que la sala capta al vuelo lo que a los demás les exige tiempo. Si la reunión busca decidir o dar opinión, es difícil llegar a conclusiones meditadas procesando información nueva en una sola sesión. El remedio no es pedir más atención, sino mover el material en el tiempo: presentaciones y documentos el día antes, y la agenda por adelantado para mantener el foco. Cuanto mayor es la reunión, más horas de todos se pierden si se llega sin preparar.",
+      "texto_nuevo": "Quien presenta conoce su material de arriba abajo y por eso puede costarle recordar cómo se ve por primera vez; puede dar por hecho que la sala capta al vuelo lo que a los demás les exige tiempo. Si la reunión busca decidir o dar opinión, puede ser difícil llegar a conclusiones meditadas procesando información nueva en una sola sesión. El remedio es mover el material en el tiempo: presentaciones y documentos el día antes, y la agenda por adelantado para mantener el foco. Cuanto mayor es la reunión, más horas de todos se pierden si se llega sin preparar.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_07.md 193-197",
+        "frase": "Because the presenters knew their material forward and back, they experienced what social psychologists call “the curse of knowledge” [...] it can be tough for stakeholders to understand the material well enough in the span of a single meeting to arrive at thoughtful conclusions. [...] The solution is to help everyone come prepared."
+      },
+      "decision": "auditoria completa M11 (invencion, matiz): El libro no contrapone el remedio a 'pedir más atención'; el caso de unos presentadores se volvía regla y el 'it can be tough' se afirmaba como 'es difícil'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion",
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-repartir_material_antes_reunion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Envía también la agenda por adelantado, que muestra un nivel de cuidado e intención al ayudar al grupo a mantenerse enfocado.",
+      "texto_nuevo": "Envía también la agenda por adelantado, que muestra cuidado e intención por ayudar al grupo a no perder el foco.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "un nivel de cuidado",
+          "al ayudar al grupo a mantenerse enfocado"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco palabra a palabra de \"shows a level of care and intentionality in helping the group stay focused\". Se conserva que el cuidado está en ayudar al grupo a mantener el foco (la propuesta lo separaba en dos cosas).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Reparte Material Antes de Reunir",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

@@ -1,0 +1,190 @@
+{
+  "node_id": "fijar_periodo_direccion_objetivos_retroalimentacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Fijar el periodo del sistema de dirección por objetivos por el plazo en que su retroalimentación sigue sirviendo, y contrastarlo con la base del plan",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "La dirección por objetivos está pensada sobre todo para darte retroalimentación sobre la tarea concreta que tienes entre manos, de modo que sepas cómo vas y puedas ajustar lo que haces si hace falta. Esa retroalimentación solo es efectiva si llega muy poco después de la actividad que mide; si llega tarde, ya no sirve para corregir. Por eso los objetivos se fijan para un periodo relativamente corto y se contrastan con la base del plan: si planificas con base anual, el periodo de los objetivos debe ser al menos trimestral, y quizás incluso mensual.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_07.md, PIEZA P29 de la frontera publicada en la vuelta 53 (docs/loop/REPORTE.md L50909), tramo L79 a L79, 112 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por 9.1, y DECLARO LA RESTRICCION 2 ANTES DE QUE ME LA SENIALEN: el libro SI pone un adjetivo de adecuacion en el camino (an MBO system should set objectives for a relatively short period) y si se quedara ahi este tramo seria POSTURA y no nodo. Lo que lo salva es que el propio libro NO se queda ahi: da el CRITERIO con el que se mide lo corto (For the feedback to be effective, it must be received very soon after the activity it is measuring occurs) y acto seguido lo CONTRASTA con una cadencia concreta contra la base de planificacion (if we plan on a yearly basis, the corresponding MBO system time frame should be at least as often as quarterly or perhaps even monthly). El adjetivo no esta en el sitio del criterio: el criterio es el plazo de la retroalimentacion, y el adjetivo es su consecuencia. DE DONDE SALE CADA PASO, uno a uno, todos de L79: paso 1 (MBO is largely designed to provide feedback relevant to the specific task at hand); paso 2 (it should tell us how we are doing so we can make adjustments in whatever we are doing if need be); paso 3 (For the feedback to be effective, it must be received very soon after the activity it is measuring occurs); paso 4 (Accordingly, an MBO system should set objectives for a relatively short period); paso 5 (For example, if we plan on a yearly basis, the corresponding MBO system time frame should be at least as often as quarterly or perhaps even monthly). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. LO QUE NO HICE CON EL PASO 5, y es donde estaba el puente facil: NO convierto el trimestral en la regla del lector ni le quito el quizas del mensual, porque el libro lo da como ejemplo condicionado a planificar con base anual, y por eso el paso conserva la condicion entera y sus dos grados. Si lo hubiera escrito como fija objetivos trimestrales, habria fabricado la segunda especie de PUENTE del lote 1, el periodo. LOS OTROS SITIOS DE TENTACION EN LOS QUE NO ESCRIBI: NO escribo que hacer si el plan no es anual, porque el libro solo da ese caso. NO escribo quien fija el periodo. NO escribo el salir de la autopista a preguntar como paso: es la ilustracion que el libro arrastra de P28, manual 3.5. NI UNA CIFRA A atribuciones: el trimestral y el mensual no son cifra del autor sobre el mundo, son la cadencia que el propio procedimiento manda, y por eso viven en el paso y no en una ficha de atribucion. LA FRONTERA CONTRA P22, que es el vecino peligroso: P22 fija el horizonte y la cadencia de la PLANIFICACION; esta pieza fija el periodo del SISTEMA DE DIRECCION POR OBJETIVOS. Dos objetos distintos en dos secciones que el libro separa con el rotulo de L67. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: este es el candidato de cap_07 que mas cerca pasa de la restriccion 2 de 9.1, y lo digo yo primero. Si el fundador lee que un relatively short period en el sitio del criterio tumba el nodo aunque despues venga el contraste, cae DENTRO de mi marcado y la pieza vuelve a cero nodos.",
+  "pasos_accionables": [
+    "Parte de para qué sirve el sistema: dar retroalimentación relevante a la tarea concreta que tienes entre manos.",
+    "Exígele que te diga cómo lo estás haciendo, para que puedas ajustar lo que sea que estés haciendo si hace falta.",
+    "Recibe esa retroalimentación muy poco después de que ocurra la actividad que mide, porque si llega más tarde deja de ser efectiva.",
+    "Fija en consecuencia los objetivos para un periodo relativamente corto.",
+    "Contrástalo con la base sobre la que planificas: si planificas con base anual, el marco temporal del sistema tiene que ser al menos trimestral, y quizás incluso mensual."
+  ],
+  "entregable_esperado": "El periodo del sistema escrito y justificado por el plazo de su retroalimentación, puesto al lado de la base sobre la que planificas para comprobar que es al menos tan frecuente como manda el contraste.",
+  "nodos_previos": [
+    "fijar_horizonte_ventana_replanificacion",
+    "contestar_dos_preguntas_direccion_objetivos"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando tienes que decidir en qué periodo se fijan los objetivos de tu sistema, o cuando la retroalimentación te llega tan tarde que ya no puedes corregir nada con ella."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-fijar_periodo_direccion_objetivos_retroalimentacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La dirección por objetivos está pensada sobre todo para darte retroalimentación sobre la tarea concreta que tienes entre manos, de modo que sepas cómo vas y puedas ajustar lo que haces si hace falta. Esa retroalimentación solo es efectiva si llega muy poco después de la actividad que mide; si llega tarde, ya no sirve para corregir. Por eso los objetivos se fijan para un periodo relativamente corto y se contrastan con la base del plan: si planificas con base anual, el periodo de los objetivos debe ser al menos trimestral, y quizás incluso mensual.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_07.md",
+          "lineas": "79-79"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Se sostiene: l.79 'MBO is largely designed'. La propuesta del lector devuelve 'sobre todo'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)"
+    },
+    {
+      "id": "m11-limpieza-fijar_periodo_direccion_objetivos_retroalimentacion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fijar el periodo del sistema de direccion por objetivos por el plazo en que su retroalimentacion sigue sirviendo, y contrastarlo con la base del plan",
+      "texto_nuevo": "Fijar el periodo del sistema de dirección por objetivos por el plazo en que su retroalimentación sigue sirviendo, y contrastarlo con la base del plan",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_periodo_direccion_objetivos_retroalimentacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Parte de para que sirve el sistema: dar retroalimentacion relevante a la tarea concreta que tienes entre manos.",
+      "texto_nuevo": "Parte de para qué sirve el sistema: dar retroalimentación relevante a la tarea concreta que tienes entre manos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_periodo_direccion_objetivos_retroalimentacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Exigele que te diga como lo estas haciendo, para que puedas ajustar lo que sea que estes haciendo si hace falta.",
+      "texto_nuevo": "Exígele que te diga cómo lo estás haciendo, para que puedas ajustar lo que sea que estés haciendo si hace falta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_periodo_direccion_objetivos_retroalimentacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recibe esa retroalimentacion muy poco despues de que ocurra la actividad que mide, porque si llega mas tarde deja de ser efectiva.",
+      "texto_nuevo": "Recibe esa retroalimentación muy poco después de que ocurra la actividad que mide, porque si llega más tarde deja de ser efectiva.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_periodo_direccion_objetivos_retroalimentacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contrastalo con la base sobre la que planificas: si planificas con base anual, el marco temporal del sistema tiene que ser al menos tan frecuente como trimestral, y quizas incluso mensual.",
+      "texto_nuevo": "Contrástalo con la base sobre la que planificas: si planificas con base anual, el marco temporal del sistema tiene que ser al menos tan frecuente como trimestral, y quizás incluso mensual.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_periodo_direccion_objetivos_retroalimentacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El periodo del sistema escrito y justificado por el plazo de su retroalimentacion, puesto al lado de la base sobre la que planificas para comprobar que es al menos tan frecuente como manda el contraste.",
+      "texto_nuevo": "El periodo del sistema escrito y justificado por el plazo de su retroalimentación, puesto al lado de la base sobre la que planificas para comprobar que es al menos tan frecuente como manda el contraste.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_periodo_direccion_objetivos_retroalimentacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes que decidir en que periodo se fijan los objetivos de tu sistema, o cuando la retroalimentacion te llega tan tarde que ya no puedes corregir nada con ella.",
+      "texto_nuevo": "Cuando tienes que decidir en qué periodo se fijan los objetivos de tu sistema, o cuando la retroalimentación te llega tan tarde que ya no puedes corregir nada con ella.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-fijar_periodo_direccion_objetivos_retroalimentacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contrástalo con la base sobre la que planificas: si planificas con base anual, el marco temporal del sistema tiene que ser al menos tan frecuente como trimestral, y quizás incluso mensual.",
+      "texto_nuevo": "Contrástalo con la base sobre la que planificas: si planificas con base anual, el marco temporal del sistema tiene que ser al menos trimestral, y quizás incluso mensual.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "tan frecuente como "
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Al menos tan frecuente como trimestral\" calca at least as often as quarterly.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Fija el Periodo de Objetivos"
+}

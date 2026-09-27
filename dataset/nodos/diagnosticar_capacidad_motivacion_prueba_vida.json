@@ -1,0 +1,171 @@
+{
+  "node_id": "diagnosticar_capacidad_motivacion_prueba_vida",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Diagnosticar si un subordinado que no rinde no puede o no quiere, con la prueba mental de si podría hacer el trabajo si su vida dependiera de ello",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Cuando alguien no hace su trabajo solo caben dos causas: no puede o no quiere; le falta capacidad o le falta motivación. Para actuar hay que saber cuál de las dos es, y la prueba que las separa es mental y sencilla: imagina que la vida de esa persona dependiera de hacer ese trabajo. Si aun así podría hacerlo, la capacidad está y lo que falta es motivación; si ni con la vida en juego podría, lo que falta es capacidad. Llevar la pregunta a ese extremo quita de en medio las ganas y deja a la vista solo si la persona es capaz o no de hacerlo.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_12.md, unidad interna Cap. 11, titulo textual The Sports Analogy. Sale de la PIEZA P5 de la frontera de esta vuelta (.v57ext/frontera.py, .v57ext/frontera.txt), tramo L17 a L17, 121 palabras, un solo renglon. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro pone su propio inventario de DOS ramas de un diagnostico (can't o won't, not capable o not motivated) y ademas nombra la propia prueba que las separa (a simple mental test), con su pregunta exacta y sus dos salidas. No hay adjetivo de adecuacion en el sitio del criterio: el criterio es la propia pregunta (if the person's life depended on doing the work, could he do it?), no una palabra como apropiado o razonable. DE DONDE SALE CADA PASO, uno a uno, todos de L17: paso 1 (When a person is not doing his job, there can only be two reasons for it. The person either can't do it or won't do it; he is either not capable or not motivated); paso 2 (To determine which, we can employ a simple mental test: if the person's life depended on doing the work, could he do it?); paso 3 (If the answer is yes, that person is not motivated); paso 4 (if the answer is no, he is not capable). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: no escribo los dos ejemplos personales del autor que cierran el tramo (If my life depended on playing the violin on command, I could not do it. But if I had to run a mile in six minutes, I probably could), porque son la propia demostracion de COMO se aplica la pregunta y no un paso adicional del procedimiento: repetirlos como paso 5 y 6 habria puesto un dato del ejemplo del autor en el entregable, la senial barata que manual 3.5 nombra (el caso no es la casa), y el procedimiento queda completo y ejecutable sin ellos. El nodo es corto a proposito, por la letra del regimen austero (D.47: cifras talladas sin parrafo de acompanamiento): cuatro pasos son todo lo que el tramo pide y anadir mas habria sido rellenar. VECINO DE FAMILIA MAS CERCANO EN ESTA MISMA TANDA, LEIDO ANTES DE ESCRIBIR EL VEREDICTO (EXTRACTOR.md 2): diagnosticar_nivel_motivacion_reaccion_aumento_salario, el candidato de la PIEZA P39 de este mismo capitulo. Los dos son pruebas diagnosticas de motivacion con dos ramas, pero preguntan cosas distintas y en momentos distintos: este separa incapacidad de desmotivacion ANTES de actuar sobre un bajo rendimiento cualquiera; aquel ubica DENTRO de la jerarquia motivacional a alguien que ya esta motivado, leyendo su reaccion a un aumento de sueldo. Cero pasos comunes entre los dos. Sin arista declarada entre ambos: no hay renglon del libro que nombre al uno dentro del otro, asi que la relacion que existe (los dos son diagnosticos de motivacion) se queda en similitud de dominio y no en arista por lectura (D.29 exige que el libro despliegue la relacion, no que el extractor la infiera por parecido tematico). DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el titulo del capitulo entero es The Sports Analogy y este tramo vive muy al principio, antes de que el capitulo llegue al deporte; un lector que busque coherencia tematica con el titulo puede pensar que este tramo pertenece mas al capitulo anterior (que cerro con managers' output). Lo sostengo porque la frontera de cap_12 lee el capitulo entero linea por linea y este tramo cae dentro de sus limites de fichero (L9 a L117), y la unidad de origen es el fichero y no el titulo de la seccion. Si cae, cae DENTRO de mi marcado. LA ADUANA EN SECO TAMBIEN BLOQUEO ESTE CANDIDATO, en una corrida posterior a que diagnosticar_nivel_motivacion_reaccion_aumento_salario creciera con su propio veredicto: similitud_texto justo por encima de 0.35 contra ese mismo vecino, con familia_id y paso_contra_nodo los dos por debajo de sus umbrales. ES EL MISMO PAR, LEIDO DESDE EL OTRO LADO, y la lectura completa (que pasos comparten, por que la plantilla infla la cifra, y por que el veredicto es SANO) ya esta escrita entera dentro de diagnosticar_nivel_motivacion_reaccion_aumento_salario para no repetirla dos veces (EXTRACTOR.md 13, el austero no repite lo que el registro ya dice): VEREDICTO SANO, hermanos del mismo capitulo, cada uno con su propia pregunta y su propia salida, ninguno despliega el procedimiento del otro. UNA SEGUNDA VECINDAD SUBIO EN LA MISMA FAMILIA DE CAUSA, contra decidir_amistad_subordinado_prueba_revision_dificil, del capitulo siguiente: la aduana empareja mi paso 1 (Cuando una persona no este haciendo su trabajo, cuenta con que solo hay dos razones posibles...) con su paso 1 (Cuando dudes si conviene hacerte amigo de un subordinado, cuenta con que hay pros y contras...). Comparten el arranque Cuando..., cuenta con que..., que es la misma plantilla de apertura de las pruebas diagnosticas de esta tanda y no contenido: uno diagnostica capacidad contra motivacion, el otro decide si conviene una amistad, y paso_contra_nodo se queda por debajo de su umbral (0.60) en las dos corridas que hice. VEREDICTO SANO: hermanos por plantilla de apertura, no por doctrina compartida. NO PROPONGO MOVER NINGUN UMBRAL: EXTRACTOR.md 11 me lo veda, y ademas lo que esto mide, otra vez, es mi propio patron de redaccion dentro de una misma tanda (la misma leccion de d051), no un defecto de la vara. Los dos veredictos SANO quedan escritos aqui para viajar a bitacora/VEREDICTOS.jsonl el dia de la insercion, con esta misma razon.",
+  "pasos_accionables": [
+    "Cuando una persona no esté haciendo su trabajo, cuenta con que solo hay dos razones posibles: no puede hacerlo o no quiere hacerlo.",
+    "Para saber cuál de las dos es, aplica esta prueba mental simple: pregunta si esa persona podría hacer el trabajo si su vida dependiera de hacerlo.",
+    "Si la respuesta es sí, es decir, si podría hacerlo con su vida en juego, esa persona no está motivada.",
+    "Si la respuesta es no, es decir, si no podría hacerlo ni con su vida en juego, esa persona no es capaz."
+  ],
+  "entregable_esperado": "El diagnóstico de si el problema es de capacidad o de motivación, obtenido con la prueba mental de si la persona podría hacer el trabajo si su vida dependiera de ello, y no una suposición sin comprobar.",
+  "nodos_previos": [
+    "diagnosticar_falta_motivacion_habilidad"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando un subordinado no está haciendo su trabajo y no sabes si el problema es que no puede o que no quiere."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-diagnosticar_capacidad_motivacion_prueba_vida-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando alguien no hace su trabajo solo caben dos causas: no puede o no quiere; le falta capacidad o le falta motivación. Para actuar hay que saber cuál de las dos es, y la prueba que las separa es mental y sencilla: imagina que la vida de esa persona dependiera de hacer ese trabajo. Si aun así podría hacerlo, la capacidad está y lo que falta es motivación; si ni con la vida en juego podría, lo que falta es capacidad. Llevar la pregunta a ese extremo quita de en medio las ganas y deja a la vista solo si la persona es capaz o no de hacerlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_12.md",
+          "lineas": "17-17"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)"
+    },
+    {
+      "id": "m11-limpieza-diagnosticar_capacidad_motivacion_prueba_vida-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Diagnosticar si un subordinado que no rinde no puede o no quiere, con la prueba mental de si podria hacer el trabajo si su vida dependiera de ello",
+      "texto_nuevo": "Diagnosticar si un subordinado que no rinde no puede o no quiere, con la prueba mental de si podría hacer el trabajo si su vida dependiera de ello",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-diagnosticar_capacidad_motivacion_prueba_vida-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando una persona no este haciendo su trabajo, cuenta con que solo hay dos razones posibles: no puede hacerlo o no quiere hacerlo.",
+      "texto_nuevo": "Cuando una persona no esté haciendo su trabajo, cuenta con que solo hay dos razones posibles: no puede hacerlo o no quiere hacerlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-diagnosticar_capacidad_motivacion_prueba_vida-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Para saber cual de las dos es, aplica esta prueba mental simple: pregunta si esa persona podria hacer el trabajo si su vida dependiera de hacerlo.",
+      "texto_nuevo": "Para saber cuál de las dos es, aplica esta prueba mental simple: pregunta si esa persona podría hacer el trabajo si su vida dependiera de hacerlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-diagnosticar_capacidad_motivacion_prueba_vida-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si la respuesta es si, es decir, si podria hacerlo con su vida en juego, esa persona no esta motivada.",
+      "texto_nuevo": "Si la respuesta es sí, es decir, si podría hacerlo con su vida en juego, esa persona no está motivada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-diagnosticar_capacidad_motivacion_prueba_vida-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si la respuesta es no, es decir, si no podria hacerlo ni con su vida en juego, esa persona no es capaz.",
+      "texto_nuevo": "Si la respuesta es no, es decir, si no podría hacerlo ni con su vida en juego, esa persona no es capaz.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-diagnosticar_capacidad_motivacion_prueba_vida-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El diagnostico de si el problema es de capacidad o de motivacion, obtenido con la prueba mental de si la persona podria hacer el trabajo si su vida dependiera de ello, y no una suposicion sin comprobar.",
+      "texto_nuevo": "El diagnóstico de si el problema es de capacidad o de motivación, obtenido con la prueba mental de si la persona podría hacer el trabajo si su vida dependiera de ello, y no una suposición sin comprobar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-diagnosticar_capacidad_motivacion_prueba_vida-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando un subordinado no esta haciendo su trabajo y no sabes si el problema es que no puede o que no quiere.",
+      "texto_nuevo": "Cuando un subordinado no está haciendo su trabajo y no sabes si el problema es que no puede o que no quiere.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 09, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 09)",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Diagnostica: no Puede o Quiere",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

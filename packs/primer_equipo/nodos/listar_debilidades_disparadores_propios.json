@@ -1,0 +1,228 @@
+{
+  "node_id": "listar_debilidades_disparadores_propios",
+  "fase_proyecto": "ideacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Listar tus debilidades y tus disparadores con cuatro preguntas",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "La segunda parte de un ajuste de cuentas honesto contigo mismo es conocer tus debilidades y lo que te dispara, es decir, las situaciones que te alteran más de lo que deberían. Cuatro preguntas concretas sacan esa lista: qué te reprocha tu peor crítico interior, qué dones te faltan, qué te dispara y qué te piden mejorar tu jefe y tus pares. La escribes justo debajo de tu lista de fuerzas, y al repasar las respuestas puede que veas emerger algunos temas; en el ejemplo, esos temas señalan las mayores barreras que se cruzan en el camino.",
+  "notas_extraccion": "Es la gemela de la lista de fuerzas y el libro la ata a ella por la sede, pidiendo escribirla justo debajo. Su inventario propio son las cuatro preguntas, escritas una a una, y la definicion de disparador que el libro mete dentro de la tercera, que es lo que evita que el que responde tenga que inventarse el criterio. Lo que el libro NO dice aqui, y por eso no esta escrito: que hacer con las debilidades una vez listadas. Eso llega mas adelante en el capitulo, en la calibracion y en los disparadores.",
+  "pasos_accionables": [
+    "La segunda parte de llegar a un ajuste de cuentas honesto contigo mismo es conocer tus debilidades y tus disparadores.",
+    "Justo debajo de tu lista de fuerzas, responde a las cuatro preguntas que siguen.",
+    "Primera: cuando mi peor crítico interior se me sienta en el hombro, ¿por qué cosas me grita? Un ejemplo de respuesta: distraerme, preocuparme demasiado por lo que piensan los demás, no decir en voz alta lo que creo.",
+    "Segunda: si viniera un hada mágica y me concediera tres dones que aún no tengo, ¿cuáles serían? Por ejemplo: un pozo sin fondo de confianza, claridad de pensamiento, una capacidad de persuasión increíble.",
+    "Tercera: ¿cuáles son tres cosas que me disparan? Un disparador es una situación que te altera más de lo que debería. Por ejemplo: la sensación de injusticia, la idea de que otra persona me crea incompetente, la gente con el ego inflado.",
+    "Cuarta: ¿cuáles son las tres opiniones más comunes que he recibido de mi jefe o de mis pares sobre cómo podría ser más efectivo? Por ejemplo: sé más directo, arriesga más, explica las cosas de forma sencilla.",
+    "Al repasar las respuestas, puede que veas emerger algunos temas; en el ejemplo, las mayores barreras que se cruzan en el camino son la duda sobre uno mismo, la tendencia a complicar y no ser lo bastante claro y directo."
+  ],
+  "entregable_esperado": "Una lista escrita de tus debilidades y tus disparadores, justo debajo de la de fuerzas, con los temas que quizá veas emerger en ella.",
+  "nodos_previos": [
+    "listar_fuerzas_propias_cuatro_preguntas"
+  ],
+  "nodos_siguientes": [
+    "identificar_disparadores_propios_reaccion",
+    "calibrar_vision_propia_opinion_ajena",
+    "disenar_entorno_rendir_mejor",
+    "cambiar_mentalidad_fija_crecimiento"
+  ],
+  "condiciones_activacion": [
+    "Cuando ya tienes escrita tu lista de fuerzas y toca la segunda parte del ajuste de cuentas honesto contigo mismo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-listar_debilidades_disparadores_propios-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Liderar bien exige un ajuste de cuentas honesto contigo mismo, y su segunda mitad es conocer tus debilidades y lo que te dispara, es decir, las situaciones que te alteran más de lo que deberían. Cuatro preguntas concretas sacan esa lista sin tener que inventar criterios: qué te reprocha tu crítico interior, qué dones te faltan, qué te dispara y qué te piden mejorar tu jefe y tus pares. Escribirla justo debajo de la de fuerzas deja ver las dos juntas, y al agrupar las respuestas emergen unos pocos temas que muestran qué barreras se te cruzan de verdad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_06.md",
+          "lineas": "95-113"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)"
+    },
+    {
+      "id": "m11-limpieza-listar_debilidades_disparadores_propios-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Primera: cuando mi peor critico interior se me sienta en el hombro, por que cosas me grita? La autora responde: distraerme, preocuparme demasiado por lo que piensan los demas, no decir en voz alta lo que creo.",
+      "texto_nuevo": "Primera: cuando mi peor crítico interior se me sienta en el hombro, ¿por qué cosas me grita? Un ejemplo de respuesta: distraerme, preocuparme demasiado por lo que piensan los demás, no decir en voz alta lo que creo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora responde:"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-listar_debilidades_disparadores_propios-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Segunda: si viniera un hada magica y me concediera tres dones que aun no tengo, cuales serian? Ella responde: un pozo sin fondo de confianza, claridad de pensamiento, una capacidad de persuasion increible.",
+      "texto_nuevo": "Segunda: si viniera un hada mágica y me concediera tres dones que aún no tengo, ¿cuáles serían? Por ejemplo: un pozo sin fondo de confianza, claridad de pensamiento, una capacidad de persuasión increíble.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Ella responde:"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-listar_debilidades_disparadores_propios-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tercera: cuales son tres cosas que me disparan? Y el libro define disparador ahi mismo: una situacion que te altera mas de lo que deberia. Ella responde: la sensacion de injusticia, la idea de que otra persona me crea incompetente, la gente con el ego inflado.",
+      "texto_nuevo": "Tercera: ¿cuáles son tres cosas que me disparan? Un disparador es una situación que te altera más de lo que debería. Por ejemplo: la sensación de injusticia, la idea de que otra persona me crea incompetente, la gente con el ego inflado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Y el libro define disparador ahi mismo:",
+          "Ella responde:"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-listar_debilidades_disparadores_propios-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuarta: cuales son las tres opiniones mas comunes que he recibido de mi jefe o de mis pares sobre como podria ser mas efectivo? Ella responde: se mas directa, arriesga mas, explica las cosas de forma sencilla.",
+      "texto_nuevo": "Cuarta: ¿cuáles son las tres opiniones más comunes que he recibido de mi jefe o de mis pares sobre cómo podría ser más efectivo? Por ejemplo: sé más directo, arriesga más, explica las cosas de forma sencilla.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Ella responde:"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-listar_debilidades_disparadores_propios-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Otra vez, cuenta con que veras emerger algunos temas: en su caso, las mayores barreras que se le cruzan son la duda sobre si misma, la tendencia a complicar y no ser lo bastante clara y directa.",
+      "texto_nuevo": "Otra vez, cuenta con que verás emerger algunos temas; en el ejemplo, las mayores barreras que se cruzan son la duda sobre uno mismo, la tendencia a complicar y no ser lo bastante claro y directo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "en su caso"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 36)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limites-listar_debilidades_disparadores_propios-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Liderar bien exige un ajuste de cuentas honesto contigo mismo, y su segunda mitad es conocer tus debilidades y lo que te dispara, es decir, las situaciones que te alteran más de lo que deberían. Cuatro preguntas concretas sacan esa lista sin tener que inventar criterios: qué te reprocha tu crítico interior, qué dones te faltan, qué te dispara y qué te piden mejorar tu jefe y tus pares. Escribirla justo debajo de la de fuerzas deja ver las dos juntas, y al agrupar las respuestas emergen unos pocos temas que muestran qué barreras se te cruzan de verdad.",
+      "texto_nuevo": "La segunda parte de un ajuste de cuentas honesto contigo mismo es conocer tus debilidades y lo que te dispara, es decir, las situaciones que te alteran más de lo que deberían. Cuatro preguntas concretas sacan esa lista: qué te reprocha tu peor crítico interior, qué dones te faltan, qué te dispara y qué te piden mejorar tu jefe y tus pares. La escribes justo debajo de tu lista de fuerzas, y al repasar las respuestas puede que veas emerger algunos temas; en el ejemplo, esos temas señalan las mayores barreras que se cruzan en el camino.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_06.md 113",
+        "frase": "Again, you may see some themes emerging"
+      },
+      "decision": "arbitro de limites de la limpieza M11 (casos que los verificadores dejaron en OK senalados como dudosos): La nota se sostiene. zhuo_manager/cap_06.md línea 113: \"Again, you may see some themes emerging\"; el texto afirmaba \"emergen unos pocos temas que muestran qué barreras se te cruzan de verdad\". Además \"sin tener que inventar criterios\" y \"deja ver las dos juntas\" son efectos que no están en las líneas 95-113 (la línea 95 solo dice \"Right beneath your list of strengths\"). Se devuelve el may, se quitan los efectos inventados y las barreras quedan como las del ejemplo.",
+      "auditoria": "docs/saneamiento/resultados/M11/limites/"
+    },
+    {
+      "id": "m11-auditoria-listar_debilidades_disparadores_propios-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Otra vez, cuenta con que verás emerger algunos temas; en el ejemplo, las mayores barreras que se cruzan son la duda sobre uno mismo, la tendencia a complicar y no ser lo bastante claro y directo.",
+      "texto_nuevo": "Otra vez, puede que veas emerger algunos temas; en el ejemplo, las mayores barreras que se cruzan son la duda sobre uno mismo, la tendencia a complicar y no ser lo bastante claro y directo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "zhuo_manager/cap_06.md 113",
+        "frase": "Again, you may see some themes emerging."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que PUEDE que veas temas; el paso lo daba por seguro.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-listar_debilidades_disparadores_propios-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Otra vez, puede que veas emerger algunos temas; en el ejemplo, las mayores barreras que se cruzan son la duda sobre uno mismo, la tendencia a complicar y no ser lo bastante claro y directo.",
+      "texto_nuevo": "Al repasar las respuestas, puede que veas emerger algunos temas; en el ejemplo, las mayores barreras que se cruzan en el camino son la duda sobre uno mismo, la tendencia a complicar y no ser lo bastante claro y directo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "\"Otra vez\" remite a unos temas de la lista de fuerzas que el nodo nunca menciona (el libro sí, zhuo cap_06 l.113 \"Again\"); se usa la fórmula del resumen. \"Las barreras que se cruzan\" sin \"en el camino\" se lee como barreras que uno cruza; se completa como en el resumen."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"Otra vez\" remite a unos temas de la lista de fuerzas que el nodo nunca menciona (el libro sí, zhuo cap_06 l.113 \"Again\"); se usa la fórmula del resumen. \"Las barreras que se cruzan\" sin \"en el camino\" se lee como barreras que uno cruza; se completa como en el resumen.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase3-listar_debilidades_disparadores_propios-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Una lista escrita de tus debilidades y tus disparadores, justo debajo de la de fuerzas, agrupada en unos pocos temas.",
+      "texto_nuevo": "Una lista escrita de tus debilidades y tus disparadores, justo debajo de la de fuerzas, con los temas que quizá veas emerger en ella.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_06.md 113",
+        "frase": "Again, you may see some themes emerging."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que puede que veas emerger algunos temas; el entregable exigía la lista agrupada en unos pocos temas.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Lista tus Debilidades y Disparadores"
+}

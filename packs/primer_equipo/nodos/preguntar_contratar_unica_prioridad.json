@@ -1,0 +1,321 @@
+{
+  "node_id": "preguntar_contratar_unica_prioridad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Preguntarte qué harías distinto si contratar bien fuera lo único que importa",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Trabajar en contratar todos los días no significa darle el tiempo que pide: la mayor parte de la jornada puede irse a otras tareas sin que lo notes. Imaginar que contratar bien es lo único que importa puede romper esa ilusión y hacer aparecer ideas que no estabas usando, como pedir referencias o invitar a más candidatos. Funciona como un problema de diseño: al principio no sabes la respuesta ni cuánto tardará, pero si pones tiempo y energía, hablando con muchos candidatos, llegas a la mejor solución. Cuando el equipo crece deprisa, contratar pasa a ser de las habilidades más importantes.",
+  "notas_extraccion": "Es la pieza que abre el bloque de contratar a escala, y su procedimiento cabe en una pregunta, lo cual la pone en el filo de la vara de que es un nodo. Entra porque la pregunta trae consigo el acto que la hace ejecutable, mirar el calendario propio contra ella, y porque el libro escribe tanto la respuesta previa como las ideas que salieron despues, es decir, el antes y el despues del mismo acto. El caso es de la autora y de su jefe y va dentro (manual seccion 3.5): lo que se lleva el lector es la pregunta y el ejercicio, no los nombres. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto tiempo hay que mover al reclutar, ni que se deja de hacer a cambio.",
+  "pasos_accionables": [
+    "Reconoce primero si te estás dando esta respuesta: que estás trabajando en ello, que no pasa un día sin que hables con los reclutadores, escribas a candidatos que no te conocen o hagas entrevistas, y que contratar bien lleva tiempo.",
+    "Hazte entonces esta pregunta: si te dijeran que contratar bien es lo único que importa, ¿harías algo distinto?",
+    "Mira con esa pregunta delante a qué se te va de verdad el tiempo. Una directiva a la que se la hicieron se dio cuenta de que trabajaba en contratar todos los días, pero que la mayoría de su tiempo iba a otras cosas: revisar hojas de ruta, criticar diseños, reunirse con las personas a su cargo.",
+    "Apunta las ideas que aparecen cuando miras la contratación como lo único en lo que necesitas sobresalir. A esa directiva le salieron de golpe: pedir más referencias a su red, invitar a más candidatos a tomar un café, y afinar su discurso de venta del puesto con colegas de confianza.",
+    "Confía en el proceso como confías al atacar un problema de diseño: al empezar no sabes cuál es la respuesta ni cuánto va a tardar, pero si pones el tiempo y la energía, si generas diez opciones de diseño o si hablas con diez candidatos, al final encuentras la mejor solución.",
+    "Cuenta con lo que pasa cuando el equipo crece deprisa: ahí contratar pasa a ser fácilmente una de las dos habilidades más importantes, y si necesitas construir un equipo grande y no tienes una reserva sólida de directivos, el problema se vuelve rápidamente intratable."
+  ],
+  "entregable_esperado": "Una lista de cosas que no estabas haciendo, sacadas de mirar la contratación como si fuera lo único en lo que tuvieras que sobresalir.",
+  "nodos_previos": [],
+  "nodos_siguientes": [
+    "buscar_recomendaciones_confianza"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo crece deprisa, la contratación no lleva el ritmo, y tú ya estás trabajando en ello todos los días sin que el hueco se cierre."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-preguntar_contratar_unica_prioridad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Trabajar en contratar todos los días no significa darle el tiempo que pide: la mayor parte de la jornada puede irse a otras tareas sin que lo notes. Imaginar que contratar bien es lo único que importa rompe esa ilusión y hace aparecer ideas que no estabas usando, como pedir referencias o invitar a más candidatos. Funciona como un problema de diseño: al principio no sabes la respuesta ni cuánto tardará, pero si pones tiempo y energía, hablando con muchos candidatos, llegas a la mejor solución. Cuando el equipo crece deprisa, contratar pasa a ser de las habilidades más importantes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "223-233"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)"
+    },
+    {
+      "id": "m11-limpieza-preguntar_contratar_unica_prioridad-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntarte que harias distinto si contratar bien fuera lo unico que importa",
+      "texto_nuevo": "Preguntarte qué harías distinto si contratar bien fuera lo único que importa",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_contratar_unica_prioridad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce primero la respuesta que te estas dando, porque es la que el libro pone en boca de la autora: que estas trabajando en ello, que no pasa un dia sin que hables con el equipo de reclutamiento, mandes correos en frio o hagas entrevistas, y que contratar bien lleva tiempo.",
+      "texto_nuevo": "Reconoce primero la respuesta que te estás dando: que estás trabajando en ello, que no pasa un día sin que hables con el equipo de reclutamiento, mandes correos en frío o hagas entrevistas, y que contratar bien lleva tiempo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "porque es la que el libro pone en boca de la autora"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_contratar_unica_prioridad-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hazte entonces la pregunta que le hizo su jefe: si te dijera que contratar bien es lo unico que importa, harias algo distinto?",
+      "texto_nuevo": "Hazte entonces esta pregunta: si te dijeran que contratar bien es lo único que importa, ¿harías algo distinto?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la pregunta que le hizo su jefe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_contratar_unica_prioridad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mirate el calendario de verdad con esa pregunta delante. Ella descubrio que trabajaba en contratar todos los dias, pero que la mayoria de su tiempo iba a otras cosas, revisar hojas de ruta, criticar disenos, reunirse con sus reportes.",
+      "texto_nuevo": "Mírate el calendario de verdad con esa pregunta delante. Una directiva que lo hizo descubrió que trabajaba en contratar todos los días, pero que la mayoría de su tiempo iba a otras cosas: revisar hojas de ruta, criticar diseños, reunirse con las personas a su cargo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Ella descubrio",
+          "reunirse con sus reportes"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_contratar_unica_prioridad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Apunta las ideas que aparecen cuando miras la contratacion como lo unico en lo que necesitas sobresalir. A ella le salieron de golpe: pedir mas referencias a su red, invitar a mas candidatos a tomar un cafe, y afinar su discurso de venta del puesto con colegas de confianza.",
+      "texto_nuevo": "Apunta las ideas que aparecen cuando miras la contratación como lo único en lo que necesitas sobresalir. A esa directiva le salieron de golpe: pedir más referencias a su red, invitar a más candidatos a tomar un café, y afinar su discurso de venta del puesto con colegas de confianza.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "A ella le salieron de golpe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_contratar_unica_prioridad-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Confia en el proceso como confias al atacar un problema de diseno: al empezar no sabes cual es la respuesta ni cuanto va a tardar, pero si pones el tiempo y la energia, si generas diez opciones de diseno o si hablas con diez candidatos, al final encuentras la mejor solucion.",
+      "texto_nuevo": "Confía en el proceso como confías al atacar un problema de diseño: al empezar no sabes cuál es la respuesta ni cuánto va a tardar, pero si pones el tiempo y la energía, si generas diez opciones de diseño o si hablas con diez candidatos, al final encuentras la mejor solución.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_contratar_unica_prioridad-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el libro dice del momento en que el equipo crece deprisa: ahi contratar pasa a ser facilmente una de las una o dos habilidades mas importantes, y si necesitas construir un equipo grande y no tienes un banquillo fuerte de directivos, el problema se vuelve rapidamente intratable.",
+      "texto_nuevo": "Cuenta con lo que pasa cuando el equipo crece deprisa: ahí contratar pasa a ser fácilmente una de las una o dos habilidades más importantes, y si necesitas construir un equipo grande y no tienes un banquillo fuerte de directivos, el problema se vuelve rápidamente intratable.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el libro dice del momento en que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_contratar_unica_prioridad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de cosas que no estabas haciendo, sacadas de mirar la contratacion como si fuera lo unico en lo que tuvieras que sobresalir.",
+      "texto_nuevo": "Una lista de cosas que no estabas haciendo, sacadas de mirar la contratación como si fuera lo único en lo que tuvieras que sobresalir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-preguntar_contratar_unica_prioridad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el equipo crece deprisa, la contratacion no lleva el ritmo, y tu ya estas trabajando en ello todos los dias sin que el hueco se cierre.",
+      "texto_nuevo": "Cuando el equipo crece deprisa, la contratación no lleva el ritmo, y tú ya estás trabajando en ello todos los días sin que el hueco se cierre.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 37, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 37)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-preguntar_contratar_unica_prioridad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Trabajar en contratar todos los días no significa darle el tiempo que pide: la mayor parte de la jornada puede irse a otras tareas sin que lo notes. Imaginar que contratar bien es lo único que importa rompe esa ilusión y hace aparecer ideas que no estabas usando, como pedir referencias o invitar a más candidatos. Funciona como un problema de diseño: al principio no sabes la respuesta ni cuánto tardará, pero si pones tiempo y energía, hablando con muchos candidatos, llegas a la mejor solución. Cuando el equipo crece deprisa, contratar pasa a ser de las habilidades más importantes.",
+      "texto_nuevo": "Trabajar en contratar todos los días no significa darle el tiempo que pide: la mayor parte de la jornada puede irse a otras tareas sin que lo notes. Imaginar que contratar bien es lo único que importa puede romper esa ilusión y hacer aparecer ideas que no estabas usando, como pedir referencias o invitar a más candidatos. Funciona como un problema de diseño: al principio no sabes la respuesta ni cuánto tardará, pero si pones tiempo y energía, hablando con muchos candidatos, llegas a la mejor solución. Cuando el equipo crece deprisa, contratar pasa a ser de las habilidades más importantes.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 227",
+        "frase": "When I looked at hiring as the only thing I needed to excel at, suddenly dozens of new ideas zoomed forth."
+      },
+      "decision": "auditoria completa M11 (matiz): Lo que le pasó a una directiva (\"suddenly dozens of new ideas zoomed forth\") afirmado como efecto seguro.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-preguntar_contratar_unica_prioridad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reconoce primero la respuesta que te estás dando: que estás trabajando en ello, que no pasa un día sin que hables con el equipo de reclutamiento, mandes correos en frío o hagas entrevistas, y que contratar bien lleva tiempo.",
+      "texto_nuevo": "Reconoce primero si te estás dando esta respuesta: que estás trabajando en ello, que no pasa un día sin que hables con los reclutadores, mandes correos en frío o hagas entrevistas, y que contratar bien lleva tiempo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 223",
+        "frase": "“But I’m working on it!” I’d cry in response."
+      },
+      "decision": "auditoria completa M11 (matiz, voz): La respuesta es la de la autora; el paso daba por hecho que tú te la das. Se vuelve condicional. Además sale \"el equipo de\" (voz de la casa).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-preguntar_contratar_unica_prioridad-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que pasa cuando el equipo crece deprisa: ahí contratar pasa a ser fácilmente una de las una o dos habilidades más importantes, y si necesitas construir un equipo grande y no tienes un banquillo fuerte de directivos, el problema se vuelve rápidamente intratable.",
+      "texto_nuevo": "Cuenta con lo que pasa cuando el equipo crece deprisa: ahí contratar pasa a ser fácilmente una de las dos habilidades más importantes, y si necesitas construir un equipo grande y no tienes una reserva sólida de directivos, el problema se vuelve rápidamente intratable.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "una de las una o dos habilidades más importantes",
+          "banquillo fuerte"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Una de las una o dos\" calca \"the top one or two\" y es agramatical; \"banquillo fuerte\" calca \"strong bench\".",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-preguntar_contratar_unica_prioridad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce primero si te estás dando esta respuesta: que estás trabajando en ello, que no pasa un día sin que hables con los reclutadores, mandes correos en frío o hagas entrevistas, y que contratar bien lleva tiempo.",
+      "texto_nuevo": "Reconoce primero si te estás dando esta respuesta: que estás trabajando en ello, que no pasa un día sin que hables con los reclutadores, escribas a candidatos que no te conocen o hagas entrevistas, y que contratar bien lleva tiempo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "mandes correos en frío"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): calco de \"cold emails\" (zhuo_manager/cap_08.md l.223)",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase5-preguntar_contratar_unica_prioridad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mírate el calendario de verdad con esa pregunta delante. Una directiva que lo hizo descubrió que trabajaba en contratar todos los días, pero que la mayoría de su tiempo iba a otras cosas: revisar hojas de ruta, criticar diseños, reunirse con las personas a su cargo.",
+      "texto_nuevo": "Mira con esa pregunta delante a qué se te va de verdad el tiempo. Una directiva a la que se la hicieron se dio cuenta de que trabajaba en contratar todos los días, pero que la mayoría de su tiempo iba a otras cosas: revisar hojas de ruta, criticar diseños, reunirse con las personas a su cargo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 225-227",
+        "frase": "I blinked. Well, when he put it that way, yes, of course. I was working on hiring every day, but the majority of my time was spent on other things—reviewing road maps, critiquing designs, meeting with my reports, etc."
+      },
+      "decision": "auditoria completa M11 (invencion): Procedencia inventada: la directiva no revisó ningún calendario, se dio cuenta al oír la pregunta de su jefe; el paso le atribuía (y mandaba) mirar el calendario, que el capítulo no dice. Se toma la propuesta del auditor.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Haz de Contratar tu Prioridad"
+}

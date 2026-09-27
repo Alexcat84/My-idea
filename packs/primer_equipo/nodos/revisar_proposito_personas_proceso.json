@@ -1,0 +1,450 @@
+{
+  "node_id": "revisar_proposito_personas_proceso",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Revisar el propósito, las personas y el proceso de tu equipo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Las tareas del día pueden ordenarse en tres palancas que mueven los resultados. El propósito, el porqué, alinea a todos en por qué importa el trabajo; si falta o no está claro, puede haber conflictos y expectativas desalineadas. Las personas, el quién, deciden si hay habilidades, motivación y un entorno para prosperar. El proceso, el cómo, fija quién hace qué y para cuándo y con qué principios se decide, o hasta lo simple puede complicarse. Pregúntate de continuo cómo influir en las tres; al crecer el equipo, pesa menos lo bien que tú trabajes y más cuánto multiplicas lo que logran todos.",
+  "notas_extraccion": "Es la cabeza de la clasificacion con la que el capitulo responde a su propia pregunta, como ayuda un directivo a un grupo de personas a lograr grandes resultados. La autora dice que llego a ella por observacion propia y la presenta despues de citar a J. Richard Hackman, el principal estudioso de los equipos, cuyas conclusiones dice que son parecidas. Los tres cubos son proposito, personas y proceso, y cada uno trae del libro su pregunta y su averia: el proposito trae por que importa nuestro trabajo y produce conflictos y expectativas desalineadas cuando falta; las personas traen si estan preparados, si tienen las habilidades y si estan motivados, y producen problemas cuando no lo estan; el proceso trae quien hace que y para cuando y que principios gobiernan las decisiones, y complica enormemente hasta las tareas simples cuando no esta. El paso que abre es la equivocacion que la autora declara de si misma: irse a los deberes de cada dia. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se revisan los tres cubos, en que orden se atienden cuando fallan dos a la vez, ni quien revisa al directivo.",
+  "pasos_accionables": [
+    "Cuando te preguntes cómo ayudar a un grupo de personas a lograr grandes resultados, no contestes con los deberes de cada día, es decir preparar la reunión siguiente, quitarle un obstáculo a alguien de tu equipo o sacar el plan de ejecución del mes que viene: es adonde se le iba la cabeza a una directiva cuando empezaba, y la respuesta está en otro sitio.",
+    "Ordena la multitud de tareas que llenan tu día en tres cajones: propósito, personas y proceso, que son el porqué, el quién y el cómo.",
+    "En el cajón del propósito pon el resultado que tu equipo intenta lograr, y comprueba que todos en el equipo tienen una imagen parecida de «¿por qué importa nuestro trabajo?». Si el propósito falta o está poco claro, pueden aparecer conflictos y expectativas desalineadas.",
+    "En el cajón de las personas pregunta si los miembros de tu equipo están preparados para tener éxito, si tienen las habilidades adecuadas y si están motivados para hacer un gran trabajo. Si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas.",
+    "En el cajón del proceso pon cómo trabaja en conjunto tu equipo, y pregunta quién debe hacer qué y para cuándo, y qué principios deben gobernar la toma de decisiones. Si no está claro cómo se supone que todos trabajan juntos, ni cuáles son los valores del equipo, hasta las tareas simples pueden complicarse enormemente.",
+    "Pregúntate de continuo cómo puedes influir en estas tres palancas para mejorar los resultados de tu equipo.",
+    "Cuenta con que según crece el equipo importa cada vez menos lo bueno que seas tú personalmente haciendo el trabajo, y cada vez más el efecto multiplicador que tienes sobre el equipo."
+  ],
+  "entregable_esperado": "Las tareas de tu día ordenadas en los tres cajones, las preguntas de cada cajón contestadas, y la palanca que está fallando identificada por lo que puede producir: conflictos y expectativas desalineadas si falla el propósito, problemas si falla la gente, y tareas simples enormemente complicadas si falla el proceso.",
+  "nodos_previos": [
+    "evaluar_directivo_resultados_fortaleza"
+  ],
+  "nodos_siguientes": [
+    "gestionar_personas_equipo",
+    "alinear_prioridades_reporte_directivo",
+    "alinear_equipo_proposito_comun",
+    "fijar_proceso_trabajo_equipo",
+    "atender_modo_supervivencia_equipo"
+  ],
+  "condiciones_activacion": [
+    "Cuando te preguntas cómo ayudar a un grupo de personas a lograr grandes resultados y tienes delante la multitud de tareas que llenan el día de un directivo, sin saber cuáles de ellas mueven de verdad el resultado."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Las tareas sueltas de cada día no dicen si un equipo logra grandes resultados; lo dicen tres palancas. El propósito, el porqué, alinea a todos en por qué importa el trabajo y evita conflictos y expectativas cruzadas. Las personas, el quién, deciden si hay habilidades, motivación y un entorno para prosperar. El proceso, el cómo, fija quién hace qué y para cuándo y con qué principios se decide, o hasta lo simple se complica. Mirar la jornada por esos tres cubos funciona porque, cuando el equipo crece, pesa menos lo bien que tú hagas el trabajo y más cuánto multiplicas lo que logran todos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_02.md",
+          "lineas": "115-149"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)"
+    },
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisar el proposito, las personas y el proceso de tu equipo",
+      "texto_nuevo": "Revisar el propósito, las personas y el proceso de tu equipo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No contestes con los deberes de cada dia, es decir preparar la reunion siguiente, quitarle un obstaculo a alguien de tu equipo o sacar el plan de ejecucion del mes que viene: es adonde iba la cabeza de la autora cuando empezaba, y el capitulo pone la respuesta en otro sitio.",
+      "texto_nuevo": "No contestes con los deberes de cada día, es decir preparar la reunión siguiente, quitarle un obstáculo a alguien de tu equipo o sacar el plan de ejecución del mes que viene: es adonde se le iba la cabeza a una directiva cuando empezaba, y la respuesta está en otro sitio.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "es adonde iba la cabeza de la autora cuando empezaba, y el capitulo pone la respuesta en otro sitio"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: propio",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ordena la multitud de tareas que llenan tu dia en tres cubos: proposito, personas y proceso, que son el porque, el quien y el como.",
+      "texto_nuevo": "Ordena la multitud de tareas que llenan tu día en tres cubos: propósito, personas y proceso, que son el porqué, el quién y el cómo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En el cubo del proposito pon el resultado que tu equipo intenta lograr, y comprueba que todos en el equipo tienen una imagen parecida de por que importa nuestro trabajo. Si el proposito falta o esta poco claro, apareceran conflictos y expectativas desalineadas.",
+      "texto_nuevo": "En el cubo del propósito pon el resultado que tu equipo intenta lograr, y comprueba que todos en el equipo tienen una imagen parecida de por qué importa nuestro trabajo. Si el propósito falta o está poco claro, aparecerán conflictos y expectativas desalineadas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En el cubo de las personas pregunta si los miembros de tu equipo estan preparados para tener exito, si tienen las habilidades adecuadas y si estan motivados para hacer un gran trabajo. Si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas.",
+      "texto_nuevo": "En el cubo de las personas pregunta si los miembros de tu equipo están preparados para tener éxito, si tienen las habilidades adecuadas y si están motivados para hacer un gran trabajo. Si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En el cubo del proceso pon como trabaja junto tu equipo, y pregunta quien debe hacer que y para cuando, y que principios deben gobernar la toma de decisiones. Si no esta claro como se supone que todos trabajan juntos, ni cuales son los valores del equipo, hasta las tareas simples se complican enormemente.",
+      "texto_nuevo": "En el cubo del proceso pon cómo trabaja junto tu equipo, y pregunta quién debe hacer qué y para cuándo, y qué principios deben gobernar la toma de decisiones. Si no está claro cómo se supone que todos trabajan juntos, ni cuáles son los valores del equipo, hasta las tareas simples se complican enormemente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntate de continuo como puedes influir en estas tres palancas para mejorar los resultados de tu equipo.",
+      "texto_nuevo": "Pregúntate de continuo cómo puedes influir en estas tres palancas para mejorar los resultados de tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que segun crece el equipo importa cada vez menos lo bueno que seas tu personalmente haciendo el trabajo, y cada vez mas el efecto multiplicador que tienes sobre el equipo.",
+      "texto_nuevo": "Cuenta con que según crece el equipo importa cada vez menos lo bueno que seas tú personalmente haciendo el trabajo, y cada vez más el efecto multiplicador que tienes sobre el equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Las tareas de tu dia ordenadas en los tres cubos, las preguntas del libro contestadas en cada uno, y la palanca que esta fallando identificada por lo que produce: conflictos y expectativas desalineadas si falla el proposito, problemas si falla la gente, y tareas simples enormemente complicadas si falla el proceso.",
+      "texto_nuevo": "Las tareas de tu día ordenadas en los tres cubos, las preguntas de cada cubo contestadas, y la palanca que está fallando identificada por lo que produce: conflictos y expectativas desalineadas si falla el propósito, problemas si falla la gente, y tareas simples enormemente complicadas si falla el proceso.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "las preguntas del libro contestadas en cada uno"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-revisar_proposito_personas_proceso-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando te preguntas como ayudar a un grupo de personas a lograr grandes resultados y tienes delante la multitud de tareas que llenan el dia de un directivo, sin saber cuales de ellas mueven de verdad el resultado.",
+      "texto_nuevo": "Cuando te preguntas cómo ayudar a un grupo de personas a lograr grandes resultados y tienes delante la multitud de tareas que llenan el día de un directivo, sin saber cuáles de ellas mueven de verdad el resultado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-revisar_proposito_personas_proceso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las tareas sueltas de cada día no dicen si un equipo logra grandes resultados; lo dicen tres palancas. El propósito, el porqué, alinea a todos en por qué importa el trabajo y evita conflictos y expectativas cruzadas. Las personas, el quién, deciden si hay habilidades, motivación y un entorno para prosperar. El proceso, el cómo, fija quién hace qué y para cuándo y con qué principios se decide, o hasta lo simple se complica. Mirar la jornada por esos tres cubos funciona porque, cuando el equipo crece, pesa menos lo bien que tú hagas el trabajo y más cuánto multiplicas lo que logran todos.",
+      "texto_nuevo": "Las tareas sueltas de cada día no dicen si un equipo logra grandes resultados; lo dicen tres palancas. El propósito, el porqué, alinea a todos en por qué importa el trabajo y evita conflictos y expectativas cruzadas. Las personas, el quién, deciden si hay habilidades, motivación y un entorno para prosperar. El proceso, el cómo, fija quién hace qué y para cuándo y con qué principios se decide, o hasta lo simple puede complicarse. Pregúntate de continuo cómo influir en las tres; al crecer el equipo, pesa menos lo bien que tú hagas el trabajo y más cuánto multiplicas lo que logran todos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 139, 149",
+        "frase": "then even simple tasks can get enormously complicated ... A great manager constantly asks herself how she can influence these levers to improve her team’s outcomes. As the team grows in size, it matters less and less how good she is personally at doing the work herself."
+      },
+      "decision": "auditoria completa M11 (invencion, matiz): La causa (mirar por los tres cubos funciona porque...) no está en el libro, que dice que el mando se pregunta cómo influir en las palancas y, aparte, que al crecer el equipo pesa el efecto multiplicador; y lo simple puede complicarse (can get), no se complica siempre.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion",
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-revisar_proposito_personas_proceso-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En el cubo del propósito pon el resultado que tu equipo intenta lograr, y comprueba que todos en el equipo tienen una imagen parecida de por qué importa nuestro trabajo. Si el propósito falta o está poco claro, aparecerán conflictos y expectativas desalineadas.",
+      "texto_nuevo": "En el cubo del propósito pon el resultado que tu equipo intenta lograr, y comprueba que todos en el equipo tienen una imagen parecida de «¿por qué importa nuestro trabajo?». Si el propósito falta o está poco claro, pueden aparecer conflictos y expectativas desalineadas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 127",
+        "frase": "Everyone on the team should have a similar picture of why does our work matter? If this purpose is missing or unclear, then you may experience conflicts or mismatched expectations."
+      },
+      "decision": "auditoria completa M11 (matiz, coherencia): Los conflictos pueden aparecer (may experience), no aparecen seguro; y \"nuestro trabajo\" cambia de persona sin marca: va como la pregunta del equipo, entre comillas.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-revisar_proposito_personas_proceso-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En el cubo del proceso pon cómo trabaja junto tu equipo, y pregunta quién debe hacer qué y para cuándo, y qué principios deben gobernar la toma de decisiones. Si no está claro cómo se supone que todos trabajan juntos, ni cuáles son los valores del equipo, hasta las tareas simples se complican enormemente.",
+      "texto_nuevo": "En el cubo del proceso pon cómo trabaja en conjunto tu equipo, y pregunta quién debe hacer qué y para cuándo, y qué principios deben gobernar la toma de decisiones. Si no está claro cómo se supone que todos trabajan juntos, ni cuáles son los valores del equipo, hasta las tareas simples pueden complicarse enormemente.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 139",
+        "frase": "but if it’s not apparent how everyone’s supposed to work together or what the team’s values are, then even simple tasks can get enormously complicated."
+      },
+      "decision": "auditoria completa M11 (matiz, calco): Las tareas simples pueden complicarse (can get); además \"trabaja junto\" es calco de \"works together\".",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-revisar_proposito_personas_proceso-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las tareas de tu día ordenadas en los tres cubos, las preguntas de cada cubo contestadas, y la palanca que está fallando identificada por lo que produce: conflictos y expectativas desalineadas si falla el propósito, problemas si falla la gente, y tareas simples enormemente complicadas si falla el proceso.",
+      "texto_nuevo": "Las tareas de tu día ordenadas en los tres cubos, las preguntas de cada cubo contestadas, y la palanca que está fallando identificada por lo que puede producir: conflictos y expectativas desalineadas si falla el propósito, problemas si falla la gente, y tareas simples enormemente complicadas si falla el proceso.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 127, 139",
+        "frase": "then you may experience conflicts or mismatched expectations ... then even simple tasks can get enormously complicated"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro da esos efectos como posibles (may, can), no como seguros.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-revisar_proposito_personas_proceso-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Las tareas sueltas de cada día no dicen si un equipo logra grandes resultados; lo dicen tres palancas. El propósito, el porqué, alinea a todos en por qué importa el trabajo y evita conflictos y expectativas cruzadas. Las personas, el quién, deciden si hay habilidades, motivación y un entorno para prosperar. El proceso, el cómo, fija quién hace qué y para cuándo y con qué principios se decide, o hasta lo simple puede complicarse. Pregúntate de continuo cómo influir en las tres; al crecer el equipo, pesa menos lo bien que tú hagas el trabajo y más cuánto multiplicas lo que logran todos.",
+      "texto_nuevo": "Las tareas del día pueden ordenarse en tres palancas que mueven los resultados. El propósito, el porqué, alinea a todos en por qué importa el trabajo; si falta o no está claro, puede haber conflictos y expectativas desalineadas. Las personas, el quién, deciden si hay habilidades, motivación y un entorno para prosperar. El proceso, el cómo, fija quién hace qué y para cuándo y con qué principios se decide, o hasta lo simple puede complicarse. Pregúntate de continuo cómo influir en las tres; al crecer el equipo, pesa menos lo bien que tú trabajes y más cuánto multiplicas lo que logran todos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 125-127",
+        "frase": "If this purpose is missing or unclear, then you may experience conflicts or mismatched expectations."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que sin propósito claro \"puedes\" tener conflictos o expectativas desalineadas (may), no que el propósito los evite; y el orden en tres cubos es cómo la autora ha llegado a ver las tareas (L125, \"I’ve come to think of the multitude of tasks ... as sorting neatly into three buckets\"), no la tesis de que las tareas no dicen nada del resultado. Se toma la propuesta, ajustada para quedar dentro de 600 caracteres.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-revisar_proposito_personas_proceso-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "No contestes con los deberes de cada día, es decir preparar la reunión siguiente, quitarle un obstáculo a alguien de tu equipo o sacar el plan de ejecución del mes que viene: es adonde se le iba la cabeza a una directiva cuando empezaba, y la respuesta está en otro sitio.",
+      "texto_nuevo": "Cuando te preguntes cómo ayudar a un grupo de personas a lograr grandes resultados, no contestes con los deberes de cada día, es decir preparar la reunión siguiente, quitarle un obstáculo a alguien de tu equipo o sacar el plan de ejecución del mes que viene: es adonde se le iba la cabeza a una directiva cuando empezaba, y la respuesta está en otro sitio.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "«No contestes» no tenía pregunta a la que referirse en el paso; se pone la pregunta del libro (how does a manager help a group of people achieve great outcomes, cap_02 l. 117), la misma de la condición."
+      },
+      "decision": "auditoria completa M11 (coherencia): «No contestes» no tenía pregunta a la que referirse en el paso; se pone la pregunta del libro (how does a manager help a group of people achieve great outcomes, cap_02 l. 117), la misma de la condición.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-revisar_proposito_personas_proceso-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ordena la multitud de tareas que llenan tu día en tres cubos: propósito, personas y proceso, que son el porqué, el quién y el cómo.",
+      "texto_nuevo": "Ordena la multitud de tareas que llenan tu día en tres cajones: propósito, personas y proceso, que son el porqué, el quién y el cómo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "tres cubos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"buckets\" (zhuo cap_02 125): en español las tareas no se ordenan en cubos (y en América un cubo es otra cosa); pasa a cajones, igual en los cinco campos del nodo que están en la entrada.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-revisar_proposito_personas_proceso-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "En el cubo del propósito pon el resultado que tu equipo intenta lograr, y comprueba que todos en el equipo tienen una imagen parecida de «¿por qué importa nuestro trabajo?». Si el propósito falta o está poco claro, pueden aparecer conflictos y expectativas desalineadas.",
+      "texto_nuevo": "En el cajón del propósito pon el resultado que tu equipo intenta lograr, y comprueba que todos en el equipo tienen una imagen parecida de «¿por qué importa nuestro trabajo?». Si el propósito falta o está poco claro, pueden aparecer conflictos y expectativas desalineadas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "En el cubo del propósito"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"buckets\" (zhuo cap_02 125): en español las tareas no se ordenan en cubos (y en América un cubo es otra cosa); pasa a cajones, igual en los cinco campos del nodo que están en la entrada.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-revisar_proposito_personas_proceso-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "En el cubo de las personas pregunta si los miembros de tu equipo están preparados para tener éxito, si tienen las habilidades adecuadas y si están motivados para hacer un gran trabajo. Si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas.",
+      "texto_nuevo": "En el cajón de las personas pregunta si los miembros de tu equipo están preparados para tener éxito, si tienen las habilidades adecuadas y si están motivados para hacer un gran trabajo. Si no tienes a las personas adecuadas para el trabajo, o no tienes un entorno donde puedan prosperar, vas a tener problemas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "En el cubo de las personas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"buckets\" (zhuo cap_02 125): en español las tareas no se ordenan en cubos (y en América un cubo es otra cosa); pasa a cajones, igual en los cinco campos del nodo que están en la entrada.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-revisar_proposito_personas_proceso-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "En el cubo del proceso pon cómo trabaja en conjunto tu equipo, y pregunta quién debe hacer qué y para cuándo, y qué principios deben gobernar la toma de decisiones. Si no está claro cómo se supone que todos trabajan juntos, ni cuáles son los valores del equipo, hasta las tareas simples pueden complicarse enormemente.",
+      "texto_nuevo": "En el cajón del proceso pon cómo trabaja en conjunto tu equipo, y pregunta quién debe hacer qué y para cuándo, y qué principios deben gobernar la toma de decisiones. Si no está claro cómo se supone que todos trabajan juntos, ni cuáles son los valores del equipo, hasta las tareas simples pueden complicarse enormemente.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "En el cubo del proceso"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"buckets\" (zhuo cap_02 125): en español las tareas no se ordenan en cubos (y en América un cubo es otra cosa); pasa a cajones, igual en los cinco campos del nodo que están en la entrada.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-revisar_proposito_personas_proceso-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Las tareas de tu día ordenadas en los tres cubos, las preguntas de cada cubo contestadas, y la palanca que está fallando identificada por lo que puede producir: conflictos y expectativas desalineadas si falla el propósito, problemas si falla la gente, y tareas simples enormemente complicadas si falla el proceso.",
+      "texto_nuevo": "Las tareas de tu día ordenadas en los tres cajones, las preguntas de cada cajón contestadas, y la palanca que está fallando identificada por lo que puede producir: conflictos y expectativas desalineadas si falla el propósito, problemas si falla la gente, y tareas simples enormemente complicadas si falla el proceso.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "los tres cubos",
+          "cada cubo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"buckets\" (zhuo cap_02 125): en español las tareas no se ordenan en cubos (y en América un cubo es otra cosa); pasa a cajones, igual en los cinco campos del nodo que están en la entrada.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Revisa Propósito, Personas y Proceso"
+}

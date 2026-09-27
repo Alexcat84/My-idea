@@ -1,0 +1,287 @@
+{
+  "node_id": "ajustar_plan_fuerzas_equipo",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Ajustar el plan a lo que tu equipo sabe hacer de verdad",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Igual que tu forma de dirigir refleja quién eres, tus planes deberían tener en cuenta las capacidades propias de tu equipo y su oficio central, aquello para lo que contratas y formas. Que tu gente pueda hacer algo fuera de él no significa que deba: una directiva calcula que, en su caso, probablemente gastarían el doble de tiempo para lograr el ochenta por ciento de la calidad de un equipo especializado. Suele haber muchas maneras de llegar al mismo resultado y ninguna es correcta para todos; el plan más inteligente reconoce las fuerzas y debilidades relativas de tu equipo.",
+  "notas_extraccion": "Es la primera de las cosas a tener en cuenta al planificar, y la unica que puede llevar a NO hacer el trabajo. Lo que la hace procedimentable es la cuenta del paso 5, doble de tiempo por el ochenta por ciento de calidad, que convierte una preferencia en un calculo, y el ejemplo del video y las ilustraciones, que es el caso concreto de trabajo derivado a otro equipo. La metafora de la caballeria va dentro porque es la forma en que el libro enuncia la regla. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se negocia ese trabajo con el otro equipo, ni que se hace cuando no existe ese otro equipo.",
+  "pasos_accionables": [
+    "Haz con tus planes lo mismo que con tu estilo de dirección: que tengan en cuenta las capacidades únicas de tu equipo, igual que tu estilo refleja quién eres y en qué eres bueno.",
+    "Identifica cuál es el oficio central de tu equipo, es decir, aquello para lo que contratas y formas porque es el grueso de lo que hace tu equipo.",
+    "Cuando un proyecto pida algo que queda fuera de ese oficio central, piensa en acudir a otro equipo, como suele hacer una directiva cuando hace falta un video promocional pulido o un gran número de ilustraciones.",
+    "No confundas poder con deber: aunque mucha gente de tu equipo pueda hacerlo, eso no significa que deba hacerlo tu equipo.",
+    "Haz esta cuenta: si no es tu competencia central, probablemente tu equipo acabará gastando más tiempo para menos calidad de la que conseguiría un equipo especializado; una directiva calcula que, en su caso, sería el doble de tiempo para el ochenta por ciento de la calidad.",
+    "No mandes a la caballería de un ejército a una misión de espionaje, ni crees un plan que no case con aquello para lo que tu equipo está bien dotado.",
+    "Recuerda que suele haber docenas de maneras de ir de un punto a otro, por tierra, por mar o por aire, y que dentro de la tierra puedes elegir el camino de la selva o el de la montaña: no hay una respuesta correcta universal, y el plan más inteligente para tu equipo es el que reconoce sus fuerzas y sus debilidades relativas."
+  ],
+  "entregable_esperado": "Un plan que reconoce las fuerzas y las debilidades relativas de tu equipo, con el trabajo fuera de su oficio central encargado a quien sí lo tiene.",
+  "nodos_previos": [
+    "crear_plan_creible_equipo"
+  ],
+  "nodos_siguientes": [
+    "disenar_equipo_plan_anual",
+    "priorizar_pocas_cosas_bien"
+  ],
+  "condiciones_activacion": [
+    "Al elegir entre varias formas de conseguir lo mismo, y sobre todo cuando un proyecto pide algo que tu equipo podría hacer pero no es su oficio central."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-ajustar_plan_fuerzas_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Igual que tu forma de dirigir refleja quién eres, tus planes deberían tener en cuenta las capacidades propias de tu equipo y su oficio central, aquello para lo que contratas y formas. Que tu gente pueda hacer algo fuera de él no significa que deba: una directiva calcula que, en su caso, probablemente gastarían el doble de tiempo para lograr el ochenta por ciento de la calidad de un equipo especializado. Suele haber muchas maneras de llegar al mismo resultado y ninguna es correcta para todos; el plan más inteligente reconoce las fuerzas y debilidades relativas de tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "74-79"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): Se sostiene: el doble de tiempo para el ochenta por ciento es la estimación de la autora sobre su propio equipo, con 'probably' (77), y 'Un plan funciona mejor' no está en las líneas; 'casi siempre' endurece el 'usually' de la 79. La propuesta del lector acierta en el fondo pero usa 'su equipo', baranda de la casa; se reescribe con el caso contado sin esa forma.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)"
+    },
+    {
+      "id": "m11-limpieza-ajustar_plan_fuerzas_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz con tus planes lo mismo que con tu estilo de direccion: que tengan en cuenta las capacidades unicas de tu equipo, igual que tu estilo refleja quien eres y en que eres bueno.",
+      "texto_nuevo": "Haz con tus planes lo mismo que con tu estilo de dirección: que tengan en cuenta las capacidades únicas de tu equipo, igual que tu estilo refleja quién eres y en qué eres bueno.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ajustar_plan_fuerzas_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica cual es el oficio central de tu equipo, es decir, aquello para lo que contratas y formas porque es el grueso de lo que haceis.",
+      "texto_nuevo": "Identifica cuál es el oficio central de tu equipo, es decir, aquello para lo que contratas y formas porque es el grueso de lo que hace tu equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "haceis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ajustar_plan_fuerzas_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando un proyecto pida algo que queda fuera de ese oficio central, acude a otro equipo, como hace la autora cuando hace falta un video de marketing pulido o un gran numero de ilustraciones.",
+      "texto_nuevo": "Cuando un proyecto pida algo que queda fuera de ese oficio central, acude a otro equipo, por ejemplo cuando hace falta un vídeo promocional pulido o un gran número de ilustraciones.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "como hace la autora",
+          "marketing"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ajustar_plan_fuerzas_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No confundas poder con deber: aunque mucha gente de tu equipo pueda hacerlo, eso no significa que debais hacerlo vosotros.",
+      "texto_nuevo": "No confundas poder con deber: aunque mucha gente de tu equipo pueda hacerlo, eso no significa que deba hacerlo tu equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "debais hacerlo vosotros"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ajustar_plan_fuerzas_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz la cuenta que el libro hace: si no es tu competencia central, probablemente acabareis gastando el doble de tiempo para el ochenta por ciento de la calidad que conseguiria un equipo especializado.",
+      "texto_nuevo": "Haz esta cuenta: si no es tu competencia central, probablemente tu equipo acabará gastando el doble de tiempo para el ochenta por ciento de la calidad que conseguiría un equipo especializado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la cuenta que el libro hace",
+          "acabareis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ajustar_plan_fuerzas_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No mandes a la caballeria de un ejercito a una mision de espionaje, ni crees un plan que no case con aquello para lo que tu equipo esta bien dotado.",
+      "texto_nuevo": "No mandes a la caballería de un ejército a una misión de espionaje, ni crees un plan que no case con aquello para lo que tu equipo está bien dotado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ajustar_plan_fuerzas_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recuerda que suele haber docenas de maneras de ir de un punto a otro, por tierra, por mar o por aire, y que dentro de la tierra puedes elegir el camino de la selva o el de la montanias: no hay una respuesta correcta universal, y el plan mas inteligente para tu equipo es el que reconoce sus fuerzas y sus debilidades relativas.",
+      "texto_nuevo": "Recuerda que suele haber docenas de maneras de ir de un punto a otro, por tierra, por mar o por aire, y que dentro de la tierra puedes elegir el camino de la selva o el de la montaña: no hay una respuesta correcta universal, y el plan más inteligente para tu equipo es el que reconoce sus fuerzas y sus debilidades relativas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ajustar_plan_fuerzas_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un plan que reconoce las fuerzas y las debilidades relativas de tu equipo, con el trabajo fuera de su oficio central encargado a quien si lo tiene.",
+      "texto_nuevo": "Un plan que reconoce las fuerzas y las debilidades relativas de tu equipo, con el trabajo fuera de su oficio central encargado a quien sí lo tiene.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-ajustar_plan_fuerzas_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al elegir entre varias formas de conseguir lo mismo, y sobre todo cuando un proyecto pide algo que tu equipo podria hacer pero no es su oficio central.",
+      "texto_nuevo": "Al elegir entre varias formas de conseguir lo mismo, y sobre todo cuando un proyecto pide algo que tu equipo podría hacer pero no es su oficio central.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-ajustar_plan_fuerzas_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando un proyecto pida algo que queda fuera de ese oficio central, acude a otro equipo, por ejemplo cuando hace falta un vídeo promocional pulido o un gran número de ilustraciones.",
+      "texto_nuevo": "Cuando un proyecto pida algo que queda fuera de ese oficio central, piensa en acudir a otro equipo, como suele hacer una directiva cuando hace falta un vídeo promocional pulido o un gran número de ilustraciones.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 75",
+        "frase": "But in those instances when a project calls for a polished marketing video or a large number of illustrations, I usually turn to another team."
+      },
+      "decision": "auditoria completa M11 (matiz): En el libro es lo que la autora suele hacer (I usually turn to another team); se cuenta como caso y con el 'suele'. No se toma 'lo normal es', que sigue generalizando.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-ajustar_plan_fuerzas_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Haz esta cuenta: si no es tu competencia central, probablemente tu equipo acabará gastando el doble de tiempo para el ochenta por ciento de la calidad que conseguiría un equipo especializado.",
+      "texto_nuevo": "Haz esta cuenta: si no es tu competencia central, probablemente tu equipo acabará gastando más tiempo para menos calidad de la que conseguiría un equipo especializado; una directiva calcula que, en su caso, sería el doble de tiempo para el ochenta por ciento de la calidad.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 77",
+        "frase": "It’s not our core competency, and we’ll probably end up spending double the time for 80 percent the quality of what a specialized team could do."
+      },
+      "decision": "auditoria completa M11 (matiz): La cifra del doble de tiempo por el ochenta por ciento de la calidad es la estimación de la autora para su propio equipo; se cuenta como caso.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase4-barrido-ajustar_plan_fuerzas_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando un proyecto pida algo que queda fuera de ese oficio central, piensa en acudir a otro equipo, como suele hacer una directiva cuando hace falta un vídeo promocional pulido o un gran número de ilustraciones.",
+      "texto_nuevo": "Cuando un proyecto pida algo que queda fuera de ese oficio central, piensa en acudir a otro equipo, como suele hacer una directiva cuando hace falta un video promocional pulido o un gran número de ilustraciones.",
+      "cita": {
+        "regla": "voz de la casa y espanol neutro: forma fijada 'a tu cargo' / 'a su cargo' y formas de una sola region a la neutra (decisiones del orquestador para todo el pack, cuarto pase de la limpieza M11, 28 sep 2026)",
+        "fragmentos": [
+          "un vídeo promocional"
+        ]
+      },
+      "decision": "decisiones del orquestador para todo el pack (cuarto pase)",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4_barrido/",
+      "motivos": [
+        "regionalismo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Ajusta el Plan a Tu Equipo",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

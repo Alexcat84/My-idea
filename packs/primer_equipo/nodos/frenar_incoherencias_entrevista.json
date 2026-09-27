@@ -1,0 +1,209 @@
+{
+  "node_id": "frenar_incoherencias_entrevista",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Frenar en las incoherencias de la entrevista y perseguirlas allí mismo",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Cuando alguien no dice la verdad, lo que más lo delata es la incoherencia entre lo que afirma y cómo lo afirma, que se ve o se oye; una ventaja de hacer la entrevista en persona es poder vigilar los cambios del cuerpo. Frenar en el momento en que la señal aparece, con curiosidad, te permite averiguar cuánto hubo de verdad en un logro que alguien presenta como muy bueno, porque probablemente hay más historia de la que te quiere contar. No se trata de buscar trapos sucios, sino de conocer a la persona con el detalle y el patrón general para decidir bien a quién contratar.",
+  "notas_extraccion": "La quinta tactica maestra es la unica que depende de un canal que las demas no usan: el cuerpo del candidato mientras habla. Ha crecido una ciencia entera dedicada a detectar cuando la gente miente, y segun el libro su mayor indicador resulta ser la incoherencia, ver u oir que lo que se afirma no cuadra con como se esta afirmando. Lo que la vuelve procedimiento no es la teoria sino que el libro pone la señal concreta, la afirmacion positiva acompañada de removerse en la silla, mirar abajo y taparse la boca, y pone el acto, frenar y ponerse curioso alli mismo. Es la unica tactica que exige la entrevista presencial, y esa exigencia es su condicion de activacion. El parrafo cierra con una advertencia que enmarca la tactica entera y que no se convierte en paso porque no ejecuta nada: la idea no es reunir trapos sucios, eso nunca es el objetivo de la entrevista cronologica, y quien se comporte como un reportero de investigacion o, peor, como un columnista de cotilleos, tiene que replantearse seriamente su enfoque; hay que pensarse mas bien como un biografo entrevistando a su sujeto, buscando a la vez el detalle y el patron amplio, los hechos y la textura, porque asi es como se toma una decision informada sobre a quien.",
+  "pasos_accionables": [
+    "Haz la entrevista en persona, que es lo que te permite vigilar los cambios de lenguaje corporal y las demás incoherencias.",
+    "Vigila las incoherencias entre lo que se dice y cómo se dice, porque son el mayor indicador de que alguien está mintiendo. Por ejemplo, alguien afirma que en aquel puesto lo hicieron muy bien mientras se remueve en la silla, mira hacia abajo y se tapa la boca: eso es una señal de alto.",
+    "Cuando la veas, pisa el freno, ponte curioso y averigua hasta qué punto lo hizo de verdad tan bien. Probablemente hay más historia de la que la persona quiere que sepas."
+  ],
+  "entregable_esperado": "La historia que hay detrás de cada afirmación que no cuadraba, sacada en el momento en que la incoherencia apareció y no después.",
+  "nodos_previos": [
+    "aplicar_tacticas_maestras_entrevista"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Durante la entrevista cronológica de trayectoria hecha en persona, en el instante en que lo que el candidato dice y lo que su cuerpo hace dejan de coincidir."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-frenar_incoherencias_entrevista-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando alguien no dice la verdad, lo que más lo delata es la incoherencia entre lo que afirma y cómo lo afirma, y esa señal se ve en el cuerpo: por eso la entrevista se hace en persona. Frenar en el momento en que la señal aparece, con curiosidad, te permite averiguar cuánto hubo de verdad en un logro que alguien presenta como muy bueno, porque probablemente hay más historia de la que te quiere contar. No se trata de buscar trapos sucios, sino de conocer a la persona con el detalle y el patrón general para decidir bien a quién contratar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_05.md",
+          "lineas": "87-91"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)"
+    },
+    {
+      "id": "m11-limpieza-frenar_incoherencias_entrevista-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Frenar en las incoherencias de la entrevista y perseguirlas alli mismo",
+      "texto_nuevo": "Frenar en las incoherencias de la entrevista y perseguirlas allí mismo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-frenar_incoherencias_entrevista-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz la entrevista en persona, que es lo que te permite vigilar los cambios de lenguaje corporal y las demas incoherencias.",
+      "texto_nuevo": "Haz la entrevista en persona, que es lo que te permite vigilar los cambios de lenguaje corporal y las demás incoherencias.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-frenar_incoherencias_entrevista-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vigila las incoherencias entre lo que se dice y como se dice, porque son el mayor indicador de que alguien esta mintiendo. El ejemplo del libro: alguien afirma que en aquel puesto lo hicieron muy bien mientras se remueve en la silla, mira hacia abajo y se tapa la boca; eso es una señal de stop.",
+      "texto_nuevo": "Vigila las incoherencias entre lo que se dice y cómo se dice, porque son el mayor indicador de que alguien está mintiendo. Por ejemplo, alguien afirma que en aquel puesto lo hicieron muy bien mientras se remueve en la silla, mira hacia abajo y se tapa la boca: eso es una señal de alto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El ejemplo del libro",
+          "stop"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-frenar_incoherencias_entrevista-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando la veas, pisa el freno, ponte curioso y averigua hasta que punto lo hizo de verdad tan bien. Casi siempre hay mas historia de la que la persona quiere que sepas.",
+      "texto_nuevo": "Cuando la veas, pisa el freno, ponte curioso y averigua hasta qué punto lo hizo de verdad tan bien. Casi siempre hay más historia de la que la persona quiere que sepas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-frenar_incoherencias_entrevista-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La historia que hay detras de cada afirmacion que no cuadraba, sacada en el momento en que la incoherencia aparecio y no despues.",
+      "texto_nuevo": "La historia que hay detrás de cada afirmación que no cuadraba, sacada en el momento en que la incoherencia apareció y no después.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-frenar_incoherencias_entrevista-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Durante la entrevista cronologica de trayectoria hecha en persona, en el instante en que lo que el candidato dice y lo que su cuerpo hace dejan de coincidir. Es la quinta de las cinco tacticas maestras.",
+      "texto_nuevo": "Durante la entrevista cronológica de trayectoria hecha en persona, en el instante en que lo que el candidato dice y lo que su cuerpo hace dejan de coincidir. Es la quinta de las cinco tácticas maestras.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 26, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 26)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-frenar_incoherencias_entrevista-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando alguien no dice la verdad, lo que más lo delata es la incoherencia entre lo que afirma y cómo lo afirma, y esa señal se ve en el cuerpo: por eso la entrevista se hace en persona. Frenar en el momento en que la señal aparece, con curiosidad, te permite averiguar cuánto hubo de verdad en un logro que alguien presenta como muy bueno, porque probablemente hay más historia de la que te quiere contar. No se trata de buscar trapos sucios, sino de conocer a la persona con el detalle y el patrón general para decidir bien a quién contratar.",
+      "texto_nuevo": "Cuando alguien no dice la verdad, lo que más lo delata es la incoherencia entre lo que afirma y cómo lo afirma, que se ve o se oye; una ventaja de hacer la entrevista en persona es poder vigilar los cambios del cuerpo. Frenar en el momento en que la señal aparece, con curiosidad, te permite averiguar cuánto hubo de verdad en un logro que alguien presenta como muy bueno, porque probablemente hay más historia de la que te quiere contar. No se trata de buscar trapos sucios, sino de conocer a la persona con el detalle y el patrón general para decidir bien a quién contratar.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_05.md 89",
+        "frase": "One of the advantages of conducting the Who Interview in person is that you can watch for shifts in body language and other inconsistencies. The biggest indicator, as it turns out, is when you see or hear inconsistencies."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro no dice que la entrevista se haga en persona por eso: poder vigilar el lenguaje corporal es una de las ventajas de hacerla en persona; y las incoherencias se ven o se oyen, no solo en el cuerpo.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-auditoria-frenar_incoherencias_entrevista-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando la veas, pisa el freno, ponte curioso y averigua hasta qué punto lo hizo de verdad tan bien. Casi siempre hay más historia de la que la persona quiere que sepas.",
+      "texto_nuevo": "Cuando la veas, pisa el freno, ponte curioso y averigua hasta qué punto lo hizo de verdad tan bien. Probablemente hay más historia de la que la persona quiere que sepas.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_05.md 89",
+        "frase": "There is probably more to the story than he wants you to know."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice probablemente; \"casi siempre\" lo refuerza.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-frenar_incoherencias_entrevista-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Durante la entrevista cronológica de trayectoria hecha en persona, en el instante en que lo que el candidato dice y lo que su cuerpo hace dejan de coincidir. Es la quinta de las cinco tácticas maestras.",
+      "texto_nuevo": "Durante la entrevista cronológica de trayectoria hecha en persona, en el instante en que lo que el candidato dice y lo que su cuerpo hace dejan de coincidir.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Las cinco tácticas maestras no existen en el nodo: referente sin antecedente."
+      },
+      "decision": "auditoria completa M11 (coherencia): Las cinco tácticas maestras no existen en el nodo: referente sin antecedente.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Persigue las Incoherencias en la Entrevista"
+}

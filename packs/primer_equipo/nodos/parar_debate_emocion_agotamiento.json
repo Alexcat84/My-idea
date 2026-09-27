@@ -1,0 +1,213 @@
+{
+  "node_id": "parar_debate_emocion_agotamiento",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Parar un debate cuando la gente está agotada o demasiado cargada de emoción, y aplazarlo en vez de dejar que decida el cansancio",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Cuando la gente está demasiado cansada, quemada o cargada de emoción para un debate productivo, conviene darse cuenta, porque esos momentos rara vez acaban bien. Tu papel es intervenir y pedir tiempo muerto; si no, la gente decidirá cualquier cosa para poder irse a casa o, peor, estallará una pelea salida de la emoción en carne viva. Aplazas el debate hasta que los ánimos estén mejor. Si has llegado a conocer bien a cada persona de tu equipo, serás lo bastante consciente de sus emociones y su energía como para saber cuándo hace falta intervenir.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 235 a 237, bajo el rotulo Pause for emotion/exhaustion, y es la tercera de las tecnicas que el libro ofrece dentro del paso DEBATE de la rueda de hacer cosas. Es la pieza mas corta del capitulo y lo digo antes que nadie: cinco pasos de un solo parrafo. La dejo como nodo propio porque el libro le da rotulo y porque tiene lo que un procedimiento necesita: un disparador nombrado, un acto (pedir tiempo muerto), una consecuencia escrita de no hacerlo, y una condicion previa que el propio texto pone (conocer a cada uno lo bastante bien). El P5 es el que la ata al resto del libro, porque es la franqueza radical aplicada a esta decision concreta. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. Los cinco de la linea 237. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto se aplaza, quien decide que ya se puede retomar, y como se sabe que la gente ya esta en mejor disposicion.",
+  "pasos_accionables": [
+    "Mantén la conciencia puesta en los momentos en que la gente está demasiado cansada, quemada o cargada de emoción para debatir; hacerlo es crucial, porque rara vez llevan a un buen resultado.",
+    "Cuando los detectes, intervén y pide tiempo muerto.",
+    "Cuenta con lo que pasa si no lo haces: la gente tomará una decisión solo para poder irse a casa, o peor, estallará una pelea enorme salida de la emoción en carne viva.",
+    "Aplaza el debate hasta que la gente esté en mejor disposición de ánimo.",
+    "Para poder detectarlo, conoce a cada persona de tu equipo lo bastante bien: si lo has hecho, serás suficientemente consciente de las emociones y las energías de cada uno como para saber cuándo hace falta intervenir."
+  ],
+  "entregable_esperado": "El debate aplazado hasta que la gente esté en mejor disposición, sin decisión tomada por agotamiento y sin la pelea que habría estallado.",
+  "nodos_previos": [
+    "montar_reunion_gran_debate"
+  ],
+  "nodos_siguientes": [
+    "fijar_fecha_cierre_debate_equipo"
+  ],
+  "condiciones_activacion": [
+    "Cuando en un debate de tu equipo la gente está demasiado cansada, quemada o cargada de emoción como para discutir de forma productiva."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-parar_debate_emocion_agotamiento-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando la gente está demasiado cansada, quemada o cargada de emoción para un debate productivo, conviene darse cuenta, porque esos momentos rara vez acaban bien. Tu papel es intervenir y pedir tiempo muerto; si no, la gente decidirá cualquier cosa para poder irse a casa o, peor, estallará una pelea salida de la emoción en carne viva. Aplazas el debate hasta que los ánimos estén mejor. Si has llegado a conocer bien a cada persona de tu equipo, serás lo bastante consciente de sus emociones y su energía como para saber cuándo hace falta intervenir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_07.md",
+          "lineas": "235-237"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: 'solo así' vuelve condición exclusiva lo que el libro da como consecuencia de conocer al equipo, y 'antes de que el cansancio decida por todos' no está. La propuesta sigue las líneas de cerca y mide 551.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)"
+    },
+    {
+      "id": "m11-limpieza-parar_debate_emocion_agotamiento-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Parar un debate cuando la gente esta agotada o demasiado cargada de emocion, y aplazarlo en vez de dejar que decida el cansancio",
+      "texto_nuevo": "Parar un debate cuando la gente está agotada o demasiado cargada de emoción, y aplazarlo en vez de dejar que decida el cansancio",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-parar_debate_emocion_agotamiento-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Manten la conciencia puesta en estos momentos, porque el texto dice que es crucial y que rara vez llevan a un buen resultado.",
+      "texto_nuevo": "Mantén la conciencia puesta en estos momentos; hacerlo es crucial, porque rara vez llevan a un buen resultado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que es crucial y que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-parar_debate_emocion_agotamiento-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando los detectes, interven y pide tiempo muerto.",
+      "texto_nuevo": "Cuando los detectes, intervén y pide tiempo muerto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-parar_debate_emocion_agotamiento-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con lo que pasa si no lo haces: la gente tomara una decision solo para poder irse a casa, o peor, estallara una pelea enorme salida de la emocion en carne viva.",
+      "texto_nuevo": "Cuenta con lo que pasa si no lo haces: la gente tomará una decisión solo para poder irse a casa, o peor, estallará una pelea enorme salida de la emoción en carne viva.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-parar_debate_emocion_agotamiento-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aplaza el debate hasta que la gente este en mejor disposicion de animo.",
+      "texto_nuevo": "Aplaza el debate hasta que la gente esté en mejor disposición de ánimo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-parar_debate_emocion_agotamiento-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para poder detectarlo, conoce a cada persona de tu equipo lo bastante bien: el texto dice que si lo has hecho, seras suficientemente consciente de las emociones y las energias de cada uno como para saber cuando hace falta intervenir.",
+      "texto_nuevo": "Para poder detectarlo, conoce a cada persona de tu equipo lo bastante bien: si lo has hecho, serás suficientemente consciente de las emociones y las energías de cada uno como para saber cuándo hace falta intervenir.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-parar_debate_emocion_agotamiento-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El debate aplazado hasta que la gente este en mejor disposicion, sin decision tomada por agotamiento y sin la pelea que habria estallado.",
+      "texto_nuevo": "El debate aplazado hasta que la gente esté en mejor disposición, sin decisión tomada por agotamiento y sin la pelea que habría estallado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-parar_debate_emocion_agotamiento-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando en un debate de tu equipo la gente esta demasiado cansada, quemada o cargada de emocion como para discutir de forma productiva.",
+      "texto_nuevo": "Cuando en un debate de tu equipo la gente está demasiado cansada, quemada o cargada de emoción como para discutir de forma productiva.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-parar_debate_emocion_agotamiento-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Mantén la conciencia puesta en estos momentos; hacerlo es crucial, porque rara vez llevan a un buen resultado.",
+      "texto_nuevo": "Mantén la conciencia puesta en los momentos en que la gente está demasiado cansada, quemada o cargada de emoción para debatir; hacerlo es crucial, porque rara vez llevan a un buen resultado.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'Estos momentos' abre la lista de pasos sin antecedente; se nombra el momento."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Estos momentos' abre la lista de pasos sin antecedente; se nombra el momento.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Detén el Debate a Tiempo"
+}

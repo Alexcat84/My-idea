@@ -1,0 +1,421 @@
+{
+  "node_id": "equilibrar_corto_largo_plazo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Equilibrar el corto y el largo plazo mirando el riesgo de los dos lados",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Hacer que las cosas pasen exige atender a la vez lo del día, la semana o el mes siguientes y el rumbo de los próximos años. Cada lado tiene su fallo: mirar solo a corto puede producir decisiones miopes que crean problemas después, y mirar siempre a largo puede frenar la ejecución diaria. Tres escenarios concretos, contratar, planificar y gestionar el desempeño, muestran lo que pasa al inclinarte demasiado hacia un lado o hacia el otro: no siempre sirve el mismo enfoque, ni el corto ni el largo, y cada decisión tiene que sopesar lo que se gana y lo que se pierde con cada plazo.",
+  "notas_extraccion": "Es la cabeza del bloque de equilibrio, y la escribo como nodo, al reves que otras dos cabezas de esta misma vuelta, porque trae detras su propio inventario: tres escenarios con su situacion y sus dos riesgos cada uno, escritos uno a uno por el libro. Eso son objetos de trabajo por D.27 y no metas. El procedimiento que se ejecuta es pasar los tres escenarios sobre la decision que tengas delante y mirar los dos riesgos antes de inclinarte. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se pesa el intercambio cuando los dos riesgos parecen iguales, ni cuanto es demasiado corto o demasiado largo en un caso concreto.",
+  "pasos_accionables": [
+    "Reconoce que ser bueno haciendo que las cosas pasen significa reconocer a la vez las realidades pragmáticas del día, la semana o el mes siguientes, y la dirección en la que quieres llevar el barco en el siguiente año, los siguientes tres o los siguientes diez.",
+    "Cuenta con el fallo de cada lado, uno frente a otro: si solo piensas en los tres meses siguientes puedes tomar decisiones cortas de vista que crean problemas más adelante; y si siempre piensas a muchos años vista puedes tener problemas con la ejecución rápida del día a día.",
+    "Pasa el escenario de contratar. Necesitas contratar a alguien para un puesto importante de tu equipo.",
+    "Mira el riesgo de pensar demasiado corto ahí: dices que sí a la primera persona que parece razonable, y aunque puede hacer el trabajo ahora, no es capaz de crecer con el puesto, así que en un año te encuentras otra vez con un hueco de liderazgo.",
+    "Mira el riesgo de pensar demasiado largo: tu contratación perfecta es casi imposible de encontrar porque tu listón está altísimo, acabas rechazando candidato tras candidato, y seis meses después sigues sin haber contratado a nadie y los resultados de tu equipo están sufriendo.",
+    "Pasa el escenario de planificar. Diriges una empresa en un sector competitivo y tienes que decidir qué iniciativas financiar.",
+    "Mira el riesgo de pensar demasiado corto ahí: no haces ninguna inversión de futuro, por ejemplo mejorar tu equipamiento, porque es cara a corto plazo, y mientras tanto tus competidores sí la hacen y en dos años fabrican más rápido y más barato que tú.",
+    "Mira el riesgo de pensar demasiado largo: apruebas varios proyectos a tres años basados en tu comprensión del mercado de hoy, y un año después el mercado ha cambiado y tus planes ya no tienen sentido.",
+    "Pasa el escenario de gestionar el desempeño. Te preocupa que la persona que tienes ahora en un proyecto no lo esté haciendo bien.",
+    "Mira el riesgo de pensar demasiado corto ahí: te las arreglas con soluciones de parche, como microgestionar a esa persona o meterte tú a trabajar en partes del proyecto, y ninguna de las dos es sostenible.",
+    "Mira el riesgo de pensar demasiado largo: inviertes en entrenar a esa persona para que mejore su desempeño, pero los cambios no llegan rápido y el proyecto se hunde.",
+    "Saca la conclusión de los tres escenarios: no siempre puedes aplicar un mismo enfoque general, ni a corto ni a largo, y las decisiones que tomes tienen que sopesar lo que ganas y lo que pierdes con cada uno."
+  ],
+  "entregable_esperado": "Una decisión que ha sopesado lo que se gana y lo que se pierde con cada plazo, en vez de aplicar por sistema un enfoque solo de corto o solo de largo plazo.",
+  "nodos_previos": [
+    "atender_modo_supervivencia_equipo"
+  ],
+  "nodos_siguientes": [
+    "repartir_equipo_cartera_horizontes"
+  ],
+  "condiciones_activacion": [
+    "Ante cualquier decisión de planificación o de ejecución en la que te notes inclinado siempre hacia el mismo lado del tiempo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Hacer que las cosas pasen exige atender a la vez lo del día, la semana o el mes siguientes y el rumbo de los próximos años. Cada lado tiene su fallo: mirar solo a corto puede producir decisiones miopes que crean problemas después, y mirar siempre a largo puede frenar la ejecución diaria. Pasar la decisión por tres escenarios concretos, contratar, planificar y gestionar el desempeño, pone delante los dos riesgos antes de inclinarte. Funciona porque no siempre sirve el mismo enfoque, ni el corto ni el largo, y cada decisión tiene que pesar el intercambio entre los dos plazos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "175-205"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): arbitro: propio",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)"
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce que ser bueno haciendo que las cosas pasen significa reconocer a la vez las realidades pragmaticas del dia, la semana o el mes siguientes, y la direccion en la que quieres llevar el barco en el siguiente anio, los siguientes tres o los siguientes diez.",
+      "texto_nuevo": "Reconoce que ser bueno haciendo que las cosas pasen significa reconocer a la vez las realidades pragmáticas del día, la semana o el mes siguientes, y la dirección en la que quieres llevar el barco en el siguiente año, los siguientes tres o los siguientes diez.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el fallo de cada lado, que el libro pone uno frente a otro: si solo piensas en los tres meses siguientes puedes tomar decisiones cortas de vista que crean problemas mas adelante; y si siempre piensas a muchos anios vista puedes tener problemas con la ejecucion rapida del dia a dia.",
+      "texto_nuevo": "Cuenta con el fallo de cada lado, uno frente a otro: si solo piensas en los tres meses siguientes puedes tomar decisiones cortas de vista que crean problemas más adelante; y si siempre piensas a muchos años vista puedes tener problemas con la ejecución rápida del día a día.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro pone"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mira el riesgo de pensar demasiado corto ahi: dices que si a la primera persona que parece razonable, y aunque puede hacer el trabajo ahora, no es capaz de crecer con el puesto, asi que en un anio te encuentras otra vez con un hueco de liderazgo.",
+      "texto_nuevo": "Mira el riesgo de pensar demasiado corto ahí: dices que sí a la primera persona que parece razonable, y aunque puede hacer el trabajo ahora, no es capaz de crecer con el puesto, así que en un año te encuentras otra vez con un hueco de liderazgo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mira el riesgo de pensar demasiado largo: tu contratacion perfecta es casi imposible de encontrar porque tu liston esta altisimo, acabas rechazando candidato tras candidato, y seis meses despues sigues sin haber fichado a nadie y los resultados de tu equipo estan sufriendo.",
+      "texto_nuevo": "Mira el riesgo de pensar demasiado largo: tu contratación perfecta es casi imposible de encontrar porque tu listón está altísimo, acabas rechazando candidato tras candidato, y seis meses después sigues sin haber fichado a nadie y los resultados de tu equipo están sufriendo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pasa el escenario de planificar. Diriges una empresa en un sector competitivo y tienes que decidir que iniciativas financiar.",
+      "texto_nuevo": "Pasa el escenario de planificar. Diriges una empresa en un sector competitivo y tienes que decidir qué iniciativas financiar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mira el riesgo de pensar demasiado corto ahi: no haces ninguna inversion de futuro, por ejemplo mejorar tu equipamiento, porque es cara a corto plazo, y mientras tanto tus competidores si la hacen y en dos anios fabrican mas rapido y mas barato que tu.",
+      "texto_nuevo": "Mira el riesgo de pensar demasiado corto ahí: no haces ninguna inversión de futuro, por ejemplo mejorar tu equipamiento, porque es cara a corto plazo, y mientras tanto tus competidores sí la hacen y en dos años fabrican más rápido y más barato que tú.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mira el riesgo de pensar demasiado largo: apruebas varios proyectos a tres anios basados en tu comprension del mercado de hoy, y un anio despues el mercado ha cambiado y tus planes ya no tienen sentido.",
+      "texto_nuevo": "Mira el riesgo de pensar demasiado largo: apruebas varios proyectos a tres años basados en tu comprensión del mercado de hoy, y un año después el mercado ha cambiado y tus planes ya no tienen sentido.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pasa el escenario de gestionar el desempenio. Te preocupa que la persona que tienes ahora en un proyecto no lo este haciendo bien.",
+      "texto_nuevo": "Pasa el escenario de gestionar el desempeño. Te preocupa que la persona que tienes ahora en un proyecto no lo esté haciendo bien.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira el riesgo de pensar demasiado corto ahi: te apanias con soluciones de tirita, como microgestionar a tu reporte o meterte tu a trabajar en partes del proyecto, y ninguna de las dos es sostenible.",
+      "texto_nuevo": "Mira el riesgo de pensar demasiado corto ahí: te apañas con soluciones de parche, como microgestionar a esa persona o meterte tú a trabajar en partes del proyecto, y ninguna de las dos es sostenible.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tu reporte"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira el riesgo de pensar demasiado largo: inviertes en entrenar a tu reporte para que mejore su desempenio, pero los cambios no llegan rapido y el proyecto se hunde.",
+      "texto_nuevo": "Mira el riesgo de pensar demasiado largo: inviertes en entrenar a esa persona para que mejore su desempeño, pero los cambios no llegan rápido y el proyecto se hunde.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tu reporte"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Saca la conclusion que el libro saca de los tres: no siempre puedes tomar un enfoque de manta, ni a corto ni a largo, y las decisiones que tomes tienen que pesar el intercambio entre los dos.",
+      "texto_nuevo": "Saca la conclusión de los tres escenarios: no siempre puedes aplicar un mismo enfoque general, ni a corto ni a largo, y las decisiones que tomes tienen que pesar el intercambio entre los dos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro saca de los tres",
+          "enfoque de manta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 11,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una decision que ha pesado el intercambio entre los dos plazos, en vez de aplicar un enfoque de manta corta o de manta larga.",
+      "texto_nuevo": "Una decisión que ha pesado el intercambio entre los dos plazos, en vez de aplicar por sistema un enfoque solo de corto o solo de largo plazo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "manta corta",
+          "manta larga"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-equilibrar_corto_largo_plazo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ante cualquier decision de planificacion o de ejecucion en la que te notes inclinado siempre hacia el mismo lado del tiempo.",
+      "texto_nuevo": "Ante cualquier decisión de planificación o de ejecución en la que te notes inclinado siempre hacia el mismo lado del tiempo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-equilibrar_corto_largo_plazo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira el riesgo de pensar demasiado largo: tu contratación perfecta es casi imposible de encontrar porque tu listón está altísimo, acabas rechazando candidato tras candidato, y seis meses después sigues sin haber fichado a nadie y los resultados de tu equipo están sufriendo.",
+      "texto_nuevo": "Mira el riesgo de pensar demasiado largo: tu contratación perfecta es casi imposible de encontrar porque tu listón está altísimo, acabas rechazando candidato tras candidato, y seis meses después sigues sin haber contratado a nadie y los resultados de tu equipo están sufriendo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "fichado"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Fichar' por contratar es de España.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-auditoria-equilibrar_corto_largo_plazo-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira el riesgo de pensar demasiado corto ahí: te apañas con soluciones de parche, como microgestionar a esa persona o meterte tú a trabajar en partes del proyecto, y ninguna de las dos es sostenible.",
+      "texto_nuevo": "Mira el riesgo de pensar demasiado corto ahí: te las arreglas con soluciones de parche, como microgestionar a esa persona o meterte tú a trabajar en partes del proyecto, y ninguna de las dos es sostenible.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "te apañas"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Apañarse' es coloquial de España.",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase4-equilibrar_corto_largo_plazo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hacer que las cosas pasen exige atender a la vez lo del día, la semana o el mes siguientes y el rumbo de los próximos años. Cada lado tiene su fallo: mirar solo a corto puede producir decisiones miopes que crean problemas después, y mirar siempre a largo puede frenar la ejecución diaria. Pasar la decisión por tres escenarios concretos, contratar, planificar y gestionar el desempeño, pone delante los dos riesgos antes de inclinarte. Funciona porque no siempre sirve el mismo enfoque, ni el corto ni el largo, y cada decisión tiene que pesar el intercambio entre los dos plazos.",
+      "texto_nuevo": "Hacer que las cosas pasen exige atender a la vez lo del día, la semana o el mes siguientes y el rumbo de los próximos años. Cada lado tiene su fallo: mirar solo a corto puede producir decisiones miopes que crean problemas después, y mirar siempre a largo puede frenar la ejecución diaria. Pasar la decisión por tres escenarios concretos, contratar, planificar y gestionar el desempeño, pone delante los dos riesgos antes de inclinarte. Funciona porque no siempre sirve el mismo enfoque, ni el corto ni el largo, y cada decisión tiene que sopesar lo que se gana y lo que se pierde con cada plazo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "pesar el intercambio entre los dos plazos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"weigh the trade-offs\": \"intercambio\" no es trade-off en español.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-equilibrar_corto_largo_plazo-pasos_accionables-11",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Saca la conclusión de los tres escenarios: no siempre puedes aplicar un mismo enfoque general, ni a corto ni a largo, y las decisiones que tomes tienen que pesar el intercambio entre los dos.",
+      "texto_nuevo": "Saca la conclusión de los tres escenarios: no siempre puedes aplicar un mismo enfoque general, ni a corto ni a largo, y las decisiones que tomes tienen que sopesar lo que ganas y lo que pierdes con cada uno.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "pesar el intercambio entre los dos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"weigh the trade-offs between the two\" (zhuo_manager cap_09 línea 205).",
+      "indice": 11,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-equilibrar_corto_largo_plazo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una decisión que ha pesado el intercambio entre los dos plazos, en vez de aplicar por sistema un enfoque solo de corto o solo de largo plazo.",
+      "texto_nuevo": "Una decisión que ha sopesado lo que se gana y lo que se pierde con cada plazo, en vez de aplicar por sistema un enfoque solo de corto o solo de largo plazo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "ha pesado el intercambio entre los dos plazos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"trade-offs\"; se decide igual que el resumen y el paso 11.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase6-equilibrar_corto_largo_plazo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Hacer que las cosas pasen exige atender a la vez lo del día, la semana o el mes siguientes y el rumbo de los próximos años. Cada lado tiene su fallo: mirar solo a corto puede producir decisiones miopes que crean problemas después, y mirar siempre a largo puede frenar la ejecución diaria. Pasar la decisión por tres escenarios concretos, contratar, planificar y gestionar el desempeño, pone delante los dos riesgos antes de inclinarte. Funciona porque no siempre sirve el mismo enfoque, ni el corto ni el largo, y cada decisión tiene que sopesar lo que se gana y lo que se pierde con cada plazo.",
+      "texto_nuevo": "Hacer que las cosas pasen exige atender a la vez lo del día, la semana o el mes siguientes y el rumbo de los próximos años. Cada lado tiene su fallo: mirar solo a corto puede producir decisiones miopes que crean problemas después, y mirar siempre a largo puede frenar la ejecución diaria. Tres escenarios concretos, contratar, planificar y gestionar el desempeño, muestran lo que pasa al inclinarte demasiado hacia un lado o hacia el otro: no siempre sirve el mismo enfoque, ni el corto ni el largo, y cada decisión tiene que sopesar lo que se gana y lo que se pierde con cada plazo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 179, 205",
+        "frase": "Here are some common examples of what happens when you tilt too far in one direction or the other. / As these examples show, you can’t always take a blanket short-term or long-term approach. The decisions you make must weigh the trade-offs between the two."
+      },
+      "decision": "doble lectura M11 (sexto pase) (invencion): Los tres escenarios son ejemplos de lo que pasa al inclinarse demasiado a un lado (contratar, planificar y el desempeño son tres decisiones distintas, no filtros por los que pasar una decisión), y el libro no afirma que ese recorrido funcione por algo; se quitan la finalidad y la eficacia inventadas y queda lo que los ejemplos muestran (texto del lector B).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Equilibra tu Corto y Largo Plazo"
+}

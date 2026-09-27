@@ -1,0 +1,183 @@
+{
+  "node_id": "eliminar_seguimiento_descendente_responsabilizar_dueno",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Eliminar el sistema de seguimiento descendente y responsabilizar a cada dueño de vigilar y completar lo suyo",
+  "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+  "resumen_teorico": "Cuando cada responsable de área vigila él mismo sus pendientes y responde por completarlos, en lugar de que lo haga un superior desde arriba, no queda duda sobre quién responde del rendimiento de cada área: su responsable. Además se deja de mantener el sistema central de seguimiento y sus reuniones de revisión, y el trabajo se hace sin esa carga. Un mando que lo probó temía que se escaparan muchas cosas; no pasó, y lo poco que se escapó fue fácil de remediar y sin mucha importancia. Lo que más valoró fue que cada uno respondiera de su propio rendimiento y del de su área.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_09.md, unidad Cap. 13, titulo textual Who's Responsible? La pieza que se mina es P1, lineas 71 y 73, contiguas (un parrafo sigue al otro sin nada intermedio), dentro del mecanismo nombrado por su propio rotulo en la linea 41, Mechanism: Eliminate Top-Down Monitoring Systems. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 y su corolario P.5.1 delante: el libro no pone una lista enumerada de pasos, pero pone el mandato completo en una sola linea (linea 71) y la accion que lo hace real en la linea siguiente (linea 73, dejar de mantener el tickler), y la prueba de que es procedimiento y no solo consigna es que existe quien lo ejecuto: la propia tripulacion del Santa Fe, con resultado medido en la linea 79 (no volvieron a tener el problema de fondo, solo incidentes menores faciles de resolver). DISCUTIBLE, MARCADO ANTES DE SABER SI ACIERTO: este nodo tiene el inventario mas delgado de los tres de esta vuelta, una sola linea de mandato en vez de una lista nombrada de medios o etapas; si el auditor lee que una sola linea de mandato sin lista propia es postura y no procedimiento, este candidato se retira. EL CASO ENTRA COMO EJEMPLO Y NO COMO NODO PROPIO (manual 3.5): la anecdota completa del tickler (el binder de tres pulgadas, las reuniones semanales, la categorizacion de las organizaciones en tickler roto, tickler ineficiente y tickler bien llevado, lineas 15 a 39) y el dialogo completo con Weps y Nav (lineas 43 a 69) son la escena naval especifica de la que Marquet generaliza el mecanismo, y no se minan como pasos propios. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: la advertencia de la linea 85 (no eliminar la recoleccion de datos y medicion que solo reporta condiciones sin juicio, evitar solo los sistemas donde el personal de mas jerarquia decide lo que debe hacer el personal de abajo) no se mina como paso propio, por no traer su propio rotulo de mecanismo ni una lista nombrada, sino una distincion declarativa unica: se sostiene como POSTURA, EXTRACTOR.md 15.4. La referencia al libro de W. Edwards Deming, Out of the Crisis, y a TQL (lineas 89 y 91) tampoco entra, por ser una recomendacion de lectura sin fecha de corte verificable como cifra. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 2 pasos, 2 TRANSCRIPCION, 0 PUENTE. CORRECCION DECLARADA, FRONTERA DECLARADA CONTRA UN NODO DEL GRAFO, SIN BORRAR NADA DE LO DE ARRIBA (manual principio 6). ES EL PAGO DE d183, ADJUDICADO POR EL AUDITOR EN LA ACTA 77 SECCION 77.5 CON LA VARA 6.1: dos doctrinas legitimas no son duplicado, son FRONTERA DECLARADA, y se escriben las dos posiciones con sus fuentes en vez de fundirlas (precedente ACTA 50 50.5). EL OTRO NODO ES delegar_tarea_base_comun_seguimiento, QUE VIVE EN dataset/nodos.jsonl Y VIENE DEL LIBRO grove_high_output. LAS DOS POSICIONES, CON SUS PASOS IMPRESOS DE SUS FICHEROS Y NO DE MEMORIA. LA DE ESTE NODO, que sale de fuentes/marquet_turn_the_ship/cap_09.md L71 y L73, son sus pasos 1 y 2: Dile a cada responsable de un area que el mismo, y no su superior, es quien debe vigilar sus propios pendientes y responder por completarlos (L71: You are all going to monitor your own departments and whatever is due. You are responsible, not me and not the XO, for getting it done); y Deja de mantener el sistema centralizado que solo vigilaba y reportaba el estado de esos pendientes, con sus reuniones de revision, porque ya no hace falta (L73: we unburdened ourselves of the effort of maintaining the tickler). Y la generalizacion del propio libro, en L85: Eliminating top-down monitoring systems will do it for you, con lo que conserva dicho alli mismo: la recogida de datos y la medicion que simply report conditions without judgment, porque lo que hay que evitar son the systems whereby senior personnel are determining what junior personnel should be doing. LA DEL NODO DEL GRAFO, que sale de fuentes/grove_high_output/cap_04.md L249, son sus pasos 6 y 7: Antes de decidir si delegas las actividades que te son familiares o las que no, aplica el principio: delegar sin seguimiento es abdicar (L249: delegation without follow-through is abdication); y Cuenta con que nunca puedes lavarte las manos de una tarea: aun despues de delegarla sigues siendo responsable de que se cumpla, y supervisar la tarea delegada es la unica via practica que tienes de asegurar un resultado (L249: You can never wash your hands of a task, y monitoring the delegated task is the only practical way for you to ensure a result). Su paso 8 separa ese seguimiento de la intromision (L249: Monitoring is not meddling). EN QUE SE CONTRADICEN, DICHO SIN SUAVIZARLO: los dos hablan de QUIEN VIGILA LOS PENDIENTES QUE EL DE ARRIBA HA PUESTO EN MANOS DEL DE ABAJO. Grove manda que los vigile el que delega, porque sigue respondiendo del resultado y vigilar es la unica via practica de asegurarlo; Marquet manda que el de arriba deje de vigilarlos y suprima el sistema con el que lo hacia, porque el que responde es el dueno de cada area, not me and not the XO. Lo que los dos conservan no los junta: Grove define su seguimiento como comprobar que la actividad avanza segun lo esperado, y Marquet conserva solo la medicion que informa sin juzgar y quita la que decide desde arriba lo que el de abajo debe hacer. NO ES UN DUPLICADO Y NO SE FUNDE, Y NINGUNO ES MADRE DEL OTRO: son dos doctrinas de dos casas distintas sobre el mismo acto, cada una con su fuente y su fecha, y la vara 6.1 manda dejarlas las dos escritas. Y NO ES CAIDA DE NADIE: asi lo leyo la vuelta 78 en .v78ext/aristas_lectura.txt y asi lo sostuvo el auditor en la ACTA 77 77.5.",
+  "pasos_accionables": [
+    "Dile a cada responsable de un área que él mismo, y no su superior, es quien debe vigilar sus propios pendientes y responder por completarlos.",
+    "Deja de mantener el sistema centralizado que solo vigilaba e informaba del estado de esos pendientes, con sus reuniones de revisión, porque ya no hace falta."
+  ],
+  "entregable_esperado": "El sistema centralizado de seguimiento eliminado, y cada responsable de área vigilando y completando por su cuenta lo que su área debe.",
+  "nodos_previos": [
+    "asignar_responsable_unico_evolucion_planificada"
+  ],
+  "nodos_siguientes": [
+    "informar_cierre_jornada_conservar_propiedad_trabajo"
+  ],
+  "condiciones_activacion": [
+    "Cuando existe un sistema centralizado, sostenido por un superior o una oficina de apoyo, dedicado a vigilar e informar del estado de las tareas pendientes de otros en vez de a que esas tareas avancen."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-eliminar_seguimiento_descendente_responsabilizar_dueno-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando cada responsable de área vigila él mismo sus pendientes y responde por completarlos, en lugar de que lo haga un superior desde arriba, no queda duda sobre quién responde del rendimiento de cada área: su responsable. Además se deja de mantener el sistema central de seguimiento y sus reuniones de revisión, y el trabajo se hace sin esa carga. Un mando que lo probó temía que se escaparan muchas cosas; no pasó, y lo poco que se escapó fue fácil de remediar y sin mucha importancia. Lo que más valoró fue que cada uno respondiera de su propio rendimiento y del de su área.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/marquet_turn_the_ship/cap_09.md",
+          "lineas": "71-79"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): Se sostiene: que lo escapado sea menor y fácil de remediar y que 'lo que se gana' sea la responsabilidad propia son la experiencia de un barco ('I was worried ... but that didn't happen'; 'What was incredibly powerful'), y 'se limitan a responder a su control' no está en las líneas. La propuesta cuenta la experiencia como caso de un mando y conserva las dos ventajas que las líneas dan.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)"
+    },
+    {
+      "id": "m11-limpieza-eliminar_seguimiento_descendente_responsabilizar_dueno-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Eliminar el sistema de seguimiento descendente y responsabilizar a cada dueno de vigilar y completar lo suyo",
+      "texto_nuevo": "Eliminar el sistema de seguimiento descendente y responsabilizar a cada dueño de vigilar y completar lo suyo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-eliminar_seguimiento_descendente_responsabilizar_dueno-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Dile a cada responsable de un area que el mismo, y no su superior, es quien debe vigilar sus propios pendientes y responder por completarlos. El texto lo dice asi: You are all going to monitor your own departments and whatever is due. You are responsible, not me and not the XO, for getting it done.",
+      "texto_nuevo": "Dile a cada responsable de un área que él mismo, y no su superior, es quien debe vigilar sus propios pendientes y responder por completarlos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: You are all going to monitor your own departments and whatever is due. You are responsible, not me and not the XO, for getting it done."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-eliminar_seguimiento_descendente_responsabilizar_dueno-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Deja de mantener el sistema centralizado que solo vigilaba y reportaba el estado de esos pendientes, con sus reuniones de revision, porque ya no hace falta. El texto lo dice asi: we unburdened ourselves of the effort of maintaining the tickler.",
+      "texto_nuevo": "Deja de mantener el sistema centralizado que solo vigilaba y reportaba el estado de esos pendientes, con sus reuniones de revisión, porque ya no hace falta.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: we unburdened ourselves of the effort of maintaining the tickler."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-eliminar_seguimiento_descendente_responsabilizar_dueno-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El sistema centralizado de seguimiento eliminado, y cada responsable de area vigilando y completando por su cuenta lo que su area debe.",
+      "texto_nuevo": "El sistema centralizado de seguimiento eliminado, y cada responsable de área vigilando y completando por su cuenta lo que su área debe.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-eliminar_seguimiento_descendente_responsabilizar_dueno-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando existe un sistema centralizado, sostenido por un superior o una oficina de staff, dedicado a vigilar y reportar el estado de las tareas pendientes de otros en vez de a que esas tareas avancen.",
+      "texto_nuevo": "Cuando existe un sistema centralizado, sostenido por un superior o una oficina de apoyo, dedicado a vigilar y reportar el estado de las tareas pendientes de otros en vez de a que esas tareas avancen.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "oficina de staff"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-eliminar_seguimiento_descendente_responsabilizar_dueno-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Deja de mantener el sistema centralizado que solo vigilaba y reportaba el estado de esos pendientes, con sus reuniones de revisión, porque ya no hace falta.",
+      "texto_nuevo": "Deja de mantener el sistema centralizado que solo vigilaba e informaba del estado de esos pendientes, con sus reuniones de revisión, porque ya no hace falta.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "vigilaba y reportaba el estado"
+        ]
+      },
+      "decision": "pase de glosario (orquestador): arbitro (redactor): fila anadida a glosario/DECISIONES.md por el orquestador (mismo criterio: espanol llano y neutro, un concepto un nombre); el verificador confirma que el sentido no cambia",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-glosario-eliminar_seguimiento_descendente_responsabilizar_dueno-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando existe un sistema centralizado, sostenido por un superior o una oficina de apoyo, dedicado a vigilar y reportar el estado de las tareas pendientes de otros en vez de a que esas tareas avancen.",
+      "texto_nuevo": "Cuando existe un sistema centralizado, sostenido por un superior o una oficina de apoyo, dedicado a vigilar e informar del estado de las tareas pendientes de otros en vez de a que esas tareas avancen.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "vigilar y reportar el estado"
+        ]
+      },
+      "decision": "pase de glosario (orquestador): arbitro (redactor): fila anadida a glosario/DECISIONES.md por el orquestador (mismo criterio: espanol llano y neutro, un concepto un nombre); el verificador confirma que el sentido no cambia",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Haz que Cada Dueño Responda"
+}

@@ -1,0 +1,509 @@
+{
+  "node_id": "establecer_dinamica_nueva_antiguos_pares",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Establecer la dinámica nueva con tus antiguos pares",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Pasar de compañero a jefe puede alterar la relación, y hay tres frentes que a una directiva se le hicieron difíciles al empezar. Ahora te toca hacer de entrenador, y eso exige conversaciones sobre metas y fortalezas que antes no hacían falta. Respondes del resultado del equipo, así que lo que estorba se aborda rápido y de frente aunque incomode, y cuanto antes asumes que los resultados son tuyos, más fáciles se hacen esas conversaciones. Y puede que te cuenten menos, algo que ella acabó viendo normal y que te toca compensar trabajando más para ganar su confianza.",
+  "notas_extraccion": "El libro escribe esta descripcion una sola vez, dentro del camino del aprendiz, y despues la invoca por su titulo desde el camino del sucesor con la formula See description from The Apprentice. Esa invocacion por nombre es lo que la convierte en una pieza con id propio y no en prosa de su capitulo: el libro la trata como una unidad direccionable. Trae inventario propio, que son las tres cosas nombradas una a una, y trae encargo propio en imperativo, que son el no evitar las conversaciones, el abordar de frente lo que estorba y el dar por normal que te compartan menos. Va en un solo nodo y no en cabeza mas tres porque las tres partes no traen procedimiento por igual: la primera trae un inventario de cuatro cosas que entender y tres encargos, la segunda una doctrina y un encargo, y la tercera un reconocimiento sin encargo ninguno. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto dura esa rareza ni que hacer si el antiguo par no acepta la relacion nueva.",
+  "pasos_accionables": [
+    "Cuenta con que puede hacerse raro establecer una dinámica nueva con tus antiguos pares: antes trabajabas sin gente a tu cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que a una directiva se le hicieron difíciles al empezar, y sobre todo con personas a su cargo a las que consideraba amigas.",
+    "La primera, hacer de entrenador: tu trabajo incluye ahora entender las metas de carrera de tus antiguos pares, qué clase de proyectos encajan con sus fuerzas e intereses, en qué necesitan ayuda y cómo van respecto a las expectativas.",
+    "No evites esas conversaciones aunque se hagan raras: busca entender qué les importa a las nuevas personas a tu cargo, dales opinión sobre lo que hacen bien y sobre dónde podrían dar más de sí, y piensa en ti como un entrenador que está ahí para apoyarlos y ayudarlos a llegar a sus metas.",
+    "La segunda, tener conversaciones duras: la relación entre directivo y persona a su cargo es distinta de la relación entre pares, porque ahora respondes del resultado de tu equipo, incluidas todas las decisiones que se toman dentro.",
+    "Si algo se interpone en que salga buen trabajo, abórdalo rápido y de frente, aunque eso signifique dar a alguien una opinión difícil o tomar decisiones duras: cuanto antes interiorices que los resultados de tu equipo son tuyos, más fácil se hace tener esas conversaciones.",
+    "La tercera, que te traten distinto o te compartan menos información: puede que dejen de contarte cuando están peleando con algo, cuando están molestos o cuando han tenido un desacuerdo con otro del equipo, y que se callen al verte entrar.",
+    "Y con esa tercera, con el tiempo puede verse que es normal: las personas a tu cargo pueden recelar de molestarte o de quedar mal, y te toca a ti trabajar más duro para establecer una relación de confianza."
+  ],
+  "entregable_esperado": "La dinámica nueva con tus antiguos pares establecida, con las tres cosas que se tuercen ya vigiladas: el papel de entrenador asumido, las conversaciones duras tenidas de frente, y dado por normal que te compartan menos de lo que te compartían.",
+  "nodos_previos": [
+    "transitar_aprendiz_primeros_meses",
+    "transitar_sucesor_equipo_entero"
+  ],
+  "nodos_siguientes": [
+    "ganar_confianza_personas_cargo"
+  ],
+  "condiciones_activacion": [
+    "Cuando pasas a dirigir a quienes hasta ayer eran tus compañeros de equipo: antes trabajabas sin gente a tu cargo, y ahora eres el jefe, así que la relación con ellos puede sentirse alterada. Te pasa tanto si diriges una parte del equipo que lleva tu jefe porque crece como si ocupas su puesto cuando se va."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Pasar de compañero a jefe cambia la relación aunque nadie lo diga, y lo que se tuerce se puede prever en tres frentes. Ahora te toca hacer de entrenador, y eso exige conversaciones sobre metas y fortalezas que antes no hacían falta. Respondes del resultado del equipo, así que lo que estorba se aborda rápido y de frente aunque incomode. Y es normal que te cuenten menos. Funciona porque convierte la rareza en tareas concretas: no evitar las conversaciones, asumir que los resultados son tuyos y trabajar más para ganar una confianza que ya no viene dada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_03.md",
+          "lineas": "73-85"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)"
+    },
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establecer la dinamica nueva con tus antiguos pares",
+      "texto_nuevo": "Establecer la dinámica nueva con tus antiguos pares",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que se hace raro establecer una dinamica nueva con tus antiguos pares: antes eras un contribuidor individual mas del equipo y ahora eres el jefe, asi que la relacion con tus companieros puede sentirse alterada. El libro nombra tres cosas que a la autora se le hicieron dificiles al empezar, y sobre todo con personas a cargo a las que consideraba amigas.",
+      "texto_nuevo": "Cuenta con que se hace raro establecer una dinámica nueva con tus antiguos pares: antes eras un miembro más del equipo, sin gente a cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que se hacen difíciles al empezar, y sobre todo con personas a cargo a las que consideras amigas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro nombra tres cosas que a la autora se le hicieron dificiles al empezar",
+          "contribuidor individual"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La primera, hacer de entrenador: tu trabajo incluye ahora entender las metas de carrera de tus antiguos pares, que clase de proyectos encajan con sus fuerzas e intereses, en que necesitan ayuda y como van respecto a lo que se espera de ellos.",
+      "texto_nuevo": "La primera, hacer de entrenador: tu trabajo incluye ahora entender las metas de carrera de tus antiguos pares, qué clase de proyectos encajan con sus fuerzas e intereses, en qué necesitan ayuda y cómo van respecto a lo que se espera de ellos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No evites esas conversaciones aunque se hagan raras: busca entender que les importa a tus nuevas personas a cargo, dales opinion sobre lo que hacen bien y sobre donde podrian estirarse, y piensa en ti como un entrenador que esta ahi para apoyarlos y ayudarlos a llegar a sus metas.",
+      "texto_nuevo": "No evites esas conversaciones aunque se hagan raras: busca entender qué les importa a tus nuevas personas a cargo, dales opinión sobre lo que hacen bien y sobre dónde podrían estirarse, y piensa en ti como un entrenador que está ahí para apoyarlos y ayudarlos a llegar a sus metas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La segunda, tener conversaciones duras: la relacion entre directivo y persona a cargo es distinta de la relacion entre pares, porque ahora respondes del resultado de tu equipo, incluidas todas las decisiones que se toman dentro.",
+      "texto_nuevo": "La segunda, tener conversaciones duras: la relación entre directivo y persona a cargo es distinta de la relación entre pares, porque ahora respondes del resultado de tu equipo, incluidas todas las decisiones que se toman dentro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si algo se interpone en que salga buen trabajo, abordalo rapido y de frente, aunque eso signifique dar a alguien una opinion dificil o tomar decisiones duras: cuanto antes interiorices que los resultados de tu equipo son tuyos, mas facil se hace tener esas conversaciones.",
+      "texto_nuevo": "Si algo se interpone en que salga buen trabajo, abórdalo rápido y de frente, aunque eso signifique dar a alguien una opinión difícil o tomar decisiones duras: cuanto antes interiorices que los resultados de tu equipo son tuyos, más fácil se hace tener esas conversaciones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La tercera, que te traten distinto o te compartan menos informacion: puede que dejen de contarte cuando estan peleando con algo, cuando estan molestos o cuando han tenido un desacuerdo con otro del equipo, y que se callen al verte entrar.",
+      "texto_nuevo": "La tercera, que te traten distinto o te compartan menos información: puede que dejen de contarte cuando están peleando con algo, cuando están molestos o cuando han tenido un desacuerdo con otro del equipo, y que se callen al verte entrar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y de esa tercera el libro no manda nada: cuenta que con el tiempo la autora reconocio que eso era normal, que sus personas a cargo recelaban de molestarla o de quedar mal, y que le tocaba a ella trabajar mas duro para establecer una relacion de confianza.",
+      "texto_nuevo": "Y esa tercera no pide ninguna acción concreta: con el tiempo se ve que es normal, que tus personas a cargo recelan de molestarte o de quedar mal, y que te toca a ti trabajar más duro para establecer una relación de confianza.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro no manda nada",
+          "la autora reconocio"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La dinamica nueva con tus antiguos pares establecida, con las tres cosas que se tuercen ya vigiladas: el papel de entrenador asumido, las conversaciones duras tenidas de frente, y dado por normal que te compartan menos de lo que te compartian.",
+      "texto_nuevo": "La dinámica nueva con tus antiguos pares establecida, con las tres cosas que se tuercen ya vigiladas: el papel de entrenador asumido, las conversaciones duras tenidas de frente, y dado por normal que te compartan menos de lo que te compartían.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 34, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-establecer_dinamica_nueva_antiguos_pares-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando pasas a dirigir a quienes hasta ayer eran tus companieros de equipo: antes eras un contribuidor individual mas y ahora eres el jefe, asi que la relacion con ellos se siente alterada. Le pasa al aprendiz y le pasa al sucesor, y el libro nombra esta descripcion desde los dos sitios.",
+      "texto_nuevo": "Cuando pasas a dirigir a quienes hasta ayer eran tus compañeros de equipo: antes eras un miembro más del equipo, sin gente a cargo, y ahora eres el jefe, así que la relación con ellos se siente alterada. Te pasa tanto si diriges una parte del equipo de tu jefe porque crece como si ocupas su puesto cuando se va.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro nombra esta descripcion desde los dos sitios",
+          "contribuidor individual",
+          "Le pasa al aprendiz y le pasa al sucesor"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 34)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que se hace raro establecer una dinámica nueva con tus antiguos pares: antes eras un miembro más del equipo, sin gente a cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que se hacen difíciles al empezar, y sobre todo con personas a cargo a las que consideras amigas.",
+      "texto_nuevo": "Cuenta con que se hace raro establecer una dinámica nueva con tus antiguos pares: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que se hacen difíciles al empezar, y sobre todo con personas a cargo a las que consideras amigas.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "eras un miembro más del equipo,"
+        ]
+      },
+      "decision": "pase de glosario (contribuidor): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-glosario-establecer_dinamica_nueva_antiguos_pares-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando pasas a dirigir a quienes hasta ayer eran tus compañeros de equipo: antes eras un miembro más del equipo, sin gente a cargo, y ahora eres el jefe, así que la relación con ellos se siente alterada. Te pasa tanto si diriges una parte del equipo de tu jefe porque crece como si ocupas su puesto cuando se va.",
+      "texto_nuevo": "Cuando pasas a dirigir a quienes hasta ayer eran tus compañeros de equipo: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con ellos se siente alterada. Te pasa tanto si diriges una parte del equipo de tu jefe porque crece como si ocupas su puesto cuando se va.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "eras un miembro más del equipo,"
+        ]
+      },
+      "decision": "pase de glosario (contribuidor): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-auditoria-establecer_dinamica_nueva_antiguos_pares-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pasar de compañero a jefe cambia la relación aunque nadie lo diga, y lo que se tuerce se puede prever en tres frentes. Ahora te toca hacer de entrenador, y eso exige conversaciones sobre metas y fortalezas que antes no hacían falta. Respondes del resultado del equipo, así que lo que estorba se aborda rápido y de frente aunque incomode. Y es normal que te cuenten menos. Funciona porque convierte la rareza en tareas concretas: no evitar las conversaciones, asumir que los resultados son tuyos y trabajar más para ganar una confianza que ya no viene dada.",
+      "texto_nuevo": "Pasar de compañero a jefe puede alterar la relación, y lo que se hace difícil al empezar se puede prever en tres frentes. Ahora te toca hacer de entrenador, y eso exige conversaciones sobre metas y fortalezas que antes no hacían falta. Respondes del resultado del equipo, así que lo que estorba se aborda rápido y de frente aunque incomode, y cuanto antes asumes que los resultados son tuyos, más fáciles se hacen esas conversaciones. Y puede que te cuenten menos, algo normal que te toca compensar trabajando más para ganar su confianza.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 73-85",
+        "frase": "The sooner you internalize that you own the outcomes of your team, the easier it becomes to have these conversations."
+      },
+      "decision": "auditoria completa M11 (invencion, matiz): 'Funciona porque convierte la rareza en tareas concretas', 'aunque nadie lo diga' y 'una confianza que ya no viene dada' no están en el libro; la relación 'might feel altered', no 'cambia'. Se pone la causa que sí da el libro.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion",
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que se hace raro establecer una dinámica nueva con tus antiguos pares: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que se hacen difíciles al empezar, y sobre todo con personas a cargo a las que consideras amigas.",
+      "texto_nuevo": "Cuenta con que puede hacerse raro establecer una dinámica nueva con tus antiguos pares: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que a una directiva se le hicieron difíciles al empezar, y sobre todo con personas a cargo a las que consideraba amigas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 73",
+        "frase": "It can feel awkward to establish a new dynamic with former peers."
+      },
+      "decision": "auditoria completa M11 (matiz): 'It can feel awkward' pierde el 'can', y las tres dificultades son la experiencia de la autora al empezar; se cuentan como caso.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "La primera, hacer de entrenador: tu trabajo incluye ahora entender las metas de carrera de tus antiguos pares, qué clase de proyectos encajan con sus fuerzas e intereses, en qué necesitan ayuda y cómo van respecto a lo que se espera de ellos.",
+      "texto_nuevo": "La primera, hacer de entrenador: tu trabajo incluye ahora entender las metas de carrera de tus antiguos pares, qué clase de proyectos encajan con sus fuerzas e intereses, en qué necesitan ayuda y cómo van respecto a las expectativas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "lo que se espera de ellos"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): 'se espera' está en la lista de voz prohibida; 'relative to expectations' queda como 'respecto a las expectativas' sin añadir nada.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Y esa tercera no pide ninguna acción concreta: con el tiempo se ve que es normal, que tus personas a cargo recelan de molestarte o de quedar mal, y que te toca a ti trabajar más duro para establecer una relación de confianza.",
+      "texto_nuevo": "Y con esa tercera, con el tiempo puede verse que es normal: tus personas a cargo pueden recelar de molestarte o de quedar mal, y te toca a ti trabajar más duro para establecer una relación de confianza.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 85",
+        "frase": "Over time, however, I recognized that, yes, this was normal. My reports were wary of bothering me or coming across poorly. It was up to me to work harder to establish a trusting relationship"
+      },
+      "decision": "auditoria completa M11 (invencion, matiz): 'no pide ninguna acción concreta' no lo dice el libro (y el mismo paso termina en una acción); lo que la autora vio en su equipo ('My reports were wary') se afirmaba como regla.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion",
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-establecer_dinamica_nueva_antiguos_pares-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando pasas a dirigir a quienes hasta ayer eran tus compañeros de equipo: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con ellos se siente alterada. Te pasa tanto si diriges una parte del equipo de tu jefe porque crece como si ocupas su puesto cuando se va.",
+      "texto_nuevo": "Cuando pasas a dirigir a quienes hasta ayer eran tus compañeros de equipo: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con ellos puede sentirse alterada. Te pasa tanto si diriges una parte del equipo que lleva tu jefe porque crece como si ocupas su puesto cuando se va.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 73",
+        "frase": "Now, you are the boss, which means your relationship with teammates might feel altered."
+      },
+      "decision": "auditoria completa M11 (matiz, voz): El libro dice 'might feel altered'; la condición lo afirmaba como hecho. De paso sale 'el equipo de' (lista de voz): 'del equipo de tu jefe' pasa a 'del equipo que lleva tu jefe'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase2-establecer_dinamica_nueva_antiguos_pares-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pasar de compañero a jefe puede alterar la relación, y lo que se hace difícil al empezar se puede prever en tres frentes. Ahora te toca hacer de entrenador, y eso exige conversaciones sobre metas y fortalezas que antes no hacían falta. Respondes del resultado del equipo, así que lo que estorba se aborda rápido y de frente aunque incomode, y cuanto antes asumes que los resultados son tuyos, más fáciles se hacen esas conversaciones. Y puede que te cuenten menos, algo normal que te toca compensar trabajando más para ganar su confianza.",
+      "texto_nuevo": "Pasar de compañero a jefe puede alterar la relación, y hay tres frentes que a una directiva se le hicieron difíciles al empezar. Ahora te toca hacer de entrenador, y eso exige conversaciones sobre metas y fortalezas que antes no hacían falta. Respondes del resultado del equipo, así que lo que estorba se aborda rápido y de frente aunque incomode, y cuanto antes asumes que los resultados son tuyos, más fáciles se hacen esas conversaciones. Y puede que te cuenten menos, algo que ella acabó viendo normal y que te toca compensar trabajando más para ganar su confianza.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "zhuo_manager/cap_03.md 73",
+        "frase": "When I started, I found the below challenging, especially with reports whom I considered friends"
+      },
+      "decision": "auditoria completa M11 (matiz): La experiencia de una directiva vuelta previsión general; el paso 0 ya la cuenta como su caso, y lo normal es lo que ella reconoció con el tiempo (línea 85: \"Over time, however, I recognized that, yes, this was normal\").",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No evites esas conversaciones aunque se hagan raras: busca entender qué les importa a tus nuevas personas a cargo, dales opinión sobre lo que hacen bien y sobre dónde podrían estirarse, y piensa en ti como un entrenador que está ahí para apoyarlos y ayudarlos a llegar a sus metas.",
+      "texto_nuevo": "No evites esas conversaciones aunque se hagan raras: busca entender qué les importa a tus nuevas personas a cargo, dales opinión sobre lo que hacen bien y sobre dónde podrían dar más de sí, y piensa en ti como un entrenador que está ahí para apoyarlos y ayudarlos a llegar a sus metas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "estirarse"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"where they might stretch\".",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuenta con que puede hacerse raro establecer una dinámica nueva con tus antiguos pares: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que a una directiva se le hicieron difíciles al empezar, y sobre todo con personas a cargo a las que consideraba amigas.",
+      "texto_nuevo": "Cuenta con que puede hacerse raro establecer una dinámica nueva con tus antiguos pares: antes trabajabas sin gente a tu cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que a una directiva se le hicieron difíciles al empezar, y sobre todo con personas a su cargo a las que consideraba amigas.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"gente a cargo\" y \"personas a cargo\" sin posesivo se leen como quien manda; forma fijada \"a tu cargo\" y, al hablar de la directiva, \"a su cargo\" (decisión del orquestador)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"gente a cargo\" y \"personas a cargo\" sin posesivo se leen como quien manda; forma fijada \"a tu cargo\" y, al hablar de la directiva, \"a su cargo\" (decisión del orquestador).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "La segunda, tener conversaciones duras: la relación entre directivo y persona a cargo es distinta de la relación entre pares, porque ahora respondes del resultado de tu equipo, incluidas todas las decisiones que se toman dentro.",
+      "texto_nuevo": "La segunda, tener conversaciones duras: la relación entre directivo y persona a su cargo es distinta de la relación entre pares, porque ahora respondes del resultado de tu equipo, incluidas todas las decisiones que se toman dentro.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"persona a cargo\" sin posesivo se lee como la que manda, justo al compararla con el directivo; forma fijada \"a su cargo\" (decisión del orquestador)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"persona a cargo\" sin posesivo se lee como la que manda, justo al compararla con el directivo; forma fijada \"a su cargo\" (decisión del orquestador).",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-establecer_dinamica_nueva_antiguos_pares-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando pasas a dirigir a quienes hasta ayer eran tus compañeros de equipo: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con ellos puede sentirse alterada. Te pasa tanto si diriges una parte del equipo que lleva tu jefe porque crece como si ocupas su puesto cuando se va.",
+      "texto_nuevo": "Cuando pasas a dirigir a quienes hasta ayer eran tus compañeros de equipo: antes trabajabas sin gente a tu cargo, y ahora eres el jefe, así que la relación con ellos puede sentirse alterada. Te pasa tanto si diriges una parte del equipo que lleva tu jefe porque crece como si ocupas su puesto cuando se va.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "\"gente a cargo\" sin posesivo se lee como quien manda; forma fijada \"a tu cargo\" (decisión del orquestador)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"gente a cargo\" sin posesivo se lee como quien manda; forma fijada \"a tu cargo\" (decisión del orquestador).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-barrido-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "No evites esas conversaciones aunque se hagan raras: busca entender qué les importa a tus nuevas personas a cargo, dales opinión sobre lo que hacen bien y sobre dónde podrían dar más de sí, y piensa en ti como un entrenador que está ahí para apoyarlos y ayudarlos a llegar a sus metas.",
+      "texto_nuevo": "No evites esas conversaciones aunque se hagan raras: busca entender qué les importa a las nuevas personas a tu cargo, dales opinión sobre lo que hacen bien y sobre dónde podrían dar más de sí, y piensa en ti como un entrenador que está ahí para apoyarlos y ayudarlos a llegar a sus metas.",
+      "cita": {
+        "instrumento": "barrido de restos del cuarto pase de la limpieza M11 con verificador ciego (docs/saneamiento/resultados/M11/pase4_barrido/)",
+        "evidencia": "'a tus nuevas personas a cargo' se lee como quien manda; forma fijada 'a tu cargo' / 'a su cargo'"
+      },
+      "decision": "decisiones del orquestador para todo el pack (cuarto pase)",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4_barrido/",
+      "motivos": [
+        "a cargo sin posesivo"
+      ]
+    },
+    {
+      "id": "m11-pase4-barrido-establecer_dinamica_nueva_antiguos_pares-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Y con esa tercera, con el tiempo puede verse que es normal: tus personas a cargo pueden recelar de molestarte o de quedar mal, y te toca a ti trabajar más duro para establecer una relación de confianza.",
+      "texto_nuevo": "Y con esa tercera, con el tiempo puede verse que es normal: las personas a tu cargo pueden recelar de molestarte o de quedar mal, y te toca a ti trabajar más duro para establecer una relación de confianza.",
+      "cita": {
+        "instrumento": "barrido de restos del cuarto pase de la limpieza M11 con verificador ciego (docs/saneamiento/resultados/M11/pase4_barrido/)",
+        "evidencia": "'tus personas a cargo' se lee como quien manda; forma fijada 'a tu cargo' / 'a su cargo'"
+      },
+      "decision": "decisiones del orquestador para todo el pack (cuarto pase)",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4_barrido/",
+      "motivos": [
+        "a cargo sin posesivo"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Establece tu Nueva Dinámica"
+}

@@ -1,0 +1,268 @@
+{
+  "node_id": "calibrar_normalidad_preguntas_jefe",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Calibrar con tu jefe qué es lo normal en el entorno nuevo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "En tus primeros meses dirigiendo, tu trabajo principal es escuchar, preguntar y aprender. Querer demostrar que sabes algo cuando tu opinión aún no está informada tiende a volverse en tu contra y hace perder el tiempo a los demás. Una manera eficaz de calibrar qué es lo normal es mirar escenarios concretos con tu jefe: qué es un trabajo excelente frente a uno medio o malo, con ejemplos; cómo cree que fue un proyecto o una reunión y por qué; si algo que viste es normal o preocupante; qué le quita el sueño y cómo decide qué priorizar.",
+  "notas_extraccion": "Es el segundo instrumento del camino del jefe nuevo, y el libro lo situa justo despues de nombrar el mayor error de los jefes nuevos, lanzarse a imponer opiniones para demostrar que son capaces. El libro dice de donde sale la necesidad, y la fuente es una medicion suya de andar por casa pero declarada: los directivos nuevos de su equipo le dicen que lo que mas quieren entender es como calibrar sus expectativas sobre que es normal. Las cinco preguntas son las cinco que el libro escribe una a una, y las tres primeras comparten una forma que el libro elige a proposito, la de pedir el juicio de otro sobre un caso concreto en vez de pedir un criterio abstracto. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuantos escenarios hacen falta, cada cuanto se repite la conversacion, ni como se sabe que la calibracion ya esta hecha.",
+  "pasos_accionables": [
+    "Acepta que en tus primeros meses tu trabajo principal es escuchar, preguntar y aprender.",
+    "Para calibrar qué es lo normal, mira escenarios concretos junto a tu propio jefe, que es una manera eficaz de hacerlo.",
+    "Pregúntale qué significa hacer un gran trabajo frente a uno medio o malo, y pídele algunos ejemplos.",
+    "Pídele que comparta contigo sus impresiones sobre cómo cree que fue tal proyecto o tal reunión, y por qué lo cree.",
+    "Cuéntale que te has fijado en que pasó tal cosa el otro día y pregúntale si eso es normal o si deberías preocuparte.",
+    "Pregúntale qué es lo que le quita el sueño, y por qué.",
+    "Y pregúntale cómo determina él qué cosas priorizar."
+  ],
+  "entregable_esperado": "Tus expectativas calibradas sobre qué es normal aquí, sacadas de mirar escenarios concretos junto a tu jefe y no de suponerlo.",
+  "nodos_previos": [
+    "transitar_jefe_nuevo_equipo_establecido"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "En tus primeros meses como jefe nuevo, cuando quieres entender cómo calibrar tus expectativas sobre qué es lo normal en este entorno y todavía no tienes criterio propio para juzgarlo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-calibrar_normalidad_preguntas_jefe-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "En tus primeros meses dirigiendo, tu trabajo principal es escuchar, preguntar y aprender. Querer demostrar que sabes algo cuando tu opinión aún no está informada tiende a volverse en tu contra y hace perder el tiempo a los demás. Una manera eficaz de calibrar qué es lo normal es mirar escenarios concretos con tu jefe: qué es un trabajo excelente frente a uno medio o malo, con ejemplos; cómo cree que fue un proyecto o una reunión y por qué; si algo que viste es normal o preocupante; qué le quita el sueño y cómo decide qué priorizar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_03.md",
+          "lineas": "173-185"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: L173 'tends to backfire' sale como regla, L175 'One effective way' sale como 'funciona mejor que los criterios abstractos', y 'completan el cuadro porque muestran qué pesa' es una causa inventada. La propuesta del lector devuelve 'tiende' y 'una manera eficaz' y se queda en las preguntas de L177-185.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)"
+    },
+    {
+      "id": "m11-limpieza-calibrar_normalidad_preguntas_jefe-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Calibrar con tu jefe que es lo normal en el entorno nuevo",
+      "texto_nuevo": "Calibrar con tu jefe qué es lo normal en el entorno nuevo",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calibrar_normalidad_preguntas_jefe-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Para calibrar que es lo normal, mira escenarios concretos junto a tu propio jefe, que es la manera eficaz de hacerlo.",
+      "texto_nuevo": "Para calibrar qué es lo normal, mira escenarios concretos junto a tu propio jefe, que es la manera eficaz de hacerlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calibrar_normalidad_preguntas_jefe-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale que significa hacer un gran trabajo frente a uno medio o malo, y pidele algunos ejemplos.",
+      "texto_nuevo": "Pregúntale qué significa hacer un gran trabajo frente a uno medio o malo, y pídele algunos ejemplos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calibrar_normalidad_preguntas_jefe-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pidele que te comparta sus impresiones sobre como cree que fue tal proyecto o tal reunion, y por que lo cree.",
+      "texto_nuevo": "Pídele que te comparta sus impresiones sobre cómo cree que fue tal proyecto o tal reunión, y por qué lo cree.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calibrar_normalidad_preguntas_jefe-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuentale que te has fijado en que paso tal cosa el otro dia y preguntale si eso es normal o si deberias preocuparte.",
+      "texto_nuevo": "Cuéntale que te has fijado en que pasó tal cosa el otro día y pregúntale si eso es normal o si deberías preocuparte.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calibrar_normalidad_preguntas_jefe-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Preguntale que es lo que le quita el sueno, y por que.",
+      "texto_nuevo": "Pregúntale qué es lo que le quita el sueño, y por qué.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calibrar_normalidad_preguntas_jefe-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y preguntale como determina el que cosas priorizar.",
+      "texto_nuevo": "Y pregúntale cómo determina él qué cosas priorizar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calibrar_normalidad_preguntas_jefe-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tus expectativas calibradas sobre que es normal aqui, sacadas de mirar escenarios concretos junto a tu jefe y no de suponerlo.",
+      "texto_nuevo": "Tus expectativas calibradas sobre qué es normal aquí, sacadas de mirar escenarios concretos junto a tu jefe y no de suponerlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calibrar_normalidad_preguntas_jefe-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En tus primeros meses como jefe nuevo, cuando lo que mas necesitas entender es como calibrar tus expectativas sobre que es lo normal en este entorno, y todavia no tienes criterio propio para juzgarlo.",
+      "texto_nuevo": "En tus primeros meses como jefe nuevo, cuando lo que más necesitas entender es cómo calibrar tus expectativas sobre qué es lo normal en este entorno, y todavía no tienes criterio propio para juzgarlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-calibrar_normalidad_preguntas_jefe-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para calibrar qué es lo normal, mira escenarios concretos junto a tu propio jefe, que es la manera eficaz de hacerlo.",
+      "texto_nuevo": "Para calibrar qué es lo normal, mira escenarios concretos junto a tu propio jefe, que es una manera eficaz de hacerlo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 175",
+        "frase": "One effective way to do that is to look at specific scenarios together with your own manager."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice \"una manera eficaz\", no la única.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-calibrar_normalidad_preguntas_jefe-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "En tus primeros meses como jefe nuevo, cuando lo que más necesitas entender es cómo calibrar tus expectativas sobre qué es lo normal en este entorno, y todavía no tienes criterio propio para juzgarlo.",
+      "texto_nuevo": "En tus primeros meses como jefe nuevo, cuando quieres entender cómo calibrar tus expectativas sobre qué es lo normal en este entorno y todavía no tienes criterio propio para juzgarlo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 175",
+        "frase": "New managers on my team tell me that the thing they most want to understand is how to calibrate their expectations around “what’s normal.”"
+      },
+      "decision": "auditoria completa M11 (matiz): Lo que los jefes nuevos de un equipo concreto dicen querer entender se volvía lo que tú más necesitas.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase4-calibrar_normalidad_preguntas_jefe-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pídele que te comparta sus impresiones sobre cómo cree que fue tal proyecto o tal reunión, y por qué lo cree.",
+      "texto_nuevo": "Pídele que comparta contigo sus impresiones sobre cómo cree que fue tal proyecto o tal reunión, y por qué lo cree.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "te comparta"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"compartir\" con complemento de persona sin \"con\" (\"share with you\", zhuo cap_03 l.179) es calco y forma regional; \"que comparta contigo\".",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Calibra lo Normal con tu Jefe",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

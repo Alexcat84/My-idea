@@ -1,0 +1,221 @@
+{
+  "node_id": "aplicar_metodo_ghsmart_contratacion",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Aplicar los cuatro pasos del método A para contratar",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Contratar bien deja de depender de la corazonada cuando se sigue un proceso sencillo de cuatro pasos que se apoyan unos en otros. Primero se define por escrito qué debe lograr la persona, con resultados y competencias; luego se reúnen candidatos de forma sistemática antes de necesitarlos; después se eligen con entrevistas estructuradas que recogen hechos para calificar esa definición; y por último se convence a los elegidos para que se incorporen. Que el método sea simple lo hace fácil de aplicar en cualquier nivel, aunque exige un esfuerzo real.",
+  "notas_extraccion": "Es la cabeza de la serie numerada del libro: cuatro pasos que construyen el metodo entero, y que el libro presenta como las lineas de la letra A mas su subrayado. Los autores lo llaman el metodo A de ghSMART para contratar, dicen haber gastado trece años aprendiendolo y todo el trabajo de campo del libro probandolo y refinandolo, y lo definen como un proceso simple para identificar y contratar a jugadores A con un alto grado de exito. La razon de que sea un proceso y no un arte esta en el propio capitulo: la contratacion es el proceso donde empieza la construccion de una organizacion, y es el unico que se sigue viendo como algo que resiste un enfoque ordenado. Que el metodo sea simple no significa que aplicarlo no exija esfuerzo real. El caso que el libro pone con su nombre: Blackstone y Apollo usaron el metodo A para reemplazar al consejero delegado de Allied Waste por John Zillmer, una compañia cuyo valor llevaba cinco años tan plano que algunos inversores la llamaban globo de plomo; Zillmer contrato o promociono a veintisiete jugadores A en dieciocho meses con un 90 por ciento de acierto y despues formo en el metodo a todos los directivos de la compañia.",
+  "pasos_accionables": [
+    "Escribe la tarjeta de puntuación del puesto: el documento que describe exactamente qué quieres que la persona logre en el puesto. No es una descripción del puesto, sino un conjunto de resultados y de competencias que definen el trabajo bien hecho, y al definir el desempeño A del puesto te da una imagen clara de lo que la persona que buscas tiene que ser capaz de lograr.",
+    "Busca candidatos de forma sistemática antes de tener plazas que cubrir, que es lo que asegura que tengas candidatos de alta calidad esperando cuando los necesites.",
+    "Selecciona con una serie de entrevistas estructuradas que reúnan los hechos relevantes de la persona, para poder puntuar tu tarjeta y tomar una decisión de contratación informada.",
+    "Vende el puesto a las personas que la selección te ha señalado como las que quieres en tu equipo y persuádelas de que se incorporen, que es lo que te protege de perder al candidato perfecto a última hora."
+  ],
+  "entregable_esperado": "El jugador A identificado y contratado para el puesto, con un alto grado de éxito: la persona acertada.",
+  "nodos_previos": [
+    "detectar_metodos_vudu_contratacion"
+  ],
+  "nodos_siguientes": [
+    "crear_tarjeta_puntuacion_puesto",
+    "abastecer_flujo_candidatos",
+    "seleccionar_jugador_cuatro_entrevistas",
+    "vender_puesto_jugador",
+    "instalar_metodo_contratacion_empresa"
+  ],
+  "condiciones_activacion": [
+    "Cuando hace falta conseguir un equipo A, es decir, cuando hay que identificar y contratar a un jugador A para un puesto."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-aplicar_metodo_ghsmart_contratacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Contratar bien deja de depender de la corazonada cuando se sigue un proceso sencillo de cuatro pasos que se apoyan unos en otros. Primero se define por escrito qué debe lograr la persona, con resultados y competencias; luego se reúnen candidatos de forma sistemática antes de necesitarlos; después se eligen con entrevistas estructuradas que recogen hechos para calificar esa definición; y por último se convence a los elegidos para que se incorporen. Que el método sea simple lo hace fácil de aplicar en cualquier nivel, aunque exige un esfuerzo real.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_02.md",
+          "lineas": "117-129"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)"
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_ghsmart_contratacion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Aplicar los cuatro pasos del metodo de ghSMART para contratar",
+      "texto_nuevo": "Aplicar los cuatro pasos del método A para contratar",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "de ghSMART"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_ghsmart_contratacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Escribe la tarjeta de puntuacion del puesto: el documento que describe exactamente que quieres que la persona logre en el papel. No es una descripcion del puesto, sino un conjunto de resultados y de competencias que definen el trabajo bien hecho, y al definir el desempeño A del papel te da una imagen clara de lo que la persona que buscas tiene que ser capaz de lograr.",
+      "texto_nuevo": "Escribe la tarjeta de puntuación del puesto: el documento que describe exactamente qué quieres que la persona logre en el papel. No es una descripción del puesto, sino un conjunto de resultados y de competencias que definen el trabajo bien hecho, y al definir el desempeño A del papel te da una imagen clara de lo que la persona que buscas tiene que ser capaz de lograr.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_ghsmart_contratacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Abastecete de candidatos de forma sistematica antes de tener plazas que cubrir, que es lo que asegura que tengas candidatos de alta calidad esperando cuando los necesites.",
+      "texto_nuevo": "Abastécete de candidatos de forma sistemática antes de tener plazas que cubrir, que es lo que asegura que tengas candidatos de alta calidad esperando cuando los necesites.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_ghsmart_contratacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Selecciona con una serie de entrevistas estructuradas que reunan los hechos relevantes de la persona, para poder puntuar tu tarjeta y tomar una decision de contratacion informada.",
+      "texto_nuevo": "Selecciona con una serie de entrevistas estructuradas que reúnan los hechos relevantes de la persona, para poder puntuar tu tarjeta y tomar una decisión de contratación informada.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_ghsmart_contratacion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vende el puesto a las personas que la seleccion te ha señalado como las que quieres en tu equipo y persuadelas de que se incorporen, que es lo que te protege de perder al candidato perfecto a ultima hora.",
+      "texto_nuevo": "Vende el puesto a las personas que la selección te ha señalado como las que quieres en tu equipo y persuádelas de que se incorporen, que es lo que te protege de perder al candidato perfecto a última hora.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_ghsmart_contratacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El jugador A identificado y contratado para el puesto, con un alto grado de exito: el who acertado.",
+      "texto_nuevo": "El jugador A identificado y contratado para el puesto, con un alto grado de éxito: la persona acertada.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el who acertado"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_ghsmart_contratacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando hace falta conseguir un equipo A, es decir cuando hay que identificar y contratar a un jugador A para un puesto.",
+      "texto_nuevo": "Cuando hace falta conseguir un equipo A, es decir, cuando hay que identificar y contratar a un jugador A para un puesto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-aplicar_metodo_ghsmart_contratacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Abastécete de candidatos de forma sistemática antes de tener plazas que cubrir, que es lo que asegura que tengas candidatos de alta calidad esperando cuando los necesites.",
+      "texto_nuevo": "Busca candidatos de forma sistemática antes de tener plazas que cubrir, que es lo que asegura que tengas candidatos de alta calidad esperando cuando los necesites.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Abastécete de candidatos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"sourcing\"; uno se abastece de mercancía, no de personas.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-aplicar_metodo_ghsmart_contratacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escribe la tarjeta de puntuación del puesto: el documento que describe exactamente qué quieres que la persona logre en el papel. No es una descripción del puesto, sino un conjunto de resultados y de competencias que definen el trabajo bien hecho, y al definir el desempeño A del papel te da una imagen clara de lo que la persona que buscas tiene que ser capaz de lograr.",
+      "texto_nuevo": "Escribe la tarjeta de puntuación del puesto: el documento que describe exactamente qué quieres que la persona logre en el puesto. No es una descripción del puesto, sino un conjunto de resultados y de competencias que definen el trabajo bien hecho, y al definir el desempeño A del puesto te da una imagen clara de lo que la persona que buscas tiene que ser capaz de lograr.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "logre en el papel",
+          "desempeño A del papel"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"role\" vertido como \"papel\": \"logre en el papel\" se lee como \"sobre el papel\"; el nodo usa \"puesto\" (smart_who/cap_02.md:121).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Sigue los Cuatro Pasos al Contratar"
+}

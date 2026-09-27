@@ -1,0 +1,336 @@
+{
+  "node_id": "hacer_repaso_posterior_proyecto",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Hacer el repaso posterior sin convertirlo en un juicio",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Un repaso posterior convierte lo que pasó en lecciones para lo que viene, y su meta no es juzgar: tratarlo como un juicio es la vía más rápida de matar la práctica, y para sacarle lecciones hace falta un ambiente seguro donde hablar abierta y honestamente. Por eso los hechos se presentan con objetividad, como una línea de tiempo, y el lenguaje asume responsabilidad colectiva en vez de señalar con el dedo. Así se aprende tanto de los aciertos como de los errores, y escribir y compartir lo aprendido es todavía mejor, porque puede ayudar a otros a mejorar o a evitar errores parecidos.",
+  "notas_extraccion": "Es la primera herramienta del bloque de proceso que evoluciona, y la mas ejecutable del capitulo: trae momento de convocatoria, duracion, preguntas, y tres actos concretos para crear el ambiente seguro, los hechos objetivos, el lenguaje colectivo y el tono. El ejemplo de linea de tiempo con fechas va dentro porque es la demostracion de a que se parece presentar los hechos objetivamente, y sin el ese paso seria un adjetivo de adecuacion. Los nombres del ejemplo se sustituyen porque son de ejemplo tambien en el libro. Lo que el libro NO dice, y por eso no esta escrito aqui, es quien convoca, quien modera, ni donde se guardan los aprendizajes.",
+  "pasos_accionables": [
+    "Convoca el repaso en cualquiera de estos momentos: al completar un proyecto, de forma periódica, o en cuanto ocurra un evento inesperado o un error.",
+    "Invita al equipo a juntarse una hora o dos para reflexionar sobre lo que pasó.",
+    "Haz las preguntas del repaso: ¿qué fue bien?, ¿qué no fue bien?, y ¿qué haría el equipo de otra manera la próxima vez?",
+    "Hazlo también cuando el resultado fue bueno, porque siempre hay algo que aprender: ¿cómo podemos sacar de aquí buenas prácticas para otros proyectos?",
+    "No trates el repaso como un juicio, porque esa es la vía más rápida de matar la práctica. Considéralo una ocasión de exprimir la experiencia en busca de lecciones futuras.",
+    "Crea para eso un ambiente seguro donde se pueda discutir abierta y honestamente.",
+    "Presenta los hechos de la forma más objetiva que puedas, por ejemplo: «aquí está la línea de tiempo: el veinte de octubre, fulano y mengana discutieron por primera vez la posibilidad de este proyecto; el dieciséis de noviembre presentaron la propuesta y recibieron luz verde para crear un equipo nuevo».",
+    "Usa un lenguaje que asuma responsabilidad colectiva en vez de señalar con el dedo: «nuestro proceso falló», y no «fulana cometió un error».",
+    "Marca la pauta de que está bien que hablemos de nuestros errores y aprendamos de ellos.",
+    "Después del repaso, escribe los aprendizajes y compártelos ampliamente, porque un equipo que se curte con sus propios aciertos y tropiezos está bien, pero que además ayude a otros a mejorar o a evitar errores parecidos está todavía mejor."
+  ],
+  "entregable_esperado": "Los aprendizajes escritos y compartidos ampliamente, sacados de una discusión abierta y honesta en la que nadie fue juzgado.",
+  "nodos_previos": [
+    "aprender_resultados_vencer_dos_presiones",
+    "comprobar_equipo_ejecuta_bien"
+  ],
+  "nodos_siguientes": [
+    "crear_manuales_jugadas_repetibles"
+  ],
+  "condiciones_activacion": [
+    "Al completar un proyecto, de forma periódica, o en cuanto ocurre un evento inesperado o un error."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un repaso posterior convierte lo que pasó en lecciones para lo que viene, y solo funciona si nadie se siente juzgado: tratarlo como un juicio es la vía más rápida de matar la práctica, porque hace falta un ambiente seguro para hablar abierta y honestamente. Por eso los hechos se presentan con objetividad, como una línea de tiempo, y el lenguaje asume responsabilidad colectiva en vez de señalar con el dedo. Así se aprende tanto de los aciertos como de los errores, y escribir y compartir lo aprendido multiplica su valor, porque ayuda a otros a mejorar o a evitar errores parecidos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_09.md",
+          "lineas": "257-263"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)"
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Convoca el repaso en cualquiera de los momentos que el libro nombra: al completar un proyecto, de forma periodica, o en cuanto ocurra un evento inesperado o un error.",
+      "texto_nuevo": "Convoca el repaso en cualquiera de estos momentos: al completar un proyecto, de forma periódica, o en cuanto ocurra un evento inesperado o un error.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los momentos que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Invita al equipo a juntarse una hora o dos para reflexionar sobre lo que paso.",
+      "texto_nuevo": "Invita al equipo a juntarse una hora o dos para reflexionar sobre lo que pasó.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz las preguntas del repaso: que fue bien, que no fue bien, y que haria el equipo de otra manera la proxima vez.",
+      "texto_nuevo": "Haz las preguntas del repaso: ¿qué fue bien?, ¿qué no fue bien?, y ¿qué haría el equipo de otra manera la próxima vez?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hazlo tambien cuando el resultado fue bueno, porque siempre hay algo que aprender: como podemos sacar de aqui buenas practicas para otros proyectos?",
+      "texto_nuevo": "Hazlo también cuando el resultado fue bueno, porque siempre hay algo que aprender: ¿cómo podemos sacar de aquí buenas prácticas para otros proyectos?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No trates el repaso como un juicio, porque el libro dice que esa es la via mas rapida de matar la practica. Considera que es una ocasion de minar la experiencia en busca de lecciones futuras.",
+      "texto_nuevo": "No trates el repaso como un juicio, porque esa es la vía más rápida de matar la práctica. Considéralo una ocasión de minar la experiencia en busca de lecciones futuras.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Presenta los hechos de la forma mas objetiva que puedas, y el libro ensena como: aqui esta la linea de tiempo, el veinte de octubre fulano y mengana discutieron por primera vez la posibilidad de este proyecto, el dieciseis de noviembre presentaron la propuesta y recibieron luz verde para crear un equipo nuevo.",
+      "texto_nuevo": "Presenta los hechos de la forma más objetiva que puedas, por ejemplo: «aquí está la línea de tiempo: el veinte de octubre, fulano y mengana discutieron por primera vez la posibilidad de este proyecto; el dieciséis de noviembre presentaron la propuesta y recibieron luz verde para crear un equipo nuevo».",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el libro ensena como"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa un lenguaje que asuma responsabilidad colectiva en vez de senialar con el dedo: nuestro proceso fallo, y no fulana cometio un error.",
+      "texto_nuevo": "Usa un lenguaje que asuma responsabilidad colectiva en vez de señalar con el dedo: «nuestro proceso falló», y no «fulana cometió un error».",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fija el tono de que esta bien que hablemos de nuestros errores y aprendamos de ellos.",
+      "texto_nuevo": "Fija el tono de que está bien que hablemos de nuestros errores y aprendamos de ellos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Despues del repaso, escribe los aprendizajes y compartelos ampliamente, porque un equipo que se curte con sus propios aciertos y tropiezos esta bien, pero que ademas ayude a otros a mejorar o a evitar errores parecidos esta todavia mejor.",
+      "texto_nuevo": "Después del repaso, escribe los aprendizajes y compártelos ampliamente, porque un equipo que se curte con sus propios aciertos y tropiezos está bien, pero que además ayude a otros a mejorar o a evitar errores parecidos está todavía mejor.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Los aprendizajes escritos y compartidos ampliamente, sacados de una discusion abierta y honesta en la que nadie fue juzgado.",
+      "texto_nuevo": "Los aprendizajes escritos y compartidos ampliamente, sacados de una discusión abierta y honesta en la que nadie fue juzgado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-hacer_repaso_posterior_proyecto-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Al completar un proyecto, de forma periodica, o en cuanto ocurre un evento inesperado o un error.",
+      "texto_nuevo": "Al completar un proyecto, de forma periódica, o en cuanto ocurre un evento inesperado o un error.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 35, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 35)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-hacer_repaso_posterior_proyecto-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No trates el repaso como un juicio, porque esa es la vía más rápida de matar la práctica. Considéralo una ocasión de minar la experiencia en busca de lecciones futuras.",
+      "texto_nuevo": "No trates el repaso como un juicio, porque esa es la vía más rápida de matar la práctica. Considéralo una ocasión de exprimir la experiencia en busca de lecciones futuras.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "minar la experiencia"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'minar la experiencia' calca 'mine the experience' y en español minar también es socavar.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-hacer_repaso_posterior_proyecto-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Fija el tono de que está bien que hablemos de nuestros errores y aprendamos de ellos.",
+      "texto_nuevo": "Marca la pauta de que está bien que hablemos de nuestros errores y aprendamos de ellos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Fija el tono"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Fija el tono' calca 'set the tone'; no se toma 'marca el tono', que sigue siendo el mismo calco: queda 'marca la pauta'.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-hacer_repaso_posterior_proyecto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un repaso posterior convierte lo que pasó en lecciones para lo que viene, y solo funciona si nadie se siente juzgado: tratarlo como un juicio es la vía más rápida de matar la práctica, porque hace falta un ambiente seguro para hablar abierta y honestamente. Por eso los hechos se presentan con objetividad, como una línea de tiempo, y el lenguaje asume responsabilidad colectiva en vez de señalar con el dedo. Así se aprende tanto de los aciertos como de los errores, y escribir y compartir lo aprendido multiplica su valor, porque ayuda a otros a mejorar o a evitar errores parecidos.",
+      "texto_nuevo": "Un repaso posterior convierte lo que pasó en lecciones para lo que viene, y solo funciona si nadie se siente juzgado: tratarlo como un juicio es la vía más rápida de matar la práctica, porque hace falta un ambiente seguro para hablar abierta y honestamente. Por eso los hechos se presentan con objetividad, como una línea de tiempo, y el lenguaje asume responsabilidad colectiva en vez de señalar con el dedo. Así se aprende tanto de los aciertos como de los errores, y escribir y compartir lo aprendido es todavía mejor, porque puede ayudar a otros a mejorar o a evitar errores parecidos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 263",
+        "frase": "A team growing hardy from its own successes and missteps is great, but when they can also help others improve or avoid similar errors, that's even better."
+      },
+      "decision": "auditoria completa M11 (invencion, matiz): El libro dice que es aún mejor cuando además puede ayudar a otros; \"multiplica su valor\" es añadido y \"ayuda\" pierde el \"can\" de una afirmación de efecto.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "invencion",
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase5-hacer_repaso_posterior_proyecto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Un repaso posterior convierte lo que pasó en lecciones para lo que viene, y solo funciona si nadie se siente juzgado: tratarlo como un juicio es la vía más rápida de matar la práctica, porque hace falta un ambiente seguro para hablar abierta y honestamente. Por eso los hechos se presentan con objetividad, como una línea de tiempo, y el lenguaje asume responsabilidad colectiva en vez de señalar con el dedo. Así se aprende tanto de los aciertos como de los errores, y escribir y compartir lo aprendido es todavía mejor, porque puede ayudar a otros a mejorar o a evitar errores parecidos.",
+      "texto_nuevo": "Un repaso posterior convierte lo que pasó en lecciones para lo que viene, y su meta no es juzgar: tratarlo como un juicio es la vía más rápida de matar la práctica, y para sacarle lecciones hace falta un ambiente seguro donde hablar abierta y honestamente. Por eso los hechos se presentan con objetividad, como una línea de tiempo, y el lenguaje asume responsabilidad colectiva en vez de señalar con el dedo. Así se aprende tanto de los aciertos como de los errores, y escribir y compartir lo aprendido es todavía mejor, porque puede ayudar a otros a mejorar o a evitar errores parecidos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_09.md 261",
+        "frase": "The goal of a debrief is not judgment. Don’t treat it as a trial—that’s the fastest way to kill the practice. Instead, consider it an opportunity to mine the experience for future lessons. To do this, you must create a safe environment to have open and honest discussions."
+      },
+      "decision": "auditoria completa M11 (invencion): Causa inventada: el libro no dice que el juicio mate la práctica porque haga falta un ambiente seguro; el ambiente seguro lo pide para sacar lecciones. Sale también el absoluto 'solo funciona si nadie se siente juzgado'. Propuesta del auditor.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "invencion"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Haz un Repaso sin Juzgar"
+}

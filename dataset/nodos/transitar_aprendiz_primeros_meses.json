@@ -1,0 +1,282 @@
+{
+  "node_id": "transitar_aprendiz_primeros_meses",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Transitar como aprendiz tus primeros meses de directivo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Pasar a dirigir una parte del equipo que lleva tu jefe suele ser la transición más fácil porque llegas con tres apoyos: un jefe que conoce a todos y puede guiarte, lo que has visto desde primera fila sobre cómo funcionan las reuniones, las decisiones y las personas, y contexto sobre metas y proyectos que te deja ser útil mucho antes. Hay dos cosas que vigilar: la relación con quienes eran tus pares puede cambiar, y el trabajo propio que sigues haciendo choca con la gestión cuando el equipo crece. Por eso conviene tener un plan para reducir ese trabajo al llegar a cuatro o cinco personas.",
+  "notas_extraccion": "Es la primera de las cuatro partes de la serie de los caminos, y el libro la califica de la mas facil de las cuatro transiciones. La autora la cuenta como suya: llego a directiva por aqui cuando la responsable del equipo, Rebekah, vio que hacia falta mas apoyo despues de que el equipo doblara de tamanio, y le dio una lista de nombres diciendole quienes creia que debian estar en su equipo. El aviso del final esta razonado con un caso propio y con la cifra del caso dentro: cuando el equipo llego a seis personas, la autora seguia siendo la disenadora principal de un proyecto complejo, y cada vez que pasaba algo fuera de lo ordinario no le quedaba tiempo para su propio proyecto, con lo que la calidad de su trabajo se resintio. De ahi sale el umbral que el libro si da, cuatro o cinco personas, distinto de las seis del caso: el caso ilustra la doctrina y el umbral es el de la doctrina. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se reduce el trabajo individual, a quien se le pasa ni en cuanto tiempo. Las dos cosas que este camino manda vigilar se describen aparte y no dentro, porque el libro las nombra por su titulo desde otros dos caminos con la formula See description from The Apprentice: la dinamica nueva con antiguos pares desde el sucesor, y el equilibrio con el trabajo individual desde el pionero. Lo que el libro invoca por su nombre desde otro sitio es una pieza con id propio, y aqui quedan los dos pasos que la nombran.",
+  "pasos_accionables": [
+    "Aprovecha que esta es normalmente la manera más fácil de pasar a ser directivo: como tu propio jefe ha estado vigilando el equipo y conoce a todos los implicados, por lo general vas a tener más guía de la que hay en los otros caminos.",
+    "Aprovecha que sabes lo que funciona y lo que no, porque has visto desde primera fila cómo opera tu equipo: cómo se llevan las reuniones, cómo se toman las decisiones y cómo son tus compañeros.",
+    "Aprovecha que puedes ponerte al día rápido porque tienes contexto: a diferencia de un directivo que llega de fuera, ya entiendes el equipo, y no solo cómo funciona sino también sus metas y los proyectos en marcha. No necesitas un periodo tan largo de escuchar y aprender, y puedes empezar a ser útil mucho antes.",
+    "Vigila lo raro que puede hacerse establecer una dinámica nueva con tus antiguos pares, que es la primera de las dos cosas que este camino manda vigilar.",
+    "Y vigila lo difícil que es equilibrar tus compromisos de trabajo individual con la gestión, que es la segunda, y que tiene un disparador con número: cuando tu equipo llegue a cuatro o cinco personas, ten ya el plan de cómo reducir ese trabajo individual."
+  ],
+  "entregable_esperado": "Aprovechadas las tres ventajas del aprendiz, que son la guía de tu jefe, saber ya lo que funciona y lo que no, y poder ponerte al día rápido, y vigiladas las dos cosas que se tuercen: la dinámica nueva con tus antiguos pares y el equilibrio con tu trabajo individual.",
+  "nodos_previos": [
+    "situar_transicion_cuatro_caminos"
+  ],
+  "nodos_siguientes": [
+    "acordar_plan_conjunto_jefe",
+    "establecer_dinamica_nueva_antiguos_pares",
+    "planificar_reduccion_trabajo_individual"
+  ],
+  "condiciones_activacion": [
+    "Cuando el equipo de tu jefe ha crecido y te han pedido que dirijas una parte de él a partir de ahora, con lo que pasas a dirigir a quienes hasta ayer eran tus pares."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-transitar_aprendiz_primeros_meses-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Pasar a dirigir una parte del equipo de tu jefe suele ser la transición más fácil porque llegas con tres apoyos: un jefe que conoce a todos y puede guiarte, una vista de primera fila de cómo funcionan las reuniones, las decisiones y las personas, y contexto sobre metas y proyectos que te deja ser útil mucho antes. Lo que se tuerce es previsible: la relación con quienes eran tus pares cambia, y el trabajo propio que sigues haciendo choca con la gestión cuando el equipo crece. Por eso conviene tener un plan para soltar ese trabajo al llegar a cuatro o cinco personas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_03.md",
+          "lineas": "37-93"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)"
+    },
+    {
+      "id": "m11-limpieza-transitar_aprendiz_primeros_meses-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprovecha que esta es normalmente la manera mas facil de pasar a ser directivo: como tu propio jefe ha estado vigilando el equipo y conoce a todos los implicados, vas a tener mas guia de la que hay en los otros caminos.",
+      "texto_nuevo": "Aprovecha que esta es normalmente la manera más fácil de pasar a ser directivo: como tu propio jefe ha estado vigilando el equipo y conoce a todos los implicados, vas a tener más guía de la que hay en los otros caminos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-transitar_aprendiz_primeros_meses-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprovecha que sabes lo que funciona y lo que no, porque has tenido una vista de primera fila de como opera tu equipo: como se llevan las reuniones, como se toman las decisiones y como son tus companieros.",
+      "texto_nuevo": "Aprovecha que sabes lo que funciona y lo que no, porque has tenido una vista de primera fila de cómo opera tu equipo: cómo se llevan las reuniones, cómo se toman las decisiones y cómo son tus compañeros.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-transitar_aprendiz_primeros_meses-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprovecha que puedes ponerte al dia rapido porque tienes contexto: a diferencia de un directivo que llega de fuera, ya entiendes el equipo, y no solo como funciona sino tambien sus metas y los proyectos en marcha. No necesitas un periodo tan largo de escuchar y aprender, y puedes empezar a ser util mucho antes.",
+      "texto_nuevo": "Aprovecha que puedes ponerte al día rápido porque tienes contexto: a diferencia de un directivo que llega de fuera, ya entiendes el equipo, y no solo cómo funciona sino también sus metas y los proyectos en marcha. No necesitas un periodo tan largo de escuchar y aprender, y puedes empezar a ser útil mucho antes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-transitar_aprendiz_primeros_meses-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vigila lo raro que se hace establecer una dinamica nueva con tus antiguos pares, que es la primera de las dos cosas que este camino manda vigilar, y que el libro describe aparte con sus tres partes nombradas una a una.",
+      "texto_nuevo": "Vigila lo raro que se hace establecer una dinámica nueva con tus antiguos pares, que es la primera de las dos cosas que este camino manda vigilar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y que el libro describe aparte con sus tres partes nombradas una a una"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-transitar_aprendiz_primeros_meses-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y vigila lo dificil que es equilibrar tus compromisos de contribuidor individual con la gestion, que es la segunda, y que el libro cierra con un disparador con numero: cuando tu equipo llegue a cuatro o cinco personas, ten ya el plan de como reducir ese trabajo individual.",
+      "texto_nuevo": "Y vigila lo difícil que es equilibrar tus compromisos de trabajo individual con la gestión, que es la segunda, y que tiene un disparador con número: cuando tu equipo llegue a cuatro o cinco personas, ten ya el plan de cómo reducir ese trabajo individual.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro cierra con un disparador",
+          "contribuidor individual"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-transitar_aprendiz_primeros_meses-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprovechadas las tres ventajas del aprendiz, que son la guia de tu jefe, saber ya lo que funciona y lo que no, y poder ponerte al dia rapido, y vigiladas las dos cosas que se tuercen: la dinamica nueva con tus antiguos pares y el equilibrio con tu trabajo individual.",
+      "texto_nuevo": "Aprovechadas las tres ventajas del aprendiz, que son la guía de tu jefe, saber ya lo que funciona y lo que no, y poder ponerte al día rápido, y vigiladas las dos cosas que se tuercen: la dinámica nueva con tus antiguos pares y el equilibrio con tu trabajo individual.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-transitar_aprendiz_primeros_meses-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el equipo de tu jefe ha crecido y te han pedido que dirijas una parte de el a partir de ahora, con lo que pasas a dirigir a quienes hasta ayer eran tus pares.",
+      "texto_nuevo": "Cuando el equipo de tu jefe ha crecido y te han pedido que dirijas una parte de él a partir de ahora, con lo que pasas a dirigir a quienes hasta ayer eran tus pares.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-transitar_aprendiz_primeros_meses-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Pasar a dirigir una parte del equipo de tu jefe suele ser la transición más fácil porque llegas con tres apoyos: un jefe que conoce a todos y puede guiarte, una vista de primera fila de cómo funcionan las reuniones, las decisiones y las personas, y contexto sobre metas y proyectos que te deja ser útil mucho antes. Lo que se tuerce es previsible: la relación con quienes eran tus pares cambia, y el trabajo propio que sigues haciendo choca con la gestión cuando el equipo crece. Por eso conviene tener un plan para soltar ese trabajo al llegar a cuatro o cinco personas.",
+      "texto_nuevo": "Pasar a dirigir una parte del equipo que lleva tu jefe suele ser la transición más fácil porque llegas con tres apoyos: un jefe que conoce a todos y puede guiarte, una vista de primera fila de cómo funcionan las reuniones, las decisiones y las personas, y contexto sobre metas y proyectos que te deja ser útil mucho antes. Hay dos cosas que vigilar: la relación con quienes eran tus pares puede cambiar, y el trabajo propio que sigues haciendo choca con la gestión cuando el equipo crece. Por eso conviene tener un plan para reducir ese trabajo al llegar a cuatro o cinco personas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 73, 93",
+        "frase": "Now, you are the boss, which means your relationship with teammates might feel altered."
+      },
+      "decision": "auditoria completa M11 (matiz, invencion, voz): El libro dice que la relación puede sentirse distinta (might feel altered), no que cambie ni que sea previsible, y pide reducir el trabajo individual (scale back), no soltarlo. De paso sale 'el equipo de' (voz de la casa).",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "invencion",
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-transitar_aprendiz_primeros_meses-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aprovecha que esta es normalmente la manera más fácil de pasar a ser directivo: como tu propio jefe ha estado vigilando el equipo y conoce a todos los implicados, vas a tener más guía de la que hay en los otros caminos.",
+      "texto_nuevo": "Aprovecha que esta es normalmente la manera más fácil de pasar a ser directivo: como tu propio jefe ha estado vigilando el equipo y conoce a todos los implicados, por lo general vas a tener más guía de la que hay en los otros caminos.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 43",
+        "frase": "you’ll typically have more guidance than in the other transition scenarios."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice 'typically'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-transitar_aprendiz_primeros_meses-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vigila lo raro que se hace establecer una dinámica nueva con tus antiguos pares, que es la primera de las dos cosas que este camino manda vigilar.",
+      "texto_nuevo": "Vigila lo raro que puede hacerse establecer una dinámica nueva con tus antiguos pares, que es la primera de las dos cosas que este camino manda vigilar.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_03.md 73",
+        "frase": "It can feel awkward to establish a new dynamic with former peers."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que puede hacerse raro (It can feel awkward).",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-transitar_aprendiz_primeros_meses-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Pasar a dirigir una parte del equipo que lleva tu jefe suele ser la transición más fácil porque llegas con tres apoyos: un jefe que conoce a todos y puede guiarte, una vista de primera fila de cómo funcionan las reuniones, las decisiones y las personas, y contexto sobre metas y proyectos que te deja ser útil mucho antes. Hay dos cosas que vigilar: la relación con quienes eran tus pares puede cambiar, y el trabajo propio que sigues haciendo choca con la gestión cuando el equipo crece. Por eso conviene tener un plan para reducir ese trabajo al llegar a cuatro o cinco personas.",
+      "texto_nuevo": "Pasar a dirigir una parte del equipo que lleva tu jefe suele ser la transición más fácil porque llegas con tres apoyos: un jefe que conoce a todos y puede guiarte, lo que has visto desde primera fila sobre cómo funcionan las reuniones, las decisiones y las personas, y contexto sobre metas y proyectos que te deja ser útil mucho antes. Hay dos cosas que vigilar: la relación con quienes eran tus pares puede cambiar, y el trabajo propio que sigues haciendo choca con la gestión cuando el equipo crece. Por eso conviene tener un plan para reducir ese trabajo al llegar a cuatro o cinco personas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "una vista de primera fila de"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Una vista de primera fila' calca 'front-row view'; en español se ve algo desde primera fila.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-transitar_aprendiz_primeros_meses-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aprovecha que sabes lo que funciona y lo que no, porque has tenido una vista de primera fila de cómo opera tu equipo: cómo se llevan las reuniones, cómo se toman las decisiones y cómo son tus compañeros.",
+      "texto_nuevo": "Aprovecha que sabes lo que funciona y lo que no, porque has visto desde primera fila cómo opera tu equipo: cómo se llevan las reuniones, cómo se toman las decisiones y cómo son tus compañeros.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "has tenido una vista de primera fila de"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'Tener una vista de primera fila' calca 'gotten a front-row view into'.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Vive tus Primeros Meses de Aprendiz",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

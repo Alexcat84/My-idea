@@ -1,0 +1,340 @@
+{
+  "node_id": "fijar_fecha_cierre_debate_equipo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Fijar por escrito cuándo termina el debate, y no arrebatar la decisión solo porque el debate se ha vuelto doloroso",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Una de las razones del estrés del debate es que a menudo media sala espera decidir al final de la reunión y la otra media quiere seguir discutiendo. Separar las reuniones de debate de las de decisión, o poner una fecha de decidir junto a cada asunto, alivia esa tensión, porque todos saben cuándo acaba la discusión. Cuando el debate duele, la gente suele mirar al jefe para que lo corte, pero a menudo su trabajo es mantenerlo vivo: los debates hacen crecer a las personas y ayudan al equipo a dar con la mejor respuesta. Hay quien arrebató la decisión y vio que, además de prepotente, no funcionó.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 245 a 257, bajo DOS rotulos del libro, Be clear when the debate will end y Dont grab a decision just because the debate has gotten painful, dentro del paso DEBATE de la rueda de hacer cosas. VA EN UN SOLO NODO Y ES UNA FUSION DECLARADA POR P.19, no un descuido: el segundo rotulo cuenta el caso de la mesa de escritorios que la autora movio un domingo, y su remedio escrito en la linea 257 es EXACTAMENTE el mismo objeto del primer rotulo, la fecha de decidir. P.19 dice que si el material repite el mismo objeto dentro del propio candidato se funde en un solo procedimiento antes de insertar, porque mandarlo a nodo propio fabrica el gemelo de su donante. Aqui se ve a simple vista: el segundo nodo habria tenido la fecha de decidir como paso principal, igual que el primero. El caso de la mesa de escritorios va NOMBRADO DENTRO del ultimo paso, que es la condicion de TRANSCRIPCION DE CASO. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 11 pasos, 11 TRANSCRIPCION, 0 PUENTE. P1, P2 y P3 de la linea 247; P4 de la 249; P5, P6 y P7 de la 253; P8, P9 y P10 de la 257; P11 de la 257 tambien, en su ultima frase. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuanto plazo se le da a una fecha de decidir, quien la pone, y que se hace cuando llega la fecha y no hay acuerdo.",
+  "pasos_accionables": [
+    "Cuenta con una de las causas del estrés en el debate: a menudo media sala espera una decisión al final de la reunión y la otra media quiere seguir discutiendo en una reunión posterior.",
+    "Separa las reuniones de debate de las reuniones de decisión.",
+    "Pon al lado de cada asunto que se debate una fecha de decidir, para que al menos se sepa cuándo acaba el debate y cuándo se va a tomar la decisión.",
+    "Monta una reunión semanal de gran debate, identificando cada semana cuál es el debate más importante y quién tiene que estar en él.",
+    "Resiste el impulso de cerrar el debate y decidir demasiado pronto cuando se vuelve doloroso, que es justo cuando la gente suele mirar al jefe para que acabe con el sufrimiento.",
+    "Cuenta con que a menudo el trabajo del jefe es mantener el debate vivo en vez de resolverlo con una decisión.",
+    "Cuenta con lo que se pierde si lo cortas: son los debates del trabajo los que hacen crecer a cada uno y los que hacen que el equipo funcione mejor en conjunto para llegar a la mejor respuesta.",
+    "Si el debate te parece demasiado agrio, pregúntale a quien lo está llevando cómo puedes ayudarle.",
+    "Sugiere por ejemplo que las personas cuyas diferencias le cuesta reconciliar lo cierren durante una comida o un paseo.",
+    "O sugiere que cambien de papel y defienda cada uno la posición del otro.",
+    "No le arrebates la decisión para tomarla tú: hay quien lo hizo y vio que esa jugada, además de prepotente, no funcionó."
+  ],
+  "entregable_esperado": "Cada asunto en debate con su fecha de decidir al lado, las reuniones de debate y las de decisión separadas, y la decisión en manos de quien la estaba llevando y no arrebatada por el jefe.",
+  "nodos_previos": [
+    "parar_debate_emocion_agotamiento",
+    "abrir_debate_humor_explicar_proposito",
+    "montar_reunion_gran_debate"
+  ],
+  "nodos_siguientes": [
+    "montar_reunion_gran_decision"
+  ],
+  "condiciones_activacion": [
+    "Cuando media sala espera una decisión al final de la reunión y la otra media quiere seguir discutiendo en otra, o cuando el debate se ha vuelto tan doloroso que todos te miran a ti para que lo cierres."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Una de las razones del estrés del debate es que a menudo media sala espera decidir al final de la reunión y la otra media quiere seguir discutiendo. Separar las reuniones de debate de las de decisión, o poner una fecha de decidir junto a cada asunto, alivia esa tensión, porque todos saben cuándo acaba la discusión. Cuando el debate duele, la gente suele mirar al jefe para que lo corte, pero a menudo su trabajo es mantenerlo vivo: los debates hacen crecer a las personas y ayudan al equipo a dar con la mejor respuesta. Hay quien arrebató la decisión y vio que, además de prepotente, no funcionó.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_07.md",
+          "lineas": "245-257"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Objecion sostenida: 'one of the reasons... often' quedó como 'buena parte', se perdieron los 'often' de la 253 y el 'no funciona' es el caso del plano de asientos (255-257) vuelto regla. La propuesta devuelve los matices y cuenta el caso como 'hay quien'.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)"
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fijar por escrito cuando termina el debate, y no arrebatar la decision solo porque el debate se ha vuelto doloroso",
+      "texto_nuevo": "Fijar por escrito cuándo termina el debate, y no arrebatar la decisión solo porque el debate se ha vuelto doloroso",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con la causa que el texto pone al estres del debate: a menudo media sala espera una decision al final de la reunion y la otra media quiere seguir discutiendo en una reunion posterior.",
+      "texto_nuevo": "Cuenta con la causa del estrés en el debate: a menudo media sala espera una decisión al final de la reunión y la otra media quiere seguir discutiendo en una reunión posterior.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto pone al estres del debate"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Separa las reuniones de debate de las reuniones de decision.",
+      "texto_nuevo": "Separa las reuniones de debate de las reuniones de decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pon al lado de cada asunto que se debate una fecha de decidir, para que al menos se sepa cuando acaba el debate y cuando se va a tomar la decision.",
+      "texto_nuevo": "Pon al lado de cada asunto que se debate una fecha de decidir, para que al menos se sepa cuándo acaba el debate y cuándo se va a tomar la decisión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Monta una reunion semanal de gran debate, identificando cada semana cual es el debate mas importante y quien tiene que estar en el.",
+      "texto_nuevo": "Monta una reunión semanal de gran debate, identificando cada semana cuál es el debate más importante y quién tiene que estar en él.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto dice que es a menudo el trabajo del jefe: mantener el debate vivo en vez de resolverlo con una decision.",
+      "texto_nuevo": "Cuenta con que a menudo el trabajo del jefe es mantener el debate vivo en vez de resolverlo con una decisión.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto dice que es"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que se pierde si lo cortas: el texto dice que son los debates del trabajo los que hacen crecer a cada uno y los que hacen que el equipo funcione mejor en conjunto para llegar a la mejor respuesta.",
+      "texto_nuevo": "Cuenta con lo que se pierde si lo cortas: son los debates del trabajo los que hacen crecer a cada uno y los que hacen que el equipo funcione mejor en conjunto para llegar a la mejor respuesta.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si el debate te parece demasiado agrio, preguntale a quien lo esta llevando como puedes ayudarle.",
+      "texto_nuevo": "Si el debate te parece demasiado agrio, pregúntale a quien lo está llevando cómo puedes ayudarle.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "O sugiere que cambien de papel y defienda cada uno la posicion del otro.",
+      "texto_nuevo": "O sugiere que cambien de papel y defienda cada uno la posición del otro.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No le arrebates la decision para tomarla tu: el texto dice de esa jugada suya que no solo fue prepotente, es que ademas no funciono.",
+      "texto_nuevo": "No le arrebates la decisión para tomarla tú: esa jugada no solo es prepotente, es que además no funciona.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice de esa jugada suya que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cada asunto en debate con su fecha de decidir al lado, las reuniones de debate y las de decision separadas, y la decision en manos de quien la estaba llevando y no arrebatada por el jefe.",
+      "texto_nuevo": "Cada asunto en debate con su fecha de decidir al lado, las reuniones de debate y las de decisión separadas, y la decisión en manos de quien la estaba llevando y no arrebatada por el jefe.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_fecha_cierre_debate_equipo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando media sala espera una decision al final de la reunion y la otra media quiere seguir discutiendo en otra, o cuando el debate se ha vuelto tan doloroso que todos te miran a ti para que lo cierres.",
+      "texto_nuevo": "Cuando media sala espera una decisión al final de la reunión y la otra media quiere seguir discutiendo en otra, o cuando el debate se ha vuelto tan doloroso que todos te miran a ti para que lo cierres.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 15, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 15)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-fijar_fecha_cierre_debate_equipo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con la causa del estrés en el debate: a menudo media sala espera una decisión al final de la reunión y la otra media quiere seguir discutiendo en una reunión posterior.",
+      "texto_nuevo": "Cuenta con una de las causas del estrés en el debate: a menudo media sala espera una decisión al final de la reunión y la otra media quiere seguir discutiendo en una reunión posterior.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 247",
+        "frase": "One of the reasons that people find debate stressful or annoying is that often half the room expects a decision at the end of the meeting and the other half wants to keep arguing in a follow-up meeting."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro la da como una de las razones del estrés del debate, no como la causa.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-fijar_fecha_cierre_debate_equipo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Resiste el impulso de cerrar el debate y decidir demasiado pronto cuando se vuelve doloroso, que es justo cuando la gente mira al jefe para que acabe con el sufrimiento.",
+      "texto_nuevo": "Resiste el impulso de cerrar el debate y decidir demasiado pronto cuando se vuelve doloroso, que es justo cuando la gente suele mirar al jefe para que acabe con el sufrimiento.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 251",
+        "frase": "At times like this, people often look to the boss to end the suffering and make a decision."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que la gente a menudo mira al jefe (often); el paso lo volvía regla.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-fijar_fecha_cierre_debate_equipo-pasos_accionables-10",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No le arrebates la decisión para tomarla tú: esa jugada no solo es prepotente, es que además no funciona.",
+      "texto_nuevo": "No le arrebates la decisión para tomarla tú: hay quien lo hizo y vio que esa jugada, además de prepotente, no funcionó.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 255-257",
+        "frase": "But grabbing the decision away from him and making it myself was not only overbearing; it simply didn’t work."
+      },
+      "decision": "auditoria completa M11 (matiz): Que no funcionó es la experiencia de la autora con el plano de asientos; el paso la volvía regla general. Se cuenta como caso.",
+      "indice": 10,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Fija Cuándo Termina el Debate",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

@@ -1,0 +1,597 @@
+{
+  "node_id": "comprobar_confianza_persona_cargo",
+  "fase_proyecto": "validacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Comprobar si tu relación con cada persona a tu cargo está fundada en la confianza",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Si las personas a tu cargo no te cuentan cómo se sienten de verdad, no puedes ayudarlas: puede que se te escapen las señales tempranas, y el descontento crece bajo la superficie hasta que un día te sorprende una renuncia. Como tú tienes más impacto en su día a día que ellas en el tuyo, construir esa confianza te toca sobre todo a ti. Tres afirmaciones la vuelven comprobable: te traen sus mayores dificultades, la opinión crítica circula en ambos sentidos sin tomarse como algo personal y volverían a trabajar contigo con gusto. Si no estás seguro de que volverían, probablemente no.",
+  "notas_extraccion": "El libro trata la confianza como el ingrediente mas importante de la relacion entre directivo y persona a cargo, y la hace comprobable en vez de dejarla como postura: escribe tres afirmaciones y dice que has construido la relacion si las tres son ciertas. Ese es el inventario propio que hace procedimentable la linea. Las tres van en un solo nodo y no en cabeza mas tres porque ninguna de las tres tiene titulo propio en el libro, son frases corridas del cuerpo, y porque la riqueza de las tres es pareja y delgada: cada una trae su afirmacion y una sola comprobacion practica. Las dos herramientas concretas, la prueba del tornasol y el apuntar a reuniones un poco incomodas, son de terceros que el libro nombra y por eso van dentro con su duenio. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se repasan las tres afirmaciones ni que hacer si una sale que no.",
+  "pasos_accionables": [
+    "Parte de que la responsabilidad de construir una relación de confianza es más tuya que de las personas a tu cargo: lo mires como lo mires eres su jefe, y tienes más impacto en su día a día que el que tienen ellas en el tuyo.",
+    "Cuenta con que es humano querer que tu jefe piense bien de ti, y que quedar como alguien que siempre se queja, como fracasado o como empleado problemático parece uno de esos errores obvios que hay que evitar en la relación con tu propio jefe. El problema es que si las personas a tu cargo no te cuentan cómo se sienten de verdad, no puedes ayudarlas.",
+    "Y cuenta con lo que eso cuesta: puede que te pierdas las señales tempranas que llevan a problemas mayores, y la insatisfacción fermenta bajo la superficie hasta que un día te sorprenden con su renuncia. La mayoría de las veces que eso pasa no solo dejan la empresa, también te dejan a ti.",
+    "Comprueba la primera afirmación: las personas a mi cargo me traen sus mayores dificultades con regularidad. Si están peleando con un encargo te lo dicen enseguida para trabajarlo juntos; si tienen problemas para colaborar con alguien, te enteras por ellos y no por el pasillo; si algo les quita el sueño, te dicen qué es.",
+    "Para esa primera usa esta prueba sencilla: si preguntas cómo van las cosas y la respuesta durante varias semanas seguidas es que todo va bien, tómalo como señal para hurgar más, porque es mucho más probable que la persona sea tímida para entrar en los detalles feos que el que todo vaya consistentemente de maravilla.",
+    "Comprueba la segunda: la persona a mi cargo y yo nos damos opinión crítica con regularidad y no se toma como algo personal. Si hace un trabajo que no te parece bueno, ¿te sientes cómodo diciéndoselo de frente? ¿Y te diría él a ti si cree que te has equivocado?",
+    "Para esa segunda, apunta a que todas tus reuniones a solas resulten un poco incómodas: las conversaciones más importantes y con más sentido tienen esa característica, y ninguna relación fuerte se construye solo sobre cortesías superficiales.",
+    "Comprueba la tercera: las personas a mi cargo volverían a trabajar conmigo con gusto. Para cada una, ¿puedes decir con confianza que querría volver a estar en tu equipo? Si no estás seguro de que la respuesta es sí, probablemente es no.",
+    "Para esa tercera, si tu organización no hace encuestas anónimas de salud de equipo que pregunten explícitamente a cada persona si volvería a trabajar con su jefe, ya puede ser útil reflexionar sobre la pregunta por tu cuenta.",
+    "Y puedes además sacar una lectura aproximada preguntándole a la persona qué cualidades tiene para ella un jefe perfecto, y evaluando cómo te comparas con la descripción que te devuelva. Preguntar directamente si volvería a trabajar contigo es sin duda incómodo, pero no te pone en buena posición para recibir respuestas del todo honestas."
+  ],
+  "entregable_esperado": "Las tres afirmaciones contestadas para cada persona a tu cargo, y dicho para cada una si son ciertas o no.",
+  "nodos_previos": [
+    "gestionar_personas_equipo"
+  ],
+  "nodos_siguientes": [
+    "revisar_ciclo_responsabilidades_relaciones",
+    "ganar_confianza_personas_cargo"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres saber si las personas a tu cargo pueden ser completamente honestas contigo, y no quieres enterarte de que no lo eran el día que te sorprenden con su renuncia."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Si las personas a tu cargo no te cuentan cómo se sienten de verdad, no puedes ayudarlas: puede que se te escapen las señales tempranas, y el descontento crece bajo la superficie hasta que un día te sorprende una renuncia. Como tú tienes más impacto en su día a día que ellas en el tuyo, construir esa confianza te toca sobre todo a ti. Tres afirmaciones la vuelven comprobable: te traen sus mayores dificultades, la opinión crítica circula en ambos sentidos sin tomarse como algo personal y volverían a trabajar contigo con gusto. Si no estás seguro de que volverían, probablemente no.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_04.md",
+          "lineas": "51-85"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Objecion sostenida: 'You may miss early warning signs' perdió el puede y el 'it's probably no' de la 83 se dice solo de la tercera afirmación, no de las tres. La propuesta corrige ambas cosas y deja el resto.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)"
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprobar si tu relacion con cada persona a cargo esta fundada en la confianza",
+      "texto_nuevo": "Comprobar si tu relación con cada persona a cargo está fundada en la confianza",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Parte de que la responsabilidad de construir una relacion de confianza es mas tuya que suya: lo mires como lo mires eres su jefe, y tienes mas impacto en su dia a dia que el que tiene el en el tuyo.",
+      "texto_nuevo": "Parte de que la responsabilidad de construir una relación de confianza es más tuya que suya: lo mires como lo mires eres su jefe, y tienes más impacto en su día a día que el que tiene él en el tuyo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que es humano querer que tu jefe piense bien de ti, y que quedar como quejica, como fracasado o como empleado problematico parece uno de esos no obvios de la gestion hacia arriba. El problema es que si tus personas a cargo no te cuentan como se sienten de verdad, no puedes ayudarlas.",
+      "texto_nuevo": "Cuenta con que es humano querer que tu jefe piense bien de ti, y que quedar como quejica, como fracasado o como empleado problemático parece uno de esos errores obvios que hay que evitar en la relación con tu propio jefe. El problema es que si tus personas a cargo no te cuentan cómo se sienten de verdad, no puedes ayudarlas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "no obvios de la gestion hacia arriba"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y cuenta con lo que eso cuesta: te pierdes las senales tempranas que llevan a problemas mayores, y la insatisfaccion fermenta bajo la superficie hasta que un dia te sorprenden con su renuncia. La mayoria de las veces que eso pasa no solo dejan la empresa, tambien te dejan a ti.",
+      "texto_nuevo": "Y cuenta con lo que eso cuesta: te pierdes las señales tempranas que llevan a problemas mayores, y la insatisfacción fermenta bajo la superficie hasta que un día te sorprenden con su renuncia. La mayoría de las veces que eso pasa no solo dejan la empresa, también te dejan a ti.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba la primera afirmacion: mis personas a cargo me traen sus mayores dificultades con regularidad. Si estan peleando con un encargo te lo dicen enseguida para trabajarlo juntos; si tienen problemas para colaborar con alguien, te enteras por ellos y no por el pasillo; si algo les quita el suenio, te dicen que es.",
+      "texto_nuevo": "Comprueba la primera afirmación: mis personas a cargo me traen sus mayores dificultades con regularidad. Si están peleando con un encargo te lo dicen enseguida para trabajarlo juntos; si tienen problemas para colaborar con alguien, te enteras por ellos y no por el pasillo; si algo les quita el sueño, te dicen qué es.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para esa primera usa la prueba del tornasol que una companiera de la autora le compartio: si preguntas como van las cosas y la respuesta durante varias semanas seguidas es que todo va bien, tomalo como senal para hurgar mas, porque es mucho mas probable que la persona sea timida para entrar en los detalles feos que no que todo vaya consistentemente de maravilla.",
+      "texto_nuevo": "Para esa primera usa esta prueba del tornasol: si preguntas cómo van las cosas y la respuesta durante varias semanas seguidas es que todo va bien, tómalo como señal para hurgar más, porque es mucho más probable que la persona sea tímida para entrar en los detalles feos que el que todo vaya consistentemente de maravilla.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que una companiera de la autora le compartio"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba la segunda: mi persona a cargo y yo nos damos opinion critica con regularidad y no se toma como algo personal. Si hace un trabajo que no te parece bueno, te sientes comodo diciendoselo de frente? Y te diria el a ti si cree que te has equivocado?",
+      "texto_nuevo": "Comprueba la segunda: mi persona a cargo y yo nos damos opinión crítica con regularidad y no se toma como algo personal. Si hace un trabajo que no te parece bueno, ¿te sientes cómodo diciéndoselo de frente? ¿Y te diría él a ti si cree que te has equivocado?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para esa segunda, apunta a que todas tus reuniones a solas se sientan un poco incomodas, que es el consejo que el libro recoge de Mark Rabkin: las conversaciones mas importantes y con mas sentido tienen esa caracteristica, y ninguna relacion fuerte se construye solo sobre cortesias superficiales.",
+      "texto_nuevo": "Para esa segunda, apunta a que todas tus reuniones a solas se sientan un poco incómodas: las conversaciones más importantes y con más sentido tienen esa característica, y ninguna relación fuerte se construye solo sobre cortesías superficiales.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es el consejo que el libro recoge de Mark Rabkin"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprueba la tercera: mis personas a cargo volverian a trabajar conmigo con gusto. Para cada una, puedes decir con confianza que querria volver a estar en tu equipo? Si no estas seguro de que la respuesta es si, probablemente es no.",
+      "texto_nuevo": "Comprueba la tercera: mis personas a cargo volverían a trabajar conmigo con gusto. Para cada una, ¿puedes decir con confianza que querría volver a estar en tu equipo? Si no estás seguro de que la respuesta es sí, probablemente es no.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para esa tercera, si tu organizacion no hace encuestas anonimas de salud de equipo que pregunten explicitamente si volverias a trabajar con tu jefe, el libro dice que ya es util reflexionar sobre la pregunta por tu cuenta.",
+      "texto_nuevo": "Para esa tercera, si tu organización no hace encuestas anónimas de salud de equipo que pregunten explícitamente si volverías a trabajar con tu jefe, ya es útil reflexionar sobre la pregunta por tu cuenta.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y puedes ademas sacar una lectura aproximada preguntandole a la persona que cualidades tiene para ella un jefe perfecto, y evaluando como te comparas con la descripcion que te devuelva. Preguntar directamente si volveria a trabajar contigo pasa de sobra la vara de lo incomodo, pero no te deja en posicion de recibir respuestas del todo honestas.",
+      "texto_nuevo": "Y puedes además sacar una lectura aproximada preguntándole a la persona qué cualidades tiene para ella un jefe perfecto, y evaluando cómo te comparas con la descripción que te devuelva. Preguntar directamente si volvería a trabajar contigo pasa de sobra la vara de lo incómodo, pero no te deja en posición de recibir respuestas del todo honestas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Las tres afirmaciones del libro contestadas para cada persona a cargo, y dicho para cada una si son ciertas o no.",
+      "texto_nuevo": "Las tres afirmaciones contestadas para cada persona a cargo, y dicho para cada una si son ciertas o no.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_confianza_persona_cargo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando quieres saber si tus personas a cargo pueden ser completamente honestas contigo, y no quieres enterarte de que no lo eran el dia que te sorprenden con su renuncia.",
+      "texto_nuevo": "Cuando quieres saber si tus personas a cargo pueden ser completamente honestas contigo, y no quieres enterarte de que no lo eran el día que te sorprenden con su renuncia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-comprobar_confianza_persona_cargo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para esa primera usa esta prueba del tornasol: si preguntas cómo van las cosas y la respuesta durante varias semanas seguidas es que todo va bien, tómalo como señal para hurgar más, porque es mucho más probable que la persona sea tímida para entrar en los detalles feos que el que todo vaya consistentemente de maravilla.",
+      "texto_nuevo": "Para esa primera usa esta prueba sencilla: si preguntas cómo van las cosas y la respuesta durante varias semanas seguidas es que todo va bien, tómalo como señal para hurgar más, porque es mucho más probable que la persona sea tímida para entrar en los detalles feos que el que todo vaya consistentemente de maravilla.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "prueba del tornasol"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Prueba del tornasol\" calca \"litmus test\"; el libro dice \"a simple litmus test\" (zhuo_manager/cap_04.md 65).",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-comprobar_confianza_persona_cargo-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y puedes además sacar una lectura aproximada preguntándole a la persona qué cualidades tiene para ella un jefe perfecto, y evaluando cómo te comparas con la descripción que te devuelva. Preguntar directamente si volvería a trabajar contigo pasa de sobra la vara de lo incómodo, pero no te deja en posición de recibir respuestas del todo honestas.",
+      "texto_nuevo": "Y puedes además sacar una lectura aproximada preguntándole a la persona qué cualidades tiene para ella un jefe perfecto, y evaluando cómo te comparas con la descripción que te devuelva. Preguntar directamente si volvería a trabajar contigo es sin duda incómodo, pero no te deja en posición de recibir respuestas del todo honestas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "pasa de sobra la vara de lo incómodo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Pasa de sobra la vara de lo incómodo\" calca \"definitely clears the bar of being awkward\" (zhuo_manager/cap_04.md 85).",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-comprobar_confianza_persona_cargo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Parte de que la responsabilidad de construir una relación de confianza es más tuya que suya: lo mires como lo mires eres su jefe, y tienes más impacto en su día a día que el que tiene él en el tuyo.",
+      "texto_nuevo": "Parte de que la responsabilidad de construir una relación de confianza es más tuya que de las personas a tu cargo: lo mires como lo mires eres su jefe, y tienes más impacto en su día a día que el que tienen ellas en el tuyo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "\"Suya\", \"su jefe\" y \"él\" no tienen antecedente en el paso; se nombra a las personas a tu cargo, en plural como en el libro (\"than they have on yours\")."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"Suya\", \"su jefe\" y \"él\" no tienen antecedente en el paso; se nombra a las personas a tu cargo, en plural como en el libro (\"than they have on yours\").",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-comprobar_confianza_persona_cargo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que es humano querer que tu jefe piense bien de ti, y que quedar como quejica, como fracasado o como empleado problemático parece uno de esos errores obvios que hay que evitar en la relación con tu propio jefe. El problema es que si tus personas a cargo no te cuentan cómo se sienten de verdad, no puedes ayudarlas.",
+      "texto_nuevo": "Cuenta con que es humano querer que tu jefe piense bien de ti, y que quedar como alguien que siempre se queja, como fracasado o como empleado problemático parece uno de esos errores obvios que hay que evitar en la relación con tu propio jefe. El problema es que si tus personas a cargo no te cuentan cómo se sienten de verdad, no puedes ayudarlas.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "quedar como quejica"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Quejica\" es forma peninsular; se dice \"alguien que siempre se queja\" (\"a complainer\").",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase2-comprobar_confianza_persona_cargo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Y cuenta con lo que eso cuesta: te pierdes las señales tempranas que llevan a problemas mayores, y la insatisfacción fermenta bajo la superficie hasta que un día te sorprenden con su renuncia. La mayoría de las veces que eso pasa no solo dejan la empresa, también te dejan a ti.",
+      "texto_nuevo": "Y cuenta con lo que eso cuesta: puede que te pierdas las señales tempranas que llevan a problemas mayores, y la insatisfacción fermenta bajo la superficie hasta que un día te sorprenden con su renuncia. La mayoría de las veces que eso pasa no solo dejan la empresa, también te dejan a ti.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 59",
+        "frase": "You may miss early warning signs that lead to bigger problems down the road."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que puedes perderte las señales (\"You may miss\"); el paso lo daba como hecho.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-comprobar_confianza_persona_cargo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Para esa segunda, apunta a que todas tus reuniones a solas se sientan un poco incómodas: las conversaciones más importantes y con más sentido tienen esa característica, y ninguna relación fuerte se construye solo sobre cortesías superficiales.",
+      "texto_nuevo": "Para esa segunda, apunta a que todas tus reuniones a solas resulten un poco incómodas: las conversaciones más importantes y con más sentido tienen esa característica, y ninguna relación fuerte se construye solo sobre cortesías superficiales.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "se sientan un poco incómodas"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Las reuniones no \"se sienten\" incómodas: calco de \"to feel a little awkward\"; en español resultan incómodas.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-comprobar_confianza_persona_cargo-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Para esa tercera, si tu organización no hace encuestas anónimas de salud de equipo que pregunten explícitamente si volverías a trabajar con tu jefe, ya es útil reflexionar sobre la pregunta por tu cuenta.",
+      "texto_nuevo": "Para esa tercera, si tu organización no hace encuestas anónimas de salud de equipo que pregunten explícitamente si volverías a trabajar con tu jefe, ya puede ser útil reflexionar sobre la pregunta por tu cuenta.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 81",
+        "frase": "If your organization doesn’t do this, simply reflecting on the question can be useful."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que reflexionar puede ser útil (\"can be useful\"); el paso lo daba por seguro.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-comprobar_confianza_persona_cargo-pasos_accionables-9",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Y puedes además sacar una lectura aproximada preguntándole a la persona qué cualidades tiene para ella un jefe perfecto, y evaluando cómo te comparas con la descripción que te devuelva. Preguntar directamente si volvería a trabajar contigo es sin duda incómodo, pero no te deja en posición de recibir respuestas del todo honestas.",
+      "texto_nuevo": "Y puedes además sacar una lectura aproximada preguntándole a la persona qué cualidades tiene para ella un jefe perfecto, y evaluando cómo te comparas con la descripción que te devuelva. Preguntar directamente si volvería a trabajar contigo es sin duda incómodo, pero no te pone en buena posición para recibir respuestas del todo honestas.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 85",
+        "frase": "Asking directly, “Would you work for me again?” definitely clears the bar of being awkward but doesn’t set you up well to receive completely honest responses."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que preguntarlo directamente no te pone en buena posición (\"doesn't set you up well\"); \"no te deja en posición\" lo endurecía a imposibilidad.",
+      "indice": 9,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-comprobar_confianza_persona_cargo-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Para esa tercera, si tu organización no hace encuestas anónimas de salud de equipo que pregunten explícitamente si volverías a trabajar con tu jefe, ya puede ser útil reflexionar sobre la pregunta por tu cuenta.",
+      "texto_nuevo": "Para esa tercera, si tu organización no hace encuestas anónimas de salud de equipo que pregunten explícitamente a cada persona si volvería a trabajar con su jefe, ya puede ser útil reflexionar sobre la pregunta por tu cuenta.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "En segunda persona la encuesta parecía preguntarte a ti por tu propio jefe; en el libro la pregunta «Would you work for your manager again?» se hace a las personas del equipo (zhuo_manager/cap_04.md:81)."
+      },
+      "decision": "auditoria completa M11 (coherencia): En segunda persona la encuesta parecía preguntarte a ti por tu propio jefe; en el libro la pregunta «Would you work for your manager again?» se hace a las personas del equipo (zhuo_manager/cap_04.md:81).",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-comprobar_confianza_persona_cargo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Comprobar si tu relación con cada persona a cargo está fundada en la confianza",
+      "texto_nuevo": "Comprobar si tu relación con cada persona a tu cargo está fundada en la confianza",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Forma fijada del orquestador: «cada persona a tu cargo»."
+      },
+      "decision": "auditoria completa M11 (coherencia): Forma fijada del orquestador: «cada persona a tu cargo».",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-comprobar_confianza_persona_cargo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuenta con que es humano querer que tu jefe piense bien de ti, y que quedar como alguien que siempre se queja, como fracasado o como empleado problemático parece uno de esos errores obvios que hay que evitar en la relación con tu propio jefe. El problema es que si tus personas a cargo no te cuentan cómo se sienten de verdad, no puedes ayudarlas.",
+      "texto_nuevo": "Cuenta con que es humano querer que tu jefe piense bien de ti, y que quedar como alguien que siempre se queja, como fracasado o como empleado problemático parece uno de esos errores obvios que hay que evitar en la relación con tu propio jefe. El problema es que si las personas a tu cargo no te cuentan cómo se sienten de verdad, no puedes ayudarlas.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Forma fijada del orquestador: «las personas a tu cargo»."
+      },
+      "decision": "auditoria completa M11 (coherencia): Forma fijada del orquestador: «las personas a tu cargo».",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-comprobar_confianza_persona_cargo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Comprueba la primera afirmación: mis personas a cargo me traen sus mayores dificultades con regularidad. Si están peleando con un encargo te lo dicen enseguida para trabajarlo juntos; si tienen problemas para colaborar con alguien, te enteras por ellos y no por el pasillo; si algo les quita el sueño, te dicen qué es.",
+      "texto_nuevo": "Comprueba la primera afirmación: las personas a mi cargo me traen sus mayores dificultades con regularidad. Si están peleando con un encargo te lo dicen enseguida para trabajarlo juntos; si tienen problemas para colaborar con alguien, te enteras por ellos y no por el pasillo; si algo les quita el sueño, te dicen qué es.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Forma fijada, en la afirmación en primera persona: «las personas a mi cargo»."
+      },
+      "decision": "auditoria completa M11 (coherencia): Forma fijada, en la afirmación en primera persona: «las personas a mi cargo».",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-comprobar_confianza_persona_cargo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Comprueba la segunda: mi persona a cargo y yo nos damos opinión crítica con regularidad y no se toma como algo personal. Si hace un trabajo que no te parece bueno, ¿te sientes cómodo diciéndoselo de frente? ¿Y te diría él a ti si cree que te has equivocado?",
+      "texto_nuevo": "Comprueba la segunda: la persona a mi cargo y yo nos damos opinión crítica con regularidad y no se toma como algo personal. Si hace un trabajo que no te parece bueno, ¿te sientes cómodo diciéndoselo de frente? ¿Y te diría él a ti si cree que te has equivocado?",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Forma fijada, en la afirmación en primera persona: «la persona a mi cargo»."
+      },
+      "decision": "auditoria completa M11 (coherencia): Forma fijada, en la afirmación en primera persona: «la persona a mi cargo».",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-comprobar_confianza_persona_cargo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Comprueba la tercera: mis personas a cargo volverían a trabajar conmigo con gusto. Para cada una, ¿puedes decir con confianza que querría volver a estar en tu equipo? Si no estás seguro de que la respuesta es sí, probablemente es no.",
+      "texto_nuevo": "Comprueba la tercera: las personas a mi cargo volverían a trabajar conmigo con gusto. Para cada una, ¿puedes decir con confianza que querría volver a estar en tu equipo? Si no estás seguro de que la respuesta es sí, probablemente es no.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Forma fijada, en la afirmación en primera persona: «las personas a mi cargo»."
+      },
+      "decision": "auditoria completa M11 (coherencia): Forma fijada, en la afirmación en primera persona: «las personas a mi cargo».",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-comprobar_confianza_persona_cargo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Las tres afirmaciones contestadas para cada persona a cargo, y dicho para cada una si son ciertas o no.",
+      "texto_nuevo": "Las tres afirmaciones contestadas para cada persona a tu cargo, y dicho para cada una si son ciertas o no.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Forma fijada del orquestador: «cada persona a tu cargo»."
+      },
+      "decision": "auditoria completa M11 (coherencia): Forma fijada del orquestador: «cada persona a tu cargo».",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-comprobar_confianza_persona_cargo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando quieres saber si tus personas a cargo pueden ser completamente honestas contigo, y no quieres enterarte de que no lo eran el día que te sorprenden con su renuncia.",
+      "texto_nuevo": "Cuando quieres saber si las personas a tu cargo pueden ser completamente honestas contigo, y no quieres enterarte de que no lo eran el día que te sorprenden con su renuncia.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Forma fijada del orquestador: «las personas a tu cargo»."
+      },
+      "decision": "auditoria completa M11 (coherencia): Forma fijada del orquestador: «las personas a tu cargo».",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Revisa la Confianza con tu Equipo"
+}

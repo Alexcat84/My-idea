@@ -1,0 +1,401 @@
+{
+  "node_id": "cuestionar_historia_irracional_cabeza",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Cuestionar la historia que te cuentas cuando no tienes todos los datos",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Con pocos datos, el cerebro toma atajos y arma una historia completa para llenar lo que falta, y en los momentos bajos esa historia suele ser la del peor caso. El método pone en duda la interpretación: al contrastarla con las explicaciones que aparecen cuando alguien pregunta (no querer hacerte perder el tiempo, no saber que te interesaba, un simple descuido), casi siempre resulta equivocada. Buscar puntos de vista alternativos y, si hace falta, pedir la aclaración te saca de la especulación, porque enfrentar la realidad es mejor que fabricar el desastre.",
+  "notas_extraccion": "Es el segundo consejo para el Pozo y el unico de los seis que ataca la veracidad de lo que crees, y no como te sientes al creerlo. Su inventario propio es doble: las tres respuestas que la autora recibio al ir a preguntar, escritas una a una, y las dos preguntas de cuestionamiento del final. Lo que lo hace ejecutable es que el libro no se queda en di que tu historia es irracional: pone el dato de que preguntando salen otras respuestas, y escribe cuales. Tambien escribe la excepcion, que es lo que impide leerlo como consuelo. Lo que el libro NO dice, y por eso no esta escrito: que hacer cuando la historia negativa resulta ser cierta.",
+  "pasos_accionables": [
+    "Recuerda que todo el mundo tiene sesgos, y que parte de la razón de que el sesgo exista es que el cerebro está hecho para tomar atajos y llegar a conclusiones más rápido. Por eso existen los estereotipos: si ves a una persona con gafas gruesas arrastrando una pila de libros de texto, puedes concluir que se le dan bien las matemáticas aunque no tengas ninguna prueba concreta.",
+    "Cuenta con que esto mismo pasa con cómo percibes los acontecimientos: cuando reúnes unos pocos datos, intentas construir una narrativa completa alrededor de ellos pese a no tener los hechos. Y cuando estás en el Pozo (el bache de desánimo), tu historia tiende a ser la del peor caso posible.",
+    "Ten delante este ejemplo: has estado batallando con el síndrome del impostor, descubres que te dejaron fuera de una reunión y concluyes que no te invitaron porque tus compañeros no te consideran valioso.",
+    "Contrasta esa conclusión con lo que encontró una directiva cuando fue a preguntar: al menos una docena de personas le han llevado esa misma preocupación a lo largo de los años. Cuando ella pregunta a los organizadores por qué no invitaron a alguien, estas son las respuestas que más recibe: no quería hacerle perder el tiempo y que se sintiera obligado a asistir; no me di cuenta de que le importaba el tema de la reunión; y fue un simple error, sin mala intención.",
+    "Y ten delante la excepción: solo una vez la respuesta estuvo en la línea de no pensábamos que fuera a aportar valor, y estaba formulada como nos preocupaba que sus opiniones fuertes desviaran la conversación.",
+    "Ten claro lo que eso dice: las historias que te cuentas a partir de unas pocas pruebas escasas suelen estar del todo equivocadas, sobre todo cuando estás en el Pozo. Nueve de cada diez veces la otra persona no está en tu contra, tus compañeros no piensan que seas un idiota y sí, mereces este trabajo.",
+    "Así que cuando una historia negativa se apodere de ti, da un paso atrás y cuestiona si tu interpretación es correcta. ¿Hay puntos de vista alternativos que no estás considerando? ¿Qué puedes hacer para buscar la verdad?",
+    "Y a veces basta con armarte de valor y preguntar directamente por qué no te invitaron a esa reunión, lo que te saca de la especulación y te lleva a la aclaración. Aunque tengas miedo de la respuesta, enfrentar la realidad siempre es mejor que fabricar el desastre en tu cabeza."
+  ],
+  "entregable_esperado": "La interpretación cuestionada y, cuando se puede, sustituida por una aclaración pedida directamente en vez de por una especulación.",
+  "nodos_previos": [
+    "identificar_disparadores_propios_reaccion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando una historia negativa se ha apoderado de ti a partir de unos pocos datos sueltos, y estás en el Pozo, que es cuando esa historia tiende a ser la del peor caso."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Con pocos datos, el cerebro toma atajos y arma una historia completa para llenar lo que falta, y en los momentos bajos esa historia suele ser la del peor caso. El método funciona porque separa la interpretación de los hechos: al contrastarla con las explicaciones que aparecen cuando alguien pregunta (no querer hacerte perder el tiempo, no saber que te interesaba, un simple descuido), casi siempre resulta equivocada. Buscar puntos de vista alternativos y, si hace falta, pedir la aclaración te saca de la especulación, porque enfrentar la realidad es mejor que fabricar el desastre.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_06.md",
+          "lineas": "281-301"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)"
+    },
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recuerda que todos tenemos sesgos, y que parte de la razon de que el sesgo exista es que nuestro cerebro esta cableado para tomar atajos y llegar a conclusiones mas rapido. Por eso existen los estereotipos: si ves a una persona con gafas gruesas arrastrando una pila de libros de texto, puedes concluir que se le dan bien las matematicas aunque no tengas ninguna prueba concreta.",
+      "texto_nuevo": "Recuerda que todos tenemos sesgos, y que parte de la razón de que el sesgo exista es que nuestro cerebro está cableado para tomar atajos y llegar a conclusiones más rápido. Por eso existen los estereotipos: si ves a una persona con gafas gruesas arrastrando una pila de libros de texto, puedes concluir que se le dan bien las matemáticas aunque no tengas ninguna prueba concreta.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que esto mismo pasa con como percibimos los acontecimientos: cuando reunimos unos pocos datos, intentamos construir una narrativa completa alrededor de ellos pese a no tener los hechos. Y cuando estamos en el Pozo, nuestra historia tiende a ser la del peor caso posible.",
+      "texto_nuevo": "Cuenta con que esto mismo pasa con cómo percibimos los acontecimientos: cuando reunimos unos pocos datos, intentamos construir una narrativa completa alrededor de ellos pese a no tener los hechos. Y cuando estamos en el Pozo, nuestra historia tiende a ser la del peor caso posible.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante el ejemplo que el libro da: has estado batallando con el sindrome del impostor y descubres que te dejaron fuera de una reunion, y concluyes que no te invitaron porque tus companieros no te consideran valioso.",
+      "texto_nuevo": "Ten delante este ejemplo: has estado batallando con el síndrome del impostor, descubres que te dejaron fuera de una reunión y concluyes que no te invitaron porque tus compañeros no te consideran valioso.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el ejemplo que el libro da"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Contrasta esa conclusion contra lo que la autora encontro cuando fue a preguntar, porque dice que al menos una docena de personas le han llevado esa misma preocupacion a lo largo de los anios. Cuando ella pregunta a los organizadores por que no invitaron a alguien, estas son las respuestas que mas recibe: no queria hacerle perder el tiempo y que se sintiera obligado a asistir; no me di cuenta de que le importaba el tema de la reunion; y fue un error honesto.",
+      "texto_nuevo": "Contrasta esa conclusión con lo que encontró una directiva cuando fue a preguntar: al menos una docena de personas le han llevado esa misma preocupación a lo largo de los años. Cuando ella pregunta a los organizadores por qué no invitaron a alguien, estas son las respuestas que más recibe: no quería hacerle perder el tiempo y que se sintiera obligado a asistir; no me di cuenta de que le importaba el tema de la reunión; y fue un simple error, sin mala intención.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que la autora encontro cuando fue a preguntar",
+          "porque dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): arbitro: propio",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y ten delante la excepcion, que el libro tambien escribe: solo una vez la respuesta estuvo en la linea de no pensabamos que fuera a aportar valor, y estaba formulada como nos preocupaba que sus opiniones fuertes desviaran la conversacion.",
+      "texto_nuevo": "Y ten delante la excepción: solo una vez la respuesta estuvo en la línea de no pensábamos que fuera a aportar valor, y estaba formulada como nos preocupaba que sus opiniones fuertes desviaran la conversación.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro tambien escribe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten claro lo que eso dice: las historias que nos contamos a partir de unas pocas pruebas escasas suelen estar del todo equivocadas, sobre todo cuando estamos en el Pozo. Nueve de cada diez veces la otra persona no va a por ti, tus companieros no piensan que seas un idiota, y si, mereces este trabajo.",
+      "texto_nuevo": "Ten claro lo que eso dice: las historias que nos contamos a partir de unas pocas pruebas escasas suelen estar del todo equivocadas, sobre todo cuando estamos en el Pozo. Nueve de cada diez veces la otra persona no va a por ti, tus compañeros no piensan que seas un idiota y sí, mereces este trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asi que cuando una historia negativa se apodere de ti, da un paso atras y cuestiona si tu interpretacion es correcta. Hay puntos de vista alternativos que no estas considerando? Que puedes hacer para buscar la verdad?",
+      "texto_nuevo": "Así que cuando una historia negativa se apodere de ti, da un paso atrás y cuestiona si tu interpretación es correcta. ¿Hay puntos de vista alternativos que no estás considerando? ¿Qué puedes hacer para buscar la verdad?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y a veces basta con cuadrar los hombros y preguntar directamente por que no me invitaron a esa reunion, lo que te saca de la especulacion y te mete en la aclaracion. Aunque tengas miedo de la respuesta, enfrentar la realidad siempre es mejor que fabricar el desastre en tu cabeza.",
+      "texto_nuevo": "Y a veces basta con cuadrar los hombros y preguntar directamente por qué no te invitaron a esa reunión, lo que te saca de la especulación y te lleva a la aclaración. Aunque tengas miedo de la respuesta, enfrentar la realidad siempre es mejor que fabricar el desastre en tu cabeza.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La interpretacion cuestionada y, cuando se puede, sustituida por una aclaracion pedida directamente en vez de por una especulacion.",
+      "texto_nuevo": "La interpretación cuestionada y, cuando se puede, sustituida por una aclaración pedida directamente en vez de por una especulación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-cuestionar_historia_irracional_cabeza-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando una historia negativa se ha apoderado de ti a partir de unos pocos datos sueltos, y estas en el Pozo, que es cuando esa historia tiende a ser la del peor caso.",
+      "texto_nuevo": "Cuando una historia negativa se ha apoderado de ti a partir de unos pocos datos sueltos, y estás en el Pozo, que es cuando esa historia tiende a ser la del peor caso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-cuestionar_historia_irracional_cabeza-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que esto mismo pasa con cómo percibimos los acontecimientos: cuando reunimos unos pocos datos, intentamos construir una narrativa completa alrededor de ellos pese a no tener los hechos. Y cuando estamos en el Pozo, nuestra historia tiende a ser la del peor caso posible.",
+      "texto_nuevo": "Cuenta con que esto mismo pasa con cómo percibimos los acontecimientos: cuando reunimos unos pocos datos, intentamos construir una narrativa completa alrededor de ellos pese a no tener los hechos. Y cuando estamos en el Pozo (el bache de desánimo), nuestra historia tiende a ser la del peor caso posible.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Pozo, nuestra"
+        ]
+      },
+      "decision": "pase de glosario (pozo): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cuestionar_historia_irracional_cabeza-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Con pocos datos, el cerebro toma atajos y arma una historia completa para llenar lo que falta, y en los momentos bajos esa historia suele ser la del peor caso. El método funciona porque separa la interpretación de los hechos: al contrastarla con las explicaciones que aparecen cuando alguien pregunta (no querer hacerte perder el tiempo, no saber que te interesaba, un simple descuido), casi siempre resulta equivocada. Buscar puntos de vista alternativos y, si hace falta, pedir la aclaración te saca de la especulación, porque enfrentar la realidad es mejor que fabricar el desastre.",
+      "texto_nuevo": "Con pocos datos, el cerebro toma atajos y arma una historia completa para llenar lo que falta, y en los momentos bajos esa historia suele ser la del peor caso. El método pone en duda la interpretación: al contrastarla con las explicaciones que aparecen cuando alguien pregunta (no querer hacerte perder el tiempo, no saber que te interesaba, un simple descuido), casi siempre resulta equivocada. Buscar puntos de vista alternativos y, si hace falta, pedir la aclaración te saca de la especulación, porque enfrentar la realidad es mejor que fabricar el desastre.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_06.md 299",
+        "frase": "When a negative story takes hold of you, step back and question whether your interpretation is correct."
+      },
+      "decision": "auditoria completa M11 (invencion): Causa añadida: el libro no explica por qué funciona, solo pide cuestionar si la interpretación es correcta. El defecto de matiz ('casi siempre') no se sostiene: el libro dice 'Nine times out of ten' y que solo una vez la respuesta fue la temida.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cuestionar_historia_irracional_cabeza-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten claro lo que eso dice: las historias que nos contamos a partir de unas pocas pruebas escasas suelen estar del todo equivocadas, sobre todo cuando estamos en el Pozo. Nueve de cada diez veces la otra persona no va a por ti, tus compañeros no piensan que seas un idiota y sí, mereces este trabajo.",
+      "texto_nuevo": "Ten claro lo que eso dice: las historias que nos contamos a partir de unas pocas pruebas escasas suelen estar del todo equivocadas, sobre todo cuando estamos en el Pozo. Nueve de cada diez veces la otra persona no está en tu contra, tus compañeros no piensan que seas un idiota y sí, mereces este trabajo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "va a por ti"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Ir a por' es forma de una sola región.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-auditoria-cuestionar_historia_irracional_cabeza-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y a veces basta con cuadrar los hombros y preguntar directamente por qué no te invitaron a esa reunión, lo que te saca de la especulación y te lleva a la aclaración. Aunque tengas miedo de la respuesta, enfrentar la realidad siempre es mejor que fabricar el desastre en tu cabeza.",
+      "texto_nuevo": "Y a veces basta con armarte de valor y preguntar directamente por qué no te invitaron a esa reunión, lo que te saca de la especulación y te lleva a la aclaración. Aunque tengas miedo de la respuesta, enfrentar la realidad siempre es mejor que fabricar el desastre en tu cabeza.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cuadrar los hombros"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'squaring your shoulders'.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-cuestionar_historia_irracional_cabeza-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recuerda que todos tenemos sesgos, y que parte de la razón de que el sesgo exista es que nuestro cerebro está cableado para tomar atajos y llegar a conclusiones más rápido. Por eso existen los estereotipos: si ves a una persona con gafas gruesas arrastrando una pila de libros de texto, puedes concluir que se le dan bien las matemáticas aunque no tengas ninguna prueba concreta.",
+      "texto_nuevo": "Recuerda que todos tenemos sesgos, y que parte de la razón de que el sesgo exista es que nuestro cerebro está hecho para tomar atajos y llegar a conclusiones más rápido. Por eso existen los estereotipos: si ves a una persona con gafas gruesas arrastrando una pila de libros de texto, puedes concluir que se le dan bien las matemáticas aunque no tengas ninguna prueba concreta.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "está cableado para tomar atajos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"wired to\" (zhuo cap_06 281).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-cuestionar_historia_irracional_cabeza-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Recuerda que todos tenemos sesgos, y que parte de la razón de que el sesgo exista es que nuestro cerebro está hecho para tomar atajos y llegar a conclusiones más rápido. Por eso existen los estereotipos: si ves a una persona con gafas gruesas arrastrando una pila de libros de texto, puedes concluir que se le dan bien las matemáticas aunque no tengas ninguna prueba concreta.",
+      "texto_nuevo": "Recuerda que todo el mundo tiene sesgos, y que parte de la razón de que el sesgo exista es que el cerebro está hecho para tomar atajos y llegar a conclusiones más rápido. Por eso existen los estereotipos: si ves a una persona con gafas gruesas arrastrando una pila de libros de texto, puedes concluir que se le dan bien las matemáticas aunque no tengas ninguna prueba concreta.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "todos tenemos sesgos",
+          "nuestro cerebro"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Nosotros genérico de quien escribe (\"we are all biased\", \"our brains\"), voz de libro: pasa a tercera persona.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase4-cuestionar_historia_irracional_cabeza-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que esto mismo pasa con cómo percibimos los acontecimientos: cuando reunimos unos pocos datos, intentamos construir una narrativa completa alrededor de ellos pese a no tener los hechos. Y cuando estamos en el Pozo (el bache de desánimo), nuestra historia tiende a ser la del peor caso posible.",
+      "texto_nuevo": "Cuenta con que esto mismo pasa con cómo percibes los acontecimientos: cuando reúnes unos pocos datos, intentas construir una narrativa completa alrededor de ellos pese a no tener los hechos. Y cuando estás en el Pozo (el bache de desánimo), tu historia tiende a ser la del peor caso posible.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "percibimos",
+          "reunimos",
+          "intentamos",
+          "estamos en el Pozo",
+          "nuestra historia"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Nosotros genérico de quien escribe y cambio de persona frente al tú del resto del nodo: pasa a tú.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase4-cuestionar_historia_irracional_cabeza-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten claro lo que eso dice: las historias que nos contamos a partir de unas pocas pruebas escasas suelen estar del todo equivocadas, sobre todo cuando estamos en el Pozo. Nueve de cada diez veces la otra persona no está en tu contra, tus compañeros no piensan que seas un idiota y sí, mereces este trabajo.",
+      "texto_nuevo": "Ten claro lo que eso dice: las historias que te cuentas a partir de unas pocas pruebas escasas suelen estar del todo equivocadas, sobre todo cuando estás en el Pozo. Nueve de cada diez veces la otra persona no está en tu contra, tus compañeros no piensan que seas un idiota y sí, mereces este trabajo.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "nos contamos",
+          "estamos en el Pozo"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Nosotros genérico de quien escribe y cambio de persona frente al tú del mismo paso: pasa a tú.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "voz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Cuestiona tu Peor Historia"
+}

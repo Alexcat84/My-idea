@@ -1,0 +1,278 @@
+{
+  "node_id": "calcular_embudo_reclutamiento_propio",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Calcular tu propio embudo de reclutamiento para dejar de sufrir cada rechazo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Hay quien vive la incertidumbre como lo más estresante de contratar: un correo puede quedar sin respuesta, tras una llamada es fácil que uno de los dos vea que el puesto no encaja, el candidato puede no hacerlo bien en la entrevista y a veces rechaza la oferta. Pero si alejas el foco y hablas de docenas de candidatos, el reclutamiento se entiende como un embudo de números relativamente constante, del tipo cierta media de correos iniciales lleva a una contratación. Con esa cuenta puedes confiar en que el tiempo que dedicas a reclutar rinde, aunque algunos casos no salgan.",
+  "notas_extraccion": "Es la ultima pieza del bloque de apostar con cabeza y la unica cuyo entregable no es una decision sobre un candidato sino una cuenta sobre el propio proceso. Lo que la hace procedimentable, y no una postura de animo, es que el libro escribe las etapas del embudo una a una y las liga a una forma de ecuacion; el propio libro avisa de que sus numeros son inventados, y ese aviso va transcrito en el paso 4 para que nadie tome el veinte, el diez y el cuatro por un dato medido. Va separada de la ejecucion diligente a escala porque su entregable es distinto: aqui se calcula la ecuacion de una contratacion, alli se reparte el trabajo que esa ecuacion implica entre directivos y semanas. Lo que el libro NO dice, y por eso no esta escrito aqui, es como se miden las etapas propias ni cada cuanto se recalcula la ecuacion.",
+  "pasos_accionables": [
+    "Nombra los sitios donde la incertidumbre duele: escribes a un candidato y no hay garantía de respuesta; si responde y se monta una llamada, hay buenas posibilidades de que después uno de los dos decida que el puesto no encaja; si el candidato viene a entrevistarse, puede no hacerlo bien en tus preguntas; y si llegas al final con una oferta reluciente lista para firmar, el candidato a veces la rechaza.",
+    "Aleja el foco un poco más, que es lo que cambia la lectura: visto así, el avance del reclutamiento se entiende simplemente como un embudo de números.",
+    "Cuenta con que cuando hablas de docenas de candidatos ese embudo se mantiene relativamente constante.",
+    "Escribe tu propia cuenta por etapas. Un ejemplo con números inventados: de veinte correos que mandas, puedes recibir interés de diez; de diez reuniones iniciales, cuatro pasan a etapa de entrevista; de cuatro entrevistas, una acaba en oferta; y de una oferta, el candidato declina la mitad de las veces.",
+    "Cuenta con que los números concretos pueden ser distintos según el equipo, el puesto y la organización, y con que aun así, pongas lo que pongas, se puede llegar a una ecuación con esta forma: una media de X correos iniciales lleva a una contratación.",
+    "Usa esa ecuación para ganar confianza: a una directiva pensar así le dio la seguridad de que cuanto más tiempo y energía dedicaba a reclutar, más rendía, aunque unos cuantos casos concretos aquí y allá no salieran."
+  ],
+  "entregable_esperado": "Una ecuación propia del tipo una media de X correos iniciales lleva a una contratación, y la confianza de que el tiempo dedicado a reclutar rinde.",
+  "nodos_previos": [
+    "crear_sistema_captura_seguimiento_candidatos"
+  ],
+  "nodos_siguientes": [
+    "ejecutar_embudo_reclutamiento_escala"
+  ],
+  "condiciones_activacion": [
+    "Cuando la incertidumbre del reclutamiento te está desgastando y cada correo sin respuesta, cada mala entrevista o cada oferta rechazada te parece tiempo perdido."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-calcular_embudo_reclutamiento_propio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Hay quien vive la incertidumbre como lo más estresante de contratar: un correo puede quedar sin respuesta, tras una llamada es fácil que uno de los dos vea que el puesto no encaja, el candidato puede no hacerlo bien en la entrevista y a veces rechaza la oferta. Pero si alejas el foco y hablas de docenas de candidatos, el reclutamiento se entiende como un embudo de números relativamente constante, del tipo cierta media de correos iniciales lleva a una contratación. Con esa cuenta puedes confiar en que el tiempo que dedicas a reclutar paga, aunque algunos casos no salgan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_08.md",
+          "lineas": "211-219"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): La objeción se sostiene: la incertidumbre como lo más estresante es la vivencia de una persona ('For me') y el rechazo que deja de ser fracaso personal no está en las líneas. La propuesta del lector la generaliza con un 'puede ser' en vez de contarla como caso; se cuenta como 'hay quien' y se cierra con la confianza que dan las líneas y el paso 6.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)"
+    },
+    {
+      "id": "m11-limpieza-calcular_embudo_reclutamiento_propio-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Nombra los sitios donde la incertidumbre duele, porque el libro los nombra: escribes a un candidato y no hay garantia de respuesta; respondes y montais una llamada, y hay buenas posibilidades de que despues uno de los dos decida que el puesto no encaja; si el candidato viene a entrevistarse, puede no hacerlo bien en vuestras preguntas; y si llegas al final con una oferta reluciente lista para firmar, el candidato a veces la rechaza.",
+      "texto_nuevo": "Nombra los sitios donde la incertidumbre duele: escribes a un candidato y no hay garantía de respuesta; si responde y se monta una llamada, hay buenas posibilidades de que después uno de los dos decida que el puesto no encaja; si el candidato viene a entrevistarse, puede no hacerlo bien en tus preguntas; y si llegas al final con una oferta reluciente lista para firmar, el candidato a veces la rechaza.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "porque el libro los nombra",
+          "montais",
+          "vuestras preguntas"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro",
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calcular_embudo_reclutamiento_propio-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aleja el foco un poco mas, que es lo que cambia la lectura: visto asi, el avance del reclutamiento se entiende simplemente como un embudo de numeros.",
+      "texto_nuevo": "Aleja el foco un poco más, que es lo que cambia la lectura: visto así, el avance del reclutamiento se entiende simplemente como un embudo de números.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calcular_embudo_reclutamiento_propio-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Escribe tu propia cuenta por etapas. El libro pone una de ejemplo, avisando de que se inventa los numeros: de veinte correos que mandas, puedes recibir interes de diez; de diez reuniones iniciales, cuatro pasan a etapa de entrevista; de cuatro entrevistas, una acaba en oferta; y de una oferta, el candidato declina la mitad de las veces.",
+      "texto_nuevo": "Escribe tu propia cuenta por etapas. Un ejemplo con números inventados: de veinte correos que mandas, puedes recibir interés de diez; de diez reuniones iniciales, cuatro pasan a etapa de entrevista; de cuatro entrevistas, una acaba en oferta; y de una oferta, el candidato declina la mitad de las veces.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro pone una de ejemplo, avisando de que se inventa los numeros"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calcular_embudo_reclutamiento_propio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que los numeros concretos van a ser distintos segun el equipo, el puesto y la organizacion, y con que aun asi, pongas lo que pongas, se puede llegar a una ecuacion con esta forma: una media de X correos iniciales lleva a una contratacion.",
+      "texto_nuevo": "Cuenta con que los números concretos van a ser distintos según el equipo, el puesto y la organización, y con que aun así, pongas lo que pongas, se puede llegar a una ecuación con esta forma: una media de X correos iniciales lleva a una contratación.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calcular_embudo_reclutamiento_propio-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa esa ecuacion para lo que sirve: para estar seguro de que cuanto mas tiempo y energia dedicas a reclutar, mas paga, aunque unos cuantos casos concretos aqui y alla no salgan.",
+      "texto_nuevo": "Usa esa ecuación para lo que sirve: para estar seguro de que cuanto más tiempo y energía dedicas a reclutar, más paga, aunque unos cuantos casos concretos aquí y allá no salgan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calcular_embudo_reclutamiento_propio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una ecuacion propia del tipo una media de X correos iniciales lleva a una contratacion, y la confianza de que el tiempo dedicado a reclutar paga.",
+      "texto_nuevo": "Una ecuación propia del tipo una media de X correos iniciales lleva a una contratación, y la confianza de que el tiempo dedicado a reclutar paga.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-calcular_embudo_reclutamiento_propio-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando la incertidumbre del reclutamiento te esta desgastando y cada correo sin respuesta, cada mala entrevista o cada oferta rechazada te parece tiempo perdido.",
+      "texto_nuevo": "Cuando la incertidumbre del reclutamiento te está desgastando y cada correo sin respuesta, cada mala entrevista o cada oferta rechazada te parece tiempo perdido.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 30, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 30)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-calcular_embudo_reclutamiento_propio-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Hay quien vive la incertidumbre como lo más estresante de contratar: un correo puede quedar sin respuesta, tras una llamada es fácil que uno de los dos vea que el puesto no encaja, el candidato puede no hacerlo bien en la entrevista y a veces rechaza la oferta. Pero si alejas el foco y hablas de docenas de candidatos, el reclutamiento se entiende como un embudo de números relativamente constante, del tipo cierta media de correos iniciales lleva a una contratación. Con esa cuenta puedes confiar en que el tiempo que dedicas a reclutar paga, aunque algunos casos no salgan.",
+      "texto_nuevo": "Hay quien vive la incertidumbre como lo más estresante de contratar: un correo puede quedar sin respuesta, tras una llamada es fácil que uno de los dos vea que el puesto no encaja, el candidato puede no hacerlo bien en la entrevista y a veces rechaza la oferta. Pero si alejas el foco y hablas de docenas de candidatos, el reclutamiento se entiende como un embudo de números relativamente constante, del tipo cierta media de correos iniciales lleva a una contratación. Con esa cuenta puedes confiar en que el tiempo que dedicas a reclutar rinde, aunque algunos casos no salgan.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "paga"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"El tiempo paga\" calca \"pays off\"; en español es \"rinde\".",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-calcular_embudo_reclutamiento_propio-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que los números concretos van a ser distintos según el equipo, el puesto y la organización, y con que aun así, pongas lo que pongas, se puede llegar a una ecuación con esta forma: una media de X correos iniciales lleva a una contratación.",
+      "texto_nuevo": "Cuenta con que los números concretos pueden ser distintos según el equipo, el puesto y la organización, y con que aun así, pongas lo que pongas, se puede llegar a una ecuación con esta forma: una media de X correos iniciales lleva a una contratación.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 217",
+        "frase": "Though the specific numbers might be different given the team, the role, and the organization"
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que los números pueden ser distintos (might be different); el paso lo afirmaba.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-calcular_embudo_reclutamiento_propio-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa esa ecuación para lo que sirve: para estar seguro de que cuanto más tiempo y energía dedicas a reclutar, más paga, aunque unos cuantos casos concretos aquí y allá no salgan.",
+      "texto_nuevo": "Usa esa ecuación para lo que sirve: para estar seguro de que cuanto más tiempo y energía dedicas a reclutar, más rinde, aunque unos cuantos casos concretos aquí y allá no salgan.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "más paga"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Más paga\" calca \"the more it pays off\"; en español es \"más rinde\".",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-calcular_embudo_reclutamiento_propio-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una ecuación propia del tipo una media de X correos iniciales lleva a una contratación, y la confianza de que el tiempo dedicado a reclutar paga.",
+      "texto_nuevo": "Una ecuación propia del tipo una media de X correos iniciales lleva a una contratación, y la confianza de que el tiempo dedicado a reclutar rinde.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "paga"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"El tiempo paga\" calca \"pays off\"; en español es \"rinde\".",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-calcular_embudo_reclutamiento_propio-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Usa esa ecuación para lo que sirve: para estar seguro de que cuanto más tiempo y energía dedicas a reclutar, más rinde, aunque unos cuantos casos concretos aquí y allá no salgan.",
+      "texto_nuevo": "Usa esa ecuación para ganar confianza: a una directiva pensar así le dio la seguridad de que cuanto más tiempo y energía dedicaba a reclutar, más rendía, aunque unos cuantos casos concretos aquí y allá no salieran.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_08.md 219",
+        "frase": "Thinking about things this way made me confident that the more time and energy I spend on recruiting, the more it pays off, even if a few specific instances here and there don’t work out."
+      },
+      "decision": "auditoria completa M11 (matiz): La seguridad que le dio a la autora vuelta garantía para cualquiera; se cuenta como caso.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Calcula tu Propio Embudo"
+}

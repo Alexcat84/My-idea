@@ -1,0 +1,340 @@
+{
+  "node_id": "bajar_detalle_organizacion_fuente_hechos",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Bajar al detalle de tu organización y buscar los hechos en su fuente, sin dejar que te lleguen filtrados por capas",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Cuando los hechos pasan demasiadas veces de mano en mano se deforman, como en el juego del teléfono, así que no dejes que te lleguen a través de capas de dirección. Bajar de vez en cuando al detalle de alguna decisión pequeña es una buena manera de enterarte de lo que pasa de verdad y de enseñar que nada está por encima ni por debajo de la preocupación de nadie. Cuando decides tú, ir directo a quien hace el trabajo y conocer varias capas por debajo te permite entender y cuestionar los hechos tal como te los presentan, y cuanto más lo haces, más empoderada se siente la organización.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 295 a 301, bajo el rotulo Go spelunking, dentro del paso DECIDE de la rueda de hacer cosas. La pieza tiene dos movimientos y los dos son del libro: bajar al detalle por costumbre (para enterarse y para igualar el trato) y bajar a la fuente cuando el que decide eres tu (para que el hecho no llegue filtrado). El caso de Steve Jobs esperando en el cubiculo de un ingeniero joven va NOMBRADO DENTRO del paso que lo usa, que es la condicion de TRANSCRIPCION DE CASO. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. P1, P2, P3 y P4 de la linea 297; P5 y P6 de la 299; P7 y P8 de la 301; P9 de la 301 tambien, en su primera frase. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cada cuanto se baja, como se elige en que detalle meterse, y como se hace sin que el jefe intermedio lo viva como una invasion, que es la pregunta que el propio metodo abre y el libro no cierra.",
+  "pasos_accionables": [
+    "Usa el derecho que tienes como jefe a meterte en cualquier detalle que te parezca interesante o importante: no tienes que quedarte en el nivel alto todo el tiempo.",
+    "Aunque hayas delegado las decisiones clave, métete de vez en cuando en los detalles de alguna otra decisión más pequeña: no puedes hacerlo con cada decisión, pero sí con algunas.",
+    "Úsalo para enterarte de lo que de verdad está pasando.",
+    "Úsalo también para poner a jefes y a quienes dependen de ellos en un plano más igual, enseñando que nada está por encima ni por debajo de la preocupación de nadie.",
+    "Cuando el que decide eres tú, ve a la fuente de los hechos.",
+    "No dejes que los hechos te lleguen a través de capas de dirección, sobre todo si eres jefe de jefes. Es como el juego del teléfono: ya sabes lo que le pasa a un hecho cuando se pasa demasiadas veces de mano en mano.",
+    "Si quieres entender más a fondo algún aspecto de una decisión importante, ve directamente a la persona que está trabajando en ello, como hacía un directivo que aparecía en el cubículo de un ingeniero recién llegado a preguntarle por un detalle concreto de su trabajo.",
+    "Cuenta con lo que se gana: cuanto más a menudo puedas hacerlo, más empoderada se siente toda tu organización.",
+    "Conoce los detalles de varias capas por debajo de la tuya para poder entender y cuestionar los hechos tal como te los presentan."
+  ],
+  "entregable_esperado": "Los hechos de la decisión obtenidos en su fuente, sin pasar por capas de dirección, y una organización que ve que nada está por encima ni por debajo de la preocupación de nadie.",
+  "nodos_previos": [
+    "pedir_hechos_decision_evitar_recomendaciones"
+  ],
+  "nodos_siguientes": [
+    "montar_reunion_gran_decision"
+  ],
+  "condiciones_activacion": [
+    "Cuando eres jefe, y sobre todo jefe de jefes, y quieres saber lo que de verdad está pasando o vas a decidir tú algo importante."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando los hechos pasan demasiadas veces de mano en mano se deforman, como en el juego del teléfono, así que no dejes que te lleguen a través de capas de dirección. Bajar de vez en cuando al detalle de alguna decisión pequeña es una buena manera de enterarte de lo que pasa de verdad y de enseñar que nada está por encima ni por debajo de la preocupación de nadie. Cuando decides tú, ir directo a quien hace el trabajo y conocer varias capas por debajo te permite entender y cuestionar los hechos tal como te los presentan, y cuanto más lo haces, más poder siente la organización.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_07.md",
+          "lineas": "297-301"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): La objeción se sostiene: L299 habla de hechos que pasan de mano en mano 'too many times', no cada vez, y L297 lo llama 'a good way to find out', lo que el actual convierte en 'te muestra'. La propuesta del lector devuelve los dos matices.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)"
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Bajar al detalle de tu organizacion y buscar los hechos en su fuente, sin dejar que te lleguen filtrados por capas",
+      "texto_nuevo": "Bajar al detalle de tu organización y buscar los hechos en su fuente, sin dejar que te lleguen filtrados por capas",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa el derecho que tienes como jefe a meterte en cualquier detalle que te parezca interesante o importante. El texto dice que no tienes que quedarte en el nivel alto todo el tiempo.",
+      "texto_nuevo": "Usa el derecho que tienes como jefe a meterte en cualquier detalle que te parezca interesante o importante: no tienes que quedarte en el nivel alto todo el tiempo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aunque hayas delegado las decisiones clave, metete de vez en cuando en los detalles de alguna otra decision mas pequeña. El texto dice que no puedes hacerlo con cada decision, pero si con algunas.",
+      "texto_nuevo": "Aunque hayas delegado las decisiones clave, métete de vez en cuando en los detalles de alguna otra decisión más pequeña: no puedes hacerlo con cada decisión, pero sí con algunas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usalo para enterarte de lo que de verdad esta pasando.",
+      "texto_nuevo": "Úsalo para enterarte de lo que de verdad está pasando.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usalo tambien para poner a jefes y a quienes dependen de ellos en un plano mas igual, enseñando que nada esta por encima ni por debajo de la preocupacion de nadie.",
+      "texto_nuevo": "Úsalo también para poner a jefes y a quienes dependen de ellos en un plano más igual, enseñando que nada está por encima ni por debajo de la preocupación de nadie.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando el que decide eres tu, ve a la fuente de los hechos.",
+      "texto_nuevo": "Cuando el que decide eres tú, ve a la fuente de los hechos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No dejes que los hechos te lleguen a traves de capas de direccion, sobre todo si eres jefe de jefes. El texto lo compara con el juego del telefono, y dice que ya sabes lo que le pasa a un hecho cuando se pasa demasiadas veces de mano en mano.",
+      "texto_nuevo": "No dejes que los hechos te lleguen a través de capas de dirección, sobre todo si eres jefe de jefes. Es como el juego del teléfono: ya sabes lo que le pasa a un hecho cuando se pasa demasiadas veces de mano en mano.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo compara con el juego del telefono, y dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Si quieres entender mas a fondo algun aspecto de una decision importante, ve directamente a la persona que esta trabajando en ello, como hacia Steve Jobs, que aparecia en el cubiculo de un ingeniero recien llegado a preguntarle por un detalle concreto de su trabajo.",
+      "texto_nuevo": "Si quieres entender más a fondo algún aspecto de una decisión importante, ve directamente a la persona que está trabajando en ello, como el directivo que aparecía en el cubículo de un ingeniero recién llegado a preguntarle por un detalle concreto de su trabajo.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "Steve Jobs"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto dice que se gana: cuanto mas a menudo puedas hacerlo, mas poder siente toda tu organizacion.",
+      "texto_nuevo": "Cuenta con lo que se gana: cuanto más a menudo puedas hacerlo, más poder siente toda tu organización.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto dice que se gana"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Conoce los detalles de varias capas por debajo de la tuya, que es lo que en Apple se esperaba de los lideres, para poder entender y cuestionar los hechos tal como te los presentan.",
+      "texto_nuevo": "Conoce los detalles de varias capas por debajo de la tuya para poder entender y cuestionar los hechos tal como te los presentan.",
+      "cita": {
+        "regla": "ningun libro ni autor llega al cliente (AGENTS.md; decision del fundador, 26 y 28 sep 2026)",
+        "fragmentos": [
+          "que es lo que en Apple se esperaba de los lideres"
+        ]
+      },
+      "decision": "limpieza M11 (ATRIBUCION): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Los hechos de la decision obtenidos en su fuente, sin pasar por capas de direccion, y una organizacion que ve que nada esta por encima ni por debajo de la preocupacion de nadie.",
+      "texto_nuevo": "Los hechos de la decisión obtenidos en su fuente, sin pasar por capas de dirección, y una organización que ve que nada está por encima ni por debajo de la preocupación de nadie.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-bajar_detalle_organizacion_fuente_hechos-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando eres jefe, y sobre todo jefe de jefes, y quieres saber lo que de verdad esta pasando o vas a decidir tu algo importante.",
+      "texto_nuevo": "Cuando eres jefe, y sobre todo jefe de jefes, y quieres saber lo que de verdad está pasando o vas a decidir tú algo importante.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-pase2-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si quieres entender más a fondo algún aspecto de una decisión importante, ve directamente a la persona que está trabajando en ello, como el directivo que aparecía en el cubículo de un ingeniero recién llegado a preguntarle por un detalle concreto de su trabajo.",
+      "texto_nuevo": "Si quieres entender más a fondo algún aspecto de una decisión importante, ve directamente a la persona que está trabajando en ello, como hacía un directivo que aparecía en el cubículo de un ingeniero recién llegado a preguntarle por un detalle concreto de su trabajo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "\"El directivo\" con artículo definido no tiene antecedente en el nodo (en el libro es un personaje con nombre, cap_07 L301)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"El directivo\" con artículo definido no tiene antecedente en el nodo (en el libro es un personaje con nombre, cap_07 L301).",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-bajar_detalle_organizacion_fuente_hechos-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que se gana: cuanto más a menudo puedas hacerlo, más poder siente toda tu organización.",
+      "texto_nuevo": "Cuenta con lo que se gana: cuanto más a menudo puedas hacerlo, más empoderada se siente toda tu organización.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "más poder siente"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Siente poder\" calca \"feels empowered\" y desplaza el sentido (poder sobre otros en vez de capacidad de actuar); cap_07 L301.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-bajar_detalle_organizacion_fuente_hechos-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando los hechos pasan demasiadas veces de mano en mano se deforman, como en el juego del teléfono, así que no dejes que te lleguen a través de capas de dirección. Bajar de vez en cuando al detalle de alguna decisión pequeña es una buena manera de enterarte de lo que pasa de verdad y de enseñar que nada está por encima ni por debajo de la preocupación de nadie. Cuando decides tú, ir directo a quien hace el trabajo y conocer varias capas por debajo te permite entender y cuestionar los hechos tal como te los presentan, y cuanto más lo haces, más poder siente la organización.",
+      "texto_nuevo": "Cuando los hechos pasan demasiadas veces de mano en mano se deforman, como en el juego del teléfono, así que no dejes que te lleguen a través de capas de dirección. Bajar de vez en cuando al detalle de alguna decisión pequeña es una buena manera de enterarte de lo que pasa de verdad y de enseñar que nada está por encima ni por debajo de la preocupación de nadie. Cuando decides tú, ir directo a quien hace el trabajo y conocer varias capas por debajo te permite entender y cuestionar los hechos tal como te los presentan, y cuanto más lo haces, más empoderada se siente la organización.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "más poder siente"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Mismo calco de \"feels empowered\" que en el paso 7 (cap_07 L301).",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Busca los Hechos en su Fuente"
+}

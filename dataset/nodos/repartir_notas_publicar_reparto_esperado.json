@@ -1,0 +1,409 @@
+{
+  "node_id": "repartir_notas_publicar_reparto_esperado",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Repartir las notas sin una distribución rígida y publicar el reparto que esperas, para que la calibración no se vuelva opaca",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "El reparto de notas depende de cuánto se puede pagar y de qué significa cada nota, así que no se copia: se decide desde las consecuencias que tendrá cada escalón. Una distribución demasiado rígida puede cegarte ante un año excepcional o uno flojo, y en general lo que más importa es la calibración; los porcentajes sirven de orientación y no de ley. Lo que sí conviene es publicar el reparto esperado: cuando todos conocen el reparto esperado, las calibraciones se discuten a la vista y no se vuelven opacas ni excesivamente frustrantes.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/scott_radical_candor/cap_14.md, unidad Bonus Chapter, titulo textual Bonus Chapter: A Radically Candid Performance Review. Sale de las lineas 143 a 151, que son la PIEZA P9 de la frontera de esta vuelta, 328 palabras, y es el elemento numero 7 de los trece que la cabeza nombra. POR QUE ES PROCEDIMIENTO Y NO POSTURA, con D.27 delante: el libro pone su propio inventario de OBJETOS con cifras propias, cinco por ciento, quince por ciento, de uno a cinco por ciento y cuarenta mas cuarenta, y cierra con una recomendacion de medio, hacer transparente el reparto esperado. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 9 pasos, 9 TRANSCRIPCION, 0 PUENTE. P1, P2 y P3 salen de la linea 145; P4, P5, P6 y P7 de la 147; P8 de la 149; P9 de la 151. LAS CIFRAS SON DEL TEXTO Y VAN ADEMAS EN atribuciones, con su banda tal como el texto la escribe, roughly very roughly, porque una tasa sin banda es media cifra. EL TEXTO MARCA SUS PROPIAS CIFRAS COMO SUYAS, my experience is y I have found, y el P8 recoge literalmente que el texto no sabe bastante de tu organizacion: por eso este nodo NO escribe un reparto como receta. NO ESCRIBO DESTINATARIO NI PERIODO NI RESPONSABLE. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: como se publica el reparto esperado, cada cuanto se revisa, ni que se hace cuando el reparto real se aleja mucho del esperado un anio concreto, que es materia del elemento 8.",
+  "pasos_accionables": [
+    "Ten delante la consideración práctica que va primero, y que no es menor: cómo repartes el dinero de la retribución. Si vas a dar primas muy grandes a la gente que saca la nota alta, probablemente no te puedes permitir tener al cincuenta por ciento de la empresa en esa categoría.",
+    "Evita en general una distribución demasiado rígida, por esta razón: puede que un año tengas la suerte de contar con un equipo excepcionalmente capaz, o la mala suerte de tener a un puñado de gente haciendo un trabajo mediocre, y no quieres que una distribución esperada te ciegue ante la realidad.",
+    "Cuenta con que, en general, lo más importante es el proceso de calibración.",
+    "Ten delante estos porcentajes, que salen de la experiencia y no de una regla: al menos un cinco por ciento de la gente probablemente necesita, en cada momento, el aviso fuerte que da la nota más baja, y puede que a ti eso te parezca excesivamente duro para tu entorno, o no bastante duro.",
+    "Cuenta con lo que la nota alta significa en ese reparto: quieres dar premios desmesurados porque quieres retribuir con justicia a quien ha conseguido más que los demás, y retenerlo. Por experiencia, ese grupo es aproximadamente, y muy aproximadamente, un quince por ciento de un equipo.",
+    "Cuenta con que normalmente entre el uno y el cinco por ciento de una población hace un trabajo de verdad excepcional, a quienes quieres retener a toda costa. Identificar a esa gente es un ejercicio importante, pero no hace falta crear una nota especial para ella.",
+    "Haz la cuenta con lo que queda: alrededor de un cuarenta por ciento de tu población sacando la nota media y un cuarenta por ciento sacando la nota buena.",
+    "Decide tú las consecuencias de cada nota y, a partir de ahí, cuál debería ser el reparto, porque quien propone estos porcentajes desde fuera no conoce tu organización lo bastante para decir si este reparto es el correcto para ti.",
+    "Haz transparente a la organización el reparto que esperas ver, porque si no lo haces las calibraciones se vuelven opacas y excesivamente frustrantes."
+  ],
+  "entregable_esperado": "El reparto de notas que esperas decidido a partir de las consecuencias de cada nota, y publicado a la organización para que las calibraciones no se vuelvan opacas.",
+  "nodos_previos": [
+    "recorrer_trece_elementos_proceso_evaluacion_formal"
+  ],
+  "nodos_siguientes": [
+    "calibrar_notas_reunion_jefes_pares"
+  ],
+  "condiciones_activacion": [
+    "Cuando tienes que decidir qué reparto de notas espera tu empresa y si lo haces público."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "El reparto de notas depende de cuánto se puede pagar y de qué significa cada nota, así que no se copia: se decide desde las consecuencias que tendrá cada escalón. Una distribución demasiado rígida puede cegarte ante un año excepcional o uno flojo, por eso la calibración pesa más que los porcentajes, que sirven de orientación y no de ley. Lo que sí conviene es publicar el reparto esperado: cuando todos conocen el reparto esperado, las calibraciones se discuten a la vista y no se vuelven opacas ni excesivamente frustrantes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_14.md",
+          "lineas": "145-151"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: baranda voz_de_libro de la casa (scripts/censo_duplicacion.py): el impersonal reflexivo o el sujeto en tercera con deber pasa a tu o a forma directa; el sentido no cambia",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)"
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Repartir las notas sin una distribucion rigida y publicar el reparto que esperas, para que la calibracion no se vuelva opaca",
+      "texto_nuevo": "Repartir las notas sin una distribución rígida y publicar el reparto que esperas, para que la calibración no se vuelva opaca",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 23, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante la consideracion practica que el texto pone primera, y que no es menor: como repartes la tarta de la retribucion. Si vas a dar primas muy grandes a la gente que saca la nota alta, probablemente no te puedes permitir tener al cincuenta por ciento de la empresa en esa categoria.",
+      "texto_nuevo": "Ten delante la consideración práctica que va primero, y que no es menor: cómo repartes la tarta de la retribución. Si vas a dar primas muy grandes a la gente que saca la nota alta, probablemente no te puedes permitir tener al cincuenta por ciento de la empresa en esa categoría.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto pone primera"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evita en general una distribucion demasiado rigida, por la razon que el texto da: puedes estar bendecido en un anio dado con un equipo excepcionalmente capaz, o maldito con un punado de gente haciendo un trabajo mediocre, y no quieres que una distribucion esperada te ciegue a la realidad.",
+      "texto_nuevo": "Evita en general una distribución demasiado rígida, por esta razón: puedes estar bendecido en un año dado con un equipo excepcionalmente capaz, o maldito con un puñado de gente haciendo un trabajo mediocre, y no quieres que una distribución esperada te ciegue a la realidad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "por la razon que el texto da"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto dice que es lo mas importante en general: el proceso de calibracion.",
+      "texto_nuevo": "Cuenta con que, en general, lo más importante es el proceso de calibración.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto dice que es"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante los porcentajes que la experiencia de la autora le da, y que ella misma marca como suyos: al menos un cinco por ciento de la gente probablemente necesita en cualquier momento dado el tipo de aviso fuerte que da la nota mas baja, y puede que a ti eso te parezca excesivamente duro para tu entorno, o no bastante duro.",
+      "texto_nuevo": "Ten delante estos porcentajes, que salen de la experiencia y no de una regla: al menos un cinco por ciento de la gente probablemente necesita en cualquier momento dado el tipo de aviso fuerte que da la nota más baja, y puede que a ti eso te parezca excesivamente duro para tu entorno, o no bastante duro.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que la experiencia de la autora le da, y que ella misma marca como suyos"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que la nota alta significa en ese reparto: quieres dar premios desmesurados porque quieres retribuir con justicia a quien ha conseguido mas que los demas, y retenerlo. La autora ha encontrado que ese grupo es aproximadamente, y muy aproximadamente, un quince por ciento de un equipo.",
+      "texto_nuevo": "Cuenta con lo que la nota alta significa en ese reparto: quieres dar premios desmesurados porque quieres retribuir con justicia a quien ha conseguido más que los demás, y retenerlo. Por experiencia, ese grupo es aproximadamente, y muy aproximadamente, un quince por ciento de un equipo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora ha encontrado que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que normalmente entre el uno y el cinco por ciento de una poblacion hace un trabajo de verdad excepcional, a quien quieres retener a toda costa. Identificar a esa gente es un ejercicio importante, y el texto dice que no hace falta crear una nota especial para ella.",
+      "texto_nuevo": "Cuenta con que normalmente entre el uno y el cinco por ciento de una población hace un trabajo de verdad excepcional, a quien quieres retener a toda costa. Identificar a esa gente es un ejercicio importante, pero no hace falta crear una nota especial para ella.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "y el texto dice que"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz la cuenta que el texto hace con lo que queda: alrededor de un cuarenta por ciento de tu poblacion sacando la nota media y un cuarenta por ciento sacando la nota buena.",
+      "texto_nuevo": "Haz la cuenta con lo que queda: alrededor de un cuarenta por ciento de tu población sacando la nota media y un cuarenta por ciento sacando la nota buena.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto hace"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Decide tu las consecuencias de cada nota y, a partir de ahi, cual deberia ser el reparto, porque el texto dice expresamente que no sabe bastante de tu organizacion para decir si el reparto que describe es el correcto para ti.",
+      "texto_nuevo": "Decide tú las consecuencias de cada nota y, a partir de ahí, cuál debería ser el reparto, porque nadie de fuera sabe bastante de tu organización para decir si este reparto es el correcto para ti.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el texto dice expresamente que no sabe bastante",
+          "el reparto que describe"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz transparente a la organizacion el reparto que esperas ver, que es lo que el texto si recomienda, porque si no lo haces las calibraciones se vuelven opacas y excesivamente frustrantes.",
+      "texto_nuevo": "Haz transparente a la organización el reparto que esperas ver, porque si no lo haces las calibraciones se vuelven opacas y excesivamente frustrantes.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que el texto si recomienda"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El reparto de notas que esperas decidido a partir de las consecuencias de cada nota, y publicado a la organizacion para que las calibraciones no se vuelvan opacas.",
+      "texto_nuevo": "El reparto de notas que esperas decidido a partir de las consecuencias de cada nota, y publicado a la organización para que las calibraciones no se vuelvan opacas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 23, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-repartir_notas_publicar_reparto_esperado-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando tienes que decidir que reparto de notas espera tu empresa y si lo haces publico.",
+      "texto_nuevo": "Cuando tienes que decidir qué reparto de notas espera tu empresa y si lo haces público.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 23, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 23)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limites-repartir_notas_publicar_reparto_esperado-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Decide tú las consecuencias de cada nota y, a partir de ahí, cuál debería ser el reparto, porque nadie de fuera sabe bastante de tu organización para decir si este reparto es el correcto para ti.",
+      "texto_nuevo": "Decide tú las consecuencias de cada nota y, a partir de ahí, cuál debería ser el reparto, porque quien propone estos porcentajes desde fuera no conoce tu organización lo bastante para decir si este reparto es el correcto para ti.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_14.md 149",
+        "frase": "I don't know enough about your organization to say whether the distributions I've described above is right for you."
+      },
+      "decision": "arbitro de limites de la limpieza M11 (casos que los verificadores dejaron en OK senalados como dudosos): La nota se sostiene. scott_radical_candor/cap_14.md línea 149: \"I don't know enough about your organization to say whether the distributions I've described above is right for you.\" Quien no sabe es quien propone los porcentajes; \"nadie de fuera\" lo generaliza a cualquier persona externa. Se ciñe a quien propone el reparto, sin voz de libro.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/limites/"
+    },
+    {
+      "id": "m11-auditoria-repartir_notas_publicar_reparto_esperado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "El reparto de notas depende de cuánto se puede pagar y de qué significa cada nota, así que no se copia: se decide desde las consecuencias que tendrá cada escalón. Una distribución demasiado rígida puede cegarte ante un año excepcional o uno flojo, por eso la calibración pesa más que los porcentajes, que sirven de orientación y no de ley. Lo que sí conviene es publicar el reparto esperado: cuando todos conocen el reparto esperado, las calibraciones se discuten a la vista y no se vuelven opacas ni excesivamente frustrantes.",
+      "texto_nuevo": "El reparto de notas depende de cuánto se puede pagar y de qué significa cada nota, así que no se copia: se decide desde las consecuencias que tendrá cada escalón. Una distribución demasiado rígida puede cegarte ante un año excepcional o uno flojo, y en general lo que más importa es la calibración; los porcentajes sirven de orientación y no de ley. Lo que sí conviene es publicar el reparto esperado: cuando todos conocen el reparto esperado, las calibraciones se discuten a la vista y no se vuelven opacas ni excesivamente frustrantes.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_14.md 145",
+        "frase": "In general, the calibration process (more on that below) is what’s most important."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro pone las dos ideas una al lado de la otra ('In general...'); el 'por eso' que las encadenaba es inventado.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase2-repartir_notas_publicar_reparto_esperado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante la consideración práctica que va primero, y que no es menor: cómo repartes la tarta de la retribución. Si vas a dar primas muy grandes a la gente que saca la nota alta, probablemente no te puedes permitir tener al cincuenta por ciento de la empresa en esa categoría.",
+      "texto_nuevo": "Ten delante la consideración práctica que va primero, y que no es menor: cómo repartes el dinero de la retribución. Si vas a dar primas muy grandes a la gente que saca la nota alta, probablemente no te puedes permitir tener al cincuenta por ciento de la empresa en esa categoría.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "la tarta de la retribución"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Tarta\" es forma de una sola región; se dice llano: el dinero de la retribución.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase2-repartir_notas_publicar_reparto_esperado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Evita en general una distribución demasiado rígida, por esta razón: puedes estar bendecido en un año dado con un equipo excepcionalmente capaz, o maldito con un puñado de gente haciendo un trabajo mediocre, y no quieres que una distribución esperada te ciegue a la realidad.",
+      "texto_nuevo": "Evita en general una distribución demasiado rígida, por esta razón: puede que un año tengas la suerte de contar con un equipo excepcionalmente capaz, o la mala suerte de tener a un puñado de gente haciendo un trabajo mediocre, y no quieres que una distribución esperada te ciegue ante la realidad.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "puedes estar bendecido en un año dado con un equipo excepcionalmente capaz, o maldito con un puñado de gente",
+          "te ciegue a la realidad"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calcos de \"blessed in a given year / cursed with\" y \"blind you to reality\"; el \"may\" queda en \"puede que\".",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-repartir_notas_publicar_reparto_esperado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Ten delante estos porcentajes, que salen de la experiencia y no de una regla: al menos un cinco por ciento de la gente probablemente necesita en cualquier momento dado el tipo de aviso fuerte que da la nota más baja, y puede que a ti eso te parezca excesivamente duro para tu entorno, o no bastante duro.",
+      "texto_nuevo": "Ten delante estos porcentajes, que salen de la experiencia y no de una regla: al menos un cinco por ciento de la gente probablemente necesita, en cada momento, el aviso fuerte que da la nota más baja, y puede que a ti eso te parezca excesivamente duro para tu entorno, o no bastante duro.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "en cualquier momento dado el tipo de aviso fuerte"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calcos de \"at any given time\" y \"the kind of strong wake-up call\".",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-repartir_notas_publicar_reparto_esperado-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que normalmente entre el uno y el cinco por ciento de una población hace un trabajo de verdad excepcional, a quien quieres retener a toda costa. Identificar a esa gente es un ejercicio importante, pero no hace falta crear una nota especial para ella.",
+      "texto_nuevo": "Cuenta con que normalmente entre el uno y el cinco por ciento de una población hace un trabajo de verdad excepcional, a quienes quieres retener a toda costa. Identificar a esa gente es un ejercicio importante, pero no hace falta crear una nota especial para ella.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "Concordancia: el antecedente es un grupo de personas (\"whom\", scott cap_14 l.147)."
+      },
+      "decision": "auditoria completa M11 (ortografia): Concordancia: el antecedente es un grupo de personas (\"whom\", scott cap_14 l.147).",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Publica el Reparto de Notas",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

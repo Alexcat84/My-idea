@@ -1,0 +1,171 @@
+{
+  "node_id": "fijar_horizonte_ventana_replanificacion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Fijar el horizonte de la planificación, implementar solo la ventana que llega hasta la próxima vez, y no replanificar tan seguido que no dé tiempo a juzgar",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Planificar solo influye de verdad en lo que vas a hacer antes de volver a planificar. Por eso miras más lejos de lo que vas a implementar, pero pones en marcha únicamente la parte del plan que cae dentro de la ventana entre ahora y el próximo ejercicio; el resto lo vuelves a mirar entonces, cuando ese periodo pase a ser el primero. Tampoco conviene replanificar demasiado seguido: necesitas tiempo para juzgar el impacto de lo que decidiste y saber si ibas por buen camino, porque esa retroalimentación es indispensable para planificar la vez siguiente.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_07.md, PIEZA P22 de la frontera publicada en la vuelta 53 (docs/loop/REPORTE.md L50902), tramo L61 a L61, 165 palabras, y de ningun otro tramo. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el libro contesta su propia pregunta (How far ahead should the planners look?) y pone el MEDIO con el que se decide que se implementa, la ventana temporal entre ahora y la proxima vez, y el CRITERIO con el que se regula la cadencia, la retroalimentacion. No es un adjetivo de adecuacion: no dice periodo prudencial, dice que la frecuencia la manda el tiempo que hace falta para juzgar el impacto. DE DONDE SALE CADA PASO, uno a uno, todos de L61: paso 1 (we examine our future five years off. But what is really being influenced here? It is the next year, and only the next year); paso 2 (you implement only that portion of a plan that lies within the time window between now and the next time you go through the exercise); paso 3 (Everything else you can look at again, y We will have another chance to replan the second of the five years in the next year's long-range planning meeting, when that year will become the first year of the five); paso 4 (We should also be careful not to plan too frequently, allowing ourselves time to judge the impact of the decisions we made and to determine whether our decisions were on the right track or not); paso 5 (In other words, we need the feedback that will be indispensable to our planning the next time around). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. LA CIFRA VA A atribuciones Y NO A LOS PASOS, y es la decision que mas me jugaba: los cinco anos y la cadencia anual son la PRACTICA DE INTEL contada por su autor (At Intel, we put ourselves through an annual strategic long-range planning effort in which we examine our future five years off), no el plazo que el lector tiene que adoptar, asi que el paso 1 dice mira mas alla del periodo que vas a implementar y NO dice mira cinco anos. Ponerle cifra al lector seria la segunda especie de PUENTE del lote 1, el periodo, con el agravante de que aqui el libro SI da un numero y por eso la tentacion es mayor. FECHA DE CORTE 1983, la del libro. LOS OTROS SITIOS DE TENTACION EN LOS QUE NO ESCRIBI: NO escribo quien participa, que es la pieza P23 y que la vuelta 53 adjudico POSTURA con cero nodos. NO escribo que formato tiene el plan. NO escribo que hacer si la ventana y la cadencia no coinciden. LA FRONTERA CONTRA P29, que es el vecino peligroso: P29 fija el periodo del SISTEMA DE DIRECCION POR OBJETIVOS por el plazo de su retroalimentacion, y esta pieza fija el horizonte y la cadencia de la PLANIFICACION. Son dos periodos distintos sobre dos objetos distintos, y el propio libro los trata en dos secciones separadas por el rotulo de L67. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: el paso 1, desprovisto de los cinco anos, queda mas cerca de un principio que de una instruccion ejecutable. Lo sostengo porque lo que el paso manda hacer es real, mirar mas lejos de lo que se implementa, y porque la alternativa, meterle los cinco anos de Intel, es exactamente el puente que D.30 nombra.",
+  "pasos_accionables": [
+    "Mira hacia delante más allá del periodo que vas a implementar, aunque lo que de verdad estés influyendo sea solo el periodo siguiente.",
+    "Implementa únicamente la parte del plan que cae dentro de la ventana temporal entre ahora y la próxima vez que vuelvas a hacer el ejercicio.",
+    "Deja todo lo demás para volver a mirarlo, contando con que tendrás otra oportunidad de replanificarlo cuando ese periodo se convierta en el primero.",
+    "No planifiques con demasiada frecuencia: date tiempo a juzgar el impacto de las decisiones que tomaste y a determinar si iban por buen camino.",
+    "Regula esa frecuencia por la retroalimentación, que es lo indispensable para planificar la vez siguiente."
+  ],
+  "entregable_esperado": "El horizonte y la cadencia escritos, con la ventana de implementación marcada: qué tramo del plan se ejecuta ahora y qué tramo queda para volver a mirarlo en el ejercicio siguiente.",
+  "nodos_previos": [
+    "cerrar_brecha_dos_preguntas_estrategia"
+  ],
+  "nodos_siguientes": [
+    "fijar_periodo_direccion_objetivos_retroalimentacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando montas el ejercicio de planificación y tienes que decidir hasta dónde mirar, qué parte de lo que salga se pone en marcha, y cada cuánto se repite el ejercicio."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-fijar_horizonte_ventana_replanificacion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Planificar solo influye de verdad en lo que vas a hacer antes de volver a planificar. Por eso miras más lejos de lo que vas a implementar, pero pones en marcha únicamente la parte del plan que cae dentro de la ventana entre ahora y el próximo ejercicio; el resto lo vuelves a mirar entonces, cuando ese periodo pase a ser el primero. Tampoco conviene replanificar demasiado seguido: necesitas tiempo para juzgar el impacto de lo que decidiste y saber si ibas por buen camino, porque esa retroalimentación es indispensable para planificar la vez siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_07.md",
+          "lineas": "59-61"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)"
+    },
+    {
+      "id": "m11-limpieza-fijar_horizonte_ventana_replanificacion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fijar el horizonte de la planificacion, implementar solo la ventana que llega hasta la proxima vez, y no replanificar tan seguido que no de tiempo a juzgar",
+      "texto_nuevo": "Fijar el horizonte de la planificación, implementar solo la ventana que llega hasta la próxima vez, y no replanificar tan seguido que no dé tiempo a juzgar",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_horizonte_ventana_replanificacion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mira hacia delante mas alla del periodo que vas a implementar, aunque lo que de verdad estes influyendo sea solo el periodo siguiente.",
+      "texto_nuevo": "Mira hacia delante más allá del periodo que vas a implementar, aunque lo que de verdad estés influyendo sea solo el periodo siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_horizonte_ventana_replanificacion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Implementa unicamente la parte del plan que cae dentro de la ventana temporal entre ahora y la proxima vez que vuelvas a hacer el ejercicio.",
+      "texto_nuevo": "Implementa únicamente la parte del plan que cae dentro de la ventana temporal entre ahora y la próxima vez que vuelvas a hacer el ejercicio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_horizonte_ventana_replanificacion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Deja todo lo demas para volver a mirarlo, contando con que tendras otra oportunidad de replanificarlo cuando ese periodo se convierta en el primero.",
+      "texto_nuevo": "Deja todo lo demás para volver a mirarlo, contando con que tendrás otra oportunidad de replanificarlo cuando ese periodo se convierta en el primero.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_horizonte_ventana_replanificacion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Regula esa frecuencia por la retroalimentacion, que es lo indispensable para planificar la vez siguiente.",
+      "texto_nuevo": "Regula esa frecuencia por la retroalimentación, que es lo indispensable para planificar la vez siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_horizonte_ventana_replanificacion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El horizonte y la cadencia escritos, con la ventana de implementacion marcada: que tramo del plan se ejecuta ahora y que tramo queda para volver a mirarlo en el ejercicio siguiente.",
+      "texto_nuevo": "El horizonte y la cadencia escritos, con la ventana de implementación marcada: qué tramo del plan se ejecuta ahora y qué tramo queda para volver a mirarlo en el ejercicio siguiente.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-fijar_horizonte_ventana_replanificacion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando montas el ejercicio de planificacion y tienes que decidir hasta donde mirar, que parte de lo que salga se pone en marcha, y cada cuanto se repite el ejercicio.",
+      "texto_nuevo": "Cuando montas el ejercicio de planificación y tienes que decidir hasta dónde mirar, qué parte de lo que salga se pone en marcha, y cada cuánto se repite el ejercicio.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 08, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 08)",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Fija tu Horizonte de Planificación"
+}

@@ -1,0 +1,266 @@
+{
+  "node_id": "crear_tarjeta_puntuacion_puesto",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Crear la tarjeta de puntuación de un puesto, con sus cuatro pasos",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "El primer fallo al contratar llega antes de ver a ningún candidato: no tener del todo claro qué quieres que logre la persona. Puede que tengas una idea vaga, que otros en tu equipo tengan la suya, igual de vaga, y lo más probable es que no coincidan. La tarjeta de puntuación pone por escrito la misión del puesto, los resultados que hay que conseguir y las competencias que encajan con el papel y con la cultura de tu empresa. Juntos describen qué debe lograr alguien y cómo, igual que un plano antes de construir una casa, y ligan con claridad a las personas que contratas con tu estrategia.",
+  "notas_extraccion": "Es la cabeza de la serie numerada del recuadro How to Create a Scorecard, y a la vez el primero de los cuatro pasos del metodo A de ghSMART. La tarjeta de puntuacion es el plano del exito: coge la definicion teorica de un jugador A y la pone en terminos practicos para el puesto concreto que hay que cubrir. Se compone de tres partes, la mision del puesto, los resultados que hay que lograr y las competencias, y juntas describen el desempeño A del papel, o sea que tiene que lograr una persona y como. Los autores lo comparan con el plano del arquitecto: nadie encargaria una casa sin plano, y nadie deberia contratar sin este. El caso que el libro pone con su nombre es el de Sewickley Academy, un colegio independiente de las afueras de Pittsburgh que encargo a ghSMART la seleccion de un nuevo director: el consejo definio la mision del puesto, tres resultados principales y unas pocas competencias que importaban de verdad, y al comparar la trayectoria de los tres candidatos contra la tarjeta descubrio que el mejor encaje era Kolia O'Connor, al que habia descartado de entrada por parecerle demasiado corporativo y agresivo. El otro caso, el que abre el capitulo, es el de la institucion financiera global donde el directivo y su jefe descubrieron en la misma sala que querian dos puestos distintos con el mismo nombre, y el responsable de la contratacion paro una oferta que estaba a punto de hacer.",
+  "pasos_accionables": [
+    "Redacta la misión: una declaración corta, de una a cinco frases, que describa por qué existe el puesto. Por ejemplo: la misión del representante de atención al cliente es ayudar a los clientes a resolver sus dudas y quejas con el máximo nivel de cortesía posible.",
+    "Define los resultados: de tres a ocho resultados específicos y objetivos que la persona tiene que lograr para alcanzar un desempeño A. Por ejemplo: mejorar la satisfacción del cliente en una escala de diez puntos, de 7,1 a 9,0, antes del 31 de diciembre.",
+    "Identifica las competencias del puesto, tantas como te parezcan apropiadas, para describir los comportamientos que alguien tiene que demostrar para lograr esos resultados. Después identifica de cinco a ocho competencias que describan tu cultura y ponlas en todas las tarjetas de puntuación. Por ejemplo: eficiencia, honestidad, altos estándares y mentalidad de servicio al cliente.",
+    "Asegura la alineación y comunica: pon a prueba la tarjeta comparándola con el plan de negocio y con las tarjetas de puntuación de las personas que van a relacionarse con el puesto, comprueba que hay coherencia y alineación, y después comparte la tarjeta con las partes a las que corresponda, incluidos los pares y los reclutadores."
+  ],
+  "entregable_esperado": "La tarjeta de puntuación del puesto escrita, con sus tres partes: la misión del puesto, los resultados que hay que lograr y las competencias que encajan a la vez con la cultura de la empresa y con el papel.",
+  "nodos_previos": [
+    "aplicar_metodo_ghsmart_contratacion",
+    "contratar_por_fortaleza"
+  ],
+  "nodos_siguientes": [
+    "alinear_comunicar_tarjeta_puntuacion",
+    "definir_resultados_tarjeta_puntuacion",
+    "identificar_competencias_tarjeta_puntuacion",
+    "redactar_mision_tarjeta_puntuacion",
+    "respetar_cautelas_legales_contratacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando vas a contratar a alguien para un puesto y todavía no está definido con claridad qué quieres que esa persona logre. Es el primer punto de fallo de la contratación: no tener meridianamente claro qué quieres que consiga la persona que contratas, mientras es probable que los demás del equipo tengan sus propias nociones vagas, que seguramente no coinciden con la tuya."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-crear_tarjeta_puntuacion_puesto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "El primer fallo al contratar llega antes de ver a ningún candidato: no tener del todo claro qué quieres que logre la persona. Puede que tengas una idea vaga, que otros en tu equipo tengan la suya, igual de vaga, y lo más probable es que no coincidan. La tarjeta de puntuación pone por escrito la misión del puesto, los resultados que hay que conseguir y las competencias que encajan con el papel y con la cultura de tu empresa. Juntas describen qué debe lograr alguien y cómo, igual que un plano antes de construir una casa, y ligan con claridad a las personas que contratas con tu estrategia.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_03.md",
+          "lineas": "9-29"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Objecion sostenida: 'You may... are likely... chances are high' de la 23 quedó como hecho y 'así todos buscan a la misma persona' no está en las líneas. La propuesta devuelve la gradación de matices y cierra con la ligazón a la estrategia de la 29.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)"
+    },
+    {
+      "id": "m11-limpieza-crear_tarjeta_puntuacion_puesto-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Crear la tarjeta de puntuacion de un puesto, con sus cuatro pasos",
+      "texto_nuevo": "Crear la tarjeta de puntuación de un puesto, con sus cuatro pasos",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_tarjeta_puntuacion_puesto-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Redacta la mision: una declaracion corta, de una a cinco frases, que describa por que existe el puesto. El ejemplo del libro: la mision del representante de atencion al cliente es ayudar a los clientes a resolver sus dudas y quejas con el maximo nivel de cortesia posible.",
+      "texto_nuevo": "Redacta la misión: una declaración corta, de una a cinco frases, que describa por qué existe el puesto. Por ejemplo: la misión del representante de atención al cliente es ayudar a los clientes a resolver sus dudas y quejas con el máximo nivel de cortesía posible.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El ejemplo del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_tarjeta_puntuacion_puesto-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Define los resultados: de tres a ocho resultados especificos y objetivos que la persona tiene que lograr para alcanzar un desempeño A. El ejemplo del libro: mejorar la satisfaccion del cliente en una escala de diez puntos, de 7,1 a 9,0, antes del 31 de diciembre.",
+      "texto_nuevo": "Define los resultados: de tres a ocho resultados específicos y objetivos que la persona tiene que lograr para alcanzar un desempeño A. Por ejemplo: mejorar la satisfacción del cliente en una escala de diez puntos, de 7,1 a 9,0, antes del 31 de diciembre.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El ejemplo del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_tarjeta_puntuacion_puesto-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Identifica las competencias del puesto, tantas como te parezcan apropiadas, para describir los comportamientos que alguien tiene que demostrar para lograr esos resultados. Despues identifica de cinco a ocho competencias que describan tu cultura y ponlas en todas las tarjetas de puntuacion. El ejemplo del libro: eficiencia, honestidad, altos estandares y mentalidad de servicio al cliente.",
+      "texto_nuevo": "Identifica las competencias del puesto, tantas como te parezcan apropiadas, para describir los comportamientos que alguien tiene que demostrar para lograr esos resultados. Después identifica de cinco a ocho competencias que describan tu cultura y ponlas en todas las tarjetas de puntuación. Por ejemplo: eficiencia, honestidad, altos estándares y mentalidad de servicio al cliente.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El ejemplo del libro"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_tarjeta_puntuacion_puesto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegura la alineacion y comunica: somete la tarjeta a prueba de presion comparandola con el plan de negocio y con las tarjetas de puntuacion de las personas que van a relacionarse con el puesto, comprueba que hay coherencia y alineacion, y despues comparte la tarjeta con las partes relevantes, incluidos los pares y los reclutadores.",
+      "texto_nuevo": "Asegura la alineación y comunica: somete la tarjeta a prueba de presión comparándola con el plan de negocio y con las tarjetas de puntuación de las personas que van a relacionarse con el puesto, comprueba que hay coherencia y alineación, y después comparte la tarjeta con las partes relevantes, incluidos los pares y los reclutadores.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_tarjeta_puntuacion_puesto-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La tarjeta de puntuacion del puesto escrita, con sus tres partes: la mision del puesto, los resultados que hay que lograr y las competencias que encajan a la vez con la cultura de la empresa y con el papel.",
+      "texto_nuevo": "La tarjeta de puntuación del puesto escrita, con sus tres partes: la misión del puesto, los resultados que hay que lograr y las competencias que encajan a la vez con la cultura de la empresa y con el papel.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 25, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-crear_tarjeta_puntuacion_puesto-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando vas a contratar a alguien para un puesto y todavia no esta definido con claridad que quieres que esa persona logre. El libro lo pone como el primer punto de fallo de la contratacion: no tener meridianamente claro que quieres que consiga la persona que contratas, mientras los demas del equipo cargan con sus propias nociones vagas que probablemente no coinciden con la tuya.",
+      "texto_nuevo": "Cuando vas a contratar a alguien para un puesto y todavía no está definido con claridad qué quieres que esa persona logre. Es el primer punto de fallo de la contratación: no tener meridianamente claro qué quieres que consiga la persona que contratas, mientras los demás del equipo cargan con sus propias nociones vagas que probablemente no coinciden con la tuya.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro lo pone como"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 25)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-crear_tarjeta_puntuacion_puesto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asegura la alineación y comunica: somete la tarjeta a prueba de presión comparándola con el plan de negocio y con las tarjetas de puntuación de las personas que van a relacionarse con el puesto, comprueba que hay coherencia y alineación, y después comparte la tarjeta con las partes relevantes, incluidos los pares y los reclutadores.",
+      "texto_nuevo": "Asegura la alineación y comunica: pon a prueba la tarjeta comparándola con el plan de negocio y con las tarjetas de puntuación de las personas que van a relacionarse con el puesto, comprueba que hay coherencia y alineación, y después comparte la tarjeta con las partes relevantes, incluidos los pares y los reclutadores.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "somete la tarjeta a prueba de presión"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'pressure-test'.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-crear_tarjeta_puntuacion_puesto-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando vas a contratar a alguien para un puesto y todavía no está definido con claridad qué quieres que esa persona logre. Es el primer punto de fallo de la contratación: no tener meridianamente claro qué quieres que consiga la persona que contratas, mientras los demás del equipo cargan con sus propias nociones vagas que probablemente no coinciden con la tuya.",
+      "texto_nuevo": "Cuando vas a contratar a alguien para un puesto y todavía no está definido con claridad qué quieres que esa persona logre. Es el primer punto de fallo de la contratación: no tener meridianamente claro qué quieres que consiga la persona que contratas, mientras es probable que los demás del equipo tengan sus propias nociones vagas, que seguramente no coinciden con la tuya.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_03.md 23",
+        "frase": "Others on your team are likely to have their own equally vague notions of what you want and need. But chances are high that your vague notions do not match theirs."
+      },
+      "decision": "auditoria completa M11 (matiz): 'are likely to have' vuelto hecho.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase2-crear_tarjeta_puntuacion_puesto-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Asegura la alineación y comunica: pon a prueba la tarjeta comparándola con el plan de negocio y con las tarjetas de puntuación de las personas que van a relacionarse con el puesto, comprueba que hay coherencia y alineación, y después comparte la tarjeta con las partes relevantes, incluidos los pares y los reclutadores.",
+      "texto_nuevo": "Asegura la alineación y comunica: pon a prueba la tarjeta comparándola con el plan de negocio y con las tarjetas de puntuación de las personas que van a relacionarse con el puesto, comprueba que hay coherencia y alineación, y después comparte la tarjeta con las partes a las que corresponda, incluidos los pares y los reclutadores.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "relevantes"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de \"relevant parties\".",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-crear_tarjeta_puntuacion_puesto-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El primer fallo al contratar llega antes de ver a ningún candidato: no tener del todo claro qué quieres que logre la persona. Puede que tengas una idea vaga, que otros en tu equipo tengan la suya, igual de vaga, y lo más probable es que no coincidan. La tarjeta de puntuación pone por escrito la misión del puesto, los resultados que hay que conseguir y las competencias que encajan con el papel y con la cultura de tu empresa. Juntas describen qué debe lograr alguien y cómo, igual que un plano antes de construir una casa, y ligan con claridad a las personas que contratas con tu estrategia.",
+      "texto_nuevo": "El primer fallo al contratar llega antes de ver a ningún candidato: no tener del todo claro qué quieres que logre la persona. Puede que tengas una idea vaga, que otros en tu equipo tengan la suya, igual de vaga, y lo más probable es que no coincidan. La tarjeta de puntuación pone por escrito la misión del puesto, los resultados que hay que conseguir y las competencias que encajan con el papel y con la cultura de tu empresa. Juntos describen qué debe lograr alguien y cómo, igual que un plano antes de construir una casa, y ligan con claridad a las personas que contratas con tu estrategia.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "Concordancia: el sujeto coordina misión, resultados y competencias, de distinto género, y pide masculino plural."
+      },
+      "decision": "auditoria completa M11 (ortografia): Concordancia: el sujeto coordina misión, resultados y competencias, de distinto género, y pide masculino plural.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Define la Tarjeta de Puntuación",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

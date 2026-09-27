@@ -1,0 +1,184 @@
+{
+  "node_id": "usar_lenguaje_no_discriminatorio_entrevista",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Usar lenguaje no discriminatorio en las entrevistas y en los formularios",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Un proceso de contratación justo elige a las personas según si es probable que puedan hacer el trabajo, y respetar la ley forma parte de hacerlo bien. El lenguaje es una de las cuatro áreas de cautela para mantenerte dentro de la ley. El cuidado tiene sitios concretos, la entrevista y los formularios escritos, y una fórmula concreta: decir él o ella, o usar una forma neutra, es mejor que dar por hecho que el puesto lo tiene que ocupar un hombre o una mujer. El lenguaje despectivo hacia cualquiera queda fuera siempre, sin excepciones.",
+  "notas_extraccion": "Es la tercera de las cuatro areas de cautela legal que el libro pide respetar. Es corta y aun asi trae inventario propio, que es lo que la separa de una postura: el libro nombra los dos sitios donde hay que mirar, las entrevistas y los formularios escritos, y da la formula concreta con la que se sustituye el supuesto, el o ella, o bien ellos, en vez de dar por hecho que el puesto lo va a desempenar un hombre o una mujer. Un lector que solo tuviera el mandato de usar lenguaje apropiado tendria que inventarse los dos sitios y la formula; aqui los pone el texto. La ultima instruccion, no usar nunca lenguaje despectivo hacia nadie, la introduce el libro con un obviamente que se recoge como lo que es, una prohibicion sin excepciones y no un consejo de estilo.",
+  "pasos_accionables": [
+    "Usa lenguaje no discriminatorio durante las entrevistas, el primero de los dos sitios donde hay que cuidarlo.",
+    "Úsalo también en los formularios escritos, el segundo sitio donde hay que cuidarlo.",
+    "Sustituye el supuesto de que un puesto lo tiene que desempeñar un hombre o una mujer por esta fórmula: él o ella, o bien una forma neutra como «la persona que ocupe el puesto».",
+    "No uses nunca lenguaje despectivo hacia nadie."
+  ],
+  "entregable_esperado": "Las entrevistas y los formularios escritos del proceso revisados y limpios de lenguaje que presuponga el sexo de quien va a ocupar el puesto o que resulte despectivo hacia nadie.",
+  "nodos_previos": [
+    "respetar_cautelas_legales_contratacion"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando preparas las entrevistas y los formularios escritos de un proceso de contratación. Es una de las cuatro áreas de cautela legal, y se aplica a los dos sitios a la vez."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-usar_lenguaje_no_discriminatorio_entrevista-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Un proceso de contratación justo elige a las personas según si es probable que puedan hacer el trabajo, y respetar la ley forma parte de hacerlo bien. El lenguaje es una de las cuatro áreas de cautela para mantenerte dentro de la ley. El cuidado tiene sitios concretos, la entrevista y los formularios escritos, y una fórmula concreta: decir él o ella, o ellos, es mejor que dar por hecho que el puesto lo tiene que ocupar un hombre o una mujer. El lenguaje despectivo hacia cualquiera queda fuera siempre, sin excepciones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "297-317"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La 311 solo dice que 'he or she' o 'they' es mejor que suponer el sexo, sin la razón de la relevancia que el actual le pega, y la 317 dice 'whether they are likely to be able to perform'. La propuesta devuelve el probable y da la razón que sí está en la 305 (áreas de cautela para estar dentro de la ley).",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)"
+    },
+    {
+      "id": "m11-limpieza-usar_lenguaje_no_discriminatorio_entrevista-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa lenguaje no discriminatorio durante las entrevistas, que es el primero de los dos sitios que el libro nombra.",
+      "texto_nuevo": "Usa lenguaje no discriminatorio durante las entrevistas, el primero de los dos sitios donde hay que cuidarlo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es el primero de los dos sitios que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_lenguaje_no_discriminatorio_entrevista-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usalo tambien en los formularios escritos, que es el segundo sitio que el libro nombra.",
+      "texto_nuevo": "Úsalo también en los formularios escritos, el segundo sitio donde hay que cuidarlo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es el segundo sitio que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_lenguaje_no_discriminatorio_entrevista-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sustituye el supuesto de que un puesto lo tiene que desempenar un hombre o una mujer por la formula que el libro da: el o ella, o bien ellos.",
+      "texto_nuevo": "Sustituye el supuesto de que un puesto lo tiene que desempeñar un hombre o una mujer por esta fórmula: él o ella, o bien ellos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la formula que el libro da"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-usar_lenguaje_no_discriminatorio_entrevista-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando preparas las entrevistas y los formularios escritos de un proceso de contratacion. Es la tercera de las cuatro areas de cautela legal, y se aplica a los dos sitios a la vez.",
+      "texto_nuevo": "Cuando preparas las entrevistas y los formularios escritos de un proceso de contratación. Es la tercera de las cuatro áreas de cautela legal, y se aplica a los dos sitios a la vez.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 28, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 28)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-usar_lenguaje_no_discriminatorio_entrevista-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Un proceso de contratación justo elige a las personas según si es probable que puedan hacer el trabajo, y respetar la ley forma parte de hacerlo bien. El lenguaje es una de las cuatro áreas de cautela para mantenerte dentro de la ley. El cuidado tiene sitios concretos, la entrevista y los formularios escritos, y una fórmula concreta: decir él o ella, o ellos, es mejor que dar por hecho que el puesto lo tiene que ocupar un hombre o una mujer. El lenguaje despectivo hacia cualquiera queda fuera siempre, sin excepciones.",
+      "texto_nuevo": "Un proceso de contratación justo elige a las personas según si es probable que puedan hacer el trabajo, y respetar la ley forma parte de hacerlo bien. El lenguaje es una de las cuatro áreas de cautela para mantenerte dentro de la ley. El cuidado tiene sitios concretos, la entrevista y los formularios escritos, y una fórmula concreta: decir él o ella, o usar una forma neutra, es mejor que dar por hecho que el puesto lo tiene que ocupar un hombre o una mujer. El lenguaje despectivo hacia cualquiera queda fuera siempre, sin excepciones.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "o ellos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'ellos' calca el 'they' singular inglés: en español es masculino plural y no evita presuponer el sexo; queda 'usar una forma neutra'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-usar_lenguaje_no_discriminatorio_entrevista-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Sustituye el supuesto de que un puesto lo tiene que desempeñar un hombre o una mujer por esta fórmula: él o ella, o bien ellos.",
+      "texto_nuevo": "Sustituye el supuesto de que un puesto lo tiene que desempeñar un hombre o una mujer por esta fórmula: él o ella, o bien una forma neutra como «la persona que ocupe el puesto».",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "o bien ellos"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): 'o bien ellos' calca el 'they' singular; se sustituye por una forma neutra con su ejemplo.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-usar_lenguaje_no_discriminatorio_entrevista-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando preparas las entrevistas y los formularios escritos de un proceso de contratación. Es la tercera de las cuatro áreas de cautela legal, y se aplica a los dos sitios a la vez.",
+      "texto_nuevo": "Cuando preparas las entrevistas y los formularios escritos de un proceso de contratación. Es una de las cuatro áreas de cautela legal, y se aplica a los dos sitios a la vez.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "El ordinal 'la tercera' no tiene antecedente en el nodo, que no enumera las áreas; se deja 'una de las cuatro áreas', como dice el resumen del propio nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): El ordinal 'la tercera' no tiene antecedente en el nodo, que no enumera las áreas; se deja 'una de las cuatro áreas', como dice el resumen del propio nodo.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Cuida tu Lenguaje al Entrevistar",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

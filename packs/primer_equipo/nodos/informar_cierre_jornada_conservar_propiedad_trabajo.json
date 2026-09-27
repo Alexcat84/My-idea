@@ -1,0 +1,290 @@
+{
+  "node_id": "informar_cierre_jornada_conservar_propiedad_trabajo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Informar al superior al cerrar la jornada sin cederle la propiedad del trabajo",
+  "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+  "resumen_teorico": "Cuando el cierre de jornada consiste en preguntarle al superior qué más necesita, la responsabilidad del trabajo pasa sin notarlo a él: es él quien repasa lo pendiente y quien se siente dueño de que salga. Si en cambio informas tú del estado de tu trabajo, de cuándo se verá el siguiente resultado y de lo que quedó sin hacer con su plan para reponerlo, la propiedad psicológica de la tarea se queda contigo. El superior sigue enterado, pero quien responde por tu trabajo eres tú, y así el liderazgo se reparte en todos los niveles.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_04.md, unidad Cap. 6, titulo textual Whatever They Tell Me to Do!. FRONTERA DENTRO DEL NODO, declarada aqui porque EXTRACTOR.md 10 la pide: los cinco pasos salen todos de la linea 35, que es la PIEZA P1 de la frontera publicada en esta vuelta para cap_04, 145 palabras, la unica pieza de todo el capitulo clasificada NODO. Los cinco pasos vienen de un solo parrafo del libro y por eso se funden en un candidato y no en cinco, por la repeticion interna de P.19: son las cuatro frases del mismo guion citado mas la frase que fija a quien pertenece la responsabilidad. POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 delante: el parrafo pone su propio guion, palabra por palabra, del reporte que el jefe de departamento tiene que dar, y ese guion nombra tres etapas una a una (el estado de un trabajo en curso, el proximo hito, y lo que quedo sin hacer con su plan de reponerlo), que son etapas de un reporte y no metas. No hay adjetivo de adecuacion en el sitio del criterio. EL CASO ENTRA COMO CONTEXTO Y NO COMO NODO PROPIO (manual 3.5): el dialogo previo con el segundo al mando y con el navegante, piezas residuo de las lineas 31 y 33 de la misma frontera, se queda fuera porque el guion generalizable esta entero en la linea 35 y el entregable no lleva ningun dato del caso, ni el nombre del segundo al mando, ni el del navegante, ni el del marinero cuya entrevista de calificacion quedo pendiente. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: la linea 41 generaliza el diagnostico de la estructura de lider a seguidores y la linea 47 compara este mismo capitulo con otros ejemplos del libro (la reunion rutinaria, el reparto de mensajes, la formacion), pero ninguna de las dos numera el cierre de jornada como una de varias partes con su cuenta, asi que esto no cablea ninguna arista D.37; y la busqueda de madre por lectura (seccion 11 de EXTRACTOR.md) no encuentra en los nodos ya minados de cap_03 ningun paso que nombre este cierre de jornada, asi que el nodo entra sin arista declarada, hermano de los de cap_03 bajo el mismo diagnostico de lider a seguidores, y su veredicto frente a ellos es SANO. CORRECCION DECLARADA DE LA VUELTA 78 de la linea serial, en la relectura de fidelidad entera que D.30 y D.58 mandan antes de la insercion (TAREA 2.3 del encargo de la 78), sin insertar nada. LOS PASOS 2 Y 4 TRAIAN UNA CLAUSULA PUENTE CADA UNO Y SE REESCRIBEN SIN BORRAR EL RASTRO. El paso 2 decia: Reporta primero el estado de un trabajo en curso con signo positivo, nombrando el propio trabajo. Hoy dice lo mismo sin con signo positivo. LA CLAUSULA QUE SE RETIRA la pone el extractor y no el libro: el coming along fine de L35 es el ejemplo del guion, y L35 no pide que el estado que se reporta sea bueno. El paso 4 decia: Si algo quedo sin hacer, dilo sin disculpa vacia y da el plan de cuando se hara. Hoy dice: Si algo quedo sin hacer, dilo y da el plan de cuando se hara. LA CLAUSULA QUE SE RETIRA, sin disculpa vacia, tampoco la pone el libro: L35 da lo pendiente y su plan de reponerlo, y ninguna linea del capitulo habla de disculpas. DONDE ARRIBA DICE RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 5 pasos, 5 TRANSCRIPCION, 0 PUENTE, la cifra de la relectura de la vuelta 78 es 5 pasos, 3 TRANSCRIPCION y 2 PUENTE sobre el texto viejo, y 5 TRANSCRIPCION y 0 PUENTE despues de esta correccion (.v78ext/fidelidad.tsv). La cifra vieja no se borra, manual principio 6.",
+  "pasos_accionables": [
+    "Al terminar el día, preséntate ante tu superior para el cierre de jornada, pero no le preguntes qué más necesita de ti: repórtale tu trabajo. Presentarte a la salida está bien; lo que cambia es la forma.",
+    "Informa primero el estado de un trabajo en curso, nombrando el propio trabajo; por ejemplo, que las cartas de navegación para la salida de la semana que viene van bien.",
+    "Di cuándo se verá el resultado o el próximo hito de ese trabajo; siguiendo el ejemplo, que mañana podrás enseñarle el plan aproximado al capitán.",
+    "Si algo quedó sin hacer, dilo y da el plan de cuándo se hará; por ejemplo, que no pudiste ver a un suboficial para su entrevista de calificación, pero que lo recuperarás mañana.",
+    "Cierra el informe dejando la propiedad de la tarea donde corresponde: quien responde por tu trabajo eres tú, no tu superior. Así el liderazgo queda repartido en todos los niveles."
+  ],
+  "entregable_esperado": "El informe verbal de cierre de jornada que deja constancia de que la tarea sigue siendo tuya: el estado de lo que avanza, cuándo se verá el resultado, y qué quedó sin hacer con su plan de reponerlo.",
+  "nodos_previos": [
+    "eliminar_seguimiento_descendente_responsabilizar_dueno"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando vas a cerrar el día con tu superior, en el momento del informe de salida, y quieres dejar constancia de tu trabajo sin que la responsabilidad de tu tarea se traslade a él."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-informar_cierre_jornada_conservar_propiedad_trabajo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando el cierre de jornada consiste en preguntarle al superior qué más necesita, la responsabilidad del trabajo pasa sin notarlo a él: es él quien repasa lo pendiente y quien se siente dueño de que salga. Si en cambio informas tú del estado de tu trabajo, de cuándo se verá el siguiente resultado y de lo que quedó sin hacer con su plan para reponerlo, la propiedad psicológica de la tarea se queda contigo. El superior sigue enterado, pero quien responde por tu trabajo eres tú, y así el liderazgo se reparte en todos los niveles.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/marquet_turn_the_ship/cap_04.md",
+          "lineas": "33-35"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)"
+    },
+    {
+      "id": "m11-limpieza-informar_cierre_jornada_conservar_propiedad_trabajo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al terminar el dia, presentate ante tu superior para el cierre de jornada, pero no le preguntes que mas necesita de ti: reportale tu trabajo. El texto lo dice asi: checking out is fine, I said, but it should go more like this.",
+      "texto_nuevo": "Al terminar el día, preséntate ante tu superior para el cierre de jornada, pero no le preguntes qué más necesita de ti: repórtale tu trabajo. Presentarte a la salida está bien; lo que cambia es la forma.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: checking out is fine, I said, but it should go more like this."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-informar_cierre_jornada_conservar_propiedad_trabajo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporta primero el estado de un trabajo en curso, nombrando el propio trabajo. El texto pone el ejemplo: the charts for next week's underway are coming along fine.",
+      "texto_nuevo": "Reporta primero el estado de un trabajo en curso, nombrando el propio trabajo; por ejemplo, que las cartas de navegación para la salida de la semana que viene van bien.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto pone el ejemplo: the charts for next week's underway are coming along fine."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-informar_cierre_jornada_conservar_propiedad_trabajo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Di cuando se vera el resultado o el proximo hito de ese trabajo. El texto sigue el mismo ejemplo: we'll be able to show the rough plan to the captain tomorrow.",
+      "texto_nuevo": "Di cuándo se verá el resultado o el próximo hito de ese trabajo; siguiendo el ejemplo, que mañana podrás enseñarle el plan aproximado al capitán.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto sigue el mismo ejemplo: we'll be able to show the rough plan to the captain tomorrow."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-informar_cierre_jornada_conservar_propiedad_trabajo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si algo quedo sin hacer, dilo y da el plan de cuando se hara. El texto cierra el ejemplo asi: I wasn't able to see Petty Officer Smith for his qualification interview but will be able to make that up tomorrow.",
+      "texto_nuevo": "Si algo quedó sin hacer, dilo y da el plan de cuándo se hará; por ejemplo, que no pudiste ver a un suboficial para su entrevista de calificación, pero que lo recuperarás mañana.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto cierra el ejemplo asi: I wasn't able to see Petty Officer Smith for his qualification interview but will be able to make that up tomorrow."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-informar_cierre_jornada_conservar_propiedad_trabajo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cierra el reporte dejando la propiedad de la tarea donde corresponde: quien responde por el trabajo del jefe de departamento es el jefe de departamento, no el segundo al mando. El texto lo dice asi: in this scenario, it is the department head, not the XO, who is responsible for the department head's job. This is leadership at all levels.",
+      "texto_nuevo": "Cierra el reporte dejando la propiedad de la tarea donde corresponde: quien responde por el trabajo del jefe de departamento es el jefe de departamento, no el segundo al mando. Así el liderazgo queda repartido en todos los niveles.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: in this scenario, it is the department head, not the XO, who is responsible for the department head's job. This is leadership at all levels."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-informar_cierre_jornada_conservar_propiedad_trabajo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El reporte verbal de cierre de jornada que deja constancia de que la tarea sigue siendo tuya: el estado de lo que avanza, cuando se vera el resultado, y que quedo sin hacer con su plan de reponerlo.",
+      "texto_nuevo": "El reporte verbal de cierre de jornada que deja constancia de que la tarea sigue siendo tuya: el estado de lo que avanza, cuándo se verá el resultado, y qué quedó sin hacer con su plan de reponerlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-informar_cierre_jornada_conservar_propiedad_trabajo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando vas a cerrar el dia con tu superior, en el momento del reporte de salida (checkout), y quieres dejar constancia de tu trabajo sin que la responsabilidad de tu tarea se traslade a el.",
+      "texto_nuevo": "Cuando vas a cerrar el día con tu superior, en el momento del reporte de salida, y quieres dejar constancia de tu trabajo sin que la responsabilidad de tu tarea se traslade a él.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "(checkout)"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-informar_cierre_jornada_conservar_propiedad_trabajo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "El reporte verbal de cierre de jornada que deja constancia de que la tarea sigue siendo tuya: el estado de lo que avanza, cuándo se verá el resultado, y qué quedó sin hacer con su plan de reponerlo.",
+      "texto_nuevo": "El informe verbal de cierre de jornada que deja constancia de que la tarea sigue siendo tuya: el estado de lo que avanza, cuándo se verá el resultado, y qué quedó sin hacer con su plan de reponerlo.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El reporte verbal"
+        ]
+      },
+      "decision": "pase de glosario (reportar (informar)): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-glosario-informar_cierre_jornada_conservar_propiedad_trabajo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reporta primero el estado de un trabajo en curso, nombrando el propio trabajo; por ejemplo, que las cartas de navegación para la salida de la semana que viene van bien.",
+      "texto_nuevo": "Informa primero el estado de un trabajo en curso, nombrando el propio trabajo; por ejemplo, que las cartas de navegación para la salida de la semana que viene van bien.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Reporta primero"
+        ]
+      },
+      "decision": "pase de glosario (reportar (informar)): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-glosario-informar_cierre_jornada_conservar_propiedad_trabajo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cierra el reporte dejando la propiedad de la tarea donde corresponde: quien responde por el trabajo del jefe de departamento es el jefe de departamento, no el segundo al mando. Así el liderazgo queda repartido en todos los niveles.",
+      "texto_nuevo": "Cierra el informe dejando la propiedad de la tarea donde corresponde: quien responde por el trabajo del jefe de departamento es el jefe de departamento, no el segundo al mando. Así el liderazgo queda repartido en todos los niveles.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Cierra el reporte"
+        ]
+      },
+      "decision": "pase de glosario (reportar (informar)): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-glosario-informar_cierre_jornada_conservar_propiedad_trabajo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando vas a cerrar el día con tu superior, en el momento del reporte de salida, y quieres dejar constancia de tu trabajo sin que la responsabilidad de tu tarea se traslade a él.",
+      "texto_nuevo": "Cuando vas a cerrar el día con tu superior, en el momento del informe de salida, y quieres dejar constancia de tu trabajo sin que la responsabilidad de tu tarea se traslade a él.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "del reporte de salida"
+        ]
+      },
+      "decision": "pase de glosario (reportar (informar)): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "ingles"
+      ]
+    },
+    {
+      "id": "m11-auditoria-informar_cierre_jornada_conservar_propiedad_trabajo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cierra el informe dejando la propiedad de la tarea donde corresponde: quien responde por el trabajo del jefe de departamento es el jefe de departamento, no el segundo al mando. Así el liderazgo queda repartido en todos los niveles.",
+      "texto_nuevo": "Cierra el informe dejando la propiedad de la tarea donde corresponde: quien responde por tu trabajo eres tú, no tu superior. Así el liderazgo queda repartido en todos los niveles.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "'jefe de departamento' y 'segundo al mando' son los cargos del submarino, no presentados; en el nodo son tú y tu superior."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'jefe de departamento' y 'segundo al mando' son los cargos del submarino, no presentados; en el nodo son tú y tu superior.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Informa sin Ceder tu Trabajo"
+}

@@ -1,0 +1,162 @@
+{
+  "node_id": "subir_productividad_gerencial_tres_vias",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Subir la productividad de un mando por sus tres vías: el ritmo, la palanca y la mezcla de actividades",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "La productividad de un mando es su resultado por cada unidad de tiempo trabajado, y ese resultado es la suma de lo que aporta cada actividad según su palanca, es decir, cuánto crece el resultado de la organización gracias a ella. Por eso la clave de un resultado alto es fijarte en la palanca de lo que haces durante el día. Hay tres maneras de mejorar la productividad: hacer tus actividades más deprisa, aumentar la palanca asociada a cada actividad y cambiar la mezcla, dejando las actividades de poca palanca para dedicarte a las de mucha.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_04.md, unidad Cap. 3, titulo textual Managerial Leverage. Sale de la PIEZA P18 de la frontera publicada en esta vuelta 46, L195 a L201, 62 palabras, y de ningun otro tramo. ESTO ES LA CABEZA DE UNA SERIE NUMERADA, y por eso existe como nodo: manual seccion 3 punto 4 manda un nodo por paso mas UNA cabeza, y jamas dos compresiones de la misma numeracion. La cabeza es esta ficha y no comprime ninguna de las tres vias: cada via se despliega en sus propios nodos, sacados de otros tramos de esta misma unidad. POR QUE ES D.37 Y NO D.29: EL TEXTO DICE CUANTAS PARTES TIENE Y LAS NOMBRA UNA A UNA, que es la condicion literal de D.37 tal como la corrigio el titular el 11 sep 2026 (la cuenta es condicion, no un adorno del ejemplo). El renglon es can be increased in three ways, y detras van los tres numerados. DE DONDE SALE CADA PASO, uno a uno: paso 1 de L195 (Managerial productivity, that is, the output of a manager per unit of time worked); paso 2 de L197 (Increasing the rate with which a manager performs his activities, speeding up his work); paso 3 de L199 (Increasing the leverage associated with the various managerial activities); paso 4 de L201 (Shifting the mix of a manager activities from those with lower to those with higher leverage). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. LO QUE NO ESCRIBO Y POR ESO NO ESTA AQUI: NO escribo COMO se ejecuta ninguna de las tres, porque este tramo no lo dice: lo dicen los tramos siguientes, y meterlo aqui seria la segunda compresion de la misma numeracion que el manual prohibe; NO escribo cual de las tres conviene primero, porque el libro solo dice Let us consider first the leverage, que es el orden de su exposicion y no una prelacion de ejecucion; NO escribo periodo, destinatario ni responsable. LAS ARISTAS D.37 QUE ESTE NODO ABRE, declaradas hoy y cableadas el dia de la insercion, que es lo que el encargo de esta vuelta manda: madre subir_productividad_gerencial_tres_vias paso 3, hijo la cabeza de las tres vias de alta palanca, que sale de L203 a L213 de esta misma unidad; madre paso 2, hijos los nodos del ritmo, que salen de L267 en adelante (el paso limitante de la jornada, agrupar tareas semejantes, el calendario como herramienta de planificacion y el inventario de proyectos discrecionales). LA TERCERA VIA, LA DE LA MEZCLA, NO TIENE HIJO Y LO DIGO: el libro la numera y no la despliega en ningun tramo de esta unidad, asi que su arista queda sin cablear y eso no es un olvido, es lo que el capitulo da. DE LOS HIJOS NOMBRADOS, EN ESTA VUELTA SOLO EXISTE LA CABEZA DE LA PALANCA: los del ritmo caen fuera del tramo que esta vuelta mina, y su arista se declara cuando se escriban, que es lo que dice la linea del tramo de mi reporte. DISCUTIBLE QUE MARCO ANTES DE SABER SI ACIERTO: un lector estricto puede decir que una cabeza de cuatro pasos que solo nombra sus tres vias es NOMBRAR y no PROCEDIMENTAR, que es la vara madre de EXTRACTOR.md 9. Lo sostengo por el manual, que da a la cabeza de una serie numerada un sitio propio precisamente para que las partes no se coman la numeracion, y porque el paso 1 trae la definicion operativa (salida por unidad de tiempo) contra la que se mide si alguna de las tres vias funciono. Si cae, cae DENTRO de mi marcado. CORRECCION DECLARADA DE LA VUELTA 50, SIN BORRAR EL NUMERO VIEJO (manual principio 6, deuda d036, adjudicada en ACTA 48 seccion 48.5.a): donde esta ficha dice mas arriba que la PIEZA P18, L195 a L201, tiene 62 palabras, TIENE QUE LEERSE 60 palabras. La cifra buena es la que la frontera de HH.2.c publica para esta pieza, y no una tercera cifra mia: la recompute en la vuelta 50 con el mismo recuento de .v46/frontera.py linea 136 y me da 60, identica a la de la frontera. EL RENGLON DEL INSTRUMENTO QUE LO SOSTIENE, pegado (.v50/palabras_d036.txt): subir_productividad_gerencial_tres_vias P18 L195 a L201 dice 62 HH.2.c 60 cuento 60 la frontera manda. LO QUE ESTA CORRECCION NO TOCA: ni un paso, ni una atribucion, ni la frontera, que es precisamente la que sale bien. El numero viejo era un numero escrito a mano en la vuelta 46 que ni la frontera citada ni ningun recuento reproducen.",
+  "pasos_accionables": [
+    "Entiende la productividad de un mando como su resultado por unidad de tiempo trabajado.",
+    "Sube el ritmo con el que ejecutas tus actividades, o sea acelera tu trabajo.",
+    "Sube la palanca asociada a las distintas actividades de mando que haces.",
+    "Corre la mezcla de tus actividades desde las de menor palanca hacia las de mayor palanca."
+  ],
+  "entregable_esperado": "Tu resultado por unidad de tiempo trabajado subido por una de las tres vías nombradas, o por varias, con la vía elegida dicha por su nombre.",
+  "nodos_previos": [
+    "evaluar_directivo_resultados_fortaleza"
+  ],
+  "nodos_siguientes": [
+    "buscar_actividad_alta_palanca_tres_vias",
+    "auditar_calendario_reuniones_semana"
+  ],
+  "condiciones_activacion": [
+    "Cuando quieres que tu trabajo de mando rinda más y solo se te ocurre trabajar más horas, que no es ninguna de estas tres vías."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-subir_productividad_gerencial_tres_vias-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La productividad de un mando es su resultado por cada unidad de tiempo trabajado, y ese resultado es la suma de lo que aporta cada actividad según su palanca, es decir, cuánto crece el resultado de la organización gracias a ella. Por eso la clave de un resultado alto es fijarte en la palanca de lo que haces durante el día. Hay tres maneras de mejorar la productividad: hacer tus actividades más deprisa, aumentar la palanca asociada a cada actividad y cambiar la mezcla, dejando las actividades de poca palanca para dedicarte a las de mucha.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_04.md",
+          "lineas": "193-201"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: baranda residuo_corporativo de la casa (scripts/censo_duplicacion.py): el resumen nuevo no puede introducir 'tu organización'; 'tu equipo' es la voz de la casa y no cambia el sentido; pase de matices (ajeno): La objeción se sostiene: ni 'trabajar más horas no la sube' ni la utilidad de nombrarlas por separado salen de las líneas 193 a 201. La propuesta sustituye esa razón inventada por la que sí da la línea 193 (el resultado es la suma de actividades según su palanca, por eso la clave es fijarte en la palanca) y mide 543.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)"
+    },
+    {
+      "id": "m11-limpieza-subir_productividad_gerencial_tres_vias-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Subir la productividad de un mando por sus tres vias: el ritmo, la palanca y la mezcla de actividades",
+      "texto_nuevo": "Subir la productividad de un mando por sus tres vías: el ritmo, la palanca y la mezcla de actividades",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-subir_productividad_gerencial_tres_vias-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta la productividad de un mando como lo que el libro dice que es: su salida por unidad de tiempo trabajado.",
+      "texto_nuevo": "Entiende la productividad de un mando como su salida por unidad de tiempo trabajado.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "como lo que el libro dice que es"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "voz_de_libro"
+      ]
+    },
+    {
+      "id": "m11-limpieza-subir_productividad_gerencial_tres_vias-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu salida por unidad de tiempo trabajado subida por una de las tres vias nombradas, o por varias, con la via elegida dicha por su nombre.",
+      "texto_nuevo": "Tu salida por unidad de tiempo trabajado subida por una de las tres vías nombradas, o por varias, con la vía elegida dicha por su nombre.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 06, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-subir_productividad_gerencial_tres_vias-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando quieres que tu trabajo de mando rinda mas y solo se te ocurre trabajar mas horas, que no es ninguna de las tres vias que el libro cuenta.",
+      "texto_nuevo": "Cuando quieres que tu trabajo de mando rinda más y solo se te ocurre trabajar más horas, que no es ninguna de estas tres vías.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro cuenta"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 06)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-subir_productividad_gerencial_tres_vias-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Entiende la productividad de un mando como su salida por unidad de tiempo trabajado.",
+      "texto_nuevo": "Entiende la productividad de un mando como su resultado por unidad de tiempo trabajado.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "su salida"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"output\" es resultado, como dice el resumen.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-subir_productividad_gerencial_tres_vias-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Tu salida por unidad de tiempo trabajado subida por una de las tres vías nombradas, o por varias, con la vía elegida dicha por su nombre.",
+      "texto_nuevo": "Tu resultado por unidad de tiempo trabajado subido por una de las tres vías nombradas, o por varias, con la vía elegida dicha por su nombre.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Tu salida",
+          "subida"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"output\" es resultado, como en el paso 0.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Sube tu Productividad Directiva"
+}

@@ -1,0 +1,248 @@
+{
+  "node_id": "comprobar_gusto_trato_personas",
+  "fase_proyecto": "ideacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Comprobar si te gusta hablar con la gente",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "La gestión no se separa del equipo: buena parte del puesto es escuchar y hablar con las personas que dependen de ti para que puedan prosperar. De ahí la prueba: imagina que el 70 por ciento de tu día se va en reuniones. La cifra puede ser exagerada; lo que cuenta es tu primera reacción. Si piensas «sin problema», es probable que el trato con otros te dé energía; si piensas «suena horrible», probablemente la gestión diaria te resulte dura. No es un examen de extroversión: lo que hace poco probable que el puesto te encaje es querer jornadas de concentración larga, tranquila y sin interrupciones.",
+  "notas_extraccion": "Es la segunda de las tres preguntas con las que el capitulo cierra, y la unica de las tres que trae un instrumento de medida propio: una pregunta hipotetica con una cifra dentro, el 70 por ciento del dia en reuniones, cuya funcion el libro explica sin que haya que suponerla, porque dice a continuacion que ese numero puede ser una exageracion. Lo que se mide no es la cifra sino la reaccion inmediata, y el libro escribe las dos reacciones posibles con sus palabras, sin problema y vaya, eso suena horrible, y lo que cada una significa. El ultimo paso es una correccion que el libro se hace a si mismo para que la prueba no se lea como un test de extroversion: la propia autora dice que no lo es, y nombra a Steven Spielberg y a Eleanor Roosevelt como directivos que tampoco lo eran. Lo que el libro NO dice, y por eso no esta escrito aqui, es que hacer si la reaccion queda en medio, ni cuanto pesa esta pregunta frente a las otras dos.",
+  "pasos_accionables": [
+    "Parte de que no puedes separar la gestión del equipo, así que como directivo vas a tener que pasar mucho tiempo con otras personas: buena parte de tu responsabilidad es asegurarte de que quienes dependen de ti puedan prosperar, y eso hace que escucharlos y hablar con ellos sean parte central del trabajo.",
+    "Hazte la prueba: si te dijeran que el 70 por ciento de tu día lo vas a pasar en reuniones, ¿cuál sería tu reacción inmediata?",
+    "Toma el número por lo que es: puede ser una exageración, y lo que se mide con él es tu primer pensamiento, no la cifra.",
+    "Si lo primero que piensas es que no hay problema, eres de los que probablemente sacan energía del trato con otros.",
+    "Si lo primero que piensas es que eso suena horrible, probablemente vas a encontrar duro el día a día de la gestión.",
+    "No conviertas la prueba en un examen de extroversión: no hace falta ser extrovertido, y lo que probablemente no encaja con el puesto es otra cosa, que lo que aspiras a tener en una jornada sean bloques largos e ininterrumpidos de concentración tranquila."
+  ],
+  "entregable_esperado": "Tu reacción inmediata a la prueba leída y anotada, y con ella si probablemente eres de los que sacan energía del trato con otros o de los que van a encontrar duro el día a día de la gestión.",
+  "nodos_previos": [
+    "responder_tres_preguntas_vocacion_directiva"
+  ],
+  "nodos_siguientes": [
+    "probar_gestion_antes_decidir"
+  ],
+  "condiciones_activacion": [
+    "Cuando te preguntas si la gestión es tu camino y tienes que saber si vas a sacar energía o a perderla en un trabajo que consiste en gran medida en escuchar y hablar con otros."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-comprobar_gusto_trato_personas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La gestión no se separa del equipo: buena parte del puesto es escuchar y hablar con las personas que dependen de ti para que puedan prosperar. De ahí la prueba: imagina que el 70 por ciento de tu día se va en reuniones. La cifra puede ser exagerada; lo que cuenta es tu primera reacción. Si piensas sin problema, es probable que el trato con otros te dé energía; si piensas que suena horrible, probablemente la gestión diaria te resulte dura. No es un examen de extroversión: lo que hace poco probable que el puesto te encaje es querer jornadas de concentración larga, tranquila y sin interrupciones.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_02.md",
+          "lineas": "217-223"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (matiz): Se sostiene: 'likely to get energy', 'probably find... challenging' y 'isn't likely to suit you' (l.221-223) quedaron como hechos, y 'te la quita' no está. La propuesta devuelve los tres matices y mantiene que lo medido es la primera reacción y no la cifra; mide 600.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)"
+    },
+    {
+      "id": "m11-limpieza-comprobar_gusto_trato_personas-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Parte de que no puedes separar la gestion del equipo, asi que como directivo vas a tener que pasar mucho tiempo con otras personas: buena parte de tu responsabilidad es asegurarte de que quienes dependen de ti puedan prosperar, y eso hace que escucharlos y hablar con ellos sean parte central del trabajo.",
+      "texto_nuevo": "Parte de que no puedes separar la gestión del equipo, así que como directivo vas a tener que pasar mucho tiempo con otras personas: buena parte de tu responsabilidad es asegurarte de que quienes dependen de ti puedan prosperar, y eso hace que escucharlos y hablar con ellos sean parte central del trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_gusto_trato_personas-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Hazte la prueba: si te dijeran que el 70 por ciento de tu dia lo vas a pasar en reuniones, cual seria tu reaccion inmediata.",
+      "texto_nuevo": "Hazte la prueba: si te dijeran que el 70 por ciento de tu día lo vas a pasar en reuniones, ¿cuál sería tu reacción inmediata?",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_gusto_trato_personas-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Toma el numero por lo que es: puede ser una exageracion, y lo que se mide con el es tu primer pensamiento, no la cifra.",
+      "texto_nuevo": "Toma el número por lo que es: puede ser una exageración, y lo que se mide con él es tu primer pensamiento, no la cifra.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_gusto_trato_personas-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu primer pensamiento es sin problema, eres de los que probablemente sacan energia del trato con otros.",
+      "texto_nuevo": "Si lo primero que piensas es que no hay problema, eres de los que probablemente sacan energía del trato con otros.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_gusto_trato_personas-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu primer pensamiento es vaya, eso suena horrible, probablemente vas a encontrar duro el dia a dia de la gestion.",
+      "texto_nuevo": "Si lo primero que piensas es que eso suena horrible, probablemente vas a encontrar duro el día a día de la gestión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_gusto_trato_personas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No conviertas la prueba en un examen de extroversion: no hace falta ser extrovertido, y lo que desaconseja el papel es otra cosa, que lo que tu aspiras a tener en una jornada sean bloques largos e ininterrumpidos de concentracion tranquila.",
+      "texto_nuevo": "No conviertas la prueba en un examen de extroversión: no hace falta ser extrovertido, y lo que no encaja con el puesto es otra cosa, que lo que aspiras a tener en una jornada sean bloques largos e ininterrumpidos de concentración tranquila.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_gusto_trato_personas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu reaccion inmediata a la prueba leida y anotada, y con ella si eres de los que sacan energia del trato con otros o de los que van a encontrar duro el dia a dia de la gestion.",
+      "texto_nuevo": "Tu reacción inmediata a la prueba leída y anotada, y con ella si eres de los que sacan energía del trato con otros o de los que van a encontrar duro el día a día de la gestión.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 31, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-comprobar_gusto_trato_personas-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando te haces la segunda de las tres preguntas sobre si la gestion es tu camino y tienes que saber si vas a sacar energia o a perderla en un trabajo que consiste en gran medida en escuchar y hablar con otros.",
+      "texto_nuevo": "Cuando te preguntas si la gestión es tu camino y tienes que saber si vas a sacar energía o a perderla en un trabajo que consiste en gran medida en escuchar y hablar con otros.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "te haces la segunda de las tres preguntas sobre"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 31)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-comprobar_gusto_trato_personas-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No conviertas la prueba en un examen de extroversión: no hace falta ser extrovertido, y lo que no encaja con el puesto es otra cosa, que lo que aspiras a tener en una jornada sean bloques largos e ininterrumpidos de concentración tranquila.",
+      "texto_nuevo": "No conviertas la prueba en un examen de extroversión: no hace falta ser extrovertido, y lo que probablemente no encaja con el puesto es otra cosa, que lo que aspiras a tener en una jornada sean bloques largos e ininterrumpidos de concentración tranquila.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 223",
+        "frase": "but the role isn’t likely to suit you if what you aspire for in a workday is long, uninterrupted blocks of quiet focus."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice \"isn’t likely\"; el resumen ya lo conserva.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-comprobar_gusto_trato_personas-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Tu reacción inmediata a la prueba leída y anotada, y con ella si eres de los que sacan energía del trato con otros o de los que van a encontrar duro el día a día de la gestión.",
+      "texto_nuevo": "Tu reacción inmediata a la prueba leída y anotada, y con ella si probablemente eres de los que sacan energía del trato con otros o de los que van a encontrar duro el día a día de la gestión.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_02.md 221-223",
+        "frase": "If, on the other hand, your first thought is Wow, that sounds awful, then you'll probably find the day-to-day of management challenging."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro solo da probabilidades (likely to get energy, l. 221; you'll probably find it challenging, l. 223) y el entregable lo daba como diagnóstico seguro; pasos y resumen conservan el «probablemente».",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-comprobar_gusto_trato_personas-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La gestión no se separa del equipo: buena parte del puesto es escuchar y hablar con las personas que dependen de ti para que puedan prosperar. De ahí la prueba: imagina que el 70 por ciento de tu día se va en reuniones. La cifra puede ser exagerada; lo que cuenta es tu primera reacción. Si piensas sin problema, es probable que el trato con otros te dé energía; si piensas que suena horrible, probablemente la gestión diaria te resulte dura. No es un examen de extroversión: lo que hace poco probable que el puesto te encaje es querer jornadas de concentración larga, tranquila y sin interrupciones.",
+      "texto_nuevo": "La gestión no se separa del equipo: buena parte del puesto es escuchar y hablar con las personas que dependen de ti para que puedan prosperar. De ahí la prueba: imagina que el 70 por ciento de tu día se va en reuniones. La cifra puede ser exagerada; lo que cuenta es tu primera reacción. Si piensas «sin problema», es probable que el trato con otros te dé energía; si piensas «suena horrible», probablemente la gestión diaria te resulte dura. No es un examen de extroversión: lo que hace poco probable que el puesto te encaje es querer jornadas de concentración larga, tranquila y sin interrupciones.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "El pensamiento citado iba sin comillas y «si piensas sin problema» se leía como «sin dificultad»; las dos reacciones van entre comillas angulares. 600 caracteres medidos."
+      },
+      "decision": "auditoria completa M11 (ortografia): El pensamiento citado iba sin comillas y «si piensas sin problema» se leía como «sin dificultad»; las dos reacciones van entre comillas angulares. 600 caracteres medidos.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Comprueba si Disfrutas la Gente"
+}

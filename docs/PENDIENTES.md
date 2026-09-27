@@ -41,6 +41,12 @@ No bloquean la declaracion "saneado para el cliente" (nivel 1, `docs/SANEAMIENTO
 - **Que:** la voz de la casa (segunda persona, sin jerga sin explicar, sin anglicismos crudos) en los textos que ve el
   cliente. La ortografia se cerro en el nivel 1; la voz no.
 - **Como se cierra:** pasada de voz con la vara de la casa y correccion declarada, sin cambiar el sentido.
+- **Entrada del 28 sep 2026 (integracion del mundo 11): VOSEO en `preguntas_cache.json`.** La casa habla de tu
+  (BANCO, tuteo singular condicional) y el prompt del generador lo pide, pero Haiku vosea a veces. Medido con formas
+  inequivocas (imaginás, tenés, pensás, sentís, vos...): 199 preguntas en los dominios previos (core 77, quality 32,
+  environmental 29, health_safety 14, exportacion 10, franquicias 9, risk_management 4, entrega 3, seguridad_digital
+  2) y 15 en primer_equipo. Las 17 puertas del mundo 11 quedaron sin voseo tras su verificacion; el resto espera esta
+  pasada.
 
 ### Ficha `n2-muestra-anadidos-practicos` (abierta el 27 sep 2026)
 - **Que:** una MUESTRA con semilla de los anadidos practicos de resumenes y entregables (lo que el nodo agrega que su
@@ -649,6 +655,50 @@ Dos conceptos de quality se deprecaron de la selección en la re-voz (ago 2026)
 Reencuadrarlos a persona-sola habría sido escribir un nodo que la fuente no
 escribió. Siguen en el grafo (nadie se borra) y **su minería propia podrá
 renacerlos desde sus fuentes** cuando ese mundo exista.
+
+### Ficha `m11-aparcados-reextraccion` (abierta el 28 sep 2026, decisión del fundador)
+
+En la integración del mundo 11, seis nodos certificados se quedaron en la forja y no entraron al pack. No se borran:
+la lista, con el motivo de cada uno, es `docs/puente_forja/aparcados_mundo11.json`, y `scripts/importar_forja.py` la
+lee y la informa.
+
+- **Cinco aislados**, sin ninguna arista real tras las rondas de lectura y las verificaciones a ciegas: el Gate 0 no
+  admite un componente por nodo. `acoger_inspectores_externos_fuente_aprendizaje` (Marquet),
+  `aprovechar_formacion_reglada` (Zhuo), `diagnosticar_nivel_motivacion_reaccion_aumento_salario` (Grove),
+  `distinguir_perfil_guepardo_cordero` (Smart) y `manejar_contacto_fisico_regla_platino` (Scott).
+- **Uno que no es puerta legítima**: `responder_4_preguntas_estandares_objetivo_estrategico` (Gerber). La verificación
+  a ciegas de puertas lo dio por `no_corresponde`, porque su condición es el punto intermedio que deja un paso del
+  método que la extracción no sacó, no una situación que la persona cuente.
+
+**REEXTRACCIÓN DIRIGIDA, para después (no ahora):** volver a cada libro a buscar los nodos que faltan para enlazarlos,
+**empezando por el de los dos primeros estándares del Objetivo Estratégico de Gerber** (el dinero y si es una
+Oportunidad que Vale la Pena), que es el previo natural de `responder_4_preguntas`. Los nodos nuevos pasan su propia
+certificación (muestra ciega, 0 invenciones y 0 contrarios) y cada arista su verificación a ciegas con trampa sin
+marca. Un aparcado solo entra al pack cuando tenga una arista real. Si su disparador sigue siendo externo, entra como
+puerta, que es el criterio del fundador del 28 sep 2026: un nodo es puerta legítima si arranca con una situación que
+la persona cuenta y que ningún otro nodo produce.
+
+### Ficha `integrar-packs-orden-gate0` (abierta el 28 sep 2026, cazada integrando el mundo 11)
+
+`scripts/integrar_packs.py --ejecutar` no puede cerrar solo la integración de un mundo nuevo. Su paso (e) corre el
+Gate 0 completo, y desde el 8 de agosto el Gate exige que todo nodo activo tenga vector en
+`web/lib/assets/semantic_index.json` (commit 335453cc). El índice se reconstruye en el paso (d), después del (e), y el
+embebido previo del candidato (a-previo, 2 sep) solo vive en memoria, para la aduana. La última integración de
+mundos, compras y entrega, fue el 7 de agosto, un día antes del check. Tampoco se puede reindexar antes de arrancar:
+el paso (a) se niega si un candidato ya tiene vector.
+
+**Procedimiento usado en el mundo 11**, el remedio que el propio Gate escribe:
+
+1. `integrar_packs.py --ejecutar`: el paso (a) copia y el (e) para, con un único rojo, el de los vectores.
+2. `build_semantic_index_voyage.py`, `etiquetas_de_cara.py --aplicar` y `sync_assets_web.py`, en ese orden.
+3. `integrar_packs.py --ejecutar` reanuda: el (e) pasa entero y la línea sigue.
+
+Reanudar sin el paso 2 da un segundo rojo, el de los dos master_graph: el snapshot de antes del paso 6 ya trae los
+nodos nuevos y la web no.
+
+**Arreglo pendiente**, con test rojo primero: que la línea haga ella misma ese orden. Por ejemplo, un paso de índice
+entre (a) y (e) que compile el master sin Gate y reindexe, o un (e) con los candidatos de la integración en curso
+declarados y un Gate 0 final completo después de (f).
 
 ## Campaña fichada: `re-voz-de-hseq` — PRIORIDAD ALTA, PRE-BETA
 

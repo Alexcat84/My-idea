@@ -1,0 +1,285 @@
+{
+  "node_id": "identificar_temas_formacion_tarjetas_decision",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Identificar con un ejercicio de tarjetas los temas de formación que hacen falta para poder delegar una decisión concreta a un nivel de mando",
+  "fuente": "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet",
+  "resumen_teorico": "La formación vale la pena cuando sirve para poder delegar decisiones: más competencia técnica permite pasar más autoridad de decisión a un nivel, y decidir más genera compromiso e iniciativa. El ejercicio parte de esa relación. Primero el grupo escribe sobre qué temas podría decidir un nivel de mando concreto; luego, para un par de ellos, qué necesitaría saber técnicamente para hacerlo. Así la lista de formación nace de las decisiones que se quieren delegar, y al explicar ese razonamiento la gente entiende por qué va a formarse y quiere ir, porque ve su camino hacia más autoridad.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/marquet_turn_the_ship/cap_12.md, unidad Cap. 17, titulo textual \"We Learn\". FRONTERA: el nodo sale de la pieza P1 de la frontera de cap_12 publicada en esta vuelta, lineas 125 a 139 (ocho lineas contiguas), dentro del mecanismo \"We Learn (Everywhere, All the Time)\" (rotulo linea 107), bajo el subrotulo propio del libro \"Divest Control, Increase Competence\" (linea 121), introducido en la linea 123 como ejercicio (\"Here's something to try at your next leadership meeting or corporate off-site\"). POR QUE ES PROCEDIMIENTO Y NO CASO, con D.27 delante: las lineas 125 a 139 ponen su propio inventario de ETAPAS del ejercicio, numeradas una a una por el propio libro (repartir tarjetas, completar la frase, pegar y hacer pausa, reducir a un par de temas, preguntar que hace falta saber, volver a pegar y pausar, obtener la lista, comunicar el porque), sin adjetivo de adecuacion en el sitio del criterio. LO QUE SE DEJA FUERA, y por que: la cadena causal de las lineas 113 a 119 (el proposito de la formacion es aumentar la competencia, el resultado es poder delegar mas decision, mas decision produce compromiso) NO se mina, porque es un argumento explicativo sobre por que importa la formacion y no una serie de acciones que el lector ejecute; se sostiene como POSTURA en la frontera (piezas R53 a R56). El credo completo de Santa Fe (lineas 61 a 105) es CASO: contenido especifico de esa tripulacion (defensa de la Constitucion, historia de la fuerza submarina) que no se traduce en pasos propios de este nodo. DISCUTIBLE, MARCADO ANTES DE SABER SI ACIERTO: el nodo tiene ocho pasos, el mas largo de los tres candidatos de esta vuelta; si el auditor lee que pegar-y-pausar (pasos 3 y 6) son la misma etapa repetida dos veces y no dos etapas distintas, esto podria comprimirse a seis pasos sin perder informacion. Lo dejo en ocho porque el libro distingue la primera tanda de tarjetas (los temas a delegar) de la segunda (lo que hace falta saber para decidirlos), y son dos objetos de trabajo distintos aunque el verbo se repita. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 8 pasos, 8 TRANSCRIPCION, 0 PUENTE.",
+  "pasos_accionables": [
+    "Reparte un montón de tarjetas de cuatro por seis pulgadas y marcadores entre el grupo.",
+    "Empieza con esta frase para completar: «Nuestra empresa sería más efectiva si la dirección de [nivel] pudiera decidir sobre [tema]»; tú especificas el nivel de dirección y pides al grupo que rellene los temas.",
+    "Cuando tengas el conjunto de tarjetas, pégalas en la pared y haz una pausa; deja que la gente se pasee mirando lo que escribió.",
+    "Reduce la selección a un par de temas.",
+    "Haz esta pregunta al grupo: técnicamente, ¿qué necesitan saber las personas de este nivel de dirección para tomar esa decisión?",
+    "De nuevo, que respondan en las tarjetas, pégalas en la pared y haz otra pausa.",
+    "Con eso tendrás una lista de temas de formación pertinente, y podrás conectarla directamente con aumentar la capacidad de decisión y control de los empleados, en una palabra, con su empoderamiento.",
+    "Al montar la formación, no olvides comunicar al grupo este razonamiento, para que sepan por qué van a asistir y quieran ir, sabiendo que es su camino hacia más autoridad de decisión."
+  ],
+  "entregable_esperado": "Una lista pertinente de temas de formación, conectada directamente con las decisiones que se quiere que ese nivel de mando pueda tomar, comunicada al grupo junto con el motivo por el que se les está formando en eso.",
+  "nodos_previos": [
+    "ceder_control_reforzar_competencia_claridad",
+    "aplicar_ejercicio_codigo_genetico_control"
+  ],
+  "nodos_siguientes": [
+    "priorizar_lista_entrenamiento_subordinados"
+  ],
+  "condiciones_activacion": [
+    "En una reunión de liderazgo o un retiro corporativo donde se quiere averiguar qué decisiones podrían delegarse a un nivel de mando concreto y qué necesita saber técnicamente ese nivel para tomarlas bien."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La formación vale la pena cuando sirve para poder delegar decisiones: más competencia técnica permite pasar más autoridad de decisión a un nivel, y decidir más genera compromiso e iniciativa. El ejercicio parte de esa relación. Primero el grupo escribe sobre qué temas podría decidir un nivel de mando concreto; luego, para un par de ellos, qué necesitaría saber técnicamente para hacerlo. Así la lista de formación nace de las decisiones que se quieren delegar, y al explicar ese razonamiento la gente entiende por qué va a formarse y quiere ir, porque ve su camino hacia más autoridad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/marquet_turn_the_ship/cap_12.md",
+          "lineas": "109-139"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)"
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar con un ejercicio de tarjetas los temas de formacion que hacen falta para poder delegar una decision concreta a un nivel de mando",
+      "texto_nuevo": "Identificar con un ejercicio de tarjetas los temas de formación que hacen falta para poder delegar una decisión concreta a un nivel de mando",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reparte un monton de tarjetas de cuatro por seis pulgadas y marcadores entre el grupo. El texto lo dice asi: Hand out a bunch of four-by-six cards and markers.",
+      "texto_nuevo": "Reparte un montón de tarjetas de cuatro por seis pulgadas y marcadores entre el grupo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: Hand out a bunch of four-by-six cards and markers."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Empieza con esta frase para completar: 'Nuestra empresa seria mas efectiva si la direccion de [nivel] pudiera decidir sobre [tema]'; tu especificas el nivel de direccion y pides al grupo que rellene los temas. El texto lo dice asi: Start with this sentence completion: Our company would be more effective if [level] management could make decisions about [subject]. You specify the level of management but ask the group to fill in the subjects.",
+      "texto_nuevo": "Empieza con esta frase para completar: «Nuestra empresa sería más efectiva si la dirección de [nivel] pudiera decidir sobre [tema]»; tú especificas el nivel de dirección y pides al grupo que rellene los temas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: Start with this sentence completion: Our company would be more effective if [level] management could make decisions about [subject]. You specify the level of management but ask the group to fill in the subjects."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando tengas el conjunto de tarjetas, pegalas en la pared y haz una pausa; deja que la gente se pasee mirando lo que escribieron. El texto lo dice asi: Once you have the set of cards, post them on the wall, and go on break. Let people mill around looking at what they've written.",
+      "texto_nuevo": "Cuando tengas el conjunto de tarjetas, pégalas en la pared y haz una pausa; deja que la gente se pasee mirando lo que escribió.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: Once you have the set of cards, post them on the wall, and go on break. Let people mill around looking at what they've written."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reduce la seleccion a un par de temas. El texto lo dice asi: Down-select to a couple subjects.",
+      "texto_nuevo": "Reduce la selección a un par de temas.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: Down-select to a couple subjects."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz esta pregunta al grupo: tecnicamente, que necesitan saber las personas de este nivel de direccion para tomar esa decision? El texto lo dice asi: Ask this question: What, technically, do the people at this level of management need to know in order to make that decision?",
+      "texto_nuevo": "Haz esta pregunta al grupo: técnicamente, ¿qué necesitan saber las personas de este nivel de dirección para tomar esa decisión?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: Ask this question: What, technically, do the people at this level of management need to know in order to make that decision?"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "De nuevo, que respondan en las tarjetas, pegalas en la pared y haz otra pausa. El texto lo dice asi: Again, answer on the cards, post them, and go on break.",
+      "texto_nuevo": "De nuevo, que respondan en las tarjetas, pégalas en la pared y haz otra pausa.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: Again, answer on the cards, post them, and go on break."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Con eso tendras una lista de temas de formacion pertinente, y podras conectarla directamente con aumentar la capacidad de decision y control de los empleados, en una palabra, con su empoderamiento. El texto lo dice asi: Now you'll have a relevant list of topics for training, and you can directly connect the training topics to increased employee decision making and control, in a word, empowerment.",
+      "texto_nuevo": "Con eso tendrás una lista de temas de formación pertinente, y podrás conectarla directamente con aumentar la capacidad de decisión y control de los empleados, en una palabra, con su empoderamiento.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: Now you'll have a relevant list of topics for training, and you can directly connect the training topics to increased employee decision making and control, in a word, empowerment."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Al montar la formacion, no olvides comunicar al grupo este razonamiento, para que sepan por que van a asistir y quieran ir, sabiendo que es su camino hacia mas autoridad de decision. El texto lo dice asi: When you set up the training, don't forget to communicate this thought process to the group. That way they'll know why they are going to attend training and want to attend, knowing it's their path to greater decision-making authority.",
+      "texto_nuevo": "Al montar la formación, no olvides comunicar al grupo este razonamiento, para que sepan por qué van a asistir y quieran ir, sabiendo que es su camino hacia más autoridad de decisión.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El texto lo dice asi: When you set up the training, don't forget to communicate this thought process to the group. That way they'll know why they are going to attend training and want to attend, knowing it's their path to greater decision-making authority."
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista pertinente de temas de formacion, conectada directamente con las decisiones que se quiere que ese nivel de mando pueda tomar, comunicada al grupo junto con el motivo por el que se les esta formando en eso.",
+      "texto_nuevo": "Una lista pertinente de temas de formación, conectada directamente con las decisiones que se quiere que ese nivel de mando pueda tomar, comunicada al grupo junto con el motivo por el que se les está formando en eso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 11, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-identificar_temas_formacion_tarjetas_decision-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "En una reunion de liderazgo o un retiro corporativo (offsite) donde se quiere averiguar que decisiones podrian delegarse a un nivel de mando concreto y que necesita saber tecnicamente ese nivel para tomarlas bien.",
+      "texto_nuevo": "En una reunión de liderazgo o un retiro corporativo donde se quiere averiguar qué decisiones podrían delegarse a un nivel de mando concreto y qué necesita saber técnicamente ese nivel para tomarlas bien.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "(offsite)"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 11)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Forma para Delegar Decisiones",
+  "fuentes_internas": [
+    "Turn the Ship Around! A True Story of Turning Followers into Leaders - L. David Marquet"
+  ]
+}

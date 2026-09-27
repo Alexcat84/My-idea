@@ -1,0 +1,480 @@
+{
+  "node_id": "respetar_cuidar_persona_cargo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Respetar a la persona a tu cargo y cuidar de ella",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Cuidar a quien tienes a tu cargo no se puede fingir: las miles de señales que mandas sin darte cuenta delatan si de verdad crees que puede tener éxito. Cuidar no es darle siempre la razón ni excusar sus errores; es ayudarle a tener éxito y a sentirse realizado, aprender qué le importa y aceptar que a veces lo personal se mezcla con el trabajo. El respeto tiene que ser incondicional porque va con la persona entera, no con lo que rinde. Funciona por lo que devuelve: si siente que tu apoyo no depende de su rendimiento, te dirá la verdad cuando las cosas vayan mal.",
+  "notas_extraccion": "Es la primera de las cuatro acciones que el libro pide para ganarse la confianza, y la unica de las cuatro que no se ejecuta haciendo algo en un momento dado sino sosteniendo una manera de estar. El inventario propio del libro esta en el nucleo del nodo: los tres contenidos de lo que cuidar si significa, nombrados uno a uno, y las dos condiciones opuestas del ultimo paso. La distincion que el nodo transcribe y que es su doctrina es que apoyar no es dar la razon, razonada en el libro con el caso de las personas mas invertidas en el exito de la autora. Lo que el libro NO dice, y por eso no esta escrito aqui, es que hacer cuando el respeto incondicional choca con una decision de personal que ya esta tomada.",
+  "pasos_accionables": [
+    "Parte de la lección con la que un directivo veterano cerró un taller, alguien que en toda su trayectoria nunca perdió a nadie a su cargo por una oferta de la competencia: gestionar es cuidar.",
+    "No intentes fingirlo, porque se nota: nadie actúa tan bien como para controlar las miles de señales diminutas que manda sin darse cuenta con el lenguaje del cuerpo, y si no crees en el fondo que alguien puede tener éxito te será imposible transmitirle que crees en él.",
+    "No confundas apoyar y cuidar con darle siempre la razón o con excusar sus errores: hay quien ha visto en su propia vida que las personas más volcadas en ayudarle a tener éxito suelen ser también las que antes le dicen por qué creen que se equivoca.",
+    "Lo que sí significa cuidar es hacer lo que puedas para que la persona a tu cargo tenga éxito y se sienta realizada en su trabajo.",
+    "Significa también dedicar el tiempo necesario a aprender qué le importa.",
+    "Y significa entender que nadie es una persona distinta en el trabajo y en casa: a veces lo personal se mezcla con lo profesional, y eso está bien.",
+    "Haz que el respeto sea incondicional, porque tiene que ver con la persona entera y no con lo que hace por ti. Apoyar a quien le va de maravilla es fácil, y la prueba difícil es qué pasa cuando la persona se atasca.",
+    "Y ten claro lo que está en juego: si la persona a tu cargo siente que tu apoyo y tu respeto dependen de su rendimiento, le costará ser honesta contigo cuando las cosas vayan mal; si siente que te importa pase lo que pase, y que nada puede cambiar eso, ni siquiera el fracaso, lo que recibirás a cambio es honestidad."
+  ],
+  "entregable_esperado": "La persona a tu cargo recibiendo de ti apoyo y respeto que no dependen de su rendimiento, y devolviéndote honestidad cuando las cosas van mal.",
+  "nodos_previos": [
+    "ganar_confianza_personas_cargo"
+  ],
+  "nodos_siguientes": [
+    "cuidar_persona_completa_equipo"
+  ],
+  "condiciones_activacion": [
+    "Siempre que tengas a alguien a tu cargo, y con más motivo cuando esa persona se atasca, que es cuando el respeto se pone a prueba de verdad."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuidar a quien tienes a cargo no se puede fingir: las miles de señales que mandas sin darte cuenta delatan si de verdad crees que puede tener éxito. Cuidar no es darle siempre la razón ni excusar sus errores; es ayudarle a tener éxito y a sentirse realizado, aprender qué le importa y aceptar que lo personal se mezcla con el trabajo. El respeto tiene que ser incondicional porque va con la persona entera, no con lo que rinde. Funciona por lo que devuelve: si siente que tu apoyo no depende de su rendimiento, te dirá la verdad cuando las cosas vayan mal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_04.md",
+          "lineas": "103-117"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)"
+    },
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Parte de la leccion con la que un directivo veterano cerro un taller al que asistio la autora, y que en toda su trayectoria nunca perdio a nadie a cargo por una oferta de la competencia: gestionar es cuidar.",
+      "texto_nuevo": "Parte de la lección con la que un directivo veterano cerró un taller, alguien que en toda su trayectoria nunca perdió a nadie a cargo por una oferta de la competencia: gestionar es cuidar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "al que asistio la autora"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No intentes fingirlo, porque se nota: ninguno de nosotros actua tan bien como para controlar las miles de senales diminutas que mandamos sin darnos cuenta con el lenguaje del cuerpo, y si no crees en el fondo que alguien puede tener exito te sera imposible transmitirle que crees en el.",
+      "texto_nuevo": "No intentes fingirlo, porque se nota: ninguno de nosotros actúa tan bien como para controlar las miles de señales diminutas que mandamos sin darnos cuenta con el lenguaje del cuerpo, y si no crees en el fondo que alguien puede tener éxito te será imposible transmitirle que crees en él.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "No confundas apoyar y cuidar con darle siempre la razon o con excusar sus errores: las personas mas volcadas en ayudarte a ti a tener exito suelen ser tambien las que antes te dicen por que creen que te equivocas.",
+      "texto_nuevo": "No confundas apoyar y cuidar con darle siempre la razón o con excusar sus errores: las personas más volcadas en ayudarte a ti a tener éxito suelen ser también las que antes te dicen por qué creen que te equivocas.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lo que si significa cuidar es hacer lo que puedas para que tu persona a cargo tenga exito y se sienta realizada en su trabajo.",
+      "texto_nuevo": "Lo que sí significa cuidar es hacer lo que puedas para que tu persona a cargo tenga éxito y se sienta realizada en su trabajo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Significa tambien dedicar el tiempo necesario a aprender que le importa.",
+      "texto_nuevo": "Significa también dedicar el tiempo necesario a aprender qué le importa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y significa entender que no somos personas distintas en el trabajo y en casa: a veces lo personal se mezcla con lo profesional, y eso esta bien.",
+      "texto_nuevo": "Y significa entender que no somos personas distintas en el trabajo y en casa: a veces lo personal se mezcla con lo profesional, y eso está bien.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz que el respeto sea incondicional, porque va de la persona entera y no de lo que hace por ti. Apoyar al que lo esta petando es facil, y la prueba dificil es que pasa cuando la persona se atasca.",
+      "texto_nuevo": "Haz que el respeto sea incondicional, porque va de la persona entera y no de lo que hace por ti. Apoyar a quien le va de maravilla es fácil, y la prueba difícil es qué pasa cuando la persona se atasca.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo esta petando"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Y ten claro lo que esta en juego: si tu persona a cargo siente que tu apoyo y tu respeto dependen de su rendimiento, le costara ser honesta contigo cuando las cosas vayan mal; si siente que te importa pase lo que pase, y que nada puede cambiar eso, ni siquiera el fracaso, lo que recibiras a cambio es honestidad.",
+      "texto_nuevo": "Y ten claro lo que está en juego: si tu persona a cargo siente que tu apoyo y tu respeto dependen de su rendimiento, le costará ser honesta contigo cuando las cosas vayan mal; si siente que te importa pase lo que pase, y que nada puede cambiar eso, ni siquiera el fracaso, lo que recibirás a cambio es honestidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Tu persona a cargo recibiendo de ti apoyo y respeto que no dependen de su rendimiento, y devolviendote honestidad cuando las cosas van mal.",
+      "texto_nuevo": "Tu persona a cargo recibiendo de ti apoyo y respeto que no dependen de su rendimiento, y devolviéndote honestidad cuando las cosas van mal.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 39, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-respetar_cuidar_persona_cargo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Siempre que tengas a alguien a cargo, y con mas motivo cuando esa persona se atasca, que es donde el libro pone la prueba dificil del respeto.",
+      "texto_nuevo": "Siempre que tengas a alguien a cargo, y con más motivo cuando esa persona se atasca, que es cuando el respeto se pone a prueba de verdad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es donde el libro pone la prueba dificil del respeto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 39)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-respetar_cuidar_persona_cargo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "No intentes fingirlo, porque se nota: ninguno de nosotros actúa tan bien como para controlar las miles de señales diminutas que mandamos sin darnos cuenta con el lenguaje del cuerpo, y si no crees en el fondo que alguien puede tener éxito te será imposible transmitirle que crees en él.",
+      "texto_nuevo": "No intentes fingirlo, porque se nota: nadie actúa tan bien como para controlar las miles de señales diminutas que manda sin darse cuenta con el lenguaje del cuerpo, y si no crees en el fondo que alguien puede tener éxito te será imposible transmitirle que crees en él.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "ninguno de nosotros actúa",
+          "que mandamos sin darnos cuenta"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Primera persona del plural del libro ('None of us... we are sending').",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-respetar_cuidar_persona_cargo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "No confundas apoyar y cuidar con darle siempre la razón o con excusar sus errores: las personas más volcadas en ayudarte a ti a tener éxito suelen ser también las que antes te dicen por qué creen que te equivocas.",
+      "texto_nuevo": "No confundas apoyar y cuidar con darle siempre la razón o con excusar sus errores: hay quien ha visto que las personas más volcadas en ayudarle a tener éxito suelen ser también las que antes le dicen por qué creen que se equivoca.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 111",
+        "frase": "The people in my life who have been most invested in helping me succeed—folks like my parents, best friends, and managers—are often also the ones who most readily tell me why they think I’m wrong."
+      },
+      "decision": "auditoria completa M11 (matiz): Es la experiencia de la autora con su gente; el texto la afirmaba como lo que le pasa al lector.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-respetar_cuidar_persona_cargo-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y significa entender que no somos personas distintas en el trabajo y en casa: a veces lo personal se mezcla con lo profesional, y eso está bien.",
+      "texto_nuevo": "Y significa entender que nadie es una persona distinta en el trabajo y en casa: a veces lo personal se mezcla con lo profesional, y eso está bien.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "no somos personas distintas"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Primera persona del plural del libro ('we are not separate people').",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase2-respetar_cuidar_persona_cargo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "No confundas apoyar y cuidar con darle siempre la razón o con excusar sus errores: hay quien ha visto que las personas más volcadas en ayudarle a tener éxito suelen ser también las que antes le dicen por qué creen que se equivoca.",
+      "texto_nuevo": "No confundas apoyar y cuidar con darle siempre la razón o con excusar sus errores: hay quien ha visto en su propia vida que las personas más volcadas en ayudarle a tener éxito suelen ser también las que antes le dicen por qué creen que se equivoca.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase2/)",
+        "evidencia": "El \"le\" pasaba de la persona a cargo a quien lo ha visto sin marca; \"en su propia vida\" ancla el referente, como en el libro (the people in my life)."
+      },
+      "decision": "auditoria completa M11 (coherencia): El \"le\" pasaba de la persona a cargo a quien lo ha visto sin marca; \"en su propia vida\" ancla el referente, como en el libro (the people in my life).",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase3-respetar_cuidar_persona_cargo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuidar a quien tienes a cargo no se puede fingir: las miles de señales que mandas sin darte cuenta delatan si de verdad crees que puede tener éxito. Cuidar no es darle siempre la razón ni excusar sus errores; es ayudarle a tener éxito y a sentirse realizado, aprender qué le importa y aceptar que lo personal se mezcla con el trabajo. El respeto tiene que ser incondicional porque va con la persona entera, no con lo que rinde. Funciona por lo que devuelve: si siente que tu apoyo no depende de su rendimiento, te dirá la verdad cuando las cosas vayan mal.",
+      "texto_nuevo": "Cuidar a quien tienes a cargo no se puede fingir: las miles de señales que mandas sin darte cuenta delatan si de verdad crees que puede tener éxito. Cuidar no es darle siempre la razón ni excusar sus errores; es ayudarle a tener éxito y a sentirse realizado, aprender qué le importa y aceptar que a veces lo personal se mezcla con el trabajo. El respeto tiene que ser incondicional porque va con la persona entera, no con lo que rinde. Funciona por lo que devuelve: si siente que tu apoyo no depende de su rendimiento, te dirá la verdad cuando las cosas vayan mal.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_04.md 113",
+        "frase": "It means understanding that we are not separate people at work and at home—sometimes the personal blends into the professional, and that’s okay."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que a veces (sometimes) lo personal se mezcla con lo profesional; el resumen lo daba como algo que pasa siempre. Se recupera el \"a veces\", como ya hace el paso del nodo.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase4-respetar_cuidar_persona_cargo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Respetar a tu persona a cargo y cuidar de ella",
+      "texto_nuevo": "Respetar a la persona a tu cargo y cuidar de ella",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo'."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo'.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-respetar_cuidar_persona_cargo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuidar a quien tienes a cargo no se puede fingir: las miles de señales que mandas sin darte cuenta delatan si de verdad crees que puede tener éxito. Cuidar no es darle siempre la razón ni excusar sus errores; es ayudarle a tener éxito y a sentirse realizado, aprender qué le importa y aceptar que a veces lo personal se mezcla con el trabajo. El respeto tiene que ser incondicional porque va con la persona entera, no con lo que rinde. Funciona por lo que devuelve: si siente que tu apoyo no depende de su rendimiento, te dirá la verdad cuando las cosas vayan mal.",
+      "texto_nuevo": "Cuidar a quien tienes a tu cargo no se puede fingir: las miles de señales que mandas sin darte cuenta delatan si de verdad crees que puede tener éxito. Cuidar no es darle siempre la razón ni excusar sus errores; es ayudarle a tener éxito y a sentirse realizado, aprender qué le importa y aceptar que a veces lo personal se mezcla con el trabajo. El respeto tiene que ser incondicional porque va con la persona entera, no con lo que rinde. Funciona por lo que devuelve: si siente que tu apoyo no depende de su rendimiento, te dirá la verdad cuando las cosas vayan mal.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'A cargo' sin posesivo; la forma fijada es 'a tu cargo', igual que en el título y los pasos del nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'A cargo' sin posesivo; la forma fijada es 'a tu cargo', igual que en el título y los pasos del nodo.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-respetar_cuidar_persona_cargo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Parte de la lección con la que un directivo veterano cerró un taller, alguien que en toda su trayectoria nunca perdió a nadie a cargo por una oferta de la competencia: gestionar es cuidar.",
+      "texto_nuevo": "Parte de la lección con la que un directivo veterano cerró un taller, alguien que en toda su trayectoria nunca perdió a nadie a su cargo por una oferta de la competencia: gestionar es cuidar.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'A nadie a cargo' sin posesivo es ambiguo; habla de otro jefe, forma fijada 'a su cargo'."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'A nadie a cargo' sin posesivo es ambiguo; habla de otro jefe, forma fijada 'a su cargo'.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-respetar_cuidar_persona_cargo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Lo que sí significa cuidar es hacer lo que puedas para que tu persona a cargo tenga éxito y se sienta realizada en su trabajo.",
+      "texto_nuevo": "Lo que sí significa cuidar es hacer lo que puedas para que la persona a tu cargo tenga éxito y se sienta realizada en su trabajo.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo'."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo'.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-respetar_cuidar_persona_cargo-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz que el respeto sea incondicional, porque va de la persona entera y no de lo que hace por ti. Apoyar a quien le va de maravilla es fácil, y la prueba difícil es qué pasa cuando la persona se atasca.",
+      "texto_nuevo": "Haz que el respeto sea incondicional, porque tiene que ver con la persona entera y no con lo que hace por ti. Apoyar a quien le va de maravilla es fácil, y la prueba difícil es qué pasa cuando la persona se atasca.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "va de la persona entera y no de lo que hace por ti"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): 'Ir de' por tener que ver con es coloquial de España.",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase4-respetar_cuidar_persona_cargo-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Y ten claro lo que está en juego: si tu persona a cargo siente que tu apoyo y tu respeto dependen de su rendimiento, le costará ser honesta contigo cuando las cosas vayan mal; si siente que te importa pase lo que pase, y que nada puede cambiar eso, ni siquiera el fracaso, lo que recibirás a cambio es honestidad.",
+      "texto_nuevo": "Y ten claro lo que está en juego: si la persona a tu cargo siente que tu apoyo y tu respeto dependen de su rendimiento, le costará ser honesta contigo cuando las cosas vayan mal; si siente que te importa pase lo que pase, y que nada puede cambiar eso, ni siquiera el fracaso, lo que recibirás a cambio es honestidad.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo'."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo'.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-respetar_cuidar_persona_cargo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Tu persona a cargo recibiendo de ti apoyo y respeto que no dependen de su rendimiento, y devolviéndote honestidad cuando las cosas van mal.",
+      "texto_nuevo": "La persona a tu cargo recibiendo de ti apoyo y respeto que no dependen de su rendimiento, y devolviéndote honestidad cuando las cosas van mal.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo'."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'Tu persona a cargo' se lee como quien manda; forma fijada 'la persona a tu cargo'.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase4-respetar_cuidar_persona_cargo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Siempre que tengas a alguien a cargo, y con más motivo cuando esa persona se atasca, que es cuando el respeto se pone a prueba de verdad.",
+      "texto_nuevo": "Siempre que tengas a alguien a tu cargo, y con más motivo cuando esa persona se atasca, que es cuando el respeto se pone a prueba de verdad.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase4/)",
+        "evidencia": "'A cargo' sin posesivo; forma fijada 'a tu cargo', igual que en el resto del nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): 'A cargo' sin posesivo; forma fijada 'a tu cargo', igual que en el resto del nodo.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Respeta y Cuida a tu Equipo",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

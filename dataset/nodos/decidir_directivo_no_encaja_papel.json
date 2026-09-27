@@ -1,0 +1,419 @@
+{
+  "node_id": "decidir_directivo_no_encaja_papel",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Decidir qué hacer cuando un directivo de tu equipo no da la talla del papel",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Apoyar a un directivo que tropieza es parte de delegar, pero su trabajo es multiplicar lo que logra su gente, y cuando no lo hace el coste es real: proyectos que se alargan, malas decisiones, gente desatendida, o un equipo que creció más deprisa que él. La pregunta útil no es si crees en esa persona, sino cuánto tardará en ponerse a la altura y quién paga mientras tanto: tú, con un movimiento difícil, o el equipo y los clientes. Imaginar el puesto vacante y preguntarte si volverías a contratarle puede apartarte de detalles que distraen y centrarte en qué hará que el equipo tenga más éxito.",
+  "notas_extraccion": "Es el tercer principio de delegacion y el unico del capitulo cuyo resultado puede ser sacar a alguien de su puesto. Lo que lo hace procedimentable es la pregunta del puesto abierto, que es una vara ejecutable y no una impresion, mas la lista de formas concretas en que un directivo frena a su equipo sin empeorarlo, que es lo que permite reconocer el caso. El caso del equipo que crecio mas que su directivo va dentro (manual seccion 3.5) y es el que explica por que esto ocurre sin que nadie haya hecho nada mal. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuanto tiempo se da antes de decidir, ni como se lleva la conversacion, ni adonde va la persona despues.",
+  "pasos_accionables": [
+    "Reconoce que tu primer impulso no está equivocado: apoyarle y ayudarle a superarlo es parte del trabajo, porque delegar bien incluye reconocer que las personas a tu cargo, como tú, van a cometer errores y a dudar de sí mismas, y a menudo lo mejor que puedes hacer es creer en ellas. Si el listón es la perfección, nadie va siquiera a intentarlo.",
+    "Cuenta con que la respuesta completa tiene más matices: el trabajo de un directivo es ser un multiplicador positivo para su equipo, y cuando no lo es los costes son altos. Los proyectos tardan más porque se mete cuando no toca, los resultados son malos porque decide mal, o se acumulan las quejas porque su gente no recibe lo que necesita.",
+    "Mira también el caso en el que no está empeorando las cosas activamente y aun así puede estar frenando al equipo: puede apagar fuegos pero no ayuda al equipo a volverse menos inflamable; puede cubrir puestos pero no atraer al mejor talento; o necesita más entrenamiento del que tú tienes tiempo de darle.",
+    "Reconoce el caso típico de una organización que crece deprisa: los equipos nuevos se forman casi de la noche a la mañana, y al principio son pequeños y se las arreglan con poco, así que al directivo que se contrata le toca llevar un puñado de personas y unos pocos proyectos especulativos. Dos o tres años después, algunos de esos proyectos han triunfado y sus equipos han crecido deprisa, y aquel directivo, perfecto para un equipo temprano, está lidiando ahora con los retos de liderar un grupo mucho mayor.",
+    "Plantea la pregunta que de verdad tienes delante, que no es si crees en él: cuánto va a tardar en llegar donde tiene que llegar, y cómo va a afectar eso al equipo mientras tanto.",
+    "Ten delante el recordatorio de que la meta final de la dirección es conseguir mejores resultados, y que cuando alguien no encaja bien en su papel hay un coste. Pregúntate entonces si prefieres pagarlo tú haciendo un movimiento difícil, o pasárselo a los demás miembros del equipo y a los clientes.",
+    "Usa la pregunta que aclara: supón que el puesto estuviera abierto, ¿preferirías volver a contratar a tu líder actual o apostar por otra persona?",
+    "Deja que esa pregunta te centre en lo que de verdad importa. Es fácil preocuparse por docenas de detalles, cómo se sentirá la persona, si le estás dando suficiente retroalimentación o el trastorno que pasarán los demás, cuando la pregunta más importante es qué va a hacer que el equipo tenga más éxito en los próximos años.",
+    "Si la respuesta es que no volverías a contratarle, da el paso. El cambio es duro, pero confía en tus instintos."
+  ],
+  "entregable_esperado": "Una decisión tomada sobre si ese directivo sigue en el papel, contestada la pregunta de si volverías a contratarle con el puesto abierto.",
+  "nodos_previos": [
+    "mover_rapido_persona_papel_equivocado",
+    "evaluar_directivo_resultados_fortaleza"
+  ],
+  "nodos_siguientes": [
+    "reciclar_empleado_ascendido_mas_alla_capacidad",
+    "elegir_recolocar_despedir_persona",
+    "dar_mala_noticia_decision_tomada",
+    "detectar_metodos_vudu_contratacion"
+  ],
+  "condiciones_activacion": [
+    "Cuando uno de los directivos de tu equipo no está cumpliendo las expectativas de su papel, y tu primer impulso es apoyarle y ayudarle a superarlo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Apoyar a un directivo que tropieza es parte de delegar, pero su trabajo es multiplicar lo que logra su equipo, y cuando no lo hace el coste es real: proyectos que se alargan, malas decisiones, gente desatendida, o un equipo que creció más deprisa que él. La pregunta útil no es si crees en esa persona, sino cuánto tardará en ponerse a la altura y quién paga mientras tanto: tú, con un movimiento difícil, o el equipo y los clientes. Imaginar el puesto vacante y preguntarte si volverías a contratarle corta los detalles que distraen y te centra en qué hará que el equipo tenga más éxito.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_10.md",
+          "lineas": "149-171"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)"
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decidir que hacer cuando un directivo de tu equipo no da la talla del papel",
+      "texto_nuevo": "Decidir qué hacer cuando un directivo de tu equipo no da la talla del papel",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce que tu primer impulso no esta equivocado: apoyarle y ayudarle a superarlo es parte del trabajo, porque delegar bien incluye reconocer que tus reportes, como tu, van a cometer errores y a dudar de si mismos, y a menudo lo mejor que puedes hacer es creer en ellos. Si el liston es la perfeccion, nadie va siquiera a intentarlo.",
+      "texto_nuevo": "Reconoce que tu primer impulso no está equivocado: apoyarle y ayudarle a superarlo es parte del trabajo, porque delegar bien incluye reconocer que las personas a tu cargo, como tú, van a cometer errores y a dudar de sí mismas, y a menudo lo mejor que puedes hacer es creer en ellas. Si el listón es la perfección, nadie va siquiera a intentarlo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tus reportes"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que la respuesta completa es mas matizada: el trabajo de un directivo es ser un multiplicador positivo para su equipo, y cuando no lo es los costes son altos. Los proyectos tardan mas porque se mete cuando no toca, los resultados son malos porque decide mal, o se acumulan las quejas porque su gente no recibe lo que necesita.",
+      "texto_nuevo": "Cuenta con que la respuesta completa tiene más matices: el trabajo de un directivo es ser un multiplicador positivo para su equipo, y cuando no lo es los costes son altos. Los proyectos tardan más porque se mete cuando no toca, los resultados son malos porque decide mal, o se acumulan las quejas porque su gente no recibe lo que necesita.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mira tambien el caso en el que no esta empeorando las cosas activamente y aun asi frena al equipo: puede apagar fuegos pero no ayuda al equipo a volverse menos inflamable; puede cubrir puestos pero no atraer al mejor talento; o necesita mas entrenamiento del que tu tienes tiempo de darle.",
+      "texto_nuevo": "Mira también el caso en el que no está empeorando las cosas activamente y aun así frena al equipo: puede apagar fuegos pero no ayuda al equipo a volverse menos inflamable; puede cubrir puestos pero no atraer al mejor talento; o necesita más entrenamiento del que tú tienes tiempo de darle.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce el caso tipico de una organizacion que escala deprisa: los equipos nuevos se forman casi de la noche a la manana, y al principio son pequenios y apaniados, asi que el directivo que se contrata se espera que lleve un punado de personas y unos pocos proyectos especulativos. Dos o tres anios despues, algunos de esos proyectos han triunfado y sus equipos han crecido deprisa, y aquel directivo, perfecto para un equipo temprano, esta lidiando ahora con los retos de liderar un grupo mucho mayor.",
+      "texto_nuevo": "Reconoce el caso típico de una organización que escala deprisa: los equipos nuevos se forman casi de la noche a la mañana, y al principio son pequeños y apañados, así que del directivo que se contrata se espera que lleve un puñado de personas y unos pocos proyectos especulativos. Dos o tres años después, algunos de esos proyectos han triunfado y sus equipos han crecido deprisa, y aquel directivo, perfecto para un equipo temprano, está lidiando ahora con los retos de liderar un grupo mucho mayor.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Plantea la pregunta que de verdad tienes delante, que no es si crees en el: cuanto va a tardar en llegar donde tiene que llegar, y como va a afectar eso al equipo mientras tanto.",
+      "texto_nuevo": "Plantea la pregunta que de verdad tienes delante, que no es si crees en él: cuánto va a tardar en llegar donde tiene que llegar, y cómo va a afectar eso al equipo mientras tanto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten delante el recordatorio de que la meta final de la direccion es conseguir mejores resultados, y que cuando alguien no encaja bien en su papel hay un coste. Preguntate entonces si prefieres pagarlo tu haciendo un movimiento dificil, o pasarselo a los demas miembros del equipo y a los clientes.",
+      "texto_nuevo": "Ten delante el recordatorio de que la meta final de la dirección es conseguir mejores resultados, y que cuando alguien no encaja bien en su papel hay un coste. Pregúntate entonces si prefieres pagarlo tú haciendo un movimiento difícil, o pasárselo a los demás miembros del equipo y a los clientes.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Usa la pregunta que aclara, que el libro recibio de un amigo: supon que el puesto estuviera abierto, preferirias volver a contratar a tu lider actual o apostar por otra persona?",
+      "texto_nuevo": "Usa la pregunta que aclara: supón que el puesto estuviera abierto, ¿preferirías volver a contratar a tu líder actual o apostar por otra persona?",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro recibio de un amigo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Deja que esa pregunta te centre en lo que de verdad importa. La autora estaba preocupada por docenas de detalles, como se sentiria la persona, si le estaba dando suficiente opinion, el trastorno que pasarian los demas, cuando la pregunta mas importante era que va a hacer que el equipo tenga mas exito en los proximos anios.",
+      "texto_nuevo": "Deja que esa pregunta te centre en lo que de verdad importa. Es fácil preocuparse por docenas de detalles, como se sentirá la persona, si le estás dando suficiente opinión o el trastorno que pasarán los demás, cuando la pregunta más importante es qué va a hacer que el equipo tenga más éxito en los próximos años.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "La autora estaba preocupada por docenas de detalles"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si la respuesta es que no volverias a contratarle, haz el movimiento. El cambio es duro, pero confia en tus instintos.",
+      "texto_nuevo": "Si la respuesta es que no volverías a contratarle, haz el movimiento. El cambio es duro, pero confía en tus instintos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una decision tomada sobre si ese directivo sigue en el papel, contestada la pregunta de si volverias a contratarle con el puesto abierto.",
+      "texto_nuevo": "Una decisión tomada sobre si ese directivo sigue en el papel, contestada la pregunta de si volverías a contratarle con el puesto abierto.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-decidir_directivo_no_encaja_papel-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando uno de los directivos de tu equipo no esta cumpliendo las expectativas de su papel, y tu primer impulso es apoyarle y ayudarle a superarlo.",
+      "texto_nuevo": "Cuando uno de los directivos de tu equipo no está cumpliendo las expectativas de su papel, y tu primer impulso es apoyarle y ayudarle a superarlo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 32, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 32)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-decidir_directivo_no_encaja_papel-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Mira también el caso en el que no está empeorando las cosas activamente y aun así frena al equipo: puede apagar fuegos pero no ayuda al equipo a volverse menos inflamable; puede cubrir puestos pero no atraer al mejor talento; o necesita más entrenamiento del que tú tienes tiempo de darle.",
+      "texto_nuevo": "Mira también el caso en el que no está empeorando las cosas activamente y aun así puede estar frenando al equipo: puede apagar fuegos pero no ayuda al equipo a volverse menos inflamable; puede cubrir puestos pero no atraer al mejor talento; o necesita más entrenamiento del que tú tienes tiempo de darle.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_10.md 153",
+        "frase": "Even when a manager isn’t actively making things worse, she may still be holding the team back."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que puede estar frenando al equipo (may), no que lo frene.",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-decidir_directivo_no_encaja_papel-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce el caso típico de una organización que escala deprisa: los equipos nuevos se forman casi de la noche a la mañana, y al principio son pequeños y apañados, así que del directivo que se contrata se espera que lleve un puñado de personas y unos pocos proyectos especulativos. Dos o tres años después, algunos de esos proyectos han triunfado y sus equipos han crecido deprisa, y aquel directivo, perfecto para un equipo temprano, está lidiando ahora con los retos de liderar un grupo mucho mayor.",
+      "texto_nuevo": "Reconoce el caso típico de una organización que crece deprisa: los equipos nuevos se forman casi de la noche a la mañana, y al principio son pequeños y apañados, así que al directivo que se contrata le toca llevar un puñado de personas y unos pocos proyectos especulativos. Dos o tres años después, algunos de esos proyectos han triunfado y sus equipos han crecido deprisa, y aquel directivo, perfecto para un equipo temprano, está lidiando ahora con los retos de liderar un grupo mucho mayor.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "escala deprisa",
+          "del directivo que se contrata se espera que lleve"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco, voz): \"Escala\" por crece (fast-scaling) y \"se espera\" prohibido en la voz de la casa.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco",
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-decidir_directivo_no_encaja_papel-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Deja que esa pregunta te centre en lo que de verdad importa. Es fácil preocuparse por docenas de detalles, como se sentirá la persona, si le estás dando suficiente opinión o el trastorno que pasarán los demás, cuando la pregunta más importante es qué va a hacer que el equipo tenga más éxito en los próximos años.",
+      "texto_nuevo": "Deja que esa pregunta te centre en lo que de verdad importa. Es fácil preocuparse por docenas de detalles, cómo se sentirá la persona, si le estás dando suficiente opinión o el trastorno que pasarán los demás, cuando la pregunta más importante es qué va a hacer que el equipo tenga más éxito en los próximos años.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "Interrogativa indirecta: cómo lleva tilde."
+      },
+      "decision": "auditoria completa M11 (ortografia): Interrogativa indirecta: cómo lleva tilde.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-decidir_directivo_no_encaja_papel-pasos_accionables-8",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si la respuesta es que no volverías a contratarle, haz el movimiento. El cambio es duro, pero confía en tus instintos.",
+      "texto_nuevo": "Si la respuesta es que no volverías a contratarle, da el paso. El cambio es duro, pero confía en tus instintos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "haz el movimiento"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Haz el movimiento\" calca make the move; en español, da el paso. El leísmo contratarle está admitido y se queda.",
+      "indice": 8,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-decidir_directivo_no_encaja_papel-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Apoyar a un directivo que tropieza es parte de delegar, pero su trabajo es multiplicar lo que logra su equipo, y cuando no lo hace el coste es real: proyectos que se alargan, malas decisiones, gente desatendida, o un equipo que creció más deprisa que él. La pregunta útil no es si crees en esa persona, sino cuánto tardará en ponerse a la altura y quién paga mientras tanto: tú, con un movimiento difícil, o el equipo y los clientes. Imaginar el puesto vacante y preguntarte si volverías a contratarle corta los detalles que distraen y te centra en qué hará que el equipo tenga más éxito.",
+      "texto_nuevo": "Apoyar a un directivo que tropieza es parte de delegar, pero su trabajo es multiplicar lo que logra su gente, y cuando no lo hace el coste es real: proyectos que se alargan, malas decisiones, gente desatendida, o un equipo que creció más deprisa que él. La pregunta útil no es si crees en esa persona, sino cuánto tardará en ponerse a la altura y quién paga mientras tanto: tú, con un movimiento difícil, o el equipo y los clientes. Imaginar el puesto vacante y preguntarte si volverías a contratarle puede apartarte de detalles que distraen y centrarte en qué hará que el equipo tenga más éxito.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_10.md 167",
+        "frase": "This question helped me to zero in on what really mattered."
+      },
+      "decision": "auditoria completa M11 (matiz, voz): Lo que a la autora le sirvió se afirmaba como efecto seguro de la pregunta; se devuelve como posibilidad. De paso, \"su equipo\" (fuera de la voz de la casa) pasa a \"su gente\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz",
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase3-decidir_directivo_no_encaja_papel-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce el caso típico de una organización que crece deprisa: los equipos nuevos se forman casi de la noche a la mañana, y al principio son pequeños y apañados, así que al directivo que se contrata le toca llevar un puñado de personas y unos pocos proyectos especulativos. Dos o tres años después, algunos de esos proyectos han triunfado y sus equipos han crecido deprisa, y aquel directivo, perfecto para un equipo temprano, está lidiando ahora con los retos de liderar un grupo mucho mayor.",
+      "texto_nuevo": "Reconoce el caso típico de una organización que crece deprisa: los equipos nuevos se forman casi de la noche a la mañana, y al principio son pequeños y se las arreglan con poco, así que al directivo que se contrata le toca llevar un puñado de personas y unos pocos proyectos especulativos. Dos o tres años después, algunos de esos proyectos han triunfado y sus equipos han crecido deprisa, y aquel directivo, perfecto para un equipo temprano, está lidiando ahora con los retos de liderar un grupo mucho mayor.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "apañados"
+        ]
+      },
+      "decision": "auditoria completa M11 (regionalismo): \"Apañado\" como hábil o mañoso es de uso peninsular y no se entiende igual en América; \"se las arreglan con poco\" recoge el \"small and scrappy\" del libro (zhuo_manager/cap_10.md:155).",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "regionalismo"
+      ]
+    },
+    {
+      "id": "m11-pase3-decidir_directivo_no_encaja_papel-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Deja que esa pregunta te centre en lo que de verdad importa. Es fácil preocuparse por docenas de detalles, cómo se sentirá la persona, si le estás dando suficiente opinión o el trastorno que pasarán los demás, cuando la pregunta más importante es qué va a hacer que el equipo tenga más éxito en los próximos años.",
+      "texto_nuevo": "Deja que esa pregunta te centre en lo que de verdad importa. Es fácil preocuparse por docenas de detalles, cómo se sentirá la persona, si le estás dando suficiente retroalimentación o el trastorno que pasarán los demás, cuando la pregunta más importante es qué va a hacer que el equipo tenga más éxito en los próximos años.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "suficiente opinión"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Suficiente opinión\" calca \"enough feedback\" (zhuo_manager/cap_10.md:167) con un nombre que no se usa como masa; \"retroalimentación\" es el término que ya usa el pack.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Decide sobre un Directivo que Falla",
+  "fuentes_internas": [
+    "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo"
+  ]
+}

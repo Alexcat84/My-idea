@@ -1,0 +1,214 @@
+{
+  "node_id": "reciclar_empleado_ascendido_mas_alla_capacidad",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Devolver abiertamente a su puesto anterior a un empleado ascendido más allá de su capacidad: reconocer el error de la dirección, llevarlo a un puesto que sepa hacer bien y apoyarlo frente a la vergüenza",
+  "fuente": "High Output Management - Andrew S. Grove",
+  "resumen_teorico": "Cuando alguien ascendido rinde por debajo durante demasiado tiempo, el fallo no es suyo sino de quien juzgó mal que estaba listo para más responsabilidad. Forzarlo a salir de la empresa es un error: lo que toca es devolverlo, con pasos deliberados y directos, al puesto que ya hacía bien, y el resultado es alguien haciendo un trabajo que ya demostró saber hacer. Es probable que sienta vergüenza por el retroceso, y hay que apoyarlo frente a ella; si esa vuelta atrás se hace a la vista de todos, en lugar de a escondidas, ese bochorno dura mucho menos de lo que todos esperan.",
+  "notas_extraccion": "UNIDAD DE ORIGEN: fuentes/grove_high_output/cap_16.md, unidad Cap. 15, titulo textual Compensation as Task-Relevant Feedback. Sale de la PIEZA P21 de la frontera publicada hoy en .v58ext/frontera.txt, L49, 253 palabras. POR QUE ES PROCEDIMIENTO, por la prueba del inventario de EXTRACTOR.md 9.1: el parrafo trae una secuencia de acciones concretas en modo deber (the solution is to recycle him... management ought to face up to its own error in judgment and take forthright and deliberate steps to place the person into a job he can do. Management should also support the employee... If recycling is done openly...), un inventario de PASOS de trabajo de la direccion y no de fines, sin adjetivo de adecuacion en el criterio: el libro no dice medidas apropiadas, dice la accion concreta a tomar. DE DONDE SALE CADA PASO, uno a uno, todos de L49: paso 1 (management was at fault for misjudging the employee's readiness for more responsibility... I think it is dead wrong to force someone in such circumstances out of the company. Instead, I think management ought to face up to its own error in judgment); paso 2 (take forthright and deliberate steps to place the person into a job he can do); paso 3 (Management should also support the employee in the face of the embarrassment that he is likely to feel); paso 4 (If recycling is done openly, all will be pleasantly surprised how short-lived that embarrassment will be). RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 4 pasos, 4 TRANSCRIPCION, 0 PUENTE. NO escribo un responsable nombrado distinto de management, ni un plazo, porque el texto no los pone: la doctrina se queda en la direccion en general como sujeto que actua. EL CIERRE DEL PARRAFO NO ENTRA COMO PASO PROPIO: la frase sobre que estos empleados, una vez recuperan la confianza, sueles ser excelentes candidatos a un ascenso posterior es una consecuencia esperada y no una accion nueva que ejecutar, y queda fuera del entregable por ser desenlace y no procedimiento.",
+  "pasos_accionables": [
+    "Reconoce que el error fue de la dirección al juzgar mal la disposición del empleado para asumir más responsabilidad, en vez de dejar que el empleado cargue con la culpa y termine saliendo de la empresa.",
+    "Toma medidas deliberadas y directas para colocar a la persona de vuelta en un puesto que sepa desempeñar bien, en lugar de forzar su salida de la empresa.",
+    "Apoya al empleado frente a la vergüenza que es probable que sienta por el retroceso.",
+    "Haz esa vuelta atrás abiertamente y no a escondidas, porque hecha así la vergüenza dura mucho menos de lo que todos esperan."
+  ],
+  "entregable_esperado": "El empleado devuelto abiertamente al puesto en el que se sabe que rinde bien, con el error de juicio reconocido por la dirección y con apoyo explícito frente a la vergüenza del retroceso.",
+  "nodos_previos": [
+    "elegir_recolocar_despedir_persona",
+    "decidir_directivo_no_encaja_papel"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando una persona fue ascendida a un puesto que la supera y lleva demasiado tiempo rindiendo por debajo de lo esperado en él."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-reciclar_empleado_ascendido_mas_alla_capacidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando alguien ascendido rinde por debajo durante demasiado tiempo, el fallo no es suyo sino de quien juzgó mal que estaba listo para más responsabilidad. Forzarlo a salir de la empresa es un error: lo que toca es devolverlo, con pasos deliberados y directos, al puesto que ya hacía bien, y el resultado es alguien haciendo un trabajo que ya demostró saber hacer. Es probable que sienta vergüenza por el retroceso, y hay que apoyarlo frente a ella; si el reciclaje se hace a la vista de todos, en lugar de a escondidas, ese bochorno dura mucho menos de lo que todos esperan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/grove_high_output/cap_16.md",
+          "lineas": "49-49"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): La objeción se sostiene: L49 cuenta la recuperación de la confianza como experiencia propia y en otro sentido ('In my experience, such people, once they regain their confidence...'), y la vergüenza es 'likely to feel', no 'el obstáculo real'. La propuesta devuelve el 'es probable', quita el efecto inventado y el 'castiga' y 'pierde a alguien' que la línea no dice, y conserva el resultado que sí da L49 ('a person doing work we know from past experience he can perform well').",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)"
+    },
+    {
+      "id": "m11-limpieza-reciclar_empleado_ascendido_mas_alla_capacidad-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reciclar abiertamente a un empleado ascendido mas alla de su capacidad: reconocer el error de la direccion, devolverlo a un puesto que sepa hacer bien y apoyarlo frente a la verguenza",
+      "texto_nuevo": "Reciclar abiertamente a un empleado ascendido más allá de su capacidad: reconocer el error de la dirección, devolverlo a un puesto que sepa hacer bien y apoyarlo frente a la vergüenza",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reciclar_empleado_ascendido_mas_alla_capacidad-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconoce que el error fue de la direccion al juzgar mal la disposicion del empleado para asumir mas responsabilidad, en vez de dejar que el empleado cargue con la culpa y termine saliendo de la empresa.",
+      "texto_nuevo": "Reconoce que el error fue de la dirección al juzgar mal la disposición del empleado para asumir más responsabilidad, en vez de dejar que el empleado cargue con la culpa y termine saliendo de la empresa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reciclar_empleado_ascendido_mas_alla_capacidad-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Apoya al empleado frente a la verguenza que es probable que sienta por el retroceso.",
+      "texto_nuevo": "Apoya al empleado frente a la vergüenza que es probable que sienta por el retroceso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reciclar_empleado_ascendido_mas_alla_capacidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz el reciclaje abiertamente y no a escondidas, porque hecho asi la verguenza dura mucho menos de lo que todos esperan.",
+      "texto_nuevo": "Haz el reciclaje abiertamente y no a escondidas, porque hecho así la vergüenza dura mucho menos de lo que todos esperan.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reciclar_empleado_ascendido_mas_alla_capacidad-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El empleado devuelto abiertamente al puesto en el que se sabe que rinde bien, con el error de juicio reconocido por la direccion y con apoyo explicito frente a la verguenza del retroceso.",
+      "texto_nuevo": "El empleado devuelto abiertamente al puesto en el que se sabe que rinde bien, con el error de juicio reconocido por la dirección y con apoyo explícito frente a la vergüenza del retroceso.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-reciclar_empleado_ascendido_mas_alla_capacidad-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuando una persona fue ascendida a un puesto que la supera y lleva demasiado tiempo rindiendo por debajo de lo esperado en el.",
+      "texto_nuevo": "Cuando una persona fue ascendida a un puesto que la supera y lleva demasiado tiempo rindiendo por debajo de lo esperado en él.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 10, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 10)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-reciclar_empleado_ascendido_mas_alla_capacidad-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reciclar abiertamente a un empleado ascendido más allá de su capacidad: reconocer el error de la dirección, devolverlo a un puesto que sepa hacer bien y apoyarlo frente a la vergüenza",
+      "texto_nuevo": "Devolver abiertamente a su puesto anterior a un empleado ascendido más allá de su capacidad: reconocer el error de la dirección, llevarlo a un puesto que sepa hacer bien y apoyarlo frente a la vergüenza",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "Reciclar",
+          "devolverlo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Reciclar\" a un empleado en español es volver a formarlo; el libro (\"recycle\") habla de devolverlo al puesto que hacía bien. Se cambia \"devolverlo\" por \"llevarlo\" para no repetir el verbo, que la propuesta repetía.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-reciclar_empleado_ascendido_mas_alla_capacidad-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando alguien ascendido rinde por debajo durante demasiado tiempo, el fallo no es suyo sino de quien juzgó mal que estaba listo para más responsabilidad. Forzarlo a salir de la empresa es un error: lo que toca es devolverlo, con pasos deliberados y directos, al puesto que ya hacía bien, y el resultado es alguien haciendo un trabajo que ya demostró saber hacer. Es probable que sienta vergüenza por el retroceso, y hay que apoyarlo frente a ella; si el reciclaje se hace a la vista de todos, en lugar de a escondidas, ese bochorno dura mucho menos de lo que todos esperan.",
+      "texto_nuevo": "Cuando alguien ascendido rinde por debajo durante demasiado tiempo, el fallo no es suyo sino de quien juzgó mal que estaba listo para más responsabilidad. Forzarlo a salir de la empresa es un error: lo que toca es devolverlo, con pasos deliberados y directos, al puesto que ya hacía bien, y el resultado es alguien haciendo un trabajo que ya demostró saber hacer. Es probable que sienta vergüenza por el retroceso, y hay que apoyarlo frente a ella; si esa vuelta atrás se hace a la vista de todos, en lugar de a escondidas, ese bochorno dura mucho menos de lo que todos esperan.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "el reciclaje"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Reciclaje\" es calco de \"recycling\" con otro sentido en español.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-reciclar_empleado_ascendido_mas_alla_capacidad-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Haz el reciclaje abiertamente y no a escondidas, porque hecho así la vergüenza dura mucho menos de lo que todos esperan.",
+      "texto_nuevo": "Haz esa vuelta atrás abiertamente y no a escondidas, porque hecha así la vergüenza dura mucho menos de lo que todos esperan.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "el reciclaje",
+          "hecho así"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Reciclaje\" es calco de \"recycling\"; se ajusta la concordancia (\"hecha\") que la propuesta dejaba en masculino.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Devuelve a su Puesto Anterior",
+  "fuentes_internas": [
+    "High Output Management - Andrew S. Grove"
+  ]
+}

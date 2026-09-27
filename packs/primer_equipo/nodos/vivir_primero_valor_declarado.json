@@ -1,0 +1,290 @@
+{
+  "node_id": "vivir_primero_valor_declarado",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Ser el primero en vivir el valor que declaras, o no declararlo",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "La gente mira de cerca a su jefe para entender qué valores y normas rigen en el equipo, y detecta enseguida cuando alguien con autoridad dice una cosa y hace otra; esa brecha es una de las formas más rápidas de perder la confianza. Si algo te importa y quieres que le importe a tu equipo, sé la primera persona en vivirlo, o no te sorprendas cuando nadie más lo haga. Hablar de un valor sin practicarlo se nota: a una directiva, una persona a su cargo le señaló que rara vez pedía opinión, lo que ella tanto recomendaba. Y si no vas a cambiar tu conducta por un valor, mejor no lo declares.",
+  "notas_extraccion": "Es el segundo de los tres frentes con que el capitulo sostiene un valor, entre hablar de el y premiarlo, y el unico cuyo objeto es la conducta del propio directivo. Su inventario propio son los cinco ejemplos impresos de decir una cosa y hacer otra, que son objetos de inspeccion y no metas, y la regla de decision de no enunciar el valor por el que no vas a cambiar. El caso de la revision de trescientos sesenta grados entra como ejemplo nombrado. Lo que el libro NO dice, y por eso no esta escrito aqui, es cada cuanto se repasa la lista de valores declarados, ni quien avisa al directivo cuando la brecha aparece, mas alla de que en este caso fue su propio reporte.",
+  "pasos_accionables": [
+    "Cuenta con que la gente mira de cerca a sus jefes para entender los valores y las normas del equipo, y con que tiene el radar muy afinado para cazar los casos en que alguien en posición de autoridad dice una cosa y hace otra. Es una de las formas más rápidas de perder la confianza.",
+    "Considera estos cinco ejemplos de alguien en posición de autoridad que dice una cosa y hace otra. Un directivo pide a la gente a su cargo gastar el dinero de la empresa con cabeza, y luego se gasta un dineral en un escritorio y un sofá elegantes para su despacho. Una directiva expresa fastidio cuando alguien a su cargo aparece con la reunión ya empezada, y ella misma llega cinco minutos tarde a todo. Un directivo dice que quiere más perspectivas diversas en el equipo y solo asciende a quien piensa como él. Una directiva dice que una de sus metas principales es crear un entorno de trabajo que apoye, y tiene tendencia a perder los nervios y regañar a la gente a su cargo. Y un director general dice que la meta de su empresa es servir a una misión social, y sus decisiones se leen como si favorecieran el beneficio a corto plazo.",
+    "Si no estás dispuesto a cambiar tu conducta por un valor declarado, entonces no lo saques a colación siquiera.",
+    "Mira este caso: a una persona a su cargo que le preguntó cuál era la mejor manera de acelerar su aprendizaje, una directiva le contestó que pidiera opinión, y se pasó el resto del rato describiendo lo importante que le parecía pedirla y sugiriendo cómo buscarla de forma proactiva. No vio ningún cambio. Semanas después, en una evaluación de trescientos sesenta grados, esa misma persona le escribió que rara vez le pedía opinión a ella ni a otros del equipo, y que le encantaría verla hacerlo más.",
+    "Saca de ahí la lección: por mucho que ella hablara de lo importante que era pedir opinión, no lo estaba viviendo, y la persona a su cargo lo notó.",
+    "Si te cazan así, sigue practicando hasta que se te vuelva costumbre.",
+    "Si dices que algo te importa y te gustaría que le importara al resto de tu equipo, sé la primera persona que viva ese valor. Si no, no te sorprendas cuando nadie más lo haga tampoco."
+  ],
+  "entregable_esperado": "Cada valor que declaras contrastado con tu propia conducta, y retirados los que no estás dispuesto a cambiar tu conducta para sostener.",
+  "nodos_previos": [
+    "comunicar_valores_diez_formas",
+    "vivir_valores_propios_evitar_listarlos"
+  ],
+  "nodos_siguientes": [
+    "revisar_incentivos_trampas_equipo"
+  ],
+  "condiciones_activacion": [
+    "Cuando has declarado un valor a tu equipo y quieres que le importe al resto, o cuando vas a declarar uno nuevo."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-vivir_primero_valor_declarado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "La gente mira de cerca a su jefe para entender qué valores y normas rigen de verdad en el equipo, y detecta enseguida cuando alguien con autoridad dice una cosa y hace otra; esa brecha es una de las formas más rápidas de perder la confianza. Por eso un valor solo se sostiene si tú eres la primera persona en vivirlo: hablar de él sin practicarlo enseña lo contrario de lo que dices. Y si no estás dispuesto a cambiar tu conducta por un valor, es mejor no declararlo. Contrastar cada valor con lo que haces te deja ver la brecha antes que tu equipo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_11.md",
+          "lineas": "99-123"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 40)"
+    },
+    {
+      "id": "m11-limpieza-vivir_primero_valor_declarado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cuenta con que la gente mira de cerca a sus jefes para entender los valores y las normas del equipo, y con que nuestros radares estan afinados para cazar los casos en que alguien en posicion de autoridad dice una cosa y hace otra. Es una de las formas mas rapidas de perder la confianza.",
+      "texto_nuevo": "Cuenta con que la gente mira de cerca a sus jefes para entender los valores y las normas del equipo, y con que nuestros radares están afinados para cazar los casos en que alguien en posición de autoridad dice una cosa y hace otra. Es una de las formas más rápidas de perder la confianza.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 40, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 40)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vivir_primero_valor_declarado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considera los cinco ejemplos que el libro pone de alguien en posicion de autoridad que dice una cosa y hace otra. Un directivo pide a su equipo gastar el dinero de la empresa con cabeza, y luego se gasta un dineral en un escritorio y un sofa elegantes para su despacho. Una directiva expresa fastidio cuando su reporte aparece con la reunion ya empezada, y ella misma llega cinco minutos tarde a todo. Un directivo dice que quiere mas perspectivas diversas en el equipo y solo asciende a quien piensa como el. Una directiva dice que una meta de arriba es crear un entorno de trabajo que apoye, y tiene tendencia a perder los nervios y echar la bronca a sus reportes. Y un consejero delegado dice que la meta de su empresa es servir a una mision social, y sus decisiones se leen como si favorecieran el beneficio a corto plazo.",
+      "texto_nuevo": "Considera estos cinco ejemplos de alguien en posición de autoridad que dice una cosa y hace otra. Un directivo pide a su equipo gastar el dinero de la empresa con cabeza, y luego se gasta un dineral en un escritorio y un sofá elegantes para su despacho. Una directiva expresa fastidio cuando alguien a su cargo aparece con la reunión ya empezada, y ella misma llega cinco minutos tarde a todo. Un directivo dice que quiere más perspectivas diversas en el equipo y solo asciende a quien piensa como él. Una directiva dice que una meta de arriba es crear un entorno de trabajo que apoye, y tiene tendencia a perder los nervios y echar la bronca a la gente a su cargo. Y un consejero delegado dice que la meta de su empresa es servir a una misión social, y sus decisiones se leen como si favorecieran el beneficio a corto plazo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "los cinco ejemplos que el libro pone",
+          "cuando su reporte aparece",
+          "a sus reportes"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 40)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vivir_primero_valor_declarado-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si no estas dispuesto a cambiar tu conducta por un valor declarado, entonces no lo saques a colacion siquiera.",
+      "texto_nuevo": "Si no estás dispuesto a cambiar tu conducta por un valor declarado, entonces no lo saques a colación siquiera.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 40, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 40)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vivir_primero_valor_declarado-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Mira el caso que la autora cuenta contra si misma: a un reporte que le pregunto cual era la mejor manera de acelerar su aprendizaje le contesto que pidiera opinion, y se paso el resto del rato describiendo lo importante que le parecia pedirla y sugiriendo como buscarla de forma proactiva. No vio ningun cambio. Semanas despues, en una revision de trescientos sesenta grados, ese mismo reporte le escribio que rara vez le pedia opinion a ella ni a otros del equipo, y que le encantaria verla hacerlo mas.",
+      "texto_nuevo": "Mira este caso: a una persona a su cargo que le preguntó cuál era la mejor manera de acelerar su aprendizaje, una directiva le contestó que pidiera opinión, y se pasó el resto del rato describiendo lo importante que le parecía pedirla y sugiriendo cómo buscarla de forma proactiva. No vio ningún cambio. Semanas después, en una evaluación de trescientos sesenta grados, esa misma persona le escribió que rara vez le pedía opinión a ella ni a otros del equipo, y que le encantaría verla hacerlo más.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el caso que la autora cuenta contra si misma",
+          "a un reporte",
+          "ese mismo reporte"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 40)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vivir_primero_valor_declarado-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con la leccion que la autora saca de ahi: por mucho que hablara de lo importante que era pedir opinion, ella no lo estaba viviendo, y su reporte lo noto.",
+      "texto_nuevo": "Saca de ahí la lección: por mucho que ella hablara de lo importante que era pedir opinión, no lo estaba viviendo, y la persona a su cargo lo notó.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "la leccion que la autora saca de ahi",
+          "su reporte lo noto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 40)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vivir_primero_valor_declarado-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Si te cazan asi, sigue practicando hasta que se te vuelva costumbre, que es lo que ella resolvio hacer.",
+      "texto_nuevo": "Si te cazan así, sigue practicando hasta que se te vuelva costumbre.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es lo que ella resolvio hacer"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 40)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vivir_primero_valor_declarado-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si dices que algo te importa y te gustaria que le importara al resto de tu equipo, se la primera persona que viva ese valor. Si no, no te sorprendas cuando nadie mas lo haga tampoco.",
+      "texto_nuevo": "Si dices que algo te importa y te gustaría que le importara al resto de tu equipo, sé la primera persona que viva ese valor. Si no, no te sorprendas cuando nadie más lo haga tampoco.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 40, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 40)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-vivir_primero_valor_declarado-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cada valor que declaras contrastado con tu propia conducta, y retirados los que no estas dispuesto a cambiar tu conducta para sostener.",
+      "texto_nuevo": "Cada valor que declaras contrastado con tu propia conducta, y retirados los que no estás dispuesto a cambiar tu conducta para sostener.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 40, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 40)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-glosario-vivir_primero_valor_declarado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Considera estos cinco ejemplos de alguien en posición de autoridad que dice una cosa y hace otra. Un directivo pide a su equipo gastar el dinero de la empresa con cabeza, y luego se gasta un dineral en un escritorio y un sofá elegantes para su despacho. Una directiva expresa fastidio cuando alguien a su cargo aparece con la reunión ya empezada, y ella misma llega cinco minutos tarde a todo. Un directivo dice que quiere más perspectivas diversas en el equipo y solo asciende a quien piensa como él. Una directiva dice que una meta de arriba es crear un entorno de trabajo que apoye, y tiene tendencia a perder los nervios y echar la bronca a la gente a su cargo. Y un consejero delegado dice que la meta de su empresa es servir a una misión social, y sus decisiones se leen como si favorecieran el beneficio a corto plazo.",
+      "texto_nuevo": "Considera estos cinco ejemplos de alguien en posición de autoridad que dice una cosa y hace otra. Un directivo pide a su equipo gastar el dinero de la empresa con cabeza, y luego se gasta un dineral en un escritorio y un sofá elegantes para su despacho. Una directiva expresa fastidio cuando alguien a su cargo aparece con la reunión ya empezada, y ella misma llega cinco minutos tarde a todo. Un directivo dice que quiere más perspectivas diversas en el equipo y solo asciende a quien piensa como él. Una directiva dice que una meta de arriba es crear un entorno de trabajo que apoye, y tiene tendencia a perder los nervios y echar la bronca a la gente a su cargo. Y un director general dice que la meta de su empresa es servir a una misión social, y sus decisiones se leen como si favorecieran el beneficio a corto plazo.",
+      "cita": {
+        "regla": "pase de glosario de la limpieza M11: un concepto, un nombre, en espanol llano y neutro (glosario/DECISIONES.md, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "consejero delegado"
+        ]
+      },
+      "decision": "pase de glosario (consejero_delegado): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/glosario/",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-limites-vivir_primero_valor_declarado-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "La gente mira de cerca a su jefe para entender qué valores y normas rigen de verdad en el equipo, y detecta enseguida cuando alguien con autoridad dice una cosa y hace otra; esa brecha es una de las formas más rápidas de perder la confianza. Por eso un valor solo se sostiene si tú eres la primera persona en vivirlo: hablar de él sin practicarlo enseña lo contrario de lo que dices. Y si no estás dispuesto a cambiar tu conducta por un valor, es mejor no declararlo. Contrastar cada valor con lo que haces te deja ver la brecha antes que tu equipo.",
+      "texto_nuevo": "La gente mira de cerca a su jefe para entender qué valores y normas rigen en el equipo, y detecta enseguida cuando alguien con autoridad dice una cosa y hace otra; esa brecha es una de las formas más rápidas de perder la confianza. Si algo te importa y quieres que le importe a tu equipo, sé la primera persona en vivirlo, o no te sorprendas cuando nadie más lo haga. Hablar de un valor sin practicarlo se nota: a una directiva, una persona a su cargo le señaló que rara vez pedía opinión, lo que ella tanto recomendaba. Y si no vas a cambiar tu conducta por un valor, mejor no lo declares.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_11.md 99-123",
+        "frase": "one of the fastest ways to lose trust"
+      },
+      "decision": "arbitro de limites de la limpieza M11 (casos que los verificadores dejaron en OK senalados como dudosos): La nota se sostiene. En zhuo_manager/cap_11.md, líneas 99-123, nada dice que contrastar cada valor con tu conducta te deje ver la brecha antes que tu equipo: en el caso de la línea 121 la brecha la vio la persona a cargo (\"And she noticed!\"). Tampoco está \"hablar de él sin practicarlo enseña lo contrario de lo que dices\". Se quitan las dos inferencias y se usa la razón de las líneas 101 y 123 (\"one of the fastest ways to lose trust\", \"Otherwise, don't be surprised when nobody else does either\"), con el caso de la directiva contado como caso.",
+      "auditoria": "docs/saneamiento/resultados/M11/limites/"
+    },
+    {
+      "id": "m11-auditoria-vivir_primero_valor_declarado-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "CONTRARIO",
+      "texto_anterior": "Considera estos cinco ejemplos de alguien en posición de autoridad que dice una cosa y hace otra. Un directivo pide a su equipo gastar el dinero de la empresa con cabeza, y luego se gasta un dineral en un escritorio y un sofá elegantes para su despacho. Una directiva expresa fastidio cuando alguien a su cargo aparece con la reunión ya empezada, y ella misma llega cinco minutos tarde a todo. Un directivo dice que quiere más perspectivas diversas en el equipo y solo asciende a quien piensa como él. Una directiva dice que una meta de arriba es crear un entorno de trabajo que apoye, y tiene tendencia a perder los nervios y echar la bronca a la gente a su cargo. Y un director general dice que la meta de su empresa es servir a una misión social, y sus decisiones se leen como si favorecieran el beneficio a corto plazo.",
+      "texto_nuevo": "Considera estos cinco ejemplos de alguien en posición de autoridad que dice una cosa y hace otra. Un directivo pide a la gente a su cargo gastar el dinero de la empresa con cabeza, y luego se gasta un dineral en un escritorio y un sofá elegantes para su despacho. Una directiva expresa fastidio cuando alguien a su cargo aparece con la reunión ya empezada, y ella misma llega cinco minutos tarde a todo. Un directivo dice que quiere más perspectivas diversas en el equipo y solo asciende a quien piensa como él. Una directiva dice que una de sus metas principales es crear un entorno de trabajo que apoye, y tiene tendencia a perder los nervios y regañar a la gente a su cargo. Y un director general dice que la meta de su empresa es servir a una misión social, y sus decisiones se leen como si favorecieran el beneficio a corto plazo.",
+      "cita": {
+        "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+        "lineas": "fuentes/zhuo_manager/cap_11.md 109",
+        "frase": "A manager says a top goal is to create a supportive work environment, but she has a tendency to lose her temper and chew out her reports."
+      },
+      "decision": "auditoria completa M11 (contrario, regionalismo, voz): \"Su equipo\" sale por la voz de la casa; \"Una meta de arriba\" atribuye la meta a la dirección (a top goal es una meta principal suya); \"echar la bronca\" es peninsular.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "contrario",
+        "regionalismo",
+        "voz"
+      ]
+    },
+    {
+      "id": "m11-pase2-vivir_primero_valor_declarado-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que la gente mira de cerca a sus jefes para entender los valores y las normas del equipo, y con que nuestros radares están afinados para cazar los casos en que alguien en posición de autoridad dice una cosa y hace otra. Es una de las formas más rápidas de perder la confianza.",
+      "texto_nuevo": "Cuenta con que la gente mira de cerca a sus jefes para entender los valores y las normas del equipo, y con que tiene el radar muy afinado para cazar los casos en que alguien en posición de autoridad dice una cosa y hace otra. Es una de las formas más rápidas de perder la confianza.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "nuestros radares están afinados"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz, coherencia): Primera persona del plural de voz de libro (\"nuestros radares\") que además cambia el sujeto a mitad de frase; se sigue con \"la gente\".",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "voz",
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Vive Primero lo que Declaras"
+}

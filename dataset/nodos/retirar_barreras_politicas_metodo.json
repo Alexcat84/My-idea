@@ -1,0 +1,220 @@
+{
+  "node_id": "retirar_barreras_politicas_metodo",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Retirar las barreras que impiden implantar el método de contratación",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Implantar un método de contratación nuevo pide retirar las barreras que impiden su éxito. Quien quiere dirigir un equipo lleno de jugadores A trabaja con la gente de personal para eliminar toda política, toda norma y toda práctica que se interponga en el camino de implantar el método con éxito. La vara para cada una es esa sola: si estorba a la implantación. Al eliminarlas retiras también toda posibilidad de excusarse en un enfoque anticuado, de modo que nadie pueda escudarse en la forma anterior de hacer las cosas para no cambiar.",
+  "notas_extraccion": "Es la sexta de las diez cosas que hay que hacer para instalar el metodo de contratacion en una empresa, y su valor esta en que el libro nombra los tres objetos de trabajo uno a uno en vez de hablar de obstaculos en general: politica, norma y practica. Que sean tres y no uno importa, porque la tercera, la practica, es la que no esta escrita en ningun manual. El libro tambien pone el interlocutor y no lo pone el lector: la gente de personal. Y pone el criterio de corte, que no es un adjetivo de adecuacion sino una prueba concreta, que la cosa se interponga en el camino de implantar el metodo con exito. El motivo que el libro da no es de higiene sino de gobierno: lo que se retira junto con las barreras es toda posibilidad de excusarse en un enfoque anticuado.",
+  "pasos_accionables": [
+    "Trabaja con la gente de personal para retirar las barreras que impiden implantar el método.",
+    "Elimina toda política que se interponga en el camino de implantar el método con éxito.",
+    "Elimina toda norma que se interponga, que es la segunda clase de barrera.",
+    "Elimina toda práctica que se interponga, que es la tercera clase de barrera.",
+    "Retira con ello toda posibilidad de excusarse en un enfoque anticuado."
+  ],
+  "entregable_esperado": "Eliminada toda política, norma o práctica que se interponía en el camino de implantar el método, y retirada con ella la posibilidad de excusarse en el enfoque anticuado.",
+  "nodos_previos": [
+    "instalar_metodo_contratacion_empresa"
+  ],
+  "nodos_siguientes": [
+    "implantar_politicas_respaldan_metodo"
+  ],
+  "condiciones_activacion": [
+    "Cuando estás instalando el método de contratación en tu empresa y toca quitar de en medio lo que tu empresa ya tiene y estorba, escrito o no, antes de que nadie pueda usarlo como excusa."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-retirar_barreras_politicas_metodo-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Implantar un método de contratación nuevo pide retirar las barreras que impiden su éxito. Quien quiere dirigir un equipo lleno de jugadores A trabaja con la gente de personal para eliminar toda política, toda norma y toda práctica que se interponga en el camino de implantar el método con éxito. La vara para cada una es esa sola: si estorba a la implantación. Al eliminarlas retiras también toda posibilidad de excusarse en un enfoque anticuado, de modo que nadie pueda escudarse en la forma anterior de hacer las cosas para no cambiar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "263-263"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (ajeno): La objeción se sostiene: L263 no dice 'algunas ni siquiera escritas', ni 'pensadas para la forma anterior de contratar', ni 'el criterio no es si gusta o no'. La propuesta del lector quita eso pero mete otro añadido, un procedimiento de revisión ('cada una se revisa con la misma pregunta') que no está en la línea ni en los pasos; el texto propio se queda en lo que dice L263: eliminar lo que 'gets in the way' y retirar las excusas de un enfoque anticuado.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)"
+    },
+    {
+      "id": "m11-limpieza-retirar_barreras_politicas_metodo-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Retirar las barreras que impiden implantar el metodo de contratacion",
+      "texto_nuevo": "Retirar las barreras que impiden implantar el método de contratación",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_barreras_politicas_metodo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Trabaja con la gente de personal, que es con quien el libro dice que se hace esto.",
+      "texto_nuevo": "Trabaja con la gente de personal para hacer esto.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que es con quien el libro dice que se hace esto"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_barreras_politicas_metodo-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elimina toda politica que se interponga en el camino de implantar el metodo con exito.",
+      "texto_nuevo": "Elimina toda política que se interponga en el camino de implantar el método con éxito.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_barreras_politicas_metodo-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elimina toda norma que se interponga, que es la segunda clase de barrera que el libro nombra.",
+      "texto_nuevo": "Elimina toda norma que se interponga, que es la segunda clase de barrera.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_barreras_politicas_metodo-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Elimina toda practica que se interponga, que es la tercera clase de barrera que el libro nombra.",
+      "texto_nuevo": "Elimina toda práctica que se interponga, que es la tercera clase de barrera.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_barreras_politicas_metodo-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Eliminada toda politica, norma o practica que se interponia en el camino de implantar el metodo, y retirada con ella la posibilidad de excusarse en el enfoque anticuado.",
+      "texto_nuevo": "Eliminada toda política, norma o práctica que se interponía en el camino de implantar el método, y retirada con ella la posibilidad de excusarse en el enfoque anticuado.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-retirar_barreras_politicas_metodo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando estas instalando el metodo de contratacion en tu empresa y toca la sexta de las diez cosas: quitar de en medio lo que la casa ya tiene escrito y que estorba, antes de que nadie pueda usarlo como excusa.",
+      "texto_nuevo": "Cuando estás instalando el método de contratación en tu empresa y toca la sexta de las diez cosas: quitar de en medio lo que tu empresa ya tiene y estorba, escrito o no, antes de que nadie pueda usarlo como excusa.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 27, verificado"
+      },
+      "decision": "limpieza M11 (COHERENCIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 27)",
+      "motivos": [
+        "coherencia",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-retirar_barreras_politicas_metodo-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando estás instalando el método de contratación en tu empresa y toca la sexta de las diez cosas: quitar de en medio lo que tu empresa ya tiene y estorba, escrito o no, antes de que nadie pueda usarlo como excusa.",
+      "texto_nuevo": "Cuando estás instalando el método de contratación en tu empresa y toca quitar de en medio lo que tu empresa ya tiene y estorba, escrito o no, antes de que nadie pueda usarlo como excusa.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "\"La sexta de las diez cosas\" remite a una lista que el nodo no enumera."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"La sexta de las diez cosas\" remite a una lista que el nodo no enumera.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-retirar_barreras_politicas_metodo-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Trabaja con la gente de personal para hacer esto.",
+      "texto_nuevo": "Trabaja con la gente de personal para retirar las barreras que impiden implantar el método.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "\"Esto\" en el primer paso no tiene antecedente dentro de la lista de pasos; el libro: trabajar con personal para eliminar lo que estorba al método (smart_who cap_06, 263)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"Esto\" en el primer paso no tiene antecedente dentro de la lista de pasos; el libro: trabajar con personal para eliminar lo que estorba al método (smart_who cap_06, 263).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Retira las Barreras del Método",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

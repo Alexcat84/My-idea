@@ -1,0 +1,390 @@
+{
+  "node_id": "aplicar_metodo_promocion_sucesion",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Aplicar el método al desarrollo, las promociones y la sucesión",
+  "fuente": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+  "resumen_teorico": "Lo que llevó a alguien a su puesto actual no garantiza que le sirva en el siguiente: cuanto más sube una persona, más cambia lo que su puesto le exige. Decidir por antigüedad o por lo bien que lo hace hoy repite los mismos fallos que tantas contrataciones. Por eso se define primero, puesto por puesto, qué hará falta hoy y a dos o tres años vista, y se juzga a cada persona con datos de su trayectoria y con la mirada de sus colegas. Con esa radiografía delante, puedes enfocar los recursos de desarrollo en las acciones correctas y promocionar a quien tendrá éxito.",
+  "notas_extraccion": "El libro abre esta seccion con un diagnostico propio: la mayoria de los directivos recaen en metodos de vudu cuando piensan en desarrollo, promociones y sucesion, y basan sus acciones en la antiguedad o en el desempeno en el puesto actual en vez de evaluar lo que hara falta para el puesto futuro; el resultado, dice, es que las empresas desvian miles de millones a formacion inutil y toman decisiones de promocion y de sucesion con la misma tasa de fallo que sufren al contratar. La linea que sostiene el nodo entero la aporta el general retirado Wesley Clark, que fue comandante supremo aliado de la OTAN, y esta citada asi: lo que te ascendio a un rango no necesariamente te va a ascender al siguiente. El libro extrae de ahi la consecuencia operativa, que la tarjeta de puntuacion cambia cuanto mas alto sube alguien y que por eso hay que cambiar el modo de pensar en sus capacidades. Las etapas del procedimiento las pone el caso de Ted Bililies, director gerente de ghSMART, con el presidente y el primer ejecutivo de un banco global en transicion, y el caso entra nombrado aqui y no dentro de los pasos: la tarjeta por puesto a dos o tres anos vista, la entrevista cronologica con cada lider de negocio, las de doce a veinte entrevistas a colegas actuales y antiguos, y la presentacion de la radiografia a quien decide. El desenlace, con el sucesor elegido y aclamado publicamente como la persona correcta y el director financiero felicitando por la transicion mas suave en cincuenta anos, es del caso y no del procedimiento.",
+  "pasos_accionables": [
+    "Cuenta con este error: basar la decisión en la antigüedad o en lo bien que alguien lo está haciendo en su puesto actual, en vez de evaluar lo que va a necesitar para tener éxito en un puesto futuro.",
+    "Construye una tarjeta de puntuación para cada puesto revisando la estrategia de su unidad de negocio y lo que implica para el puesto, hoy y sobre todo a dos o tres años vista. Ten presente además que la tarjeta cambia cuanto más alto sube alguien en la organización.",
+    "Conduce una entrevista cronológica de trayectoria con cada persona, para conocer sus patrones de éxito y cómo percibe su propia unidad.",
+    "Complementa esos datos entrevistando a colegas actuales y antiguos de cada persona, para conseguir la perspectiva de terceros, igual que harías en una entrevista de referencias; en un caso fueron de doce a veinte por cada directivo.",
+    "Presenta esa radiografía del mejor talento a quien tiene que decidir.",
+    "Con los datos delante, acelera el desarrollo de los individuos clave, coloca a otros en puestos de sucesión y saca o recoloca a otros.",
+    "Enfoca los recursos de desarrollo en las acciones correctas, que es lo que este uso del método permite hacer, y promociona a quienes vayan a tener éxito en su puesto nuevo."
+  ],
+  "entregable_esperado": "Una tarjeta de puntuación por puesto escrita a dos o tres años vista, una radiografía del mejor talento construida con entrevistas cronológicas y con terceros, y sobre ella las decisiones de desarrollo, de colocación y de sucesión tomadas con datos.",
+  "nodos_previos": [
+    "instalar_metodo_contratacion_empresa",
+    "probar_banquillo_vacaciones_largas"
+  ],
+  "nodos_siguientes": [],
+  "condiciones_activacion": [
+    "Cuando hay que decidir sobre desarrollo, promociones o sucesión de gente que ya está dentro, y no sobre a quién contratar de fuera. Es ahí donde la mayoría de los directivos recae en los mismos métodos sin fundamento de tantas contrataciones."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Lo que llevó a alguien a su puesto actual no garantiza que le sirva en el siguiente: cuanto más sube una persona, más cambia lo que su puesto le exige. Decidir por antigüedad o por lo bien que lo hace hoy repite los mismos fallos que tantas contrataciones. Por eso se define primero, puesto por puesto, qué hará falta hoy y a dos o tres años vista, y se juzga a cada persona con datos de su trayectoria y con la mirada de sus colegas. Con esa radiografía delante, los recursos de desarrollo van a las acciones correctas y se promociona a quien tendrá éxito.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/smart_who/cap_06.md",
+          "lineas": "397-407"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)"
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aplicar el metodo al desarrollo, las promociones y la sucesion",
+      "texto_nuevo": "Aplicar el método al desarrollo, las promociones y la sucesión",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con el error que el libro nombra: basar la decision en la antiguedad o en lo bien que alguien lo esta haciendo en su puesto actual, en vez de evaluar lo que va a necesitar para tener exito en un puesto futuro.",
+      "texto_nuevo": "Cuenta con este error: basar la decisión en la antigüedad o en lo bien que alguien lo está haciendo en su puesto actual, en vez de evaluar lo que va a necesitar para tener éxito en un puesto futuro.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el error que el libro nombra"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Construye una tarjeta de puntuacion para cada puesto revisando la estrategia de esa unidad de negocio y lo que implica para el puesto, hoy y sobre todo a dos o tres anos vista. El libro subraya el plazo largo, porque la tarjeta cambia cuanto mas alto sube alguien en la organizacion.",
+      "texto_nuevo": "Construye una tarjeta de puntuación para cada puesto revisando la estrategia de esa unidad de negocio y lo que implica para el puesto, hoy y sobre todo a dos o tres años vista. El plazo largo importa, porque la tarjeta cambia cuanto más alto sube alguien en la organización.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro subraya el plazo largo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Conduce una entrevista cronologica de trayectoria con cada persona, para conocer sus patrones de exito y como percibe su propia unidad.",
+      "texto_nuevo": "Conduce una entrevista cronológica de trayectoria con cada persona, para conocer sus patrones de éxito y cómo percibe su propia unidad.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Complementa esos datos entrevistando de doce a veinte colegas actuales y antiguos de cada persona, para conseguir la perspectiva de terceros, igual que harias en una entrevista de referencias.",
+      "texto_nuevo": "Complementa esos datos entrevistando de doce a veinte colegas actuales y antiguos de cada persona, para conseguir la perspectiva de terceros, igual que harías en una entrevista de referencias.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Presenta esa radiografia del talento alto a quien tiene que decidir.",
+      "texto_nuevo": "Presenta esa radiografía del talento alto a quien tiene que decidir.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Con los datos delante, acelera el desarrollo de los individuos clave, coloca a otros en puestos de sucesion y saca o recoloca a los demas.",
+      "texto_nuevo": "Con los datos delante, acelera el desarrollo de los individuos clave, coloca a otros en puestos de sucesión y saca o recoloca a los demás.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Enfoca los recursos de desarrollo en las acciones correctas, que es lo que este uso del metodo permite hacer, y promociona a quienes vayan a tener exito en su puesto nuevo.",
+      "texto_nuevo": "Enfoca los recursos de desarrollo en las acciones correctas, que es lo que este uso del método permite hacer, y promociona a quienes vayan a tener éxito en su puesto nuevo.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una tarjeta de puntuacion por puesto escrita a dos o tres anos vista, una radiografia del talento alto construida con entrevistas cronologicas y con terceros, y sobre ella las decisiones de desarrollo, de colocacion y de sucesion tomadas con datos.",
+      "texto_nuevo": "Una tarjeta de puntuación por puesto escrita a dos o tres años vista, una radiografía del talento alto construida con entrevistas cronológicas y con terceros, y sobre ella las decisiones de desarrollo, de colocación y de sucesión tomadas con datos.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 24, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aplicar_metodo_promocion_sucesion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando hay que decidir sobre desarrollo, promociones o sucesion de gente que ya esta dentro, y no sobre a quien contratar de fuera. El libro dice que es ahi donde los directivos recaen en los metodos de vudu.",
+      "texto_nuevo": "Cuando hay que decidir sobre desarrollo, promociones o sucesión de gente que ya está dentro, y no sobre a quién contratar de fuera. Es ahí donde los directivos recaen en los métodos vudú.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "El libro dice que es ahi donde"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 24)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-aplicar_metodo_promocion_sucesion-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuando hay que decidir sobre desarrollo, promociones o sucesión de gente que ya está dentro, y no sobre a quién contratar de fuera. Es ahí donde los directivos recaen en los métodos vudú.",
+      "texto_nuevo": "Cuando hay que decidir sobre desarrollo, promociones o sucesión de gente que ya está dentro, y no sobre a quién contratar de fuera. Es ahí donde la mayoría de los directivos recae en los mismos métodos sin fundamento de tantas contrataciones.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_06.md 397",
+        "frase": "We have found that most managers fall back on voodoo hiring methods when thinking about development, promotions, and succession planning."
+      },
+      "decision": "auditoria completa M11 (matiz, coherencia): El libro dice la mayoría de los directivos (most managers), no todos; y \"los métodos vudú\" no tiene referente en el nodo: se dice qué son, en línea con el resumen (\"los mismos fallos que tantas contrataciones\").",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz",
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase2-aplicar_metodo_promocion_sucesion-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Presenta esa radiografía del talento alto a quien tiene que decidir.",
+      "texto_nuevo": "Presenta esa radiografía del mejor talento a quien tiene que decidir.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "del talento alto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Talento alto\" es calco de \"top talent\".",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-aplicar_metodo_promocion_sucesion-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "VOZ",
+      "texto_anterior": "Una tarjeta de puntuación por puesto escrita a dos o tres años vista, una radiografía del talento alto construida con entrevistas cronológicas y con terceros, y sobre ella las decisiones de desarrollo, de colocación y de sucesión tomadas con datos.",
+      "texto_nuevo": "Una tarjeta de puntuación por puesto escrita a dos o tres años vista, una radiografía del mejor talento construida con entrevistas cronológicas y con terceros, y sobre ella las decisiones de desarrollo, de colocación y de sucesión tomadas con datos.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "del talento alto"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"Talento alto\" es calco de \"top talent\".",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase3-aplicar_metodo_promocion_sucesion-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Lo que llevó a alguien a su puesto actual no garantiza que le sirva en el siguiente: cuanto más sube una persona, más cambia lo que su puesto le exige. Decidir por antigüedad o por lo bien que lo hace hoy repite los mismos fallos que tantas contrataciones. Por eso se define primero, puesto por puesto, qué hará falta hoy y a dos o tres años vista, y se juzga a cada persona con datos de su trayectoria y con la mirada de sus colegas. Con esa radiografía delante, los recursos de desarrollo van a las acciones correctas y se promociona a quien tendrá éxito.",
+      "texto_nuevo": "Lo que llevó a alguien a su puesto actual no garantiza que le sirva en el siguiente: cuanto más sube una persona, más cambia lo que su puesto le exige. Decidir por antigüedad o por lo bien que lo hace hoy repite los mismos fallos que tantas contrataciones. Por eso se define primero, puesto por puesto, qué hará falta hoy y a dos o tres años vista, y se juzga a cada persona con datos de su trayectoria y con la mirada de sus colegas. Con esa radiografía delante, puedes enfocar los recursos de desarrollo en las acciones correctas y promocionar a quien tendrá éxito.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "smart_who/cap_06.md 399",
+        "frase": "Applying the A Method, and in particular the scorecard and select portions of the method, will enable you to focus development resources on the right actions, and to promote people who will succeed in their new positions."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que el método te permite enfocar los recursos y promocionar a quien tendrá éxito; el resumen lo daba como resultado seguro.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase3-aplicar_metodo_promocion_sucesion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Construye una tarjeta de puntuación para cada puesto revisando la estrategia de esa unidad de negocio y lo que implica para el puesto, hoy y sobre todo a dos o tres años vista. El plazo largo importa, porque la tarjeta cambia cuanto más alto sube alguien en la organización.",
+      "texto_nuevo": "Construye una tarjeta de puntuación para cada puesto revisando la estrategia de su unidad de negocio y lo que implica para el puesto, hoy y sobre todo a dos o tres años vista. El plazo largo importa, porque la tarjeta cambia cuanto más alto sube alguien en la organización.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/pase3/)",
+        "evidencia": "\"esa unidad de negocio\" no tiene antecedente en el nodo."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"esa unidad de negocio\" no tiene antecedente en el nodo.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase3/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-pase5-aplicar_metodo_promocion_sucesion-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Construye una tarjeta de puntuación para cada puesto revisando la estrategia de su unidad de negocio y lo que implica para el puesto, hoy y sobre todo a dos o tres años vista. El plazo largo importa, porque la tarjeta cambia cuanto más alto sube alguien en la organización.",
+      "texto_nuevo": "Construye una tarjeta de puntuación para cada puesto revisando la estrategia de su unidad de negocio y lo que implica para el puesto, hoy y sobre todo a dos o tres años vista. Ten presente además que la tarjeta cambia cuanto más alto sube alguien en la organización.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_06.md 399, 403",
+        "frase": "The scorecard changes the higher somebody climbs in an organization, which means how you think about a person's capabilities must change. / the ghSMART team built scorecards for each role by reviewing the strategy for each business unit and its implications on each position for today and especially for two to three years out."
+      },
+      "decision": "auditoria completa M11 (invencion): El libro fija el horizonte de dos o tres años por la estrategia de cada unidad y dice aparte que la tarjeta cambia al subir; el 'porque' que une ambas cosas no está en el capítulo. Se quita el nexo y se conserva el contenido.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/pase5/",
+      "motivos": [
+        "invencion"
+      ]
+    },
+    {
+      "id": "m11-pase6-aplicar_metodo_promocion_sucesion-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Con los datos delante, acelera el desarrollo de los individuos clave, coloca a otros en puestos de sucesión y saca o recoloca a los demás.",
+      "texto_nuevo": "Con los datos delante, acelera el desarrollo de los individuos clave, coloca a otros en puestos de sucesión y saca o recoloca a otros.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_06.md 407",
+        "frase": "Armed with data, the CEO was able to accelerate the development of key individuals, position others for key succession roles, and move out or redeploy others."
+      },
+      "decision": "doble lectura M11 (sexto pase) (matiz): El libro dice 'others' (a otros), no el resto entero: 'a los demás' convierte en regla que todo el que no es clave ni sucesor sale o se recoloca.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-pase6-aplicar_metodo_promocion_sucesion-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Complementa esos datos entrevistando de doce a veinte colegas actuales y antiguos de cada persona, para conseguir la perspectiva de terceros, igual que harías en una entrevista de referencias.",
+      "texto_nuevo": "Complementa esos datos entrevistando a colegas actuales y antiguos de cada persona, para conseguir la perspectiva de terceros, igual que harías en una entrevista de referencias; en un caso fueron de doce a veinte por cada directivo.",
+      "cita": {
+        "libro": "Who: The A Method for Hiring - Geoff Smart y Randy Street",
+        "lineas": "fuentes/smart_who/cap_06.md 405",
+        "frase": "The team supplemented that data by interviewing twelve to twenty current and former colleagues of each executive to gain a third-party perspective, much like you would do in a reference interview."
+      },
+      "decision": "doble lectura M11 (sexto pase) (matiz): De doce a veinte es lo que hizo un equipo en un caso (la sucesión en un banco), no una norma del método; se cuenta como caso.",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/pase6/",
+      "motivos": [
+        "matiz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Aplica el Método a los Ascensos",
+  "fuentes_internas": [
+    "Who: The A Method for Hiring - Geoff Smart y Randy Street"
+  ]
+}

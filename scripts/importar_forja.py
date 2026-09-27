@@ -104,6 +104,23 @@ DOMINIOS_A_OTRO_MUNDO = {"proteccion_consumidor": "mundo 10 (Vender), aun no exi
 ENTRADAS = BASE / "docs" / "puente_forja"
 FASES_DEFECTO = ENTRADAS / "fases_mundo11.jsonl"
 
+# DECISION DEL FUNDADOR (28 sep 2026): los nodos APARCADOS se quedan en la
+# forja y no entran al pack, cada uno con su motivo; la ficha que los espera
+# (la reextraccion dirigida) vive en docs/PENDIENTES.md.
+APARCADOS = "aparcados_mundo11.json"
+
+
+def aparcar(nodos, aparcados):
+    """(dentro, aparcados, desconocidos): los nodos que no estan en la lista, los que si, y los ids de la lista que
+    no existen en la forja. Ningun nodo se aparca sin su motivo."""
+    for a in aparcados:
+        if not str(a.get("motivo", "")).strip():
+            raise ValueError("aparcado sin motivo: %s" % a.get("id"))
+    ids = {a["id"] for a in aparcados}
+    presentes = {n["id"] for n in nodos}
+    return ([n for n in nodos if n["id"] not in ids], [n for n in nodos if n["id"] in ids],
+            [a["id"] for a in aparcados if a["id"] not in presentes])
+
 
 # ---------------------------------------------------------------------------
 # Lectura
@@ -257,6 +274,9 @@ def construir(forja, salida, fases, incluir_forja, ruta_fases="", entradas=ENTRA
     fuera = [n for n in nodos if n.get("dominio") in DOMINIOS_FUERA and not incluir_forja]
     a_otro_mundo = [n for n in nodos if n.get("dominio") in DOMINIOS_A_OTRO_MUNDO]
     dentro = [n for n in nodos if n not in fuera and n not in a_otro_mundo]
+    rp = Path(entradas) / APARCADOS
+    lista_aparcados = json.load(io.open(rp, encoding="utf-8"))["aparcados"] if rp.exists() else []
+    dentro, aparcados, aparcados_desconocidos = aparcar(dentro, lista_aparcados)
     ids_pack = {n["id"] for n in dentro}
     ids_forja = {n["id"] for n in nodos}
 
@@ -385,6 +405,8 @@ def construir(forja, salida, fases, incluir_forja, ruta_fases="", entradas=ENTRA
     for dom, casa in sorted(DOMINIOS_A_OTRO_MUNDO.items()):
         ids_o = [n["id"] for n in a_otro_mundo if n.get("dominio") == dom]
         w("   fuera del pack por ser de otro mundo (%s, a %s): %d %s" % (dom, casa, len(ids_o), ids_o))
+    w("   aparcados en la forja (%s, con ficha): %d %s" % (APARCADOS, len(aparcados), [n["id"] for n in aparcados]))
+    w("   aparcados que NO estan en la forja: %d %s" % (len(aparcados_desconocidos), aparcados_desconocidos))
     for dom_f, k in sorted(collections.Counter(n.get("dominio") for n in dentro).items()):
         w("   dominio de la forja %-22s %3d nodos, destino %s" % (dom_f, k, DOMINIO_DESTINO.get(dom_f, "(SIN DESTINO)")))
     for dom, k in sorted(por_dominio.items()):

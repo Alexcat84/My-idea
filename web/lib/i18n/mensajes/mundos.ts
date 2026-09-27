@@ -15,7 +15,7 @@ const es = {
   franquicias: { nombre: "Multiplica tu Negocio", promesa: "Convierte tu negocio probado en muchos que funcionan igual." },
   risk_management: { nombre: "Riesgos Bajo Control", promesa: "Ve venir lo que puede fallar, y decide antes de que decida por ti." },
   compras: { nombre: "Tu Compra Correcta", promesa: "Compra lo que toca, al que toca, al precio que toca." },
-  entrega: { nombre: "Del Taller a sus Manos", promesa: "Que llegue entero, a tiempo y sin sorpresas de costo." },
+  entrega: { nombre: "Del Taller a sus Manos", promesa: "Que llegue entero, a tiempo y sin sorpresas de costo." },  primer_equipo: { nombre: "Primer Equipo", promesa: "Contrata bien, dirige mejor y haz crecer a tu gente." },
 };
 
 const en: typeof es = {
@@ -28,6 +28,7 @@ const en: typeof es = {
   risk_management: { nombre: "Risks Under Control", promesa: "See what could go wrong before it happens, and decide before it decides for you." },
   compras: { nombre: "The Right Purchase", promesa: "Buy the right thing, from the right supplier, at the right price." },
   entrega: { nombre: "From Workshop to Customer", promesa: "Make sure it arrives intact, on time and with no cost surprises." },
+  primer_equipo: { nombre: "First Team", promesa: "Hire well, lead better and help your people grow." },
 };
 
 const fr: typeof es = {
@@ -66,6 +67,10 @@ const fr: typeof es = {
   entrega: {
     nombre: "De l'atelier à leurs mains",
     promesa: "Que ça arrive intact, à temps et sans mauvaise surprise sur les coûts.",
+  },
+  primer_equipo: {
+    nombre: "Première équipe",
+    promesa: "Recrute bien, dirige mieux et fais grandir ton équipe.",
   },
 };
 
@@ -106,6 +111,10 @@ const pt: typeof es = {
     nombre: "Da Oficina às Mãos Deles",
     promesa: "Que chegue inteiro, no prazo e sem surpresas de custo.",
   },
+  primer_equipo: {
+    nombre: "Primeira Equipe",
+    promesa: "Contrate bem, lidere melhor e faça sua equipe crescer.",
+  },
 };
 
 const de: typeof es = {
@@ -144,6 +153,10 @@ const de: typeof es = {
   entrega: {
     nombre: "Von der Werkstatt in ihre Hände",
     promesa: "Damit es heil, pünktlich und ohne Kostenüberraschungen ankommt.",
+  },
+  primer_equipo: {
+    nombre: "Erstes Team",
+    promesa: "Stell gut ein, führe besser und lass deine Leute wachsen.",
   },
 };
 
@@ -184,6 +197,10 @@ const it: typeof es = {
     nombre: "Dal Laboratorio alle loro Mani",
     promesa: "Fai in modo che arrivi integro, puntuale e senza sorprese sui costi.",
   },
+  primer_equipo: {
+    nombre: "Prima Squadra",
+    promesa: "Assumi bene, guida meglio e fai crescere la tua squadra.",
+  },
 };
 
 const ja: typeof es = {
@@ -222,6 +239,10 @@ const ja: typeof es = {
   entrega: {
     nombre: "工房からお客様の手へ",
     promesa: "壊れずに、時間どおりに、想定外の費用なしで届くように。",
+  },
+  primer_equipo: {
+    nombre: "はじめてのチーム",
+    promesa: "よい人を採用し、よりよく導き、メンバーを育てる。",
   },
 };
 
@@ -262,6 +283,10 @@ const zh: typeof es = {
     nombre: "从作坊到客户手中",
     promesa: "完好无损、准时送达，成本上没有意外。",
   },
+  primer_equipo: {
+    nombre: "第一支团队",
+    promesa: "招对人，带好队，让你的人成长。",
+  },
 };
 
 const ko: typeof es = {
@@ -300,6 +325,10 @@ const ko: typeof es = {
   entrega: {
     nombre: "공방에서 고객의 손까지",
     promesa: "온전하게, 제때, 뜻밖의 비용 없이 도착하도록.",
+  },
+  primer_equipo: {
+    nombre: "첫 팀",
+    promesa: "잘 뽑고, 더 잘 이끌고, 팀원이 성장하도록.",
   },
 };
 
@@ -340,6 +369,10 @@ const ar: typeof es = {
     nombre: "من الورشة إلى أيديهم",
     promesa: "أن يصل سليمًا، وفي موعده، ودون مفاجآت في التكلفة.",
   },
+  primer_equipo: {
+    nombre: "فريقكم الأول",
+    promesa: "وظّفوا جيدًا، وقودوا أفضل، وساعدوا فريقكم على النمو.",
+  },
 };
 
 const hi: typeof es = {
@@ -378,6 +411,10 @@ const hi: typeof es = {
   entrega: {
     nombre: "कार्यशाला से उनके हाथों तक",
     promesa: "ताकि सामान सही-सलामत, समय पर और बिना किसी अचानक खर्च के पहुँचे।",
+  },
+  primer_equipo: {
+    nombre: "आपकी पहली टीम",
+    promesa: "सही लोगों को चुनें, बेहतर नेतृत्व करें और अपनी टीम को आगे बढ़ाएँ।",
   },
 };
 

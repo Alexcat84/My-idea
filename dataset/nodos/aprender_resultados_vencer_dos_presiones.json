@@ -1,0 +1,365 @@
+{
+  "node_id": "aprender_resultados_vencer_dos_presiones",
+  "fase_proyecto": "ejecucion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Aprender de los resultados venciendo las dos presiones que pueden empujarte a dejar de aprender",
+  "fuente": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+  "resumen_teorico": "Es humano apegarse, a menudo sin razón, a los proyectos en los que has puesto mucho tiempo y energía, y dar un paso atrás, reconocer cuándo el resultado podría ser mucho mejor o no es bueno, y aprender de la experiencia puede pedir una disciplina casi sobrehumana. La negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y hay quien lo resume así: admitir que tu propio trabajo tiene fallos duele de forma insoportable. Una directiva que llevaba un equipo grande encontró dos presiones enormes que la tentaban a dejar de aprender: la de ser coherente y el agotamiento.",
+  "notas_extraccion": "Sale de fuentes/scott_radical_candor/cap_07.md, lineas 389 a 401, bajo el rotulo LEARN, y es la cabeza del ultimo paso de la rueda de hacer cosas. ES UNA CABEZA DE SERIE D.37 Y ESO TIENE CONSECUENCIA: la linea 401 dice CUANTAS partes tiene, con estas palabras, there were two enormous pressures that tempted me to quit learning, y las dos llevan su rotulo propio inmediatamente despues, Pressure to be consistent y Burnout. D.37 manda que las aristas de esta cabeza a sus dos partes se declaren en la misma vuelta en que se insertan las partes, sin esperar a ninguna señal, con el paso de la madre citado. El paso que las enumera es el P6. El caso de Drew Houston y el libro Denial de Richard Tedlow quedan fuera de los pasos porque son ilustracion de la postura y no actos; la frase del bebe feo si entra, dentro del paso que la usa, porque es la que nombra la causa. RELECTURA DE FIDELIDAD D.30 EN EL ACTO: 6 pasos, 6 TRANSCRIPCION, 0 PUENTE. P1, P2, P3 y P4 de la linea 395; P5 de las lineas 399 y 401; P6 de la linea 401. LO QUE EL TEXTO NO DICE Y POR ESO NO ESTA AQUI: cuando se mira el resultado, quien lo mira, y como se distingue el apego razonable del que no lo es.",
+  "pasos_accionables": [
+    "Cuenta con lo que es la naturaleza humana: te apegas, a menudo de forma poco razonable, a los proyectos en los que has metido mucho tiempo y mucha energía.",
+    "Reúne la disciplina casi sobrehumana que puede hacer falta para dar un paso atrás.",
+    "Reconoce cuándo tus resultados y los de tu equipo podrían ser mucho mejores, o cuándo directamente no son buenos.",
+    "Aprende de la experiencia.",
+    "Cuenta con que la negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y con el motivo que dio un colega: duele muchísimo reconocer que tu propio trabajo tiene fallos.",
+    "Vence las dos enormes presiones que una directiva encontró al dirigir un equipo grande y que pueden empujarte a dejar de aprender: la presión de ser coherente, y el agotamiento."
+  ],
+  "entregable_esperado": "El resultado mirado sin negación y el aprendizaje sacado de él.",
+  "nodos_previos": [
+    "reservar_calendario_tiempo_ejecutar"
+  ],
+  "nodos_siguientes": [
+    "cambiar_posicion_hechos_explicar_cambio",
+    "cuidarse_agotamiento_centro_rueda",
+    "hacer_repaso_posterior_proyecto"
+  ],
+  "condiciones_activacion": [
+    "Cuando has puesto con tu equipo muchísimo trabajo, has conseguido algo, y ahora hay que mirar el resultado de verdad."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-aprender_resultados_vencer_dos_presiones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Es humano apegarse, a menudo sin razón, a los proyectos en los que has puesto mucho tiempo y energía, y dar un paso atrás, reconocer cuándo el resultado podría ser mucho mejor o no es bueno, y aprender de la experiencia puede pedir una disciplina casi sobrehumana. La negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y hay quien lo resume en que admitir que tienes un bebé feo duele de forma insoportable. Una directiva que llevaba un equipo grande encontró dos presiones enormes que la tentaban a dejar de aprender: la de ser coherente y el agotamiento.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/scott_radical_candor/cap_07.md",
+          "lineas": "395-401"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (causa): 'funciona porque nombra ese apego' y 'saber que hay dos presiones permite vencerlas' no están en 395 a 401; las dos presiones son experiencia de la autora (401 'I found') y el bebé feo es frase de un colega (399). La propuesta devuelve el 'It can take almost superhuman discipline' y cuenta ambos como casos, sin causas añadidas.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)"
+    },
+    {
+      "id": "m11-limpieza-aprender_resultados_vencer_dos_presiones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que el texto llama naturaleza humana: que nos apegamos, a menudo de forma poco razonable, a los proyectos en los que hemos metido mucho tiempo y mucha energia.",
+      "texto_nuevo": "Cuenta con lo que es la naturaleza humana: nos apegamos, a menudo de forma poco razonable, a los proyectos en los que hemos metido mucho tiempo y mucha energía.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "lo que el texto llama naturaleza humana"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aprender_resultados_vencer_dos_presiones-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reune la disciplina casi sobrehumana que hace falta para dar un paso atras.",
+      "texto_nuevo": "Reúne la disciplina casi sobrehumana que hace falta para dar un paso atrás.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aprender_resultados_vencer_dos_presiones-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Reconoce cuando vuestros resultados podrian ser mucho mejores, o cuando directamente no son buenos.",
+      "texto_nuevo": "Reconoce cuándo tus resultados y los de tu equipo podrían ser mucho mejores, o cuándo directamente no son buenos.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "vuestros resultados"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aprender_resultados_vencer_dos_presiones-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con que la negacion es la reaccion mas comun a una ejecucion imperfecta, mas comun que el aprendizaje, y con el motivo que el texto pone en boca de un colega: es insoportablemente doloroso admitirlo cuando tienes un bebe feo.",
+      "texto_nuevo": "Cuenta con que la negación es la reacción más común a una ejecución imperfecta, más común que el aprendizaje, y con el motivo que dio un colega: duele muchísimo reconocer que la criatura que has sacado adelante es fea.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto pone en boca de un colega",
+          "es insoportablemente doloroso admitirlo cuando tienes un bebe feo"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ingles",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aprender_resultados_vencer_dos_presiones-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Vence las dos enormes presiones que el texto dice que tentaban a la autora a dejar de aprender cuando dirigia un equipo grande: la presion de ser coherente, y el agotamiento.",
+      "texto_nuevo": "Vence las dos enormes presiones que empujan a dejar de aprender cuando diriges un equipo grande: la presión de ser coherente, y el agotamiento.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "que el texto dice que tentaban a la autora a dejar de aprender"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_libro",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aprender_resultados_vencer_dos_presiones-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El resultado mirado sin negacion, el aprendizaje sacado de el, y la rueda empezada otra vez desde escuchar.",
+      "texto_nuevo": "El resultado mirado sin negación, el aprendizaje sacado de él, y la rueda empezada otra vez desde escuchar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 14, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-aprender_resultados_vencer_dos_presiones-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando tu equipo y tu habeis dado la vuelta entera a la rueda, habeis conseguido algo, y ahora hay que mirar el resultado de verdad.",
+      "texto_nuevo": "Cuando has dado con tu equipo la vuelta entera a la rueda, has conseguido algo, y ahora hay que mirar el resultado de verdad.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "tu equipo y tu habeis dado",
+          "habeis conseguido"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 14)",
+      "motivos": [
+        "voz_de_la_casa"
+      ]
+    },
+    {
+      "id": "m11-auditoria-aprender_resultados_vencer_dos_presiones-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Vence las dos enormes presiones que empujan a dejar de aprender cuando diriges un equipo grande: la presión de ser coherente, y el agotamiento.",
+      "texto_nuevo": "Vence las dos enormes presiones que una directiva encontró al dirigir un equipo grande y que pueden empujarte a dejar de aprender: la presión de ser coherente, y el agotamiento.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "scott_radical_candor/cap_07.md 401",
+        "frase": "When managing a large team, I found there were two enormous pressures that tempted me to quit learning."
+      },
+      "decision": "auditoria completa M11 (matiz): Es lo que la autora encontró al dirigir un equipo grande; se cuenta como caso y no como lo que te va a pasar.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-aprender_resultados_vencer_dos_presiones-titulo_concepto",
+      "fecha": "2026-09-28",
+      "campo": "titulo_concepto",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Aprender de los resultados venciendo las dos presiones que empujan a dejar de aprender",
+      "texto_nuevo": "Aprender de los resultados venciendo las dos presiones que pueden empujarte a dejar de aprender",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "scott_radical_candor/cap_07.md 401",
+        "frase": "When managing a large team, I found there were two enormous pressures that tempted me to quit learning."
+      },
+      "decision": "auditoria completa M11 (matiz): Presentaba como ley las dos presiones que una directiva encontró en su caso.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-aprender_resultados_vencer_dos_presiones-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Reúne la disciplina casi sobrehumana que hace falta para dar un paso atrás.",
+      "texto_nuevo": "Reúne la disciplina casi sobrehumana que puede hacer falta para dar un paso atrás.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "scott_radical_candor/cap_07.md 395",
+        "frase": "It can take almost superhuman discipline to step back, acknowledge when our results could be a lot better or are simply no good, and learn from the experience."
+      },
+      "decision": "auditoria completa M11 (matiz): El libro dice que PUEDE hacer falta una disciplina casi sobrehumana.",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "matiz"
+      ]
+    },
+    {
+      "id": "m11-auditoria-aprender_resultados_vencer_dos_presiones-entregable_esperado",
+      "fecha": "2026-09-28",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "El resultado mirado sin negación, el aprendizaje sacado de él, y la rueda empezada otra vez desde escuchar.",
+      "texto_nuevo": "El resultado mirado sin negación y el aprendizaje sacado de él.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "\"La rueda\" y su paso de escuchar no existen en el nodo, y ningún paso habla de volver a empezar."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"La rueda\" y su paso de escuchar no existen en el nodo, y ningún paso habla de volver a empezar.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-aprender_resultados_vencer_dos_presiones-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando has dado con tu equipo la vuelta entera a la rueda, has conseguido algo, y ahora hay que mirar el resultado de verdad.",
+      "texto_nuevo": "Cuando has puesto con tu equipo muchísimo trabajo, has conseguido algo, y ahora hay que mirar el resultado de verdad.",
+      "cita": {
+        "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+        "evidencia": "\"La rueda\" no tiene antecedente en el nodo; el libro: \"you and your team have put in a ton of work, you’ve achieved something\" (cap_07, 395)."
+      },
+      "decision": "auditoria completa M11 (coherencia): \"La rueda\" no tiene antecedente en el nodo; el libro: \"you and your team have put in a ton of work, you’ve achieved something\" (cap_07, 395).",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "coherencia"
+      ]
+    },
+    {
+      "id": "m11-muestra-final-aprender_resultados_vencer_dos_presiones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Es humano apegarse, a menudo sin razón, a los proyectos en los que has puesto mucho tiempo y energía, y dar un paso atrás, reconocer cuándo el resultado podría ser mucho mejor o no es bueno, y aprender de la experiencia puede pedir una disciplina casi sobrehumana. La negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y hay quien lo resume en que admitir que tienes un bebé feo duele de forma insoportable. Una directiva que llevaba un equipo grande encontró dos presiones enormes que la tentaban a dejar de aprender: la de ser coherente y el agotamiento.",
+      "texto_nuevo": "Es humano apegarse, a menudo sin razón, a los proyectos en los que has puesto mucho tiempo y energía, y dar un paso atrás, reconocer cuándo el resultado podría ser mucho mejor o no es bueno, y aprender de la experiencia puede pedir una disciplina casi sobrehumana. La negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y hay quien lo resume en que admitir que tu criatura es fea duele de forma insoportable. Una directiva que llevaba un equipo grande encontró dos presiones enormes que la tentaban a dejar de aprender: la de ser coherente y el agotamiento.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "tienes un bebé feo"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco literal del modismo inglés 'ugly baby', que en español no se lee como 'lo que has creado es malo'; el paso 5 ya usa 'la criatura'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-aprender_resultados_vencer_dos_presiones-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Es humano apegarse, a menudo sin razón, a los proyectos en los que has puesto mucho tiempo y energía, y dar un paso atrás, reconocer cuándo el resultado podría ser mucho mejor o no es bueno, y aprender de la experiencia puede pedir una disciplina casi sobrehumana. La negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y hay quien lo resume en que admitir que tu criatura es fea duele de forma insoportable. Una directiva que llevaba un equipo grande encontró dos presiones enormes que la tentaban a dejar de aprender: la de ser coherente y el agotamiento.",
+      "texto_nuevo": "Es humano apegarse, a menudo sin razón, a los proyectos en los que has puesto mucho tiempo y energía, y dar un paso atrás, reconocer cuándo el resultado podría ser mucho mejor o no es bueno, y aprender de la experiencia puede pedir una disciplina casi sobrehumana. La negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y hay quien lo resume así: admitir que tu propio trabajo tiene fallos duele de forma insoportable. Una directiva que llevaba un equipo grande encontró dos presiones enormes que la tentaban a dejar de aprender: la de ser coherente y el agotamiento.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "lo resume en que admitir que tu criatura es fea"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de la metáfora \"an ugly baby\"; se dice en llano lo que significa: admitir que tu propio trabajo tiene fallos. Queda en 600 caracteres.",
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-aprender_resultados_vencer_dos_presiones-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ANADIDO",
+      "texto_anterior": "Cuenta con que la negación es la reacción más común a una ejecución imperfecta, más común que el aprendizaje, y con el motivo que dio un colega: duele muchísimo reconocer que la criatura que has sacado adelante es fea.",
+      "texto_nuevo": "Cuenta con que la negación es una reacción más común que el aprendizaje ante una ejecución imperfecta, y con el motivo que dio un colega: duele muchísimo reconocer que tu propio trabajo tiene fallos.",
+      "cita": {
+        "libro": "Radical Candor: Fully Revised and Updated Edition - Kim Scott",
+        "lineas": "fuentes/scott_radical_candor/cap_07.md 401",
+        "frase": "And yet, denial is actually the more common reaction to imperfect execution than learning."
+      },
+      "decision": "auditoria completa M11 (matiz, calco): El libro compara dos reacciones (más común que el aprendizaje), no dice que la negación sea la más común de todas; y la metáfora \"an ugly baby\" (línea 399) se dice en llano: reconocer que tu propio trabajo tiene fallos.",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "matiz",
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase4-aprender_resultados_vencer_dos_presiones-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuenta con lo que es la naturaleza humana: nos apegamos, a menudo de forma poco razonable, a los proyectos en los que hemos metido mucho tiempo y mucha energía.",
+      "texto_nuevo": "Cuenta con lo que es la naturaleza humana: te apegas, a menudo de forma poco razonable, a los proyectos en los que has metido mucho tiempo y mucha energía.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "nos apegamos",
+          "hemos metido"
+        ]
+      },
+      "decision": "auditoria completa M11 (voz): Nosotros genérico de quien escribe (it is human nature for us to become attached): voz de libro, pasa a tú.",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/pase4/",
+      "motivos": [
+        "voz"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Aprende de Tus Resultados sin Apegos",
+  "fuentes_internas": [
+    "Radical Candor: Fully Revised and Updated Edition - Kim Scott"
+  ]
+}

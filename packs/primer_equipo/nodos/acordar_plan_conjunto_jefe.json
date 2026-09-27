@@ -1,0 +1,299 @@
+{
+  "node_id": "acordar_plan_conjunto_jefe",
+  "fase_proyecto": "planificacion",
+  "dominio": "primer_equipo",
+  "titulo_concepto": "Acordar con tu jefe un plan conjunto para empezar",
+  "fuente": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+  "resumen_teorico": "Cuando pasas a dirigir a parte de la gente que ya lleva tu propio jefe, este suele ser el camino más fácil: esa persona ya ha estado mirando el equipo y conoce a todos los implicados, así que normalmente tendrás más guía que en otras transiciones. Conviene trabajar con tu jefe un plan conjunto para empezar: cuál será tu ámbito y cómo cambiará, cómo se comunicará tu transición, qué necesitas saber de las personas, qué metas o procesos empujar, qué sería un éxito a tres y seis meses y cómo mantener claro quién hace qué. Hay quien tuvo en su jefa un apoyo constante en sus primeros meses.",
+  "notas_extraccion": "Es el instrumento que el libro pone dentro del camino del aprendiz, y el unico del capitulo que produce un acuerdo con otra persona en vez de una lista propia. Las seis preguntas son las seis que el libro escribe una a una bajo la frase que las introduce, preguntas que discutir incluyen. La doctrina de la que cuelgan es la ventaja que el libro atribuye a este camino, que tu propio jefe ha estado vigilando el equipo y conoce a todos los implicados, asi que hay mas guia disponible que en los otros tres caminos. El ultimo paso NO es un encargo al lector y por eso lleva dentro de quien es la experiencia: viene del caso que la autora cuenta de si misma, su jefa Rebekah fue su caja de resonancia constante en los primeros meses, y el libro dice para que exactamente, para cuando no sabia como responder a una peticion o surgia una situacion para la que no se sentia preparada. Lo que el libro NO dice, y por eso no esta escrito aqui, es cuando se tiene esa conversacion, si se escribe, ni cada cuanto se revisa el plan.",
+  "pasos_accionables": [
+    "Si estás haciendo la transición como aprendiz, trabaja con tu jefe en un plan conjunto para empezar.",
+    "Habla con él de cuál va a ser tu ámbito al principio y de cómo espera que cambie con el tiempo.",
+    "Habla con él de cómo se va a comunicar tu transición.",
+    "Habla con él de qué necesitas saber sobre las personas que vas a dirigir.",
+    "Habla con él de qué metas o procesos importantes del equipo deberías conocer y ayudar a empujar.",
+    "Habla con él de qué sería un éxito en tus primeros tres meses y en tus primeros seis.",
+    "Y habla con él de cómo mantener entre los dos una misma idea de quién hace qué.",
+    "Como ejemplo de esa guía, no como encargo para ti: en sus primeros meses como directiva nueva, una persona tuvo a su jefa como apoyo constante al que consultar cuando no estaba segura de cómo responder a una petición o surgía una situación para la que no se sentía preparada."
+  ],
+  "entregable_esperado": "Un plan conjunto de arranque, acordado con tu jefe, con las seis preguntas discutidas y contestadas.",
+  "nodos_previos": [
+    "transitar_aprendiz_primeros_meses"
+  ],
+  "nodos_siguientes": [
+    "listar_bueno_mejorable_equipo"
+  ],
+  "condiciones_activacion": [
+    "Cuando estás haciendo la transición como aprendiz, es decir, cuando tu jefe te ha dado a dirigir una parte de su equipo y todavía te falta acordar con él cómo empieza eso."
+  ],
+  "ids_alias": [],
+  "correcciones": [
+    {
+      "id": "m11-limpieza-acordar_plan_conjunto_jefe-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "RESUMEN",
+      "texto_nuevo": "Cuando pasas a dirigir a parte de la gente que ya lleva tu propio jefe, este suele ser el camino más fácil: esa persona ya ha estado mirando el equipo y conoce a todos los implicados, así que normalmente tendrás más guía que en otras transiciones. Conviene trabajar con tu jefe un plan conjunto para empezar: cuál será tu ámbito y cómo cambiará, cómo se comunicará tu transición, qué necesitas saber de las personas, qué metas o procesos empujar, cómo se ve el éxito a tres y seis meses y cómo mantener claro quién hace qué. Hay quien tuvo en su jefa un apoyo constante en sus primeros meses.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": {
+          "fichero": "fuentes/zhuo_manager/cap_03.md",
+          "lineas": "43-59"
+        }
+      },
+      "decision": "limpieza M11 (RESUMEN): verificador OK; ajuste del orquestador: pase de matices (anecdota): Se sostiene: 'usually the easiest way' y 'you'll typically have more guidance' pierden su matiz, el apoyo constante es la experiencia de quien escribe con su jefa y 'Así nadie adivina' no sale de las líneas. La propuesta devuelve 'suele' y 'normalmente' y cuenta el apoyo como caso ('hay quien') y es correcta de fondo, pero abre con 'del equipo de tu propio jefe', que choca con la baranda 'el equipo de'; se toma la propuesta cambiando solo esa frase.",
+      "texto_anterior_en": "notas_extraccion",
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)"
+    },
+    {
+      "id": "m11-limpieza-acordar_plan_conjunto_jefe-pasos_accionables-0",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si estas haciendo la transicion como aprendiz, trabaja con tu jefe en un plan conjunto para empezar.",
+      "texto_nuevo": "Si estás haciendo la transición como aprendiz, trabaja con tu jefe en un plan conjunto para empezar.",
+      "cita": {
+        "instrumento": "limpieza M11: redactor, verificador ciego con trampas y arbitro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "evidencia": "lote 29, verificado"
+      },
+      "decision": "limpieza M11 (ORTOGRAFIA): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-acordar_plan_conjunto_jefe-pasos_accionables-1",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Discutid cual va a ser tu ambito al principio y como espera el que cambie con el tiempo.",
+      "texto_nuevo": "Habla con él de cuál va a ser tu ámbito al principio y de cómo espera que cambie con el tiempo.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Discutid"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 1,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-acordar_plan_conjunto_jefe-pasos_accionables-2",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Discutid como se va a comunicar tu transicion.",
+      "texto_nuevo": "Habla con él de cómo se va a comunicar tu transición.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Discutid"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 2,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-acordar_plan_conjunto_jefe-pasos_accionables-3",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Discutid que necesitas saber sobre las personas que vas a dirigir.",
+      "texto_nuevo": "Habla con él de qué necesitas saber sobre las personas que vas a dirigir.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Discutid"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 3,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-acordar_plan_conjunto_jefe-pasos_accionables-4",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Discutid que metas o procesos importantes del equipo deberias conocer y ayudar a empujar.",
+      "texto_nuevo": "Habla con él de qué metas o procesos importantes del equipo deberías conocer y ayudar a empujar.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Discutid"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 4,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-acordar_plan_conjunto_jefe-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Discutid a que se parece el exito en tus primeros tres meses y en tus primeros seis.",
+      "texto_nuevo": "Habla con él de cómo se ve el éxito en tus primeros tres meses y en tus primeros seis.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "Discutid"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-acordar_plan_conjunto_jefe-pasos_accionables-6",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y discutid como vais a mantener alineado entre los dos quien hace que.",
+      "texto_nuevo": "Y habla con él de cómo mantener entre los dos una misma idea de quién hace qué.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "discutid",
+          "vais"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 6,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-acordar_plan_conjunto_jefe-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Y el ejemplo que el libro pone de esa guia es de la propia autora, no un encargo para ti: en sus primeros meses su jefa Rebekah fue su caja de resonancia constante, para cuando no estaba segura de como responder a una peticion o surgia una situacion para la que no se sentia preparada.",
+      "texto_nuevo": "Como ejemplo de esa guía, no como encargo para ti: en sus primeros meses como directiva nueva, una persona tuvo a su jefa como caja de resonancia constante, para cuando no estaba segura de cómo responder a una petición o surgía una situación para la que no se sentía preparada.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "el libro pone",
+          "de la propia autora",
+          "Rebekah"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_libro",
+        "autor_o_titulo",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-limpieza-acordar_plan_conjunto_jefe-condiciones_activacion-0",
+      "fecha": "2026-09-28",
+      "campo": "condiciones_activacion",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando estas haciendo la transicion como aprendiz, es decir cuando tu jefe te ha dado a dirigir una parte de su equipo y todavia teneis que acordar como empieza eso.",
+      "texto_nuevo": "Cuando estás haciendo la transición como aprendiz, es decir, cuando tu jefe te ha dado a dirigir una parte de su equipo y todavía te falta acordar con él cómo empieza eso.",
+      "cita": {
+        "regla": "voz de libro, citas en ingles y voz de la casa: el cliente no ve el libro, el texto, el autor ni ingles (decision del fundador, 28 sep 2026; docs/saneamiento/instrumentos/M11_LIMPIEZA.md)",
+        "fragmentos": [
+          "teneis"
+        ]
+      },
+      "decision": "limpieza M11 (VOZ): verificador OK",
+      "indice": 0,
+      "auditoria": "docs/saneamiento/resultados/M11/ (redactor, verificador y arbitro, lote 29)",
+      "motivos": [
+        "voz_de_la_casa",
+        "ortografia"
+      ]
+    },
+    {
+      "id": "m11-auditoria-acordar_plan_conjunto_jefe-resumen_teorico",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Cuando pasas a dirigir a parte de la gente que ya lleva tu propio jefe, este suele ser el camino más fácil: esa persona ya ha estado mirando el equipo y conoce a todos los implicados, así que normalmente tendrás más guía que en otras transiciones. Conviene trabajar con tu jefe un plan conjunto para empezar: cuál será tu ámbito y cómo cambiará, cómo se comunicará tu transición, qué necesitas saber de las personas, qué metas o procesos empujar, cómo se ve el éxito a tres y seis meses y cómo mantener claro quién hace qué. Hay quien tuvo en su jefa un apoyo constante en sus primeros meses.",
+      "texto_nuevo": "Cuando pasas a dirigir a parte de la gente que ya lleva tu propio jefe, este suele ser el camino más fácil: esa persona ya ha estado mirando el equipo y conoce a todos los implicados, así que normalmente tendrás más guía que en otras transiciones. Conviene trabajar con tu jefe un plan conjunto para empezar: cuál será tu ámbito y cómo cambiará, cómo se comunicará tu transición, qué necesitas saber de las personas, qué metas o procesos empujar, qué sería un éxito a tres y seis meses y cómo mantener claro quién hace qué. Hay quien tuvo en su jefa un apoyo constante en sus primeros meses.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cómo se ve el éxito"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'what does success look like'.",
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-auditoria-acordar_plan_conjunto_jefe-pasos_accionables-5",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Habla con él de cómo se ve el éxito en tus primeros tres meses y en tus primeros seis.",
+      "texto_nuevo": "Habla con él de qué sería un éxito en tus primeros tres meses y en tus primeros seis.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "cómo se ve el éxito"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): Calco de 'what does success look like'.",
+      "indice": 5,
+      "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+      "motivos": [
+        "calco"
+      ]
+    },
+    {
+      "id": "m11-pase2-acordar_plan_conjunto_jefe-pasos_accionables-7",
+      "fecha": "2026-09-28",
+      "campo": "pasos_accionables",
+      "veredicto": "VOZ",
+      "texto_anterior": "Como ejemplo de esa guía, no como encargo para ti: en sus primeros meses como directiva nueva, una persona tuvo a su jefa como caja de resonancia constante, para cuando no estaba segura de cómo responder a una petición o surgía una situación para la que no se sentía preparada.",
+      "texto_nuevo": "Como ejemplo de esa guía, no como encargo para ti: en sus primeros meses como directiva nueva, una persona tuvo a su jefa como apoyo constante al que consultar cuando no estaba segura de cómo responder a una petición o surgía una situación para la que no se sentía preparada.",
+      "cita": {
+        "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+        "fragmentos": [
+          "caja de resonancia constante, para cuando"
+        ]
+      },
+      "decision": "auditoria completa M11 (calco): \"caja de resonancia\" calca \"sounding board\"; en español significa lo que amplifica o difunde, no a quién consultar.",
+      "indice": 7,
+      "auditoria": "docs/saneamiento/resultados/M11/pase2/",
+      "motivos": [
+        "calco"
+      ]
+    }
+  ],
+  "etiqueta_arbol": "Traza el Plan con Tu Jefe"
+}
