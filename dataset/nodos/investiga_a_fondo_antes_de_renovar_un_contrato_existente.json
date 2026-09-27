@@ -6,13 +6,13 @@
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
   "resumen_teorico": "Cuando te toca renovar un contrato que ya tienes con un proveedor, no firmes por inercia. Revisa el contrato completo, incluyendo anexos y notas de la negociacion anterior, para entender que se acordo y por que. Habla con quien usa el producto o servicio dia a dia para saber si funciona bien o si hay quejas. Conversa tambien con la persona del proveedor que maneja tu cuenta para escuchar su version de lo que ha ido bien y lo que no. Esta informacion te da argumentos reales para pedir mejores condiciones en la renovacion, en lugar de aceptar lo mismo de siempre solo porque ya es costumbre trabajar con ese proveedor. Sin este repaso, renuevas a ciegas y pierdes la oportunidad de corregir problemas o negociar un mejor precio.",
   "pasos_accionables": [
-    "Lee de nuevo el contrato completo, incluyendo anexos y cualquier nota de la negociacion original.",
-    "Pregunta a quien usa el producto o servicio si esta funcionando bien y que mejoraria.",
-    "Habla con tu contacto en el proveedor sobre que ha ido bien y que problemas ha habido de su lado.",
-    "Compara el costo actual con lo que cobrarian otros proveedores similares antes de aceptar renovar igual.",
+    "Lee de nuevo el contrato completo, incluyendo anexos y cualquier nota de la negociación original.",
+    "Pregunta a quien usa el producto o servicio si está funcionando bien y qué mejoraría.",
+    "Habla con tu contacto en el proveedor sobre qué ha ido bien y qué problemas ha habido de su lado.",
+    "Compara el costo actual con lo que cobrarían otros proveedores similares antes de aceptar renovar igual.",
     "Anota los puntos que quieres cambiar antes de sentarte a renegociar."
   ],
-  "entregable_esperado": "Una lista de hallazgos y puntos a renegociar, lista antes de la reunion de renovacion.",
+  "entregable_esperado": "Una lista de hallazgos y puntos a renegociar, lista antes de la reunión de renovación.",
   "nodos_previos": [
     "verifica_quien_tiene_el_poder_de_decidir_o_vetar",
     "documenta_el_ahorro_real_de_cada_compra"
@@ -42,6 +42,75 @@
         "evidencia": "F12-013: Revisar y renegociar un contrato vigente con un proveedor es gestion operativa de un negocio en marcha. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0177",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lee de nuevo el contrato completo, incluyendo anexos y cualquier nota de la negociacion original.",
+      "texto_nuevo": "Lee de nuevo el contrato completo, incluyendo anexos y cualquier nota de la negociación original.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-030.paso0: negociación (Solo añade la tilde que faltaba en negociación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0178",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a quien usa el producto o servicio si esta funcionando bien y que mejoraria.",
+      "texto_nuevo": "Pregunta a quien usa el producto o servicio si está funcionando bien y qué mejoraría.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-030.paso1: está, qué, mejoraría (Añade las tildes de está y mejoraría, y la de qué como interrogativo indirecto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0179",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Habla con tu contacto en el proveedor sobre que ha ido bien y que problemas ha habido de su lado.",
+      "texto_nuevo": "Habla con tu contacto en el proveedor sobre qué ha ido bien y qué problemas ha habido de su lado.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-030.paso2: qué, qué (Los dos qué llevan tilde porque son interrogativos indirectos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0180",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara el costo actual con lo que cobrarian otros proveedores similares antes de aceptar renovar igual.",
+      "texto_nuevo": "Compara el costo actual con lo que cobrarían otros proveedores similares antes de aceptar renovar igual.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-030.paso3: cobrarían (Solo añade la tilde que faltaba en cobrarían.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0181",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de hallazgos y puntos a renegociar, lista antes de la reunion de renovacion.",
+      "texto_nuevo": "Una lista de hallazgos y puntos a renegociar, lista antes de la reunión de renovación.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-030.entregable: reunión, renovación (Solo añade las tildes de reunión y renovación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

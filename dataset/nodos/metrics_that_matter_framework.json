@@ -36,7 +36,7 @@
   "condiciones_activacion": [
     "Cuando has completado la validación de clientes y necesitas decidir si avanzar a la etapa de creación de clientes",
     "Cuando necesitas evaluar si tu modelo de negocio es financieramente viable antes de escalar",
-    "Si confundes este análisis con las proyecciones financieras tradicionales de cinco años",
+    "Cuando necesitas saber cuántos meses de efectivo te quedan y a qué ritmo los estás quemando",
     "Cuando necesitas decidir si invertir fuertemente en escalar sin quedarte sin fondos"
   ],
   "etiqueta_arbol": "Enfócate en las Métricas Clave",
@@ -79,6 +79,20 @@
         "motivo": "Referencia de un nodo vivo a tipo_mercado_curva_ingresos, deprecado; su superviviente es market_type_revenue_growth."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-condicion-125",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si confundes este análisis con las proyecciones financieras tradicionales de cinco años",
+      "texto_nuevo": "Cuando necesitas saber cuántos meses de efectivo te quedan y a qué ritmo los estás quemando",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q071-005: La condición 2 es una advertencia sobre confundir análisis, no un momento en que el nodo aplique. (lector y verificador de acuerdo) Motivo: Describe una confusión conceptual, no una situación en la que el contenido aplique."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 2
     }
   ]
 }

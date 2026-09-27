@@ -18,10 +18,26 @@
     "vinculacion_reporte_financiero"
   ],
   "condiciones_activacion": [
-    "Cuando le comunicas métricas técnicas a personas que no son expertas"
+    "Cuando comunicas tus métricas de sostenibilidad o impacto ambiental a personas que no son expertas"
   ],
   "etiqueta_arbol": "Da Contexto a tus Datos Verdes",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-028",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando le comunicas métricas técnicas a personas que no son expertas",
+      "texto_nuevo": "Cuando comunicas tus métricas de sostenibilidad o impacto ambiental a personas que no son expertas",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q064-006: Tiene razon el lector A: la condicion no acota a datos de sostenibilidad y dispararia un nodo cuyo entregable es un reporte de sostenibilidad ante cualquier metrica tecnica. (arbitro) Motivo: Demasiado amplia: se activaria con cualquier metrica tecnica (financiera, de calidad), cuando el resumen y el entregable (reporte de sostenibilidad) tratan de dar contexto a datos de sostenibilidad"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

@@ -28,7 +28,7 @@
     "programas_ex_im_bank"
   ],
   "condiciones_activacion": [
-    "Estás empezando a exportar y necesitas orientación experta gratuita o de bajo costo",
+    "Tu empresa opera en Estados Unidos, estas empezando a exportar y necesitas orientacion experta gratuita o de bajo costo",
     "Buscas expandirte a nuevos mercados internacionales",
     "No tienes contactos ni experiencia en mercados en desarrollo",
     "Necesitas apoyo para buscar y evaluar posibles socios comerciales en el extranjero"
@@ -79,6 +79,20 @@
         "motivo": "Referencia de un nodo vivo a financiamiento_exim_bank_3, deprecado; su superviviente es programas_ex_im_bank."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-condicion-188",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Estás empezando a exportar y necesitas orientación experta gratuita o de bajo costo",
+      "texto_nuevo": "Tu empresa opera en Estados Unidos, estas empezando a exportar y necesitas orientacion experta gratuita o de bajo costo",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q008-028: La condicion 0 no dice que el nodo aplica si operas en Estados Unidos, como exige la clase C. (lector y verificador de acuerdo) Motivo: Clase C (Estados Unidos): el U.S. Commercial Service atiende a exportadores de alli y ninguna condicion deja claro que aplica si operas o vendes desde Estados Unidos"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ]
 }

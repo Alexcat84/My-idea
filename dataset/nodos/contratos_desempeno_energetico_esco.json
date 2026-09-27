@@ -6,14 +6,14 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Las Energy Service Companies (ESCOs) ofrecen contratos de desempeño energético que permiten externalizar la implementación de mejoras de eficiencia energética. La ESCO identifica, evalúa e implementa las mejoras, financiando el proyecto a cambio de una parte de los ahorros generados, y asumiendo el riesgo técnico y de desempeño mediante garantías de cumplimiento de resultados. Esta modalidad resulta util cuando no cuentas con capital inicial ni capacidad interna para gestionar este tipo de proyectos, permitiendote modernizar tus sistemas energeticos minimizando el riesgo financiero en mejoras de gran escala.",
   "pasos_accionables": [
-    "Investigar y evaluar ESCOs disponibles en tu region",
-    "Solicitar una evaluacion inicial de oportunidades de eficiencia energetica",
-    "Negociar el contrato de desempeño energetico con garantias de ahorro",
-    "Definir el alcance de auditoria, implementacion y mantenimiento a cargo del ESCO",
-    "Establecer mecanismos de monitoreo y verificacion de los ahorros durante el contrato",
+    "Investigar y evaluar ESCOs disponibles en tu región",
+    "Solicitar una evaluación inicial de oportunidades de eficiencia energética",
+    "Negociar el contrato de desempeño energético con garantías de ahorro",
+    "Definir el alcance de auditoría, implementación y mantenimiento a cargo del ESCO",
+    "Establecer mecanismos de monitoreo y verificación de los ahorros durante el contrato",
     "Capacitarte o capacitar a alguien de confianza para el mantenimiento a largo plazo"
   ],
-  "entregable_esperado": "Contrato firmado con ESCO especificando garantias de ahorro y plan de implementacion de mejoras energeticas",
+  "entregable_esperado": "Contrato firmado con ESCO especificando garantías de ahorro y plan de implementación de mejoras energéticas",
   "nodos_previos": [
     "eficiencia_hidrica_edificios_2",
     "benchmark_auditoria_energetica"
@@ -54,6 +54,89 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro recomienda contratar una ESCO pero no exige ninguna certificacion; no hay referencia a ESCOs certificadas ni acreditadas en el libro.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C060-108"
+    },
+    {
+      "id": "n1-orto-0584",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Investigar y evaluar ESCOs disponibles en tu region",
+      "texto_nuevo": "Investigar y evaluar ESCOs disponibles en tu región",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-036.paso0: región (Solo añade la tilde de región; la sigla ESCOs se conserva.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0585",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Solicitar una evaluacion inicial de oportunidades de eficiencia energetica",
+      "texto_nuevo": "Solicitar una evaluación inicial de oportunidades de eficiencia energética",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-036.paso1: evaluación, energética (Solo añade tildes en evaluación y energética.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0586",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Negociar el contrato de desempeño energetico con garantias de ahorro",
+      "texto_nuevo": "Negociar el contrato de desempeño energético con garantías de ahorro",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-036.paso2: energético, garantías (Solo añade tildes en energético y garantías.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0587",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir el alcance de auditoria, implementacion y mantenimiento a cargo del ESCO",
+      "texto_nuevo": "Definir el alcance de auditoría, implementación y mantenimiento a cargo del ESCO",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-036.paso3: auditoría, implementación (Solo añade tildes en auditoría e implementación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0588",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establecer mecanismos de monitoreo y verificacion de los ahorros durante el contrato",
+      "texto_nuevo": "Establecer mecanismos de monitoreo y verificación de los ahorros durante el contrato",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-036.paso4: verificación (Solo añade la tilde de verificación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0589",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Contrato firmado con ESCO especificando garantias de ahorro y plan de implementacion de mejoras energeticas",
+      "texto_nuevo": "Contrato firmado con ESCO especificando garantías de ahorro y plan de implementación de mejoras energéticas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O051-036.entregable: garantías, implementación, energéticas (Solo añade tildes que faltaban; la sigla se conserva.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

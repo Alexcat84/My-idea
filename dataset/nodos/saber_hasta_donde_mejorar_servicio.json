@@ -6,13 +6,13 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "Subir tu nivel de servicio de entrega no cuesta lo mismo en cada tramo: acercarte al 100 por ciento, es decir a entregas perfectas sin ninguna falla, es desproporcionadamente mas caro que pasar de un nivel modesto a uno decente. Mejorar de 70 a 72 por ciento de pedidos entregados bien casi no se siente en el bolsillo, pero mejorar de 95 a 97 por ciento puede costar mucho mas, y frecuentemente el cliente ni siquiera percibe la diferencia entre esos dos niveles. Esto significa que perseguir la perfeccion en cada aspecto de tu entrega, sin preguntarte si el cliente lo valora, es una forma comun de gastar dinero sin ganar clientes. Antes de invertir en mejorar tu servicio, pregunta que tanto le importa realmente ese nivel de detalle a la persona que te compra, y decide con eso donde vale la pena seguir invirtiendo y donde ya es suficiente.",
   "pasos_accionables": [
-    "Anota tu nivel actual de servicio: por ejemplo, que porcentaje de pedidos llega a tiempo y completo.",
-    "Pregunta a tus clientes si notarian la diferencia si mejoraras ese numero unos puntos mas.",
-    "Calcula cuanto te costaria en tiempo o dinero subir ese numero antes de intentarlo.",
+    "Anota tu nivel actual de servicio: por ejemplo, qué porcentaje de pedidos llega a tiempo y completo.",
+    "Pregunta a tus clientes si notarían la diferencia si mejoraras ese número unos puntos más.",
+    "Calcula cuánto te costaría en tiempo o dinero subir ese número antes de intentarlo.",
     "Detente en el punto donde el costo de mejorar supera lo que el cliente valora.",
-    "Revisa esta decision cada varios meses, porque las expectativas del cliente cambian."
+    "Revisa esta decisión cada varios meses, porque las expectativas del cliente cambian."
   ],
-  "entregable_esperado": "Una decision clara y por escrito de hasta que nivel de servicio vale la pena invertir, y donde parar.",
+  "entregable_esperado": "Una decisión clara y por escrito de hasta qué nivel de servicio vale la pena invertir, y dónde parar.",
   "nodos_previos": [
     "encuestar_al_cliente_para_saber_que_valora",
     "trade_off_responsividad_eficiencia"
@@ -55,6 +55,75 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por trade_off_responsividad_eficiencia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "n1-orto-0304",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Anota tu nivel actual de servicio: por ejemplo, que porcentaje de pedidos llega a tiempo y completo.",
+      "texto_nuevo": "Anota tu nivel actual de servicio: por ejemplo, qué porcentaje de pedidos llega a tiempo y completo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-006.paso0: qué ('qué' introduce aquí una interrogativa indirecta y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0305",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a tus clientes si notarian la diferencia si mejoraras ese numero unos puntos mas.",
+      "texto_nuevo": "Pregunta a tus clientes si notarían la diferencia si mejoraras ese número unos puntos más.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-006.paso1: notarían, número, más ('notarían', 'número' y 'más' necesitan la tilde que les faltaba; el resto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0306",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Calcula cuanto te costaria en tiempo o dinero subir ese numero antes de intentarlo.",
+      "texto_nuevo": "Calcula cuánto te costaría en tiempo o dinero subir ese número antes de intentarlo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-006.paso2: cuánto, costaría, número ('cuánto', 'costaría' y 'número' necesitan la tilde que les faltaba; el resto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0307",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa esta decision cada varios meses, porque las expectativas del cliente cambian.",
+      "texto_nuevo": "Revisa esta decisión cada varios meses, porque las expectativas del cliente cambian.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-006.paso4: decisión ('decisión' necesita la tilde que le faltaba.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0308",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una decision clara y por escrito de hasta que nivel de servicio vale la pena invertir, y donde parar.",
+      "texto_nuevo": "Una decisión clara y por escrito de hasta qué nivel de servicio vale la pena invertir, y dónde parar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O026-006.entregable: decisión, qué, dónde ('decisión', 'qué' y 'dónde' necesitan la tilde que les faltaba; el resto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

@@ -6,13 +6,13 @@
   "fuente": "Diana L. Lindstrom, Procurement Project Management Success (J. Ross, 2014)",
   "resumen_teorico": "Antes de visitar a un proveedor o probar un producto, decide de antemano que esa visita es solo para evaluar, no para comprar. Dilo en voz alta o anotalo si negocias acompañado, porque la presion del vendedor en el momento, como poca disponibilidad o una oferta de hoy, esta diseñada justamente para que rompas ese plan. Si vas con la decision tomada de que hoy no firmas nada, es mas facil resistir la urgencia artificial que te presenten. Cuando alguien del equipo o de tu familia olvida ese acuerdo y empieza a negociar en el momento, el vendedor recupera el control de la conversacion. Mantener esa separacion entre ver y decidir te da tiempo para comparar con calma otras opciones antes de comprometer tu dinero.",
   "pasos_accionables": [
-    "Antes de la visita, decide y anota que el proposito es solo evaluar, no comprar ese dia.",
-    "Si vas acompañado, avisa a la otra persona cual es el plan para que no lo rompa bajo presion.",
+    "Antes de la visita, decide y anota que el propósito es solo evaluar, no comprar ese día.",
+    "Si vas acompañado, avisa a la otra persona cuál es el plan para que no lo rompa bajo presión.",
     "Si el vendedor presiona con escasez o urgencia, responde que necesitas comparar antes de decidir.",
-    "Sal de la reunion con la informacion que buscabas, sin firmar ni dar anticipos.",
-    "Da tu respuesta unos dias despues, cuando ya hayas comparado con calma."
+    "Sal de la reunión con la información que buscabas, sin firmar ni dar anticipos.",
+    "Da tu respuesta unos días después, cuando ya hayas comparado con calma."
   ],
-  "entregable_esperado": "Una decision de compra tomada fuera de la presion del punto de venta, con tiempo para comparar.",
+  "entregable_esperado": "Una decisión de compra tomada fuera de la presión del punto de venta, con tiempo para comparar.",
   "nodos_previos": [
     "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor",
     "obtencion_de_compromiso"
@@ -68,6 +68,75 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del compras reemplazo por obtencion_de_compromiso."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "n1-orto-0832",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de la visita, decide y anota que el proposito es solo evaluar, no comprar ese dia.",
+      "texto_nuevo": "Antes de la visita, decide y anota que el propósito es solo evaluar, no comprar ese día.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-028.paso0: propósito, día (Faltan las tildes en 'proposito' y 'dia'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0833",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si vas acompañado, avisa a la otra persona cual es el plan para que no lo rompa bajo presion.",
+      "texto_nuevo": "Si vas acompañado, avisa a la otra persona cuál es el plan para que no lo rompa bajo presión.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-028.paso1: cuál, presión (Faltan la tilde del interrogativo indirecto 'cuál' y la de 'presion'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0834",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sal de la reunion con la informacion que buscabas, sin firmar ni dar anticipos.",
+      "texto_nuevo": "Sal de la reunión con la información que buscabas, sin firmar ni dar anticipos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-028.paso3: reunión, información (Faltan las tildes en 'reunion' e 'informacion'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0835",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Da tu respuesta unos dias despues, cuando ya hayas comparado con calma.",
+      "texto_nuevo": "Da tu respuesta unos días después, cuando ya hayas comparado con calma.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-028.paso4: días, después (Faltan las tildes en 'dias' y 'despues'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0836",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una decision de compra tomada fuera de la presion del punto de venta, con tiempo para comparar.",
+      "texto_nuevo": "Una decisión de compra tomada fuera de la presión del punto de venta, con tiempo para comparar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-028.entregable: decisión, presión (Faltan las tildes en 'decision' y 'presion'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

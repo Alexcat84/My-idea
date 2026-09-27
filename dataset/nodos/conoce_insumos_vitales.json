@@ -7,12 +7,12 @@
   "resumen_teorico": "No todos los insumos que compras pesan igual. Algunos representan mucho dinero invertido pero se consiguen facilmente en cualquier lado. Otros cuestan poco pero si faltan, tu negocio se detiene por completo porque no hay sustituto rapido ni proveedor alterno cercano. Confundir estas dos cosas lleva a errores comunes: vigilar de cerca un insumo barato y facil de reponer, mientras un insumo critico y economico se queda sin control hasta que un dia falta y detiene tu operacion. Distinguir lo que representa mayor gasto de lo que realmente te deja parado si no lo tienes te permite decidir a que insumos ponerles mas atencion, mas stock de seguridad, o mas de un proveedor disponible por si el habitual te falla.",
   "pasos_accionables": [
     "Haz una lista de los insumos que compras regularmente.",
-    "Marca cuales representan mayor gasto anual, sin importar que tan facil sea reponerlos.",
+    "Marca cuáles representan mayor gasto anual, sin importar qué tan fácil sea reponerlos.",
     "Marca por separado cuales, si faltan, detienen tu operacion o tus ventas de inmediato.",
-    "Para los insumos criticos y dificiles de reponer rapido, define un stock de seguridad o un segundo proveedor.",
-    "Sugerencia de My Idea: revisa esta lista cada pocos meses, porque lo que es critico puede cambiar."
+    "Para los insumos críticos y difíciles de reponer rápido, define un stock de seguridad o un segundo proveedor.",
+    "Sugerencia de My Idea: revisa esta lista cada pocos meses, porque lo que es crítico puede cambiar."
   ],
-  "entregable_esperado": "Una lista de insumos marcados por valor y por cuan critico es que no falten, con una decision de que hacer con cada grupo.",
+  "entregable_esperado": "Una lista de insumos marcados por valor y por cuán crítico es que no falten, con una decisión de qué hacer con cada grupo.",
   "nodos_previos": [
     "clasifica_tu_inventario"
   ],
@@ -42,6 +42,61 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro trata la criticidad pero no fija ninguna frecuencia de revision de la lista de insumos criticos.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C131-005"
+    },
+    {
+      "id": "n1-orto-0561",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Marca cuales representan mayor gasto anual, sin importar que tan facil sea reponerlos.",
+      "texto_nuevo": "Marca cuáles representan mayor gasto anual, sin importar qué tan fácil sea reponerlos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O049-003.paso1: cuáles, qué, fácil (Faltan las tildes de cuáles, qué y fácil, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0562",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Para los insumos criticos y dificiles de reponer rapido, define un stock de seguridad o un segundo proveedor.",
+      "texto_nuevo": "Para los insumos críticos y difíciles de reponer rápido, define un stock de seguridad o un segundo proveedor.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O049-003.paso3: críticos, difíciles, rápido (Faltan las tildes de críticos, difíciles y rápido, y el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0563",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: revisa esta lista cada pocos meses, porque lo que es critico puede cambiar.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa esta lista cada pocos meses, porque lo que es crítico puede cambiar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O049-003.paso4: crítico (Falta la tilde de crítico y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0564",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de insumos marcados por valor y por cuan critico es que no falten, con una decision de que hacer con cada grupo.",
+      "texto_nuevo": "Una lista de insumos marcados por valor y por cuán crítico es que no falten, con una decisión de qué hacer con cada grupo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O049-003.entregable: cuán, crítico, decisión, qué (Son tildes que faltaban: cuán y qué como interrogativos indirectos, más crítico y decisión.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

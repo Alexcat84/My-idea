@@ -17,9 +17,8 @@
 //   reciente al más antiguo, cruzando el cambio de año: "enero de 2026" [d, b],
 //   "diciembre de 2025" [a, e], "noviembre de 2025" [c].
 import { describe, expect, it } from "vitest";
-import { bitacoraCuerpo, bitacoraMarkdown, mesesDeBitacora, ordenCronologico, type EntradaBitacora } from "./bitacoraCliente";
+import { bitacoraCuerpo, bitacoraMarkdown, ordenCronologico, type EntradaBitacora } from "./bitacoraCliente";
 import { expedienteMarkdown, type DatosExpediente } from "./expediente";
-import { mesConAno } from "./fechas";
 
 const local = (y: number, m: number, d: number, h: number) => new Date(y, m - 1, d, h).toISOString();
 const ent = (fecha: string, texto: string): EntradaBitacora => ({ fecha, texto, peso: "accion", dominio: "core" });
@@ -41,41 +40,13 @@ function posiciones(texto: string, agujas: string[]): number[] {
 }
 const creciente = (xs: number[]) => xs.every((x, i) => i === 0 || xs[i - 1] < x);
 
-describe("mesConAno: el encabezado de mes, en el idioma pedido", () => {
-  const SEPT = local(2026, 9, 10, 12);
-  it("español: 'septiembre de 2026' (el ejemplo del fundador)", () => {
-    expect(mesConAno(SEPT, "es")).toBe("septiembre de 2026");
-  });
-  it("inglés, japonés, coreano, alemán: el orden natural de cada idioma", () => {
-    expect(mesConAno(SEPT, "en")).toBe("September 2026");
-    expect(mesConAno(SEPT, "ja")).toBe("2026年9月");
-    expect(mesConAno(SEPT, "ko")).toBe("2026년 9월");
-    expect(mesConAno(SEPT, "de")).toBe("September 2026");
-  });
-});
-
-describe("ordenCronologico y mesesDeBitacora", () => {
+describe("ordenCronologico", () => {
   it("ordenCronologico: c, e, a, b, d (sin tocar el arreglo de entrada)", () => {
     const copia = [...DESORDEN];
     expect(ordenCronologico(DESORDEN).map((e) => e.texto)).toEqual([C, E, A, B, D].map((e) => e.texto));
     expect(DESORDEN).toEqual(copia);
   });
 
-  it("mesesDeBitacora: lo más reciente primero, un grupo por mes, cruzando el año", () => {
-    const meses = mesesDeBitacora(DESORDEN);
-    expect(meses.map((m) => mesConAno(m.fecha, "es"))).toEqual(["enero de 2026", "diciembre de 2025", "noviembre de 2025"]);
-    expect(meses.map((m) => m.entradas.map((e) => e.texto))).toEqual([
-      [D.texto, B.texto],
-      [A.texto, E.texto],
-      [C.texto],
-    ]);
-  });
-
-  it("mismo mes y año distinto NO se juntan (enero 2025 y enero 2026 son dos grupos)", () => {
-    // enero 2025 (10:00) y enero 2026 (10:00): dos meses, el de 2026 arriba.
-    const meses = mesesDeBitacora([ent(local(2025, 1, 20, 10), "viejo"), ent(local(2026, 1, 20, 10), "nuevo")]);
-    expect(meses.map((m) => mesConAno(m.fecha, "es"))).toEqual(["enero de 2026", "enero de 2025"]);
-  });
 });
 
 describe("documentos: orden cronológico, del más antiguo al más reciente", () => {

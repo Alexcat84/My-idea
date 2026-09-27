@@ -6,14 +6,14 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Conjunto de practicas y procedimientos para prevenir o minimizar el contagio de agentes infecciosos en tu lugar de trabajo. Parte de evaluar los riesgos de exposicion en tus tareas para luego poner en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies, manejo de residuos biopeligrosos, uso de equipo de proteccion personal (tambien frente a mosquitos, garrapatas y enfermedades respiratorias de temporada), y capacitacion sobre exposicion a animales. También contempla definir una politica de licencia por enfermedad flexible para quien te ayuda, además de llevar registros y reportar casos graves según lo que exija la normativa laboral de tu mercado.",
   "pasos_accionables": [
-    "Evalua los riesgos de exposicion a agentes infecciosos en tu negocio.",
-    "Pon en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies.",
+    "Evalúa los riesgos de exposición a agentes infecciosos en tu negocio.",
+    "Pon en marcha hábitos de higiene de manos, limpieza y desinfección de superficies.",
     "Consigue contenedores cerrados y a prueba de fugas para residuos infecciosos y objetos punzocortantes, con las etiquetas correspondientes.",
-    "Ten a mano el equipo de proteccion necesario según el riesgo: guantes, proteccion ocular, mascarillas o respiradores certificados.",
-    "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacitate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
-    "Define una politica de licencia por enfermedad flexible y lleva un registro de las enfermedades infecciosas relacionadas con el trabajo, reportando los casos graves según lo que exija la normativa laboral de tu mercado."
+    "Ten a mano el equipo de protección necesario según el riesgo: guantes, protección ocular, mascarillas o respiradores certificados.",
+    "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacítate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
+    "Define una política de licencia por enfermedad flexible y lleva un registro de las enfermedades infecciosas relacionadas con el trabajo, reportando los casos graves según lo que exija la normativa laboral de tu mercado."
   ],
-  "entregable_esperado": "Un plan de control de infecciones por escrito, con la evaluacion de riesgo, los procedimientos de higiene y manejo de residuos, el equipo de proteccion asignado, y los registros de capacitacion y reportes que correspondan según tu normativa local.",
+  "entregable_esperado": "Un plan de control de infecciones por escrito, con la evaluación de riesgo, los procedimientos de higiene y manejo de residuos, el equipo de protección asignado, y los registros de capacitación y reportes que correspondan según tu normativa local.",
   "nodos_previos": [
     "personal_protective_equipment",
     "prevencion_enfermedades_por_calor"
@@ -70,6 +70,89 @@
       },
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro: dato repetido en el campo resumen_teorico del nodo; se cambia solo el segmento.",
       "auditoria": "tramo1 SB1-005"
+    },
+    {
+      "id": "n1-orto-0551",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua los riesgos de exposicion a agentes infecciosos en tu negocio.",
+      "texto_nuevo": "Evalúa los riesgos de exposición a agentes infecciosos en tu negocio.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-033.paso0: Evalúa, exposición (Solo añade las tildes que faltaban en Evalúa y exposición.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0552",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pon en marcha habitos de higiene de manos, limpieza y desinfeccion de superficies.",
+      "texto_nuevo": "Pon en marcha hábitos de higiene de manos, limpieza y desinfección de superficies.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-033.paso1: hábitos, desinfección (Solo añade las tildes que faltaban en hábitos y desinfección.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0553",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ten a mano el equipo de proteccion necesario según el riesgo: guantes, proteccion ocular, mascarillas o respiradores certificados.",
+      "texto_nuevo": "Ten a mano el equipo de protección necesario según el riesgo: guantes, protección ocular, mascarillas o respiradores certificados.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-033.paso3: protección, protección (Solo añade la tilde que faltaba en las dos apariciones de protección.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0554",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacitate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
+      "texto_nuevo": "Si tu trabajo o el de quien te ayuda implica contacto con animales, capacítate al menos una vez al año sobre cómo protegerte; si trabajas donde hay mosquitos o garrapatas, usa ropa protectora y, cuando aplique, repelente.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-033.paso4: capacítate (Solo añade la tilde que faltaba en capacítate.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0555",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define una politica de licencia por enfermedad flexible y lleva un registro de las enfermedades infecciosas relacionadas con el trabajo, reportando los casos graves según lo que exija la normativa laboral de tu mercado.",
+      "texto_nuevo": "Define una política de licencia por enfermedad flexible y lleva un registro de las enfermedades infecciosas relacionadas con el trabajo, reportando los casos graves según lo que exija la normativa laboral de tu mercado.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-033.paso5: política (Solo añade la tilde que faltaba en política.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0556",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un plan de control de infecciones por escrito, con la evaluacion de riesgo, los procedimientos de higiene y manejo de residuos, el equipo de proteccion asignado, y los registros de capacitacion y reportes que correspondan según tu normativa local.",
+      "texto_nuevo": "Un plan de control de infecciones por escrito, con la evaluación de riesgo, los procedimientos de higiene y manejo de residuos, el equipo de protección asignado, y los registros de capacitación y reportes que correspondan según tu normativa local.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-033.entregable: evaluación, protección, capacitación (Solo añade las tildes que faltaban en evaluación, protección y capacitación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

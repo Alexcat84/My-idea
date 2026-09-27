@@ -6,14 +6,14 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "La retención busca minimizar el abandono de clientes ofreciendo un buen producto, servicio e interacción frecuente, algo mas facil en canales digitales porque permiten rastrear el comportamiento individual de cada cliente. Es mas rentable que adquirir clientes nuevos. Los programas de retencion dependen del monitoreo cercano de senales como visitas decrecientes, tiempo entre visitas o quejas, organizadas por cohortes segun antiguedad. Es clave mapear el customer life cycle completo y organizar las metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion. Las tacticas combinan outreach, contenido, notificaciones, programas de lealtad y contacto proactivo antes de renovaciones para sostener el compromiso en el tiempo.",
   "pasos_accionables": [
-    "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y senales de abandono",
-    "Disena e-mails de bienvenida y guias de uso para los primeros dias de cada cliente nuevo",
+    "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y señales de abandono",
+    "Diseña e-mails de bienvenida y guías de uso para los primeros días de cada cliente nuevo",
     "Crea un programa de lealtad con recompensas por compras o visitas repetidas",
-    "Envia notificaciones push y newsletters periodicas con tips para mantener el engagement",
-    "Organiza tus metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion",
-    "Establece llamadas de servicio antes de renovaciones y ofrece descuentos preventivos ante senales de posible abandono"
+    "Envía notificaciones push y newsletters periódicas con tips para mantener el engagement",
+    "Organiza tus métricas de retención por cohortes de clientes para identificar cuándo aparecen las señales de deserción",
+    "Establece llamadas de servicio antes de renovaciones y ofrece descuentos preventivos ante señales de posible abandono"
   ],
-  "entregable_esperado": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validacion de clientes.",
+  "entregable_esperado": "Plan de retención con tácticas específicas por canal digital y físico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validación de clientes.",
   "nodos_previos": [
     "segmentos_de_clientes_problema_necesidad",
     "channels_hypothesis_physical",
@@ -164,6 +164,89 @@
         "motivo": "Referencia de un nodo vivo a customer_acquisition_activation_web, deprecado; su superviviente es get_customers_funnel_webmobile."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-orto-0218",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y senales de abandono",
+      "texto_nuevo": "Instrumenta tu producto para rastrear comportamientos clave del cliente como fecha de inicio, frecuencia de visitas y señales de abandono",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.paso0: señales (Solo corrige la eñe que faltaba en señales.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0219",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Disena e-mails de bienvenida y guias de uso para los primeros dias de cada cliente nuevo",
+      "texto_nuevo": "Diseña e-mails de bienvenida y guías de uso para los primeros días de cada cliente nuevo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.paso1: Diseña, guías, días (Solo corrige la eñe y las tildes que faltaban; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0220",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Envia notificaciones push y newsletters periodicas con tips para mantener el engagement",
+      "texto_nuevo": "Envía notificaciones push y newsletters periódicas con tips para mantener el engagement",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.paso3: Envía, periódicas (Solo corrige tildes; los términos en inglés se quedan como estaban.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0221",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Organiza tus metricas de retencion por cohortes de clientes para identificar cuando aparecen las senales de desercion",
+      "texto_nuevo": "Organiza tus métricas de retención por cohortes de clientes para identificar cuándo aparecen las señales de deserción",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.paso4: métricas, retención, cuándo, señales, deserción (Solo corrige las tildes y la eñe que faltaban.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0222",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establece llamadas de servicio antes de renovaciones y ofrece descuentos preventivos ante senales de posible abandono",
+      "texto_nuevo": "Establece llamadas de servicio antes de renovaciones y ofrece descuentos preventivos ante señales de posible abandono",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.paso5: señales (Solo corrige la eñe que faltaba en señales.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0223",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Plan de retencion con tacticas especificas por canal digital y fisico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validacion de clientes.",
+      "texto_nuevo": "Plan de retención con tácticas específicas por canal digital y físico, organizado por cohortes y con puntos de contacto definidos a lo largo del ciclo de vida del cliente, listo para probar en validación de clientes.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O019-011.entregable: retención, tácticas, específicas, físico, validación (Solo corrige las tildes que faltaban; el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

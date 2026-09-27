@@ -1,6 +1,6 @@
 {
   "node_id": "emprendimiento_serial",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Lo que aprendes al emprender más de una vez",
   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
@@ -24,5 +24,20 @@
   "etiqueta_arbol": "Aprende de Cada Nuevo Intento",
   "fuentes_internas": [
     "The Founder's Dilemmas - Wasserman, Noam"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-065",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q090-004: El nodo trata de preparar las decisiones de un negocio nuevo (reparto, equipo, negociación con inversionistas) a partir de lo aprendido, no de operar uno en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

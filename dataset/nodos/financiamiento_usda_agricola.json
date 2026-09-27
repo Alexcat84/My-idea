@@ -19,7 +19,7 @@
     "seguro_inversion_opic"
   ],
   "condiciones_activacion": [
-    "La empresa exporta productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado"
+    "Si exportas desde Estados Unidos productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado"
   ],
   "etiqueta_arbol": "Financia tus Exportaciones Agrícolas",
   "correcciones": [
@@ -38,6 +38,20 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 4): verificacion actual de los plazos legales contra la fuente oficial vigente (verificador por nodo, verificador ciego y arbitro en desacuerdo). El plazo de hasta 3 años correspondía al GSM-102 anterior a las reformas: la Farm Bill de 2008 derogó el GSM-103 (hasta 10 años) y la Agricultural Act of 2014 redujo el tope legal del GSM-102 a 24 meses, tras el acuerdo con Brasil en la disputa del algodón ante la OMC. La cita se tomó del PDF oficia",
       "auditoria": "SANEAMIENTO P21 (los dos de acuerdo)"
+    },
+    {
+      "id": "n1-condicion-084",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "La empresa exporta productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado",
+      "texto_nuevo": "Si exportas desde Estados Unidos productos agrícolas o alimentarios a mercados donde el crédito comercial es limitado",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q004-028: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: los programas son del USDA de Estados Unidos y la condicion no dice que aplica si exportas desde alli."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ],
   "fuentes_internas": [

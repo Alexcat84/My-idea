@@ -6,13 +6,13 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Tienes varias formas de medir el impacto ambiental de tu negocio: datos absolutos (toneladas, metros cúbicos, kilovatios hora), datos de tendencia (cómo cambian año a año) y datos normalizados o de intensidad (por ejemplo, emisiones de CO2 por unidad de producto). Qué metricas elijas depende de tu sector, de tus propios objetivos y de lo que esperan de ti quienes te rodean: clientes, inversionistas, tu comunidad.",
   "pasos_accionables": [
-    "Familiarízate con las metricas que ya existen y, si te sirve, apóyate en marcos de referencia reconocidos que existan en tu mercado para orientarte",
-    "Elige metricas absolutas que tengan sentido para tu negocio: agua, energía, residuos, CO2",
-    "Define metricas normalizadas o de intensidad para poder compararte con otros (por ejemplo, cuánto produces por cada unidad de carbono que emites)",
+    "Familiarízate con las métricas que ya existen y, si te sirve, apóyate en marcos de referencia reconocidos que existan en tu mercado para orientarte",
+    "Elige métricas absolutas que tengan sentido para tu negocio: agua, energía, residuos, CO2",
+    "Define métricas normalizadas o de intensidad para poder compararte con otros (por ejemplo, cuánto produces por cada unidad de carbono que emites)",
     "Monta tu propio reporte anual que te muestre cómo cambian tus datos con el tiempo",
-    "Usa esas metricas para compararte, fijarte metas y comunicar tu impacto hacia afuera"
+    "Usa esas métricas para compararte, fijarte metas y comunicar tu impacto hacia afuera"
   ],
-  "entregable_esperado": "Un sistema propio de indicadores ambientales con metricas absolutas, de tendencia y normalizadas",
+  "entregable_esperado": "Un sistema propio de indicadores ambientales con métricas absolutas, de tendencia y normalizadas",
   "nodos_previos": [
     "priorizacion_issues",
     "programa_reciclaje_integral"
@@ -31,5 +31,76 @@
   "etiqueta_arbol": "Mide tu Huella Ambiental Real",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0359",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Familiarízate con las metricas que ya existen y, si te sirve, apóyate en marcos de referencia reconocidos que existan en tu mercado para orientarte",
+      "texto_nuevo": "Familiarízate con las métricas que ya existen y, si te sirve, apóyate en marcos de referencia reconocidos que existan en tu mercado para orientarte",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-019.paso0: métricas (Tilde real en métricas; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0360",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Elige metricas absolutas que tengan sentido para tu negocio: agua, energía, residuos, CO2",
+      "texto_nuevo": "Elige métricas absolutas que tengan sentido para tu negocio: agua, energía, residuos, CO2",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-019.paso1: métricas (Tilde real en métricas; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0361",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define metricas normalizadas o de intensidad para poder compararte con otros (por ejemplo, cuánto produces por cada unidad de carbono que emites)",
+      "texto_nuevo": "Define métricas normalizadas o de intensidad para poder compararte con otros (por ejemplo, cuánto produces por cada unidad de carbono que emites)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-019.paso2: métricas (Tilde real en métricas; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0362",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa esas metricas para compararte, fijarte metas y comunicar tu impacto hacia afuera",
+      "texto_nuevo": "Usa esas métricas para compararte, fijarte metas y comunicar tu impacto hacia afuera",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-019.paso4: métricas (Tilde real en métricas; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0363",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un sistema propio de indicadores ambientales con metricas absolutas, de tendencia y normalizadas",
+      "texto_nuevo": "Un sistema propio de indicadores ambientales con métricas absolutas, de tendencia y normalizadas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-019.entregable: métricas (Tilde real en métricas; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

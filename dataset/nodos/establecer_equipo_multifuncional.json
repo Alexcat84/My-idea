@@ -6,10 +6,10 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Para completar un proyecto de diseño para la calidad conviene reunir a distintas personas que aporten miradas diferentes: eso ayuda a intercambiar ideas, sumar conocimiento diverso sobre el producto y los procesos, y facilita que el nuevo diseño se acepte y se lleve a la practica en todo tu negocio. Al elegir a quien sumar, identifica quien se ve mas afectado por el resultado, quien es responsable de los procesos involucrados, quien tiene conocimiento especial y quien es clave para poner en marcha lo que se diseñe.",
   "pasos_accionables": [
-    "Identifica quien se ve afectado por el resultado del proyecto",
+    "Identifica quién se ve afectado por el resultado del proyecto",
     "Suma a las personas responsables de los procesos involucrados",
-    "Incorpora a quienes tengan conocimiento tecnico especializado",
-    "Asegurate de contar con quienes seran clave para poner en marcha el diseño"
+    "Incorpora a quienes tengan conocimiento técnico especializado",
+    "Asegúrate de contar con quienes serán clave para poner en marcha el diseño"
   ],
   "entregable_esperado": "Grupo de personas conformado y roles asignados para el proyecto de diseño",
   "nodos_previos": [
@@ -26,5 +26,49 @@
   "etiqueta_arbol": "Arma un Equipo Multifuncional",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0236",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica quien se ve afectado por el resultado del proyecto",
+      "texto_nuevo": "Identifica quién se ve afectado por el resultado del proyecto",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-007.paso0: quién (Es una interrogativa indirecta y quién lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0237",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Incorpora a quienes tengan conocimiento tecnico especializado",
+      "texto_nuevo": "Incorpora a quienes tengan conocimiento técnico especializado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-007.paso2: técnico (Falta la tilde de técnico, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0238",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurate de contar con quienes seran clave para poner en marcha el diseño",
+      "texto_nuevo": "Asegúrate de contar con quienes serán clave para poner en marcha el diseño",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-007.paso3: Asegúrate, serán (Faltan las tildes de Asegúrate y serán, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
   ]
 }

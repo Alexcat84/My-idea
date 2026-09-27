@@ -1,7 +1,7 @@
 {
   "node_id": "senales_alerta_no_atendidas",
   "fase_proyecto": "ejecucion",
-  "dominio": "health_safety",
+  "dominio": "risk_management",
   "titulo_concepto": "Señales de Alerta Ignoradas (Warning Signs)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "En el colapso de Barings, existieron múltiples indicadores previos (falta de segregación de funciones, altos requerimientos de financiamiento, ganancias desproporcionadas al riesgo percibido, comunicaciones de la bolsa sobre cuentas sospechosas) que individualmente parecían poco significativos, pero que en conjunto debían haber activado una alarma organizacional. La falta de un mecanismo que integre estas señales dispersas es en sí misma una condición latente.",
@@ -24,5 +24,20 @@
   "etiqueta_arbol": "Atiende las Señales de Alerta",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-dominio-184",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "health_safety",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q063-011: Tiene razon el lector B: el nodo trata del colapso financiero de Barings, un registro de senales de alerta y umbrales que disparan una revision de riesgo en auditorias de riesgo, y nada de su contenido toca la seguridad y salud en el trabajo; el marco de accidentes organizacionales del libro no basta para que encaje en health_safety, asi que el dominio que le toca es risk_management. Las condiciones y la fase de ejecucion estan bien, en eso coinciden los dos. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    }
   ]
 }

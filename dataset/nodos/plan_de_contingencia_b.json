@@ -21,7 +21,8 @@
     "pivote_estrategico",
     "necesidad_vs_deseo_en_ma",
     "plan_de_desastre_y_recuperacion",
-    "plan_b_antes_de_necesitarlo"
+    "plan_b_antes_de_necesitarlo",
+    "respuesta_estrategica_a_amenaza_competitiva"
   ],
   "condiciones_activacion": [
     "Cuando el modelo de negocio actual muestra señales claras de inviabilidad futura",
@@ -71,6 +72,19 @@
         "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "n1-nucleo-20",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "plan_de_contingencia_b -> respuesta_estrategica_a_amenaza_competitiva",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-21, arbitro): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tenia razon el lector B: el plan B ante una crisis inminente, trazado mientras aun hay tiempo y recursos para pivotar de forma controlada, desemboca de forma directa en ejecutar un pivote rapido ante una amenaza existencial. Ademas ambos nodos vienen de la misma experiencia de crisis de Horowitz. El pivote como hipotesis estrategica es un marco generico de Lean y no apunta a la urgencia ni a la amenaza competitiva."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ],
   "fuentes_internas": [

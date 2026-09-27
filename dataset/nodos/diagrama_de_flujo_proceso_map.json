@@ -1,6 +1,6 @@
 {
   "node_id": "diagrama_de_flujo_proceso_map",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Flow Diagram / Process Map",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -31,5 +31,20 @@
   "etiqueta_arbol": "Dibuja el Flujo de tu Proceso",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-057",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q086-001: Tiene razon el lector B: el entregable documenta el proceso actual, el paso 7 lo valida por observacion o entrevistas y las condiciones hablan de entenderlo antes de mejorarlo y de buscar errores o retrasos, lo que es mejorar un proceso que ya funciona (ejecucion), no disenar el plan; condiciones y dominio quality estan bien. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

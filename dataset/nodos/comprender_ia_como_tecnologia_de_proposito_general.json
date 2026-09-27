@@ -13,7 +13,8 @@
   ],
   "entregable_esperado": "Documento de análisis de impacto de IA en el sector, identificando riesgos y oportunidades estratégicas para el negocio",
   "nodos_previos": [
-    "analisis_competitivo_calidad"
+    "analisis_competitivo_calidad",
+    "principio_mejora_continua_ia"
   ],
   "nodos_siguientes": [
     "adoptar_co_inteligencia_ia",
@@ -26,5 +27,20 @@
   "etiqueta_arbol": "Entiende el Poder de IA",
   "fuentes_internas": [
     "Co-Intelligence_ Living and Wor - Ethan Mollick"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-03",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "principio_mejora_continua_ia -> comprender_ia_como_tecnologia_de_proposito_general",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-03, arbitro): raiz de 3 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tenia razon el lector A: el nodo trata de dimensionar la magnitud del cambio, con una adopcion y una mejora sin precedentes, y eso continua de forma natural la idea de asumir que la IA mejora sin parar. El nivelador de habilidades es un hallazgo concreto que viene despues del marco general, no antes."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

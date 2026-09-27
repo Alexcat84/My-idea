@@ -6,9 +6,9 @@
   "fuente": "SMALL_BUSINESS",
   "resumen_teorico": "Si en tu negocio hay escaleras fijas con cuatro o mas escalones, necesitas barandillas y pasamanos que cumplan con la altura, el ancho, la resistencia de carga y el espacio libre adecuados según la normativa de tu mercado. Además, cada escalon debe ser antideslizante y mantener la misma altura y profundidad de un descanso a otro, para que nadie se tropiece por una medida distinta.",
   "pasos_accionables": [
-    "Verificar que las escaleras con 4 o mas escalones tengan barandillas y pasamanos instalados",
-    "Confirmar el ancho minimo exigido consultando la normativa vigente en tu mercado",
-    "Asegurar que los pasamanos soporten la carga minima que exige la normativa de tu mercado",
+    "Verificar que las escaleras con 4 o más escalones tengan barandillas y pasamanos instalados",
+    "Confirmar el ancho mínimo exigido consultando la normativa vigente en tu mercado",
+    "Asegurar que los pasamanos soporten la carga mínima que exige la normativa de tu mercado",
     "Revisar que los escalones sean antideslizantes y de altura y profundidad uniforme"
   ],
   "entregable_esperado": "Escaleras fijas cumpliendo con las especificaciones correspondientes, verificado mediante un checklist.",
@@ -26,5 +26,49 @@
   "etiqueta_arbol": "Asegura tus Escaleras Fijas",
   "fuentes_internas": [
     "SMALL_BUSINESS"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0101",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Verificar que las escaleras con 4 o mas escalones tengan barandillas y pasamanos instalados",
+      "texto_nuevo": "Verificar que las escaleras con 4 o más escalones tengan barandillas y pasamanos instalados",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O010-016.paso0: más (Solo falta la tilde en 'más'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0102",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Confirmar el ancho minimo exigido consultando la normativa vigente en tu mercado",
+      "texto_nuevo": "Confirmar el ancho mínimo exigido consultando la normativa vigente en tu mercado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O010-016.paso1: mínimo (Solo falta la tilde en 'mínimo'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0103",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurar que los pasamanos soporten la carga minima que exige la normativa de tu mercado",
+      "texto_nuevo": "Asegurar que los pasamanos soporten la carga mínima que exige la normativa de tu mercado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O010-016.paso2: mínima (Solo falta la tilde en 'mínima'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
   ]
 }

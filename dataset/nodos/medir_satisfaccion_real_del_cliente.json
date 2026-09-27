@@ -6,13 +6,13 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "La calidad de un servicio no la define lo que tu entregaste, sino lo que el cliente cree haber recibido comparado con lo que esperaba antes de comprar. Aunque tu proceso de entrega funcione perfecto por dentro, si el cliente esperaba algo distinto, existira una brecha de servicio que solo se detecta preguntando, no suponiendo. Esta brecha es el punto central para saber si tu logistica de salida esta funcionando de verdad. Medir esto exige comparar dos cosas por separado: la expectativa antes de la entrega y la percepcion despues de recibirla, en lugar de asumir que coinciden porque tu cumpliste el plazo que tenias planeado.",
   "pasos_accionables": [
-    "Pregunta directamente a tus clientes que esperaban antes de que llegara su pedido.",
-    "Pregunta despues de la entrega que recibieron en realidad y como se sintieron con eso.",
-    "Compara ambas respuestas para encontrar la brecha real, no la que tu imaginas.",
+    "Pregunta directamente a tus clientes qué esperaban antes de que llegara su pedido.",
+    "Pregunta después de la entrega qué recibieron en realidad y cómo se sintieron con eso.",
+    "Compara ambas respuestas para encontrar la brecha real, no la que tú imaginas.",
     "Anota estas brechas por tipo de pedido para detectar patrones repetidos.",
-    "Ajusta tu promesa de entrega o tu servicio segun lo que encuentres, no segun tu intuicion."
+    "Ajusta tu promesa de entrega o tu servicio según lo que encuentres, no según tu intuición."
   ],
-  "entregable_esperado": "Una comparacion escrita entre lo que el cliente esperaba y lo que percibio en tus ultimos pedidos.",
+  "entregable_esperado": "Una comparación escrita entre lo que el cliente esperaba y lo que percibió en tus últimos pedidos.",
   "nodos_previos": [
     "encuestar_al_cliente_para_saber_que_valora",
     "experiencia_del_cliente_proactiva"
@@ -40,6 +40,75 @@
         "evidencia": "F29-019: Mide la brecha de servicio en los ultimos pedidos de una operacion de entrega ya en marcha para mejorarla, control y mejora de ejecucion. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0484",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta directamente a tus clientes que esperaban antes de que llegara su pedido.",
+      "texto_nuevo": "Pregunta directamente a tus clientes qué esperaban antes de que llegara su pedido.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-032.paso0: que (El interrogativo indirecto qué lleva tilde; 'antes de que' queda sin tilde, como debe.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0485",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta despues de la entrega que recibieron en realidad y como se sintieron con eso.",
+      "texto_nuevo": "Pregunta después de la entrega qué recibieron en realidad y cómo se sintieron con eso.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-032.paso1: despues, que, como (Faltan la tilde de después y las de los interrogativos indirectos qué y cómo.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0486",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara ambas respuestas para encontrar la brecha real, no la que tu imaginas.",
+      "texto_nuevo": "Compara ambas respuestas para encontrar la brecha real, no la que tú imaginas.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-032.paso2: tu (Aquí tú es pronombre personal y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0487",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ajusta tu promesa de entrega o tu servicio segun lo que encuentres, no segun tu intuicion.",
+      "texto_nuevo": "Ajusta tu promesa de entrega o tu servicio según lo que encuentres, no según tu intuición.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-032.paso4: segun, segun, intuicion (Faltan las tildes de según (dos veces) e intuición; los posesivos 'tu' quedan sin tilde, como deben.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0488",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una comparacion escrita entre lo que el cliente esperaba y lo que percibio en tus ultimos pedidos.",
+      "texto_nuevo": "Una comparación escrita entre lo que el cliente esperaba y lo que percibió en tus últimos pedidos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-032.entregable: comparacion, percibio, ultimos (Faltan las tildes de comparación, percibió y últimos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

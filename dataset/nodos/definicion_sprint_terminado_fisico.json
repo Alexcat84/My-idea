@@ -9,7 +9,7 @@
     "Define qué entregable tangible marca el cierre de cada sprint: boceto, prototipo, modelo de trabajo o informe de estudio de mercado",
     "Crea una checklist de definición de terminado adaptada a la etapa del proyecto, ideación o desarrollo técnico",
     "Establece un formato estándar de documentación para cada entregable, por ejemplo un reporte de una página",
-    "Fija un límite de horas para las tareas de evaluación o diseño y evita sobre ingeniería, por ejemplo máximo 10 horas para evaluar un concepto",
+    "Fija un límite de horas para las tareas de evaluación o diseño y evita sobreingeniería, por ejemplo máximo 10 horas para evaluar un concepto",
     "Valida el sprint terminado con un experto o revisor externo antes de cerrarlo",
     "Comunica los criterios de terminado antes de iniciar cada sprint"
   ],
@@ -42,5 +42,21 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0897",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fija un límite de horas para las tareas de evaluación o diseño y evita sobre ingeniería, por ejemplo máximo 10 horas para evaluar un concepto",
+      "texto_nuevo": "Fija un límite de horas para las tareas de evaluación o diseño y evita sobreingeniería, por ejemplo máximo 10 horas para evaluar un concepto",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O076-033.paso3: sobre ingeniería (Según la norma ortográfica, el prefijo 'sobre-' se escribe unido a la palabra, así que 'sobreingeniería' va junto; el resto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
   ]
 }

@@ -7,12 +7,12 @@
   "resumen_teorico": "Antes de comprar cajas, sobres o material de relleno, conviene revisar de forma ordenada las caracteristicas de lo que vas a enviar: cuanto pesa, que tan fragil es, si tiene forma irregular, si es liquido o polvo, cual es su valor y si su uso final exige algo especial. Tambien hay que revisar si el producto cae dentro de alguna categoria regulada, como perfumes, baterias o quimicos, que exigen empaque especifico. Esta evaluacion previa evita comprar el tipo de caja equivocado o descubrir demasiado tarde que el material elegido no protege lo que necesitas proteger. Cada factor apunta a un tipo distinto de solucion, por lo que revisarlos todos antes de comprar ahorra dinero y devoluciones.",
   "pasos_accionables": [
     "Antes de comprar cajas o bolsas, anota el peso y la fragilidad de lo que vas a enviar.",
-    "Pregunta si el contenido es liquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
-    "Sugerencia de My Idea: verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
-    "Revisa si tu producto entra en alguna categoria regulada, como baterias, perfumes o quimicos, antes de despacharlo.",
-    "Con esa informacion decide si necesitas caja simple, de doble pared o bolsa plastica."
+    "Pregunta si el contenido es líquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
+    "Sugerencia de My Idea: verifica si el valor del contenido exige protección extra o algún tipo de seguro.",
+    "Revisa si tu producto entra en alguna categoría regulada, como baterías, perfumes o químicos, antes de despacharlo.",
+    "Con esa información decide si necesitas caja simple, de doble pared o bolsa plástica."
   ],
-  "entregable_esperado": "Una lista de requisitos de empaque especificos para tu producto, lista antes de comprar materiales.",
+  "entregable_esperado": "Una lista de requisitos de empaque específicos para tu producto, lista antes de comprar materiales.",
   "nodos_previos": [
     "disenar_empaque_logistica",
     "logistica_inversa_retornos"
@@ -74,6 +74,75 @@
         "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "n1-orto-0172",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta si el contenido es liquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
+      "texto_nuevo": "Pregunta si el contenido es líquido, en polvo o de forma irregular, porque cada uno pide empaque distinto.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-022.paso1: líquido (Solo añade la tilde que faltaba en líquido.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0173",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: verifica si el valor del contenido exige proteccion extra o algun tipo de seguro.",
+      "texto_nuevo": "Sugerencia de My Idea: verifica si el valor del contenido exige protección extra o algún tipo de seguro.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-022.paso2: protección, algún (Solo añade las tildes de protección y algún.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0174",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si tu producto entra en alguna categoria regulada, como baterias, perfumes o quimicos, antes de despacharlo.",
+      "texto_nuevo": "Revisa si tu producto entra en alguna categoría regulada, como baterías, perfumes o químicos, antes de despacharlo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-022.paso3: categoría, baterías, químicos (Solo añade las tildes de categoría, baterías y químicos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0175",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Con esa informacion decide si necesitas caja simple, de doble pared o bolsa plastica.",
+      "texto_nuevo": "Con esa información decide si necesitas caja simple, de doble pared o bolsa plástica.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-022.paso4: información, plástica (Solo añade las tildes de información y plástica.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0176",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de requisitos de empaque especificos para tu producto, lista antes de comprar materiales.",
+      "texto_nuevo": "Una lista de requisitos de empaque específicos para tu producto, lista antes de comprar materiales.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O015-022.entregable: específicos (Solo añade la tilde que faltaba en específicos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

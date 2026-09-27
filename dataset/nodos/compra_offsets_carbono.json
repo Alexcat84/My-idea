@@ -9,7 +9,7 @@
     "Determinar qué porcentaje de emisiones no puede reducirse internamente.",
     "Investigar proveedores certificados de offsets de carbono.",
     "Verificar la validez y trazabilidad de los proyectos de compensación.",
-    "Combinar la compra de offsets con metas de reducción interna real. El plan de reduccion se establece antes de recurrir a compensaciones",
+    "Combinar la compra de offsets con metas de reducción interna real. El plan de reducción se establece antes de recurrir a compensaciones",
     "Comunicar de forma transparente el uso de offsets como parte de la estrategia climática. Se comunica igualmente el alcance real de la declaración de neutralidad",
     "Definir qué alcances de emisiones se incluirán en la meta de neutralidad"
   ],
@@ -39,5 +39,21 @@
   ],
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0820",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Combinar la compra de offsets con metas de reducción interna real. El plan de reduccion se establece antes de recurrir a compensaciones",
+      "texto_nuevo": "Combinar la compra de offsets con metas de reducción interna real. El plan de reducción se establece antes de recurrir a compensaciones",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O072-009.paso3: reducción (Falta la tilde en 'reduccion'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
   ]
 }

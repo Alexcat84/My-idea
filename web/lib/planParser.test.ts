@@ -178,10 +178,12 @@ describe("parsearSeccion — Primera acción y el rótulo viejo son el mismo cam
     expect(s.entregable).toBe("una lista.");
   });
 
-  it("el viejo da exactamente la misma sección", () => {
-    expect(parsearSeccion("Etapa 1: Valida", cuerpo("**Esta semana:**"))).toEqual(
-      parsearSeccion("Etapa 1: Valida", cuerpo("**Primera acción:**"))
-    );
+  it("el viejo da la misma sección, marcada como acción vieja (27 sep 2026: la vista del plan no la muestra)", () => {
+    const viejo = parsearSeccion("Etapa 1: Valida", cuerpo("**Esta semana:**"));
+    const nuevo = parsearSeccion("Etapa 1: Valida", cuerpo("**Primera acción:**"));
+    expect(viejo.accionVieja).toBe(true);
+    expect(nuevo.accionVieja).toBe(false);
+    expect({ ...viejo, accionVieja: false }).toEqual(nuevo);
   });
 
   it("también sin tilde", () => {

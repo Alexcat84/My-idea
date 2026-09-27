@@ -13,7 +13,8 @@
   ],
   "entregable_esperado": "Mapa de redes clave con responsable asignado a cada una y protocolo de acceso compartido para todo el equipo",
   "nodos_previos": [
-    "establecer_equipo_multifuncional"
+    "establecer_equipo_multifuncional",
+    "capital_social_founder"
   ],
   "nodos_siguientes": [
     "diferenciacion_de_marca_contraintuitiva"
@@ -25,5 +26,20 @@
   "etiqueta_arbol": "Comparte tu Red de Contactos",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-04",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "capital_social_founder -> construccion_red_profesional_integrada",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-04, lectores de acuerdo): raiz de 2 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Después de construir la red de contactos propia, el siguiente paso es integrarla en una red institucional compartida en vez de operar cada uno con su red aislada."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

@@ -25,7 +25,8 @@
   "nodos_siguientes": [
     "estrategia_crecimiento_clientes",
     "retention_metrics",
-    "optimizacion_metricas_crecimiento"
+    "optimizacion_metricas_crecimiento",
+    "persuasion_directivos_prioridad_cliente"
   ],
   "condiciones_activacion": [
     "Si ya tienes primeros clientes o una base activa que necesitas evitar que se vaya",
@@ -73,6 +74,19 @@
         "motivo": "Referencia de un nodo vivo a cohort_analysis_retencion, deprecado; su superviviente es analisis_de_cohortes."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-nucleo-18",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "keep_customers_strategy -> persuasion_directivos_prioridad_cliente",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-19, arbitro): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tenia razon el lector B: la estrategia de retencion termina con usar los datos por cohortes para justificar la inversion en experiencia, y el nodo consiste justo en convencer a quien decide con cifras de retencion. El candidato de incentivos habla de redisenar la organizacion, que es mas bien una consecuencia de haber convencido ya a quien decide."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ]
 }

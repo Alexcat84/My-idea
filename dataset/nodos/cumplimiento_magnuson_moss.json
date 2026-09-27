@@ -6,12 +6,12 @@
   "fuente": "Businessperson's Guide to Federal Warranty Law",
   "resumen_teorico": "Esta es una ley federal de Estados Unidos, la Magnuson-Moss Warranty Act, que regula las garantías escritas sobre productos de consumo vendidos a clientes en ese pais. No te obliga a ofrecer una garantia escrita, pero si decides hacerlo debes cumplir tres cosas: titularla como garantia total o limitada (full o limited), explicar sus terminos con claridad antes de la venta (regla de divulgacion) y ponerla a disposicion del comprador antes de que pague (regla de disponibilidad previa). Además no puedes eliminar las garantias implicitas, ni condicionar tu garantia a que el cliente compre otro producto o servicio tuyo, ni usar terminos enganosos. Como es una ley de Estados Unidos, si vendes en otro pais conviene revisar la norma equivalente que aplique alli.",
   "pasos_accionables": [
-    "Decide si vas a ofrecer una garantia escrita sobre tu producto.",
-    "Si decides ofrecerla, verifica que cumple los tres requisitos: titulo claro, terminos divulgados con claridad y disponibilidad antes de la venta.",
-    "Revisa que tu garantia no obligue al cliente a comprarte algo mas ni use frases enganosas.",
-    "Consulta con un abogado que conozca esta ley antes de publicar tu garantia, para confirmar que todo esta en regla."
+    "Decide si vas a ofrecer una garantía escrita sobre tu producto.",
+    "Si decides ofrecerla, verifica que cumple los tres requisitos: título claro, términos divulgados con claridad y disponibilidad antes de la venta.",
+    "Revisa que tu garantía no obligue al cliente a comprarte algo más ni use frases engañosas.",
+    "Consulta con un abogado que conozca esta ley antes de publicar tu garantía, para confirmar que todo está en regla."
   ],
-  "entregable_esperado": "El texto de tu garantia revisado por un abogado, listo antes de imprimirlo o publicarlo, si vendes a clientes en Estados Unidos.",
+  "entregable_esperado": "El texto de tu garantía revisado por un abogado, listo antes de imprimirlo o publicarlo, si vendes a clientes en Estados Unidos.",
   "nodos_previos": [
     "garantias_implicitas_vs_expresas"
   ],
@@ -29,5 +29,76 @@
   "etiqueta_arbol": "Cumple las Reglas de Garantía",
   "fuentes_internas": [
     "Businessperson's Guide to Federal Warranty Law"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0479",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide si vas a ofrecer una garantia escrita sobre tu producto.",
+      "texto_nuevo": "Decide si vas a ofrecer una garantía escrita sobre tu producto.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-028.paso0: garantia (Falta la tilde de garantía.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0480",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si decides ofrecerla, verifica que cumple los tres requisitos: titulo claro, terminos divulgados con claridad y disponibilidad antes de la venta.",
+      "texto_nuevo": "Si decides ofrecerla, verifica que cumple los tres requisitos: título claro, términos divulgados con claridad y disponibilidad antes de la venta.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-028.paso1: titulo, terminos (Faltan las tildes de título y términos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0481",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa que tu garantia no obligue al cliente a comprarte algo mas ni use frases enganosas.",
+      "texto_nuevo": "Revisa que tu garantía no obligue al cliente a comprarte algo más ni use frases engañosas.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-028.paso2: garantia, mas, enganosas (Faltan las tildes de garantía y más, y la eñe de engañosas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0482",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consulta con un abogado que conozca esta ley antes de publicar tu garantia, para confirmar que todo esta en regla.",
+      "texto_nuevo": "Consulta con un abogado que conozca esta ley antes de publicar tu garantía, para confirmar que todo está en regla.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-028.paso3: garantia, esta (Faltan las tildes de garantía y del verbo está; el demostrativo 'esta ley' queda sin tilde, como debe.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0483",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "El texto de tu garantia revisado por un abogado, listo antes de imprimirlo o publicarlo, si vendes a clientes en Estados Unidos.",
+      "texto_nuevo": "El texto de tu garantía revisado por un abogado, listo antes de imprimirlo o publicarlo, si vendes a clientes en Estados Unidos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O042-028.entregable: garantia (Falta la tilde de garantía.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

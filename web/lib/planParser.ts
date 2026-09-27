@@ -36,6 +36,10 @@ export interface Seccion {
    * semana:**"; en la sección de números, "**El lunes que viene:**". El nombre
    * del campo se quedó por compatibilidad; la pantalla lo rotula "Primera acción". */
   estaSemana: string | null;
+  /** La acción vino de un rótulo VIEJO con plazo ("Esta semana", "El lunes que
+   * viene") de un plan guardado. Decisión del fundador (27 sep 2026): en la vista
+   * del plan ese contenido ya no se muestra; solo la "Primera acción". */
+  accionVieja: boolean;
 }
 
 export interface PlanParseado {
@@ -85,6 +89,7 @@ export function parsearSeccion(tituloCrudo: string, contenido: string, idioma: L
   let estaSemana = es.valor
     ? es.valor.replace(/^\*\*(?:Primera acci[oó]n|Esta semana|El lunes(?: que viene)?):?\*\*\s*/i, "").trim()
     : null;
+  let accionVieja = es.valor ? !/^\*\*Primera acci[oó]n/i.test(es.valor.trim()) : false;
 
   // 2) "Entregable" — el artefacto que queda.
   const ent = recortarBloque(cuerpo, /\*\*Entregable:?\*\*[\s\S]*?(?=\n\s*\n|$)/);
@@ -141,6 +146,7 @@ export function parsearSeccion(tituloCrudo: string, contenido: string, idioma: L
       const m = descripcion.match(/(?:^|\.\s+)((?:El lunes|Esta semana|Primera acci[oó]n)(?![\p{L}])[\s\S]*)$/iu);
       if (m && m[1].trim().length > 30) {
         estaSemana = m[1].trim();
+        accionVieja = !/^Primera acci[oó]n/i.test(estaSemana);
         descripcion = descripcion.slice(0, (m.index ?? 0) + (m[0].length - m[1].length)).trim();
       }
     }
@@ -169,6 +175,7 @@ export function parsearSeccion(tituloCrudo: string, contenido: string, idioma: L
     bloquesPasos: bloquesPasos.filter((b) => b.pasos.length > 0),
     entregable,
     estaSemana,
+    accionVieja,
   };
 }
 

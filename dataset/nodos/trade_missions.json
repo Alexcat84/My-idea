@@ -7,12 +7,12 @@
   "resumen_teorico": "Las misiones comerciales son viajes organizados a otros paises en los que participas junto a otras empresas, a veces con un funcionario de alto nivel al frente. Te permiten reunirte cara a cara con contactos internacionales ya preseleccionados, aprovechando el tiempo con distribuidores, representantes de ventas o socios calificados. Suelen enfocarse en una industria especifica y cubrir de dos a cuatro paises por viaje. Conviene preguntar en tu mercado si existe un programa así.",
   "pasos_accionables": [
     "Identifica las misiones comerciales relevantes para tu industria",
-    "Inscribete y entrega la información de tu negocio para el proceso de preseleccion",
+    "Inscríbete y entrega la información de tu negocio para el proceso de preselección",
     "Revisa la agenda de citas coordinada por los especialistas del programa",
-    "Viaja y reunete cara a cara con los contactos preseleccionados",
-    "Da seguimiento después de la mision a los contactos que generaste"
+    "Viaja y reúnete cara a cara con los contactos preseleccionados",
+    "Da seguimiento después de la misión a los contactos que generaste"
   ],
-  "entregable_esperado": "Agenda de reuniones internacionales confirmadas durante una mision comercial oficial",
+  "entregable_esperado": "Agenda de reuniones internacionales confirmadas durante una misión comercial oficial",
   "nodos_previos": [
     "trade_fair_certification_program"
   ],
@@ -26,5 +26,62 @@
   "etiqueta_arbol": "Súmate a Misiones Comerciales",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0647",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Inscribete y entrega la información de tu negocio para el proceso de preseleccion",
+      "texto_nuevo": "Inscríbete y entrega la información de tu negocio para el proceso de preselección",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O056-023.paso1: Inscríbete, preselección (Añade las tildes que faltaban en Inscríbete y preselección.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0648",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Viaja y reunete cara a cara con los contactos preseleccionados",
+      "texto_nuevo": "Viaja y reúnete cara a cara con los contactos preseleccionados",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O056-023.paso3: reúnete (Reúnete lleva tilde para romper el diptongo.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0649",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Da seguimiento después de la mision a los contactos que generaste",
+      "texto_nuevo": "Da seguimiento después de la misión a los contactos que generaste",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O056-023.paso4: misión (Misión es aguda terminada en n y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0650",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Agenda de reuniones internacionales confirmadas durante una mision comercial oficial",
+      "texto_nuevo": "Agenda de reuniones internacionales confirmadas durante una misión comercial oficial",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O056-023.entregable: misión (Misión es aguda terminada en n y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

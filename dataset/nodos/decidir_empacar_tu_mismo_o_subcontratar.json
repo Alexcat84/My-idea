@@ -6,13 +6,13 @@
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
   "resumen_teorico": "Antes de crecer tienes que decidir si empacas y despachas tus propios pedidos o si le pagas a un tercero que lo haga por ti. Empacar tu mismo te da control total sobre la experiencia del cliente, pero te consume tiempo y espacio que podrias usar para vender. Subcontratar libera ese tiempo, pero pone la marca de tu negocio en manos de otro: muchos compradores eligen que tienda comprar segun el courier que usa, asi que el operador que elijas se vuelve parte de tu reputacion. No es una decision de una sola vez: conviene revisarla cuando el volumen cambie, porque lo que conviene con pocos pedidos puede dejar de convenir cuando crecen.",
   "pasos_accionables": [
-    "Calcula cuanto tiempo y espacio te toma empacar cada pedido tu mismo en una semana normal.",
-    "Compara ese costo contra las tarifas de un operador logistico local.",
-    "Pregunta a tus clientes que tan importante es la marca del courier en su decision de comprarte.",
+    "Calcula cuánto tiempo y espacio te toma empacar cada pedido tú mismo en una semana normal.",
+    "Compara ese costo contra las tarifas de un operador logístico local.",
+    "Pregunta a tus clientes qué tan importante es la marca del courier en su decisión de comprarte.",
     "Prueba subcontratar solo una parte de tus pedidos antes de mover todo el volumen.",
-    "Decide segun quien te da mas control sobre la experiencia del cliente sin romper tu margen."
+    "Decide según quién te da más control sobre la experiencia del cliente sin romper tu margen."
   ],
-  "entregable_esperado": "Una decision escrita sobre fulfilment propio o tercerizado con el costo por pedido de cada opcion.",
+  "entregable_esperado": "Una decisión escrita sobre fulfilment propio o tercerizado con el costo por pedido de cada opción.",
   "nodos_previos": [
     "vender_sin_stock_con_drop_shipping"
   ],
@@ -54,6 +54,75 @@
         "evidencia": "F15-017: Decide si subcontratar el despacho cuando los pedidos ya crecieron; es gestión operativa de un negocio en marcha, no descubrimiento de una oportunidad. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0796",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Calcula cuanto tiempo y espacio te toma empacar cada pedido tu mismo en una semana normal.",
+      "texto_nuevo": "Calcula cuánto tiempo y espacio te toma empacar cada pedido tú mismo en una semana normal.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-013.paso0: cuánto, tú ('cuánto' es interrogativo indirecto y 'tú' es pronombre personal; los dos llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0797",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara ese costo contra las tarifas de un operador logistico local.",
+      "texto_nuevo": "Compara ese costo contra las tarifas de un operador logístico local.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-013.paso1: logístico ('logístico' es esdrújula y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0798",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a tus clientes que tan importante es la marca del courier en su decision de comprarte.",
+      "texto_nuevo": "Pregunta a tus clientes qué tan importante es la marca del courier en su decisión de comprarte.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-013.paso2: qué, decisión ('qué' es interrogativo y 'decisión' es aguda terminada en n; los dos llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0799",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Decide segun quien te da mas control sobre la experiencia del cliente sin romper tu margen.",
+      "texto_nuevo": "Decide según quién te da más control sobre la experiencia del cliente sin romper tu margen.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-013.paso4: según, quién, más ('según' y 'más' llevan tilde, y 'quién' también, porque aquí es interrogativo indirecto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0800",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una decision escrita sobre fulfilment propio o tercerizado con el costo por pedido de cada opcion.",
+      "texto_nuevo": "Una decisión escrita sobre fulfilment propio o tercerizado con el costo por pedido de cada opción.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-013.entregable: decisión, opción ('decisión' y 'opción' son agudas terminadas en n y llevan tilde; el término 'fulfilment' se deja intacto.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

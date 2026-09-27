@@ -1,6 +1,6 @@
 {
   "node_id": "local_rationality_principle",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Principio de Racionalidad Local",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Entiende por qué Tiene Sentido",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-118",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q027-027: Aplicar la racionalidad local al investigar un incidente o accidente ya ocurrido es controlar y mejorar la operación en marcha, no planificar. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

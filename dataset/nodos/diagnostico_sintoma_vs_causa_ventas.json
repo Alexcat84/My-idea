@@ -17,7 +17,8 @@
   ],
   "entregable_esperado": "Un diagnóstico basado en datos reales de tus conversaciones de venta, que te muestre la causa raíz antes de decidir cómo mejorar o entrenarte",
   "nodos_previos": [
-    "viaje_diagnostico_remedial"
+    "viaje_diagnostico_remedial",
+    "preguntas_need_payoff"
   ],
   "nodos_siguientes": [
     "prevencion_objeciones_vs_manejo"
@@ -43,6 +44,19 @@
         "evidencia": "F18-023: Diagnosticar el bajo desempeño de ventas que ya se hacen es mejorar la operación comercial. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-nucleo-22",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "preguntas_need_payoff -> diagnostico_sintoma_vs_causa_ventas",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-07, segunda eleccion de un lector: la primera formaba un par de ida y vuelta).",
+        "motivo": "Quien ya sabe que las preguntas de beneficio reducen la resistencia porque el cliente expresa el valor pasa de forma natural a diagnosticar si las objeciones de su equipo son un sintoma de haber ofrecido la solucion antes de construir ese valor."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ]
 }

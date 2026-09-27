@@ -17,6 +17,37 @@ decisiones (`docs/fidelidad/`, las tandas y el campo `correcciones` de los nodos
 recoge (`git log --format=%ci`). Una fecha escrita en el texto es orientativa; si
 no coincide con la del commit, manda el commit.
 
+## 0c. Saneamiento del dataset, NIVEL 2 "MEJORA CONTINUA" (decision del fundador del 27 sep 2026)
+
+No bloquean la declaracion "saneado para el cliente" (nivel 1, `docs/SANEAMIENTO_DATASET.md`). Cada ficha se abre el
+27 sep 2026 y se cierra con su instrumento, sus trampas y su tanda declarada, por el metodo de siempre.
+
+### Ficha `n2-aristas-por-lectura` (abierta el 27 sep 2026)
+- **Que:** leer una a una las aristas vivas que ninguna pasada leyo todavia (unas 4.900 de 7.162; ya leidas: las
+  nuevas, los pares bidireccionales, las 2.212 de la pasada R, las 61 de la P y las entradas de E, C y N) y tejer las
+  477 que faltan (`docs/loop/ACTA_INTEGRAL.md`).
+- **Tasa de referencia:** la pasada R midio 6,7 por ciento de aristas rancias en su muestra (no aleatoria).
+- **Como se cierra:** pasada de aristas por lectura con la vara de R (lector con trampas, verificador ciego, arbitro);
+  las rancias salen por `scripts/saneamiento/aplicar_aristas.py` sin dejar a ningun nodo sin camino; Gate 0 en verde.
+
+### Ficha `n2-vigencia-completa` (abierta el 27 sep 2026)
+- **Que:** la campania completa de vigencia de los 305 nodos con norma, plazo, cifra con fecha o institucion: ficha de
+  vigencia con fecha de verificacion por nodo, cada norma, cifra e institucion contra su fuente oficial vigente, los unos
+  63 nodos con dependencia que la criba no marco, y los 10 anos de libro de seguridad BAJA.
+- **Como se cierra:** `dataset/metadata/vigencia.json` con fecha de verificacion por nodo, y correcciones declaradas
+  (veredicto VIGENCIA) de lo que haya cambiado.
+
+### Ficha `n2-voz-de-la-casa` (abierta el 27 sep 2026)
+- **Que:** la voz de la casa (segunda persona, sin jerga sin explicar, sin anglicismos crudos) en los textos que ve el
+  cliente. La ortografia se cerro en el nivel 1; la voz no.
+- **Como se cierra:** pasada de voz con la vara de la casa y correccion declarada, sin cambiar el sentido.
+
+### Ficha `n2-muestra-anadidos-practicos` (abierta el 27 sep 2026)
+- **Que:** una MUESTRA con semilla de los anadidos practicos de resumenes y entregables (lo que el nodo agrega que su
+  libro no dice), para decidir si merecen campania. La pasada de campos de la fidelidad solo busco cifras, plazos y
+  normas contrarios o anadidos.
+- **Como se cierra:** la tasa medida, con su intervalo, y la decision del fundador: campania o cierre.
+
 ## 0b. Saneamiento del dataset: lo que la tanda 1 deja para despues (26 sep 2026)
 
 Ver `docs/SANEAMIENTO_DATASET.md` (tanda 1 cerrada).
@@ -32,7 +63,7 @@ Ver `docs/SANEAMIENTO_DATASET.md` (tanda 1 cerrada).
   `dataset/metadata/fuentes_canonicas.json` con sus titulos; se corre `python scripts/fuentes_internas.py`; sus nodos
   pasan la guarda de titulos (`engine/test_fuentes_de_cara.py`) y cualquier cita a un autor o libro como fuente sale por
   correccion declarada (veredicto ATRIBUCION) antes de integrar.
-- **Sesion con credencial:** 252 nodos a re-embeber y 66 preguntas a regenerar (`docs/fidelidad/credencial/`).
+- **Sesion con credencial:** 349 nodos a re-embeber y 66 preguntas a regenerar (`docs/fidelidad/credencial/`).
 
 ## 0a. Campaña de FIDELIDAD: lo que queda para la integración del mundo 11 (24 sep 2026)
 

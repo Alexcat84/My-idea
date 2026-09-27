@@ -7,13 +7,13 @@
   "resumen_teorico": "Herramienta para identificar y mapear a los actores que, junto con tu negocio, definen las prioridades de sostenibilidad de tu industria: empleados, inversores, bancos, comunidades, gobiernos, ONG, medios, reguladores, competidores y academia. No eliges tus prioridades de forma aislada, la sociedad y estos actores externos también las moldean. La herramienta te ayuda a identificar quien lidera el debate en cada categoria, y a mirar a cada actor según cuanto te puede influir y cuanto le importa cada tema, para decidir si conviene cultivar la relacion, involucrarlo de cerca, mantenerlo informado o simplemente monitorearlo. Cruzando esto con tu propia mirada sobre lo que es material para tu negocio, ajustas tu lista final de prioridades incorporando temas que estos actores consideran criticos aunque a ti te parezcan menores.",
   "pasos_accionables": [
     "Identificar todos los actores relevantes para tu industria: empleados, inversores, bancos, comunidades, gobiernos, ONG, medios, reguladores, competidores y academia",
-    "Determinar que personas o grupos lideran el debate en cada categoria",
-    "Evaluar cuanto te puede influir cada actor y cuanto le importa cada tema, decidiendo si conviene cultivar la relacion, involucrarlo de cerca, mantenerlo informado o solo monitorearlo",
+    "Determinar qué personas o grupos lideran el debate en cada categoría",
+    "Evaluar cuánto te puede influir cada actor y cuánto le importa cada tema, decidiendo si conviene cultivar la relación, involucrarlo de cerca, mantenerlo informado o solo monitorearlo",
     "Cruzar esta información con tu propia mirada sobre lo que es material para tu negocio",
-    "Ajustar tu lista de prioridades de sostenibilidad incorporando temas externos criticos aunque te parezcan menores desde adentro",
-    "Definir como te vas a acercar a cada actor según el tipo de atencion que necesita"
+    "Ajustar tu lista de prioridades de sostenibilidad incorporando temas externos críticos aunque te parezcan menores desde adentro",
+    "Definir cómo te vas a acercar a cada actor según el tipo de atención que necesita"
   ],
-  "entregable_esperado": "Mapa de stakeholders que muestra cuanto te puede influir cada uno y cuanto le importa cada tema, con un plan de acercamiento diferenciado por grupo, integrado con tu propia mirada sobre lo material para definir tu lista final de prioridades de sostenibilidad.",
+  "entregable_esperado": "Mapa de stakeholders que muestra cuánto te puede influir cada uno y cuánto le importa cada tema, con un plan de acercamiento diferenciado por grupo, integrado con tu propia mirada sobre lo material para definir tu lista final de prioridades de sostenibilidad.",
   "nodos_previos": [
     "business_materiality_assessment",
     "issue_spotting_ambiental"
@@ -44,5 +44,76 @@
   ],
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0709",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Determinar que personas o grupos lideran el debate en cada categoria",
+      "texto_nuevo": "Determinar qué personas o grupos lideran el debate en cada categoría",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O061-027.paso1: qué, categoría (Tildes que faltaban en el interrogativo qué y en categoría; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0710",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evaluar cuanto te puede influir cada actor y cuanto le importa cada tema, decidiendo si conviene cultivar la relacion, involucrarlo de cerca, mantenerlo informado o solo monitorearlo",
+      "texto_nuevo": "Evaluar cuánto te puede influir cada actor y cuánto le importa cada tema, decidiendo si conviene cultivar la relación, involucrarlo de cerca, mantenerlo informado o solo monitorearlo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O061-027.paso2: cuánto, cuánto, relación (Tildes que faltaban en los dos cuánto interrogativos y en relación; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0711",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ajustar tu lista de prioridades de sostenibilidad incorporando temas externos criticos aunque te parezcan menores desde adentro",
+      "texto_nuevo": "Ajustar tu lista de prioridades de sostenibilidad incorporando temas externos críticos aunque te parezcan menores desde adentro",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O061-027.paso4: críticos (Faltaba la tilde en críticos; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0712",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir como te vas a acercar a cada actor según el tipo de atencion que necesita",
+      "texto_nuevo": "Definir cómo te vas a acercar a cada actor según el tipo de atención que necesita",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O061-027.paso5: cómo, atención (Tildes que faltaban en el interrogativo cómo y en atención; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0713",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mapa de stakeholders que muestra cuanto te puede influir cada uno y cuanto le importa cada tema, con un plan de acercamiento diferenciado por grupo, integrado con tu propia mirada sobre lo material para definir tu lista final de prioridades de sostenibilidad.",
+      "texto_nuevo": "Mapa de stakeholders que muestra cuánto te puede influir cada uno y cuánto le importa cada tema, con un plan de acercamiento diferenciado por grupo, integrado con tu propia mirada sobre lo material para definir tu lista final de prioridades de sostenibilidad.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O061-027.entregable: cuánto, cuánto (Tildes que faltaban en los dos cuánto interrogativos; stakeholders se mantiene y nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

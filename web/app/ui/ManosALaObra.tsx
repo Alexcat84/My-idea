@@ -62,7 +62,7 @@ import { hitosDeEspacio } from "@/lib/hitosEspacio";
 import { SelectorCara, type Cara } from "./SelectorCara";
 import { LineaAvance } from "./LineaAvance";
 import { loginConNext } from "@/lib/nextSeguro";
-import { cadenciasPorEspacio, chapaEstaSemana, diaDominante, ordenarEnFechas, sugerirFechasBase } from "@/lib/fechasBase";
+import { cadenciasPorEspacio, diaDominante, ordenarEnFechas, sugerirFechasBase } from "@/lib/fechasBase";
 import { haceCuanto } from "@/lib/ideas";
 import { errorGenerico, irAlDesafio, leerRechazo } from "@/lib/mensajeServidor";
 import { elegir, type ActiveLocale, type Locale } from "@/lib/i18n/config";
@@ -467,14 +467,13 @@ function FilaItem({
           {!hecho && !retirada && item.estado !== "pendiente" && (
             <span className="mt-0.5 block text-[12.5px] text-done">{etiquetaEstado[item.estado]}</span>
           )}
-          {!hecho && !retirada && chapaEstaSemana(modo, item) && (
-            // "esta semana": chapa HONESTA (adjudicación ago 2026). En modo fechas
-            // solo si la fecha vigente cae en la semana actual; en a-mi-ritmo,
-            // atada a `destacado`. Borde verde (no fondo lleno), como fija Design.
+          {!hecho && !retirada && item.destacado && (
+            // La tarea destacada es la PRIMERA ACCIÓN de su etapa, en los dos
+            // modos. "Esta semana" ya no va en las tarjetas (decisión del
+            // fundador, 27 sep 2026): solo en el bloque único de arriba. Borde
+            // verde (no fondo lleno), como fija Design.
             <span className="mt-1 inline-block rounded-full border border-done/30 px-2.5 py-0.5 text-[11.5px] font-semibold text-done">
-              {/* Decisión del fundador (26 sep 2026): a mi ritmo no hay semana que
-                  prometer; la destacada es la primera acción de su etapa. */}
-              {modo === "fechas" ? t.fila.estaSemana : t.fila.primeraAccion}
+              {t.fila.primeraAccion}
             </span>
           )}
           {/* AUD-09 M38: a mi ritmo no hay plazos: sin "para el …". */}

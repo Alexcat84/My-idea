@@ -6,11 +6,11 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "Si tu negocio tiene personal sindicalizado, cualquier programa de mejora de calidad necesita la colaboración de los representantes del sindicato desde el principio, no como un permiso automatico sino como participación activa y personal de cada uno. Así evitas que el programa se vea como una imposición o como acelerar el trabajo, le das legitimidad ante los trabajadores y te ayuda a identificar a las personas clave para tu equipo de mejora. Invita a los lideres sindicales a dar recomendaciones y a proponer empleados que puedan colaborar, y manten una comunicación abierta y honesta que reduzca la resistencia al cambio. También conviene resolver de antemano temas contractuales como horas extra o turnos que puedan afectar su participación real en el programa.",
   "pasos_accionables": [
-    "Programa una reunion temprana con los representantes sindicales para explicar el proposito del programa de calidad",
-    "Aclara que buscas participación individual y consultiva, no una aprobación automatica",
+    "Programa una reunión temprana con los representantes sindicales para explicar el propósito del programa de calidad",
+    "Aclara que buscas participación individual y consultiva, no una aprobación automática",
     "Pide recomendaciones de empleados que puedan integrarse a tu equipo de mejora",
     "Resuelve aspectos contractuales como horas extra o turnos que permitan su participación",
-    "Manten una comunicación abierta y transparente para evitar que se perciba como imposición o presión adicional"
+    "Mantén una comunicación abierta y transparente para evitar que se perciba como imposición o presión adicional"
   ],
   "entregable_esperado": "Acuerdo de colaboración con representantes sindicales, con al menos un representante integrado a tu equipo de mejora.",
   "nodos_previos": [
@@ -40,5 +40,49 @@
   ],
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0459",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Programa una reunion temprana con los representantes sindicales para explicar el proposito del programa de calidad",
+      "texto_nuevo": "Programa una reunión temprana con los representantes sindicales para explicar el propósito del programa de calidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O040-003.paso0: reunión, propósito (Solo añade las tildes que faltaban en reunión y propósito; el resto del texto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0460",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aclara que buscas participación individual y consultiva, no una aprobación automatica",
+      "texto_nuevo": "Aclara que buscas participación individual y consultiva, no una aprobación automática",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O040-003.paso1: automática (Solo añade la tilde que faltaba en automática.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0461",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Manten una comunicación abierta y transparente para evitar que se perciba como imposición o presión adicional",
+      "texto_nuevo": "Mantén una comunicación abierta y transparente para evitar que se perciba como imposición o presión adicional",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O040-003.paso4: Mantén (Solo añade la tilde del imperativo Mantén, que es aguda.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
   ]
 }

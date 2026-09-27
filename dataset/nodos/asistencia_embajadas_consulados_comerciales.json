@@ -19,10 +19,26 @@
     "adaptacion_cultural_negocios_internacionales"
   ],
   "condiciones_activacion": [
-    "El usuario enfrenta dificultades para penetrar un nuevo mercado o resolver disputas comerciales en el extranjero"
+    "Tu negocio opera en Estados Unidos y enfrenta dificultades para penetrar un nuevo mercado o resolver disputas comerciales o problemas de cobro en el extranjero"
   ],
   "etiqueta_arbol": "Acude a Embajadas y Consulados",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-007",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "El usuario enfrenta dificultades para penetrar un nuevo mercado o resolver disputas comerciales en el extranjero",
+      "texto_nuevo": "Tu negocio opera en Estados Unidos y enfrenta dificultades para penetrar un nuevo mercado o resolver disputas comerciales o problemas de cobro en el extranjero",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q001-014: Clase C sin la condición de operar en Estados Unidos. (lector y verificador de acuerdo) Motivo: Es un nodo de clase C (embajadas y consulados de Estados Unidos que atienden a empresas estadounidenses), pero la condición no dice que aplica si tu negocio opera en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

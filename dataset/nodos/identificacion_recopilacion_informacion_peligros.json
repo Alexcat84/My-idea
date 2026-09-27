@@ -6,7 +6,7 @@
   "fuente": "OSHA3885",
   "resumen_teorico": "Antes de controlar los riesgos, reune y organiza toda la información disponible sobre peligros en tu negocio, tanto interna como externa. Esto incluye manuales de equipos, hojas de datos de seguridad, reportes de autoinspección, registros de lesiones, resultados de monitoreo de exposición, programas de seguridad existentes y análisis de riesgos por tarea. Complementa esto con los aportes directos de tu equipo, ya sea mediante encuestas o conversaciones directas, para saber quien esta expuesto a que. También consulta fuentes externas como los organismos de salud y seguridad laboral de tu país, asociaciones gremiales, sindicatos y consultores de seguridad. El objetivo es tener un panorama completo antes de decidir como actuar frente a los riesgos identificados.",
   "pasos_accionables": [
-    "Reune documentacion interna: manuales de equipos, hojas de datos de seguridad, reportes de inspeccion, registros de incidentes y análisis de riesgos por tarea",
+    "Reúne documentación interna: manuales de equipos, hojas de datos de seguridad, reportes de inspección, registros de incidentes y análisis de riesgos por tarea",
     "Revisa tus registros de lesiones y enfermedades laborales y los resultados de monitoreo de exposición",
     "Consulta fuentes externas como los organismos de salud y seguridad laboral de tu país, sindicatos y consultores de seguridad",
     "Recoge los aportes de tu equipo mediante encuestas o conversaciones directas",
@@ -38,5 +38,21 @@
   "fuentes_internas": [
     "OSHA3885",
     "OSHA3886"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0387",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reune documentacion interna: manuales de equipos, hojas de datos de seguridad, reportes de inspeccion, registros de incidentes y análisis de riesgos por tarea",
+      "texto_nuevo": "Reúne documentación interna: manuales de equipos, hojas de datos de seguridad, reportes de inspección, registros de incidentes y análisis de riesgos por tarea",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-035.paso0: Reúne, documentación, inspección (Tildes que faltaban en 'Reúne', 'documentación' e 'inspección'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    }
   ]
 }

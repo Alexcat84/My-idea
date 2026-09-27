@@ -7,11 +7,11 @@
   "resumen_teorico": "La calidad no tiene una definición única: cambia según quien la juzgue, sea un trabajador, quien dirige la planta, el consumidor, el impresor o el autor. Un mismo producto puede parecerte excelente a ti y deficiente a otra persona involucrada, así que tienes que identificar con claridad que caracteristica de calidad le importa a cada parte.",
   "pasos_accionables": [
     "Identifica a todas las personas relevantes que juzgan la calidad de tu producto o servicio (quien lo hace, quien lo dirige, el cliente, quien lo distribuye)",
-    "Determina que entiende cada una de ellas por 'buena calidad'",
+    "Determina qué entiende cada una de ellas por 'buena calidad'",
     "Anota los posibles desacuerdos entre lo que cada persona considera calidad",
-    "Prioriza las caracteristicas de calidad según el impacto que tienen en tu negocio y en tu cliente final"
+    "Prioriza las características de calidad según el impacto que tienen en tu negocio y en tu cliente final"
   ],
-  "entregable_esperado": "Un documento donde anotas como percibe la calidad cada persona involucrada en tu producto o servicio",
+  "entregable_esperado": "Un documento donde anotas cómo percibe la calidad cada persona involucrada en tu producto o servicio",
   "nodos_previos": [
     "doble_significado_calidad"
   ],
@@ -39,6 +39,47 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U3-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-orto-0286",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Determina que entiende cada una de ellas por 'buena calidad'",
+      "texto_nuevo": "Determina qué entiende cada una de ellas por 'buena calidad'",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-017.paso1: qué (Falta la tilde del interrogativo indirecto 'qué'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0287",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Prioriza las caracteristicas de calidad según el impacto que tienen en tu negocio y en tu cliente final",
+      "texto_nuevo": "Prioriza las características de calidad según el impacto que tienen en tu negocio y en tu cliente final",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-017.paso3: características (Falta la tilde de la esdrújula 'características'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0288",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un documento donde anotas como percibe la calidad cada persona involucrada en tu producto o servicio",
+      "texto_nuevo": "Un documento donde anotas cómo percibe la calidad cada persona involucrada en tu producto o servicio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O024-017.entregable: cómo (Falta la tilde del interrogativo indirecto 'cómo'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

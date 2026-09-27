@@ -7,12 +7,12 @@
   "resumen_teorico": "Cero Defectos es una manera de pensar y de trabajar que busca eliminar la idea de que los errores son inevitables, apostando por prevenir en lugar de detectar y corregir después. Se basa en que si identificas y controlas las causas raiz de los defectos (mirando datos y tendencias), puedes reducir drasticamente o eliminar los defectos, evitando que se encadenen con otros problemas como ausentismo, sobrecostos y retrasos.",
   "pasos_accionables": [
     "Tener claro, y transmitirlo a quien trabaje contigo, que los defectos no son algo que simplemente hay que aceptar.",
-    "Usar datos de tendencias para detectar señales tempranas de que los defectos estan subiendo.",
+    "Usar datos de tendencias para detectar señales tempranas de que los defectos están subiendo.",
     "Actuar de inmediato cuando los defectos empiecen a subir, antes de que afecten otras cosas.",
     "Involucrar en la lectura de los datos a la persona que hace el trabajo directamente, no solo a quien revisa la calidad.",
     "Mantener el compromiso propio y de quien te ayuda con la idea de prevenir en lugar de corregir."
   ],
-  "entregable_esperado": "Un plan de acción para prevenir defectos, con puntos de control basados en datos, que tu decidas aplicar y que la persona que te ayuda entienda y respalde.",
+  "entregable_esperado": "Un plan de acción para prevenir defectos, con puntos de control basados en datos, que tú decidas aplicar y que la persona que te ayuda entienda y respalde.",
   "nodos_previos": [
     "analisis_causa_efecto_indicadores_calidad",
     "definicion_calidad_conformidad",
@@ -30,5 +30,34 @@
   "etiqueta_arbol": "Previene en Vez de Corregir",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0053",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usar datos de tendencias para detectar señales tempranas de que los defectos estan subiendo.",
+      "texto_nuevo": "Usar datos de tendencias para detectar señales tempranas de que los defectos están subiendo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O006-003.paso1: están (Falta la tilde en 'están' y el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0054",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un plan de acción para prevenir defectos, con puntos de control basados en datos, que tu decidas aplicar y que la persona que te ayuda entienda y respalde.",
+      "texto_nuevo": "Un plan de acción para prevenir defectos, con puntos de control basados en datos, que tú decidas aplicar y que la persona que te ayuda entienda y respalde.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O006-003.entregable: tú ('tú' es pronombre personal y lleva tilde diacrítica; no hay más cambios.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

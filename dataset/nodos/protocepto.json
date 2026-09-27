@@ -1,17 +1,17 @@
 {
   "node_id": "protocepto",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Versión intermedia entre idea y prototipo (protocept)",
   "fuente": "Winning at New Products - Robert G. Cooper",
   "resumen_teorico": "Un 'protocept' es una versión intermedia de tu producto, entre la idea (dibujos y palabras) y un prototipo listo para probar. Puede ser un dibujo en 3D hecho por computadora, un prototipo virtual, un modelo rudimentario o algo impreso en 3D. Te sirve para validar con el cliente si tu hipótesis de mercado tiene sentido, buscar la primera prueba de que la idea funciona tecnicamente, y conseguir el respaldo que necesitas para seguir adelante, sin tener que construir todavia un producto completamente funcional.",
   "pasos_accionables": [
-    "En cada vuelta de trabajo, crea una representacion tangible de tu producto: un dibujo en 3D, un modelo impreso, un prototipo virtual",
+    "En cada vuelta de trabajo, crea una representación tangible de tu producto: un dibujo en 3D, un modelo impreso, un prototipo virtual",
     "Muestra ese protocept al cliente y recoge lo que piensa sobre tu hipótesis de mercado",
-    "Usa el mismo protocept para comprobar con quien te ayuda si la idea es viable tecnicamente",
-    "Repite el ciclo en periodos cortos, de semanas, acercandote cada vez mas a un prototipo que funcione de verdad"
+    "Usa el mismo protocept para comprobar con quien te ayuda si la idea es viable técnicamente",
+    "Repite el ciclo en periodos cortos, de semanas, acercándote cada vez más a un prototipo que funcione de verdad"
   ],
-  "entregable_esperado": "Una serie de versiones intermedias de tu producto, una tras otra, con el feedback del cliente y los ajustes tecnicos que hiciste en cada ciclo.",
+  "entregable_esperado": "Una serie de versiones intermedias de tu producto, una tras otra, con el feedback del cliente y los ajustes técnicos que hiciste en cada ciclo.",
   "nodos_previos": [
     "definicion_sprint_terminado_fisico",
     "diseno_consecuencias_no_intencionadas"
@@ -26,5 +26,75 @@
   "etiqueta_arbol": "Itera entre Concepto y Prototipo",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-149",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q043-018: El protocept sirve para validar con el cliente la hipótesis de mercado y la viabilidad técnica antes de construir el prototipo completo; es validación, no operación de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "n1-orto-0091",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "En cada vuelta de trabajo, crea una representacion tangible de tu producto: un dibujo en 3D, un modelo impreso, un prototipo virtual",
+      "texto_nuevo": "En cada vuelta de trabajo, crea una representación tangible de tu producto: un dibujo en 3D, un modelo impreso, un prototipo virtual",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-030.paso0: representación (Falta la tilde en 'representación'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0092",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa el mismo protocept para comprobar con quien te ayuda si la idea es viable tecnicamente",
+      "texto_nuevo": "Usa el mismo protocept para comprobar con quien te ayuda si la idea es viable técnicamente",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-030.paso2: técnicamente (Falta la tilde en 'técnicamente'; 'protocept' se queda como está.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0093",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Repite el ciclo en periodos cortos, de semanas, acercandote cada vez mas a un prototipo que funcione de verdad",
+      "texto_nuevo": "Repite el ciclo en periodos cortos, de semanas, acercándote cada vez más a un prototipo que funcione de verdad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-030.paso3: acercándote, más (Faltan las tildes en 'acercándote' y 'más'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0094",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una serie de versiones intermedias de tu producto, una tras otra, con el feedback del cliente y los ajustes tecnicos que hiciste en cada ciclo.",
+      "texto_nuevo": "Una serie de versiones intermedias de tu producto, una tras otra, con el feedback del cliente y los ajustes técnicos que hiciste en cada ciclo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O009-030.entregable: técnicos (Falta la tilde en 'técnicos'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

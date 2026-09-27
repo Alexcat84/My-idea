@@ -22,7 +22,8 @@
   "nodos_siguientes": [
     "embudo_get_keep_grow",
     "entrada_mercado_nuevo",
-    "hipotesis_relacion_clientes_web"
+    "hipotesis_relacion_clientes_web",
+    "posicionamiento_est"
   ],
   "condiciones_activacion": [
     "Si necesitas justificar tu posicionamiento frente a inversionistas o clientes",
@@ -31,5 +32,20 @@
   "etiqueta_arbol": "Redacta tu Brief Competitivo",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-043",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "brief_competitivo -> posicionamiento_est",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C11, lectores de acuerdo)",
+        "motivo": "Analizar por que tu producto supera a las alternativas precede a elegir en que ser el mejor y a que renunciar."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
   ]
 }

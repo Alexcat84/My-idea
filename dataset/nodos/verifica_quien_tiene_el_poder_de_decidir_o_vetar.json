@@ -6,12 +6,12 @@
   "fuente": "Chris Voss, Rompe la barrera del no",
   "resumen_teorico": "En toda negociacion hay personas que no estan sentadas contigo pero que pueden aprobar o tumbar el acuerdo despues: un socio, un familiar, un jefe que no viste. Si solo negocias con quien tienes enfrente, corres el riesgo de cerrar un trato que luego alguien mas rompe. Usa preguntas simples como como afecta esto a los demas involucrados o quien mas necesita estar de acuerdo con esto, para descubrir esas presencias ocultas antes de que se conviertan en un problema al final. Presta atencion tambien a como habla la otra parte: si usa mucho yo, mi y me, suele ser señal de que decide otra persona; si usa nosotros o ellos, suele tener capacidad de decision y remite a terceros para no quedar atrapada. Reconocer esto a tiempo te ahorra negociar dos veces por el mismo trato.",
   "pasos_accionables": [
-    "Antes de negociar, pregunta directamente quien mas tiene que estar de acuerdo con esto ademas de ti.",
+    "Antes de negociar, pregunta directamente quién más tiene que estar de acuerdo con esto además de ti.",
     "Escucha si tu interlocutor usa mucho yo, mi y me (suele decidir otra persona) o nosotros y ellos (suele tener capacidad de decisión).",
     "Si detectas un tercero con poder de veto, busca la forma de incluirlo o de que se entere del trato antes de cerrarlo.",
     "Sugerencia de My Idea: deja por escrito quién aprobó cada parte del acuerdo, para que nadie lo desconozca después."
   ],
-  "entregable_esperado": "Un registro de quien tiene poder de aprobar o vetar el trato, obtenido antes de cerrar la negociacion.",
+  "entregable_esperado": "Un registro de quién tiene poder de aprobar o vetar el trato, obtenido antes de cerrar la negociación.",
   "nodos_previos": [
     "investiga_con_fuentes_objetivas_antes_de_contactar_al_proveedor"
   ],
@@ -87,6 +87,33 @@
         "evidencia": "F06-009: Identificar quien aprueba o veta en una negociacion es practica operativa de negociacion, no prueba de la idea con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0902",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de negociar, pregunta directamente quien mas tiene que estar de acuerdo con esto ademas de ti.",
+      "texto_nuevo": "Antes de negociar, pregunta directamente quién más tiene que estar de acuerdo con esto además de ti.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O077-027.paso0: quién, más, además (Faltan tildes reales en quién (interrogativo indirecto), más y además; el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0903",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un registro de quien tiene poder de aprobar o vetar el trato, obtenido antes de cerrar la negociacion.",
+      "texto_nuevo": "Un registro de quién tiene poder de aprobar o vetar el trato, obtenido antes de cerrar la negociación.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O077-027.entregable: quién, negociación (Faltan tildes reales en quién (interrogativo indirecto: registrar quién tiene poder) y en negociación; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

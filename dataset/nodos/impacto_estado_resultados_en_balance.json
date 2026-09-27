@@ -17,8 +17,7 @@
     "accruals_y_activos_prepagados"
   ],
   "nodos_siguientes": [
-    "evaluacion_salud_financiera_empresa",
-    "efecto_bullwhip"
+    "evaluacion_salud_financiera_empresa"
   ],
   "condiciones_activacion": [
     "Si un gerente o fundador está tomando una decisión operativa (compra, contratación, expansión de clientes) y necesita anticipar su impacto financiero integral"
@@ -26,5 +25,20 @@
   "etiqueta_arbol": "Conecta Resultados con tu Balance",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-arista-020",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "impacto_estado_resultados_en_balance -> efecto_bullwhip",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A30, lectores de acuerdo)",
+        "motivo": "El impacto del estado de resultados en el balance es contable y no conduce al efecto latigo."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    }
   ]
 }

@@ -6,14 +6,14 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La calidad afecta tanto los costos como los ingresos, y estos efectos se relacionan entre si. Por el lado de los costos, mas calidad reduce fallas y gastos asociados. Por el lado de los ingresos, entregar caracteristicas que responden mejor a las necesidades del cliente hace tu producto mas vendible y puede permitirte cobrar un precio premium, e incluso ganar mas participacion de mercado si eres lider en calidad. Además, los productos con defectos no solo aumentan costos sino que desalientan la recompra y generan comentarios negativos, afectando tus ventas futuras de forma indirecta. Historicamente se ha estudiado mas el efecto en costos que en ingresos, lo que representa una oportunidad de análisis para tu negocio.",
   "pasos_accionables": [
-    "Analiza la percepcion de tus clientes sobre las caracteristicas que diferencian tu producto o servicio",
-    "Compara tu desempeno de ventas frente a competidores con menor calidad percibida",
-    "Analiza la relacion entre el nivel de calidad percibida y la tasa de recompra de tus clientes",
-    "Evalua si puedes cobrar un precio premium por tu nivel de calidad actual o mejorado",
+    "Analiza la percepción de tus clientes sobre las características que diferencian tu producto o servicio",
+    "Compara tu desempeño de ventas frente a competidores con menor calidad percibida",
+    "Analiza la relación entre el nivel de calidad percibida y la tasa de recompra de tus clientes",
+    "Evalúa si puedes cobrar un precio premium por tu nivel de calidad actual o mejorado",
     "Monitorea indicadores de ingresos vinculados a las mejoras de calidad que implementes",
-    "Incluye metricas de impacto en ingresos, no solo en costos, cuando evalues tus iniciativas de calidad"
+    "Incluye métricas de impacto en ingresos, no solo en costos, cuando evalúes tus iniciativas de calidad"
   ],
-  "entregable_esperado": "Análisis de negocio que vincule mejoras de calidad con proyecciones de ingresos, ventas y retencion de clientes",
+  "entregable_esperado": "Análisis de negocio que vincule mejoras de calidad con proyecciones de ingresos, ventas y retención de clientes",
   "nodos_previos": [
     "costo_de_mala_calidad_copq",
     "definicion_calidad_fitness_for_purpose"
@@ -79,6 +79,89 @@
         "evidencia": "F20-020: Razon para B, aunque planificacion era defendible: casi todos los pasos analizan datos de un negocio que ya vende (percepcion de clientes, ventas frente a competidores, recompra, precio) y monitorean indicadores de ingresos ligados a mejoras de calidad, o sea mejorar y controlar lo que ya funciona; los dos coinciden en que no es validacion. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0494",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Analiza la percepcion de tus clientes sobre las caracteristicas que diferencian tu producto o servicio",
+      "texto_nuevo": "Analiza la percepción de tus clientes sobre las características que diferencian tu producto o servicio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-008.paso0: percepción, características (Faltan las tildes en percepción y características.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0495",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Compara tu desempeno de ventas frente a competidores con menor calidad percibida",
+      "texto_nuevo": "Compara tu desempeño de ventas frente a competidores con menor calidad percibida",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-008.paso1: desempeño (desempeno es errata; lleva eñe.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0496",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Analiza la relacion entre el nivel de calidad percibida y la tasa de recompra de tus clientes",
+      "texto_nuevo": "Analiza la relación entre el nivel de calidad percibida y la tasa de recompra de tus clientes",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-008.paso2: relación (Falta la tilde en relación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0497",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua si puedes cobrar un precio premium por tu nivel de calidad actual o mejorado",
+      "texto_nuevo": "Evalúa si puedes cobrar un precio premium por tu nivel de calidad actual o mejorado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-008.paso3: Evalúa (Falta la tilde en Evalúa.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0498",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Incluye metricas de impacto en ingresos, no solo en costos, cuando evalues tus iniciativas de calidad",
+      "texto_nuevo": "Incluye métricas de impacto en ingresos, no solo en costos, cuando evalúes tus iniciativas de calidad",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-008.paso5: métricas, evalúes (Faltan las tildes en métricas y evalúes.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0499",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Análisis de negocio que vincule mejoras de calidad con proyecciones de ingresos, ventas y retencion de clientes",
+      "texto_nuevo": "Análisis de negocio que vincule mejoras de calidad con proyecciones de ingresos, ventas y retención de clientes",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-008.entregable: retención (Falta la tilde en retención.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

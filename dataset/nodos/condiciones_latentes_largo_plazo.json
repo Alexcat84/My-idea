@@ -22,7 +22,7 @@
   "condiciones_activacion": [
     "Cuando se investiga una falla de infraestructura antigua",
     "Cuando se evalúan riesgos de sistemas con largo historial operativo",
-    "Cuando se quiere ilustrar con un ejemplo concreto el concepto de condición latente sin fallo humano activo."
+    "Cuando se planifica una auditoria de riesgos de infraestructura critica y solo se esta mirando su mantenimiento reciente, no su diseno original."
   ],
   "etiqueta_arbol": "Vigila Riesgos Dormidos Años",
   "ids_alias": [
@@ -51,6 +51,20 @@
         "evidencia": "F22-005: Es auditoria de riesgos de infraestructura con largo historial operativo, control de algo que ya funciona, no prueba con clientes o mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-condicion-027",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se quiere ilustrar con un ejemplo concreto el concepto de condición latente sin fallo humano activo.",
+      "texto_nuevo": "Cuando se planifica una auditoria de riesgos de infraestructura critica y solo se esta mirando su mantenimiento reciente, no su diseno original.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q079-017: La tercera condicion describe un uso didactico del caso, no cuando aplica el nodo. (lector y verificador de acuerdo) Motivo: Es una condicion pedagogica (ilustrar un concepto), no una situacion del negocio en la que el contenido aplique."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 2
     }
   ]
 }

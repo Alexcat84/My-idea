@@ -20,10 +20,26 @@
     "soporte_continuo_franquicia"
   ],
   "condiciones_activacion": [
-    "Cuando el modelo de negocio depende de bienes raíces o ubicación física"
+    "Cuando franquicias un negocio que depende de un local físico y debes definir tu papel en la selección de sitio, arrendamiento, construcción y equipo inicial de cada apertura"
   ],
   "etiqueta_arbol": "Define tu Ayuda en la Apertura",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-006",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando el modelo de negocio depende de bienes raíces o ubicación física",
+      "texto_nuevo": "Cuando franquicias un negocio que depende de un local físico y debes definir tu papel en la selección de sitio, arrendamiento, construcción y equipo inicial de cada apertura",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q015-025: La condicion omite que aplica al franquiciante que organiza aperturas. (lector y verificador de acuerdo) Motivo: Depender de una ubicacion fisica no basta: el contenido es el papel del franquiciante en la apertura de cada unidad y activaria el nodo en cualquier negocio con local."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

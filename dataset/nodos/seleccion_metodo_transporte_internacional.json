@@ -24,9 +24,9 @@
   ],
   "condiciones_activacion": [
     "Cuando debes decidir cómo transportar tu mercancía al mercado extranjero.",
-    "Si buscas optimizar costos y tiempos de entrega para ganar ventaja competitiva.",
-    "Cuando estás planificando el envío físico de tu producto.",
-    "Si tienes presión de tiempo de entrega o restricciones de costo."
+    "Si exportas y buscas optimizar costos y tiempos de entrega internacional comparando transporte aéreo, marítimo y multimodal.",
+    "Cuando estás planificando el envío físico de tu producto a un comprador en el extranjero.",
+    "Si tu envío al comprador extranjero tiene presión de tiempo de entrega o restricciones de costo, o tu carga es voluminosa y necesitas reservar espacio con anticipación."
   ],
   "etiqueta_arbol": "Elige tu Transporte Internacional",
   "ids_alias": [
@@ -68,6 +68,48 @@
         "motivo": "Referencia de un nodo vivo a documentacion_exportacion_basica, deprecado; su superviviente es documentacion_exportacion."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-condicion-181",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si buscas optimizar costos y tiempos de entrega para ganar ventaja competitiva.",
+      "texto_nuevo": "Si exportas y buscas optimizar costos y tiempos de entrega internacional comparando transporte aéreo, marítimo y multimodal.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q025-010: Tenía razón A: el contenido (freight forwarder, booking contract, marcas de exportación, zonas francas) solo aplica al envío internacional, y las condiciones 1 y 3 (y por el mismo motivo la 2) se activarían en negocios que no exportan; dominio y fase están bien, como dicen ambos. (arbitro) Motivo: Demasiado genérica: se activaría en cualquier negocio que quiera bajar costos o tiempos de entrega, aunque no exporte."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    },
+    {
+      "id": "n1-condicion-182",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando estás planificando el envío físico de tu producto.",
+      "texto_nuevo": "Cuando estás planificando el envío físico de tu producto a un comprador en el extranjero.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q025-010: Tenía razón A: el contenido (freight forwarder, booking contract, marcas de exportación, zonas francas) solo aplica al envío internacional, y las condiciones 1 y 3 (y por el mismo motivo la 2) se activarían en negocios que no exportan; dominio y fase están bien, como dicen ambos. (arbitro) Motivo: No ancla al envío internacional: cualquier envío local de producto la dispara."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 2
+    },
+    {
+      "id": "n1-condicion-183",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si tienes presión de tiempo de entrega o restricciones de costo.",
+      "texto_nuevo": "Si tu envío al comprador extranjero tiene presión de tiempo de entrega o restricciones de costo, o tu carga es voluminosa y necesitas reservar espacio con anticipación.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q025-010: Tenía razón A: el contenido (freight forwarder, booking contract, marcas de exportación, zonas francas) solo aplica al envío internacional, y las condiciones 1 y 3 (y por el mismo motivo la 2) se activarían en negocios que no exportan; dominio y fase están bien, como dicen ambos. (arbitro) Motivo: Demasiado genérica: cualquier presión de plazo o costo la dispara, sin relación con el transporte internacional."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 3
     }
   ]
 }

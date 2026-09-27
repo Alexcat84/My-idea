@@ -13,8 +13,8 @@
   ],
   "entregable_esperado": "Un documento inicial de contexto de riesgo que describa la tolerancia, supuestos y enfoque general para evaluar, responder y monitorear riesgos.",
   "nodos_previos": [
-    "gestion_riesgo_cadena_suministro",
-    "reglas_gestion_riesgo_gambling"
+    "reglas_gestion_riesgo_gambling",
+    "analisis_de_sensibilidad_riesgo"
   ],
   "nodos_siguientes": [
     "proceso_rmf_siete_pasos",
@@ -41,6 +41,58 @@
         "evidencia": "F19-017: Establecer contexto, tolerancia y enfoque de gestión de riesgo es diseñar la estrategia y el marco, no explorar una idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "mv-arista-010",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "matriz_probabilidad_impacto -> fundamentos_gestion_riesgo",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B06, lectores de acuerdo)",
+        "motivo": "Priorizar riesgos por probabilidad e impacto es la entrada a un proceso completo de enmarcar, evaluar, responder y monitorear."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "mv-arista-011",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_riesgo_cadena_suministro -> fundamentos_gestion_riesgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B06)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en matriz_probabilidad_impacto."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "mv-arista-046",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "matriz_probabilidad_impacto -> fundamentos_gestion_riesgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Guarda de puentes (engine/test_puentes_tejidos.py): ley del ancla",
+        "motivo": "matriz_probabilidad_impacto ya anclaba 2 puentes en seguridad digital; el reanclaje de fundamentos_gestion_riesgo pasa a analisis_de_sensibilidad_riesgo."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): ley del ancla en 2."
+    },
+    {
+      "id": "mv-arista-047",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "analisis_de_sensibilidad_riesgo -> fundamentos_gestion_riesgo",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B06, segunda eleccion de un lector)",
+        "motivo": "Quien ya identifico y cuantifico los riesgos clave de su proyecto al variar supuestos criticos sigue naturalmente con el ciclo completo de enmarcar, evaluar, responder y monitorear el riesgo."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): ley del ancla en 2."
     }
   ]
 }

@@ -31,7 +31,7 @@
   "condiciones_activacion": [
     "Cuando se dispone de presupuesto para inversión en relación con pocos clientes de alto valor",
     "Si se busca reforzar la lealtad de clientes clave con un gesto exclusivo y privado, sin fines publicitarios",
-    "Cuando se quiere empezar con 2 o 3 clientes clave antes de escalar la practica",
+    "Cuando se tienen pocos clientes clave de alto valor y se quiere fortalecer la relacion a largo plazo en lugar de solo buscar clientes nuevos",
     "Cuando se busca diferenciarse de la competencia en la retención de clientes clave"
   ],
   "etiqueta_arbol": "Regala Algo Único a tus Clientes",
@@ -88,6 +88,20 @@
         "evidencia": "Razon para A. De cuatro condiciones, dos no encajan. Una es tener ya un proceso de onboarding y personalizacion establecido, que el contenido no exige: empieza desde cero con 2 o 3 clientes. La otra es buscar contenido viral, que va contra un regalo privado, exclusivo, sin marca y sin comercializacion masiva. B vio el choque y aun asi lo dio por bueno, pero con la mitad de las condiciones mal el conjunto no describe bien cuando aplica el nodo."
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 9: corregir el caso de condicion hallado; la condicion nueva sale de los pasos del propio nodo.",
+      "indice": 2
+    },
+    {
+      "id": "n1-condicion-157",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se quiere empezar con 2 o 3 clientes clave antes de escalar la practica",
+      "texto_nuevo": "Cuando se tienen pocos clientes clave de alto valor y se quiere fortalecer la relacion a largo plazo en lugar de solo buscar clientes nuevos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q031-008: Tiene razon el lector A: la condicion 2 repite el paso 10 y habla de 'la practica' como si ya estuviera en marcha, asi que no sirve para activar el nodo; dominio core y fase ejecucion son correctos. (arbitro) Motivo: Copia el paso 10 del metodo (empezar con 2 o 3 clientes antes de escalar) y presupone que ya se aplica la practica; no describe una situacion en la que el nodo aplica."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
       "indice": 2
     }
   ],

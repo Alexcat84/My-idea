@@ -17,7 +17,8 @@
     "ceo_de_guerra_vs_paz"
   ],
   "nodos_siguientes": [
-    "reunion_conclusion_proyecto"
+    "reunion_conclusion_proyecto",
+    "reuniones_uno_a_uno"
   ],
   "condiciones_activacion": [
     "Cuando en tu negocio se esconden problemas o malas noticias hasta que ya es tarde para actuar.",
@@ -27,5 +28,20 @@
   "etiqueta_arbol": "Da Feedback Todo el Tiempo",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-23",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "cultura_feedback_alta_frecuencia -> reuniones_uno_a_uno",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-22, segunda eleccion de un lector: la primera formaba un par de ida y vuelta).",
+        "motivo": "Despues de instalar una cultura donde la opinion y las malas noticias circulan rapido, el paso natural es el uno a uno, el espacio donde esa informacion sube desde cada persona."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

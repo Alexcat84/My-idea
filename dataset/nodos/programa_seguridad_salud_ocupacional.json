@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Diagnosticar el estado actual de la seguridad y salud en tu lugar de trabajo",
     "Definir metas modestas e iniciales para comenzar el programa",
-    "Establecer procedimientos para identificar y evaluar peligros, e implementar controles de prevencion",
-    "Capacitarte a ti y a quienes trabajan contigo en identificacion y control de peligros",
-    "Establecer un ciclo de monitoreo y evaluacion de desempeno, ajustando según resultados",
-    "Coordinar la comunicacion con contratistas o personal temporal si los hay"
+    "Establecer procedimientos para identificar y evaluar peligros, e implementar controles de prevención",
+    "Capacitarte a ti y a quienes trabajan contigo en identificación y control de peligros",
+    "Establecer un ciclo de monitoreo y evaluación de desempeño, ajustando según resultados",
+    "Coordinar la comunicación con contratistas o personal temporal si los hay"
   ],
-  "entregable_esperado": "Documento marco del programa de seguridad y salud con los siete elementos identificados, evidencia de implementacion y un plan inicial de mejora continua.",
+  "entregable_esperado": "Documento marco del programa de seguridad y salud con los siete elementos identificados, evidencia de implementación y un plan inicial de mejora continua.",
   "nodos_previos": [
     "nueve_pasos_iniciar_programa",
     "capacitacion_educacion_seguridad"
@@ -75,6 +75,75 @@
         "motivo": "Referencia de un nodo vivo a evaluacion_periodica_programa_seguridad, deprecado; su superviviente es evaluacion_mejora_programa."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): recablear al superviviente las referencias a deprecados."
+    },
+    {
+      "id": "n1-orto-0936",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establecer procedimientos para identificar y evaluar peligros, e implementar controles de prevencion",
+      "texto_nuevo": "Establecer procedimientos para identificar y evaluar peligros, e implementar controles de prevención",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-040.paso2: prevención (Falta la tilde real en 'prevención'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0937",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Capacitarte a ti y a quienes trabajan contigo en identificacion y control de peligros",
+      "texto_nuevo": "Capacitarte a ti y a quienes trabajan contigo en identificación y control de peligros",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-040.paso3: identificación (Falta la tilde real en 'identificación'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0938",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Establecer un ciclo de monitoreo y evaluacion de desempeno, ajustando según resultados",
+      "texto_nuevo": "Establecer un ciclo de monitoreo y evaluación de desempeño, ajustando según resultados",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-040.paso4: evaluación, desempeño (Faltan la tilde en 'evaluación' y la eñe en 'desempeño'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0939",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Coordinar la comunicacion con contratistas o personal temporal si los hay",
+      "texto_nuevo": "Coordinar la comunicación con contratistas o personal temporal si los hay",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-040.paso5: comunicación (Falta la tilde real en 'comunicación'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0940",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Documento marco del programa de seguridad y salud con los siete elementos identificados, evidencia de implementacion y un plan inicial de mejora continua.",
+      "texto_nuevo": "Documento marco del programa de seguridad y salud con los siete elementos identificados, evidencia de implementación y un plan inicial de mejora continua.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-040.entregable: implementación (Falta la tilde real en 'implementación'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

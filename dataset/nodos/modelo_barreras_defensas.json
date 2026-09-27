@@ -7,13 +7,13 @@
   "resumen_teorico": "Este modelo explica que los sistemas criticos se protegen con capas de defensa, unas duras (muros, barreras fisicas) y otras blandas (procedimientos, revisiones). Los accidentes ocurren cuando un error en el momento de ejecutar una tarea se combina con condiciones que ya existian de antes en tu negocio, como un diseno inadecuado, falta de entrenamiento o mantenimiento postergado, y esas condiciones alinean agujeros en las capas de defensa dejando que el riesgo se propague. Surgio en industrias que manejan energia peligrosa (nuclear, petroleo, procesos quimicos) y se populariza tras accidentes como el de Bhopal en 1984. Aunque dirige la atencion hacia los factores de fondo, el modelo todavia deja un lugar al error puntual como causa final, lo que puede terminar culpando a la persona que ejecuto la tarea si no investigas con cuidado el trasfondo completo.",
   "pasos_accionables": [
     "Identifica las defensas duras y blandas que existen en tu sistema o negocio",
-    "Mapea posibles condiciones latentes en tu negocio como diseno, mantenimiento o capacitacion deficientes",
-    "Evalua si tus defensas estan realmente instaladas y funcionando o solo existen en el papel",
-    "Analiza como un error de quien ejecuta la tarea puede combinarse con fallas latentes para causar un problema mayor",
-    "Evita centrar tu análisis unicamente en el acto inseguro final de la persona que hizo la tarea",
-    "Investiga que condiciones de tu negocio contribuyeron de fondo a que fallaran tus barreras"
+    "Mapea posibles condiciones latentes en tu negocio como diseño, mantenimiento o capacitación deficientes",
+    "Evalúa si tus defensas están realmente instaladas y funcionando o solo existen en el papel",
+    "Analiza cómo un error de quien ejecuta la tarea puede combinarse con fallas latentes para causar un problema mayor",
+    "Evita centrar tu análisis únicamente en el acto inseguro final de la persona que hizo la tarea",
+    "Investiga qué condiciones de tu negocio contribuyeron de fondo a que fallaran tus barreras"
   ],
-  "entregable_esperado": "Mapa de capas de defensa de tu sistema con identificacion de brechas latentes y activas, evitando culpar unicamente a quien ejecuto la tarea",
+  "entregable_esperado": "Mapa de capas de defensa de tu sistema con identificación de brechas latentes y activas, evitando culpar únicamente a quien ejecutó la tarea",
   "nodos_previos": [
     "modelo_queso_suizo",
     "no_usar_triangulo_heinrich",
@@ -43,5 +43,90 @@
   ],
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0007",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mapea posibles condiciones latentes en tu negocio como diseno, mantenimiento o capacitacion deficientes",
+      "texto_nuevo": "Mapea posibles condiciones latentes en tu negocio como diseño, mantenimiento o capacitación deficientes",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-011.paso1: diseño, capacitación (Faltan la eñe de diseño y la tilde de capacitación; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0008",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evalua si tus defensas estan realmente instaladas y funcionando o solo existen en el papel",
+      "texto_nuevo": "Evalúa si tus defensas están realmente instaladas y funcionando o solo existen en el papel",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-011.paso2: Evalúa, están (Faltan las tildes de Evalúa y están; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0009",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Analiza como un error de quien ejecuta la tarea puede combinarse con fallas latentes para causar un problema mayor",
+      "texto_nuevo": "Analiza cómo un error de quien ejecuta la tarea puede combinarse con fallas latentes para causar un problema mayor",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-011.paso3: cómo (Falta la tilde del interrogativo indirecto cómo; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0010",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita centrar tu análisis unicamente en el acto inseguro final de la persona que hizo la tarea",
+      "texto_nuevo": "Evita centrar tu análisis únicamente en el acto inseguro final de la persona que hizo la tarea",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-011.paso4: únicamente (Falta la tilde de únicamente; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0011",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Investiga que condiciones de tu negocio contribuyeron de fondo a que fallaran tus barreras",
+      "texto_nuevo": "Investiga qué condiciones de tu negocio contribuyeron de fondo a que fallaran tus barreras",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-011.paso5: qué (Falta la tilde del interrogativo indirecto qué; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0012",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mapa de capas de defensa de tu sistema con identificacion de brechas latentes y activas, evitando culpar unicamente a quien ejecuto la tarea",
+      "texto_nuevo": "Mapa de capas de defensa de tu sistema con identificación de brechas latentes y activas, evitando culpar únicamente a quien ejecutó la tarea",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-011.entregable: identificación, únicamente, ejecutó (Faltan las tildes de identificación, únicamente y ejecutó; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

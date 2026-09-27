@@ -6,11 +6,11 @@
   "fuente": "Guia de empaque para envios (FedEx)",
   "resumen_teorico": "Enviar flores o plantas vivas exige controlar la humedad y el movimiento dentro de la caja, porque el agua libre provoca fugas y daña tanto el contenido como otros paquetes cercanos. La tecnica central es simple: nunca cargar agua en el envio. Vacia floreros o macetas antes de cerrar la caja, cubre la tierra de las macetas con una bolsa o papel asegurado al tallo, y fija el arreglo o la maceta con bridas, cintas o un divisor de carton para que no se desplace en transito. Cuando envies varias piezas u orquideas, separalas para que hojas y flores no se rocen. Esta preparacion reduce reclamos por derrames y por piezas rotas, y aplica tanto a arreglos florales como a plantas en maceta o esquejes.",
   "pasos_accionables": [
-    "Vacia toda el agua de floreros o recipientes antes de cerrar la caja.",
-    "Cubre la tierra de las macetas con una bolsa plastica asegurada alrededor del tallo.",
-    "Fija el arreglo o la maceta dentro de la caja con bridas, cintas o un divisor de carton.",
-    "Separa cada planta u orquidea individual para que hojas y flores no se toquen entre si.",
-    "Pon la etiqueta de envio en la cara superior de la caja para aumentar la chance de que viaje derecha."
+    "Vacía toda el agua de floreros o recipientes antes de cerrar la caja.",
+    "Cubre la tierra de las macetas con una bolsa plástica asegurada alrededor del tallo.",
+    "Fija el arreglo o la maceta dentro de la caja con bridas, cintas o un divisor de cartón.",
+    "Separa cada planta u orquídea individual para que hojas y flores no se toquen entre sí.",
+    "Pon la etiqueta de envío en la cara superior de la caja para aumentar la chance de que viaje derecha."
   ],
   "entregable_esperado": "Una caja de flores o plantas lista para despachar sin riesgo de fuga ni movimiento interno.",
   "nodos_previos": [
@@ -28,5 +28,77 @@
   "etiqueta_arbol": "Empaca flores sin agua",
   "fuentes_internas": [
     "Guia de empaque para envios (FedEx)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0543",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vacia toda el agua de floreros o recipientes antes de cerrar la caja.",
+      "texto_nuevo": "Vacía toda el agua de floreros o recipientes antes de cerrar la caja.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-003.paso0: Vacía (Solo añade la tilde que faltaba en Vacía; el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0544",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cubre la tierra de las macetas con una bolsa plastica asegurada alrededor del tallo.",
+      "texto_nuevo": "Cubre la tierra de las macetas con una bolsa plástica asegurada alrededor del tallo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-003.paso1: plástica (Solo añade la tilde que faltaba en plástica.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0545",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Fija el arreglo o la maceta dentro de la caja con bridas, cintas o un divisor de carton.",
+      "texto_nuevo": "Fija el arreglo o la maceta dentro de la caja con bridas, cintas o un divisor de cartón.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-003.paso2: cartón (Solo añade la tilde que faltaba en cartón.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0546",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Separa cada planta u orquidea individual para que hojas y flores no se toquen entre si.",
+      "texto_nuevo": "Separa cada planta u orquídea individual para que hojas y flores no se toquen entre sí.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-003.paso3: orquídea, sí (Solo añade las tildes que faltaban en orquídea y en sí (pronombre).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0547",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pon la etiqueta de envio en la cara superior de la caja para aumentar la chance de que viaje derecha.",
+      "texto_nuevo": "Pon la etiqueta de envío en la cara superior de la caja para aumentar la chance de que viaje derecha.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-003.paso4: envío (Solo añade la tilde que faltaba en envío; el estilo no se toca.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    }
   ]
 }

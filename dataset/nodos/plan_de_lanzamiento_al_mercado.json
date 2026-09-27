@@ -1,6 +1,6 @@
 {
   "node_id": "plan_de_lanzamiento_al_mercado",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "Plan de Lanzamiento al Mercado (Market Launch Plan)",
   "fuente": "Winning at New Products - Robert G. Cooper",
@@ -32,5 +32,20 @@
   "etiqueta_arbol": "Lanza tu Producto al Mercado",
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-134",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q069-004: El contenido es construir el plan de lanzamiento y sus recursos antes de lanzar (entregable: el plan), no operarlo; es planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

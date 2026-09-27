@@ -1,12 +1,12 @@
 {
   "node_id": "identificacion_de_riesgos",
   "fase_proyecto": "ejecucion",
-  "dominio": "quality",
+  "dominio": "risk_management",
   "titulo_concepto": "Identificación de Riesgos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Un riesgo es cualquier cosa que puede salir mal y resultar en una pérdida. Antes de gestionar o mitigar riesgos es indispensable identificarlos de forma sistemática, porque suelen permanecer invisibles mientras las condiciones son favorables y solo se manifiestan bajo condiciones adversas. El primer paso es reunir conocimiento amplio sobre tu negocio, sus sistemas, personas y procesos, y examinar de forma crítica qué puede fallar en cada uno. Usa el sombrero negro de los Seis Sombreros de pensar para cuestionar cada respuesta y evitar quedarte solo con lo obvio. Revisar fallas pasadas ayuda a completar la lista. El resultado debe documentarse por completo antes de pasar a evaluar la probabilidad o el impacto de cada riesgo.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: reune conocimiento amplio de tu negocio consultando, por ejemplo por telefono, a quienes conocen sus sistemas, personas y procesos, o revisando tu mismo cada area si trabajas solo.",
+    "Sugerencia de My Idea: reúne conocimiento amplio de tu negocio consultando, por ejemplo por teléfono, a quienes conocen sus sistemas, personas y procesos, o revisando tú mismo cada área si trabajas solo.",
     "Elabora una lista de actividades, sistemas y procesos usados en tu negocio.",
     "Pregunta sistemáticamente qué puede salir mal para cada elemento de la lista.",
     "Aplica el sombrero negro de los Seis Sombreros de pensar para cuestionar críticamente cada respuesta y evitar quedarte con lo superficial.",
@@ -133,6 +133,33 @@
         "evidencia": "F20-014: Razon para B: el nodo supone un negocio que ya opera (sus sistemas, personas y procesos, sus fallas de los ultimos 3 anos) y arranca su gestion de riesgos, que es gestion operativa; los dos coinciden en que no es validacion, pero A lo lleva a planificacion cuando no se disena ningun plan nuevo. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-dominio-106",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "quality",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q022-013: La identificacion sistematica de riesgos pertenece a gestion de riesgos, no a gestion de la calidad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "n1-orto-0745",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: reune conocimiento amplio de tu negocio consultando, por ejemplo por telefono, a quienes conocen sus sistemas, personas y procesos, o revisando tu mismo cada area si trabajas solo.",
+      "texto_nuevo": "Sugerencia de My Idea: reúne conocimiento amplio de tu negocio consultando, por ejemplo por teléfono, a quienes conocen sus sistemas, personas y procesos, o revisando tú mismo cada área si trabajas solo.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O065-032.paso0: reúne, teléfono, tú, área (Faltan las tildes de 'reúne', 'teléfono', 'tú' (pronombre) y 'área'; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
     }
   ],
   "fuentes_internas": [

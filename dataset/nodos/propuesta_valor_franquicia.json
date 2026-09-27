@@ -14,7 +14,6 @@
   "entregable_esperado": "Documento de propuesta de valor del sistema de franquicia, listo para incorporar en materiales de venta y FDD",
   "nodos_previos": [
     "reduccion_riesgo_percibido",
-    "posicionamiento_est",
     "mensaje_desarrolladores_area",
     "analisis_competencia_franquicias",
     "historia_marca_diferenciacion",
@@ -58,6 +57,19 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador o el arbitro, con su cita. Decision del fundador del 27 sep, punto 5: segunda pasada ciega dirigida sobre los FIEL no releidos de seguridad y salud, legal y dinero (lote P018, arbitro). Tiene razon el LECTOR B. He buscado con Grep pasajes que apoyen el paso. L3277 dice que los sistemas aseguran la consistencia a nivel del consumidor ('ensure consistency at the consumer level'), y L1657 y L2558 dicen que un buen sistema replica su exito y que documentarlo es la clave para duplicarlo. Esa es la parte de la consistencia, y esta respaldada. Pero el paso forma parte de la propuesta de valor dirigida al prospecto y manda argumentar que el sistema garantiza que el exito se replique. L649 (lineas L645-L652) lo descarta de forma expresa: el franquiciador no ofrece garantias ni seguridades de exito. Ademas L166 y L611 limitan lo que se puede decir al prospecto sobre resultados si no esta en el Item 19. Ningun pasaje apoya prometer que el exito se replica; solo apoyan la replicacion como objetivo del sistema. Presentarla como garantia invierte lo que dice el libro. El LECTOR A se quedo en L3277 y no vio L649.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/p2/VEREDICTOS_SEGUNDA_PASADA.jsonl, id P018-098"
+    },
+    {
+      "id": "mv-arista-023",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "posicionamiento_est -> propuesta_valor_franquicia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A44, arbitro)",
+        "motivo": "Tiene razon el lector A: elegir en que destacar frente a los clientes es estrategia general, mientras que la propuesta de valor de la franquicia trata del sistema completo que compra un franquiciado. Presupone haber decidido franquiciar, asi que el posicionamiento no es su puerta natural."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
     }
   ],
   "fuentes_internas": [

@@ -6,13 +6,13 @@
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
   "resumen_teorico": "Cuando el cliente no esta en casa, la entrega falla y el paquete regresa al vehiculo o termina en un centro de distribucion lejano, algo costoso para ti y frustrante para el comprador. Ofrecer un punto de recogida (una tienda, un locker, un negocio aliado o una oficina cercana) evita ese vaiven y reduce el costo de la ultima milla, porque el cliente decide cuando pasar a buscar su pedido. Esta opcion tambien ayuda a que el impacto ambiental sea menor, siempre que el cliente recoja su pedido de camino a otro lugar y no haga un viaje exclusivo para eso. Cada vez mas negocios pequenos encuentran aliados locales, como tiendas de barrio, gasolineras u oficinas de correo, para ofrecer esta alternativa sin construir infraestructura propia.",
   "pasos_accionables": [
-    "Pregunta a couriers y negocios cercanos que puntos de recogida tienen disponibles.",
-    "Agrega la opcion de recoger en tienda o en un punto aliado al finalizar la compra.",
-    "Define un plazo realista para tener el pedido listo antes de anunciar la opcion.",
-    "Notifica al cliente con claridad donde y cuando puede recoger su pedido.",
-    "Sugerencia de My Idea: revisa cada tres meses cuantos clientes eligen recoger frente a domicilio y ajusta la oferta."
+    "Pregunta a couriers y negocios cercanos qué puntos de recogida tienen disponibles.",
+    "Agrega la opción de recoger en tienda o en un punto aliado al finalizar la compra.",
+    "Define un plazo realista para tener el pedido listo antes de anunciar la opción.",
+    "Notifica al cliente con claridad dónde y cuándo puede recoger su pedido.",
+    "Sugerencia de My Idea: revisa cada tres meses cuántos clientes eligen recoger frente a domicilio y ajusta la oferta."
   ],
-  "entregable_esperado": "Una opcion de recogida activa en tu proceso de compra, con al menos un punto alterno al domicilio.",
+  "entregable_esperado": "Una opción de recogida activa en tu proceso de compra, con al menos un punto alterno al domicilio.",
   "nodos_previos": [
     "disenar_empaque_logistica",
     "detectar_prioridad_cliente_entrega",
@@ -63,6 +63,89 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo o norma: quitado o sustituido por lo que dice el libro. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R052-009 (ANADIDO, lector y verificador de acuerdo): Cifra (50 por ciento de entregas fallidas) que el libro no da; buscado half, 50 per cent, failed deliveries. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R052-009"
+    },
+    {
+      "id": "n1-orto-0132",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a couriers y negocios cercanos que puntos de recogida tienen disponibles.",
+      "texto_nuevo": "Pregunta a couriers y negocios cercanos qué puntos de recogida tienen disponibles.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O013-004.paso0: qué ('qué' es interrogativo indirecto y lleva tilde; 'couriers' no se toca.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0133",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Agrega la opcion de recoger en tienda o en un punto aliado al finalizar la compra.",
+      "texto_nuevo": "Agrega la opción de recoger en tienda o en un punto aliado al finalizar la compra.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O013-004.paso1: opción (Tilde real en 'opción'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0134",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define un plazo realista para tener el pedido listo antes de anunciar la opcion.",
+      "texto_nuevo": "Define un plazo realista para tener el pedido listo antes de anunciar la opción.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O013-004.paso2: opción (Tilde real en 'opción'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0135",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Notifica al cliente con claridad donde y cuando puede recoger su pedido.",
+      "texto_nuevo": "Notifica al cliente con claridad dónde y cuándo puede recoger su pedido.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O013-004.paso3: dónde, cuándo ('dónde' y 'cuándo' son interrogativos indirectos y llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0136",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: revisa cada tres meses cuantos clientes eligen recoger frente a domicilio y ajusta la oferta.",
+      "texto_nuevo": "Sugerencia de My Idea: revisa cada tres meses cuántos clientes eligen recoger frente a domicilio y ajusta la oferta.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O013-004.paso4: cuántos ('cuántos' es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0137",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una opcion de recogida activa en tu proceso de compra, con al menos un punto alterno al domicilio.",
+      "texto_nuevo": "Una opción de recogida activa en tu proceso de compra, con al menos un punto alterno al domicilio.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O013-004.entregable: opción (Tilde real en 'opción'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

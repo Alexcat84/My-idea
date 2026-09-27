@@ -1,6 +1,6 @@
 {
   "node_id": "desajuste_tarea_persona",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Desajuste entre Tarea y Persona (Mismatch)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "Ajusta Persona y Tarea",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-046",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q075-025: Diagnosticar errores repetidos de un trabajador y corregir el desajuste es gestion operativa de un negocio en marcha, no planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

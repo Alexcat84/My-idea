@@ -16,12 +16,15 @@
     "Reduce el número de proveedores con los que trabajas para concentrar tu volumen de compra y ganar poder de negociación",
     "Anota tu lista de proveedores preferidos"
   ],
-  "entregable_esperado": "La comparacion ponderada de tus proveedores por costo total, con los criterios y sus pesos escritos, y la lista de proveedores preferidos que sale de ella",
+  "entregable_esperado": "La comparación ponderada de tus proveedores por costo total, con los criterios y sus pesos escritos, y la lista de proveedores preferidos que sale de ella",
   "nodos_previos": [
     "analisis_tco_roi_b2b",
     "criterios_seleccion_proveedores"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "negociacion_contratos_proveedores",
+    "alcance_profundo_cadena_suministro"
+  ],
   "condiciones_activacion": [
     "Cuando tienes varias propuestas de proveedor sobre la mesa y el precio unitario no alcanza para decidir",
     "Cuando quieres reducir el numero de proveedores para concentrar volumen de compra y ganar poder de negociacion"
@@ -29,5 +32,46 @@
   "etiqueta_arbol": "Elige por Costo Total",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-14",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "seleccion_de_proveedores_por_costo_total -> negociacion_contratos_proveedores",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-15, lectores de acuerdo): raiz de 2 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tras comparar proveedores por costo total ponderado, calidad y cumplimiento, lo natural es negociar el contrato equilibrando precio, servicios y metas de desempeño."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "n1-orto-0262",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La comparacion ponderada de tus proveedores por costo total, con los criterios y sus pesos escritos, y la lista de proveedores preferidos que sale de ella",
+      "texto_nuevo": "La comparación ponderada de tus proveedores por costo total, con los criterios y sus pesos escritos, y la lista de proveedores preferidos que sale de ella",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O022-003.entregable: comparación (Solo añade la tilde que faltaba en comparación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "mv-arista-004",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "seleccion_de_proveedores_por_costo_total -> alcance_profundo_cadena_suministro",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B03, lectores de acuerdo)",
+        "motivo": "Tras gestionar y elegir proveedores directos se llega a extender los requisitos a los niveles 2 y 3."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    }
   ]
 }

@@ -12,7 +12,8 @@
   ],
   "entregable_esperado": "Documento de objetivo del sistema con métricas de throughput, inventario y gasto operativo definidas",
   "nodos_previos": [
-    "constraint_management"
+    "constraint_management",
+    "produccion_scheduling_balance_objetivos"
   ],
   "nodos_siguientes": [
     "cinco_pasos_enfoque_restricciones",
@@ -25,5 +26,20 @@
   "etiqueta_arbol": "Explota Antes de Elevar",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-21",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "produccion_scheduling_balance_objetivos -> teoria_de_restricciones",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-23, lectores de acuerdo): raiz de 2 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "El equilibrio entre utilización, inventario y servicio lleva a la Teoría de Restricciones, que gestiona el cuello de botella para subir el throughput reduciendo inventario y gastos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

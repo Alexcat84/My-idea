@@ -12,7 +12,7 @@
     "Propón intercambios: contenido, listas de correo, anuncios, mini sitios",
     "Después de cada reunión, arma una ficha de resultados (report card) para estimar qué tan grande es la oportunidad",
     "Cierra acuerdos o compromisos firmes con los socios de tráfico",
-    "Ordena tu lista de socios según cuales son mas criticos para ti"
+    "Ordena tu lista de socios según cuáles son más críticos para ti"
   ],
   "entregable_esperado": "Acuerdos o compromisos firmes con socios de tráfico, documentados en tu ficha de resultados",
   "nodos_previos": [
@@ -41,5 +41,21 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0924",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ordena tu lista de socios según cuales son mas criticos para ti",
+      "texto_nuevo": "Ordena tu lista de socios según cuáles son más críticos para ti",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-005.paso6: cuáles, más, críticos (Faltan tildes reales en 'cuáles' (interrogativo indirecto), 'más' y 'críticos'; el resto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 6
+    }
   ]
 }

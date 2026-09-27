@@ -1,0 +1,247 @@
+[
+ {
+  "nodo": "cadena_suministro_respuesta_desastres",
+  "de": "core",
+  "a": "entrega",
+  "nota": "El contenido es diseno de cadenas de suministro y logistica (inventario preposicionado, coordinacion logistica), no emprender en general, asi que su mundo es logistica y entrega.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "colaboracion_cadena_suministro",
+  "de": "core",
+  "a": "compras",
+  "nota": "El contenido es colaboracion en la cadena de suministro (efecto latigo, pedidos a proveedores, inventario compartido con socios), propio de compras y proveedores mas que de emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "collaboration_enablers",
+  "de": "core",
+  "a": "compras",
+  "nota": "La colaboración con socios de la cadena de suministro es gestión de proveedores, propia de compras y no de emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "compartir_datos_cadena_suministro",
+  "de": "core",
+  "a": "compras",
+  "nota": "Compartir datos de demanda y acuerdos de intercambio con proveedores de la cadena de suministro pertenece a compras y proveedores.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "contract_close_out",
+  "de": "core",
+  "a": "compras",
+  "nota": "Cerrar el contrato con un proveedor y evaluar su desempeño es gestión de compras y proveedores, no emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "criterios_seleccion_proveedores",
+  "de": "core",
+  "a": "compras",
+  "nota": "Tenia razon el lector B: el nodo entero trata de comparar y elegir proveedores para un contrato o licitacion con criterios ponderados, que es contenido propio de compras y proveedores y no de emprender en general; condiciones y fase (planificacion) estan bien en ambos lectores.",
+  "decidido_por": "arbitro"
+ },
+ {
+  "nodo": "crossdocking",
+  "de": "core",
+  "a": "entrega",
+  "nota": "El crossdocking es una técnica de logística de centros de distribución, propia del dominio entrega y no de emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "diagnostico_efecto_latigo",
+  "de": "core",
+  "a": "compras",
+  "nota": "El efecto latigo trata de pedidos a proveedores e inventario a lo largo de la cadena de suministro, no de emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "driver_transporte",
+  "de": "core",
+  "a": "entrega",
+  "nota": "Seleccion de modo de transporte y diseno de rutas es logistica y entrega, no emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "drum_buffer_rope",
+  "de": "core",
+  "a": "entrega",
+  "nota": "Sincronizar inventarios y buffers a lo largo de la cadena de suministro es logistica y entrega, no emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "efecto_bullwhip",
+  "de": "core",
+  "a": "compras",
+  "nota": "Medir el efecto latigo en la cadena de proveedores y decidir la coordinacion con ellos es gestion de compras y proveedores, no emprendimiento general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "estandar_gtin_epc",
+  "de": "core",
+  "a": "entrega",
+  "nota": "GTIN/EPC y la red EPCglobal sirven para rastrear productos en la cadena de suministro, así que el dominio es logística y entrega, no emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "estandarizacion_codigos_producto_epc",
+  "de": "core",
+  "a": "entrega",
+  "nota": "Tiene razon el lector B: el nodo trata de codigos EPC, GDSN y estandares GS1 para compartir datos de producto e inventario con socios comerciales, un tema propio de la cadena de suministro y la logistica y no de emprender en general; condiciones y fase estan bien, como coinciden ambos lectores.",
+  "decidido_por": "arbitro"
+ },
+ {
+  "nodo": "gestion_contratos_desempeno",
+  "de": "core",
+  "a": "compras",
+  "nota": "Medir y gestionar el desempeno de proveedores contra contrato pertenece a compras y proveedores, no a emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "gestion_procurement_consumo",
+  "de": "core",
+  "a": "compras",
+  "nota": "El contenido es analisis del gasto y consumo de compras por categoria (procurement, MRO), pertenece a compras y proveedores, no a emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "gestion_rationing_shortage_gaming",
+  "de": "core",
+  "a": "entrega",
+  "nota": "Tenia razon B: el nodo trata del racionamiento de producto a distribuidores y de la distorsion de la demanda en toda la cadena de suministro (efecto de pedidos inflados), que es logistica y distribucion y no emprender en general.",
+  "decidido_por": "arbitro"
+ },
+ {
+  "nodo": "gestion_riesgo_cadena_suministro",
+  "de": "core",
+  "a": "risk_management",
+  "nota": "El nodo es una evaluacion de riesgos natural y operativo con plan de contingencia y apetito de riesgo; su mundo es la gestion de riesgos, no emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "gestion_riesgo_seguridad_ia",
+  "de": "core",
+  "a": "seguridad_digital",
+  "nota": "El contenido trata vulnerabilidades de seguridad de sistemas de IA (prompt injection, jailbreaking, red teaming), que es seguridad digital y no emprendimiento general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "ia_en_supply_chain",
+  "de": "core",
+  "a": "entrega",
+  "nota": "El contenido es de logística y cadena de suministro (pronóstico de demanda, rutas y almacén), así que pertenece a entrega y no a core.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "iot_big_data_supply_chain",
+  "de": "core",
+  "a": "entrega",
+  "nota": "El nodo trata de la trazabilidad del movimiento de mercancias en la cadena de suministro (codigos de barras, RFID, tiempos de transito, quiebres de stock), que pertenece a logistica y entrega.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "metricas_calidad",
+  "de": "core",
+  "a": "quality",
+  "nota": "Las metricas de calidad para aseguramiento y control de calidad pertenecen a la gestion de la calidad, no a emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "mission_and_operations_planning",
+  "de": "core",
+  "a": "entrega",
+  "nota": "El contenido es planificación logística de una cadena de suministro (demanda por instalación, transporte, modelo y simulación), así que corresponde a entrega y no a core; además la condición 0 es genérica y no dice cuándo aplica.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "modelado_simulacion_cadena_suministro",
+  "de": "core",
+  "a": "entrega",
+  "nota": "Modelar instalaciones, vehiculos y rutas de la cadena de suministro es logistica y entrega, no emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "modelo_simulacion_cadena_suministro_circular",
+  "de": "core",
+  "a": "entrega",
+  "nota": "El contenido es diseno de red logistica (instalaciones, vehiculos, rutas, centro de gravedad), mundo de entrega; y la primera condicion lo activa en cualquier negocio sostenible sin cadena fisica.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "negociacion_contratos_proveedores",
+  "de": "core",
+  "a": "compras",
+  "nota": "Negociar contratos con proveedores (precio, niveles de servicio, penalizaciones, pago) pertenece al mundo de compras y proveedores, no a emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "plataforma_colaboracion_tiempo_real",
+  "de": "core",
+  "a": "entrega",
+  "nota": "El contenido es una plataforma de visibilidad y coordinacion de la cadena de suministro (inventario, rutas, logistica), que pertenece a logistica y entrega, no a emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "procurement_audit",
+  "de": "core",
+  "a": "compras",
+  "nota": "La auditoria de contratos de adquisicion y del desempeno del proveedor pertenece a compras y proveedores, no a emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "programacion_entregas_delivery_scheduling",
+  "de": "core",
+  "a": "entrega",
+  "nota": "Programar entregas directas o milk run y disenar rutas es logistica y entrega, no emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "quality_audit",
+  "de": "core",
+  "a": "quality",
+  "nota": "Una auditoria del cumplimiento del plan y la politica de calidad es gestion de la calidad, no emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "risk_audit",
+  "de": "core",
+  "a": "risk_management",
+  "nota": "Auditar el proceso de gestion de riesgos pertenece al dominio de gestion de riesgos.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "scorecard_desempeno_cadena_suministro",
+  "de": "core",
+  "a": "entrega",
+  "nota": "Trata de coordinar el desempeño de la cadena de suministro entre socios (entregas a tiempo, inventario, efecto bullwhip), que es logística y entrega y no emprendimiento en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "simulacion_de_operaciones_supply_chain",
+  "de": "core",
+  "a": "entrega",
+  "nota": "El contenido es diseno de red de suministro, almacenes, layout e inventario de seguridad: pertenece a logistica y entrega, no a emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "sistema_visibilidad_cadena_suministro_low_cost",
+  "de": "core",
+  "a": "entrega",
+  "nota": "Tenia razon el lector A: el nodo construye la visibilidad de inventario en produccion, almacen, pedidos y entregas para proyectar agotamientos y mover stock entre los actores de la cadena, y eso es logistica y entrega, no emprender en general.",
+  "decidido_por": "arbitro"
+ },
+ {
+  "nodo": "tecnologias_emergentes_cadena_suministro",
+  "de": "core",
+  "a": "entrega",
+  "nota": "El contenido trata de la cadena de suministro y la logistica (almacenes automatizados, vehiculos autonomos, drones, entregas mas rapidas), que es el mundo de logistica y entrega, no emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ },
+ {
+  "nodo": "warehouse_management_system",
+  "de": "core",
+  "a": "entrega",
+  "nota": "Un sistema de gestión de almacén (inventario, ubicaciones, picking, packing y envío) pertenece al mundo de la logística y la entrega, no a emprender en general.",
+  "decidido_por": "lector y verificador de acuerdo"
+ }
+]

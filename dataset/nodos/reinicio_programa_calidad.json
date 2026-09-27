@@ -1,6 +1,6 @@
 {
   "node_id": "reinicio_programa_calidad",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Paso 14: Hazlo de Nuevo (Do It Over Again)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
@@ -41,5 +41,20 @@
   ],
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-160",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q026-022: Reiniciar un programa de calidad que ya alcanzó sus metas es mejora continua de algo que ya funciona, no diseño inicial: ejecucion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

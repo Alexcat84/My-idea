@@ -6,12 +6,12 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "Para que la calidad funcione de verdad, tiene que actuar de forma objetiva e imparcial, sin depender de las areas que revisa: ingenieria, producción, marketing, administración. Quien se encarga de calidad debe estar al mismo nivel que esas areas y tener acceso directo a quienes toman las decisiones en tu negocio. Así evitas conflictos de interes y logras que la calidad prevenga problemas, en lugar de solo detectarlos después de que ya ocurrieron.",
   "pasos_accionables": [
-    "Ubica a quien se encarga de calidad al mismo nivel que ingenieria, producción y marketing en tu organigrama.",
-    "Asegurate de que esa persona te reporte directamente a ti, no a las areas operativas.",
+    "Ubica a quien se encarga de calidad al mismo nivel que ingeniería, producción y marketing en tu organigrama.",
+    "Asegúrate de que esa persona te reporte directamente a ti, no a las áreas operativas.",
     "Elige a alguien capaz de comunicarse, e incluso llamar la atención a otros responsables, sin generar antagonismo.",
     "Evita que la calidad se convierta en solo una revisión posterior; que prevenga defectos activamente, no que solo los detecte."
   ],
-  "entregable_esperado": "Un organigrama actualizado donde la calidad aparece como un area independiente, al mismo nivel que las areas operativas.",
+  "entregable_esperado": "Un organigrama actualizado donde la calidad aparece como un área independiente, al mismo nivel que las áreas operativas.",
   "nodos_previos": [
     "politica_formal_de_calidad"
   ],
@@ -41,6 +41,47 @@
         "motivo": "Convertir los mensajes obligatorios en experiencias de marca no guarda relacion con la independencia de la funcion de calidad."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "n1-orto-0215",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ubica a quien se encarga de calidad al mismo nivel que ingenieria, producción y marketing en tu organigrama.",
+      "texto_nuevo": "Ubica a quien se encarga de calidad al mismo nivel que ingeniería, producción y marketing en tu organigrama.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-035.paso0: ingeniería (Tilde de 'ingeniería'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0216",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Asegurate de que esa persona te reporte directamente a ti, no a las areas operativas.",
+      "texto_nuevo": "Asegúrate de que esa persona te reporte directamente a ti, no a las áreas operativas.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-035.paso1: Asegúrate, áreas (Tildes de 'Asegúrate' y 'áreas'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0217",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un organigrama actualizado donde la calidad aparece como un area independiente, al mismo nivel que las areas operativas.",
+      "texto_nuevo": "Un organigrama actualizado donde la calidad aparece como un área independiente, al mismo nivel que las áreas operativas.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O018-035.entregable: área, áreas (Tildes de 'área' y 'áreas'; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

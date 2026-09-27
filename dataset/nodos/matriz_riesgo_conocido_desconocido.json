@@ -1,17 +1,17 @@
 {
   "node_id": "matriz_riesgo_conocido_desconocido",
   "fase_proyecto": "validacion",
-  "dominio": "quality",
+  "dominio": "risk_management",
   "titulo_concepto": "Los tres niveles de riesgo: lo que no sabes que no sabes, lo que sabes que no sabes y lo que crees saber",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "La incertidumbre en tu negocio se puede pensar en tres niveles. Primero, lo que no sabes que no sabes: una mala posición, porque ni siquiera ves el riesgo. Segundo, lo que sabes que no sabes: ya identificaste el riesgo pero te faltan datos para evaluarlo. Tercero, lo que crees saber: tienes datos y confianza, pero esa confianza puede estar mal puesta. Reconocer en cual de los tres estas te ayuda a decidir que hacer: aprender mas, buscar datos, o revisar con ojo critico lo que dabas por hecho.",
   "pasos_accionables": [
     "Ubica cada riesgo que identificaste en uno de los tres niveles.",
-    "Si es algo que ni siquiera sabias que existia, invierte tiempo en aprender y en hablar con otros que ya conocen ese terreno.",
+    "Si es algo que ni siquiera sabías que existía, invierte tiempo en aprender y en hablar con otros que ya conocen ese terreno.",
     "Si sabes que el riesgo existe pero te faltan datos, prioriza conseguir esa información.",
     "Si crees tener el riesgo controlado, cuestiona si tus datos realmente son suficientes o solo te dan una falsa sensación de seguridad."
   ],
-  "entregable_esperado": "Una lista de tus riesgos clasificados según cuanto sabes de cada uno, con la acción que corresponde a cada caso.",
+  "entregable_esperado": "Una lista de tus riesgos clasificados según cuánto sabes de cada uno, con la acción que corresponde a cada caso.",
   "nodos_previos": [
     "evaluacion_de_factores_de_riesgo"
   ],
@@ -39,6 +39,46 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R041-035 (CONTRARIO, lector y verificador de acuerdo): Invierte la jerarquía de peligro: el libro no dice que la ignorancia total sea la peor y advierte que la falsa confianza puede ser igual o peor. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R041-035"
+    },
+    {
+      "id": "n1-dominio-122",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "quality",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q016-028: Clasificar riesgos por nivel de conocimiento e incertidumbre es gestion de riesgos, no gestion de la calidad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "n1-orto-0855",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si es algo que ni siquiera sabias que existia, invierte tiempo en aprender y en hablar con otros que ya conocen ese terreno.",
+      "texto_nuevo": "Si es algo que ni siquiera sabías que existía, invierte tiempo en aprender y en hablar con otros que ya conocen ese terreno.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-012.paso1: sabías, existía (Solo añade las tildes que faltaban en sabías y existía.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0856",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de tus riesgos clasificados según cuanto sabes de cada uno, con la acción que corresponde a cada caso.",
+      "texto_nuevo": "Una lista de tus riesgos clasificados según cuánto sabes de cada uno, con la acción que corresponde a cada caso.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-012.entregable: cuánto (Cuánto lleva tilde porque es interrogativo indirecto, y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

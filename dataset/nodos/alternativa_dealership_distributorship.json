@@ -19,11 +19,27 @@
     "alternativa_agency_relationship"
   ],
   "condiciones_activacion": [
-    "Si el negocio es de manufactura o distribución de productos físicos",
+    "Si tu negocio opera en Estados Unidos y es de manufactura o distribución de productos físicos",
     "Si se busca un canal de distribución sin necesidad de cobrar tarifas de franquicia"
   ],
   "etiqueta_arbol": "Considera Distribuir sin Cobrar Tarifa",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-002",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el negocio es de manufactura o distribución de productos físicos",
+      "texto_nuevo": "Si tu negocio opera en Estados Unidos y es de manufactura o distribución de productos físicos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q001-031: Clase C sin la condición de operar o vender en Estados Unidos. (lector y verificador de acuerdo) Motivo: Es un nodo de clase C (el elemento de fee de la definición de franquicia de Estados Unidos), pero ninguna condición dice que aplica si operas o vendes en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

@@ -40,7 +40,6 @@
   "nodos_siguientes": [
     "creacion_estrategia_cadena_suministro",
     "enfoque_paso_a_paso_investigacion_mercado",
-    "compartir_datos_cadena_suministro",
     "creacion_data_warehouse",
     "equipo_conjunto_de_mejora_con_proveedores",
     "estrategia_captura_mercado_crecimiento",
@@ -136,6 +135,19 @@
         "motivo": "El analisis del tipo de mercado y de la competencia no continua en identificar caracteristicas clave de producto y proceso."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "mv-arista-017",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "marco_analisis_mercado_cadena_suministro -> compartir_datos_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A36, lectores de acuerdo)",
+        "motivo": "Entender el tipo de mercado para priorizar capacidades no sigue con compartir datos entre empresas de la cadena."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "node_id": "segregacion_funciones_trading_settlement",
   "fase_proyecto": "planificacion",
-  "dominio": "health_safety",
+  "dominio": "risk_management",
   "titulo_concepto": "Segregación de Funciones como Defensa Organizacional",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
   "resumen_teorico": "Uno de los principios básicos de control interno es separar quien ejecuta una operación (trading) de quien la verifica y concilia (settlement/back office). El caso Barings muestra que asignar a una sola persona ambos roles elimina un mecanismo crítico de detección de errores o fraudes, permitiendo que las irregularidades se oculten indefinidamente.",
@@ -24,5 +24,20 @@
   "etiqueta_arbol": "Separa Quien Ejecuta y Verifica",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-dominio-176",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "health_safety",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q047-011: La segregación de funciones es un control interno contra errores y fraude (caso Barings), propio de gestión de riesgos y no de seguridad y salud en el trabajo. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    }
   ]
 }

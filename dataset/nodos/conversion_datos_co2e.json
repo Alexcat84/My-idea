@@ -8,10 +8,10 @@
   "pasos_accionables": [
     "Elige una herramienta o calculadora que use factores de conversión estándar",
     "Convierte cada tipo de dato crudo a toneladas o kilogramos de CO2e",
-    "Revisa tus calculos y, si puedes, pide que alguien mas los valide",
+    "Revisa tus cálculos y, si puedes, pide que alguien más los valide",
     "Si detectas un error importante, recalcula y avisa"
   ],
-  "entregable_esperado": "Un reporte de tu huella de carbono en unidades CO2e, organizado por cada fuente de emision",
+  "entregable_esperado": "Un reporte de tu huella de carbono en unidades CO2e, organizado por cada fuente de emisión",
   "nodos_previos": [
     "estrategia_recoleccion_datos_carbono",
     "definir_limites_huella_carbono"
@@ -26,5 +26,34 @@
   "etiqueta_arbol": "Convierte tus Datos a CO2e",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0548",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa tus calculos y, si puedes, pide que alguien mas los valide",
+      "texto_nuevo": "Revisa tus cálculos y, si puedes, pide que alguien más los valide",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-016.paso2: cálculos, más (Solo añade las tildes que faltaban en cálculos y más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0549",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un reporte de tu huella de carbono en unidades CO2e, organizado por cada fuente de emision",
+      "texto_nuevo": "Un reporte de tu huella de carbono en unidades CO2e, organizado por cada fuente de emisión",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O047-016.entregable: emisión (Solo añade la tilde que faltaba en emisión; CO2e queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

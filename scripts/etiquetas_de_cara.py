@@ -38,6 +38,10 @@ LISTAS = [
     RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1.json",
     RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1_casa.json",
     RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1_curaduria_final.json",
+    #  la ORTOGRAFIA (saneamiento, nivel 1, criterio 16, 27 sep 2026): solo tildes, erratas y enie, cada una con su
+    #  motivo en `_motivos`. Va ANTES de la de fidelidad, que sigue siendo la ultima (engine/test_etiquetas_fidelidad.py):
+    #  no comparten ninguna etiqueta.
+    RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1_ortografia.json",
     RAIZ / "dataset" / "metadata" / "etiquetas_de_cara_v1_fidelidad.json",
 ]
 GRAFOS = [

@@ -27,10 +27,26 @@
   "condiciones_activacion": [
     "Si tú y quien te acompaña no tienen experiencia cerrando acuerdos comerciales",
     "Si tus relaciones con earlyvangelists no se están convirtiendo en órdenes de compra",
-    "No aplica antes de tener earlyvangelists y un producto que ya intentas vender: es un problema de escalar ventas, no de empezar"
+    "Si ya tienes earlyvangelists y un producto que intentas vender, pero no logras cerrar los primeros acuerdos con compradores o gerentes de compras"
   ],
   "etiqueta_arbol": "Contrata a tu Cerrador de Ventas",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-029",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "No aplica antes de tener earlyvangelists y un producto que ya intentas vender: es un problema de escalar ventas, no de empezar",
+      "texto_nuevo": "Si ya tienes earlyvangelists y un producto que intentas vender, pero no logras cerrar los primeros acuerdos con compradores o gerentes de compras",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q097-016: La tercera condición es una exclusión que dice que se trata de escalar ventas, cuando el nodo trata de cerrar los primeros acuerdos. (lector y verificador de acuerdo) Motivo: Es una exclusión, no una situación en la que el nodo aplica, y además contradice el resumen: el cerrador sirve para cerrar los primeros acuerdos, no para escalar ventas."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 2
+    }
   ]
 }

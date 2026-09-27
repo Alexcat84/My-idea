@@ -9,7 +9,7 @@
     "Revisa si la hoja de términos (term sheet) incluye una cláusula de redención estándar o una redención por cambio adverso, que debes evitar.",
     "Negocia que la redención necesite la aprobación conjunta de todas las clases de inversionistas preferentes, no solo de una clase minoritaria.",
     "Evalúa si tu negocio realmente podría pagar esa recompra si llegara el momento.",
-    "Rechaza siempre cualquier clausula de redencion por cambio material adverso (adverse change redemption): es un concepto vago, demasiado punitivo y le da demasiado control al inversionista"
+    "Rechaza siempre cualquier cláusula de redención por cambio material adverso (adverse change redemption): es un concepto vago, demasiado punitivo y le da demasiado control al inversionista"
   ],
   "entregable_esperado": "Una cláusula de redención revisada, sin lenguaje de redención por cambio adverso, y con protecciones aprobadas por tu consejo (board).",
   "nodos_previos": [
@@ -40,6 +40,20 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. El libro rechaza siempre la redencion por cambio adverso; el paso la rechaza solo si no esta claramente definida, abriendo una excepcion que el libro no admite.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B1.json, ficha C022-070"
+    },
+    {
+      "id": "n1-orto-0840",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Rechaza siempre cualquier clausula de redencion por cambio material adverso (adverse change redemption): es un concepto vago, demasiado punitivo y le da demasiado control al inversionista",
+      "texto_nuevo": "Rechaza siempre cualquier cláusula de redención por cambio material adverso (adverse change redemption): es un concepto vago, demasiado punitivo y le da demasiado control al inversionista",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O073-006.paso3: cláusula, redención (Tildes que faltaban en cláusula y redención; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
     }
   ],
   "fuentes_internas": [

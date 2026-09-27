@@ -7,7 +7,7 @@
   "resumen_teorico": "Cuando un producto tiene dos o más características de calidad, monitorearlas de forma independiente con gráficos separados puede ser engañoso, ya que la probabilidad conjunta de que ambas excedan sus límites simultáneamente es mucho menor que la individual. Los gráficos multivariados (como el T² de Hotelling o EWMA multivariado) abordan correctamente esta interdependencia.",
   "pasos_accionables": [
     "Identificar las múltiples características de calidad correlacionadas del producto",
-    "Sugerencia de My Idea: calcular la matriz de covarianza entre las caracteristicas",
+    "Sugerencia de My Idea: calcular la matriz de covarianza entre las características",
     "Construir el estadístico multivariado (por ejemplo, T² de Hotelling)",
     "Establecer límites de control multivariados apropiados",
     "Monitorear el estadístico combinado en lugar de gráficos independientes"
@@ -43,6 +43,20 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro solo nombra el T2 de Hotelling y el EWMA multivariado y remite a Montgomery; no da ningun procedimiento de calculo. Busque en todo el libro 'covarian', 'covariance matrix', 'variance-covariance', 'Hotelling', 'matrix of': la unica aparicion de covarianza es MANOVA/MANCOVA (L20051), ajena a los graficos de control. Calcular la matriz de covarianza es una tecnica concreta que el libro no aporta; aunque sea correcta e intrinseca al T2, es un dato tecnico nuevo, no una concrecion del texto.",
       "indice": 1,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B3.json, ficha C049-092"
+    },
+    {
+      "id": "n1-orto-0317",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: calcular la matriz de covarianza entre las caracteristicas",
+      "texto_nuevo": "Sugerencia de My Idea: calcular la matriz de covarianza entre las características",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O027-015.paso1: características (Solo añade la tilde que faltaba en características.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
     }
   ],
   "fuentes_internas": [

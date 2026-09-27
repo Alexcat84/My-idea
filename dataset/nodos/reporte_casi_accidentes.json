@@ -21,10 +21,26 @@
   ],
   "condiciones_activacion": [
     "Cuando la organización no cuenta con un canal formal para reportar eventos sin consecuencias graves",
-    "Cuando se busca fortalecer la cultura de reporte (Capítulo 9 del libro)"
+    "Cuando se busca fortalecer una cultura de reporte sin represalias sobre eventos que pudieron ser graves"
   ],
   "etiqueta_arbol": "Reporta los Casi Accidentes",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-162",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se busca fortalecer la cultura de reporte (Capítulo 9 del libro)",
+      "texto_nuevo": "Cuando se busca fortalecer una cultura de reporte sin represalias sobre eventos que pudieron ser graves",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q102-007: La segunda condicion cita el capitulo del libro fuente; se reescribe sin la referencia. (lector y verificador de acuerdo) Motivo: Arrastra una referencia a la fuente (Capítulo 9 del libro) que no describe la situacion y no tiene sentido para el cliente."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
   ]
 }

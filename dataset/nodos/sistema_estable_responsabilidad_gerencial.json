@@ -6,12 +6,12 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Cuando un grafico de control muestra que un proceso (por ejemplo, el tiempo de preparacion de habitaciones de un hotel o la atencion en un area de tu negocio) esta en un estado estable, esto indica que las causas de los problemas son comunes al sistema y no atribuibles a una persona en particular. En consecuencia, la responsabilidad de mejorar el desempeno recae completamente en ti, que disenas y controlas el sistema, no en quienes trabajan dentro de sus limites.",
   "pasos_accionables": [
-    "Recolectar datos del desempeno del proceso mediante observacion planificada (conteos puntuales, muestreos periodicos).",
-    "Construir un grafico de control para verificar si el sistema es estable.",
+    "Recolectar datos del desempeño del proceso mediante observación planificada (conteos puntuales, muestreos periódicos).",
+    "Construir un gráfico de control para verificar si el sistema es estable.",
     "Si el sistema es estable, entender que la mejora depende de rediseñar el sistema, no de presionar a las personas que trabajan contigo.",
-    "Priorizar cambios estructurales (diseno, herramientas, procesos) en lugar de sanciones individuales."
+    "Priorizar cambios estructurales (diseño, herramientas, procesos) en lugar de sanciones individuales."
   ],
-  "entregable_esperado": "Un grafico de control que muestra la estabilidad del sistema y te ayuda a decidir que la mejora depende de cambios estructurales, no de culpar a alguien en particular.",
+  "entregable_esperado": "Un gráfico de control que muestra la estabilidad del sistema y te ayuda a decidir que la mejora depende de cambios estructurales, no de culpar a alguien en particular.",
   "nodos_previos": [
     "control_estadistico_de_inventario_en_transito",
     "diseno_de_calidad_desde_planificacion"
@@ -40,6 +40,61 @@
         "evidencia": "F21-005: Usa graficos de control sobre un proceso en marcha para decidir mejoras del sistema: es control y mejora operativa. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0043",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Recolectar datos del desempeno del proceso mediante observacion planificada (conteos puntuales, muestreos periodicos).",
+      "texto_nuevo": "Recolectar datos del desempeño del proceso mediante observación planificada (conteos puntuales, muestreos periódicos).",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O004-027.paso0: desempeño, observación, periódicos (Faltan de verdad la eñe en desempeño y las tildes en observación y periódicos; el resto del texto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0044",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Construir un grafico de control para verificar si el sistema es estable.",
+      "texto_nuevo": "Construir un gráfico de control para verificar si el sistema es estable.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O004-027.paso1: gráfico (A gráfico le falta de verdad la tilde, y es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0045",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Priorizar cambios estructurales (diseno, herramientas, procesos) en lugar de sanciones individuales.",
+      "texto_nuevo": "Priorizar cambios estructurales (diseño, herramientas, procesos) en lugar de sanciones individuales.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O004-027.paso3: diseño (A diseño le falta de verdad la eñe, y es el único cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0046",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un grafico de control que muestra la estabilidad del sistema y te ayuda a decidir que la mejora depende de cambios estructurales, no de culpar a alguien en particular.",
+      "texto_nuevo": "Un gráfico de control que muestra la estabilidad del sistema y te ayuda a decidir que la mejora depende de cambios estructurales, no de culpar a alguien en particular.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O004-027.entregable: gráfico (A gráfico le falta de verdad la tilde, y el 'que' de 'decidir que' es conjunción, así que queda sin tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

@@ -12,7 +12,8 @@
   ],
   "entregable_esperado": "Plan de expectativas escalonado sobre impacto de IA en la organización",
   "nodos_previos": [
-    "ley_de_capacidad_de_sistemas"
+    "ley_de_capacidad_de_sistemas",
+    "escenarios_de_evolucion_de_la_ia"
   ],
   "nodos_siguientes": [
     "desafios_implementacion_ia"
@@ -39,6 +40,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO de cifra, plazo, norma o materia legal: se quita o se reemplaza por lo que dice el libro. El libro cita la Ley de Amara sin fijar horizontes; los plazos de 1, 3 y 5 a 10 años no están (buscado three years, five years, horizon: sin ese uso).",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-030"
+    },
+    {
+      "id": "n1-nucleo-01",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "escenarios_de_evolucion_de_la_ia -> amara_law_expectativas_tecnologia",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-01, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Quien arma escenarios sobre la velocidad de avance de la IA sigue naturalmente con la Ley de Amara para calibrar expectativas a corto y largo plazo."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ],
   "fuentes_internas": [

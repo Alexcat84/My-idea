@@ -20,10 +20,26 @@
     "gestion_configuracion_least_functionality"
   ],
   "condiciones_activacion": [
-    "Cuando se implementan los requisitos de la familia Audit and Accountability de SP 800-171"
+    "Cuando tu negocio opera o vende en Estados Unidos y debe implementar los requisitos de la familia Audit and Accountability de SP 800-171"
   ],
   "etiqueta_arbol": "Registra y Audita tu Actividad",
   "fuentes_internas": [
     "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-008",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se implementan los requisitos de la familia Audit and Accountability de SP 800-171",
+      "texto_nuevo": "Cuando tu negocio opera o vende en Estados Unidos y debe implementar los requisitos de la familia Audit and Accountability de SP 800-171",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q001-026: Clase C sin la condición de operar o vender en Estados Unidos. (lector y verificador de acuerdo) Motivo: Es un nodo de clase C (NIST SP 800-171 de Estados Unidos), pero la condición no dice que aplica si operas o vendes en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

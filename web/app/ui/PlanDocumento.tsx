@@ -153,7 +153,9 @@ function BarraTopic({ s, abierta }: { s: Seccion; abierta?: boolean }) {
           </div>
         )}
         {/* La acción concreta, SIEMPRE al final del tramo. */}
-        {s.estaSemana && <CajaEstaSemana contenido={s.estaSemana} />}
+        {/* Solo la Primera acción: lo que era "Esta semana" en un plan viejo ya
+            no se muestra (decisión del fundador, 27 sep 2026). */}
+        {s.estaSemana && !s.accionVieja && <CajaEstaSemana contenido={s.estaSemana} />}
       </div>
     </details>
   );
@@ -187,8 +189,10 @@ export function PlanDocumento({
   const etapas = plan.secciones.filter((s) => s.tipo === "etapa");
   // La acción de la etapa 1 (el corazón del producto): SIEMPRE visible arriba,
   // fuera de los acordeones. Su copia también vive al final de su tramo.
-  const primeraAccion =
-    etapas.find((s) => s.estaSemana)?.estaSemana ?? plan.secciones.find((s) => s.estaSemana)?.estaSemana ?? null;
+  // Solo de un rótulo "Primera acción": el contenido de "Esta semana" de un plan
+  // viejo ya no se muestra (decisión del fundador, 27 sep 2026).
+  const conAccion = (s: (typeof plan.secciones)[number]) => Boolean(s.estaSemana) && !s.accionVieja;
+  const primeraAccion = etapas.find(conAccion)?.estaSemana ?? plan.secciones.find(conAccion)?.estaSemana ?? null;
 
   const documento = (
     <PapelEnIdioma idioma={idiomaDocumento}>

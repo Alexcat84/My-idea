@@ -20,7 +20,6 @@
     "industrial_robots_automation"
   ],
   "nodos_siguientes": [
-    "simulacion_de_operaciones_supply_chain",
     "ia_en_supply_chain"
   ],
   "condiciones_activacion": [
@@ -71,6 +70,19 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite la materia legal añadida (revisar el marco regulatorio local de drones y vehículos autónomos) que el libro no trata; ANADIDO de materia legal, se quita igual que en el paso 1.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C092-007"
+    },
+    {
+      "id": "mv-arista-018",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "vehiculos_autonomos_drones_supply_chain -> simulacion_de_operaciones_supply_chain",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A58, lectores de acuerdo)",
+        "motivo": "Los drones y vehiculos autonomos no llevan naturalmente a la simulacion de operaciones."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
     }
   ],
   "fuentes_internas": [
