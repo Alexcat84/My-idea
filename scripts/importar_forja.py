@@ -91,6 +91,12 @@ DOMINIO_DESTINO = {
     "gestion_equipos": "primer_equipo",
     "contratacion": "primer_equipo",
     "carrera_profesional": "primer_equipo",
+    # Integracion del mundo 11 (28 sep 2026): la forja cerro el mundo con dos
+    # dominios mas, gestion_negocio (Gerber, The E-Myth Revisited) y produccion
+    # (los capitulos de produccion de Grove). La cifra de 471 nodos del encargo
+    # del fundador los incluye en el mismo pack.
+    "gestion_negocio": "primer_equipo",
+    "produccion": "primer_equipo",
 }
 DOMINIOS_A_OTRO_MUNDO = {"proteccion_consumidor": "mundo 10 (Vender), aun no existe en la app"}
 
