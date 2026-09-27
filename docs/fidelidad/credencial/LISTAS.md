@@ -143,3 +143,9 @@ La cita a un autor o a un libro como fuente salio de 182 nodos (`docs/saneamient
 176 cambian su resumen_teorico, que entra al vector. Van al final de `nodos_a_reembeber.txt` (ahora 252 con la tanda 2). Ninguna
 pregunta en cache nombra un autor o un libro: no se suma ninguna a regenerar.
 
+## Segunda sesion con credencial: HECHA (saneamiento, nivel 1, criterio 7)
+
+Indice semantico reconstruido: los 349 nodos de `nodos_a_reembeber.txt` cambiaron de vector y ningun otro se movio.
+Preguntas: de las 66 de `preguntas_a_regenerar.txt`, 3 ya no son nodos vivos, 60 regeneradas (44 de vuelta en la cache y
+16 refrescadas) y 3 sin sucesor vivo (cerradas por diseno). Detalle en `docs/SANEAMIENTO_DATASET.md`, nivel 1.
+

@@ -63,7 +63,7 @@ Ver `docs/SANEAMIENTO_DATASET.md` (tanda 1 cerrada).
   `dataset/metadata/fuentes_canonicas.json` con sus titulos; se corre `python scripts/fuentes_internas.py`; sus nodos
   pasan la guarda de titulos (`engine/test_fuentes_de_cara.py`) y cualquier cita a un autor o libro como fuente sale por
   correccion declarada (veredicto ATRIBUCION) antes de integrar.
-- **Sesion con credencial:** 349 nodos a re-embeber y 66 preguntas a regenerar (`docs/fidelidad/credencial/`).
+- **Sesion con credencial: HECHA** (saneamiento, nivel 1, criterio 7): 349 nodos re-embebidos y 60 preguntas regeneradas (`docs/fidelidad/credencial/LISTAS.md`).
 
 ## 0a. Campaña de FIDELIDAD: lo que queda para la integración del mundo 11 (24 sep 2026)
 

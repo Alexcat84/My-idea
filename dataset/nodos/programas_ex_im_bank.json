@@ -6,7 +6,7 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "El Export-Import Bank de Estados Unidos ofrece seguro de crédito a la exportacion, garantias de prestamo y prestamos directos de mediano (1 a 5 anios) y largo plazo (hasta 10 anios) para reducir riesgos comerciales y politicos, especialmente en proyectos de bienes de capital como plantas de energia, telecomunicaciones y transporte. La Garantia de Capital de Trabajo cubre la etapa previa a la exportacion, con tasas de anticipo de hasta 75% en inventario y 90% en cuentas por cobrar, y un reembolso de hasta 90% si hay incumplimiento (100% si tu negocio es de minorias, mujeres o rural), lo que aumenta tu capacidad de endeudamiento. Para ventas grandes, una garantia suele salir mas económica que un prestamo directo. Si ya tienes historial como exportador, también puedes optar por un seguro de crédito privado.",
   "pasos_accionables": [
-    "Solicita la Garantia de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportacion",
+    "Solicita la Garantía de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportación",
     "Determina si te conviene más una garantía de préstamo, que suele ser más económica, o un préstamo directo de mediano o largo plazo para la venta",
     "Evalúa contratar un seguro de crédito a la exportación, propio del Ex-Im Bank o privado si ya tienes historial como exportador establecido",
     "Revisa si calificas para la Bank Buyer Credit Policy en ventas de bienes de capital como plantas de energía, telecomunicaciones o transporte",
@@ -151,6 +151,20 @@
         "evidencia": "O018-024.entregable: precalificación, garantía, préstamo (Tildes de precalificación, garantía y préstamo; nada más cambia.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "n1-orto-det-2",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Solicita la Garantia de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportacion",
+      "texto_nuevo": "Solicita la Garantía de Capital de Trabajo del Ex-Im Bank para financiar tu producción o tus cuentas por cobrar de exportación",
+      "cita": {
+        "instrumento": "Detector de acentos de la casa (web/lib/detectorAcentos.ts, scripts/saneamiento/medirOrtografia.ts)",
+        "evidencia": "Faltas que la pasada O dejo pasar: Garantía, exportación"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
     }
   ]
 }
