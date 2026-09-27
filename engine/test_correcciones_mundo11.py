@@ -66,6 +66,9 @@ RESUMEN = c(id="m11-03", campo="resumen_teorico", veredicto="RESUMEN", texto_ant
 CIFRA = c(id="m11-04", campo="pasos_accionables", indice=1, veredicto="CIFRA",
           texto_anterior="Paga 50.000 dolares al reclutador.", texto_nuevo="Acuerda por adelantado lo que pagaras al reclutador.",
           cita={"regla": "regla de la cifra (docs/POLITICA_MARCO_PAIS.md): la cifra de mercado sale", "fragmentos": ["50.000 dolares"]})
+ORTO_TITULO = c(id="m11-06", campo="titulo_concepto", veredicto="ORTOGRAFIA", texto_anterior="Aplicar las tres preguntas",
+                texto_nuevo="Aplicar las tres preguntas clave", motivos=["ortografia"],
+                cita={"instrumento": "prueba", "evidencia": "prueba"})
 DOMINIO = c(id="m11-05", campo="dominio", veredicto="DOMINIO", texto_anterior="primer_equipo", texto_nuevo="core",
             cita={"instrumento": "prueba", "evidencia": "prueba"})
 
@@ -92,8 +95,10 @@ def montar(tmp):
 def correr(repo, pack, tanda):
     t = repo / "tanda.json"
     t.write_text(json.dumps(tanda, ensure_ascii=False), encoding="utf-8")
+    import os
+    env = dict(os.environ, PYTHONIOENCODING="utf-8")
     return subprocess.run([sys.executable, str(repo / "scripts" / "fidelidad" / "aplicar_correcciones.py"), str(t), "--nodos", str(pack)],
-                          capture_output=True, text=True, encoding="utf-8")
+                          capture_output=True, text=True, encoding="utf-8", env=env)
 
 
 def main():
@@ -121,8 +126,29 @@ def main():
                 fallos.append("el nodo con notas_extraccion no pasa la lista blanca: " + v.stdout[-300:])
     with tempfile.TemporaryDirectory() as tmp:
         repo, ruta, pack = montar(tmp)
+        r = correr(repo, pack, [VOZ_TITULO, ORTO_TITULO])
+        n = json.loads(ruta.read_text(encoding="utf-8"))
+        if r.returncode != 0 or n["titulo_concepto"] != "Aplicar las tres preguntas clave":
+            fallos.append("ORTOGRAFIA no corrige el titulo (la forja escribe sin tildes): " + r.stdout[-300:])
+        elif [x.get("motivos") for x in n["correcciones"] if x["id"] == "m11-06"] != [["ortografia"]]:
+            fallos.append("los motivos de una correccion no quedan declarados en el nodo")
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, ruta, pack = montar(tmp)
         if correr(repo, pack, [DOMINIO]).returncode != 0:
             fallos.append("DOMINIO no admite primer_equipo como dominio de partida o core de llegada")
+    # Las tildes no crean barandas: "tu organizacion" -> "tu organización" ya estaba (residuo_corporativo) y la
+    # correccion solo le pone la tilde. Antes el aplicador comparaba la cita exacta y la daba por nueva.
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, ruta, pack = montar(tmp)
+        n = dict(NODO, entregable_esperado="Las reglas repartidas en tu organizacion segun el caso.")
+        ruta.write_text(json.dumps(n, ensure_ascii=False, indent=2), encoding="utf-8")
+        orto = c(id="m11-07", campo="entregable_esperado", veredicto="ORTOGRAFIA",
+                 texto_anterior="Las reglas repartidas en tu organizacion segun el caso.",
+                 texto_nuevo="Las reglas repartidas en tu organización según el caso.",
+                 cita={"instrumento": "prueba", "evidencia": "prueba"})
+        r = correr(repo, pack, [orto])
+        if r.returncode != 0:
+            fallos.append("una correccion de solo tildes se rechazo por una baranda que ya estaba: " + r.stdout[-300:])
     sin_nota = dict(NODO)
     sin_nota.pop("notas_extraccion")
     for nombre, mala, nodo in (

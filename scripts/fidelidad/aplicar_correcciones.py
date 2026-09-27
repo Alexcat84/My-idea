@@ -47,8 +47,9 @@ BASE = Path(__file__).resolve().parent.parent.parent
 NODOS = BASE / "dataset" / "nodos"
 CAMPOS = {"pasos_accionables", "condiciones_activacion", "resumen_teorico", "entregable_esperado", "etiqueta_arbol",
           "fase_proyecto", "dominio", "titulo_concepto"}
-# El titulo vive con el libro y no se pinta (AGENTS.md), asi que solo lo tocan los veredictos de la voz de cliente.
-SOLO_VOZ = {"titulo_concepto": {"VOZ", "ATRIBUCION"}}
+# El titulo llega a la IA y a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), pero su contenido vive con el libro:
+# solo lo tocan la voz de cliente y la ortografia (la forja escribe sin tildes).
+SOLO_VOZ = {"titulo_concepto": {"VOZ", "ATRIBUCION", "ORTOGRAFIA"}}
 # Veredictos que declara una regla y los fragmentos que salen, no una frase del libro.
 POR_REGLA = {"ATRIBUCION", "VOZ", "CIFRA"}
 RESUMEN_MIN, RESUMEN_MAX = 400, 600
@@ -158,6 +159,9 @@ def main(argv):
                 registro["indice"] = c["indice"]
             if c.get("auditoria"):
                 registro["auditoria"] = c["auditoria"]
+            if c.get("motivos"):
+                # Un mismo texto puede corregirse por varias razones a la vez (voz, ingles, tildes): se declaran todas.
+                registro["motivos"] = c["motivos"]
             nodo.setdefault("correcciones", []).append(registro)
     # LAS BARANDAS DE LA CASA (scripts/censo_duplicacion.py): una correccion no
     # puede dejar en el nodo una baranda que antes no tenia (por ejemplo, una sigla
@@ -173,10 +177,19 @@ def main(argv):
             for nid, nodo in nodos.items():
                 ruta = NODOS / ("%s.json" % nid)
                 antes = censo_duplicacion.revisar_barandas(json.loads(ruta.read_text(encoding="utf-8")))
-                ya = {(b["baranda"], b.get("cita")) for b in antes}
-                for b in censo_duplicacion.revisar_barandas(nodo):
-                    if (b["baranda"], b.get("cita")) not in ya:
-                        fallas.append("%s: la correccion deja la baranda %s: %s" % (nid, b["baranda"], b.get("cita")))
+                # Se compara CUANTOS hallazgos tiene cada baranda antes y despues, no la cita exacta: una
+                # correccion de solo tildes ("tu organizacion" a "tu organización") cambia la cita y no deja
+                # ninguna baranda nueva (integracion del mundo 11, 28 sep 2026: la forja escribe sin tildes).
+                cuenta = {}
+                for b in antes:
+                    cuenta[b["baranda"]] = cuenta.get(b["baranda"], 0) + 1
+                despues = censo_duplicacion.revisar_barandas(nodo)
+                por_baranda = {}
+                for b in despues:
+                    por_baranda.setdefault(b["baranda"], []).append(b)
+                for baranda, hallazgos in por_baranda.items():
+                    if len(hallazgos) > cuenta.get(baranda, 0):
+                        fallas.append("%s: la correccion deja la baranda %s: %s" % (nid, baranda, hallazgos[-1].get("cita")))
     if fallas:
         print("TANDA RECHAZADA, no se escribio nada:")
         for f in fallas:
