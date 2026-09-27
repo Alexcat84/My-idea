@@ -20785,7 +20785,8 @@
         "sales_operations_planning"
       ],
       "nodos_siguientes": [
-        "optimizacion_tecnologia_cadena_suministro"
+        "optimizacion_tecnologia_cadena_suministro",
+        "equipo_conjunto_de_mejora_con_proveedores"
       ],
       "condiciones_activacion": [
         "Cuando la empresa sufre variabilidad de demanda no explicada por ventas reales",
@@ -20794,6 +20795,21 @@
       "etiqueta_arbol": "Mide y Comparte con tu Cadena",
       "fuentes_internas": [
         "Essentials of Supply Chain Management - Michael H. Hugos"
+      ],
+      "correcciones": [
+        {
+          "id": "d27-arista-01",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_TEJIDA",
+          "texto_anterior": "",
+          "texto_nuevo": "colaboracion_cadena_suministro -> equipo_conjunto_de_mejora_con_proveedores",
+          "cita": {
+            "instrumento": "Pasada C del saneamiento (C-A, lectores de acuerdo)",
+            "motivo": "Quien da el primer paso de colaborar midiendo el efecto latigo y compartiendo datos sigue naturalmente con formar un equipo conjunto con el proveedor que avanza por niveles progresivos hasta operar la cadena como un proceso unico."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: el puente a calidad se ancla en el nucleo."
+        }
       ]
     },
     "colaboracion_creador_consumidor": {
@@ -20885,7 +20901,7 @@
     "colaboracion_transporte_ctm": {
       "node_id": "colaboracion_transporte_ctm",
       "fase_proyecto": "ejecucion",
-      "dominio": "core",
+      "dominio": "entrega",
       "titulo_concepto": "Gestión Colaborativa de Transporte (CTM)",
       "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
       "resumen_teorico": "La gestión colaborativa de transporte (CTM) permite a empresas más pequeñas, incluso competidoras, unir fuerzas para consolidar embarques y reducir costos de transporte significativamente (hasta 25% según el caso Just Born). El éxito depende de habilitadores humanos como confianza, apertura, liderazgo y beneficios compartidos, superando obstáculos como el control de información propietaria y la falta de estándares.",
@@ -20899,14 +20915,11 @@
       ],
       "entregable_esperado": "Acuerdo de colaboración de transporte (CTM) con socios definidos, modelo de red optimizado y métricas de ahorro esperado",
       "nodos_previos": [
-        "outsourcing_cadena_suministro",
         "programacion_entregas_delivery_scheduling",
         "collaboration_roadblocks",
-        "definicion_alineacion_cadena_suministro",
         "stakeholder_mapping_wheel"
       ],
       "nodos_siguientes": [
-        "equipo_conjunto_de_mejora_con_proveedores",
         "collaboration_enablers",
         "scorecard_desempeno_cadena_suministro"
       ],
@@ -20929,6 +20942,60 @@
       ],
       "fuentes_internas": [
         "Essentials of Supply Chain Management - Michael H. Hugos"
+      ],
+      "correcciones": [
+        {
+          "id": "d27-dominio-1",
+          "fecha": "2026-09-27",
+          "campo": "dominio",
+          "veredicto": "DOMINIO",
+          "texto_anterior": "core",
+          "texto_nuevo": "entrega",
+          "cita": {
+            "instrumento": "Pasada M del saneamiento (docs/saneamiento/resultados/M)",
+            "evidencia": "Consolidacion de embarques y red de distribucion es logistica y transporte, no emprender en general. (lector y verificador de acuerdo)"
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: colaboracion_transporte_ctm pasa a entrega."
+        },
+        {
+          "id": "d27-arista-02",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_QUITADA",
+          "texto_anterior": "colaboracion_transporte_ctm -> equipo_conjunto_de_mejora_con_proveedores",
+          "texto_nuevo": "",
+          "cita": {
+            "instrumento": "Decision del fundador del 27 sep 2026, punto 1",
+            "motivo": "El puente a calidad deja de salir de colaboracion_transporte_ctm, que pasa a entrega; lo reemplaza colaboracion_cadena_suministro -> equipo_conjunto_de_mejora_con_proveedores."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista de entrega a calidad que el reanclaje reemplaza sale."
+        },
+        {
+          "id": "d27-arista-04",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_QUITADA",
+          "texto_anterior": "definicion_alineacion_cadena_suministro -> colaboracion_transporte_ctm",
+          "texto_nuevo": "",
+          "cita": {
+            "instrumento": "Pasada C del saneamiento (C-C2, lectores de acuerdo)",
+            "motivo": "La definicion general de cadena de suministro y su alineacion con la estrategia es demasiado amplia para que consolidar embarques con otras empresas sea su continuacion natural."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista del nucleo a entrega que no es puente sale."
+        },
+        {
+          "id": "d27-arista-05",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_QUITADA",
+          "texto_anterior": "outsourcing_cadena_suministro -> colaboracion_transporte_ctm",
+          "texto_nuevo": "",
+          "cita": {
+            "instrumento": "Pasada C del saneamiento (C-C3, lectores de acuerdo)",
+            "motivo": "El outsourcing trata de ceder operaciones no centrales a especialistas, mientras que la gestion colaborativa de transporte une a empresas pares para consolidar carga, asi que no es su siguiente paso natural."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista del nucleo a entrega que no es puente sale."
+        }
       ]
     },
     "collaboration_enablers": {
@@ -20947,7 +21014,8 @@
       ],
       "entregable_esperado": "Checklist de habilitadores presentes/ausentes y plan de acción para fortalecer los débiles",
       "nodos_previos": [
-        "colaboracion_transporte_ctm"
+        "colaboracion_transporte_ctm",
+        "coordinacion_colaboracion_cadena_suministro"
       ],
       "nodos_siguientes": [
         "collaboration_roadblocks",
@@ -20959,6 +21027,21 @@
       "etiqueta_arbol": "Crea las Bases para Colaborar",
       "fuentes_internas": [
         "Essentials of Supply Chain Management - Michael H. Hugos"
+      ],
+      "correcciones": [
+        {
+          "id": "d27-arista-03",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_TEJIDA",
+          "texto_anterior": "",
+          "texto_nuevo": "coordinacion_colaboracion_cadena_suministro -> collaboration_enablers",
+          "cita": {
+            "instrumento": "Pasada C del saneamiento (C-B, lectores de acuerdo)",
+            "motivo": "Tras entender que la coordinacion entre empresas es una ventaja competitiva frente al control unilateral, lo natural es preguntar que habilitadores humanos y tecnologicos hacen que esa colaboracion funcione."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: el nodo del nucleo que solo entraba por colaboracion_transporte_ctm recibe un predecesor del nucleo."
+        }
       ]
     },
     "collaboration_roadblocks": {
@@ -28984,7 +29067,8 @@
       ],
       "nodos_siguientes": [
         "ciclo_virtuoso_datos_electronicos",
-        "plataforma_colaboracion_tiempo_real"
+        "plataforma_colaboracion_tiempo_real",
+        "collaboration_enablers"
       ],
       "condiciones_activacion": [
         "Cuando la empresa depende de un ecosistema de proveedores/socios para innovar",
@@ -28994,6 +29078,21 @@
       "etiqueta_arbol": "Coordina Toda tu Cadena",
       "fuentes_internas": [
         "Essentials of Supply Chain Management - Michael H. Hugos"
+      ],
+      "correcciones": [
+        {
+          "id": "d27-arista-03",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_TEJIDA",
+          "texto_anterior": "",
+          "texto_nuevo": "coordinacion_colaboracion_cadena_suministro -> collaboration_enablers",
+          "cita": {
+            "instrumento": "Pasada C del saneamiento (C-B, lectores de acuerdo)",
+            "motivo": "Tras entender que la coordinacion entre empresas es una ventaja competitiva frente al control unilateral, lo natural es preguntar que habilitadores humanos y tecnologicos hacen que esa colaboracion funcione."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: el nodo del nucleo que solo entraba por colaboracion_transporte_ctm recibe un predecesor del nucleo."
+        }
       ]
     },
     "coordinacion_control_vs_cambio": {
@@ -39668,7 +39767,6 @@
         "driver_produccion",
         "arquitectura_tecnica_modular",
         "bucle_retroalimentacion_autoajustable",
-        "colaboracion_transporte_ctm",
         "marco_analisis_mercado_cadena_suministro",
         "gestion_procurement_consumo",
         "gestion_riesgo_cadena_suministro",
@@ -39697,6 +39795,21 @@
       ],
       "fuentes_internas": [
         "Essentials of Supply Chain Management - Michael H. Hugos"
+      ],
+      "correcciones": [
+        {
+          "id": "d27-arista-04",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_QUITADA",
+          "texto_anterior": "definicion_alineacion_cadena_suministro -> colaboracion_transporte_ctm",
+          "texto_nuevo": "",
+          "cita": {
+            "instrumento": "Pasada C del saneamiento (C-C2, lectores de acuerdo)",
+            "motivo": "La definicion general de cadena de suministro y su alineacion con la estrategia es demasiado amplia para que consolidar embarques con otras empresas sea su continuacion natural."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista del nucleo a entrega que no es puente sale."
+        }
       ]
     },
     "definicion_calidad_como_conformidad": {
@@ -57208,8 +57321,7 @@
       "entregable_esperado": "Guía de decisión personal para intervenciones de error que priorice mejoras situacionales sobre medidas disciplinarias individuales",
       "nodos_previos": [
         "ciclo_de_culpa_2",
-        "errores_como_consecuencia",
-        "gestion_de_conflictos_cofundadores"
+        "errores_como_consecuencia"
       ],
       "nodos_siguientes": [
         "tripod_delta_general_failure_types",
@@ -57234,6 +57346,21 @@
       ],
       "fuentes_internas": [
         "Managing the Risks of Organizat - Reason, J. T_"
+      ],
+      "correcciones": [
+        {
+          "id": "d27-arista-06",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_QUITADA",
+          "texto_anterior": "gestion_de_conflictos_cofundadores -> enfoque_situacional_vs_personal",
+          "texto_nuevo": "",
+          "cita": {
+            "instrumento": "Pasada P del saneamiento (P2-08)",
+            "motivo": "Los dos lectores de la pasada P juzgaron debil este puente: los conflictos entre cofundadores no llevan al enfoque situacional de la seguridad."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 2: se rechaza el puente."
+        }
       ]
     },
     "enfoque_situacional_vs_personal_2": {
@@ -58235,9 +58362,9 @@
         "analisis_pareto_de_proveedores",
         "punto_equilibrio_calidad_inspeccion",
         "regla_todo_o_nada_inspeccion_2",
-        "colaboracion_transporte_ctm",
         "logistica_inversa_retornos",
-        "marco_analisis_mercado_cadena_suministro"
+        "marco_analisis_mercado_cadena_suministro",
+        "colaboracion_cadena_suministro"
       ],
       "nodos_siguientes": [
         "planificacion_de_la_inspeccion",
@@ -58250,6 +58377,34 @@
       "etiqueta_arbol": "Mejora la Cadena con Proveedores",
       "fuentes_internas": [
         "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+      ],
+      "correcciones": [
+        {
+          "id": "d27-arista-01",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_TEJIDA",
+          "texto_anterior": "",
+          "texto_nuevo": "colaboracion_cadena_suministro -> equipo_conjunto_de_mejora_con_proveedores",
+          "cita": {
+            "instrumento": "Pasada C del saneamiento (C-A, lectores de acuerdo)",
+            "motivo": "Quien da el primer paso de colaborar midiendo el efecto latigo y compartiendo datos sigue naturalmente con formar un equipo conjunto con el proveedor que avanza por niveles progresivos hasta operar la cadena como un proceso unico."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: el puente a calidad se ancla en el nucleo."
+        },
+        {
+          "id": "d27-arista-02",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_QUITADA",
+          "texto_anterior": "colaboracion_transporte_ctm -> equipo_conjunto_de_mejora_con_proveedores",
+          "texto_nuevo": "",
+          "cita": {
+            "instrumento": "Decision del fundador del 27 sep 2026, punto 1",
+            "motivo": "El puente a calidad deja de salir de colaboracion_transporte_ctm, que pasa a entrega; lo reemplaza colaboracion_cadena_suministro -> equipo_conjunto_de_mejora_con_proveedores."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista de entrega a calidad que el reanclaje reemplaza sale."
+        }
       ]
     },
     "equipo_customer_development": {
@@ -76600,8 +76755,7 @@
         "decision_egalitaria_vs_jerarquica"
       ],
       "nodos_siguientes": [
-        "rotacion_equipo_fundador",
-        "enfoque_situacional_vs_personal"
+        "rotacion_equipo_fundador"
       ],
       "condiciones_activacion": [
         "Cuando surgen tensiones recurrentes entre cofundadores",
@@ -76611,6 +76765,21 @@
       "etiqueta_arbol": "Distingue Conflictos entre Socios",
       "fuentes_internas": [
         "The Founder's Dilemmas - Wasserman, Noam"
+      ],
+      "correcciones": [
+        {
+          "id": "d27-arista-06",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_QUITADA",
+          "texto_anterior": "gestion_de_conflictos_cofundadores -> enfoque_situacional_vs_personal",
+          "texto_nuevo": "",
+          "cita": {
+            "instrumento": "Pasada P del saneamiento (P2-08)",
+            "motivo": "Los dos lectores de la pasada P juzgaron debil este puente: los conflictos entre cofundadores no llevan al enfoque situacional de la seguridad."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 2: se rechaza el puente."
+        }
       ]
     },
     "gestion_de_errores": {
@@ -107120,7 +107289,6 @@
         "definicion_alineacion_cadena_suministro"
       ],
       "nodos_siguientes": [
-        "colaboracion_transporte_ctm",
         "outsourcing_funciones_franquicia"
       ],
       "condiciones_activacion": [
@@ -107130,6 +107298,21 @@
       "etiqueta_arbol": "Terceriza lo que No es Núcleo",
       "fuentes_internas": [
         "Essentials of Supply Chain Management - Michael H. Hugos"
+      ],
+      "correcciones": [
+        {
+          "id": "d27-arista-05",
+          "fecha": "2026-09-27",
+          "campo": "aristas",
+          "veredicto": "ARISTA_QUITADA",
+          "texto_anterior": "outsourcing_cadena_suministro -> colaboracion_transporte_ctm",
+          "texto_nuevo": "",
+          "cita": {
+            "instrumento": "Pasada C del saneamiento (C-C3, lectores de acuerdo)",
+            "motivo": "El outsourcing trata de ceder operaciones no centrales a especialistas, mientras que la gestion colaborativa de transporte une a empresas pares para consolidar carga, asi que no es su siguiente paso natural."
+          },
+          "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista del nucleo a entrega que no es puente sale."
+        }
       ]
     },
     "outsourcing_funciones_franquicia": {
@@ -159185,7 +159368,6 @@
       "cohort_analysis_retencion",
       "colaboracion_cadena_suministro",
       "colaboracion_creador_consumidor",
-      "colaboracion_transporte_ctm",
       "collaboration_enablers",
       "collaboration_roadblocks",
       "collaborative_transportation_management",
@@ -160704,6 +160886,7 @@
       "aplicar_regla_fija_de_colchon_de_relleno",
       "calcular_peso_dimensional_antes_cotizar",
       "clasificar_tipo_paquete",
+      "colaboracion_transporte_ctm",
       "colocar_etiquetas_de_manejo_correctamente",
       "conocer_limites_peso_tamano_courier",
       "decidir_cobro_velocidad_ventana_entrega",

@@ -17,7 +17,6 @@
     "definicion_alineacion_cadena_suministro"
   ],
   "nodos_siguientes": [
-    "colaboracion_transporte_ctm",
     "outsourcing_funciones_franquicia"
   ],
   "condiciones_activacion": [
@@ -27,5 +26,20 @@
   "etiqueta_arbol": "Terceriza lo que No es Núcleo",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "d27-arista-05",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "outsourcing_cadena_suministro -> colaboracion_transporte_ctm",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada C del saneamiento (C-C3, lectores de acuerdo)",
+        "motivo": "El outsourcing trata de ceder operaciones no centrales a especialistas, mientras que la gestion colaborativa de transporte une a empresas pares para consolidar carga, asi que no es su siguiente paso natural."
+      },
+      "decision": "Decisiones del fundador del 27 sep 2026, punto 1: la arista del nucleo a entrega que no es puente sale."
+    }
   ]
 }

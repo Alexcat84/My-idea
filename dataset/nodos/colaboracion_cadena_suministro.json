@@ -17,7 +17,8 @@
     "sales_operations_planning"
   ],
   "nodos_siguientes": [
-    "optimizacion_tecnologia_cadena_suministro"
+    "optimizacion_tecnologia_cadena_suministro",
+    "equipo_conjunto_de_mejora_con_proveedores"
   ],
   "condiciones_activacion": [
     "Cuando la empresa sufre variabilidad de demanda no explicada por ventas reales",
@@ -26,5 +27,20 @@
   "etiqueta_arbol": "Mide y Comparte con tu Cadena",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "d27-arista-01",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "colaboracion_cadena_suministro -> equipo_conjunto_de_mejora_con_proveedores",
+      "cita": {
+        "instrumento": "Pasada C del saneamiento (C-A, lectores de acuerdo)",
+        "motivo": "Quien da el primer paso de colaborar midiendo el efecto latigo y compartiendo datos sigue naturalmente con formar un equipo conjunto con el proveedor que avanza por niveles progresivos hasta operar la cadena como un proceso unico."
+      },
+      "decision": "Decisiones del fundador del 27 sep 2026, punto 1: el puente a calidad se ancla en el nucleo."
+    }
   ]
 }

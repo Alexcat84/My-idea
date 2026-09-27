@@ -14928,7 +14928,8 @@
         "sales_operations_planning"
       ],
       "nodos_siguientes": [
-        "optimizacion_tecnologia_cadena_suministro"
+        "optimizacion_tecnologia_cadena_suministro",
+        "equipo_conjunto_de_mejora_con_proveedores"
       ],
       "condiciones_activacion": [
         "Cuando la empresa sufre variabilidad de demanda no explicada por ventas reales",
@@ -15016,7 +15017,7 @@
     "colaboracion_transporte_ctm": {
       "node_id": "colaboracion_transporte_ctm",
       "fase_proyecto": "ejecucion",
-      "dominio": "core",
+      "dominio": "entrega",
       "titulo_concepto": "Gestión Colaborativa de Transporte (CTM)",
       "resumen_teorico": "La gestión colaborativa de transporte (CTM) permite a empresas más pequeñas, incluso competidoras, unir fuerzas para consolidar embarques y reducir costos de transporte significativamente (hasta 25% según el caso Just Born). El éxito depende de habilitadores humanos como confianza, apertura, liderazgo y beneficios compartidos, superando obstáculos como el control de información propietaria y la falta de estándares.",
       "pasos_accionables": [
@@ -15029,14 +15030,11 @@
       ],
       "entregable_esperado": "Acuerdo de colaboración de transporte (CTM) con socios definidos, modelo de red optimizado y métricas de ahorro esperado",
       "nodos_previos": [
-        "outsourcing_cadena_suministro",
         "programacion_entregas_delivery_scheduling",
         "collaboration_roadblocks",
-        "definicion_alineacion_cadena_suministro",
         "stakeholder_mapping_wheel"
       ],
       "nodos_siguientes": [
-        "equipo_conjunto_de_mejora_con_proveedores",
         "collaboration_enablers",
         "scorecard_desempeno_cadena_suministro"
       ],
@@ -15066,7 +15064,8 @@
       ],
       "entregable_esperado": "Checklist de habilitadores presentes/ausentes y plan de acción para fortalecer los débiles",
       "nodos_previos": [
-        "colaboracion_transporte_ctm"
+        "colaboracion_transporte_ctm",
+        "coordinacion_colaboracion_cadena_suministro"
       ],
       "nodos_siguientes": [
         "collaboration_roadblocks",
@@ -20933,7 +20932,8 @@
       ],
       "nodos_siguientes": [
         "ciclo_virtuoso_datos_electronicos",
-        "plataforma_colaboracion_tiempo_real"
+        "plataforma_colaboracion_tiempo_real",
+        "collaboration_enablers"
       ],
       "condiciones_activacion": [
         "Cuando la empresa depende de un ecosistema de proveedores/socios para innovar",
@@ -28271,7 +28271,6 @@
         "driver_produccion",
         "arquitectura_tecnica_modular",
         "bucle_retroalimentacion_autoajustable",
-        "colaboracion_transporte_ctm",
         "marco_analisis_mercado_cadena_suministro",
         "gestion_procurement_consumo",
         "gestion_riesgo_cadena_suministro",
@@ -40809,8 +40808,7 @@
       "entregable_esperado": "Guía de decisión personal para intervenciones de error que priorice mejoras situacionales sobre medidas disciplinarias individuales",
       "nodos_previos": [
         "ciclo_de_culpa_2",
-        "errores_como_consecuencia",
-        "gestion_de_conflictos_cofundadores"
+        "errores_como_consecuencia"
       ],
       "nodos_siguientes": [
         "tripod_delta_general_failure_types",
@@ -41584,9 +41582,9 @@
         "analisis_pareto_de_proveedores",
         "punto_equilibrio_calidad_inspeccion",
         "regla_todo_o_nada_inspeccion_2",
-        "colaboracion_transporte_ctm",
         "logistica_inversa_retornos",
-        "marco_analisis_mercado_cadena_suministro"
+        "marco_analisis_mercado_cadena_suministro",
+        "colaboracion_cadena_suministro"
       ],
       "nodos_siguientes": [
         "planificacion_de_la_inspeccion",
@@ -55129,8 +55127,7 @@
         "decision_egalitaria_vs_jerarquica"
       ],
       "nodos_siguientes": [
-        "rotacion_equipo_fundador",
-        "enfoque_situacional_vs_personal"
+        "rotacion_equipo_fundador"
       ],
       "condiciones_activacion": [
         "Cuando surgen tensiones recurrentes entre cofundadores",
@@ -77036,7 +77033,6 @@
         "definicion_alineacion_cadena_suministro"
       ],
       "nodos_siguientes": [
-        "colaboracion_transporte_ctm",
         "outsourcing_funciones_franquicia"
       ],
       "condiciones_activacion": [
@@ -115355,7 +115351,6 @@
       "cohort_analysis_retencion",
       "colaboracion_cadena_suministro",
       "colaboracion_creador_consumidor",
-      "colaboracion_transporte_ctm",
       "collaboration_enablers",
       "collaboration_roadblocks",
       "collaborative_transportation_management",
@@ -116874,6 +116869,7 @@
       "aplicar_regla_fija_de_colchon_de_relleno",
       "calcular_peso_dimensional_antes_cotizar",
       "clasificar_tipo_paquete",
+      "colaboracion_transporte_ctm",
       "colocar_etiquetas_de_manejo_correctamente",
       "conocer_limites_peso_tamano_courier",
       "decidir_cobro_velocidad_ventana_entrega",

@@ -1,5 +1,5 @@
 {
-  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; regla max 2 por ancla core aplicada; rechazados: 4 usos extra de calidad_de_ejecucion_proceso_innovacion, 2 pares de seed_deals por trampa semantica, 1 redundante de ROI, 1 vago de capacidad). | 2026-08-07: un puente apuntaba a un nodo deprecado por la fusion y se REDIRIGIO a su superviviente. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | ronda 2 de fusion: puente redirigido a su superviviente. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md).",
+  "nota": "Propuesta del auditor APROBADA POR EL USUARIO (12 puentes; regla max 2 por ancla core aplicada; rechazados: 4 usos extra de calidad_de_ejecucion_proceso_innovacion, 2 pares de seed_deals por trampa semantica, 1 redundante de ROI, 1 vago de capacidad). | 2026-08-07: un puente apuntaba a un nodo deprecado por la fusion y se REDIRIGIO a su superviviente. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | ronda 2 de fusion: puente redirigido a su superviviente. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md). | 2026-09-27: el puente de colaboracion_transporte_ctm se reancla en colaboracion_cadena_suministro (colaboracion_transporte_ctm pasa a entrega).",
   "aprobados": [
     {
       "core": "reglas_brainstorming",
@@ -100,14 +100,6 @@
       "lectura": "Pasada P del saneamiento (P3-15): El proceso Abastecer del modelo SCOR se profundiza de forma razonable en la planificacion de la calidad del abastecimiento."
     },
     {
-      "core": "colaboracion_transporte_ctm",
-      "dominio": "equipo_conjunto_de_mejora_con_proveedores",
-      "score": 0.6415,
-      "declarado_de_arista_existente": true,
-      "fuerza_leida": 2,
-      "lectura": "Pasada P del saneamiento (P3-09): Colaborar entre empresas en transporte lleva de forma razonable al equipo conjunto comprador-proveedor para mejorar la cadena."
-    },
-    {
       "core": "guias_diseno_sistemas_estrategicos",
       "dominio": "revision_diseno",
       "score": 0.5721,
@@ -186,6 +178,13 @@
       "declarado_de_arista_existente": true,
       "fuerza_leida": 1,
       "lectura": "Pasada P del saneamiento (P2-17): Las devoluciones apuntan a causas que hay que corregir en origen, y un equipo conjunto con el proveedor contra problemas cronicos es un siguiente paso posible, aunque debil."
+    },
+    {
+      "core": "colaboracion_cadena_suministro",
+      "dominio": "equipo_conjunto_de_mejora_con_proveedores",
+      "score": 0.7729,
+      "reanclado_de": "colaboracion_transporte_ctm",
+      "lectura": "Pasada C del saneamiento (C-A, lectores de acuerdo): Quien da el primer paso de colaborar midiendo el efecto latigo y compartiendo datos sigue naturalmente con formar un equipo conjunto con el proveedor que avanza por niveles progresivos hasta operar la cadena como un proceso unico."
     }
   ],
   "rechazados": [
@@ -194,6 +193,15 @@
       "dominio": "medicion_servicios",
       "score": 0.85,
       "motivo": "Arista juzgada rancia en la pasada R del saneamiento (t2-arista-135): El trabajo previo de estudio de mercado y analisis tecnico para desarrollar productos no prepara la medicion de la calidad en areas administrativas y de servicio. Son temas distintos."
+    },
+    {
+      "core": "colaboracion_transporte_ctm",
+      "dominio": "equipo_conjunto_de_mejora_con_proveedores",
+      "score": 0.6415,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada P del saneamiento (P3-09): Colaborar entre empresas en transporte lleva de forma razonable al equipo conjunto comprador-proveedor para mejorar la cadena.",
+      "motivo": "colaboracion_transporte_ctm pasa a entrega (decision del fundador del 27 sep 2026): el puente se reancla en colaboracion_cadena_suministro."
     }
   ]
 }

@@ -13,26 +13,25 @@ integrar todavia.
 
 ## ESTADO DE UN VISTAZO
 
-| # | criterio | estado |
+| # | criterio | estado (27 sep 2026, cierre de la tanda 2) |
 |---|---|---|
 | 1 | Duplicados y fusiones | VERIFICADO |
 | 2 | Pasos contra su libro | VERIFICADO |
 | 3 | Etiquetas del riel contra su nodo, y su vigencia en las traducciones | VERIFICADO |
 | 4 | Identificadores | VERIFICADO |
-| 5 | Fuentes | VERIFICADO |
-| 6 | Aristas por lectura | A MEDIAS (el mandato lo daba por VERIFICADO; ver la fila) |
-| 7 | Indice semantico | A MEDIAS (el mandato lo daba por VERIFICADO; ver la fila) |
-| 8 | Resumenes y entregables | A MEDIAS |
-| 9 | Los 61 puentes al nucleo sin declarar | VERIFICADO (tanda 2: aprobados igual a aristas en los 9 mundos, ley del ancla en 2, guarda) |
-| 10 | Vigencia de contenido legal, normativo, numerico y de enlaces | A MEDIAS (tanda 1: aviso en 305 nodos, enlaces comprobados, 21 plazos verificados; el resto, campania posterior) |
+| 5 | Fuentes | VERIFICADO (y desde el 27 sep: `fuentes_internas` completas por nodo, guarda; ningun libro ni autor llega al cliente, guardas) |
+| 6 | Aristas por lectura | A MEDIAS: leidas las nuevas, los pares bidireccionales, las 2.212 que tocan a los nodos corregidos (R), las 61 del nucleo a un mundo (P) y las entradas nuevas (E, C); quedan sin leer una a una unas 4.900 de las 7.162 aristas vivas, las 477 que faltan, 45 nodos del nucleo inalcanzables andando solo por el nucleo y 240 nodos sin sucesor |
+| 7 | Indice semantico | A MEDIAS: cobertura completa; **252 nodos llevan el vector de su texto viejo**, a la sesion con credencial |
+| 8 | Resumenes y entregables | A MEDIAS: contrarios y anadidos de cifra, plazo o norma, cero; los anadidos practicos no se midieron |
+| 9 | Los 61 puentes al nucleo sin declarar | VERIFICADO (tanda 2 y 27 sep: aprobados igual a aristas en los 9 mundos, ley del ancla en 2, guarda) |
+| 10 | Vigencia de contenido legal, normativo, numerico y de enlaces | A MEDIAS: aviso sin libro en 305 nodos, enlaces comprobados, 21 plazos verificados; el resto es la campania de vigencia |
 | 11 | Jurisdiccion (nodos propios de un pais) | VERIFICADO (tanda 1: 237 nodos con clase, aviso en la tarjeta, guarda) |
-| 12 | Coherencia interna de cada nodo | A MEDIAS (tanda 1: los 25 corregidos contra su libro; residuo estimado sin localizar) |
-| 13 | Aristas rancias tras las correcciones | VERIFICADO (tanda 2: las 136 rancias fuera, 54 referencias a deprecados recableadas, ningun nodo sin camino) |
-| 14 | Titulos y condiciones de activacion contra su contenido | A MEDIAS (muestra: 0,0 y 0,3 por ciento; el caso hallado, corregido; sin pasada completa) |
-| 15 | Fase y dominio de cada nodo | A MEDIAS (tanda 2: fase leida en los 853 de validacion e ideacion, 326 corregidas; planificacion y ejecucion sin pasada; 1 dominio corregido, 1 retenido para el fundador) |
+| 12 | Coherencia interna de cada nodo | A MEDIAS: los 25 hallados en los 3.169, corregidos contra su libro; un residuo estimado (unos 19) sin localizar |
+| 13 | Aristas rancias tras las correcciones | VERIFICADO (tanda 2: 136 fuera, 54 recableadas, ningun nodo sin camino) |
+| 14 | Titulos y condiciones de activacion contra su contenido | A MEDIAS: muestra de 300 (0,0 y 0,3 por ciento); el caso hallado, corregido; sin pasada completa (unas 10 condiciones estimadas) |
+| 15 | Fase y dominio de cada nodo | A MEDIAS: fase leida en los 853 de validacion e ideacion (326 corregidas); planificacion y ejecucion (2.635) sin pasada, error de muestra 1 y 3 por ciento (unos 60); dominio, los 2 de la muestra corregidos, unos 20 estimados sin localizar |
 | 16 | Ortografia y voz de la casa | PENDIENTE |
-| 17 | Mundo 11 contra el catalogo (puerta semantica en la integracion) | PENDIENTE |
-
+| 17 | Mundo 11 contra el catalogo | PENDIENTE (en la integracion, por la aduana semantica) |
 ---
 
 ## VERIFICADOS
@@ -100,7 +99,7 @@ integrar todavia.
 - **Por que A MEDIAS:** solo busco CONTRARIOS y ANADIDOS de cifra, plazo o norma; los anadidos practicos y la
   coherencia del resumen y del entregable con los pasos no se midieron (criterio 12).
 
-### 9. Los 61 puentes al nucleo sin declarar: A MEDIAS
+### 9. Los 61 puentes al nucleo sin declarar: VERIFICADO (ver TANDA 2 y las decisiones del 27 sep)
 - **Evidencia:** AUD-09 M53 (`docs/audits/AUD-09-Recorrido_Completo_2026-09-23.md`) y la ficha
   `puentes-reanclados-sin-tejer` (`docs/PENDIENTES.md`). Reproducido hoy: 112 puentes aprobados, 151 aristas vivas de
   nucleo a mundo, **61 fuera de todo `bridges_aprobados`** (48 a quality, 7 a health_safety, 6 a environmental).
@@ -109,8 +108,8 @@ integrar todavia.
 
 ## PENDIENTES
 
-### 10. Vigencia de contenido legal, normativo, numerico y de enlaces: PENDIENTE
-### 11. Jurisdiccion: PENDIENTE
+### 10. Vigencia de contenido legal, normativo, numerico y de enlaces: A MEDIAS (ver TANDA 1)
+### 11. Jurisdiccion: VERIFICADO (ver TANDA 1)
 - **La politica existe** ("marco contra pais", agosto 2026), repartida en adjudicaciones: `docs/PENDIENTES.md`
   (ficha `vigencia-del-marco-internacional`, doctrina de la clase), `packs/exportacion/poda/ADJUDICACION_MARCO_VS_PAIS.md`,
   `packs/_core/poda/REGULACION_EEUU_NUCLEO.md`, `packs/_core/poda/_frontera_eeuu.json`, `_reencuadre_clase.json`,
@@ -119,10 +118,10 @@ integrar todavia.
 - La regla "contratar, nomina y despido como metodo, nunca como norma" **no aparece escrita** en el repo.
 - **Medicion en curso** (ver MEDICIONES).
 
-### 12. Coherencia interna de cada nodo: PENDIENTE (medicion en curso)
-### 13. Aristas rancias tras las correcciones: PENDIENTE (medicion en curso)
-### 14. Titulos y condiciones de activacion contra su contenido: PENDIENTE (medicion en curso, muestra con semilla)
-### 15. Fase y dominio de cada nodo: PENDIENTE (medicion en curso, muestra con semilla)
+### 12. Coherencia interna de cada nodo: A MEDIAS (ver pasada K y TANDA 1)
+### 13. Aristas rancias tras las correcciones: VERIFICADO (ver TANDA 2)
+### 14. Titulos y condiciones de activacion contra su contenido: A MEDIAS (ver pasada M y TANDA 2)
+### 15. Fase y dominio de cada nodo: A MEDIAS (ver TANDA 2; las cifras de abajo son de antes)
 - Hoy, vivos por fase: ejecucion 1.333, planificacion 983, validacion 452, ideacion 401; por dominio: core 1.439,
   quality 692, environmental 265, health_safety 260, franquicias 182, exportacion 131, risk_management 55,
   seguridad_digital 52, entrega 47, compras 46.
@@ -361,7 +360,7 @@ en los dos nodos); fase, dominio y coherencia con los veredictos nuevos FASE, DO
      `regalos_estrategicos_personalizados` que contradecian el contenido se reescriben desde sus pasos.
 
 **Para el fundador:**
-- **Retenido:** `colaboracion_transporte_ctm` (la muestra M lo ve de entrega, no del nucleo). No se movio: es ancla de un
+- **Retenido (decidido el 27 sep: pasa a entrega, ver abajo):** `colaboracion_transporte_ctm` (la muestra M lo ve de entrega, no del nucleo). No se movio: es ancla de un
   puente aprobado a quality, 4 nodos del nucleo entran por el, y sacarlo del nucleo lo cierra tras el mundo de entrega.
   Es decision de producto: moverlo (y declarar sus puentes) o dejarlo en el nucleo.
 - **Aviso:** el puente aprobado `gestion_de_conflictos_cofundadores` hacia `enfoque_situacional_vs_personal`
@@ -370,4 +369,40 @@ en los dos nodos); fase, dominio y coherencia con los veredictos nuevos FASE, DO
 
 **Textos derivados:** las 2 condiciones nuevas entran al vector: `regalos_estrategicos_personalizados` se suma a
 `nodos_a_reembeber.txt` (252). Fase, dominio y aristas no cambian vectores ni preguntas en cache.
+
+---
+
+## DECISIONES DEL FUNDADOR (27 sep 2026, cierre de la tanda 2). CERRADA
+
+1. **`colaboracion_transporte_ctm` pasa a entrega** (correccion declarada DOMINIO, `saneamiento-d27-dominio`). Pasada C
+   (`docs/saneamiento/resultados/C`, dos lectores ciegos, acuerdo en los 6 bloques, sin arbitro):
+   - su puente a calidad se reancla en `colaboracion_cadena_suministro` (ley del ancla intacta); la arista vieja de
+     entrega a calidad sale;
+   - `collaboration_enablers`, el unico nodo del nucleo que solo entraba por el, recibe como predecesor
+     `coordinacion_colaboracion_cadena_suministro`;
+   - de las 4 aristas del nucleo que le llegaban, 2 son puente a entrega y se declaran en su fichero
+     (`collaboration_roadblocks`, `programacion_entregas_delivery_scheduling`) y 2 salen
+     (`definicion_alineacion_cadena_suministro`, `outsourcing_cadena_suministro`).
+2. **El puente `gestion_de_conflictos_cofundadores` hacia `enfoque_situacional_vs_personal` se rechaza** y su arista
+   sale; el nodo conserva sus 2 entradas de su propio mundo (`ciclo_de_culpa_2`, `errores_como_consecuencia`).
+3. Tanda `saneamiento-d27-aristas` (6 operaciones en 9 nodos). **Alcanzabilidad 100 por ciento** (3.169 de 3.169) en
+   Gate 0; `collaboration_enablers` se alcanza andando solo por el nucleo. Gate 0, motor (32 de 32), vitest (2.017) y
+   tsc en verde; 126 puentes aprobados en 9 mundos, todos tejidos.
+
+## ESTADO FINAL: LO QUE FALTA PARA DECLARAR EL DATASET SANEADO
+
+Verificados: 1, 2, 3, 4, 5, 9, 11 y 13. **No se declara saneado todavia**: quedan nueve criterios, en este orden de
+peso para el cliente.
+
+| # | lo que falta | como se cierra |
+|---|---|---|
+| 15 | Fase de los 2.635 nodos de planificacion y ejecucion (unos 60 mal, por la muestra) y dominio en todo el catalogo (unos 20) | Pasada F con la misma vara sobre planificacion y ejecucion, y una pasada de dominio; correccion declarada |
+| 14 | Condiciones de activacion en todo el catalogo (unas 10 mal, por la muestra) | Pasada completa de titulos y condiciones contra el contenido |
+| 12 | Residuo de coherencia interna (unos 19 sin localizar) | Segunda pasada K sobre los nodos que la primera dio por coherentes |
+| 8 | Anadidos practicos de resumenes y entregables sin medir | Pasada de anadidos contra el libro |
+| 6 | Unas 4.900 aristas sin leer una a una; 477 que faltan; 45 nodos del nucleo inalcanzables solo por el nucleo; 240 sin sucesor | Pasada de aristas por lectura (tasa medida en R: 6,7 por ciento rancias); tejer las que faltan |
+| 10 | Vigencia: fichas con fecha de verificacion, las normas, cifras e instituciones de los 305 nodos contra su fuente oficial, unos 63 sin marcar, 10 anos de libro BAJA, 4 enlaces rotos | Campania de vigencia |
+| 16 | Ortografia y voz de la casa | Pasada de estilo |
+| 7 | 252 vectores de texto viejo y 66 preguntas a regenerar | Sesion con credencial, cuando el fundador diga "clave cargada" |
+| 17 | Mundo 11 contra el catalogo | En la integracion del mundo 11, por la aduana semantica, con sus libros en la lista canonica y sus fuentes internas |
 
