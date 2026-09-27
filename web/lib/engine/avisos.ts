@@ -3,8 +3,9 @@
  * saneamiento del dataset, tanda 1; docs/POLITICA_MARCO_PAIS.md):
  *   - jurisdiccion (dataset/metadata/jurisdiccion.json): clase B, "Ejemplo de Estados Unidos: busca el
  *     equivalente en tu pais"; clase C, "Aplica si operas o vendes en Estados Unidos". La clase A no avisa.
- *   - vigencia (dataset/metadata/vigencia.json): "Segun [libro], [ano]: verifica la norma vigente en tu pais",
- *     en los nodos con una norma, un plazo legal, una cifra con fecha o una institucion.
+ *   - vigencia (dataset/metadata/vigencia.json): "Esta informacion puede haber cambiado desde [ano]: verifica la
+ *     norma vigente en tu pais", en los nodos con una norma, un plazo legal, una cifra con fecha o una institucion.
+ *     REGLA ESTRICTA (fundador, 26 sep 2026): el aviso NUNCA nombra el libro; el libro vive solo en los metadatos.
  * Las listas son CURADAS y se sincronizan como assets (scripts/sync_assets_web.py). El texto del nodo no se
  * toca: el aviso va aparte, en el idioma de la interfaz. Se resuelve por el mismo resolutor que la etiqueta,
  * asi que una referencia historica avisa lo de quien la representa hoy.
@@ -51,9 +52,7 @@ export function avisosNodo(nid: string, graph: GrafoResoluble, idioma: Locale = 
   const libro = v ? VIGENCIA_LIBROS[v.fuente] : undefined;
   if (libro) {
     avisos.push(
-      libro.anio
-        ? interpolar(t.vigencia, { libro: libro.nombre, anio: libro.anio })
-        : interpolar(t.vigenciaSinAnio, { libro: libro.nombre })
+      libro.anio ? interpolar(t.vigencia, { anio: libro.anio }) : t.vigenciaSinAnio
     );
   }
   return avisos;

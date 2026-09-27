@@ -27,11 +27,29 @@ describe("avisos de la tarjeta: jurisdiccion y vigencia", () => {
     expect(avisosNodo(id!, graph, "fr")).toEqual(["S'applique si tu opères ou vends aux États-Unis."]);
   });
 
-  it("un nodo con vigencia avisa su libro y su ano", () => {
+  it("un nodo con vigencia avisa el ano, sin nombrar el libro", () => {
     const id = Object.keys(VIGENCIA_NODOS).find((k) => !JURISDICCION[k] && VIGENCIA_LIBROS[VIGENCIA_NODOS[k].fuente].anio);
     expect(id).toBeTruthy();
     const libro = VIGENCIA_LIBROS[VIGENCIA_NODOS[id!].fuente];
-    expect(avisosNodo(id!, graph, "es")).toEqual([`Según ${libro.nombre}, ${libro.anio}: verifica la norma vigente en tu país.`]);
+    expect(avisosNodo(id!, graph, "es")).toEqual([`Esta información puede haber cambiado desde ${libro.anio}: verifica la norma vigente en tu país.`]);
+  });
+
+  it("REGLA ESTRICTA (fundador, 26 sep 2026): ningun aviso nombra un libro ni su fuente, en ningun idioma", () => {
+    const titulos = new Set<string>();
+    for (const [fuente, l] of Object.entries(VIGENCIA_LIBROS)) {
+      titulos.add(fuente.toLowerCase());
+      titulos.add(l.nombre.toLowerCase());
+    }
+    const fallos: string[] = [];
+    for (const id of Object.keys(VIGENCIA_NODOS)) {
+      for (const idioma of LOCALES) {
+        for (const aviso of avisosNodo(id, graph, idioma)) {
+          const bajo = aviso.toLowerCase();
+          for (const t of titulos) if (t.length > 3 && bajo.includes(t)) fallos.push(`${id} ${idioma}: "${aviso}"`);
+        }
+      }
+    }
+    expect(fallos.slice(0, 5), `${fallos.length} avisos nombran un libro`).toEqual([]);
   });
 
   it("caso negativo: un nodo sin pais ni vigencia no avisa nada, y la clase A tampoco", () => {
