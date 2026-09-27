@@ -9,7 +9,7 @@
  */
 import type { SupabaseClient } from "@supabase/supabase-js";
 import type { NumerosProyecto } from "./calculadora";
-import type { UsoAcumulado } from "./costmeter";
+import { costoAcumuladoUsd, type UsoAcumulado } from "./costmeter";
 import { ETIQUETAS_CICLO, type CapacidadSemanal, type ChecklistEstado, type ModoCamino, type ModoRuta, type PlanEtiqueta, type ProjectNodeTipo, type SessionTipo } from "./dbContract";
 import type { EstadoRecorrido } from "./engine/recorrido";
 import type { EstadoReporte } from "./engine/reporteFlow";
@@ -492,7 +492,17 @@ export async function guardarEstadoSesion(
   sessionId: string,
   estado: EstadoSesionPersistido
 ): Promise<void> {
-  const { error } = await supabase.from("sessions").update({ estado_recorrido: estado }).eq("id", sessionId);
+  // Costes del vuelo del 27 sep 2026: el coste se escribe en CADA turno, no solo
+  // al cerrar. Una sesion que se queda a medias tambien gasto (turnos, puerta
+  // avanzada) y con costo_usd en 0 ese gasto no aparecia en ninguna cuenta.
+  const { error } = await supabase
+    .from("sessions")
+    .update({
+      estado_recorrido: estado,
+      costo_usd: costoAcumuladoUsd(estado.acumulado),
+      costo_desglose: estado.acumulado.uso_por_componente,
+    })
+    .eq("id", sessionId);
   if (error) throw error;
 }
 

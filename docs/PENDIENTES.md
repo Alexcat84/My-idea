@@ -678,6 +678,24 @@ marca. Un aparcado solo entra al pack cuando tenga una arista real. Si su dispar
 puerta, que es el criterio del fundador del 28 sep 2026: un nodo es puerta legítima si arranca con una situación que
 la persona cuenta y que ningún otro nodo produce.
 
+### Ficha `historial-creditos-rotulos` (abierta el 28 sep 2026, decision del fundador)
+
+El registro de creditos guarda el concepto `mundo_activar` (el nombre de la clave de `web/lib/precios.ts`) cuando se
+entrega un plan de mundo. Hoy el cliente NO lo ve: no hay pantalla ni descarga de su historial de movimientos, y al
+borrar la cuenta el concepto se anonimiza (`app/api/cuenta/eliminar/route.ts:133`). **El dia que exista ese historial,
+el concepto `mundo_activar` se muestra como "Plan del mundo"**; el preview y el diagnostico de un mundo son gratis y
+nunca aparecen como cobro. El rotulo va en el catalogo de textos de la pantalla, no en el registro (el dato no cambia).
+
+### Ficha `m11-preguntas-emprendedor` (abierta el 28 sep 2026, decision del fundador)
+
+Medido: de las 347 preguntas en cache del mundo 11, 14 suponian un jefe, recursos humanos o una empresa grande (12 con
+los patrones afinados de la guarda); de las 465 condiciones, 41 (23 empresa grande, 16 jefe, 3 recursos humanos; las
+condiciones son contenido certificado y solo se midieron). La regla ROLES DE EMPRESA GRANDE esta en el generador
+(`engine/build_question_cache.py`) y en la entrevista (`SYSTEM_INTERPRETE_MULTI`). **Pendiente con la clave:**
+regenerar las 12 de `PENDIENTES_DE_REGENERAR` en `web/lib/engine/preguntasEmprendedor.test.ts` con
+`python engine/build_question_cache.py --patch <ids> --yes`, sincronizar y vaciar esa lista; la guarda falla si una
+regenerada sigue suponiendo un jefe o si una arreglada se queda en la lista.
+
 ### Ficha `integrar-packs-orden-gate0` (abierta el 28 sep 2026, cazada integrando el mundo 11)
 
 `scripts/integrar_packs.py --ejecutar` no puede cerrar solo la integración de un mundo nuevo. Su paso (e) corre el

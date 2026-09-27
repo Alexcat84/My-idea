@@ -243,17 +243,26 @@ function validarCamino(
   return caminoReparado;
 }
 
+/** Lo que la brujula busca: la respuesta del turno Y la prioridad declarada.
+ * Pertinencia (vuelo del 27 sep 2026, mundo 11): con solo la respuesta, los
+ * saltos ofrecidos no traian los nodos que atienden lo que el usuario viene
+ * repitiendo como su urgencia, y la entrevista se iba a otro tema. */
+export function consultaParaBrujula(respuesta: string, prioridad: PrioridadDeclarada | null): string {
+  return [respuesta.trim(), prioridad?.texto?.trim() ?? ""].filter(Boolean).join(" ");
+}
+
 /** Ultimo recurso silencioso: elige el candidato de mayor afinidad de
  * palabras clave con la ultima respuesta del usuario (y el perfil de
- * sesion), en vez de un menu numerado. */
-function elegirPorAfinidad(
+ * sesion, y su prioridad declarada), en vez de un menu numerado. */
+export function elegirPorAfinidad(
   candidatosIds: string[],
   graph: Grafo,
   respuestaUsuario: string | null,
-  perfilSesion: string | null
+  perfilSesion: string | null,
+  prioridad: PrioridadDeclarada | null = null
 ): string | null {
   if (candidatosIds.length === 0) return null;
-  const contexto = tokensCosecha(`${respuestaUsuario ?? ""} ${perfilSesion ?? ""}`);
+  const contexto = tokensCosecha(`${respuestaUsuario ?? ""} ${perfilSesion ?? ""} ${prioridad?.texto ?? ""}`);
   if (contexto.size === 0) return candidatosIds[0];
   const puntaje = (nid: string): number => {
     const n = graph[nid];
@@ -346,7 +355,12 @@ export async function interpretarMultiSalto(
 
   // i18n F5, remedio de F1: el índice está en español; en una idea escrita en
   // otro idioma, la brújula busca con la respuesta traducida al español.
-  const traducida = await consultaAlEspanol(client, respuestaUsuario || textoOriginal, idiomaSalida, acumulado);
+  const traducida = await consultaAlEspanol(
+    client,
+    consultaParaBrujula(respuestaUsuario || textoOriginal, prioridadDeclaradaActual),
+    idiomaSalida,
+    acumulado
+  );
   acumulado = traducida.acumulado;
   if (traducida.fallo && registrarEvento) {
     registrarEvento({ tipo: "consulta_sin_traducir", nodo_actual: actualId, idioma: idiomaSalida });
@@ -543,7 +557,7 @@ export async function interpretarMultiSalto(
     emitirDecisionTurno(resultado);
     return { resultado, acumulado, historialMensajes: nuevoHistorial };
   } catch (segundoError) {
-    const candidato = elegirPorAfinidad(nivel1Ids, graph, respuestaUsuario, perfilSesion);
+    const candidato = elegirPorAfinidad(nivel1Ids, graph, respuestaUsuario, perfilSesion, prioridadDeclaradaActual);
     if (!candidato) {
       return { resultado: null, acumulado, historialMensajes: nuevoHistorial };
     }
