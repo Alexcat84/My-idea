@@ -3,10 +3,9 @@
 > **EL DATASET ESTA SANEADO PARA EL CLIENTE.**
 >
 > Nivel 1 cerrado por la decision del fundador del 27 sep 2026 ("dos niveles de saneamiento"): todos sus criterios
-> verificados por su instrumento, con Gate 0 (alcanzabilidad 100 por ciento), el motor, vitest y tsc en verde. La unica
-> pieza del nivel 1 que no depende de este trabajo es el criterio 7 (252 vectores y 66 preguntas de texto viejo, ahora
-> 349 nodos), que por la misma decision espera a que el fundador diga "clave cargada": no toca ningun texto que vea el
-> cliente, solo la busqueda semantica.
+> verificados por su instrumento, con Gate 0 (alcanzabilidad 100 por ciento), el motor, vitest y tsc en verde. El
+> criterio 7 se cerro en la sesion con credencial ("clave cargada"): el indice semantico reconstruido (los 349 nodos
+> con texto nuevo cambiaron de vector, ningun otro se movio) y las preguntas regeneradas de vuelta en la cache.
 >
 > **Nivel 2, mejora continua (no bloquea esta declaracion)**, cada uno con su ficha y su fecha en `docs/PENDIENTES.md`,
 > seccion 0c:
@@ -37,7 +36,7 @@ integrar todavia.
 | 4 | Identificadores | VERIFICADO |
 | 5 | Fuentes | VERIFICADO (`fuentes_internas` completas; ningun libro ni autor llega al cliente) |
 | 6 | Aristas | VERIFICADO PARA EL CLIENTE: ningun nodo del nucleo sin camino por el nucleo (eran 45); alcanzabilidad 100 por ciento; los 240 sin sucesor, cerrados por diseno. Nivel 2: la lectura de las aristas restantes y las 477 que faltan |
-| 7 | Indice semantico | ESPERA "clave cargada": 349 nodos a re-embeber y 66 preguntas a regenerar |
+| 7 | Indice semantico | VERIFICADO (sesion con credencial: 349 vectores nuevos, 60 preguntas regeneradas; ver abajo) |
 | 8 | Resumenes y entregables | VERIFICADO PARA EL CLIENTE (contrarios y anadidos de cifra, plazo o norma: cero). Nivel 2: la muestra de anadidos practicos |
 | 9 | Los 61 puentes al nucleo sin declarar | VERIFICADO (157 puentes en 9 mundos, todos tejidos, ley del ancla en 2, guarda) |
 | 10 | Vigencia | VERIFICADO PARA EL CLIENTE: aviso sin libro en 305 nodos, 21 plazos verificados, enlaces rotos corregidos o retirados. Nivel 2: la campania completa |
@@ -462,6 +461,19 @@ Todo por correccion declarada en el propio nodo, instrumento y resultados por no
   primero no vio sobre 227 (1,3 por ciento). **1.036 correcciones**: 941 en pasos y entregables (veredicto ORTOGRAFIA),
   87 preguntas y 8 etiquetas (lista `etiquetas_de_cara_v1_ortografia.json`, con sus traducciones reselladas en los diez
   idiomas).
-- **7.** Espera "clave cargada": 349 nodos a re-embeber (`docs/fidelidad/credencial/nodos_a_reembeber.txt`) y 66
-  preguntas a regenerar.
+- **7. Sesion con credencial ("clave cargada", fundador).**
+  - **Indice semantico** reconstruido con `scripts/build_semantic_index_voyage.py` (voyage-4-lite, 3.169 nodos vivos):
+    los **349 nodos** con titulo, resumen o condiciones corregidos cambiaron de vector (coseno con el viejo de 0,889 a
+    0,99976) y **ningun otro se movio** (los 2.820 restantes, de 0,99984 a 1): los dos grupos no se tocan. El umbral de
+    salto sigue separando sus dos puntos de control (0,3511 pasa, 0,2632 fuera): no se toca.
+  - **Preguntas:** de las 66 de la lista, 3 ya no eran nodos vivos (absorbidos por una fusion; sus supervivientes tienen
+    su pregunta); de las 63, **60 regeneradas** con `engine/build_question_cache.py --patch-file` (su modelo,
+    claude-haiku-4-5; coste 0,07 USD): **44 vuelven a la cache** (3.519 a 3.563) y 16 se refrescan desde el texto
+    nuevo; ninguna otra pregunta cambio. 3 no tienen hoy ningun sucesor vivo (`breakup_fee_evaluation`,
+    `comunicacion_interna_post_despido_ejecutivo`, `diseno_organizacional`): entran en los nodos sin sucesor cerrados
+    por diseno (el motor les da salida con la pregunta generica y su etiqueta). Ninguna pregunta nueva nombra un libro ni
+    trae una falta de tilde.
+  - **Ortografia, remate:** el detector de la casa hallo 3 pasos con tildes que la pasada O dejo pasar (el 1,3 por
+    ciento que midio su segundo lector); corregidos (`saneamiento-n1-ortografia-detector`). Las 4 marcas que quedan son
+    palabras en ingles (omission, Mission, Decision Day, Commission).
 

@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Haz una lista de los insumos que compras regularmente.",
     "Marca cuáles representan mayor gasto anual, sin importar qué tan fácil sea reponerlos.",
-    "Marca por separado cuales, si faltan, detienen tu operacion o tus ventas de inmediato.",
+    "Marca por separado cuáles, si faltan, detienen tu operación o tus ventas de inmediato.",
     "Para los insumos críticos y difíciles de reponer rápido, define un stock de seguridad o un segundo proveedor.",
     "Sugerencia de My Idea: revisa esta lista cada pocos meses, porque lo que es crítico puede cambiar."
   ],
@@ -97,6 +97,20 @@
         "evidencia": "O049-003.entregable: cuán, crítico, decisión, qué (Son tildes que faltaban: cuán y qué como interrogativos indirectos, más crítico y decisión.)"
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    },
+    {
+      "id": "n1-orto-det-1",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Marca por separado cuales, si faltan, detienen tu operacion o tus ventas de inmediato.",
+      "texto_nuevo": "Marca por separado cuáles, si faltan, detienen tu operación o tus ventas de inmediato.",
+      "cita": {
+        "instrumento": "Detector de acentos de la casa (web/lib/detectorAcentos.ts, scripts/saneamiento/medirOrtografia.ts)",
+        "evidencia": "Faltas que la pasada O dejo pasar: cuáles, operación"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
     }
   ],
   "fuentes_internas": [

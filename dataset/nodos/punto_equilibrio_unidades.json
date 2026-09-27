@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Clasificar cada costo del proyecto como variable (cambia con las unidades producidas: materiales, tiempo de producción) o fijo (no cambia: renta, herramientas, salarios administrativos)",
     "Sugerencia de My Idea: calcular el margen de contribución por unidad: precio de venta menos costo variable por unidad",
-    "Sugerencia de My Idea: dividir los costos fijos mensuales entre el margen de contribucion por unidad para obtener el punto de equilibrio en unidades por mes",
+    "Sugerencia de My Idea: dividir los costos fijos mensuales entre el margen de contribución por unidad para obtener el punto de equilibrio en unidades por mes",
     "Sugerencia de My Idea: comparar ese número contra la capacidad real de producción: ¿se puede vender esa cantidad con los recursos actuales?",
     "Sugerencia de My Idea: recalcular el punto de equilibrio cada vez que cambien los costos fijos o el precio"
   ],
@@ -169,6 +169,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
       "indice": 3
+    },
+    {
+      "id": "n1-orto-det-3",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: dividir los costos fijos mensuales entre el margen de contribucion por unidad para obtener el punto de equilibrio en unidades por mes",
+      "texto_nuevo": "Sugerencia de My Idea: dividir los costos fijos mensuales entre el margen de contribución por unidad para obtener el punto de equilibrio en unidades por mes",
+      "cita": {
+        "instrumento": "Detector de acentos de la casa (web/lib/detectorAcentos.ts, scripts/saneamiento/medirOrtografia.ts)",
+        "evidencia": "Faltas que la pasada O dejo pasar: contribución"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
     }
   ],
   "fuentes_internas": [
