@@ -1,18 +1,18 @@
 {
   "node_id": "responsabilidad_gerencial_causas_comunes",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "quality",
   "titulo_concepto": "Tu responsabilidad sobre las causas comunes del sistema",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "La mayoria de los problemas de producción vienen de causas comunes, es decir, del propio sistema, y solo quien dirige el negocio puede eliminarlas. No vienen de fallas individuales de las personas que te ayudan. Culpar a alguien por un problema que en realidad es del sistema es un error frecuente y contraproducente. Tu tarea es usar herramientas estadisticas simples para distinguir causas comunes de causas especiales, y asumir de forma continua, no puntual, la mejora del sistema, reemplazando frases motivacionales vacias por métodos reales de mejora.",
   "pasos_accionables": [
     "Aprende a distinguir entre causas comunes (del sistema) y causas especiales (puntuales)",
-    "Usa graficos de control para calcular que porcentaje de los defectos viene de causas comunes y cual de causas especiales",
+    "Usa gráficos de control para calcular qué porcentaje de los defectos viene de causas comunes y cuál de causas especiales",
     "Elimina las frases motivacionales tipo 'trabajo perfecto' que no vienen acompañadas de un método concreto",
-    "Comprometete de forma continua y por escrito a remover las barreras del sistema que impiden que las personas que te ayudan se sientan orgullosas de su trabajo",
-    "Comunica a las personas que te ayudan que solo son responsables de las causas especiales que estan bajo su control, no de las fallas del sistema"
+    "Comprométete de forma continua y por escrito a remover las barreras del sistema que impiden que las personas que te ayudan se sientan orgullosas de su trabajo",
+    "Comunica a las personas que te ayudan que solo son responsables de las causas especiales que están bajo su control, no de las fallas del sistema"
   ],
-  "entregable_esperado": "Un plan escrito de tu responsabilidad sobre el sistema, con las metricas de causas comunes versus causas especiales y tu compromiso de mejora continua",
+  "entregable_esperado": "Un plan escrito de tu responsabilidad sobre el sistema, con las métricas de causas comunes versus causas especiales y tu compromiso de mejora continua",
   "nodos_previos": [
     "abolir_inspeccion_masiva",
     "causas_comunes_vs_especiales",
@@ -41,6 +41,74 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U4-015 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-fase-164",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q093-024: Trata de gestionar y mejorar de forma continua un sistema de producción ya en marcha (gráficos de control, causas comunes frente a especiales, dejar de culpar al personal), que es ejecucion y no planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "n1-orto-0557",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa graficos de control para calcular que porcentaje de los defectos viene de causas comunes y cual de causas especiales",
+      "texto_nuevo": "Usa gráficos de control para calcular qué porcentaje de los defectos viene de causas comunes y cuál de causas especiales",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O048-030.paso1: gráficos, qué, cuál (Solo añade las tildes que faltaban en gráficos, qué y cuál; el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0558",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comprometete de forma continua y por escrito a remover las barreras del sistema que impiden que las personas que te ayudan se sientan orgullosas de su trabajo",
+      "texto_nuevo": "Comprométete de forma continua y por escrito a remover las barreras del sistema que impiden que las personas que te ayudan se sientan orgullosas de su trabajo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O048-030.paso3: Comprométete (Comprométete es esdrújula y lleva tilde; no hay otros cambios.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0559",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comunica a las personas que te ayudan que solo son responsables de las causas especiales que estan bajo su control, no de las fallas del sistema",
+      "texto_nuevo": "Comunica a las personas que te ayudan que solo son responsables de las causas especiales que están bajo su control, no de las fallas del sistema",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O048-030.paso4: están (Añade la tilde que faltaba en están; no hay otros cambios.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0560",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un plan escrito de tu responsabilidad sobre el sistema, con las metricas de causas comunes versus causas especiales y tu compromiso de mejora continua",
+      "texto_nuevo": "Un plan escrito de tu responsabilidad sobre el sistema, con las métricas de causas comunes versus causas especiales y tu compromiso de mejora continua",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O048-030.entregable: métricas (Añade la tilde que faltaba en métricas; no hay otros cambios.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

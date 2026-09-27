@@ -20,11 +20,27 @@
     "import_regulations_foreign_governments"
   ],
   "condiciones_activacion": [
-    "Si el usuario negocia con funcionarios de gobiernos extranjeros o partidos políticos",
+    "Si tu empresa es de Estados Unidos u opera allí y negocia con funcionarios de gobiernos extranjeros o partidos políticos",
     "Si el usuario contrata agentes o distribuidores en el extranjero"
   ],
   "etiqueta_arbol": "Evita Sobornos en el Extranjero",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-086",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el usuario negocia con funcionarios de gobiernos extranjeros o partidos políticos",
+      "texto_nuevo": "Si tu empresa es de Estados Unidos u opera allí y negocia con funcionarios de gobiernos extranjeros o partidos políticos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q004-007: Razon para A en el alcance: un solo anclaje a Estados Unidos basta y la condicion 1 queda ok; tomo la redaccion de B (negocia) porque concuerda con el sujeto tu empresa. (arbitro) Motivo: Clase C Estados Unidos: la FCPA aplica a personas o empresas de Estados Unidos o a actos en su territorio, y ninguna condicion lo dice."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

@@ -16,14 +16,14 @@
     "rmf_paso_preparar",
     "fundamentos_gestion_riesgo",
     "plan_gestion_riesgos",
-    "risk_audit"
+    "matriz_probabilidad_impacto"
   ],
   "nodos_siguientes": [
     "limites_autorizacion_sistema"
   ],
   "condiciones_activacion": [
     "Cuando la organización necesita justificar decisiones de inversión en seguridad frente a otras prioridades.",
-    "Al negociar con proveedores el nivel de riesgo aceptable en contratos."
+    "Cuando la organización no ha definido de forma explícita cuánto riesgo de ciberseguridad y privacidad está dispuesta a aceptar."
   ],
   "etiqueta_arbol": "Define tu Tolerancia al Riesgo",
   "fuentes_internas": [
@@ -55,6 +55,46 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del risk_management reemplazo por gestion_riesgo_incremental."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "n1-condicion-071",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Al negociar con proveedores el nivel de riesgo aceptable en contratos.",
+      "texto_nuevo": "Cuando la organización no ha definido de forma explícita cuánto riesgo de ciberseguridad y privacidad está dispuesta a aceptar.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q058-018: Tenia razon A: la condicion de negociar con proveedores el riesgo en contratos no sale ni del resumen ni de los pasos, que tratan de fijar la tolerancia al riesgo interna y comunicarla a liderazgo. (arbitro) Motivo: El contenido no habla de proveedores ni de contratos; trata de definir, documentar y comunicar la tolerancia al riesgo de ciberseguridad y privacidad de la propia organizacion."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    },
+    {
+      "id": "mv-arista-008",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "matriz_probabilidad_impacto -> estrategia_gestion_riesgo_tolerancia",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-B05, lectores de acuerdo)",
+        "motivo": "La matriz ya introduce cuanto riesgo estas dispuesto a aceptar, que la estrategia formaliza como tolerancia."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el puente se ancla en el nucleo."
+    },
+    {
+      "id": "mv-arista-009",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "risk_audit -> estrategia_gestion_riesgo_tolerancia",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B05)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en matriz_probabilidad_impacto."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "node_id": "gestion_riesgo_cadena_suministro",
   "fase_proyecto": "planificacion",
-  "dominio": "core",
+  "dominio": "risk_management",
   "titulo_concepto": "Cómo manejar el riesgo natural y operativo en tu cadena de suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Manejar el riesgo en tu cadena de suministro es un equilibrio constante entre lograr buen desempeño a bajo costo y cuidarte de eventos que puedan interrumpir tu operación. Si eliminas proveedores duplicados, instalaciones extra o stock de seguridad, bajas costos pero subes el riesgo ante una disrupción. Evalúa el riesgo natural (desastres) y operativo (calidad, mano de obra, tipo de cambio, impuestos, infraestructura, robo, terrorismo) de cada país o ubicación donde trabajas, para decidir cuánto stock de seguridad necesitas según cuánto riesgo estás dispuesto a asumir.",
@@ -21,9 +21,7 @@
     "efecto_bullwhip"
   ],
   "nodos_siguientes": [
-    "trade_off_responsividad_eficiencia",
-    "fundamentos_gestion_riesgo",
-    "getting_started_supply_chain_risk_management"
+    "trade_off_responsividad_eficiencia"
   ],
   "condiciones_activacion": [
     "Cuando tu negocio opera en entornos muy cambiantes, inciertos, complejos y difíciles de predecir (conocidos como VUCA)",
@@ -33,5 +31,46 @@
   "etiqueta_arbol": "Equilibra Riesgo y Eficiencia",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-16",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-22: Evaluar el riesgo natural y operativo por país y dimensionar stock de seguridad por instalación es gestión de riesgos de cadena global, no algo que todo emprendedor necesite. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-011",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_riesgo_cadena_suministro -> fundamentos_gestion_riesgo",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B06)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en matriz_probabilidad_impacto."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "mv-arista-013",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_riesgo_cadena_suministro -> getting_started_supply_chain_risk_management",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B07)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en definicion_alineacion_cadena_suministro."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    }
   ]
 }

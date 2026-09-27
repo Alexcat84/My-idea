@@ -9,11 +9,11 @@
     "Consultar publicaciones y directorios del sector privado sobre empresas internacionales",
     "Contactar bancos internacionales para obtener información sobre la empresa extranjera",
     "Revisar los directorios de las secciones comerciales de embajadas extranjeras",
-    "Solicitar reportes de crédito de la empresa extranjera a la oficina de comercio exterior de tu pais",
-    "Pedir un perfil de la empresa a traves de la persona encargada de comercio exterior que te corresponda",
+    "Solicitar reportes de crédito de la empresa extranjera a la oficina de comercio exterior de tu país",
+    "Pedir un perfil de la empresa a través de la persona encargada de comercio exterior que te corresponda",
     "Verificar la información en internet, contrastando fuentes y comprobando que estén actualizadas"
   ],
-  "entregable_esperado": "Un reporte de investigacion y verificacion de la empresa extranjera (solvencia, reputacion, historial comercial) antes de cerrar la transaccion.",
+  "entregable_esperado": "Un reporte de investigación y verificación de la empresa extranjera (solvencia, reputación, historial comercial) antes de cerrar la transacción.",
   "nodos_previos": [
     "respuesta_consultas_internacionales"
   ],
@@ -41,6 +41,47 @@
         "evidencia": "F18-005: Tiene razon el lector A: el nodo se activa al recibir una consulta u orden de un comprador y entrega un informe de solvencia antes de cerrar la transaccion. Es diligencia operativa de un negocio exportador que ya vende, y el 'validar' del texto se refiere a la contraparte, no a probar la idea con el mercado. (arbitro)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0595",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Solicitar reportes de crédito de la empresa extranjera a la oficina de comercio exterior de tu pais",
+      "texto_nuevo": "Solicitar reportes de crédito de la empresa extranjera a la oficina de comercio exterior de tu país",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O052-001.paso3: país (Solo añade la tilde que faltaba en país; el resto queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0596",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pedir un perfil de la empresa a traves de la persona encargada de comercio exterior que te corresponda",
+      "texto_nuevo": "Pedir un perfil de la empresa a través de la persona encargada de comercio exterior que te corresponda",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O052-001.paso4: través (Solo añade la tilde que faltaba en través.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0597",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un reporte de investigacion y verificacion de la empresa extranjera (solvencia, reputacion, historial comercial) antes de cerrar la transaccion.",
+      "texto_nuevo": "Un reporte de investigación y verificación de la empresa extranjera (solvencia, reputación, historial comercial) antes de cerrar la transacción.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O052-001.entregable: investigación, verificación, reputación, transacción (Solo añade las tildes que faltaban en investigación, verificación, reputación y transacción.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

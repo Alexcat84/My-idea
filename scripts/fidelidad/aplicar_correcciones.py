@@ -41,7 +41,7 @@ FASES = {"ideacion", "validacion", "planificacion", "ejecucion"}
 DOMINIOS = {"core", "quality", "health_safety", "environmental", "seguridad_digital", "exportacion", "franquicias",
             "risk_management", "compras", "entrega"}
 # Declarados por una pasada de lectura contra el propio nodo: su cita es {"instrumento", "evidencia"}.
-POR_INSTRUMENTO = {"FASE": "fase_proyecto", "DOMINIO": "dominio", "COHERENCIA": None, "VIGENCIA": None}
+POR_INSTRUMENTO = {"FASE": "fase_proyecto", "DOMINIO": "dominio", "COHERENCIA": None, "VIGENCIA": None, "ORTOGRAFIA": None}
 # Los campos lista se corrigen elemento a elemento, por indice. Las condiciones de
 # activacion entraron el 24 sep 2026: la pasada contra la fuente sobre los campos
 # que no son pasos (docs/fidelidad/CAMPOS_QUE_LLEGAN.md) llegan a la IA. La etiqueta

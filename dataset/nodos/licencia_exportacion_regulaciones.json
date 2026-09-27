@@ -23,7 +23,7 @@
     "plan_cumplimiento_exportacion"
   ],
   "condiciones_activacion": [
-    "Si la empresa está por iniciar su primera exportación",
+    "Si tu empresa opera en Estados Unidos y está por iniciar su primera exportación",
     "Si el producto tiene aplicaciones duales (comerciales y militares)",
     "Si se va a exportar a un nuevo país o comprador"
   ],
@@ -72,6 +72,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 10: los enlaces rotos, corregidos o retirados.",
       "indice": 2
+    },
+    {
+      "id": "n1-condicion-117",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si la empresa está por iniciar su primera exportación",
+      "texto_nuevo": "Si tu empresa opera en Estados Unidos y está por iniciar su primera exportación",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-011: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: ninguna condición dice que aplica si exportas desde Estados Unidos, que es donde rigen EAR, ITAR y OFAC."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ]
 }

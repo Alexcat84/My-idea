@@ -6,7 +6,7 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "El caso de la empresa HPA es un ejemplo práctico del programa de 14 pasos para instalar una actitud de prevención de defectos en todo tu negocio. El caso muestra cómo una empresa atrapada en un ciclo de apagar incendios (resolver problemas que ya ocurrieron) puede pasar a la prevención mediante un compromiso genuino tuyo como responsable del negocio, empezando por reconocer con claridad que estás corrigiendo en lugar de prevenir, y que hace falta un cambio de actitud que lideres tú junto con la persona que te ayuda con la calidad.",
   "pasos_accionables": [
-    "Reconocer con claridad si estas en modo reactivo (corrigiendo) en lugar de preventivo",
+    "Reconocer con claridad si estás en modo reactivo (corrigiendo) en lugar de preventivo",
     "Tener una conversación directa con la persona que te ayuda con la calidad sobre el cambio de actitud necesario",
     "Acordar que el objetivo es lograr que todo tu negocio se comprometa con la prevención de defectos",
     "Antes de comunicar el programa a todos, asegurarte de que las personas clave entiendan bien la situación, el programa y lo que implica",
@@ -41,6 +41,20 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U2-007 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "n1-orto-0332",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Reconocer con claridad si estas en modo reactivo (corrigiendo) en lugar de preventivo",
+      "texto_nuevo": "Reconocer con claridad si estás en modo reactivo (corrigiendo) en lugar de preventivo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O028-040.paso0: estás (Tilde que faltaba en estás.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
     }
   ],
   "fuentes_internas": [

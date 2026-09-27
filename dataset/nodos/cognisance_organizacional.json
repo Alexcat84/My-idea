@@ -1,6 +1,6 @@
 {
   "node_id": "cognisance_organizacional",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Cognisance: Conciencia Organizacional del Peligro",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
@@ -26,5 +26,20 @@
   "etiqueta_arbol": "Mantén Conciencia de tus Peligros",
   "fuentes_internas": [
     "Managing the Risks of Organizat - Reason, J. T_"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-022",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q087-012: Es un diagnostico y refuerzo de la conciencia del peligro en una organizacion que ya opera (largos periodos sin accidentes, medidas ya implantadas), gestion operativa, no planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

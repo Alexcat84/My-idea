@@ -23,7 +23,7 @@
   ],
   "condiciones_activacion": [
     "Cuando necesitas ajustar el presupuesto de marketing de tus franquicias",
-    "Cuando recién empiezas y todavía tienes pocos datos históricos de ventas"
+    "Cuando recién empiezas a vender franquicias y todavía tienes muy pocas ventas para juzgar qué canales de marketing te funcionan"
   ],
   "etiqueta_arbol": "Mide tus Resultados de Marketing",
   "correcciones": [
@@ -57,6 +57,20 @@
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 10: los enlaces rotos, corregidos o retirados.",
       "indice": 2
+    },
+    {
+      "id": "n1-condicion-123",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando recién empiezas y todavía tienes pocos datos históricos de ventas",
+      "texto_nuevo": "Cuando recién empiezas a vender franquicias y todavía tienes muy pocas ventas para juzgar qué canales de marketing te funcionan",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q089-010: La segunda condicion no dice que se trate del marketing de franquicias. (lector y verificador de acuerdo) Motivo: Es generica: no dice que se trate de medir el marketing de la venta de franquicias, asi que aplicaria a cualquier negocio nuevo con pocos datos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
     }
   ],
   "fuentes_internas": [

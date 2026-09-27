@@ -1,18 +1,18 @@
 {
   "node_id": "desconexion_ventas_experiencia",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "core",
   "titulo_concepto": "La desconexion entre vender y cumplir lo prometido después",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
   "resumen_teorico": "En muchos negocios, quien cierra la venta no es quien después entrega la experiencia al cliente. Si vendes pensando solo en cerrar cuentas nuevas, no tienes ningun incentivo para cuidar que el traspaso hacia quien atiende o entrega sea fluido. Así, la información que el cliente te compartio (sus necesidades, sus expectativas, el porque de su compra) se pierde en el camino, y el cliente se frustra cuando la persona que lo atiende después no sabe lo que le prometiste.",
   "pasos_accionables": [
-    "Traza el camino que sigue un cliente entre la venta y la entrega, y anota que información se pierde en ese traspaso",
-    "Revisa como te pagas o incentivas a quien vende, para que también le importe que el cliente se quede contento y se quede contigo, no solo cerrar cuentas nuevas",
-    "Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después, en concreto lo que el cliente necesita, qué le prometiste y sus preferencias",
+    "Traza el camino que sigue un cliente entre la venta y la entrega, y anota qué información se pierde en ese traspaso",
+    "Revisa cómo te pagas o incentivas a quien vende, para que también le importe que el cliente se quede contento y se quede contigo, no solo cerrar cuentas nuevas",
+    "Usa una herramienta (CRM) que guarde y pase de forma automática la información relevante del cliente hacia quien lo va a atender después, en concreto lo que el cliente necesita, qué le prometiste y sus preferencias",
     "Sugerencia de My Idea: crea un protocolo claro de traspaso, por ejemplo una reunión conjunta entre el cliente, quien vendió y quien sigue atendiéndolo, empezando por tus clientes más importantes",
     "De vez en cuando revisa si lo que prometiste al vender coincide con lo que de verdad estás entregando"
   ],
-  "entregable_esperado": "Un proceso documentado de traspaso del cliente (de la venta a la entrega), con una herramienta (CRM) configurada y con metas de retencion ligadas a la venta",
+  "entregable_esperado": "Un proceso documentado de traspaso del cliente (de la venta a la entrega), con una herramienta (CRM) configurada y con metas de retención ligadas a la venta",
   "nodos_previos": [
     "preframing_expectativas"
   ],
@@ -68,6 +68,74 @@
         "motivo": "Primero se ve que se corta la conexión entre quien vende y quien entrega; el traspaso cuidado entre ventas y gestión de cuentas es la solución que sigue."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "n1-fase-052",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q032-008: Corregir el traspaso de la venta a la entrega a partir de quejas y bajas de clientes es gestión operativa de un negocio en marcha, así que es ejecución. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "n1-orto-0914",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Traza el camino que sigue un cliente entre la venta y la entrega, y anota que información se pierde en ese traspaso",
+      "texto_nuevo": "Traza el camino que sigue un cliente entre la venta y la entrega, y anota qué información se pierde en ese traspaso",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O078-003.paso0: qué (Es un interrogativo indirecto y lleva tilde: qué.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0915",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa como te pagas o incentivas a quien vende, para que también le importe que el cliente se quede contento y se quede contigo, no solo cerrar cuentas nuevas",
+      "texto_nuevo": "Revisa cómo te pagas o incentivas a quien vende, para que también le importe que el cliente se quede contento y se quede contigo, no solo cerrar cuentas nuevas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O078-003.paso1: cómo (Es un interrogativo indirecto y lleva tilde: cómo.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0916",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa una herramienta (CRM) que guarde y pase de forma automatica la información relevante del cliente hacia quien lo va a atender después, en concreto lo que el cliente necesita, qué le prometiste y sus preferencias",
+      "texto_nuevo": "Usa una herramienta (CRM) que guarde y pase de forma automática la información relevante del cliente hacia quien lo va a atender después, en concreto lo que el cliente necesita, qué le prometiste y sus preferencias",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O078-003.paso2: automática (Falta la tilde en automática.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0917",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un proceso documentado de traspaso del cliente (de la venta a la entrega), con una herramienta (CRM) configurada y con metas de retencion ligadas a la venta",
+      "texto_nuevo": "Un proceso documentado de traspaso del cliente (de la venta a la entrega), con una herramienta (CRM) configurada y con metas de retención ligadas a la venta",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O078-003.entregable: retención (Falta la tilde en retención.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

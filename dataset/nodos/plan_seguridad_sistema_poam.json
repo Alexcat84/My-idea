@@ -21,11 +21,27 @@
     "auditoria_responsabilidad"
   ],
   "condiciones_activacion": [
-    "Cuando se ha completado la evaluación de requisitos y se necesita documentar el estado de implementación",
+    "Cuando vendes o prestas servicios a agencias federales de Estados Unidos, manejas información CUI y ya completaste la autoevaluación de requisitos de SP 800-171, y necesitas documentar su estado de implementación",
     "Si un requisito no se puede satisfacer inmediatamente y se necesita un plan de mitigación"
   ],
   "etiqueta_arbol": "Planea tu Seguridad y Acciones",
   "fuentes_internas": [
     "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-136",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se ha completado la evaluación de requisitos y se necesita documentar el estado de implementación",
+      "texto_nuevo": "Cuando vendes o prestas servicios a agencias federales de Estados Unidos, manejas información CUI y ya completaste la autoevaluación de requisitos de SP 800-171, y necesitas documentar su estado de implementación",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q006-026: Falta en las condiciones la regla de clase C: que aplica si trabajas con agencias federales de EE.UU. manejando CUI. (lector y verificador de acuerdo) Motivo: Nodo de clase C (NIST SP 800-171, CUI de agencias federales de EE.UU.) y ninguna condicion dice que aplica solo si trabajas o vendes en EE.UU.; ademas no dice de que evaluacion se trata."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

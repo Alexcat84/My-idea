@@ -6,14 +6,14 @@
   "fuente": "SPIN Selling - Neil Rackham",
   "resumen_teorico": "Las preguntas de beneficio son preguntas centradas en la solucion que buscan que el propio cliente exprese el valor de resolver su problema. A diferencia de las preguntas de implicacion, que pueden agravar la incomodidad, estas generan un ambiente positivo y reducen la resistencia a objeciones porque es el cliente quien articula el beneficio, no tu. Los vendedores mas efectivos usan este tipo de pregunta muchas mas veces que el promedio. Es clave no usarlas al inicio de la llamada ni sobre necesidades que no puedes resolver, porque eso solo fortalece una necesidad que no vas a poder satisfacer. El momento optimo es cuando el cliente ya reconoce un problema serio pero todavia no valora la solucion.",
   "pasos_accionables": [
-    "Espera a que el cliente reconozca un problema serio o exprese una necesidad explicita que tu solucion pueda resolver",
-    "Pregunta directamente si resolver eso seria valioso o importante para el, por ejemplo 'seria util para usted resolver esto'",
-    "Pide que explique por que le resultaria valiosa la solucion, dejando que el mismo enuncie los beneficios",
-    "Explora beneficios adicionales con preguntas como 'de que otra forma le ayudaria esto'",
-    "Evita usar estas preguntas al inicio de la conversacion o sobre necesidades que no puedes cubrir",
+    "Espera a que el cliente reconozca un problema serio o exprese una necesidad explícita que tu solución pueda resolver",
+    "Pregunta directamente si resolver eso sería valioso o importante para él, por ejemplo 'sería útil para usted resolver esto'",
+    "Pide que explique por qué le resultaría valiosa la solución, dejando que él mismo enuncie los beneficios",
+    "Explora beneficios adicionales con preguntas como 'de qué otra forma le ayudaría esto'",
+    "Evita usar estas preguntas al inicio de la conversación o sobre necesidades que no puedes cubrir",
     "Guarda las respuestas del cliente en sus propias palabras para usarlas como argumento de cierre"
   ],
-  "entregable_esperado": "Lista de beneficios articulados por el cliente en sus propias palabras, vinculados a sus necesidades explicitas y lista para usarse como argumento de cierre.",
+  "entregable_esperado": "Lista de beneficios articulados por el cliente en sus propias palabras, vinculados a sus necesidades explícitas y lista para usarse como argumento de cierre.",
   "nodos_previos": [
     "planificacion_preguntas_implicacion",
     "necesidades_implicitas_vs_explicitas",
@@ -76,6 +76,89 @@
         "motivo": "Quien ya sabe que las preguntas de beneficio reducen la resistencia porque el cliente expresa el valor pasa de forma natural a diagnosticar si las objeciones de su equipo son un sintoma de haber ofrecido la solucion antes de construir ese valor."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "n1-orto-0868",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Espera a que el cliente reconozca un problema serio o exprese una necesidad explicita que tu solucion pueda resolver",
+      "texto_nuevo": "Espera a que el cliente reconozca un problema serio o exprese una necesidad explícita que tu solución pueda resolver",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-034.paso0: explícita, solución (Solo añade las tildes que faltaban.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0869",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta directamente si resolver eso seria valioso o importante para el, por ejemplo 'seria util para usted resolver esto'",
+      "texto_nuevo": "Pregunta directamente si resolver eso sería valioso o importante para él, por ejemplo 'sería útil para usted resolver esto'",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-034.paso1: sería, él, sería, útil (Solo añade las tildes que faltaban, incluida la de él como pronombre.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0870",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pide que explique por que le resultaria valiosa la solucion, dejando que el mismo enuncie los beneficios",
+      "texto_nuevo": "Pide que explique por qué le resultaría valiosa la solución, dejando que él mismo enuncie los beneficios",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-034.paso2: qué, resultaría, solución, él (Solo añade las tildes que faltaban, con qué como interrogativo y él como pronombre.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0871",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Explora beneficios adicionales con preguntas como 'de que otra forma le ayudaria esto'",
+      "texto_nuevo": "Explora beneficios adicionales con preguntas como 'de qué otra forma le ayudaría esto'",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-034.paso3: qué, ayudaría (Solo añade las tildes que faltaban, con qué como interrogativo.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0872",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Evita usar estas preguntas al inicio de la conversacion o sobre necesidades que no puedes cubrir",
+      "texto_nuevo": "Evita usar estas preguntas al inicio de la conversación o sobre necesidades que no puedes cubrir",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-034.paso4: conversación (Solo añade la tilde que faltaba en conversación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0873",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Lista de beneficios articulados por el cliente en sus propias palabras, vinculados a sus necesidades explicitas y lista para usarse como argumento de cierre.",
+      "texto_nuevo": "Lista de beneficios articulados por el cliente en sus propias palabras, vinculados a sus necesidades explícitas y lista para usarse como argumento de cierre.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-034.entregable: explícitas (Solo añade la tilde que faltaba en explícitas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

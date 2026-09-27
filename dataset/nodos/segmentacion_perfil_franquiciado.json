@@ -18,7 +18,8 @@
   ],
   "nodos_siguientes": [
     "embudo_ventas_franquicia",
-    "mix_medios_marketing_franquicia"
+    "mix_medios_marketing_franquicia",
+    "calificacion_prospectos_marketing"
   ],
   "condiciones_activacion": [
     "Cuando el franquiciador compite en mercados saturados de oportunidades de franquicia",
@@ -27,5 +28,20 @@
   "etiqueta_arbol": "Precisa el Perfil de Comprador",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-entrada-02",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "segmentacion_perfil_franquiciado -> calificacion_prospectos_marketing",
+      "cita": {
+        "instrumento": "Pasada R2 del saneamiento (R2-02, arbitro): sin entrada tras mover nodos del nucleo a su mundo.",
+        "motivo": "Para descalificar en el mensaje primero hay que saber quien califica, y el estrechamiento del perfil define esos requisitos de inversion y perfil; ademas su resumen termina en que el mensaje se vuelve mas especifico, mientras que el diseno del mensaje por contenido y emocion es un paso hermano y no el origen de los criterios."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    }
   ]
 }

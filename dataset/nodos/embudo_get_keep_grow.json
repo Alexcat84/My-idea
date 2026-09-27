@@ -1,6 +1,6 @@
 {
   "node_id": "embudo_get_keep_grow",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Embudo Get, Keep, Grow Customers",
   "fuente": "The Startup Owner's Manual - Blank, Steve",
@@ -34,8 +34,7 @@
     "get_customers_funnel_webmobile",
     "get_customers_funnel",
     "keep_customers_strategy",
-    "hipotesis_relacion_clientes_web",
-    "metricas_calidad"
+    "hipotesis_relacion_clientes_web"
   ],
   "condiciones_activacion": [
     "Cuando tu startup ya tiene un MVP y necesitas definir cómo conseguirás, retendrás y harás crecer tu base de clientes",
@@ -62,5 +61,33 @@
   ],
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-064",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q088-007: El contenido es formular hipotesis Get/Keep/Grow sobre el canvas con pruebas pass/fail y medir CAC tras el MVP, es decir probar con el mercado, no operar un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "mv-arista-032",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "embudo_get_keep_grow -> metricas_calidad",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A21, lectores de acuerdo)",
+        "motivo": "El embudo de clientes no conduce a las metricas de calidad de proyecto o producto."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    }
   ]
 }

@@ -6,13 +6,13 @@
   "fuente": "ISTA 3P, Protocolo de ensayo de empaque para paqueteria",
   "resumen_teorico": "Antes de decidir como vas a empacar y probar tus envios, necesitas saber a que categoria pertenece tu producto. Si se rompe facilmente con un golpe (vidrio, ceramica, electronica) se considera fragil; si es liquido, o puede volverse liquido con el calor y derramarse desde su envase, se considera liquido. Estas dos categorias exigen mas cuidado que un producto solido y resistente, y por su variabilidad conviene probar mas de una unidad, no solo una, antes de confiar en el empaque. Ademas, la forma fisica del producto (si es plano, alargado o de forma estandar) determina que tipo de prueba de caida le corresponde, asi que clasificarlo bien evita pruebas incorrectas o insuficientes.",
   "pasos_accionables": [
-    "Revisa si tu producto se rompe facilmente al caer, como vidrio, ceramica o electronica.",
-    "Revisa si tu producto es liquido o puede volverse liquido con el calor y derramarse.",
-    "Si es fragil o liquido, prueba con al menos dos unidades distintas, no solo una.",
-    "Clasifica la forma de tu empaque (estandar, plano o alargado) para saber que prueba de caida aplica.",
-    "Sugerencia de My Idea: refuerza el empaque de lo fragil o liquido antes de escalar el volumen de envios."
+    "Revisa si tu producto se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
+    "Revisa si tu producto es líquido o puede volverse líquido con el calor y derramarse.",
+    "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una.",
+    "Clasifica la forma de tu empaque (estándar, plano o alargado) para saber qué prueba de caída aplica.",
+    "Sugerencia de My Idea: refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos."
   ],
-  "entregable_esperado": "Una ficha por producto que indique si es fragil, liquido o normal, y cuantas muestras probaste.",
+  "entregable_esperado": "Una ficha por producto que indique si es frágil, líquido o normal, y cuántas muestras probaste.",
   "nodos_previos": [
     "decidir_empacar_tu_mismo_o_subcontratar"
   ],
@@ -46,6 +46,89 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tenia razon el lector B. Para lo fragil y lo liquido, la unica consecuencia que saca ISTA de su mayor variabilidad es ensayar dos muestras o mas (L151); para liquidos anade la prueba de fuga (L265). No pide reforzar el empaque ni pone condiciones ligadas al volumen de envios: busque reinforc, scale, increase e improv, sin resultado. Tampoco hay en el libro una cita que diga lo contrario, asi que no es CONTRARIO. La accion (reforzar) y la condicion (antes de escalar) las pone el paso.",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C132-068"
+    },
+    {
+      "id": "n1-orto-0411",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si tu producto se rompe facilmente al caer, como vidrio, ceramica o electronica.",
+      "texto_nuevo": "Revisa si tu producto se rompe fácilmente al caer, como vidrio, cerámica o electrónica.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-026.paso0: fácilmente, cerámica, electrónica (Faltan las tildes de fácilmente, cerámica y electrónica.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0412",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si tu producto es liquido o puede volverse liquido con el calor y derramarse.",
+      "texto_nuevo": "Revisa si tu producto es líquido o puede volverse líquido con el calor y derramarse.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-026.paso1: líquido, líquido (Faltan las dos tildes de líquido.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0413",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si es fragil o liquido, prueba con al menos dos unidades distintas, no solo una.",
+      "texto_nuevo": "Si es frágil o líquido, prueba con al menos dos unidades distintas, no solo una.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-026.paso2: frágil, líquido (Faltan las tildes de frágil y líquido.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0414",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Clasifica la forma de tu empaque (estandar, plano o alargado) para saber que prueba de caida aplica.",
+      "texto_nuevo": "Clasifica la forma de tu empaque (estándar, plano o alargado) para saber qué prueba de caída aplica.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-026.paso3: estándar, qué, caída (Faltan las tildes de estándar, qué y caída.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0415",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: refuerza el empaque de lo fragil o liquido antes de escalar el volumen de envios.",
+      "texto_nuevo": "Sugerencia de My Idea: refuerza el empaque de lo frágil o líquido antes de escalar el volumen de envíos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-026.paso4: frágil, líquido, envíos (Faltan las tildes de frágil, líquido y envíos; la marca My Idea queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0416",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una ficha por producto que indique si es fragil, liquido o normal, y cuantas muestras probaste.",
+      "texto_nuevo": "Una ficha por producto que indique si es frágil, líquido o normal, y cuántas muestras probaste.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-026.entregable: frágil, líquido, cuántas (Faltan las tildes de frágil, líquido y cuántas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

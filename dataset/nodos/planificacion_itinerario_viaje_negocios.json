@@ -21,10 +21,26 @@
     "asistencia_embajadas_consulados_comerciales"
   ],
   "condiciones_activacion": [
-    "Tienes tu documentación lista y necesitas organizar un viaje de negocios"
+    "Tienes tu documentación lista y necesitas organizar un viaje de negocios al extranjero"
   ],
   "etiqueta_arbol": "Planifica tu Viaje de Negocios",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-138",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Tienes tu documentación lista y necesitas organizar un viaje de negocios",
+      "texto_nuevo": "Tienes tu documentación lista y necesitas organizar un viaje de negocios al extranjero",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q099-006: La condición tiene que dejar claro que el viaje es al extranjero. (lector y verificador de acuerdo) Motivo: No dice que el viaje es al extranjero, así que se activaría con cualquier viaje de negocios dentro del país, donde no aplican el intérprete, las tarjetas bilingües, la moneda ni el cambio de horario."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

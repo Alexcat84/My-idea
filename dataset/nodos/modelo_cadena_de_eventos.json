@@ -1,6 +1,6 @@
 {
   "node_id": "modelo_cadena_de_eventos",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Modelo de Cadena de Eventos (Chain of Events)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Corta la Cadena de Errores",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-127",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q072-010: Reconstruir la secuencia de un accidente ya ocurrido es investigacion y control de la operacion en marcha, fase ejecucion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

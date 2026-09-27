@@ -10,8 +10,8 @@
     "Asigna quién va a poner en marcha esos cambios, no quién va a recibir el castigo",
     "Define cómo vas a comprobar si los cambios que hiciste realmente funcionan",
     "Cuéntale a las personas con las que trabajas que la idea es mejorar, no castigar",
-    "Comparte lo que conto la persona involucrada (storytelling) para que todos aprendan de la situacion, en lugar de sancionarla",
-    "Da apoyo a quien vivio el incidente de cerca, porque también carga con el golpe"
+    "Comparte lo que contó la persona involucrada (storytelling) para que todos aprendan de la situación, en lugar de sancionarla",
+    "Da apoyo a quien vivió el incidente de cerca, porque también carga con el golpe"
   ],
   "entregable_esperado": "Un plan con los cambios que vas a hacer y quién se encarga de ponerlos en marcha, sin apuntar a sanciones",
   "nodos_previos": [
@@ -44,5 +44,35 @@
   ],
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0346",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Comparte lo que conto la persona involucrada (storytelling) para que todos aprendan de la situacion, en lugar de sancionarla",
+      "texto_nuevo": "Comparte lo que contó la persona involucrada (storytelling) para que todos aprendan de la situación, en lugar de sancionarla",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-038.paso4: contó, situación (Faltan las tildes de contó y situación; storytelling se deja igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0347",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Da apoyo a quien vivio el incidente de cerca, porque también carga con el golpe",
+      "texto_nuevo": "Da apoyo a quien vivió el incidente de cerca, porque también carga con el golpe",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O030-038.paso5: vivió (Falta la tilde de vivió; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    }
   ]
 }

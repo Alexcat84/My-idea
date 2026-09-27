@@ -1,6 +1,6 @@
 {
   "node_id": "responsabilidad_sistemica",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Enfoque Sistémico de la Responsabilidad (Systems Approach)",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -29,5 +29,20 @@
   "etiqueta_arbol": "Entiende tu Rol en el Sistema",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-165",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q042-004: Es el análisis de un incidente ya ocurrido y el apoyo a la segunda víctima, gestión operativa de un negocio en marcha, no planificación. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

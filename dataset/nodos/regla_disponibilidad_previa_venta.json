@@ -6,11 +6,11 @@
   "fuente": "Businessperson's Guide to Federal Warranty Law",
   "resumen_teorico": "Esta es una regla de una ley federal de Estados Unidos (la Magnuson-Moss Warranty Act). Si vendes productos con garantia escrita a clientes en ese pais, la norma exige que el texto completo de la garantia este disponible para que la persona lo pueda leer antes de comprar, no después. Puedes lograrlo exhibiendola junto al producto, incluyendola en tu catalogo o pagina de venta, o entregandola de inmediato si el cliente la pide antes de pagar. La idea de fondo es que nadie compre a ciegas: el comprador debe poder comparar la garantia antes de decidirse.",
   "pasos_accionables": [
-    "Revisa por que canal vendes (tienda fisica, en línea, puerta a puerta) y define como vas a mostrar la garantia antes de que la persona compre en ese canal.",
-    "Coloca el texto de la garantia visible junto al producto si vendes en persona, o en la misma pagina del producto si vendes en línea.",
-    "Prepara a quien te ayuda a vender para que muestre la garantia completa si el cliente la pide antes de decidirse."
+    "Revisa por qué canal vendes (tienda física, en línea, puerta a puerta) y define cómo vas a mostrar la garantía antes de que la persona compre en ese canal.",
+    "Coloca el texto de la garantía visible junto al producto si vendes en persona, o en la misma página del producto si vendes en línea.",
+    "Prepara a quien te ayuda a vender para que muestre la garantía completa si el cliente la pide antes de decidirse."
   ],
-  "entregable_esperado": "Un método simple, por cada canal donde vendes, para mostrar la garantia escrita antes de que el cliente compre.",
+  "entregable_esperado": "Un método simple, por cada canal donde vendes, para mostrar la garantía escrita antes de que el cliente compre.",
   "nodos_previos": [
     "regla_divulgacion_garantia",
     "clasificacion_garantia_full_limited",
@@ -57,6 +57,61 @@
         "motivo": "Puente aprobado en packs/entrega/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "n1-orto-0881",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa por que canal vendes (tienda fisica, en línea, puerta a puerta) y define como vas a mostrar la garantia antes de que la persona compre en ese canal.",
+      "texto_nuevo": "Revisa por qué canal vendes (tienda física, en línea, puerta a puerta) y define cómo vas a mostrar la garantía antes de que la persona compre en ese canal.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-035.paso0: qué, física, cómo, garantía (Faltaban tildes en qué, física, cómo y garantía; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0882",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Coloca el texto de la garantia visible junto al producto si vendes en persona, o en la misma pagina del producto si vendes en línea.",
+      "texto_nuevo": "Coloca el texto de la garantía visible junto al producto si vendes en persona, o en la misma página del producto si vendes en línea.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-035.paso1: garantía, página (Faltaban tildes en garantía y página.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0883",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Prepara a quien te ayuda a vender para que muestre la garantia completa si el cliente la pide antes de decidirse.",
+      "texto_nuevo": "Prepara a quien te ayuda a vender para que muestre la garantía completa si el cliente la pide antes de decidirse.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-035.paso2: garantía (Faltaba la tilde en garantía.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0884",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un método simple, por cada canal donde vendes, para mostrar la garantia escrita antes de que el cliente compre.",
+      "texto_nuevo": "Un método simple, por cada canal donde vendes, para mostrar la garantía escrita antes de que el cliente compre.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-035.entregable: garantía (Faltaba la tilde en garantía.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

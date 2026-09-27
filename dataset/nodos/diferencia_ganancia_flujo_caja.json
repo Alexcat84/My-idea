@@ -7,12 +7,12 @@
   "resumen_teorico": "Uno de los errores más peligrosos que puedes cometer es pensar que si tu negocio es rentable (muestra ganancias en tus reportes) ya tienes suficiente efectivo disponible. Puedes estar duplicando tus ventas cada año y mostrar ganancias en tus números, y aun así quedarte sin efectivo si no gestionas bien tu flujo de caja, sobre todo cuando estás creciendo rápido y necesitas capital de trabajo. Entender esta diferencia es crítico para que tu negocio sobreviva.",
   "pasos_accionables": [
     "Revisa el reporte de flujo de caja de tu negocio por separado del estado de resultados, no asumas que son lo mismo",
-    "Proyecta tu flujo de caja a 12 meses considerando cuanto esperas crecer en ventas",
+    "Proyecta tu flujo de caja a 12 meses considerando cuánto esperas crecer en ventas",
     "Calcula cuánto efectivo gastas cada mes si tu negocio todavía no genera flujo de caja positivo",
     "Identifica el momento en que crecer en ventas podría dejarte sin liquidez",
     "Consigue líneas de crédito o busca financiamiento antes de que la falta de efectivo se vuelva crítica",
-    "Revisa el saldo de tu cuenta y el flujo de caja cada semana, o cada día si estas en un momento critico",
-    "Aprende a leer el estado de flujo de efectivo, aunque al principio el lenguaje te parezca tecnico",
+    "Revisa el saldo de tu cuenta y el flujo de caja cada semana, o cada día si estás en un momento crítico",
+    "Aprende a leer el estado de flujo de efectivo, aunque al principio el lenguaje te parezca técnico",
     "Mira cuánto tardan tus clientes en pagarte y cuánto tardas tú en pagarle a tus proveedores."
   ],
   "entregable_esperado": "Una proyección de flujo de caja a 12 meses que te anticipe posibles momentos en los que te falte efectivo",
@@ -82,6 +82,48 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (entregable_esperado): El entregable repite el horizonte de 18 meses, que es un ANADIDO de plazo sin respaldo (el libro habla de proyectar hasta doce meses, L3441). Se corrige igual que el paso 1: se deja solo el horizonte de 12 meses.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C028-081"
+    },
+    {
+      "id": "n1-orto-0789",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Proyecta tu flujo de caja a 12 meses considerando cuanto esperas crecer en ventas",
+      "texto_nuevo": "Proyecta tu flujo de caja a 12 meses considerando cuánto esperas crecer en ventas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O069-024.paso1: cuánto (Aquí «cuánto» es interrogativo indirecto, así que lleva tilde, y el resto del texto no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0790",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa el saldo de tu cuenta y el flujo de caja cada semana, o cada día si estas en un momento critico",
+      "texto_nuevo": "Revisa el saldo de tu cuenta y el flujo de caja cada semana, o cada día si estás en un momento crítico",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O069-024.paso5: estás, crítico (A «estás» (verbo) y «crítico» les faltaba la tilde, y no hay ningún otro cambio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0791",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprende a leer el estado de flujo de efectivo, aunque al principio el lenguaje te parezca tecnico",
+      "texto_nuevo": "Aprende a leer el estado de flujo de efectivo, aunque al principio el lenguaje te parezca técnico",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O069-024.paso6: técnico («Técnico» es esdrújula y le faltaba la tilde; lo demás queda igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 6
     }
   ],
   "fuentes_internas": [

@@ -35,7 +35,7 @@
     "technology_platform_evaluation"
   ],
   "condiciones_activacion": [
-    "Si usas o evalúas este tipo de instrumento de puntaje",
+    "Cuando necesitas comparar tus proyectos con criterios explicitos de estrategia, ventaja competitiva, mercado, capacidades, viabilidad tecnica y riesgo contra retorno",
     "Cuando tienes varios proyectos compitiendo por el mismo tiempo o dinero",
     "Cuando decides en qué invertir por intuición o por presión de otros, sin criterios claros",
     "Cuando los datos financieros todavía no son confiables porque el proyecto está en una etapa temprana",
@@ -55,5 +55,21 @@
   ],
   "fuentes_internas": [
     "Winning at New Products - Robert G. Cooper"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-174",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si usas o evalúas este tipo de instrumento de puntaje",
+      "texto_nuevo": "Cuando necesitas comparar tus proyectos con criterios explicitos de estrategia, ventaja competitiva, mercado, capacidades, viabilidad tecnica y riesgo contra retorno",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q044-020: La primera condicion es circular y no dice cuando aplica. (lector y verificador de acuerdo) Motivo: Es circular: no describe una situacion del emprendedor, solo remite al propio instrumento."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

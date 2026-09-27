@@ -22,11 +22,27 @@
     "term_sheet_negociacion"
   ],
   "condiciones_activacion": [
-    "Cuando la startup necesita atraer o retener talento sin suficiente efectivo",
+    "Cuando tu startup opera en Estados Unidos y necesita atraer o retener talento sin suficiente efectivo",
     "Al formalizar la compensación de asesores o empleados clave"
   ],
   "etiqueta_arbol": "Paga Servicios con Equity",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-023",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando la startup necesita atraer o retener talento sin suficiente efectivo",
+      "texto_nuevo": "Cuando tu startup opera en Estados Unidos y necesita atraer o retener talento sin suficiente efectivo",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q002-007: Tenía razón A: con que una condición ate el nodo a operar en Estados Unidos se cumple la clase C; B reescribe también la segunda sin necesidad. (arbitro) Motivo: Clase C: ninguna condición dice que aplica si operas en Estados Unidos, aunque los pasos dependen de 83(b) y de la valuación 409A."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

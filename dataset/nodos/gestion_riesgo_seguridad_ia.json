@@ -1,7 +1,7 @@
 {
   "node_id": "gestion_riesgo_seguridad_ia",
   "fase_proyecto": "planificacion",
-  "dominio": "core",
+  "dominio": "seguridad_digital",
   "titulo_concepto": "Gestión de Riesgos de Seguridad en IA (Prompt Injection y Jailbreaking)",
   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
   "resumen_teorico": "Los sistemas de IA pueden ser manipulados mediante técnicas como 'prompt injection' (instrucciones ocultas en contenido web o documentos que la IA lee) y 'jailbreaking' (convencer a la IA de romper sus reglas mediante escenarios ficticios o roleplay). Esto representa un riesgo real para cualquier negocio que integre IA con acceso a datos externos, atención al cliente automatizada o generación de contenido, ya que actores malintencionados pueden explotar estas vulnerabilidades para phishing, desinformación o fraude.",
@@ -57,6 +57,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon B. El libro explica la inyeccion de prompt con el ejemplo de su biografia (L325) y luego el jailbreak (L327). No propone ninguna defensa tecnica contra eso. Busque validat, valid, sanitiz, untrusted, safeguard, guardrail y defense en todo el libro: solo salen los guardrails del RLHF (L321, L349) y la defensa de los abogados (L716), nada sobre validar lo que llega de contenido no confiable. Las capas de validacion adicionales son un mecanismo tecnico concreto que el paso mete por su cuenta. No concreta ninguna recomendacion del libro, porque el libro describe el riesgo pero no da remedio. Por eso no es OPERATIVO, como decia A. Es una practica, asi que el tipo es PRACTICO.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B6.json, ficha C127-020"
+    },
+    {
+      "id": "mv-dominio-17",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "seguridad_digital",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-19: Defenderse de prompt injection y jailbreaking solo le toca a quien integra IA en su producto; una tienda o un servicio sin IA no lo necesita. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
     }
   ],
   "fuentes_internas": [

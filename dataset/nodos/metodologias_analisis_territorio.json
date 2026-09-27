@@ -20,10 +20,26 @@
     "otros_terminos_contractuales"
   ],
   "condiciones_activacion": [
-    "Cuando no tienes suficientes datos históricos de ventas para armar modelos predictivos avanzados"
+    "Cuando necesitas definir el tamaño de los territorios de tus franquicias y no tienes suficientes datos históricos de ventas para armar modelos predictivos avanzados"
   ],
   "etiqueta_arbol": "Analiza y Define tu Territorio",
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-124",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando no tienes suficientes datos históricos de ventas para armar modelos predictivos avanzados",
+      "texto_nuevo": "Cuando necesitas definir el tamaño de los territorios de tus franquicias y no tienes suficientes datos históricos de ventas para armar modelos predictivos avanzados",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q089-005: La unica condicion es demasiado generica: le falta la situacion de definir el territorio de las franquicias. (lector y verificador de acuerdo) Motivo: Solo describe la falta de datos historicos y no dice que haya que definir territorios, asi que se activaria en cualquier negocio con pocos datos de ventas."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

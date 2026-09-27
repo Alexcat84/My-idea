@@ -20,7 +20,7 @@
     "tasa_captura_leads"
   ],
   "condiciones_activacion": [
-    "Cuando se busca aumentar tasas de conversión y credibilidad en campañas digitales"
+    "Cuando se busca captar prospectos de franquicia y aumentar la conversión de las campañas digitales con video en el sitio web, YouTube y los Discovery Days"
   ],
   "etiqueta_arbol": "Muestra tu Negocio en Video",
   "correcciones": [
@@ -39,6 +39,20 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R017-033 (CONTRARIO, lector y verificador de acuerdo): Convierte un minimo del libro en un maximo. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R017-033"
+    },
+    {
+      "id": "n1-condicion-194",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se busca aumentar tasas de conversión y credibilidad en campañas digitales",
+      "texto_nuevo": "Cuando se busca captar prospectos de franquicia y aumentar la conversión de las campañas digitales con video en el sitio web, YouTube y los Discovery Days",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q095-001: Razón para el lector A: la única condición vale para cualquier campaña digital, y el nodo trata del video para reclutar franquiciados (Discovery Days, formulario de captura); dominio y fase están bien, como dicen los dos lectores. (arbitro) Motivo: La condicion es generica de cualquier campaña digital: no menciona el video ni que el contenido sirve para captar prospectos de franquicia (Discovery Days, presentaciones a candidatos, sitio web y YouTube de la franquicia)."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ],
   "fuentes_internas": [

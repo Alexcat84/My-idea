@@ -1,7 +1,7 @@
 {
   "node_id": "negociacion_contratos_proveedores",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "compras",
   "titulo_concepto": "Negociación de Contratos con Proveedores",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "La negociación de contratos con proveedores debe equilibrar precio unitario con otros servicios de valor agregado como conexiones electrónicas, entregas frecuentes y precisión en pedidos. Deben especificarse metas de desempeño, penalizaciones y formas de pago (mayor margen en precio, pagos separados o combinación). Entender la cultura y etiqueta de negocios del proveedor es clave para negociaciones interculturales efectivas.",
@@ -69,6 +69,19 @@
         "motivo": "Tras comparar proveedores por costo total ponderado, calidad y cumplimiento, lo natural es negociar el contrato equilibrando precio, servicios y metas de desempeño."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "mv-dominio-24",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "compras",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-35: Tenia razon el lector B: el bloque no trata de elegir o tratar con un proveedor en general, sino de negociar contratos formales que comparan el precio unitario con servicios de valor agregado (conexiones electronicas, entregas frecuentes), fijan metas de desempeno con penalizaciones y cuidan la etiqueta intercultural; quien abre una app, un servicio o una tienda pequena saca adelante su negocio sin ese nivel contractual de especialista, que es justo lo que profundiza el mundo de compras. (arbitro)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
     }
   ]
 }

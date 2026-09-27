@@ -6,10 +6,10 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "La seguridad de tu producto se previene con revisiones de diseño planificadas, pruebas antes de lanzar y control de calidad. Todo problema de seguridad tiene como causa raiz una falta de integridad en tu propio juicio, usualmente por buscar resultados rapidos cortando esquinas. Es un problema etico, no legal.",
   "pasos_accionables": [
-    "Revisa el diseño enfocandote en riesgos de seguridad antes de lanzar",
+    "Revisa el diseño enfocándote en riesgos de seguridad antes de lanzar",
     "Pon a prueba el producto contra condiciones reales de uso antes de liberarlo",
-    "Si detectas un error, admitelo y corrigelo rápido sin dejarte paralizar por el miedo legal",
-    "Trata la seguridad del producto como un compromiso etico tuyo, no solo un requisito legal"
+    "Si detectas un error, admítelo y corrígelo rápido sin dejarte paralizar por el miedo legal",
+    "Trata la seguridad del producto como un compromiso ético tuyo, no solo un requisito legal"
   ],
   "entregable_esperado": "Proceso de revisión de seguridad de producto integrado a tu ciclo de diseño y pruebas",
   "nodos_previos": [
@@ -24,5 +24,49 @@
   "etiqueta_arbol": "Diseña Productos Más Seguros",
   "fuentes_internas": [
     "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0793",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa el diseño enfocandote en riesgos de seguridad antes de lanzar",
+      "texto_nuevo": "Revisa el diseño enfocándote en riesgos de seguridad antes de lanzar",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-006.paso0: enfocándote (Falta la tilde en el gerundio con enclítico 'enfocándote'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0794",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si detectas un error, admitelo y corrigelo rápido sin dejarte paralizar por el miedo legal",
+      "texto_nuevo": "Si detectas un error, admítelo y corrígelo rápido sin dejarte paralizar por el miedo legal",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-006.paso2: admítelo, corrígelo (Faltan las tildes en los imperativos con enclítico, esdrújulos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0795",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Trata la seguridad del producto como un compromiso etico tuyo, no solo un requisito legal",
+      "texto_nuevo": "Trata la seguridad del producto como un compromiso ético tuyo, no solo un requisito legal",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O071-006.paso3: ético ('ético' es esdrújula y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    }
   ]
 }

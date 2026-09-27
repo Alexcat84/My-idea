@@ -21,7 +21,8 @@
     "definicion_alineacion_cadena_suministro",
     "trade_off_responsividad_eficiencia",
     "planificacion_cadena_suministro",
-    "iot_big_data_supply_chain"
+    "iot_big_data_supply_chain",
+    "sop_colaborativo"
   ],
   "condiciones_activacion": [
     "Si operas con múltiples proveedores o distribuidores y necesitas optimizar tus decisiones",
@@ -69,6 +70,19 @@
         "motivo": "Quien entiende la información como conector de la cadena sigue con IoT y big data como forma de capturarla de manera continua y granular."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "mv-arista-045",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "information_driver_supply_chain -> sop_colaborativo",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C13, lectores de acuerdo)",
+        "motivo": "La informacion como base de coordinacion y pronostico precede a convertir datos en un plan S&OP compartido; se evita proceso_sop_mop por duplicado."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
     }
   ],
   "fuentes_internas": [

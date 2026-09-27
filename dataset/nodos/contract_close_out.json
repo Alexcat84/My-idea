@@ -1,7 +1,7 @@
 {
   "node_id": "contract_close_out",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "compras",
   "titulo_concepto": "Cierre de Contrato",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "El Cierre de Contrato documenta el desempeño del proveedor para evaluaciones futuras, asegurando que todas las disputas se resuelvan, el producto sea aceptado y los pagos finales realizados antes de cerrar formalmente el contrato. Incluye análisis de desempeño del proveedor, registro de cambios contractuales y disputas, así como la fecha de finalización, firma y pago final.",
@@ -16,8 +16,7 @@
   "nodos_previos": [
     "procurement_audit",
     "formal_acceptance",
-    "contractor_status_report",
-    "mecanismo_resolucion_disputas"
+    "contractor_status_report"
   ],
   "nodos_siguientes": [
     "project_close_out",
@@ -46,6 +45,32 @@
         "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "mv-dominio-05",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "compras",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-24: El cierre formal de contrato con análisis de desempeño del proveedor, disputas y firma es procedimiento de gestión de adquisiciones que profundiza el mundo de compras. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-025",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "mecanismo_resolucion_disputas -> contract_close_out",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A37, lectores de acuerdo)",
+        "motivo": "Las disputas de garantia con consumidores no tienen relacion con el cierre de contratos con proveedores."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
     }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "riesgos_lanzamiento_mvp",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Los miedos que te frenan al construir tu primera versión de prueba (MVP): legales, competencia, marca y ánimo",
   "fuente": "The Lean Startup - Eric Ries",
@@ -62,6 +62,19 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U3-034 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-fase-167",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q031-009: El nodo trata de los miedos a lanzar la primera version de prueba (MVP), que es la fase de validacion, no de operar un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
     }
   ],
   "fuentes_internas": [

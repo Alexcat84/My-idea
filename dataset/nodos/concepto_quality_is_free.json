@@ -6,13 +6,13 @@
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
   "resumen_teorico": "La calidad no cuesta dinero; lo que cuesta dinero es la no calidad o incumplimiento, es decir, todas las acciones que vienen de no hacer las cosas bien la primera vez: reprocesos, desperdicios, garantias e inspecciones adicionales. Calcular este costo te permite ver la magnitud real del problema de calidad en tu negocio y sirve como punto de partida para medir la mejora en el tiempo. Al enfocarte en hacer la calidad cierta, puedes aumentar tus utilidades entre un 5% y 10% de las ventas sin inversión adicional relevante, simplemente evitando los costos del fracaso. El mensaje central es que invertir en prevención reduce estos costos y mejora directamente tu rentabilidad, adoptando hacer las cosas bien la primera vez como filosofia de trabajo.",
   "pasos_accionables": [
-    "Identifica todas las actividades de tu negocio relacionadas con corregir errores: reprocesos, devoluciones, garantias, desperdicio e inspecciones adicionales.",
+    "Identifica todas las actividades de tu negocio relacionadas con corregir errores: reprocesos, devoluciones, garantías, desperdicio e inspecciones adicionales.",
     "Calcula el costo actual de estos fallos internos y externos como referencia base.",
     "Registra esta cifra para usarla como punto de partida y medir la mejora con el tiempo.",
-    "Adopta el mensaje hacer las cosas bien la primera vez como filosofia de trabajo diario.",
-    "Usa el diagnostico de costos para decidir en que prevención invertir primero."
+    "Adopta el mensaje hacer las cosas bien la primera vez como filosofía de trabajo diario.",
+    "Usa el diagnóstico de costos para decidir en qué prevención invertir primero."
   ],
-  "entregable_esperado": "Un diagnostico cuantificado del costo de la no calidad en tu negocio, que sirve como base para decidir si vale la pena invertir en prevención y medir la mejora futura.",
+  "entregable_esperado": "Un diagnóstico cuantificado del costo de la no calidad en tu negocio, que sirve como base para decidir si vale la pena invertir en prevención y medir la mejora futura.",
   "nodos_previos": [
     "costo_de_calidad_3",
     "definicion_calidad_conformidad"
@@ -94,6 +94,61 @@
         "evidencia": "F15-015: Calcula el costo de la no calidad (reprocesos, garantías, desperdicio) en un negocio que ya opera para medir su mejora; es control y mejora operativa. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0364",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica todas las actividades de tu negocio relacionadas con corregir errores: reprocesos, devoluciones, garantias, desperdicio e inspecciones adicionales.",
+      "texto_nuevo": "Identifica todas las actividades de tu negocio relacionadas con corregir errores: reprocesos, devoluciones, garantías, desperdicio e inspecciones adicionales.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-025.paso0: garantías (Tilde real en garantías; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0365",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Adopta el mensaje hacer las cosas bien la primera vez como filosofia de trabajo diario.",
+      "texto_nuevo": "Adopta el mensaje hacer las cosas bien la primera vez como filosofía de trabajo diario.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-025.paso3: filosofía (Tilde real en filosofía; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0366",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Usa el diagnostico de costos para decidir en que prevención invertir primero.",
+      "texto_nuevo": "Usa el diagnóstico de costos para decidir en qué prevención invertir primero.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-025.paso4: diagnóstico, qué (Tildes reales en diagnóstico y en el interrogativo indirecto qué; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0367",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un diagnostico cuantificado del costo de la no calidad en tu negocio, que sirve como base para decidir si vale la pena invertir en prevención y medir la mejora futura.",
+      "texto_nuevo": "Un diagnóstico cuantificado del costo de la no calidad en tu negocio, que sirve como base para decidir si vale la pena invertir en prevención y medir la mejora futura.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-025.entregable: diagnóstico (Tilde real en diagnóstico; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

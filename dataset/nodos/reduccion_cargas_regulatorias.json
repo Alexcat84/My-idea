@@ -6,7 +6,7 @@
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Estrategia intermedia que consiste en analizar las obligaciones de cumplimiento ambiental para identificar cuáles podrían eliminarse mediante el rediseño de productos o procesos de manufactura. Si un proceso usa materiales peligrosos no esenciales que requieren seguimiento regulatorio complejo, conviene rediseñarlo para eliminarlos, reduciendo así la carga regulatoria y el riesgo legal.",
   "pasos_accionables": [
-    "Mapear todos los materiales usados en cada producto para identificar sustancias sensibles, y tambien en los procesos de manufactura",
+    "Mapear todos los materiales usados en cada producto para identificar sustancias sensibles, y también en los procesos de manufactura",
     "Clasificar materias primas según su impacto en salud y ambiente (ej. escala 0-3 tipo 'green list')",
     "Priorizar el uso de materiales mejor calificados en nuevos productos o reformulaciones",
     "Evaluar la descentralización de equipos de cumplimiento regulatorio si hay heterogeneidad normativa entre regiones",
@@ -37,5 +37,21 @@
   ],
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0651",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mapear todos los materiales usados en cada producto para identificar sustancias sensibles, y tambien en los procesos de manufactura",
+      "texto_nuevo": "Mapear todos los materiales usados en cada producto para identificar sustancias sensibles, y también en los procesos de manufactura",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O056-028.paso0: también (También es aguda terminada en n y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    }
   ]
 }

@@ -1,0 +1,1604 @@
+{
+ "O024-001.etiqueta": {
+  "clave": "roles_product_owner_scrum_master",
+  "campo": "etiqueta",
+  "real": "Separa Producto y Proceso",
+  "trampa": null
+ },
+ "O024-001.paso0": {
+  "clave": "roles_product_owner_scrum_master",
+  "campo": "paso0",
+  "real": "Decide quien va a llevar el contenido y la visión de lo que construyes",
+  "trampa": null
+ },
+ "O024-001.paso1": {
+  "clave": "roles_product_owner_scrum_master",
+  "campo": "paso1",
+  "real": "Decide quien va a llevar el proceso y destrabar obstaculos en el día a día",
+  "trampa": null
+ },
+ "O024-001.paso2": {
+  "clave": "roles_product_owner_scrum_master",
+  "campo": "paso2",
+  "real": "Mira el tamaño y la complejidad de lo que haces para saber si puedes cubrir ambas funciones tu solo",
+  "trampa": null
+ },
+ "O024-001.paso3": {
+  "clave": "roles_product_owner_scrum_master",
+  "campo": "paso3",
+  "real": "Si tienes mas de un proyecto, revisa que la persona a cargo del proceso pueda apoyar en varios a la vez",
+  "trampa": null
+ },
+ "O024-001.entregable": {
+  "clave": "roles_product_owner_scrum_master",
+  "campo": "entregable",
+  "real": "Tener claro, por escrito, quien lleva el contenido y quien lleva el proceso en tu proyecto",
+  "trampa": null
+ },
+ "O024-002.etiqueta": {
+  "clave": "reglas_origen_sectoriales",
+  "campo": "etiqueta",
+  "real": "Revisa Reglas por Sector",
+  "trampa": null
+ },
+ "O024-002.paso0": {
+  "clave": "reglas_origen_sectoriales",
+  "campo": "paso0",
+  "real": "Identificar si el producto pertenece a un sector con reglas especiales (textiles, autos, químicos, agrícola)",
+  "trampa": null
+ },
+ "O024-002.paso1": {
+  "clave": "reglas_origen_sectoriales",
+  "campo": "paso1",
+  "real": "Para textiles, verificar cumplimiento del estándar yarn-forward en www.trade.gov/otexa",
+  "trampa": null
+ },
+ "O024-002.paso2": {
+  "clave": "reglas_origen_sectoriales",
+  "campo": "paso2",
+  "real": "Para agrícolas, consultar cuotas y restricciones en www.fas.usda.gov",
+  "trampa": null
+ },
+ "O024-002.paso3": {
+  "clave": "reglas_origen_sectoriales",
+  "campo": "paso3",
+  "real": "Para autos bajo NAFTA, aplicar el método de trazabilidad y RVC por costo neto",
+  "trampa": null
+ },
+ "O024-002.entregable": {
+  "clave": "reglas_origen_sectoriales",
+  "campo": "entregable",
+  "real": "Identificación de la regla sectorial aplicable y su cumplimiento documentado",
+  "trampa": null
+ },
+ "O024-003.etiqueta": {
+  "clave": "etiqueta_duplicada_dentro_del_paquete",
+  "campo": "etiqueta",
+  "real": "Duplica la etiqueta dentro",
+  "trampa": null
+ },
+ "O024-003.paso0": {
+  "clave": "etiqueta_duplicada_dentro_del_paquete",
+  "campo": "paso0",
+  "real": "Imprime la etiqueta de envio por duplicado antes de cerrar la caja.",
+  "trampa": null
+ },
+ "O024-003.paso1": {
+  "clave": "etiqueta_duplicada_dentro_del_paquete",
+  "campo": "paso1",
+  "real": "Pega la primera copia en la cara mas grande y plana de la caja, sin arrugas.",
+  "trampa": null
+ },
+ "O024-003.paso2": {
+  "clave": "etiqueta_duplicada_dentro_del_paquete",
+  "campo": "paso2",
+  "real": "Coloca la segunda copia dentro de la caja, encima del contenido, antes de sellar.",
+  "trampa": null
+ },
+ "O024-003.paso3": {
+  "clave": "etiqueta_duplicada_dentro_del_paquete",
+  "campo": "paso3",
+  "real": "Verifica que ambas copias tengan la direccion completa de remitente y destinatario.",
+  "trampa": null
+ },
+ "O024-003.paso4": {
+  "clave": "etiqueta_duplicada_dentro_del_paquete",
+  "campo": "paso4",
+  "real": "Revisa que ninguna cinta ni otra etiqueta cubra la informacion de contacto.",
+  "trampa": null
+ },
+ "O024-003.entregable": {
+  "clave": "etiqueta_duplicada_dentro_del_paquete",
+  "campo": "entregable",
+  "real": "Un paquete con etiqueta doble que sigue siendo identificable aunque la etiqueta externa se dañe.",
+  "trampa": null
+ },
+ "O024-004.etiqueta": {
+  "clave": "riesgo_error_humano_en_mantenimiento",
+  "campo": "etiqueta",
+  "real": "Vigila el Error en Mantenimiento",
+  "trampa": null
+ },
+ "O024-004.paso0": {
+  "clave": "riesgo_error_humano_en_mantenimiento",
+  "campo": "paso0",
+  "real": "Analizar históricamente la proporción de fallos atribuibles a error humano vs fallo técnico puro",
+  "trampa": null
+ },
+ "O024-004.paso1": {
+  "clave": "riesgo_error_humano_en_mantenimiento",
+  "campo": "paso1",
+  "real": "Evaluar si el nivel actual de contacto humano en mantenimiento sigue siendo necesario dado el avance tecnológico",
+  "trampa": null
+ },
+ "O024-004.paso2": {
+  "clave": "riesgo_error_humano_en_mantenimiento",
+  "campo": "paso2",
+  "real": "Priorizar el diseño de componentes que solo puedan instalarse correctamente (poka-yoke)",
+  "trampa": null
+ },
+ "O024-004.paso3": {
+  "clave": "riesgo_error_humano_en_mantenimiento",
+  "campo": "paso3",
+  "real": "Explorar la eliminación de la necesidad de contacto humano directo mediante sistemas de autodiagnóstico",
+  "trampa": null
+ },
+ "O024-004.paso4": {
+  "clave": "riesgo_error_humano_en_mantenimiento",
+  "campo": "paso4",
+  "real": "Reportar a diseñadores y fabricantes la necesidad de considerar la falibilidad humana en el ciclo de vida del producto",
+  "trampa": null
+ },
+ "O024-004.entregable": {
+  "clave": "riesgo_error_humano_en_mantenimiento",
+  "campo": "entregable",
+  "real": "Informe de análisis de riesgo comparando fallos técnicos vs errores humanos de mantenimiento, con recomendaciones de rediseño",
+  "trampa": null
+ },
+ "O024-005.etiqueta": {
+  "clave": "concepto_proyecto_breakthrough",
+  "campo": "etiqueta",
+  "real": "Resuelve Problemas Proyecto a Proyecto",
+  "trampa": null
+ },
+ "O024-005.paso0": {
+  "clave": "concepto_proyecto_breakthrough",
+  "campo": "paso0",
+  "real": "Definir claramente el problema crónico a resolver como proyecto",
+  "trampa": null
+ },
+ "O024-005.paso1": {
+  "clave": "concepto_proyecto_breakthrough",
+  "campo": "paso1",
+  "real": "Clasificar el proyecto como parte de los 'vitales pocos' o 'útiles muchos'",
+  "trampa": null
+ },
+ "O024-005.paso2": {
+  "clave": "concepto_proyecto_breakthrough",
+  "campo": "paso2",
+  "real": "Asignar un equipo responsable de ejecutar el proyecto",
+  "trampa": null
+ },
+ "O024-005.entregable": {
+  "clave": "concepto_proyecto_breakthrough",
+  "campo": "entregable",
+  "real": "Ficha de proyecto con definición del problema crónico, alcance y equipo asignado",
+  "trampa": null
+ },
+ "O024-006.etiqueta": {
+  "clave": "ciclo_ventas_calidad_franquicia",
+  "campo": "etiqueta",
+  "real": "Apoya al Franquiciado tras la Venta",
+  "trampa": null
+ },
+ "O024-006.paso0": {
+  "clave": "ciclo_ventas_calidad_franquicia",
+  "campo": "paso0",
+  "real": "Diseña un concepto sólido y una estructura de franquicia competitiva antes de vender.",
+  "trampa": null
+ },
+ "O024-006.paso1": {
+  "clave": "ciclo_ventas_calidad_franquicia",
+  "campo": "paso1",
+  "real": "Invierte en marketing y materiales de venta que comuniquen ese concepto con claridad.",
+  "trampa": null
+ },
+ "O024-006.paso2": {
+  "clave": "ciclo_ventas_calidad_franquicia",
+  "campo": "paso2",
+  "real": "Establece criterios de selección rigurosos para aceptar nuevos franquiciados.",
+  "trampa": null
+ },
+ "O024-006.paso3": {
+  "clave": "ciclo_ventas_calidad_franquicia",
+  "campo": "paso3",
+  "real": "Diseña un sistema de soporte y capacitación robusto para después de la venta.",
+  "trampa": null
+ },
+ "O024-006.paso4": {
+  "clave": "ciclo_ventas_calidad_franquicia",
+  "campo": "paso4",
+  "real": "Mide y monitorea la satisfacción y validación de tus franquiciados actuales.",
+  "trampa": null
+ },
+ "O024-006.paso5": {
+  "clave": "ciclo_ventas_calidad_franquicia",
+  "campo": "paso5",
+  "real": "Usa a tus franquiciados exitosos como referencias activas para atraer nuevas ventas y expandir unidades.",
+  "trampa": null
+ },
+ "O024-006.entregable": {
+  "clave": "ciclo_ventas_calidad_franquicia",
+  "campo": "entregable",
+  "real": "Sistema documentado que conecte selección, soporte y validación de franquiciados como ciclo continuo de crecimiento sostenible.",
+  "trampa": null
+ },
+ "O024-007.etiqueta": {
+  "clave": "actividades_clave",
+  "campo": "etiqueta",
+  "real": "Define tus Actividades Clave",
+  "trampa": null
+ },
+ "O024-007.paso0": {
+  "clave": "actividades_clave",
+  "campo": "paso0",
+  "real": "Determinar si el negocio requiere principalmente producción, resolución de problemas o gestión de plataforma",
+  "trampa": null
+ },
+ "O024-007.paso1": {
+  "clave": "actividades_clave",
+  "campo": "paso1",
+  "real": "Listar las actividades específicas necesarias para entregar la propuesta de valor",
+  "trampa": null
+ },
+ "O024-007.paso2": {
+  "clave": "actividades_clave",
+  "campo": "paso2",
+  "real": "Vincular cada actividad clave con los canales, relaciones de cliente e ingresos que soporta",
+  "trampa": null
+ },
+ "O024-007.paso3": {
+  "clave": "actividades_clave",
+  "campo": "paso3",
+  "real": "Priorizar actividades core vs. actividades delegables a socios",
+  "trampa": null
+ },
+ "O024-007.entregable": {
+  "clave": "actividades_clave",
+  "campo": "entregable",
+  "real": "Lista de actividades clave categorizadas y vinculadas a otros bloques del modelo",
+  "trampa": null
+ },
+ "O024-008.etiqueta": {
+  "clave": "reinvencion_constante",
+  "campo": "etiqueta",
+  "real": "Reinvéntate Antes de la Crisis",
+  "trampa": null
+ },
+ "O024-008.paso0": {
+  "clave": "reinvencion_constante",
+  "campo": "paso0",
+  "real": "Tomar la exploración de nuevas propuestas de valor tan en serio como la ejecución de las actuales",
+  "trampa": null
+ },
+ "O024-008.paso1": {
+  "clave": "reinvencion_constante",
+  "campo": "paso1",
+  "real": "Invertir en experimentación continua en vez de apuestas grandes e inciertas",
+  "trampa": null
+ },
+ "O024-008.paso2": {
+  "clave": "reinvencion_constante",
+  "campo": "paso2",
+  "real": "Reinventarse mientras la empresa aún es exitosa, no esperar a la crisis",
+  "trampa": null
+ },
+ "O024-008.paso3": {
+  "clave": "reinvencion_constante",
+  "campo": "paso3",
+  "real": "Usar nuevas ideas para energizar y movilizar empleados y clientes",
+  "trampa": null
+ },
+ "O024-008.paso4": {
+  "clave": "reinvencion_constante",
+  "campo": "paso4",
+  "real": "Usar experimentos con clientes reales como criterio de decisión, no opiniones de expertos",
+  "trampa": null
+ },
+ "O024-008.paso5": {
+  "clave": "reinvencion_constante",
+  "campo": "paso5",
+  "real": "Preguntarse periódicamente: ¿qué está cambiando en el entorno?, ¿el modelo de negocio está caducando?, ¿la propuesta de valor sigue siendo atractiva?",
+  "trampa": null
+ },
+ "O024-008.entregable": {
+  "clave": "reinvencion_constante",
+  "campo": "entregable",
+  "real": "Un proceso organizacional formal (portafolio de exploración) que permite mejorar el modelo actual e inventar nuevos modelos de negocio en paralelo.",
+  "trampa": null
+ },
+ "O024-009.etiqueta": {
+  "clave": "consecuencias_no_intencionadas_sistemicas",
+  "campo": "etiqueta",
+  "real": "Anticipa Consecuencias No Intencionadas",
+  "trampa": null
+ },
+ "O024-009.paso0": {
+  "clave": "consecuencias_no_intencionadas_sistemicas",
+  "campo": "paso0",
+  "real": "Identifica otros sistemas externos que podrían interactuar con tu solución (redes sociales, otras apps, comportamiento social).",
+  "trampa": null
+ },
+ "O024-009.paso1": {
+  "clave": "consecuencias_no_intencionadas_sistemicas",
+  "campo": "paso1",
+  "real": "Simula o investiga escenarios de uso indebido o inesperado de tu producto.",
+  "trampa": null
+ },
+ "O024-009.paso2": {
+  "clave": "consecuencias_no_intencionadas_sistemicas",
+  "campo": "paso2",
+  "real": "Diseña salvaguardas o mecanismos de monitoreo para detectar efectos en cascada no deseados.",
+  "trampa": null
+ },
+ "O024-009.paso3": {
+  "clave": "consecuencias_no_intencionadas_sistemicas",
+  "campo": "paso3",
+  "real": "Revisa periódicamente el impacto real vs. el impacto previsto de tu sistema en el mundo.",
+  "trampa": null
+ },
+ "O024-009.entregable": {
+  "clave": "consecuencias_no_intencionadas_sistemicas",
+  "campo": "entregable",
+  "real": "Un documento de análisis de riesgos sistémicos que liste posibles interacciones no intencionadas con otros sistemas y planes de mitigación.",
+  "trampa": null
+ },
+ "O024-010.etiqueta": {
+  "clave": "eleccion_83b",
+  "campo": "etiqueta",
+  "real": "Elige tu Impuesto a Tiempo",
+  "trampa": null
+ },
+ "O024-010.paso0": {
+  "clave": "eleccion_83b",
+  "campo": "paso0",
+  "real": "Identifica a todos los que reciben acciones con vesting, incluido tú mismo y tus primeros empleados",
+  "trampa": null
+ },
+ "O024-010.paso1": {
+  "clave": "eleccion_83b",
+  "campo": "paso1",
+  "real": "Consulta con un asesor fiscal si te conviene hacer la elección 83(b)",
+  "trampa": null
+ },
+ "O024-010.paso2": {
+  "clave": "eleccion_83b",
+  "campo": "paso2",
+  "real": "Presenta la elección 83(b) ante la autoridad fiscal de Estados Unidos dentro de los 30 días posteriores a la entrega de las acciones",
+  "trampa": null
+ },
+ "O024-010.paso3": {
+  "clave": "eleccion_83b",
+  "campo": "paso3",
+  "real": "Sugerencia de My Idea: guarda el comprobante de que la enviaste y de que la recibieron",
+  "trampa": null
+ },
+ "O024-010.paso4": {
+  "clave": "eleccion_83b",
+  "campo": "paso4",
+  "real": "Verifica que todos los que tienen acciones hayan presentado su 83(b) antes de cualquier ronda de inversión o venta de la empresa",
+  "trampa": null
+ },
+ "O024-010.entregable": {
+  "clave": "eleccion_83b",
+  "campo": "entregable",
+  "real": "Elecciones 83(b) presentadas y guardadas para ti y para todos los que tienen acciones con vesting",
+  "trampa": null
+ },
+ "O024-011.etiqueta": {
+  "clave": "superioridad_calidad_market_share",
+  "campo": "etiqueta",
+  "real": "Haz Visible tu Calidad Superior",
+  "trampa": null
+ },
+ "O024-011.paso0": {
+  "clave": "superioridad_calidad_market_share",
+  "campo": "paso0",
+  "real": "Realizar pruebas de preferencia estadísticamente sólidas (forced choice) entre tu producto y el competidor líder",
+  "trampa": null
+ },
+ "O024-011.paso1": {
+  "clave": "superioridad_calidad_market_share",
+  "campo": "paso1",
+  "real": "Determinar si la diferencia de preferencia cae fuera del rango 25-75 por ciento",
+  "trampa": null
+ },
+ "O024-011.paso2": {
+  "clave": "superioridad_calidad_market_share",
+  "campo": "paso2",
+  "real": "Traducir las ventajas técnicas a términos económicos comprensibles para el comprador, como costo por uso o ahorro",
+  "trampa": null
+ },
+ "O024-011.paso3": {
+  "clave": "superioridad_calidad_market_share",
+  "campo": "paso3",
+  "real": "Si la diferencia es amplia invertir en mejoras de calidad; si es pequeña invertir en marketing",
+  "trampa": null
+ },
+ "O024-011.paso4": {
+  "clave": "superioridad_calidad_market_share",
+  "campo": "paso4",
+  "real": "Evitar mejoras menores de calidad que el cliente no perciba ni valore",
+  "trampa": null
+ },
+ "O024-011.entregable": {
+  "clave": "superioridad_calidad_market_share",
+  "campo": "entregable",
+  "real": "Informe de análisis de preferencia de consumidor frente a cuota de mercado con recomendación de invertir en calidad o en marketing.",
+  "trampa": null
+ },
+ "O024-012.etiqueta": {
+  "clave": "limites_control_por_juicio_error",
+  "campo": "etiqueta",
+  "real": "No Fijes Límites a Juicio",
+  "trampa": null
+ },
+ "O024-012.paso0": {
+  "clave": "limites_control_por_juicio_error",
+  "campo": "paso0",
+  "real": "Nunca fijar límites de control basados en especificaciones, metas o requerimientos del cliente",
+  "trampa": null
+ },
+ "O024-012.paso1": {
+  "clave": "limites_control_por_juicio_error",
+  "campo": "paso1",
+  "real": "Calcular los límites de control estadísticamente a partir de los datos históricos del propio proceso",
+  "trampa": null
+ },
+ "O024-012.paso2": {
+  "clave": "limites_control_por_juicio_error",
+  "campo": "paso2",
+  "real": "Verificar que ningún manual o consultor esté usando curvas OC o especificaciones como base de límites",
+  "trampa": null
+ },
+ "O024-012.paso3": {
+  "clave": "limites_control_por_juicio_error",
+  "campo": "paso3",
+  "real": "Educar a supervisores y gerentes sobre la diferencia entre límite de control (estadístico) y límite de especificación (requerimiento)",
+  "trampa": null
+ },
+ "O024-012.entregable": {
+  "clave": "limites_control_por_juicio_error",
+  "campo": "entregable",
+  "real": "Carta de control con límites calculados estadísticamente, documentando la fórmula y datos usados",
+  "trampa": null
+ },
+ "O024-013.etiqueta": {
+  "clave": "intellectual_property_strategy",
+  "campo": "etiqueta",
+  "real": "Protege tu Propiedad Intelectual",
+  "trampa": null
+ },
+ "O024-013.paso0": {
+  "clave": "intellectual_property_strategy",
+  "campo": "paso0",
+  "real": "Identificar qué activos requieren trademark, copyright o patente",
+  "trampa": null
+ },
+ "O024-013.paso1": {
+  "clave": "intellectual_property_strategy",
+  "campo": "paso1",
+  "real": "Presentar patentes provisionales tempranamente para invenciones clave",
+  "trampa": null
+ },
+ "O024-013.paso2": {
+  "clave": "intellectual_property_strategy",
+  "campo": "paso2",
+  "real": "Crear acuerdos de cesión de invención con empleados y acuerdos escritos de cesión del trabajo creado con contratistas y subcontratistas",
+  "trampa": null
+ },
+ "O024-013.paso3": {
+  "clave": "intellectual_property_strategy",
+  "campo": "paso3",
+  "real": "Documentar cadena de título de la propiedad intelectual, desde que fundas tu empresa",
+  "trampa": null
+ },
+ "O024-013.paso4": {
+  "clave": "intellectual_property_strategy",
+  "campo": "paso4",
+  "real": "Evitar divulgaciones públicas antes de proteger la invención",
+  "trampa": null
+ },
+ "O024-013.paso5": {
+  "clave": "intellectual_property_strategy",
+  "campo": "paso5",
+  "real": "Define qué ideas e invenciones clave necesitan patente o patente provisional y empieza a presentarlas pronto",
+  "trampa": null
+ },
+ "O024-013.entregable": {
+  "clave": "intellectual_property_strategy",
+  "campo": "entregable",
+  "real": "Mapa de estrategia de IP con activos identificados, tipo de protección y cronograma de registro",
+  "trampa": null
+ },
+ "O024-014.etiqueta": {
+  "clave": "auditoria_ti_verde",
+  "campo": "etiqueta",
+  "real": "Diagnostica tu Uso de Tecnología",
+  "trampa": null
+ },
+ "O024-014.paso0": {
+  "clave": "auditoria_ti_verde",
+  "campo": "paso0",
+  "real": "Inventariar todo el hardware de oficina y de centro de datos (computadoras, servidores, impresoras, etc.)",
+  "trampa": null
+ },
+ "O024-014.paso1": {
+  "clave": "auditoria_ti_verde",
+  "campo": "paso1",
+  "real": "Listar todo el software utilizado a nivel empresa e individual",
+  "trampa": null
+ },
+ "O024-014.paso2": {
+  "clave": "auditoria_ti_verde",
+  "campo": "paso2",
+  "real": "Medir consumo de papel usando contadores de dispositivos",
+  "trampa": null
+ },
+ "O024-014.paso3": {
+  "clave": "auditoria_ti_verde",
+  "campo": "paso3",
+  "real": "Calcular consumo energético por componente de TI y por persona",
+  "trampa": null
+ },
+ "O024-014.paso4": {
+  "clave": "auditoria_ti_verde",
+  "campo": "paso4",
+  "real": "Utilizar herramientas como el 'Aberdeen/IBM Green IT Assessment Calculator' para benchmarking",
+  "trampa": null
+ },
+ "O024-014.entregable": {
+  "clave": "auditoria_ti_verde",
+  "campo": "entregable",
+  "real": "Informe de auditoría de TI con inventario completo, métricas de consumo energético y de papel, y comparación con estándares best-in-class",
+  "trampa": null
+ },
+ "O024-015.etiqueta": {
+  "clave": "ciclo_virtuoso_datos_electronicos",
+  "campo": "etiqueta",
+  "real": "Mejora el Flujo de tus Datos",
+  "trampa": null
+ },
+ "O024-015.paso0": {
+  "clave": "ciclo_virtuoso_datos_electronicos",
+  "campo": "paso0",
+  "real": "Mapear qué tipo de conexión de datos usa cada socio de la cadena (EDI, XML, email, fax, APIs)",
+  "trampa": null
+ },
+ "O024-015.paso1": {
+  "clave": "ciclo_virtuoso_datos_electronicos",
+  "campo": "paso1",
+  "real": "Priorizar soluciones de conectividad simples y de bajo costo sobre sistemas complejos y caros",
+  "trampa": null
+ },
+ "O024-015.paso2": {
+  "clave": "ciclo_virtuoso_datos_electronicos",
+  "campo": "paso2",
+  "real": "Implementar APIs o conexiones cloud-based (SaaS) para automatizar el intercambio de datos",
+  "trampa": null
+ },
+ "O024-015.paso3": {
+  "clave": "ciclo_virtuoso_datos_electronicos",
+  "campo": "paso3",
+  "real": "Establecer el flujo continuo de datos como base para todas las decisiones estratégicas y tácticas",
+  "trampa": null
+ },
+ "O024-015.paso4": {
+  "clave": "ciclo_virtuoso_datos_electronicos",
+  "campo": "paso4",
+  "real": "Validar que los datos compartidos sean precisos antes de escalar el sistema",
+  "trampa": null
+ },
+ "O024-015.entregable": {
+  "clave": "ciclo_virtuoso_datos_electronicos",
+  "campo": "entregable",
+  "real": "Infraestructura básica de conexión de datos entre la empresa y sus socios clave de cadena de suministro, con flujo continuo y validado",
+  "trampa": null
+ },
+ "O024-016.etiqueta": {
+  "clave": "abrazar_los_bordes_de_la_conciencia",
+  "campo": "etiqueta",
+  "real": "Reconoce los Límites de tu Percepción",
+  "trampa": null
+ },
+ "O024-016.paso0": {
+  "clave": "abrazar_los_bordes_de_la_conciencia",
+  "campo": "paso0",
+  "real": "Antes de definir un problema, listar explícitamente qué perspectivas, sentidos o experiencias NO están representadas en tu equipo o investigación.",
+  "trampa": null
+ },
+ "O024-016.paso1": {
+  "clave": "abrazar_los_bordes_de_la_conciencia",
+  "campo": "paso1",
+  "real": "Buscar activamente usuarios, expertos o fuentes con 'burbujas sensoriales' distintas a las tuyas (discapacidad, cultura, edad, especie si aplica).",
+  "trampa": null
+ },
+ "O024-016.paso2": {
+  "clave": "abrazar_los_bordes_de_la_conciencia",
+  "campo": "paso2",
+  "real": "Evitar rellenar vacíos de información con suposiciones; en cambio, documentar la incertidumbre como parte del hallazgo.",
+  "trampa": null
+ },
+ "O024-016.paso3": {
+  "clave": "abrazar_los_bordes_de_la_conciencia",
+  "campo": "paso3",
+  "real": "Iterar el diseño incorporando estas perspectivas ausentes detectadas.",
+  "trampa": null
+ },
+ "O024-016.entregable": {
+  "clave": "abrazar_los_bordes_de_la_conciencia",
+  "campo": "entregable",
+  "real": "Un mapa de 'puntos ciegos' de percepción del equipo de diseño y un plan de investigación para cubrirlos con voces/fuentes diversas.",
+  "trampa": null
+ },
+ "O024-017.etiqueta": {
+  "clave": "definicion_calidad_segun_agente",
+  "campo": "etiqueta",
+  "real": "Calidad Según Quien Juzga",
+  "trampa": null
+ },
+ "O024-017.paso0": {
+  "clave": "definicion_calidad_segun_agente",
+  "campo": "paso0",
+  "real": "Identifica a todas las personas relevantes que juzgan la calidad de tu producto o servicio (quien lo hace, quien lo dirige, el cliente, quien lo distribuye)",
+  "trampa": null
+ },
+ "O024-017.paso1": {
+  "clave": "definicion_calidad_segun_agente",
+  "campo": "paso1",
+  "real": "Determina que entiende cada una de ellas por 'buena calidad'",
+  "trampa": null
+ },
+ "O024-017.paso2": {
+  "clave": "definicion_calidad_segun_agente",
+  "campo": "paso2",
+  "real": "Anota los posibles desacuerdos entre lo que cada persona considera calidad",
+  "trampa": null
+ },
+ "O024-017.paso3": {
+  "clave": "definicion_calidad_segun_agente",
+  "campo": "paso3",
+  "real": "Prioriza las caracteristicas de calidad según el impacto que tienen en tu negocio y en tu cliente final",
+  "trampa": null
+ },
+ "O024-017.entregable": {
+  "clave": "definicion_calidad_segun_agente",
+  "campo": "entregable",
+  "real": "Un documento donde anotas como percibe la calidad cada persona involucrada en tu producto o servicio",
+  "trampa": null
+ },
+ "O024-018.etiqueta": {
+  "clave": "decision_cuando_fundar",
+  "campo": "etiqueta",
+  "real": "Evalúa Cuándo Fundar tu Empresa",
+  "trampa": null
+ },
+ "O024-018.paso0": {
+  "clave": "decision_cuando_fundar",
+  "campo": "paso0",
+  "real": "Evaluar tus factores de carrera: ¿tienes las habilidades y experiencia necesarias o necesitarás cofundadores/empleados para compensar?",
+  "trampa": null
+ },
+ "O024-018.paso1": {
+  "clave": "decision_cuando_fundar",
+  "campo": "paso1",
+  "real": "Evaluar factores de mercado: ¿tu idea es lo suficientemente sólida o tu pasión te está sesgando el juicio?",
+  "trampa": null
+ },
+ "O024-018.paso2": {
+  "clave": "decision_cuando_fundar",
+  "campo": "paso2",
+  "real": "Evaluar factores personales: ¿tu situación familiar y económica permite asumir el riesgo del emprendimiento?",
+  "trampa": null
+ },
+ "O024-018.paso3": {
+  "clave": "decision_cuando_fundar",
+  "campo": "paso3",
+  "real": "Identificar cuál de los tres factores es más débil y diseñar un plan para mitigarlo antes de dar el salto",
+  "trampa": null
+ },
+ "O024-018.entregable": {
+  "clave": "decision_cuando_fundar",
+  "campo": "entregable",
+  "real": "Matriz de autoevaluación de los tres factores (carrera, mercado, personal) con plan de mitigación para los factores débiles",
+  "trampa": null
+ },
+ "O024-019.etiqueta": {
+  "clave": "evaluar_ia_predictiva_vs_generativa_para_negocio",
+  "campo": "etiqueta",
+  "real": "Elige la IA Correcta",
+  "trampa": null
+ },
+ "O024-019.paso0": {
+  "clave": "evaluar_ia_predictiva_vs_generativa_para_negocio",
+  "campo": "paso0",
+  "real": "Clasifica los problemas de tu negocio en 'predecir datos numéricos' o 'generar contenido y lenguaje'",
+  "trampa": null
+ },
+ "O024-019.paso1": {
+  "clave": "evaluar_ia_predictiva_vs_generativa_para_negocio",
+  "campo": "paso1",
+  "real": "Si tu problema es de predicción (demanda, inventario, precios), evalúa herramientas de IA predictiva usando tus propios datos históricos",
+  "trampa": null
+ },
+ "O024-019.paso2": {
+  "clave": "evaluar_ia_predictiva_vs_generativa_para_negocio",
+  "campo": "paso2",
+  "real": "Si tu problema es de generación de contenido (marketing, atención a clientes, documentos), evalúa usar LLMs",
+  "trampa": null
+ },
+ "O024-019.paso3": {
+  "clave": "evaluar_ia_predictiva_vs_generativa_para_negocio",
+  "campo": "paso3",
+  "real": "Revisa qué datos propios tienes disponibles para entrenar o alimentar un sistema predictivo",
+  "trampa": null
+ },
+ "O024-019.entregable": {
+  "clave": "evaluar_ia_predictiva_vs_generativa_para_negocio",
+  "campo": "entregable",
+  "real": "Una lista clara que diga, proceso por proceso, qué tipo de IA le conviene a tu negocio",
+  "trampa": null
+ },
+ "O024-020.etiqueta": {
+  "clave": "venture_debt_introduccion",
+  "campo": "etiqueta",
+  "real": "Complementa tu Capital con Deuda",
+  "trampa": null
+ },
+ "O024-020.paso0": {
+  "clave": "venture_debt_introduccion",
+  "campo": "paso0",
+  "real": "Evaluar el balance ideal entre equity y deuda dentro de la estrategia de capital.",
+  "trampa": null
+ },
+ "O024-020.paso1": {
+  "clave": "venture_debt_introduccion",
+  "campo": "paso1",
+  "real": "Confirmar que la empresa ya cuenta con respaldo de capital de riesgo institucional antes de buscar venture debt.",
+  "trampa": null
+ },
+ "O024-020.paso2": {
+  "clave": "venture_debt_introduccion",
+  "campo": "paso2",
+  "real": "Identificar bancos especializados (ej. SVB) o fondos de deuda de riesgo con track record en el sector.",
+  "trampa": null
+ },
+ "O024-020.paso3": {
+  "clave": "venture_debt_introduccion",
+  "campo": "paso3",
+  "real": "Discutir con el board y los VCs la conveniencia y momento de levantar deuda.",
+  "trampa": null
+ },
+ "O024-020.paso4": {
+  "clave": "venture_debt_introduccion",
+  "campo": "paso4",
+  "real": "Definir el propósito específico del préstamo (extensión de runway, capex, adquisición, puente a próxima ronda).",
+  "trampa": null
+ },
+ "O024-020.entregable": {
+  "clave": "venture_debt_introduccion",
+  "campo": "entregable",
+  "real": "Análisis de estrategia de capital que determine cuánta deuda de riesgo levantar, con qué prestamista y para qué propósito específico.",
+  "trampa": null
+ },
+ "O024-021.etiqueta": {
+  "clave": "concepto_de_advances",
+  "campo": "etiqueta",
+  "real": "Avanza con Pequeños Compromisos",
+  "trampa": null
+ },
+ "O024-021.paso0": {
+  "clave": "concepto_de_advances",
+  "campo": "paso0",
+  "real": "Definir un objetivo de avance específico para cada llamada o interacción",
+  "trampa": null
+ },
+ "O024-021.paso1": {
+  "clave": "concepto_de_advances",
+  "campo": "paso1",
+  "real": "Pedir compromisos concretos y medibles al prospecto (ej. completar CIRF, investigar mercado)",
+  "trampa": null
+ },
+ "O024-021.paso2": {
+  "clave": "concepto_de_advances",
+  "campo": "paso2",
+  "real": "Registrar el avance logrado en cada interacción para dar seguimiento",
+  "trampa": null
+ },
+ "O024-021.paso3": {
+  "clave": "concepto_de_advances",
+  "campo": "paso3",
+  "real": "Escalar progresivamente el nivel de compromiso hasta llegar al cierre",
+  "trampa": null
+ },
+ "O024-021.entregable": {
+  "clave": "concepto_de_advances",
+  "campo": "entregable",
+  "real": "Lista de posibles advances mapeados a cada etapa del proceso de venta, con seguimiento por prospecto",
+  "trampa": null
+ },
+ "O024-022.etiqueta": {
+  "clave": "adaptacion_producto_mercado_exterior",
+  "campo": "etiqueta",
+  "real": "Adapta tu Producto al Exportar",
+  "trampa": null
+ },
+ "O024-022.paso0": {
+  "clave": "adaptacion_producto_mercado_exterior",
+  "campo": "paso0",
+  "real": "Investiga las reglas del gobierno del país al que quieres vender, tanto aranceles como otros requisitos",
+  "trampa": null
+ },
+ "O024-022.paso1": {
+  "clave": "adaptacion_producto_mercado_exterior",
+  "campo": "paso1",
+  "real": "Averigua los gustos culturales, sensoriales y de tamaño corporal de la gente en ese mercado",
+  "trampa": null
+ },
+ "O024-022.paso2": {
+  "clave": "adaptacion_producto_mercado_exterior",
+  "campo": "paso2",
+  "real": "Revisa si tienes que convertir a sistema métrico o ajustar estándares eléctricos (voltaje, ciclos, fases)",
+  "trampa": null
+ },
+ "O024-022.paso3": {
+  "clave": "adaptacion_producto_mercado_exterior",
+  "campo": "paso3",
+  "real": "Adapta tu marca, etiquetas, empaque, colores e idioma según la norma y la cultura local",
+  "trampa": null
+ },
+ "O024-022.paso4": {
+  "clave": "adaptacion_producto_mercado_exterior",
+  "campo": "paso4",
+  "real": "Calcula cuánto cuesta adaptar el producto contra cuánto más vas a ganar por hacerlo",
+  "trampa": null
+ },
+ "O024-022.entregable": {
+  "clave": "adaptacion_producto_mercado_exterior",
+  "campo": "entregable",
+  "real": "Tu producto adaptado (diseño, etiquetado, empaque) listo para el mercado que elegiste, con el cálculo de costo contra beneficio",
+  "trampa": null
+ },
+ "O024-023.etiqueta": {
+  "clave": "tres_palancas_rentabilidad",
+  "campo": "etiqueta",
+  "real": "Activa tus Tres Palancas de Rentabilidad",
+  "trampa": null
+ },
+ "O024-023.paso0": {
+  "clave": "tres_palancas_rentabilidad",
+  "campo": "paso0",
+  "real": "Diagnosticar cuál de las tres palancas explica la baja rentabilidad actual",
+  "trampa": null
+ },
+ "O024-023.paso1": {
+  "clave": "tres_palancas_rentabilidad",
+  "campo": "paso1",
+  "real": "Si es ventas: analizar el embudo de ventas y nuevos mercados potenciales",
+  "trampa": null
+ },
+ "O024-023.paso2": {
+  "clave": "tres_palancas_rentabilidad",
+  "campo": "paso2",
+  "real": "Si es COGS: auditar el proceso productivo buscando ineficiencias",
+  "trampa": null
+ },
+ "O024-023.paso3": {
+  "clave": "tres_palancas_rentabilidad",
+  "campo": "paso3",
+  "real": "Si es gastos operativos: evaluar impacto en moral antes de decidir recortes",
+  "trampa": null
+ },
+ "O024-023.paso4": {
+  "clave": "tres_palancas_rentabilidad",
+  "campo": "paso4",
+  "real": "Priorizar soluciones de largo plazo (ventas y eficiencia) sobre recortes rápidos",
+  "trampa": null
+ },
+ "O024-023.entregable": {
+  "clave": "tres_palancas_rentabilidad",
+  "campo": "entregable",
+  "real": "Plan de acción con la palanca priorizada, métricas objetivo y cronograma de implementación",
+  "trampa": null
+ },
+ "O024-024.etiqueta": {
+  "clave": "cuan_probable_y_cuanto_doleria",
+  "campo": "etiqueta",
+  "real": "Cuán Probable y Cuánto Dolería",
+  "trampa": null
+ },
+ "O024-024.paso0": {
+  "clave": "cuan_probable_y_cuanto_doleria",
+  "campo": "paso0",
+  "real": "Para cada riesgo de tu lista, traduce el impacto a una cifra de dinero o de tiempo que perderias, no a una etiqueta de color.",
+  "trampa": null
+ },
+ "O024-024.paso1": {
+  "clave": "cuan_probable_y_cuanto_doleria",
+  "campo": "paso1",
+  "real": "Para cada probabilidad, escribe el rango concreto (un porcentaje o una frecuencia) que tienes en mente cuando dices alta, media o baja.",
+  "trampa": null
+ },
+ "O024-024.paso2": {
+  "clave": "cuan_probable_y_cuanto_doleria",
+  "campo": "paso2",
+  "real": "Revisa si dos riesgos con la misma etiqueta en realidad significan cosas muy distintas en dinero o tiempo; si es así, corrige la etiqueta.",
+  "trampa": null
+ },
+ "O024-024.paso3": {
+  "clave": "cuan_probable_y_cuanto_doleria",
+  "campo": "paso3",
+  "real": "Marca que riesgos improbables pero capaces de hundirte necesitan tu atencion, aunque su probabilidad sea baja.",
+  "trampa": null
+ },
+ "O024-024.paso4": {
+  "clave": "cuan_probable_y_cuanto_doleria",
+  "campo": "paso4",
+  "real": "Aplica el mismo criterio de conversión, en dinero, en tiempo o en rango de porcentaje, a todos los riesgos de tu lista, sin excepciones.",
+  "trampa": null
+ },
+ "O024-024.entregable": {
+  "clave": "cuan_probable_y_cuanto_doleria",
+  "campo": "entregable",
+  "real": "Tu lista de riesgos con cada probabilidad expresada como rango y cada impacto expresado en dinero o tiempo, en vez de etiquetas o colores vagos.",
+  "trampa": null
+ },
+ "O024-025.etiqueta": {
+  "clave": "incoterms_reglas_comerciales_internacionales",
+  "campo": "etiqueta",
+  "real": "Define Quién Asume Cada Riesgo",
+  "trampa": null
+ },
+ "O024-025.paso0": {
+  "clave": "incoterms_reglas_comerciales_internacionales",
+  "campo": "paso0",
+  "real": "Identificar el modo de transporte que se usará (marítimo, aéreo, terrestre o intermodal).",
+  "trampa": null
+ },
+ "O024-025.paso1": {
+  "clave": "incoterms_reglas_comerciales_internacionales",
+  "campo": "paso1",
+  "real": "Seleccionar el Incoterm adecuado según el nivel de responsabilidad que quieres asumir, considerando CIF o CIP si buscas mostrar el costo total al comprador.",
+  "trampa": null
+ },
+ "O024-025.paso2": {
+  "clave": "incoterms_reglas_comerciales_internacionales",
+  "campo": "paso2",
+  "real": "Negociar con el comprador el punto exacto de transferencia de riesgo y costo.",
+  "trampa": null
+ },
+ "O024-025.paso3": {
+  "clave": "incoterms_reglas_comerciales_internacionales",
+  "campo": "paso3",
+  "real": "Especificar el Incoterm y el lugar o puerto nombrado en la cotización, pro forma invoice, factura comercial y contrato de venta.",
+  "trampa": null
+ },
+ "O024-025.paso4": {
+  "clave": "incoterms_reglas_comerciales_internacionales",
+  "campo": "paso4",
+  "real": "Consultar con un freight forwarder o agente aduanal las obligaciones específicas del término elegido, incluyendo el cálculo de precios CIF o CIP si aplica.",
+  "trampa": null
+ },
+ "O024-025.paso5": {
+  "clave": "incoterms_reglas_comerciales_internacionales",
+  "campo": "paso5",
+  "real": "Verificar que el Incoterm sea compatible con los requisitos de documentación del país importador.",
+  "trampa": null
+ },
+ "O024-025.entregable": {
+  "clave": "incoterms_reglas_comerciales_internacionales",
+  "campo": "entregable",
+  "real": "Cotización o pro forma invoice y contrato de venta con el Incoterm y el lugar o puerto nombrado claramente especificado.",
+  "trampa": null
+ },
+ "O024-026.etiqueta": {
+  "clave": "triple_bottom_line_2",
+  "campo": "etiqueta",
+  "real": "Suma lo Social a tu Impacto",
+  "trampa": null
+ },
+ "O024-026.paso0": {
+  "clave": "triple_bottom_line_2",
+  "campo": "paso0",
+  "real": "Identificar issues sociales relevantes para la empresa (más allá de los ambientales)",
+  "trampa": null
+ },
+ "O024-026.paso1": {
+  "clave": "triple_bottom_line_2",
+  "campo": "paso1",
+  "real": "Evaluar prácticas laborales, de diversidad y de derechos humanos en la cadena de valor",
+  "trampa": null
+ },
+ "O024-026.paso2": {
+  "clave": "triple_bottom_line_2",
+  "campo": "paso2",
+  "real": "Integrar métricas sociales junto con las ambientales en el análisis de sostenibilidad",
+  "trampa": null
+ },
+ "O024-026.entregable": {
+  "clave": "triple_bottom_line_2",
+  "campo": "entregable",
+  "real": "Un mapeo de issues sociales relevantes complementario al análisis ambiental",
+  "trampa": null
+ },
+ "O024-027.etiqueta": {
+  "clave": "metodos_de_valuacion",
+  "campo": "etiqueta",
+  "real": "Elige Cómo Valuar tu Empresa",
+  "trampa": null
+ },
+ "O024-027.paso0": {
+  "clave": "metodos_de_valuacion",
+  "campo": "paso0",
+  "real": "Identificar el propósito de la valuación (venta, levantamiento de capital, fusión, préstamo)",
+  "trampa": null
+ },
+ "O024-027.paso1": {
+  "clave": "metodos_de_valuacion",
+  "campo": "paso1",
+  "real": "Calcular el valor de la empresa usando al menos dos métodos distintos (precio-ganancias, flujo de caja descontado, valor de activos)",
+  "trampa": null
+ },
+ "O024-027.paso2": {
+  "clave": "metodos_de_valuacion",
+  "campo": "paso2",
+  "real": "Comparar los resultados obtenidos y entender por qué difieren entre métodos",
+  "trampa": null
+ },
+ "O024-027.paso3": {
+  "clave": "metodos_de_valuacion",
+  "campo": "paso3",
+  "real": "Documentar y justificar los supuestos usados en cada método (tasa de descuento, múltiplos comparables, valor de activos)",
+  "trampa": null
+ },
+ "O024-027.paso4": {
+  "clave": "metodos_de_valuacion",
+  "campo": "paso4",
+  "real": "Consultar con un experto en valuación antes de negociar con inversionistas, compradores o prestamistas",
+  "trampa": null
+ },
+ "O024-027.entregable": {
+  "clave": "metodos_de_valuacion",
+  "campo": "entregable",
+  "real": "Un rango de valuación de la empresa sustentado en al menos dos metodologías diferentes, con los supuestos documentados y justificados",
+  "trampa": null
+ },
+ "O024-028.etiqueta": {
+  "clave": "diseno_para_factores_criticos_y_error_humano",
+  "campo": "etiqueta",
+  "real": "Reduce el Error Humano Crítico",
+  "trampa": null
+ },
+ "O024-028.paso0": {
+  "clave": "diseno_para_factores_criticos_y_error_humano",
+  "campo": "paso0",
+  "real": "Identifica los aspectos del proceso con riesgo serio para la vida, la salud, el ambiente o grandes pérdidas económicas",
+  "trampa": null
+ },
+ "O024-028.paso1": {
+  "clave": "diseno_para_factores_criticos_y_error_humano",
+  "campo": "paso1",
+  "real": "Aplica un análisis de criticidad y FMEA para priorizar estos factores",
+  "trampa": null
+ },
+ "O024-028.paso2": {
+  "clave": "diseno_para_factores_criticos_y_error_humano",
+  "campo": "paso2",
+  "real": "Diseña márgenes de seguridad, sistemas fail safe, redundancia y alarmas múltiples",
+  "trampa": null
+ },
+ "O024-028.paso3": {
+  "clave": "diseno_para_factores_criticos_y_error_humano",
+  "campo": "paso3",
+  "real": "Analiza tus datos de errores humanos y aplica el principio de Pareto para priorizar los tipos de error vitales",
+  "trampa": null
+ },
+ "O024-028.paso4": {
+  "clave": "diseno_para_factores_criticos_y_error_humano",
+  "campo": "paso4",
+  "real": "Aplica principios de mistake proofing como la eliminación de operaciones propensas al error",
+  "trampa": null
+ },
+ "O024-028.paso5": {
+  "clave": "diseno_para_factores_criticos_y_error_humano",
+  "campo": "paso5",
+  "real": "Documenta las contramedidas de prevención de fallas y error humano incorporadas al proceso",
+  "trampa": null
+ },
+ "O024-028.entregable": {
+  "clave": "diseno_para_factores_criticos_y_error_humano",
+  "campo": "entregable",
+  "real": "Plan de diseño con análisis de criticidad, FMEA y mecanismos a prueba de error implementados.",
+  "trampa": null
+ },
+ "O024-029.etiqueta": {
+  "clave": "gamificacion_onboarding_visual",
+  "campo": "etiqueta",
+  "real": "Vuelve Lúdico el Onboarding",
+  "trampa": null
+ },
+ "O024-029.paso0": {
+  "clave": "gamificacion_onboarding_visual",
+  "campo": "paso0",
+  "real": "Documentar y simplificar el proceso interno en pasos discretos y nombrados de forma simple",
+  "trampa": null
+ },
+ "O024-029.paso1": {
+  "clave": "gamificacion_onboarding_visual",
+  "campo": "paso1",
+  "real": "Diseñar un elemento visual o lúdico (rompecabezas, checklist ilustrado, barra de progreso) que represente cada paso",
+  "trampa": null
+ },
+ "O024-029.paso2": {
+  "clave": "gamificacion_onboarding_visual",
+  "campo": "paso2",
+  "real": "Entregar el elemento físico o digital al inicio del proceso, junto con el kickoff",
+  "trampa": null
+ },
+ "O024-029.paso3": {
+  "clave": "gamificacion_onboarding_visual",
+  "campo": "paso3",
+  "real": "Actualizar y comunicar el avance con cada hito completado usando imágenes en emails o mensajes",
+  "trampa": null
+ },
+ "O024-029.paso4": {
+  "clave": "gamificacion_onboarding_visual",
+  "campo": "paso4",
+  "real": "Celebrar la finalización con un evento o pieza final que sirva como recuerdo tangible",
+  "trampa": null
+ },
+ "O024-029.paso5": {
+  "clave": "gamificacion_onboarding_visual",
+  "campo": "paso5",
+  "real": "Enviar solo la información necesaria para el paso actual, evitando saturar al cliente con todo el proceso de una vez.",
+  "trampa": null
+ },
+ "O024-029.paso6": {
+  "clave": "gamificacion_onboarding_visual",
+  "campo": "paso6",
+  "real": "Anticipar el siguiente paso en cada comunicación para generar expectativa.",
+  "trampa": null
+ },
+ "O024-029.entregable": {
+  "clave": "gamificacion_onboarding_visual",
+  "campo": "entregable",
+  "real": "Un sistema visual/lúdico de seguimiento de progreso para procesos complejos de implementación u onboarding",
+  "trampa": null
+ },
+ "O024-030.etiqueta": {
+  "clave": "planificacion_preguntas_implicacion",
+  "campo": "etiqueta",
+  "real": "Prepara tus Preguntas de Implicación",
+  "trampa": null
+ },
+ "O024-030.paso0": {
+  "clave": "planificacion_preguntas_implicacion",
+  "campo": "paso0",
+  "real": "Antes de la llamada, escribe al menos tres problemas potenciales que el comprador podría tener y que tu producto o servicio puede resolver",
+  "trampa": null
+ },
+ "O024-030.paso1": {
+  "clave": "planificacion_preguntas_implicacion",
+  "campo": "paso1",
+  "real": "Para cada problema, anota las dificultades relacionadas o consecuencias que podría generar, sean financieras, operativas, de satisfacción",
+  "trampa": null
+ },
+ "O024-030.paso2": {
+  "clave": "planificacion_preguntas_implicacion",
+  "campo": "paso2",
+  "real": "Para cada dificultad, redacta preguntas de implicación específicas que la hagan evidente al cliente",
+  "trampa": null
+ },
+ "O024-030.paso3": {
+  "clave": "planificacion_preguntas_implicacion",
+  "campo": "paso3",
+  "real": "Evita empezar la llamada solo con preguntas de situación; avanza rápido hacia problema e implicación",
+  "trampa": null
+ },
+ "O024-030.paso4": {
+  "clave": "planificacion_preguntas_implicacion",
+  "campo": "paso4",
+  "real": "Practicar y refinar estas preguntas ya que requieren mayor habilidad y preparación",
+  "trampa": null
+ },
+ "O024-030.entregable": {
+  "clave": "planificacion_preguntas_implicacion",
+  "campo": "entregable",
+  "real": "Guion o mapa de preguntas de implicación preparado antes de cada llamada de ventas, vinculando problemas potenciales con consecuencias y preguntas específicas",
+  "trampa": null
+ },
+ "O024-031.etiqueta": {
+  "clave": "metricas_de_startup",
+  "campo": "etiqueta",
+  "real": "No Midas tu Startup Como Grande",
+  "trampa": null
+ },
+ "O024-031.paso0": {
+  "clave": "metricas_de_startup",
+  "campo": "paso0",
+  "real": "Definir junto al equipo o la dirección un tablero de métricas de aprendizaje, en vez de un reporte financiero tradicional",
+  "trampa": null
+ },
+ "O024-031.paso1": {
+  "clave": "metricas_de_startup",
+  "campo": "paso1",
+  "real": "Medir si el problema del cliente y las características del producto han sido validados en cada iteración",
+  "trampa": null
+ },
+ "O024-031.paso2": {
+  "clave": "metricas_de_startup",
+  "campo": "paso2",
+  "real": "Rastrear métricas de validación de clientes: tamaño promedio de pedido, valor de vida del cliente, tiempo hasta la primera compra, tasa de cierre",
+  "trampa": null
+ },
+ "O024-031.paso3": {
+  "clave": "metricas_de_startup",
+  "campo": "paso3",
+  "real": "Monitorear métricas financieras mínimas en cada reunión de dirección: tasa de consumo de caja, meses de caja restante y tiempo estimado hasta el punto de equilibrio",
+  "trampa": null
+ },
+ "O024-031.entregable": {
+  "clave": "metricas_de_startup",
+  "campo": "entregable",
+  "real": "Tablero de métricas de aprendizaje y supervivencia que reemplace o complemente los reportes financieros tradicionales en las reuniones de dirección tempranas",
+  "trampa": null
+ },
+ "O024-032.etiqueta": {
+  "clave": "funciones_del_departamento_de_calidad",
+  "campo": "etiqueta",
+  "real": "Organiza tu Área de Calidad",
+  "trampa": null
+ },
+ "O024-032.paso0": {
+  "clave": "funciones_del_departamento_de_calidad",
+  "campo": "paso0",
+  "real": "Establece una inspección de aceptación planificada, a cargo de alguien capacitado que no sea quien fabrica el producto.",
+  "trampa": null
+ },
+ "O024-032.paso1": {
+  "clave": "funciones_del_departamento_de_calidad",
+  "campo": "paso1",
+  "real": "Define pruebas funcionales con procedimientos exactos y trata el software de prueba como un producto que también debe calificarse.",
+  "trampa": null
+ },
+ "O024-032.paso2": {
+  "clave": "funciones_del_departamento_de_calidad",
+  "campo": "paso2",
+  "real": "No dejes que quien diseñó el producto sea quien haga las pruebas rutinarias de aceptación; que las haga alguien dedicado a seguir el procedimiento exacto.",
+  "trampa": null
+ },
+ "O024-032.paso3": {
+  "clave": "funciones_del_departamento_de_calidad",
+  "campo": "paso3",
+  "real": "Involucra el control de calidad desde el principio al elegir y desarrollar proveedores, no solo al momento de comprarles.",
+  "trampa": null
+ },
+ "O024-032.paso4": {
+  "clave": "funciones_del_departamento_de_calidad",
+  "campo": "paso4",
+  "real": "Decide dónde conviene aceptar el material comprado: en la planta del proveedor, en tu línea de producción, o al recibirlo.",
+  "trampa": null
+ },
+ "O024-032.entregable": {
+  "clave": "funciones_del_departamento_de_calidad",
+  "campo": "entregable",
+  "real": "Un procedimiento escrito que define cómo haces inspección, pruebas y control de proveedores, con quién hace qué.",
+  "trampa": null
+ },
+ "O024-033.etiqueta": {
+  "clave": "plan_de_lanzamiento_al_mercado",
+  "campo": "etiqueta",
+  "real": "Lanza tu Producto al Mercado",
+  "trampa": null
+ },
+ "O024-033.paso0": {
+  "clave": "plan_de_lanzamiento_al_mercado",
+  "campo": "paso0",
+  "real": "Empieza a armar tu plan de lanzamiento desde las primeras etapas del proyecto, no lo dejes para el final",
+  "trampa": null
+ },
+ "O024-033.paso1": {
+  "clave": "plan_de_lanzamiento_al_mercado",
+  "campo": "paso1",
+  "real": "Investiga cómo compra tu cliente antes de diseñar el lanzamiento",
+  "trampa": null
+ },
+ "O024-033.paso2": {
+  "clave": "plan_de_lanzamiento_al_mercado",
+  "campo": "paso2",
+  "real": "Haz una prueba de mercado o una venta piloto para validar tu plan antes de lanzar en serio",
+  "trampa": null
+ },
+ "O024-033.paso3": {
+  "clave": "plan_de_lanzamiento_al_mercado",
+  "campo": "paso3",
+  "real": "Asegúrate de tener las personas y el presupuesto que el lanzamiento realmente necesita",
+  "trampa": null
+ },
+ "O024-033.paso4": {
+  "clave": "plan_de_lanzamiento_al_mercado",
+  "campo": "paso4",
+  "real": "Suma a tu equipo, desde ya, a quienes van a vender y dar soporte cuando lances",
+  "trampa": null
+ },
+ "O024-033.entregable": {
+  "clave": "plan_de_lanzamiento_al_mercado",
+  "campo": "entregable",
+  "real": "Tu plan de marketing y lanzamiento completo, con los recursos definidos y validado con una prueba de mercado",
+  "trampa": null
+ },
+ "O024-034.etiqueta": {
+  "clave": "analisis_de_sistemas_de_medicion_msa",
+  "campo": "etiqueta",
+  "real": "Confía en tus Mediciones",
+  "trampa": null
+ },
+ "O024-034.paso0": {
+  "clave": "analisis_de_sistemas_de_medicion_msa",
+  "campo": "paso0",
+  "real": "Definir el método de prueba con procedimiento paso a paso, equipo y condiciones",
+  "trampa": null
+ },
+ "O024-034.paso1": {
+  "clave": "analisis_de_sistemas_de_medicion_msa",
+  "campo": "paso1",
+  "real": "Identificar el sistema de causas de variabilidad (material, analistas, aparatos, días)",
+  "trampa": null
+ },
+ "O024-034.paso2": {
+  "clave": "analisis_de_sistemas_de_medicion_msa",
+  "campo": "paso2",
+  "real": "Verificar que el proceso de medición esté bajo control estadístico mediante carta de control",
+  "trampa": null
+ },
+ "O024-034.paso3": {
+  "clave": "analisis_de_sistemas_de_medicion_msa",
+  "campo": "paso3",
+  "real": "Realizar un estudio Gauge R&R con múltiples apraisers, partes y repeticiones",
+  "trampa": null
+ },
+ "O024-034.paso4": {
+  "clave": "analisis_de_sistemas_de_medicion_msa",
+  "campo": "paso4",
+  "real": "Calcular 5.15σ y compararlo con el rango de especificación (aceptable si es ≤10%)",
+  "trampa": "TILDE"
+ },
+ "O024-034.paso5": {
+  "clave": "analisis_de_sistemas_de_medicion_msa",
+  "campo": "paso5",
+  "real": "Ajustar o calibrar el instrumento si se detecta sesgo sistemático, respecto a estándares de medida reconocidos",
+  "trampa": null
+ },
+ "O024-034.entregable": {
+  "clave": "analisis_de_sistemas_de_medicion_msa",
+  "campo": "entregable",
+  "real": "Informe de estudio MSA/Gauge R&R con estimaciones de repetibilidad, reproducibilidad y determinación de aceptabilidad del sistema de medición",
+  "trampa": null
+ },
+ "O024-035.etiqueta": {
+  "clave": "concepto_patrimonio_equity",
+  "campo": "etiqueta",
+  "real": "Entiende tu Patrimonio Real",
+  "trampa": null
+ },
+ "O024-035.paso0": {
+  "clave": "concepto_patrimonio_equity",
+  "campo": "paso0",
+  "real": "Calcular el patrimonio como activos totales menos pasivos totales",
+  "trampa": null
+ },
+ "O024-035.paso1": {
+  "clave": "concepto_patrimonio_equity",
+  "campo": "paso1",
+  "real": "Revisar la línea de utilidades retenidas para ver la acumulación histórica de ganancias o pérdidas",
+  "trampa": null
+ },
+ "O024-035.paso2": {
+  "clave": "concepto_patrimonio_equity",
+  "campo": "paso2",
+  "real": "Entender que las utilidades de cada periodo afectan el patrimonio acumulado",
+  "trampa": null
+ },
+ "O024-035.paso3": {
+  "clave": "concepto_patrimonio_equity",
+  "campo": "paso3",
+  "real": "Comparar el patrimonio actual con periodos anteriores para medir crecimiento del valor del negocio",
+  "trampa": null
+ },
+ "O024-035.entregable": {
+  "clave": "concepto_patrimonio_equity",
+  "campo": "entregable",
+  "real": "Cálculo documentado del patrimonio actual de la empresa y su evolución en los últimos periodos",
+  "trampa": null
+ },
+ "O024-036.etiqueta": {
+  "clave": "footnotes_financieros",
+  "campo": "etiqueta",
+  "real": "Lee las Notas al Pie",
+  "trampa": null
+ },
+ "O024-036.paso0": {
+  "clave": "footnotes_financieros",
+  "campo": "paso0",
+  "real": "Leer cuidadosamente cada nota al pie del estado de resultados, especialmente sobre reconocimiento de ingresos.",
+  "trampa": null
+ },
+ "O024-036.paso1": {
+  "clave": "footnotes_financieros",
+  "campo": "paso1",
+  "real": "Preguntar al contador sobre supuestos detrás de cifras importantes aunque no haya nota explícita.",
+  "trampa": null
+ },
+ "O024-036.paso2": {
+  "clave": "footnotes_financieros",
+  "campo": "paso2",
+  "real": "Detectar cambios de política contable entre periodos que puedan explicar variaciones.",
+  "trampa": null
+ },
+ "O024-036.entregable": {
+  "clave": "footnotes_financieros",
+  "campo": "entregable",
+  "real": "Una lista de preguntas clave para el contador sobre supuestos y políticas contables aplicadas.",
+  "trampa": null
+ },
+ "O024-037.etiqueta": {
+  "clave": "analisis_licitaciones_no_ganadas",
+  "campo": "etiqueta",
+  "real": "Aprende de Licitaciones Perdidas",
+  "trampa": null
+ },
+ "O024-037.paso0": {
+  "clave": "analisis_licitaciones_no_ganadas",
+  "campo": "paso0",
+  "real": "Formar un equipo multifuncional para revisar licitaciones no ganadas",
+  "trampa": null
+ },
+ "O024-037.paso1": {
+  "clave": "analisis_licitaciones_no_ganadas",
+  "campo": "paso1",
+  "real": "Identificar causas principales y contribuyentes de cada fracaso",
+  "trampa": "ERRATA"
+ },
+ "O024-037.paso2": {
+  "clave": "analisis_licitaciones_no_ganadas",
+  "campo": "paso2",
+  "real": "Cuantificar la frecuencia de cada causa de pérdida",
+  "trampa": null
+ },
+ "O024-037.paso3": {
+  "clave": "analisis_licitaciones_no_ganadas",
+  "campo": "paso3",
+  "real": "Revisar y ajustar el proceso de estimación de costos/precios según hallazgos",
+  "trampa": null
+ },
+ "O024-037.entregable": {
+  "clave": "analisis_licitaciones_no_ganadas",
+  "campo": "entregable",
+  "real": "Tabla de análisis de causas de licitaciones perdidas y plan de mejora del proceso de oferta",
+  "trampa": null
+ },
+ "O024-038.etiqueta": {
+  "clave": "aplica_modelo_ackerman",
+  "campo": "etiqueta",
+  "real": "Sube tu oferta en tramos",
+  "trampa": null
+ },
+ "O024-038.paso0": {
+  "clave": "aplica_modelo_ackerman",
+  "campo": "paso0",
+  "real": "Define el precio objetivo real que quieres pagar o cobrar antes de hablar con la otra parte.",
+  "trampa": null
+ },
+ "O024-038.paso1": {
+  "clave": "aplica_modelo_ackerman",
+  "campo": "paso1",
+  "real": "Calcula tu primera oferta bastante alejada de ese objetivo, dejando margen para moverte.",
+  "trampa": null
+ },
+ "O024-038.paso2": {
+  "clave": "aplica_modelo_ackerman",
+  "campo": "paso2",
+  "real": "Prepara tres subidas graduales, cada vez más pequeñas (al 85 %, 95 % y 100 % de tu objetivo), en vez de una sola concesión grande.",
+  "trampa": null
+ },
+ "O024-038.paso3": {
+  "clave": "aplica_modelo_ackerman",
+  "campo": "paso3",
+  "real": "Usa preguntas abiertas entre cada oferta para que la otra parte hable antes de que tú vuelvas a mover el número.",
+  "trampa": null
+ },
+ "O024-038.paso4": {
+  "clave": "aplica_modelo_ackerman",
+  "campo": "paso4",
+  "real": "Cierra con una cifra específica y no redonda, y añade un pequeño extra que no cuesta dinero.",
+  "trampa": null
+ },
+ "O024-038.entregable": {
+  "clave": "aplica_modelo_ackerman",
+  "campo": "entregable",
+  "real": "Una secuencia escrita de ofertas graduales lista para usar en la próxima negociación de precio.",
+  "trampa": null
+ },
+ "O024-039.etiqueta": {
+  "clave": "cumplimiento_acuerdos_comerciales_tanc",
+  "campo": "etiqueta",
+  "real": "Vigila el Cumplimiento Comercial",
+  "trampa": null
+ },
+ "O024-039.paso0": {
+  "clave": "cumplimiento_acuerdos_comerciales_tanc",
+  "campo": "paso0",
+  "real": "Identifica las barreras comerciales que enfrentas al vender en un mercado extranjero",
+  "trampa": null
+ },
+ "O024-039.paso1": {
+  "clave": "cumplimiento_acuerdos_comerciales_tanc",
+  "campo": "paso1",
+  "real": "Busca si tu pais tiene una oficina de comercio con una base de datos de los acuerdos comerciales vigentes",
+  "trampa": null
+ },
+ "O024-039.paso2": {
+  "clave": "cumplimiento_acuerdos_comerciales_tanc",
+  "campo": "paso2",
+  "real": "Presenta una queja formal sobre la barrera comercial ante esa oficina",
+  "trampa": null
+ },
+ "O024-039.paso3": {
+  "clave": "cumplimiento_acuerdos_comerciales_tanc",
+  "campo": "paso3",
+  "real": "Da seguimiento hasta que el caso se resuelva",
+  "trampa": null
+ },
+ "O024-039.entregable": {
+  "clave": "cumplimiento_acuerdos_comerciales_tanc",
+  "campo": "entregable",
+  "real": "Una queja documentada sobre una barrera comercial especifica, presentada ante la oficina correspondiente en tu pais",
+  "trampa": null
+ },
+ "O024-040.etiqueta": {
+  "clave": "evaluacion_salud_financiera_empresa",
+  "campo": "etiqueta",
+  "real": "Lee tu Balance con Claridad",
+  "trampa": null
+ },
+ "O024-040.paso0": {
+  "clave": "evaluacion_salud_financiera_empresa",
+  "campo": "paso0",
+  "real": "Calcular si el patrimonio es positivo (empresa solvente) comparando activos totales vs pasivos totales.",
+  "trampa": null
+ },
+ "O024-040.paso1": {
+  "clave": "evaluacion_salud_financiera_empresa",
+  "campo": "paso1",
+  "real": "Comparar activos corrientes (especialmente efectivo) contra pasivos corrientes para medir liquidez.",
+  "trampa": null
+ },
+ "O024-040.paso2": {
+  "clave": "evaluacion_salud_financiera_empresa",
+  "campo": "paso2",
+  "real": "Rastrear la evolución del patrimonio en varios periodos para distinguir crecimiento orgánico vs inyecciones de capital.",
+  "trampa": null
+ },
+ "O024-040.paso3": {
+  "clave": "evaluacion_salud_financiera_empresa",
+  "campo": "paso3",
+  "real": "Revisar notas al pie sobre goodwill, depreciación y supuestos contables antes de tomar decisiones de inversión.",
+  "trampa": null
+ },
+ "O024-040.entregable": {
+  "clave": "evaluacion_salud_financiera_empresa",
+  "campo": "entregable",
+  "real": "Reporte de salud financiera con indicadores de solvencia, liquidez y evolución patrimonial en el tiempo.",
+  "trampa": null
+ }
+}

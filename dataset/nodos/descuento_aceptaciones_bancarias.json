@@ -18,10 +18,26 @@
     "programas_ex_im_bank"
   ],
   "condiciones_activacion": [
-    "Si el exportador necesita liquidez inmediata antes del vencimiento de una letra de crédito"
+    "Si el exportador necesita liquidez inmediata antes del vencimiento de una letra de cambio a plazo emitida a su comprador extranjero"
   ],
   "etiqueta_arbol": "Convierte tus Letras en Efectivo",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-054",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si el exportador necesita liquidez inmediata antes del vencimiento de una letra de crédito",
+      "texto_nuevo": "Si el exportador necesita liquidez inmediata antes del vencimiento de una letra de cambio a plazo emitida a su comprador extranjero",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q089-015: La condicion confunde el instrumento: dice letra de credito donde el contenido habla de letra de cambio a plazo. (lector y verificador de acuerdo) Motivo: Dice 'letra de credito', que confunde la carta de credito con la letra de cambio; el nodo trata de descontar letras de cambio a plazo."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

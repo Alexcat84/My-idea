@@ -11,7 +11,7 @@
     "Crear métricas y bonos ligados a retención, satisfacción y valor vitalicio, no solo a cierre de ventas.",
     "Eliminar incentivos que premien rapidez en atención al cliente por encima de calidad de la relación."
   ],
-  "entregable_esperado": "La auditoria de tus incentivos actuales con lo que premian hoy, y el esquema corregido: metricas y bonos ligados a retencion, satisfaccion y valor vitalicio, los incentivos daninos retirados, y el asiento ejecutivo de quien responde por la experiencia",
+  "entregable_esperado": "La auditoría de tus incentivos actuales con lo que premian hoy, y el esquema corregido: métricas y bonos ligados a retención, satisfacción y valor vitalicio, los incentivos dañinos retirados, y el asiento ejecutivo de quien responde por la experiencia",
   "nodos_previos": [
     "diseno_estructura_recompensas_roles"
   ],
@@ -23,5 +23,20 @@
   "etiqueta_arbol": "Premia Retener, no solo Vender",
   "fuentes_internas": [
     "Never Lose a Customer Again - Joey Coleman"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0115",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "La auditoria de tus incentivos actuales con lo que premian hoy, y el esquema corregido: metricas y bonos ligados a retencion, satisfaccion y valor vitalicio, los incentivos daninos retirados, y el asiento ejecutivo de quien responde por la experiencia",
+      "texto_nuevo": "La auditoría de tus incentivos actuales con lo que premian hoy, y el esquema corregido: métricas y bonos ligados a retención, satisfacción y valor vitalicio, los incentivos dañinos retirados, y el asiento ejecutivo de quien responde por la experiencia",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O012-029.entregable: auditoría, métricas, retención, satisfacción, dañinos (Solo se añaden las tildes y la eñe que faltaban (auditoría, métricas, retención, satisfacción, dañinos), sin más cambios.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

@@ -6,13 +6,13 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Un paso crucial en cualquier revisión de tu negocio es verificar que tu misión, visión, valores y politicas esten alineados y se comuniquen con claridad hasta llegar al cliente final. A partir de estos elementos se desarrollan estrategias de largo plazo y metas anuales de corto plazo, que se despliegan mediante politicas e iniciativas. La falta de alineación entre tu plan estrategico y las actividades diarias puede provocar proyectos de baja importancia y desperdicio de recursos.",
   "pasos_accionables": [
-    "Identificar la misión, visión, valores y politicas actuales de tu negocio",
+    "Identificar la misión, visión, valores y políticas actuales de tu negocio",
     "Verificar la coherencia entre tus metas de largo plazo (estrategias) y tus metas anuales de corto plazo",
-    "Revisar tu mismo, o con la persona que te ayuda a decidir, como se esta desplegando el plan estrategico",
-    "Detectar areas desalineadas entre tu plan estrategico y los proyectos o actividades diarias",
-    "Realinear iniciativas y proyectos con los objetivos estrategicos identificados"
+    "Revisar tú mismo, o con la persona que te ayuda a decidir, cómo se está desplegando el plan estratégico",
+    "Detectar áreas desalineadas entre tu plan estratégico y los proyectos o actividades diarias",
+    "Realinear iniciativas y proyectos con los objetivos estratégicos identificados"
   ],
-  "entregable_esperado": "Un mapa que muestre como tu visión se conecta con tus estrategias, tus metas anuales y tus iniciativas o proyectos alineados",
+  "entregable_esperado": "Un mapa que muestre cómo tu visión se conecta con tus estrategias, tus metas anuales y tus iniciativas o proyectos alineados",
   "nodos_previos": [
     "evaluacion_riesgo_calidad_organizacional",
     "rol_alta_direccion_calidad"
@@ -41,6 +41,75 @@
         "evidencia": "F22-006: Alinear mision, estrategias, metas anuales e iniciativas es trabajo de plan estrategico, no de explorar una idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0515",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identificar la misión, visión, valores y politicas actuales de tu negocio",
+      "texto_nuevo": "Identificar la misión, visión, valores y políticas actuales de tu negocio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-039.paso0: políticas (Falta la tilde en políticas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0516",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisar tu mismo, o con la persona que te ayuda a decidir, como se esta desplegando el plan estrategico",
+      "texto_nuevo": "Revisar tú mismo, o con la persona que te ayuda a decidir, cómo se está desplegando el plan estratégico",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-039.paso2: tú, cómo, está, estratégico (Faltan las tildes en el pronombre tú y en cómo, está y estratégico.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0517",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Detectar areas desalineadas entre tu plan estrategico y los proyectos o actividades diarias",
+      "texto_nuevo": "Detectar áreas desalineadas entre tu plan estratégico y los proyectos o actividades diarias",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-039.paso3: áreas, estratégico (Faltan las tildes en áreas y estratégico.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0518",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Realinear iniciativas y proyectos con los objetivos estrategicos identificados",
+      "texto_nuevo": "Realinear iniciativas y proyectos con los objetivos estratégicos identificados",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-039.paso4: estratégicos (Falta la tilde en estratégicos.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0519",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un mapa que muestre como tu visión se conecta con tus estrategias, tus metas anuales y tus iniciativas o proyectos alineados",
+      "texto_nuevo": "Un mapa que muestre cómo tu visión se conecta con tus estrategias, tus metas anuales y tus iniciativas o proyectos alineados",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-039.entregable: cómo (cómo es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "node_id": "procurement_audit",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "compras",
   "titulo_concepto": "Auditoría de Adquisiciones",
   "fuente": "A Project Manager's Book of Forms - Cynthia Stackpole Snyder",
   "resumen_teorico": "La Auditoría de Adquisiciones es una revisión de los contratos y procesos de contratación para verificar su completitud, precisión y efectividad. Evalúa el desempeño del proveedor (alcance, calidad, cronograma, costo, facilidad de trabajo) y el proceso de gestión de adquisiciones en sí, generando información útil para mejorar contratos futuros y alimentar las Lecciones Aprendidas.",
@@ -28,5 +28,20 @@
   "etiqueta_arbol": "Audita tus Compras y Contratos",
   "fuentes_internas": [
     "A Project Manager's Book of Forms - Cynthia Stackpole Snyder"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-26",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "compras",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-06: Auditar formalmente los contratos y el proceso de adquisiciones es práctica de gestión de compras de proyecto que un emprendedor que empieza no necesita. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    }
   ]
 }

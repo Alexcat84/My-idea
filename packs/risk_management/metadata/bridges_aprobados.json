@@ -1,5 +1,5 @@
 {
-  "nota": "Curaduria Fase v1.4: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Conserva leap_of_faith_assumptions <-> tecnicas_para_sacar_riesgos_a_la_luz. Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | Doctrina del puente-correctivo escrita en el puente matriz_probabilidad_impacto -> evalua_la_gravedad_sin_autoengano. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md).",
+  "nota": "Curaduria Fase v1.4: 13 aprobados, 7 rechazados. Regla: ninguna ancla core pasa de 2 (max real 2). Conserva leap_of_faith_assumptions <-> tecnicas_para_sacar_riesgos_a_la_luz. Rechazos uno a uno con motivo abajo. | 2026-08-07: puente(s) redirigidos: su ancla fue deprecada por la fusion de Calidad. | 2026-08-07: puentes RE-ANCLADOS al nucleo (ley del ancla). Los que anclaban en otro pack eran un accidente del proponedor, que buscaba candidatos sobre el master entero. | Doctrina del puente-correctivo escrita en el puente matriz_probabilidad_impacto -> evalua_la_gravedad_sin_autoengano. | 2026-09-26: saneamiento, tanda 2, punto 9: ley del ancla en 2, aprobados tejidos en el grafo y aristas del nucleo sin declarar leidas (docs/SANEAMIENTO_DATASET.md). | 2026-09-27: nodos que salen del nucleo a su mundo (pasadas D y MV del saneamiento).",
   "aprobados": [
     {
       "core": "reglas_gestion_riesgo_gambling",
@@ -72,6 +72,14 @@
       "dominio": "gestionar_el_riesgo_es_de_adultos",
       "score": 0.6831,
       "reanclado_de": "enfoque_situacional_vs_personal_2"
+    },
+    {
+      "core": "definicion_alineacion_cadena_suministro",
+      "dominio": "gestion_riesgo_cadena_suministro",
+      "score": 0.6855,
+      "declarado_de_arista_existente": true,
+      "fuerza_leida": 2,
+      "lectura": "Pasada MV del saneamiento (MV-A14, lectores de acuerdo): El balance entre respuesta y eficiencia de la cadena conecta con el equilibrio entre costo y riesgo de disrupcion."
     }
   ],
   "rechazados": [

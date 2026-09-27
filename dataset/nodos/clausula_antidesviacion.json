@@ -6,12 +6,12 @@
   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
   "resumen_teorico": "Si exportas mercancia comercial desde Estados Unidos, casi siempre necesitas incluir una declaracion de control de destino en tus documentos de embarque, es decir, en la factura comercial y en el conocimiento de embarque. Esta declaracion avisa que la mercancia fue aprobada para exportarse solo a ciertos destinos y no puede desviarse a otros. Debe aparecer tanto en la factura comercial como en el bill of lading o air waybill. Existen excepciones detalladas en la seccion 758.6 del EAR que pueden eximirte de este requisito. Esta mecanica refleja la normativa de Estados Unidos vigente a la fecha de la fuente; verifica la regulacion vigente en tu mercado antes de actuar.",
   "pasos_accionables": [
-    "Incluye la declaracion minima de control de destino en tu factura comercial",
-    "Incluye la misma declaracion en el bill of lading o air waybill",
-    "Verifica si tu envio califica para alguna excepcion según la Parte 758.6 del EAR",
-    "Consulta con la persona que te ayuda con el transporte internacional, un abogado o la autoridad de comercio de tu pais sobre la declaracion adecuada"
+    "Incluye la declaración mínima de control de destino en tu factura comercial",
+    "Incluye la misma declaración en el bill of lading o air waybill",
+    "Verifica si tu envío califica para alguna excepción según la Parte 758.6 del EAR",
+    "Consulta con la persona que te ayuda con el transporte internacional, un abogado o la autoridad de comercio de tu país sobre la declaración adecuada"
   ],
-  "entregable_esperado": "Documentos de embarque (factura comercial y bill of lading) con la declaracion antidesviacion correctamente incluida.",
+  "entregable_esperado": "Documentos de embarque (factura comercial y bill of lading) con la declaración antidesviación correctamente incluida.",
   "nodos_previos": [
     "export_administration_regulations"
   ],
@@ -20,9 +20,9 @@
     "documentacion_viaje_internacional"
   ],
   "condiciones_activacion": [
-    "Cuando estas preparando documentos de embarque para una exportacion comercial",
+    "Cuando estas preparando documentos de embarque para una exportacion comercial desde Estados Unidos",
     "En cada envio sujeto a las EAR",
-    "Cuando preparas la documentacion de transporte internacional"
+    "Cuando preparas la factura comercial y el bill of lading o air waybill de un envio que sale de Estados Unidos"
   ],
   "etiqueta_arbol": "Declara el Control de Destino",
   "ids_alias": [
@@ -37,5 +37,104 @@
   ],
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-020",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando estas preparando documentos de embarque para una exportacion comercial",
+      "texto_nuevo": "Cuando estas preparando documentos de embarque para una exportacion comercial desde Estados Unidos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q002-013: Dos condiciones se activan para cualquier exportador, pero el contenido solo aplica a exportaciones desde Estados Unidos sujetas a las EAR. (lector y verificador de acuerdo) Motivo: Demasiado amplia: la declaracion de control de destino es un requisito de las EAR de Estados Unidos y no aplica a cualquier exportacion comercial."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-condicion-021",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando preparas la documentacion de transporte internacional",
+      "texto_nuevo": "Cuando preparas la factura comercial y el bill of lading o air waybill de un envio que sale de Estados Unidos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q002-013: Dos condiciones se activan para cualquier exportador, pero el contenido solo aplica a exportaciones desde Estados Unidos sujetas a las EAR. (lector y verificador de acuerdo) Motivo: Demasiado amplia: se activaria con cualquier documentacion de transporte internacional, no solo con envios que salen de Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0598",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Incluye la declaracion minima de control de destino en tu factura comercial",
+      "texto_nuevo": "Incluye la declaración mínima de control de destino en tu factura comercial",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O052-009.paso0: declaración, mínima (Solo añade las tildes que faltaban en declaración y mínima.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0599",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Incluye la misma declaracion en el bill of lading o air waybill",
+      "texto_nuevo": "Incluye la misma declaración en el bill of lading o air waybill",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O052-009.paso1: declaración (Solo añade la tilde que faltaba en declaración; los términos en inglés no cambian.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0600",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Verifica si tu envio califica para alguna excepcion según la Parte 758.6 del EAR",
+      "texto_nuevo": "Verifica si tu envío califica para alguna excepción según la Parte 758.6 del EAR",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O052-009.paso2: envío, excepción (Solo añade las tildes que faltaban en envío y excepción; la sigla no cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0601",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consulta con la persona que te ayuda con el transporte internacional, un abogado o la autoridad de comercio de tu pais sobre la declaracion adecuada",
+      "texto_nuevo": "Consulta con la persona que te ayuda con el transporte internacional, un abogado o la autoridad de comercio de tu país sobre la declaración adecuada",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O052-009.paso3: país, declaración (Solo añade las tildes que faltaban en país y declaración.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0602",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Documentos de embarque (factura comercial y bill of lading) con la declaracion antidesviacion correctamente incluida.",
+      "texto_nuevo": "Documentos de embarque (factura comercial y bill of lading) con la declaración antidesviación correctamente incluida.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O052-009.entregable: declaración, antidesviación (Solo añade las tildes que faltaban en declaración y antidesviación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

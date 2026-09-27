@@ -4,12 +4,12 @@
   "dominio": "franquicias",
   "titulo_concepto": "Entiende la definición legal de franquicia (regla federal FTC 436)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+  "resumen_teorico": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
   "pasos_accionables": [
-    "Revisa si tu modelo de negocio hara que los operadores usen una marca o nombre en comun",
+    "Revisa si tu modelo de negocio hará que los operadores usen una marca o nombre en común",
     "Identifica si vas a ejercer control significativo (sitio, horarios, técnicas de producción, contabilidad, etc.) o si vas a dar asistencia significativa (entrenamiento, manual de operaciones, marketing)",
-    "Calcula si el pago que le pedirias al operador supera los $500 en los primeros seis meses",
-    "Consulta con un abogado especializado en franquicias para confirmar como se clasifica legalmente tu modelo"
+    "Calcula si el pago que le pedirias al operador llega a $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación",
+    "Consulta con un abogado especializado en franquicias para confirmar cómo se clasifica legalmente tu modelo"
   ],
   "entregable_esperado": "Un análisis legal preliminar que te confirme si tu modelo de negocio califica como franquicia bajo la definición federal",
   "nodos_previos": [
@@ -54,6 +54,75 @@
         "evidencia": "F10-006: Analizar si el modelo de expansion califica legalmente como franquicia es disenar el modelo y su marco legal, no probarlo con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0159",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si tu modelo de negocio hara que los operadores usen una marca o nombre en comun",
+      "texto_nuevo": "Revisa si tu modelo de negocio hará que los operadores usen una marca o nombre en común",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-037.paso0: hará, común (Faltas reales: 'hará' y 'común' llevan tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0160",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Calcula si el pago que le pedirias al operador supera los $500 en los primeros seis meses",
+      "texto_nuevo": "Calcula si el pago que le pedirías al operador supera los $500 en los primeros seis meses",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-037.paso2: pedirías (Falta real: 'pedirías' lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0161",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Consulta con un abogado especializado en franquicias para confirmar como se clasifica legalmente tu modelo",
+      "texto_nuevo": "Consulta con un abogado especializado en franquicias para confirmar cómo se clasifica legalmente tu modelo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O014-037.paso3: cómo (Falta real: 'cómo' es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-coherencia-01",
+      "fecha": "2026-09-27",
+      "campo": "resumen_teorico",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+      "texto_nuevo": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+      "cita": {
+        "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+        "evidencia": "Franchise Your Business (Siebert), lineas 121; 137: \"3.A required payment of more than $500 in the first six months of operation by the franchisee (including initial fees, royalties, advertising fees, training fees, or fees for equipment)\". Ambos lectores coinciden. Solo se quita el residuo 'que se pague mas de $500', que dejaba dos umbrales en la misma frase. El libro (regla enmendada en 2008) dice $500; como el propio nodo ya trae la cifra vigente con su fuente (ajuste de la FTC de 2024: $735), vale la vigente. No se toca el alcance (Estados Unidos) ni la ubicacion nucleo o mundo del nodo."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro."
+    },
+    {
+      "id": "n1-coherencia-02",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Calcula si el pago que le pedirías al operador supera los $500 en los primeros seis meses",
+      "texto_nuevo": "Calcula si el pago que le pedirias al operador llega a $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación",
+      "cita": {
+        "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+        "evidencia": "Franchise Your Business (Siebert), lineas 121; 137: \"It is intended to capture any payment of at least $500 during the first six months of the franchisee’s operations.\". El paso calculaba contra el umbral antiguo del libro ($500) y el resumen fija el vigente ($735, ajuste FTC 2024, fuente ya citada en el nodo). Se alinea el paso con la cifra vigente y con la misma ventana temporal del resumen. Se toma la version del lector A: no se repite la cifra del libro en el paso para no volver a meter dos umbrales en el mismo nodo."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro.",
+      "indice": 2
     }
   ],
   "fuentes_internas": [

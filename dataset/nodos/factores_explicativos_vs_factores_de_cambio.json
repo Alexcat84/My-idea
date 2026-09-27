@@ -1,6 +1,6 @@
 {
   "node_id": "factores_explicativos_vs_factores_de_cambio",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Diferencia entre Factores Explicativos y Factores de Cambio",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "Distingue Explicación de Cambio Real",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-081",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q048-025: Separar factores explicativos de factores de cambio tras una investigacion de incidentes es controlar y mejorar lo que ya opera, no disenar un plan. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

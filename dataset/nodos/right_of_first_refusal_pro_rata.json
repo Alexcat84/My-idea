@@ -1,5 +1,5 @@
 {
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "core",
   "titulo_concepto": "El derecho de tus inversionistas a comprar primero y mantener su porcentaje (pro rata o ROFR)",
   "fuente": "Venture Deals - Brad Feld",
@@ -29,5 +29,20 @@
   "etiqueta_arbol": "Protege tu Derecho Pro Rata",
   "fuentes_internas": [
     "Venture Deals - Brad Feld"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-168",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q072-014: Tiene razon el lector A: el nodo consiste en diseñar y redactar una clausula del term sheet (quien es inversionista principal, multiplo de pro rata, reasignacion, extincion en la OPI), es decir, diseñar la estructura de financiacion y conseguir recursos, que es planificacion; no es operar, implementar ni controlar un negocio en marcha, asi que ejecucion no se sostiene. Condiciones y dominio core estan bien, en eso coinciden ambos. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

@@ -6,13 +6,13 @@
   "fuente": "Sharon Cullinane, E-Logistics, Cap. 8 (B2C e-commerce y fulfilment)",
   "resumen_teorico": "Cuando vendes en linea, la velocidad y el precio no son lo unico que decide una compra: en una encuesta, casi la mitad de los compradores admitio haber abandonado un carrito antes de pagar por problemas con la entrega ofrecida. Lo que mas valora el comprador es una ventana de entrega angosta para no quedarse esperando todo el dia, un aviso por mensaje cuando el paquete esta en camino, la posibilidad de rastrear el pedido en tiempo real, y poder devolver algo sin complicaciones. Los primeros negocios en linea fracasaron porque disenaban la entrega desde su propia comodidad y no desde estas prioridades del cliente. Detectar cuales de estos puntos pesan mas para tu publico, antes de prometer plazos o metodos de entrega, evita que pierdas ventas por una promesa que no coincide con lo que el comprador realmente espera.",
   "pasos_accionables": [
-    "Pregunta a tus ultimos diez compradores que les preocupo mas de la entrega.",
-    "Activa notificaciones automaticas por mensaje de texto cuando despaches cada pedido.",
-    "Ofrece un rango de entrega de pocas horas en vez de decir en los proximos dias.",
-    "Publica un numero de rastreo que el cliente pueda consultar por su cuenta.",
-    "Simplifica el proceso de devolucion antes de que un cliente lo necesite."
+    "Pregunta a tus últimos diez compradores qué les preocupó más de la entrega.",
+    "Activa notificaciones automáticas por mensaje de texto cuando despaches cada pedido.",
+    "Ofrece un rango de entrega de pocas horas en vez de decir en los próximos días.",
+    "Publica un número de rastreo que el cliente pueda consultar por su cuenta.",
+    "Simplifica el proceso de devolución antes de que un cliente lo necesite."
   ],
-  "entregable_esperado": "Una lista de las tres prioridades reales de entrega de tu cliente, con un metodo simple para avisar y rastrear cada pedido.",
+  "entregable_esperado": "Una lista de las tres prioridades reales de entrega de tu cliente, con un método simple para avisar y rastrear cada pedido.",
   "nodos_previos": [],
   "nodos_siguientes": [
     "decidir_cobro_velocidad_ventana_entrega",
@@ -69,6 +69,89 @@
         "evidencia": "F10-007: Negocio que ya vende en linea y ajusta avisos, rastreo y devoluciones de sus pedidos: operacion y mejora de la entrega. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0875",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a tus ultimos diez compradores que les preocupo mas de la entrega.",
+      "texto_nuevo": "Pregunta a tus últimos diez compradores qué les preocupó más de la entrega.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.paso0: últimos, qué, preocupó, más (Faltaban tildes en últimos, qué, preocupó y más; nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0876",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Activa notificaciones automaticas por mensaje de texto cuando despaches cada pedido.",
+      "texto_nuevo": "Activa notificaciones automáticas por mensaje de texto cuando despaches cada pedido.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.paso1: automáticas (Faltaba la tilde en automáticas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0877",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ofrece un rango de entrega de pocas horas en vez de decir en los proximos dias.",
+      "texto_nuevo": "Ofrece un rango de entrega de pocas horas en vez de decir en los próximos días.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.paso2: próximos (Faltaban las tildes de próximos y días.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0878",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Publica un numero de rastreo que el cliente pueda consultar por su cuenta.",
+      "texto_nuevo": "Publica un número de rastreo que el cliente pueda consultar por su cuenta.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.paso3: número (Faltaba la tilde en número.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0879",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Simplifica el proceso de devolucion antes de que un cliente lo necesite.",
+      "texto_nuevo": "Simplifica el proceso de devolución antes de que un cliente lo necesite.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.paso4: devolución (Faltaba la tilde en devolución.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0880",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una lista de las tres prioridades reales de entrega de tu cliente, con un metodo simple para avisar y rastrear cada pedido.",
+      "texto_nuevo": "Una lista de las tres prioridades reales de entrega de tu cliente, con un método simple para avisar y rastrear cada pedido.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O075-034.entregable: método (Faltaba la tilde en método.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

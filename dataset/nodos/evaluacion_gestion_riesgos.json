@@ -1,7 +1,7 @@
 {
   "node_id": "evaluacion_gestion_riesgos",
   "fase_proyecto": "planificacion",
-  "dominio": "quality",
+  "dominio": "risk_management",
   "titulo_concepto": "Evaluación y Gestión de Riesgos",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Proceso estructurado para identificar riesgos potenciales, evaluar su severidad y probabilidad, y definir acciones concretas para minimizarlos o eliminarlos. Incluye el análisis de consecuencias de actuar o no actuar, el impacto futuro de las decisiones, y el balance costo/beneficio. El objetivo final no es solo evaluar sino generar una lista de acciones ejecutables con responsables y fechas.",
@@ -13,7 +13,7 @@
     "Definir acciones concretas, responsables y fechas de entrega",
     "Reevaluar el proceso de riesgo al menos anualmente"
   ],
-  "entregable_esperado": "Lista priorizada de riesgos con score de severidad x probabilidad, acciones concretas asignadas con responsable y fecha límite",
+  "entregable_esperado": "Lista de acciones concretas para minimizar o eliminar cada riesgo que ya priorizaste (por severidad x probabilidad), con responsable y fecha límite asignados",
   "nodos_previos": [
     "identificacion_de_riesgos",
     "evaluacion_de_factores_de_riesgo",
@@ -45,5 +45,33 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-dominio-075",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "quality",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q021-031: El contenido es un proceso generico de identificar, evaluar y mitigar riesgos, propio de gestion de riesgos y no de gestion de la calidad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "n1-coherencia-04",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Lista priorizada de riesgos con score de severidad x probabilidad, acciones concretas asignadas con responsable y fecha límite",
+      "texto_nuevo": "Lista de acciones concretas para minimizar o eliminar cada riesgo que ya priorizaste (por severidad x probabilidad), con responsable y fecha límite asignados",
+      "cita": {
+        "instrumento": "Pasada K2 del saneamiento y correccion contra el libro (docs/saneamiento/resultados/K2c)",
+        "evidencia": "Juran's Quality Handbook, lineas 12478; 12691: \"Use the list of concerns and options tempered by consideration of the consequences, the cost/benefit and future impact to develop a list of real actions and projects that we can and will do. [...] We identify the action or project, the name of the person who is responsible and the date it is due.\". Los pasos y la condicion 3 cubren la etapa de gestion que el libro pone DESPUES de puntuar (seccion Managing Risk, linea 12478; paso 6 del procedimiento, linea 12691). El score severidad x probabilidad es el paso 4 del libro (linea 12683), un insumo previo que ningun paso del nodo calcula. Se corrige el entregable para que la priorizacion sea entrada y el producto sea la lista de acciones con responsable y fecha, que el libro llama 'the real purpose of doing a risk assessment'. Se toma la redaccion del lector A (mas corta) con la cita doble del lector B."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 12: el residuo de coherencia interna, corregido contra su libro."
+    }
   ]
 }

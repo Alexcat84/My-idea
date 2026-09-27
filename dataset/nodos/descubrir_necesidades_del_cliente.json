@@ -36,7 +36,7 @@
   ],
   "condiciones_activacion": [
     "Cuando ya se han identificado los clientes y se requiere entender a profundidad qué esperan del producto o servicio",
-    "Cuando cambios en la normativa puedan revelar necesidades actuales u oportunidades nuevas que el producto deba atender"
+    "Cuando lo que el cliente dice que quiere no coincide con el beneficio que realmente busca, o el producto se usa de formas no previstas"
   ],
   "etiqueta_arbol": "Descubre lo que Realmente Quieren",
   "ids_alias": [
@@ -66,6 +66,20 @@
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 5): la incoherencia interna medida en la pasada K se resuelve a favor del libro. En el paso 3 de Quality by Design (Discover Customer Needs), el libro no trata la normativa ni los requisitos técnicos como algo que bloquea el proyecto. La normativa aparece solo como una de las formas de recoger necesidades del cliente (Plan to Collect Customers' Needs, L3738-L3763), y los reguladores figuran entre los clientes ocultos (L3542). Por eso cambio solo la condición 1: ahora activa el nodo cuando la normativa revela necesidades que hay que descubrir, y así casa con el resumen y con el paso 0. Quito lo de 'federal, state, and local' para que valga en cualquier país.",
       "indice": 1,
       "auditoria": "SANEAMIENTO pasada K, ficha C15 (lector, verificador ciego y arbitro)"
+    },
+    {
+      "id": "n1-condicion-053",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando cambios en la normativa puedan revelar necesidades actuales u oportunidades nuevas que el producto deba atender",
+      "texto_nuevo": "Cuando lo que el cliente dice que quiere no coincide con el beneficio que realmente busca, o el producto se usa de formas no previstas",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q044-012: La segunda condicion introduce la normativa, que el nodo no toca. (lector y verificador de acuerdo) Motivo: El contenido no trata de cambios normativos; habla de distinguir necesidades declaradas, reales, percibidas y culturales y de investigar usos no previstos del producto."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
     }
   ],
   "fuentes_internas": [

@@ -20,7 +20,7 @@
     "partnerships_estrategicos_verdes"
   ],
   "condiciones_activacion": [
-    "Cuando el consumidor necesita atajos de confianza para decidir su compra",
+    "Cuando comunicas atributos ambientales de tu producto y el consumidor necesita un respaldo creible de terceros para decidir su compra",
     "Si existe riesgo de percepción de greenwashing"
   ],
   "etiqueta_arbol": "Respáldate con Sellos de Terceros",
@@ -40,6 +40,20 @@
         "evidencia": "F03-001: Conseguir una certificación ambiental y comunicarla en marketing es operar un producto que ya existe; no se prueba la idea con clientes ni con el mercado. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-condicion-189",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando el consumidor necesita atajos de confianza para decidir su compra",
+      "texto_nuevo": "Cuando comunicas atributos ambientales de tu producto y el consumidor necesita un respaldo creible de terceros para decidir su compra",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q008-015: La condicion 0 es generica y no ata el nodo a sus certificaciones ambientales. (lector y verificador de acuerdo) Motivo: Demasiado generica: no menciona lo ambiental y se activaria ante cualquier necesidad de confianza del consumidor, cuando el nodo trata de certificaciones y sellos ecologicos"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ]
 }

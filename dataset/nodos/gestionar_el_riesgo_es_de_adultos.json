@@ -1,6 +1,6 @@
 {
   "node_id": "gestionar_el_riesgo_es_de_adultos",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "risk_management",
   "titulo_concepto": "Gestión de Riesgo Como Madurez",
   "fuente": "DeMarco y Lister, Waltzing with Bears",
@@ -44,6 +44,19 @@
         "motivo": "Puente aprobado en packs/risk_management/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "n1-fase-094",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q104-011: El nodo consiste en revisar el plan para que contemple lo que puede salir mal, y su entregable es el plan revisado: es planificacion, no operacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
     }
   ]
 }

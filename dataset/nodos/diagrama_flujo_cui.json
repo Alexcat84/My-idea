@@ -19,10 +19,26 @@
     "determinar_alcance_cui"
   ],
   "condiciones_activacion": [
-    "Cuando se inicia el proceso de implementación de SP 800-171 y se necesita entender el alcance de sistemas afectados"
+    "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos, inicias la implementación de SP 800-171 y necesitas entender cómo entra, se mueve y sale el CUI de tus sistemas"
   ],
   "etiqueta_arbol": "Dibuja el Flujo de Datos",
   "fuentes_internas": [
     "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-058",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se inicia el proceso de implementación de SP 800-171 y se necesita entender el alcance de sistemas afectados",
+      "texto_nuevo": "Cuando manejas CUI por contratos con el gobierno federal de Estados Unidos, inicias la implementación de SP 800-171 y necesitas entender cómo entra, se mueve y sale el CUI de tus sistemas",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q003-018: La condición no ata el nodo a operar con el gobierno federal de Estados Unidos, como pide la clase C. (lector y verificador de acuerdo) Motivo: Clase C: no dice que SP 800-171 aplica a quien maneja CUI por contratos con el gobierno federal de Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

@@ -1,6 +1,6 @@
 {
   "node_id": "new_view_human_error",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "New View del Error Humano",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -27,5 +27,20 @@
   "etiqueta_arbol": "Ve el Error como Síntoma",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-129",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q052-016: Tiene razon B: los pasos y el entregable investigan incidentes ya reportados y sus factores sistemicos (herramientas, presiones de produccion), lo que es gestion operativa de la seguridad en un negocio en marcha, es decir, ejecucion. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

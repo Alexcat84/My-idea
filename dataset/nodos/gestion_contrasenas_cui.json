@@ -6,7 +6,7 @@
   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
   "resumen_teorico": "Define reglas organizacionales para la creación, transmisión y actualización de contraseñas, asegurando que no coincidan con listas de contraseñas comprometidas o comúnmente utilizadas, y que se transmitan mediante canales cifrados.",
   "pasos_accionables": [
-    "Sugerencia de My Idea: definir reglas de contrasenas para la organizacion que incluyan criterios de complejidad y de renovacion.",
+    "Sugerencia de My Idea: definir reglas de contraseñas para la organización que incluyan criterios de complejidad y de renovación.",
     "Utilizar correo cifrado o gestores de contraseñas para compartir credenciales.",
     "Mantener y actualizar regularmente una lista de contraseñas comprometidas o débiles.",
     "Verificar que las contraseñas nuevas no estén en dicha lista antes de aceptarlas."
@@ -20,7 +20,7 @@
     "mantenimiento_sistema_cui"
   ],
   "condiciones_activacion": [
-    "Cuando la empresa maneja CUI y necesita establecer controles de acceso robustos."
+    "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos y necesita reglas para crear, compartir y renovar contraseñas de forma segura"
   ],
   "etiqueta_arbol": "Protege tus Contraseñas Correctamente",
   "correcciones": [
@@ -40,6 +40,34 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro solo pide definir reglas de contrasenas y mantener una lista de contrasenas comprometidas; no habla de complejidad ni de renovacion. Busque complex, expir, rotat, renew y change sin hallazgos pertinentes.",
       "indice": 0,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C032-044"
+    },
+    {
+      "id": "n1-condicion-091",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando la empresa maneja CUI y necesita establecer controles de acceso robustos.",
+      "texto_nuevo": "Cuando tu empresa maneja CUI por un contrato con el gobierno federal de Estados Unidos y necesita reglas para crear, compartir y renovar contraseñas de forma segura",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q004-020: Clase C sin mencion de Estados Unidos en la condicion; dominio y fase ok. (lector y verificador de acuerdo) Motivo: Clase C: el CUI es una categoria del gobierno federal de Estados Unidos y la condicion no lo deja claro; ademas habla de controles de acceso en general y no de contraseñas."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0228",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Sugerencia de My Idea: definir reglas de contrasenas para la organizacion que incluyan criterios de complejidad y de renovacion.",
+      "texto_nuevo": "Sugerencia de My Idea: definir reglas de contraseñas para la organización que incluyan criterios de complejidad y de renovación.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O020-004.paso0: contraseñas, organización, renovación (Faltan la eñe y dos tildes, y el resto del texto se mantiene igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
     }
   ],
   "fuentes_internas": [

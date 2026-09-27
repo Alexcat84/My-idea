@@ -1,7 +1,7 @@
 {
   "node_id": "innovacion_tipo_ii",
   "fase_proyecto": "ideacion",
-  "dominio": "quality",
+  "dominio": "core",
   "titulo_concepto": "Innovación Tipo II (Más grande/Más pequeño/Combinación)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Técnica de generación de ideas basada en tres categorías simples: hacer algo más grande, más pequeño, o combinarlo con otra cosa. Es una habilidad que se puede aprender y mejorar con práctica, útil en sesiones de brainstorming para innovar productos, servicios o estrategias sin necesidad de ser un genio creativo nato.",
@@ -14,12 +14,10 @@
   ],
   "entregable_esperado": "Lista de ideas de innovación categorizadas y priorizadas, lista para pasar a evaluación de viabilidad",
   "nodos_previos": [
-    "design_for_six_sigma_dfss"
-  ],
-  "nodos_siguientes": [
     "design_for_six_sigma_dfss",
-    "juran_quality_by_design"
+    "reglas_brainstorming"
   ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando el equipo necesita generar ideas innovadoras para un nuevo producto o servicio",
     "Cuando se requiere romper esquemas mentales limitantes ('pensar fuera de la caja')",
@@ -38,5 +36,59 @@
   ],
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-dominio-110",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "quality",
+      "texto_nuevo": "core",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q067-027: Es una tecnica de generacion de ideas para productos, servicios o estrategias, emprendimiento general y no gestion de la calidad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "mv-arista-028",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "innovacion_tipo_ii -> juran_quality_by_design",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A34, lectores de acuerdo)",
+        "motivo": "La ideacion por mas grande o mas pequeno no lleva al modelo Juran de calidad por diseno."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-arista-030",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "innovacion_tipo_ii -> design_for_six_sigma_dfss",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A33, lectores de acuerdo)",
+        "motivo": "Una tecnica simple de ideacion no tiene como continuacion natural DFSS y DMADV."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-arista-039",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "reglas_brainstorming -> innovacion_tipo_ii",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C07, lectores de acuerdo)",
+        "motivo": "La tecnica se usa en sesiones de brainstorming, cuyas reglas son el paso previo natural."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
   ]
 }

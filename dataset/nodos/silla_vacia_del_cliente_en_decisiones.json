@@ -9,7 +9,7 @@
     "Incorporar un símbolo o recordatorio del cliente en las reuniones internas de decisión",
     "Colocar una silla vacía representando al cliente en cada reunión interna como recordatorio simbólico"
   ],
-  "entregable_esperado": "Un simbolo del cliente instalado en tus reuniones internas de decision, con la regla escrita de quien lo ocupa y en que momento de la reunion se le pregunta",
+  "entregable_esperado": "Un símbolo del cliente instalado en tus reuniones internas de decisión, con la regla escrita de quién lo ocupa y en qué momento de la reunión se le pregunta",
   "nodos_previos": [
     "cultura_de_experiencia",
     "customer_journey_mapping"
@@ -36,6 +36,19 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R046-026 (CONTRARIO, lector y verificador de acuerdo): El libro da otro dato para el mismo ejemplo: la silla vacia es de Comcast, no de Amazon. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R046-026"
+    },
+    {
+      "id": "n1-orto-0352",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un simbolo del cliente instalado en tus reuniones internas de decision, con la regla escrita de quien lo ocupa y en que momento de la reunion se le pregunta",
+      "texto_nuevo": "Un símbolo del cliente instalado en tus reuniones internas de decisión, con la regla escrita de quién lo ocupa y en qué momento de la reunión se le pregunta",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O031-006.entregable: símbolo, decisión, quién, qué, reunión (Tildes reales (símbolo, decisión, reunión e interrogativos indirectos quién y qué); nada más cambia.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

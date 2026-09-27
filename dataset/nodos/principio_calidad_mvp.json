@@ -1,6 +1,6 @@
 {
   "node_id": "principio_calidad_mvp",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Calidad y Diseño en el MVP",
   "fuente": "The Lean Startup - Eric Ries | The Hard Thing About Hard Things - Ben Horowitz",
@@ -14,7 +14,7 @@
     "Usa el feedback del cliente sobre la versión simple para decidir si invertir en una solución de alta calidad tradicional.",
     "Iterar rápidamente el producto con base en el feedback de mercado, no en suposiciones internas"
   ],
-  "entregable_esperado": "Criterio validado y basado en evidencia sobre qué nivel de calidad/diseño es realmente necesario para satisfacer al cliente, evitando sobre-inversión prematura.",
+  "entregable_esperado": "Criterio validado y basado en evidencia sobre qué nivel de calidad/diseño es realmente necesario para satisfacer al cliente, evitando sobreinversión prematura.",
   "nodos_previos": [
     "concierge_mvp",
     "wizard_of_oz_testing",
@@ -35,5 +35,33 @@
   "fuentes_internas": [
     "The Lean Startup - Eric Ries",
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-145",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q069-029: El nodo trata de lanzar un MVP de baja fidelidad para aprender de los primeros clientes antes de invertir en calidad; es validacion, no operación de un negocio en marcha. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    },
+    {
+      "id": "n1-orto-0921",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Criterio validado y basado en evidencia sobre qué nivel de calidad/diseño es realmente necesario para satisfacer al cliente, evitando sobre-inversión prematura.",
+      "texto_nuevo": "Criterio validado y basado en evidencia sobre qué nivel de calidad/diseño es realmente necesario para satisfacer al cliente, evitando sobreinversión prematura.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O078-016.entregable: sobreinversión (Según la norma ortográfica, el prefijo sobre- se escribe unido y sin guion.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

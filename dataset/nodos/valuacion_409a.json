@@ -21,7 +21,7 @@
     "compensacion_service_providers"
   ],
   "condiciones_activacion": [
-    "Solo si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí) y vas a otorgar opciones sobre acciones a tus empleados",
+    "Si vas a otorgar opciones sobre acciones a tus empleados y necesitas una valoracion profesional y documentada de su precio",
     "Después de cerrar una ronda de financiamiento con inversionistas"
   ],
   "etiqueta_arbol": "Valora tus Opciones Justamente",
@@ -109,6 +109,20 @@
       },
       "decision": "Decision del fundador del 26 sep 2026 (saneamiento, tanda 1, punto 2): valuacion_409a vuelve a CLASE C con la condicion 'si tu empresa esta constituida en EE.UU. (por ejemplo, Delaware para levantar capital alli)'. La fidelidad (fidelidad-t4-035) le puso la formula B; el resumen cerraba con 'verificalos con un profesional en tu mercado', que tambien es formula B.",
       "auditoria": "SANEAMIENTO_DATASET pasada J"
+    },
+    {
+      "id": "n1-condicion-192",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Solo si tu empresa está constituida en EE.UU. (por ejemplo, en Delaware para levantar capital allí) y vas a otorgar opciones sobre acciones a tus empleados",
+      "texto_nuevo": "Si vas a otorgar opciones sobre acciones a tus empleados y necesitas una valoracion profesional y documentada de su precio",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q008-027: La condicion 0 exige estar constituida en EE.UU., contra la regla de la clase B. (lector y verificador de acuerdo) Motivo: Clase B: la condicion exige que la empresa este constituida en EE.UU., y en clase B las condiciones no deben exigir operar alli"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ],
   "fuentes_internas": [

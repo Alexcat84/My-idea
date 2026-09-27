@@ -6,7 +6,7 @@
   "fuente": "Change by Design, Revised and U - Tim Brown",
   "resumen_teorico": "El brief es el punto de partida clásico de cualquier proyecto: un conjunto de restricciones mentales que da al equipo un marco de referencia, puntos de comparación para medir el progreso y objetivos a cumplir (precio, tecnología disponible, segmento de mercado). A diferencia de un algoritmo, un buen brief no responde preguntas de antemano sino que deja espacio para la serendipia y el descubrimiento. Un brief demasiado abstracto deja al equipo perdido; uno demasiado restrictivo garantiza resultados incrementales y mediocres. El arte está en balancear libertad y restricción.",
   "pasos_accionables": [
-    "Definir objetivos claros pero no sobre-especificados (evitar dictar la solución final)",
+    "Definir objetivos claros pero no sobreespecificados (evitar dictar la solución final)",
     "Incluir restricciones de precio, tecnología, y segmento de mercado sin cerrar el espacio de exploración",
     "Ajustar el brief a mitad de camino si surgen nuevos aprendizajes (agregar o modificar restricciones)",
     "Practicar el design thinking tanto del lado del cliente como del equipo de diseño al redactar el brief"
@@ -30,5 +30,21 @@
   "etiqueta_arbol": "Define el Marco de tu Diseño",
   "fuentes_internas": [
     "Change by Design, Revised and U - Tim Brown"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0014",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Definir objetivos claros pero no sobre-especificados (evitar dictar la solución final)",
+      "texto_nuevo": "Definir objetivos claros pero no sobreespecificados (evitar dictar la solución final)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O001-037.paso0: sobreespecificados (Según la Ortografía de la RAE, el prefijo sobre- se escribe unido a la palabra, sin guion; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    }
   ]
 }

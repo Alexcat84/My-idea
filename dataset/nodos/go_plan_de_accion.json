@@ -8,12 +8,12 @@
   "pasos_accionables": [
     "Compara el estado actual de tu manejo de privacidad contra las recomendaciones del framework",
     "Prioriza los resultados que quieres lograr",
-    "Crea un plan de accion concreto y con plazos",
+    "Crea un plan de acción concreto y con plazos",
     "Habla el plan con quienes trabajan contigo",
     "Destina los recursos y arma el equipo necesario",
-    "Pon en marcha el plan de accion"
+    "Pon en marcha el plan de acción"
   ],
-  "entregable_esperado": "Plan de accion de privacidad priorizado, acordado y en ejecucion",
+  "entregable_esperado": "Plan de acción de privacidad priorizado, acordado y en ejecución",
   "nodos_previos": [
     "communicate_transparencia",
     "funcion_protect_politica_seguridad"
@@ -25,5 +25,48 @@
   "etiqueta_arbol": "Crea tu Plan de Acción",
   "fuentes_internas": [
     "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0408",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Crea un plan de accion concreto y con plazos",
+      "texto_nuevo": "Crea un plan de acción concreto y con plazos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-019.paso2: acción (Falta la tilde de acción.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0409",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pon en marcha el plan de accion",
+      "texto_nuevo": "Pon en marcha el plan de acción",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-019.paso5: acción (Falta la tilde de acción.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 5
+    },
+    {
+      "id": "n1-orto-0410",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Plan de accion de privacidad priorizado, acordado y en ejecucion",
+      "texto_nuevo": "Plan de acción de privacidad priorizado, acordado y en ejecución",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O035-019.entregable: acción, ejecución (Faltan las tildes de acción y ejecución.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

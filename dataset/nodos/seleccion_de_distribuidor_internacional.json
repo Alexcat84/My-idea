@@ -21,11 +21,27 @@
     "capacitacion_de_distribuidores"
   ],
   "condiciones_activacion": [
-    "Cuando la empresa decide entrar a un nuevo mercado mediante un socio local",
+    "Cuando tu empresa opera o exporta desde Estados Unidos y decide entrar a un nuevo mercado mediante un distribuidor o representante local",
     "Si la empresa no cuenta con presencia directa en el país destino"
   ],
   "etiqueta_arbol": "Elige tu Distribuidor Internacional",
   "fuentes_internas": [
     "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-180",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando la empresa decide entrar a un nuevo mercado mediante un socio local",
+      "texto_nuevo": "Cuando tu empresa opera o exporta desde Estados Unidos y decide entrar a un nuevo mercado mediante un distribuidor o representante local",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q008-001: La condicion 0 no dice que el nodo aplica si operas en Estados Unidos, como exige la clase C. (lector y verificador de acuerdo) Motivo: Clase C (Estados Unidos): ninguna condicion deja claro que aplica si tu empresa opera o exporta desde alli, y el paso 3 depende del U.S. Commercial Service"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

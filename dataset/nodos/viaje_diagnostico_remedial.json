@@ -36,7 +36,7 @@
   ],
   "condiciones_activacion": [
     "Cuando se ha identificado un problema crónico de calidad y se requiere metodología estructurada de resolución",
-    "Cuando el equipo tiene múltiples hipótesis sin validar"
+    "Cuando el equipo tiene varias teorías sobre la causa de un defecto de calidad y necesita probarlas con datos antes de diseñar un remedio"
   ],
   "etiqueta_arbol": "Diagnostica y Corrige la Causa",
   "ids_alias": [
@@ -71,6 +71,20 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U7-029 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    },
+    {
+      "id": "n1-condicion-193",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando el equipo tiene múltiples hipótesis sin validar",
+      "texto_nuevo": "Cuando el equipo tiene varias teorías sobre la causa de un defecto de calidad y necesita probarlas con datos antes de diseñar un remedio",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q077-021: Tenía razón el lector B: la condición 1 no dice que las hipótesis sean sobre la causa de un problema de calidad, así que el nodo se activaría en cualquier validación de hipótesis de negocio, algo que su contenido no cubre. En dominio (quality) y fase (ejecucion) los dos lectores coinciden y aciertan. (arbitro) Motivo: Demasiado genérica: en un catálogo de emprendimiento, 'múltiples hipótesis sin validar' se cumple ante cualquier hipótesis de negocio o de mercado, cuando el nodo trata de teorías sobre la causa de un defecto de calidad que se prueban con datos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
     }
   ],
   "fuentes_internas": [

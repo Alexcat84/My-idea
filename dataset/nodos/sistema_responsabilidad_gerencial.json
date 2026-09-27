@@ -6,13 +6,13 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "El 'sistema' es el conjunto de elementos que están fuera del control directo de quien ejecuta el trabajo: el estilo de dirección, la formación y experiencia de las personas, las regulaciones, los proveedores, los clientes, los inversores, los bancos y las restricciones del entorno. Tú tienes poder y margen de decisión sobre buena parte de ese sistema, pero no sobre todo. Esto es clave porque la mayoría de los problemas de calidad (según una estimación, el 94%) son responsabilidad de quien diseña y mantiene el sistema, no de la persona que trabaja dentro de él.",
   "pasos_accionables": [
-    "Mapea todos los componentes del sistema que afectan el trabajo de quien te ayuda: politicas, recursos, capacitación, proveedores",
-    "Identifica que elementos del sistema estan bajo tu control directo y cuales no",
-    "Antes de culpar a alguien por un error, evalua si el sistema le permitia hacer bien su trabajo",
-    "Rediseña procesos y politicas del sistema en lugar de limitarte a corregir a las personas",
+    "Mapea todos los componentes del sistema que afectan el trabajo de quien te ayuda: políticas, recursos, capacitación, proveedores",
+    "Identifica qué elementos del sistema están bajo tu control directo y cuáles no",
+    "Antes de culpar a alguien por un error, evalúa si el sistema le permitía hacer bien su trabajo",
+    "Rediseña procesos y políticas del sistema en lugar de limitarte a corregir a las personas",
     "Escucha las advertencias tempranas, tanto de quien trabaja contigo como de los clientes, antes de lanzar algo al mercado"
   ],
-  "entregable_esperado": "Mapa o diagrama de tu sistema de negocio identificando que elementos controlas tu directamente y cuales quedan fuera de tu alcance",
+  "entregable_esperado": "Mapa o diagrama de tu sistema de negocio identificando qué elementos controlas tú directamente y cuáles quedan fuera de tu alcance",
   "nodos_previos": [
     "causas_comunes_vs_especiales",
     "mal_uso_histograma_vs_carta_control"
@@ -43,6 +43,75 @@
       },
       "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
       "auditoria": "Clasificacion U6-003 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    },
+    {
+      "id": "n1-orto-0717",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mapea todos los componentes del sistema que afectan el trabajo de quien te ayuda: politicas, recursos, capacitación, proveedores",
+      "texto_nuevo": "Mapea todos los componentes del sistema que afectan el trabajo de quien te ayuda: políticas, recursos, capacitación, proveedores",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-032.paso0: políticas (Solo se añade la tilde que faltaba en políticas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0718",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica que elementos del sistema estan bajo tu control directo y cuales no",
+      "texto_nuevo": "Identifica qué elementos del sistema están bajo tu control directo y cuáles no",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-032.paso1: qué, están, cuáles (Faltaban las tildes en qué y cuáles, que aquí son interrogativos indirectos, y en están.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0719",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Antes de culpar a alguien por un error, evalua si el sistema le permitia hacer bien su trabajo",
+      "texto_nuevo": "Antes de culpar a alguien por un error, evalúa si el sistema le permitía hacer bien su trabajo",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-032.paso2: evalúa, permitía (Faltaban las tildes en evalúa y permitía.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0720",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Rediseña procesos y politicas del sistema en lugar de limitarte a corregir a las personas",
+      "texto_nuevo": "Rediseña procesos y políticas del sistema en lugar de limitarte a corregir a las personas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-032.paso3: políticas (Solo se añade la tilde que faltaba en políticas.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0721",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Mapa o diagrama de tu sistema de negocio identificando que elementos controlas tu directamente y cuales quedan fuera de tu alcance",
+      "texto_nuevo": "Mapa o diagrama de tu sistema de negocio identificando qué elementos controlas tú directamente y cuáles quedan fuera de tu alcance",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O063-032.entregable: qué, tú, cuáles (Faltaban las tildes en qué y cuáles (interrogativos indirectos) y en tú, que aquí es pronombre personal.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ],
   "fuentes_internas": [

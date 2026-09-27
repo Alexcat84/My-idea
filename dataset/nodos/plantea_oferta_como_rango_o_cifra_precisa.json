@@ -1,7 +1,7 @@
 {
   "node_id": "plantea_oferta_como_rango_o_cifra_precisa",
   "fase_proyecto": "ejecucion",
-  "dominio": "compras",
+  "dominio": "core",
   "titulo_concepto": "Plantea tu oferta como un rango o con una cifra precisa, no redonda",
   "fuente": "Chris Voss, Rompe la barrera del no",
   "resumen_teorico": "En lugar de dar una cifra fija y redonda cuando te preguntan tu precio, plantea un rango donde el número más bajo sea justo el que en realidad esperas recibir, o da una cifra exacta y no redonda. Ambas formas transmiten que hiciste un cálculo cuidadoso, en vez de improvisar un número al azar, y dejan menos margen para que te empujen hacia abajo. Un rango bien pensado amplía la referencia de la otra parte hacia arriba sin que parezca una posición extrema. Una cifra exacta, en lugar de un número redondeado, transmite que hiciste cálculos reales. Esto importa especialmente cuando no conoces con certeza el valor de mercado de lo que negocias.",
@@ -14,7 +14,8 @@
   "entregable_esperado": "Un rango de precio o una cifra exacta preparada antes de dar tu primera oferta.",
   "nodos_previos": [
     "negocia_por_intereses_no_posiciones",
-    "aplica_modelo_ackerman"
+    "aplica_modelo_ackerman",
+    "orden_negociacion_puntos"
   ],
   "nodos_siguientes": [],
   "condiciones_activacion": [
@@ -66,6 +67,32 @@
         "motivo": "Orden invertido: el propio vecino dice que se busca el terreno comun antes de hablar de precio, asi que prepara el nodo y no va despues de dar la oferta."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): quitar la arista rancia por la correccion y las rancias de antes."
+    },
+    {
+      "id": "n1-dominio-139",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "compras",
+      "texto_nuevo": "core",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q059-032: Tenia razon el lector A: el nodo se escribe desde quien vende y da su precio (el numero mas bajo del rango es lo que esperas recibir, evitar que te empujen hacia abajo), asi que es negociacion de precio de emprender en general y no compras a proveedores. (arbitro)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "mv-arista-042",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "orden_negociacion_puntos -> plantea_oferta_como_rango_o_cifra_precisa",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C10, lectores de acuerdo)",
+        "motivo": "Tras ordenar los puntos de una negociacion se llega a como plantear la cifra de la oferta."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
     }
   ],
   "fuentes_internas": [

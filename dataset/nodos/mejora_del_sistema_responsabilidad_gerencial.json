@@ -6,13 +6,13 @@
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
   "resumen_teorico": "Las personas que trabajan contigo actuan dentro de un sistema que ellas no controlan: los materiales, los equipos, las politicas que tu defines. Cuando un proceso esta bajo control estadistico pero sigue generando defectos, la única manera de mejorarlo es que tu actues sobre el sistema: mejores materiales, mejor mantenimiento, mejor diseno de equipos o procesos. Ejemplos: cambiar un hilo de mala calidad, instalar una placa niveladora en vagones de carga, ajustar los insumos y el mantenimiento en la producción de ruedas.",
   "pasos_accionables": [
-    "Verificar que el proceso este en control estadistico (sin causas especiales)",
-    "Si persisten defectos con el proceso en control, identificar elementos del sistema (materiales, equipo, entorno) como causa raiz",
-    "Realizar pruebas simples para aislar la variable comun a todas las personas o maquinas involucradas",
-    "Implementar el cambio estructural (mejor insumo, rediseno de equipo, mejor mantenimiento)",
+    "Verificar que el proceso esté en control estadístico (sin causas especiales)",
+    "Si persisten defectos con el proceso en control, identificar elementos del sistema (materiales, equipo, entorno) como causa raíz",
+    "Realizar pruebas simples para aislar la variable común a todas las personas o máquinas involucradas",
+    "Implementar el cambio estructural (mejor insumo, rediseño de equipo, mejor mantenimiento)",
     "Verificar la reducción o eliminación de defectos tras el cambio"
   ],
-  "entregable_esperado": "Informe de causa raiz a nivel de sistema y evidencia de mejora tras el cambio implementado por ti",
+  "entregable_esperado": "Informe de causa raíz a nivel de sistema y evidencia de mejora tras el cambio implementado por ti",
   "nodos_previos": [
     "causas_comunes_vs_especiales",
     "analisis_distribucion_poisson_para_capacidad",
@@ -28,5 +28,76 @@
   "etiqueta_arbol": "Mejora el Sistema desde Gerencia",
   "fuentes_internas": [
     "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0693",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Verificar que el proceso este en control estadistico (sin causas especiales)",
+      "texto_nuevo": "Verificar que el proceso esté en control estadístico (sin causas especiales)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O060-010.paso0: esté, estadístico (Faltan tildes en esté (subjuntivo) y estadístico; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0694",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si persisten defectos con el proceso en control, identificar elementos del sistema (materiales, equipo, entorno) como causa raiz",
+      "texto_nuevo": "Si persisten defectos con el proceso en control, identificar elementos del sistema (materiales, equipo, entorno) como causa raíz",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O060-010.paso1: raíz (Falta la tilde de raíz; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0695",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Realizar pruebas simples para aislar la variable comun a todas las personas o maquinas involucradas",
+      "texto_nuevo": "Realizar pruebas simples para aislar la variable común a todas las personas o máquinas involucradas",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O060-010.paso2: común, máquinas (Faltan tildes en común y máquinas; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0696",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Implementar el cambio estructural (mejor insumo, rediseno de equipo, mejor mantenimiento)",
+      "texto_nuevo": "Implementar el cambio estructural (mejor insumo, rediseño de equipo, mejor mantenimiento)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O060-010.paso3: rediseño (Falta la eñe en rediseño; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0697",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Informe de causa raiz a nivel de sistema y evidencia de mejora tras el cambio implementado por ti",
+      "texto_nuevo": "Informe de causa raíz a nivel de sistema y evidencia de mejora tras el cambio implementado por ti",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O060-010.entregable: raíz (Falta la tilde de raíz; no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

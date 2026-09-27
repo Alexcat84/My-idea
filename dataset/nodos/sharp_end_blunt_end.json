@@ -1,6 +1,6 @@
 {
   "node_id": "sharp_end_blunt_end",
-  "fase_proyecto": "planificacion",
+  "fase_proyecto": "ejecucion",
   "dominio": "health_safety",
   "titulo_concepto": "Extremo Agudo vs Extremo Romo del Sistema",
   "fuente": "The Field Guide to Understandin - Dekker, Sidney",
@@ -25,5 +25,20 @@
   "etiqueta_arbol": "Distingue Extremo Agudo y Romo",
   "fuentes_internas": [
     "The Field Guide to Understandin - Dekker, Sidney"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-185",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "planificacion",
+      "texto_nuevo": "ejecucion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q019-018: Los pasos y condiciones tratan de investigar un accidente ya ocurrido en una operación en marcha (evento investigado, informe final), que es control y mejora de lo que funciona, no planificación. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

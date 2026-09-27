@@ -7,11 +7,11 @@
   "resumen_teorico": "Muchas veces delegas toda la responsabilidad de la calidad en quien te ayuda con eso, y te alejas de tu propio rol en decidir y actuar. Quien se encarga de calidad suele limitarse a darte reportes de lo que ya paso, en lugar de decirte si tu proceso esta estable o si hay algo puntual que necesita tu decisión. La calidad no se instala de una vez: es un aprendizaje continuo que tienes que liderar tu.",
   "pasos_accionables": [
     "Redefine el rol de quien te ayuda con calidad: es tu asesor, no el único responsable",
-    "Involucrate activamente en las decisiones de calidad, junto con quien compra y quien produce",
-    "Pide reportes que te digan si tu proceso esta estable o tiene algo puntual que atender, no solo el conteo de defectos",
-    "Convierte la mejora de calidad en un proceso de aprendizaje continuo que tu lideras"
+    "Involúcrate activamente en las decisiones de calidad, junto con quien compra y quien produce",
+    "Pide reportes que te digan si tu proceso está estable o tiene algo puntual que atender, no solo el conteo de defectos",
+    "Convierte la mejora de calidad en un proceso de aprendizaje continuo que tú lideras"
   ],
-  "entregable_esperado": "Una redefinición escrita de quien hace que en calidad, con tu rol claro en el centro",
+  "entregable_esperado": "Una redefinición escrita de quién hace qué en calidad, con tu rol claro en el centro",
   "nodos_previos": [
     "eliminacion_planes_muestreo_estandar"
   ],
@@ -39,6 +39,61 @@
         "evidencia": "F15-004: Redefine los roles y la responsabilidad de la calidad en un negocio que ya opera; es gestión operativa, no exploración de una idea. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0383",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Involucrate activamente en las decisiones de calidad, junto con quien compra y quien produce",
+      "texto_nuevo": "Involúcrate activamente en las decisiones de calidad, junto con quien compra y quien produce",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-028.paso1: Involúcrate (Faltaba la tilde en 'Involúcrate' (esdrújula con enclítico).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0384",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pide reportes que te digan si tu proceso esta estable o tiene algo puntual que atender, no solo el conteo de defectos",
+      "texto_nuevo": "Pide reportes que te digan si tu proceso está estable o tiene algo puntual que atender, no solo el conteo de defectos",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-028.paso2: está (Faltaba la tilde en 'está' (verbo).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0385",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Convierte la mejora de calidad en un proceso de aprendizaje continuo que tu lideras",
+      "texto_nuevo": "Convierte la mejora de calidad en un proceso de aprendizaje continuo que tú lideras",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-028.paso3: tú (Faltaba la tilde en 'tú' (pronombre personal).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0386",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Una redefinición escrita de quien hace que en calidad, con tu rol claro en el centro",
+      "texto_nuevo": "Una redefinición escrita de quién hace qué en calidad, con tu rol claro en el centro",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O033-028.entregable: quién, qué (Tildes que faltaban en 'quién' y 'qué' (interrogativa indirecta).)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
     }
   ]
 }

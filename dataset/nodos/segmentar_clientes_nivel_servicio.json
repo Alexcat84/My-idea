@@ -6,12 +6,12 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "No todos tus clientes valoran lo mismo cuando reciben un pedido: algunos priorizan la velocidad, otros el precio bajo, otros la frecuencia con la que compran. Tratar a todos igual significa que gastas de mas en quien no lo necesita o quedas corto con quien si lo necesita. Identificar dos o tres grupos claros de clientes, segun su comportamiento de compra o sus expectativas de entrega, te permite ofrecer paquetes de servicio diferenciados: plazos distintos, costos distintos, opciones de entrega distintas para cada grupo. Esta segmentacion no requiere estudios costosos, una conversacion directa o una pregunta corta al momento de entregar puede revelar que espera cada tipo de cliente, y con eso ya puedes disenar el servicio que realmente corresponde a cada segmento.",
   "pasos_accionables": [
-    "Identifica dos o tres grupos de clientes segun cuanto compran o cuanto les urge la entrega.",
-    "Pregunta directamente, con una llamada o mensaje corto, que espera cada grupo de la entrega.",
+    "Identifica dos o tres grupos de clientes según cuánto compran o cuánto les urge la entrega.",
+    "Pregunta directamente, con una llamada o mensaje corto, qué espera cada grupo de la entrega.",
     "Define un paquete de servicio distinto para cada grupo, con plazos y costos propios.",
     "Comunica cada paquete con claridad en el momento de la compra."
   ],
-  "entregable_esperado": "Dos o tres paquetes de servicio de entrega diferenciados segun el tipo de cliente.",
+  "entregable_esperado": "Dos o tres paquetes de servicio de entrega diferenciados según el tipo de cliente.",
   "nodos_previos": [
     "ofrecer_puntos_recogida",
     "tipos_de_clientes"
@@ -27,5 +27,48 @@
   "etiqueta_arbol": "Segmenta tus niveles de servicio",
   "fuentes_internas": [
     "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0573",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Identifica dos o tres grupos de clientes segun cuanto compran o cuanto les urge la entrega.",
+      "texto_nuevo": "Identifica dos o tres grupos de clientes según cuánto compran o cuánto les urge la entrega.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O050-030.paso0: según, cuánto, cuánto (Faltan tildes en 'según' y en los interrogativos indirectos 'cuánto', y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0574",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta directamente, con una llamada o mensaje corto, que espera cada grupo de la entrega.",
+      "texto_nuevo": "Pregunta directamente, con una llamada o mensaje corto, qué espera cada grupo de la entrega.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O050-030.paso1: qué (Falta la tilde del interrogativo indirecto 'qué', y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0575",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Dos o tres paquetes de servicio de entrega diferenciados segun el tipo de cliente.",
+      "texto_nuevo": "Dos o tres paquetes de servicio de entrega diferenciados según el tipo de cliente.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O050-030.entregable: según (Falta la tilde de 'según', y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

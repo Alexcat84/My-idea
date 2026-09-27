@@ -6,14 +6,14 @@
   "fuente": "Franchise Your Business - Mark Siebert",
   "resumen_teorico": "El manual de operaciones es el documento central que traduce tu sistema de negocio probado en instrucciones replicables para franquiciados. Funciona como herramienta de ventas, texto de capacitacion, referencia diaria y documento legal exigible de estandares de marca. Debe cubrir desde la apertura de una unidad (seleccion de sitio, cuenta bancaria, EIN, seguros) hasta la operacion diaria, e incluir politicas de cumplimiento legal (leyes laborales, EEOC, ADA) sin dictar politicas internas de empleo del franquiciado. Redactalo evitando lenguaje absoluto de obligaciones y mantenlo fuera del contrato de franquicia para preservarlo como secreto comercial y poder modificarlo con el tiempo. Solo el indice se divulga en el FDD, nunca el contenido completo.",
   "pasos_accionables": [
-    "Documenta exhaustivamente todos los procesos operativos, desde la apertura de una unidad (sitio, cuenta bancaria, EIN, seguros) hasta la operacion diaria, incluyendo compras, marketing local, guiones de venta y control de inventario",
-    "Diferencia claramente los estandares de marca de control estricto de las areas operativas flexibles",
-    "Incluye politicas de cumplimiento legal como leyes laborales, EEOC y ADA, sin dictar politicas internas de empleo del franquiciado",
-    "Redacta el manual evitando lenguaje absoluto de obligaciones, sustituyendolo por terminos flexibles",
-    "Vincula legalmente el manual al contrato de franquicia como estandar de cumplimiento obligatorio, manteniendolo fuera del contrato mismo y confidencial, divulgando solo el indice en el FDD, exigiendo a los franquiciados mantener el manual bajo resguardo controlado, y limitando su divulgacion a los empleados solo según necesidad de entrenamiento",
+    "Documenta exhaustivamente todos los procesos operativos, desde la apertura de una unidad (sitio, cuenta bancaria, EIN, seguros) hasta la operación diaria, incluyendo compras, marketing local, guiones de venta y control de inventario",
+    "Diferencia claramente los estándares de marca de control estricto de las áreas operativas flexibles",
+    "Incluye políticas de cumplimiento legal como leyes laborales, EEOC y ADA, sin dictar políticas internas de empleo del franquiciado",
+    "Redacta el manual evitando lenguaje absoluto de obligaciones, sustituyéndolo por términos flexibles",
+    "Vincula legalmente el manual al contrato de franquicia como estándar de cumplimiento obligatorio, manteniéndolo fuera del contrato mismo y confidencial, divulgando solo el índice en el FDD, exigiendo a los franquiciados mantener el manual bajo resguardo controlado, y limitando su divulgación a los empleados solo según necesidad de entrenamiento",
     "Contrata a un profesional con experiencia legal en franquicias para redactarlo y haz que tu abogado lo revise antes de implementarlo"
   ],
-  "entregable_esperado": "Un manual de operaciones completo, redactado y revisado legalmente, vinculado al contrato de franquicia y listo para servir como base de capacitacion y estandar de cumplimiento.",
+  "entregable_esperado": "Un manual de operaciones completo, redactado y revisado legalmente, vinculado al contrato de franquicia y listo para servir como base de capacitación y estándar de cumplimiento.",
   "nodos_previos": [
     "pilares_control_calidad",
     "gestion_responsabilidad_vicaria",
@@ -55,5 +55,90 @@
   ],
   "fuentes_internas": [
     "Franchise Your Business - Mark Siebert"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0604",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Documenta exhaustivamente todos los procesos operativos, desde la apertura de una unidad (sitio, cuenta bancaria, EIN, seguros) hasta la operacion diaria, incluyendo compras, marketing local, guiones de venta y control de inventario",
+      "texto_nuevo": "Documenta exhaustivamente todos los procesos operativos, desde la apertura de una unidad (sitio, cuenta bancaria, EIN, seguros) hasta la operación diaria, incluyendo compras, marketing local, guiones de venta y control de inventario",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O053-003.paso0: operación (Solo añade la tilde que faltaba en operación.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0605",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Diferencia claramente los estandares de marca de control estricto de las areas operativas flexibles",
+      "texto_nuevo": "Diferencia claramente los estándares de marca de control estricto de las áreas operativas flexibles",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O053-003.paso1: estándares, áreas (Las tildes de estándares y áreas son faltas reales.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0606",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Incluye politicas de cumplimiento legal como leyes laborales, EEOC y ADA, sin dictar politicas internas de empleo del franquiciado",
+      "texto_nuevo": "Incluye políticas de cumplimiento legal como leyes laborales, EEOC y ADA, sin dictar políticas internas de empleo del franquiciado",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O053-003.paso2: políticas, políticas (Solo añade las dos tildes de políticas; las siglas quedan igual.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0607",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Redacta el manual evitando lenguaje absoluto de obligaciones, sustituyendolo por terminos flexibles",
+      "texto_nuevo": "Redacta el manual evitando lenguaje absoluto de obligaciones, sustituyéndolo por términos flexibles",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O053-003.paso3: sustituyéndolo (La tilde de sustituyéndolo es real, y añado la de términos, que el lector no vio.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0608",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Vincula legalmente el manual al contrato de franquicia como estandar de cumplimiento obligatorio, manteniendolo fuera del contrato mismo y confidencial, divulgando solo el indice en el FDD, exigiendo a los franquiciados mantener el manual bajo resguardo controlado, y limitando su divulgacion a los empleados solo según necesidad de entrenamiento",
+      "texto_nuevo": "Vincula legalmente el manual al contrato de franquicia como estándar de cumplimiento obligatorio, manteniéndolo fuera del contrato mismo y confidencial, divulgando solo el índice en el FDD, exigiendo a los franquiciados mantener el manual bajo resguardo controlado, y limitando su divulgación a los empleados solo según necesidad de entrenamiento",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O053-003.paso4: estándar, manteniéndolo, índice, divulgación (Las cuatro tildes (estándar, manteniéndolo, índice, divulgación) son reales y no cambia nada más.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0609",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un manual de operaciones completo, redactado y revisado legalmente, vinculado al contrato de franquicia y listo para servir como base de capacitacion y estandar de cumplimiento.",
+      "texto_nuevo": "Un manual de operaciones completo, redactado y revisado legalmente, vinculado al contrato de franquicia y listo para servir como base de capacitación y estándar de cumplimiento.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O053-003.entregable: capacitación, estándar (Las tildes de capacitación y estándar son faltas reales.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

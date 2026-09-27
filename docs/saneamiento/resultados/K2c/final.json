@@ -1,0 +1,298 @@
+{
+ "A": [
+  {
+   "node_id": "comprender_definicion_legal_franquicia",
+   "campo": "resumen_teorico",
+   "indice": -1,
+   "texto_anterior": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+   "texto_nuevo": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+   "cita_lineas": "113-121",
+   "cita_frase": "3.A required payment of more than $500 in the first six months of operation by the franchisee (including initial fees, royalties, advertising fees, training fees, or fees for equipment)",
+   "nota": "Se quita el residuo 'que se pague mas de $500' que duplicaba y contradecia la cifra. El libro (regla enmendada en 2008) dice $500; el propio nodo ya trae la cifra vigente de $735 con su fuente (ajuste de la FTC de 2024), asi que vale la vigente y el resumen queda con una sola cifra."
+  },
+  {
+   "node_id": "comprender_definicion_legal_franquicia",
+   "campo": "pasos_accionables",
+   "indice": 2,
+   "texto_anterior": "Calcula si el pago que le pedirias al operador supera los $500 en los primeros seis meses",
+   "texto_nuevo": "Calcula si el pago que le pedirias al operador llega a $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación",
+   "cita_lineas": "121; 137",
+   "cita_frase": "It is intended to capture any payment of at least $500 during the first six months of the franchisee’s operations.",
+   "nota": "El paso calculaba contra el umbral antiguo del libro ($500) mientras el resumen usa el vigente ($735, ajuste FTC 2024, fuente ya citada en el nodo). Se alinea el paso con la cifra vigente y con la misma ventana temporal del resumen."
+  },
+  {
+   "node_id": "prevenir_franquicias_inadvertidas",
+   "campo": "condiciones_activacion",
+   "indice": 0,
+   "texto_anterior": "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+   "texto_nuevo": "Solo aplica si en Estados Unidos das o piensas dar a terceros el uso de tu marca (distribucion, licencia, agencia u otra relacion), aunque no tengas intencion de vender franquicias",
+   "cita_lineas": "2263; 2287",
+   "cita_frase": "Worst of all, these situations are entirely and easily avoidable. In virtually every case, these companies (or their lawyers) simply did not realize they were franchising.",
+   "nota": "La condicion excluia justo al publico del nodo: empresas que crean franquicias sin saberlo ni pretenderlo. Se conserva el ambito de Estados Unidos (el libro trata la regla FTC y leyes estatales como Illinois y Connecticut) pero la puerta pasa a ser dar la marca a terceros, no vender franquicias. Nota aparte, sin cambiarlo: el alcance nucleo o mundo de este nodo no se decide aqui; esta correccion solo quita la contradiccion interna."
+  },
+  {
+   "node_id": "evaluacion_gestion_riesgos",
+   "campo": "entregable_esperado",
+   "indice": -1,
+   "texto_anterior": "Lista priorizada de riesgos con score de severidad x probabilidad, acciones concretas asignadas con responsable y fecha límite",
+   "texto_nuevo": "Lista de acciones concretas para minimizar o eliminar cada riesgo que ya priorizaste (por severidad x probabilidad), con responsable y fecha límite asignados",
+   "cita_lineas": "12236; 12478",
+   "cita_frase": "Last, we need to decide what we will do, who will do it and when. Now is the time for practical actions that we can execute.",
+   "nota": "Los pasos y la condicion 3 tratan la etapa de gestion del riesgo que el libro coloca DESPUES de priorizar (seccion Managing Risk: concerns, options, consequences, future impact, cost and benefit, What Will You Do?). La priorizacion por severidad x probabilidad (linea 12236) es un insumo previo, no un producto de este nodo. Se corrige el entregable para que pida las acciones sobre riesgos ya priorizados, en vez de exigir un score que ningun paso calcula."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "entregable_esperado",
+   "indice": -1,
+   "texto_anterior": "Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+   "texto_nuevo": "Proyecto DMAIC documentado con el problema seleccionado y el proyecto lanzado, y sus cinco fases completas (definir, medir, analizar, mejorar, controlar), causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+   "cita_lineas": "5036-5048; 14258",
+   "cita_frase": "Experience with applying the five DMAIC steps shows that the team’s DMAIC journey needs to be preceded by management selecting the project.",
+   "nota": "El resumen es fiel al libro (seis momentos: seleccionar y lanzar, mas las cinco fases DMAIC). El entregable solo nombraba las cinco fases; ahora incluye la seleccion previa y nombra las cinco, sin contradecir el resumen."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 6,
+   "texto_anterior": "Establecer la creencia de que el cambio es deseable y factible",
+   "texto_nuevo": "Antes de seleccionar el problema del paso 1, establece la creencia de que el cambio es deseable y factible.",
+   "cita_lineas": "5071",
+   "cita_frase": "The starting point is the attitude that a breakthrough is both desirable and feasible.",
+   "nota": "En el libro esto es el punto de partida de la secuencia de ruptura, no algo posterior al control. Como no se puede reordenar la lista, se ancla el paso explicitamente antes del paso 1 para quitar la contradiccion de orden."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 7,
+   "texto_anterior": "Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales",
+   "texto_nuevo": "Antes de seleccionar el problema del paso 1, realiza un estudio de factibilidad con análisis de Pareto para separar los pocos vitales de los muchos triviales y elegir de ahí el problema.",
+   "cita_lineas": "5073",
+   "cita_frase": "The second step is to see whether a breakthrough is likely to happen if we mobilize for it, a feasibility study or demonstration project. This study will help separate the problem into major parts, the vital few from the useful many. I call this the Pareto analysis.",
+   "nota": "El estudio de factibilidad es el segundo paso de la secuencia de ruptura, previo a elegir y lanzar el proyecto; se ancla antes del paso 1. (En la cita se sustituye por coma la raya del original.)"
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 8,
+   "texto_anterior": "Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)",
+   "texto_nuevo": "Al lanzar el proyecto del paso 1, crea un brazo directivo (steering arm) que lo guíe y un brazo diagnóstico (diagnostic arm) que reúna y analice los datos.",
+   "cita_lineas": "5075",
+   "cita_frase": "It requires that we appoint or create two systems: one that directs or guides the breakthrough, and one that does the fact-gathering and analysis. We call them the steering arm and the diagnostic arm, respectively.",
+   "nota": "La organizacion para la ruptura va antes del diagnostico, no despues del control; se ancla al lanzamiento del paso 1."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 9,
+   "texto_anterior": "Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia",
+   "texto_nuevo": "Al implementar el remedio del paso 5, y antes de fijar los controles del paso 6, evalúa el impacto cultural de los cambios propuestos y gestiona la resistencia.",
+   "cita_lineas": "5032-5034",
+   "cita_frase": "From workable remedies to dealing with predictable resistance to change",
+   "nota": "En el recorrido de remedio del libro la resistencia se atiende entre el remedio y el establecimiento de controles; se ancla ahi para respetar el orden."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 10,
+   "texto_anterior": "Establecer un proyecto formal con equipo asignado.",
+   "texto_nuevo": "Al lanzar el proyecto del paso 1, formalízalo con un equipo asignado.",
+   "cita_lineas": "4984",
+   "cita_frase": "b. Establish a project and team. (Management does this.)",
+   "nota": "Tal como estaba, volvia a establecer el proyecto despues de controlar, cuando ya se lanzo en el paso 1. Se convierte en precision del paso 1, que es donde el libro lo coloca. El paso 11 (replicar y nominar nuevos proyectos) ya va bien al final y no se toca."
+  }
+ ],
+ "B": [
+  {
+   "node_id": "comprender_definicion_legal_franquicia",
+   "campo": "resumen_teorico",
+   "indice": -1,
+   "texto_anterior": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+   "texto_nuevo": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+   "cita_lineas": "121; 137",
+   "cita_frase": "3.A required payment of more than $500 in the first six months of operation by the franchisee (including initial fees, royalties, advertising fees, training fees, or fees for equipment)",
+   "nota": "Solo se quita el residuo 'que se pague mas de $500' que dejaba dos umbrales en la misma frase. El libro (regla enmendada en 2008) dice $500; el propio nodo ya trae la cifra vigente con su fuente (ajuste de la FTC de 2024: $735), y se conserva la vigente."
+  },
+  {
+   "node_id": "comprender_definicion_legal_franquicia",
+   "campo": "pasos_accionables",
+   "indice": 2,
+   "texto_anterior": "Calcula si el pago que le pedirias al operador supera los $500 en los primeros seis meses",
+   "texto_nuevo": "Calcula si el pago que le pedirias al operador llega a $735 o mas (cifra ajustada por la FTC en 2024; el libro cita $500) entre antes de abrir y los primeros seis meses de operación",
+   "cita_lineas": "137",
+   "cita_frase": "It is intended to capture any payment of at least $500 during the first six months of the franchisee’s operations.",
+   "nota": "El paso calculaba contra el umbral antiguo del libro ($500) mientras el resumen fija el vigente ($735, ajuste FTC 2024). Se alinea con la cifra vigente que el nodo ya trae con su fuente, dejando constancia de la cifra del libro, y con la misma ventana temporal del resumen."
+  },
+  {
+   "node_id": "prevenir_franquicias_inadvertidas",
+   "campo": "condiciones_activacion",
+   "indice": 0,
+   "texto_anterior": "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+   "texto_nuevo": "Solo aplica si operas o piensas operar en Estados Unidos y dejas que terceros (distribuidores, licenciatarios o agentes) usen tu marca, aunque no pienses vender franquicias",
+   "cita_lineas": "2263; 2287",
+   "cita_frase": "Others may not have liked the idea of calling their relationship a “franchise” and assumed if they called it something else, they were not violating franchise regulations. Some simply had no clue about franchise law.",
+   "nota": "La condicion excluia justo al publico del nodo: quien crea una franquicia sin saberlo no 'vende o piensa vender franquicias'. Se conserva el alcance estadounidense (el pasaje trata la Regla FTC 436 y leyes estatales como Illinois y Connecticut) y se cambia el disparador al uso de la marca por terceros. Linea 2287: 'In virtually every case, these companies (or their lawyers) simply did not realize they were franchising.'"
+  },
+  {
+   "node_id": "evaluacion_gestion_riesgos",
+   "campo": "entregable_esperado",
+   "indice": -1,
+   "texto_anterior": "Lista priorizada de riesgos con score de severidad x probabilidad, acciones concretas asignadas con responsable y fecha límite",
+   "texto_nuevo": "Para cada riesgo de tu lista ya priorizada (por severidad x probabilidad), sus preocupaciones, opciones y acciones concretas asignadas con responsable y fecha límite",
+   "cita_lineas": "12478; 12691",
+   "cita_frase": "Next, we select each risk and identify our concerns, options and next steps as shown in Fig. 13.4. [...] We identify the action or project, the name of the person who is responsible and the date it is due.",
+   "nota": "Los pasos del nodo resumen la seccion 'Managing Risk' del libro (concerns, options, consequences, future impact, cost and benefit, what will you do), que parte de riesgos ya evaluados; la condicion 3 y el paso 1 lo dan por hecho. El entregable pedia producir el score, que ningun paso hace (en el libro es el paso 4, linea 12683). Se reescribe el entregable para que la priorizacion sea la entrada y el producto sea el que el libro llama 'the real purpose of doing a risk assessment' (linea 12478): acciones con responsable y fecha."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "entregable_esperado",
+   "indice": -1,
+   "texto_anterior": "Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+   "texto_nuevo": "Proyecto DMAIC documentado con la selección del proyecto y las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+   "cita_lineas": "14258; 5036-5048",
+   "cita_frase": "Experience with applying the five DMAIC steps shows that the team’s DMAIC journey needs to be preceded by management selecting the project.",
+   "nota": "El resumen cuenta seis momentos (libro, lineas 5038-5048: 'a. Select the problem and launch a project' mas define, measure, analyze, improve, control) y el entregable solo cinco fases. Ambos son fieles: las cinco fases DMAIC van precedidas por la seleccion del proyecto. Se añade esa seleccion al entregable para que cubra los seis momentos del resumen."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 6,
+   "texto_anterior": "Establecer la creencia de que el cambio es deseable y factible",
+   "texto_nuevo": "Antes de seleccionar el problema (paso 1), asegúrate de que existe la creencia de que el cambio es deseable y factible; sin alguien que abogue por el cambio, el proyecto no arranca.",
+   "cita_lineas": "5071",
+   "cita_frase": "The first step on that road is someone’s belief that a change—a breakthrough—is desirable and feasible.",
+   "nota": "En la secuencia universal de ruptura de Juran la creencia en el cambio es el punto de partida; injertada tras 'Controla' contradecia el orden DMAIC. Se ancla explicitamente antes del paso 1 sin quitar el contenido."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 7,
+   "texto_anterior": "Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales",
+   "texto_nuevo": "Para elegir el problema del paso 1, realiza un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales.",
+   "cita_lineas": "5073",
+   "cita_frase": "The second step is to see whether a breakthrough is likely to happen if we mobilize for it—a feasibility study or demonstration project. This study will help separate the problem into major parts, the vital few from the useful many. I call this the Pareto analysis.",
+   "nota": "El estudio de factibilidad con Pareto sirve para escoger los pocos problemas vitales, es decir, alimenta la seleccion del paso 1; colocado despues del control rompia la secuencia. Se ancla a la seleccion."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 8,
+   "texto_anterior": "Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)",
+   "texto_nuevo": "Al lanzar el proyecto del paso 1, crea un brazo directivo (steering arm) que lo guíe y un brazo diagnóstico (diagnostic arm) que reúna y analice los datos de los pasos 3 y 4.",
+   "cita_lineas": "5075",
+   "cita_frase": "It requires that we appoint or create two systems: one that directs or guides the breakthrough, and one that does the fact-gathering and analysis. We call them the steering arm and the diagnostic arm, respectively. [...] When both are in place, diagnosis begins.",
+   "nota": "Los dos brazos se crean antes del diagnostico ('When both are in place, diagnosis begins'), o sea al lanzar el proyecto y antes de medir y analizar; tras el control contradecia el orden. Se ancla a su momento."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 10,
+   "texto_anterior": "Establecer un proyecto formal con equipo asignado.",
+   "texto_nuevo": "Formaliza el proyecto del paso 1 con un equipo asignado antes de empezar a definir el problema.",
+   "cita_lineas": "5038; 14258",
+   "cita_frase": "a. Select the problem and launch a project. (Management does this.)",
+   "nota": "El proyecto ya se selecciona y lanza en el paso 1; volver a 'establecer un proyecto formal' despues de controlar era la contradiccion de orden que midieron los lectores. Se convierte en la formalizacion del mismo proyecto del paso 1, antes de la fase Definir. El paso de indice 9 (impacto cultural y resistencia) no se toca: en el libro la resistencia se trata entre el remedio y los controles (lineas 5030-5032), y los lectores no lo marcaron."
+  }
+ ],
+ "final": [
+  {
+   "node_id": "comprender_definicion_legal_franquicia",
+   "campo": "resumen_teorico",
+   "indice": -1,
+   "texto_anterior": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague mas de $500 que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+   "texto_nuevo": "Esta es una regla estadounidense de la FTC (Regla 436) que aplica solo si vendes o piensas vender franquicias en Estados Unidos. Define legalmente una franquicia con tres elementos: que se use una marca o nombre en comun, que exista control o ayuda operativa significativa, y que se pague al franquiciador $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación. Te sirve para saber si el acuerdo que estas armando con otros (licencia, distribucion, etc.) califica legalmente como franquicia y por lo tanto queda sujeto a esta regulacion.",
+   "cita_lineas": "121; 137",
+   "cita_frase": "3.A required payment of more than $500 in the first six months of operation by the franchisee (including initial fees, royalties, advertising fees, training fees, or fees for equipment)",
+   "nota": "Ambos lectores coinciden. Solo se quita el residuo 'que se pague mas de $500', que dejaba dos umbrales en la misma frase. El libro (regla enmendada en 2008) dice $500; como el propio nodo ya trae la cifra vigente con su fuente (ajuste de la FTC de 2024: $735), vale la vigente. No se toca el alcance (Estados Unidos) ni la ubicacion nucleo o mundo del nodo."
+  },
+  {
+   "node_id": "comprender_definicion_legal_franquicia",
+   "campo": "pasos_accionables",
+   "indice": 2,
+   "texto_anterior": "Calcula si el pago que le pedirias al operador supera los $500 en los primeros seis meses",
+   "texto_nuevo": "Calcula si el pago que le pedirias al operador llega a $735 o mas (cifra ajustada por la FTC en 2024) entre antes de abrir y los primeros seis meses de operación",
+   "cita_lineas": "121; 137",
+   "cita_frase": "It is intended to capture any payment of at least $500 during the first six months of the franchisee’s operations.",
+   "nota": "El paso calculaba contra el umbral antiguo del libro ($500) y el resumen fija el vigente ($735, ajuste FTC 2024, fuente ya citada en el nodo). Se alinea el paso con la cifra vigente y con la misma ventana temporal del resumen. Se toma la version del lector A: no se repite la cifra del libro en el paso para no volver a meter dos umbrales en el mismo nodo."
+  },
+  {
+   "node_id": "prevenir_franquicias_inadvertidas",
+   "campo": "condiciones_activacion",
+   "indice": 0,
+   "texto_anterior": "Solo aplica si vendes o piensas vender franquicias en Estados Unidos",
+   "texto_nuevo": "Solo aplica si operas o piensas operar en Estados Unidos y dejas que terceros (distribuidores, licenciatarios o agentes) usen tu marca, aunque no pienses vender franquicias",
+   "cita_lineas": "2263; 2287",
+   "cita_frase": "In virtually every case, these companies (or their lawyers) simply did not realize they were franchising.",
+   "nota": "La condicion excluia justo al publico del nodo: quien crea una franquicia sin saberlo no 'vende ni piensa vender franquicias' (linea 2263: 'Some simply had no clue about franchise law'). Se conserva el ambito de Estados Unidos (el pasaje trata la Regla FTC 436 y leyes estatales de Illinois y Connecticut) y el disparador pasa a ser que terceros usen tu marca. Se toma la redaccion del lector B. Esta correccion solo quita la contradiccion interna; NO decide si el nodo va en el nucleo o en el mundo de franquicias: esa decision es de la pasada nodo por nodo del fundador (prueba de si lo necesita cualquier emprendedor aunque nunca active ese mundo) y aqui no se toca."
+  },
+  {
+   "node_id": "evaluacion_gestion_riesgos",
+   "campo": "entregable_esperado",
+   "indice": -1,
+   "texto_anterior": "Lista priorizada de riesgos con score de severidad x probabilidad, acciones concretas asignadas con responsable y fecha límite",
+   "texto_nuevo": "Lista de acciones concretas para minimizar o eliminar cada riesgo que ya priorizaste (por severidad x probabilidad), con responsable y fecha límite asignados",
+   "cita_lineas": "12478; 12691",
+   "cita_frase": "Use the list of concerns and options tempered by consideration of the consequences, the cost/benefit and future impact to develop a list of real actions and projects that we can and will do. [...] We identify the action or project, the name of the person who is responsible and the date it is due.",
+   "nota": "Los pasos y la condicion 3 cubren la etapa de gestion que el libro pone DESPUES de puntuar (seccion Managing Risk, linea 12478; paso 6 del procedimiento, linea 12691). El score severidad x probabilidad es el paso 4 del libro (linea 12683), un insumo previo que ningun paso del nodo calcula. Se corrige el entregable para que la priorizacion sea entrada y el producto sea la lista de acciones con responsable y fecha, que el libro llama 'the real purpose of doing a risk assessment'. Se toma la redaccion del lector A (mas corta) con la cita doble del lector B."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "entregable_esperado",
+   "indice": -1,
+   "texto_anterior": "Proyecto DMAIC documentado con las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+   "texto_nuevo": "Proyecto DMAIC documentado con la selección del proyecto y las cinco fases completas, causa raíz resuelta, resultados medibles y controles de sostenimiento implementados.",
+   "cita_lineas": "5038-5048; 14258",
+   "cita_frase": "Experience with applying the five DMAIC steps shows that the team’s DMAIC journey needs to be preceded by management selecting the project.",
+   "nota": "El resumen es fiel al libro (lineas 5038-5048: seleccionar y lanzar mas definir, medir, analizar, mejorar, controlar) y el entregable solo nombraba las cinco fases. Ambos son fieles: las cinco fases van precedidas por la seleccion del proyecto. Se anade esa seleccion al entregable con el cambio minimo (redaccion del lector B)."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 6,
+   "texto_anterior": "Establecer la creencia de que el cambio es deseable y factible",
+   "texto_nuevo": "Antes de seleccionar el problema del paso 1, establece la creencia de que el cambio es deseable y factible.",
+   "cita_lineas": "5071",
+   "cita_frase": "The starting point is the attitude that a breakthrough is both desirable and feasible.",
+   "nota": "En la secuencia de ruptura de Juran la creencia en el cambio es el punto de partida, no algo posterior al control. Como no se reordena la lista, se ancla explicitamente antes del paso 1 (redaccion del lector A, minima)."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 7,
+   "texto_anterior": "Realizar un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales",
+   "texto_nuevo": "Para elegir el problema del paso 1, realiza un estudio de factibilidad usando análisis de Pareto para separar los pocos vitales de los muchos triviales.",
+   "cita_lineas": "5073",
+   "cita_frase": "This study will help separate the problem into major parts, the vital few from the useful many. I call this the Pareto analysis.",
+   "nota": "El estudio de factibilidad con Pareto es el segundo paso de la secuencia de ruptura y sirve para escoger los pocos problemas vitales, o sea alimenta la seleccion del paso 1; tras el control rompia el orden. Redaccion del lector B. La cita se toma de un tramo de la linea sin raya larga."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 8,
+   "texto_anterior": "Crear un brazo directivo (steering arm) y un brazo diagnóstico (diagnostic arm)",
+   "texto_nuevo": "Al lanzar el proyecto del paso 1, crea un brazo directivo (steering arm) que lo guíe y un brazo diagnóstico (diagnostic arm) que reúna y analice los datos de los pasos 3 y 4.",
+   "cita_lineas": "5075",
+   "cita_frase": "It requires that we appoint or create two systems: one that directs or guides the breakthrough, and one that does the fact-gathering and analysis. We call them the steering arm and the diagnostic arm, respectively. [...] When both are in place, diagnosis begins.",
+   "nota": "Los dos brazos se crean antes del diagnostico ('When both are in place, diagnosis begins'), es decir al lanzar el proyecto y antes de medir y analizar (pasos 3 y 4); despues del control contradecia el orden. Redaccion del lector B."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 9,
+   "texto_anterior": "Evaluar el impacto cultural de los cambios propuestos y gestionar la resistencia",
+   "texto_nuevo": "Al implementar el remedio del paso 5, y antes de fijar los controles del paso 6, evalúa el impacto cultural de los cambios propuestos y gestiona la resistencia.",
+   "cita_lineas": "5032; 5034",
+   "cita_frase": "c. From workable remedies to dealing with predictable resistance to change",
+   "nota": "El conflicto pasos-pasos que midieron los lectores abarca los pasos 7 a 11 injertados tras el control, y este es uno de ellos: evaluar 'cambios propuestos' despues de controlar es incoherente. En el recorrido de remedio del libro la resistencia se atiende entre el remedio y los nuevos controles (linea 5034: 'd. From dealing with resistance to establishing new controls on the remedies to hold the gains'). Se ancla ahi (propuesta del lector A; el lector B lo dejo intacto pero reconoce ese mismo orden en el libro)."
+  },
+  {
+   "node_id": "six_sigma_dmaic",
+   "campo": "pasos_accionables",
+   "indice": 10,
+   "texto_anterior": "Establecer un proyecto formal con equipo asignado.",
+   "texto_nuevo": "Formaliza el proyecto del paso 1 con un equipo asignado antes de empezar a definir el problema.",
+   "cita_lineas": "4984; 5038",
+   "cita_frase": "b. Establish a project and team. (Management does this.)",
+   "nota": "El proyecto ya se selecciona y lanza en el paso 1; volver a establecerlo despues de controlar era la contradiccion de orden. En el libro establecer proyecto y equipo va justo tras nominar el problema y antes del diagnostico, asi que se convierte en la formalizacion del mismo proyecto del paso 1, antes de Definir (redaccion del lector B). El paso de indice 11 (replicar y nominar nuevos proyectos) ya va bien al final y no se toca."
+  }
+ ]
+}

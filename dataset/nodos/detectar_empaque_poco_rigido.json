@@ -8,9 +8,9 @@
   "pasos_accionables": [
     "Revisa si alguna cara de tu caja es grande y no tiene refuerzo ni soporte interno.",
     "Verifica que el producto nunca toque directamente la pared de la caja.",
-    "Cambia el papel o el plastico estirable por carton corrugado si es tu unica proteccion.",
-    "Aprieta la caja armada con las manos para sentir si el carton es demasiado delgado.",
-    "Anota cada senal de debilidad que encuentres antes de decidir si necesitas rediseñar."
+    "Cambia el papel o el plástico estirable por cartón corrugado si es tu única protección.",
+    "Aprieta la caja armada con las manos para sentir si el cartón es demasiado delgado.",
+    "Anota cada señal de debilidad que encuentres antes de decidir si necesitas rediseñar."
   ],
   "entregable_esperado": "Una lista de las fallas de rigidez encontradas en tu empaque actual, lista para corregir antes de escalar.",
   "nodos_previos": [
@@ -56,6 +56,48 @@
         "motivo": "Arista vieja de mundo a mundo que el reanclaje del entrega reemplazo por regla_disponibilidad_previa_venta."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas que los puentes reanclados reemplazan."
+    },
+    {
+      "id": "n1-orto-0857",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Cambia el papel o el plastico estirable por carton corrugado si es tu unica proteccion.",
+      "texto_nuevo": "Cambia el papel o el plástico estirable por cartón corrugado si es tu única protección.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-016.paso2: plástico, cartón, única, protección (Solo añade las tildes que faltaban.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0858",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Aprieta la caja armada con las manos para sentir si el carton es demasiado delgado.",
+      "texto_nuevo": "Aprieta la caja armada con las manos para sentir si el cartón es demasiado delgado.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-016.paso3: cartón (Solo añade la tilde que faltaba en cartón.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0859",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Anota cada senal de debilidad que encuentres antes de decidir si necesitas rediseñar.",
+      "texto_nuevo": "Anota cada señal de debilidad que encuentres antes de decidir si necesitas rediseñar.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O074-016.paso4: señal (Corrige senal por señal, que es una errata de eñe.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
     }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "node_id": "colaboracion_cadena_suministro",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "compras",
   "titulo_concepto": "Iniciar la Colaboración en la Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El primer paso para reducir el efecto látigo es medirlo dentro de la propia empresa, comparando el volumen y frecuencia de pedidos recibidos de clientes contra los pedidos realizados a proveedores. Compartir datos de inventario y demanda con socios comerciales (como hacen Walmart, Dell y P&G) permite decisiones más eficientes en toda la cadena, en lugar de que cada empresa optimice de forma aislada.",
@@ -16,10 +16,7 @@
   "nodos_previos": [
     "sales_operations_planning"
   ],
-  "nodos_siguientes": [
-    "optimizacion_tecnologia_cadena_suministro",
-    "equipo_conjunto_de_mejora_con_proveedores"
-  ],
+  "nodos_siguientes": [],
   "condiciones_activacion": [
     "Cuando la empresa sufre variabilidad de demanda no explicada por ventas reales",
     "Si se busca iniciar colaboración formal con proveedores o clientes en la cadena"
@@ -41,6 +38,45 @@
         "motivo": "Quien da el primer paso de colaborar midiendo el efecto latigo y compartiendo datos sigue naturalmente con formar un equipo conjunto con el proveedor que avanza por niveles progresivos hasta operar la cadena como un proceso unico."
       },
       "decision": "Decisiones del fundador del 27 sep 2026, punto 1: el puente a calidad se ancla en el nucleo."
+    },
+    {
+      "id": "mv-dominio-02",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "compras",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-21: Medir el efecto látigo y firmar acuerdos de intercambio de datos POS con socios es colaboración de cadena de suministro, ajena a quien no opera con distribuidores. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-003",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "colaboracion_cadena_suministro -> optimizacion_tecnologia_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B02)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en supply_chain_management_systems."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "mv-arista-007",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "colaboracion_cadena_suministro -> equipo_conjunto_de_mejora_con_proveedores",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B04)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en coordinacion_colaboracion_cadena_suministro."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
     }
   ]
 }

@@ -6,9 +6,9 @@
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Muchos negocios pierden terreno frente a la competencia porque repiten en cada nueva versión de su producto o servicio los mismos defectos que ya causaron problemas antes. Esto pasa porque esos costos recurrentes terminan metidos en el presupuesto como si fueran normales, y porque nadie tiene como tarea concreta eliminarlos: siempre es mas atractivo sumar algo nuevo que corregir algo viejo. Resolverlo exige que tu, como responsable del negocio, lo pongas como prioridad explicita.",
   "pasos_accionables": [
-    "Haz un listado historico de las fallas que se repiten en cada versión de tu producto o servicio",
-    "Revisa si esas fallas se han colado como un costo mas dentro de tu presupuesto habitual, sin que nadie las cuestione",
-    "Define quien es responsable de eliminar cada falla, con nombre y apellido, no como tarea difusa",
+    "Haz un listado histórico de las fallas que se repiten en cada versión de tu producto o servicio",
+    "Revisa si esas fallas se han colado como un costo más dentro de tu presupuesto habitual, sin que nadie las cuestione",
+    "Define quién es responsable de eliminar cada falla, con nombre y apellido, no como tarea difusa",
     "Ponte como meta concreta eliminar esas fallas antes de lanzar la siguiente versión"
   ],
   "entregable_esperado": "Plan de eliminación de fallas recurrentes con responsables y metas por versión de producto",
@@ -22,5 +22,49 @@
   "etiqueta_arbol": "Elimina Fallas Heredadas",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0502",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Haz un listado historico de las fallas que se repiten en cada versión de tu producto o servicio",
+      "texto_nuevo": "Haz un listado histórico de las fallas que se repiten en cada versión de tu producto o servicio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-019.paso0: histórico (Falta la tilde en histórico.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0503",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa si esas fallas se han colado como un costo mas dentro de tu presupuesto habitual, sin que nadie las cuestione",
+      "texto_nuevo": "Revisa si esas fallas se han colado como un costo más dentro de tu presupuesto habitual, sin que nadie las cuestione",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-019.paso1: más (más es adverbio de cantidad y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0504",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Define quien es responsable de eliminar cada falla, con nombre y apellido, no como tarea difusa",
+      "texto_nuevo": "Define quién es responsable de eliminar cada falla, con nombre y apellido, no como tarea difusa",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O043-019.paso2: quién (quién es interrogativo indirecto y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    }
   ]
 }

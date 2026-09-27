@@ -6,13 +6,13 @@
   "fuente": "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management",
   "resumen_teorico": "Como primera aproximacion, el tamaño de tu envio y la distancia que debe recorrer indican que modo de transporte conviene: un paquete pequeño a corta distancia suele ir por tierra o correo, mientras que una carga grande a mucha distancia suele ir por mar, y los casos intermedios se reparten entre tierra, ferrocarril o aire. Esta relacion es solo el punto de partida: la urgencia del pedido o la necesidad de una fecha de entrega confiable pueden justificar pagar mas por un modo mas rapido o mas puntual, incluso si el criterio de costo puro sugeriria otra cosa. Los umbrales exactos de tamaño y distancia varian segun el pais y el proveedor, asi que sirven como metodo de razonamiento, no como tabla fija.",
   "pasos_accionables": [
-    "Ubica el tamaño tipico de tus envios (paquete individual, pallet, carga grande) y la distancia que recorren.",
-    "Pregunta a tus posibles transportistas que modo usan normalmente para ese tamaño y esa distancia.",
-    "Si el pedido es urgente, pregunta el costo de subir a un modo mas rapido y comparalo con el costo de hacer esperar al cliente.",
-    "Si necesitas una fecha de entrega confiable, prioriza el modo con mejor historial de puntualidad aunque sea mas caro.",
-    "Revisa esta eleccion cada vez que cambie el volumen o el destino habitual de tus envios."
+    "Ubica el tamaño típico de tus envíos (paquete individual, pallet, carga grande) y la distancia que recorren.",
+    "Pregunta a tus posibles transportistas qué modo usan normalmente para ese tamaño y esa distancia.",
+    "Si el pedido es urgente, pregunta el costo de subir a un modo más rápido y compáralo con el costo de hacer esperar al cliente.",
+    "Si necesitas una fecha de entrega confiable, prioriza el modo con mejor historial de puntualidad aunque sea más caro.",
+    "Revisa esta elección cada vez que cambie el volumen o el destino habitual de tus envíos."
   ],
-  "entregable_esperado": "Un criterio simple para decidir que modo de transporte usar segun el tamaño y la distancia de cada envio.",
+  "entregable_esperado": "Un criterio simple para decidir qué modo de transporte usar según el tamaño y la distancia de cada envío.",
   "nodos_previos": [
     "conocer_limites_peso_tamano_courier",
     "driver_transporte"
@@ -28,5 +28,90 @@
   "etiqueta_arbol": "Elige transporte por tamaño y distancia",
   "fuentes_internas": [
     "Rushton, Croucher y Baker, The Handbook of Logistics and Distribution Management"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-orto-0927",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Ubica el tamaño tipico de tus envios (paquete individual, pallet, carga grande) y la distancia que recorren.",
+      "texto_nuevo": "Ubica el tamaño típico de tus envíos (paquete individual, pallet, carga grande) y la distancia que recorren.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-013.paso0: típico, envíos (Faltan tildes reales en 'típico' y 'envíos'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0928",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Pregunta a tus posibles transportistas que modo usan normalmente para ese tamaño y esa distancia.",
+      "texto_nuevo": "Pregunta a tus posibles transportistas qué modo usan normalmente para ese tamaño y esa distancia.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-013.paso1: qué ('qué' introduce una interrogativa indirecta y lleva tilde.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 1
+    },
+    {
+      "id": "n1-orto-0929",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si el pedido es urgente, pregunta el costo de subir a un modo mas rapido y comparalo con el costo de hacer esperar al cliente.",
+      "texto_nuevo": "Si el pedido es urgente, pregunta el costo de subir a un modo más rápido y compáralo con el costo de hacer esperar al cliente.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-013.paso2: más, rápido, compáralo (Faltan tildes reales en 'más', 'rápido' y 'compáralo'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 2
+    },
+    {
+      "id": "n1-orto-0930",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si necesitas una fecha de entrega confiable, prioriza el modo con mejor historial de puntualidad aunque sea mas caro.",
+      "texto_nuevo": "Si necesitas una fecha de entrega confiable, prioriza el modo con mejor historial de puntualidad aunque sea más caro.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-013.paso3: más (Falta la tilde real en 'más'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
+    },
+    {
+      "id": "n1-orto-0931",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Revisa esta eleccion cada vez que cambie el volumen o el destino habitual de tus envios.",
+      "texto_nuevo": "Revisa esta elección cada vez que cambie el volumen o el destino habitual de tus envíos.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-013.paso4: elección, envíos (Faltan tildes reales en 'elección' y 'envíos'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 4
+    },
+    {
+      "id": "n1-orto-0932",
+      "fecha": "2026-09-27",
+      "campo": "entregable_esperado",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Un criterio simple para decidir que modo de transporte usar segun el tamaño y la distancia de cada envio.",
+      "texto_nuevo": "Un criterio simple para decidir qué modo de transporte usar según el tamaño y la distancia de cada envío.",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O079-013.entregable: qué, según, envío (Faltan tildes reales en 'qué' (interrogativa indirecta), 'según' y 'envío'.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente."
+    }
   ]
 }

@@ -20,11 +20,41 @@
     "cultura_de_transparencia_financiera"
   ],
   "condiciones_activacion": [
-    "Cuando buscas financiamiento bancario significativo o inversión externa",
-    "Si tienes un plan a mediano plazo de convertirte en empresa pública"
+    "Cuando operas en Estados Unidos y buscas financiamiento bancario significativo o inversión externa",
+    "Si tienes un plan a mediano plazo de convertirte en empresa pública que cotice en Estados Unidos"
   ],
   "etiqueta_arbol": "Cumple con la Ley Sarbanes-Oxley",
   "fuentes_internas": [
     "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-037",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando buscas financiamiento bancario significativo o inversión externa",
+      "texto_nuevo": "Cuando operas en Estados Unidos y buscas financiamiento bancario significativo o inversión externa",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q003-007: Las condiciones no dicen que SOX aplica si operas o cotizas en Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: SOX es ley estadounidense y la condición se activaría ante cualquier financiamiento en cualquier país."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    },
+    {
+      "id": "n1-condicion-038",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si tienes un plan a mediano plazo de convertirte en empresa pública",
+      "texto_nuevo": "Si tienes un plan a mediano plazo de convertirte en empresa pública que cotice en Estados Unidos",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q003-007: Las condiciones no dicen que SOX aplica si operas o cotizas en Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: no aclara que SOX aplica a empresas que cotizan en Estados Unidos."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
+    }
   ]
 }

@@ -21,10 +21,26 @@
     "posicionamiento_de_empresa"
   ],
   "condiciones_activacion": [
-    "Cuando ya se definió el tipo de mercado en fases anteriores (Chapter 8)"
+    "Cuando ya identificaste si tu mercado es existente, nuevo, clon o re-segmentado y necesitas definir el mensaje de posicionamiento de tu producto"
   ],
   "etiqueta_arbol": "Adapta tu Mensaje al Mercado",
   "fuentes_internas": [
     "The Startup Owner's Manual - Blank, Steve"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-condicion-142",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando ya se definió el tipo de mercado en fases anteriores (Chapter 8)",
+      "texto_nuevo": "Cuando ya identificaste si tu mercado es existente, nuevo, clon o re-segmentado y necesitas definir el mensaje de posicionamiento de tu producto",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q019-030: La condición cita un capítulo del libro fuente en lugar de la situación en la que aplica el nodo. (lector y verificador de acuerdo) Motivo: Remite a un capítulo de libro (Chapter 8) y a fases anteriores que el usuario no conoce; no describe una situación real del emprendedor."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
+    }
   ]
 }

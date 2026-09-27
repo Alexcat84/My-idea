@@ -21,7 +21,7 @@
   ],
   "condiciones_activacion": [
     "Cuando la empresa ha decidido reducir personal por incumplimiento de metas",
-    "Si existe riesgo de filtración de información sensible"
+    "Si ya se tomo la decision de despedir y existe riesgo de que se filtre antes de ejecutarla"
   ],
   "etiqueta_arbol": "Ejecuta los Despidos sin Demora",
   "correcciones": [
@@ -66,6 +66,20 @@
         "motivo": "El proceso general de despidos ya pide actuar con rapidez para evitar filtraciones; este nodo desarrolla ese punto."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "n1-condicion-061",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Si existe riesgo de filtración de información sensible",
+      "texto_nuevo": "Si ya se tomo la decision de despedir y existe riesgo de que se filtre antes de ejecutarla",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q022-004: La condicion 1 no esta ligada al despido que trata el nodo. (lector y verificador de acuerdo) Motivo: Demasiado generica: cualquier riesgo de filtracion de informacion la dispara, aunque no haya ningun despido decidido."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 1
     }
   ],
   "fuentes_internas": [

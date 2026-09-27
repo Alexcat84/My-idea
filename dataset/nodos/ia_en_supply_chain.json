@@ -1,7 +1,7 @@
 {
   "node_id": "ia_en_supply_chain",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "Inteligencia Artificial Aplicada a la Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "La IA, potenciada por machine learning y modelos de lenguaje grandes (LLMs), te permite encontrar patrones en grandes volúmenes de datos y convertirlos en decisiones accionables en tiempo real. Transforma tres áreas clave: pronóstico de demanda (analizando históricos, tendencias de mercado y factores externos como clima o eventos sociales), optimización de rutas (con datos de tráfico en tiempo real para rutas dinámicas) y operaciones de almacén (automatización y visión computacional para manipular productos de formas variables). El objetivo no es reemplazar tu juicio sino complementarlo: la IA procesa el volumen de datos que a ti te resulta inmanejable desde el teléfono, y tú decides qué hacer con esas señales para ganar ventaja competitiva frente a métodos tradicionales que ya no alcanzan.",
@@ -16,17 +16,14 @@
   "entregable_esperado": "Un plan piloto de IA implementado en un área de tu cadena de suministro, con métricas de mejora documentadas para decidir si escalarlo.",
   "nodos_previos": [
     "iot_big_data_supply_chain",
-    "definicion_alineacion_cadena_suministro",
     "simulacion_de_operaciones_supply_chain",
     "vehiculos_autonomos_drones_supply_chain",
     "supply_chain_management_systems",
-    "industrial_robots_automation",
-    "prompting_cadena_de_pensamiento"
+    "industrial_robots_automation"
   ],
   "nodos_siguientes": [
     "desafios_implementacion_ia",
-    "simulacion_de_operaciones_supply_chain",
-    "optimizacion_tecnologia_cadena_suministro"
+    "simulacion_de_operaciones_supply_chain"
   ],
   "condiciones_activacion": [
     "Cuando tienes datos históricos de demanda, rutas o inventario que no estás explotando",
@@ -46,5 +43,59 @@
   ],
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-18",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-38: Aplicar IA a pronóstico, ruteo y almacén en la cadena de suministro es profundización logística; un emprendedor sin operación de inventario no lo necesita. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-002",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "ia_en_supply_chain -> optimizacion_tecnologia_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B01)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en supply_chain_management_systems."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "mv-arista-014",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "definicion_alineacion_cadena_suministro -> ia_en_supply_chain",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A15, lectores de acuerdo)",
+        "motivo": "Puente legitimo, pero el ancla definicion_alineacion_cadena_suministro ya lleva 2 puentes a entrega (ley del ancla)."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    },
+    {
+      "id": "mv-arista-016",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "prompting_cadena_de_pensamiento -> ia_en_supply_chain",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A47, lectores de acuerdo)",
+        "motivo": "Una tecnica de prompting no tiene como continuacion la IA aplicada a la cadena de suministro."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "node_id": "definicion_metas_engagement",
   "fase_proyecto": "planificacion",
-  "dominio": "environmental",
+  "dominio": "core",
   "titulo_concepto": "Define tus metas y decisiones sobre el compromiso de tu equipo (engagement)",
   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
   "resumen_teorico": "Después de evaluar las actitudes de tu equipo, tienes que definir objetivos claros y tomar decisiones clave: qué le vas a pedir a las personas, si la participación será opcional u obligatoria, quién toma las decisiones y cómo vas a medir y evaluar el progreso con datos cuantitativos y cualitativos.",
@@ -14,7 +14,8 @@
   "entregable_esperado": "Un documento de estrategia de compromiso con metas, tareas, quién decide y el sistema de métricas ya definidos",
   "nodos_previos": [
     "evaluacion_actitudes_empleados",
-    "co_creacion_estrategia_engagement"
+    "co_creacion_estrategia_engagement",
+    "team_performance_assessment"
   ],
   "nodos_siguientes": [
     "programa_do_one_thing",
@@ -26,5 +27,33 @@
   "etiqueta_arbol": "Define Metas de Compromiso",
   "fuentes_internas": [
     "The Green to Gold Business Play - Daniel C. Esty"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-dominio-042",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "environmental",
+      "texto_nuevo": "core",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q095-006: El contenido trata de definir metas y metricas del compromiso del equipo sin ninguna referencia ambiental; encaja en core. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
+    },
+    {
+      "id": "mv-arista-036",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "team_performance_assessment -> definicion_metas_engagement",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-C04, lectores de acuerdo)",
+        "motivo": "Evaluar la moral y cohesion del equipo precede a definir metas y decisiones de compromiso."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): el nodo del nucleo que se queda sin camino por el nucleo recibe un predecesor del nucleo."
+    }
   ]
 }

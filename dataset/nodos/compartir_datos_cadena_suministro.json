@@ -1,7 +1,7 @@
 {
   "node_id": "compartir_datos_cadena_suministro",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "compras",
   "titulo_concepto": "Compartición de Datos entre Empresas de la Cadena de Suministro",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Compartir datos de demanda, decisiones y métricas de desempeño entre las empresas de una cadena de suministro mejora la toma de decisiones colectiva y reduce distorsiones como el efecto látigo (bullwhip effect). Aunque existe reticencia por temor a filtrar información confidencial a competidores, las cadenas que colaboran eficientemente ganan cuota de mercado frente a las que no lo hacen, ya que la competencia se traslada de empresa-contra-empresa a cadena-de-suministro-contra-cadena-de-suministro.",
@@ -13,7 +13,6 @@
   ],
   "entregable_esperado": "Acuerdo de intercambio de datos con al menos un socio clave de la cadena de suministro",
   "nodos_previos": [
-    "marco_analisis_mercado_cadena_suministro",
     "creacion_data_warehouse"
   ],
   "nodos_siguientes": [
@@ -27,5 +26,33 @@
   "etiqueta_arbol": "Comparte Datos con tu Cadena",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-04",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "compras",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-32: Compartir datos de demanda y desempeño entre las empresas de una cadena para reducir el efecto látigo es colaboración de cadena de suministro que profundiza el mundo. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-017",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "marco_analisis_mercado_cadena_suministro -> compartir_datos_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A36, lectores de acuerdo)",
+        "motivo": "Entender el tipo de mercado para priorizar capacidades no sigue con compartir datos entre empresas de la cadena."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
+    }
   ]
 }

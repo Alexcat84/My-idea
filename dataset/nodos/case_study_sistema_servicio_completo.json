@@ -1,6 +1,6 @@
 {
   "node_id": "case_study_sistema_servicio_completo",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "validacion",
   "dominio": "core",
   "titulo_concepto": "Diseñar el sistema completo de un servicio (caso Clean Team)",
   "fuente": "The field guide to human-centered design",
@@ -28,5 +28,20 @@
   "etiqueta_arbol": "Diseña Todo el Servicio",
   "fuentes_internas": [
     "The field guide to human-centered design"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-013",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "validacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q044-019: El nodo investiga, prototipa y prueba en vivo con pocas personas el sistema de servicio antes de escalar: es validacion, no operacion de algo que ya funciona. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

@@ -1,7 +1,7 @@
 {
   "node_id": "equipo_de_gestion_de_crisis",
   "fase_proyecto": "planificacion",
-  "dominio": "quality",
+  "dominio": "risk_management",
   "titulo_concepto": "Protocolo de Equipo de Gestión de Crisis",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
   "resumen_teorico": "Para responder efectivamente cuando ocurre un evento de riesgo, se necesita un protocolo claro: definir qué constituye una crisis para la organización, exigir comunicación rápida (ej. dentro de 30 minutos), asegurar que ninguna persona decida sola ('dos personas en la caja'), hacer preguntas simples para determinar qué se sabe y qué falta saber, ejecutar decisiones rápidamente, reagrupar al equipo periódicamente y hacer un debrief final documentando todo lo ocurrido.",
@@ -42,6 +42,19 @@
         "motivo": "Tener mentores de confianza personal no lleva a un protocolo de equipo de gestion de crisis; la relacion es solo por la palabra crisis."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "n1-dominio-067",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "quality",
+      "texto_nuevo": "risk_management",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q015-026: Un protocolo de respuesta ante crisis y eventos de riesgo es gestion de riesgos, no gestion de la calidad. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: dominio en todo el catalogo (los que no sacan un nodo del nucleo)."
     }
   ]
 }

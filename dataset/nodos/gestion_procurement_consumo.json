@@ -1,7 +1,7 @@
 {
   "node_id": "gestion_procurement_consumo",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "compras",
   "titulo_concepto": "Cuánto y qué compras en tu negocio (procurement)",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "Antes de negociar con tus proveedores, necesitas entender cuánto y qué compras en todo tu negocio. Define cuánto esperas consumir de cada categoría de producto y en cada lugar donde operas, y compara eso regularmente con lo que realmente consumes para detectar desviaciones que te avisen de problemas u oportunidades.",
@@ -17,8 +17,8 @@
     "definicion_alineacion_cadena_suministro"
   ],
   "nodos_siguientes": [
-    "alcance_profundo_cadena_suministro",
-    "negociacion_carta_compromiso_banquero"
+    "negociacion_carta_compromiso_banquero",
+    "efecto_bullwhip"
   ],
   "condiciones_activacion": [
     "Cuando no tienes claro qué y cuánto compras en tu negocio",
@@ -27,5 +27,46 @@
   "etiqueta_arbol": "Entiende tu Consumo Real",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "mv-dominio-14",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "compras",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-10: Clasificar compras en estratégicas y MRO y comparar el consumo por categoría y sede es análisis de gasto de compras que profundiza el mundo, no lo que un emprendedor necesita para arrancar. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
+    },
+    {
+      "id": "mv-arista-005",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "gestion_procurement_consumo -> alcance_profundo_cadena_suministro",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada D y MV del saneamiento (MV-B03)",
+        "motivo": "Arista de mundo a mundo: su ancla sale del nucleo y el puente se reancla en seleccion_de_proveedores_por_costo_total."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista vieja que el reanclaje reemplaza sale."
+    },
+    {
+      "id": "mv-entrada-03",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "gestion_procurement_consumo -> efecto_bullwhip",
+      "cita": {
+        "instrumento": "Pasada R2 del saneamiento (R2-03, lectores de acuerdo): sin entrada tras mover nodos del nucleo a su mundo.",
+        "motivo": "Diagnostico_efecto_latigo es casi un duplicado del nodo, asi que elijo el seguimiento de consumo esperado contra consumo real: quien ya detecta desviaciones en lo que compra pasa de forma natural a medir cuanto se amplifican sus pedidos y cuanto le cuesta eso."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): alcanzabilidad 100 por ciento comprobada despues."
+    }
   ]
 }

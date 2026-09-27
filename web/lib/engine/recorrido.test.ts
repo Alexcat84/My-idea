@@ -370,13 +370,15 @@ describe("avanzarTurno: la entrevista de un mundo no cruza a otro mundo (AUD-09 
     interpretarMultiSaltoFalso.mockResolvedValueOnce({ resultado: null, acumulado: usoVacio(), eventos: [] });
     const estado = {
       ...estadoInicial({
-        actualId: "identificacion_de_riesgos",
+        // Un nodo de Calidad con sucesores en Calidad y en otro mundo (Entrega). Era identificacion_de_riesgos,
+        // que el saneamiento (nivel 1, pasada Q) paso a Riesgos.
+        actualId: "seleccion_fuente_unica_multiple",
         perfilSesion: "p",
         textoOriginal: "t",
         dominioSesion: "quality",
-        dominiosDesbloqueados: ["core", "quality", "risk_management"],
+        dominiosDesbloqueados: ["core", "quality", "entrega"],
       }),
-      preguntaPendiente: "¿Cómo identificas tus riesgos?",
+      preguntaPendiente: "¿Con cuántos proveedores trabajas para cada insumo?",
     };
     await avanzarTurno({
       client: {} as never,

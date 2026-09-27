@@ -17,8 +17,7 @@
   "nodos_previos": [
     "desarrollo_capacidades_expertos_calidad",
     "diferencia_planeacion_mejora",
-    "brecha_de_calidad_cuatro_gaps",
-    "innovacion_tipo_ii"
+    "brecha_de_calidad_cuatro_gaps"
   ],
   "nodos_siguientes": [
     "design_for_six_sigma_dfss",
@@ -80,6 +79,19 @@
         "evidencia": "F17-021: Metodo de seis pasos para disenar producto y procesos con controles hasta transferirlos a operaciones, su entregable es un plan de diseno. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "mv-arista-028",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_QUITADA",
+      "texto_anterior": "innovacion_tipo_ii -> juran_quality_by_design",
+      "texto_nuevo": "",
+      "cita": {
+        "instrumento": "Pasada MV del saneamiento (MV-A34, lectores de acuerdo)",
+        "motivo": "La ideacion por mas grande o mas pequeno no lleva al modelo Juran de calidad por diseno."
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): la arista del nucleo al mundo que no es puente sale."
     }
   ]
 }

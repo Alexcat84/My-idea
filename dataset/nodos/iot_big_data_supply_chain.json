@@ -1,7 +1,7 @@
 {
   "node_id": "iot_big_data_supply_chain",
   "fase_proyecto": "ejecucion",
-  "dominio": "core",
+  "dominio": "entrega",
   "titulo_concepto": "IoT y Big Data para Trazabilidad de Supply Chain",
   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
   "resumen_teorico": "El Internet de las Cosas (IoT) conecta dispositivos embebidos en productos y equipos para enviar y recibir datos en tiempo real, generando volúmenes masivos de 'big data' que alimentan el análisis de patrones y tendencias en la cadena de suministro. Esta evolución va desde códigos de barras, pasando por RFID, hasta microchips embebidos en cualquier producto, permitiendo un seguimiento continuo y granular del movimiento de mercancías.",
@@ -41,6 +41,19 @@
         "motivo": "Quien entiende la información como conector de la cadena sigue con IoT y big data como forma de capturarla de manera continua y granular."
       },
       "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    },
+    {
+      "id": "mv-dominio-19",
+      "fecha": "2026-09-27",
+      "campo": "dominio",
+      "veredicto": "DOMINIO",
+      "texto_anterior": "core",
+      "texto_nuevo": "entrega",
+      "cita": {
+        "instrumento": "Pasada D del saneamiento (docs/saneamiento/resultados/D): \"lo necesita cualquier emprendedor aunque nunca active ese mundo?\" NO",
+        "evidencia": "D-33: Montar infraestructura IoT, RFID y big data para trazar mercancías es tecnología logística de especialista que una tienda pequeña o un servicio no necesitan. (lector y verificador de acuerdo)"
+      },
+      "decision": "Decision del fundador (nodo por nodo, prueba del nucleo): sale del nucleo a su mundo, con sus puentes y predecesores por lectura (pasada MV)."
     }
   ]
 }

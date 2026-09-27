@@ -1,6 +1,6 @@
 {
   "node_id": "desarrollo_caracteristicas_producto",
-  "fase_proyecto": "ejecucion",
+  "fase_proyecto": "planificacion",
   "dominio": "quality",
   "titulo_concepto": "Desarrollo de Características del Producto o Servicio (Quality by Design - Paso 4)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
@@ -29,5 +29,20 @@
   "etiqueta_arbol": "Diseña las Características Técnicas",
   "fuentes_internas": [
     "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-fase-050",
+      "fecha": "2026-09-27",
+      "campo": "fase_proyecto",
+      "veredicto": "FASE",
+      "texto_anterior": "ejecucion",
+      "texto_nuevo": "planificacion",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q018-004: Disenar las caracteristicas del producto o servicio (Quality by Design) es disenar el producto antes de operarlo, por eso es planificacion. (lector y verificador de acuerdo)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: fase de los nodos de planificacion y ejecucion."
+    }
   ]
 }

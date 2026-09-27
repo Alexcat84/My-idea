@@ -6,10 +6,10 @@
   "fuente": "The Startup Owner's Manual - Blank, Steve",
   "resumen_teorico": "Cada uno de los cuatro tipos de mercado (nuevo, existente, re-segmentado, clonado) tiene una curva de crecimiento de ventas distinta, determinada por la dificultad de pasar de vender a earlyvangelists a vender a clientes mainstream. Entender el tipo de mercado te ayuda a estimar de forma realista cómo crecerán tus ingresos con el tiempo. En mercados nuevos, el éxito inicial con earlyvangelists no garantiza una escalabilidad rápida de ingresos, y estimar su tamaño requiere usar proxies y mercados adyacentes comparables. En mercados existentes, además de la cuota capturable a incumbentes, conviene considerar contratos a largo plazo y costos hundidos como barreras de cambio (lock-ins) que frenan tu crecimiento.",
   "pasos_accionables": [
-    "Determina el tipo de mercado en el que opera tu startup (nuevo, existente, re-segmentado o clonado)",
+    "Determina el tipo de mercado en el que opera tu startup (nuevo, existente, resegmentado o clonado)",
     "Si es mercado existente, analiza incumbentes y estima qué porcentaje de cuota de mercado puedes capturar por año",
     "Si es mercado nuevo, busca proxies y mercados adyacentes, y compara con empresas similares para estimar el crecimiento",
-    "Si es mercado re-segmentado, evalúa el tamaño del mercado existente, el tamaño de tu segmento y la tasa de adopción o cambio",
+    "Si es mercado resegmentado, evalúa el tamaño del mercado existente, el tamaño de tu segmento y la tasa de adopción o cambio",
     "Considera contratos a largo plazo y costos hundidos de tus clientes potenciales como barreras que ralentizan tu adopción",
     "Ajusta tus proyecciones de ingresos según el tipo de mercado identificado y documenta tus supuestos"
   ],
@@ -98,6 +98,34 @@
         "evidencia": "F26-029: El entregable es una proyeccion de ingresos ajustada por tipo de mercado, trabajo de modelo y plan financiero. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-orto-0919",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Determina el tipo de mercado en el que opera tu startup (nuevo, existente, re-segmentado o clonado)",
+      "texto_nuevo": "Determina el tipo de mercado en el que opera tu startup (nuevo, existente, resegmentado o clonado)",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O078-012.paso0: resegmentado (Según la norma ortográfica, el prefijo re- se escribe unido y sin guion.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 0
+    },
+    {
+      "id": "n1-orto-0920",
+      "fecha": "2026-09-27",
+      "campo": "pasos_accionables",
+      "veredicto": "ORTOGRAFIA",
+      "texto_anterior": "Si es mercado re-segmentado, evalúa el tamaño del mercado existente, el tamaño de tu segmento y la tasa de adopción o cambio",
+      "texto_nuevo": "Si es mercado resegmentado, evalúa el tamaño del mercado existente, el tamaño de tu segmento y la tasa de adopción o cambio",
+      "cita": {
+        "instrumento": "Pasada O del saneamiento (docs/saneamiento/resultados/O): lector con trampas, verificador de cada cambio",
+        "evidencia": "O078-012.paso3: resegmentado (Según la norma ortográfica, el prefijo re- se escribe unido y sin guion.)"
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 16: ortografia de los textos que ve el cliente.",
+      "indice": 3
     }
   ]
 }

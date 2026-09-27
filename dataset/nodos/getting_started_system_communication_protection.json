@@ -22,7 +22,7 @@
     "getting_started_system_information_integrity"
   ],
   "condiciones_activacion": [
-    "Cuando se necesita proteger comunicaciones de red que transmiten CUI."
+    "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y tus comunicaciones de red transmiten CUI."
   ],
   "etiqueta_arbol": "Protege tus Comunicaciones Digitales",
   "correcciones": [
@@ -58,6 +58,20 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO practico: el resumen repite TLS o IPsec como medio para cifrar la CUI tambien en almacenamiento; el libro reserva TLS e IPsec para la transmision. En el resumen se quita el dato dejando TLS e IPsec solo para el transito.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C032-087"
+    },
+    {
+      "id": "n1-condicion-101",
+      "fecha": "2026-09-27",
+      "campo": "condiciones_activacion",
+      "veredicto": "COHERENCIA",
+      "texto_anterior": "Cuando se necesita proteger comunicaciones de red que transmiten CUI.",
+      "texto_nuevo": "Cuando operas o vendes en Estados Unidos como contratista del gobierno federal y tus comunicaciones de red transmiten CUI.",
+      "cita": {
+        "instrumento": "Pasada Q del saneamiento (docs/saneamiento/resultados/Q)",
+        "evidencia": "Q005-004: Clase C sin anclaje explícito a Estados Unidos. (lector y verificador de acuerdo) Motivo: Clase C: la única condición no dice que aplica si operas o vendes en Estados Unidos; la CUI es información del gobierno federal de ese país."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterios 14 y 15: las condiciones de activacion dicen cuando aplica de verdad el nodo.",
+      "indice": 0
     }
   ],
   "fuentes_internas": [
