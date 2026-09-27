@@ -1,0 +1,671 @@
+{
+ "lote": "16",
+ "nodos": [
+  {
+   "node_id": "repartir_papeles_directivo_reclutador",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "Asume que",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "desarrollar_primer_curso_entrenamiento",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "regionalismo",
+     "cita": "y díctala",
+     "motivo": "\"Dictar\" una clase es americanismo (el DLE lo marca Am.); en España se lee como dictar un texto. Neutro: impartir.",
+     "propuesta": "Desarrolla solo la primera clase, e impártela."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "regionalismo",
+     "cita": "Un primer curso corto dictado",
+     "motivo": "\"Dictar\" un curso es americanismo (DLE, Am.). Neutro: impartido.",
+     "propuesta": "Un primer curso corto impartido, con su segunda clase desarrollada tras la primera y una decisión explícita sobre si tú solo puedes cubrir a toda la organización o hace falta preparar instructores adicionales."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "buscar_actividad_alta_palanca_tres_vias",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "cuidarse_agotamiento_centro_rueda",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "pasear_organizacion_hallar_problemas_pequenios",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "pasar_direccion_directa_indirecta",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "ocho personas a cargo",
+     "motivo": "\"a cargo\" sin posesivo; la forma fijada es \"a su cargo\" (las personas que dependen de ella).",
+     "propuesta": "Fíjate en tu propia señal de saturación. A una directiva le llegó al pasar de ocho personas a su cargo, cuando empezó a sentir que no tenía horas suficientes en el día para apoyar bien a todos mientras pensaba además en contratar, en asegurar trabajo de calidad y en contribuir a la estrategia de producto."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "las ocho personas a cargo",
+     "motivo": "\"a cargo\" sin posesivo; la forma fijada es \"a su cargo\".",
+     "propuesta": "Cuando el equipo crece más allá del punto en que puedes tener relación personal con cada uno. A una directiva le pasó al superar las ocho personas a su cargo."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "escala",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "contratar_investigadores_reclutamiento",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "calco",
+     "cita": "por contrato",
+     "motivo": "\"Contratar por contrato\" es redundante: calco de \"hiring the researchers on a contract basis\" (smart_who cap_03 l.389). En español: por encargo.",
+     "propuesta": "Contratar investigadores de reclutamiento por encargo"
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "contratar por contrato",
+     "motivo": "\"Contratar por contrato\" es redundante: calco de \"hiring the researchers on a contract basis\" (smart_who cap_03 l.389). En español: por encargo.",
+     "propuesta": "Identifica investigadores de reclutamiento a los que puedas contratar por encargo."
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "contratarlos por contrato",
+     "motivo": "\"Contratar por contrato\" es redundante: calco de \"hiring the researchers on a contract basis\" (smart_who cap_03 l.389). En español: por encargo. Propuesta conjunta con las otras dos entradas de este campo.",
+     "propuesta": "Los investigadores de reclutamiento amplían tu búsqueda a bajo coste: exploran un mercado, localizan fuentes de talento y te devuelven nombres para que tu equipo los contacte, y contratarlos por encargo mantiene el coste variable. Su límite es que no entrevistan y filtran menos a fondo de lo que querrías, así que la criba recae en tus reclutadores internos o en quien contrata, y si prima la cantidad sobre la calidad el proceso puede atascarse. Fija tus requisitos en una tarjeta de puntuación y oriéntalos al principio a tu negocio y tu cultura: cuanto más sepan al entrar, más sacarás de ellos."
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "para que tu equipo los persiga",
+     "motivo": "\"Perseguir\" nombres o candidatos es calco de \"pursue\" (l.387); en español se lee como acosar. Mejor \"contactar\". Propuesta conjunta con las otras dos entradas de este campo.",
+     "propuesta": "Los investigadores de reclutamiento amplían tu búsqueda a bajo coste: exploran un mercado, localizan fuentes de talento y te devuelven nombres para que tu equipo los contacte, y contratarlos por encargo mantiene el coste variable. Su límite es que no entrevistan y filtran menos a fondo de lo que querrías, así que la criba recae en tus reclutadores internos o en quien contrata, y si prima la cantidad sobre la calidad el proceso puede atascarse. Fija tus requisitos en una tarjeta de puntuación y oriéntalos al principio a tu negocio y tu cultura: cuanto más sepan al entrar, más sacarás de ellos."
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "no entrevistan ni filtran tan a fondo como querrías",
+     "motivo": "Se lee como que entrevistan, aunque no a fondo; contradice pasos_accionables[3] (\"no van a entrevistar ellos\") y el libro (l.387 \"won't conduct interviews themselves\"; l.391 \"won't qualify candidates as thoroughly as you might like\"). Propuesta conjunta.",
+     "propuesta": "Los investigadores de reclutamiento amplían tu búsqueda a bajo coste: exploran un mercado, localizan fuentes de talento y te devuelven nombres para que tu equipo los contacte, y contratarlos por encargo mantiene el coste variable. Su límite es que no entrevistan y filtran menos a fondo de lo que querrías, así que la criba recae en tus reclutadores internos o en quien contrata, y si prima la cantidad sobre la calidad el proceso puede atascarse. Fija tus requisitos en una tarjeta de puntuación y oriéntalos al principio a tu negocio y tu cultura: cuanto más sepan al entrar, más sacarás de ellos."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "tus mandos los persigan",
+     "motivo": "\"Perseguir\" nombres o candidatos es calco de \"pursue\" (l.387); en español se lee como acosar. Mejor \"contactar\".",
+     "propuesta": "Cuenta con que no van a entrevistar ellos: lo que hacen es identificar nombres para que tu equipo interno de reclutamiento o tus mandos los contacten, y el proceso de filtrado cae sobre los reclutadores internos o directamente sobre el jefe que contrata."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "tus mandos los persigan, con los investigadores contratados por contrato",
+     "motivo": "\"Perseguir\" nombres o candidatos es calco de \"pursue\" (l.387); en español se lee como acosar. Mejor \"contactar\". Y \"Contratar por contrato\" es redundante: calco de \"hiring the researchers on a contract basis\" (smart_who cap_03 l.389). En español: por encargo.",
+     "propuesta": "Un flujo de nombres que entra a coste mínimo para que tu equipo interno de reclutamiento o tus mandos los contacten, con los investigadores contratados por encargo y orientados a tu negocio y tu cultura."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "prima",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "ser_honesto_transparente_desempenio",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "coherencia",
+     "cita": "tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se puede leer como la persona que está a cargo (quien manda); la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Ser honesto y transparente sobre el desempeño de la persona a tu cargo"
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se puede leer como la persona que está a cargo (quien manda); la forma fijada es \"la persona a tu cargo\". Para no pasar de 600 caracteres se quita el \"lo crees\" final, que repite lo ya dicho.",
+     "propuesta": "Quien dirige decide en qué trabaja cada persona, si asciende y si se queda, así que su opinión sobre el desempeño ajeno pesa mucho más que la inversa. Ese desequilibrio de poder pone en ti la carga de ser claro: la persona a tu cargo debe saber siempre qué esperas y dónde está respecto a eso. Funciona porque quita las conjeturas: nadie tiene que leer entre líneas ni tomar el silencio por buena señal, y si a menudo se pregunta qué piensas de ella, te falta decirlo más. Si crees que va de maravilla, lo sabe; si crees que no llega al nivel que quieres, también, y sabe exactamente por qué."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "coherencia",
+     "cita": "Tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se puede leer como la persona que está a cargo (quien manda); la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "La persona a tu cargo sabiendo en todo momento cuáles son tus expectativas y dónde está ella respecto a ellas, y, si no rinde al nivel que te gustaría, sabiendo exactamente por qué lo crees."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se puede leer como la persona que está a cargo (quien manda); la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Parte del desequilibrio de poder: tu punto de vista sobre cómo lo está haciendo la persona a tu cargo pesa mucho más que el suyo sobre cómo lo estás haciendo tú, porque eres tú quien determina en qué trabaja y si debe ascender o si debe ser despedida."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se puede leer como la persona que está a cargo (quien manda); la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Haz que la persona a tu cargo tenga en todo momento una idea clara de cuáles son tus expectativas y de dónde está ella respecto a ellas."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "a alguien a cargo",
+     "motivo": "\"a cargo\" sin posesivo; la forma fijada es \"a tu cargo\".",
+     "propuesta": "Siempre que tengas a alguien a tu cargo, y con más urgencia cuando notes que a menudo se está preguntando qué piensas de ella."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "titulo_concepto",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "resumen_teorico",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "entregable_esperado",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "desplegar_estrategia_tarjeta_puntuacion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "comunicar_valores_diez_formas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "reservar_valor_unico_prioridades_arriba",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "tus fuerzas personales",
+     "motivo": "\"fuerzas personales\" es calco de \"personal strengths\" (zhuo cap_10 l.201); en español: puntos fuertes.",
+     "propuesta": "Delegar lo que otros pueden hacer tiene su otra mitad: lo que solo tú puedes aportar a las prioridades principales te lo quedas. Sale de tus puntos fuertes y de tu posición: con un alcance más ancho ves patrones que tu equipo podría no ver y puedes comunicar lo que importa; los candidatos suelen querer hablar con quien dirige, así que tienes ventaja para atraer talento; y cuando dos proyectos chocan, solo tú tienes la perspectiva completa para decidir. Soltar el resto no te deja sin trabajo: mientras te mueva tu propósito y veas retos nuevos, hay sitio para más impacto."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "calco",
+     "cita": "tus fuerzas personales",
+     "motivo": "\"fuerzas personales\" es calco de \"personal strengths\" (zhuo cap_10 l.201); en español: puntos fuertes.",
+     "propuesta": "Saca parte de eso de tus puntos fuertes, como en estos ejemplos: una directiva que escribe bien ha usado esa habilidad durante años para ayudar al equipo a documentar y compartir sus valores, desde redactar guías de carrera y manuales de entrevista hasta sacar notas internas sobre lecciones aprendidas construyendo productos; un colega suyo es asombroso gestionando operaciones, así que responde de los procesos más complejos del equipo, como el reclutamiento; y su jefe es uno de los oradores más inspiradores que conoce, así que es la primera persona que recibe a los empleados nuevos en la acogida y les cuenta la misión y los valores de la casa."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "tus personas a cargo",
+     "motivo": "\"tus personas a cargo\" se puede leer como las personas que mandan; la forma fijada es \"las personas a tu cargo\".",
+     "propuesta": "Quédate además con el primero de los terrenos donde se cruzan lo que importa a la organización y lo que solo tú puedes aportar: identificar y comunicar lo que importa. Tu papel tiene un alcance más ancho, lo que significa que puedes ver una variedad mayor de trabajo y detectar patrones que las personas a tu cargo podrían no ver. Esa directiva notó que varios lanzamientos recientes tenían elementos de diseño que intentaban hacer lo mismo pero se veían y se comportaban distinto, un botón azul oscuro y rectangular en una parte y azul claro y ovalado en otra, un botón de volver arriba de la página en unos sitios y abajo en otros, y eso hacía el producto más difícil de usar porque no había patrones predecibles; así que reunió al equipo para establecer una biblioteca común de patrones de diseño con la que todos trabajaran sobre las mismas piezas."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "sus personas a cargo",
+     "motivo": "La forma fijada es \"las personas a su cargo\". Propuesta conjunta con la otra entrada de este campo.",
+     "propuesta": "Quédate con el segundo: contratar al mejor talento. Como los candidatos potenciales suelen tener interés en hablar con líderes de alto nivel, tienes ventaja a la hora de encontrar talento y cerrar su contratación. Esa directiva va a eventos del sector y habla en congresos para atraer gente, y les dice a las personas a su cargo que, si tienen un candidato que les entusiasma, ella con gusto le manda una nota o se ofrece a hablar por teléfono. Su propio jefe hace lo mismo por ella."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "líderes veteranos",
+     "motivo": "\"veteranos\" calca \"senior leaders\" (l.209): senior es rango, no antigüedad. Propuesta conjunta con la otra entrada de este campo.",
+     "propuesta": "Quédate con el segundo: contratar al mejor talento. Como los candidatos potenciales suelen tener interés en hablar con líderes de alto nivel, tienes ventaja a la hora de encontrar talento y cerrar su contratación. Esa directiva va a eventos del sector y habla en congresos para atraer gente, y les dice a las personas a su cargo que, si tienen un candidato que les entusiasma, ella con gusto le manda una nota o se ofrece a hablar por teléfono. Su propio jefe hace lo mismo por ella."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "coherencia",
+     "cita": "dos de tus personas a cargo",
+     "motivo": "La forma fijada es \"las personas a tu cargo\".",
+     "propuesta": "Quédate con el tercero: resolver los conflictos dentro de tu grupo. Imagina dos proyectos distintos llevados por dos de las personas a tu cargo, los dos faltos de personal, y una persona nueva que quiere unirse a tu equipo: ¿en cuál de los dos proyectos debería trabajar?"
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "tus personas a cargo",
+     "motivo": "La forma fijada es \"las personas a tu cargo\".",
+     "propuesta": "No pidas a las personas a tu cargo que resuelvan eso y te traigan una recomendación, porque ninguna tiene la perspectiva completa de lo que más importa y van a perder tiempo intentando convencerse una a la otra de por qué su proyecto necesita de verdad a esa persona. La decisión tiene que tomarla tú."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "ortografia",
+     "cita": "más allá de lo que tu equipo es capaz hoy",
+     "motivo": "Régimen: \"ser capaz de\"; falta la preposición (queísmo).",
+     "propuesta": "Cuenta con lo que muestra la experiencia de una directiva: cada vez que dio un trozo de su trabajo, descubrió que siempre había más que asumir. Y mientras te siga motivando tu propósito, mientras tus aspiraciones vayan más allá de lo que tu equipo es capaz de hacer hoy y mientras veas retos nuevos en el horizonte, hay oportunidad de tener más impacto. A menudo eso significa hacer cosas nuevas en las que todavía no eres muy bueno, y eso puede resultar incómodo comparado con la pericia que tenías en lo que delegaste."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "posición",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "hacer_opinion_accionable",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se puede leer como la persona que está a cargo (quien manda); la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "El tercer consejo: sugiere los próximos pasos, que suele ser la manera más fácil de ayudar a la persona a tu cargo a traducir tu opinión en acción."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "coherencia",
+     "cita": "tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se puede leer como la persona que está a cargo (quien manda); la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Y no te pases con esto, porque si siempre estás dictando qué debe pasar después no estás habilitando a tu equipo para aprender a resolver problemas por su cuenta: un enfoque más suave es preguntarle a la persona a tu cargo qué cree ella que deberían ser los próximos pasos, y dejarla guiar la discusión."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "podríamos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "direcciones",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "hemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "acabamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "acoger_inspectores_externos_fuente_aprendizaje",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "crear_tarjeta_puntuacion_puesto",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "escala",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "celebrar_pequenias_victorias",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "dar_elogio_disciplina_igual_critica",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "no estás en la mentalidad correcta",
+     "motivo": "Calco de \"not in the right mind-set\" (scott cap_13 l.271); \"estar en una mentalidad\" no es español.",
+     "propuesta": "Cuenta con este aviso: muy a menudo lo que te molesta lleva molestándote tanto tiempo que es todo lo que puedes ver o sentir, y has dejado de notar todo lo que te gusta de trabajar con esa persona. Si solo ves lo negativo, probablemente no estás en la disposición adecuada para dar crítica."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "calco",
+     "cita": "centrándote en las fuerzas que en las debilidades",
+     "motivo": "\"fuerzas\" por \"strengths\" (l.273); en español: puntos fuertes y débiles.",
+     "propuesta": "Pero cuenta con dónde está el rendimiento: sacas más partido centrándote en los puntos fuertes que en los débiles, potenciando lo bueno en vez de reducir lo malo."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "calco",
+     "cita": "cómo una fuerza puede llevar al éxito",
+     "motivo": "\"una fuerza\" por \"a strength\" (l.273); en español: un punto fuerte.",
+     "propuesta": "Y cuenta con lo que el elogio hace que lo vuelve práctico y no solo agradable: revela lo que funciona y lo hace usable y repetible, enseña cómo un punto fuerte puede llevar al éxito y cómo se puede construir un éxito sobre otro, demuestra que te importa personalmente, y desafía directamente, porque anima a la gente a seguir haciendo más de lo que está bien."
+    },
+    {
+     "campo": "pasos_accionables[17]",
+     "tipo": "voz",
+     "cita": "hacia dónde vamos",
+     "motivo": "Nosotros del libro fuera de cita (\"what direction we're headed in\", l.287); en la casa es tú o el equipo. Propuesta conjunta con la otra entrada de este campo.",
+     "propuesta": "Y cuenta con para qué sirve además del propósito principal: el propósito primero del elogio es enseñar hacia dónde va el equipo y cómo es lo bueno, y este ejercicio corto es además una vía rápida y fácil de desarrollar la habilidad de dar voz a lo que aprecias."
+    },
+    {
+     "campo": "pasos_accionables[17]",
+     "tipo": "calco",
+     "cita": "construir la habilidad",
+     "motivo": "Calco de \"build the skill\" (l.287); en español: desarrollar. Propuesta conjunta con la otra entrada de este campo.",
+     "propuesta": "Y cuenta con para qué sirve además del propósito principal: el propósito primero del elogio es enseñar hacia dónde va el equipo y cómo es lo bueno, y este ejercicio corto es además una vía rápida y fácil de desarrollar la habilidad de dar voz a lo que aprecias."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "impacto a",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[11]",
+     "texto": "impacto a",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[16]",
+     "texto": "íbamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "alinear_prioridades_reporte_directivo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "nuestro",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "estamos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "pensamos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "sentimos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "tenemos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "elegir_palabras_nota_definirlas_empresa_entera",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "que vas a tener que trabajar con tu jefe",
+     "motivo": "El sujeto cambia sin motivo: el paso te habla a ti, que defines las notas, y de pronto \"tú\" es el empleado que recibe la nota más baja (en el libro es una cita entre comillas, l.121). Se cuenta en tercera persona.",
+     "propuesta": "Escribe en la definición lo que la nota arrastra. Por ejemplo, algunas empresas querrían dejar claro para la nota más baja que quien la recibe va a tener que trabajar con su jefe e idear juntos un plan que le ayude a atender los problemas que ahí se describen, porque si no los atiende probablemente acabará en un plan de desempeño que puede llevar después al despido."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[6]",
+     "texto": "esa misma",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "revisar_critica_mujer_agresiva_cuatro_tacticas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "calco",
+     "cita": "No uses lenguaje de género",
+     "motivo": "\"lenguaje de género\" calca \"gendered language\" (scott cap_09 l.311) y en español se lee como lenguaje inclusivo, lo contrario de lo que se quiere decir.",
+     "propuesta": "No uses lenguaje con sesgo de género: fíjate en las palabras que usas."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "sin lenguaje de género",
+     "motivo": "\"lenguaje de género\" calca \"gendered language\" (scott cap_09 l.311) y en español se lee como lenguaje inclusivo, lo contrario de lo que se quiere decir.",
+     "propuesta": "La crítica revisada por las cuatro tácticas: o descartada porque era tu sesgo, o reescrita en ejemplos concretos y sin lenguaje con sesgo de género, y con sugerencias de conducta en vez de un «sé más simpática»."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "la trampa de lo abrasivo",
+     "motivo": "Referente sin antecedente: el nodo solo presenta la trampa de competencia contra simpatía; \"la trampa de lo abrasivo\" no se explica en ningún campo.",
+     "propuesta": "Sé más concreto: una crítica como «eres demasiado agresiva» es demasiado abstracta y por eso queda expuesta a la trampa de tachar de abrasiva a una mujer."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "conducir_reunion_equipo_agenda_tres_bloques",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[15]",
+     "tipo": "calco",
+     "cita": "el único debate más importante",
+     "motivo": "Calco de \"the single most important debate\" (scott cap_11 l.159).",
+     "propuesta": "En el bloque de aclarar, pregunta cuáles son la una o dos decisiones más importantes y el debate principal que tu equipo tiene que abordar esa semana."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "calco",
+     "cita": "La reunión semanal corrida",
+     "motivo": "\"correr una reunión\" calca \"run a meeting\".",
+     "propuesta": "La reunión semanal hecha con sus tres bloques y sus tiempos, el cuadro de mando revisado, y las una o dos decisiones y el debate más importante de la semana identificados, con su dueño cuando el equipo pasa de unas veinte personas, sin haberlos decidido ni debatido dentro."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[12]",
+     "texto": "la lata",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_fecha_cierre_debate_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "posición",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "planificar_tres_pasos_demanda_estado_brecha",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "comprobar_equipo_ejecuta_bien",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "empezar_cultura_franqueza_radical",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "crear_plan_creible_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "evaluar_desempenio_dos_veces_anio",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "voz",
+     "cita": "cuando se nos juzga",
+     "motivo": "Primera persona del plural fuera de cita; en la casa es tú.",
+     "propuesta": "Cuenta con lo que suele haber detrás del impulso de poner notas más a menudo: la confusión entre gestión del desempeño y desarrollo. Si las notas ocurren demasiado a menudo se confunden con el desarrollo, y las conversaciones que deberían conectar con el deseo intrínseco de mejorar disparan en su lugar la resistencia que aparece cuando te juzgan y el juicio arrastra premios y castigos extrínsecos."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "cerrar_brecha_dos_preguntas_estrategia",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "correr_semana_arreglo_averias_gestion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "leerlas todas",
+     "motivo": "\"leerlas\" no tiene antecedente claro: el femenino plural más cercano es \"las prioridades\" (paso 4), y lo registrado se llamó \"problemas\" y \"avería\" en singular.",
+     "propuesta": "Asigna a alguien el trabajo de leer todas las averías registradas y agrupar las duplicadas."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "ortografia",
+     "cita": "Haz qe",
+     "motivo": "Errata: \"qe\" por \"que\".",
+     "propuesta": "Haz que esos jefes cancelen todas sus actividades regulares, o casi todas, y se centren en arreglar los problemas de gestión que más molestan a la organización."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "fastidiando",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "fastidiando",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "evitar_doble_impuesto_malestar",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  }
+ ]
+}

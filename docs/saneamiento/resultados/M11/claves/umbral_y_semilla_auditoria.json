@@ -25,5 +25,12 @@
    "trampas_sin_marca_por_auditor": 2,
    "umbral_en_50_nodos": "invencion 0, contrario 0; el resto como maximo 10"
   }
+ },
+ "cuarto_pase": {
+  "escrito": "2026-09-28, antes de repartir y antes de sortear, tras la muestra final 3 (NO CUMPLE: 0 duros, 11 blandos: coherencia 4, regionalismo 3, calco 2, voz 1, ortografia 1; matiz 0)",
+  "semilla_reparto_pase4": 20261013,
+  "semilla_muestra_final4": 20261014,
+  "que_se_revisa": "solo lo que fallo: coherencia, regionalismo, calco, voz y ortografia, con avisos mecanicos por nodo (lexico de regionalismos de ambos lados, primera persona del plural, 'a cargo' sin posesivo, calcos conocidos, demostrativos sin antecedente) que el auditor juzga uno a uno, mas lectura de coherencia interna del nodo",
+  "lectura_del_umbral": "la misma de medir.py: todo lo confirmado que no es invencion ni contrario cuenta, por campo; duros en 0; tope 10 en 50 nodos"
  }
 }

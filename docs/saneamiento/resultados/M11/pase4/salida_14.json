@@ -1,0 +1,380 @@
+{
+ "lote": "14",
+ "nodos": [
+  {
+   "node_id": "desarrollar_estrategia_busqueda_candidatos",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "retirar_barreras_politicas_metodo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "facilitar_gente_diga_verdad",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "posición",
+     "defecto": false
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "posición",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "retar_superestrellas_equipo_constantemente",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "Rétala y asegúrate de que está aprendiendo constantemente, que es la mejor forma de mantener contenta a esta gente.",
+     "motivo": "El pronombre femenino «la» y «esta gente» no tienen antecedente en el nodo: el título y el resumen hablan de «quien está en trayectoria empinada» en masculino («bloquearlo», «retarlo») y ningún texto previo nombra a «la persona» ni a «esta gente»; el paso abre la lista sin decir a quién se reta.",
+     "propuesta": "Reta a la persona que está en trayectoria empinada y asegúrate de que está aprendiendo constantemente, que es la mejor forma de mantener contenta a la gente así."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "sociedad intelectual",
+     "motivo": "Calco de «intellectual partnership» (línea 217): en español «sociedad» es una entidad o una sociedad mercantil; lo que se construye es una colaboración.",
+     "propuesta": "Construye con ella una colaboración intelectual."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "direcciones",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "preparar_resena_mixta_hoja_trabajo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "has elegido entregar",
+     "motivo": "Calco de «messages you have chosen to deliver» (líneas 129-131): los mensajes no se «entregan», se transmiten o se dan (mismo caso que «la guía entregada» de la muestra).",
+     "propuesta": "Pregúntate si el subordinado será capaz de recordar todos los mensajes que has elegido transmitir; si la respuesta es no, elimina los menos importantes, sabiendo que lo que no entra en esta revisión puede entrar en la siguiente."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "decidir_momento_despedir_persona",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "buscar_recomendaciones_confianza",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "repartir_semana_cuarenta_horas_jefe",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "tus personas a cargo",
+     "motivo": "«Tus personas a cargo» no es la forma fijada y suena forzado; la forma de la casa es «las personas a tu cargo».",
+     "propuesta": "Da por hecho que sí necesitas pasar tiempo con las personas a tu cargo para ser un gran jefe, pero no necesitas pasar todo tu tiempo con ellas."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "parar_debate_emocion_agotamiento",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "reservar_media_hora_semanal_talento",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "demostrar_apertura_visiones_distintas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "convertir_cualquiera_mentor",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "hemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "hemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "texto": "mentoría",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "decidir_contratacion_final",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "cubrir_indicadores_problemas_reunion_individual",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "dirigir_reunion_reforzar_relaciones",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "entendemos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "construir_empresa_plantilla_vision_diaria",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "al final del día",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "aplicar_metodo_promocion_sucesion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "desplegar_plan_orden_operaciones_franqueza_radical",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "avisar_organizador_reunion_prescindible",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "dirigir_reunion_decision",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "Enmarca las distintas opciones",
+     "motivo": "Calco de «you're framing the different options on the table» (línea 55): «enmarcar opciones» es el anglicismo de «framing»; en español se plantean o se exponen.",
+     "propuesta": "Plantea las distintas opciones que hay sobre la mesa y pide a quien decide que tome la decisión."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "regionalismo",
+     "cita": "tarden mucho en cogerse",
+     "motivo": "«Coger» es forma de una sola región (y malsonante en buena parte de América); las decisiones se toman.",
+     "propuesta": "Evita el segundo: que las decisiones tarden mucho en tomarse y eso retrase el avance. Las decisiones importantes y difíciles de revertir merecen consideración profunda, pero desconfía de gastar demasiado tiempo en las pequeñas y fáciles de revertir."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "diagnosticar_capacidad_motivacion_prueba_vida",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "repartir_equipo_cartera_horizontes",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "escuchar_ruidoso_opinion_fuerte_pedir_agujeros",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[8]",
+     "texto": "deberíamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "elogiar_publico_criticar_privado_sus_tres_matices",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "ortografia",
+     "cita": "lo que SÍ puede ir",
+     "motivo": "Mayúsculas enfáticas: la norma ortográfica no admite la mayúscula para enfatizar una palabra dentro del texto.",
+     "propuesta": "Ten en cuenta estos ejemplos de lo que sí puede ir por correo o en una reunión pública: hay una errata en la diapositiva seis; hay muchas erratas en esta presentación y, por la naturaleza de nuestro trabajo, necesitamos ser exactos al cien por cien; hay un montón de erratas aquí, pero a estas alturas no importan mucho; te has quedado un cinco por ciento por debajo de tu objetivo; no estoy de acuerdo con lo que acabas de decir."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "ortografia",
+     "cita": "le haga sentir a ELLA",
+     "motivo": "Mayúsculas enfáticas: la norma ortográfica no admite la mayúscula para enfatizar una palabra; el énfasis se logra con la construcción.",
+     "propuesta": "Ten claro cuál es tu meta al elogiar: que la persona sepa lo que hizo bien de la forma más clara posible y de la manera que mejor le haga sentir a ella misma, y no de la manera en que a ti te gustaría oírlo."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "nuestro",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "necesitamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "mantener_proceso_evaluacion_ligero_vigilar_crecimiento",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "igual que la herramienta de trescientos sesenta grados",
+     "motivo": "Referente fuera del nodo: remite a «the 360 tool I described above» (línea 231), una herramienta descrita en otra parte del capítulo que ningún texto del nodo presenta; el cliente no sabe cómo es esa herramienta, y el resto del paso ya describe lo que hace la ligera.",
+     "propuesta": "Monta la herramienta de evaluación ligera de modo que pida a los jefes calificar a sus empleados en cada categoría, y que les pida meter texto cuando el empleado está en las dos notas de abajo o en las dos de arriba."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "coherencia",
+     "cita": "la opinión de sus pares",
+     "motivo": "Sujeto ambiguo: «sus pares» se lee como los pares del jefe, cuando es la opinión de los pares sobre la persona evaluada («a summary of the peer feedback», línea 235).",
+     "propuesta": "Dale al jefe un resumen de la opinión de los pares de la persona evaluada para que pueda mirarlo antes de crear la valoración final, con cuánta gente dio cada nota y la posibilidad de hacer clic en una nota para ver el detalle."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "listar_debilidades_disparadores_propios",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "planificar_cinco_olas_venta",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "rechazar_conducta_toxica_entrevista",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "elegir_pregunta_recurrente_pedir_critica",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[14]",
+     "tipo": "coherencia",
+     "cita": "Dime por qué estoy equivocado aquí.",
+     "motivo": "El paso es solo una frase de ejemplo suelta, sin comillas ni marco: separada del paso 13 que abre la lista, el cliente la lee como si la app le hablara a él (el imperativo o la pregunta no van dirigidos a ti, sino a quien te da la crítica).",
+     "propuesta": "Otra pregunta de ejemplo: «Dime por qué estoy equivocado aquí.»"
+    },
+    {
+     "campo": "pasos_accionables[15]",
+     "tipo": "coherencia",
+     "cita": "¿Qué podría haber hecho distinto esta semana para hacerte más fácil tu trabajo?",
+     "motivo": "El paso es solo una frase de ejemplo suelta, sin comillas ni marco: separada del paso 13 que abre la lista, el cliente la lee como si la app le hablara a él (el imperativo o la pregunta no van dirigidos a ti, sino a quien te da la crítica).",
+     "propuesta": "Otra pregunta de ejemplo: «¿Qué podría haber hecho distinto esta semana para hacerte más fácil tu trabajo?»"
+    },
+    {
+     "campo": "pasos_accionables[16]",
+     "tipo": "coherencia",
+     "cita": "¿Cómo podría apoyar mejor tu desarrollo profesional ahora mismo?",
+     "motivo": "El paso es solo una frase de ejemplo suelta, sin comillas ni marco: separada del paso 13 que abre la lista, el cliente la lee como si la app le hablara a él (el imperativo o la pregunta no van dirigidos a ti, sino a quien te da la crítica).",
+     "propuesta": "Otra pregunta de ejemplo: «¿Cómo podría apoyar mejor tu desarrollo profesional ahora mismo?»"
+    },
+    {
+     "campo": "pasos_accionables[17]",
+     "tipo": "coherencia",
+     "cita": "¿Qué he hecho en la última semana que haya hecho difícil trabajar conmigo?",
+     "motivo": "El paso es solo una frase de ejemplo suelta, sin comillas ni marco: separada del paso 13 que abre la lista, el cliente la lee como si la app le hablara a él (el imperativo o la pregunta no van dirigidos a ti, sino a quien te da la crítica).",
+     "propuesta": "Otra pregunta de ejemplo: «¿Qué he hecho en la última semana que haya hecho difícil trabajar conmigo?»"
+    },
+    {
+     "campo": "pasos_accionables[18]",
+     "tipo": "coherencia",
+     "cita": "¿Qué punto ciego mío has notado?",
+     "motivo": "El paso es solo una frase de ejemplo suelta, sin comillas ni marco: separada del paso 13 que abre la lista, el cliente la lee como si la app le hablara a él (el imperativo o la pregunta no van dirigidos a ti, sino a quien te da la crítica).",
+     "propuesta": "Otra pregunta de ejemplo: «¿Qué punto ciego mío has notado?»"
+    },
+    {
+     "campo": "pasos_accionables[19]",
+     "tipo": "coherencia",
+     "cita": "Lo más importante que puedes hacer por los dos es decirme cuando he metido la pata.",
+     "motivo": "El paso es solo una frase de ejemplo suelta, sin comillas ni marco: separada del paso 13 que abre la lista, el cliente la lee como si la app le hablara a él (el imperativo o la pregunta no van dirigidos a ti, sino a quien te da la crítica).",
+     "propuesta": "Otra pregunta de ejemplo: «Lo más importante que puedes hacer por los dos es decirme cuando he metido la pata.»"
+    },
+    {
+     "campo": "pasos_accionables[20]",
+     "tipo": "coherencia",
+     "cita": "Siento que no lo hice todo lo bien que podía en esa reunión, pero no estoy seguro de qué hice mal. ¿Puedes ayudarme a averiguarlo?",
+     "motivo": "El paso es solo una frase de ejemplo suelta, sin comillas ni marco: separada del paso 13 que abre la lista, el cliente la lee como si la app le hablara a él (el imperativo o la pregunta no van dirigidos a ti, sino a quien te da la crítica).",
+     "propuesta": "Otra pregunta de ejemplo: «Siento que no lo hice todo lo bien que podía en esa reunión, pero no estoy seguro de qué hice mal. ¿Puedes ayudarme a averiguarlo?»"
+    },
+    {
+     "campo": "pasos_accionables[21]",
+     "tipo": "coherencia",
+     "cita": "De verdad estoy intentando hacer mejor esto. Sé que en teoría es un problema, pero no siempre soy consciente en el momento. ¿Puedes ayudarme señalándomelo cuando lo veas?",
+     "motivo": "El paso es solo una frase de ejemplo suelta, sin comillas ni marco: separada del paso 13 que abre la lista, el cliente la lee como si la app le hablara a él (el imperativo o la pregunta no van dirigidos a ti, sino a quien te da la crítica).",
+     "propuesta": "Otra pregunta de ejemplo: «De verdad estoy intentando hacer mejor esto. Sé que en teoría es un problema, pero no siempre soy consciente en el momento. ¿Puedes ayudarme señalándomelo cuando lo veas?»"
+    }
+   ],
+   "avisos_revisados": []
+  }
+ ]
+}

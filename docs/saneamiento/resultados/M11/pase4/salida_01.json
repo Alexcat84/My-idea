@@ -1,0 +1,465 @@
+{
+ "lote": "01",
+ "nodos": [
+  {
+   "node_id": "invitar_personas_necesarias_reunion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "como con el cliente de la fábrica que viste antes",
+     "motivo": "Referente que no existe en el nodo: ningún campo habla de un cliente de una fábrica, y tampoco está en el pasaje (cap_07 l.183: \"I couldn’t be as casual and direct as I would have liked\").",
+     "propuesta": "Vuelve entonces a la meta principal de la reunión y mide contra ella para desempatar: en ese caso la meta era que los directivos pudieran dar opinión útil sobre proyectos a medio hacer, y tener tantos observadores lo hacía más difícil, porque el ambiente se volvía formal y de mucha presión, los que presentaban empezaban a gastar demasiado tiempo retocando los detalles de sus presentaciones, y quien revisaba sentía que tenía que elegir sus palabras con cuidado delante de tanta gente y no podía ser tan informal y directo como habría querido."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "hemos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "recoger_opinion_360_grados",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "coherencia",
+     "cita": "con tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se lee como \"tu persona que está al mando\"; la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Una sola mirada ve solo una parte del trabajo de alguien. Reunir la opinión de las pocas personas que trabajan más de cerca con la persona a tu cargo suele dar una imagen más completa y más objetiva, sobre todo cuando te falta contexto de su día a día. Sin un proceso formal de empresa, puedes reunirla con dos preguntas: qué hace especialmente bien y qué debería cambiar o dejar de hacer. Como es exhaustiva, cuesta tiempo reunirla y no se repite más que unas pocas veces al año; y como es tan completa, merece una conversación en persona y quedar por escrito para volver a ella."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "si tu persona a cargo dirigió",
+     "motivo": "\"tu persona a cargo\" se lee como \"tu persona que está al mando\"; la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Por ejemplo, si la persona a tu cargo dirigió una sesión de lluvia de ideas, en vez de mandarle solo tu opinión específica sobre esa tarea, recoge y comparte también lo que pensó el resto de la sala."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "para cada persona a cargo",
+     "motivo": "\"cada persona a cargo\" sin posesivo se lee como quien está al mando; la forma fijada es \"a tu cargo\".",
+     "propuesta": "Si tu empresa no hace un proceso formal de trescientos sesenta grados una o dos veces al año, puedes reunirla tú mismo; una forma de hacerlo: cada trimestre, y para cada persona a tu cargo, manda un correo corto a un puñado de sus colaboradores más cercanos con dos preguntas."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "coherencia",
+     "cita": "con tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se lee como \"tu persona que está al mando\"; la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Como es tan completa, monta una reunión con la persona a tu cargo para hablarla en persona, y documenta por escrito lo aprendido para poder volver a ello los dos en el futuro."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "coherencia",
+     "cita": "con tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se lee como \"tu persona que está al mando\"; la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "La opinión agregada de varios colaboradores cercanos, hablada en una reunión en persona con la persona a tu cargo y documentada por escrito para poder volver a ella los dos en el futuro."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "de tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se lee como \"tu persona que está al mando\"; la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Cuando te falta contexto profundo del día a día de la persona a tu cargo, cuando toca su revisión anual de desempeño, o cuando sospechas que tu mensaje no está calando y necesitas que le llegue desde varias voces."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "entregable_esperado",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "ayudar_personas_jugar_fortalezas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "ortografia",
+     "cita": "a alguien abatido, su jefe pudo haberle dicho decenas de cosas para que se sintiera mejor, y lo que le dijo fue que recordara que tenía buenos valores, algo específico de ella y que ella sintió",
+     "motivo": "Concordancia de género: \"alguien abatido\" en masculino y después \"de ella\" y \"ella sintió\" (en el pasaje es la propia directiva).",
+     "propuesta": "Haz que sea específico de la persona: a una directiva abatida, su jefe pudo haberle dicho decenas de cosas para que se sintiera mejor, y lo que le dijo fue que recordara que tenía buenos valores, algo específico de ella y que ella sintió que él creía de verdad."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "vemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "estamos",
+     "defecto": false
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "texto": "a cargo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "detectar_arreglar_fallo_etapa_menor_valor",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "juzgar_cultura_renuncias_equipo",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "nutrir_ideas_nuevas_reunion_solas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "zanjar_seis_preguntas_decision_adelantado",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "regionalismo",
+     "cita": "qué decisión hay que coger",
+     "motivo": "\"coger\" una decisión es forma de España (y malsonante en buena parte de América); en el resto del nodo es \"tomar\".",
+     "propuesta": "Pregunta primero qué decisión hay que tomar."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "priorizar_pocas_cosas_bien",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "más abajo",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "establecer_credibilidad_pericia_humildad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "Establece que quien decide, seas tú o sea otro de tu equipo, tiene credibilidad",
+     "motivo": "Calco de \"establish your credibility\": \"establecer que X tiene credibilidad\" en español es dictaminarlo o decretarlo, no construirla (cap_07 l.357: \"Don’t forget to establish your credibility\").",
+     "propuesta": "Asegúrate de que quien decide, seas tú o sea otro de tu equipo, tiene credibilidad, porque sin eso no puedes esperar que nadie ejecute la decisión."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "nosotros",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "nosotros",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "nosotros",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "contratar_reclutadores_externos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "Usa este mismo método de contratación",
+     "motivo": "\"este mismo método\" no tiene antecedente en el nodo: ningún campo anterior presenta un método de contratación.",
+     "propuesta": "Usa el mismo método con el que contratas a tu gente para identificar y contratar reclutadores que sean jugadores A."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "este mismo",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "vivir_primero_valor_declarado",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "posición",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "fastidio",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "texto": "posición",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "texto": "esa misma",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "preparar_respuestas_estandar_interrupciones_repetidas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "los clientes no salen con preguntas",
+     "motivo": "\"los clientes\" no tiene antecedente en el nodo: el nodo habla de quienes te interrumpen, nunca de clientes (en el libro son los clientes de un jefe de marketing, contexto que el nodo no trae).",
+     "propuesta": "Cuenta con lo que hace que eso funcione: quienes te interrumpen no salen con preguntas y problemas totalmente nuevos un día tras otro, y los mismos tienden a aflorar una y otra vez."
+    }
+   ],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "montar_reunion_gran_debate",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "manejar_contacto_fisico_regla_platino",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "regionalismo",
+     "cita": "accidente de auto",
+     "motivo": "\"auto\" es la forma de una región (como \"coche\" la de otra); la forma general es \"accidente de tráfico\".",
+     "propuesta": "Cuenta con que el apretón de manos muy profesional no da para todo: cuando la pareja de un compañero ha muerto en un accidente de tráfico, o cuando alguien acaba de anunciar que se casa, un abrazo de verdad puede ser la manera más eficaz del mundo de demostrar que te importa esa persona."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[0]",
+     "texto": "auto",
+     "defecto": true
+    }
+   ]
+  },
+  {
+   "node_id": "dar_guia_acto_seis_consejos",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "digamos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "dar_opinion_especifica_tarea",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "instalar_metodo_contratacion_empresa",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "situar_transicion_cuatro_caminos",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "desplegar_marco_franqueza_radical",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "resumen_teorico",
+     "texto": "caemos",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "texto": "caemos",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "canalizar_interrupciones_cartel_hora_oficina",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "dar_estabilidad_situacion_emocional",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "decidir_amistad_subordinado_prueba_revision_dificil",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "operar_modelo_gente_destreza_minima",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[5]",
+     "texto": "esa misma",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "Asume que",
+     "defecto": false
+    }
+   ]
+  },
+  {
+   "node_id": "decidir_quien_comunica_cada_cuanto",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "admitir_errores_areas_mejora_propias",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "eliminar_seguimiento_descendente_responsabilizar_dueno",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "probar_traje_azul_seis_semanas",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "anunciar_decision_inesperada_reconvocar_reunion",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "actuar_conducta_contraria_valores",
+   "limpio": true,
+   "defectos": [],
+   "avisos_revisados": []
+  },
+  {
+   "node_id": "despedir_persona_respeto_franqueza",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "dejar ir a alguien",
+     "motivo": "Calco de \"let someone go\" (cap_04 l.313); en español es despedir, como dice el propio título.",
+     "propuesta": "Cuando decidas despedir a alguien, hazlo de forma respetuosa y directa."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "calco",
+     "cita": "dejar ir a alguien",
+     "motivo": "Calco de \"let someone go\"; en español es despedir.",
+     "propuesta": "Cuando ya has decidido despedir a alguien y toca ejecutarlo."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "por parte de tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se lee como \"tu persona que está al mando\"; la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Y no lo consideres un fracaso por parte de la persona a tu cargo."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "coherencia",
+     "cita": "ayuda a tu persona a cargo",
+     "motivo": "\"tu persona a cargo\" se lee como \"tu persona que está al mando\"; la forma fijada es \"la persona a tu cargo\".",
+     "propuesta": "Y ayuda a la persona a tu cargo a ponerse en el mejor camino posible hacia su etapa siguiente, y usa la experiencia para volverte mejor directivo."
+    }
+   ],
+   "avisos_revisados": [
+    {
+     "campo": "pasos_accionables[2]",
+     "texto": "a cargo",
+     "defecto": true
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "texto": "asumir que",
+     "defecto": false
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "texto": "a cargo",
+     "defecto": true
+    }
+   ]
+  }
+ ]
+}

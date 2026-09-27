@@ -92,3 +92,31 @@ regionalismo, voz y ortografia dentro del tope). Todas las trampas sin marca y e
 - Orden de las tandas sobre el pack importado: m11-limpieza, m11-glosario, m11-limites, m11-auditoria, m11-barrido,
   m11-muestra-final, m11-pase2, m11-salida, m11-muestra-final2, m11-pase3, m11-muestra-final3.
 - Evolucion de la muestra ciega final (defectos blandos confirmados en 50 nodos, tope 10): 23, 11, 11. Duros: 0 en las tres.
+
+## Cuarto pase, barrido de restos y muestra ciega final 4 (28 sep 2026)
+
+- `pase4/`: cuarto pase solo sobre lo que fallo en la muestra 3 (coherencia, regionalismo, calco, voz, ortografia; el
+  matiz dio 0), 16 auditores con reparto de semilla 20261013. Cada nodo llevo sus avisos mecanicos (460: lexico de
+  regionalismos de ambos lados, primera persona del plural, "a cargo" sin posesivo, calcos conocidos, demostrativos sin
+  antecedente), que el auditor juzgo uno a uno, y lectura de coherencia interna. 23 trampas sin marca, 22 cazadas (se
+  escapo una de ortografia). FALLO DE METODO DECLARADO: una trampa de calco reemplazo "importa" dentro de "importantes"
+  y dejo una palabra rota; solo vivia en la entrada del auditor y se cazo. 365 campos al arbitro: 355 corregidos (VOZ 196,
+  COHERENCIA 147, ORTOGRAFIA 12) y 10 que no se sostuvieron. Tanda `m11-pase4` (355 en 172 nodos). Decisiones del
+  orquestador para todo el pack, escritas en `pase4/INSTRUCCIONES_ARBITRO.md` mientras los arbitros trabajaban y
+  enviadas a los que ya habian empezado: forma fijada "a tu cargo" / "a su cargo"; formas de una sola region a la neutra
+  ("adhesivo", "cien por ciento", "video"); el "nosotros" generico de quien escribe pasa a tu o a tercera persona.
+- `pase4_barrido/`: los restos de esas decisiones en campos que ningun arbitro tenia (10), propuestos por el
+  orquestador y cotejados por un verificador ciego con una trampa sin marca (cazada). Tanda `m11-pase4-barrido`.
+- `muestra_final4/`: 50 nodos con semilla 20261014, 4 trampas sin marca, 4 cazadas. El arbitro confirmo 1 INVENCION
+  ("que es como lo comprobaron", zhuo cap_09 217: el libro usa la pelicula como ilustracion, no como la prueba que
+  hicieron; el orquestador lo coteja contra el libro y coincide), 0 contrarios y 5 del resto contra un tope de 10:
+  NO CUMPLE por la invencion. Nota declarada: el encargo de este arbitro llevaba una aclaracion de tipos del orquestador
+  (invencion es causa, efecto, cifra o contenido que el libro no dice; un enfasis o un matiz perdido llevan su tipo
+  real), sacada de la definicion del umbral del fundador; con ella "Eso, y no otra cosa" quedo como actual. Tanda
+  `m11-muestra-final4` (4 en 4 nodos).
+- Reproducibilidad: las catorce tandas aplicadas en orden sobre el pack importado dan la copia limpia exacta. Guarda de
+  voz de cliente: 0 faltas en 471 nodos.
+- Orden de las tandas: m11-limpieza, m11-glosario, m11-limites, m11-auditoria, m11-barrido, m11-muestra-final,
+  m11-pase2, m11-salida, m11-muestra-final2, m11-pase3, m11-muestra-final3, m11-pase4, m11-pase4-barrido,
+  m11-muestra-final4.
+- Evolucion de la muestra ciega final (50 nodos): blandos 23, 11, 11, 5 (tope 10); duros 0, 0, 0, 1 (tope 0).

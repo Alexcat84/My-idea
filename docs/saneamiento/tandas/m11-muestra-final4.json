@@ -1,0 +1,81 @@
+[
+ {
+  "id": "m11-muestra-final4-definir_vision_larga_trabajar_atras-pasos_accionables-4",
+  "fecha": "2026-09-28",
+  "node_id": "definir_vision_larga_trabajar_atras",
+  "campo": "pasos_accionables",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Prueba la ambigüedad con un ejemplo concreto, que es como lo comprobaron: si alguien comparte que fue a ver una película y no estuvo a la altura, y tú le pones no me gusta, ¿cómo se lee tu acción? ¿Que también te disgustó la película? ¿Que te disgustó que fuera a verla? ¿Que te molestó que hablara mal de algo que a ti te parecía estupendo?",
+  "texto_nuevo": "Prueba la ambigüedad con un ejemplo concreto: si alguien comparte que fue a ver una película y no estuvo a la altura, y tú le pones no me gusta, ¿cómo se lee tu acción? ¿Que también te disgustó la película? ¿Que te disgustó que fuera a verla? ¿Que te molestó que hablara mal de algo que a ti te parecía estupendo?",
+  "decision": "auditoria completa M11 (invencion): El libro da el ejemplo de la película como ilustración de por qué juzgaron (\"we didn't feel\") que el botón se malinterpreta; en ninguna parte del pasaje (215-221) dice que el equipo lo comprobara con ese ejemplo ni con prueba alguna. \"que es como lo comprobaron\" atribuye al equipo una verificación que el libro no cuenta; sale la cláusula y el paso queda igual.",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "invencion"
+  ],
+  "indice": 4,
+  "cita": {
+   "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+   "lineas": "fuentes/zhuo_manager/cap_09.md 217",
+   "frase": "we didn’t feel the Dislike button met that bar because it’s so easily misinterpreted. If you share, “I went to see Movie X tonight and it didn’t live up to the hype,” and I “dislike” your post, how should you read my action?"
+  }
+ },
+ {
+  "id": "m11-muestra-final4-conversar_historia_vida_descubrir_motivadores-titulo_concepto",
+  "fecha": "2026-09-28",
+  "node_id": "conversar_historia_vida_descubrir_motivadores",
+  "campo": "titulo_concepto",
+  "veredicto": "VOZ",
+  "texto_anterior": "Conversar la historia de vida de cada persona a tu cargo para descubrir qué la motiva, que es la primera de las tres conversaciones de carrera",
+  "texto_nuevo": "Conversar sobre la historia de vida de cada persona a tu cargo para descubrir qué la motiva, que es la primera de las tres conversaciones de carrera",
+  "decision": "auditoria completa M11 (regionalismo): \"Conversar\" transitivo (\"conversar algo\") es uso de algunos países de América (lo recoge como americanismo el Diccionario de americanismos); en la norma general es intransitivo y un lector de España o de México lo lee como ajeno. Pasa a \"conversar sobre\". El libro (scott cap_10, 47: \"Conversation one: life story\") no se ve afectado; ningún otro campo del nodo usa la forma.",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "regionalismo"
+  ],
+  "cita": {
+   "regla": "voz de la casa y espanol llano: sin calcos, regionalismos ni voz de libro (docs/saneamiento/instrumentos/M11_LIMPIEZA.md; decisiones del fundador, 28 sep 2026)",
+   "fragmentos": [
+    "Conversar la historia"
+   ]
+  }
+ },
+ {
+  "id": "m11-muestra-final4-compartir_opinion_conductual_regularidad-pasos_accionables-7",
+  "fecha": "2026-09-28",
+  "node_id": "compartir_opinion_conductual_regularidad",
+  "campo": "pasos_accionables",
+  "veredicto": "ORTOGRAFIA",
+  "texto_anterior": "Usa como modelo estos dos ejemplos. Para la crítica: cuando la gente te hace preguntas sobre tu trabajo tu tono es a menudo defensivo; por ejemplo, cuando una compañera dejó un comentario en tu código respondiste con un confía en mí, lo que desatendió el fondo de su comentario y te hizo parecer menos digno de confianza.",
+  "texto_nuevo": "Usa como modelo estos dos ejemplos. Para la crítica: cuando la gente te hace preguntas sobre tu trabajo tu tono es a menudo defensivo; por ejemplo, cuando una compañera dejó un comentario en tu código respondiste con un «confía en mí», lo que desatendió el fondo de su comentario y te hizo parecer menos digno de confianza.",
+  "decision": "auditoria completa M11 (ortografia): En el libro es cita textual entre comillas (zhuo cap_05, 87: \"you replied with “just trust me.”\"); en español una cita textual, y más sustantivada con \"un\", va entre comillas. Sin ellas \"confía en mí\" se lee como parte de la frase. Se añaden comillas angulares, sin otro cambio.",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "ortografia"
+  ],
+  "indice": 7,
+  "cita": {
+   "instrumento": "auditoria completa de la limpieza M11: auditor ciego por nodo con trampas sin marca y arbitro contra el libro (docs/saneamiento/resultados/M11/auditoria/)",
+   "evidencia": "En el libro es cita textual entre comillas (zhuo cap_05, 87: \"you replied with “just trust me.”\"); en español una cita textual, y más sustantivada con \"un\", va entre comillas. Sin ellas \"confía en mí\" se lee como parte de la frase. Se añaden comillas angulares, sin otro cambio."
+  }
+ },
+ {
+  "id": "m11-muestra-final4-mover_rapido_persona_papel_equivocado-resumen_teorico",
+  "fecha": "2026-09-28",
+  "node_id": "mover_rapido_persona_papel_equivocado",
+  "campo": "resumen_teorico",
+  "veredicto": "ANADIDO",
+  "texto_anterior": "Querer defender a cada persona puede llevar a volcar reuniones y charlas en quien no rinde, y a una directiva ese esfuerzo no le sirvió ocho de cada diez veces. Depende de la causa: ignorar las expectativas o no sentirse apreciado suele arreglarse hablando con honestidad, pero un desencaje de valores no se cura con charlas, y no es razonable esperar que una falta de habilidades de fondo se supla en pocos meses. Alargar el ciclo puede estresar a la persona, que se siente vigilada, y desgastar al resto del equipo. Por eso lo más amable es ser honesto pronto y apoyarla para que siga su camino.",
+  "texto_nuevo": "Querer defender a cada persona puede llevar a volcar reuniones y charlas en quien no rinde, y a una directiva ese esfuerzo no le sirvió ocho de cada diez veces. Depende de la causa: ignorar las expectativas o no sentirse apreciado suele arreglarse hablando con honestidad, pero un desencaje de valores no se cura con charlas, y no es razonable esperar que una falta de habilidades de fondo se supla en pocos meses. Alargar el ciclo puede estresar a la persona, que se siente vigilada, y desgastar al equipo. Si no la ves capaz, lo más amable es ser honesto pronto y apoyarla para que siga su camino.",
+  "decision": "auditoria completa M11 (matiz, longitud): El libro condiciona la conclusión (\"if you don't believe someone is set up to succeed in his current role\"); el resumen la da sin condición justo después de decir que la falta de claridad o de aprecio suele arreglarse hablando, y así parece regla para todo el que no rinde. Se devuelve la condición (\"Si no la ves capaz\" en lugar de \"Por eso\") y, como el resumen estaba en 597 caracteres, \"al resto del equipo\" pasa a \"al equipo\" para quedar en 599 (medido con script). La propuesta del auditor quitaba además \"ese esfuerzo\" (dejaba sin sujeto \"no le sirvió\") y \"que se siente vigilada\" (el ojo que vigila, línea 301), contenido que el libro sí dice, así que no se toma.",
+  "auditoria": "docs/saneamiento/resultados/M11/auditoria/",
+  "motivos": [
+   "matiz",
+   "longitud"
+  ],
+  "cita": {
+   "libro": "The Making of a Manager: What to Do When Everyone Looks to You - Julie Zhuo",
+   "lineas": "fuentes/zhuo_manager/cap_04.md 301-303",
+   "frase": "At the end of the day, if you don't believe someone is set up to succeed in his current role, the kindest thing you can do is to be honest with him and support him in moving on."
+  }
+ }
+]
