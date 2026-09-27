@@ -14,7 +14,8 @@
   ],
   "entregable_esperado": "Un calendario recurrente de 1:1 con cada persona que trabaja contigo y un registro de los temas tratados y los acuerdos",
   "nodos_previos": [
-    "auditorias_gerenciales_periodicas"
+    "auditorias_gerenciales_periodicas",
+    "cultura_feedback_alta_frecuencia"
   ],
   "nodos_siguientes": [
     "diseno_organizacional"
@@ -40,6 +41,19 @@
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel escrita por el verificador (o el arbitro si hubo desacuerdo), con su cita. En el libro quien puede cancelar es el empleado, porque la reunion es suya; el paso, dirigido al gerente, le traslada esa decision.",
       "indice": 3,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-067"
+    },
+    {
+      "id": "n1-nucleo-23",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "cultura_feedback_alta_frecuencia -> reuniones_uno_a_uno",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-22, segunda eleccion de un lector: la primera formaba un par de ida y vuelta).",
+        "motivo": "Despues de instalar una cultura donde la opinion y las malas noticias circulan rapido, el paso natural es el uno a uno, el espacio donde esa informacion sube desde cada persona."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ],
   "fuentes_internas": [

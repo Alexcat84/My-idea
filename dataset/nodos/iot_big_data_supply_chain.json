@@ -13,7 +13,8 @@
   ],
   "entregable_esperado": "Infraestructura de captura de datos IoT integrada con un repositorio central listo para análisis",
   "nodos_previos": [
-    "optimizacion_tecnologia_cadena_suministro"
+    "optimizacion_tecnologia_cadena_suministro",
+    "information_driver_supply_chain"
   ],
   "nodos_siguientes": [
     "estandar_gtin_epc",
@@ -26,5 +27,20 @@
   "etiqueta_arbol": "Rastrea tu Cadena con IoT",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-10",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "information_driver_supply_chain -> iot_big_data_supply_chain",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-11, lectores de acuerdo): raiz de 2 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Quien entiende la información como conector de la cadena sigue con IoT y big data como forma de capturarla de manera continua y granular."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

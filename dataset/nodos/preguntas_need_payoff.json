@@ -28,7 +28,8 @@
     "value_proposition_startup",
     "obtencion_compromiso",
     "encuestar_al_cliente_para_saber_que_valora",
-    "framework_caracteristicas_ventajas_beneficios"
+    "framework_caracteristicas_ventajas_beneficios",
+    "diagnostico_sintoma_vs_causa_ventas"
   ],
   "condiciones_activacion": [
     "Cuando el cliente ya reconoce que tiene un problema serio pero aun no valora la solucion",
@@ -61,5 +62,20 @@
   ],
   "fuentes_internas": [
     "SPIN Selling - Neil Rackham"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-22",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "preguntas_need_payoff -> diagnostico_sintoma_vs_causa_ventas",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-07, segunda eleccion de un lector: la primera formaba un par de ida y vuelta).",
+        "motivo": "Quien ya sabe que las preguntas de beneficio reducen la resistencia porque el cliente expresa el valor pasa de forma natural a diagnosticar si las objeciones de su equipo son un sintoma de haber ofrecido la solucion antes de construir ese valor."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

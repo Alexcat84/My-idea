@@ -14,7 +14,8 @@
   ],
   "entregable_esperado": "Protocolo personal de feedback documentado (cuándo, cómo y con qué tono se da feedback en la organización) y evidencia de al menos una sesión de feedback aplicando estos principios.",
   "nodos_previos": [
-    "cultura_organizacional_calidad"
+    "cultura_organizacional_calidad",
+    "gestion_desempeno_feedback"
   ],
   "nodos_siguientes": [
     "cultura_feedback_alta_frecuencia"
@@ -27,5 +28,20 @@
   "etiqueta_arbol": "Da Feedback Honesto Siempre",
   "fuentes_internas": [
     "The Hard Thing About Hard Things - Ben Horowitz"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-08",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "gestion_desempeno_feedback -> feedback_efectivo_liderazgo",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-09, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Una vez instalado un proceso de revisiones y feedback, el paso natural es aprender a dar feedback auténtico y efectivo, aunque vaya contra el instinto."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

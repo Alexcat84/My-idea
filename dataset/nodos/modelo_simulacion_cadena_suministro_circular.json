@@ -14,7 +14,8 @@
   ],
   "entregable_esperado": "Modelo de simulación funcional con reporte de P&L y KPIs para al menos dos escenarios de diseño de cadena de suministro",
   "nodos_previos": [
-    "planificacion_cadena_suministro"
+    "planificacion_cadena_suministro",
+    "estrategia_circular_y_mecanismo_de_retorno"
   ],
   "nodos_siguientes": [
     "gestion_instalaciones",
@@ -41,6 +42,19 @@
         "evidencia": "F18-030: Simular diseños de cadena de suministro antes de invertir es diseñar las operaciones y los recursos, no probar con clientes. (lector y verificador de acuerdo)"
       },
       "decision": "Saneamiento del dataset, TANDA 2 (decision del fundador del 26 sep 2026), punto 8: pasada de fase sobre los 853 nodos de validacion e ideacion."
+    },
+    {
+      "id": "n1-nucleo-13",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "estrategia_circular_y_mecanismo_de_retorno -> modelo_simulacion_cadena_suministro_circular",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-14, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Este candidato declara que la estrategia circular elegida y el mecanismo de retorno son el insumo de la simulación, así que la simulación circular es su paso siguiente."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ]
 }

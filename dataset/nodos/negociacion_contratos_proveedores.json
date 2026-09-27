@@ -14,7 +14,8 @@
   ],
   "entregable_esperado": "Contrato firmado con proveedor especificando precios, términos de servicio, penalizaciones y condiciones de pago",
   "nodos_previos": [
-    "alcance_profundo_cadena_suministro"
+    "alcance_profundo_cadena_suministro",
+    "seleccion_de_proveedores_por_costo_total"
   ],
   "nodos_siguientes": [
     "gestion_contratos_desempeno",
@@ -55,6 +56,19 @@
         "motivo": "Puente aprobado en packs/compras/metadata/bridges_aprobados.json que el grafo no tejia."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): tejer los puentes aprobados."
+    },
+    {
+      "id": "n1-nucleo-14",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "seleccion_de_proveedores_por_costo_total -> negociacion_contratos_proveedores",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-15, lectores de acuerdo): raiz de 2 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Tras comparar proveedores por costo total ponderado, calidad y cumplimiento, lo natural es negociar el contrato equilibrando precio, servicios y metas de desempeño."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ]
 }

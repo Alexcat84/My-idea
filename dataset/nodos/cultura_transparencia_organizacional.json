@@ -18,7 +18,8 @@
   ],
   "nodos_siguientes": [
     "proceso_despidos_responsables",
-    "comunicacion_honesta_en_crisis_al_equipo"
+    "comunicacion_honesta_en_crisis_al_equipo",
+    "deteccion_de_mentiras_organizacionales"
   ],
   "condiciones_activacion": [
     "Cuando el equipo percibe que el CEO oculta información",
@@ -41,6 +42,19 @@
         "motivo": "La crisis es el caso extremo de la transparencia radical del CEO: decir con franqueza lo grave de la situación y pedir el sacrificio es su aplicación directa."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 7 (decision del fundador del 26 sep 2026): ningun nodo se queda sin camino al quitar una arista rancia."
+    },
+    {
+      "id": "n1-nucleo-06",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "cultura_transparencia_organizacional -> deteccion_de_mentiras_organizacionales",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-06, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Quien adopta la transparencia radical frente a la trampa de la positividad sigue con detectar las mentiras y autoengaños que aparecen cuando la empresa pierde terreno."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ]
 }

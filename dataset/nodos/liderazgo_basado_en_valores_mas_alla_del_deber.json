@@ -15,7 +15,9 @@
   "nodos_previos": [
     "adquisicion_estrategica_resolver_crisis"
   ],
-  "nodos_siguientes": [],
+  "nodos_siguientes": [
+    "cultura_de_buena_empresa"
+  ],
   "condiciones_activacion": [
     "Cuando surge una crisis humana en el entorno cercano de la empresa sin obligación contractual",
     "Cuando se quiere definir/reforzar la cultura de la organización mediante acciones, no discursos"
@@ -37,6 +39,19 @@
         "motivo": "Asumir costos por valores ante una crisis personal no se continua en como la cultura condiciona la adopcion de herramientas de calidad; solo comparten la palabra cultura."
       },
       "decision": "Saneamiento del dataset, TANDA 2, punto 9 (decision del fundador del 26 sep 2026): retirar las aristas del nucleo a un mundo que no son puente."
+    },
+    {
+      "id": "n1-nucleo-05",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "liderazgo_basado_en_valores_mas_alla_del_deber -> cultura_de_buena_empresa",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-05, lectores de acuerdo): raiz de 2 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Las decisiones guiadas por valores que generan lealtad desembocan en la idea de construir una buena empresa como fin en sí mismo, con el mismo referente de Bill Campbell."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ]
 }

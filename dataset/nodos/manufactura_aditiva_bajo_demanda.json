@@ -13,7 +13,8 @@
   ],
   "entregable_esperado": "Análisis de viabilidad de manufactura aditiva para una línea de productos, con proyección de ahorro en inventario",
   "nodos_previos": [
-    "impresion_inteligente"
+    "impresion_inteligente",
+    "gestion_inventario"
   ],
   "nodos_siguientes": [
     "simulacion_de_operaciones_supply_chain"
@@ -25,5 +26,20 @@
   "etiqueta_arbol": "Imprime en 3D bajo Demanda",
   "fuentes_internas": [
     "Essentials of Supply Chain Management - Michael H. Hugos"
+  ],
+  "correcciones": [
+    {
+      "id": "n1-nucleo-12",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "gestion_inventario -> manufactura_aditiva_bajo_demanda",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-13, lectores de acuerdo): raiz de 1 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "El reto de minimizar inventario sin quiebres de stock conduce a la impresión 3D como forma de fabricar bajo demanda en vez de almacenar variantes."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
+    }
   ]
 }

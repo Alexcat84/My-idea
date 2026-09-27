@@ -20,7 +20,8 @@
   "nodos_siguientes": [
     "definicion_alineacion_cadena_suministro",
     "trade_off_responsividad_eficiencia",
-    "planificacion_cadena_suministro"
+    "planificacion_cadena_suministro",
+    "iot_big_data_supply_chain"
   ],
   "condiciones_activacion": [
     "Si operas con múltiples proveedores o distribuidores y necesitas optimizar tus decisiones",
@@ -55,6 +56,19 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. El libro habla de pronosticos tacticos para programas mensuales y trimestrales y de pronosticos estrategicos para decisiones de instalaciones y mercados, pero no les asigna frecuencia anual; la periodicidad anual es un dato anadido (frecuencia).",
       "indice": 4,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C090-004"
+    },
+    {
+      "id": "n1-nucleo-10",
+      "fecha": "2026-09-27",
+      "campo": "aristas",
+      "veredicto": "ARISTA_TEJIDA",
+      "texto_anterior": "",
+      "texto_nuevo": "information_driver_supply_chain -> iot_big_data_supply_chain",
+      "cita": {
+        "instrumento": "Pasada N del saneamiento (N-11, lectores de acuerdo): raiz de 2 nodos del nucleo sin camino por el nucleo.",
+        "motivo": "Quien entiende la información como conector de la cadena sigue con IoT y big data como forma de capturarla de manera continua y granular."
+      },
+      "decision": "Saneamiento del dataset, nivel 1 (decision del fundador del 27 sep 2026), criterio 6: los nodos del nucleo inalcanzables dentro del nucleo reciben un predecesor del nucleo por lectura."
     }
   ],
   "fuentes_internas": [
