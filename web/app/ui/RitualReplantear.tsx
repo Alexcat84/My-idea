@@ -359,6 +359,9 @@ export function RitualReplantear({
     // La sesión de los caminos anteriores (si los hubo): el servidor suelta su
     // precio apartado antes de apartar el de esta vuelta.
     const previa = sessionId;
+    // Si el servidor dice que se llegó al tope de vueltas, la vuelta anterior
+    // sigue viva (sus caminos y su precio apartado): se restaura para elegir.
+    const anterior = { caminos, sessionId, claveCaminos, elegido };
     setCargando(true);
     setError(null);
     setCaminos(null);
@@ -375,6 +378,22 @@ export function RitualReplantear({
         return;
       }
       if (!res.ok) {
+        const cuerpo = (await res.clone().json().catch(() => null)) as { tope?: unknown; error?: unknown } | null;
+        if (cuerpo?.tope === true) {
+          setCaminos(anterior.caminos);
+          setSessionId(anterior.sessionId);
+          setClaveCaminos(anterior.claveCaminos);
+          setElegido(anterior.elegido);
+          // Y la historia y las sueltas CON las que se pidió esa vuelta: el
+          // resumen del paso 4 no puede mostrar un texto que el plan no usará.
+          if (anterior.claveCaminos) {
+            const [h, sueltasPrevias] = JSON.parse(anterior.claveCaminos) as [string, string[]];
+            setHistoria(h);
+            setSueltas(new Set(sueltasPrevias));
+          }
+          setError(typeof cuerpo.error === "string" ? cuerpo.error : errorGenerico(idioma));
+          return;
+        }
         // Igual que el follow: todo rechazo con razón (saldo, límite, fusible,
         // muros del mundo, doble factor, texto largo) se muestra tal cual.
         const r = await leerRechazo(res, idioma);

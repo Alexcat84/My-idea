@@ -46,6 +46,9 @@ export type CicloSesion =
       suelta: TareaCiclo[];
       caminos: Camino[];
       caminoElegido: string | null;
+      /** Qué vuelta de caminos es esta (1, 2 o 3): cuenta desde la sesión
+       * previa del mismo ritual. Ausente en sesiones de antes del tope = 1. */
+      generacion?: number;
     };
 
 const linea = (t: TareaCiclo) => `- ${t.texto}${t.nota?.trim() ? ` (nota: ${t.nota.trim()})` : ""}`;
@@ -81,6 +84,11 @@ export function componerMensajeReplanteamiento(e: {
   partes.push("No empieces de cero: parte de lo que ya tengo.");
   return partes.join("\n");
 }
+
+/** Decisión del fundador (28 sep 2026): un replanteamiento pide caminos 3
+ * veces como mucho (la primera y dos vueltas atrás). Cada vuelta es una llamada
+ * a la IA dentro del mismo cobro. */
+export const TOPE_GENERACIONES_CAMINOS = 3;
 
 const MAX_CAMINOS = 3;
 const MAX_NODOS_POR_CAMINO = 5;

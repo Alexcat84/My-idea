@@ -239,6 +239,19 @@ describe("Replantear mi camino", () => {
   });
 });
 
+// Decisión del fundador (28 sep 2026): 3 vueltas de caminos por replanteamiento.
+// Al llegar al tope el servidor responde { tope: true } SIN tocar la vuelta
+// anterior: la pantalla la conserva (sus caminos y su sesión siguen sirviendo
+// para elegir) y muestra el mensaje.
+describe("el tope de vueltas de caminos", () => {
+  it("con { tope: true } la pantalla restaura los caminos y la sesión de la vuelta anterior", () => {
+    const ritual = readFileSync(path.join(__dirname, "RitualReplantear.tsx"), "utf8");
+    expect(ritual).toMatch(/\.tope === true/);
+    expect(ritual).toMatch(/setCaminos\(anterior\.caminos\)/);
+    expect(ritual).toMatch(/setSessionId\(anterior\.sessionId\)/);
+  });
+});
+
 describe("lo hecho no se pierde", () => {
   const historial: PlanHistorial[] = [
     { etiqueta: "completo", created_at: FECHA, contenido_md: "# Primer plan\n", hechas: [], relato: null },

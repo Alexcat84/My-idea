@@ -45,6 +45,7 @@ import { estadoInicial } from "@/lib/engine/recorrido";
 import {
   componerMensajeReplanteamiento,
   planAnteriorParaIA,
+  TOPE_GENERACIONES_CAMINOS,
   validarCaminos,
   type TareaCiclo,
 } from "@/lib/engine/replanteamiento";
@@ -69,10 +70,17 @@ export async function GET(request: Request, { params }: { params: Promise<{ id: 
   return consultarSaldoCiclo({ supabase, projectId, dominio, tipo: "replantear", idioma: idiomaDeRequest(request) });
 }
 
-async function soltarSesionPrevia(supabase: Awaited<ReturnType<typeof createClient>>, projectId: string, id: string) {
+/** La sesión previa de ESTE ritual, si es un replanteamiento abierto de esta
+ * idea (la lectura va con la sesión y los permisos de quien pide), con su
+ * vuelta de caminos. null si no califica. */
+async function leerSesionPrevia(supabase: Awaited<ReturnType<typeof createClient>>, projectId: string, id: string) {
   const previa = await obtenerSesion(supabase, id);
-  const estado = previa?.estado_recorrido as EstadoSesionPersistido | null | undefined;
-  if (!previa || previa.project_id !== projectId || previa.closed_at || estado?.recorrido?.ciclo?.tipo !== "replantear") return;
+  const ciclo = (previa?.estado_recorrido as EstadoSesionPersistido | null | undefined)?.recorrido?.ciclo;
+  if (!previa || previa.project_id !== projectId || previa.closed_at || ciclo?.tipo !== "replantear") return null;
+  return { id, generacion: ciclo.generacion ?? 1 };
+}
+
+async function soltarSesionPrevia(supabase: Awaited<ReturnType<typeof createClient>>, id: string) {
   const { data: planes } = await supabase.from("plans").select("id").eq("session_id", id).limit(1);
   if ((planes ?? []).length > 0) return;
   await resolverReserva(`plan:${id}`, "liberada");
@@ -115,9 +123,21 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
   // sesión anterior de ESTE ritual, si aún no dio su plan, suelta su reserva y
   // se cierra. Solo la de un replanteamiento abierto, de esta idea y de quien
   // pide (la lectura va con su sesión y sus permisos).
-  if (typeof body.session_previa === "string" && body.session_previa) {
-    await soltarSesionPrevia(supabase, projectId, body.session_previa);
+  const previa =
+    typeof body.session_previa === "string" && body.session_previa
+      ? await leerSesionPrevia(supabase, projectId, body.session_previa)
+      : null;
+  // Decisión del fundador (28 sep 2026): 3 vueltas de caminos por
+  // replanteamiento. La 4.ª se dice claro y NO toca nada: la previa conserva sus
+  // caminos y su precio apartado, para elegir uno de ellos.
+  const generacion = previa ? previa.generacion + 1 : 1;
+  if (generacion > TOPE_GENERACIONES_CAMINOS) {
+    return NextResponse.json(
+      { error: interpolar(t.topeCaminos, { n: TOPE_GENERACIONES_CAMINOS }), tope: true },
+      { status: 429 }
+    );
   }
+  if (previa) await soltarSesionPrevia(supabase, previa.id);
   const apertura = await abrirCiclo({ request, supabase, projectId, dominio, tipo: "replantear", idioma });
   if (!apertura.ok) return apertura.respuesta;
   const { user, proyecto, nombreMundo, sessionIdNueva, soltarReserva } = apertura.ciclo;
@@ -221,7 +241,7 @@ export async function POST(request: Request, { params }: { params: Promise<{ id:
       dominiosDesbloqueados: dominios,
       dominioSesion: dominio,
       idioma: idiomaSalida,
-      ciclo: { tipo: "replantear", historia, conserva, suelta, caminos, caminoElegido: null },
+      ciclo: { tipo: "replantear", historia, conserva, suelta, caminos, caminoElegido: null, generacion },
     });
     // Sin entrevista: la sesión queda lista para generar el plan del camino que
     // elija la persona en el paso 4.

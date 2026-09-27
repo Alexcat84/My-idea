@@ -160,7 +160,9 @@ canon visual las **reflejan**, jamás las definen (ver `AGENTS.md`).
   `plan:{sesión}` (migración 042); se DESCUENTA A LA ENTREGA del plan nuevo
   (`session/[id]/plan`, idempotente por esa clave); cero cobro si el sistema
   falla a mitad, y lo apartado se suelta. Al replantear, volver atrás y pedir
-  caminos otra vez suelta la reserva de la vuelta anterior.
+  caminos otra vez suelta la reserva de la vuelta anterior, con un tope de 3
+  vueltas por replanteamiento (decisión del fundador, 28 sep 2026): la 4.ª se
+  rechaza con un mensaje claro y la vuelta anterior queda intacta para elegir.
 - **Cómo medir el coste real** (pedido del fundador): cada sesión guarda su
   `costo_usd` y su desglose por componente (`costo_desglose`); la de un
   replanteamiento incluye sus caminos. En el SQL Editor:

@@ -21,6 +21,32 @@ const base = process.argv[2] ?? execFileSync("git", ["merge-base", "HEAD", "orig
 
 const normal = (t: string) => t.replace(/\s+/g, " ").trim();
 
+/**
+ * Las EXCEPCIONES, una por una y con su motivo (decisión del fundador, 28 sep
+ * 2026: la guarda no se afloja). Casan EXACTO por archivo y texto: cualquier
+ * otro texto que salga de ese mismo archivo sigue fallando. Solo entran textos
+ * que no son de pantalla y que el filtro de candidatos no sabe reconocer.
+ */
+const EXCEPCIONES: Array<{ archivo: string; texto: string; motivo: string }> = [
+  {
+    archivo: "web/app/api/project/[id]/checklist/route.ts",
+    texto:
+      "id, plan_id, dominio, etapa, orden, texto, destacado, estado, nota, completed_at, no_aplica_motivo, fecha_base, fecha_base_origen, fecha_base_original, banda, espera_externa, protege_item, deteccion, probabilidad, dolor, camino, nodos_origen, protege_nodos, created_at, updated_at",
+    motivo: "lista de columnas del select; creció con heredado_de (migración 047)",
+  },
+  {
+    archivo: "web/app/api/project/[id]/follow/route.ts",
+    texto: "id, completado_at",
+    motivo: "columnas del select de project_unlocks; la consulta se mudó a lib/cicloApertura.ts",
+  },
+  {
+    archivo: "web/lib/expediente.ts",
+    texto: "Seguimiento N",
+    motivo: "texto de un comentario de código borrado; los ciclos se llaman ahora Profundización N / Replanteamiento N",
+  },
+];
+const esExcepcion = (archivo: string, t: string) => EXCEPCIONES.some((e) => e.archivo === archivo && e.texto === t);
+
 function archivos(dir: string): string[] {
   return readdirSync(dir).flatMap((n) => {
     const p = path.join(dir, n);
@@ -78,6 +104,7 @@ async function main() {
   ).toString();
 
   const faltan: string[] = [];
+  const exceptuados = new Set<string>();
   let revisados = 0;
   for (const bloque of diff.split(/^diff --git /m).slice(1)) {
     const archivo = bloque.split("\n")[0].split(" b/")[1] ?? "?";
@@ -87,11 +114,17 @@ async function main() {
       for (const t of candidatos(linea)) {
         if (agregadas.includes(t)) continue; // se movió, no se extrajo
         revisados++;
-        if (!estaEnCatalogo(t)) faltan.push(`${archivo}: "${t}"`);
+        if (estaEnCatalogo(t)) continue;
+        if (esExcepcion(archivo, t)) {
+          exceptuados.add(`${archivo}: "${t.slice(0, 60)}${t.length > 60 ? "…" : ""}"`);
+          continue;
+        }
+        faltan.push(`${archivo}: "${t}"`);
       }
     }
   }
   console.log(`extracción idéntica: ${revisados} textos extraídos revisados contra ${corpus.length} textos del catálogo (base ${base.slice(0, 8)})`);
+  for (const e of exceptuados) console.log(`  excepción declarada: ${e}`);
   if (faltan.length) {
     console.log(`FALTAN ${faltan.length} (salieron del código y no están tal cual en el catálogo):`);
     for (const f of [...new Set(faltan)]) console.log("  " + f);

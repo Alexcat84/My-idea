@@ -46,6 +46,7 @@ const es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "Cuéntame qué pasó: sin tu historia no puedo replantear tu camino.",
     caminosFallidos: "No pude proponerte caminos en este momento. No se cobró nada; intenta de nuevo en un rato.",
+    topeCaminos: "Ya pediste caminos {{n}} veces para este replanteamiento. Elige uno de los que tienes, o cierra y empieza un replanteamiento nuevo.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' debe ser un objeto de campo: valor",
@@ -120,6 +121,7 @@ const en: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "Tell me what happened: without your story I can't rethink your path.",
     caminosFallidos: "I couldn't suggest paths right now. Nothing was charged; try again in a little while.",
+    topeCaminos: "You've already asked for paths {{n}} times for this rethink. Choose one of the ones you have, or close it and start a new rethink.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' must be an object of field: value",
@@ -193,6 +195,7 @@ const fr: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "Raconte-moi ce qui s'est passé : sans ton histoire, je ne peux pas repenser ton chemin.",
     caminosFallidos: "Je n'ai pas pu te proposer de chemins pour l'instant. Rien n'a été débité ; réessaie dans un moment.",
+    topeCaminos: "Tu as déjà demandé des chemins {{n}} fois pour ce nouveau cap. Choisis l'un de ceux que tu as, ou ferme et recommence un nouveau cap.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' doit être un objet de la forme champ : valeur",
@@ -264,6 +267,7 @@ const pt: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "Conte o que aconteceu: sem a sua história eu não consigo repensar o seu caminho.",
     caminosFallidos: "Não consegui propor caminhos agora. Nada foi cobrado; tente de novo daqui a pouco.",
+    topeCaminos: "Você já pediu caminhos {{n}} vezes para este novo rumo. Escolha um dos que você tem, ou feche e comece um novo rumo.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' deve ser um objeto de campo: valor",
@@ -335,6 +339,7 @@ const de: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "Erzähl mir, was passiert ist: Ohne deine Geschichte kann ich deinen Weg nicht neu denken.",
     caminosFallidos: "Ich konnte dir gerade keine Wege vorschlagen. Es wurde nichts abgebucht; versuch es gleich noch einmal.",
+    topeCaminos: "Du hast für diese Neuausrichtung schon {{n}} Mal Wege angefragt. Wähle einen der vorhandenen, oder schließe sie und beginne eine neue Neuausrichtung.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' muss ein Objekt aus Feld: Wert sein",
@@ -406,6 +411,7 @@ const it: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "Raccontami cos'è successo: senza la tua storia non posso ripensare il tuo percorso.",
     caminosFallidos: "Non sono riuscito a proporti dei percorsi in questo momento. Non è stato addebitato nulla; riprova tra poco.",
+    topeCaminos: "Hai già chiesto dei percorsi {{n}} volte per questa nuova rotta. Scegline uno tra quelli che hai, oppure chiudi e inizia una nuova rotta.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' deve essere un oggetto campo: valore",
@@ -477,6 +483,7 @@ const ja: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "何があったのか聞かせてください。あなたの話がないと、道すじを考え直せません。",
     caminosFallidos: "いまは道すじを提案できませんでした。料金はかかっていません。少し時間をおいて、もう一度お試しください。",
+    topeCaminos: "この見直しでは、すでに{{n}}回道すじを出しました。いまある道すじから1つ選ぶか、閉じて新しい見直しを始めてください。",
   },
   numeros: {
     cifrasNoObjeto: "'numeros'は「項目: 値」形式のオブジェクトである必要があります",
@@ -548,6 +555,7 @@ const zh: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "告诉我发生了什么：没有你的经历，我没法重新规划你的道路。",
     caminosFallidos: "现在没能为你提出可选的道路。没有扣除任何费用；请稍后再试。",
+    topeCaminos: "这次重新规划你已经要求了{{n}}次道路。请从现有的道路中选一条，或者关闭后重新开始一次重新规划。",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' 必须是“字段：值”形式的对象",
@@ -619,6 +627,7 @@ const ko: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "무슨 일이 있었는지 들려주세요. 이야기가 없으면 길을 다시 세울 수 없어요.",
     caminosFallidos: "지금은 길을 제안하지 못했어요. 아무것도 차감되지 않았으니 잠시 후 다시 시도해 주세요.",
+    topeCaminos: "이번 재설정에서 이미 길을 {{n}}번 요청했어요. 지금 있는 길 중 하나를 고르거나, 닫고 새 재설정을 시작해 주세요.",
   },
   numeros: {
     cifrasNoObjeto: "'numeros'는 필드: 값 형태의 객체여야 해요",
@@ -690,6 +699,7 @@ const ar: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "احكوا لي ما حدث: من دون قصتكم لا أستطيع إعادة التفكير في طريقكم.",
     caminosFallidos: "لم أتمكن من اقتراح طرق الآن. لم يُخصم شيء؛ حاولوا مرة أخرى بعد قليل.",
+    topeCaminos: "طلبتم طرقًا {{n}} مرات لإعادة التوجيه هذه. اختاروا أحد الطرق التي لديكم، أو أغلقوا وابدؤوا إعادة توجيه جديدة.",
   },
   numeros: {
     cifrasNoObjeto: "يجب أن تكون 'numeros' كائنًا بصيغة حقل: قيمة",
@@ -761,6 +771,7 @@ const hi: typeof es = {
     // Ciclo de replanteamiento, Fase 2: "Replantear mi camino".
     historiaObligatoria: "बताइए क्या हुआ: आपकी कहानी के बिना मैं आपका रास्ता दोबारा नहीं सोच सकता।",
     caminosFallidos: "अभी मैं रास्ते नहीं सुझा सका। कुछ भी नहीं कटा; थोड़ी देर बाद फिर कोशिश करें।",
+    topeCaminos: "इस नई दिशा के लिए आप {{n}} बार रास्ते माँग चुके हैं। जो रास्ते आपके पास हैं उनमें से एक चुनें, या बंद करके नई दिशा शुरू करें।",
   },
   numeros: {
     cifrasNoObjeto: "'numeros' एक ऑब्जेक्ट होना चाहिए (फ़ील्ड: मान)",

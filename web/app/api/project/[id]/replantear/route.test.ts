@@ -6,6 +6,7 @@
 // por un cliente falso que responde con los candidatos que la ruta le ofreció
 // (así ningún veredicto depende de una clave real, regla de AGENTS.md).
 import { beforeEach, describe, expect, it, vi } from "vitest";
+import { interpolar } from "@/lib/i18n/interpolar";
 import { SERVIDOR_PROYECTO } from "@/lib/i18n/mensajes/servidorProyecto";
 import { crearSupabaseFalso, estadoFalsoVacio, type EstadoFalso } from "@/lib/testUtils/fakeSupabase";
 
@@ -237,6 +238,62 @@ describe("POST replantear: volver a pedir caminos no deja precio apartado", () =
     await POST(req({ historia: "Se cayó el local.", suelta: [], session_previa: "s-prof" }), PARAMS);
     expect(resolverReserva).not.toHaveBeenCalledWith("plan:s-prof", "liberada");
     expect(estadoFalso.sessions["s-prof"].closed_at).toBeNull();
+  });
+});
+
+// Decisión del fundador (28 sep 2026): un replanteamiento pide caminos 3 veces
+// como mucho. La vuelta cuenta desde la sesión previa (session_previa): sin
+// previa es la 1.ª; con una previa de la 2.ª, esta es la 3.ª; con una previa de
+// la 3.ª, la 4.ª se rechaza con un mensaje claro, SIN soltar la previa (sus
+// caminos siguen sirviendo) y sin apartar ni llamar a la IA.
+describe("POST replantear: tope de 3 generaciones de caminos", () => {
+  const previa = (id: string, generacion: number) => {
+    estadoFalso.sessions[id] = {
+      id,
+      project_id: "p1",
+      closed_at: null,
+      estado_recorrido: { recorrido: { ciclo: { tipo: "replantear", generacion } }, acumulado: {} },
+    };
+  };
+  beforeEach(() => {
+    estadoFalso = estadoFalsoVacio();
+    supabaseFalso = crearSupabaseFalso(estadoFalso);
+    create.mockClear();
+    respuestaIA = (c) =>
+      JSON.stringify({
+        caminos: [
+          { titulo: "Vender por encargo", descripcion: "Sin local.", nodos: [c[0], c[1]] },
+          { titulo: "Feria del barrio", descripcion: "Un puesto.", nodos: [c[2], c[3]] },
+        ],
+      });
+  });
+
+  it("sin previa es la generación 1; con una previa de la 2, esta es la 3", async () => {
+    sembrar();
+    const primera = (await (await POST(req({ historia: "Se cayó el local.", suelta: [] }), PARAMS)).json()) as { session_id: string };
+    const ciclo1 = (estadoFalso.sessions[primera.session_id].estado_recorrido as { recorrido: { ciclo: { generacion: number } } }).recorrido.ciclo;
+    expect(ciclo1.generacion).toBe(1);
+    previa("s-g2", 2);
+    const tercera = (await (await POST(req({ historia: "Se cayó el local.", suelta: [], session_previa: "s-g2" }), PARAMS)).json()) as { session_id: string };
+    const ciclo3 = (estadoFalso.sessions[tercera.session_id].estado_recorrido as { recorrido: { ciclo: { generacion: number } } }).recorrido.ciclo;
+    expect(ciclo3.generacion).toBe(3);
+  });
+
+  it("la 4.ª vuelta: 429 con el mensaje del catálogo, la previa intacta, sin apartar ni llamar a la IA", async () => {
+    sembrar();
+    previa("s-g3", 3);
+    const { resolverReserva, reservarCreditos } = await import("@/lib/creditos");
+    vi.mocked(resolverReserva).mockClear();
+    vi.mocked(reservarCreditos).mockClear();
+    const res = await POST(req({ historia: "Otra versión.", suelta: [], session_previa: "s-g3" }), PARAMS);
+    expect(res.status).toBe(429);
+    const cuerpo = await res.json();
+    expect(cuerpo.error).toBe(interpolar(SERVIDOR_PROYECTO.es.follow.topeCaminos, { n: 3 }));
+    expect(cuerpo.tope).toBe(true);
+    expect(resolverReserva).not.toHaveBeenCalled();
+    expect(reservarCreditos).not.toHaveBeenCalled();
+    expect(create).not.toHaveBeenCalled();
+    expect(estadoFalso.sessions["s-g3"].closed_at).toBeNull();
   });
 });
 
