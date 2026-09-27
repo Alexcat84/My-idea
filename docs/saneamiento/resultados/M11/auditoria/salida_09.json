@@ -1,0 +1,600 @@
+{
+ "lote": "09",
+ "nodos": [
+  {
+   "node_id": "asignar_responsable_unico_evolucion_planificada",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "evento o evolución",
+     "motivo": "'evolución' calca el 'evolution' naval (maniobra, operación); en español no significa eso.",
+     "propuesta": "Al planificar cada evento u operación, añade una línea al documento de planificación que nombre quién es el jefe a cargo de ese evento."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "calco",
+     "cita": "cualquier evento o evolución",
+     "motivo": "'evolución' calca el 'evolution' naval; en español no significa operación.",
+     "propuesta": "Cuando estás planificando cualquier evento u operación y quieres que quede claro quién responde de que salga bien, en lugar de enumerar todo lo que podría salir mal."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz",
+     "cita": "concentra la atención en dejar señalado quién está a cargo, que pesa más",
+     "motivo": "Es lo que aprendió quien mandaba el submarino ('I learned'); el paso lo vuelve regla general.",
+     "fichero": "fuentes/marquet_turn_the_ship/cap_06.md",
+     "lineas": "127",
+     "frase": "I learned that focusing on who was put in charge was more important than trying to evaluate all the ways the event could go wrong.",
+     "propuesta": "No dediques el esfuerzo principal a evaluar todas las formas en que el evento podría salir mal: concentra la atención en dejar señalado quién está a cargo, que en un submarino resultó pesar más."
+    }
+   ]
+  },
+  {
+   "node_id": "seguir_frustrado_preguntar_implantacion_ideas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "síguelo a su sitio de trabajo",
+     "motivo": "El pronombre 'lo' no tiene antecedente dentro de los pasos: nadie ha nombrado aún a la persona frustrada.",
+     "propuesta": "Al acabar la reunión, sigue a quien viste frustrado hasta su sitio de trabajo."
+    }
+   ]
+  },
+  {
+   "node_id": "establecer_dinamica_nueva_antiguos_pares",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "Funciona porque convierte la rareza en tareas concretas",
+     "motivo": "Causa inventada: el pasaje no dice que funcione por convertir la rareza en tareas; dice que cuanto antes asumes que los resultados son tuyos, más fáciles son esas conversaciones. Tampoco dice 'aunque nadie lo diga' ni que la confianza 'ya no viene dada', y la relación 'might feel altered', no 'cambia'.",
+     "fichero": "fuentes/zhuo_manager/cap_03.md",
+     "lineas": "73-85",
+     "frase": "The sooner you internalize that you own the outcomes of your team, the easier it becomes to have these conversations.",
+     "propuesta": "Pasar de compañero a jefe puede alterar la relación, y lo que se hace difícil al empezar se puede prever en tres frentes. Ahora te toca hacer de entrenador, y eso exige conversaciones sobre metas y fortalezas que antes no hacían falta. Respondes del resultado del equipo, así que lo que estorba se aborda rápido y de frente aunque incomode, y cuanto antes asumes que los resultados son tuyos, más fáciles se hacen esas conversaciones. Y puede que te cuenten menos, algo normal que te toca compensar trabajando más para ganar su confianza."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "Cuenta con que se hace raro establecer una dinámica nueva",
+     "motivo": "El libro dice que 'puede' hacerse raro (can feel) y que las tres dificultades son la experiencia de la autora al empezar, sobre todo con amigos; el paso lo afirma como lo que le pasa a todo el mundo.",
+     "fichero": "fuentes/zhuo_manager/cap_03.md",
+     "lineas": "73",
+     "frase": "It can feel awkward to establish a new dynamic with former peers. [...] When I started, I found the below challenging, especially with reports whom I considered friends",
+     "propuesta": "Cuenta con que puede hacerse raro establecer una dinámica nueva con tus antiguos pares: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con tus compañeros puede sentirse alterada. Hay tres cosas que a una directiva se le hicieron difíciles al empezar, y sobre todo con personas a cargo a las que consideraba amigas."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "voz",
+     "cita": "lo que se espera de ellos",
+     "motivo": "'se espera' está en la lista de voz impersonal prohibida.",
+     "propuesta": "La primera, hacer de entrenador: tu trabajo incluye ahora entender las metas de carrera de tus antiguos pares, qué clase de proyectos encajan con sus fuerzas e intereses, en qué necesitan ayuda y cómo van respecto a las expectativas de su puesto."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "invencion",
+     "cita": "esa tercera no pide ninguna acción concreta",
+     "motivo": "Inventado y contradictorio: el libro no dice que no pida acción, y el mismo paso termina con una (trabajar más duro por la confianza). Además lo que la autora reconoció en su equipo ('my reports were wary') se afirma como regla ('tus personas a cargo recelan').",
+     "fichero": "fuentes/zhuo_manager/cap_03.md",
+     "lineas": "85",
+     "frase": "Over time, however, I recognized that, yes, this was normal. My reports were wary of bothering me or coming across poorly. It was up to me to work harder to establish a trusting relationship",
+     "propuesta": "Y con esa tercera, con el tiempo puede verse que es normal: tus personas a cargo pueden recelar de molestarte o de quedar mal, y te toca a ti trabajar más duro para establecer una relación de confianza."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "matiz",
+     "cita": "así que la relación con ellos se siente alterada",
+     "motivo": "El libro dice 'might feel altered'; la condición lo afirma como hecho.",
+     "fichero": "fuentes/zhuo_manager/cap_03.md",
+     "lineas": "73",
+     "frase": "Now, you are the boss, which means your relationship with teammates might feel altered.",
+     "propuesta": "Cuando pasas a dirigir a quienes hasta ayer eran tus compañeros de equipo: antes trabajabas sin gente a cargo, y ahora eres el jefe, así que la relación con ellos puede sentirse alterada. Te pasa tanto si diriges una parte del equipo de tu jefe porque crece como si ocupas su puesto cuando se va."
+    }
+   ]
+  },
+  {
+   "node_id": "casar_flujo_fabricacion_flujo_ventas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "coherencia",
+     "cita": "como los huevos crudos de la fábrica de desayunos",
+     "motivo": "'la fábrica de desayunos' es el ejemplo de otro capítulo; en este nodo no existe.",
+     "propuesta": "Guarda ese inventario en la etapa de menor valor, como los huevos crudos en una cocina que sirve desayunos, porque cuanto menor es el valor más flexibilidad de producción obtienes por el mismo coste de inventario."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "matiz",
+     "cita": "Guarda ese inventario en la etapa de menor valor",
+     "motivo": "El libro lo pone como ideal ('Ideally'); el paso lo da como orden sin matiz.",
+     "fichero": "fuentes/grove_high_output/cap_03.md",
+     "lineas": "119",
+     "frase": "Ideally, inventory should be kept at the lowest-value stage, as we've learned before, like raw eggs kept at the breakfast factory.",
+     "propuesta": "Guarda ese inventario, idealmente, en la etapa de menor valor, como los huevos crudos de la fábrica de desayunos, porque cuanto menor es el valor más flexibilidad de producción obtienes por el mismo coste de inventario."
+    }
+   ]
+  },
+  {
+   "node_id": "trazar_modelo_negocio_cliente_primero",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "vuelve al tablero de dibujo",
+     "motivo": "Calco literal de 'goes back to the drawing board'.",
+     "propuesta": "Una vez la has identificado, vuelve a la mesa de trabajo a diseñar."
+    }
+   ]
+  },
+  {
+   "node_id": "fijar_resultado_excelente_reunion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "una reunión de estado va a tener propósito",
+     "motivo": "Es la reunión de la autora ('My status meeting'); el paso la vuelve regla ('va a tener... y aun así salir mala'). El resumen sí lo dice bien ('puede tenerlo').",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "47",
+     "frase": "My status meeting had a purpose—keep everyone informed about the team's weekly progress. It still ended up lousy because I didn't ask myself",
+     "propuesta": "No te quedes en el consejo corriente de que toda reunión debe tener un propósito. Es buen consejo, pero no llega lo bastante lejos: una reunión de seguimiento puede tener propósito, mantener a todo el mundo informado del avance semanal del equipo, y aun así salir mala."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "reunión de estado",
+     "motivo": "Calco de 'status meeting'; en español es reunión de seguimiento.",
+     "propuesta": "No te quedes en el consejo corriente de que toda reunión debe tener un propósito. Es buen consejo, pero no llega lo bastante lejos: una reunión de seguimiento puede tener propósito, mantener a todo el mundo informado del avance semanal del equipo, y aun así salir mala."
+    },
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "matiz",
+     "cita": "es improbable",
+     "motivo": "El libro lo cuenta como experiencia de la autora ('In my experience'); el paso lo afirma como regla.",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "165",
+     "frase": "In my experience, it's unlikely that the structure of a decision meeting makes it a good forum for generating ideas.",
+     "propuesta": "No cuentes con que la estructura de una reunión de decisión sirva de foro para generar ideas: en la experiencia de una directiva, es improbable."
+    },
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "es fácil devolver la conversación a la agenda",
+     "motivo": "El libro no dice que sea fácil; dice que recuerdes al grupo su propósito primario cuando la conversación se desvía.",
+     "fichero": "fuentes/zhuo_manager/cap_07.md",
+     "lineas": "165",
+     "frase": "Don't try to make a single meeting do too much, and remind the group of its primary purpose when the conversation starts to deviate.",
+     "propuesta": "Tener un propósito no basta para que una reunión salga bien: una reunión informativa puede tenerlo y aun así fracasar si nadie se preguntó antes a qué se parece un gran resultado. Solo hay un puñado de razones para juntarse en persona, así que tener cristalinamente claro el resultado que persigues es el primer paso. Cuando cada reunión persigue una sola de esas razones, no se le pide que haga demasiado y puedes recordarle al grupo su propósito en cuanto la conversación se desvía. Esa claridad y esa eficiencia respetan el tiempo de la gente, y por eso te lo agradecen."
+    }
+   ]
+  },
+  {
+   "node_id": "ajustar_franqueza_oido_oyente",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "En el equipo de Tokio",
+     "motivo": "'el equipo de Tokio' no tiene antecedente en el nodo: artículo definido para un equipo que nadie ha presentado.",
+     "propuesta": "Busca la forma local de cuidar personalmente, que es la primera dimensión. En un equipo en Tokio la forma preferida de mostrar que les importaba era ser educados."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "voz",
+     "cita": "la dirección de producto de Google",
+     "motivo": "Nombra la empresa de la anécdota de la autora (fuente reconocible del caso); el ejemplo se cuenta sin atribuirlo. Y 'el equipo de Tokio' repite el artículo sin antecedente.",
+     "propuesta": "Busca la forma local de desafiar directamente, que es la segunda. En ese mismo equipo de Tokio la forma con la que estaban más cómodos desafiando la dirección de producto de la sede central era ser persistentes."
+    }
+   ]
+  },
+  {
+   "node_id": "construir_grafico_escalonado_pronosticos",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "matiz",
+     "cita": "que es lo que te deja anticipar la tendencia mejor",
+     "motivo": "El libro dice 'can help you anticipate'; el paso lo vuelve certeza.",
+     "fichero": "fuentes/grove_high_output/cap_03.md",
+     "lineas": "91",
+     "frase": "You can readily see the variation of one forecast from the next, which can help you anticipate future trends better than if you used a simple trend chart.",
+     "propuesta": "Lee la variación de un pronóstico al siguiente, que es lo que puede ayudarte a anticipar la tendencia mejor que un gráfico de tendencia simple."
+    }
+   ]
+  },
+  {
+   "node_id": "planificar_reduccion_trabajo_individual",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "Cuenta con que en los primeros tiempos vas a llevar a la vez",
+     "motivo": "El libro dice que la mayoría de los directivos nuevos lleva también trabajo individual ('most'); el paso lo da como certeza para ti.",
+     "fichero": "fuentes/zhuo_manager/cap_03.md",
+     "lineas": "87",
+     "frase": "This means that, in the early days, most new apprentice managers are also handling individual contributor responsibilities.",
+     "propuesta": "Cuenta con que en los primeros tiempos lo más probable es que lleves a la vez trabajo individual y trabajo de gestión: cuando te toca dirigir dentro de un equipo que crece rara vez empiezas con un equipo grande, lo normal es empezar con un puñado de personas a cargo e ir recibiendo más con el tiempo, así que lo más común es que, además de apoyar a otros, sigas haciendo tu propio trabajo."
+    }
+   ]
+  },
+  {
+   "node_id": "agrupar_tareas_semejantes_aprovechar_preparacion",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "el segundo principio de producción",
+     "motivo": "'el segundo' remite a un primer principio que no está en el nodo.",
+     "propuesta": "Aplica a tu trabajo de mando un principio de producción: agrupar las tareas semejantes."
+    }
+   ]
+  },
+  {
+   "node_id": "equilibrar_microdireccion_ausencia",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "a ella una persona a su cargo",
+     "motivo": "'ella' no tiene antecedente dentro del paso (la directiva aparece en el paso anterior).",
+     "propuesta": "Cuenta con que lo normal es inclinarte de forma distinta en aspectos distintos del trabajo según dónde esté tu equipo. En una misma semana, a esa directiva una persona a su cargo le dijo que opinaba demasiado sobre un detalle concreto de diseño, mientras otra le pidió que se implicara más en la estrategia de otro proyecto: una estaba segura de lo que hacía y su implicación le parecía agobiante, la otra no lo estaba y quería más ayuda."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "coherencia",
+     "cita": "Ella ha dado un paso atrás",
+     "motivo": "'Ella' sin antecedente dentro del paso.",
+     "propuesta": "Cuenta con que en el momento no siempre sabes cómo lo estás haciendo. Esa misma directiva ha dado un paso atrás en un área pensando que iba bien, y unas semanas después se ha dado cuenta de que no había dejado el trabajo bien montado y de que debería haberse quedado más cerca del detalle."
+    }
+   ]
+  },
+  {
+   "node_id": "construir_indicador_linealidad_alerta_temprana",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "porque los dos te avisan de si hay problemas más adelante",
+     "motivo": "El libro dice 'might include' y 'can tell us'; el paso lo vuelve certeza.",
+     "fichero": "fuentes/grove_high_output/cap_03.md",
+     "lineas": "83",
+     "frase": "Leading indicators might include the daily monitors [...] both of which can tell us if problems lie down the road.",
+     "propuesta": "Cuenta como indicadores adelantados los controles diarios que ya usas para llevar la operación, desde el registro de paradas de máquina hasta un índice de satisfacción del cliente, porque los dos pueden avisarte de si hay problemas más adelante."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "Recorta en tu caja esta ventana concreta",
+     "motivo": "'tu caja' y 'ventana' remiten a la caja negra, que este nodo no presenta.",
+     "propuesta": "Abre en tu proceso esta ventana concreta para mirar dentro, el indicador de linealidad, que vale para cualquier proceso."
+    }
+   ]
+  },
+  {
+   "node_id": "mover_rapido_persona_papel_equivocado",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "invencion",
+     "cita": "porque así el equipo rinde el doble",
+     "motivo": "Efecto inventado y fuera de lugar: el libro no dice nada de que el equipo rinda el doble; solo que el resto del equipo sufría los efectos de un compañero que batallaba.",
+     "fichero": "fuentes/zhuo_manager/cap_04.md",
+     "lineas": "301",
+     "frase": "Meanwhile, the rest of my team would wait impatiently for things to get better because they also felt the effects of a struggling teammate.",
+     "propuesta": "Vigila lo que el ciclo de intentarlo una y otra vez le hace a la otra persona y no solo a ti, porque ese fue el punto de inflexión en el caso de una directiva: quien recibía su ayuda se estresaba porque sabía que no lo estaba haciendo bien, esa ayuda se le sentía como un ojo que le vigilaba cada movimiento, y el resto del equipo esperaba impaciente a que la cosa mejorase porque también sufría los efectos."
+    },
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "calco",
+     "cita": "ser el campeón de tu equipo",
+     "motivo": "Calco de 'a champion for my team'; en español es el defensor.",
+     "propuesta": "Parte de esta idea: tu papel es ante todo ser el defensor de tu equipo, apoyarlos, defenderlos y escucharlos, y si una persona a cargo está batallando por hacer trabajo de calidad, por ser productiva, o porque baja la moral del equipo, si tú no das un paso al frente con empatía no lo hará nadie. Nadie lo hará: ese es tu trabajo, y todo el mundo merece una segunda oportunidad."
+    }
+   ]
+  },
+  {
+   "node_id": "pedir_referencias_red_personal",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "calco",
+     "cita": "Captura esos nombres",
+     "motivo": "'Capturar' por anotar es calco de 'captures' (está en la lista de calcos).",
+     "propuesta": "Apunta esos nombres en la lista y sigue construyéndola, y sigue hablando con al menos una persona por semana."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "matiz",
+     "cita": "que pasa de las diez personas iniciales a otros cincuenta o cien nombres",
+     "motivo": "El libro dice que la pregunta 'can easily generate' otros cincuenta a cien nombres; el entregable lo da como resultado seguro.",
+     "fichero": "fuentes/smart_who/cap_03.md",
+     "lineas": "315",
+     "frase": "Calling your list of ten and asking [...] can easily generate another fifty to one hundred names.",
+     "propuesta": "Una lista de talento en crecimiento continuo, alimentada a razón de al menos una conversación por semana, que puede pasar de las diez personas iniciales a otros cincuenta o cien nombres."
+    }
+   ]
+  },
+  {
+   "node_id": "rehacer_flujo_paso_limitante_capacidad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "coherencia",
+     "cita": "tu huevo de tres minutos",
+     "motivo": "'tu huevo' remite al ejemplo del desayuno, que el nodo no presenta en ningún paso.",
+     "propuesta": "Cuenta el tiempo de espera dentro del flujo y no solo el tiempo de la operación, porque si no ajustas el flujo por la cola en una cocina de desayunos, el huevo de tres minutos que espera turno se convierte fácilmente en uno de seis."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "coherencia",
+     "cita": "como siguen iguales el del huevo y el del café",
+     "motivo": "Huevo y café sin antecedente en el nodo.",
+     "propuesta": "Deja iguales los ciclos que la cola no toca, como en esa cocina de desayunos siguen iguales el del huevo y el del café, y altera los desfases."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "coherencia",
+     "cita": "el huevo sigue determinando la calidad general del desayuno aunque el paso limitante ya sea el tostador",
+     "motivo": "Huevo, desayuno y tostador sin antecedente en el nodo.",
+     "propuesta": "Y no cambies de componente el que manda la calidad: en esa cocina, el huevo sigue determinando la calidad general del desayuno aunque el paso limitante ya sea el tostador."
+    }
+   ]
+  },
+  {
+   "node_id": "informar_cierre_jornada_conservar_propiedad_trabajo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "coherencia",
+     "cita": "quien responde por el trabajo del jefe de departamento es el jefe de departamento, no el segundo al mando",
+     "motivo": "'jefe de departamento' y 'segundo al mando' son los cargos del submarino; en el nodo son tú y tu superior.",
+     "propuesta": "Cierra el informe dejando la propiedad de la tarea donde corresponde: quien responde por tu trabajo eres tú, no tu superior. Así el liderazgo queda repartido en todos los niveles."
+    }
+   ]
+  },
+  {
+   "node_id": "representar_actividad_caja_negra_ventanas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "Pero la caja cerrada solo enseña lo que ya salió.",
+     "motivo": "El libro no dice eso; dice que recortar ventanas mejora tu capacidad de llevar el proceso.",
+     "fichero": "fuentes/grove_high_output/cap_03.md",
+     "lineas": "77",
+     "frase": "We can improve our ability to run that process by cutting some windows in our box so that we can see some of what goes on within it.",
+     "propuesta": "Casi cualquier actividad que se parezca a producir algo, de fábrica o administrativa, se puede ver como una caja negra: entra materia prima o información, entra el trabajo de quienes la hacen y de quien manda, y sale un resultado. Nombrar esas tres piezas ordena el proceso, y sirve igual para contratar titulados, formar vendedores o facturar. Recortarle ventanas mejora tu manera de llevar el proceso: deja ver parte de lo que pasa dentro, entender cómo funciona y anticipar cuál será probablemente la salida futura."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "invencion",
+     "cita": "porque sin saber cuáles son su entrada, su salida y su trabajo no hay indicador que colocar",
+     "motivo": "Causa inventada: el pasaje no vincula la caja negra con que no haya indicador que colocar.",
+     "fichero": "fuentes/grove_high_output/cap_03.md",
+     "lineas": "77",
+     "frase": "The black box sorts out what the inputs, the output, and the labor are in the production process.",
+     "propuesta": "Cuando tienes delante una actividad que se parece a un proceso de producción, sea de fábrica o administrativa, y necesitas ordenar cuál es su entrada, su salida y su trabajo, y ver parte de lo que pasa dentro."
+    }
+   ]
+  },
+  {
+   "node_id": "recorrer_trece_elementos_proceso_evaluacion_formal",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "alinear_equipo_proposito_comun",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "por qué importa nuestro trabajo",
+     "motivo": "Primera persona del plural en un texto en tú: ¿'nuestro' de quién? Es la pregunta del libro copiada.",
+     "propuesta": "Comprueba que todos en el equipo tienen una imagen parecida de por qué importa el trabajo que hacen juntos."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "coherencia",
+     "cita": "por qué importa nuestro trabajo",
+     "motivo": "Primera persona del plural en un texto en tú.",
+     "propuesta": "El equipo sabiendo a qué se parece el éxito y con ganas de lograrlo, y todos con una imagen parecida de por qué importa el trabajo que hacen juntos."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "súbelo a bordo",
+     "motivo": "Calco de 'get him on board'.",
+     "propuesta": "Cuando veas a alguien de tu equipo trabajando sobre una impresión distinta de para qué existe esto, haz que se sume a lo que de verdad te importa, que es lo que evita esos desalineamientos."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "matiz",
+     "cita": "son lo que produce un propósito que falta o que está poco claro",
+     "motivo": "El libro dice que un propósito que falta 'may' traer conflictos; la condición lo da como causa segura.",
+     "fichero": "fuentes/zhuo_manager/cap_02.md",
+     "lineas": "127",
+     "frase": "If this purpose is missing or unclear, then you may experience conflicts or mismatched expectations.",
+     "propuesta": "Cuando alguien de tu equipo está haciendo cosas que a ti te parecen poco importantes o un derroche, o cuando notas conflictos y expectativas desalineadas: pueden venir de un propósito que falta o que está poco claro."
+    }
+   ]
+  },
+  {
+   "node_id": "conocer_fuerzas_valores_sesgos_propios",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "contrario",
+     "cita": "la entrenadora la paró",
+     "motivo": "Al revés: la entrenadora no la interrumpió, la escuchó con calma hasta que terminó y solo entonces le pidió dar un paso atrás.",
+     "fichero": "fuentes/zhuo_manager/cap_06.md",
+     "lineas": "23",
+     "frase": "Instead, Stacy listened calmly until I was done. Then she said, “We'll get to all that later, but first, why don't we take a step back? Tell me about you.”",
+     "propuesta": "En la primera sesión ella empezó a enumerar problemas enredados, y la entrenadora la escuchó con calma hasta que terminó y luego le pidió dar un paso atrás y hablarle de ella: de su pasado, del camino que la había traído hasta ahí, y de cómo se veía a sí misma a los ochenta años mirando atrás y preguntándose qué quería recordar."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "coherencia",
+     "cita": "que es la razón de estar aquí",
+     "motivo": "Referente vacío: ¿la razón de estar aquí de quién o de qué?",
+     "propuesta": "Y fíjate en lo que aquel informe le dio: le sirvió para calibrar su propia brújula interna, para entender dónde sus miedos estaban desmedidos y dónde no estaba prestando suficiente atención, y una vez supo dónde estaba pudo empezar a avanzar."
+    }
+   ]
+  },
+  {
+   "node_id": "armar_plan_anual_crecimiento_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "coherencia",
+     "cita": "ya has tenido tus tres conversaciones",
+     "motivo": "'tus tres conversaciones' remite a un procedimiento que el nodo no presenta.",
+     "propuesta": "Parte de aquí: ya has tenido tus tres conversaciones de carrera con cada persona y has empezado a alinear las oportunidades del equipo con las aspiraciones de cada persona, lo que te ha subido mucho en la dimensión de que te importe personalmente. Ahora toca moverte en la otra dimensión, la de desafiar directamente."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "coherencia",
+     "cita": "escribe sus nombres en las casillas correctas",
+     "motivo": "'las casillas' remite a una cuadrícula de otro capítulo que el nodo no presenta.",
+     "propuesta": "Primer paso: identifica a tus estrellas de rock y a tus superestrellas, y escribe sus nombres en su casilla, una por cada tipo de persona que vas a identificar."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "coherencia",
+     "cita": "no vas sesgada",
+     "motivo": "Femenino de la autora aplicado al lector en segunda persona ('sesgada', y 'alguien... implicada'); el resto del pack usa el genérico.",
+     "propuesta": "Busca después una mirada de fuera para asegurarte de que no vas sesgado: encuentra a alguien que conozca el trabajo de la gente de tu equipo pero que no esté tan implicado emocionalmente como tú, por ejemplo tu jefe, un igual o alguien de recursos humanos."
+    },
+    {
+     "campo": "pasos_accionables[21]",
+     "tipo": "coherencia",
+     "cita": "estés desacompasada",
+     "motivo": "Femenino de la autora aplicado al lector en segunda persona.",
+     "propuesta": "Usa esta señal para cazarte: si tienes a medio equipo en la casilla de estrella de rock y nadie más tiene a nadie ahí, es más probable que estés desacompasado con tus colegas que que tengas el mejor equipo."
+    },
+    {
+     "campo": "pasos_accionables[22]",
+     "tipo": "coherencia",
+     "cita": "Si eres jefa de jefes",
+     "motivo": "Femenino de la autora aplicado al lector en segunda persona.",
+     "propuesta": "Si eres jefe de jefes, busca una vía simple para que todos vean lo mismo, por ejemplo esta: crea un documento compartido, pide a todas tus personas a cargo que pongan ahí los nombres de sus equipos en las casillas que correspondan, y reúnete después con ellas en una sala a discutirlo."
+    },
+    {
+     "campo": "pasos_accionables[20]",
+     "tipo": "calco",
+     "cita": "Compara notas con tus iguales",
+     "motivo": "Calco de 'compare notes' (cambiar impresiones).",
+     "propuesta": "Contrasta tus valoraciones con tus iguales si muchos de ellos también hacen planes de gestión del crecimiento, porque cuando formas parte de un equipo más amplio hace falta un entendimiento compartido de qué es trabajo excepcional, qué es trabajo bueno y qué es trabajo malo."
+    },
+    {
+     "campo": "pasos_accionables[25]",
+     "tipo": "matiz",
+     "cita": "eso se convierte en sesgo inconsciente",
+     "motivo": "El libro dice 'can turn into' y 'if you're not careful'; el paso lo da como certeza.",
+     "fichero": "fuentes/scott_radical_candor/cap_10.md",
+     "lineas": "123",
+     "frase": "This is a good thing, but it can turn into a form of unconscious bias on a really big team. [...] So if you're not careful, a disproportionate percentage",
+     "propuesta": "Comprueba por último la equidad entre niveles, y cuenta con este sesgo: como te importan mucho tus personas a cargo, tiendes a ver lo mejor de ellas, y en un equipo muy grande eso puede convertirse en sesgo inconsciente, porque tus personas a cargo hacen lo mismo con las suyas y, si no tienes cuidado, acaba habiendo un porcentaje desproporcionado de gente considerada estrella de rock o superestrella entre los más veteranos de la jerarquía."
+    }
+   ]
+  },
+  {
+   "node_id": "cuantificar_impacto_innovacion_6_pasos",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "sopesar_consejo_legal_despedir_humildad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "coherencia",
+     "cita": "que es la tercera de las tres cosas que facilitan un despido",
+     "motivo": "Remite a una lista de tres que no existe en el nodo.",
+     "propuesta": "Sopesar el consejo legal contra el riesgo de seguirlo y despedir con humildad"
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "invencion",
+     "cita": "si el riesgo de no seguir el consejo es el mismo que el consejo dice prevenir",
+     "motivo": "Criterio inventado y vacío (el riesgo de no seguir un consejo siempre es lo que el consejo previene). En el libro lo que decide es que la forma que proponía el consejo hacía más probable el estallido; por eso seguirlo podía provocarlo.",
+     "fichero": "fuentes/scott_radical_candor/cap_10.md",
+     "lineas": "193",
+     "frase": "I knew the person I was firing would feel ashamed if I did it this way, and that it would make him more likely to go ballistic. [...] I realized I was likely to cause the very thing I was trying to prevent by following legal advice",
+     "propuesta": "Compara entonces las respuestas: si la forma que te propone el consejo puede provocar lo mismo que dice prevenir, seguirlo es probablemente provocar justo lo que intentas evitar."
+    }
+   ]
+  },
+  {
+   "node_id": "abrir_debate_humor_explicar_proposito",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "titulo_concepto",
+     "tipo": "matiz",
+     "cita": "el tono con que se lanza marca el de todo lo que viene detrás",
+     "motivo": "El libro dice 'often determines'; el título lo vuelve regla (el paso 1 y el resumen sí conservan el matiz).",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "241",
+     "frase": "The spirit with which a debate is launched often determines the tenor of what follows.",
+     "propuesta": "Abrir un debate con humor y explicando para qué sirve, porque el tono con que se lanza suele marcar el de todo lo que viene detrás"
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz",
+     "cita": "la gente de tu equipo se guía por tu estado de ánimo hasta un punto casi alarmante",
+     "motivo": "Es lo que la autora ha visto en su equipo ('I have found that people on a team I lead'); el paso lo afirma de tu equipo.",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "241",
+     "frase": "I have found that people on a team I lead key off my mood to an almost alarming extent; when I find a way to have fun with a debate, others often follow suit.",
+     "propuesta": "Cuenta con que la gente de tu equipo puede guiarse por tu estado de ánimo hasta un punto casi alarmante, como hay quien lo ha notado en el suyo, y que cuando tú encuentras la manera de pasártelo bien en un debate, los demás suelen seguirte."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "matiz",
+     "cita": "Usa humor simple, o abre la reunión con una buena historia a tu costa.",
+     "motivo": "El libro dice 'In some cases, it might be'; el paso lo vuelve orden general.",
+     "fichero": "fuentes/scott_radical_candor/cap_07.md",
+     "lineas": "241",
+     "frase": "In some cases, it might be simple humor or opening the meeting with a good self-effacing story.",
+     "propuesta": "En algunos casos, puede servir un humor simple, o abrir la reunión con una buena historia a tu costa."
+    }
+   ]
+  },
+  {
+   "node_id": "impedir_punialadas_espalda_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "calco",
+     "cita": "remover la olla política",
+     "motivo": "Calco de 'stirring the political pot'.",
+     "propuesta": "Ten presente lo que estás haciendo en realidad cuando escuchas eso: parece que estás siendo empático, pero lo que haces es avivar la política interna."
+    }
+   ]
+  }
+ ]
+}

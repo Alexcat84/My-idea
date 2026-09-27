@@ -136,6 +136,23 @@ def main():
         repo, ruta, pack = montar(tmp)
         if correr(repo, pack, [DOMINIO]).returncode != 0:
             fallos.append("DOMINIO no admite primer_equipo como dominio de partida o core de llegada")
+    # Un titulo que dice lo contrario que el libro (o le anade una causa) se corrige contra el libro, con cita: la
+    # auditoria completa del mundo 11 encontro titulos asi ("Ponerte a trabajar en tu negocio" donde el metodo es
+    # trabajar SOBRE el negocio). Un veredicto ajeno al texto (FASE) sigue sin poder tocar el titulo.
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, ruta, pack = montar(tmp)
+        contrario = c(id="m11-08", campo="titulo_concepto", veredicto="CONTRARIO",
+                      texto_anterior="Aplicar las tres preguntas que el libro nombra", texto_nuevo="Aplicar las tres preguntas sobre el trabajo",
+                      cita={"libro": "Test", "lineas": "fuentes/x/cap_01.md 12", "frase": "work on your business, not in it"})
+        r = correr(repo, pack, [contrario])
+        if r.returncode != 0 or json.loads(ruta.read_text(encoding="utf-8"))["titulo_concepto"] != contrario["texto_nuevo"]:
+            fallos.append("un titulo contrario al libro no se puede corregir con su cita: " + r.stdout[-300:])
+    with tempfile.TemporaryDirectory() as tmp:
+        repo, ruta, pack = montar(tmp)
+        fase = c(id="m11-09", campo="titulo_concepto", veredicto="FASE", texto_anterior=NODO["titulo_concepto"], texto_nuevo="validacion",
+                 cita={"instrumento": "prueba", "evidencia": "prueba"})
+        if correr(repo, pack, [fase]).returncode == 0:
+            fallos.append("acepto un veredicto FASE sobre el titulo")
     # Las tildes no crean barandas: "tu organizacion" -> "tu organización" ya estaba (residuo_corporativo) y la
     # correccion solo le pone la tilde. Antes el aplicador comparaba la cita exacta y la daba por nueva.
     with tempfile.TemporaryDirectory() as tmp:

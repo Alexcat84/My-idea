@@ -48,8 +48,11 @@ NODOS = BASE / "dataset" / "nodos"
 CAMPOS = {"pasos_accionables", "condiciones_activacion", "resumen_teorico", "entregable_esperado", "etiqueta_arbol",
           "fase_proyecto", "dominio", "titulo_concepto"}
 # El titulo llega a la IA y a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), pero su contenido vive con el libro:
-# solo lo tocan la voz de cliente y la ortografia (la forja escribe sin tildes).
-SOLO_VOZ = {"titulo_concepto": {"VOZ", "ATRIBUCION", "ORTOGRAFIA"}}
+# solo lo tocan la voz de cliente y la ortografia (la forja escribe sin tildes) y, contra el libro con su cita, la
+# fidelidad: un titulo que dice lo contrario del libro (CONTRARIO), le anade algo (ANADIDO) o no calza con su propio
+# nodo (COHERENCIA). Lo encontro la auditoria completa del mundo 11 (28 sep 2026). FASE, DOMINIO, RESUMEN, CIFRA y
+# VIGENCIA no tocan el titulo.
+SOLO_VOZ = {"titulo_concepto": {"VOZ", "ATRIBUCION", "ORTOGRAFIA", "CONTRARIO", "ANADIDO", "COHERENCIA"}}
 # Veredictos que declara una regla y los fragmentos que salen, no una frase del libro.
 POR_REGLA = {"ATRIBUCION", "VOZ", "CIFRA"}
 RESUMEN_MIN, RESUMEN_MAX = 400, 600

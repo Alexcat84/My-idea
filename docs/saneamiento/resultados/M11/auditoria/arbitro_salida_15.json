@@ -1,0 +1,750 @@
+{
+ "lote": "15",
+ "campos": [
+  {
+   "node_id": "vender_abastecimiento_candidatos",
+   "campo": "titulo_concepto",
+   "decision": "corregido",
+   "texto_final": "Vender ya en la primera ola, mientras captas candidatos",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "mientras abasteces"
+   ],
+   "motivo": "\"Abastecer\" calca sourcing y queda sin complemento; el pack lo llama captación de candidatos."
+  },
+  {
+   "node_id": "vender_abastecimiento_candidatos",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Vender no es el remate del proceso, sino algo que empieza con el primer contacto. Al captar candidatos la conversación ya gira en torno a intereses y talentos, así que es la primera ocasión de calibrar cuáles de las cinco áreas de la venta le importarán a esta persona. Para dar con sus ganchos hay que escuchar y preguntar dónde está hoy y qué busca de verdad. Además, quien siente que le venden desde el principio baja antes la guardia, y eso te da una visión más rápida y más rica de quién es y qué quiere, para presentarle el puesto como su siguiente paso correcto.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "Al abastecer candidatos"
+   ],
+   "motivo": "\"Abastecer candidatos\" calca sourcing."
+  },
+  {
+   "node_id": "vender_abastecimiento_candidatos",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Aprovecha el énfasis en intereses y talentos que el propio proceso de captación pone: es tu primera oportunidad de calibrar cuáles de las cinco áreas de la venta le van a importar a este candidato.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "proceso de abastecimiento"
+   ],
+   "motivo": "\"Proceso de abastecimiento\" calca sourcing process."
+  },
+  {
+   "node_id": "vender_abastecimiento_candidatos",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con la segunda razón para vender desde el principio: así la gente baja la guardia antes, tú consigues una visión más rápida y más rica de quiénes son y de qué quieren, y entonces puedes venderles el puesto como, claramente, el siguiente paso correcto para ellos.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "esto como claramente el siguiente movimiento correcto"
+   ],
+   "motivo": "Calco literal de \"sell this as clearly the right next move\": \"movimiento\" por paso y \"esto\" sin referente (es el puesto)."
+  },
+  {
+   "node_id": "vender_abastecimiento_candidatos",
+   "campo": "entregable_esperado",
+   "decision": "corregido",
+   "texto_final": "Los ganchos del candidato localizados: cuáles de las cinco áreas de la venta le van a importar, dicho por él, y una primera venta hecha del puesto como el siguiente paso correcto para él.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco",
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "qué efes",
+    "siguiente movimiento"
+   ],
+   "motivo": "\"Efes\" es la sigla inglesa de las five F's, sin sentido en español; el nodo las llama las cinco áreas de la venta. \"Siguiente movimiento\" calca \"next move\"."
+  },
+  {
+   "node_id": "vender_abastecimiento_candidatos",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando estás captando candidatos y hablas por primera vez con alguien que te interesa. Es la primera de las cinco olas de la venta.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion",
+    "calco"
+   ],
+   "fichero": "fuentes/smart_who/cap_06.md",
+   "lineas": "149-161",
+   "frase": "You sell from the moment you start the whole hiring process.",
+   "fragmentos": [
+    "abasteciendo el flujo de candidatos",
+    "y es la única que ocurre antes de que exista ningún proceso formal con esa persona"
+   ],
+   "motivo": "El libro no dice que la primera ola ocurra antes de ningún proceso formal: la captación es la primera fase del propio proceso de contratación y se vende desde que arranca. \"Abasteciendo el flujo\" calca sourcing."
+  },
+  {
+   "node_id": "tratar_jefe_entrenador",
+   "campo": "pasos_accionables[10]",
+   "decision": "corregido",
+   "texto_final": "Y prueba a ver las reuniones a solas con tu jefe como una oportunidad de aprendizaje enfocado; a una directiva eso le hizo sacarles mucho más partido. Incluso cuando no estés lidiando con ningún problema, hacer preguntas abiertas como ¿qué criterio usas para decidir a qué reuniones asistes? o ¿cómo abordas convencer a un candidato? aprovecha lo que tu jefe sabe y te enseña algo nuevo.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_06.md",
+   "lineas": "397",
+   "frase": "When I started to see 1:1s with my manager as an opportunity for focused learning, I got so much more out of it.",
+   "fragmentos": [],
+   "motivo": "La experiencia de la autora (\"I got so much more out of it\") vuelta promesa general; se cuenta como caso."
+  },
+  {
+   "node_id": "interrogar_negocio_cinco_preguntas",
+   "campo": "titulo_concepto",
+   "decision": "corregido",
+   "texto_final": "Ponerte a trabajar sobre tu negocio como si fuera un prototipo de preproducción, y hacerte cinco preguntas clave",
+   "veredicto": "CONTRARIO",
+   "tipos": [
+    "contrario"
+   ],
+   "fichero": "fuentes/gerber_emyth/cap_11.md",
+   "lineas": "245-247",
+   "frase": "Go to work on your business rather than in it.",
+   "fragmentos": [],
+   "motivo": "El método es trabajar SOBRE el negocio y no dentro; \"trabajar en tu negocio\" dice lo que el libro pide dejar de hacer."
+  },
+  {
+   "node_id": "interrogar_negocio_cinco_preguntas",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Piensa tu negocio como algo aparte de ti mismo, en estas formas: un mundo propio, un producto de tu esfuerzo, una máquina diseñada para cubrir una necesidad muy concreta, un mecanismo para darte más vida, un sistema de piezas interconectadas, un paquete de cereales, una lata de legumbres, algo creado para satisfacer las necesidades percibidas de tus consumidores, un sitio que actúa claramente distinto de todos los demás, y una solución al problema de otro.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "regionalismo"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "judías"
+   ],
+   "motivo": "\"Judías\" por frijoles o porotos es forma de España."
+  },
+  {
+   "node_id": "interrogar_negocio_cinco_preguntas",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando quieres comprobar si estás trabajando sobre tu negocio o dentro de él.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "\"Cuando cierras el trabajo del prototipo\" es un momento que el nodo no define; el pasaje es un resumen a mitad de capítulo."
+  },
+  {
+   "node_id": "preguntar_contratar_unica_prioridad",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Trabajar en contratar todos los días no significa darle el tiempo que pide: la mayor parte de la jornada puede irse a otras tareas sin que lo notes. Imaginar que contratar bien es lo único que importa puede romper esa ilusión y hacer aparecer ideas que no estabas usando, como pedir referencias o invitar a más candidatos. Funciona como un problema de diseño: al principio no sabes la respuesta ni cuánto tardará, pero si pones tiempo y energía, hablando con muchos candidatos, llegas a la mejor solución. Cuando el equipo crece deprisa, contratar pasa a ser de las habilidades más importantes.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_08.md",
+   "lineas": "227",
+   "frase": "When I looked at hiring as the only thing I needed to excel at, suddenly dozens of new ideas zoomed forth.",
+   "fragmentos": [],
+   "motivo": "Lo que le pasó a una directiva (\"suddenly dozens of new ideas zoomed forth\") afirmado como efecto seguro."
+  },
+  {
+   "node_id": "preguntar_contratar_unica_prioridad",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Reconoce primero si te estás dando esta respuesta: que estás trabajando en ello, que no pasa un día sin que hables con los reclutadores, mandes correos en frío o hagas entrevistas, y que contratar bien lleva tiempo.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz",
+    "voz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_08.md",
+   "lineas": "223",
+   "frase": "“But I’m working on it!” I’d cry in response.",
+   "fragmentos": [
+    "Reconoce primero la respuesta que te estás dando",
+    "el equipo de reclutamiento"
+   ],
+   "motivo": "La respuesta es la de la autora; el paso daba por hecho que tú te la das. Se vuelve condicional. Además sale \"el equipo de\" (voz de la casa)."
+  },
+  {
+   "node_id": "preguntar_contratar_unica_prioridad",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Cuenta con lo que pasa cuando el equipo crece deprisa: ahí contratar pasa a ser fácilmente una de las dos habilidades más importantes, y si necesitas construir un equipo grande y no tienes una reserva sólida de directivos, el problema se vuelve rápidamente intratable.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "una de las una o dos habilidades más importantes",
+    "banquillo fuerte"
+   ],
+   "motivo": "\"Una de las una o dos\" calca \"the top one or two\" y es agramatical; \"banquillo fuerte\" calca \"strong bench\"."
+  },
+  {
+   "node_id": "debatir_decidir_asuntos_cultura_evitar_delegar",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Ten delante estos asuntos, uno a uno, porque son el inventario de lo que se delega: si a la fiesta se le va a llamar fiesta de Navidad o fiesta de fin de año, si va a haber árbol o no, si va a haber menorá, si se va a servir alcohol en la fiesta, qué se hace cuando llegas un lunes por la mañana y te encuentras ropa interior sobre la mesa de la sala de reuniones, y qué se hace con que una persona del equipo le haya dado a otra una patada en el trasero de las de broma, de esas que se dan entre amigos en el colegio, y la que la recibió esté indignada.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "candelabro"
+   ],
+   "motivo": "El libro dice \"A menorah?\", el candelabro de Janucá frente al árbol de Navidad; \"candelabro\" a secas pierde el dilema."
+  },
+  {
+   "node_id": "responder_primer_aviso_renuncia_subordinado",
+   "campo": "entregable_esperado",
+   "decision": "corregido",
+   "texto_final": "El subordinado escuchado por completo, sin que hayas discutido ni intentado cambiarle la idea en ese primer momento, con el tiempo comprado para preparar la siguiente conversación y el compromiso de seguimiento que hayas hecho ya asumido.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "el mando haya discutido",
+    "que el mando haya hecho"
+   ],
+   "motivo": "El nodo habla de tú y aquí nombra al lector en tercera persona (\"el mando\")."
+  },
+  {
+   "node_id": "responder_primer_aviso_renuncia_subordinado",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando un subordinado valioso y estimado se te acerca y te anuncia, de pasada, que ha decidido dejar la empresa.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "se acerca al mando y anuncia"
+   ],
+   "motivo": "El lector aparece como \"el mando\" en tercera persona."
+  },
+  {
+   "node_id": "reconocer_recompensar_gente_estable",
+   "campo": "resumen_teorico",
+   "decision": "actual",
+   "texto_final": "Para mucha gente estable, ascender no es un premio: la saca de un papel que domina y quiere, o la sube por encima de su nivel de competencia, y a veces acaba yéndose. Reconocerla por otras vías la mantiene contenta y aprovecha lo que sabe: dinero, visibilidad si le gusta, enseñar si tiene aptitud, gratitud en privado si es tímida. Las puntuaciones deben premiar el trabajo pasado, no justificar ascensos futuros, o quien rinde siempre queda por debajo. Rechazar etiquetas como tocar techo sostiene a quienes dan estabilidad al equipo.",
+   "veredicto": "",
+   "tipos": [],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "No se sostiene: el libro es categórico en ese punto (\"when ratings are primarily used to justify future promotions, rather than to recognize past performance, this doesn't happen\", scott cap_06 l.159); el \"often\" es de otra frase (el racionamiento de notas altas)."
+  },
+  {
+   "node_id": "reconocer_recompensar_gente_estable",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Parte de que reconocer no es promover. Para demasiados jefes reconocimiento significa promoción, y en la mayoría de los casos eso es un gran error porque la promoción a menudo mete a estas personas en papeles para los que no encajan tan bien o que no quieren.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_06.md",
+   "lineas": "153",
+   "frase": "Promotion often puts these people in roles they are not as well-suited for or don’t want.",
+   "fragmentos": [],
+   "motivo": "Se pierde el \"often\"."
+  },
+  {
+   "node_id": "reconocer_recompensar_gente_estable",
+   "campo": "pasos_accionables[6]",
+   "decision": "actual",
+   "texto_final": "Nombra experto de referencia a la gente en fase de estrella de rock, una gran vía de reconocimiento además de la puntuación alta, que a menudo significa ponerlos a enseñar a los miembros nuevos del equipo si muestran aptitud para ello.",
+   "veredicto": "",
+   "tipos": [],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "No se sostiene: \"estrella de rock\" es nombre fijado del perfil del método de crecimiento (no es defecto por instrucción)."
+  },
+  {
+   "node_id": "reconocer_recompensar_gente_estable",
+   "campo": "pasos_accionables[7]",
+   "decision": "actual",
+   "texto_final": "Cuenta con la objeción habitual y con su respuesta: los jefes son reacios a usar así a alguien que rinde mucho porque prefieren que haga el trabajo antes que enseñarlo, y eso impide que la organización saque de sus expertos toda la palanca que podría.",
+   "veredicto": "",
+   "tipos": [],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "No se sostiene: \"palanca\" es concepto fijado del pack (no es defecto por instrucción del orquestador)."
+  },
+  {
+   "node_id": "disenar_equipo_plan_anual",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Con el equipo corto de gente puede costar mucho resistirse a quien parece disponible y listo, aunque no sea lo que necesitas, igual que con hambre cualquier cosa de la nevera parece una comida. La salida es planificar antes de que apriete: dibujar el organigrama que quieres a final de año, ver qué habilidades, fuerzas o experiencias faltan y cuáles ya tiene el equipo, y listar los puestos por cubrir. Ese plan se vuelve el marco con el que evalúas candidatos, así no dices que sí al primero que aparece, y como se ajusta cuando algo cambia, siempre tienes clara la forma que debe tener tu equipo.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_08.md",
+   "lineas": "41",
+   "frase": "When you are buckling under the strain of a short-staffed team, it can be very hard to resist someone who seems available and ready to do the work.",
+   "fragmentos": [],
+   "motivo": "El libro dice \"it can be very hard\"."
+  },
+  {
+   "node_id": "disenar_equipo_plan_anual",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Reconoce el peligro que te lleva a hacerlo: cuando estás doblado bajo la tensión de un equipo corto de personal, puede ser muy difícil resistirse a alguien que parece disponible y listo para trabajar, y puedes pasar por alto que no es exactamente lo que quieres, igual que cuando te ruge el estómago y asaltas la nevera y unos pepinillos con kétchup y pan te parecen una comida aceptable.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_08.md",
+   "lineas": "41",
+   "frase": "When you are buckling under the strain of a short-staffed team, it can be very hard to resist someone who seems available and ready to do the work.",
+   "fragmentos": [],
+   "motivo": "Se pierde el \"can\"."
+  },
+  {
+   "node_id": "disenar_equipo_plan_anual",
+   "campo": "condiciones_activacion[0]",
+   "decision": "actual",
+   "texto_final": "Una vez al año, y antes de que el equipo esté corto de gente, porque es entonces cuando cuesta resistirse a quien parece disponible y listo para el trabajo.",
+   "veredicto": "",
+   "tipos": [],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "No se sostiene: el ejercicio es anual por construcción (organigrama a final de año, cuánta gente añadirás \"este año\") y el libro invita a hacer \"something similar\"; \"una vez al año\" no vuelve regla la costumbre de enero."
+  },
+  {
+   "node_id": "comunicar_vision_jugadores_organizacion",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando estás instalando el método de contratación en tu empresa y necesitas que la organización entera sepa adónde va y por qué, y lo oiga en cada comunicación y no una sola vez.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "toca la cuarta de las diez cosas"
+   ],
+   "motivo": "\"La cuarta de las diez cosas\" remite a una lista que el nodo no contiene. \"Y por qué\" se queda: los mensajes del libro dan la razón (\"because we have an A Player in every role\")."
+  },
+  {
+   "node_id": "detectar_metodos_vudu_contratacion",
+   "campo": "pasos_accionables[11]",
+   "decision": "actual",
+   "texto_final": "Rompe los malos hábitos de contratación propios que hayas encontrado, porque hasta entonces un método riguroso de contratación no puede funcionar a su nivel óptimo.",
+   "veredicto": "",
+   "tipos": [],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "No se sostiene: el paso ya es condicional (\"que hayas encontrado\"), no afirma que tengas malos hábitos; el \"chances are\" se refiere a eso y la parte del método óptimo es del libro (smart_who cap_02 l.53)."
+  },
+  {
+   "node_id": "responder_tres_preguntas_vocacion_directiva",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Hazte la primera pregunta: ¿me motiva más lograr un resultado concreto o desempeñar un papel concreto? Es la más importante de las tres, y un sí rotundo aquí puede compensar casi cualquier otra cosa.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_02.md",
+   "lineas": "215",
+   "frase": "This question is more important than any other on the list, and a strong yes can make up for almost anything",
+   "fragmentos": [],
+   "motivo": "El libro dice \"can make up for\"."
+  },
+  {
+   "node_id": "responder_tres_preguntas_vocacion_directiva",
+   "campo": "entregable_esperado",
+   "decision": "corregido",
+   "texto_final": "Las tres preguntas contestadas, y con ellas el contraste hecho entre lo que te atrae de la gestión, o lo que le atrae a quien te lo plantea, y lo que sería de verdad el trabajo de cada día.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "lo que a esa persona le atrae"
+   ],
+   "motivo": "\"Esa persona\" no tiene antecedente en el entregable; se corrige también el \"su trabajo\" de la propuesta del auditor, que reabría la ambigüedad."
+  },
+  {
+   "node_id": "facilitar_despido_tres_cosas",
+   "campo": "entregable_esperado",
+   "decision": "corregido",
+   "texto_final": "Las tres cosas puestas como plan del despido: no esperar demasiado, no decidir en solitario y que la persona te importe de verdad.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "identificadas y encargadas"
+   ],
+   "motivo": "\"Encargadas\" no tiene sentido y las tres cosas no se nombran en el entregable."
+  },
+  {
+   "node_id": "evaluar_directivo_resultados_fortaleza",
+   "campo": "pasos_accionables[7]",
+   "decision": "corregido",
+   "texto_final": "Deja que pase el tiempo, que es lo que siempre revela la verdad: los mejores empleados no suelen aguantar años y años con un jefe que los trata mal o al que no respetan, y un directivo con talento suele enderezar un equipo que rinde mal si se le da poder para cambiar cosas.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_02.md",
+   "lineas": "107",
+   "frase": "The best employees don’t tend to stick around for years and years under a boss who treats them poorly or whom they don’t respect.",
+   "fragmentos": [],
+   "motivo": "El libro dice \"don't tend to\"."
+  },
+  {
+   "node_id": "descubrir_motivacion_sentido_persona",
+   "campo": "titulo_concepto",
+   "decision": "corregido",
+   "texto_final": "Descubrir de dónde saca cada persona el sentido de su trabajo, en vez de darle tú un propósito",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "proveerle"
+   ],
+   "motivo": "\"Proveer un propósito\" calca \"provide purpose\"."
+  },
+  {
+   "node_id": "descubrir_motivacion_sentido_persona",
+   "campo": "pasos_accionables[4]",
+   "decision": "corregido",
+   "texto_final": "No te pases de la raya con la pasión. Es cierto que la gente trabaja mejor cuando encuentra sentido en lo que hace, pero los jefes que leen eso como que su trabajo es dar el propósito tienden a excederse, e insistir en que la gente tenga pasión por su trabajo puede poner presión innecesaria sobre el jefe y sobre el empleado.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz",
+    "calco"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_06.md",
+   "lineas": "101",
+   "frase": "Insisting that people have passion for their job can place unnecessary pressure on both boss and employee.",
+   "fragmentos": [
+    "proveer el propósito"
+   ],
+   "motivo": "El libro dice \"can place\"; \"proveer el propósito\" calca \"provide purpose\"."
+  },
+  {
+   "node_id": "descubrir_motivacion_sentido_persona",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando quieres saber qué mueve a cada persona de tu equipo, y sobre todo cuando te descubres intentando convencerlos de que su trabajo tiene un propósito elevado.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "regionalismo"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "convencerles"
+   ],
+   "motivo": "Leísmo plural de persona, forma peninsular."
+  },
+  {
+   "node_id": "pasar_direccion_directa_indirecta",
+   "campo": "resumen_teorico",
+   "decision": "corregido",
+   "texto_final": "Dirigir de cerca tiene un techo que se mide en horas: con cinco personas puedes conocer el trabajo de cada una, lo que le importa y en qué es buena, pero con treinta, solo las reuniones individuales semanales de media hora suman quince horas, media semana, antes de seguir lo que salga de ellas. Por eso quien dirige un equipo que crece pone directivos debajo. Eso tiene un precio que conviene conocer: quedas más lejos del terreno, respondes por resultados cuyos detalles no ves, y otros deciden y hacen las cosas a su manera. Al principio puede desorientar, pero dar ese poder es una necesidad.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion",
+    "calco"
+   ],
+   "fichero": "fuentes/zhuo_manager/cap_10.md",
+   "lineas": "45-47",
+   "frase": "At first, this can feel disorienting, like you’re losing control. But empowering your leaders is a necessity.",
+   "fragmentos": [
+    "Funciona si aceptas de antemano el precio",
+    "es lo que permite dirigir a escala"
+   ],
+   "motivo": "El libro no pone condición de éxito ni dice que dar poder sea \"lo que permite dirigir a escala\": dice que al principio puede desorientar y que es una necesidad. \"A escala\" calca \"at scale\". Se conserva el \"can\" que la propuesta del auditor perdía (\"desorienta\")."
+  },
+  {
+   "node_id": "pasar_direccion_directa_indirecta",
+   "campo": "pasos_accionables[6]",
+   "decision": "corregido",
+   "texto_final": "Trata el equilibrio entre profundizar en un problema y dar un paso atrás confiando en que otros se ocupen como lo que es: uno de los mayores retos de dirigir un equipo grande.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "dirigir a escala"
+   ],
+   "motivo": "\"A escala\" calca \"at scale\"."
+  },
+  {
+   "node_id": "admitir_pronto_mal_desempenio_cuatro_razones",
+   "campo": "pasos_accionables[2]",
+   "decision": "corregido",
+   "texto_final": "Pregunta primero, o pregúntate: ¿crees que hay gente que rinde por debajo en esta empresa? Cuando esa directiva lo pregunta en sus clases, en general todas las manos se levantan.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Las manos levantadas son de las clases de la directiva del paso 0 y aquí no tenían referente."
+  },
+  {
+   "node_id": "admitir_pronto_mal_desempenio_cuatro_razones",
+   "campo": "pasos_accionables[3]",
+   "decision": "corregido",
+   "texto_final": "Pregunta después: ¿has puesto un solo nombre en una de las dos casillas de mal desempeño? En esas clases, en general solo un par de manos se levantan, alguien se ríe, y todo el mundo está siempre muy deseoso de pasar a otra cosa.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "Misma escena de aula sin referente."
+  },
+  {
+   "node_id": "admitir_pronto_mal_desempenio_cuatro_razones",
+   "campo": "pasos_accionables[5]",
+   "decision": "corregido",
+   "texto_final": "Oblígate a identificar el bajo desempeño pronto, y hazlo por la primera razón: para ser justo con la persona que está fallando. Si identificas el problema pronto le das tiempo a atenderlo, y reduces el golpe si no puede o no quiere atenderlo y acabas teniendo que despedirla.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "justa"
+   ],
+   "motivo": "Lector en femenino heredado de la voz de la autora, mientras el nodo lo trata en masculino (\"ni ante ti mismo\")."
+  },
+  {
+   "node_id": "admitir_pronto_mal_desempenio_cuatro_razones",
+   "campo": "pasos_accionables[6]",
+   "decision": "corregido",
+   "texto_final": "Segunda razón: para ser justo con tu empresa. Si identificas y atiendes los problemas lo bastante pronto, reduces drásticamente el riesgo de que te demanden o la posibilidad de tener que mantener a la persona en nómina durante meses de dolorosa documentación legal.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "justa"
+   ],
+   "motivo": "Lector en femenino, incoherente con el resto del nodo."
+  },
+  {
+   "node_id": "admitir_pronto_mal_desempenio_cuatro_razones",
+   "campo": "pasos_accionables[7]",
+   "decision": "corregido",
+   "texto_final": "Tercera razón: para ser justo contigo mismo. Cuando le das a alguien una buena calificación un trimestre y lo despides el siguiente, se corre la voz y eso socava la confianza de todos los demás, además de que te arriesgas a que te demande la persona despedida. Atender problemas de desempeño consume tiempo y es desagradable, pero lidiar con una demanda consume mucho más tiempo y es mucho más desagradable.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "justa contigo misma"
+   ],
+   "motivo": "Lector en femenino, incoherente con el resto del nodo."
+  },
+  {
+   "node_id": "admitir_pronto_mal_desempenio_cuatro_razones",
+   "campo": "pasos_accionables[8]",
+   "decision": "corregido",
+   "texto_final": "Cuarta razón, y la más importante: para ser justo con la gente que rinde de verdad bien. Tolerar el mal trabajo es injusto con quien hace un trabajo excelente.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "justa"
+   ],
+   "motivo": "Lector en femenino, incoherente con el resto del nodo."
+  },
+  {
+   "node_id": "admitir_pronto_mal_desempenio_cuatro_razones",
+   "campo": "entregable_esperado",
+   "decision": "corregido",
+   "texto_final": "El bajo desempeño admitido pronto, con el nombre puesto en la casilla que le corresponde, y las cuatro razones contestadas para ti en vez de evitadas.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_10.md",
+   "lineas": "177",
+   "frase": "This is a purely mental exercise.",
+   "fragmentos": [
+    "y por escrito"
+   ],
+   "motivo": "El ejercicio es puramente mental; \"por escrito\" no está en el libro."
+  },
+  {
+   "node_id": "pedir_referencias_empleados",
+   "campo": "pasos_accionables[0]",
+   "decision": "corregido",
+   "texto_final": "Añade la captación de candidatos como un resultado en la tarjeta de puntuación de cada persona de tu equipo. Por ejemplo: conseguir cierto número de jugadores A al año que pasen nuestra criba telefónica.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "invencion"
+   ],
+   "fichero": "fuentes/smart_who/cap_03.md",
+   "lineas": "349",
+   "frase": "Try including something along the lines of “Source [number] A Player candidates per year,”",
+   "fragmentos": [
+    "cinco jugadores A"
+   ],
+   "motivo": "La cifra cinco no está en el libro: la fórmula deja el número abierto."
+  },
+  {
+   "node_id": "elegir_palabras_nota_definirlas_empresa_entera",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Pero entrega la nota en palabras y no en números. Podrías usar simplemente números, uno, dos, tres, cuatro, o símbolos, un visto con menos, un visto, un visto con más y un visto con dos más, pero hay quien siente que las palabras humanizan lo que es un proceso potencialmente alienante.",
+   "veredicto": "ANADIDO",
+   "tipos": [
+    "matiz"
+   ],
+   "fichero": "fuentes/scott_radical_candor/cap_14.md",
+   "lineas": "119",
+   "frase": "However, my general feeling is that words humanize what is a potentially alienating process.",
+   "fragmentos": [],
+   "motivo": "Es la impresión de la autora (\"my general feeling\") afirmada como hecho."
+  },
+  {
+   "node_id": "dar_valor_constante_cuatro_publicos",
+   "campo": "pasos_accionables[0]",
+   "decision": "actual",
+   "texto_final": "Parte de esta idea del valor: es lo que la gente percibe que es, y nada más.",
+   "veredicto": "",
+   "tipos": [],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [],
+   "motivo": "No se sostiene: \"Parte de esta idea del valor\" ya la presenta como idea que adoptas, no como definición cerrada, igual que el \"I would suggest\" del libro (gerber cap_11 l.63)."
+  },
+  {
+   "node_id": "dar_valor_constante_cuatro_publicos",
+   "campo": "pasos_accionables[1]",
+   "decision": "corregido",
+   "texto_final": "Hazte la pregunta que todo emprendedor tiene que hacerse: qué podría hacer tu prototipo que no solo diera valor constante a tus clientes, empleados, proveedores y prestamistas, sino que se lo diera muy por encima de lo que esperan.",
+   "veredicto": "VOZ",
+   "tipos": [
+    "calco"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "por encima de sus expectativas más locas"
+   ],
+   "motivo": "Calco de \"beyond their wildest expectations\"."
+  },
+  {
+   "node_id": "dar_valor_constante_cuatro_publicos",
+   "campo": "condiciones_activacion[0]",
+   "decision": "corregido",
+   "texto_final": "Cuando trabajas el prototipo de tu negocio y tienes que decidir qué hará tu modelo para dar valor.",
+   "veredicto": "COHERENCIA",
+   "tipos": [
+    "coherencia"
+   ],
+   "fichero": "",
+   "lineas": "",
+   "frase": "",
+   "fragmentos": [
+    "la regla 1 del"
+   ],
+   "motivo": "\"La regla 1\" remite a una lista que el nodo no contiene."
+  }
+ ]
+}

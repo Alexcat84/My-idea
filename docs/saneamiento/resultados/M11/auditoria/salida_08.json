@@ -1,0 +1,566 @@
+{
+ "lote": "08",
+ "nodos": [
+  {
+   "node_id": "infundir_regularidad_reunion_proceso",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "así que las reuniones quedan asentadas en los calendarios como un sistema de control",
+     "motivo": "El libro dice que de la regularidad un sistema de control de producción, registrado en los calendarios, PUEDE tomar forma; el texto lo da por hecho y además cambia el sujeto: no son las reuniones las que quedan como sistema de control.",
+     "fichero": "fuentes/grove_high_output/cap_05.md",
+     "lineas": "21",
+     "frase": "Hence, a “production control” system, as recorded on various calendars, can take shape, which means that a scheduled meeting will have minimum impact on other things people are doing.",
+     "propuesta": "Una reunión que se repite rinde más cuando es predecible: si todos saben cómo se lleva, qué asuntos de fondo trata y qué hay que sacar de ella, quien la dirige puede agrupar muchas tareas de mando semejantes en una sola sesión y aprovechar para todas la misma preparación, como en una tanda de producción. Esa regularidad permite además empezar a pronosticar cuánto tiempo pide cada clase de trabajo, y de ahí puede tomar forma un sistema de control registrado en los calendarios, con el que una reunión programada apenas estorba el resto de lo que hace la gente."
+    }
+   ]
+  },
+  {
+   "node_id": "revisar_incentivos_trampas_equipo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "matiz",
+     "cita": "Las reglas de incentivo simples suelen dejar daño colateral, porque invitan a cumplir la letra sin el sentido; funciona mejor hablar con franqueza de qué valorar y por qué",
+     "motivo": "El libro habla de reglas APARENTEMENTE simples que rara vez lo son, y dice que hablar con franqueza SUELE ser la mejor opción; el texto quita el 'aparentemente' y afirma como regla que funciona mejor.",
+     "fichero": "fuentes/zhuo_manager/cap_11.md",
+     "lineas": "141",
+     "frase": "These days, I’m wary of seemingly simple incentive rules that promise amazing results. They are rarely simple, and often leave collateral damage. Usually, a better option is to have a frank discussion about what we should value and why.",
+     "propuesta": "Hablar de valores y dar ejemplo no basta si el entorno premia otra cosa: la gente se guía por lo que se celebra y se tolera, no por lo que se declara. Por eso hay que mirar qué acciones o resultados celebra el equipo y dónde traza la raya. Las reglas de incentivo en apariencia simples rara vez lo son y a menudo dejan daño colateral, porque invitan a cumplir la letra sin el sentido; suele funcionar mejor hablar con franqueza de qué valorar y por qué, para que cada uno decida bien. Al comparar lo que dices valorar con cómo actúa tu equipo, ves si el fallo es estructural y cambias el incentivo."
+    }
+   ]
+  },
+  {
+   "node_id": "preferir_inspeccion_proceso_prueba_destructiva",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "vigila sin destruir nada y avisa antes",
+     "motivo": "El libro no dice que la inspección dentro del proceso avise antes que la prueba funcional; dice que permite comprobar la temperatura fácilmente y a menudo, y que el aviso automático sirve para no pagar a alguien por leer el termómetro. 'Y mejor con un aviso' también añade una preferencia que el libro no da.",
+     "fichero": "fuentes/grove_high_output/cap_02.md",
+     "lineas": "67",
+     "frase": "You could, for example, simply insert a thermometer into the water so that the temperature could be easily and frequently checked. To avoid having to pay someone to read the thermometer, you could connect an electronic gadget to it that would set off bells anytime the temperature varied by a degree or two.",
+     "propuesta": "En una operación continua, un parámetro que se sale de especificación sin avisar arruina todo el trabajo en curso, todo lo producido hasta que alguien lo nota y lo que dependía de ello en los pasos de al lado. Probar unidades sueltas detecta el fallo, pero cada unidad probada se tira. Medir el parámetro dentro del proceso permite comprobarlo fácilmente y a menudo sin destruir nada, y un aviso automático cuando varía un grado o dos evita pagar a alguien por leerlo. Por eso, siempre que se pueda, la prueba dentro del proceso gana a la que destruye producto."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "como se pierde todo el pan tostado porque no hay huevos que servir con él",
+     "motivo": "El pan tostado y los huevos no tienen antecedente en el nodo: la fábrica de desayunos que cuece huevos y tuesta pan no se presenta en ningún texto (es la 'fábrica de desayunos' sin antecedente).",
+     "propuesta": "Cuenta también con lo que se desperdicia en los pasos de al lado que dependen de ese: en una fábrica de desayunos que cuece huevos sin parar y los sirve con pan tostado, si falla la cocción se pierde también todo el pan tostado, porque no hay huevos que servir con él."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "coherencia",
+     "cita": "como meter un termómetro en el agua",
+     "motivo": "'El agua' no tiene antecedente en el nodo: el parámetro es genérico y ningún texto dice que se trate del agua de una cocción.",
+     "propuesta": "Considera la inspección dentro del proceso, que puede tomar muchas formas: mide el parámetro en el propio proceso, como meter un termómetro en el agua donde se cuecen los huevos para poder comprobar la temperatura fácilmente y a menudo."
+    }
+   ]
+  },
+  {
+   "node_id": "hacer_opinion_accionable",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "una imagen de a qué se parece y a qué se siente el éxito",
+     "motivo": "Calco de 'what success looks and feels like': 'a qué se siente' no es español natural.",
+     "propuesta": "Que una opinión se oiga no significa que se pueda usar: quien la recibe puede entender el mensaje y aun así no saber qué hacer con él. Una opinión vaga deja que cada uno la lea con su propia definición, y los ejemplos claros que llegan al porqué ayudan a saber a qué te refieres. Aun así hace falta una imagen de cómo se ve y cómo se vive el éxito, porque sin ella puede costar saber a qué aspirar. Sugerir los próximos pasos, dejando claro si es expectativa o sugerencia, ayuda a pasar a la acción, sin dictar siempre lo que sigue, que quita al equipo la ocasión de aprender a resolver solo."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "aclara a qué se parece y a qué se siente el éxito",
+     "motivo": "Calco de 'clarify what success looks and feels like'.",
+     "propuesta": "El segundo consejo: aclara cómo se ve y cómo se vive el éxito, porque aunque tu opinión sea específica, se haya oído y se haya entendido, a la otra persona todavía puede costarle tener una imagen clara de a qué debería aspirar."
+    },
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "calco",
+     "cita": "se sentían demasiado pesadas / no se siente abrumadora",
+     "motivo": "Calco de 'felt too heavy' y 'doesn't feel overwhelming': en español un formulario o una cola no 'se sienten'; resultan o parecen.",
+     "propuesta": "Toma este ejemplo. En una revisión de diseño, un jefe dijo que las propuestas de un formulario de registro resultaban demasiado pesadas. Un diseñador sugirió cambiar el trazo de los recuadros de azul a gris y separarlos un poco. El jefe pensó un momento y dijo: «piensa en las colas de un gran parque de atracciones; en realidad estás esperando en una cola larguísima, pero como vas pasando de una sala pequeña a otra, no resulta abrumadora; eso es a lo que voy». Al instante tuvieron claro cómo mejorarlo: partir el formulario largo en una serie de formularios más pequeños."
+    }
+   ]
+  },
+  {
+   "node_id": "repartir_papeles_directivo_reclutador",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "integrar_peticion_critica_rutina_existente",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "voz",
+     "cita": "solo podemos estar seguros de que un jefe quiere crítica",
+     "motivo": "Primera persona plural del libro ('We can only really be sure'): voz de libro, no la voz de la casa en tú.",
+     "propuesta": "Cuenta con la consecuencia que sale de ahí: tu equipo solo puede estar seguro de que quieres crítica si tienes la costumbre de pedirla con regularidad."
+    }
+   ]
+  },
+  {
+   "node_id": "construir_estrategia_gente_cuatro_componentes",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "calco",
+     "cita": "depende de cuánto compra tu juego",
+     "motivo": "Calco de 'buy into your game'; además 'tu juego' aparece sin decir que es el juego que propone tu negocio.",
+     "propuesta": "Esta estrategia funciona porque el grado en que tu gente hace lo que quieres depende de cuánto se suma al juego que propone tu negocio, y eso no depende de ellos sino de lo bien que se lo comuniques desde el inicio de la relación, no después. Los cuatro componentes le dan a esa comunicación una secuencia concreta: empiezas por tu Objetivo Principal y tu Objetivo Estratégico, sigues con la Estrategia Organizativa, con su organigrama y los contratos de cada puesto, y terminas con los Manuales de Operaciones que definen el trabajo de tu gente."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "Cuando ya tienes tu Objetivo Principal y tu Objetivo Estratégico escritos y tu Estrategia Organizativa construida, y necesitas comunicarle esa idea a tu gente para que compre el juego que le propones.",
+     "motivo": "La condición da por hechos tres de los cuatro componentes que los pasos mandan arrancar y construir; 'esa idea' no tiene antecedente en la condición; y 'compre el juego' es calco de 'buy into your game'.",
+     "propuesta": "Cuando necesitas comunicarle a tu gente la idea de tu negocio desde el inicio de la relación, para que se sume al juego que le propones."
+    }
+   ]
+  },
+  {
+   "node_id": "inspeccionar_reparto_informacion_notas_jefe",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "los treinta o cuarenta mensajes navales que llegaban al barco cada día",
+     "motivo": "El libro da la cifra como aproximada ('there might be thirty or forty'); el texto la fija.",
+     "fichero": "fuentes/marquet_turn_the_ship/cap_03.md",
+     "lineas": "45",
+     "frase": "In those days, we took all the naval messages that came to the ship each day—there might be thirty or forty—printed them out, and routed them on a clipboard with a routing stamp.",
+     "propuesta": "Toma el canal por el que entra la información del día y míralo con el responsable delante. En un submarino era el tablero de mensajes: los mensajes navales que llegaban al barco cada día, que podían ser treinta o cuarenta, impresos y repartidos en una tablilla con un sello de reparto que tenía un hueco para que cada uno pusiera sus iniciales al haberlos visto."
+    },
+    {
+     "campo": "pasos_accionables[3]",
+     "tipo": "invencion",
+     "cita": "En aquel caso había dos: mete este cambio de mensaje en la publicación, y quiero un informe de esto para el viernes.",
+     "motivo": "El libro dice que MUCHOS mensajes llevaban notas, y da estas dos como ejemplos ('things like'); el texto inventa que había dos.",
+     "fichero": "fuentes/marquet_turn_the_ship/cap_03.md",
+     "lineas": "49",
+     "frase": "Many of the messages had notes on them from one or both: things like “Enter this message change in the publication,” or “I want a report back on this by Friday.”",
+     "propuesta": "Mira las notas que el jefe ha dejado escritas en lo que ya pasó por sus manos. En aquel caso muchos mensajes llevaban notas como estas: mete este cambio de mensaje en la publicación, o quiero un informe de esto para el viernes."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "matiz",
+     "cita": "En aquel caso fue que si algo no pasa y un equipo de inspección mira los registros",
+     "motivo": "Se pierde la reserva del subordinado ('I may be wrong'): lo da como hecho y no como su lectura, que el resumen sí conserva.",
+     "fichero": "fuentes/marquet_turn_the_ship/cap_03.md",
+     "lineas": "53",
+     "frase": "“Well, look, I may be wrong, but let’s say something doesn’t happen—some report does not get sent or a school date changes and we don’t catch it—and some inspection team is looking at the records.",
+     "propuesta": "Quédate con el motivo que el subordinado atribuye al jefe. En aquel caso, admitiendo que podía equivocarse, fue que si algo no pasa y un equipo de inspección mira los registros, el comandante puede decir yo le dije que lo hiciera, y saca buena nota por estar muy implicado y por tener sus huellas por todas partes."
+    }
+   ]
+  },
+  {
+   "node_id": "construir_equipo_perspectivas_diversas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "Cuenta con que vas a chocar al principio.",
+     "motivo": "Anécdota vuelta regla: es la experiencia de la autora ('At first, I found myself clashing with the new managers'), y el texto te la anuncia como lo que te va a pasar a ti.",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "187",
+     "frase": "At first, I found myself clashing with the new managers—we disagreed on hiring strategy, how to run a critique, what an A-plus designer looked like, and more.",
+     "propuesta": "Cuenta con que puedes chocar al principio. En un equipo que crecía, cuando la jefa empezó a contratar liderazgo de fuera, una directiva veía presentación tras presentación de candidatos de empresas de renombre explicando procesos de diseño elaborados, perfiles de usuario intrincados, investigaciones de meses, jornadas de generación de ideas con cientos de notas adhesivas, y no entendía por qué no meterse en una sala con unos ingenieros y construir y diseñar un producto en unas semanas. Con los nuevos directivos discrepó sobre estrategia de contratación, sobre cómo llevar una crítica y sobre cómo es un diseñador sobresaliente."
+    }
+   ]
+  },
+  {
+   "node_id": "cultivar_relacion_talento_largo_plazo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "Cuenta con que va a pasar, porque es casi un tópico",
+     "motivo": "El libro cuenta la experiencia de la autora, que pasa tan a menudo que es casi un tópico; el texto lo vuelve certeza ('va a pasar').",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "261-263",
+     "frase": "This happens so often that it’s practically a cliché: I’m actively recruiting for an amazing leader.",
+     "propuesta": "Cuenta con que pasa a menudo, tanto que es casi un tópico: reclutas a un líder que te impresiona, te imaginas atacando problemas juntos, le das la oferta y llega la llamada temida diciendo que ha decidido hacer otra cosa."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz",
+     "cita": "Cuenta también con el final feliz: meses o años después llega un correo inesperado",
+     "motivo": "Anécdota vuelta regla: es lo que le pasó a la autora con una candidata ('this story has a happy ending'); el texto te promete ese final.",
+     "fichero": "fuentes/zhuo_manager/cap_08.md",
+     "lineas": "265",
+     "frase": "But, see, this story has a happy ending. Because months or years down the road, I get an email out of the blue. It’s from the candidate.",
+     "propuesta": "Cuenta también con que esa historia puede tener final feliz: a una directiva, meses o años después, le llegó un correo inesperado de esa misma persona diciendo que la situación había cambiado, que ya estaba lista para algo nuevo, y preguntando si había oportunidades en su equipo."
+    }
+   ]
+  },
+  {
+   "node_id": "ejercer_poder_posicion_etapa_decision_clara",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[5]",
+     "tipo": "matiz",
+     "cita": "porque existe reticencia a ejercer el poder de posición de forma deliberada y explícita",
+     "motivo": "El libro dice que se TIENDE a ser reticente ('tend to be reluctant'); 'existe reticencia' lo vuelve un hecho general.",
+     "fichero": "fuentes/grove_high_output/cap_06.md",
+     "lineas": "61",
+     "frase": "We Americans tend to be reluctant to exercise position power deliberately and explicitly—it is just “not nice” to give orders.",
+     "propuesta": "Cuenta con que esto no suele ser fácil, porque se tiende a ser reticente a ejercer el poder de posición de forma deliberada y explícita, ya que dar órdenes parece poco amable."
+    },
+    {
+     "campo": "pasos_accionables[6]",
+     "tipo": "matiz",
+     "cita": "alarga la primera fase del proceso",
+     "motivo": "El libro dice que esa reticencia PUEDE alargar la discusión ('can prolong'); el texto lo afirma como consecuencia segura.",
+     "fichero": "fuentes/grove_high_output/cap_06.md",
+     "lineas": "61",
+     "frase": "Such reluctance on the part of the senior manager can prolong the first phase of the decision-making process—the time of free discussion—past the optimum point, and the decision will be put off.",
+     "propuesta": "Vigila la consecuencia de esa reticencia: puede alargar la primera fase del proceso, que es el tiempo de discusión libre, más allá del punto óptimo, y la decisión se aplaza."
+    }
+   ]
+  },
+  {
+   "node_id": "reconocer_decision_dificil_valores",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "resumen_teorico",
+     "tipo": "invencion",
+     "cita": "si la conducta correcta pasa sin que nadie la note, la gente aprende que no cuenta / paga un coste real / hace visible que ese coste vale la pena y deja claro qué conducta se valora de verdad",
+     "motivo": "Causas y efectos que el libro no dice: las líneas solo mandan reconocerlo, admitir que fue difícil y dar las gracias; ni que la gente aprenda que no cuenta, ni que se pague un coste, ni que se haga visible que vale la pena.",
+     "fichero": "fuentes/zhuo_manager/cap_11.md",
+     "lineas": "127, 157",
+     "frase": "The final piece is ensuring that your environment rewards people who behave according to your team’s values ... When a report does something difficult that is in the spirit of your team’s values ... recognize them for it. Acknowledge that it was hard, and thank them for doing the right thing.",
+     "propuesta": "Hablar de valores no basta: la pieza final es asegurarte de que tu entorno premia a quien se comporta según los valores del equipo. Por eso, cuando una persona a tu cargo hace algo difícil en el espíritu de esos valores, como renunciar a una venta lucrativa por reparos éticos, despedir a quien rinde de maravilla pero crea un ambiente de trabajo tóxico, o admitir abiertamente un error, toca reconocérselo. Admitir que fue difícil y darle las gracias por hacer lo correcto es la forma de que el entorno premie esa conducta."
+    }
+   ]
+  },
+  {
+   "node_id": "canalizar_interrupciones_cartel_hora_oficina",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "coherencia",
+     "cita": "como en el tercer punto de la lista anterior",
+     "motivo": "Referente que no existe: el nodo no tiene ninguna lista anterior con un tercer punto, y el libro tampoco lo dice en ese pasaje.",
+     "propuesta": "Intenta en todo caso obligar a los que te interrumpen a menudo a tomar una decisión activa sobre si su asunto puede esperar."
+    },
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz",
+     "cita": "Obliga en todo caso a los que te interrumpen a menudo",
+     "motivo": "El libro dice que hay que INTENTAR obligarlos ('should try to force'); el texto lo da como orden cumplida.",
+     "fichero": "fuentes/grove_high_output/cap_04.md",
+     "lineas": "321",
+     "frase": "In any case, a manager should try to force his frequent interrupters to make an active decision about whether an issue can wait.",
+     "propuesta": "Intenta en todo caso obligar a los que te interrumpen a menudo a tomar una decisión activa sobre si su asunto puede esperar."
+    },
+    {
+     "campo": "pasos_accionables[7]",
+     "tipo": "calco",
+     "cita": "las interrupciones que te plagan",
+     "motivo": "Calco de 'the interruptions that plague you'.",
+     "propuesta": "Vuelve regular lo que antes era irregular, que es un principio de producción fundamental, y afronta así las interrupciones que te acosan."
+    }
+   ]
+  },
+  {
+   "node_id": "conducir_reuniones_salto_nivel_diez_reglas",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[17]",
+     "tipo": "coherencia",
+     "cita": "preguntando qué está haciendo bien tu jefe",
+     "motivo": "Sujeto ambiguo: el paso te habla a ti (jefe de jefes) y 'tu jefe' se lee como tu propio jefe, no el jefe de los que están en la sala. Además se pierde el 'por lo general' del libro ('Generally, it's easiest').",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "405",
+     "frase": "Generally, it’s easiest to start with praise to get people talking, “What is your manager doing well?”",
+     "propuesta": "Empieza por el elogio, que por lo general es lo más fácil para que la gente hable, preguntando qué está haciendo bien su jefe; luego qué podría estar haciendo mejor; y luego qué es lo que de verdad es un asco."
+    },
+    {
+     "campo": "pasos_accionables[19]",
+     "tipo": "calco",
+     "cita": "solo estás fracasando si todo es dulzura y luz",
+     "motivo": "Calco de 'sweetness and light'.",
+     "propuesta": "Y si te llegan muchas quejas, recuérdate que eso es bueno y no malo: solo estás fracasando si todo es color de rosa."
+    },
+    {
+     "campo": "pasos_accionables[20]",
+     "tipo": "matiz",
+     "cita": "casi siempre se plantean muchos más problemas de los que se van a arreglar",
+     "motivo": "El libro dice 'a menudo' ('often'); 'casi siempre' lo refuerza.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "407",
+     "frase": "Once things get flowing, remind people that often far more issues will get raised than will get fixed.",
+     "propuesta": "Prioriza los asuntos: cuando la cosa fluya, recuérdale a la gente que a menudo se plantean muchos más problemas de los que se van a arreglar, y que la meta es mejorar las cosas, porque dejarlas perfectas no es realista."
+    },
+    {
+     "campo": "pasos_accionables[28]",
+     "tipo": "matiz",
+     "cita": "en casos extremos quita al jefe en cuestión del equipo",
+     "motivo": "El libro lo deja como opción ('you may want to remove'); el texto lo manda.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "411",
+     "frase": "In extreme cases, you may want to remove the manager in question from the team—either to return to an individual contributor role, to manage a different team, or to be fired.",
+     "propuesta": "Si la gente cree que no se hizo ningún cambio, o que la reunión no sirvió de nada, tómatelo muy en serio, y en casos extremos puede que quieras quitar al jefe en cuestión del equipo, devolviéndolo a un puesto sin gente a cargo, poniéndolo al frente de otro equipo o despidiéndolo."
+    },
+    {
+     "campo": "pasos_accionables[29]",
+     "tipo": "calco",
+     "cita": "que es lo que hace que el proceso escale",
+     "motivo": "'Escalar' por crecer, calco de 'scales'.",
+     "propuesta": "Ten estas reuniones una vez al año para cada persona a tu cargo, y si diriges jefes, insiste en que hagan lo mismo, que es lo que permite que el proceso crezca sin cargarlo todo sobre ti."
+    },
+    {
+     "campo": "pasos_accionables[30]",
+     "tipo": "matiz",
+     "cita": "y se llega a la proliferación de saltos de nivel",
+     "motivo": "El libro dice que PUEDES llegar a la proliferación ('you can get'); el texto la da por segura. 'Que tiene nombre propio' tampoco está en el libro, que la llama el mayor problema.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "413",
+     "frase": "The biggest problem with skip level meetings is that when they start going well, everybody wants them all the time, and you can get skip level proliferation.",
+     "propuesta": "Cuenta con el mayor problema de estas reuniones: cuando empiezan a ir bien todo el mundo las quiere todo el tiempo, y puedes llegar a la proliferación de saltos de nivel, que consumen mucha energía y atención y pueden acabar quemándote si tienes que hacer demasiadas."
+    }
+   ]
+  },
+  {
+   "node_id": "exigir_critica_jefe_reticente",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[0]",
+     "tipo": "matiz",
+     "cita": "es lo útil cuando te preocupa que dude en criticar tu trabajo",
+     "motivo": "El libro dice que PUEDE ayudar ('it can be helpful'); el texto lo vuelve la respuesta segura.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "297",
+     "frase": "if you’re a woman and worried that your male boss is hesitant to criticize your work, it can be helpful to make him aware that you want more feedback.",
+     "propuesta": "Hazle saber a tu jefe que quieres más opinión suya: puede ayudarte cuando te preocupa que dude en criticar tu trabajo."
+    },
+    {
+     "campo": "entregable_esperado",
+     "tipo": "invencion",
+     "cita": "y no la sensación de que todo va bien porque nadie dice lo contrario",
+     "motivo": "Contenido que no está en las líneas ni en los pasos: el pasaje no habla de la sensación de que todo va bien.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "297-299",
+     "frase": "Do whatever it takes to drag a candid assessment out of your male colleagues or boss.",
+     "propuesta": "Una valoración franca sacada de tu jefe."
+    }
+   ]
+  },
+  {
+   "node_id": "desplegar_plan_orden_operaciones_franqueza_radical",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "regionalismo",
+     "cita": "cuando cojas la costumbre",
+     "motivo": "'Coger' es forma de una sola región.",
+     "propuesta": "Cuenta también con que al principio se te va a hacer raro, y con que cuando tomes la costumbre lo raro será no hacerlo: nunca dejarás de recibir guía, igual que nunca dejarás de tener que beber agua o lavarte los dientes."
+    },
+    {
+     "campo": "pasos_accionables[18]",
+     "tipo": "coherencia",
+     "cita": "otra como agresión odiosa",
+     "motivo": "El nombre decidido del método es 'agresividad molesta'; 'agresión odiosa' es otro nombre para el mismo cuadrante y rompe la coherencia con los demás nodos.",
+     "propuesta": "Y asegúrate de medir tu guía, porque puede pasar esto: puedes creerte radicalmente franco y que una persona no haya oído ninguna crítica, otra la haya oído como empatía ruinosa y otra como agresividad molesta. Tienes que ajustar para cada persona, y no basta con ser consciente de ti mismo: hay que serlo también de la relación y de la cultura."
+    },
+    {
+     "campo": "pasos_accionables[25]",
+     "tipo": "calco",
+     "cita": "o de escalada limpia",
+     "motivo": "Calco de 'clean escalation': en español 'escalada limpia' no se entiende como llevar un desacuerdo al jefe juntos y de frente.",
+     "propuesta": "Establece en tu equipo una norma de nada de puñaladas por la espalda, o de llevar los desacuerdos al jefe juntos y de frente, y explícala: no vas a permitir que una persona venga a hablarte de otra."
+    },
+    {
+     "campo": "pasos_accionables[28]",
+     "tipo": "calco",
+     "cita": "Pelea la multiplicación de reuniones",
+     "motivo": "Calco de 'Fight meeting proliferation': 'pelear' no lleva objeto directo así en español.",
+     "propuesta": "Combate la multiplicación de reuniones: asegúrate de que no te están sobreprogramando, y piensa muy a conciencia qué estás haciendo que puedas dejar de hacer."
+    },
+    {
+     "campo": "pasos_accionables[33]",
+     "tipo": "calco",
+     "cita": "te dará más palanca",
+     "motivo": "Calco de 'provide you with more leverage'; además 'palanca' en parte de América es tener enchufe.",
+     "propuesta": "Vuelve otra vez a la guía, ahora entre ellos: pide a tu equipo que empiece a medirse la guía unos a otros. La razón: son más que tú, así que cualquier cosa que consigas para que se den entre ellos más elogio y más crítica radicalmente francos reforzará la cultura y te dará más alcance que toda la guía que puedas dar o recibir tú en persona."
+    },
+    {
+     "campo": "pasos_accionables[38]",
+     "tipo": "coherencia",
+     "cita": "vuelve al paso uno",
+     "motivo": "El paso uno del nodo es 'Parte de esta pregunta...', no la primera etapa del plan; el referente no calza.",
+     "propuesta": "Si tienes la sensación de que las cosas siguen sin ir bien y de que hay mucho escepticismo en el equipo, vuelve a la primera etapa: compartir tus historias."
+    }
+   ]
+  },
+  {
+   "node_id": "preparar_respuestas_estandar_interrupciones_repetidas",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "entregar_problema_dificil_reporte",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "regionalismo",
+     "cita": "para irte a por un aperitivo, no dejes a esa persona apañárselas sola",
+     "motivo": "'Ir a por' y 'apañárselas' son formas de una sola región.",
+     "propuesta": "No confundas delegar con marcharte. Igual que no tirarías a un nadador novato a la parte honda de la piscina para irte a buscar algo de picar, no dejes a esa persona arreglárselas sola: ella lleva el timón, pero tú estás con ella en el barco, animándola, ayudándola con lo que necesite de ti y entrenándola para que llegue a su destino sin sobresaltos."
+    }
+   ]
+  },
+  {
+   "node_id": "minimizar_impuesto_colaboracion_equipo",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "dimensionar_plantilla_administrativa_pronostico",
+   "limpio": true,
+   "defectos": []
+  },
+  {
+   "node_id": "construir_apoyo_equipo_directivo_metodo",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "coherencia",
+     "cita": "la otra sede donde construir este apoyo",
+     "motivo": "'Sede' (lugar, oficina) no corresponde: los pares son el otro grupo, no un sitio.",
+     "propuesta": "Haz lo mismo con tus pares, el otro frente donde construir este apoyo junto al equipo directivo."
+    },
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "toca la tercera de las diez cosas",
+     "motivo": "Referente que no existe en el nodo: ningún texto presenta una lista de diez cosas.",
+     "propuesta": "Cuando estás instalando el método de contratación en tu empresa y necesitas que el equipo directivo o tus pares no solo lo consientan, sino que lo empujen contigo."
+    }
+   ]
+  },
+  {
+   "node_id": "dar_elogio_disciplina_igual_critica",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[1]",
+     "tipo": "matiz",
+     "cita": "Cuenta con la razón por la que la gente se resiste a elogiar",
+     "motivo": "El libro dice que A VECES la gente se resiste por eso ('Sometimes people are reluctant'); el texto lo da como la razón general.",
+     "fichero": "fuentes/scott_radical_candor/cap_13.md",
+     "lineas": "267",
+     "frase": "SOMETIMES PEOPLE ARE reluctant to praise others because it’s much easier to look “smart” when criticizing them.",
+     "propuesta": "Cuenta con una razón por la que a veces la gente se resiste a elogiar, dicha sin rodeos: es mucho más fácil parecer listo criticando. Y la meta de la guía es ayudar a los demás a tener éxito, no demostrar lo listo que eres tú."
+    },
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "calco",
+     "cita": "tira a quien tuvo éxito debajo de un autobús lleno de compañeros",
+     "motivo": "Calco del modismo inglés 'throw under the bus'.",
+     "propuesta": "No uses el elogio como arma, que es el otro mal uso: decir que fulano es estupendo y preguntar qué les pasa a los demás, como si fueran unos perdedores, deja a quien tuvo éxito a merced de un montón de compañeros que ahora le guardan rencor, y no vas a conseguir que el éxito se repita."
+    },
+    {
+     "campo": "pasos_accionables[4]",
+     "tipo": "calco",
+     "cita": "Pon disciplina de verdad en el foco sobre el elogio",
+     "motivo": "Traslado literal de 'The focus on praise requires real discipline': la frase no es española.",
+     "propuesta": "Centrarte en el elogio pide disciplina de verdad, y cuenta con por qué cuesta: después del trabajo duro y doloroso de pedir crítica, apetece dar algo de la tuya, y probablemente llevas un tiempo guardándote alguna."
+    },
+    {
+     "campo": "pasos_accionables[11]",
+     "tipo": "matiz",
+     "cita": "que es justo lo contrario del efecto que buscabas",
+     "motivo": "El libro dice 'the opposite effect than you may have intended': el efecto que QUIZÁ buscabas.",
+     "fichero": "fuentes/scott_radical_candor/cap_13.md",
+     "lineas": "279",
+     "frase": "An empty “great job!” can sound condescending and be demoralizing, exactly the opposite effect than you may have intended.",
+     "propuesta": "Cuenta con lo que pasa cuando eres vago con el elogio: es igual de probable que dejes a la persona sintiéndose tratada con condescendencia, y en cualquier caso la positividad vaga tiene muy poco impacto a largo plazo. Un «¡buen trabajo!» vacío puede sonar condescendiente y desmoralizar, que es justo lo contrario del efecto que quizá buscabas."
+    }
+   ]
+  },
+  {
+   "node_id": "vender_final_entrevista",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "condiciones_activacion[0]",
+     "tipo": "coherencia",
+     "cita": "Es la segunda de las cinco olas de la venta",
+     "motivo": "Referente que no existe en el nodo: ningún texto presenta cinco olas (ni 'el método' al que alude 'las entrevistas del método').",
+     "propuesta": "Cuando estás conduciendo cualquiera de tus entrevistas de selección y llegas al tramo final de la sesión, siempre que sigas viendo potencial en el candidato."
+    }
+   ]
+  },
+  {
+   "node_id": "compartir_opinion_conductual_regularidad",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[2]",
+     "tipo": "matiz",
+     "cita": "conectando los puntos entre múltiples ejemplos ayudas a la gente a entender",
+     "motivo": "El libro dice que PUEDES ayudar ('you can help'); el texto lo da por conseguido.",
+     "fichero": "fuentes/zhuo_manager/cap_05.md",
+     "lineas": "81",
+     "frase": "By connecting the dots across multiple examples, you can help people understand how their unique interests, personalities, and habits affect their ability to have impact.",
+     "propuesta": "Cuenta con para qué sirve: conectando los puntos entre múltiples ejemplos puedes ayudar a la gente a entender cómo sus intereses, su personalidad y sus hábitos afectan a su capacidad de tener impacto, que es la personalización y la profundidad que a la opinión específica de tarea le faltan."
+    }
+   ]
+  },
+  {
+   "node_id": "fomentar_guia_reciproca_companieros",
+   "limpio": false,
+   "defectos": [
+    {
+     "campo": "pasos_accionables[8]",
+     "tipo": "matiz",
+     "cita": "Cuenta con lo que pasa la primera vez: silencio.",
+     "motivo": "Anécdota vuelta regla: el silencio es lo que pasó en dos empresas concretas ('When we first started doing this at both Juice and Google, there was silence'); el texto te lo anuncia como lo que te va a pasar.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "373",
+     "frase": "When we first started doing this at both Juice and Google, there was silence.",
+     "propuesta": "Cuenta con que la primera vez puede haber silencio, como pasó en dos empresas. Para romperlo, pon un pequeño premio en dinero sobre la cabeza del peluche, para que la gente pueda fingir que no se suma al peluche sino que va por el dinero."
+    },
+    {
+     "campo": "pasos_accionables[9]",
+     "tipo": "matiz",
+     "cita": "Cuenta con las dos cosas que consigue esa práctica",
+     "motivo": "Anécdota vuelta regla: el libro cuenta lo que esa práctica consiguió en esos equipos ('This practice not only made it safe...'), y el propio pasaje dice que no funciona en todas partes; el texto lo promete como efecto general.",
+     "fichero": "fuentes/scott_radical_candor/cap_09.md",
+     "lineas": "373-375",
+     "frase": "This practice not only made it safe to make mistakes—and therefore to innovate—it also speeded up resolution to problems that otherwise would have festered. ... Of course, that approach won’t work everywhere.",
+     "propuesta": "Ten presente lo que esa práctica consiguió en esos equipos: hizo seguro equivocarse, y por tanto innovar, y aceleró la resolución de problemas que, si no, se habrían enquistado."
+    },
+    {
+     "campo": "pasos_accionables[10]",
+     "tipo": "calco",
+     "cita": "en un sitio de medir dos veces y cortar una",
+     "motivo": "Calco del modismo 'measure twice, cut once'.",
+     "propuesta": "Comprueba antes si esa práctica encaja donde estás, porque tiene un límite: en una empresa donde todo se comprueba con cuidado antes de lanzar habría sido publicidad engañosa, y en sectores como la aviación bromear sobre los errores sería sencillamente inapropiado."
+    }
+   ]
+  }
+ ]
+}
