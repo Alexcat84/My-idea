@@ -84,10 +84,14 @@ def main():
         ("Cobertura del componente principal >= 99%", r["cobertura_pct"] >= 99.0, r["cobertura_pct"]),
         ("Alcanzabilidad dirigida >= %s%%" % gate.MIN_DIRECTED_REACHABILITY_PCT,
          r["alcance_pct"] >= gate.MIN_DIRECTED_REACHABILITY_PCT, r["alcance_pct"]),
-        ("Mundo %s: 100%% alcanzable desde sus puertas" % dominio, r["mundo_alcance_pct"] == 100.0,
+        ("Mundo %s: 100%% alcanzable desde todas las semillas del catalogo (puentes incluidos)" % dominio,
+         r["mundo_alcance_pct"] == 100.0,
          "%s%% (%d nodos; fuera %s)" % (r["mundo_alcance_pct"], r["mundo_nodos"], r["mundo_no_alcanzados"][:10])),
         ("Mundo %s: ningun nodo aislado" % dominio, not r["mundo_aislados"], r["mundo_aislados"][:10]),
     ]
+    solo = medir(tejer(catalogo, pack, puentes), [x for x in semillas_pack if x in pack], dominio)
+    print("  (informativo) desde las %d puertas del propio mundo, sin puentes: %s%% (%d fuera)"
+          % (len(semillas_pack), solo["mundo_alcance_pct"], len(solo["mundo_no_alcanzados"])))
     print("SECO DEL GATE 0 DE GRAFO, %s tejido en memoria sobre el catalogo (%d nodos activos, %d puentes, %d semillas)"
           % (dominio, r["nodos"], len(puentes), len(semillas)))
     for nombre, ok, valor in checks:

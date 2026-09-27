@@ -500,3 +500,22 @@ de 2.107; suite python 39 de 39. El integrador no pudo cerrar solo (ficha `integ
 corre el Gate 0 antes de que exista el indice, y tampoco conoce `scripts/fuentes_internas.py`; se siguio el remedio
 que el propio Gate escribe. Costes: Voyage ~98 mil tokens por cada embebido del candidato y ~632 mil por cada indice
 completo (voyage-4-lite, dentro de la franja gratuita); cache de preguntas $0,4214 mas $0,0142 de las regeneraciones.
+
+## PASO 8 (28 sep 2026): comprobaciones
+
+**Gerber y Marquet desde las puertas del propio mundo** (encargo del fundador). Con las puertas del paso 5 no se
+cumplia: el 100 por ciento de alcanzabilidad se habia medido, como Gate 0, desde todas las semillas del catalogo con
+los puentes dentro, y desde las 17 puertas del mundo solas Gerber daba 2 de 21 (sus 19 nodos colgaban del puente
+nuevo `tres_preguntas_carrera` -> `hacer_trabajo_futuro_imaginar_negocio`) y Marquet 18 de 19
+(`resistir_dar_solucion_clasificar_decision_urgencia` colgaba de `repartir_decision_cercanos_hechos`, extremo de otro
+puente). Entran dos puertas, las dos con condicion precisa por el criterio del fundador, verificadas a ciegas con
+trampas sin marca (condicion y pregunta, 4 de 4 trampas cazadas en dos rondas): `hacer_trabajo_futuro_imaginar_negocio`
+(ideacion) y `repartir_decision_cercanos_hechos` (ejecucion). Sus preguntas generadas salian flojas (no cubrian los
+tres candidatos) y se escribieron a mano leyendo cada nodo, como en AUD-09 H13; la verificacion las dio por
+adecuadas. **19 puertas**: ideacion 2, validacion 3, planificacion 5, ejecucion 9. Resultado: Gerber 21 de 21, Marquet
+19 de 19 desde las puertas del mundo. Quedan 19 nodos del mundo (10 de Scott, 7 de Zhuo, 1 de Smart y 1 de Grove) que solo se alcanzan entrando por un puente desde el nucleo; el seco lo informa aparte
+(`scripts/seco_gate0_pack.py`: 95,91 por ciento desde las 19 puertas solas, 100 por ciento con los puentes).
+
+**Gate 0 y suites**: Gate 0 OK, seco de grafo OK, motor, tsc y web en verde en el guardian, rumbos sin deriva.
+**Pendiente del fundador**: aplicar la migracion 048 (sin ella la base rechaza sesiones, planes y desbloqueos de
+`primer_equipo`), despues el vuelo del mundo y su recorrido en el preview.
