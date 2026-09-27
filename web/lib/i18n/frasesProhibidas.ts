@@ -208,6 +208,44 @@ export const REGLAS_VOZ: readonly ReglaVoz[] = [
     },
     sinEquivalente: {},
   },
+  {
+    id: "vozDeLibro",
+    origen:
+      "BANCO §5 y AGENTS.md (ningún libro ni autor llega al cliente), extendida el 28 sep 2026 por el fundador: tampoco \"el libro\", \"el texto\" ni \"el autor\"",
+    que: "hablarle al cliente con voz de libro: el libro, el texto (como fuente), el autor, el capítulo",
+    porIdioma: {
+      es: [
+        palabra("(?:el|del|al|este|ese|propio|mismo) libro(?! de texto| abierto)"),
+        palabra("(?:el|del|al|la|de la|los|las) autor(?:a|es|as)?"),
+        palabra("(?:seg[uú]n|como dice|lo que dice) el texto"),
+        palabra("el texto (?:lo |la |las |los |le |les |no )?(?:dice|pone|nombra|enumera|escribe|cuenta|llama|describe|avisa|hace|propone|atribuye|define|recoge|da|trae|manda|pide|admite|advierte|recomienda|sugiere|abre|cierra|usa|deja|insiste|lista|habla)"),
+        palabra("(?:del|propio) texto(?! (?:de|legal|lineal|completo|largo|plano))"),
+        palabra("(?:el|del|este|ese|mismo|propio) cap[ií]tulo"),
+      ],
+      en: [palabra("(?:the|this) (?:book|author)|in the book|the text (?:says|puts|calls|names|lists)")],
+      pt: [palabra("(?:o|do|no|este|esse) livro|(?:o|a|do|da) autora?")],
+      // "le livre" también es el verbo livrer ("on le livre"): solo las formas sin esa lectura.
+      fr: [palabra(`(?:du|ce|dans le) livre|l${AP}auteur(?:e)?`)],
+      de: [palabra("(?:das|dem|des|im|dieses|diesem) Buch(?:es)?|(?:der|die|den|des) Autor(?:in)?")],
+      it: [palabra(`(?:il|del|nel|questo) libro|l${AP}autore|l${AP}autrice`)],
+      ja: [/本書|この本|著者/u],
+      zh: [/本书|书中|(?<![工合创])作者/u], // 工作者 (trabajador), 合作者 (colaborador) y 创作者 (creador) no son un autor
+      ko: [/이 책|책에서|저자/u],
+      ar: [/الكتاب(?!ة)|المؤلف/u], // الكتابة (la escritura) no es el libro
+      hi: [/पुस्तक|किताब|लेखक/u],
+    },
+    sinEquivalente: {},
+  },
+  {
+    id: "marcasInternas",
+    origen:
+      "BANCO §5 (la mecánica interna es confidencial), extendida el 28 sep 2026 por el fundador: ninguna ruta de archivo, número de línea ni marca de auditoría",
+    que: "rutas de archivo, números de línea y marcas de auditoría de la extracción",
+    porIdioma: LOS_ONCE([
+      /fuentes\/[a-z_]+|\bcap_\d+|[a-z0-9_]\.md\b|UNIDAD DE ORIGEN|RELECTURA DE FIDELIDAD|CORRECCION DECLARADA|VA MARCADO COMO|\bD\.\d{1,3}\b|\bl[ií]neas? \d+(?: a \d+)?\b|\bsed -n\b|\bgrep -r/iu,
+    ]),
+    sinEquivalente: {},
+  },
 ];
 
 export type FaltaVoz = { regla: string; texto: string };

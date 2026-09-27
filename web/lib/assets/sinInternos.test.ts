@@ -22,6 +22,8 @@ const ASSETS = path.resolve(__dirname);
 const CLAVES_INTERNAS = new Set([
   "fuente", "fuentes", "fuentes_internas", "correcciones", "merged_originals", "cita", "citas",
   "libro", "libros", "autor", "autores", "fichero", "frase", "texto_anterior",
+  // Integracion del mundo 11 (28 sep 2026): las notas de extraccion de la forja.
+  "notas_extraccion", "texto_anterior_en",
 ]);
 
 /** Los unicos assets de datos que un componente de cliente puede importar: copy de produccion. */

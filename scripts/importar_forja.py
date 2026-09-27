@@ -204,6 +204,11 @@ def convertir(n, fuentes, fases):
         "titulo_concepto": n.get("titulo"),
         "fuente": SEP_FUENTE.join(grafias),
         "resumen_teorico": n.get("resumen_teorico"),
+        # Integracion del mundo 11 (decision del fundador, 28 sep 2026): el resumen de la forja es su nota de
+        # extraccion (unidad de origen, lineas, razonamiento del extractor). Se guarda ENTERA en el campo interno
+        # notas_extraccion, que jamas llega a la web ni a la IA; el resumen de cara se reescribe por correccion
+        # declarada (veredicto RESUMEN de scripts/fidelidad/aplicar_correcciones.py, que exige esta copia).
+        "notas_extraccion": n.get("resumen_teorico"),
         "pasos_accionables": list(n.get("pasos_accionables") or []),
         "entregable_esperado": n.get("entregable_esperado"),
         "nodos_previos": list(n.get("nodos_previos") or []),

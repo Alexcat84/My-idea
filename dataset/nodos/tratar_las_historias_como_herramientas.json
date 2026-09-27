@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Tratar las Creencias como Vehículos, no como Monumentos",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Aristóteles entendía la 'doxa' (creencia/opinión) no como una verdad fija sino como una hipótesis útil para avanzar hacia mejor comprensión. El texto propone que las historias e hipótesis de negocio deben tratarse como 'vehículos' que nos llevan de un punto a otro, y no como destinos finales o verdades absolutas. Cuando una hipótesis deja de funcionar (los datos la contradicen), hay que estar dispuesto a soltarla y reemplazarla, en lugar de aferrarse por seguridad emocional o social. Esto es la base filosófica del pivote en metodologías ágiles.",
+  "resumen_teorico": "Aristóteles entendía la 'doxa' (creencia/opinión) no como una verdad fija sino como una hipótesis útil para avanzar hacia mejor comprensión. Las historias e hipótesis de negocio deben tratarse como 'vehículos' que nos llevan de un punto a otro, y no como destinos finales o verdades absolutas. Cuando una hipótesis deja de funcionar (los datos la contradicen), hay que estar dispuesto a soltarla y reemplazarla, en lugar de aferrarse por seguridad emocional o social. Esto es la base filosófica del pivote en metodologías ágiles.",
   "pasos_accionables": [
     "Antes de lanzar una prueba de validación, define explícitamente qué resultado haría que abandones o cambies tu hipótesis actual.",
     "Revisa periódicamente tus creencias fundacionales del negocio con la pregunta: '¿Sigue esto sirviendo o me estoy aferrando por comodidad?'",
@@ -27,5 +27,23 @@
   "etiqueta_arbol": "Usa tus Creencias como Herramientas",
   "fuentes_internas": [
     "Assembling Tomorrow: A Guide to Designing a Thriving Future"
+  ],
+  "correcciones": [
+    {
+      "id": "m11-voz-catalogo-02",
+      "fecha": "2026-09-28",
+      "campo": "resumen_teorico",
+      "veredicto": "VOZ",
+      "texto_anterior": "Aristóteles entendía la 'doxa' (creencia/opinión) no como una verdad fija sino como una hipótesis útil para avanzar hacia mejor comprensión. El texto propone que las historias e hipótesis de negocio deben tratarse como 'vehículos' que nos llevan de un punto a otro, y no como destinos finales o verdades absolutas. Cuando una hipótesis deja de funcionar (los datos la contradicen), hay que estar dispuesto a soltarla y reemplazarla, en lugar de aferrarse por seguridad emocional o social. Esto es la base filosófica del pivote en metodologías ágiles.",
+      "texto_nuevo": "Aristóteles entendía la 'doxa' (creencia/opinión) no como una verdad fija sino como una hipótesis útil para avanzar hacia mejor comprensión. Las historias e hipótesis de negocio deben tratarse como 'vehículos' que nos llevan de un punto a otro, y no como destinos finales o verdades absolutas. Cuando una hipótesis deja de funcionar (los datos la contradicen), hay que estar dispuesto a soltarla y reemplazarla, en lugar de aferrarse por seguridad emocional o social. Esto es la base filosófica del pivote en metodologías ágiles.",
+      "cita": {
+        "regla": "voz de libro: el cliente no ve 'el libro', 'el texto' ni 'el autor' (decision del fundador, 28 sep 2026); cazado por la guarda nueva web/lib/vozDeCliente.test.ts sobre el grafo vivo",
+        "fragmentos": [
+          "El texto propone"
+        ]
+      },
+      "decision": "se quita la voz de libro sin cambiar el sentido: la frase afirma lo mismo sin atribuirlo a un texto",
+      "auditoria": "guarda vozDeLibro en rojo sobre el grafo vivo"
+    }
   ]
 }

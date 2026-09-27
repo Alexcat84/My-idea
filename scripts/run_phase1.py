@@ -553,7 +553,7 @@ def gemelos_divergentes(nodos_dataset, nodos_web):
 
     La web es la VISTA WEB (decision del fundador del 27 sep 2026: nada interno
     llega al navegador): no lleva las claves internas de scripts/sync_assets_web.py
-    (fuente, fuentes_internas, correcciones, merged_originals). Esas no se comparan,
+    (fuente, fuentes_internas, correcciones, merged_originals, notas_extraccion). Esas no se comparan,
     y si una aparece en la copia web es una divergencia.
     """
     sys.path.insert(0, str(BASE / "scripts"))

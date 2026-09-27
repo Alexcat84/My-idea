@@ -28,6 +28,16 @@ VIGENCIA uno que dejo de ser cierto con el tiempo (un enlace roto o movido, comp
 Se niega (exit 1, sin escribir nada) si el texto anterior no es EXACTAMENTE el
 vigente, si el nuevo trae guiones largos o medios, si falta la cita, o si el id
 de la correccion ya esta aplicado en el nodo. Con --comprobar solo valida.
+
+Integracion del mundo 11 (decisiones del fundador, 28 sep 2026): el pack se limpia ANTES de integrarse.
+  --nodos DIR   aplica sobre otra carpeta de nodos (la de un pack, packs/<dominio>/nodos) en vez de dataset/nodos.
+  VOZ           quita la voz de libro ("el libro", "el texto", "el autor", las citas en ingles) de un campo de cara,
+                titulo_concepto incluido, sin cambiar el sentido. Su "cita" es {"regla", "fragmentos"} como ATRIBUCION.
+  CIFRA         quita una cifra de mercado (regla de la cifra de docs/POLITICA_MARCO_PAIS.md). {"regla", "fragmentos"}.
+  RESUMEN       pone el resumen nuevo (400 a 600 caracteres) cuando el viejo era la nota de extraccion de la forja.
+                El texto viejo YA vive en el campo interno `notas_extraccion` (el importador lo copia alli): el
+                aplicador lo exige identico y en `correcciones` lo remite con `texto_anterior_en` en vez de duplicarlo.
+                Su "cita" es {"instrumento", "evidencia": {"fichero", "lineas"}}.
 """
 import json
 import sys
@@ -36,10 +46,15 @@ from pathlib import Path
 BASE = Path(__file__).resolve().parent.parent.parent
 NODOS = BASE / "dataset" / "nodos"
 CAMPOS = {"pasos_accionables", "condiciones_activacion", "resumen_teorico", "entregable_esperado", "etiqueta_arbol",
-          "fase_proyecto", "dominio"}
+          "fase_proyecto", "dominio", "titulo_concepto"}
+# El titulo vive con el libro y no se pinta (AGENTS.md), asi que solo lo tocan los veredictos de la voz de cliente.
+SOLO_VOZ = {"titulo_concepto": {"VOZ", "ATRIBUCION"}}
+# Veredictos que declara una regla y los fragmentos que salen, no una frase del libro.
+POR_REGLA = {"ATRIBUCION", "VOZ", "CIFRA"}
+RESUMEN_MIN, RESUMEN_MAX = 400, 600
 FASES = {"ideacion", "validacion", "planificacion", "ejecucion"}
 DOMINIOS = {"core", "quality", "health_safety", "environmental", "seguridad_digital", "exportacion", "franquicias",
-            "risk_management", "compras", "entrega"}
+            "risk_management", "compras", "entrega", "primer_equipo"}
 # Declarados por una pasada de lectura contra el propio nodo: su cita es {"instrumento", "evidencia"}.
 POR_INSTRUMENTO = {"FASE": "fase_proyecto", "DOMINIO": "dominio", "COHERENCIA": None, "VIGENCIA": None, "ORTOGRAFIA": None}
 # Los campos lista se corrigen elemento a elemento, por indice. Las condiciones de
@@ -57,6 +72,8 @@ def validar(c, nodo):
             fallas.append("falta %s" % k)
     if c.get("campo") not in CAMPOS:
         fallas.append("campo no admitido: %r" % c.get("campo"))
+    if c.get("campo") in SOLO_VOZ and c.get("veredicto") not in SOLO_VOZ[c["campo"]]:
+        fallas.append("%s solo se corrige con %s" % (c["campo"], sorted(SOLO_VOZ[c["campo"]])))
     cita = c.get("cita") or {}
     if c.get("veredicto") in POR_INSTRUMENTO:
         if not cita.get("instrumento") or not cita.get("evidencia"):
@@ -72,9 +89,20 @@ def validar(c, nodo):
             fallas.append("dominio no valido: %r" % c.get("texto_nuevo"))
     elif c.get("campo") in ("fase_proyecto", "dominio"):
         fallas.append("fase_proyecto y dominio solo se corrigen con los veredictos FASE y DOMINIO")
-    elif c.get("veredicto") == "ATRIBUCION":
+    elif c.get("veredicto") == "RESUMEN":
+        ev = cita.get("evidencia") or {}
+        if not cita.get("instrumento") or not isinstance(ev, dict) or not ev.get("fichero") or not ev.get("lineas"):
+            fallas.append("un RESUMEN declara su instrumento y su evidencia con fichero y lineas")
+        if c.get("campo") != "resumen_teorico":
+            fallas.append("el veredicto RESUMEN solo corrige resumen_teorico")
+        largo = len(c.get("texto_nuevo") or "")
+        if not RESUMEN_MIN <= largo <= RESUMEN_MAX:
+            fallas.append("el resumen nuevo tiene %d caracteres (van de %d a %d)" % (largo, RESUMEN_MIN, RESUMEN_MAX))
+        if nodo is not None and nodo.get("notas_extraccion") != c.get("texto_anterior"):
+            fallas.append("el texto viejo del resumen no esta guardado en notas_extraccion")
+    elif c.get("veredicto") in POR_REGLA:
         if not cita.get("regla") or not cita.get("fragmentos"):
-            fallas.append("una ATRIBUCION declara su regla y los fragmentos que salen")
+            fallas.append("una %s declara su regla y los fragmentos que salen" % c.get("veredicto"))
         for f in cita.get("fragmentos") or []:
             if f and f in c.get("texto_nuevo", ""):
                 fallas.append("el fragmento de atribucion sigue en el texto nuevo: %r" % f)
@@ -103,8 +131,11 @@ def validar(c, nodo):
 
 
 def main(argv):
+    global NODOS
     tanda = json.loads(Path(argv[0]).read_text(encoding="utf-8"))
     comprobar = "--comprobar" in argv
+    if "--nodos" in argv:
+        NODOS = Path(argv[argv.index("--nodos") + 1]).resolve()
     nodos, fallas = {}, []
     for c in tanda:
         ruta = NODOS / ("%s.json" % c.get("node_id"))
@@ -119,6 +150,10 @@ def main(argv):
             else:
                 nodo[c["campo"]] = c["texto_nuevo"]
             registro = {k: c[k] for k in ("id", "fecha", "campo", "veredicto", "texto_anterior", "texto_nuevo", "cita", "decision")}
+            if c["veredicto"] == "RESUMEN":
+                # El texto viejo ya esta, identico, en notas_extraccion: se remite en vez de duplicarlo.
+                del registro["texto_anterior"]
+                registro["texto_anterior_en"] = "notas_extraccion"
             if c["campo"] in LISTAS:
                 registro["indice"] = c["indice"]
             if c.get("auditoria"):
