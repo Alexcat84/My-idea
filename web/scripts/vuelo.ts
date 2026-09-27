@@ -2104,6 +2104,14 @@ async function faseMundoSubproyecto(cookie: string, projectId: string) {
   // El cumplimiento solo existe en modo fechas; la 2k lo dejo asi.
   const rModo = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "fechas" });
   if (rModo.modo_camino !== "fechas") throw new Error("no se pudo restituir el modo 'fechas'");
+  // Y el modo DEL MUNDO (AUD-09 M10, c531e175, 23 sep 2026): el bloque de
+  // realidad de un mundo lee su propio modo en project_modos, no el del nucleo.
+  // Sin esto el follow del mundo sale en la redaccion de ritmo y sin su linea de
+  // cumplimiento (cazado en la corrida del 27 sep 2026, docs/vuelos/2026-09-28_mundo11).
+  const rModoMundo = await patchJson(cookie, `/api/project/${projectId}/modo`, { modo_camino: "fechas", dominio: MUNDO });
+  if (rModoMundo.dominio !== MUNDO || rModoMundo.modo_camino !== "fechas") {
+    throw new Error(`/modo de ${MUNDO} no respondio 'fechas': ${JSON.stringify(rModoMundo)}`);
+  }
 
   // ── 1. Desviacion sembrada en los items DEL MUNDO ──
   // La 2k dejo 3 items del mundo fechados y hechos: dif 0, +8, -5.
