@@ -12,6 +12,7 @@
  * documentos los pintan en el idioma de quien lee.
  */
 import { nombreIdiomaParaIA } from "./detectarIdioma";
+import { REGLA_SIN_FUENTES } from "../reglaSinFuentes";
 
 export type BloqueSistema = { type: "text"; text: string; cache_control?: { type: "ephemeral" } };
 
@@ -34,14 +35,18 @@ export function reglaIdiomaSalida(codigo: string | null | undefined, rotulosFijo
   return partes.join(" ");
 }
 
-/** El `system` de una llamada: el prompt cacheado y, fuera del español, la
- * regla del idioma de salida después, sin marca de caché. */
+/** El `system` de una llamada: el prompt cacheado; después, sin marca de caché, la
+ * regla SIN FUENTES (REGLA ESTRICTA del fundador, 26 sep 2026: la IA jamás cita un
+ * libro ni un autor como fuente) y, fuera del español, la regla del idioma de salida. */
 export function bloquesDeSistema(
   system: string,
   idiomaSalida?: string | null,
   rotulosFijos: readonly string[] = []
 ): BloqueSistema[] {
-  const bloques: BloqueSistema[] = [{ type: "text", text: system, cache_control: { type: "ephemeral" } }];
+  const bloques: BloqueSistema[] = [
+    { type: "text", text: system, cache_control: { type: "ephemeral" } },
+    { type: "text", text: REGLA_SIN_FUENTES },
+  ];
   const regla = reglaIdiomaSalida(idiomaSalida, rotulosFijos);
   if (regla) bloques.push({ type: "text", text: regla });
   return bloques;

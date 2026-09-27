@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "El Diagrama de Eames y la Intersección de Posibilidad",
   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-  "resumen_teorico": "Charles Eames postuló que el trabajo del diseñador ocurre en la superposición entre sus propios intereses, los del cliente y las necesidades de la sociedad. Assembling Tomorrow amplía este diagrama clásico añadiendo la naturaleza, los descendientes futuros y el tiempo como actores con 'silla en la mesa'. La 'intersección de posibilidad' es el punto donde todos estos círculos se solapan, y desde ahí se puede preguntar qué entidad (negocio, gobierno, organización) comparte esos mismos deseos y podría ser socio, financiador o defensor del proyecto.",
+  "resumen_teorico": "El diagrama de Eames plantea que el trabajo del diseñador ocurre en la superposición entre sus propios intereses, los del cliente y las necesidades de la sociedad. Una versión ampliada de este diagrama clásico añade la naturaleza, los descendientes futuros y el tiempo como actores con 'silla en la mesa'. La 'intersección de posibilidad' es el punto donde todos estos círculos se solapan, y desde ahí se puede preguntar qué entidad (negocio, gobierno, organización) comparte esos mismos deseos y podría ser socio, financiador o defensor del proyecto.",
   "pasos_accionables": [
     "Dibuja un círculo con tu talento y pasiones, y otro con las tecnologías/recursos disponibles.",
     "Dibuja un círculo con las necesidades de la sociedad, otro con las de la naturaleza y otro con las de las futuras generaciones.",
@@ -41,6 +41,25 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R026-040 (CONTRARIO, arbitro): Tenía razón el lector B. El único pasaje que pone al cliente como círculo (L4132) es el diagrama original de Eames, que el libro critica y redibuja; en la versión redibujada (L4146-L4164) el giro central es precisamente quitarle al cliente su forma y buscar al negocio desde el centro. Busqué en todo el libro (client, overlap, intersection of possibility, Eames) y ningún pasaje apoya que el negocio sea un círculo del diagrama ampliado. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R026-040"
+    },
+    {
+      "id": "atribucion-061",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Charles Eames postuló que el trabajo del diseñador ocurre en la superposición entre sus propios intereses, los del cliente y las necesidades de la sociedad. Assembling Tomorrow amplía este diagrama clásico añadiendo la naturaleza, los descendientes futuros y el tiempo como actores con 'silla en la mesa'. La 'intersección de posibilidad' es el punto donde todos estos círculos se solapan, y desde ahí se puede preguntar qué entidad (negocio, gobierno, organización) comparte esos mismos deseos y podría ser socio, financiador o defensor del proyecto.",
+      "texto_nuevo": "El diagrama de Eames plantea que el trabajo del diseñador ocurre en la superposición entre sus propios intereses, los del cliente y las necesidades de la sociedad. Una versión ampliada de este diagrama clásico añade la naturaleza, los descendientes futuros y el tiempo como actores con 'silla en la mesa'. La 'intersección de posibilidad' es el punto donde todos estos círculos se solapan, y desde ahí se puede preguntar qué entidad (negocio, gobierno, organización) comparte esos mismos deseos y podría ser socio, financiador o defensor del proyecto.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Assembling Tomorrow amplía este diagrama clásico"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion G-001 (lector con trampas, verificador ciego y arbitro; guarda de titulos). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
     }
+  ],
+  "fuentes_internas": [
+    "Assembling Tomorrow: A Guide to Designing a Thriving Future"
   ]
 }

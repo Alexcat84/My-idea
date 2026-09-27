@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Relación entre Emoción, Imagen Sensorial y Pensamiento",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Wallas explora cómo el afecto (emoción) que acompaña a una Intimación puede ser más duradero que la imagen visual o auditiva asociada, y viceversa. Cita evidencia de psicólogos de laboratorio (Titchener, Külpe) que muestran que atender directamente a una emoción tiende a disiparla, mientras que concentrarse en la sensación asociada ayuda a retenerla indirectamente. La retención efectiva del pensamiento y su comunicación a otros es más probable cuando se asocia a una imagen sensorial vívida y fácil de retener, siguiendo el ciclo primitivo de sensación-emoción-pensamiento.",
+  "resumen_teorico": "El afecto (emoción) que acompaña a una Intimación puede ser más duradero que la imagen visual o auditiva asociada, y viceversa. Hay evidencia de psicólogos de laboratorio que muestra que atender directamente a una emoción tiende a disiparla, mientras que concentrarse en la sensación asociada ayuda a retenerla indirectamente. La retención efectiva del pensamiento y su comunicación a otros es más probable cuando se asocia a una imagen sensorial vívida y fácil de retener, siguiendo el ciclo primitivo de sensación-emoción-pensamiento.",
   "pasos_accionables": [
     "Cuando surja una emoción ligada a una idea, evitar analizarla directamente; en cambio, enfocar la atención en la sensación o imagen concreta que la acompaña.",
     "Buscar términos particulares y concretos (en vez de generales y abstractos) para anclar y comunicar la idea con mayor fuerza emocional e intelectual.",
@@ -22,5 +22,27 @@
     "Cuando el usuario necesita comunicar una idea o propuesta de valor de forma memorable y emocionalmente resonante.",
     "Cuando una idea se siente 'correcta' pero cuesta articularla o transmitirla a otros."
   ],
-  "etiqueta_arbol": "Conecta Emoción e Imagen Mental"
+  "etiqueta_arbol": "Conecta Emoción e Imagen Mental",
+  "correcciones": [
+    {
+      "id": "atribucion-076",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Wallas explora cómo el afecto (emoción) que acompaña a una Intimación puede ser más duradero que la imagen visual o auditiva asociada, y viceversa. Cita evidencia de psicólogos de laboratorio (Titchener, Külpe) que muestran que atender directamente a una emoción tiende a disiparla, mientras que concentrarse en la sensación asociada ayuda a retenerla indirectamente. La retención efectiva del pensamiento y su comunicación a otros es más probable cuando se asocia a una imagen sensorial vívida y fácil de retener, siguiendo el ciclo primitivo de sensación-emoción-pensamiento.",
+      "texto_nuevo": "El afecto (emoción) que acompaña a una Intimación puede ser más duradero que la imagen visual o auditiva asociada, y viceversa. Hay evidencia de psicólogos de laboratorio que muestra que atender directamente a una emoción tiende a disiparla, mientras que concentrarse en la sensación asociada ayuda a retenerla indirectamente. La retención efectiva del pensamiento y su comunicación a otros es más probable cuando se asocia a una imagen sensorial vívida y fácil de retener, siguiendo el ciclo primitivo de sensación-emoción-pensamiento.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Wallas explora cómo",
+          "Cita evidencia de psicólogos de laboratorio (Titchener, Külpe)"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-014 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "The Art of Thought - Wallas, Graham"
+  ]
 }

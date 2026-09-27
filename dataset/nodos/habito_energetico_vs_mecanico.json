@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Hábito Energizante vs. Hábito Mecánico en el Pensamiento",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Contrastando a Herbert Spencer (pensamiento pasivo que decae en energía con la repetición) y John Stuart Mill (hábito de nunca aceptar soluciones a medias, manteniendo alta energía mediante esfuerzo voluntario repetido), Wallas muestra que no todo hábito reduce la vitalidad del pensamiento. El hábito correcto es aquel que mantiene activo el compromiso voluntario y crítico, en vez de caer en la repetición 'ciega y mecánica' que Wordsworth defendió sin ver el problema y que, según Wallas, ayudó a destruir su propia poesía.",
+  "resumen_teorico": "No todo hábito reduce la vitalidad del pensamiento. Frente al pensamiento pasivo, que decae en energía con la repetición, está el hábito de nunca aceptar soluciones a medias, que mantiene alta la energía mediante esfuerzo voluntario repetido. El hábito correcto es aquel que mantiene activo el compromiso voluntario y crítico, en vez de caer en la repetición 'ciega y mecánica', que un poeta defendió sin ver el problema y que, según se ha señalado, ayudó a destruir su propia poesía.",
   "pasos_accionables": [
     "Adoptar la actitud de Mill: nunca aceptar una solución parcial como completa, volviendo repetidamente al problema",
     "Evitar caer en la producción 'automática' sin cuestionamiento crítico de las ideas generadas",
@@ -42,6 +42,29 @@
       },
       "decision": "Mandato del fundador, regla B, CONTRARIO: version fiel del verificador o del arbitro, con su cita. Decision del fundador (recogida el 24 sep 2026): pasada contra la fuente sobre los campos que llegan a la IA o a la pantalla (docs/fidelidad/CAMPOS_QUE_LLEGAN.md), solo CONTRARIOS y ANADIDOS de cifra, plazo o norma. R053-013 (CONTRARIO, lector y verificador de acuerdo): Invierte la postura de Wordsworth: no la reconocio como destructiva, la defendio. La sesion aplica solo el cambio que cae sobre el fragmento senalado; lo que el texto propuesto cambiara fuera de el se descarta.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/campos/VEREDICTOS_CAMPOS.jsonl, ids R053-013"
+    },
+    {
+      "id": "atribucion-102",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Contrastando a Herbert Spencer (pensamiento pasivo que decae en energía con la repetición) y John Stuart Mill (hábito de nunca aceptar soluciones a medias, manteniendo alta energía mediante esfuerzo voluntario repetido), Wallas muestra que no todo hábito reduce la vitalidad del pensamiento. El hábito correcto es aquel que mantiene activo el compromiso voluntario y crítico, en vez de caer en la repetición 'ciega y mecánica' que Wordsworth defendió sin ver el problema y que, según Wallas, ayudó a destruir su propia poesía.",
+      "texto_nuevo": "No todo hábito reduce la vitalidad del pensamiento. Frente al pensamiento pasivo, que decae en energía con la repetición, está el hábito de nunca aceptar soluciones a medias, que mantiene alta la energía mediante esfuerzo voluntario repetido. El hábito correcto es aquel que mantiene activo el compromiso voluntario y crítico, en vez de caer en la repetición 'ciega y mecánica', que un poeta defendió sin ver el problema y que, según se ha señalado, ayudó a destruir su propia poesía.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Contrastando a Herbert Spencer (pensamiento pasivo que decae en energía con la repetición)",
+          "John Stuart Mill (hábito de nunca aceptar soluciones a medias, manteniendo alta energía mediante esfuerzo voluntario repetido)",
+          "Wallas muestra que",
+          "que Wordsworth defendió sin ver el problema",
+          "según Wallas"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U5-024 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
     }
+  ],
+  "fuentes_internas": [
+    "The Art of Thought - Wallas, Graham"
   ]
 }

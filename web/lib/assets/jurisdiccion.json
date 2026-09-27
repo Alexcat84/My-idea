@@ -1,1450 +1,953 @@
 {
- "_nota": "Clase de pais de cada nodo vivo con contenido propio de un pais (docs/POLITICA_MARCO_PAIS.md, ratificada por el fundador el 26 sep 2026; saneamiento del dataset, tanda 1, punto 3). A = vocabulario o tratado internacional (pais INT si no es de ninguno), B = reencuadre a la clase universal, C = nodo-frontera. La app avisa B y C en la tarjeta (web/lib/engine/avisos.ts). Origen: pasada J (clase medida, 1.466 nodos leidos con trampas y verificador ciego) y pasada JC (clase declarada de los 110 sin clase y de los 21 que la criba no vio, 820 filas con trampas). Guarda: engine/test_jurisdiccion.py.",
- "_adjudicados_sin_pais": {
-  "actualizacion_hvac": "Sin contenido propio de un pais (pasada JC, lector y verificador ciego): Modernizar el HVAC es una practica tecnica universal, sin ley ni programa de un pais.",
-  "actualizacion_iluminacion": "Sin contenido propio de un pais (pasada JC, lector y verificador ciego): No hay ley, organismo ni programa de un pais; solo una estadistica de consumo.",
-  "branding_etiquetado_empaque_internacional": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): Tiene razon el LECTOR B. He releido el nodo entero y no trae ley, organismo, programa, obligacion, tramite ni cifra legal de ningun pais. Los requisitos legales se piden en generico: 'Verificar requisitos legales de idio",
-  "circulos_calidad_qc": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): Nombra a Japon y a Estados Unidos solo para comparar como se practican los circulos de calidad; no hay ley, organismo ni programa de ningun pais.",
-  "convertir_necesidad_en_demanda": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): El 90% de los adultos estadounidenses es un dato del caso Shimano, no contenido normativo de un pais; no lo cuento como dependencia.",
-  "decision_estrategica_exportar": "Sin contenido propio de un pais (pasada JC, lector y verificador ciego): No hay ley, organismo ni programa de un pais; son razones y estadisticas para exportar.",
-  "desarrollo_plan_exportacion": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): Tiene razon el lector A. La unica pieza de un pais es una estadistica descriptiva y el nodo la atribuye a EE.UU. de forma explicita ('de EE.UU.'). No es una ley, ni un organismo, ni un programa, ni una obligacion, ni un ",
-  "desarrollo_value_proposition_usp": "Sin contenido propio de un pais (pasada JC, lector y verificador ciego): La propuesta de valor es un metodo universal; lo unico de EE.UU. es un dato del mercado de franquicias, que no es ley, organismo, figura ni cifra legal.",
-  "desmitificacion_barreras_exportacion": "Sin contenido propio de un pais (pasada JC, lector y verificador ciego): Desmontar mitos sobre exportar es universal; no hay ley, organismo ni programa de un pais.",
-  "diseno_de_comportamiento_sostenible": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): El caso del Departamento de Energía de EE.UU. (Shift Focus con IDEO) es ilustracion, no recurso ni obligacion para el usuario.",
-  "enfasis_en_utilidades_corto_plazo": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): El contraste entre modelo estadounidense y modelo japones es de cultura de gestion, no ley, organismo ni obligacion de un pais; no lo cuento como contenido propio de pais.",
-  "exportacion_de_servicios": "Sin contenido propio de un pais (pasada JC, lector y verificador ciego): Exportar servicios es un tema universal; no hay ley, organismo ni programa de un pais.",
-  "garantias_producto_internacional": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): EE.UU. sale solo como punto de comparacion, lo que supone un lector estadounidense (sesgo de la fuente). Los pasos ya mandan investigar las normas del pais de destino. No hay norma de EE.UU.",
-  "gestion_centro_datos_verde": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): La unica mencion de pais es una estadistica de contexto de EE.UU., declarada como tal y sin fecha; no es ley, organismo ni obligacion, asi que no la trato como contenido propio de pais, pero caduca. Los rangos de tempera",
-  "gestion_riesgo_cambiario": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): Esta escrito desde la perspectiva del exportador estadounidense (cotizar en dolares estadounidenses frente a moneda extranjera), pero no trae ley, organismo ni obligacion de un pais; forward es vocabulario financiero int",
-  "impresion_inteligente": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): 'el Gobierno de EE.UU.' aparece solo como caso de ahorro, no como norma ni programa. Los productos nombrados (GreenPrint, HP Smart Web Printing, Adobe LiveCycle) pueden quedar obsoletos, pero no encajan en ningun tipo de",
-  "prevencion_control_peligros": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): NIOSH, un organismo de EE.UU., aparece solo como origen de un método universal (la jerarquía de controles), no como obligación ni trámite. Lo registro como institución nombrada y no como contenido de país.",
-  "programa_do_one_thing": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): El PSP es un programa de una empresa privada (Walmart) en EE.UU., citado como ejemplo; no es ley, organismo ni programa de gobierno, asi que no lo cuento como contenido propio de pais. Queda una cifra fechada (2007, 1.3 ",
-  "seleccion_canales_distribucion": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): Tiene razon B. La unica mencion es una observacion descriptiva sobre exportadores estadounidenses; no es ley, organismo, programa, obligacion, tramite ni cifra legal, y no fija el entorno del usuario (los pasos comparan ",
-  "servicio_postventa_internacional": "Sin contenido propio de un pais (pasada JC, lector y verificador ciego): Estrategia de servicio postventa universal, sin ley, organismo ni programa de un pais.",
-  "transformacion_calidad_compromiso_alta_direccion_japon": "Sin contenido propio de un pais (pasada J, lector y verificador ciego): Japon (JUSE, 1950-1970) y Estados Unidos (anos cuarenta) aparecen solo como caso historico ilustrativo. No hay norma, obligacion ni recurso de pais."
- },
- "nodos": {
-  "adaptacion_producto_estandares_tecnicos": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El NIST es el organismo de normalizacion de EE.UU. usado como recurso; el organismo de normas existe en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "adaptaciones_sectoriales_iso": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los dos lectores coinciden en B y los dos tienen razon; es mas completo el inventario de B, porque ISO 9001, AS9100 e ISO/TS 16949 aparecen aqui como normas de certificacion con version y obligacion, no como marco de metodo. El reencuadre es coherente en resumen, paso 4 y entregable: la FDA y las cG",
-   "origen": "pasada J (clase medida)"
-  },
-  "almacenamiento_liquidos_inflamables": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Las normas de almacenamiento de inflamables existen en casi todos los paises; la de OSHA es un ejemplo de EE.UU. que debe reencuadrarse.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "alternativa_agency_relationship": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La definicion legal de franquicia por el elemento del fee es derecho de EE.UU. (regla de la FTC y leyes estatales); solo obliga a quien franquicia alli.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "alternativa_business_opportunity_licensing": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos miden C y los dos tienen razon. La primera condicion lo condiciona de forma explicita ('Solo aplica si vendes o piensas vender franquicias en Estados Unidos'). B dejo nota y A no. La tercera condicion ('disclosure de franquicia a nivel local') es ambigua, pero no contradice la condicion de p",
-   "origen": "pasada J (clase medida)"
-  },
-  "alternativa_dealership_distributorship": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El 'elemento fee' y la excepcion por venta a precio mayorista de buena fe son la definicion legal de franquicia de la FTC Franchise Rule y las leyes estatales de EE.UU.; solo aplican a quien franquicia en EE.UU., y el texto la presenta como definicion universal sin nombrar el pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "alternativa_joint_venture": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La recalificacion como franquicia por cobrar fees es la definicion legal de EE.UU. escrita como universal; la figura de franquicia existe en casi todos los paises con otra definicion.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "alternativa_operaciones_propias": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La responsabilidad laboral, de accesibilidad y antidiscriminacion existe en casi todos los paises; ADA y EEOC son el ejemplo de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "alternativa_trademark_licensing": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo-frontera con condicion explicita de EE.UU. en sus condiciones de activacion.",
-   "origen": "pasada J (clase medida)"
-  },
-  "analisis_competencia_franquicias": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El FDD es el documento de divulgacion de franquicias de EE.UU.; se usa como fuente de investigacion y otros paises tienen documentos de divulgacion o registros equivalentes.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "antiboycott_regulations": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo frontera: el resumen condiciona de forma explícita ('si tienes un negocio en Estados Unidos'). Tiene dos flojedades. Las condiciones de activación no repiten el requisito de operar en EE.UU. Y la frase final ('confirma el acuerdo y la regulacion vigente en tu jurisdiccion') roza el reencuadre s",
-   "origen": "pasada J (clase medida)"
-  },
-  "asistencia_agencias_minoritarias_mbda": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Programa de una agencia federal de EE.UU., condicionado de forma explicita al frente del resumen y en las condiciones. La cifra de centros y la propia existencia de la agencia dependen de la decision del gobierno de turno.",
-   "origen": "pasada J (clase medida)"
-  },
-  "asistencia_embajadas_consulados_comerciales": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Es un servicio del gobierno de EE.UU. para sus empresas (embajadas, U.S. Commercial Service, Country Commercial Guide): programa de gobierno, lleva condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "auditoria_responsabilidad": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La NIST SP 800-171 obliga por contrato a los contratistas del gobierno federal de EE.UU. que manejan CUI.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "autocertificacion_del_exportador": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La mecanica se liga a un tratado bilateral (TLC EE.UU.-Corea) y a la normativa de EE.UU. El nodo lo pone como ejemplo ('En ciertos tratados', 'ej.') y lleva un puntero explicito para verificar el acuerdo y la regulacion vigentes en la propia jurisdiccion. Lo leo como B coherente, aunque el tratado e",
-   "origen": "pasada J (clase medida)"
-  },
-  "autorregulacion_seguridad": {
-   "pais": "GB",
-   "clase": "B",
-   "motivo": "La HSW Act y el Informe Robens son el ejemplo britanico de un modelo (legislacion por objetivos) presente en muchos paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "barreras_comerciales_no_arancelarias": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los pasos ya son genericos: la oficina de comercio exterior de tu pais, los acuerdos entre tu pais y el destino y el organismo correspondiente en tu mercado. El puntero declara el origen estadounidense y manda verificar en tu mercado. No queda ningun organismo concreto de EE.UU. nombrado.",
-   "origen": "pasada J (clase medida)"
-  },
-  "benchmark_inversion_rd_industria": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La NSF (EE.UU.) aparece reencuadrada con 'o la autoridad equivalente en tu mercado'. Los porcentajes de I+D sobre ventas por sector son promedios estadisticos sin fecha: cambian con el tiempo, pero no son precios de mercado.",
-   "origen": "pasada J (clase medida)"
-  },
-  "buenas_practicas_manufactura_cgmp": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "cGMP es el termino de la FDA estadounidense, aunque el nodo no nombra a EE.UU. Esta reencuadrado de forma coherente: 'el organismo sanitario de tu país' y 'el organismo regulador de tu mercado'. Las GMP existen en casi todas las jurisdicciones, asi que el reencuadre es valido.",
-   "origen": "pasada J (clase medida)"
-  },
-  "business_excellence_models": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los modelos y premios nacionales de excelencia existen en casi todos los paises; Baldrige y EFQM son ejemplos regionales usados como marco de autoevaluacion.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "calculo_contenido_valor_regional": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Coinciden en B y los dos aciertan: el puntero declara que la mecanica es la de EE.UU. y manda verificar el acuerdo y la regulacion de la propia jurisdiccion. Tomo tambien la dependencia de B sobre los beneficios FTA, porque las reglas de origen dependen del tratado vigente. Los umbrales del 35 y el ",
-   "origen": "pasada J (clase medida)"
-  },
-  "calculo_de_aranceles_importacion": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los dos tienen razon y coinciden en todo lo que cuenta. El portal de EE.UU. va siempre con 'o el organismo equivalente en tu mercado' y con el puntero jurisdiccional, asi que es un reencuadre B coherente. El codigo HS es vocabulario internacional de clase A, pero sigue siendo dependencia de tipo nor",
-   "origen": "pasada J (clase medida)"
-  },
-  "calculo_roi_franquiciado_2": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El calculo del retorno cash on cash para quien compra la franquicia es un metodo universal; el FDD y su Item 19 son solo el ejemplo de EE.UU. del documento de divulgacion, que existe en muchos paises y el resumen ya reencuadra.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "calificacion_prospectos_award": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Condicion explicita de EE.UU. en las condiciones de activacion, que cubre las obligaciones del FDD. El criterio de seleccion en si es metodo general.",
-   "origen": "pasada J (clase medida)"
-  },
-  "capacitacion_de_distribuidores": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Tiene un reencuadre explícito ('verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar'). El cuerpo del nodo no cita ninguna norma concreta de EE.UU.: el puntero parece genérico y el contenido es método de capacitación de distribuidores. La única dependencia es la referencia ",
-   "origen": "pasada J (clase medida)"
-  },
-  "capacitacion_roles_gerencia": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Las responsabilidades legales del empleador en seguridad laboral existen en casi todos los paises; la OSH Act es el ejemplo de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "carta_de_credito_letter_of_credit": {
-   "pais": "US",
-   "clase": "A",
-   "motivo": "Los dos miden A y los dos tienen razon. La carta de credito es vocabulario de comercio internacional. El puntero jurisdiccional y temporal reconoce el sesgo de EE.UU. y manda verificar en la propia jurisdiccion ('verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar'), lo cu",
-   "origen": "pasada J (clase medida)"
-  },
-  "centro_asesoria_advocacy_center": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Es un programa del gobierno de EE.UU. solo para empresas estadounidenses: lleva condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "certificacion_leed_energy_star": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La certificacion de edificios sostenibles existe en casi todos los paises y LEED es un sello privado de alcance global; Energy Star con Portfolio Manager es el programa de gobierno de EE.UU. que sirve de ejemplo y debe reencuadrarse como tal.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "certificacion_origen_producto": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El nucleo (certificado de origen, reglas de origen de un FTA, clasificacion HS) es vocabulario de tratado internacional, de clase A. Lo propio de EE.UU. (la declaracion en formato libre y los 5 anos de conservacion) queda cubierto por el puntero explicito ('verifica el acuerdo y la regulación vigent",
-   "origen": "pasada J (clase medida)"
-  },
-  "certificaciones_ecoetiquetas": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Las ecoetiquetas existen en casi todos los paises; Green Seal, Green-e, USDA Organic y Energy Star son ejemplos de EE.UU. junto a otras internacionales (FSC, MSC).",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "certificado_de_origen_coo": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Coinciden en clase B y dependencias. En paises ninguno acierta del todo: los acuerdos se citan desde la optica de EE.UU. y no traen contenido propio de Canada, Mexico ni Centroamerica (B sobrecuenta), y Medio Oriente aparece como region de ejemplo de requisitos que varian por pais, sin pais nombrado",
-   "origen": "pasada J (clase medida)"
-  },
-  "certificado_de_origen_tratados_libre_comercio": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Reglas de origen y certificados de los TLC de EE.UU. (T-MEC/USMCA y otros) solo aplican a quien comercia con EE.UU. bajo esos tratados.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "certificados_genericos_de_origen": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los dos coinciden en un B debil y tienen razon. El puntero jurisdiccional del resumen reencuadra toda la mecanica como normativa de EE.UU. y manda verificar la de la propia jurisdiccion. Pero 'únicamente se certifican bienes fabricados en EE.UU.' y el paso 5 (la camara EE.UU.-Arabe) van sin 'o el eq",
-   "origen": "pasada J (clase medida)"
-  },
-  "clasificacion_consultores_empleados": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Distinguir entre consultor y empleado existe en casi todos los paises; es contratacion y va como metodo, con el marco de EE.UU. solo como ejemplo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "clasificacion_garantia_full_limited": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo-frontera bien condicionado al frente y en la condicion de activacion. El umbral de $10 es cifra de la norma (umbral legal), no de mercado, y se queda en su frontera.",
-   "origen": "pasada J (clase medida)"
-  },
-  "clausula_antidesviacion": {
-   "pais": "US",
-   "clase": "A",
-   "motivo": "La politica de la casa pone la clausula antidesviacion en clase A (se queda con su vigencia), y el nodo la lleva con aviso de vigencia. Aun asi el tratamiento interno es mixto: el resumen la condiciona al frente a exportar desde Estados Unidos (estilo C) y a la vez manda 'verifica la regulacion vige",
-   "origen": "pasada J (clase medida)"
-  },
-  "clausula_deber_general_osha": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El titulo es el nombre de la clausula de la ley OSHA de EE.UU., pero el nodo no nombra el pais. El cuerpo ya esta reencuadrado: 'En muchas legislaciones existe una obligación general' y 'Conviene que verifiques cómo se llama y qué exige exactamente en tu propio mercado'. Es un B en el que el ejemplo",
-   "origen": "pasada J (clase medida)"
-  },
-  "communicate_transparencia": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La respuesta y notificación de brechas de datos existe en casi todos los países; la función Communicate viene del NIST Privacy Framework de EE.UU. y el monitoreo y congelamiento de crédito son remedios propios del sistema de burós estadounidense, así que es un ejemplo de un país que debe reencuadrar",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "compensacion_service_providers": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La eleccion 83(b) y la valuacion 409A son figuras del codigo fiscal de EE.UU. que solo obligan a empresas y receptores sujetos a ese fisco, asi que van con condicion de pais (si tu empresa esta constituida en EE.UU.).",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "comprender_definicion_legal_franquicia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos lectores aciertan en la clase C. Es un nodo-frontera bien condicionado, en el resumen y en las condiciones. Me quedo con la lista del lector B porque el umbral vuelve a salir en el paso 3 y alli tambien caduca. Los $500 son la cifra que es la norma, no una cifra de mercado, y se quedan. Pero",
-   "origen": "pasada J (clase medida)"
-  },
-  "concepto_de_advances": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos lectores coinciden: clase C por la condicion explicita, con el FDD como norma. Solo cambia como escriben el pais. B lo precisa mejor: el CIRF y el Discovery Day son practica comercial del sector, no norma. El metodo de avances es generico, asi que la condicion lo restringe mas de lo necesari",
-   "origen": "pasada J (clase medida)"
-  },
-  "concientizacion_entrenamiento_cui": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "CUI, NARA y SP 800-171 son del gobierno federal de EE.UU. y solo obligan a sus contratistas.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "conformidad_comercio_internacional": {
-   "pais": "EU",
-   "clase": "C",
-   "motivo": "La condición de activación es explícita: exportar a la Unión Europea. El nodo añade 'u otros mercados regulados' y 'u homólogo' para otros destinos de exportación, lo que no choca con la condición porque el CE se reserva para la UE. La norma ISO 9002 está retirada desde la revisión de 2000, así que ",
-   "origen": "pasada J (clase medida)"
-  },
-  "consideraciones_instalacion_internacional": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El nodo lleva un puntero de reencuadre (verifica lo vigente en tu mercado), pero el contenido no tiene ninguna norma, organismo ni cifra de EE.UU.: habla de preensamblar, capacitar y traducir. El puntero es residual y sin objeto; quitado, el nodo seria SIN_PAIS.",
-   "origen": "pasada J (clase medida)"
-  },
-  "consultores_comercio_internacional": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre B por el puntero del resumen ('verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar'). Debil: el paso 3 sigue mandando al U.S. Commercial Service (servicio del gobierno de EE.UU.) sin 'o el organismo equivalente de tu pais' en ese paso. Contratar aqui es contrata",
-   "origen": "pasada J (clase medida)"
-  },
-  "contacto_evaluacion_representantes_extranjeros": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los dos tienen razon y coinciden del todo. El cuerpo ya no nombra ninguna herramienta ni organismo de EE.UU.: el paso 4 manda buscar 'las herramientas de evaluación de empresas que existan en tu mercado'. Lo unico de EE.UU. es el puntero jurisdiccional, que funciona como reencuadre B. Casi sobra, po",
-   "origen": "pasada J (clase medida)"
-  },
-  "contratar_abogado_franquicias": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los registros estatales anuales de franquicia y las legal document preparation firms son del sistema de EE.UU.; la clase (abogado especializado que mantiene los registros de franquicia que exija la ley) existe en muchos paises, asi que se reencuadra como ejemplo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "contratos_de_servicio_garantia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo-frontera coherente: la ley se declara de EE.UU. al frente y la condicion de activacion la limita a quien vende a clientes en EE.UU. La sugerencia de fijar precio no trae ninguna cifra.",
-   "origen": "pasada J (clase medida)"
-  },
-  "control_acceso_least_privilege": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "SP 800-171 y la CUI son obligacion de los contratistas federales de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "control_exportaciones_bis": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Tratado como B por el puntero del resumen, que dice que es normativa de EE.UU. y manda verificar la regulacion de tu jurisdiccion. Tratamiento debil: titulo, pasos 2 y 3 y entregable (ECCN, BIS) siguen siendo el tramite de EE.UU. sin 'o el organismo equivalente', y las condiciones de activacion no c",
-   "origen": "pasada J (clase medida)"
-  },
-  "control_responsabilidad_manual": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La responsabilidad vicaria y la relacion de agencia existen en casi todos los ordenamientos; los casos son jurisprudencia de EE.UU. como ejemplo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "convertible_debt_fundamentos": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Las 'tasas federales aplicables' son la AFR del fisco de EE.UU.; las tasas minimas de referencia para prestamos existen en muchos paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "coshh_procedimiento_rolling": {
-   "pais": "GB",
-   "clase": "B",
-   "motivo": "COSHH es reglamento britanico; la regulacion de sustancias peligrosas en el trabajo existe en casi todos los paises y el ciclo de gestion es metodo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "crowdfunding_legal_exemptions_jobs_act": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La JOBS Act y las reglas 506(b) y 506(c) son ley de valores de EE.UU. con alcance real.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "cumplimiento_acuerdos_comerciales_tanc": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "TANC (Trade Agreements Negotiations and Compliance) es una oficina del gobierno de EE.UU. El resumen y los pasos si reencuadran ('conviene que averigues si tu pais cuenta con un servicio así', 'Busca si tu pais tiene una oficina de comercio'). Pero el titulo mantiene la sigla TANC y el nodo nunca di",
-   "origen": "pasada J (clase medida)"
-  },
-  "cumplimiento_can_spam": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "CAN-SPAM es una ley de EE.UU. con alcance real sobre quien envia correo comercial a consumidores alli.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "cumplimiento_ftc_rule_436": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo-frontera bien condicionado: la condicion de EE.UU. esta en el resumen y en la primera condicion de activacion. Las multas y los plazos son cifras de la propia norma, no de mercado, y caducan (el importe de la multa civil federal se actualiza por inflacion).",
-   "origen": "pasada J (clase medida)"
-  },
-  "cumplimiento_inversionistas_acreditados": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Inversionista acreditado, derecho de rescision y JOBS Act son derecho de valores de EE.UU. con alcance real sobre quien levanta capital alli.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "cumplimiento_magnuson_moss": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Es nodo-frontera, condicionado al frente y en el entregable. El umbral de 15 dolares es cifra de la norma, no de mercado, y se queda. Dos matices. Primero, el resumen añade 'si vendes en otro pais conviene revisar la norma equivalente que aplique alli', una remision al equivalente dentro de un nodo ",
-   "origen": "pasada J (clase medida)"
-  },
-  "cumplimiento_sarbanes_oxley": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "SOX es ley de EE.UU. con alcance real sobre las empresas que cotizan o se registran alli.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "cumplir_leyes_estatales_franquicia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Coinciden en clase C y en las mismas seis dependencias; solo difieren en la longitud de los fragmentos, y los dos son literales. Nodo-frontera coherente: la primera condicion de activacion lo limita de forma explicita a quien vende franquicias en EE.UU. El numero de estados es cifra que puede cambia",
-   "origen": "pasada J (clase medida)"
-  },
-  "customs_bonded_warehouses": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Tiene razon el lector B. El almacen aduanero es una figura que existe en casi todos los paises, asi que por su naturaleza es de clase B. El resumen reconoce que la mecanica es de EE.UU. y manda verificar la regulacion de la propia jurisdiccion, que es justo el reencuadre de B. Que el paso 2 nombre l",
-   "origen": "pasada J (clase medida)"
-  },
-  "dar_forma_politica_climatica": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre implicito y debil: el resumen situa el ejemplo en EE.UU. y presenta USCAP y BICEP como ejemplos ('Coaliciones como'), y el paso 1 y la condicion ('de su sector o país') llevan a buscar las propias, pero no dice de forma explicita 'averigua las de tu pais'. Frontera con SIN_CLASE si se lee",
-   "origen": "pasada J (clase medida)"
-  },
-  "decision_fpr": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "C por la condicion explicita de EE.UU., aunque la obligacion del Item 19 se enuncia en el resumen sin nombrar el pais. Depende de la regla de franquicias de EE.UU. (Item 19) y de GAAP.",
-   "origen": "pasada J (clase medida)"
-  },
-  "decision_marca_comun_branding": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Usa la definicion legal de franquicia de EE.UU. y la figura de business opportunity, y lo condiciona de forma explicita con 'Solo aplica si vendes o piensas vender franquicias en Estados Unidos'. La condicion es la primera de las condiciones de activacion, no aparece en el titulo ni en el resumen.",
-   "origen": "pasada J (clase medida)"
-  },
-  "derecho_rechazo_trabajo_peligroso": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El derecho a rechazar trabajo peligroso existe en casi todos los paises (con ancla internacional en el Convenio 155 de la OIT), pero los tres requisitos citados son los de la regulacion de OSHA de EE.UU., asi que es ejemplo de un pais que se reencuadra.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "derechos_de_registro": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La clausula nace del registro de valores ante la SEC del modelo de term sheet estadounidense, pero la obligacion de registrar valores para ofrecerlos al publico existe en casi todos los paises y el texto ya remite a la oficina de valores de tu pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "desarrollar_manual_operaciones": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo-frontera bien condicionado en la primera condicion. EIN (tramite fiscal), EEOC (organismo), ADA (ley) y FDD (documento exigido por la regla federal de franquicias) son todos de EE.UU. y quedan cubiertos por la condicion. La mencion a leyes laborales es cumplimiento del manual, no trata contrata",
-   "origen": "pasada J (clase medida)"
-  },
-  "design_for_environment": {
-   "pais": "EU",
-   "clase": "B",
-   "motivo": "Tiene razon el lector A. RoHS sale siempre como ejemplo ('como RoHS', 'ej. RoHS', 'ej. RoHS, UE') de una clase que existe en muchas jurisdicciones. La condicion manda al usuario a las regulaciones ambientales aplicables a su producto, que es un reencuadre, aunque debil. No es C, porque no hay condic",
-   "origen": "pasada J (clase medida)"
-  },
-  "deteccion_temprana_regulatoria": {
-   "pais": "EU",
-   "clase": "B",
-   "motivo": "REACH y TSCA aparecen como ejemplos con su jurisdiccion, y el nodo reencuadra con 'o su equivalente en tu mercado'. El tratamiento es coherente con la clase B.",
-   "origen": "pasada J (clase medida)"
-  },
-  "determinar_alcance_cui": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "SP 800-171 y CUI son exigencias del gobierno federal de EE.UU. a sus contratistas.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "diagrama_flujo_cui": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "SP 800-171 y la CUI obligan a contratistas del gobierno federal de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "diferenciacion_garantia_contrato_servicio": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo-frontera bien formado: la ley se nombra al frente del resumen y la condicion de vender a EE.UU. va en las condiciones de activacion.",
-   "origen": "pasada J (clase medida)"
-  },
-  "diseno_programa_capacitacion_franquicia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El FDD es el documento de divulgacion que exige la regla de franquicias de EE.UU. La condicion explicita de pais va en la primera condicion de activacion. El resto del nodo es metodo de capacitacion.",
-   "origen": "pasada J (clase medida)"
-  },
-  "distincion_gasto_vs_capital_expenditure": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Las normas contables existen en todos los paises (NIIF o las normas locales); los US GAAP son el ejemplo de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "documentacion_exportacion": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Coinciden en clase B y dependencias; la disputa es de paises y tiene razon A. NAFTA entra como acuerdo leido desde EE.UU. (el propio resumen dice que refleja la normativa de Estados Unidos) y no aporta contenido propio de Canada o Mexico; B los anade con el mismo fragmento y eso es sobrecontar. El c",
-   "origen": "pasada J (clase medida)"
-  },
-  "documentacion_viaje_internacional": {
-   "pais": "US",
-   "clase": "A",
-   "motivo": "Los dos lectores aciertan en la clase A. El nucleo es el carnet ATA, que sale de un convenio aduanero internacional. La visa se consulta en la embajada del destino y las vacunas 'en la fuente oficial de tu país', o sea ya van reencuadradas. EE.UU. solo aparece en el puntero, que no casa con el conte",
-   "origen": "pasada J (clase medida)"
-  },
-  "elaboracion_pro_forma_invoice": {
-   "pais": "INT",
-   "clase": "A",
-   "motivo": "Vocabulario de comercio internacional (pro forma invoice, carta de credito, licencia de importacion, terminos de venta). No trae ley ni organismo de un pais; lo de 'precio en USD' es convencion de moneda, no norma. Si se exige contenido de pais para ser A, seria SIN_PAIS.",
-   "origen": "pasada J (clase medida)"
-  },
-  "eleccion_83b": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La eleccion 83(b) es una figura del codigo fiscal federal de EE.UU. (seccion 83(b) del Internal Revenue Code, ante el IRS) que solo aplica a quien tributa alli; es norma con plazo legal, nodo-frontera con condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "eleccion_abogado_franquicias": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Condicion explicita de EE.UU. en las condiciones de activacion. Los honorarios se mencionan como modelo (tarifa plana o por hora), sin importe.",
-   "origen": "pasada J (clase medida)"
-  },
-  "elementos_contrato_legal": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los requisitos de validez de un contrato existen en todos los paises; la consideracion y el statute of frauds estatal son el ejemplo del common law estadounidense.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "elementos_plan_exportacion_ejemplo": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre explicito al final del resumen. El codigo arancelario es vocabulario internacional (clase A). El 15% en dos anos es una meta de ejemplo, no una cifra de norma ni de mercado.",
-   "origen": "pasada J (clase medida)"
-  },
-  "embalaje_exportacion": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre explicito en el resumen: dice que refleja la normativa de EE.UU. y manda preguntar la regulacion del propio mercado. El paso 5 (tratamiento de madera, materiales peligrosos) queda como pregunta, sin norma nombrada.",
-   "origen": "pasada J (clase medida)"
-  },
-  "enfoque_paso_a_paso_investigacion_mercado": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El U.S. Census Bureau es la fuente estadistica de EE.UU.; la oficina de estadisticas de comercio exterior existe en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "equity_crowdfunding": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Las reglas de valores de la SEC (inversionista acreditado, solicitud general) son ley de EE.UU. con alcance real sobre quien ofrece valores alli.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "equity_crowdfunding_terminos": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Title III es el crowdfunding regulado de EE.UU. (JOBS Act); el equity crowdfunding regulado existe en muchos paises y aqui es solo ejemplo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "escaleras_fijas_seguridad": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadrado a medias: ancho, carga y altura van 'según la normativa de tu mercado', pero el umbral de cuatro o mas escalones (cifra de la norma de EE.UU., OSHA 1910 subparte D) queda escrito como obligacion universal ('necesitas'), sin pais y sin remitirlo a la normativa propia. Ningun pais nombrad",
-   "origen": "pasada J (clase medida)"
-  },
-  "escaleras_portatiles_seguridad": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Las normas de seguridad en escaleras portatiles existen en casi todos los paises; la cifra de 3 pies y el etiquetado electrico son la norma OSHA de EE.UU. usada como ejemplo, que debe reencuadrarse ('en EE.UU. OSHA pide 3 pies; busca la norma de seguridad laboral de tu pais').",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "estandar_gtin_epc": {
-   "pais": "EU",
-   "clase": "A",
-   "motivo": "GTIN/EPC de GS1 es un estandar global de identificacion de producto, vocabulario compartido entre paises; las variantes regionales (Norteamerica y Europa) aparecen en paralelo como parte del estandar unificado, no como norma de un pais. Aviso de exactitud, no de pais: el UPC es de 12 digitos y el EA",
-   "origen": "pasada J (clase medida)"
-  },
-  "estimacion_inversion_inicial_franquiciador": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos lectores coinciden en lo que importa: clase C por la condicion explicita de EE.UU. y el FDD como norma. Solo cambia como escriben el pais. Los dos aciertan al avisar que la condicion restringe todo el nodo, aunque lo unico propio de EE.UU. es el FDD. El paso 7 ('cuánta gente necesitas contra",
-   "origen": "pasada J (clase medida)"
-  },
-  "estructura_proveedores_aprobados_designados": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El FDD (documento de divulgacion de franquicia de EE.UU.) y el riesgo de tying bajo leyes antimonopolio van con la condicion explicita, que es la primera de las condiciones de activacion. La parte de proveedores aprobados frente a designados es metodo general, pero queda entero detras de la condicio",
-   "origen": "pasada J (clase medida)"
-  },
-  "estructura_sp800171": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "SP 800-171 y la CUI son obligacion de los contratistas del gobierno federal de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "etiquetado_exportacion": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los dos lectores coinciden en B, y es correcto: el origen estadounidense va reencuadrado por el puntero, que manda verificar la regulacion de la propia jurisdiccion. IATA/OMI y los simbolos pictoricos internacionales son marco internacional (A) y conviven sin incoherencia. En dependencias gana B en ",
-   "origen": "pasada J (clase medida)"
-  },
-  "evaluacion_preparacion_empresa_exportar": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre correcto: nombra el servicio de evaluacion del gobierno de EE.UU. y manda buscar el organismo equivalente del propio mercado. Marco programa_gobierno por tratarse de una herramienta que ofrece un gobierno concreto (juicio leve).",
-   "origen": "pasada J (clase medida)"
-  },
-  "evaluacion_riesgos_legales_ia": {
-   "pais": "EU",
-   "clase": "B",
-   "motivo": "Reencuadre correcto: dice que depende del pais donde operes, da tres ejemplos y el paso 1 manda investigar la ley de tu pais. Las afirmaciones sobre el estado legal (UE, EE.UU., Japon y la proteccion del contenido generado) son muy volatiles y caducan.",
-   "origen": "pasada J (clase medida)"
-  },
-  "evaluar_controles": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Evaluar controles de seguridad es un metodo universal; el RMF y la SP 800-53A del NIST son el marco de ejemplo de un organismo de EE.UU. y existen equivalentes internacionales como ISO 27001.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "evitar_terminos_enganosos_garantia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La Ley Magnuson-Moss es una ley de EE.UU. con alcance real sobre quien vende productos con garantia escrita a clientes alli.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "exclusividad_territorial_representante": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los pasos son genericos de contrato; la unica referencia de pais es el puntero del resumen, que reencuadra y manda verificar en el propio mercado, reforzado por el paso 4 (Verifica si las leyes de tu país permiten este tipo de límite territorial).",
-   "origen": "pasada J (clase medida)"
-  },
-  "exenciones_legales_franquicia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Es un nodo frontera bien condicionado en las condiciones de activacion, aunque el resumen arranca sin decir el pais. Los umbrales de la Franchise Rule de la FTC para las exenciones de inversion grande y comprador sofisticado se ajustan por inflacion cada cierto tiempo. El millon y los 5 millones del",
-   "origen": "pasada J (clase medida)"
-  },
-  "exercise_period_opciones": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los dos lectores coinciden en la clase, las dependencias y las banderas; solo difieren en como anotan el pais. Tienen razon los dos, y B anota mejor el pais: es Estados Unidos implicito, porque el nodo no lo nombra en ningun sitio. Los 90 dias, el maximo legal de 10 anos y la distincion capital gain",
-   "origen": "pasada J (clase medida)"
-  },
-  "export_administration_regulations": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Las EAR son ley de control de exportaciones de EE.UU. con alcance real sobre las exportaciones desde EE.UU. y las reexportaciones de articulos de origen estadounidense.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "extension_credito_compradores_extranjeros": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Razon para B. El reencuadre es explicito ('verifica el acuerdo y la regulación vigente en tu jurisdicción antes de actuar') y el cuerpo no nombra ninguna ley, organismo, plazo legal ni cifra propia de EE.UU. La frase del puntero que cita A como norma no identifica ninguna norma concreta que pueda ca",
-   "origen": "pasada J (clase medida)"
-  },
-  "extintores_portatiles_de_incendio": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "NFPA 10 y la regla OSHA de inspeccion mensual y mantenimiento anual son el ejemplo de EE.UU.; las normas de extintores existen en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "financial_performance_representations": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos lectores coinciden en el fondo: clase C, las mismas cinco dependencias y ninguna bandera. Solo difieren en como nombran el pais (Estados Unidos o EE.UU.). Uso Estados Unidos, que es como aparece en el nodo. Es C porque la regla de la FTC y el Item 19 del FDD son ley de EE.UU. con alcance rea",
-   "origen": "pasada J (clase medida)"
-  },
-  "financiamiento_bancos_multilaterales_desarrollo": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los bancos multilaterales son internacionales; el contenido de pais es una agencia de promocion de exportaciones de EE.UU., una clase de organismo que existe en casi todos los paises, y el nodo la da sin mandar buscar la del propio pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "financiamiento_sba_exportacion": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Programa de gobierno de EE.UU. con la condicion de pais al frente del resumen. Ojo: las condiciones de activacion no repiten la condicion de pais.",
-   "origen": "pasada J (clase medida)"
-  },
-  "financiamiento_usda_agricola": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "GSM-102, SCGP y FGP son programas del gobierno de EE.UU. para exportadores de alli.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "fiscalidad_comercio_electronico_internacional": {
-   "pais": "EU",
-   "clase": "C",
-   "motivo": "El regimen de IVA de la UE para proveedores no comunitarios es una ley con alcance real que obliga a quien vende a clientes de la UE, y el U.S. Commercial Service es un programa del gobierno de EE.UU.; los dos llevan condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "folleto_franquicia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La regulacion estatal de la publicidad de franquicias es ley con alcance real en ciertos estados de EE.UU. que obliga solo a quien ofrece franquicias alli; lleva condicion 'si vendes franquicias en EE.UU.'.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "foreign_corrupt_practices_act": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La FCPA es ley de EE.UU. con alcance real sobre personas y empresas de EE.UU., emisores alli y actos en su territorio.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "foreign_trade_zones": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Las FTZ de EE.UU. son una figura aduanera y un programa del gobierno estadounidense que solo sirve a quien importa a EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "fuentes_investigacion_mercado": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "USA Trade Online, Trade Stats Express, la Market Research Library y el Customized Market Research del U.S. Commercial Service y el USDA Foreign Agricultural Service son programas del gobierno de EE.UU. para sus exportadores, y la politica les da condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "garantias_implicitas_vs_expresas": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La Ley Magnuson-Moss y las garantias implicitas que describe son derecho de EE.UU. con alcance real sobre quien vende a consumidores de alli.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "gestion_configuracion_least_functionality": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La SP 800-171 y el CUI son obligaciones de los contratistas del gobierno federal de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "gestion_contrasenas_cui": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "CUI es informacion del gobierno federal de EE.UU.; el control solo obliga a quien la maneja.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "gestion_diferencias_culturales": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La mencion es al servicio consular y comercial de EE.UU.; la embajada y la oficina comercial de tu propio pais existen en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "gestion_energia_equipos": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Energy Star es el programa de etiquetado de eficiencia de la EPA de EE.UU., pero la clase (etiqueta oficial de eficiencia energetica de equipos) existe en casi todos los paises y el nodo la usa como criterio de compra, no como obligacion; toca reencuadrarlo como ejemplo de EE.UU. y mandar a buscar l",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "gestion_fluctuaciones_cambiarias_clientes": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Ex-Im Bank es una agencia y programa del gobierno de EE.UU. que solo atiende a exportadores de alli; por la politica, un programa de gobierno lleva condicion de pais ('si exportas desde EE.UU.').",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "gestion_responsabilidad_vicaria": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La responsabilidad vicaria del principal existe en casi todos los ordenamientos; el caso judicial es un ejemplo de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "gestion_terminacion_franquiciado": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La exigencia de justa causa y plazo de subsanacion viene de las leyes estadounidenses de relacion de franquicia y el contraste con el despido 'a voluntad' es figura laboral de EE.UU., pero las reglas para terminar una franquicia existen en casi todos los paises (ley de franquicias o derecho de contr",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "getting_started_media_protection": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "CUI es una categoria de informacion del gobierno federal de EE.UU.; el control de SP 800-171 solo obliga a quien maneja CUI de ese gobierno.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "getting_started_personnel_security": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "CUI y la familia de seguridad del personal de SP 800-171 obligan a contratistas del gobierno federal de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "getting_started_physical_protection": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El nodo es la familia de proteccion fisica de la SP 800-171 para CUI, una obligacion de los contratistas federales de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "getting_started_planning": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "SP 800-171 y la proteccion de CUI obligan solo a contratistas del gobierno federal de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "getting_started_risk_assessment": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La CUI es categoria federal de EE.UU. y su evaluacion de riesgos es requisito de SP 800-171 para contratistas federales.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "getting_started_supply_chain_risk_management": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Aqui el SCRM se ata al CUI de la SP 800-171, una obligacion de los contratistas federales de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "getting_started_system_communication_protection": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "CUI y su control de SP 800-171 son exigencias del gobierno federal de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "getting_started_system_information_integrity": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La gestion de CUI en sistemas no federales es obligacion de SP 800-171 para contratistas del gobierno de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "getting_started_system_services_acquisition": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Es un requisito de la SP 800-171 sobre CUI, que obliga a los contratistas federales de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "herramientas_accionadas_por_explosivos": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Es la norma OSHA de herramientas accionadas por polvora; las normas de seguridad laboral sobre estas herramientas existen en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "identificacion_autenticacion_mfa": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "NIST SP 800-171 es la norma federal de EE.UU. que obliga a los contratistas del gobierno estadounidense que manejan CUI.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "identificacion_evaluacion_peligros": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La identificacion de peligros viene de las practicas recomendadas de OSHA para la \"industria general\" de EE.UU., pero la obligacion de evaluar riesgos laborales existe en casi todos los paises y el texto ya remite a lo que pida tu mercado.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "import_regulations_foreign_governments": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Investigar las regulaciones de importacion del pais destino es un metodo universal y la agencia de promocion de exportaciones existe en casi todos los paises; el U.S. Commercial Service es solo el ejemplo de EE.UU. citado en un paso.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "incoterms_reglas_comerciales_internacionales": {
-   "pais": "INT",
-   "clase": "A",
-   "motivo": "Vocabulario internacional (Incoterms), clase A. Dependencia de version: cita la edicion 2010, que ya reemplazo la 2020. Incoherencia menor interna: el resumen remite a CPT o CIP para transporte no maritimo y el paso 2 menciona CIF o CIP. 'país importador' es generico, no un pais concreto.",
-   "origen": "pasada J (clase medida)"
-  },
-  "indice_de_reparabilidad": {
-   "pais": "FR",
-   "clase": "C",
-   "motivo": "El indice de reparabilidad es una obligacion legal francesa que solo alcanza a quien vende esos productos en Francia.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "ingresos_por_rebates": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El FDD es el documento de divulgacion que exige la FTC en EE.UU. Condicion explicita en la primera condicion de activacion; el resumen lo trata sin pais, pero la condicion lo cubre.",
-   "origen": "pasada J (clase medida)"
-  },
-  "intellectual_property_strategy": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La solicitud provisional es una figura de la oficina de patentes de EE.UU.; la clase (asegurar pronto una fecha de prioridad con una primera solicitud) existe en casi todos los paises via el Convenio de Paris, asi que se reencuadra como ejemplo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "international_buyer_program": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Programa de un gobierno concreto, con la condicion de pais explicita en sus condiciones de activacion y el pais dicho en el resumen.",
-   "origen": "pasada J (clase medida)"
-  },
-  "international_partner_search": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "International Partner Search, Gold Key e ICP son servicios del gobierno de EE.UU. para sus empresas: programa de gobierno con condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "investigacion_mercado_primaria_secundaria_2": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La investigacion de mercado primaria y secundaria es un metodo universal y casi todos los paises tienen agencia de promocion de exportaciones con estudios de mercado; el U.S. Commercial Service es el ejemplo de EE.UU. citado en un paso.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "joint_ventures_internacionales": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El joint venture internacional es universal; la asesoria legal en el pais de origen existe en todos y EE.UU. es solo el origen del libro.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "letters_of_credit": {
-   "pais": "US",
-   "clase": "A",
-   "motivo": "La carta de credito es vocabulario internacional (UCP de la CCI): clase A, intocable.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "licencia_exportacion_regulaciones": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "EAR, ITAR y OFAC son leyes de EE.UU. con alcance real, incluso extraterritorial, sobre bienes y personas bajo su jurisdiccion.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "los_tres_grandes_criterios": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos coinciden y aciertan: la condicion de EE.UU. es explicita. Observacion comun a ambos: el unico contenido de pais es el paso 3 (Items 7 y 8 del FDD); el marco de los tres criterios es metodo universal que la condicion restringe entero a EE.UU.",
-   "origen": "pasada J (clase medida)"
-  },
-  "machine_guarding_abrasive_wheels": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Las normas de resguardo de maquinas y esmeriladoras existen en casi todos los paises; el contenido sigue la norma estadounidense (descanso de trabajo, lengueta ajustable, prueba de sonido) y debe reencuadrarse hacia la norma de seguridad laboral del propio pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "mantenimiento_sistema_cui": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "SP 800-171 y CUI son exigencias del gobierno federal de EE.UU. a sus contratistas.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "marcas_registradas": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre correcto: el ejemplo de EE.UU. se nombra como tal y se manda buscar la oficina y la regla del propio pais; los costos se remiten al mercado propio sin cifra.",
-   "origen": "pasada J (clase medida)"
-  },
-  "marco_name_system_fee": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Es la definicion legal de franquicia de EE.UU. (marca, control o apoyo, y tarifa) escrita como universal; la regulacion de franquicias existe en muchos paises con definiciones distintas.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "marco_nist_cybersecurity_framework": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los marcos de ciberseguridad existen en casi todos los paises (ISO 27001 y marcos nacionales); el NIST CSF es un marco voluntario de un organismo de EE.UU. que sirve de ejemplo y se usa en todo el mundo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "marketing_directo_y_llamadas_en_frio_franquicias": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los dos coinciden en la clase B y en los paises. En las dependencias tiene razon B. El resumen pone a EE.UU. y Canada como ejemplos ('en mercados como') y el paso 4 manda al lector a lo suyo ('Verificar el cumplimiento normativo de contacto directo en cada mercado objetivo.'), que es el reencuadre d",
-   "origen": "pasada J (clase medida)"
-  },
-  "mecanismo_resolucion_disputas": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La Magnuson-Moss y la Dispute Resolution Rule de la FTC obligan a quien vende con garantia a clientes en EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "mensaje_desarrolladores_area": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La FPR es la figura de divulgacion financiera de la regla de franquicias de EE.UU.; la divulgacion de desempeño existe como practica en casi todos los mercados de franquicia y aqui se usa como metodo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "multiples_compradores_influyentes": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Lleva la condicion explicita de EE.UU. y lo unico estadounidense es la capa de registro estatal. El nucleo (mapear a quienes influyen en la compra) es metodo y valdria en cualquier pais. La condicion restringe el nodo entero, mas de lo necesario.",
-   "origen": "pasada J (clase medida)"
-  },
-  "negociacion_acuerdo_representante_extranjero": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre por puntero: dice que refleja la normativa de EE.UU. y manda verificar en tu jurisdiccion. La CISG es convenio de la ONU (clase A). Queda un resto de la fuente estadounidense escrito para todos: 'Redactar el contrato en inglés y en el idioma oficial del país extranjero' supone un exportad",
-   "origen": "pasada J (clase medida)"
-  },
-  "obtencion_marca_registrada": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos lectores coinciden en la clase C y aciertan: la condicion 'Solo aplica si vendes o piensas vender franquicias en Estados Unidos' cubre el titulo y el resumen, que dicen 'federal' sin nombrar el pais. En las dependencias acierta A con el tipo del plazo: 'un año o más' es tiempo de tramite, no",
-   "origen": "pasada J (clase medida)"
-  },
-  "organizacion_interna_exportacion": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El puntero jurisdiccional es de plantilla y no tiene norma debajo: organizar un departamento de exportacion es puro metodo, sin nada propio de EE.UU. Lo mido como B porque el nodo reencuadra de forma explicita, pero el puntero sobra.",
-   "origen": "pasada J (clase medida)"
-  },
-  "original_issue_discount_oid": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El OID es una regla del codigo fiscal de EE.UU. que solo obliga a quien tributa alli; es ley con alcance real, no clase universal.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "paris_convention_prioridad": {
-   "pais": "US",
-   "clase": "A",
-   "motivo": "El Convenio de Paris es un tratado internacional; el derecho de prioridad vale desde cualquier pais miembro.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "participacion_ferias_comerciales": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los pabellones nacionales en ferias son un apoyo que casi todos los paises ofrecen a sus empresas; el de EE.UU. es solo el ejemplo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "participacion_trabajadores": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre bien hecho: 'según la norma de tu país (en Estados Unidos, ...)', y el paso 6 insiste en 'las protecciones contra represalias que existen en tu país'. Las SDS son vocabulario internacional del SGA.",
-   "origen": "pasada J (clase medida)"
-  },
-  "patent_cooperation_treaty": {
-   "pais": "INT",
-   "clase": "A",
-   "motivo": "Tratado internacional (PCT), clase A intocable con su vigencia. El plazo de 18 meses es una forma aproximada de decir el plazo del tratado (fase nacional a los 30 meses desde la prioridad).",
-   "origen": "pasada J (clase medida)"
-  },
-  "patentes_startup": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Las oficinas y los procesos de patente existen en todos los paises; el USPTO y la solicitud provisional son el ejemplo de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "permit_required_confined_spaces": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La figura 'espacio confinado con permiso requerido' y el programa escrito son la norma OSHA de EE.UU. (permit-required confined spaces); la regulacion de seguridad en espacios confinados existe en casi todos los paises, asi que se reencuadra como ejemplo de EE.UU. con busqueda de la norma propia.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "pisos_aberturas_paredes_seguridad": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Es la norma OSHA de EE.UU. sobre superficies de trabajo (aberturas de piso, cubiertas con el doble de carga, rodapies); casi todos los paises tienen normas de seguridad laboral equivalentes, asi que es un ejemplo de un pais que hay que reencuadrar mandando buscar la norma propia.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "plan_accion_exportacion": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El contenido es generico (licencias, aranceles, recursos gubernamentales de exportacion sin nombrar); el puntero declara el origen estadounidense y manda verificar la regulacion propia. Los plazos 14, 30, 60, 120 dias son ejemplos de gestion, no legales.",
-   "origen": "pasada J (clase medida)"
-  },
-  "plan_cumplimiento_exportacion": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Tratado como B por el puntero del resumen, que dice que es normativa de EE.UU. y manda verificar la de tu jurisdiccion. Reencuadre debil: los seis pasos prescriben BIS y EAR sin 'o el equivalente en tu pais', y las condiciones de activacion no mencionan EE.UU. Ademas EAR tiene alcance real sobre bie",
-   "origen": "pasada J (clase medida)"
-  },
-  "plan_seguridad_sistema_poam": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "SSP y POAM bajo SP 800-171 para CUI son exigencias del gobierno federal de EE.UU. a sus contratistas; solo obligan a quien maneja CUI de ese gobierno.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "planes_estatales_osha": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Tiene razon B. La unica diferencia es 'la página de Planes Estatales de OSHA': es una referencia a una web (aunque sin URL), asi que su tipo es enlace y no institucion. El organismo ya queda recogido en 'OSHA Federal'. Por lo demas coinciden y aciertan: es un programa del gobierno de EE.UU. con la c",
-   "origen": "pasada J (clase medida)"
-  },
-  "politica_compras_verdes": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Energy Star es un programa de etiquetado de EE.UU. citado como ejemplo; las etiquetas de eficiencia energetica existen en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "powered_industrial_trucks_safety": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Es la norma OSHA 29 CFR 1910.178 (titulo 'Powered Industrial Trucks', certificacion, reevaluacion trienal, inspeccion por turno, sin pasajeros) sin nombrarla; la clase, norma de seguridad para montacargas, existe en casi todos los paises, asi que se reencuadra como ejemplo de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "prediccion_confiabilidad_diseno": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los bancos de datos de confiabilidad de partes existen en muchos paises; GIDEP y RIAC son programas del gobierno y del sector defensa de EE.UU. que aparecen como ejemplo de fuente.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "preparacion_due_diligence": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Presenta el caso de EE.UU. como ejemplo y manda buscar lo propio ('en tu país existen figuras legales equivalentes, así que averigua cuáles aplican'; 'si estás en otro país, averiguar cuál es la forma legal equivalente'). El paso 1 condiciona ademas a EE.UU., pero no es incoherente: la condicion y e",
-   "origen": "pasada J (clase medida)"
-  },
-  "preparacion_para_salida_a_bolsa": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los dos lectores coinciden: clase B con Sarbanes-Oxley como norma. B lo justifica bien: el nodo dice 'las normas de gobierno corporativo que existan en tu país', usa Sarbanes-Oxley como ejemplo declarado y en el paso 4 manda averiguar las del pais propio. Es un reencuadre coherente.",
-   "origen": "pasada J (clase medida)"
-  },
-  "preparar_fdd": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "C por la primera condicion de activacion. El resumen presenta el FDD como obligatorio para todo franquiciador sin nombrar el pais: la condicion esta solo en las condiciones, no al frente. Hay una incoherencia interna aparte del pais: el paso 1 manda contratar un abogado, y la ultima condicion da por",
-   "origen": "pasada J (clase medida)"
-  },
-  "prevencion_enfermedades_por_calor": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La estructura (plan escrito, responsable designado, aclimatacion de nuevos y de quienes regresan, sistema de companeros) sigue la norma de calor de OSHA/Cal-OSHA de EE.UU.; la prevencion del estres termico existe en casi todos los paises, asi que se reencuadra como ejemplo con busqueda de la norma p",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "prevenir_franquicias_inadvertidas": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo-frontera con condicion explicita de EE.UU. en sus condiciones de activacion.",
-   "origen": "pasada J (clase medida)"
-  },
-  "proceso_rmf_siete_pasos": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El RMF es un marco de una agencia de EE.UU.; los marcos de gestion de riesgo de seguridad existen en casi todos los paises (ISO 27005 y equivalentes).",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "proceso_venta_franquicias": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El FDD (documento de divulgacion de la regla de franquicias de EE.UU.) aparece sin explicar y el nodo entero va condicionado a EE.UU. en las condiciones, coherente con C. Observacion: solo el paso 4 es norma de EE.UU.; el resto es metodo de venta general, y la condicion excluye a todo usuario fuera ",
-   "origen": "pasada J (clase medida)"
-  },
-  "programa_consulta_osha_onsite": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Ambos coinciden en C y programa de gobierno; la diferencia es el tipo de SHARP. Razon para el LECTOR A en eso: SHARP es un programa de reconocimiento de OSHA nombrado como recurso, no una ley ni un reglamento con version, asi que va como institucion. Tomo los fragmentos literales mas completos del L",
-   "origen": "pasada J (clase medida)"
-  },
-  "programa_proteccion_denunciantes": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La proteccion del denunciante existe en casi todos los paises; el plazo de 30 dias de la ley OSH (seccion 11(c)) es el ejemplo de EE.UU. que dejo la verificacion de plazos (saneamiento-t1-p), con \"verifica el plazo vigente en tu pais\".",
-   "origen": "saneamiento tanda 1, plazos legales"
-  },
-  "programa_proteccion_respiratoria": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "29 CFR 1910.134 y NIOSH son la norma y el organismo de EE.UU.; la proteccion respiratoria regulada y la certificacion de equipos existen en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "programas_compra_franquicia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos lectores tienen razon y solo difieren en la largura del fragmento; me quedo con el recorte de B en las dependencias. La primera condicion de activacion restringe de forma explicita a quien vende o piensa vender franquicias en Estados Unidos, y la Sherman Antitrust Act y el Item 8 del FDD que",
-   "origen": "pasada J (clase medida)"
-  },
-  "programas_cooperativos_osha": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "OSPP, Alianzas y VPP son programas del gobierno de EE.UU.; por la politica de agosto van como clase C con condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "programas_estatales_locales_financiamiento_exportacion": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos tienen razon en la clase C, las dependencias y la bandera de programa de gobierno. Solo difieren en cuantas veces cuentan el pais. EE.UU. aparece en tres sitios: la condicion al frente del resumen, la mencion de estados y ciudades de EE.UU., y la condicion de activacion. Por eso lo cuento tr",
-   "origen": "pasada J (clase medida)"
-  },
-  "programas_ex_im_bank": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El Ex-Im Bank es un programa del gobierno de EE.UU. para exportadores de alli; lleva condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "prohibicion_tie_in_sales": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos lectores coinciden por completo en clase, norma e institucion. Es un nodo-frontera bien condicionado: lleva la condicion de venta a EE.UU. en las condiciones de activacion y declara que es ley federal. La indicacion para otros paises va aparte y no se mezcla con la regla estadounidense.",
-   "origen": "pasada J (clase medida)"
-  },
-  "propuesta_valor_franquicia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El FDD (documento de divulgacion de franquicia exigido en EE.UU.) aparece en el entregable; la condicion de pais explicita en activacion lo convierte en nodo-frontera. El paso de contratacion de la lista de valor es metodo, no norma.",
-   "origen": "pasada J (clase medida)"
-  },
-  "proteccion_patentes_internacional": {
-   "pais": "US",
-   "clase": "A",
-   "motivo": "El núcleo es el PCT, un tratado internacional (clase A), junto con la regla general de que la patente se pide país por país. La única mención a EE.UU. está en el puntero, que ya manda verificar la regulación de la propia jurisdicción. Ni los pasos ni las condiciones dan por hecho ningún país.",
-   "origen": "pasada J (clase medida)"
-  },
-  "proteccion_propiedad_intelectual_franq": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "FDD y leyes estatales de no competencia de EE.UU.; condicionado de forma explicita a EE.UU. en la primera condicion de activacion.",
-   "origen": "pasada J (clase medida)"
-  },
-  "proteccion_propiedad_intelectual_internacional": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El nucleo (PCT y Protocolo de Madrid) es tratado internacional de clase A; lo unico de pais es la oficina de propiedad intelectual de EE.UU. como recurso, y esa oficina existe en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "publicidad_garantia_conforme": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo frontera limpio: el resumen condiciona al frente ('te aplica si vendes o piensas vender a clientes en ese país') y la primera condicion de activacion lo repite ('Vendes, o piensas vender, productos a clientes en Estados Unidos.'). No hay reencuadre contradictorio. Los $15 son umbral legal (cifr",
-   "origen": "pasada J (clase medida)"
-  },
-  "que_es_cui": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El CUI es una categoria del gobierno federal de EE.UU. que obliga a quien contrata con el.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "recursos_apoyo_gubernamental_exportacion": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "CS, SBA, SBDC, USTDA, USAID, FAS y Ex-Im Bank son programas del gobierno de EE.UU.; llevan condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "recursos_educativos_osha": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo entero sobre recursos y programas de la agencia federal OSHA; condicionado de forma explicita a EE.UU. en la primera condicion de activacion, lo que cumple la regla de programa de gobierno con condicion de pais.",
-   "origen": "pasada J (clase medida)"
-  },
-  "recursos_niosh": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Es un programa del gobierno de EE.UU. y lleva la condicion de pais explicita en el resumen y en las condiciones. Depende de que NIOSH siga ofreciendo sus programas (HHE, FACE, la guia).",
-   "origen": "pasada J (clase medida)"
-  },
-  "reduccion_riesgo_percibido": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La IFA es la asociacion de franquicias de EE.UU. y la FPR la figura de divulgacion de su regla de franquicias; asociaciones y divulgacion financiera existen en casi todos los mercados.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "registration_rights_stock_consideration": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre correcto: habla del organismo regulador de valores de tu pais, da la SEC como ejemplo de EE.UU. y manda revisar detalles con un profesional en tu propio mercado.",
-   "origen": "pasada J (clase medida)"
-  },
-  "registro_estatal_franquicia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos tenian razon en la clase C: la condicion 'Solo aplica si vendes o piensas vender franquicias en Estados Unidos' es explicita. La diferencia es solo de fragmentos: junto las dos listas, que citan el mismo contenido (FDD sin registro federal, leyes estatales frente a la Regla FTC 436 y el paso",
-   "origen": "pasada J (clase medida)"
-  },
-  "registro_reporte_lesiones": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Esta reencuadrado: 'en muchos mercados', 'Conviene preguntar cuales son las reglas exactas en tu mercado', con el ejemplo de EE.UU. marcado. Quedan dos restos. El primero, 'siempre debes reportar fatalidades, hospitalizaciones, amputaciones o perdida de un ojo', copia la lista exacta de OSHA en tono",
-   "origen": "pasada J (clase medida)"
-  },
-  "regla_de_minimis": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La regla de minimis de origen es un mecanismo de los tratados de libre comercio, que podria leerse como clase A. El nodo la ancla en la normativa de EE.UU. y manda verificar el acuerdo vigente en tu jurisdiccion, asi que la mido como B. El umbral del 7% es de NAFTA, que el T-MEC/USMCA sustituyo en 2",
-   "origen": "pasada J (clase medida)"
-  },
-  "regla_disponibilidad_previa_venta": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La Magnuson-Moss es ley federal de EE.UU. que obliga a quien vende alli con garantia escrita, y el nodo ya se condiciona a vender a EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "regla_divulgacion_garantia": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo-frontera bien condicionado: al frente dice que es ley de EE.UU. y la condicion de activacion lo limita a quien vende a clientes en EE.UU. El umbral de 15 dolares es cifra de la norma (se queda) y puede cambiar.",
-   "origen": "pasada J (clase medida)"
-  },
-  "reglas_de_origen_fta_2": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Aunque las reglas de origen son vocabulario internacional, este nodo opera sobre los TLC de EE.UU. y sus herramientas (Schedule B), y su condicion ya es de exportar desde EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "reglas_origen_sectoriales": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "B por el puntero del resumen, que dice que la mecanica es la de EE.UU. y manda verificar la de tu jurisdiccion. Es un B debil: los pasos 2 a 4 mandan a webs de agencias de EE.UU. y a NAFTA sin ninguna condicion, y la condicion de activacion no nombra pais. Las reglas de origen de EE.UU. son ley con ",
-   "origen": "pasada J (clase medida)"
-  },
-  "resolucion_problemas_de_pago": {
-   "pais": "INT",
-   "clase": "A",
-   "motivo": "El unico organismo concreto es internacional (arbitraje de la ICC), que es mecanismo del comercio internacional y se queda con su puntero de vigencia ('verifica el acuerdo y la regulación de tu mercado antes de actuar'). Los organismos nacionales van en generico ('los organismos de apoyo al comercio",
-   "origen": "pasada J (clase medida)"
-  },
-  "responsabilidad_extendida_productor_2": {
-   "pais": "EU",
-   "clase": "B",
-   "motivo": "La responsabilidad extendida del productor existe en muchos paises; WEEE y EWRA se citan como ejemplos con su jurisdiccion.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "respuesta_consultas_internacionales": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El puntero jurisdiccional es de plantilla: el nodo no cita ninguna norma de EE.UU. que lo justifique, porque es un metodo para responder consultas. Queda un resto de perspectiva estadounidense en el paso 2 ('si la consulta no está en inglés'), que da por hecho un exportador de habla inglesa. El fax ",
-   "origen": "pasada J (clase medida)"
-  },
-  "respuesta_incidentes_cui": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "La respuesta a incidentes con CUI bajo la SP 800-171 obliga por contrato a los contratistas federales de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "revision_legal_marketing": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo-frontera bien condicionado en sus condiciones de activacion a quien vende franquicias en EE.UU.; el numero de estados que regulan el marketing puede cambiar.",
-   "origen": "pasada J (clase medida)"
-  },
-  "riesgo_fiduciario_insolvencia_deuda": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los deberes de los directores hacia acreedores en insolvencia existen en casi todos los paises; la 'ley estatal' es la doctrina estadounidense usada como ejemplo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "rmf_paso_categorizar": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "NIST SP 800-60 (y la categorizacion FIPS 199) es guia federal de EE.UU. usada como plantilla de un metodo universal que tiene equivalentes en otros marcos.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "rol_black_belt_six_sigma": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "ASQ (EE.UU.) aparece reencuadrado como ejemplo de 'organismos reconocidos en tu mercado'. El umbral de $250,000 es una cifra en dolares de la epoca de la fuente, puesta como meta para todos sin reencuadre a la moneda ni a la escala del negocio. No es precio de mercado ni norma, pero caduca.",
-   "origen": "pasada J (clase medida)"
-  },
-  "safety_case_evaluacion_formal": {
-   "pais": "GB",
-   "clase": "B",
-   "motivo": "Los dos coinciden en clase B y Reino Unido; el desacuerdo esta en la dependencia y la razon es de B. Lo que puede caducar es el propio regimen regulatorio del Safety Case, que el resumen presenta como modelo regulatorio que te exige demostrar algo: eso es una norma. El 'organismo regulador correspon",
-   "origen": "pasada J (clase medida)"
-  },
-  "sbrefa_cumplimiento": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Nodo-frontera bien condicionado al frente del resumen y en la primera condicion de activacion. Ley de EE.UU. con OSHA como organismo.",
-   "origen": "pasada J (clase medida)"
-  },
-  "screening_mercados_potenciales": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Filtrar mercados potenciales con estadisticas es un metodo universal; casi todos los paises tienen oficina de estadisticas de comercio exterior y agencia de promocion de exportaciones, y las de EE.UU. son el ejemplo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "seguridad_soldadura_corte_bronceado": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Son requisitos OSHA de soldadura; las normas de seguridad en soldadura existen en casi todos los paises con sus propias cifras.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "seguridad_trabajadores_jovenes": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Ya reencuadrado: 'las leyes de trabajo infantil de tu país o región', 'los permisos de trabajo que exija la ley en tu país o región', 'cuando existan en tu mercado'. No queda ningun pais nombrado, pero el origen implicito es el marco de EE.UU. (OSHA/FLSA) y le queda el umbral de 18 anios para equipo",
-   "origen": "pasada J (clase medida)"
-  },
-  "seguro_de_credito_a_la_exportacion": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El seguro de credito a la exportacion lo ofrecen agencias de credito a la exportacion en casi todos los paises; el ejemplo de origen (productos del EXIM Bank de EE.UU.) se reencuadra mandando buscar la entidad del propio pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "seguro_exportacion": {
-   "pais": "INT",
-   "clase": "A",
-   "motivo": "Los dos lectores coinciden en la clase A y aciertan. El nodo no trae contenido de ningun pais: lo unico con vigencia es vocabulario internacional. CIF/CIP son Incoterms, y por eso son una norma con version. El 110% es la cobertura minima que fijan esos terminos y cambia con su version, asi que es un",
-   "origen": "pasada J (clase medida)"
-  },
-  "seguro_inversion_opic": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "OPIC es una agencia del gobierno de EE.UU. solo para inversores estadounidenses: programa de gobierno con condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "seleccion_agente_carga_internacional": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El resumen trae un puntero que reencuadra ('refleja la normativa de EE.UU. ... verifica el acuerdo y la regulación vigente en tu jurisdicción'), por eso B. Punto debil: los pasos 2 y 4 nombran la Federal Maritime Commission y el filing en AES (obligacion del exportador desde EE.UU.) sin repetir el r",
-   "origen": "pasada J (clase medida)"
-  },
-  "seleccion_controles": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Seleccionar y adaptar un conjunto de controles de seguridad es un metodo universal; el catalogo SP 800-53 del NIST aparece como ejemplo de un organismo de EE.UU.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "seleccion_de_distribuidor_internacional": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "El U.S. Commercial Service es un programa del gobierno de EE.UU. que sirve a exportadores de EE.UU.; por la politica de agosto, ratificada, un programa de gobierno lleva condicion de pais (si operas en EE.UU.).",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "seleccion_de_metodo_de_pago": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Los cinco metodos de pago (carta de credito, cobranza documentaria y los demas) son vocabulario internacional de clase A. Lo propio de un pais es el ICP del U.S. Commercial Service, un servicio del gobierno de EE.UU. para sus exportadores. Va con reencuadre ('u otras fuentes disponibles en tu mercad",
-   "origen": "pasada J (clase medida)"
-  },
-  "seleccion_estructura_corporativa": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre B explicito en resumen ('Averigua cuál es la forma legal equivalente en tu país y consulta el costo y los requisitos en tu mercado') y en pasos 2 y 4. Residuo: el titulo y el paso 3 siguen nombrando solo las figuras de EE.UU. (S Corp, LLC) sin su 'o el equivalente' en ese mismo paso, aunq",
-   "origen": "pasada J (clase medida)"
-  },
-  "senalizacion_de_salidas": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Son requisitos de OSHA/NFPA de EE.UU. sin nombrar el pais; la señalizacion de salidas de emergencia existe como norma en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "temas_legales_empleo": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Contratar y despedir van como metodo y nunca como norma de un pais. El at-will es la figura de EE.UU. dentro de una clase que existe en todas partes (fijar las condiciones de terminacion e indemnizacion en la oferta y tener asesoria laboral), asi que se reencuadra como ejemplo.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "term_sheet_disposiciones_vinculantes": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La HSR Act es el control previo de concentraciones de EE.UU. citado como ejemplo; la notificacion de concentraciones existe en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "trade_fair_certification_program": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Los dos miden C y los dos tienen razon: la condicion nombra el pais de forma explicita, aunque es debil, porque pide querer el respaldo de EE.UU. y no ser exportador de EE.UU., que es a quien sirve el programa. En las dependencias acierta A. 'Inscribirse en el pabellón de EE.UU. correspondiente' es ",
-   "origen": "pasada J (clase medida)"
-  },
-  "transitarios_freight_forwarders": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Reencuadre explicito: dice que la mecanica sigue la normativa de EE.UU. y manda verificar la de la propia jurisdiccion. El papel del transitario existe en casi todos los paises. Las empresas nombradas son ejemplos comerciales concretos.",
-   "origen": "pasada J (clase medida)"
-  },
-  "uso_del_us_commercial_service": {
-   "pais": "US",
-   "clase": "C",
-   "motivo": "Es un programa del gobierno de EE.UU. para sus exportadores; por la politica de agosto lleva condicion de pais.",
-   "origen": "pasada JC (clase declarada)"
-  },
-  "validacion_certificaciones_terceros": {
-   "pais": "EU",
-   "clase": "B",
-   "motivo": "Razon para el LECTOR A. La etiqueta de la UE no esta escrita como si valiera para todos: va como ejemplo (ej.) junto a un sello internacional (FSC), y el paso 1 manda al usuario a buscar las certificaciones que le correspondan en un indice global, que es un reenvio a lo propio. El reencuadre es debi",
-   "origen": "pasada J (clase medida)"
-  },
-  "valuacion_409a": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "Razon para A. El nodo situa la 409A 'En Estados Unidos', dice que 'Estos detalles legales y fiscales varían según el país', manda verificarlos 'con un profesional en tu mercado' y en el paso 3 anade 'o la autoridad equivalente en tu mercado'. Es un tratamiento B coherente. No hay condicion de solo E",
-   "origen": "pasada J (clase medida)"
-  },
-  "vesting_acciones_fundadores": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El vesting es universal; la eleccion 83(b) es el ejemplo de EE.UU. y queda condicionada en el texto (saneamiento-t1-j07 a j09). La sesion corrige el C de la pasada JC: el aviso de frontera enganaria sobre un metodo universal.",
-   "origen": "decision de la sesion sobre la pasada JC"
-  },
-  "vesting_dinamico": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "La 83(b) de EE.UU. entra como ejemplo marcado con 'por ejemplo' y con su pais nombrado, y el resumen reencuadra: 'Los detalles legales y fiscales de este tema varían según el país; antes de actuar, verifícalos con un profesional local.' El cliff de 1 ano y los 4 anos son costumbre de mercado del ves",
-   "origen": "pasada J (clase medida)"
-  },
-  "warrant_pricing_venture_debt": {
-   "pais": "US",
-   "clase": "B",
-   "motivo": "El OID es una figura fiscal de EE.UU.; el tratamiento fiscal del descuento en deuda existe en casi todos los paises.",
-   "origen": "pasada JC (clase declarada)"
+  "_nota": "Vista web de dataset/metadata/jurisdiccion.json: pais y clase de cada nodo, sin su motivo.",
+  "nodos": {
+    "adaptacion_producto_estandares_tecnicos": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "adaptaciones_sectoriales_iso": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "almacenamiento_liquidos_inflamables": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "alternativa_agency_relationship": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "alternativa_business_opportunity_licensing": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "alternativa_dealership_distributorship": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "alternativa_joint_venture": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "alternativa_operaciones_propias": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "alternativa_trademark_licensing": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "analisis_competencia_franquicias": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "antiboycott_regulations": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "asistencia_agencias_minoritarias_mbda": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "asistencia_embajadas_consulados_comerciales": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "auditoria_responsabilidad": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "autocertificacion_del_exportador": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "autorregulacion_seguridad": {
+      "pais": "GB",
+      "clase": "B"
+    },
+    "barreras_comerciales_no_arancelarias": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "benchmark_inversion_rd_industria": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "buenas_practicas_manufactura_cgmp": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "business_excellence_models": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "calculo_contenido_valor_regional": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "calculo_de_aranceles_importacion": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "calculo_roi_franquiciado_2": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "calificacion_prospectos_award": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "capacitacion_de_distribuidores": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "capacitacion_roles_gerencia": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "carta_de_credito_letter_of_credit": {
+      "pais": "US",
+      "clase": "A"
+    },
+    "centro_asesoria_advocacy_center": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "certificacion_leed_energy_star": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "certificacion_origen_producto": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "certificaciones_ecoetiquetas": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "certificado_de_origen_coo": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "certificado_de_origen_tratados_libre_comercio": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "certificados_genericos_de_origen": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "clasificacion_consultores_empleados": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "clasificacion_garantia_full_limited": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "clausula_antidesviacion": {
+      "pais": "US",
+      "clase": "A"
+    },
+    "clausula_deber_general_osha": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "communicate_transparencia": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "compensacion_service_providers": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "comprender_definicion_legal_franquicia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "concepto_de_advances": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "concientizacion_entrenamiento_cui": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "conformidad_comercio_internacional": {
+      "pais": "EU",
+      "clase": "C"
+    },
+    "consideraciones_instalacion_internacional": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "consultores_comercio_internacional": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "contacto_evaluacion_representantes_extranjeros": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "contratar_abogado_franquicias": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "contratos_de_servicio_garantia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "control_acceso_least_privilege": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "control_exportaciones_bis": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "control_responsabilidad_manual": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "convertible_debt_fundamentos": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "coshh_procedimiento_rolling": {
+      "pais": "GB",
+      "clase": "B"
+    },
+    "crowdfunding_legal_exemptions_jobs_act": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "cumplimiento_acuerdos_comerciales_tanc": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "cumplimiento_can_spam": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "cumplimiento_ftc_rule_436": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "cumplimiento_inversionistas_acreditados": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "cumplimiento_magnuson_moss": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "cumplimiento_sarbanes_oxley": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "cumplir_leyes_estatales_franquicia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "customs_bonded_warehouses": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "dar_forma_politica_climatica": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "decision_fpr": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "decision_marca_comun_branding": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "derecho_rechazo_trabajo_peligroso": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "derechos_de_registro": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "desarrollar_manual_operaciones": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "design_for_environment": {
+      "pais": "EU",
+      "clase": "B"
+    },
+    "deteccion_temprana_regulatoria": {
+      "pais": "EU",
+      "clase": "B"
+    },
+    "determinar_alcance_cui": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "diagrama_flujo_cui": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "diferenciacion_garantia_contrato_servicio": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "diseno_programa_capacitacion_franquicia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "distincion_gasto_vs_capital_expenditure": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "documentacion_exportacion": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "documentacion_viaje_internacional": {
+      "pais": "US",
+      "clase": "A"
+    },
+    "elaboracion_pro_forma_invoice": {
+      "pais": "INT",
+      "clase": "A"
+    },
+    "eleccion_83b": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "eleccion_abogado_franquicias": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "elementos_contrato_legal": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "elementos_plan_exportacion_ejemplo": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "embalaje_exportacion": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "enfoque_paso_a_paso_investigacion_mercado": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "equity_crowdfunding": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "equity_crowdfunding_terminos": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "escaleras_fijas_seguridad": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "escaleras_portatiles_seguridad": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "estandar_gtin_epc": {
+      "pais": "EU",
+      "clase": "A"
+    },
+    "estimacion_inversion_inicial_franquiciador": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "estructura_proveedores_aprobados_designados": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "estructura_sp800171": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "etiquetado_exportacion": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "evaluacion_preparacion_empresa_exportar": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "evaluacion_riesgos_legales_ia": {
+      "pais": "EU",
+      "clase": "B"
+    },
+    "evaluar_controles": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "evitar_terminos_enganosos_garantia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "exclusividad_territorial_representante": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "exenciones_legales_franquicia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "exercise_period_opciones": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "export_administration_regulations": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "extension_credito_compradores_extranjeros": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "extintores_portatiles_de_incendio": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "financial_performance_representations": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "financiamiento_bancos_multilaterales_desarrollo": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "financiamiento_sba_exportacion": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "financiamiento_usda_agricola": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "fiscalidad_comercio_electronico_internacional": {
+      "pais": "EU",
+      "clase": "C"
+    },
+    "folleto_franquicia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "foreign_corrupt_practices_act": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "foreign_trade_zones": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "fuentes_investigacion_mercado": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "garantias_implicitas_vs_expresas": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "gestion_configuracion_least_functionality": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "gestion_contrasenas_cui": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "gestion_diferencias_culturales": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "gestion_energia_equipos": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "gestion_fluctuaciones_cambiarias_clientes": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "gestion_responsabilidad_vicaria": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "gestion_terminacion_franquiciado": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "getting_started_media_protection": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "getting_started_personnel_security": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "getting_started_physical_protection": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "getting_started_planning": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "getting_started_risk_assessment": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "getting_started_supply_chain_risk_management": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "getting_started_system_communication_protection": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "getting_started_system_information_integrity": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "getting_started_system_services_acquisition": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "herramientas_accionadas_por_explosivos": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "identificacion_autenticacion_mfa": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "identificacion_evaluacion_peligros": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "import_regulations_foreign_governments": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "incoterms_reglas_comerciales_internacionales": {
+      "pais": "INT",
+      "clase": "A"
+    },
+    "indice_de_reparabilidad": {
+      "pais": "FR",
+      "clase": "C"
+    },
+    "ingresos_por_rebates": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "intellectual_property_strategy": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "international_buyer_program": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "international_partner_search": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "investigacion_mercado_primaria_secundaria_2": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "joint_ventures_internacionales": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "letters_of_credit": {
+      "pais": "US",
+      "clase": "A"
+    },
+    "licencia_exportacion_regulaciones": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "los_tres_grandes_criterios": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "machine_guarding_abrasive_wheels": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "mantenimiento_sistema_cui": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "marcas_registradas": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "marco_name_system_fee": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "marco_nist_cybersecurity_framework": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "marketing_directo_y_llamadas_en_frio_franquicias": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "mecanismo_resolucion_disputas": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "mensaje_desarrolladores_area": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "multiples_compradores_influyentes": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "negociacion_acuerdo_representante_extranjero": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "obtencion_marca_registrada": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "organizacion_interna_exportacion": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "original_issue_discount_oid": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "paris_convention_prioridad": {
+      "pais": "US",
+      "clase": "A"
+    },
+    "participacion_ferias_comerciales": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "participacion_trabajadores": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "patent_cooperation_treaty": {
+      "pais": "INT",
+      "clase": "A"
+    },
+    "patentes_startup": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "permit_required_confined_spaces": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "pisos_aberturas_paredes_seguridad": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "plan_accion_exportacion": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "plan_cumplimiento_exportacion": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "plan_seguridad_sistema_poam": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "planes_estatales_osha": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "politica_compras_verdes": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "powered_industrial_trucks_safety": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "prediccion_confiabilidad_diseno": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "preparacion_due_diligence": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "preparacion_para_salida_a_bolsa": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "preparar_fdd": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "prevencion_enfermedades_por_calor": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "prevenir_franquicias_inadvertidas": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "proceso_rmf_siete_pasos": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "proceso_venta_franquicias": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "programa_consulta_osha_onsite": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "programa_proteccion_denunciantes": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "programa_proteccion_respiratoria": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "programas_compra_franquicia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "programas_cooperativos_osha": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "programas_estatales_locales_financiamiento_exportacion": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "programas_ex_im_bank": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "prohibicion_tie_in_sales": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "propuesta_valor_franquicia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "proteccion_patentes_internacional": {
+      "pais": "US",
+      "clase": "A"
+    },
+    "proteccion_propiedad_intelectual_franq": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "proteccion_propiedad_intelectual_internacional": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "publicidad_garantia_conforme": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "que_es_cui": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "recursos_apoyo_gubernamental_exportacion": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "recursos_educativos_osha": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "recursos_niosh": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "reduccion_riesgo_percibido": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "registration_rights_stock_consideration": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "registro_estatal_franquicia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "registro_reporte_lesiones": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "regla_de_minimis": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "regla_disponibilidad_previa_venta": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "regla_divulgacion_garantia": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "reglas_de_origen_fta_2": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "reglas_origen_sectoriales": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "resolucion_problemas_de_pago": {
+      "pais": "INT",
+      "clase": "A"
+    },
+    "responsabilidad_extendida_productor_2": {
+      "pais": "EU",
+      "clase": "B"
+    },
+    "respuesta_consultas_internacionales": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "respuesta_incidentes_cui": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "revision_legal_marketing": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "riesgo_fiduciario_insolvencia_deuda": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "rmf_paso_categorizar": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "rol_black_belt_six_sigma": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "safety_case_evaluacion_formal": {
+      "pais": "GB",
+      "clase": "B"
+    },
+    "sbrefa_cumplimiento": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "screening_mercados_potenciales": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "seguridad_soldadura_corte_bronceado": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "seguridad_trabajadores_jovenes": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "seguro_de_credito_a_la_exportacion": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "seguro_exportacion": {
+      "pais": "INT",
+      "clase": "A"
+    },
+    "seguro_inversion_opic": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "seleccion_agente_carga_internacional": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "seleccion_controles": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "seleccion_de_distribuidor_internacional": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "seleccion_de_metodo_de_pago": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "seleccion_estructura_corporativa": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "senalizacion_de_salidas": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "temas_legales_empleo": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "term_sheet_disposiciones_vinculantes": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "trade_fair_certification_program": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "transitarios_freight_forwarders": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "uso_del_us_commercial_service": {
+      "pais": "US",
+      "clase": "C"
+    },
+    "validacion_certificaciones_terceros": {
+      "pais": "EU",
+      "clase": "B"
+    },
+    "valuacion_409a": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "vesting_acciones_fundadores": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "vesting_dinamico": {
+      "pais": "US",
+      "clase": "B"
+    },
+    "warrant_pricing_venture_debt": {
+      "pais": "US",
+      "clase": "B"
+    }
   }
- }
 }

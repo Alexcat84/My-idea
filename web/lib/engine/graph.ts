@@ -166,9 +166,9 @@ export function resolverId(nid: string, graph: GrafoResoluble): string | null {
 
 /** Fase 3.9: lo que se muestra en las SUPERFICIES DE NAVEGACIÓN (riel del
  * árbol, cintillo de la tarjeta) es la etiqueta_arbol -- 4-5 palabras en
- * segunda persona, generada para enamorar. El titulo_concepto (el nombre del
- * libro) solo respalda en el DETALLE del nodo. "La etiqueta enamora, el título
- * respalda".
+ * segunda persona, generada para enamorar. El titulo_concepto es material
+ * interno para la IA y no se pinta en ninguna parte: ningún libro ni autor llega
+ * al cliente (REGLA ESTRICTA del fundador, 26 sep 2026; AGENTS.md).
  *
  * Pasa por el resolutor: una referencia histórica muestra el título de quien la
  * representa hoy. El id crudo ya no lo alcanza ninguna referencia real -- solo

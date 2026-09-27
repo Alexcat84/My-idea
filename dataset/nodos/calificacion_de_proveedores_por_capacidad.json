@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Calificación de proveedores basada en capacidad real, no en manuales de auditoría",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, Deming sugiere que los proveedores compitan demostrando compromiso activo de su gerencia con la mejora continua de procesos, capacidad de I+D y récord de desarrollo de producto.",
+  "resumen_teorico": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, conviene que los proveedores compitan demostrando compromiso activo de su gerencia con la mejora continua de procesos, capacidad de I+D y récord de desarrollo de producto.",
   "pasos_accionables": [
     "Descartar procesos de calificación basados solo en checklists genéricos",
     "Solicitar evidencia de inversión en investigación y desarrollo del proveedor",
@@ -22,5 +22,26 @@
   "condiciones_activacion": [
     "Cuando se necesita seleccionar un nuevo proveedor para un componente crítico"
   ],
-  "etiqueta_arbol": "Elige Proveedores por Capacidad Real"
+  "etiqueta_arbol": "Elige Proveedores por Capacidad Real",
+  "correcciones": [
+    {
+      "id": "atribucion-017",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, Deming sugiere que los proveedores compitan demostrando compromiso activo de su gerencia con la mejora continua de procesos, capacidad de I+D y récord de desarrollo de producto.",
+      "texto_nuevo": "En lugar de usar manuales estándar (como Military Standard 9858A) y equipos de auditores no calificados para 'calificar' proveedores, conviene que los proveedores compitan demostrando compromiso activo de su gerencia con la mejora continua de procesos, capacidad de I+D y récord de desarrollo de producto.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming sugiere que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U2-020 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

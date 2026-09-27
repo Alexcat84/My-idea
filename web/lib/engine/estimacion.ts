@@ -20,8 +20,6 @@ import type Anthropic from "@anthropic-ai/sdk";
 import { BANDA, type Banda } from "../dbContract";
 import { llamarClaude, MODEL, type UsoAcumulado } from "../costmeter";
 import { SYSTEM_ESTIMACION_BANDA } from "../prompts";
-import { elegir, LOCALE_BASE, type Locale } from "../i18n/config";
-import { MOTOR } from "../i18n/mensajes/motor";
 
 export interface EstimacionItem {
   banda: Banda;
@@ -159,20 +157,6 @@ export async function estimarLoteMayoria(
   return { estimaciones, acumulado: acc };
 }
 
-/** Rango honesto en palabras para una banda (para el detalle de la tarea). Son
- * las MISMAS fronteras del prompt validado; JAMÁS un número de horas inventado. */
-export function rangoDeBanda(banda: Banda | null | undefined, idioma: Locale = LOCALE_BASE): string | null {
-  const t = elegir(MOTOR, idioma).rangoBanda;
-  switch (banda) {
-    case "S":
-      return t.S;
-    case "M":
-      return t.M;
-    case "L":
-      return t.L;
-    case "XL":
-      return t.XL;
-    default:
-      return null; // plan viejo o estimación fallida: sin rango, cero invención
-  }
-}
+// rangoDeBanda vive aparte (./rangoBanda): la pinta un componente de cliente, y este modulo importa las
+// instrucciones de la IA, que no llegan al navegador (fundador, 27 sep 2026).
+export { rangoDeBanda } from "./rangoBanda";

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Hoshin Kanri (Despliegue de Políticas)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Hoshin Kanri, también llamado despliegue de políticas o planificación hoshin, es una metodología japonesa que traduce la estrategia de alto nivel ('gran visión') en acciones ejecutables en todos los niveles de la organización mediante un proceso en cascada de 'qués' y 'cómos'. Integra el trabajo de Deming y Juran con la Administración por Objetivos de Drucker. Se basa en un diálogo negociado bidireccional llamado 'catchball' que conecta a planificadores con ejecutores, generando consenso y alineación organizacional. Típicamente una organización mantiene entre 3 y 5 hoshins (metas vitales) por periodo.",
+  "resumen_teorico": "Hoshin Kanri, también llamado despliegue de políticas o planificación hoshin, es una metodología japonesa que traduce la estrategia de alto nivel ('gran visión') en acciones ejecutables en todos los niveles de la organización mediante un proceso en cascada de 'qués' y 'cómos'. Integra los principios de la gestión de la calidad con la Administración por Objetivos de Drucker. Se basa en un diálogo negociado bidireccional llamado 'catchball' que conecta a planificadores con ejecutores, generando consenso y alineación organizacional. Típicamente una organización mantiene entre 3 y 5 hoshins (metas vitales) por periodo.",
   "pasos_accionables": [
     "Identificar los 3 a 5 hoshins (metas vitales) al nivel ejecutivo usando el principio de Pareto",
     "Comunicar los 'qués' (whats) al siguiente nivel organizacional sin especificar el 'cómo'",
@@ -27,5 +27,26 @@
     "Cuando existe desalineación entre los niveles jerárquicos respecto a las prioridades",
     "Al implementar iniciativas de mejora tipo Six Sigma o Lean que requieren alineación estratégica"
   ],
-  "etiqueta_arbol": "Despliega tu Estrategia a Todos"
+  "etiqueta_arbol": "Despliega tu Estrategia a Todos",
+  "correcciones": [
+    {
+      "id": "atribucion-105",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Hoshin Kanri, también llamado despliegue de políticas o planificación hoshin, es una metodología japonesa que traduce la estrategia de alto nivel ('gran visión') en acciones ejecutables en todos los niveles de la organización mediante un proceso en cascada de 'qués' y 'cómos'. Integra el trabajo de Deming y Juran con la Administración por Objetivos de Drucker. Se basa en un diálogo negociado bidireccional llamado 'catchball' que conecta a planificadores con ejecutores, generando consenso y alineación organizacional. Típicamente una organización mantiene entre 3 y 5 hoshins (metas vitales) por periodo.",
+      "texto_nuevo": "Hoshin Kanri, también llamado despliegue de políticas o planificación hoshin, es una metodología japonesa que traduce la estrategia de alto nivel ('gran visión') en acciones ejecutables en todos los niveles de la organización mediante un proceso en cascada de 'qués' y 'cómos'. Integra los principios de la gestión de la calidad con la Administración por Objetivos de Drucker. Se basa en un diálogo negociado bidireccional llamado 'catchball' que conecta a planificadores con ejecutores, generando consenso y alineación organizacional. Típicamente una organización mantiene entre 3 y 5 hoshins (metas vitales) por periodo.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Integra el trabajo de Deming y Juran"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-020 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ]
 }

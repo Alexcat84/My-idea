@@ -32,7 +32,7 @@ describe("consultaAlEspanol", () => {
     const r = await consultaAlEspanol(client, "우리 동네에서 빵을 팔고 싶어요", "ko", usoVacio());
     expect(r).toMatchObject({ consulta: "quiero vender pan en mi barrio", fallo: false });
     const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
-    expect(sistema).toHaveLength(1);
+    expect(sistema).toHaveLength(2); // prompt y regla sin fuentes (26 sep 2026);
     expect(sistema[0].text).toBe(SYSTEM_CONSULTA_AL_ESPANOL);
   });
 

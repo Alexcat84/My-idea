@@ -12,8 +12,12 @@ Uso:
 
 <tanda.json> es una lista de correcciones:
   {"id", "node_id", "campo" (pasos_accionables | condiciones_activacion | resumen_teorico |
-   entregable_esperado | etiqueta_arbol), "indice" (solo en los campos lista, pasos y condiciones, desde 0), "veredicto" (CONTRARIO | ANADIDO), "texto_anterior",
+   entregable_esperado | etiqueta_arbol), "indice" (solo en los campos lista, pasos y condiciones, desde 0), "veredicto" (CONTRARIO | ANADIDO | ATRIBUCION), "texto_anterior",
    "texto_nuevo", "cita": {"libro", "fichero", "lineas", "frase"}, "decision", "auditoria"}
+
+El veredicto ATRIBUCION (REGLA ESTRICTA del fundador, 26 sep 2026: el cliente nunca ve un autor ni un libro citado
+como fuente) quita la cita a un autor o a un libro sin cambiar el sentido. No lo motiva una frase del libro sino la
+regla, asi que su "cita" es {"regla", "fragmentos"}: la regla que lo ordena y los fragmentos de atribucion que salen.
 
 Se niega (exit 1, sin escribir nada) si el texto anterior no es EXACTAMENTE el
 vigente, si el nuevo trae guiones largos o medios, si falta la cita, o si el id
@@ -42,9 +46,16 @@ def validar(c, nodo):
     if c.get("campo") not in CAMPOS:
         fallas.append("campo no admitido: %r" % c.get("campo"))
     cita = c.get("cita") or {}
-    for k in ("libro", "lineas", "frase"):
-        if not cita.get(k):
-            fallas.append("cita sin %s" % k)
+    if c.get("veredicto") == "ATRIBUCION":
+        if not cita.get("regla") or not cita.get("fragmentos"):
+            fallas.append("una ATRIBUCION declara su regla y los fragmentos que salen")
+        for f in cita.get("fragmentos") or []:
+            if f and f in c.get("texto_nuevo", ""):
+                fallas.append("el fragmento de atribucion sigue en el texto nuevo: %r" % f)
+    else:
+        for k in ("libro", "lineas", "frase"):
+            if not cita.get(k):
+                fallas.append("cita sin %s" % k)
     if any(p in c.get("texto_nuevo", "") for p in PROHIBIDOS):
         fallas.append("el texto nuevo trae guion largo o medio")
     if c.get("texto_nuevo") == c.get("texto_anterior"):

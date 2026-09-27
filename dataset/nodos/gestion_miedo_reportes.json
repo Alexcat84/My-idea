@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Gestión del Miedo en el Reporte de Datos",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming ilustra cómo el miedo (a perder el empleo, a ser señalado, a incumplir metas de producción) distorsiona sistemáticamente los datos reportados, como se observa en los índices de calidad del aire que rara vez superan el límite regulatorio, o en el caso del capataz que prioriza la producción sobre el mantenimiento por temor a represalias. Esta distorsión oculta problemas reales y perpetúa pérdidas evitables, siendo una manifestación directa de la falta del Punto 8 (eliminar el miedo) de su filosofía de gestión.",
+  "resumen_teorico": "El miedo (a perder el empleo, a ser señalado, a incumplir metas de producción) distorsiona sistemáticamente los datos reportados, como se observa en los índices de calidad del aire que rara vez superan el límite regulatorio, o en el caso del capataz que prioriza la producción sobre el mantenimiento por temor a represalias. Esta distorsión oculta problemas reales y perpetúa pérdidas evitables, siendo una manifestación directa de la falta del Punto 8 (eliminar el miedo) de los 14 puntos de Deming.",
   "pasos_accionables": [
     "Auditar la distribución de datos reportados en busca de patrones anómalos de concentración cerca de límites regulatorios.",
     "Investigar si el personal evita reportar valores extremos por temor a consecuencias.",
@@ -41,5 +41,26 @@
       "titulo": "Administración sin Miedo",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-101",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming ilustra cómo el miedo (a perder el empleo, a ser señalado, a incumplir metas de producción) distorsiona sistemáticamente los datos reportados, como se observa en los índices de calidad del aire que rara vez superan el límite regulatorio, o en el caso del capataz que prioriza la producción sobre el mantenimiento por temor a represalias. Esta distorsión oculta problemas reales y perpetúa pérdidas evitables, siendo una manifestación directa de la falta del Punto 8 (eliminar el miedo) de su filosofía de gestión.",
+      "texto_nuevo": "El miedo (a perder el empleo, a ser señalado, a incumplir metas de producción) distorsiona sistemáticamente los datos reportados, como se observa en los índices de calidad del aire que rara vez superan el límite regulatorio, o en el caso del capataz que prioriza la producción sobre el mantenimiento por temor a represalias. Esta distorsión oculta problemas reales y perpetúa pérdidas evitables, siendo una manifestación directa de la falta del Punto 8 (eliminar el miedo) de los 14 puntos de Deming.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming ilustra cómo"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-034 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
   ]
 }

@@ -301,7 +301,7 @@ describe("anclarResultadoTurno: el idioma de la idea (i18n F5)", () => {
     };
     await anclarI18n({ messages: { create } } as never, resultado, usoVacioI18n());
     const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
-    expect(sistema).toHaveLength(2);
-    expect(sistema[1].text).toMatch(/^IDIOMA DE SALIDA: hindi/);
+    expect(sistema).toHaveLength(3); // prompt, regla sin fuentes (26 sep 2026), idioma;
+    expect(sistema[2].text).toMatch(/^IDIOMA DE SALIDA: hindi/);
   });
 });

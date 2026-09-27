@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Análisis y Clasificación Precisa de Causas de Defectos",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "A través del caso de Charlie Gordon, Crosby muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas.",
+  "resumen_teorico": "Un caso práctico muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas.",
   "pasos_accionables": [
     "Recolectar datos reales de defectos por unidad y frecuencia",
     "Cuestionar las clasificaciones genéricas de causa (ej. 'workmanship') y desagregarlas en subcausas específicas",
@@ -25,5 +25,26 @@
     "Cuando existe una alta tasa de retrabajo o rechazo sin causa clara identificada",
     "Cuando diferentes departamentos se culpan mutuamente por los mismos defectos"
   ],
-  "etiqueta_arbol": "Encuentra la Causa de Defectos"
+  "etiqueta_arbol": "Encuentra la Causa de Defectos",
+  "correcciones": [
+    {
+      "id": "atribucion-003",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "A través del caso de Charlie Gordon, Crosby muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas.",
+      "texto_nuevo": "Un caso práctico muestra que muchos defectos se clasifican erróneamente bajo categorías genéricas como 'workmanship', lo cual impide identificar la causa real. Es necesario desagregar las categorías de defectos en causas específicas (falta de entrenamiento, escasez de partes, error de herramienta, etc.) y validar con evidencia (no solo opiniones) antes de asignar acciones correctivas.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "A través del caso de Charlie Gordon, Crosby muestra que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-004 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ]
 }

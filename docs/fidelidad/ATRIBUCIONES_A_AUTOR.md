@@ -1,5 +1,9 @@
 # Atribuciones a autor o libro que pueden llegar a pantalla
 
+**CERRADO (correccion urgente del fundador, 26 sep 2026):** las 252 menciones se clasificaron y las citas salieron por
+correccion declarada; cifras y metodo en `docs/SANEAMIENTO_DATASET.md`, seccion de la correccion urgente. El titulo ya no
+llega a la pregunta generica ni al plan sin IA. Lo que sigue es la lista de partida, tal como se midio.
+
 Decision del fundador del 27 sep 2026, punto 2: los OPERATIVOS se quedan; toda frase con que la app atribuye un paso o un nodo a su autor se cambiara a "basado en" en la sesion de idiomas. Esta es la lista; aqui no se cambia nada.
 
 ## 1. Codigo de web/: ninguna atribucion

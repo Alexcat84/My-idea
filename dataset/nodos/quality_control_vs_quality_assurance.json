@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "Control de Calidad versus Aseguramiento de Calidad",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "Históricamente el control de calidad (QC) dependía de inspectores especializados al final del proceso productivo. Con el movimiento TQM (Total Quality Management), impulsado por Deming, Juran e Ishikawa, la responsabilidad se distribuyó a todo el personal bajo el concepto de aseguramiento de calidad (QA), donde la calidad se 'construye' en el proceso en lugar de 'inspeccionarse' al final. Sin embargo, la eliminación de la inspección independiente puede generar riesgos de seguridad si no existe una verificación externa robusta, como ocurrió en casos de mantenimiento aeronáutico donde trabajadores firmaban su propio trabajo sin supervisión.",
+  "resumen_teorico": "Históricamente el control de calidad (QC) dependía de inspectores especializados al final del proceso productivo. Con el movimiento TQM (Total Quality Management), la responsabilidad se distribuyó a todo el personal bajo el concepto de aseguramiento de calidad (QA), donde la calidad se 'construye' en el proceso en lugar de 'inspeccionarse' al final. Sin embargo, la eliminación de la inspección independiente puede generar riesgos de seguridad si no existe una verificación externa robusta, como ocurrió en casos de mantenimiento aeronáutico donde trabajadores firmaban su propio trabajo sin supervisión.",
   "pasos_accionables": [
     "Revisar si la organización cuenta con una función de inspección independiente para tareas críticas de seguridad",
     "Evaluar los riesgos de permitir el autochequeo ('sign-off') sin verificación externa",
@@ -40,6 +40,25 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor (PRACTICO). Lo añadido es un método (auditorías aleatorias) que Reason no propone. El libro solo señala que faltaba una inspección separada (L971). Es un añadido práctico y se reescribe como sugerencia de My Idea. El dato no se repite en el resumen ni en el entregable.",
       "indice": 3,
       "auditoria": "muestreo A22"
+    },
+    {
+      "id": "atribucion-146",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Históricamente el control de calidad (QC) dependía de inspectores especializados al final del proceso productivo. Con el movimiento TQM (Total Quality Management), impulsado por Deming, Juran e Ishikawa, la responsabilidad se distribuyó a todo el personal bajo el concepto de aseguramiento de calidad (QA), donde la calidad se 'construye' en el proceso en lugar de 'inspeccionarse' al final. Sin embargo, la eliminación de la inspección independiente puede generar riesgos de seguridad si no existe una verificación externa robusta, como ocurrió en casos de mantenimiento aeronáutico donde trabajadores firmaban su propio trabajo sin supervisión.",
+      "texto_nuevo": "Históricamente el control de calidad (QC) dependía de inspectores especializados al final del proceso productivo. Con el movimiento TQM (Total Quality Management), la responsabilidad se distribuyó a todo el personal bajo el concepto de aseguramiento de calidad (QA), donde la calidad se 'construye' en el proceso en lugar de 'inspeccionarse' al final. Sin embargo, la eliminación de la inspección independiente puede generar riesgos de seguridad si no existe una verificación externa robusta, como ocurrió en casos de mantenimiento aeronáutico donde trabajadores firmaban su propio trabajo sin supervisión.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "impulsado por Deming, Juran e Ishikawa"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
     }
+  ],
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
   ]
 }

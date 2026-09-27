@@ -48,7 +48,7 @@ describe("preguntaEnIdioma", () => {
     const r = await preguntaEnIdioma(client, "¿Cómo vas?", "ko", usoVacio());
     expect(r).toMatchObject({ pregunta: "요즘 어떻게 지내요?", traducida: true });
     const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
-    expect(sistema[1].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
+    expect(sistema[2].text).toMatch(/^IDIOMA DE SALIDA: coreano/);
   });
 
   it("si la IA falla o devuelve vacío, queda la cacheada", async () => {

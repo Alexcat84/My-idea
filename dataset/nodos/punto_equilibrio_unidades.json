@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Punto de Equilibrio y Margen de Contribución (Break-Even Point & Contribution Margin)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "El margen de contribución es lo que queda de cada venta después de cubrir los costos variables (los que cambian con el volumen producido, como materiales y mano de obra directa, incluidos en COGS). El punto de equilibrio es el número de unidades que hay que vender al mes para que ese margen acumulado cubra exactamente los costos fijos (los que no cambian con el volumen, como renta, salarios administrativos o herramientas, incluidos en gastos operativos). Por debajo de ese número se pierde dinero; por encima, cada unidad adicional genera ganancia real. Esto se relaciona con lo que el libro llama 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
+  "resumen_teorico": "El margen de contribución es lo que queda de cada venta después de cubrir los costos variables (los que cambian con el volumen producido, como materiales y mano de obra directa, incluidos en COGS). El punto de equilibrio es el número de unidades que hay que vender al mes para que ese margen acumulado cubra exactamente los costos fijos (los que no cambian con el volumen, como renta, salarios administrativos o herramientas, incluidos en gastos operativos). Por debajo de ese número se pierde dinero; por encima, cada unidad adicional genera ganancia real. Esto se relaciona con el 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
   "pasos_accionables": [
     "Clasificar cada costo del proyecto como variable (cambia con las unidades producidas: materiales, tiempo de producción) o fijo (no cambia: renta, herramientas, salarios administrativos)",
     "Sugerencia de My Idea: calcular el margen de contribucion por unidad: precio de venta menos costo variable por unidad",
@@ -125,6 +125,25 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): ANADIDO practico: el resumen repite el calculo del margen de contribucion por unidad (precio de venta menos costo variable por unidad), que el libro no da; en el resumen se quita el dato. El paso 2 y el entregable se dejan.",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B2.json, ficha C030-090"
+    },
+    {
+      "id": "atribucion-145",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El margen de contribución es lo que queda de cada venta después de cubrir los costos variables (los que cambian con el volumen producido, como materiales y mano de obra directa, incluidos en COGS). El punto de equilibrio es el número de unidades que hay que vender al mes para que ese margen acumulado cubra exactamente los costos fijos (los que no cambian con el volumen, como renta, salarios administrativos o herramientas, incluidos en gastos operativos). Por debajo de ese número se pierde dinero; por encima, cada unidad adicional genera ganancia real. Esto se relaciona con lo que el libro llama 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
+      "texto_nuevo": "El margen de contribución es lo que queda de cada venta después de cubrir los costos variables (los que cambian con el volumen producido, como materiales y mano de obra directa, incluidos en COGS). El punto de equilibrio es el número de unidades que hay que vender al mes para que ese margen acumulado cubra exactamente los costos fijos (los que no cambian con el volumen, como renta, salarios administrativos o herramientas, incluidos en gastos operativos). Por debajo de ese número se pierde dinero; por encima, cada unidad adicional genera ganancia real. Esto se relaciona con el 'apalancamiento operativo': aumentar los costos fijos (por ejemplo, un espacio más grande o más eficiente) puede reducir el costo variable por unidad, pero también eleva el riesgo, porque esos costos fijos hay que pagarlos exista o no exista venta ese mes.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "lo que el libro llama 'apalancamiento operativo'"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U5-006 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
     }
+  ],
+  "fuentes_internas": [
+    "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
   ]
 }

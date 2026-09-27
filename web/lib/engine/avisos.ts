@@ -6,7 +6,9 @@
  *   - vigencia (dataset/metadata/vigencia.json): "Esta informacion puede haber cambiado desde [ano]: verifica la
  *     norma vigente en tu pais", en los nodos con una norma, un plazo legal, una cifra con fecha o una institucion.
  *     REGLA ESTRICTA (fundador, 26 sep 2026): el aviso NUNCA nombra el libro; el libro vive solo en los metadatos.
- * Las listas son CURADAS y se sincronizan como assets (scripts/sync_assets_web.py). El texto del nodo no se
+ * Las listas son CURADAS y se sincronizan como assets (scripts/sync_assets_web.py) en su VISTA WEB: el pais y la
+ * clase, y el ANO del aviso, sin el libro ni el motivo (NADA INTERNO LLEGA AL NAVEGADOR, fundador, 27 sep 2026).
+ * El texto del nodo no se
  * toca: el aviso va aparte, en el idioma de la interfaz. Se resuelve por el mismo resolutor que la etiqueta,
  * asi que una referencia historica avisa lo de quien la representa hoy.
  */
@@ -21,21 +23,13 @@ export type ClasePais = "A" | "B" | "C";
 export interface EntradaJurisdiccion {
   pais: CodigoPais | "INT";
   clase: ClasePais;
-  motivo: string;
-}
-export interface LibroVigencia {
-  nombre: string;
-  anio: number | null;
 }
 export interface EntradaVigencia {
-  fuente: string;
-  tipos: string[];
+  anio: number | null;
 }
 
 export const JURISDICCION = (jurisdiccionJson as unknown as { nodos: Record<string, EntradaJurisdiccion> }).nodos;
-const vigencia = vigenciaJson as unknown as { libros: Record<string, LibroVigencia>; nodos: Record<string, EntradaVigencia> };
-export const VIGENCIA_NODOS = vigencia.nodos;
-export const VIGENCIA_LIBROS = vigencia.libros;
+export const VIGENCIA_NODOS = (vigenciaJson as unknown as { nodos: Record<string, EntradaVigencia> }).nodos;
 
 export function avisosNodo(nid: string, graph: GrafoResoluble, idioma: Locale = LOCALE_BASE): string[] {
   const real = resolverId(nid, graph) ?? nid;
@@ -49,11 +43,6 @@ export function avisosNodo(nid: string, graph: GrafoResoluble, idioma: Locale = 
     }
   }
   const v = VIGENCIA_NODOS[real];
-  const libro = v ? VIGENCIA_LIBROS[v.fuente] : undefined;
-  if (libro) {
-    avisos.push(
-      libro.anio ? interpolar(t.vigencia, { anio: libro.anio }) : t.vigenciaSinAnio
-    );
-  }
+  if (v) avisos.push(v.anio ? interpolar(t.vigencia, { anio: v.anio }) : t.vigenciaSinAnio);
   return avisos;
 }

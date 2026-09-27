@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "La falacia de culpar únicamente a los trabajadores",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Existe la creencia generalizada de que los problemas de producción se resolverian si la persona que hace el trabajo simplemente lo hiciera bien. Juran y Deming demuestran que la mayoria de las oportunidades de mejora residen en el sistema, no en el desempeno individual de quien ejecuta, que esta limitado por las condiciones que tu has establecido.",
+  "resumen_teorico": "Existe la creencia generalizada de que los problemas de producción se resolverían si la persona que hace el trabajo simplemente lo hiciera bien. En realidad, la mayoría de las oportunidades de mejora residen en el sistema, no en el desempeño individual de quien ejecuta, que está limitado por las condiciones que tú has establecido.",
   "pasos_accionables": [
     "Analizar que porcentaje de defectos son atribuibles al sistema versus a quien ejecuta la tarea",
     "Revisar diseno de producto, especificaciones, materiales entrantes y mantenimiento de maquinas antes de culpar a la persona",
@@ -21,5 +21,26 @@
   "condiciones_activacion": [
     "Si tiendes a atribuir la mayoria de los problemas de calidad al desempeno de quien hace el trabajo operativo"
   ],
-  "etiqueta_arbol": "No Culpes Solo al Equipo"
+  "etiqueta_arbol": "No Culpes Solo al Equipo",
+  "correcciones": [
+    {
+      "id": "atribucion-092",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Existe la creencia generalizada de que los problemas de producción se resolverian si la persona que hace el trabajo simplemente lo hiciera bien. Juran y Deming demuestran que la mayoria de las oportunidades de mejora residen en el sistema, no en el desempeno individual de quien ejecuta, que esta limitado por las condiciones que tu has establecido.",
+      "texto_nuevo": "Existe la creencia generalizada de que los problemas de producción se resolverían si la persona que hace el trabajo simplemente lo hiciera bien. En realidad, la mayoría de las oportunidades de mejora residen en el sistema, no en el desempeño individual de quien ejecuta, que está limitado por las condiciones que tú has establecido.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Juran y Deming demuestran que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-015 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

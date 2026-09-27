@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Categorías de Brechas en el Desempeño de Materiales Entrantes",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming clasifica todo lote de material que te llega en cuatro categorías: (1) usado en producción sin problema, (2) usado en desesperación pese a no cumplir los requisitos, generando retrabajo o desperdicio, (3) totalmente inutilizable, y (4) material en inventario sin uso claro. Tu contabilidad suele tener cifras exactas solo de las categorías 3 y 4, mientras que el costo real y oculto de la categoría 2 (la usada en desesperación) suele ser mucho mayor y desconocido.",
+  "resumen_teorico": "Todo lote de material que te llega cae en una de cuatro categorías: (1) usado en producción sin problema, (2) usado en desesperación pese a no cumplir los requisitos, generando retrabajo o desperdicio, (3) totalmente inutilizable, y (4) material en inventario sin uso claro. Tu contabilidad suele tener cifras exactas solo de las categorías 3 y 4, mientras que el costo real y oculto de la categoría 2 (la usada en desesperación) suele ser mucho mayor y desconocido.",
   "pasos_accionables": [
     "Clasificar todos los lotes de material entrante según las cuatro categorías definidas",
     "Cuantificar el costo real del material usado en desesperación (retrabajo, desperdicio, riesgo de rechazo)",
@@ -21,5 +21,26 @@
     "Cuando existen quejas recurrentes de retrabajo por materiales defectuosos",
     "Si tu contabilidad no tiene visibilidad clara del costo de los materiales usados en desesperación"
   ],
-  "etiqueta_arbol": "Evalúa tus Materiales Entrantes"
+  "etiqueta_arbol": "Evalúa tus Materiales Entrantes",
+  "correcciones": [
+    {
+      "id": "atribucion-018",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming clasifica todo lote de material que te llega en cuatro categorías: (1) usado en producción sin problema, (2) usado en desesperación pese a no cumplir los requisitos, generando retrabajo o desperdicio, (3) totalmente inutilizable, y (4) material en inventario sin uso claro. Tu contabilidad suele tener cifras exactas solo de las categorías 3 y 4, mientras que el costo real y oculto de la categoría 2 (la usada en desesperación) suele ser mucho mayor y desconocido.",
+      "texto_nuevo": "Todo lote de material que te llega cae en una de cuatro categorías: (1) usado en producción sin problema, (2) usado en desesperación pese a no cumplir los requisitos, generando retrabajo o desperdicio, (3) totalmente inutilizable, y (4) material en inventario sin uso claro. Tu contabilidad suele tener cifras exactas solo de las categorías 3 y 4, mientras que el costo real y oculto de la categoría 2 (la usada en desesperación) suele ser mucho mayor y desconocido.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming clasifica todo lote"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U5-028 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

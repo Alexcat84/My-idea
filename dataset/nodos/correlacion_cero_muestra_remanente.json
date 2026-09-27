@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Correlación Cero entre Muestra y Remanente en Estado de Control Estadístico",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming demuestra empírica y matemáticamente (experimento de las bolitas rojas y blancas) que cuando un proceso está en estado de control estadístico, no existe correlación entre el número de defectos encontrados en una muestra y el número de defectos en el remanente del lote. Esto implica que inspeccionar una muestra no predice de forma útil el contenido del remanente salvo mediante la teoría de muestreo (para fines enumerativos), reforzando la idea de que la inspección por muestreo no sirve para 'filtrar' calidad, solo para estimar parámetros poblacionales con su error estándar asociado.",
+  "resumen_teorico": "Se puede demostrar empírica y matemáticamente (experimento de las bolitas rojas y blancas) que cuando un proceso está en estado de control estadístico, no existe correlación entre el número de defectos encontrados en una muestra y el número de defectos en el remanente del lote. Esto implica que inspeccionar una muestra no predice de forma útil el contenido del remanente salvo mediante la teoría de muestreo (para fines enumerativos), reforzando la idea de que la inspección por muestreo no sirve para 'filtrar' calidad, solo para estimar parámetros poblacionales con su error estándar asociado.",
   "pasos_accionables": [
     "Verificar si el proceso de producción está en estado de control estadístico antes de diseñar planes de muestreo",
     "Realizar experimentos de muestreo (ej. con lotes de prueba) para confirmar independencia entre muestra y remanente",
@@ -22,5 +22,26 @@
     "Cuando se diseña o evalúa un plan de muestreo de aceptación",
     "Cuando se desea justificar estadísticamente por qué la inspección por muestreo no mejora la calidad final del lote"
   ],
-  "etiqueta_arbol": "Entiende la Correlación Cero"
+  "etiqueta_arbol": "Entiende la Correlación Cero",
+  "correcciones": [
+    {
+      "id": "atribucion-041",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming demuestra empírica y matemáticamente (experimento de las bolitas rojas y blancas) que cuando un proceso está en estado de control estadístico, no existe correlación entre el número de defectos encontrados en una muestra y el número de defectos en el remanente del lote. Esto implica que inspeccionar una muestra no predice de forma útil el contenido del remanente salvo mediante la teoría de muestreo (para fines enumerativos), reforzando la idea de que la inspección por muestreo no sirve para 'filtrar' calidad, solo para estimar parámetros poblacionales con su error estándar asociado.",
+      "texto_nuevo": "Se puede demostrar empírica y matemáticamente (experimento de las bolitas rojas y blancas) que cuando un proceso está en estado de control estadístico, no existe correlación entre el número de defectos encontrados en una muestra y el número de defectos en el remanente del lote. Esto implica que inspeccionar una muestra no predice de forma útil el contenido del remanente salvo mediante la teoría de muestreo (para fines enumerativos), reforzando la idea de que la inspección por muestreo no sirve para 'filtrar' calidad, solo para estimar parámetros poblacionales con su error estándar asociado.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming demuestra empírica y matemáticamente"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-019 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

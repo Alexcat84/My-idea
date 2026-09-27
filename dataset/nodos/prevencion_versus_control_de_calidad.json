@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Prevención de Defectos vs. Control/Aseguramiento de Calidad",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Crosby argumenta que términos como 'control de calidad' o 'aseguramiento de calidad' diluyen el verdadero propósito: prevenir errores. Sugiere eliminar modificadores innecesarios y enfocar la calidad en la prevención activa de defectos, no solo en revisar o vigilar después de que el problema ya ocurrió. Compara esto con la diferencia entre un policía, que controla, y un abogado, que previene, y afirma que prevenir genera más valor y más reconocimiento que solo controlar.",
+  "resumen_teorico": "Términos como 'control de calidad' o 'aseguramiento de calidad' diluyen el verdadero propósito: prevenir errores. Conviene eliminar modificadores innecesarios y enfocar la calidad en la prevención activa de defectos, no solo en revisar o vigilar después de que el problema ya ocurrió. Es como la diferencia entre un policía, que controla, y un abogado, que previene; y prevenir suele generar más valor y más reconocimiento que solo controlar.",
   "pasos_accionables": [
     "Replantea cómo entiendes la calidad en tu negocio: no se trata solo de revisar o auditar, sino de prevenir.",
     "Si usas palabras como 'aseguramiento' o 'control' para describir tu forma de cuidar la calidad y eso te confunde el propósito, cámbialas por algo que hable de prevenir.",
@@ -22,5 +22,26 @@
     "Cuando sientes que solo revisas o corriges errores después de que ya pasaron, en vez de evitarlos.",
     "Cuando quieres que cuidar la calidad se convierta en algo que suma valor a tu negocio, y no solo en una revisión más."
   ],
-  "etiqueta_arbol": "Enfócate en Prevenir, No Controlar"
+  "etiqueta_arbol": "Enfócate en Prevenir, No Controlar",
+  "correcciones": [
+    {
+      "id": "atribucion-137",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Crosby argumenta que términos como 'control de calidad' o 'aseguramiento de calidad' diluyen el verdadero propósito: prevenir errores. Sugiere eliminar modificadores innecesarios y enfocar la calidad en la prevención activa de defectos, no solo en revisar o vigilar después de que el problema ya ocurrió. Compara esto con la diferencia entre un policía, que controla, y un abogado, que previene, y afirma que prevenir genera más valor y más reconocimiento que solo controlar.",
+      "texto_nuevo": "Términos como 'control de calidad' o 'aseguramiento de calidad' diluyen el verdadero propósito: prevenir errores. Conviene eliminar modificadores innecesarios y enfocar la calidad en la prevención activa de defectos, no solo en revisar o vigilar después de que el problema ya ocurrió. Es como la diferencia entre un policía, que controla, y un abogado, que previene; y prevenir suele generar más valor y más reconocimiento que solo controlar.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Crosby argumenta que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-032 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ]
 }

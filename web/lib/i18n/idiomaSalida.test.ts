@@ -6,6 +6,7 @@
  */
 import { describe, expect, it, vi } from "vitest";
 import type Anthropic from "@anthropic-ai/sdk";
+import { REGLA_SIN_FUENTES } from "../reglaSinFuentes";
 import { bloquesDeSistema, reglaIdiomaSalida } from "./idiomaSalida";
 import { llamarClaude, llamarClaudeConversacion, usoVacio } from "../costmeter";
 
@@ -29,15 +30,19 @@ describe("reglaIdiomaSalida", () => {
 });
 
 describe("bloquesDeSistema", () => {
-  it("español: un solo bloque, cacheado (idéntico a antes de F5)", () => {
-    expect(bloquesDeSistema("PROMPT", "es")).toEqual([{ type: "text", text: "PROMPT", cache_control: { type: "ephemeral" } }]);
+  it("español: el prompt cacheado y la regla sin fuentes (26 sep 2026), sin regla de idioma", () => {
+    expect(bloquesDeSistema("PROMPT", "es")).toEqual([
+      { type: "text", text: "PROMPT", cache_control: { type: "ephemeral" } },
+      { type: "text", text: REGLA_SIN_FUENTES },
+    ]);
   });
-  it("otro idioma: el cacheado primero y la regla después, sin marca de caché", () => {
+  it("otro idioma: el cacheado primero, la regla sin fuentes y la del idioma después, sin marca de caché", () => {
     const b = bloquesDeSistema("PROMPT", "ar");
-    expect(b).toHaveLength(2);
+    expect(b).toHaveLength(3);
     expect(b[0]).toEqual({ type: "text", text: "PROMPT", cache_control: { type: "ephemeral" } });
-    expect(b[1].text).toMatch(/^IDIOMA DE SALIDA: árabe/);
-    expect(b[1]).not.toHaveProperty("cache_control");
+    expect(b[1].text).toBe(REGLA_SIN_FUENTES);
+    expect(b[2].text).toMatch(/^IDIOMA DE SALIDA: árabe/);
+    expect(b[2]).not.toHaveProperty("cache_control");
   });
 });
 
@@ -54,20 +59,20 @@ describe("llamarClaude y llamarClaudeConversacion llevan el idioma de salida", (
     const { create, client } = clienteFalso();
     await llamarClaude(client, "PROMPT", "u", "m", usoVacio(), { idiomaSalida: "ko" });
     const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
-    expect(sistema).toHaveLength(2);
-    expect(sistema[1].text).toMatch(/coreano/);
+    expect(sistema).toHaveLength(3); // prompt, regla sin fuentes (26 sep 2026), idioma
+    expect(sistema[2].text).toMatch(/coreano/);
   });
   it("llamarClaude sin idiomaSalida: como siempre", async () => {
     const { create, client } = clienteFalso();
     await llamarClaude(client, "PROMPT", "u", "m", usoVacio());
     const sistema = (create.mock.calls[0] as unknown as [{ system: unknown[] }])[0].system;
-    expect(sistema).toHaveLength(1);
+    expect(sistema).toHaveLength(2); // prompt y regla sin fuentes (26 sep 2026)
   });
   it("llamarClaudeConversacion con idiomaSalida hi manda los dos bloques", async () => {
     const { create, client } = clienteFalso();
     await llamarClaudeConversacion(client, "PROMPT", [], "u", "m", usoVacio(), { idiomaSalida: "hi" });
     const sistema = (create.mock.calls[0] as unknown as [{ system: Array<{ text: string }> }])[0].system;
-    expect(sistema[1].text).toMatch(/hindi/);
+    expect(sistema[2].text).toMatch(/hindi/);
   });
 });
 

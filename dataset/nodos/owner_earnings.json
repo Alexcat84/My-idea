@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ganancias del propietario (Owner Earnings)",
   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-  "resumen_teorico": "Es una métrica creada por Warren Buffett que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
+  "resumen_teorico": "Es una métrica que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
   "pasos_accionables": [
     "Calcula el flujo de caja operativo de tu negocio",
     "Resta los gastos de capital que necesitas para mantener el negocio, no para crecerlo",
@@ -22,5 +22,26 @@
   "condiciones_activacion": [
     "Cuando necesitas saber cuánto vale realmente tu negocio, para invertir en él o para venderlo"
   ],
-  "etiqueta_arbol": "Calcula tus Ganancias Reales"
+  "etiqueta_arbol": "Calcula tus Ganancias Reales",
+  "correcciones": [
+    {
+      "id": "atribucion-129",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Es una métrica creada por Warren Buffett que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
+      "texto_nuevo": "Es una métrica que mide cuánto efectivo te deja realmente tu negocio, una vez que descuentas lo que necesitas invertir para mantenerlo sano. A diferencia de la ganancia contable o del flujo de caja operativo sin ajustar, aquí restas las inversiones que tienes que hacer sí o sí para sostener el negocio, no para hacerlo crecer.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "una métrica creada por Warren Buffett"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-025 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe"
+  ]
 }

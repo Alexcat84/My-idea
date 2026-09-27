@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Evaluación de Candidatos para VP de Ventas",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Horowitz plantea un marco riguroso de preguntas para evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
+  "resumen_teorico": "Un marco riguroso de preguntas permite evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
   "pasos_accionables": [
     "Pregunta si el candidato diseñó o solo ejecutó el proceso de ventas en su empresa anterior",
     "Verifica su comprensión de procesos técnicos de venta: benchmarking, POCs, demos, lockout documents",
@@ -42,5 +42,26 @@
       "titulo": "Cómo evaluar a un candidato a líder de ventas para grandes cuentas (Head of Enterprise Sales)",
       "fuente": "The Hard Thing About Hard Thing - Ben Horowitz"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-091",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Horowitz plantea un marco riguroso de preguntas para evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
+      "texto_nuevo": "Un marco riguroso de preguntas permite evaluar si un candidato a VP de Ventas realmente sabe construir una organización de ventas escalable, distinguiendo entre quienes pueden 'escribir' un plan de juego (diseñar procesos desde cero) y quienes solo saben 'seguir' uno ya creado por otros. Esta distinción es crítica al contratar líderes senior, ya que muchos candidatos con buen historial simplemente ejecutaron sistemas que otros diseñaron.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Horowitz plantea un marco riguroso"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-013 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
   ]
 }

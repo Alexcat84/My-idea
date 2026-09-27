@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Deja de usar tablas de muestreo estándar para aceptar o rechazar lotes (AQL, Military Standard 105D)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming muestra que usar planes de aceptación estándar como Military Standard 105D o las tablas Dodge-Romig de forma automática es un error, porque esas tablas solo fijan un nivel de calidad aceptable (AQL) arbitrario y no toman en cuenta lo que realmente te cuesta inspeccionar o dejar pasar un defecto. Aplicarlas sin mirar tus costos reales puede hacer que termines pagando el doble de lo que pagarías si eligieras la estrategia correcta: revisar el cien por ciento de las piezas o no revisar ninguna. Mejor descarta estos planes y decide según el costo total real.",
+  "resumen_teorico": "Usar planes de aceptación estándar como Military Standard 105D o las tablas Dodge-Romig de forma automática es un error, porque esas tablas solo fijan un nivel de calidad aceptable (AQL) arbitrario y no toman en cuenta lo que realmente te cuesta inspeccionar o dejar pasar un defecto. Aplicarlas sin mirar tus costos reales puede hacer que termines pagando el doble de lo que pagarías si eligieras la estrategia correcta: revisar el cien por ciento de las piezas o no revisar ninguna. Mejor descarta estos planes y decide según el costo total real.",
   "pasos_accionables": [
     "Revisa los contratos y procedimientos actuales que te exigen usar AQL o planes de muestreo estándar.",
     "Calcula el costo total que tienes con el plan de muestreo actual y compáralo con el costo de la regla óptima: revisar todo o no revisar nada.",
@@ -35,5 +35,26 @@
       "titulo": "Por qué revisar una muestra de cada lote no basta (muestreo de aceptación)",
       "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-070",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming muestra que usar planes de aceptación estándar como Military Standard 105D o las tablas Dodge-Romig de forma automática es un error, porque esas tablas solo fijan un nivel de calidad aceptable (AQL) arbitrario y no toman en cuenta lo que realmente te cuesta inspeccionar o dejar pasar un defecto. Aplicarlas sin mirar tus costos reales puede hacer que termines pagando el doble de lo que pagarías si eligieras la estrategia correcta: revisar el cien por ciento de las piezas o no revisar ninguna. Mejor descarta estos planes y decide según el costo total real.",
+      "texto_nuevo": "Usar planes de aceptación estándar como Military Standard 105D o las tablas Dodge-Romig de forma automática es un error, porque esas tablas solo fijan un nivel de calidad aceptable (AQL) arbitrario y no toman en cuenta lo que realmente te cuesta inspeccionar o dejar pasar un defecto. Aplicarlas sin mirar tus costos reales puede hacer que termines pagando el doble de lo que pagarías si eligieras la estrategia correcta: revisar el cien por ciento de las piezas o no revisar ninguna. Mejor descarta estos planes y decide según el costo total real.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming muestra que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-012 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
   ]
 }

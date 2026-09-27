@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Pensamiento Regulado y Problem-Attitude (Aufgabe)",
   "fuente": "The Art of Thought - Wallas, Graham",
-  "resumen_teorico": "Basado en Hobbes, Wallas distingue el 'pensamiento regulado' (una búsqueda dirigida y sistemática, como barrer una habitación para encontrar una joya) del 'vagar salvaje de la mente' sin dirección. Formar una actitud de problema clara (Aufgabe) —una pregunta bien definida o un caso concreto por probar o refutar— aumenta la probabilidad de notar el significado de nueva evidencia o nuevas asociaciones de ideas relevantes para la solución.",
+  "resumen_teorico": "El 'pensamiento regulado' (una búsqueda dirigida y sistemática, como barrer una habitación para encontrar una joya) se distingue del 'vagar salvaje de la mente' sin dirección. Formar una actitud de problema clara (Aufgabe), es decir, una pregunta bien definida o un caso concreto por probar o refutar, aumenta la probabilidad de notar el significado de nueva evidencia o nuevas asociaciones de ideas relevantes para la solución.",
   "pasos_accionables": [
     "Convertir el problema general en una pregunta específica y verificable.",
     "Diseñar un método sistemático de exploración del problema (por categorías, por orden lógico, por eliminación).",
@@ -22,5 +22,27 @@
     "Cuando el problema a resolver es demasiado amplio o ambiguo para atacarlo directamente.",
     "Cuando el equipo necesita estructura antes de iniciar un proceso de ideación."
   ],
-  "etiqueta_arbol": "Enfoca tu Búsqueda con Propósito"
+  "etiqueta_arbol": "Enfoca tu Búsqueda con Propósito",
+  "correcciones": [
+    {
+      "id": "atribucion-181",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Basado en Hobbes, Wallas distingue el 'pensamiento regulado' (una búsqueda dirigida y sistemática, como barrer una habitación para encontrar una joya) del 'vagar salvaje de la mente' sin dirección. Formar una actitud de problema clara (Aufgabe) —una pregunta bien definida o un caso concreto por probar o refutar— aumenta la probabilidad de notar el significado de nueva evidencia o nuevas asociaciones de ideas relevantes para la solución.",
+      "texto_nuevo": "El 'pensamiento regulado' (una búsqueda dirigida y sistemática, como barrer una habitación para encontrar una joya) se distingue del 'vagar salvaje de la mente' sin dirección. Formar una actitud de problema clara (Aufgabe), es decir, una pregunta bien definida o un caso concreto por probar o refutar, aumenta la probabilidad de notar el significado de nueva evidencia o nuevas asociaciones de ideas relevantes para la solución.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Basado en Hobbes",
+          "Wallas distingue"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-013 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "The Art of Thought - Wallas, Graham"
+  ]
 }

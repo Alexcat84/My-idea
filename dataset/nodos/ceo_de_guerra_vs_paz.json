@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "CEO de Guerra vs. CEO de Paz",
   "fuente": "The Hard Thing About Hard Things - Ben Horowitz",
-  "resumen_teorico": "Horowitz distingue dos modos de liderazgo según el contexto de tu negocio. El 'CEO de paz' opera cuando hay ventaja competitiva clara y el mercado crece: fomenta creatividad, consenso y exploración de oportunidades, minimizando el conflicto. El 'CEO de guerra' opera ante una amenaza existencial (crisis financiera, pérdida de cliente clave, colapso de mercado): exige precisión absoluta, cero tolerancia a desviaciones del plan, prioriza la supervivencia sobre el proceso y puede saltarse protocolos convencionales de gestión. En ese modo no hay espacio para debates extensos; las decisiones de supervivencia recaen exclusivamente en ti, aunque sigas delegando la ejecución. La mayoría de los recursos de management enseñan solo técnicas de paz; dominar ambos modos y saber cuándo cambiar de uno a otro es lo que marca la diferencia.",
+  "resumen_teorico": "Se distinguen dos modos de liderazgo según el contexto de tu negocio. El 'CEO de paz' opera cuando hay ventaja competitiva clara y el mercado crece: fomenta creatividad, consenso y exploración de oportunidades, minimizando el conflicto. El 'CEO de guerra' opera ante una amenaza existencial (crisis financiera, pérdida de cliente clave, colapso de mercado): exige precisión absoluta, cero tolerancia a desviaciones del plan, prioriza la supervivencia sobre el proceso y puede saltarse protocolos convencionales de gestión. En ese modo no hay espacio para debates extensos; las decisiones de supervivencia recaen exclusivamente en ti, aunque sigas delegando la ejecución. La mayoría de los recursos de management enseñan solo técnicas de paz; dominar ambos modos y saber cuándo cambiar de uno a otro es lo que marca la diferencia.",
   "pasos_accionables": [
     "Evaluar honestamente si tu negocio está en modo de crecimiento normal o en riesgo existencial",
     "Si es modo de guerra, concentrar en ti las decisiones estratégicas centrales y exigir alineación estricta sin tolerar desviaciones del plan",
@@ -47,5 +47,26 @@
       "titulo": "CEO en Tiempos de Paz vs. CEO en Tiempos de Guerra",
       "fuente": "The Hard Thing About Hard Things"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-021",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Horowitz distingue dos modos de liderazgo según el contexto de tu negocio. El 'CEO de paz' opera cuando hay ventaja competitiva clara y el mercado crece: fomenta creatividad, consenso y exploración de oportunidades, minimizando el conflicto. El 'CEO de guerra' opera ante una amenaza existencial (crisis financiera, pérdida de cliente clave, colapso de mercado): exige precisión absoluta, cero tolerancia a desviaciones del plan, prioriza la supervivencia sobre el proceso y puede saltarse protocolos convencionales de gestión. En ese modo no hay espacio para debates extensos; las decisiones de supervivencia recaen exclusivamente en ti, aunque sigas delegando la ejecución. La mayoría de los recursos de management enseñan solo técnicas de paz; dominar ambos modos y saber cuándo cambiar de uno a otro es lo que marca la diferencia.",
+      "texto_nuevo": "Se distinguen dos modos de liderazgo según el contexto de tu negocio. El 'CEO de paz' opera cuando hay ventaja competitiva clara y el mercado crece: fomenta creatividad, consenso y exploración de oportunidades, minimizando el conflicto. El 'CEO de guerra' opera ante una amenaza existencial (crisis financiera, pérdida de cliente clave, colapso de mercado): exige precisión absoluta, cero tolerancia a desviaciones del plan, prioriza la supervivencia sobre el proceso y puede saltarse protocolos convencionales de gestión. En ese modo no hay espacio para debates extensos; las decisiones de supervivencia recaen exclusivamente en ti, aunque sigas delegando la ejecución. La mayoría de los recursos de management enseñan solo técnicas de paz; dominar ambos modos y saber cuándo cambiar de uno a otro es lo que marca la diferencia.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Horowitz distingue"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-013 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
   ]
 }

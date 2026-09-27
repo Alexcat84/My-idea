@@ -18,7 +18,7 @@ import { CampoConVoz } from "./CampoConVoz";
 import { IconoEstado, ORDEN_ESTADOS } from "./SelectorEstado";
 import { fechaHumana, fechaInputLocal, isoDesdeInputLocal } from "@/lib/fechas";
 import { BANDA, type Banda, type ChecklistEstado, type ModoCamino } from "@/lib/dbContract";
-import { rangoDeBanda } from "@/lib/engine/estimacion";
+import { rangoDeBanda } from "@/lib/engine/rangoBanda";
 import type { CambioItem, ItemChecklistUI } from "./ManosALaObra";
 import { elegir, type Locale } from "@/lib/i18n/config";
 import { useIdioma } from "@/lib/i18n/IdiomaProvider";

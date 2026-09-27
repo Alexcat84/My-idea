@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Limitaciones del Análisis Costo/Beneficio en Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming advierte que el análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+  "resumen_teorico": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
   "pasos_accionables": [
     "Antes de hacer un análisis costo/beneficio, revisa si de verdad puedes estimar los costos y los beneficios con una precision razonable",
     "Si no puedes ponerle número al beneficio, usa un análisis de rangos o de opciones en lugar de forzar una cifra monetaria",
@@ -20,5 +20,26 @@
     "Cuando quieras justificar una inversion en calidad usando un análisis costo/beneficio",
     "Cuando la decision de diseño involucre riesgo de seguridad"
   ],
-  "etiqueta_arbol": "Cuestiona el Costo Beneficio en Calidad"
+  "etiqueta_arbol": "Cuestiona el Costo Beneficio en Calidad",
+  "correcciones": [
+    {
+      "id": "atribucion-113",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming advierte que el análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+      "texto_nuevo": "El análisis costo/beneficio frecuentemente falla en calidad porque tanto los costos (por ejemplo, el costo real de un defecto que llega al cliente) como los beneficios (satisfaccion, reputacion) son extremadamente dificiles de poner en números. Si no puedes estimar con confianza ni un lado ni el otro, la cuenta que te queda no vale nada, y usarla puede ser peligroso, sobre todo en decisiones de diseño de producto donde hay riesgo de que alguien salga lastimado.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming advierte que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-022 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Muestreo estadístico como alternativa a la inspección al 100%",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "En lugar de revisar cada transacción, reclamo o pieza de inventario (costoso e ineficiente), Deming propone usar muestreo estadístico basado en teoría de probabilidad para estimar el estado general del sistema y detectar anomalías. Ejemplos incluyen el pago inmediato de viáticos con auditoría de una muestra (ej. 1 de 50) y la evaluación del valor de planta física de una empresa mediante inspección de una fracción representativa de los activos. Este enfoque libera recursos de revisión excesiva y los redirige a trabajo productivo.",
+  "resumen_teorico": "En lugar de revisar cada transacción, reclamo o pieza de inventario (costoso e ineficiente), conviene usar muestreo estadístico basado en teoría de probabilidad para estimar el estado general del sistema y detectar anomalías. Ejemplos incluyen el pago inmediato de viáticos con auditoría de una muestra (ej. 1 de 50) y la evaluación del valor de planta física de una empresa mediante inspección de una fracción representativa de los activos. Este enfoque libera recursos de revisión excesiva y los redirige a trabajo productivo.",
   "pasos_accionables": [
     "Definir la población total de transacciones, activos o documentos a controlar.",
     "Diseñar un tamaño de muestra estadísticamente representativo (incluyendo 100% de casos sospechosos).",
@@ -23,5 +23,26 @@
     "Si la organización revisa el 100% de las transacciones o activos de forma costosa e ineficiente.",
     "Si se requiere estimar el valor o estado de un gran volumen de inventario o documentos."
   ],
-  "etiqueta_arbol": "Muestrea en Lugar de Todo"
+  "etiqueta_arbol": "Muestrea en Lugar de Todo",
+  "correcciones": [
+    {
+      "id": "atribucion-125",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "En lugar de revisar cada transacción, reclamo o pieza de inventario (costoso e ineficiente), Deming propone usar muestreo estadístico basado en teoría de probabilidad para estimar el estado general del sistema y detectar anomalías. Ejemplos incluyen el pago inmediato de viáticos con auditoría de una muestra (ej. 1 de 50) y la evaluación del valor de planta física de una empresa mediante inspección de una fracción representativa de los activos. Este enfoque libera recursos de revisión excesiva y los redirige a trabajo productivo.",
+      "texto_nuevo": "En lugar de revisar cada transacción, reclamo o pieza de inventario (costoso e ineficiente), conviene usar muestreo estadístico basado en teoría de probabilidad para estimar el estado general del sistema y detectar anomalías. Ejemplos incluyen el pago inmediato de viáticos con auditoría de una muestra (ej. 1 de 50) y la evaluación del valor de planta física de una empresa mediante inspección de una fracción representativa de los activos. Este enfoque libera recursos de revisión excesiva y los redirige a trabajo productivo.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming propone"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-033 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

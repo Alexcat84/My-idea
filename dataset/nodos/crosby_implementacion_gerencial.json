@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Implementación como Habilidad Gerencial Crítica",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "Según Crosby, el gerente más valioso es aquel que puede crear y luego implementar. La implementación implica tomar una asignación, determinar cómo lograrla, y regresar con el resultado cumplido sin exigir autoridad absoluta ni compromisos firmados de antemano. Los programas de mejora de calidad fallan a menudo porque los responsables de calidad exigen autoridad total en lugar de simplemente identificar problemas, determinar soluciones prácticas, venderlas a los involucrados, y ejecutarlas.",
+  "resumen_teorico": "El gerente más valioso es aquel que puede crear y luego implementar. La implementación implica tomar una asignación, determinar cómo lograrla, y regresar con el resultado cumplido sin exigir autoridad absoluta ni compromisos firmados de antemano. Los programas de mejora de calidad fallan a menudo porque los responsables de calidad exigen autoridad total en lugar de simplemente identificar problemas, determinar soluciones prácticas, venderlas a los involucrados, y ejecutarlas.",
   "pasos_accionables": [
     "Aceptar la asignación sin exigir autoridad absoluta previa",
     "Identificar los problemas básicos detrás de la asignación",
@@ -24,5 +24,26 @@
     "Cuando el responsable de calidad exige autoridad total antes de actuar",
     "Cuando existe un mandato claro pero falta un plan de ejecución"
   ],
-  "etiqueta_arbol": "Aprende a Implementar tus Ideas"
+  "etiqueta_arbol": "Aprende a Implementar tus Ideas",
+  "correcciones": [
+    {
+      "id": "atribucion-048",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Según Crosby, el gerente más valioso es aquel que puede crear y luego implementar. La implementación implica tomar una asignación, determinar cómo lograrla, y regresar con el resultado cumplido sin exigir autoridad absoluta ni compromisos firmados de antemano. Los programas de mejora de calidad fallan a menudo porque los responsables de calidad exigen autoridad total en lugar de simplemente identificar problemas, determinar soluciones prácticas, venderlas a los involucrados, y ejecutarlas.",
+      "texto_nuevo": "El gerente más valioso es aquel que puede crear y luego implementar. La implementación implica tomar una asignación, determinar cómo lograrla, y regresar con el resultado cumplido sin exigir autoridad absoluta ni compromisos firmados de antemano. Los programas de mejora de calidad fallan a menudo porque los responsables de calidad exigen autoridad total en lugar de simplemente identificar problemas, determinar soluciones prácticas, venderlas a los involucrados, y ejecutarlas.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Según Crosby"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U7-032 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ]
 }

@@ -28,7 +28,11 @@ Ver `docs/SANEAMIENTO_DATASET.md` (tanda 1 cerrada).
 - **Mundo 11, en la forja y por su proceso, antes de integrar:** `evitar_preguntas_ilegales_entrevista` sin clase y con
   contratar como norma (clase C o B, y contratar como metodo); las 3 cifras de mercado (`repartir_material_antes_reunion`,
   `vender_puesto_jugador`, `nombrar_delegados_amigos_casa`) salen.
-- **Sesion con credencial:** 75 nodos a re-embeber y 66 preguntas a regenerar (`docs/fidelidad/credencial/`).
+- **Mundo 11, al integrar (REGLA ESTRICTA del 26 sep y decisiones del 27 sep 2026):** sus libros nuevos entran a
+  `dataset/metadata/fuentes_canonicas.json` con sus titulos; se corre `python scripts/fuentes_internas.py`; sus nodos
+  pasan la guarda de titulos (`engine/test_fuentes_de_cara.py`) y cualquier cita a un autor o libro como fuente sale por
+  correccion declarada (veredicto ATRIBUCION) antes de integrar.
+- **Sesion con credencial:** 251 nodos a re-embeber y 66 preguntas a regenerar (`docs/fidelidad/credencial/`).
 
 ## 0a. Campaña de FIDELIDAD: lo que queda para la integración del mundo 11 (24 sep 2026)
 

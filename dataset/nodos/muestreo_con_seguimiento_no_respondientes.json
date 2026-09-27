@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Muestreo estratificado con seguimiento a no respondientes en encuestas de clientes",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Deming propone en su lugar seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+  "resumen_teorico": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
   "pasos_accionables": [
     "Definir una muestra representativa reducida de la población de clientes (ej. 1000 de miles).",
     "Enviar el cuestionario únicamente a esa muestra.",
@@ -39,6 +39,25 @@
       "decision": "Mandato del fundador, regla B, ANADIDO practico: se reescribe como sugerencia de My Idea, sin atribuirlo al autor. Tiene razon el lector A. El libro fija el medio de seguimiento: entrevista personal a quienes no responden dentro de la muestra. Busque telephone y phone en todo el libro y la via telefonica nunca aparece como forma de seguir a los no respondientes (solo sale en otros contextos: companias telefonicas, operadoras, quejas). El seguimiento personal es fiel, pero la opcion telefonica es un canal o herramienta que el libro no pone. No es solo concretar: anade otro medio.",
       "indice": 2,
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B4.json, ficha C086-014"
+    },
+    {
+      "id": "atribucion-124",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Deming propone en su lugar seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+      "texto_nuevo": "Enviar cuestionarios a toda la base de clientes y obtener solo un 50% de respuesta introduce un sesgo estadístico grave, ya que no se puede asumir que quienes no responden tienen la misma opinión que quienes sí lo hacen. Es mejor seleccionar una muestra reducida y representativa, y hacer seguimiento personal (entrevista) a los no respondientes de esa muestra, lo cual reduce el costo total del estudio y aumenta la confiabilidad de las conclusiones.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming propone en su lugar"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-016 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
     }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
   ]
 }

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Claridad en Especificaciones e Instrucciones como Principio de Calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming ilustra, usando el ejemplo de las señales de tránsito confusas, cómo la falta de claridad en instrucciones o especificaciones genera errores, accidentes y costos evitables. Una instrucción o señal debe transmitir su mensaje instantáneamente y sin ambigüedad, ya que el usuario (o conductor) dispone de fracciones de segundo para actuar. Este principio se extiende a cualquier documento, procedimiento o especificación dentro de una organización.",
+  "resumen_teorico": "El ejemplo de las señales de tránsito confusas ilustra cómo la falta de claridad en instrucciones o especificaciones genera errores, accidentes y costos evitables. Una instrucción o señal debe transmitir su mensaje instantáneamente y sin ambigüedad, ya que el usuario (o conductor) dispone de fracciones de segundo para actuar. Este principio se extiende a cualquier documento, procedimiento o especificación dentro de una organización.",
   "pasos_accionables": [
     "Revisar especificaciones, procedimientos y señalizaciones existentes en busca de ambigüedades",
     "Probar las instrucciones con usuarios no familiarizados para detectar interpretaciones erróneas",
@@ -19,5 +19,26 @@
   "condiciones_activacion": [
     "Cuando existan altas tasas de error atribuibles a instrucciones o señalización poco clara"
   ],
-  "etiqueta_arbol": "Da Instrucciones Claras y Precisas"
+  "etiqueta_arbol": "Da Instrucciones Claras y Precisas",
+  "correcciones": [
+    {
+      "id": "atribucion-027",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming ilustra, usando el ejemplo de las señales de tránsito confusas, cómo la falta de claridad en instrucciones o especificaciones genera errores, accidentes y costos evitables. Una instrucción o señal debe transmitir su mensaje instantáneamente y sin ambigüedad, ya que el usuario (o conductor) dispone de fracciones de segundo para actuar. Este principio se extiende a cualquier documento, procedimiento o especificación dentro de una organización.",
+      "texto_nuevo": "El ejemplo de las señales de tránsito confusas ilustra cómo la falta de claridad en instrucciones o especificaciones genera errores, accidentes y costos evitables. Una instrucción o señal debe transmitir su mensaje instantáneamente y sin ambigüedad, ya que el usuario (o conductor) dispone de fracciones de segundo para actuar. Este principio se extiende a cualquier documento, procedimiento o especificación dentro de una organización.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming ilustra, usando el ejemplo de las señales de tránsito confusas"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-014 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

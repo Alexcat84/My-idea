@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Eliminación de Cuotas Numéricas para la Fuerza Laboral",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Las cuotas de producción, tasas de trabajo (work standards) y el pago por pieza (piece work) son mecanismos que fijan un estándar promedio, generando que la mitad de los trabajadores nunca lo alcancen y la otra mitad no supere el mínimo por presión de grupo. Estas prácticas destruyen el orgullo por el trabajo bien hecho, incentivan la producción de artículos defectuosos (especialmente en el pago por pieza) y no incluyen ningún mecanismo de mejora continua. Deming las considera una 'fortaleza contra la mejora' que debe ser reemplazada por supervisión inteligente y liderazgo basado en el conocimiento del proceso.",
+  "resumen_teorico": "Las cuotas de producción, tasas de trabajo (work standards) y el pago por pieza (piece work) son mecanismos que fijan un estándar promedio, generando que la mitad de los trabajadores nunca lo alcancen y la otra mitad no supere el mínimo por presión de grupo. Estas prácticas destruyen el orgullo por el trabajo bien hecho, incentivan la producción de artículos defectuosos (especialmente en el pago por pieza) y no incluyen ningún mecanismo de mejora continua. Son una 'fortaleza contra la mejora' que debe ser reemplazada por supervisión inteligente y liderazgo basado en el conocimiento del proceso.",
   "pasos_accionables": [
     "Identificar todos los esquemas de cuotas, tasas de trabajo o incentivos por pieza vigentes",
     "Sustituir las cuotas por indicadores de calidad de servicio, no solo de cantidad",
@@ -22,5 +22,26 @@
     "Cuando la organización usa pago por pieza, tasas de producción o cuotas diarias",
     "Cuando se detecta alta variabilidad o defectos asociados a presión por cumplir metas numéricas"
   ],
-  "etiqueta_arbol": "Elimina Cuotas de Producción"
+  "etiqueta_arbol": "Elimina Cuotas de Producción",
+  "correcciones": [
+    {
+      "id": "atribucion-071",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Las cuotas de producción, tasas de trabajo (work standards) y el pago por pieza (piece work) son mecanismos que fijan un estándar promedio, generando que la mitad de los trabajadores nunca lo alcancen y la otra mitad no supere el mínimo por presión de grupo. Estas prácticas destruyen el orgullo por el trabajo bien hecho, incentivan la producción de artículos defectuosos (especialmente en el pago por pieza) y no incluyen ningún mecanismo de mejora continua. Deming las considera una 'fortaleza contra la mejora' que debe ser reemplazada por supervisión inteligente y liderazgo basado en el conocimiento del proceso.",
+      "texto_nuevo": "Las cuotas de producción, tasas de trabajo (work standards) y el pago por pieza (piece work) son mecanismos que fijan un estándar promedio, generando que la mitad de los trabajadores nunca lo alcancen y la otra mitad no supere el mínimo por presión de grupo. Estas prácticas destruyen el orgullo por el trabajo bien hecho, incentivan la producción de artículos defectuosos (especialmente en el pago por pieza) y no incluyen ningún mecanismo de mejora continua. Son una 'fortaleza contra la mejora' que debe ser reemplazada por supervisión inteligente y liderazgo basado en el conocimiento del proceso.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming las considera una 'fortaleza contra la mejora'"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U5-004 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

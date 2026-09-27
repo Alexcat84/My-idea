@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Contabilidad de Innovación Orientada al Largo Plazo",
   "fuente": "The Lean Startup - Eric Ries",
-  "resumen_teorico": "Las presiones de los mercados públicos por resultados trimestrales de corto plazo desincentivan la inversión constante en innovación dentro de las empresas establecidas. Esto es consecuencia de métodos contables centrados en métricas de vanidad. Ries propone (a través del concepto de Long-Term Stock Exchange) que las organizaciones reporten, además de utilidades trimestrales, indicadores de 'contabilidad de innovación' sobre sus esfuerzos internos de emprendimiento, como el porcentaje de ingresos proveniente de productos que no existían hace pocos años, ligando la compensación ejecutiva al desempeño de largo plazo.",
+  "resumen_teorico": "Las presiones de los mercados públicos por resultados trimestrales de corto plazo desincentivan la inversión constante en innovación dentro de las empresas establecidas. Esto es consecuencia de métodos contables centrados en métricas de vanidad. Una salida (en la línea del Long-Term Stock Exchange) es que las organizaciones reporten, además de utilidades trimestrales, indicadores de 'contabilidad de innovación' sobre sus esfuerzos internos de emprendimiento, como el porcentaje de ingresos proveniente de productos que no existían hace pocos años, ligando la compensación ejecutiva al desempeño de largo plazo.",
   "pasos_accionables": [
     "Definir métricas internas de innovación (ej: % de ingresos de productos nuevos) además de las métricas financieras tradicionales",
     "Establecer un horizonte de evaluación de largo plazo para los proyectos de innovación, no solo trimestral",
@@ -25,5 +25,26 @@
     "Si la organización enfrenta presión de inversionistas o mercados por resultados de corto plazo que sacrifican la innovación",
     "Si se busca institucionalizar el Lean Startup dentro de una empresa grande o madura"
   ],
-  "etiqueta_arbol": "Invierte en Innovación a Largo Plazo"
+  "etiqueta_arbol": "Invierte en Innovación a Largo Plazo",
+  "correcciones": [
+    {
+      "id": "atribucion-037",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Las presiones de los mercados públicos por resultados trimestrales de corto plazo desincentivan la inversión constante en innovación dentro de las empresas establecidas. Esto es consecuencia de métodos contables centrados en métricas de vanidad. Ries propone (a través del concepto de Long-Term Stock Exchange) que las organizaciones reporten, además de utilidades trimestrales, indicadores de 'contabilidad de innovación' sobre sus esfuerzos internos de emprendimiento, como el porcentaje de ingresos proveniente de productos que no existían hace pocos años, ligando la compensación ejecutiva al desempeño de largo plazo.",
+      "texto_nuevo": "Las presiones de los mercados públicos por resultados trimestrales de corto plazo desincentivan la inversión constante en innovación dentro de las empresas establecidas. Esto es consecuencia de métodos contables centrados en métricas de vanidad. Una salida (en la línea del Long-Term Stock Exchange) es que las organizaciones reporten, además de utilidades trimestrales, indicadores de 'contabilidad de innovación' sobre sus esfuerzos internos de emprendimiento, como el porcentaje de ingresos proveniente de productos que no existían hace pocos años, ligando la compensación ejecutiva al desempeño de largo plazo.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Ries propone"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-005 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "The Lean Startup - Eric Ries"
+  ]
 }

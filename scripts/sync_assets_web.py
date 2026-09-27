@@ -61,6 +61,30 @@ def _sha256_file(path: Path) -> str:
     return _sha256_bytes(path.read_bytes())
 
 
+# NADA INTERNO LLEGA AL NAVEGADOR (decision del fundador del 27 sep 2026, punto 2; REGLA ESTRICTA del 26 sep):
+# lo que se copia a web/ es la VISTA WEB de cada asset, sin la fuente de los nodos, sus fuentes internas, sus
+# correcciones (con sus citas) ni la procedencia de sus fusiones. Todo eso vive solo en dataset/.
+# La guarda es web/lib/assets/sinInternos.test.ts.
+CLAVES_INTERNAS_NODO = ("fuente", "fuentes_internas", "correcciones", "merged_originals")
+
+
+def _vista_web(nombre: str, datos):
+    if nombre == "master_graph.json":
+        for n in datos["nodos"].values():
+            for k in CLAVES_INTERNAS_NODO:
+                n.pop(k, None)
+        return datos
+    if nombre == "vigencia.json":
+        # La web solo necesita el ANO del aviso; el libro, su fichero y su frase se quedan en dataset/.
+        libros = datos["libros"]
+        return {"_nota": "Vista web de dataset/metadata/vigencia.json: el ano del aviso de cada nodo, sin el libro.",
+                "nodos": {k: {"anio": libros[v["fuente"]]["anio"]} for k, v in datos["nodos"].items()}}
+    if nombre == "jurisdiccion.json":
+        return {"_nota": "Vista web de dataset/metadata/jurisdiccion.json: pais y clase de cada nodo, sin su motivo.",
+                "nodos": {k: {"pais": v["pais"], "clase": v["clase"]} for k, v in datos["nodos"].items()}}
+    return datos
+
+
 def _exportar_prompts():
     """write_bytes en vez de write_text: en Windows, write_text traduce
     '\\n' a '\\r\\n' al escribir (modo texto), lo que produciria un
@@ -90,11 +114,14 @@ def main():
         # escribir con write_bytes, hasheando LOS MISMOS bytes escritos.
         # (Causa raiz del desync: CRLF de Windows hasheado aqui, LF en git.)
         contenido = origen.read_bytes().replace(b"\r\n", b"\n")
+        if nombre in ("master_graph.json", "vigencia.json", "jurisdiccion.json"):
+            vista = _vista_web(nombre, json.loads(contenido.decode("utf-8")))
+            contenido = (json.dumps(vista, ensure_ascii=False, indent=2) + "\n").encode("utf-8")
         destino.write_bytes(contenido)
         manifest[nombre] = {
             "sha256": _sha256_bytes(contenido),
             "bytes": len(contenido),
-            "fuente": str(origen.relative_to(BASE)).replace("\\", "/"),
+            "origen": str(origen.relative_to(BASE)).replace("\\", "/"),
         }
         print(f"  {nombre}: {manifest[nombre]['bytes']} bytes, sha256={manifest[nombre]['sha256'][:12]}...")
 
@@ -102,7 +129,7 @@ def main():
     manifest["prompts.json"] = {
         "sha256": _sha256_bytes(contenido_prompts),
         "bytes": len(contenido_prompts),
-        "fuente": "engine/prototipo_motor.py (SYSTEM_* constants)",
+        "origen": "engine/prototipo_motor.py (SYSTEM_* constants)",
     }
     print(f"  prompts.json: {manifest['prompts.json']['bytes']} bytes, "
           f"sha256={manifest['prompts.json']['sha256'][:12]}... ({len(PROMPTS_A_EXPORTAR)} prompts)")
@@ -118,7 +145,7 @@ def main():
         manifest["semantic_index.json"] = {
             "sha256": _sha256_bytes(contenido_si),
             "bytes": len(contenido_si),
-            "fuente": "scripts/build_semantic_index_voyage.py (Voyage AI voyage-4-lite)",
+            "origen": "scripts/build_semantic_index_voyage.py (Voyage AI voyage-4-lite)",
         }
         print(f"  semantic_index.json: {manifest['semantic_index.json']['bytes']} bytes, "
               f"sha256={manifest['semantic_index.json']['sha256'][:12]}...")

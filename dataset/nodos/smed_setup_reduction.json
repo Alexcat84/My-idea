@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "SMED – Reducción de Tiempos de Cambio (Setup)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "Single Minute Exchange of Die (SMED) es un conjunto de técnicas desarrolladas por Shigeo Shingo para reducir drásticamente el tiempo de cambio de producto/proceso, idealmente a menos de 10 minutos, separando actividades internas (que requieren detener producción) de externas (que pueden hacerse sin detenerla).",
+  "resumen_teorico": "Single Minute Exchange of Die (SMED) es un conjunto de técnicas para reducir drásticamente el tiempo de cambio de producto/proceso, idealmente a menos de 10 minutos, separando actividades internas (que requieren detener producción) de externas (que pueden hacerse sin detenerla).",
   "pasos_accionables": [
     "Documentar el proceso actual de cambio/setup",
     "Clasificar actividades en internas y externas",
@@ -24,5 +24,26 @@
     "Cuando los tiempos de cambio de producto son largos y generan inventario excesivo",
     "Al buscar mayor flexibilidad de producción"
   ],
-  "etiqueta_arbol": "Reduce tus Tiempos de Cambio"
+  "etiqueta_arbol": "Reduce tus Tiempos de Cambio",
+  "correcciones": [
+    {
+      "id": "atribucion-169",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Single Minute Exchange of Die (SMED) es un conjunto de técnicas desarrolladas por Shigeo Shingo para reducir drásticamente el tiempo de cambio de producto/proceso, idealmente a menos de 10 minutos, separando actividades internas (que requieren detener producción) de externas (que pueden hacerse sin detenerla).",
+      "texto_nuevo": "Single Minute Exchange of Die (SMED) es un conjunto de técnicas para reducir drásticamente el tiempo de cambio de producto/proceso, idealmente a menos de 10 minutos, separando actividades internas (que requieren detener producción) de externas (que pueden hacerse sin detenerla).",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "desarrolladas por Shigeo Shingo"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-030 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ]
 }

@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Marcos Teóricos sobre Concentración Geográfica de Innovación",
   "fuente": "Venture Deals - Brad Feld",
-  "resumen_teorico": "Existen tres marcos históricos que explican por qué ciertas geografías concentran innovación: (1) economías externas/aglomeración (costos compartidos de insumos especializados y efectos de red), (2) redes horizontales (cultura de intercambio de información abierta, como Silicon Valley vs. Route 128 según Saxenian), y (3) clase creativa (Richard Florida: concentración de individuos creativos que se atraen mutuamente). Estos marcos son complementarios pero no explican cómo iniciar una comunidad desde cero.",
+  "resumen_teorico": "Existen tres marcos históricos que explican por qué ciertas geografías concentran innovación: (1) economías externas/aglomeración (costos compartidos de insumos especializados y efectos de red), (2) redes horizontales (cultura de intercambio de información abierta, como el contraste entre Silicon Valley y Route 128), y (3) clase creativa (concentración de individuos creativos que se atraen mutuamente). Estos marcos son complementarios pero no explican cómo iniciar una comunidad desde cero.",
   "pasos_accionables": [
     "Analizar qué economías externas existen en la región (infraestructura, talento, proveedores especializados)",
     "Evaluar la cultura de apertura e intercambio de información entre empresas locales",
@@ -22,5 +22,27 @@
   "condiciones_activacion": [
     "Si se busca entender por qué una región no logra desarrollar un ecosistema emprendedor competitivo"
   ],
-  "etiqueta_arbol": "Entiende los Clústeres de Innovación"
+  "etiqueta_arbol": "Entiende los Clústeres de Innovación",
+  "correcciones": [
+    {
+      "id": "atribucion-117",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Existen tres marcos históricos que explican por qué ciertas geografías concentran innovación: (1) economías externas/aglomeración (costos compartidos de insumos especializados y efectos de red), (2) redes horizontales (cultura de intercambio de información abierta, como Silicon Valley vs. Route 128 según Saxenian), y (3) clase creativa (Richard Florida: concentración de individuos creativos que se atraen mutuamente). Estos marcos son complementarios pero no explican cómo iniciar una comunidad desde cero.",
+      "texto_nuevo": "Existen tres marcos históricos que explican por qué ciertas geografías concentran innovación: (1) economías externas/aglomeración (costos compartidos de insumos especializados y efectos de red), (2) redes horizontales (cultura de intercambio de información abierta, como el contraste entre Silicon Valley y Route 128), y (3) clase creativa (concentración de individuos creativos que se atraen mutuamente). Estos marcos son complementarios pero no explican cómo iniciar una comunidad desde cero.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "como Silicon Valley vs. Route 128 según Saxenian",
+          "(Richard Florida: concentración de individuos creativos"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-019 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Venture Deals - Brad Feld"
+  ]
 }

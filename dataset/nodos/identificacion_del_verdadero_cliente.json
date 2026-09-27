@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Identificación del Verdadero Cliente (Quién Decide la Calidad)",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "No siempre quien paga o usa el producto es quien decide sobre su calidad. Deming ilustra con ejemplos (tambores de selenio, etiquetas de carne, lentes ópticos) cómo un técnico, gerente intermedio u otro actor de la cadena puede ser el verdadero árbitro de calidad, distinto del usuario final o pagador.",
+  "resumen_teorico": "No siempre quien paga o usa el producto es quien decide sobre su calidad. Ejemplos como los tambores de selenio, las etiquetas de carne o los lentes ópticos ilustran cómo un técnico, gerente intermedio u otro actor de la cadena puede ser el verdadero árbitro de calidad, distinto del usuario final o pagador.",
   "pasos_accionables": [
     "Mapear toda la cadena de actores que interactúan con el producto antes de llegar al usuario final",
     "Determinar quién tiene poder de rechazo o aceptación en cada etapa",
@@ -20,5 +20,26 @@
   "condiciones_activacion": [
     "Cuando existen intermediarios técnicos o comerciales entre el fabricante y el usuario final"
   ],
-  "etiqueta_arbol": "Encuentra a tu Verdadero Cliente"
+  "etiqueta_arbol": "Encuentra a tu Verdadero Cliente",
+  "correcciones": [
+    {
+      "id": "atribucion-106",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "No siempre quien paga o usa el producto es quien decide sobre su calidad. Deming ilustra con ejemplos (tambores de selenio, etiquetas de carne, lentes ópticos) cómo un técnico, gerente intermedio u otro actor de la cadena puede ser el verdadero árbitro de calidad, distinto del usuario final o pagador.",
+      "texto_nuevo": "No siempre quien paga o usa el producto es quien decide sobre su calidad. Ejemplos como los tambores de selenio, las etiquetas de carne o los lentes ópticos ilustran cómo un técnico, gerente intermedio u otro actor de la cadena puede ser el verdadero árbitro de calidad, distinto del usuario final o pagador.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming ilustra con ejemplos"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-002 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

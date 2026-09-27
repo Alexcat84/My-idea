@@ -4,7 +4,7 @@
   "dominio": "environmental",
   "titulo_concepto": "Soporte Activo a la Diversidad",
   "fuente": "Cradle to Cradle - Michael Braungart",
-  "resumen_teorico": "Braungart reconsidera que 'respetar' la diversidad (biológica, cultural, material) es insuficiente frente a las fuerzas de estandarización y homogeneización del mundo industrial ('una talla para todos'). Propone que la diversidad requiere soporte activo y científico -no solo tolerancia pasiva- para preservar lo particular y valioso, ya sea en ecosistemas, culturas indígenas o variaciones materiales.",
+  "resumen_teorico": "'Respetar' la diversidad (biológica, cultural, material) es insuficiente frente a las fuerzas de estandarización y homogeneización del mundo industrial ('una talla para todos'). La diversidad requiere soporte activo y científico, no solo tolerancia pasiva, para preservar lo particular y valioso, ya sea en ecosistemas, culturas indígenas o variaciones materiales.",
   "pasos_accionables": [
     "Identificar elementos de diversidad (biológica, cultural o material) relevantes al proyecto",
     "Evaluar si las soluciones actuales tienden a la estandarización que erosiona esa diversidad",
@@ -18,5 +18,27 @@
   "condiciones_activacion": [
     "Cuando el proyecto opera en contextos con alta diversidad biológica o cultural en riesgo de homogeneización"
   ],
-  "etiqueta_arbol": "Apoya Activamente la Diversidad"
+  "etiqueta_arbol": "Apoya Activamente la Diversidad",
+  "correcciones": [
+    {
+      "id": "atribucion-066",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Braungart reconsidera que 'respetar' la diversidad (biológica, cultural, material) es insuficiente frente a las fuerzas de estandarización y homogeneización del mundo industrial ('una talla para todos'). Propone que la diversidad requiere soporte activo y científico -no solo tolerancia pasiva- para preservar lo particular y valioso, ya sea en ecosistemas, culturas indígenas o variaciones materiales.",
+      "texto_nuevo": "'Respetar' la diversidad (biológica, cultural, material) es insuficiente frente a las fuerzas de estandarización y homogeneización del mundo industrial ('una talla para todos'). La diversidad requiere soporte activo y científico, no solo tolerancia pasiva, para preservar lo particular y valioso, ya sea en ecosistemas, culturas indígenas o variaciones materiales.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Braungart reconsidera que",
+          "Propone que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U3-003 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Cradle to Cradle - Michael Braungart"
+  ]
 }

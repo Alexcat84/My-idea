@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Ciclo PDCA/PDSA (Shewhart-Deming)",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El ciclo PDCA (Plan-Do-Check-Act) o PDSA (Plan-Do-Study-Act), popularizado por Shewhart y difundido por Deming, es un método de retroalimentación para tomar acción correctiva ante problemas esporádicos. 'Plan' define metas y sujetos de control, 'Do' ejecuta y monitorea el proceso, 'Check/Study' analiza mediante sensado y comparación, y 'Act' implementa la acción correctiva. Se distingue de metodologías de mejora como Six Sigma, más adecuadas para problemas crónicos.",
+  "resumen_teorico": "El ciclo PDCA (Plan-Do-Check-Act) o PDSA (Plan-Do-Study-Act) es un método de retroalimentación para tomar acción correctiva ante problemas esporádicos. 'Plan' define metas y sujetos de control, 'Do' ejecuta y monitorea el proceso, 'Check/Study' analiza mediante sensado y comparación, y 'Act' implementa la acción correctiva. Se distingue de metodologías de mejora como Six Sigma, más adecuadas para problemas crónicos.",
   "pasos_accionables": [
     "Planificar: seleccionar los sujetos de control y definir metas",
     "Ejecutar (Do): correr y monitorear el proceso",
@@ -23,5 +23,26 @@
     "Cuando surge un problema esporádico o cambio repentino en el desempeño del proceso",
     "Si se necesita una acción correctiva rápida sin análisis estadístico complejo"
   ],
-  "etiqueta_arbol": "Planea, Haz y Corrige"
+  "etiqueta_arbol": "Planea, Haz y Corrige",
+  "correcciones": [
+    {
+      "id": "atribucion-025",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El ciclo PDCA (Plan-Do-Check-Act) o PDSA (Plan-Do-Study-Act), popularizado por Shewhart y difundido por Deming, es un método de retroalimentación para tomar acción correctiva ante problemas esporádicos. 'Plan' define metas y sujetos de control, 'Do' ejecuta y monitorea el proceso, 'Check/Study' analiza mediante sensado y comparación, y 'Act' implementa la acción correctiva. Se distingue de metodologías de mejora como Six Sigma, más adecuadas para problemas crónicos.",
+      "texto_nuevo": "El ciclo PDCA (Plan-Do-Check-Act) o PDSA (Plan-Do-Study-Act) es un método de retroalimentación para tomar acción correctiva ante problemas esporádicos. 'Plan' define metas y sujetos de control, 'Do' ejecuta y monitorea el proceso, 'Check/Study' analiza mediante sensado y comparación, y 'Act' implementa la acción correctiva. Se distingue de metodologías de mejora como Six Sigma, más adecuadas para problemas crónicos.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "popularizado por Shewhart y difundido por Deming"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-009 (lector con trampas, verificador ciego y arbitro; arbitro). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ]
 }

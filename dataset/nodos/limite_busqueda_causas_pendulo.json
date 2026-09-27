@@ -4,7 +4,7 @@
   "dominio": "health_safety",
   "titulo_concepto": "El Límite en la Búsqueda de Causas Distales (¿Ha Ido el Péndulo Demasiado Lejos?)",
   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-  "resumen_teorico": "En los últimos años el análisis de accidentes se ha expandido cada vez más hacia atrás: de actos inseguros a factores organizacionales, reguladores, e incluso factores societales y económicos. Reason cuestiona si este alcance ha llegado al punto de rendimientos decrecientes, especialmente para fines de remediación. Los factores individuales tienen valor explicativo, predictivo y remedial pequeño-moderado; los factores de lugar de trabajo y organizacionales aportan el mayor valor agregado; los factores más remotos (sociales, económicos) tienen rendimientos decrecientes, particularmente para contramedidas prácticas, ya que están fuera del alcance de los gestores del sistema.",
+  "resumen_teorico": "En los últimos años el análisis de accidentes se ha expandido cada vez más hacia atrás: de actos inseguros a factores organizacionales, reguladores, e incluso factores societales y económicos. Cabe preguntarse si este alcance ha llegado al punto de rendimientos decrecientes, especialmente para fines de remediación. Los factores individuales tienen valor explicativo, predictivo y remedial pequeño-moderado; los factores de lugar de trabajo y organizacionales aportan el mayor valor agregado; los factores más remotos (sociales, económicos) tienen rendimientos decrecientes, particularmente para contramedidas prácticas, ya que están fuera del alcance de los gestores del sistema.",
   "pasos_accionables": [
     "Al investigar un accidente, evaluar en qué punto el análisis causal deja de aportar valor remedial práctico",
     "Enfocar recursos de investigación en factores de lugar de trabajo y organizacionales, que ofrecen el mayor retorno",
@@ -38,5 +38,26 @@
       "titulo": "Reglas de Parada (Stop Rules) en la Investigación de Accidentes",
       "fuente": "Managing the Risks of Organizat - Reason, J. T_"
     }
+  ],
+  "correcciones": [
+    {
+      "id": "atribucion-114",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "En los últimos años el análisis de accidentes se ha expandido cada vez más hacia atrás: de actos inseguros a factores organizacionales, reguladores, e incluso factores societales y económicos. Reason cuestiona si este alcance ha llegado al punto de rendimientos decrecientes, especialmente para fines de remediación. Los factores individuales tienen valor explicativo, predictivo y remedial pequeño-moderado; los factores de lugar de trabajo y organizacionales aportan el mayor valor agregado; los factores más remotos (sociales, económicos) tienen rendimientos decrecientes, particularmente para contramedidas prácticas, ya que están fuera del alcance de los gestores del sistema.",
+      "texto_nuevo": "En los últimos años el análisis de accidentes se ha expandido cada vez más hacia atrás: de actos inseguros a factores organizacionales, reguladores, e incluso factores societales y económicos. Cabe preguntarse si este alcance ha llegado al punto de rendimientos decrecientes, especialmente para fines de remediación. Los factores individuales tienen valor explicativo, predictivo y remedial pequeño-moderado; los factores de lugar de trabajo y organizacionales aportan el mayor valor agregado; los factores más remotos (sociales, económicos) tienen rendimientos decrecientes, particularmente para contramedidas prácticas, ya que están fuera del alcance de los gestores del sistema.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Reason cuestiona si"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U1-010 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Managing the Risks of Organizat - Reason, J. T_"
   ]
 }

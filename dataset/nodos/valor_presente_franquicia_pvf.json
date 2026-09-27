@@ -4,7 +4,7 @@
   "dominio": "franquicias",
   "titulo_concepto": "Valor Presente de una Franquicia (PVF)",
   "fuente": "Franchise Your Business - Mark Siebert",
-  "resumen_teorico": "El PVF es un concepto desarrollado por iFranchise Group que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo.",
+  "resumen_teorico": "El PVF es un concepto que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo.",
   "pasos_accionables": [
     "Calcular el flujo de ingresos esperado de un franquiciado durante toda la relación (fee, regalías, fondo publicitario, rebates)",
     "Estimar el impacto en el valor de empresa de cada franquiciado adicional",
@@ -22,5 +22,26 @@
   "condiciones_activacion": [
     "Cuando se toman decisiones sobre inversión en marketing, reclutamiento o brokers de franquicia"
   ],
-  "etiqueta_arbol": "Calcula el Valor Futuro"
+  "etiqueta_arbol": "Calcula el Valor Futuro",
+  "correcciones": [
+    {
+      "id": "atribucion-176",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El PVF es un concepto desarrollado por iFranchise Group que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo.",
+      "texto_nuevo": "El PVF es un concepto que trata la venta de una franquicia como la compra de una anualidad: además del fee inicial, el franquiciante recibirá regalías, aportes al fondo publicitario, ventas de producto y otros ingresos durante años o décadas. Este valor de vida del franquiciado debe guiar decisiones sobre inversión en marketing, contratación de personal, uso de brokers y calidad de materiales, evitando decisiones basadas en visión de corto plazo.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "un concepto desarrollado por iFranchise Group"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-029 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Franchise Your Business - Mark Siebert"
+  ]
 }

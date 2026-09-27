@@ -1,3459 +1,920 @@
 {
- "_nota": "Vigencia de los nodos (decision del fundador del 26 sep 2026, saneamiento del dataset, tanda 1, punto 4). Cada nodo con una norma, un plazo legal, una cifra con fecha o una institucion lleva en la tarjeta el aviso \"Esta informacion puede haber cambiado desde [ano]: verifica la norma vigente en tu pais\" (REGLA ESTRICTA del fundador, 26 sep 2026: el cliente nunca ve el titulo de un libro ni un autor como fuente; los libros de esta lista son metadato interno y el aviso usa solo el ano) (web/lib/engine/avisos.ts). Los nodos salen de la pasada J del diagnostico (docs/saneamiento/resultados/J), leidos por lector y verificador ciego; el ano de cada libro, de su propio fichero, con la linea que lo prueba y su seguridad (ALTA, MEDIA o BAJA). Un ano nulo omite el ano en el aviso. El resto de la vigencia (fichas con fecha de verificacion) es campania posterior.",
- "libros": {
-  "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)": {
-   "nombre": "A Basic Guide to Exporting",
-   "anio": 2015,
-   "seguridad": "ALTA",
-   "fichero": "basic-guide-to-exporting_Latest_eg_main_086196.txt",
-   "linea": "L37",
-   "frase": "First printing, 2015.",
-   "nota": "11th Edition (L9). The CIP data agrees (L21, HF1416.5.B37 2015; L23, LCCN 2015010057). The 2011 and 2013 candidates are the 10th edition and export data mentioned in the text, not this edition."
-  },
-  "Assembling Tomorrow: A Guide to Designing a Thriving Future": {
-   "nombre": "Assembling Tomorrow",
-   "anio": 2024,
-   "seguridad": "BAJA",
-   "fichero": "Assembling Tomorrow_ A Guide to - Scott Doorley.txt",
-   "linea": "L1479",
-   "frase": "This emotional entanglement with technology goes both ways. The machines seem to be getting emotional too. In February 2023, New York Times reporter Kevin Roose had a now-famous conversation with a trial version of Microsoft’s Bing AI chatbot. He’d heard rumors the bot would say odd things when push",
-   "nota": "The file has no copyright page. The latest internal dates are 2023 (L1077, L1479). 2024 is the known first edition (Ten Speed Press, Stanford d.school, 2024). The file does not confirm it."
-  },
-  "Business Model Generation - Osterwalder, Alexander": {
-   "nombre": "Business Model Generation",
-   "anio": 2010,
-   "seguridad": "ALTA",
-   "fichero": "Business Model Generation_ A Ha - Osterwalder, Alexander.txt",
-   "linea": "L9",
-   "frase": "Copyright © 2010 by Alexander Osterwalder and Yves Pigneur. All rights reserved.",
-   "nota": "Wiley copyright page (L11 publisher, L25 ISBN 978-0470-87641-1)."
-  },
-  "Businessperson's Guide to Federal Warranty Law": {
-   "nombre": "Businessperson's Guide to Federal Warranty Law",
-   "anio": 2018,
-   "seguridad": "ALTA",
-   "fichero": "Businessperson's Guide to Federal Warranty Law.txt",
-   "linea": "L900",
-   "frase": "\"Tie-In Sales\" and E-Warranty Act Provisions updated March 2018",
-   "nota": "FTC guide taken from ftc.gov (extracted 2026-07-11, L4). The base guide is dated December 2006 (L902); the latest revision is March 2018 (L900), which is the year given here."
-  },
-  "Change by Design, Revised and U - Tim Brown": {
-   "nombre": "Change by Design",
-   "anio": 2019,
-   "seguridad": "MEDIA",
-   "fichero": "Change by Design, Revised and U - Tim Brown.txt",
-   "linea": "L91",
-   "frase": "San Francisco, 2019",
-   "nota": "Revised and updated edition. The copyright page is listed in the contents (L54) but its text is not in the file. The new Reintroduction is signed TIM BROWN, San Francisco, 2019 (L88 and L91). The first edition was 2009 (L85)."
-  },
-  "Co-Intelligence_ Living and Wor - Ethan Mollick": {
-   "nombre": "Co-Intelligence",
-   "anio": 2024,
-   "seguridad": "MEDIA",
-   "fichero": "Co-Intelligence_ Living and Wor - Ethan Mollick.txt",
-   "linea": "L487",
-   "frase": "As I write this in late 2023, I think I know what the world looks like for at least the next year. Bigger, smarter Frontier Models are coming, along with an increasing range of smaller and open-source AI platforms. In addition, AIs are becoming connected to the world in new ways: they can read and w",
-   "nota": "The file has no copyright page. It starts at the Introduction and ends in the last chapter. The author says he is writing in late 2023 (L487). The known edition is Portfolio, 2024. The year is deduced."
-  },
-  "Cradle to Cradle - Michael Braungart": {
-   "nombre": "Cradle to Cradle",
-   "anio": 2008,
-   "seguridad": "ALTA",
-   "fichero": "Cradle to Cradle - Michael Braungart.txt",
-   "linea": "L1",
-   "frase": "Introduction to the 2008",
-   "nota": "The heading runs over two lines (L1 and L3: Introduction to the 2008 / edition). The introduction is signed Michael Braungart, Hamburg 2008 (L88). The first edition was 2002 (L8), so the 2002 candidate is the first edition, not this one."
-  },
-  "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)": {
-   "nombre": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework",
-   "anio": 2018,
-   "seguridad": "BAJA",
-   "fichero": "cybersecurity_sb_nist-cyber-framework.txt",
-   "linea": "L5",
-   "frase": "Understanding THE NIST CYBERSECURITY FRAMEWORK",
-   "nota": "Folleto de 82 lineas sin fecha, sin copyright ni revision en todo el fichero. 2018 es el mejor dato externo (campana FTC Cybersecurity for Small Business, lanzada en otoño de 2018); el fichero no lo confirma. Remite al NIST CSF 1.x, no al 2.0 de 2024."
-  },
-  "Essentials of Supply Chain Management - Michael H. Hugos": {
-   "nombre": "Essentials of Supply Chain Management",
-   "anio": 2024,
-   "seguridad": "MEDIA",
-   "fichero": "Essentials of Supply Chain Mana - Michael H. Hugos.txt",
-   "linea": "L2252",
-   "frase": "In general use, the term “artificial intelligence” means a program that mimics human cognition. At least some of the things we associate with other minds, such as learning and problem solving, can be done by computers, though not in the same way as we do. Andreas Kaplan and Michael Haenlein define A",
-   "nota": "Sin pagina de copyright. La referencia mas reciente es de 2023 y el texto trata el SCOR DS de finales de 2022 (L663). Eso cuadra con la 5.a edicion (Wiley, 2024), no con la 4.a (2018). Año deducido."
-  },
-  "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe": {
-   "nombre": "Financial Intelligence for Entrepreneurs",
-   "anio": 2008,
-   "seguridad": "MEDIA",
-   "fichero": "Financial Intelligence for Entr - Berman, Karen; Knight, Joe;.txt",
-   "linea": "L533",
-   "frase": "Why so many? In cases where there is any question, the rules of accounting require the financial folks to explain how they arrived at their totals. So most of the notes are like windows into how the numbers were determined. Some are simple and straightforward, such as the following two footnotes fro",
-   "nota": "Sin pagina de copyright. Los datos mas recientes son los Form 10-K de 2007, y los agradecimientos (L4785) nombran a Harvard Business Press. Encaja con la unica edicion conocida, HBP 2008. Año deducido."
-  },
-  "Franchise Your Business - Mark Siebert": {
-   "nombre": "Franchise Your Business",
-   "anio": 2016,
-   "seguridad": "MEDIA",
-   "fichero": "Franchise Your Business - Mark Siebert.txt",
-   "linea": "L1435",
-   "frase": "Think back 20 years ago. Were you living in the same house? Driving the same car? Using the same computer? Or even using a computer at all? As I write this in 2015, I’m amazed at the pace at which business strategy, technology, and franchising have evolved.",
-   "nota": "Sin pagina de copyright. El autor escribe en 2015 (L1435) y los datos mas recientes son de 2014 y 2015. Encaja con la edicion de Entrepreneur Press de 2016. Los candidatos 2004 y 2001 son de estudios citados (L349). Año deducido."
-  },
-  "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses": {
-   "nombre": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
-   "anio": 2021,
-   "seguridad": "BAJA",
-   "fichero": "Getting-Started-NIST-Privacy-Framework-Guide.txt",
-   "linea": "L1",
-   "frase": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
-   "nota": "Guia de 108 lineas sin fecha ni numero de revision en todo el fichero. Cota inferior segura: 2020, año del Privacy Framework 1.0 al que remite. 2021 es una estimacion de la fecha de publicacion de la guia rapida para pymes; conviene verificarla en nist.gov/privacy-framework."
-  },
-  "Guia de empaque para envios (FedEx)": {
-   "nombre": "FedEx: How to Pack",
-   "anio": 2018,
-   "seguridad": "ALTA",
-   "fichero": "HowToPack_fxcom.txt",
-   "linea": "L273",
-   "frase": "NOTICE: This packaging brochure is provided to FedEx customers to help reduce loss or damage due to improper packaging. It is NOT intended to be a comprehensive guide for packaging items we accept for transit. We make no warranties, expressed or implied, regarding this information. Proper packaging ",
-   "nota": "Folleto de FedEx, revision 28437PM-Rev. 12/18 (diciembre de 2018); la misma nota de copyright se repite en L503, L647, L909, L1049 y L1195."
-  },
-  "Juran's Quality Handbook_ The C - Joseph A. Defeo": {
-   "nombre": "Juran's Quality Handbook",
-   "anio": 2017,
-   "seguridad": "MEDIA",
-   "fichero": "Juran's Quality Handbook_ The C - Joseph A. Defeo.txt",
-   "linea": "L12",
-   "frase": "We set out to make this 7th edition handbook a reference for all who are leading, creating, producing, and delivering high quality products, services, and processes to attain superior customer experiences and business results. Experience with the first six editions has shown that “those who are invo",
-   "nota": "El fichero no trae pagina de copyright; la frase fija que es la 7a edicion (McGraw-Hill, copyright 2017, a la venta desde finales de 2016). Las citas mas recientes del texto son de 2016 (L223, L1016) y la ISO 9001:2015 (L11009)."
-  },
-  "Managing the Risks of Organizat - Reason, J. T_": {
-   "nombre": "Managing the Risks of Organizational Accidents",
-   "anio": 1997,
-   "seguridad": "MEDIA",
-   "fichero": "Managing the Risks of Organizat - Reason, J. T_.txt",
-   "linea": "L5986",
-   "frase": "D. Stover, The costs of failure. Proceedings of the 1996 Safety Conference, Institute of Petroleum, London, 26 September 1996.",
-   "nota": "Sin pagina de copyright en el fichero (empieza en el prefacio). La referencia mas reciente es de septiembre de 1996 (L5982, L5986), lo que cuadra con la unica edicion de Ashgate, de 1997."
-  },
-  "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide": {
-   "nombre": "NIST Cybersecurity Framework 2.0: Small Business Quick-Start Guide",
-   "anio": 2024,
-   "seguridad": "MEDIA",
-   "fichero": "NIST.SP.1300.txt",
-   "linea": "L11",
-   "frase": "February",
-   "nota": "La portada solo dice 'February', sin ano (la extraccion lo perdio). Es la guia NIST SP 1300 del CSF 2.0 (L1 a L9), con Gina M. Raimondo como Secretaria de Comercio (L5). El CSF 2.0 y sus guias rapidas salieron en febrero de 2024."
-  },
-  "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide": {
-   "nombre": "NIST RMF Small Enterprise Quick Start Guide",
-   "anio": 2024,
-   "seguridad": "ALTA",
-   "fichero": "NIST.SP.1314.txt",
-   "linea": "L9",
-   "frase": "NIST Special Publication NIST SP 1314 https://doi.org/10.6028/NIST.SP.1314 July 2024",
-   "nota": "Portada de la publicacion con su fecha: julio de 2024. Unica fecha de edicion en el fichero."
-  },
-  "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer": {
-   "nombre": "Protecting Controlled Unclassified Information: NIST SP 800-171 Rev. 3 Small Business Primer",
-   "anio": 2025,
-   "seguridad": "MEDIA",
-   "fichero": "NIST.SP.1318.txt",
-   "linea": "L19",
-   "frase": "August",
-   "nota": "La portada solo dice el mes (August, L19), sin ano. El ano se deduce: la portada nombra a Howard Lutnick como Secretary of Commerce (L7) y a Craig Burkhardt como director interino de NIST (L11), cargos de 2025; L199 dice que SP 800-171 Rev. 3 salio en mayo de 2024, asi que el primer es posterior. El candidato 2024 de la regex es la fecha de la norma, no del primer. Publicacion: agosto de 2025."
-  },
-  "Never Lose a Customer Again - Joey Coleman": {
-   "nombre": "Never Lose a Customer Again",
-   "anio": 2018,
-   "seguridad": "MEDIA",
-   "fichero": "Never Lose a Customer Again_ Tu - Joey Coleman.txt",
-   "linea": "L744",
-   "frase": "The number of resources devoted to marketing and sales are enormous compared to those directed toward customer retention. The 2017 edition of the annual CMO Survey (conducted by the Fuqua School of Business at Duke University, Deloitte LLP, and the American Marketing Association) found that the aver",
-   "nota": "El fichero no trae pagina de copyright (empieza en el capitulo uno). La fecha mas reciente del texto es 2017 (L744; la linea lleva tabuladores al inicio, omitidos en la frase). Primera y unica edicion: Portfolio/Penguin, 2018, coherente con el texto."
-  },
-  "OSHA3885": {
-   "nombre": "Recommended Practices for Safety and Health Programs",
-   "anio": 2016,
-   "seguridad": "BAJA",
-   "fichero": "OSHA3885.md",
-   "linea": "L7",
-   "frase": "Source: Ohio Bureau of Workers' Compensation (2011), Ohio 21(d) SHARP Program Performance Assessment.",
-   "nota": "En el fichero no hay ni portada ni fecha de publicacion (empieza en la Introduccion). La cita mas reciente del texto es de 2011. La publicacion OSHA 3885 salio en octubre de 2016 (dato externo, no esta en el fichero). El candidato 1970 de la regex es el ano de la OSH Act, no el de la edicion."
-  },
-  "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev": {
-   "nombre": "Out of the Crisis",
-   "anio": 2018,
-   "seguridad": "BAJA",
-   "fichero": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev.txt",
-   "linea": "L1883",
-   "frase": "Another simple example of a change was suggested by Dr. Ivor S. Francis at a seminar at the W. Edwards Deming Institute of New Zealand in August 1985: lengthen the coffee break from 15 minutes to 30 minutes. Result: time saved; commotion avoided. Explanation: 15 minutes is not enough time for 350 pe",
-   "nota": "El fichero no trae ni copyright ni el prologo de Cahill (empieza en el capitulo 1). Las fechas del texto llegan hasta 1985 y 1986, las del original (MIT CAES, 1982 y 1986). La fuente dice Reissue con Kevin Cahill: es la reedicion de MIT Press de 2018 (dato externo). Si se prefiere el texto original, el ano seria 1986."
-  },
-  "SMALL_BUSINESS": {
-   "nombre": "OSHA Small Business Safety and Health Handbook",
-   "anio": 2023,
-   "seguridad": "BAJA",
-   "fichero": "SMALL_BUSINESS.md",
-   "linea": "L905",
-   "frase": "Provide annual training on vaccination (e. g. , Hepatitis B, influenza, COVID-19, tetanus, etc. ), including information from local health departments.",
-   "nota": "El fichero no tiene pagina de copyright, numero de publicacion OSHA ni fecha de revision. Empieza en 'About this Handbook' (L1) y en L11 dice que es de dominio publico. Solo hay un suelo de fecha: menciona COVID-19 (L905, L927), asi que es de 2020 o posterior; tambien cita el umbral de escaleras del 17 de enero de 2017 (L1549) y el envio electronico del 300A antes del 2 de marzo (L253). 2023 es un"
-  },
-  "The Founder's Dilemmas - Wasserman, Noam": {
-   "nombre": "The Founder's Dilemmas",
-   "anio": 2012,
-   "seguridad": "MEDIA",
-   "fichero": "The Founder's Dilemmas - Wasserman, Noam.txt",
-   "linea": "L5130",
-   "frase": "13. Erick Schonfeld, http://techcrunch.com/2011/03/03/jack-dorsey-twitter-punched-stomach/, March 3, 2011.",
-   "nota": "El texto empieza en 'PART I' y no tiene pagina de copyright. La cita mas reciente es del 3 de marzo de 2011 (L5130). El libro es de Princeton University Press, 2012, y es su unica edicion. El ano sale de ese dato externo."
-  },
-  "The Green to Gold Business Play - Daniel C. Esty": {
-   "nombre": "The Green to Gold Business Playbook",
-   "anio": 2011,
-   "seguridad": "MEDIA",
-   "fichero": "The Green to Gold Business Play - Daniel C. Esty.txt",
-   "linea": "L25",
-   "frase": "February 2011",
-   "nota": "The file has no copyright page. The preface is signed by Dan Esty and Andrew Winston with the date February 2011 (L17 to L25). The Playbook (Esty and P.J. Simmons, Wiley) came out in 2011."
-  },
-  "Traction - Gabriel Weinberg": {
-   "nombre": "Traction",
-   "anio": 2014,
-   "seguridad": "MEDIA",
-   "fichero": "Traction - Gabriel Weinberg.txt",
-   "linea": "L64",
-   "frase": "\t\t\tAround this time I also started angel investing and more seriously advising other startups. I saw firsthand similar struggles and mistakes. I also partnered with Justin Mares, my coauthor. Justin founded two startups (one of which was acquired) and recently ran growth at Exceptional Cloud Service",
-   "nota": "No copyright page. The latest year in the text is 2013 (L64, L255, L342). The closing line asks readers to leave an Amazon review (L3555), which points to the self-published edition of 2014 (Traction: A Startup Guide to Getting Customers). If the file were the Portfolio edition, the year would be 2015."
-  },
-  "Value Proposition Design": {
-   "nombre": "Value Proposition Design",
-   "anio": 2014,
-   "seguridad": "MEDIA",
-   "fichero": "Value Proposition Design - Smith, Alan, Osterwalder, Alexa.txt",
-   "linea": "L3179",
-   "frase": "A spin-off has been created to develop this principle and create ‘turnkey’ electrical energy storage and retrieval units. In 2014, a 25 kW pilot will be installed at a photovoltaic park in Jura.… In the future, there will be 250 kW installations at first and 2,500 kW ones afterwards.”",
-   "nota": "No copyright page. The most recent works it cites are from 2013 (L4007, L9193), and it speaks of 2014 in the future tense (L3179). This matches the only edition (Wiley, 2014)."
-  },
-  "Venture Deals - Brad Feld": {
-   "nombre": "Venture Deals",
-   "anio": 2019,
-   "seguridad": "MEDIA",
-   "fichero": "Venture Deals - Brad Feld.txt",
-   "linea": "L230",
-   "frase": "While lawyers usually bill by the hour, many lawyers experienced with VC investments will cap their fees in advance of the deal. As of this writing in 2019, a very early stage financing can be done for between $5,000 and $20,000 and a typical financing can be completed for between $20,000 and $40,00",
-   "nota": "No copyright page. The regex candidate 2011 is the year of the first edition ('Since we published the first edition of Venture Deals in 2011', L5474), not this one. The text is dated 2019 ('As of this writing in 2019'), and the sample term sheets use 2018 funds (L4785). This is the 4th edition (Wiley, 2019)."
-  },
-  "Winning at New Products - Robert G. Cooper": {
-   "nombre": "Winning at New Products",
-   "anio": 2017,
-   "seguridad": "MEDIA",
-   "fichero": "Winning at New Products_ Creati - Robert G. Cooper.txt",
-   "linea": "L284",
-   "frase": "2017",
-   "nota": "The copyright text is not in the file (only the Copyright entry in the table of contents, L8). The preface belongs to the '5th edition' (L246, L254) and is signed 'Robert G. Cooper / 2017' (L282 to L284), with Basic Books as publisher. The candidates 1986, 1993, 2000 and 2011 are years of earlier editions or of works it cites."
+  "_nota": "Vista web de dataset/metadata/vigencia.json: el ano del aviso de cada nodo, sin el libro.",
+  "nodos": {
+    "actualizacion_hvac": {
+      "anio": 2011
+    },
+    "actualizacion_iluminacion": {
+      "anio": 2011
+    },
+    "ad_tracking": {
+      "anio": 2014
+    },
+    "adaptacion_producto_estandares_tecnicos": {
+      "anio": 2015
+    },
+    "adaptaciones_sectoriales_iso": {
+      "anio": 2017
+    },
+    "adopciones_industria_especifica_iso9000": {
+      "anio": 2017
+    },
+    "alianzas_cross_industry": {
+      "anio": 2011
+    },
+    "almacenamiento_liquidos_inflamables": {
+      "anio": 2023
+    },
+    "alternativa_agency_relationship": {
+      "anio": 2016
+    },
+    "alternativa_business_opportunity_licensing": {
+      "anio": 2016
+    },
+    "alternativa_joint_venture": {
+      "anio": 2016
+    },
+    "alternativa_operaciones_propias": {
+      "anio": 2016
+    },
+    "alternativa_trademark_licensing": {
+      "anio": 2016
+    },
+    "analisis_competencia_franquicias": {
+      "anio": 2016
+    },
+    "antiboycott_regulations": {
+      "anio": 2015
+    },
+    "asistencia_agencias_minoritarias_mbda": {
+      "anio": 2015
+    },
+    "asistencia_embajadas_consulados_comerciales": {
+      "anio": 2015
+    },
+    "aspectos_legales_eticos_benchmarking": {
+      "anio": 2017
+    },
+    "auditoria_responsabilidad": {
+      "anio": 2025
+    },
+    "auditoria_ti_verde": {
+      "anio": 2011
+    },
+    "auditorias_proveedores": {
+      "anio": 2011
+    },
+    "auditorias_vigilancia_certificacion": {
+      "anio": 2017
+    },
+    "autocertificacion_del_exportador": {
+      "anio": 2015
+    },
+    "autorregulacion_seguridad": {
+      "anio": 1997
+    },
+    "barreras_comerciales_no_arancelarias": {
+      "anio": 2015
+    },
+    "benchmark_inversion_rd_industria": {
+      "anio": 2017
+    },
+    "buenas_practicas_manufactura_cgmp": {
+      "anio": 2017
+    },
+    "bullseye_framework": {
+      "anio": 2014
+    },
+    "business_excellence_models": {
+      "anio": 2017
+    },
+    "calculo_contenido_valor_regional": {
+      "anio": 2015
+    },
+    "calculo_de_aranceles_importacion": {
+      "anio": 2015
+    },
+    "calculo_roi_franquiciado_2": {
+      "anio": 2016
+    },
+    "calificacion_prospectos_award": {
+      "anio": 2016
+    },
+    "capacitacion_de_distribuidores": {
+      "anio": 2015
+    },
+    "capacitacion_roles_gerencia": {
+      "anio": 2016
+    },
+    "carta_de_credito_letter_of_credit": {
+      "anio": 2015
+    },
+    "centro_asesoria_advocacy_center": {
+      "anio": 2015
+    },
+    "certificacion_belts_six_sigma": {
+      "anio": 2017
+    },
+    "certificacion_de_proveedores": {
+      "anio": 2017
+    },
+    "certificacion_leed_energy_star": {
+      "anio": 2011
+    },
+    "certificacion_origen_producto": {
+      "anio": 2015
+    },
+    "certificacion_profesional_calidad": {
+      "anio": 2017
+    },
+    "certificacion_registro_sistema_calidad": {
+      "anio": 2017
+    },
+    "certificaciones_ecoetiquetas": {
+      "anio": 2011
+    },
+    "certificado_de_origen_coo": {
+      "anio": 2015
+    },
+    "certificado_de_origen_tratados_libre_comercio": {
+      "anio": 2015
+    },
+    "certificados_genericos_de_origen": {
+      "anio": 2015
+    },
+    "clasificacion_consultores_empleados": {
+      "anio": 2019
+    },
+    "clasificacion_garantia_full_limited": {
+      "anio": 2018
+    },
+    "clausula_antidesviacion": {
+      "anio": 2015
+    },
+    "clausula_deber_general_osha": {
+      "anio": 2023
+    },
+    "cliente_disena_producto": {
+      "anio": 2017
+    },
+    "competencias_ingeniero_calidad": {
+      "anio": 2017
+    },
+    "comprender_definicion_legal_franquicia": {
+      "anio": 2016
+    },
+    "comprender_ia_como_tecnologia_de_proposito_general": {
+      "anio": 2024
+    },
+    "concepto_de_advances": {
+      "anio": 2016
+    },
+    "concientizacion_entrenamiento_cui": {
+      "anio": 2025
+    },
+    "conformidad_comercio_internacional": {
+      "anio": 2017
+    },
+    "consideraciones_instalacion_internacional": {
+      "anio": 2015
+    },
+    "consultores_comercio_internacional": {
+      "anio": 2015
+    },
+    "contacto_evaluacion_representantes_extranjeros": {
+      "anio": 2015
+    },
+    "contratos_de_servicio_garantia": {
+      "anio": 2018
+    },
+    "control_acceso_least_privilege": {
+      "anio": 2025
+    },
+    "control_del_board_startup": {
+      "anio": 2012
+    },
+    "control_exportaciones_bis": {
+      "anio": 2015
+    },
+    "control_responsabilidad_manual": {
+      "anio": 2016
+    },
+    "convertible_debt_fundamentos": {
+      "anio": 2019
+    },
+    "coshh_procedimiento_rolling": {
+      "anio": 1997
+    },
+    "costos_ocultos_accidentes_iceberg": {
+      "anio": 1997
+    },
+    "crecimiento_ingresos_verdes": {
+      "anio": 2011
+    },
+    "crowdfunding_legal_exemptions_jobs_act": {
+      "anio": 2019
+    },
+    "csf_funcion_detect": {
+      "anio": 2024
+    },
+    "csf_funcion_govern": {
+      "anio": 2024
+    },
+    "csf_funcion_identify": {
+      "anio": 2024
+    },
+    "csf_funcion_protect": {
+      "anio": 2024
+    },
+    "csf_perfiles_organizacionales": {
+      "anio": 2024
+    },
+    "cumplimiento_acuerdos_comerciales_tanc": {
+      "anio": 2015
+    },
+    "cumplimiento_can_spam": {
+      "anio": 2015
+    },
+    "cumplimiento_ftc_rule_436": {
+      "anio": 2016
+    },
+    "cumplimiento_inversionistas_acreditados": {
+      "anio": 2019
+    },
+    "cumplimiento_magnuson_moss": {
+      "anio": 2018
+    },
+    "cumplimiento_sarbanes_oxley": {
+      "anio": 2008
+    },
+    "cumplir_leyes_estatales_franquicia": {
+      "anio": 2016
+    },
+    "customs_bonded_warehouses": {
+      "anio": 2015
+    },
+    "dar_forma_politica_climatica": {
+      "anio": 2011
+    },
+    "decision_estrategica_exportar": {
+      "anio": 2015
+    },
+    "decision_fpr": {
+      "anio": 2016
+    },
+    "decision_marca_comun_branding": {
+      "anio": 2016
+    },
+    "definicion_sistema_calidad_proveedor": {
+      "anio": 2017
+    },
+    "definir_limites_huella_carbono": {
+      "anio": 2011
+    },
+    "desarrollar_manual_operaciones": {
+      "anio": 2016
+    },
+    "desarrollo_plan_exportacion": {
+      "anio": 2015
+    },
+    "desarrollo_value_proposition_usp": {
+      "anio": 2016
+    },
+    "design_for_environment": {
+      "anio": 2017
+    },
+    "desmitificacion_barreras_exportacion": {
+      "anio": 2015
+    },
+    "deteccion_temprana_regulatoria": {
+      "anio": 2011
+    },
+    "determinar_alcance_cui": {
+      "anio": 2025
+    },
+    "diagrama_flujo_cui": {
+      "anio": 2025
+    },
+    "diferenciacion_garantia_contrato_servicio": {
+      "anio": 2018
+    },
+    "diseno_programa_capacitacion_franquicia": {
+      "anio": 2016
+    },
+    "disruptores_endocrinos_y_salud_industrial": {
+      "anio": 2008
+    },
+    "distincion_gasto_vs_capital_expenditure": {
+      "anio": 2008
+    },
+    "documentacion_exportacion": {
+      "anio": 2015
+    },
+    "documentacion_viaje_internacional": {
+      "anio": 2015
+    },
+    "economia_circular_como_modelo_de_negocio": {
+      "anio": 2019
+    },
+    "ecosistema_global_emprendimiento_gee": {
+      "anio": 2015
+    },
+    "eleccion_abogado_franquicias": {
+      "anio": 2016
+    },
+    "elementos_contrato_legal": {
+      "anio": 2012
+    },
+    "elementos_plan_exportacion_ejemplo": {
+      "anio": 2015
+    },
+    "eliminacion_planes_muestreo_estandar": {
+      "anio": 2018
+    },
+    "embalaje_exportacion": {
+      "anio": 2015
+    },
+    "enfoque_paso_a_paso_investigacion_mercado": {
+      "anio": 2015
+    },
+    "entrenamiento_para_breakthrough": {
+      "anio": 2017
+    },
+    "equity_crowdfunding": {
+      "anio": 2019
+    },
+    "equity_crowdfunding_terminos": {
+      "anio": 2019
+    },
+    "escaleras_fijas_seguridad": {
+      "anio": 2023
+    },
+    "establecer_metas_reduccion_emisiones": {
+      "anio": 2011
+    },
+    "estandar_gtin_epc": {
+      "anio": 2024
+    },
+    "estandarizacion_codigos_producto_epc": {
+      "anio": 2024
+    },
+    "estandarizar_metodologia_lca": {
+      "anio": 2011
+    },
+    "estimacion_inversion_inicial_franquiciador": {
+      "anio": 2016
+    },
+    "estrategias_seleccion_preferencial": {
+      "anio": 2008
+    },
+    "estructura_proveedores_aprobados_designados": {
+      "anio": 2016
+    },
+    "estructura_sp800171": {
+      "anio": 2025
+    },
+    "etiquetado_exportacion": {
+      "anio": 2015
+    },
+    "evaluacion_preparacion_empresa_exportar": {
+      "anio": 2015
+    },
+    "evaluacion_riesgos_legales_ia": {
+      "anio": 2024
+    },
+    "evaluar_controles": {
+      "anio": 2024
+    },
+    "evaluar_huella_hidrica": {
+      "anio": 2011
+    },
+    "evaluar_impacto_ecosistemas_biodiversidad": {
+      "anio": 2011
+    },
+    "evitar_materiales_blandos_contenedor_final": {
+      "anio": 2018
+    },
+    "evitar_terminos_enganosos_garantia": {
+      "anio": 2018
+    },
+    "exclusividad_territorial_representante": {
+      "anio": 2015
+    },
+    "exenciones_legales_franquicia": {
+      "anio": 2016
+    },
+    "exercise_period_opciones": {
+      "anio": 2019
+    },
+    "export_administration_regulations": {
+      "anio": 2015
+    },
+    "exportacion_de_servicios": {
+      "anio": 2015
+    },
+    "extintores_portatiles_de_incendio": {
+      "anio": 2023
+    },
+    "familia_normas_iso_9000": {
+      "anio": 2017
+    },
+    "financial_performance_representations": {
+      "anio": 2016
+    },
+    "financiamiento_bancos_multilaterales_desarrollo": {
+      "anio": 2015
+    },
+    "financiamiento_sba_exportacion": {
+      "anio": 2015
+    },
+    "financiamiento_usda_agricola": {
+      "anio": 2015
+    },
+    "fiscalidad_comercio_electronico_internacional": {
+      "anio": 2015
+    },
+    "foreign_corrupt_practices_act": {
+      "anio": 2015
+    },
+    "foreign_trade_zones": {
+      "anio": 2015
+    },
+    "fuentes_investigacion_mercado": {
+      "anio": 2015
+    },
+    "fundamentos_gestion_riesgo": {
+      "anio": 2024
+    },
+    "garantias_implicitas_vs_expresas": {
+      "anio": 2018
+    },
+    "gestion_centro_datos_verde": {
+      "anio": 2011
+    },
+    "gestion_configuracion_least_functionality": {
+      "anio": 2025
+    },
+    "gestion_contrasenas_cui": {
+      "anio": 2025
+    },
+    "gestion_cuentas_por_pagar_dpo": {
+      "anio": 2008
+    },
+    "gestion_diferencias_culturales": {
+      "anio": 2015
+    },
+    "gestion_e_waste": {
+      "anio": 2011
+    },
+    "getting_started_media_protection": {
+      "anio": 2025
+    },
+    "getting_started_personnel_security": {
+      "anio": 2025
+    },
+    "getting_started_physical_protection": {
+      "anio": 2025
+    },
+    "getting_started_planning": {
+      "anio": 2025
+    },
+    "getting_started_risk_assessment": {
+      "anio": 2025
+    },
+    "getting_started_supply_chain_risk_management": {
+      "anio": 2025
+    },
+    "getting_started_system_communication_protection": {
+      "anio": 2025
+    },
+    "getting_started_system_information_integrity": {
+      "anio": 2025
+    },
+    "getting_started_system_services_acquisition": {
+      "anio": 2025
+    },
+    "herramientas_accionadas_por_explosivos": {
+      "anio": 2023
+    },
+    "herramientas_computacionales_business_model": {
+      "anio": 2010
+    },
+    "identificacion_autenticacion_mfa": {
+      "anio": 2025
+    },
+    "import_regulations_foreign_governments": {
+      "anio": 2015
+    },
+    "incoterms_reglas_comerciales_internacionales": {
+      "anio": 2015
+    },
+    "indice_de_reparabilidad": {
+      "anio": 2024
+    },
+    "ingresos_por_rebates": {
+      "anio": 2016
+    },
+    "innovacion_abierta": {
+      "anio": 2017
+    },
+    "international_buyer_program": {
+      "anio": 2015
+    },
+    "international_partner_search": {
+      "anio": 2015
+    },
+    "investigacion_mercado_primaria_secundaria_2": {
+      "anio": 2015
+    },
+    "investigar_datos_cliente": {
+      "anio": 2018
+    },
+    "iso_31000_gestion_riesgo": {
+      "anio": 2017
+    },
+    "iso_ts_16949_automotriz": {
+      "anio": 2017
+    },
+    "licencia_exportacion_regulaciones": {
+      "anio": 2015
+    },
+    "los_tres_grandes_criterios": {
+      "anio": 2016
+    },
+    "mantenimiento_sistema_cui": {
+      "anio": 2025
+    },
+    "marcas_registradas": {
+      "anio": 2019
+    },
+    "marco_name_system_fee": {
+      "anio": 2016
+    },
+    "marco_nist_cybersecurity_framework": {
+      "anio": 2018
+    },
+    "mecanismo_resolucion_disputas": {
+      "anio": 2018
+    },
+    "medicion_resultados_marketing_franquicia": {
+      "anio": 2016
+    },
+    "medir_huella_carbono_corporativa": {
+      "anio": 2011
+    },
+    "mejora_valoracion_empresa": {
+      "anio": 2016
+    },
+    "mensaje_desarrolladores_area": {
+      "anio": 2016
+    },
+    "metodos_pago_electronico_internacional": {
+      "anio": 2015
+    },
+    "modelado_simulacion_cadena_suministro": {
+      "anio": 2024
+    },
+    "modelo_madurez_capacidades_cmmi": {
+      "anio": 2017
+    },
+    "modelo_shingo_evaluacion_excelencia": {
+      "anio": 2017
+    },
+    "monitoreo_continuo": {
+      "anio": 2024
+    },
+    "multiples_compradores_influyentes": {
+      "anio": 2016
+    },
+    "negociacion_acuerdo_representante_extranjero": {
+      "anio": 2015
+    },
+    "nist_privacy_framework_introduccion": {
+      "anio": 2021
+    },
+    "obtencion_marca_registrada": {
+      "anio": 2016
+    },
+    "open_business_models": {
+      "anio": 2010
+    },
+    "original_issue_discount_oid": {
+      "anio": 2019
+    },
+    "paris_convention_prioridad": {
+      "anio": 2015
+    },
+    "participacion_ferias_comerciales": {
+      "anio": 2015
+    },
+    "participacion_trabajadores": {
+      "anio": 2016
+    },
+    "paso2_preferencias_informadas": {
+      "anio": 2008
+    },
+    "patent_cooperation_treaty": {
+      "anio": 2015
+    },
+    "patentes_startup": {
+      "anio": 2019
+    },
+    "plan_accion_exportacion": {
+      "anio": 2015
+    },
+    "plan_cumplimiento_exportacion": {
+      "anio": 2015
+    },
+    "plan_seguridad_sistema_poam": {
+      "anio": 2025
+    },
+    "planes_estatales_osha": {
+      "anio": 2023
+    },
+    "planificacion_gobierno_organizaciones_familiares": {
+      "anio": 2017
+    },
+    "politica_compras_verdes": {
+      "anio": 2011
+    },
+    "ppc_para_venta_de_franquicias": {
+      "anio": 2016
+    },
+    "prediccion_confiabilidad_diseno": {
+      "anio": 2017
+    },
+    "preparacion_due_diligence": {
+      "anio": 2019
+    },
+    "preparacion_para_salida_a_bolsa": {
+      "anio": 2008
+    },
+    "preparar_fdd": {
+      "anio": 2016
+    },
+    "prevencion_control_peligros": {
+      "anio": 2016
+    },
+    "prevenir_franquicias_inadvertidas": {
+      "anio": 2016
+    },
+    "principios_auditoria_calidad": {
+      "anio": 2017
+    },
+    "principios_gestion_calidad_iso9000": {
+      "anio": 2017
+    },
+    "proceso_rmf_siete_pasos": {
+      "anio": 2024
+    },
+    "proceso_venta_franquicias": {
+      "anio": 2016
+    },
+    "programa_afiliados": {
+      "anio": 2014
+    },
+    "programa_consulta_osha_onsite": {
+      "anio": 2023
+    },
+    "programa_do_one_thing": {
+      "anio": 2011
+    },
+    "programa_mentoria_proveedores": {
+      "anio": 2011
+    },
+    "programa_proteccion_denunciantes": {
+      "anio": 2023
+    },
+    "programa_proteccion_respiratoria": {
+      "anio": 2023
+    },
+    "programas_compra_franquicia": {
+      "anio": 2016
+    },
+    "programas_cooperativos_osha": {
+      "anio": 2023
+    },
+    "programas_estatales_locales_financiamiento_exportacion": {
+      "anio": 2015
+    },
+    "programas_ex_im_bank": {
+      "anio": 2015
+    },
+    "prohibicion_tie_in_sales": {
+      "anio": 2018
+    },
+    "propuesta_valor_franquicia": {
+      "anio": 2016
+    },
+    "proteccion_patentes_internacional": {
+      "anio": 2015
+    },
+    "proteccion_propiedad_intelectual_franq": {
+      "anio": 2016
+    },
+    "proteccion_propiedad_intelectual_internacional": {
+      "anio": 2015
+    },
+    "publicidad_garantia_conforme": {
+      "anio": 2018
+    },
+    "publicidad_tradicional_pr": {
+      "anio": 2014
+    },
+    "quality_score_optimizacion": {
+      "anio": 2014
+    },
+    "que_es_cui": {
+      "anio": 2025
+    },
+    "recursos_apoyo_gubernamental_exportacion": {
+      "anio": 2015
+    },
+    "recursos_educativos_osha": {
+      "anio": 2023
+    },
+    "recursos_niosh": {
+      "anio": 2023
+    },
+    "reduccion_riesgo_percibido": {
+      "anio": 2016
+    },
+    "registration_rights_stock_consideration": {
+      "anio": 2019
+    },
+    "registro_estatal_franquicia": {
+      "anio": 2016
+    },
+    "registro_reporte_lesiones": {
+      "anio": 2023
+    },
+    "regla_de_minimis": {
+      "anio": 2015
+    },
+    "regla_disponibilidad_previa_venta": {
+      "anio": 2018
+    },
+    "regla_divulgacion_garantia": {
+      "anio": 2018
+    },
+    "reglas_de_origen_fta_2": {
+      "anio": 2015
+    },
+    "reglas_origen_sectoriales": {
+      "anio": 2015
+    },
+    "reparto_inicial_equity": {
+      "anio": 2012
+    },
+    "resolucion_problemas_de_pago": {
+      "anio": 2015
+    },
+    "resolver_problemas_climaticos_clientes": {
+      "anio": 2011
+    },
+    "responsabilidad_extendida_productor_2": {
+      "anio": 2011
+    },
+    "respuesta_incidentes_cui": {
+      "anio": 2025
+    },
+    "revision_legal_marketing": {
+      "anio": 2016
+    },
+    "riesgo_fiduciario_insolvencia_deuda": {
+      "anio": 2019
+    },
+    "riesgo_litigios_franquicia": {
+      "anio": 2016
+    },
+    "rmf_paso_categorizar": {
+      "anio": 2024
+    },
+    "rmf_paso_preparar": {
+      "anio": 2024
+    },
+    "rol_black_belt_six_sigma": {
+      "anio": 2017
+    },
+    "roles_six_sigma": {
+      "anio": 2017
+    },
+    "safe_simple_agreement_future_equity": {
+      "anio": 2019
+    },
+    "safety_case_evaluacion_formal": {
+      "anio": 1997
+    },
+    "sbrefa_cumplimiento": {
+      "anio": 2023
+    },
+    "scor_model_operaciones": {
+      "anio": 2024
+    },
+    "screening_mercados_potenciales": {
+      "anio": 2015
+    },
+    "seguimiento_tendencias_sostenibilidad": {
+      "anio": 2011
+    },
+    "seguridad_electrica": {
+      "anio": 2023
+    },
+    "seguridad_soldadura_corte_bronceado": {
+      "anio": 2023
+    },
+    "seguridad_trabajadores_jovenes": {
+      "anio": 2023
+    },
+    "seguro_exportacion": {
+      "anio": 2015
+    },
+    "seguro_inversion_opic": {
+      "anio": 2015
+    },
+    "seleccion_agente_carga_internacional": {
+      "anio": 2015
+    },
+    "seleccion_controles": {
+      "anio": 2024
+    },
+    "seleccion_de_distribuidor_internacional": {
+      "anio": 2015
+    },
+    "seleccion_de_metodo_de_pago": {
+      "anio": 2015
+    },
+    "seleccion_estructura_corporativa": {
+      "anio": 2019
+    },
+    "seleccion_plan_muestreo_ansi_z14": {
+      "anio": 2017
+    },
+    "seleccionar_tipo_de_lca_segun_recursos": {
+      "anio": 2011
+    },
+    "sem_estrategia_ejecucion": {
+      "anio": 2014
+    },
+    "senalizacion_de_salidas": {
+      "anio": 2023
+    },
+    "seo_long_tail": {
+      "anio": 2014
+    },
+    "shareholder_representative_role": {
+      "anio": 2019
+    },
+    "shingo_prize": {
+      "anio": 2017
+    },
+    "sistema_gestion_cumplimiento_ambiental": {
+      "anio": 2011
+    },
+    "sistema_puntuacion_baldrige": {
+      "anio": 2017
+    },
+    "sistema_recoleccion_datos": {
+      "anio": 2011
+    },
+    "targeting_blogs_traccion": {
+      "anio": 2014
+    },
+    "temas_legales_empleo": {
+      "anio": 2019
+    },
+    "term_sheet_disposiciones_vinculantes": {
+      "anio": 2019
+    },
+    "trade_fair_certification_program": {
+      "anio": 2015
+    },
+    "transitarios_freight_forwarders": {
+      "anio": 2015
+    },
+    "unirse_organizacion_rsc_ambiental": {
+      "anio": 2011
+    },
+    "uso_del_us_commercial_service": {
+      "anio": 2015
+    },
+    "validacion_certificaciones_terceros": {
+      "anio": 2011
+    },
+    "valuacion_409a": {
+      "anio": 2019
+    },
+    "venture_debt_introduccion": {
+      "anio": 2019
+    },
+    "vesting_dinamico": {
+      "anio": 2012
+    },
+    "video_marketing_franquicia": {
+      "anio": 2016
+    },
+    "warrant_pricing_venture_debt": {
+      "anio": 2019
+    }
   }
- },
- "nodos": {
-  "actualizacion_hvac": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "más de la mitad del consumo energético en edificios de oficina en EE.UU."
-   ]
-  },
-  "actualizacion_iluminacion": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "cerca del 35% de la electricidad en edificios comerciales de EE.UU.",
-    "al menos el 50% de esa energía se desperdicia"
-   ]
-  },
-  "ad_tracking": {
-   "fuente": "Value Proposition Design",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Técnica publicitaria (ej. Google AdWords)"
-   ]
-  },
-  "adaptacion_producto_estandares_tecnicos": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "National Institute of Standards and Technology (NIST)"
-   ]
-  },
-  "adaptaciones_sectoriales_iso": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "cGMP (Current Good Manufacturing Practices)",
-    "la FDA en Estados Unidos",
-    "ISO/TS 16949",
-    "reemplazo al antiguo estándar QS-9000"
-   ]
-  },
-  "adopciones_industria_especifica_iso9000": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "extensiones regulatorias como las cGMP (cumplimiento farmacéutico)",
-    "ISO/TC210 para dispositivos médicos",
-    "sistema de gestión de calidad ISO 9001 vigente"
-   ]
-  },
-  "alianzas_cross_industry": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Electronics Industry Citizenship Coalition (EICC)",
-    "Buscar coaliciones existentes (ej. EICC, AIM-PROGRESS)",
-    "(tipo 'Responsible Care')"
-   ]
-  },
-  "almacenamiento_liquidos_inflamables": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "conforme a 29 CFR 1910.106"
-   ]
-  },
-  "alternativa_agency_relationship": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "se activa el elemento de fee de franquicia",
-    "Una estructura contractual de agencia validada legalmente para evitar activar la definición de franquicia"
-   ]
-  },
-  "alternativa_business_opportunity_licensing": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "regulaciones FTC de divulgación de franquicia",
-    "FTC",
-    "leyes estatales de biz opp aplicables",
-    "más de dos docenas de estados"
-   ]
-  },
-  "alternativa_joint_venture": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Cualquier joint venture que cobre fees por la propiedad intelectual será considerado también franquicia."
-   ]
-  },
-  "alternativa_operaciones_propias": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "ADA",
-    "EEOC"
-   ]
-  },
-  "alternativa_trademark_licensing": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Revisar los criterios de la FTC sobre 'soporte o control significativo'",
-    "criterios de la FTC"
-   ]
-  },
-  "analisis_competencia_franquicias": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "revisar sus FDDs",
-    "no todos los 3,000 franquiciadores existentes"
-   ]
-  },
-  "antiboycott_regulations": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Las regulaciones antiboicot"
-   ]
-  },
-  "asistencia_agencias_minoritarias_mbda": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "Agencia de Desarrollo de Negocios de Minorías (MBDA)",
-    "Busca el centro de negocios MBDA más cercano a ti",
-    "una red de más de 40 centros de negocios"
-   ]
-  },
-  "asistencia_embajadas_consulados_comerciales": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "embajadas y consulados de EE.UU.",
-    "Contactar a la oficina local de U.S. Commercial Service",
-    "Revisar la Country Commercial Guide del país a visitar"
-   ]
-  },
-  "aspectos_legales_eticos_benchmarking": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "El Código de Conducta de Benchmarking (creado por APQC en 1992, con una versión europea en 1996)",
-    "Código de Conducta de Benchmarking (APQC/EFQM)"
-   ]
-  },
-  "auditoria_responsabilidad": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "SP 800-171"
-   ]
-  },
-  "auditoria_ti_verde": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Aberdeen/IBM Green IT Assessment Calculator"
-   ]
-  },
-  "auditorias_proveedores": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "GEMI recomienda",
-    "Carbon Disclosure Project",
-    "(ej. CDP)"
-   ]
-  },
-  "auditorias_vigilancia_certificacion": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "la certificación ISO 9000",
-    "ISO 9000/9001",
-    "normalmente cada seis meses",
-    "las auditorías de seguimiento cada seis meses"
-   ]
-  },
-  "autocertificacion_del_exportador": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "TLC EE.UU.-Corea",
-    "la normativa de EE.UU.",
-    "periodo cobertura de 12 meses máximo",
-    "definir el periodo cobertura en formato mm/dd/yyyy (máximo 12 meses)"
-   ]
-  },
-  "autorregulacion_seguridad": {
-   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "HSW Act 1974"
-   ]
-  },
-  "barreras_comerciales_no_arancelarias": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "esto refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente"
-   ]
-  },
-  "benchmark_inversion_rd_industria": {
-   "fuente": "Winning at New Products - Robert G. Cooper",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "los datos de la NSF",
-    "farmacéutica (10.3%)",
-    "semiconductores (18-28%)",
-    "papel o petróleo (0.1-1%)"
-   ]
-  },
-  "buenas_practicas_manufactura_cgmp": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Las cGMP son regulaciones que exige el organismo sanitario de tu país"
-   ]
-  },
-  "bullseye_framework": {
-   "fuente": "Traction - Gabriel Weinberg",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Prueba en AdWords"
-   ]
-  },
-  "business_excellence_models": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "El Premio Baldridge (EE.UU.)",
-    "el Modelo EFQM (Europa)"
-   ]
-  },
-  "calculo_contenido_valor_regional": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "puede calificar para beneficios FTA",
-    "esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente",
-    "usualmente 35% Buildup o 45% Builddown"
-   ]
-  },
-  "calculo_de_aranceles_importacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "código HS (Sistema Armonizado) de 6 dígitos",
-    "la base de datos de aranceles e impuestos del portal oficial de exportación del gobierno de EE. UU.",
-    "los acuerdos vigentes a la fecha de la fuente"
-   ]
-  },
-  "calculo_roi_franquiciado_2": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "Item 19 del FDD",
-    "documento de divulgación de franquicia de tu país (conocido como FDD en Estados Unidos)",
-    "El punto de referencia de la industria es un retorno mínimo del 15% para el segundo o tercer año de operación."
-   ]
-  },
-  "calificacion_prospectos_award": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "contaminación de las representaciones de desempeño financiero en el FDD",
-    "cada franquiciado fallido debe divulgarse en el FDD"
-   ]
-  },
-  "capacitacion_de_distribuidores": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente"
-   ]
-  },
-  "capacitacion_roles_gerencia": {
-   "fuente": "OSHA3885",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "responsabilidades legales bajo la OSH Act"
-   ]
-  },
-  "carta_de_credito_letter_of_credit": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente"
-   ]
-  },
-  "centro_asesoria_advocacy_center": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "Advocacy Center del Servicio Comercial de Estados Unidos",
-    "coordina a 20 agencias del gobierno de EE. UU."
-   ]
-  },
-  "certificacion_belts_six_sigma": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Organismos como ASQ ofrecen certificaciones estandarizadas (CQE, Certified Manager of Quality/Organizational Excellence)"
-   ]
-  },
-  "certificacion_de_proveedores": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "los ocho criterios recomendados por ASQ"
-   ]
-  },
-  "certificacion_leed_energy_star": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "LEED",
-    "Energy Star",
-    "Portfolio Manager",
-    "entre el 25% más eficiente energéticamente"
-   ]
-  },
-  "certificacion_origen_producto": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente",
-    "las Reglas de Origen de un FTA",
-    "clasificación HS a 6 dígitos o más",
-    "Conservar la documentación de respaldo hasta por 5 años en caso de auditoría aduanera"
-   ]
-  },
-  "certificacion_profesional_calidad": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Elige un organismo certificador con buena reputación (ASQ, Juran Institute, PMI, etc.)",
-    "como ASQ CQE, Certified Manager of Quality/Organizational Excellence, o los Belts de Six Sigma"
-   ]
-  },
-  "certificacion_registro_sistema_calidad": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "normas como ISO 9001 o ISO 9002",
-    "Elige el estándar de referencia aplicable a tu negocio, como ISO 9001 o ISO 9002",
-    "Los estándares ISO 9000, adoptados por más de 100 países"
-   ]
-  },
-  "certificaciones_ecoetiquetas": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Forest Stewardship Council",
-    "Marine Stewardship Council",
-    "Green Seal",
-    "Green-e"
-   ]
-  },
-  "certificado_de_origen_coo": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "el U.S. Commercial Service",
-    "FTA/NAFTA/CAFTA-DR"
-   ]
-  },
-  "certificado_de_origen_tratados_libre_comercio": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "T-MEC/USMCA",
-    "NAFTA Certificate of Origin",
-    "NAFTA, CAFTA-DR, Chile, Singapur, Australia, Corea, Colombia, Panamá, Perú, entre otros",
-    "Articulo 401"
-   ]
-  },
-  "certificados_genericos_de_origen": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Arab Chamber of Commerce para destinos de Medio Oriente",
-    "los acuerdos vigentes a la fecha de la fuente"
-   ]
-  },
-  "clasificacion_consultores_empleados": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Las leyes laborales estatales y federales exigen pagar al menos salario mínimo a empleados de tiempo completo"
-   ]
-  },
-  "clasificacion_garantia_full_limited": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "Magnuson-Moss Warranty Act",
-    "sobre un producto que cuesta más de $10"
-   ]
-  },
-  "clausula_antidesviacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la seccion 758.6 del EAR",
-    "la Parte 758.6 del EAR",
-    "En cada envio sujeto a las EAR"
-   ]
-  },
-  "clausula_deber_general_osha": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Cláusula de Deber General (General Duty Clause)"
-   ]
-  },
-  "cliente_disena_producto": {
-   "fuente": "Winning at New Products - Robert G. Cooper",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "usando plataformas simples (por ejemplo, LEGO Digital Designer)"
-   ]
-  },
-  "competencias_ingeniero_calidad": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Certificar al ingeniero mediante organismo reconocido (ej. ASQ CQE)"
-   ]
-  },
-  "comprender_definicion_legal_franquicia": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "regla federal FTC 436",
-    "FTC",
-    "que se pague mas de $500 en los primeros seis meses de operación",
-    "Calcula si el pago que le pedirias al operador supera los $500 en los primeros seis meses"
-   ]
-  },
-  "comprender_ia_como_tecnologia_de_proposito_general": {
-   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "un asistente de IA alcanzó 100 millones de usuarios más rápido que cualquier producto en la historia",
-    "los estudios muestran mejoras de productividad del 20-80% en diversas tareas",
-    "podrían beneficiarse de una mejora de productividad del 20-80%"
-   ]
-  },
-  "concepto_de_advances": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "programe una llamada de revisión del FDD"
-   ]
-  },
-  "concientizacion_entrenamiento_cui": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "SP 800-171",
-    "cómo manejar CUI de forma segura",
-    "NARA CUI training",
-    "Security Awareness Hub"
-   ]
-  },
-  "conformidad_comercio_internacional": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "es obligatorio el marcado CE",
-    "una directiva regulada de la UE",
-    "ante un organismo notificado",
-    "certificaciones ISO 9001/9002"
-   ]
-  },
-  "consideraciones_instalacion_internacional": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente"
-   ]
-  },
-  "consultores_comercio_internacional": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente",
-    "del U.S. Commercial Service"
-   ]
-  },
-  "contacto_evaluacion_representantes_extranjeros": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "los acuerdos vigentes a la fecha de la fuente"
-   ]
-  },
-  "contratos_de_servicio_garantia": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la Ley Magnuson Moss de Garantias",
-    "La seccion 106 de esa ley te exige dejar claros los terminos y condiciones de ese contrato."
-   ]
-  },
-  "control_acceso_least_privilege": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la familia Access Control de SP 800-171",
-    "CUI"
-   ]
-  },
-  "control_del_board_startup": {
-   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "en promedio, del 34% después de la ronda A al 21% después de la ronda B"
-   ]
-  },
-  "control_exportaciones_bis": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Control de Exportaciones (Bureau of Industry and Security)",
-    "la Oficina de Servicios al Exportador",
-    "Contactar la oficina distrital de BIS o la División de Educación y Difusión",
-    "esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente"
-   ]
-  },
-  "control_responsabilidad_manual": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Decker v. Domino's",
-    "Ketterling v. Burger King"
-   ]
-  },
-  "convertible_debt_fundamentos": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "cercana a las tasas federales aplicables"
-   ]
-  },
-  "coshh_procedimiento_rolling": {
-   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Las regulaciones COSHH (1988)",
-    "Procedimiento Continuo de Control de Sustancias Peligrosas (COSHH)"
-   ]
-  },
-  "costos_ocultos_accidentes_iceberg": {
-   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "como el realizado por HSE-Chevron"
-   ]
-  },
-  "crecimiento_ingresos_verdes": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "genera más de 20 mil millones de dólares anuales con un crecimiento del 20%"
-   ]
-  },
-  "crowdfunding_legal_exemptions_jobs_act": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "JOBS Act",
-    "la Regla 506(b)",
-    "la Regla 506(c) o Título II",
-    "el Título III"
-   ]
-  },
-  "csf_funcion_detect": {
-   "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "NIST CSF 2.0"
-   ]
-  },
-  "csf_funcion_govern": {
-   "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Función Govern del NIST CSF 2.0"
-   ]
-  },
-  "csf_funcion_identify": {
-   "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "NIST CSF 2.0"
-   ]
-  },
-  "csf_funcion_protect": {
-   "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "NIST CSF 2.0"
-   ]
-  },
-  "csf_perfiles_organizacionales": {
-   "fuente": "NIST SP 1300: Cybersecurity Framework 2.0 - Small Business Quick-Start Guide",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Un Perfil Organizacional del CSF describe la postura actual y/o deseada de ciberseguridad de una organización en términos de los resultados del CSF Core.",
-    "Cuando el negocio ya implementó las seis funciones básicas"
-   ]
-  },
-  "cumplimiento_acuerdos_comerciales_tanc": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "TANC"
-   ]
-  },
-  "cumplimiento_can_spam": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "El CAN-SPAM Act",
-    "conformes con la normativa CAN-SPAM y regulaciones locales equivalentes"
-   ]
-  },
-  "cumplimiento_ftc_rule_436": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "Cumplir la regla federal de franquicias (FTC 436) y las leyes estatales",
-    "Comisión Federal de Comercio (FTC)",
-    "multas civiles de hasta $11,000 por cada violación",
-    "multas que pueden subir hasta $100,000"
-   ]
-  },
-  "cumplimiento_inversionistas_acreditados": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Las leyes de valores de EE.UU.",
-    "régimen de crowdfunding post-JOBS Act",
-    "inversionistas acreditados (personas de alto patrimonio o sofisticadas legalmente definidas)"
-   ]
-  },
-  "cumplimiento_magnuson_moss": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "Magnuson-Moss Warranty Act",
-    "Cuando tu producto cuesta mas de 15 dolares y lo vendes a consumidores finales en Estados Unidos."
-   ]
-  },
-  "cumplimiento_sarbanes_oxley": {
-   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Cumplimiento con la Ley Sarbanes-Oxley",
-    "Sarbanes-Oxley (SOX) es una legislación estadounidense de 2002"
-   ]
-  },
-  "cumplir_leyes_estatales_franquicia": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "regulación federal",
-    "leyes de registro, leyes de oportunidad de negocio o leyes de relación",
-    "30 estados en EE.UU. regulan las franquicias",
-    "períodos de espera distintos"
-   ]
-  },
-  "customs_bonded_warehouses": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente",
-    "U.S. Customs and Border Protection"
-   ]
-  },
-  "dar_forma_politica_climatica": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "U.S. Climate Action Partnership (USCAP)",
-    "Business for Innovative Climate and Energy Policy (BICEP)"
-   ]
-  },
-  "decision_estrategica_exportar": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "las empresas que exportan son un 17% más rentables",
-    "El 95% de los consumidores del mundo vive fuera de Estados Unidos",
-    "el comercio global se va a triplicar para 2030"
-   ]
-  },
-  "decision_fpr": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "debe incluirse en el Item 19 del FDD como una Financial Performance Representation (FPR o 'earnings claim')",
-    "preparar la información según el Item 19 sin necesidad de cumplir con GAAP"
-   ]
-  },
-  "decision_marca_comun_branding": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "el elemento 'nombre' de la definición de franquicia",
-    "modelos sin marca compartida, como las oportunidades de negocio (biz opps)"
-   ]
-  },
-  "definicion_sistema_calidad_proveedor": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "ISO 9000 o TS-16949 como requisito contractual",
-    "Referenciar normas de sistemas de calidad reconocidas (ISO 9000, TS-16949) en el contrato"
-   ]
-  },
-  "definir_limites_huella_carbono": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "protocolo de gases de efecto invernadero (GHG Protocol)"
-   ]
-  },
-  "desarrollar_manual_operaciones": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "cuenta bancaria, EIN, seguros",
-    "leyes laborales, EEOC y ADA",
-    "leyes laborales, EEOC y ADA",
-    "Solo el indice se divulga en el FDD, nunca el contenido completo."
-   ]
-  },
-  "desarrollo_plan_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "Solo un tercio de las PYMES exportadoras de EE.UU. tiene un plan escrito"
-   ]
-  },
-  "desarrollo_value_proposition_usp": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "más de 3,000 franquiciadores activos en EE.UU."
-   ]
-  },
-  "design_for_environment": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "RoHS"
-   ]
-  },
-  "desmitificacion_barreras_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "casi el 30% de los exportadores estadounidenses tienen menos de 19 empleados"
-   ]
-  },
-  "deteccion_temprana_regulatoria": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "el REACH europeo",
-    "el TSCA en Estados Unidos"
-   ]
-  },
-  "determinar_alcance_cui": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "SP 800-171",
-    "transmiten CUI"
-   ]
-  },
-  "diagrama_flujo_cui": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "SP 800-171"
-   ]
-  },
-  "diferenciacion_garantia_contrato_servicio": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Magnuson-Moss Warranty Act"
-   ]
-  },
-  "diseno_programa_capacitacion_franquicia": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Revisar los FDD de franquicias comparables"
-   ]
-  },
-  "disruptores_endocrinos_y_salud_industrial": {
-   "fuente": "Cradle to Cradle - Michael Braungart",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "De los aproximadamente 80,000 químicos industriales en uso"
-   ]
-  },
-  "distincion_gasto_vs_capital_expenditure": {
-   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "normas contables (GAAP)"
-   ]
-  },
-  "documentacion_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "certificado de origen (incluido NAFTA)",
-    "declaración de exportación del embarcador (SED)",
-    "código del Sistema Armonizado (HS)"
-   ]
-  },
-  "documentacion_viaje_internacional": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "un carnet ATA (documento que permite entrar temporalmente con muestras o equipo profesional sin pagar aranceles)",
-    "Esta mecánica refleja normativa y acuerdos de EE.UU. vigentes a la fecha de la fuente: confirma el acuerdo y la regulación vigente en tu país antes de actuar."
-   ]
-  },
-  "economia_circular_como_modelo_de_negocio": {
-   "fuente": "Change by Design, Revised and U - Tim Brown",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "IDEO, junto a la Ellen MacArthur Foundation, desarrolló una guía práctica con 24 medidas concretas y prototipables"
-   ]
-  },
-  "ecosistema_global_emprendimiento_gee": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "redes profesionales como LinkedIn"
-   ]
-  },
-  "eleccion_abogado_franquicias": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "regulaciones estatales en EE.UU.",
-    "Franchise Disclosure Document (FDD)",
-    "Valida su experiencia en el marco regulatorio estatal"
-   ]
-  },
-  "elementos_contrato_legal": {
-   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-   "tipos": [
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "Bajo el common law, un contrato se considera válido cuando existen tres elementos",
-    "las leyes de fraude en muchos estados exigen que ciertos contratos",
-    "aquellos que tomarán más de un año en ejecutarse",
-    "Formalizar por escrito cualquier acuerdo que pueda tardar más de un año en cumplirse."
-   ]
-  },
-  "elementos_plan_exportacion_ejemplo": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Identifica el código arancelario de tu producto",
-    "Determina si necesitas un agente de carga (forwarder), licencias de exportación y certificados sanitarios"
-   ]
-  },
-  "eliminacion_planes_muestreo_estandar": {
-   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Military Standard 105D",
-    "las tablas Dodge-Romig"
-   ]
-  },
-  "embalaje_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la normativa de Estados Unidos y los acuerdos vigentes al momento de la fuente"
-   ]
-  },
-  "enfoque_paso_a_paso_investigacion_mercado": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "U.S. Census Bureau"
-   ]
-  },
-  "entrenamiento_para_breakthrough": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Certificar a los empleados mediante organismos reconocidos (ASQ, Juran Institute)"
-   ]
-  },
-  "equity_crowdfunding": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "SEC",
-    "vender valores requiere registrarte ante la SEC, salvo que califiques para una excepción",
-    "'inversionista acreditado' (un nivel de ingreso o patrimonio que la ley define)",
-    "AngelList"
-   ]
-  },
-  "equity_crowdfunding_terminos": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Title III",
-    "AngelList"
-   ]
-  },
-  "escaleras_fijas_seguridad": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "Si en tu negocio hay escaleras fijas con cuatro o mas escalones, necesitas barandillas y pasamanos",
-    "Verificar que las escaleras con 4 o mas escalones tengan barandillas y pasamanos instalados"
-   ]
-  },
-  "establecer_metas_reduccion_emisiones": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "USG (20% para 2020)",
-    "MillerCoors (15% de reducción de energía para 2015)"
-   ]
-  },
-  "estandar_gtin_epc": {
-   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Registrar la organización en GS1 para obtener un código de gestor (manager code)",
-    "Global Trade Item Number (GTIN)",
-    "Electronic Product Code (EPC)",
-    "la red EPCglobal"
-   ]
-  },
-  "estandarizacion_codigos_producto_epc": {
-   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "El Electronic Product Code (EPC)",
-    "Global Data Synchronization Network (GDSN)",
-    "a través de GS1",
-    "estándares como UNSPSC o GPC"
-   ]
-  },
-  "estandarizar_metodologia_lca": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Sustainability Consortium (respaldado por Walmart y otras 50 empresas)",
-    "GHG Protocol o BSI PAS 2050",
-    "herramientas open-source como Earthster"
-   ]
-  },
-  "estimacion_inversion_inicial_franquiciador": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "el documento de divulgación conocido como FDD"
-   ]
-  },
-  "estrategias_seleccion_preferencial": {
-   "fuente": "Cradle to Cradle - Michael Braungart",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "preferir alternativas certificadas (ej. sello FSC)"
-   ]
-  },
-  "estructura_proveedores_aprobados_designados": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "el FDD",
-    "riesgo legal de tying o venta atada bajo leyes antimonopolio"
-   ]
-  },
-  "estructura_sp800171": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "SP 800-171",
-    "referencias a SP 800-53",
-    "17 familias temáticas",
-    "NIST Cybersecurity and Privacy Reference Tool (CPRT)"
-   ]
-  },
-  "etiquetado_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente",
-    "Etiquetar materiales peligrosos según símbolos de IATA/OMI si aplica"
-   ]
-  },
-  "evaluacion_preparacion_empresa_exportar": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "el portal oficial de exportación del gobierno de EE. UU."
-   ]
-  },
-  "evaluacion_riesgos_legales_ia": {
-   "fuente": "Co-Intelligence_ Living and Wor - Ethan Mollick",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "en la Unión Europea las reglas son más estrictas",
-    "en Estados Unidos más flexibles",
-    "en Japón está permitido de forma explícita",
-    "hoy no está claro si lo que genera la IA está protegido por derechos de autor"
-   ]
-  },
-  "evaluar_controles": {
-   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "NIST SP 800-53A"
-   ]
-  },
-  "evaluar_huella_hidrica": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "para 2030, el 47% de la población mundial enfrentará escasez severa",
-    "Water Footprint Network",
-    "CDP Water Disclosure Project"
-   ]
-  },
-  "evaluar_impacto_ecosistemas_biodiversidad": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "servicios estimados en 33 billones de dólares al año",
-    "El daño a estos ecosistemas le cuesta al mundo entre 2 y 4.5 billones de dólares al año, un 7.5% del PIB mundial",
-    "Corporate Ecosystem Services Review) del World Resources Institute"
-   ]
-  },
-  "evitar_materiales_blandos_contenedor_final": {
-   "fuente": "Guia de empaque para envios (FedEx)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "donde la norma exige un contenedor rigido de carton corrugado, madera, metal o plastico resistente"
-   ]
-  },
-  "evitar_terminos_enganosos_garantia": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la Ley Magnuson-Moss, en su sección 110(c)(2)"
-   ]
-  },
-  "exclusividad_territorial_representante": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la normativa de Estados Unidos y los acuerdos vigentes al momento de la fuente"
-   ]
-  },
-  "exenciones_legales_franquicia": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "alguna exención de la FTC",
-    "si vendes petróleo (exención PMPA)",
-    "leyes estatales adicionales que no reconozcan la exención federal",
-    "al menos 2 años de experiencia en el mismo tipo de negocio y cuyas ventas por la relación no superan el 20% de su volumen total"
-   ]
-  },
-  "exercise_period_opciones": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "Tradicionalmente 90 días",
-    "hasta 10 años (máximo legal)",
-    "Ejercer opciones a bajo costo antes de la venta permite tributación de ganancias de capital en vez de ingreso ordinario"
-   ]
-  },
-  "export_administration_regulations": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Cumplimiento de las Export Administration Regulations (EAR)",
-    "BIS (Bureau of Industry and Security) del Departamento de Comercio de EE.UU.",
-    "Export Control Classification Number (ECCN)",
-    "Consulta el chart de las EAR"
-   ]
-  },
-  "exportacion_de_servicios": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "El sector servicios es el componente más grande de la economía estadounidense"
-   ]
-  },
-  "extintores_portatiles_de_incendio": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "según NFPA 10",
-    "inspeccionarse mensualmente y recibir mantenimiento anual",
-    "deben recibir capacitación inicial y anual"
-   ]
-  },
-  "familia_normas_iso_9000": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "La version ISO 9001:2015 incorporo un enfoque basado en riesgos",
-    "conforme a ISO 9001:2015 y listo para auditoria de certificacion"
-   ]
-  },
-  "financial_performance_representations": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Bajo la regla de la FTC",
-    "FTC",
-    "Item 19 del FDD",
-    "Franchise Disclosure Document (FDD)"
-   ]
-  },
-  "financiamiento_bancos_multilaterales_desarrollo": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "como el Banco Mundial, el BID, el Banco Africano de Desarrollo",
-    "la oficina de U.S. Commercial Service"
-   ]
-  },
-  "financiamiento_sba_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "SBA",
-    "U.S. Commercial Service",
-    "Export Working Capital Program (EWCP)",
-    "International Trade Loan Program"
-   ]
-  },
-  "financiamiento_usda_agricola": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "El Foreign Agricultural Service (FAS) del USDA",
-    "el GSM-102 (garantías de crédito hasta 3 años mediante cartas de crédito)",
-    "garantías de crédito hasta 3 años",
-    "el Supplier Credit Guarantee Program (SCGP, financiamiento de cuenta abierta a corto plazo)"
-   ]
-  },
-  "fiscalidad_comercio_electronico_internacional": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "el régimen de IVA de la Unión Europea que exige a proveedores no comunitarios registrarse y cobrar IVA según la ubicación del cliente",
-    "esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente",
-    "U.S. Commercial Service"
-   ]
-  },
-  "foreign_corrupt_practices_act": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Cumplimiento de la Foreign Corrupt Practices Act (FCPA)",
-    "el procedimiento de opinión de la FCPA del Departamento de Justicia"
-   ]
-  },
-  "foreign_trade_zones": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente",
-    "No hay restricciones de cuota para actividad de exportación",
-    "U.S. Commercial Service",
-    "Foreign-Trade Zones Board"
-   ]
-  },
-  "fuentes_investigacion_mercado": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "U.S. Commercial Service",
-    "USA Trade Online",
-    "Trade Stats Express",
-    "UN Statistical Yearbook"
-   ]
-  },
-  "fundamentos_gestion_riesgo": {
-   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Risk Management Framework (RMF) de NIST"
-   ]
-  },
-  "garantias_implicitas_vs_expresas": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la Ley Magnuson-Moss de Garantías"
-   ]
-  },
-  "gestion_centro_datos_verde": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "Los centros de datos consumen cerca del 1.5% de la energía total en Estados Unidos, cifra que se espera se duplique."
-   ]
-  },
-  "gestion_configuracion_least_functionality": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Cuando se implementan los requisitos de la familia Configuration Management de SP 800-171",
-    "Localizar dónde reside el CUI y qué componentes del sistema lo procesan"
-   ]
-  },
-  "gestion_contrasenas_cui": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "CUI"
-   ]
-  },
-  "gestion_cuentas_por_pagar_dpo": {
-   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Dun & Bradstreet"
-   ]
-  },
-  "gestion_diferencias_culturales": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "la embajada de EE.UU.",
-    "U.S. Commercial Service"
-   ]
-  },
-  "gestion_e_waste": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "programas de devolución (take-back) de fabricantes como Dell, HP, Apple"
-   ]
-  },
-  "getting_started_media_protection": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Marcar los medios con las restricciones de distribución y manejo de CUI."
-   ]
-  },
-  "getting_started_personnel_security": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "con acceso a sistemas que procesan CUI"
-   ]
-  },
-  "getting_started_physical_protection": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "donde se procesa o almacena CUI"
-   ]
-  },
-  "getting_started_planning": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "SP 800-171",
-    "CUI"
-   ]
-  },
-  "getting_started_risk_assessment": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "sistemas que procesan CUI"
-   ]
-  },
-  "getting_started_supply_chain_risk_management": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "relacionados con CUI"
-   ]
-  },
-  "getting_started_system_communication_protection": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "CUI"
-   ]
-  },
-  "getting_started_system_information_integrity": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "institucion",
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "CISA, NSA, FBI, ISACs",
-    "Establecer políticas de gestión y retención de CUI conforme a leyes y regulaciones.",
-    "una vez concluidos los contratos"
-   ]
-  },
-  "getting_started_system_services_acquisition": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "contrata servicios externos que procesarán CUI"
-   ]
-  },
-  "herramientas_accionadas_por_explosivos": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "necesitas estar capacitado y contar con una tarjeta válida que lo acredite",
-    "Coloca la señal de 'EXPLOSIVE-TOOL IN USE' mientras la usas"
-   ]
-  },
-  "herramientas_computacionales_business_model": {
-   "fuente": "Business Model Generation - Osterwalder, Alexander",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "migrar el modelo a una herramienta digital (Strategyzer, Business Model Toolbox u otra)"
-   ]
-  },
-  "identificacion_autenticacion_mfa": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "SP 800-171"
-   ]
-  },
-  "import_regulations_foreign_governments": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "U.S. Commercial Service"
-   ]
-  },
-  "incoterms_reglas_comerciales_internacionales": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Los Incoterms 2010"
-   ]
-  },
-  "indice_de_reparabilidad": {
-   "fuente": "Assembling Tomorrow: A Guide to Designing a Thriving Future",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "los fabricantes de electrónicos están obligados a puntuar sus productos con un índice de reparabilidad",
-    "desde 2021"
-   ]
-  },
-  "ingresos_por_rebates": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Item 8 del FDD"
-   ]
-  },
-  "innovacion_abierta": {
-   "fuente": "Winning at New Products - Robert G. Cooper",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "(como LEGO Digital Designer)"
-   ]
-  },
-  "international_buyer_program": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Programa Internacional de Compradores (IBP) del Departamento de Comercio de Estados Unidos",
-    "promocion en el Export Interest Directory"
-   ]
-  },
-  "international_partner_search": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "U.S. Commercial Service",
-    "en mas de 75 paises",
-    "en 15 días recibes una lista de hasta cinco empresas prescreened",
-    "puedes solicitar el servicio Gold Key"
-   ]
-  },
-  "investigacion_mercado_primaria_secundaria_2": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Consultar reportes del U.S. Commercial Service específicos del país objetivo",
-    "CIA World Factbook",
-    "El Market Survey Report combina ambos enfoques"
-   ]
-  },
-  "investigar_datos_cliente": {
-   "fuente": "Never Lose a Customer Again - Joey Coleman",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "LinkedIn, Facebook, el sitio web de la empresa o una búsqueda en Google"
-   ]
-  },
-  "iso_31000_gestion_riesgo": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "ISO 31000:2009"
-   ]
-  },
-  "iso_ts_16949_automotriz": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "ISO/TS 16949:2009",
-    "ISO 9001:2008"
-   ]
-  },
-  "licencia_exportacion_regulaciones": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "regulaciones EAR (Bureau of Industry and Security)",
-    "ITAR (Departamento de Estado)",
-    "OFAC (sanciones económicas)",
-    "Bureau of Industry and Security"
-   ]
-  },
-  "los_tres_grandes_criterios": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Items 7 y 8 del FDD"
-   ]
-  },
-  "mantenimiento_sistema_cui": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "los requisitos de la familia Maintenance de SP 800-171",
-    "Sistemas que Procesan CUI"
-   ]
-  },
-  "marcas_registradas": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "ante el USPTO"
-   ]
-  },
-  "marco_name_system_fee": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "legalmente se está creando una franquicia sin importar cómo se le llame",
-    "cumple los tres criterios legales de una franquicia (marca, sistema y tarifa)"
-   ]
-  },
-  "marco_nist_cybersecurity_framework": {
-   "fuente": "Cybersecurity for Small Business: Understanding the NIST Cybersecurity Framework (FTC)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "NIST Cybersecurity Framework",
-    "Se organiza en cinco funciones núcleo: Identificar, Proteger, Detectar, Responder y Recuperar",
-    "Instituto Nacional de Estándares y Tecnología (NIST)"
-   ]
-  },
-  "mecanismo_resolucion_disputas": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "institucion",
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "Magnuson-Moss Warranty Act",
-    "reglas de la FTC (Dispute Resolution Rule)",
-    "FTC",
-    "el Better Business Bureau"
-   ]
-  },
-  "medicion_resultados_marketing_franquicia": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "AdRoll y Google Analytics"
-   ]
-  },
-  "medir_huella_carbono_corporativa": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "El Greenhouse Gas Protocol",
-    "World Resources Institute",
-    "World Business Council for Sustainable Development",
-    "Carbon Disclosure Project"
-   ]
-  },
-  "mejora_valoracion_empresa": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "en 2012 el P/E promedio de franquiciantes públicos era 26.5 vs 16.7 del S&P 500, una prima del 59%"
-   ]
-  },
-  "mensaje_desarrolladores_area": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "más del 50% de las unidades de franquicia en EE.UU.",
-    "Representación de Desempeño Financiero (FPR)"
-   ]
-  },
-  "metodos_pago_electronico_internacional": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "P2P, ej. PayPal"
-   ]
-  },
-  "modelado_simulacion_cadena_suministro": {
-   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Google Maps",
-    "SCM Globe"
-   ]
-  },
-  "modelo_madurez_capacidades_cmmi": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "desarrollado por el SEI de Carnegie Mellon",
-    "Contratar un evaluador (lead appraiser) autorizado por el SEI para el diagnóstico",
-    "Aplicar el método SCAMPI para evaluar el cumplimiento del modelo CMMI"
-   ]
-  },
-  "modelo_shingo_evaluacion_excelencia": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "El Modelo Shingo evalua tu operación en cuatro dimensiones sobre una escala de 1000 puntos: Habilitadores Culturales (250), Mejora Continua de Procesos (350), Alineación Empresarial (200) y Resultados"
-   ]
-  },
-  "monitoreo_continuo": {
-   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "(tarea M-1)",
-    "plan de acción y cronograma (POA&M)"
-   ]
-  },
-  "multiples_compradores_influyentes": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Revisar cumplimiento regulatorio en los estados con requisitos de registro de franquicias",
-    "hasta motores de búsqueda y reguladores estatales"
-   ]
-  },
-  "negociacion_acuerdo_representante_extranjero": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "esta mecánica refleja la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente",
-    "(arbitraje, CISG, corte)"
-   ]
-  },
-  "nist_privacy_framework_introduccion": {
-   "fuente": "Getting Started with the NIST Privacy Framework: A Guide for Small and Medium Businesses",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "El NIST Privacy Framework es una herramienta voluntaria"
-   ]
-  },
-  "obtencion_marca_registrada": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "base de datos TESS del gobierno de EE.UU.",
-    "USPTO",
-    "Thomson CompuMark",
-    "los derechos se establecen desde la fecha de solicitud"
-   ]
-  },
-  "open_business_models": {
-   "fuente": "Business Model Generation - Osterwalder, Alexander",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Evaluar plataformas intermediarias (como InnoCentive)"
-   ]
-  },
-  "original_issue_discount_oid": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la autoridad fiscal considera que existe un descuento de emisión original (OID)"
-   ]
-  },
-  "paris_convention_prioridad": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "El Convenio de París establece el trato nacional (no discriminación) y el derecho de prioridad",
-    "dentro de 1 año (6 meses para diseños/marcas) desde la primera solicitud",
-    "(12 meses patentes, 6 meses marcas/diseños)"
-   ]
-  },
-  "participacion_ferias_comerciales": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "pabellones de EE.UU. dedicados a empresas estadounidenses"
-   ]
-  },
-  "participacion_trabajadores": {
-   "fuente": "OSHA3885",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la Sección 11(c) de la ley de salud y seguridad ocupacional, OSH Act"
-   ]
-  },
-  "paso2_preferencias_informadas": {
-   "fuente": "Cradle to Cradle - Michael Braungart",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "FSC para madera"
-   ]
-  },
-  "patent_cooperation_treaty": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "Patent Cooperation Treaty (PCT)",
-    "extendiendo por 18 meses el plazo para cumplir los requisitos nacionales de cada país",
-    "Aprovechar el plazo extendido de 18 meses"
-   ]
-  },
-  "patentes_startup": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "institucion",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "Una patente te da un monopolio de 20 años sobre un invento.",
-    "dentro de los 12 meses de haber divulgado o vendido el invento",
-    "Convertir esa solicitud provisional en una solicitud completa dentro del año siguiente",
-    "USPTO"
-   ]
-  },
-  "plan_accion_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente"
-   ]
-  },
-  "plan_cumplimiento_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Estudiar videos y publicaciones online de BIS sobre EAR",
-    "Agregar campo con países donde la exportación está prohibida por EAR",
-    "que sistematice la clasificación ECCN",
-    "Contactar a BIS para revisar el plan final"
-   ]
-  },
-  "plan_seguridad_sistema_poam": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "SP 800-171A",
-    "Defense Industrial Base Sector Coordinating Council",
-    "agencias federales"
-   ]
-  },
-  "planes_estatales_osha": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "En 22 estados y territorios",
-    "OSHA Federal",
-    "un plan estatal aprobado por OSHA"
-   ]
-  },
-  "planificacion_gobierno_organizaciones_familiares": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "como más del 70% de las organizaciones registradas en el mundo"
-   ]
-  },
-  "politica_compras_verdes": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "equipos Energy Star",
-    "herramientas de autoevaluación como GEMI New Paths o Eco-S.A.T."
-   ]
-  },
-  "ppc_para_venta_de_franquicias": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "solo el 6% de los clics van a anuncios pagados frente al 94% de resultados orgánicos, según estudios citados",
-    "buscadores como Google y Bing"
-   ]
-  },
-  "prediccion_confiabilidad_diseno": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "GIDEP",
-    "RIAC"
-   ]
-  },
-  "preparacion_due_diligence": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "constituirse como C Corporation en Delaware",
-    "calificar para operar en cada estado donde funciona",
-    "Dropbox, Google Drive, Carta"
-   ]
-  },
-  "preparacion_para_salida_a_bolsa": {
-   "fuente": "Financial Intelligence for Entrepreneurs - Berman, Karen; Knight, Joe",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "como la Sarbanes-Oxley en Estados Unidos"
-   ]
-  },
-  "preparar_fdd": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "El FDD es el documento legal obligatorio que todo franquiciador debe entregar a los prospectos antes de vender una franquicia.",
-    "Debe contener 23 ítems específicos de divulgación",
-    "requeridos por la FTC",
-    "presentar el FDD al menos 14 días antes de la venta, y antes de cualquier firma o cobro"
-   ]
-  },
-  "prevencion_control_peligros": {
-   "fuente": "OSHA3885",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Sigue el modelo NIOSH de jerarquía de controles"
-   ]
-  },
-  "prevenir_franquicias_inadvertidas": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "leyes estatales de franquicia",
-    "cumplen legalmente con la definición de franquicia (marca + sistema de marketing prescrito + tarifa)",
-    "Verificar los umbrales de tarifas"
-   ]
-  },
-  "principios_auditoria_calidad": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "busca una certificación externa como referencia (ej. ASQ)"
-   ]
-  },
-  "principios_gestion_calidad_iso9000": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "ISO 9000 identifica ocho principios rectores"
-   ]
-  },
-  "proceso_rmf_siete_pasos": {
-   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "de NIST",
-    "El Risk Management Framework (RMF) de NIST ofrece un proceso integral, flexible, repetible y medible de siete pasos"
-   ]
-  },
-  "proceso_venta_franquicias": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Asegurar que los candidatos lean el FDD y consulten con abogado externo"
-   ]
-  },
-  "programa_afiliados": {
-   "fuente": "Traction - Gabriel Weinberg",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Decidir si usar una red de afiliados existente (CJ, ShareASale, ClickBank)"
-   ]
-  },
-  "programa_consulta_osha_onsite": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "OSHA ofrece un servicio gratuito y confidencial de seguridad y salud ocupacional",
-    "Pide una visita de consulta al programa estatal de On-Site Consultation",
-    "puedes calificar para el programa SHARP, que te libera de las inspecciones programadas de OSHA"
-   ]
-  },
-  "programa_do_one_thing": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "que en 2007 pidió a sus 1.3 millones de asociados en Estados Unidos"
-   ]
-  },
-  "programa_mentoria_proveedores": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "certificación de tercero como FSC"
-   ]
-  },
-  "programa_proteccion_denunciantes": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "presentar la queja dentro del plazo legal, que suele ser corto y contarse en días calendario"
-   ]
-  },
-  "programa_proteccion_respiratoria": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "institucion",
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "29 CFR 1910.134",
-    "aprobados por NIOSH",
-    "Realizar fit-test antes del primer uso y anualmente para respiradores ajustados",
-    "Capacitar a los trabajadores anualmente sobre uso, limitaciones y mantenimiento"
-   ]
-  },
-  "programas_compra_franquicia": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Sherman Antitrust Act",
-    "Item 8 del FDD"
-   ]
-  },
-  "programas_cooperativos_osha": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "la agencia estadounidense OSHA",
-    "Contacta la Oficina de Área o Regional de OSHA que corresponda a tu zona",
-    "Asociación Estratégica (OSPP)",
-    "Programas Voluntarios de Protección (VPP)"
-   ]
-  },
-  "programas_estatales_locales_financiamiento_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "el programa STEP de la SBA",
-    "la agencia de desarrollo económico de tu estado"
-   ]
-  },
-  "programas_ex_im_bank": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "Export-Import Bank de Estados Unidos",
-    "U.S. Commercial Service",
-    "Garantia de Capital de Trabajo del Ex-Im Bank",
-    "Bank Buyer Credit Policy"
-   ]
-  },
-  "prohibicion_tie_in_sales": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "la Magnuson-Moss Warranty Act",
-    "la FTC, la Comisión Federal de Comercio de Estados Unidos"
-   ]
-  },
-  "propuesta_valor_franquicia": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "listo para incorporar en materiales de venta y FDD"
-   ]
-  },
-  "proteccion_patentes_internacional": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "tratados como el PCT (administrado por WIPO)",
-    "usando bases de datos de WIPO"
-   ]
-  },
-  "proteccion_propiedad_intelectual_franq": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Incluir cláusulas de confidencialidad en el FDD y contrato de franquicia",
-    "Redactar cláusulas de no competencia (in-term y post-term) según las leyes del estado"
-   ]
-  },
-  "proteccion_propiedad_intelectual_internacional": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Patent Cooperation Treaty (PCT)",
-    "Madrid Protocol"
-   ]
-  },
-  "publicidad_garantia_conforme": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Existe una ley de Estados Unidos (FTC)",
-    "verificar que cumple las guías de la FTC",
-    "legalmente conformes con las normativas FTC de garantías",
-    "Si tu producto cuesta más de $15, tu anuncio debe decir dónde se puede consultar la garantía completa."
-   ]
-  },
-  "publicidad_tradicional_pr": {
-   "fuente": "Traction - Gabriel Weinberg",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Usar herramientas como HARO para ofrecer comentarios de experto",
-    "seguir en Twitter",
-    "grandes outlets (NYT, CNN)"
-   ]
-  },
-  "quality_score_optimizacion": {
-   "fuente": "Traction - Gabriel Weinberg",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "El Quality Score es una calificación que Google (y otras plataformas) asigna",
-    "Ads con CTR menor a 1.5% suelen recibir baja calificación",
-    "(el promedio ronda el 2%)"
-   ]
-  },
-  "que_es_cui": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Comprensión de la Información No Clasificada Controlada (CUI)",
-    "Consultar el sitio de NARA"
-   ]
-  },
-  "recursos_apoyo_gubernamental_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "U.S. Commercial Service (CS)",
-    "Comercio de Estados Unidos",
-    "SBA",
-    "SBDC"
-   ]
-  },
-  "recursos_educativos_osha": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Centros de Educación del OSHA Training Institute",
-    "Programa de Capacitación Outreach",
-    "el boletín informativo QuickTakes",
-    "los estándares OSHA que te aplican"
-   ]
-  },
-  "recursos_niosh": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "NIOSH es la agencia de investigación del CDC",
-    "Evaluación de Riesgos para la Salud (HHE) gratuita",
-    "Guía de Recursos para Pequeñas Empresas",
-    "Programa de Evaluación y Control de Fatalidades (FACE)"
-   ]
-  },
-  "reduccion_riesgo_percibido": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "uniéndose a la IFA",
-    "International Franchise Association",
-    "Representación de Desempeño Financiero (FPR)"
-   ]
-  },
-  "registration_rights_stock_consideration": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "(en Estados Unidos es la SEC)"
-   ]
-  },
-  "registro_estatal_franquicia": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Aunque el FDD no requiere registro federal",
-    "Las leyes estatales pueden ser inconsistentes entre sí y con la Regla FTC 436",
-    "Monitorear cambios en la legislación estatal de franquicias periódicamente"
-   ]
-  },
-  "registro_reporte_lesiones": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "institucion",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "en Estados Unidos son 8 y 24 horas",
-    "OSHA",
-    "muy pocas horas para una fatalidad, un poco mas para hospitalizaciones o amputaciones"
-   ]
-  },
-  "regla_de_minimis": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "generalmente 7% para NAFTA, 10% para otros FTAs",
-    "generalmente 7% para NAFTA, 10% para otros FTAs",
-    "umbral De Minimis aplicable (7-10%)"
-   ]
-  },
-  "regla_disponibilidad_previa_venta": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la Magnuson-Moss Warranty Act",
-    "Pre-Sale Availability Rule"
-   ]
-  },
-  "regla_divulgacion_garantia": {
-   "fuente": "Businessperson's Guide to Federal Warranty Law",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Regla de Divulgación de Términos de Garantía (Disclosure Rule)",
-    "FTC",
-    "el producto cuesta más de 15 dólares"
-   ]
-  },
-  "reglas_de_origen_fta_2": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente",
-    "para países OMC bajo trato de Nación Más Favorecida",
-    "usando el código Schedule B",
-    "comparando la tasa MFN vs la tasa preferencial del FTA"
-   ]
-  },
-  "reglas_origen_sectoriales": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "La industria automotriz usa reglas de trazabilidad (tracing) exclusivas de NAFTA",
-    "Para autos bajo NAFTA, aplicar el método de trazabilidad y RVC por costo neto",
-    "reglas simplificadas comunes para los capítulos 28-39 del HS"
-   ]
-  },
-  "reparto_inicial_equity": {
-   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Usa una plantilla estructurada (como la de UpDown)"
-   ]
-  },
-  "resolucion_problemas_de_pago": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "puedes recurrir al arbitraje internacional de la ICC"
-   ]
-  },
-  "resolver_problemas_climaticos_clientes": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "se usan más de 125 mil millones de veces al año a nivel mundial"
-   ]
-  },
-  "responsabilidad_extendida_productor_2": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "WEEE en Europa",
-    "EWRA en California",
-    "Evaluar el cumplimiento con regulaciones de responsabilidad extendida (WEEE, EWRA, etc.)"
-   ]
-  },
-  "respuesta_incidentes_cui": {
-   "fuente": "NIST SP 1318: Protecting CUI (SP 800-171 r3) - Small Business Primer",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Cuando se implementan los requisitos de la familia Incident Response de SP 800-171",
-    "Plan de Respuesta a Incidentes para CUI",
-    "FBI",
-    "requisitos específicos de reporte según contratos federales"
-   ]
-  },
-  "revision_legal_marketing": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "Documento de Divulgación de Franquicia (FDD)",
-    "ocho estados requieren aprobación regulatoria de materiales de marketing"
-   ]
-  },
-  "riesgo_fiduciario_insolvencia_deuda": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "según la ley estatal",
-    "las leyes estatales de responsabilidad fiduciaria hacia acreedores"
-   ]
-  },
-  "riesgo_litigios_franquicia": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "estudios (FRANdata 2004) muestran que solo 26% de franquiciantes reportaron algún litigio"
-   ]
-  },
-  "rmf_paso_categorizar": {
-   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "NIST SP 800-60"
-   ]
-  },
-  "rmf_paso_preparar": {
-   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "(Tarea P-1)"
-   ]
-  },
-  "rol_black_belt_six_sigma": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "como ASQ",
-    "un retorno mínimo de $250,000"
-   ]
-  },
-  "roles_six_sigma": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "lidera proyectos con retorno esperado de 250,000 dólares o más"
-   ]
-  },
-  "safe_simple_agreement_future_equity": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "el documento estándar"
-   ]
-  },
-  "safety_case_evaluacion_formal": {
-   "fuente": "Managing the Risks of Organizat - Reason, J. T_",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Modelo regulatorio nacido del Informe Cullen sobre el desastre de Piper Alpha, que te exige demostrar formalmente, mediante un documento llamado Safety Case"
-   ]
-  },
-  "sbrefa_cumplimiento": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Small Business Regulatory Enforcement Fairness Act (SBREFA)",
-    "es una ley estadounidense de 1996",
-    "OSHA",
-    "Guías de Cumplimiento para Pequeñas Entidades (Small Entity Compliance Guides) de OSHA"
-   ]
-  },
-  "scor_model_operaciones": {
-   "fuente": "Essentials of Supply Chain Management - Michael H. Hugos",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "La versión más reciente, SCOR DS, incorpora resiliencia, sostenibilidad y procesos digitales"
-   ]
-  },
-  "screening_mercados_potenciales": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "U.S. Census Bureau",
-    "especialistas del U.S. Commercial Service"
-   ]
-  },
-  "seguimiento_tendencias_sostenibilidad": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Map of Future Forces Affecting Sustainability) de GEMI"
-   ]
-  },
-  "seguridad_electrica": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "normas de seguridad eléctrica vigentes en tu mercado"
-   ]
-  },
-  "seguridad_soldadura_corte_bronceado": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "(20 pies o barrera de 5 pies)",
-    "código de colores (rojo=acetileno, verde=oxígeno, negro=gas inerte)"
-   ]
-  },
-  "seguridad_trabajadores_jovenes": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "cifra_datada"
-   ],
-   "fragmentos": [
-    "Confirmar que los menores de 18 no operen equipos peligrosos que estén prohibidos para ellos",
-    "Los trabajadores jóvenes tienen aproximadamente el doble de riesgo de lesión que los adultos"
-   ]
-  },
-  "seguro_exportacion": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "CIF/CIP",
-    "típicamente 110% del valor CIF/CIP"
-   ]
-  },
-  "seguro_inversion_opic": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "Overseas Private Investment Corporation (OPIC)",
-    "cubriendo hasta 400 millones de dólares por proyecto",
-    "Contactar OPIC InfoLine o FactsLine para determinar elegibilidad",
-    "Explorar el Small Business Center de OPIC si la empresa es PYME"
-   ]
-  },
-  "seleccion_agente_carga_internacional": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "las normativas de exportación de EE.UU.",
-    "Buscar freight forwarders licenciados por IATA (aéreo) o Federal Maritime Commission (marítimo)",
-    "filing electrónico en AES"
-   ]
-  },
-  "seleccion_controles": {
-   "fuente": "NIST SP 1314: Risk Management Framework - Small Enterprise Quick Start Guide",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "NIST SP 800-53",
-    "(Tarea S-1)"
-   ]
-  },
-  "seleccion_de_distribuidor_internacional": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Solicitar apoyo del U.S. Commercial Service para identificar candidatos evaluados"
-   ]
-  },
-  "seleccion_de_metodo_de_pago": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "del U.S. Commercial Service",
-    "el International Company Profile (ICP)"
-   ]
-  },
-  "seleccion_estructura_corporativa": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la C Corp, la S Corp o la LLC",
-    "evalúa figuras como la S Corp o la LLC por sus beneficios fiscales"
-   ]
-  },
-  "seleccion_plan_muestreo_ansi_z14": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "ANSI/ASQC Z1.4"
-   ]
-  },
-  "seleccionar_tipo_de_lca_segun_recursos": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "software especializado (SimaPro, GaBi, TEAM)",
-    "herramientas de LCA Light, EIO-LCA o MIPS"
-   ]
-  },
-  "sem_estrategia_ejecucion": {
-   "fuente": "Traction - Gabriel Weinberg",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Google Keyword Planner, SEMrush o SpyFu",
-    "Generador de URL de Google Analytics"
-   ]
-  },
-  "senalizacion_de_salidas": {
-   "fuente": "SMALL_BUSINESS",
-   "tipos": [
-    "cifra_datada",
-    "norma",
-    "plazo_legal"
-   ],
-   "fragmentos": [
-    "con letras de al menos 6 pulgadas",
-    "Probar la iluminación de emergencia mensualmente (30 seg) y anualmente (90 min)",
-    "conforme a normativa"
-   ]
-  },
-  "seo_long_tail": {
-   "fuente": "Traction - Gabriel Weinberg",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "Google Keyword Planner",
-    "que en conjunto representan el 70% de todas las búsquedas"
-   ]
-  },
-  "shareholder_representative_role": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Considerar contratar un servicio profesional especializado (ej. SRS Acquiom)"
-   ]
-  },
-  "shingo_prize": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "El Shingo Institute, parte de la Universidad Estatal de Utah, administra el Shingo Prize",
-    "Shingo Prize, Silver Medallion y Bronze Medallion",
-    "A diferencia del Baldrige Award o el EFQM"
-   ]
-  },
-  "sistema_gestion_cumplimiento_ambiental": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Implementar un software de gestión de cumplimiento ambiental (ej. EPOCH)"
-   ]
-  },
-  "sistema_puntuacion_baldrige": {
-   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-   "tipos": [
-    "cifra_datada",
-    "norma"
-   ],
-   "fragmentos": [
-    "El sistema de puntuación Baldrige usa una escala de 0 a 1000 puntos repartidos entre las categorías",
-    "con fuerte peso en los Resultados (450 puntos)"
-   ]
-  },
-  "sistema_recoleccion_datos": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "las entidades voluntarias de reporte (como CDP)"
-   ]
-  },
-  "targeting_blogs_traccion": {
-   "fuente": "Traction - Gabriel Weinberg",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "usando buscadores, YouTube, Twitter, Social Mention"
-   ]
-  },
-  "temas_legales_empleo": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "empleo libre (at-will employment)"
-   ]
-  },
-  "term_sheet_disposiciones_vinculantes": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "HSR Act"
-   ]
-  },
-  "trade_fair_certification_program": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Trade Fair Certification (TFC)"
-   ]
-  },
-  "transitarios_freight_forwarders": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Empresas como UPS, FedEx y DHL actúan como forwarders y agentes aduanales integrados.",
-    "la normativa de EE.UU. y los acuerdos vigentes a la fecha de la fuente"
-   ]
-  },
-  "unirse_organizacion_rsc_ambiental": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "como Ceres, EDF, NRDC, WWF"
-   ]
-  },
-  "uso_del_us_commercial_service": {
-   "fuente": "A Basic Guide to Exporting (U.S. Commercial Service, 11th Edition)",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "U.S. Commercial Service",
-    "Tiene presencia en más de 75 países",
-    "International Buyer Program",
-    "la afiliada a un DEC"
-   ]
-  },
-  "validacion_certificaciones_terceros": {
-   "fuente": "The Green to Gold Business Play - Daniel C. Esty",
-   "tipos": [
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "Forest Stewardship Council",
-    "etiquetas de eficiencia energética de la UE"
-   ]
-  },
-  "valuacion_409a": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "cifra_datada",
-    "institucion",
-    "norma"
-   ],
-   "fragmentos": [
-    "la norma fiscal conocida como 409A",
-    "la autoridad fiscal (IRS)",
-    "o un servicio como Carta",
-    "entre el 20% y el 30% del precio de las acciones preferentes, cuando antes se valoraban al 10%"
-   ]
-  },
-  "venture_debt_introduccion": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "institucion"
-   ],
-   "fragmentos": [
-    "Identificar bancos especializados (ej. SVB)"
-   ]
-  },
-  "vesting_dinamico": {
-   "fuente": "The Founder's Dilemmas - Wasserman, Noam",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "la Sección 83(b) del código fiscal en Estados Unidos"
-   ]
-  },
-  "video_marketing_franquicia": {
-   "fuente": "Franchise Your Business - Mark Siebert",
-   "tipos": [
-    "cifra_datada",
-    "institucion"
-   ],
-   "fragmentos": [
-    "apareciendo en el 70% de las búsquedas de Google",
-    "puede aumentar el clickthrough rate en campañas PPC un 60% o más",
-    "mejorar la tasa de captura hasta un 40%",
-    "versiones cortas sirven para el sitio web y YouTube"
-   ]
-  },
-  "warrant_pricing_venture_debt": {
-   "fuente": "Venture Deals - Brad Feld",
-   "tipos": [
-    "norma"
-   ],
-   "fragmentos": [
-    "Original Issue Discount, OID"
-   ]
-  }
- }
 }

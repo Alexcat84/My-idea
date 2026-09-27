@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Ciclo Build-Measure-Learn (Lean Startup)",
   "fuente": "Value Proposition Design",
-  "resumen_teorico": "Ciclo iterativo de Eric Ries que elimina el desperdicio del desarrollo de producto mediante construcción, medición y aprendizaje continuos. Se parte de una hipótesis (paso 0), se diseña/construye un artefacto para testearla (prototipo o MVP), se mide su desempeño, y se analizan los resultados para derivar aprendizajes y decidir el siguiente paso.",
+  "resumen_teorico": "Ciclo iterativo que elimina el desperdicio del desarrollo de producto mediante construcción, medición y aprendizaje continuos. Se parte de una hipótesis (paso 0), se diseña/construye un artefacto para testearla (prototipo o MVP), se mide su desempeño, y se analizan los resultados para derivar aprendizajes y decidir el siguiente paso.",
   "pasos_accionables": [
     "Paso 0: Generar una hipótesis clara a partir de los Canvas de Value Proposition y Business Model",
     "Paso 1: Diseñar/construir un artefacto (prototipo conceptual, experimento o MVP) para testear la hipótesis",
@@ -35,5 +35,26 @@
   "condiciones_activacion": [
     "Cuando el usuario tiene una hipótesis de negocio o producto que necesita validar rápidamente"
   ],
-  "etiqueta_arbol": "Construye, Mide y Aprende"
+  "etiqueta_arbol": "Construye, Mide y Aprende",
+  "correcciones": [
+    {
+      "id": "atribucion-011",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Ciclo iterativo de Eric Ries que elimina el desperdicio del desarrollo de producto mediante construcción, medición y aprendizaje continuos. Se parte de una hipótesis (paso 0), se diseña/construye un artefacto para testearla (prototipo o MVP), se mide su desempeño, y se analizan los resultados para derivar aprendizajes y decidir el siguiente paso.",
+      "texto_nuevo": "Ciclo iterativo que elimina el desperdicio del desarrollo de producto mediante construcción, medición y aprendizaje continuos. Se parte de una hipótesis (paso 0), se diseña/construye un artefacto para testearla (prototipo o MVP), se mide su desempeño, y se analizan los resultados para derivar aprendizajes y decidir el siguiente paso.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Ciclo iterativo de Eric Ries"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-011 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Value Proposition Design"
+  ]
 }

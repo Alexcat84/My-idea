@@ -43,6 +43,11 @@ CAMPOS_PERMITIDOS = {
     #    (docs/loop/EJECUTOR.md, regla 8), y el fundador pidio que ese registro
     #    viva en el nodo. Lo escribe solo scripts/fidelidad/aplicar_correcciones.py.
     "correcciones",
+    #  * `fuentes_internas` (decisiones del fundador del 27 sep 2026, puntos 1 y 4):
+    #    la lista COMPLETA de los libros del nodo, el suyo mas los de todo lo que
+    #    absorbio en cadena. Registro interno: jamas llega al cliente. Lo escribe
+    #    solo scripts/fuentes_internas.py; `fuente` no se toca.
+    "fuentes_internas",
 }
 OBLIGATORIOS_NO_VACIOS = {
     "node_id", "fase_proyecto", "dominio", "titulo_concepto", "fuente",

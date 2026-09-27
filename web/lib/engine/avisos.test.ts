@@ -6,7 +6,8 @@
 import { describe, expect, it } from "vitest";
 import { LOCALES } from "../i18n/config";
 import { AVISO_NODO } from "../i18n/mensajes/avisoNodo";
-import { avisosNodo, JURISDICCION, VIGENCIA_LIBROS, VIGENCIA_NODOS } from "./avisos";
+import { titulosCanonicos, titulosEn } from "../testFixtures/fuentesCanonicas";
+import { avisosNodo, JURISDICCION, VIGENCIA_NODOS } from "./avisos";
 import { cargarGrafo } from "./graph";
 
 const graph = cargarGrafo();
@@ -28,24 +29,18 @@ describe("avisos de la tarjeta: jurisdiccion y vigencia", () => {
   });
 
   it("un nodo con vigencia avisa el ano, sin nombrar el libro", () => {
-    const id = Object.keys(VIGENCIA_NODOS).find((k) => !JURISDICCION[k] && VIGENCIA_LIBROS[VIGENCIA_NODOS[k].fuente].anio);
+    const id = Object.keys(VIGENCIA_NODOS).find((k) => !JURISDICCION[k] && VIGENCIA_NODOS[k].anio);
     expect(id).toBeTruthy();
-    const libro = VIGENCIA_LIBROS[VIGENCIA_NODOS[id!].fuente];
-    expect(avisosNodo(id!, graph, "es")).toEqual([`Esta información puede haber cambiado desde ${libro.anio}: verifica la norma vigente en tu país.`]);
+    expect(avisosNodo(id!, graph, "es")).toEqual([`Esta información puede haber cambiado desde ${VIGENCIA_NODOS[id!].anio}: verifica la norma vigente en tu país.`]);
   });
 
   it("REGLA ESTRICTA (fundador, 26 sep 2026): ningun aviso nombra un libro ni su fuente, en ningun idioma", () => {
-    const titulos = new Set<string>();
-    for (const [fuente, l] of Object.entries(VIGENCIA_LIBROS)) {
-      titulos.add(fuente.toLowerCase());
-      titulos.add(l.nombre.toLowerCase());
-    }
+    const titulos = titulosCanonicos();
     const fallos: string[] = [];
-    for (const id of Object.keys(VIGENCIA_NODOS)) {
+    for (const id of new Set([...Object.keys(VIGENCIA_NODOS), ...Object.keys(JURISDICCION)])) {
       for (const idioma of LOCALES) {
         for (const aviso of avisosNodo(id, graph, idioma)) {
-          const bajo = aviso.toLowerCase();
-          for (const t of titulos) if (t.length > 3 && bajo.includes(t)) fallos.push(`${id} ${idioma}: "${aviso}"`);
+          if (titulosEn(aviso, titulos).length) fallos.push(`${id} ${idioma}: "${aviso}"`);
         }
       }
     }
@@ -69,7 +64,7 @@ describe("avisos de la tarjeta: jurisdiccion y vigencia", () => {
     }
     for (const [id, v] of Object.entries(VIGENCIA_NODOS)) {
       expect(graph[id], id).toBeTruthy();
-      expect(VIGENCIA_LIBROS[v.fuente]?.nombre, id).toBeTruthy();
+      expect(v.anio === null || (v.anio > 1900 && v.anio < 2100), id).toBe(true);
     }
     for (const idioma of LOCALES) {
       const id = Object.keys(JURISDICCION).find((k) => JURISDICCION[k].clase !== "A") ?? Object.keys(VIGENCIA_NODOS)[0];

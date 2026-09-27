@@ -10,7 +10,7 @@ import { describe, expect, it } from "vitest";
 const ASSETS_DIR = path.resolve(__dirname);
 const manifest = JSON.parse(
   readFileSync(path.join(ASSETS_DIR, "manifest.json"), "utf-8")
-) as Record<string, { sha256: string; bytes: number; fuente: string }>;
+) as Record<string, { sha256: string; bytes: number; origen: string }>;
 
 function sha256(filePath: string): string {
   return createHash("sha256").update(readFileSync(filePath)).digest("hex");

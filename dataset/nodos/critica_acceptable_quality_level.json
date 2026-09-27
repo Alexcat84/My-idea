@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Crítica al Nivel de Calidad Aceptable (AQL)",
   "fuente": "Quality is free _ the art of making quality certain -- Philip B_ Crosby",
-  "resumen_teorico": "El Nivel de Calidad Aceptable (AQL) es un término estadístico de control de calidad que, mal usado, se convierte en una autorización previa para fallar: al aceptar que un porcentaje de tu producto sea no conforme, estás planificando el fracaso desde el inicio. Crosby argumenta que no hay evidencia real de que los últimos puntos porcentuales de mejora cuesten más que los primeros, y que la economía de la calidad debe entenderse como la economía de hacer las cosas bien la primera vez, no como la excusa para tolerar defectos.",
+  "resumen_teorico": "El Nivel de Calidad Aceptable (AQL) es un término estadístico de control de calidad que, mal usado, se convierte en una autorización previa para fallar: al aceptar que un porcentaje de tu producto sea no conforme, estás planificando el fracaso desde el inicio. Puede argumentarse que no hay evidencia real de que los últimos puntos porcentuales de mejora cuesten más que los primeros, y que la economía de la calidad debe entenderse como la economía de hacer las cosas bien la primera vez, no como la excusa para tolerar defectos.",
   "pasos_accionables": [
     "Revisa si estás usando estándares de AQL que toleran un porcentaje fijo de defectos.",
     "Cuestiona el origen de esos estándares: casi siempre nacen de la operación diaria, no de un análisis técnico riguroso.",
@@ -23,5 +23,26 @@
     "Cuando usas estándares de calidad que aceptan un porcentaje de defectos como algo normal.",
     "Cuando alguien te dice que mejorar más allá de cierto punto sale demasiado caro."
   ],
-  "etiqueta_arbol": "No Aceptes Fallas de Antemano"
+  "etiqueta_arbol": "No Aceptes Fallas de Antemano",
+  "correcciones": [
+    {
+      "id": "atribucion-043",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El Nivel de Calidad Aceptable (AQL) es un término estadístico de control de calidad que, mal usado, se convierte en una autorización previa para fallar: al aceptar que un porcentaje de tu producto sea no conforme, estás planificando el fracaso desde el inicio. Crosby argumenta que no hay evidencia real de que los últimos puntos porcentuales de mejora cuesten más que los primeros, y que la economía de la calidad debe entenderse como la economía de hacer las cosas bien la primera vez, no como la excusa para tolerar defectos.",
+      "texto_nuevo": "El Nivel de Calidad Aceptable (AQL) es un término estadístico de control de calidad que, mal usado, se convierte en una autorización previa para fallar: al aceptar que un porcentaje de tu producto sea no conforme, estás planificando el fracaso desde el inicio. Puede argumentarse que no hay evidencia real de que los últimos puntos porcentuales de mejora cuesten más que los primeros, y que la economía de la calidad debe entenderse como la economía de hacer las cosas bien la primera vez, no como la excusa para tolerar defectos.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Crosby argumenta que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-001 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "Quality is free _ the art of making quality certain -- Philip B_ Crosby"
+  ]
 }

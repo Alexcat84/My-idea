@@ -8,7 +8,7 @@
   "pasos_accionables": [
     "Identificar dos equipos con conflicto crónico y líderes competentes en ambos lados",
     "Proponer el intercambio de roles entre los líderes de los equipos en conflicto",
-    "Hacer el intercambio de puestos de forma permanente, no como una prueba temporal; en el caso del libro, basto una semana en el puesto del otro para que ambos lideres diagnosticaran el conflicto",
+    "Hacer el intercambio de puestos de forma permanente, no como una prueba temporal; en un caso de ejemplo, bastó una semana en el puesto del otro para que ambos líderes diagnosticaran el conflicto",
     "Facilitar que ambos líderes diagnostiquen las causas del conflicto desde la nueva perspectiva",
     "Implementar los procesos que ambos líderes propongan tras el intercambio"
   ],
@@ -58,6 +58,26 @@
       },
       "decision": "Mandato del fundador, dato repetido en el nodo (resumen_teorico): El resumen repite el intercambio temporal que la correccion C096-070 cambia: en el libro el cambio de puestos fue permanente (L3208-L3210).",
       "auditoria": "rama fidelidad-total, docs/fidelidad/campania/c2/fichas/B5.json, ficha C096-070"
+    },
+    {
+      "id": "atribucion-173",
+      "fecha": "2026-09-26",
+      "campo": "pasos_accionables",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Hacer el intercambio de puestos de forma permanente, no como una prueba temporal; en el caso del libro, basto una semana en el puesto del otro para que ambos lideres diagnosticaran el conflicto",
+      "texto_nuevo": "Hacer el intercambio de puestos de forma permanente, no como una prueba temporal; en un caso de ejemplo, bastó una semana en el puesto del otro para que ambos líderes diagnosticaran el conflicto",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "en el caso del libro"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "indice": 2,
+      "auditoria": "Clasificacion U3-031 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
     }
+  ],
+  "fuentes_internas": [
+    "The Hard Thing About Hard Things - Ben Horowitz"
   ]
 }

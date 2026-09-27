@@ -246,7 +246,8 @@ Gate 0, `engine/run_all_tests.py` y vitest en verde. Tandas en `docs/saneamiento
    Estados Unidos: busca el equivalente en tu pais", C "Aplica si operas o vendes en Estados Unidos". **Guarda:**
    `engine/test_jurisdiccion.py`, ningun nodo con marca de pais sin clase (con caso negativo), y `web/lib/engine/avisos.test.ts`.
 4. **Vigencia, primer paso:** `dataset/metadata/vigencia.json`, **305 nodos** con norma, plazo legal, cifra con fecha o
-   institucion llevan en la tarjeta "Segun [libro], [ano]: verifica la norma vigente en tu pais". El ano de cada libro se
+   institucion llevan en la tarjeta "Esta informacion puede haber cambiado desde [ano]: verifica la norma vigente en tu
+   pais" (sin el libro: correccion urgente del 26 sep, abajo). El ano de cada libro se
    leyo en su propio fichero, con la linea que lo prueba y su seguridad (de 54 libros: 17 ALTA, 27 MEDIA, 10 BAJA; si no hay
    ano, el aviso lo omite). **Comprobador de enlaces:** `scripts/saneamiento/comprobar_enlaces.py` y su informe
    `docs/saneamiento/ENLACES.md` (24 enlaces: 14 vivos, 2 redirigen, 4 rotos, 4 no responden). **Los 21 plazos legales,
@@ -263,5 +264,60 @@ Gate 0, `engine/run_all_tests.py` y vitest en verde. Tandas en `docs/saneamiento
 
 **Textos derivados:** ninguna pregunta en cache contenia el texto corregido (no se retiro ninguna); 24 nodos van a
 re-embeber y 14 preguntas a regenerar en la proxima sesion con credencial (`docs/fidelidad/credencial/`, ahora 75 y 66).
-**Aviso con titulo de libro:** `AGENTS.md` reserva el titulo del libro al detalle del nodo; el fundador decidio que el aviso de
-vigencia lo nombre en la tarjeta ("segun [libro]"), y asi se hizo.
+**Aviso con titulo de libro:** salio a produccion como "Segun [libro], [ano]" y el fundador lo corrigio el mismo dia; ver la
+seccion siguiente.
+
+---
+
+## CORRECCION URGENTE DEL FUNDADOR (26 sep 2026): NINGUN LIBRO NI AUTOR LLEGA AL CLIENTE. CERRADA
+
+**Regla:** el cliente nunca ve el titulo de un libro ni un autor citado como fuente, ni en pantalla, ni en un documento, ni
+en un correo, ni en una respuesta de la IA. Las fuentes viven solo en metadatos internos. Regla escrita en `AGENTS.md`
+("Ningun libro ni autor llega al cliente; las fuentes son metadato interno"), que sustituye a "la etiqueta enamora, el
+titulo respalda": ya no hay "detalle del nodo junto a su fuente" (esa vista nunca existio y el tooltip repetia la etiqueta).
+
+1. **Hotfix del aviso** (9349df2c, en vivo): "Esta informacion puede haber cambiado desde [ano]: verifica la norma vigente
+   en tu pais", en los once idiomas, sin libro. La prueba que lo exige estuvo en rojo primero (3.355 avisos nombraban un
+   libro).
+2. **El titulo no se pinta en ninguna parte:** la opcion de emergencia (error de la IA) y el plan sin IA nombraban el nodo
+   por su `titulo_concepto`; ahora por su etiqueta. **Guarda:** `engine/test_fuentes_de_cara.py` barre 66.848 textos de
+   cara al cliente (catalogos de la interfaz y de los correos en los once idiomas, etiquetas en diez idiomas, preguntas en
+   cache, instrucciones de la IA, el codigo de la web y el texto de cada nodo vivo) contra la lista canonica de titulos
+   (`dataset/metadata/fuentes_canonicas.json`, 67 formas de fuente, 53 libros). Un titulo que tambien es el nombre de un
+   concepto del oficio (green to gold, quality is free, co-inteligencia, SPIN Selling) solo cuenta en su forma inequivoca.
+3. **Las 252 menciones de autor en 241 nodos, clasificadas** (lector con 2 trampas por lote, 16 de 16; verificador ciego,
+   10 de 11; arbitro en 25 desacuerdos). Menciones: **CITA 215** (sale), **CONCEPTO 61** y **ORGANIZACION 61** (se quedan).
+   Por texto: **185 con alguna cita**, 60 solo con conceptos u organizaciones, 7 sin mencion real (falsos positivos de la
+   busqueda). La cita salio por **correccion declarada** (veredicto nuevo ATRIBUCION de `aplicar_correcciones.py`, que
+   declara la regla y los fragmentos que salen): `saneamiento-atribuciones`, **183 correcciones en 182 nodos** (178
+   resumenes, 4 pasos y 1 resumen que citaba "Assembling Tomorrow", hallado por la guarda de titulos). Cada texto sin la
+   cita se reviso contra el anterior (misma informacion, sin endurecer una opinion en un hecho): 149 bien a la primera, 33
+   reescritos y confirmados por un segundo revisor ciego, 1 corregido por el confirmador. **3 titulos** citan a su autor
+   ("(Juran)", "(Deming)", "Crosby"): no se tocan por doctrina y no se muestran. Ninguna pregunta en cache nombra un autor
+   o un libro; los 176 nodos con resumen nuevo van a re-embeber (`docs/fidelidad/credencial/`, ahora 251).
+4. **La IA:** solo `SYSTEM_PLAN` prohibia autores ("sin autores"). Ahora TODA llamada lleva el bloque fijo
+   `REGLA_SIN_FUENTES` (`web/lib/reglaSinFuentes.ts`) despues del prompt cacheado (el cache no cambia). **Guarda:**
+   `web/lib/reglaSinFuentes.test.ts` (la regla en toda llamada, y ninguna llamada arma su sistema por otro camino).
+
+## DECISIONES DEL FUNDADOR (27 sep 2026): FUENTES COMPLETAS Y NADA INTERNO EN EL NAVEGADOR. CERRADA
+
+1. y 4. **Fuentes completas por nodo:** `scripts/fuentes_internas.py` calcula, para cada nodo vivo, TODOS los libros de los
+   que viene: el suyo y los de todo lo que absorbio por cualquier fusion y en cadena, sin limite (ids_alias y
+   merged_originals de los nodos, merge_decisions, los mapas de alias de las capas y las referencias fantasma; la fuente de
+   cada absorbido sale de su fichero, de su original, de la procedencia de su absorbedor o, para 38 que solo quedaban en el
+   historial de git, de `dataset/metadata/fuentes_historicas.json`). Lo guarda en el campo interno `fuentes_internas` y en
+   `docs/internos/INVENTARIO_FUENTES.md`. `fuente` no se toca. Resultado: 3.169 nodos vivos, **54 con mas de un libro**
+   (hasta 4), 722 absorbedores de 1.165 ids; 333 ids absorbidos no tienen libro en ningun sitio (referencias que nunca
+   fueron nodo) y se listan aparte. **Guarda:** `engine/test_fuentes_internas.py` (al dia, empieza por la fuente propia,
+   cada libro en la lista canonica; caso negativo con una cadena de cuatro fusiones por cuatro vias).
+2. **Nada interno llega al navegador.** Medido en rojo primero (`web/lib/assets/sinInternos.test.ts`): la copia del grafo
+   en web/ llevaba `fuente`, `correcciones` con sus citas y `merged_originals` (8.336 claves internas); vigencia.json llevaba
+   los libros con su fichero y su frase; y las instrucciones de la IA (prompts.json) iban en el paquete del navegador por
+   DetalleActividad, estimacion.ts y prompts.ts. Arreglado por el ciclo de siempre: `scripts/sync_assets_web.py` escribe la
+   VISTA WEB (sin fuente, fuentes_internas, correcciones ni merged_originals; vigencia solo con el ano; jurisdiccion solo con
+   pais y clase) y `rangoDeBanda` vive en un modulo puro. El chequeo de gemelos del Gate 0 compara todo menos esas claves y
+   falla si una aparece en la web. **Comprobado en un build de produccion:** los 44 ficheros que descarga el navegador no
+   llevan ninguna clave interna, instruccion de la IA, texto de nodo ni titulo de libro.
+3. **Repositorios a privado:** ninguna sesion en la nube esta a mitad de un trabajo (la unica en la nube, "Proyecto idiomas
+   My Idea", esta ociosa).
+

@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Cálculo del Retorno de Inversión (ROI) en Calidad",
   "fuente": "Juran's Quality Handbook_ The C - Joseph A. Defeo",
-  "resumen_teorico": "El ROI es un factor decisivo para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo es complejo porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que se tratan diferente en contabilidad. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Juran recomienda usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que la precisión extrema rara vez cambia tu decisión.",
+  "resumen_teorico": "El ROI es un factor decisivo para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo es complejo porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que se tratan diferente en contabilidad. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Conviene usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que la precisión extrema rara vez cambia tu decisión.",
   "pasos_accionables": [
     "Buscar ayuda de alguien que entienda de finanzas para armar la información de ROI",
     "Diferenciar entre gastos de capital y gastos operativos en el cálculo",
@@ -24,5 +24,26 @@
     "Cuando necesitas tener el número claro antes de decidir si vale la pena invertir en una mejora",
     "Cuando tienes varias ideas compitiendo por el mismo dinero disponible"
   ],
-  "etiqueta_arbol": "Calcula el Retorno de la Calidad"
+  "etiqueta_arbol": "Calcula el Retorno de la Calidad",
+  "correcciones": [
+    {
+      "id": "atribucion-015",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "El ROI es un factor decisivo para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo es complejo porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que se tratan diferente en contabilidad. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Juran recomienda usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que la precisión extrema rara vez cambia tu decisión.",
+      "texto_nuevo": "El ROI es un factor decisivo para decidir si vale la pena meterle dinero a una mejora frente a otras cosas en las que podrías invertir. Su cálculo es complejo porque involucra capital (dinero después de impuestos) y gastos (dinero antes de impuestos), que se tratan diferente en contabilidad. Los proyectos de mejora radical suelen ser ventajosos porque rara vez son intensivos en capital. Conviene usar estimaciones rápidas en lugar de sistemas contables exhaustivos, ya que la precisión extrema rara vez cambia tu decisión.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Juran recomienda usar estimaciones rápidas"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U6-021 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Juran's Quality Handbook_ The C - Joseph A. Defeo"
+  ]
 }

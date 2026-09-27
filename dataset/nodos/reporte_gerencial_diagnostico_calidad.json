@@ -4,7 +4,7 @@
   "dominio": "quality",
   "titulo_concepto": "Diagnostico de fallas en el sistema de calidad",
   "fuente": "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev",
-  "resumen_teorico": "Deming muestra un caso real de diagnostico hecho con datos que ya existen (auditorias de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raiz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
+  "resumen_teorico": "Un caso real muestra un diagnostico hecho con datos que ya existen (auditorias de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raiz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
   "pasos_accionables": [
     "Recopilar y revisar los datos historicos de auditoria de calidad (defectos mayores y menores) que ya tienes disponibles",
     "Documentar como funciona realmente la detección de defectos: quien los repara, quien los deja pasar y por que",
@@ -25,5 +25,26 @@
     "Cuando tu negocio tiene niveles constantes de defectos y tu única explicación es que falta maquinaria nueva",
     "Cuando tienes datos de auditoria de calidad que nunca has analizado para mejorar algo"
   ],
-  "etiqueta_arbol": "Diagnostica las Fallas de Calidad"
+  "etiqueta_arbol": "Diagnostica las Fallas de Calidad",
+  "correcciones": [
+    {
+      "id": "atribucion-154",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Deming muestra un caso real de diagnostico hecho con datos que ya existen (auditorias de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raiz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
+      "texto_nuevo": "Un caso real muestra un diagnostico hecho con datos que ya existen (auditorias de calidad) para entender los problemas de fondo en una planta: defectos mayores que se repiten, inspección al 200% que no funciona, retrabajo excesivo, pago por pieza como causa raiz de la mala calidad, y falta de definiciones claras sobre que es un defecto. La conclusión es que inspeccionar mas o comprar maquinaria nueva no resuelve nada si tu no asumes la tarea de rediseñar el sistema completo.",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Deming muestra un caso real"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U4-024 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor reescribe, confirmador acepta."
+    }
+  ],
+  "fuentes_internas": [
+    "Out of the Crisis, Reissue - Deming, W. Edwards; Cahill, Kev"
+  ]
 }

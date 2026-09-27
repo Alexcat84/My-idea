@@ -4,7 +4,7 @@
   "dominio": "core",
   "titulo_concepto": "Investiga a tu futuro cliente antes de venderle",
   "fuente": "Never Lose a Customer Again - Joey Coleman",
-  "resumen_teorico": "Antes de vender, investiga detalles personales de la persona con la que quieres cerrar un trato: sus intereses, sus hábitos, sus gustos. Con esa información puedes crear momentos que generen una conexión emocional genuina, incluso antes de hablar de precio. Coleman explica que esto se logra en pocos minutos, escuchando con atención o revisando sus redes sociales, y que el costo del gesto no importa frente al impacto emocional que produce: un pequeño detalle, casi sin costo, puede abrir la puerta a un contrato grande. Esta forma de personalizar no tiene que ser artesanal cada vez: puedes sistematizarla con un sistema para llevar el registro de tus clientes (CRM).",
+  "resumen_teorico": "Antes de vender, investiga detalles personales de la persona con la que quieres cerrar un trato: sus intereses, sus hábitos, sus gustos. Con esa información puedes crear momentos que generen una conexión emocional genuina, incluso antes de hablar de precio. Esto se logra en pocos minutos, escuchando con atención o revisando sus redes sociales, y el costo del gesto no importa frente al impacto emocional que produce: un pequeño detalle, casi sin costo, puede abrir la puerta a un contrato grande. Esta forma de personalizar no tiene que ser artesanal cada vez: puedes sistematizarla con un sistema para llevar el registro de tus clientes (CRM).",
   "pasos_accionables": [
     "Define qué información personal quieres guardar de cada persona con la que hablas: sus intereses, fechas importantes, su contexto.",
     "Anota esa información en tu sistema de registro de clientes (CRM) desde el primer contacto.",
@@ -23,5 +23,26 @@
     "Si todavía no tienes una forma ordenada de guardar los detalles de cada cliente.",
     "Cuando quieres vender más apoyándote en la conexión emocional, no solo en argumentos racionales."
   ],
-  "etiqueta_arbol": "Investiga a tu Prospecto a Fondo"
+  "etiqueta_arbol": "Investiga a tu Prospecto a Fondo",
+  "correcciones": [
+    {
+      "id": "atribucion-132",
+      "fecha": "2026-09-26",
+      "campo": "resumen_teorico",
+      "veredicto": "ATRIBUCION",
+      "texto_anterior": "Antes de vender, investiga detalles personales de la persona con la que quieres cerrar un trato: sus intereses, sus hábitos, sus gustos. Con esa información puedes crear momentos que generen una conexión emocional genuina, incluso antes de hablar de precio. Coleman explica que esto se logra en pocos minutos, escuchando con atención o revisando sus redes sociales, y que el costo del gesto no importa frente al impacto emocional que produce: un pequeño detalle, casi sin costo, puede abrir la puerta a un contrato grande. Esta forma de personalizar no tiene que ser artesanal cada vez: puedes sistematizarla con un sistema para llevar el registro de tus clientes (CRM).",
+      "texto_nuevo": "Antes de vender, investiga detalles personales de la persona con la que quieres cerrar un trato: sus intereses, sus hábitos, sus gustos. Con esa información puedes crear momentos que generen una conexión emocional genuina, incluso antes de hablar de precio. Esto se logra en pocos minutos, escuchando con atención o revisando sus redes sociales, y el costo del gesto no importa frente al impacto emocional que produce: un pequeño detalle, casi sin costo, puede abrir la puerta a un contrato grande. Esta forma de personalizar no tiene que ser artesanal cada vez: puedes sistematizarla con un sistema para llevar el registro de tus clientes (CRM).",
+      "cita": {
+        "regla": "REGLA ESTRICTA del fundador (26 sep 2026): el cliente nunca ve el titulo de un libro ni un autor citado como fuente; un concepto con nombre propio es vocabulario y se queda.",
+        "fragmentos": [
+          "Coleman explica que"
+        ]
+      },
+      "decision": "Correccion urgente del fundador (26 sep 2026), punto 3: la cita a un autor o a un libro como fuente sale por correccion declarada, sin cambiar el sentido.",
+      "auditoria": "Clasificacion U8-032 (lector con trampas, verificador ciego y arbitro; lector y verificador de acuerdo). Texto sin la cita revisado contra el anterior: revisor OK."
+    }
+  ],
+  "fuentes_internas": [
+    "Never Lose a Customer Again - Joey Coleman"
+  ]
 }
