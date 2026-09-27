@@ -137,3 +137,27 @@ regionalismo, voz y ortografia dentro del tope). Todas las trampas sin marca y e
   contrario. Tanda `m11-muestra-final5` (8 en 7 nodos).
 - Reproducibilidad: las dieciseis tandas aplicadas en orden sobre el pack importado dan la copia limpia exacta.
 - Evolucion de la muestra ciega final (50 nodos): blandos 23, 11, 11, 5, 7 (tope 10); duros 0, 0, 0, 1, 1 (tope 0).
+
+## Sexto pase (doble lectura) y muestra ciega final 6: MUNDO 11 CERTIFICADO (28 sep 2026)
+
+Decision del fundador tras la muestra 5: doble lectura, con tres condiciones escritas antes de repartir y de sortear
+(`claves/umbral_y_semilla_auditoria.json`, sexto_pase): (1) las trampas sin marca se plantan antes de generar cualquier
+contexto, para que ningun texto original las delate; (2) REGLA DE PARADA: si la muestra 6 da cero contrarios y cero
+invenciones, el mundo 11 queda certificado; si da uno o mas, se corrigen, se releen con el libro los nodos del mismo libro
+y del mismo tipo de campo, y se integra declarando su riesgo residual, sin otro pase completo; (3) los blandos siguen con
+su tope de 1 por cada 5 nodos.
+
+- `pase6/`: cada uno de los 471 nodos lo leyeron de punta a punta dos lectores independientes (A y B, 16 lotes, reparto
+  con semilla 20261018) contra el libro, solo buscando invenciones y contrarios. Las entradas solo llevan el texto del nodo
+  y su evidencia; las trampas se plantan antes de escribirlas y el plantador salta los pasos cuyo texto original sigue
+  visible en otro campo del nodo (un primer reparto tenia uno asi y se rehizo con la misma semilla antes de lanzar a nadie).
+  47 trampas sin marca, 0 fugas, 47 cazadas. Un arbitro por grupo de lotes decidio todo lo que marco cualquiera de los dos
+  lectores: 35 corregidos (ANADIDO 34, CONTRARIO 1) y el resto no se sostuvo. Tanda `m11-pase6` (35 en 30 nodos).
+- `muestra_final6/`: 50 nodos con semilla 20261019, 4 trampas sin marca, 0 fugas, 4 cazadas. El arbitro confirmo 0
+  invenciones, 0 contrarios y 2 del resto (coherencia 1, calco 1) contra un tope de 10: CUMPLE. Por la regla de parada del
+  fundador, el mundo 11 queda CERTIFICADO. Tanda `m11-muestra-final6` (2 en 2 nodos).
+- Evolucion de la muestra ciega final (50 nodos): blandos 23, 11, 11, 5, 7, 2 (tope 10); duros 0, 0, 0, 1, 1, 0 (tope 0).
+- Orden completo de las tandas sobre el pack importado: m11-limpieza, m11-glosario, m11-limites, m11-auditoria,
+  m11-barrido, m11-muestra-final, m11-pase2, m11-salida, m11-muestra-final2, m11-pase3, m11-muestra-final3, m11-pase4,
+  m11-pase4-barrido, m11-muestra-final4, m11-pase5, m11-muestra-final5, m11-pase6, m11-muestra-final6. Las dieciocho
+  reproducen la copia limpia exacta; guarda de voz de cliente 0 faltas en 471 nodos.
